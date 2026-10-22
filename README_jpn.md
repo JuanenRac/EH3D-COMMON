@@ -1,0 +1,94 @@
+<p align="center">
+  <img src="images/EH3D_BANNER.svg" alt="EH3D-COMMON banner" width="100%">
+</p>
+
+# 🧱 EH3D-COMMON
+
+<p align="center"><a href="README.md">🇺🇸 English</a> | <a href="README_spa.md">🇪🇸 Español</a> | <a href="README_fra.md">🇫🇷 Français</a> | <a href="README_ita.md">🇮🇹 Italiano</a> | <a href="README_deu.md">🇩🇪 Deutsch</a> | <a href="README_zho.md">🇨🇳 中文</a> | 🇯🇵 <b>日本語</b> | <a href="README_por.md">🇵🇹 Português</a></p>
+
+### EH3D Fabrication Suite の共有データモデル：プロジェクトコンテナ、メタデータ、整合性チェック、マシンのテレメトリ
+
+<p align="center">
+  <img src="https://img.shields.io/badge/License-GPL%203.0--or--later-blue.svg" alt="GPL 3.0 or later">
+  <img src="https://img.shields.io/badge/Stack-Rust-DEA584.svg" alt="Rust">
+  <img src="https://img.shields.io/badge/Languages-8-00E5FF.svg" alt="Languages">
+  <img src="https://img.shields.io/badge/Version-0.0.1-0f6cbd.svg" alt="Version">
+  <img src="https://img.shields.io/badge/Maturity-scaffolding-FFB020.svg" alt="Maturity">
+</p>
+
+---
+
+**正直さの確認 - 今日実際に動くもの：** プロジェクトコンテナ（`.eh3dproj`）、プロジェクトのメタデータ、SHA-256 整合性チェック、マシンのテレメトリ型を備えた Rust ライブラリです。すべて開発用コンピューター上のテストで動作します。スイートのプログラムはまだこれを使っておらず、実際のマシンでは何も実行していません。
+
+---
+
+> **安全性とセキュリティの現状：** このライブラリは安全システムではなく、これでマシンを制御したことはありません。コンテナは偶然に壊れたり変更されたりしたパッケージを検出しますが、署名も暗号化もされていません。誰がプロジェクトを書いたかは証明できません。他人から受け取ったパッケージは信頼できない入力として扱うため、エントリー名・サイズ・数を制限しています。
+
+## 📋 概要
+
+| | |
+|---|---|
+| バージョン | `0.0.1` |
+| 成熟度 | 足場 |
+| テスト | 29 |
+| 技術スタック | Rust |
+| 実機での動作 | 該当なし：データライブラリであり、マシンと通信するものはありません |
+
+## 🎯 概要説明
+
+* **プロジェクトコンテナ**：`.eh3dproj` パッケージは標準の ZIP アーカイブで、`project.json`、`integrity.json`、フォルダー `layers/`、`toolpaths/`、`vision/` を含みます。
+* プロジェクトの**メタデータ**：名前、識別子、単位、ワークのゼロ点、レイヤー、工具、ツールパス、フィデューシャルと、セマンティックなフォーマットバージョン。新しいメジャーバージョンは中途半端に解釈せず拒否します。
+* **整合性レコード**：各エントリーの SHA-256 とサイズ。エントリーが変更・欠落・未記載のパッケージは開きません。
+* **制限**：パッケージのフォルダーの外に出られる名前のエントリーは拒否され、大きすぎるエントリーや多すぎるエントリーも拒否されます。
+* **テレメトリ型**：軸、スピンドル、マシン状態、重大度付きの GRBL アラームコード。
+* **テーマ**：スイートの色とコントラストチェック。
+
+## 🧩 EH3D での役割
+
+EH3D-COMMON はスイートの土台です。プロジェクトを開いたり保存したりするライブラリやプログラムが、これに依存する予定です。それらはまだ存在しません。
+
+## 📂 リポジトリ構成
+
+```text
+EH3D-COMMON/
+├── src/          container.rs, project.rs, telemetry.rs, theme.rs, error.rs
+├── tests/        the package: round trips, changed, missing and unlisted entries, unsafe names
+├── docs/         FORMAT.md: the .eh3dproj format
+├── tools/        ci_validate.py: manifest, versions, changelog and README checks
+├── images/       banner
+└── eh3d.project.json   the manifest of the project
+```
+
+## 🛠️ ビルドと実行
+
+安定版の Rust ツールチェーンが必要です。
+
+```bash
+cargo build --release
+cargo test
+cargo clippy --all-targets -- -D warnings
+cargo fmt --check
+python -I tools/ci_validate.py
+```
+
+## 🔗 関連プロジェクト
+
+* [EH3D-CORE-LIBS](https://github.com/JuanenRac/EH3D-CORE-LIBS): 予定：これらの型を使うパーサーとジオメトリエンジン
+* [EH3D-SUITE-LAUNCHER](https://github.com/JuanenRac/EH3D-SUITE-LAUNCHER): 予定：プロジェクトを開いて保存するハブ
+* [HYDRA-UMC](https://github.com/JuanenRac/HYDRA-UMC): スイートが将来制御する予定のマシンを持つロボティクスプラットフォーム
+
+## 📚 ドキュメントとコミュニティ
+
+* [プロジェクト形式](docs/FORMAT.md)：エントリー、メタデータ、整合性レコード、読み取り側のルール。
+* [変更履歴](CHANGELOG.md)
+* [貢献方法](CONTRIBUTING.md)
+* [セキュリティポリシー](SECURITY.md)
+* [サポート](SUPPORT.md)
+
+## 👤 作者
+
+**JuanenRac (Electro Hobby 3D)** · electrohobby3d@gmail.com
+
+## 📜 ライセンス
+
+ソフトウェア：GPL-3.0-or-later。[LICENSE](LICENSE) を参照。スイートのハードウェア設計には CERN OHL-S を使います。

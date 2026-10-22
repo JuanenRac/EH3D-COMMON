@@ -1,0 +1,34 @@
+[package]
+name = "eh3d-common"
+version = "0.0.1"
+edition = "2021"
+rust-version = "1.75"
+description = "Shared data model of the EH3D Fabrication Suite: the .eh3dproj project container, its metadata, integrity checks and the machine telemetry types."
+license = "GPL-3.0-or-later"
+authors = ["JuanenRac (Electro Hobby 3D) <electrohobby3d@gmail.com>"]
+repository = "https://github.com/JuanenRac/EH3D-COMMON"
+readme = "README.md"
+keywords = ["cnc", "cam", "pcb", "gerber", "project-format"]
+categories = ["data-structures", "parser-implementations"]
+
+[dependencies]
+# serde / serde_json: project.json and integrity.json are plain JSON, readable without this crate.
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# sha2: every entry of a package carries its SHA-256, the package refuses to open when one differs.
+sha2 = "0.10"
+# zip: the container is a standard ZIP archive (deflate only), so any archive tool can look inside.
+zip = { version = "2", default-features = false, features = ["deflate"] }
+thiserror = "2"
+# uuid / chrono: stable project identity and ISO 8601 timestamps.
+uuid = { version = "1", features = ["v4", "serde"] }
+chrono = { version = "0.4", default-features = false, features = ["clock", "serde", "std"] }
+# semver: the format version of a project file is a semantic version.
+semver = { version = "1", features = ["serde"] }
+
+[dev-dependencies]
+tempfile = "3"
+
+[profile.release]
+opt-level = 3
+lto = true
