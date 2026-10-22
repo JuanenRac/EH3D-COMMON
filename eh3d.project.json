@@ -6,7 +6,7 @@
   "role": "library",
   "stack": "rust",
   "technologies": ["Rust", "serde", "zip", "sha2"],
-  "deployment_target": "desktop",
+  "deployment_target": "user-pc",
   "maturity": "scaffolding",
   "family": "Platform Foundation",
   "parent": null,
