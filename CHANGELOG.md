@@ -4,6 +4,7 @@ All notable changes to this project are documented here. The version number foll
 
 ## [Unreleased]
 
+- The banner follows the animated style of the ecosystem banners, with the name, the kind and the technologies of the project.
 ## [0.0.1] - The project container, its metadata and the machine telemetry types
 
 - **The `.eh3dproj` container:** a ZIP archive with `project.json`, `integrity.json` and the folders `layers/`, `toolpaths/` and `vision/`. The writer is deterministic and writes through a temporary file.
