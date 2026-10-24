@@ -34,6 +34,22 @@
 | Stack tecnologico | Rust |
 | Su hardware reale | Non applicabile: una libreria di dati, nulla qui parla con una macchina |
 
+## 🚦 Stato del progetto
+
+Ogni riga è una parte di questo repository e il semaforo dice a che punto è oggi. È scritta in base a ciò che il repository può mostrare (test, compilazioni, esecuzioni), non a ciò che è previsto.
+
+🟢 Fatto e verificato · 🟡 Funziona, con limiti noti · 🟠 Fatto a metà o non ancora verificato · 🔴 Non fatto o non funzionante
+
+| Area | Stato | Cosa significa qui |
+|---|---|---|
+| Software | 🟡 | Il contenitore, i metadati e i tipi di telemetria funzionano come libreria Rust; nessun programma della suite li usa ancora. |
+| Test | 🟢 | 29 test passano (`cargo test`): andata e ritorno, voci modificate, mancanti o non elencate, e nomi non sicuri. |
+| Formato dei dati | 🟡 | `.eh3dproj` è uno ZIP standard con lo SHA-256 di ogni voce, descritto in `docs/FORMAT.md`; una versione maggiore più recente viene rifiutata. Per ora lo leggono e lo scrivono solo i suoi test. |
+| Sicurezza | 🟡 | I nomi di voce non sicuri e le voci troppo grandi o troppo numerose vengono rifiutati, e un pacchetto modificato non si apre; il pacchetto non è firmato né cifrato e non ha avuto una revisione indipendente. |
+| Base firmware condivisa | 🟠 | La parte del firmware di nodo condivisa da tutti i nodi è testata solo tramite EH3D-NODE-BUNGARD, l'unico nodo che la usa; un secondo nodo non esiste ancora. |
+| Hardware reale | 🟠 | La libreria non ne ha bisogno, ma la base firmware che contiene non è mai stata eseguita su una scheda. |
+| Documentazione | 🟢 | README in otto lingue, la descrizione del formato e la guida alla base firmware; i controlli li confrontano con il manifesto e il registro delle modifiche. |
+
 ## 🎯 Panoramica
 
 * Il **contenitore di progetto**: un pacchetto `.eh3dproj` è un archivio ZIP standard con `project.json`, `integrity.json` e le cartelle `layers/`, `toolpaths/` e `vision/`.

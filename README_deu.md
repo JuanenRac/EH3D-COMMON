@@ -34,6 +34,22 @@
 | Technologie-Stack | Rust |
 | Auf echter Hardware | Nicht zutreffend: eine Datenbibliothek, nichts hier spricht mit einer Maschine |
 
+## 🚦 Projektstatus
+
+Jede Zeile ist ein Teil dieses Repositorys, und die Ampel sagt, wie weit er heute ist. Sie beruht auf dem, was das Repository zeigen kann (Tests, Builds, Läufe), nicht auf dem, was geplant ist.
+
+🟢 Fertig und überprüft · 🟡 Funktioniert, mit bekannten Grenzen · 🟠 Teilweise fertig oder noch nicht überprüft · 🔴 Nicht gemacht oder funktioniert nicht
+
+| Bereich | Stand | Was das hier bedeutet |
+|---|---|---|
+| Software | 🟡 | Der Container, die Metadaten und die Telemetrietypen funktionieren als Rust-Bibliothek; noch kein Programm der Suite verwendet sie. |
+| Tests | 🟢 | 29 Tests bestehen (`cargo test`): Hin- und Rückweg, geänderte, fehlende und nicht aufgeführte Einträge sowie unsichere Namen. |
+| Datenformat | 🟡 | `.eh3dproj` ist ein Standard-ZIP mit dem SHA-256 jedes Eintrags, beschrieben in `docs/FORMAT.md`; eine neuere Hauptversion wird abgelehnt. Bisher lesen und schreiben es nur die eigenen Tests. |
+| Sicherheit | 🟡 | Unsichere Eintragsnamen sowie zu große oder zu viele Einträge werden abgelehnt, und ein verändertes Paket lässt sich nicht öffnen; das Paket ist weder signiert noch verschlüsselt und wurde nicht unabhängig geprüft. |
+| Gemeinsame Firmware-Basis | 🟠 | Der Teil der Knoten-Firmware, den alle Knoten teilen, wird nur über EH3D-NODE-BUNGARD getestet, den einzigen Knoten, der ihn verwendet; einen zweiten Knoten gibt es noch nicht. |
+| Echte Hardware | 🟠 | Die Bibliothek braucht keine, aber die darin enthaltene Firmware-Basis ist noch nie auf einer Platine gelaufen. |
+| Dokumentation | 🟢 | README in acht Sprachen, die Formatbeschreibung und die Anleitung zur Firmware-Basis; die Prüfungen vergleichen sie mit dem Manifest und dem Änderungsprotokoll. |
+
 ## 🎯 Überblick
 
 * Der **Projektcontainer**: ein `.eh3dproj`-Paket ist ein Standard-ZIP-Archiv mit `project.json`, `integrity.json` und den Ordnern `layers/`, `toolpaths/` und `vision/`.

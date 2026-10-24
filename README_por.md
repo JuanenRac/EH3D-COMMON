@@ -34,6 +34,22 @@
 | Tecnologias | Rust |
 | Em hardware real | Não aplicável: é uma biblioteca de dados, nada aqui comunica com uma máquina |
 
+## 🚦 Estado do projeto
+
+Cada linha é uma parte deste repositório e a luz diz até onde chega hoje. É escrita com o que o repositório consegue demonstrar (testes, compilações, execuções), não com o que está previsto.
+
+🟢 Feito e verificado · 🟡 Funciona, com limites conhecidos · 🟠 Feito a meio ou ainda por verificar · 🔴 Por fazer ou a não funcionar
+
+| Área | Estado | O que significa aqui |
+|---|---|---|
+| Software | 🟡 | O contentor, os metadados e os tipos de telemetria funcionam como biblioteca Rust; nenhum programa da suite os usa ainda. |
+| Testes | 🟢 | Passam 29 testes (`cargo test`): ida e volta, entradas alteradas, em falta ou não listadas, e nomes inseguros. |
+| Formato de dados | 🟡 | O `.eh3dproj` é um ZIP normal com o SHA-256 de cada entrada, descrito em `docs/FORMAT.md`; uma versão principal mais recente é recusada. Por agora só os seus próprios testes o leem e escrevem. |
+| Segurança | 🟡 | Os nomes de entrada inseguros e as entradas demasiado grandes ou numerosas são recusados, e um pacote alterado não abre; o pacote não está assinado nem cifrado e não teve revisão independente. |
+| Base de firmware partilhada | 🟠 | A parte do firmware de nó que todos os nós partilham só é testada através do EH3D-NODE-BUNGARD, o único nó que a usa; ainda não existe um segundo nó. |
+| Hardware real | 🟠 | A biblioteca não precisa de nenhum, mas a base de firmware que contém nunca correu numa placa. |
+| Documentação | 🟢 | README em oito idiomas, a descrição do formato e o guia da base de firmware; as verificações comparam-nos com o manifesto e o registo de alterações. |
+
 ## 🎯 Descrição geral
 
 * O **contentor de projeto**: um pacote `.eh3dproj` é um ficheiro ZIP padrão com `project.json`, `integrity.json` e as pastas `layers/`, `toolpaths/` e `vision/`.

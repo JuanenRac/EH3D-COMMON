@@ -34,6 +34,22 @@
 | Pile technique | Rust |
 | Sur du matériel réel | Sans objet : une bibliothèque de données, rien ici ne parle à une machine |
 
+## 🚦 État du projet
+
+Chaque ligne est une partie de ce dépôt et le feu dit où elle en est aujourd'hui. Elle est écrite d'après ce que le dépôt peut montrer (tests, compilations, exécutions), pas d'après ce qui est prévu.
+
+🟢 Fait et vérifié · 🟡 Fonctionne, avec des limites connues · 🟠 À moitié fait ou pas encore vérifié · 🔴 Pas fait ou ne fonctionne pas
+
+| Domaine | État | Ce que cela veut dire ici |
+|---|---|---|
+| Logiciel | 🟡 | Le conteneur, les métadonnées et les types de télémétrie fonctionnent comme bibliothèque Rust ; aucun programme de la suite ne les utilise encore. |
+| Tests | 🟢 | 29 tests réussissent (`cargo test`) : aller-retour, entrées modifiées, manquantes ou non listées, et noms dangereux. |
+| Format de données | 🟡 | `.eh3dproj` est un ZIP standard avec le SHA-256 de chaque entrée, décrit dans `docs/FORMAT.md` ; une version majeure plus récente est refusée. Pour l'instant, seuls ses propres tests le lisent et l'écrivent. |
+| Sécurité | 🟡 | Les noms d'entrée dangereux et les entrées trop grandes ou trop nombreuses sont refusés, et un paquet modifié ne s'ouvre pas ; le paquet n'est ni signé ni chiffré et n'a pas eu de revue indépendante. |
+| Base de firmware partagée | 🟠 | La partie du firmware de nœud que tous les nœuds partagent n'est testée qu'à travers EH3D-NODE-BUNGARD, le seul nœud qui l'utilise ; un second nœud n'existe pas encore. |
+| Matériel réel | 🟠 | La bibliothèque n'en a pas besoin, mais la base de firmware qu'elle contient n'a jamais tourné sur une carte. |
+| Documentation | 🟢 | README en huit langues, la description du format et le guide de la base de firmware ; les vérifications les comparent au manifeste et au journal des modifications. |
+
 ## 🎯 Vue d'ensemble
 
 * Le **conteneur de projet** : un paquet `.eh3dproj` est une archive ZIP standard avec `project.json`, `integrity.json` et les dossiers `layers/`, `toolpaths/` et `vision/`.

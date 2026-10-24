@@ -34,6 +34,22 @@
 | Stack | Rust |
 | On real hardware | Not applicable: a data library, nothing here talks to a machine |
 
+## 🚦 Project status
+
+Each line is one part of this repository and the light says how far it is today. It is written from what the repository can show (tests, builds, runs), not from what is planned.
+
+🟢 Done and verified · 🟡 Works, with known limits · 🟠 Partly done or not verified yet · 🔴 Not done or not working
+
+| Area | State | What it means here |
+|---|---|---|
+| Software | 🟡 | The container, the metadata and the telemetry types work as a Rust library; no program of the suite uses them yet. |
+| Tests | 🟢 | 29 tests pass (`cargo test`): round trips, changed, missing and unlisted entries, and unsafe names. |
+| Data format | 🟡 | `.eh3dproj` is a standard ZIP with a SHA-256 record of every entry, described in `docs/FORMAT.md`; a newer major version is refused. Only its own tests read and write it so far. |
+| Security | 🟡 | Unsafe entry names and oversized or too many entries are refused, and a changed package does not open; the package is not signed or encrypted and has had no independent review. |
+| Shared firmware base | 🟠 | The part of the node firmware that every node shares is tested only through EH3D-NODE-BUNGARD, the one node that uses it; no second node exists yet. |
+| Real hardware | 🟠 | The library needs none, but the firmware base it carries has never run on a board. |
+| Documentation | 🟢 | README in eight languages, the format description and the firmware-base guide; the checks compare them with the manifest and the changelog. |
+
 ## 🎯 Overview
 
 * The **project container**: a `.eh3dproj` package is a standard ZIP archive with `project.json`, `integrity.json` and the folders `layers/`, `toolpaths/` and `vision/`.
