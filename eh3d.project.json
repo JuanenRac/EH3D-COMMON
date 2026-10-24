@@ -5,12 +5,20 @@
   "version": "0.0.1",
   "role": "library",
   "stack": "rust",
-  "technologies": ["Rust", "serde", "zip", "sha2"],
+  "technologies": [
+    "Rust",
+    "serde",
+    "zip",
+    "sha2"
+  ],
   "deployment_target": "user-pc",
   "maturity": "scaffolding",
   "family": "Platform Foundation",
   "parent": null,
   "build": "cargo build --release; cargo test",
-  "notes": "Scaffolding v0.0.1: the .eh3dproj project container (a ZIP archive with project.json, integrity.json and layers/, toolpaths/, vision/), its metadata with format versions, SHA-256 checks and limits against unsafe entry names and oversized entries, the machine telemetry types (axes, spindle, states, GRBL alarm codes) and the colours of the suite. No program of the suite uses it yet and nothing here has been run on a machine.",
-  "native_version": {"file": "Cargo.toml", "pattern": "^version\\s*=\\s*\"(\\d+\\.\\d+\\.\\d+)\""}
+  "notes": "Scaffolding v0.0.1: the .eh3dproj project container (a ZIP archive with project.json, integrity.json and layers/, toolpaths/, vision/), its metadata with format versions, SHA-256 checks and limits against unsafe entry names and oversized entries, the machine telemetry types (axes, spindle, states, GRBL alarm codes) and the colours of the suite. No program of the suite uses it yet and nothing here has been run on a machine. It also keeps the firmware base of the ESP32 nodes (firmware_base/ and tools/sync_firmware_base.py): the part of the node firmware that every EH3D node shares, written once and copied into each node.",
+  "native_version": {
+    "file": "Cargo.toml",
+    "pattern": "^version\\s*=\\s*\"(\\d+\\.\\d+\\.\\d+)\""
+  }
 }

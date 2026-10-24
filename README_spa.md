@@ -42,10 +42,11 @@
 * Los **límites**: se rechazan los nombres de entrada que podrían salir de la carpeta del paquete, y también las entradas demasiado grandes o demasiado numerosas.
 * Los **tipos de telemetría**: ejes, husillo, estados de la máquina y códigos de alarma GRBL con su gravedad.
 * El **tema**: los colores de la suite, con una comprobación de contraste.
+* La **base del firmware de los nodos** (`firmware_base/`, con `tools/sync_firmware_base.py`): la parte del firmware de los nodos ESP32 que comparten todos los nodos EH3D - el documento de ajustes, la red, el servidor del panel, usuarios y sesiones, la actualización con vuelta atrás, el registro, la autoprotección y las pruebas que las acompañan - escrita una vez con el nombre del proyecto como marcadores. Cada nodo guarda su propia copia y compila por su cuenta; la herramienta escribe la base en cada nodo y avisa cuando una copia se ha desviado.
 
 ## 🧩 Papel en EH3D
 
-EH3D-COMMON es la base de la suite: se prevé que las bibliotecas y los programas que abren o guardan un proyecto dependan de ella. Ninguno existe todavía.
+EH3D-COMMON es la base de la suite: se prevé que las bibliotecas y los programas que abren o guardan un proyecto dependan de ella. Ninguno existe todavía. La base del firmware de los nodos también vive aquí: EH3D-NODE-BUNGARD es el primer nodo que la usa.
 
 ## 📂 Estructura del repositorio
 
@@ -54,6 +55,7 @@ EH3D-COMMON/
 ├── src/          container.rs, project.rs, telemetry.rs, theme.rs, error.rs
 ├── tests/        the package: round trips, changed, missing and unlisted entries, unsafe names
 ├── docs/         FORMAT.md: the .eh3dproj format
+├── firmware_base/la parte compartida del firmware de los nodos
 ├── tools/        ci_validate.py: manifest, versions, changelog and README checks
 ├── images/       banner
 └── eh3d.project.json   the manifest of the project
@@ -80,6 +82,7 @@ python -I tools/ci_validate.py
 ## 📚 Documentación y comunidad
 
 * [Formato de proyecto](docs/FORMAT.md): las entradas, los metadatos, el registro de integridad y las reglas para quien lee.
+* [La base del firmware](docs/FIRMWARE_BASE.md): qué se comparte, cómo se mantiene idéntico y cómo añadir un nodo.
 * [Registro de cambios](CHANGELOG.md)
 * [Cómo contribuir](CONTRIBUTING.md)
 * [Política de seguridad](SECURITY.md)

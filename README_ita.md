@@ -42,10 +42,11 @@
 * I **limiti**: i nomi di voce che potrebbero uscire dalla cartella del pacchetto vengono rifiutati, come le voci troppo grandi o troppo numerose.
 * I **tipi di telemetria**: assi, mandrino, stati della macchina e codici di allarme GRBL con la loro gravità.
 * Il **tema**: i colori della suite, con un controllo del contrasto.
+* La **base del firmware dei nodi** (`firmware_base/`, con `tools/sync_firmware_base.py`): la parte del firmware dei nodi ESP32 che condividono tutti i nodi EH3D - il documento delle impostazioni, la rete, il server del pannello, utenti e sessioni, l'aggiornamento con ripristino, il registro, l'autoprotezione e i test che li accompagnano - scritta una volta con il nome del progetto come segnaposto. Ogni nodo tiene la propria copia e si compila da solo; lo strumento scrive la base in ogni nodo e avvisa quando una copia si è discostata.
 
 ## 🧩 Ruolo in EH3D
 
-EH3D-COMMON è la base della suite: le librerie e i programmi che aprono o salvano un progetto sono previsti come dipendenti da essa. Nessuno esiste ancora.
+EH3D-COMMON è la base della suite: le librerie e i programmi che aprono o salvano un progetto sono previsti come dipendenti da essa. Nessuno esiste ancora. Qui vive anche la base del firmware dei nodi: EH3D-NODE-BUNGARD è il primo nodo che la usa.
 
 ## 📂 Struttura del repository
 
@@ -54,6 +55,7 @@ EH3D-COMMON/
 ├── src/          container.rs, project.rs, telemetry.rs, theme.rs, error.rs
 ├── tests/        the package: round trips, changed, missing and unlisted entries, unsafe names
 ├── docs/         FORMAT.md: the .eh3dproj format
+├── firmware_base/la parte condivisa del firmware dei nodi
 ├── tools/        ci_validate.py: manifest, versions, changelog and README checks
 ├── images/       banner
 └── eh3d.project.json   the manifest of the project
@@ -80,6 +82,7 @@ python -I tools/ci_validate.py
 ## 📚 Documentazione e community
 
 * [Formato del progetto](docs/FORMAT.md): le voci, i metadati, il registro di integrità e le regole per chi legge.
+* [La base del firmware](docs/FIRMWARE_BASE.md): cosa si condivide, come si mantiene identico e come aggiungere un nodo.
 * [Registro delle modifiche](CHANGELOG.md)
 * [Contribuire](CONTRIBUTING.md)
 * [Politica di sicurezza](SECURITY.md)

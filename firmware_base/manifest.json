@@ -1,0 +1,249 @@
+{
+  "files": {
+    "core/admin_sources.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/admin_sources.hpp"
+      }
+    },
+    "core/auth.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/auth.hpp"
+      }
+    },
+    "core/backoff.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/backoff.hpp"
+      }
+    },
+    "core/board_s3.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/board_s3.hpp"
+      }
+    },
+    "core/civil_time.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/civil_time.hpp"
+      }
+    },
+    "core/config_common.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/config_common.hpp"
+      }
+    },
+    "core/improv.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/improv.hpp"
+      }
+    },
+    "core/json.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/json.hpp"
+      }
+    },
+    "core/memory_budget.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/memory_budget.hpp"
+      }
+    },
+    "core/net_text.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/net_text.hpp"
+      }
+    },
+    "core/netplan.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/netplan.hpp"
+      }
+    },
+    "core/node_guard.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/node_guard.hpp"
+      }
+    },
+    "core/node_id.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/node_id.hpp"
+      }
+    },
+    "core/node_settings.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/node_settings.hpp"
+      }
+    },
+    "core/semver.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/semver.hpp"
+      }
+    },
+    "core/stored_load.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/stored_load.hpp"
+      }
+    },
+    "core/task_health.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/task_health.hpp"
+      }
+    },
+    "core/web_policy.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/web_policy.hpp"
+      }
+    },
+    "main/api_shared.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/api_shared.cpp"
+      }
+    },
+    "main/api_shared.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/api_shared.hpp"
+      }
+    },
+    "main/board_ethernet.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/board_ethernet.cpp"
+      }
+    },
+    "main/board_ethernet.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/board_ethernet.hpp"
+      }
+    },
+    "main/clock_sync.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/clock_sync.cpp"
+      }
+    },
+    "main/clock_sync.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/clock_sync.hpp"
+      }
+    },
+    "main/entropy.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/entropy.cpp"
+      }
+    },
+    "main/entropy.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/entropy.hpp"
+      }
+    },
+    "main/improv_serial.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/improv_serial.cpp"
+      }
+    },
+    "main/improv_serial.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/improv_serial.hpp"
+      }
+    },
+    "main/log_buffer.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/log_buffer.cpp"
+      }
+    },
+    "main/log_buffer.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/log_buffer.hpp"
+      }
+    },
+    "main/network.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/network.cpp"
+      }
+    },
+    "main/network.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/network.hpp"
+      }
+    },
+    "main/node_guard.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/node_guard.cpp"
+      }
+    },
+    "main/node_guard.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/node_guard.hpp"
+      }
+    },
+    "main/node_store.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/node_store.cpp"
+      }
+    },
+    "main/node_store.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/node_store.hpp"
+      }
+    },
+    "main/psram_mem.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/psram_mem.cpp"
+      }
+    },
+    "main/psram_mem.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/psram_mem.hpp"
+      }
+    },
+    "main/task_health.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/task_health.cpp"
+      }
+    },
+    "main/task_health.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/task_health.hpp"
+      }
+    },
+    "main/tls_cert.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/tls_cert.cpp"
+      }
+    },
+    "main/tls_cert.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/tls_cert.hpp"
+      }
+    },
+    "main/web_server.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "main/web_server.hpp"
+      }
+    },
+    "tests/check_task_safety.py": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "tests/check_task_safety.py"
+      }
+    },
+    "tests/test_base.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "tests/test_base.cpp"
+      }
+    },
+    "tests/test_clock.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "tests/test_clock.cpp"
+      }
+    },
+    "tests/test_shared.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "tests/test_shared.cpp"
+      }
+    },
+    "tools/check_sdkconfig.py": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "tools/check_sdkconfig.py"
+      }
+    },
+    "tools/pack_panel.py": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "tools/pack_panel.py"
+      }
+    }
+  }
+}

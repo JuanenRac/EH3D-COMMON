@@ -42,10 +42,11 @@
 * Os **limites**: são recusados os nomes de entrada que poderiam sair da pasta do pacote, bem como as entradas demasiado grandes ou demasiado numerosas.
 * Os **tipos de telemetria**: eixos, fuso, estados da máquina e códigos de alarme GRBL com a sua gravidade.
 * O **tema**: as cores da suite, com uma verificação de contraste.
+* A **base do firmware dos nós** (`firmware_base/`, com `tools/sync_firmware_base.py`): a parte do firmware dos nós ESP32 que todos os nós EH3D partilham - o documento de definições, a rede, o servidor do painel, utilizadores e sessões, a atualização com reversão, o registo, a autoproteção e os testes que as acompanham - escrita uma só vez com o nome do projeto como marcadores. Cada nó guarda a sua própria cópia e compila por si; a ferramenta escreve a base em cada nó e avisa quando uma cópia se desviou.
 
 ## 🧩 Papel no EH3D
 
-O EH3D-COMMON é a base da suite: está previsto que as bibliotecas e os programas que abrem ou guardam um projeto dependam dele. Nenhum existe ainda.
+O EH3D-COMMON é a base da suite: está previsto que as bibliotecas e os programas que abrem ou guardam um projeto dependam dele. Nenhum existe ainda. A base do firmware dos nós também vive aqui: o EH3D-NODE-BUNGARD é o primeiro nó que a usa.
 
 ## 📂 Estrutura do repositório
 
@@ -54,6 +55,7 @@ EH3D-COMMON/
 ├── src/          container.rs, project.rs, telemetry.rs, theme.rs, error.rs
 ├── tests/        the package: round trips, changed, missing and unlisted entries, unsafe names
 ├── docs/         FORMAT.md: the .eh3dproj format
+├── firmware_base/a parte partilhada do firmware dos nós
 ├── tools/        ci_validate.py: manifest, versions, changelog and README checks
 ├── images/       banner
 └── eh3d.project.json   the manifest of the project
@@ -80,6 +82,7 @@ python -I tools/ci_validate.py
 ## 📚 Documentação e comunidade
 
 * [Formato do projeto](docs/FORMAT.md): as entradas, os metadados, o registo de integridade e as regras para quem lê.
+* [A base do firmware](docs/FIRMWARE_BASE.md): o que se partilha, como se mantém idêntica e como acrescentar um nó.
 * [Registo de alterações](CHANGELOG.md)
 * [Como contribuir](CONTRIBUTING.md)
 * [Política de segurança](SECURITY.md)

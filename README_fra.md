@@ -42,10 +42,11 @@
 * Les **limites** : les noms d'entrée qui pourraient sortir du dossier du paquet sont refusés, ainsi que les entrées trop grandes ou trop nombreuses.
 * Les **types de télémétrie** : axes, broche, états de la machine et codes d'alarme GRBL avec leur gravité.
 * Le **thème** : les couleurs de la suite, avec un contrôle de contraste.
+* La **base du micrologiciel des nœuds** (`firmware_base/`, avec `tools/sync_firmware_base.py`) : la partie du micrologiciel des nœuds ESP32 que partagent tous les nœuds EH3D - le document de réglages, le réseau, le serveur du panneau, les utilisateurs et sessions, la mise à jour avec retour arrière, le journal, l'autoprotection et les tests qui vont avec - écrite une fois avec le nom du projet en marqueurs. Chaque nœud garde sa propre copie et se compile seul ; l'outil écrit la base dans chaque nœud et signale quand une copie a dérivé.
 
 ## 🧩 Rôle dans EH3D
 
-EH3D-COMMON est la base de la suite : les bibliothèques et les programmes qui ouvrent ou enregistrent un projet sont prévus pour en dépendre. Aucun n'existe encore.
+EH3D-COMMON est la base de la suite : les bibliothèques et les programmes qui ouvrent ou enregistrent un projet sont prévus pour en dépendre. Aucun n'existe encore. La base du micrologiciel des nœuds vit aussi ici : EH3D-NODE-BUNGARD est le premier nœud à l'utiliser.
 
 ## 📂 Structure du dépôt
 
@@ -54,6 +55,7 @@ EH3D-COMMON/
 ├── src/          container.rs, project.rs, telemetry.rs, theme.rs, error.rs
 ├── tests/        the package: round trips, changed, missing and unlisted entries, unsafe names
 ├── docs/         FORMAT.md: the .eh3dproj format
+├── firmware_base/la partie partagée du micrologiciel des nœuds
 ├── tools/        ci_validate.py: manifest, versions, changelog and README checks
 ├── images/       banner
 └── eh3d.project.json   the manifest of the project
@@ -80,6 +82,7 @@ python -I tools/ci_validate.py
 ## 📚 Documentation et communauté
 
 * [Format de projet](docs/FORMAT.md) : les entrées, les métadonnées, le registre d'intégrité et les règles pour les lecteurs.
+* [La base du micrologiciel](docs/FIRMWARE_BASE.md) : ce qui est partagé, comment cela reste identique et comment ajouter un nœud.
 * [Journal des modifications](CHANGELOG.md)
 * [Contribuer](CONTRIBUTING.md)
 * [Politique de sécurité](SECURITY.md)

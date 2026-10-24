@@ -42,10 +42,11 @@
 * The **limits**: entry names that could leave the package folder are refused, and so are oversized or too many entries.
 * The **telemetry types**: axes, spindle, machine states and GRBL alarm codes with their severity.
 * The **theme**: the colours of the suite, with a contrast check.
+* The **firmware base of the nodes** (`firmware_base/`, with `tools/sync_firmware_base.py`): the part of the ESP32 node firmware that every EH3D node shares - the settings document, the network, the panel's server, users and sessions, the update with rollback, the log, the self-protection and the tests that go with them - written once with the name of the project as placeholders. Each node keeps its own copy and builds on its own; the tool writes the base into every node and says when a copy has drifted.
 
 ## 🧩 Role in EH3D
 
-EH3D-COMMON is the base of the suite: the libraries and the programs that open or save a project are planned to depend on it. None of them exists yet.
+EH3D-COMMON is the base of the suite: the libraries and the programs that open or save a project are planned to depend on it. None of them exists yet. The firmware base of the nodes also lives here: EH3D-NODE-BUNGARD is the first node that uses it.
 
 ## 📂 Repository Structure
 
@@ -54,6 +55,7 @@ EH3D-COMMON/
 ├── src/          container.rs, project.rs, telemetry.rs, theme.rs, error.rs
 ├── tests/        the package: round trips, changed, missing and unlisted entries, unsafe names
 ├── docs/         FORMAT.md: the .eh3dproj format
+├── firmware_base/the shared part of the node firmware
 ├── tools/        ci_validate.py: manifest, versions, changelog and README checks
 ├── images/       banner
 └── eh3d.project.json   the manifest of the project
@@ -80,6 +82,7 @@ python -I tools/ci_validate.py
 ## 📚 Documentation & Community
 
 * [Project format](docs/FORMAT.md): the entries, the metadata, the integrity record and the rules for readers.
+* [The firmware base](docs/FIRMWARE_BASE.md): what is shared, how it is kept identical and how to add a node.
 * [Changelog](CHANGELOG.md)
 * [Contributing](CONTRIBUTING.md)
 * [Security policy](SECURITY.md)

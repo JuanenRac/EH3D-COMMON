@@ -42,10 +42,11 @@
 * **限制**：可能跳出包文件夹的条目名称会被拒绝，过大或过多的条目也会被拒绝。
 * **遥测类型**：轴、主轴、机床状态和带严重程度的 GRBL 报警代码。
 * **主题**：套件的颜色，并带有对比度检查。
+* **节点固件基础**（`firmware_base/`，配套 `tools/sync_firmware_base.py`）：所有 EH3D 节点共享的 ESP32 节点固件部分（设置文档、网络、面板服务器、用户与会话、可回滚的更新、日志、自我保护以及相应的测试），以项目名称作占位符只写一次。每个节点保留自己的副本并独立编译；该工具把基础写入每个节点，并在某个副本偏离时报告。
 
 ## 🧩 在 EH3D 中的角色
 
-EH3D-COMMON 是套件的基础：打开或保存项目的库和程序计划依赖它。目前它们都还不存在。
+EH3D-COMMON 是套件的基础：打开或保存项目的库和程序计划依赖它。目前它们都还不存在。节点固件基础也放在这里：EH3D-NODE-BUNGARD 是第一个使用它的节点。
 
 ## 📂 仓库结构
 
@@ -54,6 +55,7 @@ EH3D-COMMON/
 ├── src/          container.rs, project.rs, telemetry.rs, theme.rs, error.rs
 ├── tests/        the package: round trips, changed, missing and unlisted entries, unsafe names
 ├── docs/         FORMAT.md: the .eh3dproj format
+├── firmware_base/节点固件的共享部分
 ├── tools/        ci_validate.py: manifest, versions, changelog and README checks
 ├── images/       banner
 └── eh3d.project.json   the manifest of the project
@@ -80,6 +82,7 @@ python -I tools/ci_validate.py
 ## 📚 文档与社区
 
 * [项目格式](docs/FORMAT.md)：条目、元数据、完整性记录以及读取方的规则。
+* [固件基础](docs/FIRMWARE_BASE.md)：共享什么、如何保持一致，以及如何添加节点。
 * [更新日志](CHANGELOG.md)
 * [参与贡献](CONTRIBUTING.md)
 * [安全政策](SECURITY.md)

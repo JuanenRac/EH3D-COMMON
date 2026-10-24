@@ -42,10 +42,11 @@
 * Die **Grenzen**: Eintragsnamen, die den Paketordner verlassen könnten, werden abgelehnt, ebenso zu große oder zu viele Einträge.
 * Die **Telemetrietypen**: Achsen, Spindel, Maschinenzustände und GRBL-Alarmcodes mit ihrem Schweregrad.
 * Das **Thema**: die Farben der Suite, mit einer Kontrastprüfung.
+* Die **Firmware-Basis der Knoten** (`firmware_base/`, mit `tools/sync_firmware_base.py`): der Teil der ESP32-Knoten-Firmware, den alle EH3D-Knoten teilen - das Einstellungsdokument, das Netzwerk, der Server des Panels, Benutzer und Sitzungen, das Update mit Rollback, das Log, der Selbstschutz und die zugehörigen Tests - einmal geschrieben, mit dem Projektnamen als Platzhalter. Jeder Knoten behält seine eigene Kopie und baut für sich; das Werkzeug schreibt die Basis in jeden Knoten und meldet, wenn eine Kopie abgewichen ist.
 
 ## 🧩 Rolle in EH3D
 
-EH3D-COMMON ist die Grundlage der Suite: Die Bibliotheken und Programme, die ein Projekt öffnen oder speichern, sollen davon abhängen. Keines davon existiert bisher.
+EH3D-COMMON ist die Grundlage der Suite: Die Bibliotheken und Programme, die ein Projekt öffnen oder speichern, sollen davon abhängen. Keines davon existiert bisher. Auch die Firmware-Basis der Knoten liegt hier: EH3D-NODE-BUNGARD ist der erste Knoten, der sie nutzt.
 
 ## 📂 Repository-Struktur
 
@@ -54,6 +55,7 @@ EH3D-COMMON/
 ├── src/          container.rs, project.rs, telemetry.rs, theme.rs, error.rs
 ├── tests/        the package: round trips, changed, missing and unlisted entries, unsafe names
 ├── docs/         FORMAT.md: the .eh3dproj format
+├── firmware_base/der gemeinsame Teil der Knoten-Firmware
 ├── tools/        ci_validate.py: manifest, versions, changelog and README checks
 ├── images/       banner
 └── eh3d.project.json   the manifest of the project
@@ -80,6 +82,7 @@ python -I tools/ci_validate.py
 ## 📚 Dokumentation und Community
 
 * [Projektformat](docs/FORMAT.md): die Einträge, die Metadaten, das Integritätsprotokoll und die Regeln für Leser.
+* [Die Firmware-Basis](docs/FIRMWARE_BASE.md): was geteilt wird, wie es identisch gehalten wird und wie man einen Knoten hinzufügt.
 * [Änderungsprotokoll](CHANGELOG.md)
 * [Mitwirken](CONTRIBUTING.md)
 * [Sicherheitsrichtlinie](SECURITY.md)

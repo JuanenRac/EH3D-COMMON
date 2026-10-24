@@ -20,6 +20,8 @@ jobs:
           python-version: "3.12"
       - name: Manifest, documentation and language parity
         run: python -I tools/ci_validate.py
+      - name: Firmware base copies
+        run: python -I tools/sync_firmware_base.py check
 
   rust:
     name: Rust (${{ matrix.os }})

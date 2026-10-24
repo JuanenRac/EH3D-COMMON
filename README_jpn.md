@@ -42,10 +42,11 @@
 * **制限**：パッケージのフォルダーの外に出られる名前のエントリーは拒否され、大きすぎるエントリーや多すぎるエントリーも拒否されます。
 * **テレメトリ型**：軸、スピンドル、マシン状態、重大度付きの GRBL アラームコード。
 * **テーマ**：スイートの色とコントラストチェック。
+* **ノードのファームウェアベース**（`firmware_base/`、`tools/sync_firmware_base.py` 付き）：すべての EH3D ノードが共有する ESP32 ノードファームウェアの部分（設定ドキュメント、ネットワーク、パネルのサーバー、ユーザーとセッション、ロールバック付き更新、ログ、自己保護、およびそれに付随するテスト）を、プロジェクト名をプレースホルダーにして 1 か所に書いたものです。各ノードは自分のコピーを持って単独でビルドし、ツールがベースを各ノードに書き込み、コピーがずれたときに知らせます。
 
 ## 🧩 EH3D での役割
 
-EH3D-COMMON はスイートの土台です。プロジェクトを開いたり保存したりするライブラリやプログラムが、これに依存する予定です。それらはまだ存在しません。
+EH3D-COMMON はスイートの土台です。プロジェクトを開いたり保存したりするライブラリやプログラムが、これに依存する予定です。それらはまだ存在しません。ノードのファームウェアベースもここにあります。EH3D-NODE-BUNGARD がそれを使う最初のノードです。
 
 ## 📂 リポジトリ構成
 
@@ -54,6 +55,7 @@ EH3D-COMMON/
 ├── src/          container.rs, project.rs, telemetry.rs, theme.rs, error.rs
 ├── tests/        the package: round trips, changed, missing and unlisted entries, unsafe names
 ├── docs/         FORMAT.md: the .eh3dproj format
+├── firmware_base/ノードのファームウェアの共有部分
 ├── tools/        ci_validate.py: manifest, versions, changelog and README checks
 ├── images/       banner
 └── eh3d.project.json   the manifest of the project
@@ -80,6 +82,7 @@ python -I tools/ci_validate.py
 ## 📚 ドキュメントとコミュニティ
 
 * [プロジェクト形式](docs/FORMAT.md)：エントリー、メタデータ、整合性レコード、読み取り側のルール。
+* [ファームウェアベース](docs/FIRMWARE_BASE.md)：何を共有するか、どう同一に保つか、ノードの追加方法。
 * [変更履歴](CHANGELOG.md)
 * [貢献方法](CONTRIBUTING.md)
 * [セキュリティポリシー](SECURITY.md)
