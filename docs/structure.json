@@ -83,6 +83,35 @@
       }
     },
     {
+      "name": "crates/",
+      "span": 3,
+      "accent": "a",
+      "tree": {
+        "en": "shared crates: the view of a job, the themes and the ZIP job archives",
+        "es": "crates compartidos: la vista de un trabajo, los temas y los archivos ZIP de trabajos",
+        "de": "gemeinsame Crates: die Ansicht eines Auftrags, die Themen und die ZIP-Auftragsarchive",
+        "fr": "crates partagés : la vue d'un travail, les thèmes et les archives ZIP de travaux",
+        "it": "crate condivisi: la vista di un lavoro, i temi e gli archivi ZIP dei lavori",
+        "ja": "共有クレート：ジョブの表示、テーマ、ZIP ジョブアーカイブ",
+        "zh": "共享 crate：作业视图、主题和 ZIP 作业压缩包",
+        "pt": "crates partilhados: a vista de um trabalho, os temas e os arquivos ZIP de trabalhos"
+      },
+      "rows": [
+        {
+          "desc": {
+            "en": "shared crates: the view of a job, the themes and the ZIP job archives",
+            "es": "crates compartidos: la vista de un trabajo, los temas y los archivos ZIP de trabajos",
+            "de": "gemeinsame Crates: die Ansicht eines Auftrags, die Themen und die ZIP-Auftragsarchive",
+            "fr": "crates partagés : la vue d'un travail, les thèmes et les archives ZIP de travaux",
+            "it": "crate condivisi: la vista di un lavoro, i temi e gli archivi ZIP dei lavori",
+            "ja": "共有クレート：ジョブの表示、テーマ、ZIP ジョブアーカイブ",
+            "zh": "共享 crate：作业视图、主题和 ZIP 作业压缩包",
+            "pt": "crates partilhados: a vista de um trabalho, os temas e os arquivos ZIP de trabalhos"
+          }
+        }
+      ]
+    },
+    {
       "name": "firmware_base/",
       "span": 3,
       "accent": "b",

@@ -177,6 +177,7 @@ EH3D-COMMON/
 │   ├── project.rs                               i metadati e la loro validazione
 │   ├── telemetry.rs                             assi, mandrino, stati e codici di allarme
 │   └── theme.rs error.rs lib.rs                 i colori con contrasto, gli errori e la radice del crate
+├── crates/                                      crate condivisi: la vista di un lavoro, i temi e gli archivi ZIP dei lavori
 ├── firmware_base/
 │   ├── core/                                    senza hardware: impostazioni, auth, piano di rete
 │   ├── main/                                    codice ESP-IDF: rete, archivio, API del pannello
