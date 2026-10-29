@@ -99,6 +99,45 @@ impl Scene {
     }
 
     /// The box that holds every hole and every point: (min x, min y, max x, max y). `None` for an empty scene.
+    /// The scene copied over a panel: `columns` by `rows`, each copy `pitch` from the next (X to the right, Y upwards).
+    pub fn panelized(&self, columns: u32, rows: u32, pitch: (f64, f64)) -> Scene {
+        let mut out = Scene::new(self.table);
+        for iy in 0..rows.max(1) {
+            for ix in 0..columns.max(1) {
+                let (dx, dy) = (ix as f64 * pitch.0, iy as f64 * pitch.1);
+                out.holes.extend(self.holes.iter().map(|h| Hole {
+                    x_mm: h.x_mm + dx,
+                    y_mm: h.y_mm + dy,
+                    ..h.clone()
+                }));
+                out.paths.extend(self.paths.iter().map(|p| Path {
+                    points: p.points.iter().map(|&(x, y)| (x + dx, y + dy)).collect(),
+                    ..p.clone()
+                }));
+            }
+        }
+        out
+    }
+
+    /// How many copies of a board of `size` mm, `pitch` mm apart, fit in `room` mm starting at `start` (at least one each way).
+    pub fn panel_fit(
+        start: (f64, f64),
+        size: (f64, f64),
+        room: (f64, f64),
+        pitch: (f64, f64),
+    ) -> (u32, u32) {
+        let n = |start: f64, size: f64, room: f64, pitch: f64| {
+            if pitch <= 0.0 {
+                return 1;
+            }
+            (((room - start - size) / pitch).floor().max(0.0) as u32) + 1
+        };
+        (
+            n(start.0, size.0, room.0, pitch.0),
+            n(start.1, size.1, room.1, pitch.1),
+        )
+    }
+
     pub fn bounds(&self) -> Option<(f64, f64, f64, f64)> {
         let pts = self
             .holes
@@ -182,11 +221,24 @@ pub struct Iso {
     /// Pixels per millimetre.
     pub k: f64,
     pub origin: (f64, f64),
+    /// The view turned around the vertical axis through `pivot` (a point of the table), in degrees; 0 is the usual isometric view.
+    pub yaw_deg: f64,
+    pub pivot: (f64, f64),
 }
 
 impl Iso {
     pub fn project(&self, x_mm: f64, y_mm: f64, z_mm: f64) -> (f64, f64) {
         let (c, s) = (30f64.to_radians().cos(), 30f64.to_radians().sin());
+        let (x_mm, y_mm) = if self.yaw_deg == 0.0 {
+            (x_mm, y_mm)
+        } else {
+            let (sn, cs) = self.yaw_deg.to_radians().sin_cos();
+            let (dx, dy) = (x_mm - self.pivot.0, y_mm - self.pivot.1);
+            (
+                self.pivot.0 + dx * cs - dy * sn,
+                self.pivot.1 + dx * sn + dy * cs,
+            )
+        };
         (
             self.origin.0 + (x_mm - y_mm) * c * self.k,
             self.origin.1 + (x_mm + y_mm) * s * self.k - z_mm * self.k,
@@ -206,13 +258,60 @@ impl Iso {
             (width - w_mm * k) / 2.0 - left,
             (height - h_mm * k) / 2.0 + height_mm * k,
         );
-        Iso { k, origin }
+        Iso {
+            k,
+            origin,
+            yaw_deg: 0.0,
+            pivot: (0.0, 0.0),
+        }
     }
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn a_panel_repeats_the_board_and_says_how_many_fit() {
+        let mut sc = Scene::new(Table::new(300.0, 200.0));
+        sc.holes.push(Hole {
+            x_mm: 10.0,
+            y_mm: 5.0,
+            diameter_mm: 0.8,
+            tool: 1,
+            done: false,
+        });
+        let p = sc.panelized(3, 2, (50.0, 40.0));
+        assert_eq!(p.holes.len(), 6);
+        assert!(p.holes.iter().any(|h| h.x_mm == 110.0 && h.y_mm == 45.0));
+        assert_eq!(
+            Scene::panel_fit((0.0, 0.0), (40.0, 30.0), (300.0, 200.0), (50.0, 40.0)),
+            (6, 5)
+        );
+        assert_eq!(
+            Scene::panel_fit((0.0, 0.0), (400.0, 30.0), (300.0, 200.0), (50.0, 40.0)).0,
+            1
+        );
+    }
+
+    #[test]
+    fn a_turned_view_moves_a_point_around_the_pivot() {
+        let a = Iso {
+            k: 1.0,
+            origin: (0.0, 0.0),
+            yaw_deg: 0.0,
+            pivot: (50.0, 50.0),
+        };
+        let b = Iso {
+            yaw_deg: 360.0,
+            ..a
+        };
+        let (p, q) = (a.project(10.0, 20.0, 5.0), b.project(10.0, 20.0, 5.0));
+        assert!((p.0 - q.0).abs() < 1e-9 && (p.1 - q.1).abs() < 1e-9);
+        let c = Iso { yaw_deg: 90.0, ..a };
+        assert_ne!(a.project(10.0, 20.0, 0.0), c.project(10.0, 20.0, 0.0));
+        assert_eq!(a.project(50.0, 50.0, 0.0), c.project(50.0, 50.0, 0.0));
+    }
 
     fn hole(x: f64, y: f64, d: f64, done: bool) -> Hole {
         Hole {
