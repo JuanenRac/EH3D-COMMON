@@ -1,0 +1,12 @@
+[package]
+name = "eh3d-view"
+version = "0.0.1"
+edition = "2021"
+rust-version = "1.75"
+description = "What the EH3D machine-control programs show: a job on the work table in 2D and 3D, the themes of the interface and its words in eight languages"
+license = "GPL-3.0-or-later"
+authors = ["JuanenRac (Electro Hobby 3D) <electrohobby3d@gmail.com>"]
+repository = "https://github.com/JuanenRac/EH3D-COMMON"
+
+[dependencies]
+eh3d-common = { path = "../.." }

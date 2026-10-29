@@ -158,6 +158,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "eh3d-view"
+version = "0.0.1"
+dependencies = [
+ "eh3d-common",
+]
+
+[[package]]
 name = "equivalent"
 version = "1.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"

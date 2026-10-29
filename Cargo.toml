@@ -11,6 +11,11 @@ readme = "README.md"
 keywords = ["cnc", "cam", "pcb", "gerber", "project-format"]
 categories = ["data-structures", "parser-implementations"]
 
+[workspace]
+# the data crate of the suite is the root package; the crates beside it may draw, read files or talk to machines
+members = [".", "crates/view"]
+resolver = "2"
+
 [dependencies]
 # serde / serde_json: project.json and integrity.json are plain JSON, readable without this crate.
 serde = { version = "1", features = ["derive"] }

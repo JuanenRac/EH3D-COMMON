@@ -44,6 +44,13 @@ impl Rgb {
         let (light, dark) = if a > b { (a, b) } else { (b, a) };
         (light + 0.05) / (dark + 0.05)
     }
+
+    /// Towards white by `amount` (0.0 leaves it as it is, 1.0 makes it white).
+    pub fn lighten(self, amount: f64) -> Self {
+        let step =
+            |c: u8| (f64::from(c) + (255.0 - f64::from(c)) * amount.clamp(0.0, 1.0)).round() as u8;
+        Self(step(self.0), step(self.1), step(self.2))
+    }
 }
 
 /// The background of windows.
@@ -75,6 +82,17 @@ mod tests {
         for bad in ["", "#12345", "#1234567", "#gg0000", "éééééé"] {
             assert_eq!(Rgb::from_hex(bad), None, "{bad}");
         }
+    }
+
+    #[test]
+    fn lighten_goes_towards_white() {
+        let c = Rgb(0, 100, 200);
+        assert_eq!(c.lighten(0.0), c);
+        assert_eq!(c.lighten(1.0), Rgb(255, 255, 255));
+        assert_eq!(c.lighten(0.5), Rgb(128, 178, 228));
+        // out of range is kept in range
+        assert_eq!(c.lighten(7.0), Rgb(255, 255, 255));
+        assert!(c.lighten(0.3).luminance() > c.luminance());
     }
 
     #[test]
