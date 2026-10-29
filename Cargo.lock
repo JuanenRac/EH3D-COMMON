@@ -143,6 +143,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "eh3d-archive"
+version = "0.0.1"
+dependencies = [
+ "zip",
+]
+
+[[package]]
 name = "eh3d-common"
 version = "0.0.1"
 dependencies = [
