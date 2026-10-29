@@ -198,6 +198,10 @@ texts! {
     LblWorkArea => ["Work area", "Área de trabajo", "Area di lavoro", "Arbeitsbereich", "Zone de travail", "Área de trabalho", "工作区", "作業エリア"],
     LblWholeMachine => ["Whole machine", "Máquina completa", "Macchina intera", "Ganze Maschine", "Machine entière", "Máquina completa", "整机", "機械全体"],
     LblLayers => ["Layers", "Capas", "Livelli", "Ebenen", "Calques", "Camadas", "图层", "レイヤー"],
+    SoundFinish => ["Sound when the job ends", "Sonido al terminar el trabajo", "Suono alla fine del lavoro", "Ton am Ende des Auftrags", "Son à la fin du travail", "Som ao terminar o trabalho", "作业结束时的声音", "作業終了時の音"],
+    SoundTool => ["Sound when a tool is asked for", "Sonido al pedir una herramienta", "Suono alla richiesta di un utensile", "Ton bei Werkzeuganforderung", "Son à la demande d'un outil", "Som ao pedir uma ferramenta", "请求刀具时的声音", "工具を求めるときの音"],
+    SoundFileHint => ["WAV file (empty: the default tone)", "Archivo WAV (vacío: el tono por defecto)", "File WAV (vuoto: il tono predefinito)", "WAV-Datei (leer: der Standardton)", "Fichier WAV (vide : la tonalité par défaut)", "Ficheiro WAV (vazio: o tom predefinido)", "WAV 文件（留空：默认提示音）", "WAV ファイル（空欄：既定の音）"],
+    SoundTest => ["Test", "Probar", "Prova", "Testen", "Tester", "Testar", "试听", "試す"],
 }
 
 pub fn tr(lang: Lang, text: Text) -> &'static str {
