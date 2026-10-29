@@ -87,26 +87,26 @@
       "span": 3,
       "accent": "a",
       "tree": {
-        "en": "shared crates: the view of a job, the themes and the ZIP job archives",
-        "es": "crates compartidos: la vista de un trabajo, los temas y los archivos ZIP de trabajos",
-        "de": "gemeinsame Crates: die Ansicht eines Auftrags, die Themen und die ZIP-Auftragsarchive",
-        "fr": "crates partagés : la vue d'un travail, les thèmes et les archives ZIP de travaux",
-        "it": "crate condivisi: la vista di un lavoro, i temi e gli archivi ZIP dei lavori",
-        "ja": "共有クレート：ジョブの表示、テーマ、ZIP ジョブアーカイブ",
-        "zh": "共享 crate：作业视图、主题和 ZIP 作业压缩包",
-        "pt": "crates partilhados: a vista de um trabalho, os temas e os arquivos ZIP de trabalhos"
+        "en": "shared crates: the job view, the ZIP archives and the machine controllers",
+        "es": "crates compartidos: la vista del trabajo, los ZIP y los controladores",
+        "de": "gemeinsame Crates: Auftragsansicht, ZIP-Archive und Steuerungen",
+        "fr": "crates partagés : la vue du travail, les ZIP et les contrôleurs",
+        "it": "crate condivisi: vista del lavoro, archivi ZIP e controllori",
+        "ja": "共有クレート：ジョブ表示、ZIP、機械コントローラー",
+        "zh": "共享 crate：作业视图、ZIP 压缩包和机器控制器",
+        "pt": "crates partilhados: vista do trabalho, ZIP e controladores"
       },
       "rows": [
         {
           "desc": {
-            "en": "shared crates: the view of a job, the themes and the ZIP job archives",
-            "es": "crates compartidos: la vista de un trabajo, los temas y los archivos ZIP de trabajos",
-            "de": "gemeinsame Crates: die Ansicht eines Auftrags, die Themen und die ZIP-Auftragsarchive",
-            "fr": "crates partagés : la vue d'un travail, les thèmes et les archives ZIP de travaux",
-            "it": "crate condivisi: la vista di un lavoro, i temi e gli archivi ZIP dei lavori",
-            "ja": "共有クレート：ジョブの表示、テーマ、ZIP ジョブアーカイブ",
-            "zh": "共享 crate：作业视图、主题和 ZIP 作业压缩包",
-            "pt": "crates partilhados: a vista de um trabalho, os temas e os arquivos ZIP de trabalhos"
+            "en": "shared crates: the job view, the ZIP archives and the machine controllers",
+            "es": "crates compartidos: la vista del trabajo, los ZIP y los controladores",
+            "de": "gemeinsame Crates: Auftragsansicht, ZIP-Archive und Steuerungen",
+            "fr": "crates partagés : la vue du travail, les ZIP et les contrôleurs",
+            "it": "crate condivisi: vista del lavoro, archivi ZIP e controllori",
+            "ja": "共有クレート：ジョブ表示、ZIP、機械コントローラー",
+            "zh": "共享 crate：作业视图、ZIP 压缩包和机器控制器",
+            "pt": "crates partilhados: vista do trabalho, ZIP e controladores"
           }
         }
       ]

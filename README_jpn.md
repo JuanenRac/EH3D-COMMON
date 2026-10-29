@@ -177,7 +177,7 @@ EH3D-COMMON/
 │   ├── project.rs                               メタデータとその検証
 │   ├── telemetry.rs                             軸、スピンドル、状態、アラーム コード
 │   └── theme.rs error.rs lib.rs                 コントラスト付きの配色、エラー、クレートのルート
-├── crates/                                      共有クレート：ジョブの表示、テーマ、ZIP ジョブアーカイブ
+├── crates/                                      共有クレート：ジョブ表示、ZIP、機械コントローラー
 ├── firmware_base/
 │   ├── core/                                    ハードウェア非依存：設定、認証、ネットワーク計画
 │   ├── main/                                    ESP-IDF コード：ネットワーク、保存、パネル API
