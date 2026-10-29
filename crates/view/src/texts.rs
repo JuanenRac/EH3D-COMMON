@@ -152,6 +152,9 @@ texts! {
     NavBack => ["Back", "Atrás", "Indietro", "Zurück", "Précédent", "Retroceder", "返回", "戻る"],
     NavUp => ["Up", "Subir", "Su", "Nach oben", "Dossier parent", "Subir", "上一级", "上へ"],
     ThisPc => ["This PC", "Este equipo", "Questo PC", "Dieser PC", "Ce PC", "Este PC", "此电脑", "このPC"],
+    SimSpeed => ["Simulation speed", "Velocidad de la simulación", "Velocità della simulazione", "Simulationsgeschwindigkeit", "Vitesse de la simulation", "Velocidade da simulação", "模拟速度", "シミュレーション速度"],
+    DefaultValues => ["Defaults", "Valores por defecto", "Valori predefiniti", "Standardwerte", "Valeurs par défaut", "Valores predefinidos", "默认值", "既定値"],
+    TypeValueHint => ["Click a value to type it", "Pulsa un valor para escribirlo", "Clicca un valore per digitarlo", "Auf einen Wert klicken, um ihn einzugeben", "Cliquez sur une valeur pour la saisir", "Clique num valor para o escrever", "点击数值即可输入", "値をクリックして入力"],
 }
 
 pub fn tr(lang: Lang, text: Text) -> &'static str {
