@@ -224,11 +224,14 @@ pub struct Iso {
     /// The view turned around the vertical axis through `pivot` (a point of the table), in degrees; 0 is the usual isometric view.
     pub yaw_deg: f64,
     pub pivot: (f64, f64),
+    /// How high the eye is over the table, in degrees; 30 is the usual isometric view, 90 would be straight from above.
+    pub pitch_deg: f64,
 }
 
 impl Iso {
     pub fn project(&self, x_mm: f64, y_mm: f64, z_mm: f64) -> (f64, f64) {
-        let (c, s) = (30f64.to_radians().cos(), 30f64.to_radians().sin());
+        let (c, s) = (30f64.to_radians().cos(), self.pitch_deg.to_radians().sin());
+        let rise = self.pitch_deg.to_radians().cos() / c;
         let (x_mm, y_mm) = if self.yaw_deg == 0.0 {
             (x_mm, y_mm)
         } else {
@@ -241,7 +244,7 @@ impl Iso {
         };
         (
             self.origin.0 + (x_mm - y_mm) * c * self.k,
-            self.origin.1 + (x_mm + y_mm) * s * self.k - z_mm * self.k,
+            self.origin.1 + (x_mm + y_mm) * s * self.k - z_mm * rise * self.k,
         )
     }
 
@@ -263,6 +266,7 @@ impl Iso {
             origin,
             yaw_deg: 0.0,
             pivot: (0.0, 0.0),
+            pitch_deg: 30.0,
         }
     }
 }
@@ -295,12 +299,30 @@ mod tests {
     }
 
     #[test]
+    fn a_higher_eye_flattens_the_height_and_spreads_the_depth() {
+        let a = Iso {
+            k: 1.0,
+            origin: (0.0, 0.0),
+            yaw_deg: 0.0,
+            pivot: (0.0, 0.0),
+            pitch_deg: 30.0,
+        };
+        let b = Iso {
+            pitch_deg: 60.0,
+            ..a
+        };
+        assert!(b.project(0.0, 0.0, 10.0).1.abs() < a.project(0.0, 0.0, 10.0).1.abs());
+        assert!(b.project(10.0, 10.0, 0.0).1 > a.project(10.0, 10.0, 0.0).1);
+    }
+
+    #[test]
     fn a_turned_view_moves_a_point_around_the_pivot() {
         let a = Iso {
             k: 1.0,
             origin: (0.0, 0.0),
             yaw_deg: 0.0,
             pivot: (50.0, 50.0),
+            pitch_deg: 30.0,
         };
         let b = Iso {
             yaw_deg: 360.0,
