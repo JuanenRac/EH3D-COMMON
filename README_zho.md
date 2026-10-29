@@ -177,7 +177,7 @@ EH3D-COMMON/
 │   ├── project.rs                               元数据及其校验
 │   ├── telemetry.rs                             轴、主轴、状态和报警码
 │   └── theme.rs error.rs lib.rs                 带对比度的配色、错误和 crate 根
-├── crates/                                      共享 crate：作业视图、ZIP 压缩包和机器控制器
+├── crates/                                      共享 crate：视图、ZIP、机器文件、控制器
 ├── firmware_base/
 │   ├── core/                                    无硬件：设置、认证、网络方案
 │   ├── main/                                    ESP-IDF 代码：网络、存储、面板 API

@@ -58,7 +58,7 @@
 <rect x="360" y="436" width="3" height="90" rx="1.5" fill="#00E5FF"><animate attributeName="opacity" values="0.55;1;0.55" dur="4s" begin="0.6s" repeatCount="indefinite"/></rect>
 <text x="382" y="456" font-family="'JetBrains Mono','Cascadia Code','SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="19" font-weight="700" fill="#F2F6FA" text-anchor="start">crates/</text>
 <line x1="382" y1="470" x2="1122" y2="470" stroke="#00E5FF" stroke-opacity="0.35" stroke-width="1"/>
-<text x="382" y="502" font-family="'JetBrains Mono','Cascadia Code','SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="13.5" font-weight="400" fill="#C9D4DF" text-anchor="start">shared crates: the job view, the ZIP archives and the machine controllers</text>
+<text x="382" y="502" font-family="'JetBrains Mono','Cascadia Code','SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="13.5" font-weight="400" fill="#C9D4DF" text-anchor="start">shared crates: job view, ZIP, machine files and controllers</text>
 <rect x="360" y="570" width="780" height="219" rx="10" fill="url(#card)" stroke="#1E2A36" stroke-width="1"/>
 <rect x="360" y="584" width="3" height="191" rx="1.5" fill="#4DA3FF"><animate attributeName="opacity" values="0.55;1;0.55" dur="4s" begin="1.2s" repeatCount="indefinite"/></rect>
 <text x="382" y="604" font-family="'JetBrains Mono','Cascadia Code','SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="19" font-weight="700" fill="#F2F6FA" text-anchor="start">firmware_base/</text>

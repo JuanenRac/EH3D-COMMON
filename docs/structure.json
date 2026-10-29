@@ -87,26 +87,26 @@
       "span": 3,
       "accent": "a",
       "tree": {
-        "en": "shared crates: the job view, the ZIP archives and the machine controllers",
-        "es": "crates compartidos: la vista del trabajo, los ZIP y los controladores",
-        "de": "gemeinsame Crates: Auftragsansicht, ZIP-Archive und Steuerungen",
-        "fr": "crates partagés : la vue du travail, les ZIP et les contrôleurs",
-        "it": "crate condivisi: vista del lavoro, archivi ZIP e controllori",
-        "ja": "共有クレート：ジョブ表示、ZIP、機械コントローラー",
-        "zh": "共享 crate：作业视图、ZIP 压缩包和机器控制器",
-        "pt": "crates partilhados: vista do trabalho, ZIP e controladores"
+        "en": "shared crates: job view, ZIP, machine files and controllers",
+        "es": "crates compartidos: vista, ZIP, ficheros de máquina, controladores",
+        "de": "gemeinsame Crates: Ansicht, ZIP, Maschinendateien, Steuerungen",
+        "fr": "crates partagés : vue, ZIP, fichiers machine, contrôleurs",
+        "it": "crate condivisi: vista, ZIP, file macchina, controllori",
+        "ja": "共有クレート：表示、ZIP、機械ファイル、コントローラー",
+        "zh": "共享 crate：视图、ZIP、机器文件、控制器",
+        "pt": "crates partilhados: vista, ZIP, ficheiros de máquina, controladores"
       },
       "rows": [
         {
           "desc": {
-            "en": "shared crates: the job view, the ZIP archives and the machine controllers",
-            "es": "crates compartidos: la vista del trabajo, los ZIP y los controladores",
-            "de": "gemeinsame Crates: Auftragsansicht, ZIP-Archive und Steuerungen",
-            "fr": "crates partagés : la vue du travail, les ZIP et les contrôleurs",
-            "it": "crate condivisi: vista del lavoro, archivi ZIP e controllori",
-            "ja": "共有クレート：ジョブ表示、ZIP、機械コントローラー",
-            "zh": "共享 crate：作业视图、ZIP 压缩包和机器控制器",
-            "pt": "crates partilhados: vista do trabalho, ZIP e controladores"
+            "en": "shared crates: job view, ZIP, machine files and controllers",
+            "es": "crates compartidos: vista, ZIP, ficheros de máquina, controladores",
+            "de": "gemeinsame Crates: Ansicht, ZIP, Maschinendateien, Steuerungen",
+            "fr": "crates partagés : vue, ZIP, fichiers machine, contrôleurs",
+            "it": "crate condivisi: vista, ZIP, file macchina, controllori",
+            "ja": "共有クレート：表示、ZIP、機械ファイル、コントローラー",
+            "zh": "共享 crate：视图、ZIP、机器文件、控制器",
+            "pt": "crates partilhados: vista, ZIP, ficheiros de máquina, controladores"
           }
         }
       ]

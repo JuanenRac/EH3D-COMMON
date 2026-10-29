@@ -1,0 +1,11 @@
+[package]
+name = "eh3d-bungard-formats"
+version = "0.0.1"
+edition = "2021"
+rust-version = "1.88"
+description = "The files of the Bungard CCD machines and their programs: the Excellon drill file, the HP-GL routing file, the tool tables and the machine configuration, read and written back with their own layout"
+license = "GPL-3.0-or-later"
+authors = ["JuanenRac (Electro Hobby 3D) <electrohobby3d@gmail.com>"]
+repository = "https://github.com/JuanenRac/EH3D-COMMON"
+
+[dependencies]
