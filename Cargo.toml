@@ -37,3 +37,7 @@ tempfile = "3"
 [profile.release]
 opt-level = 3
 lto = true
+
+[profile.dev]
+# a lighter debug build: the file and line of a panic stay, the full debug symbols (the bulk of the target folder) do not
+debug = "line-tables-only"
