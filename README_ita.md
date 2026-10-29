@@ -6,7 +6,7 @@
 
 <p align="center"><a href="README.md">🇺🇸 English</a> | <a href="README_spa.md">🇪🇸 Español</a> | <a href="README_fra.md">🇫🇷 Français</a> | 🇮🇹 <b>Italiano</b> | <a href="README_deu.md">🇩🇪 Deutsch</a> | <a href="README_zho.md">🇨🇳 中文</a> | <a href="README_jpn.md">🇯🇵 日本語</a> | <a href="README_por.md">🇵🇹 Português</a></p>
 
-### Il modello di dati condiviso della EH3D Fabrication Suite: contenitore di progetto, metadati, controlli di integrità e telemetria della macchina
+### Il modello di dati condiviso della EH3D Fabrication Suite: contenitore di progetto, metadati, controlli di integrità e telemetria macchina
 
 <p align="center">
   <img src="https://img.shields.io/badge/License-GPL%203.0--or--later-blue.svg" alt="GPL 3.0 or later">
@@ -18,11 +18,11 @@
 
 ---
 
-**Verifica di onestà - cosa funziona oggi:** una libreria Rust con il contenitore di progetto (`.eh3dproj`), i metadati di un progetto, controlli di integrità SHA-256 e i tipi di telemetria della macchina. Tutto viene eseguito nei test sul computer di sviluppo; nessun programma della suite la usa ancora e nulla è stato eseguito su una macchina.
+**Verifica di onestà - cosa funziona oggi:** una libreria Rust con il contenitore di progetto (`.eh3dproj`), i metadati di un progetto, i controlli di integrità SHA-256, i tipi di telemetria macchina e i colori della suite, più la base del firmware che ogni nodo ESP32 della suite copia (49 file e lo strumento che mantiene le copie identiche). 29 test girano su un computer. Nessun programma della suite usa ancora la libreria e nulla di qui è stato eseguito su una macchina o su una scheda.
 
 ---
 
-> **Stato di sicurezza funzionale e informatica:** questa libreria non è un sistema di sicurezza e nessuna macchina è stata controllata con essa. Il contenitore rileva un pacchetto danneggiato o alterato per errore, ma non è firmato né cifrato: non dimostra chi ha scritto un progetto. Un pacchetto di un'altra persona è un input non attendibile, per questo i nomi delle voci, le dimensioni e il numero di voci sono limitati.
+> **Stato di sicurezza funzionale e informatica:** questa libreria non è un sistema di sicurezza funzionale e nessuna macchina è stata controllata con essa. Il contenitore rileva un pacchetto danneggiato o alterato per errore, ma non è firmato né cifrato: non prova chi ha scritto un progetto. Un pacchetto di un'altra persona è un input non fidato, per questo nomi, dimensioni e numero delle voci sono limitati.
 
 ## 📋 In breve
 
@@ -31,8 +31,10 @@
 | Versione | `0.0.1` |
 | Maturità | Impalcatura |
 | Test | 29 |
-| Stack tecnologico | Rust |
-| Su hardware reale | Non applicabile: una libreria di dati, nulla qui parla con una macchina |
+| Stack tecnologico | Rust (crate di libreria) e C++17 (base del firmware) |
+| Su hardware reale | Non applicabile: una libreria di dati, nulla qui parla con una macchina; la base del firmware non è mai stata eseguita su una scheda |
+
+**Vai a:** [Panoramica](#-panoramica) · [Architettura](#-architettura) · [Avvio rapido](#-avvio-rapido) · [Test](#-test) · [Struttura](#-struttura-del-repository) · [Correlati](#-progetti-correlati)
 
 ## 🚦 Stato del progetto
 
@@ -42,44 +44,105 @@ Ogni riga è una parte di questo repository e il semaforo dice a che punto è og
 
 | Area | Stato | Cosa significa qui |
 |---|---|---|
-| Software | 🟡 | Il contenitore, i metadati e i tipi di telemetria funzionano come libreria Rust; nessun programma della suite li usa ancora. |
-| Test | 🟢 | 29 test passano (`cargo test`): andata e ritorno, voci modificate, mancanti o non elencate, e nomi non sicuri. |
-| Formato dei dati | 🟡 | `.eh3dproj` è uno ZIP standard con lo SHA-256 di ogni voce, descritto in `docs/FORMAT.md`; una versione maggiore più recente viene rifiutata. Per ora lo leggono e lo scrivono solo i suoi test. |
-| Sicurezza | 🟡 | I nomi di voce non sicuri e le voci troppo grandi o troppo numerose vengono rifiutati, e un pacchetto modificato non si apre; il pacchetto non è firmato né cifrato e non ha avuto una revisione indipendente. |
-| Base firmware condivisa | 🟠 | La parte del firmware di nodo condivisa da tutti i nodi è testata solo tramite EH3D-NODE-BUNGARD, l'unico nodo che la usa; un secondo nodo non esiste ancora. |
-| Hardware reale | 🟠 | La libreria non ne ha bisogno, ma la base firmware che contiene non è mai stata eseguita su una scheda. |
-| Documentazione | 🟢 | README in otto lingue, la descrizione del formato e la guida alla base firmware; i controlli li confrontano con il manifesto e il registro delle modifiche. |
+| Contenitore | 🟡 | `.eh3dproj` è uno ZIP standard con un registro SHA-256 di ogni voce; legge, scrive e rifiuta voci danneggiate, alterate, non elencate o non sicure. Finora lo leggono e scrivono solo i suoi test. |
+| Metadati | 🟡 | I metadati di un progetto (unità, zero, livelli, utensili, percorsi, fiduciali) sono convalidati e portano una versione di formato semantica; non c'è ancora migrazione perché 1.0.0 è il primo formato. |
+| Telemetria e tema | 🟢 | Assi, mandrino, stati della macchina, codici di allarme GRBL con la loro gravità e colori della suite con controllo del contrasto, tutto testato. |
+| Test | 🟢 | Passano 29 test (`cargo test`): 15 nei moduli e 14 sul contenitore. |
+| Sicurezza | 🟡 | Nomi non sicuri, voci troppo grandi o troppo numerose e qualsiasi voce alterata vengono rifiutati; il pacchetto non è firmato né cifrato e non ha avuto una revisione indipendente. |
+| Base del firmware | 🟠 | 49 file condivisi dai nodi ESP32, mantenuti identici da `tools/sync_firmware_base.py`; provata solo tramite EH3D-NODE-BUNGARD, l'unico nodo che la usa, e mai eseguita su una scheda. |
+| Uso da altri programmi | 🔴 | Nessun programma della suite dipende ancora dal crate. |
+| Documentazione | 🟢 | README in otto lingue, la descrizione del formato e la guida alla base del firmware; la CI le confronta con il manifesto e il registro delle modifiche. |
 
 ## 🎯 Panoramica
 
-* Il **contenitore di progetto**: un pacchetto `.eh3dproj` è un archivio ZIP standard con `project.json`, `integrity.json` e le cartelle `layers/`, `toolpaths/` e `vision/`.
-* I **metadati** di un progetto: nome, identità, unità, zero del pezzo, livelli, utensili, percorsi utensile e fiduciali, con una versione di formato semantica. Una versione maggiore più recente viene rifiutata invece di essere capita a metà.
-* Il **registro di integrità**: lo SHA-256 e la dimensione di ogni voce. Un pacchetto in cui una voce è cambiata, manca o non è elencata non si apre.
-* I **limiti**: i nomi di voce che potrebbero uscire dalla cartella del pacchetto vengono rifiutati, come le voci troppo grandi o troppo numerose.
-* I **tipi di telemetria**: assi, mandrino, stati della macchina e codici di allarme GRBL con la loro gravità.
-* Il **tema**: i colori della suite, con un controllo del contrasto.
-* La **base del firmware dei nodi** (`firmware_base/`, con `tools/sync_firmware_base.py`): la parte del firmware dei nodi ESP32 che condividono tutti i nodi EH3D - il documento delle impostazioni, la rete, il server del pannello, utenti e sessioni, l'aggiornamento con ripristino, il registro, l'autoprotezione e i test che li accompagnano - scritta una volta con il nome del progetto come segnaposto. Ogni nodo tiene la propria copia e si compila da solo; lo strumento scrive la base in ogni nodo e avvisa quando una copia si è discostata.
+* Il **contenitore di progetto**: un pacchetto `.eh3dproj` è un archivio ZIP standard con `project.json`, `integrity.json` e le cartelle `layers/`, `toolpaths/` e `vision/`. La scrittura è deterministica (lo stesso contenuto dà gli stessi byte) e passa per un file temporaneo.
+* I **metadati** di un progetto: nome, identità, unità, zero del pezzo, livelli, utensili, percorsi e fiduciali, con una versione di formato semantica (oggi 1.0.0). Una versione maggiore più nuova viene rifiutata invece di essere capita a metà; una più vecchia richiede una migrazione registrata, e non ne esiste ancora nessuna.
+* Il **registro di integrità**: lo SHA-256 e la dimensione di ogni voce. Un pacchetto con una voce cambiata, mancante o non elencata non si apre.
+* I **limiti**: i nomi di voce che potrebbero uscire dalla cartella del pacchetto vengono rifiutati, così come le voci troppo grandi o troppo numerose.
+* I **tipi di telemetria**: assi, mandrino, stati della macchina letti dalle parole di stato e i nove codici di allarme GRBL con la loro gravità (avviso o critico; un codice sconosciuto conta come critico).
+* Il **tema**: i colori della suite, con un controllo del contrasto WCAG che i test applicano a ogni colore di testo e di stato.
+* La **base del firmware dei nodi** (`firmware_base/`, con `tools/sync_firmware_base.py`): la parte del firmware dei nodi ESP32 che ogni nodo EH3D condivide - il documento delle impostazioni, la rete, il server del pannello, utenti e sessioni, l'aggiornamento con ripristino, il registro, l'autoprotezione e i test relativi - scritta una volta con il nome del progetto come segnaposto. Ogni nodo tiene la propria copia e si compila da solo; lo strumento scrive la base in ogni nodo e segnala quando una copia si è discostata.
 
 ## 🧩 Ruolo in EH3D
 
-EH3D-COMMON è la base della suite: le librerie e i programmi che aprono o salvano un progetto sono previsti come dipendenti da essa. Nessuno esiste ancora. Qui vive anche la base del firmware dei nodi: EH3D-NODE-BUNGARD è il primo nodo che la usa.
+EH3D-COMMON è la base della suite: le librerie e i programmi che aprono o salvano un progetto dovranno dipenderne. Nessuno esiste ancora. Qui vive anche la base del firmware dei nodi: EH3D-NODE-BUNGARD è il primo nodo che la usa.
 
-## 📂 Struttura del repository
+## 🏛️ Architettura
 
-```text
-EH3D-COMMON/
-├── src/          container.rs, project.rs, telemetry.rs, theme.rs, error.rs
-├── tests/        the package: round trips, changed, missing and unlisted entries, unsafe names
-├── docs/         FORMAT.md: the .eh3dproj format
-├── firmware_base/la parte condivisa del firmware dei nodi
-├── tools/        ci_validate.py: manifest, versions, changelog and README checks
-├── images/       banner
-└── eh3d.project.json   the manifest of the project
+<p align="center">
+  <img src="images/architecture.svg" alt="Architettura di EH3D-COMMON: chi lo usa, che cosa contiene e da che cosa dipende" width="100%">
+</p>
+
+Come si incastrano le parti di questo repository: chi lo usa, che cosa contiene e da che cosa dipende. L'immagine è disegnata da `docs/architecture.json` e verificata rispetto al codice.
+
+## ✨ Funzionalità
+
+* **Scrittura deterministica e atomica:** lo stesso progetto dà sempre gli stessi byte e il file viene scritto tramite uno temporaneo, quindi una scrittura fallita non lascia un pacchetto a metà.
+* **Tutto controllato in lettura:** prima nomi, numero e dimensioni, poi il registro di integrità contro ogni voce e infine i metadati; il primo problema ferma la lettura con un errore tipizzato.
+* **Un formato che ogni strumento apre:** ZIP semplice (solo deflate) e JSON semplice, leggibili senza questo crate; `docs/FORMAT.md` è il contratto scritto.
+* **I lettori restano compatibili:** la stessa versione maggiore viene letta ignorando ciò che non conosce; una versione maggiore più nuova viene rifiutata.
+* **Codici di allarme che non si perdono:** un codice che questo crate non conosce resta come `Unknown(n)` e conta come critico.
+* **Una base del firmware per tutti i nodi:** si modifica dove è nata l'esigenza, si fa `import`, si fa `sync` negli altri e il `check` della CI segnala quando una copia si discosta.
+
+## 🔒 Sicurezza e protezione
+
+Il contenitore legge file che altre persone possono inviare, quindi ogni controllo qui sotto è una difesa contro un pacchetto ostile o danneggiato, e ognuno ha il suo test.
+
+| Minaccia | Difesa |
+|---|---|
+| Un nome che esce dalla cartella del pacchetto (`../x`, `/etc/x`, `C:\x`) | `check_entry_name` rifiuta un nome vuoto, assoluto o troppo lungo (oltre 240 byte), una barra rovesciata, i due punti, un carattere di controllo e qualsiasi parte vuota, `.` o `..`, in scrittura e di nuovo per ogni nome trovato in uno ZIP |
+| Una zip bomb o un pacchetto con un numero enorme di voci | al massimo 10.000 voci, 256 MiB per voce e 1 GiB in totale; la lettura di una voce si ferma un byte oltre il suo limite |
+| Una voce alterata per strada (per errore o di proposito) | lo SHA-256 e la dimensione di ogni voce vengono confrontati con `integrity.json`; una voce diversa, mancante o non elencata fa rifiutare l'intero pacchetto |
+| Due voci con lo stesso nome | rifiutate come duplicato in lettura, e una voce sostituita in scrittura conserva una sola copia |
+| Un pacchetto di un programma più nuovo | una versione maggiore di formato più nuova viene rifiutata invece di essere capita a metà |
+| Metadati incoerenti (nome vuoto, id utensile ripetuto, NaN, diametro negativo, un livello fuori da `layers/`) | `validate` gira prima della scrittura e dopo la lettura; un progetto non valido non si può scrivere |
+| Nessun codice unsafe | il crate è `#![forbid(unsafe_code)]` |
+
+**Ciò che non è difeso:** il pacchetto non è firmato né cifrato. Chi può riscrivere le voci può riscrivere anche il registro di integrità, quindi rileva danni e incidenti, non un autore. La libreria non ha avuto una revisione indipendente. Segnala una vulnerabilità in privato (vedi [SECURITY.md](SECURITY.md)).
+
+## 🔌 Interfacce
+
+| Interfaccia | Che cos'è | Dove |
+|---|---|---|
+| API Rust | `Package` (`new`, `add_entry`, `entry`, `entry_names`, `integrity`, `write`, `write_to_path`, `to_bytes`, `read`, `read_from_path`), `ProjectMetadata` (`new`, `validate`, `to_json`, `read_metadata`), i tipi di telemetria e `theme` | `src/` |
+| Formato di file | `.eh3dproj`: uno ZIP con `project.json`, `integrity.json` e le cartelle dati `layers/`, `toolpaths/` e `vision/` | [docs/FORMAT.md](docs/FORMAT.md) |
+| Errori | un solo enum `Error`: `Io`, `Json`, `Zip`, `UnsupportedFormat`, `MissingEntry`, `Integrity`, `UnsafePath`, `DuplicateEntry`, `TooLarge`, `InvalidMetadata` | `src/error.rs` |
+| Strumento della base del firmware | `python tools/sync_firmware_base.py check`, `sync`, `import <nodo>` e `status` | [docs/FIRMWARE_BASE.md](docs/FIRMWARE_BASE.md) |
+
+Questo repository non ha programma a riga di comando, né server, né accesso alla rete.
+
+## ⚙️ Configurazione
+
+La libreria non ha un file di configurazione: i suoi limiti sono costanti del codice, elencate qui perché si sappia cosa può contenere un pacchetto. La versione del formato fa parte del file, non è un'impostazione.
+
+| Valore | Limite | Dove |
+|---|---|---|
+| Voci in un pacchetto | da 1 a 10.000 | `MAX_ENTRIES` in `src/container.rs` |
+| Dimensione di una voce | fino a 256 MiB (268.435.456 byte) | `MAX_ENTRY_BYTES` |
+| Dimensione di tutte le voci insieme | fino a 1 GiB | `MAX_TOTAL_BYTES` |
+| Lunghezza del nome di una voce | da 1 a 240 byte | `check_entry_name` |
+| Cartelle dati | solo `layers/`, `toolpaths/`, `vision/` | `DATA_FOLDERS` in `src/project.rs` |
+| Versione del formato | 1.0.0 (la stessa versione maggiore viene letta, una più nuova rifiutata) | `FORMAT_VERSION` |
+| Diametro dell'utensile | finito e maggiore di 0 | `ProjectMetadata::validate` |
+
+La base del firmware ha un proprio documento di impostazioni (`node_settings.hpp`, `config_common.hpp`); i suoi valori appartengono a ogni nodo e sono descritti nel README di EH3D-NODE-BUNGARD.
+
+## 🚀 Avvio rapido
+
+Serve una toolchain Rust stabile (1.75 o successiva).
+
+```rust
+use eh3d_common::{Package, ProjectMetadata};
+
+fn main() -> eh3d_common::Result<()> {
+    let mut package = Package::new(ProjectMetadata::new("Test board"));
+    package.add_entry("layers/top.gbr", b"G04 test*".to_vec())?;
+    package.write_to_path(std::path::Path::new("board.eh3dproj"))?;
+    let again = Package::read_from_path(std::path::Path::new("board.eh3dproj"))?;   // controlla ogni voce
+    println!("{} data entries", again.entry_names().count());
+    Ok(())
+}
 ```
-
-## 🛠️ COMPILARE ED ESEGUIRE
-
-Serve una toolchain Rust stabile.
 
 ```bash
 cargo build --release
@@ -87,22 +150,93 @@ cargo test
 cargo clippy --all-targets -- -D warnings
 cargo fmt --check
 python -I tools/ci_validate.py
+python -I tools/sync_firmware_base.py check
 ```
+
+## 🧪 Test
+
+La suite ha 29 test (`cargo test`, eseguiti su Windows e Linux nella CI): 15 nei moduli (i metadati e la loro validazione, i codici di allarme e gli stati della macchina, i colori e il loro contrasto WCAG) e 14 sul contenitore (andata e ritorno in memoria e su file, stessi byte per lo stesso contenuto, il registro di integrità, una voce cambiata, una dimensione cambiata, una voce non elencata, una voce mancante, metadati modificati, un file che non è un pacchetto, nomi di voce non sicuri e ostili, una voce sostituita e un progetto non valido). La CI esegue anche `cargo fmt --check` e `cargo clippy` con gli avvisi come errori, `python -I tools/ci_validate.py` (manifesto, versioni, registro delle modifiche e gli otto README) e `tools/sync_firmware_base.py check` (le copie della base del firmware). I test su computer della base del firmware (`firmware_base/tests/`) girano dentro EH3D-NODE-BUNGARD, non qui.
+
+## 🏗️ Compilazione e rilascio
+
+La versione sta in `Cargo.toml` e in `eh3d.project.json`, e ogni versione ha la sua voce in [CHANGELOG.md](CHANGELOG.md). Le versioni vengono pubblicate su GitHub; la libreria si usa come crate Rust da questo repository e non è su crates.io.
+
+## 📂 Struttura del repository
+
+<p align="center">
+  <img src="images/repository-structure.svg" alt="Struttura del repository EH3D-COMMON" width="100%">
+</p>
+
+<details>
+<summary>Versione testuale dell'albero</summary>
+
+```text
+EH3D-COMMON/
+├── src/
+│   ├── container.rs                             il pacchetto: lettura, scrittura, integrità e limiti
+│   ├── project.rs                               i metadati e la loro validazione
+│   ├── telemetry.rs                             assi, mandrino, stati e codici di allarme
+│   └── theme.rs error.rs lib.rs                 i colori con contrasto, gli errori e la radice del crate
+├── firmware_base/
+│   ├── core/                                    senza hardware: impostazioni, auth, piano di rete
+│   ├── main/                                    codice ESP-IDF: rete, archivio, API del pannello
+│   ├── tests/                                   i test su computer di tutto questo
+│   ├── tools/                                   impacchetta il pannello; elenca le righe sdkconfig ignorate
+│   └── manifest.json                            quale file va in quale nodo
+├── tests/                                       il pacchetto: andata e ritorno, voci cambiate, mancanti e non elencate, nomi non sicuri
+├── docs/                                        il formato, la base del firmware e i dati delle due immagini
+├── tools/                                       controllo della CI e del README, sincronizzazione della base del firmware e strumenti per le immagini
+├── images/                                      banner e le immagini di Architettura e Struttura del repository
+├── .github/                                     workflow di CI e di rilascio, modelli di issue e pull request
+├── eh3d.project.json                            manifesto: versione, ruolo, maturità e comando di compilazione
+├── Cargo.toml Cargo.lock                        il pacchetto Rust e le sue dipendenze bloccate
+├── CHANGELOG.md                                 cosa è cambiato in ogni versione
+├── SECURITY.md SUPPORT.md                       come segnalare una vulnerabilità e dove chiedere
+└── CONTRIBUTING.md CODE_OF_CONDUCT.md LICENSE   come contribuire, codice di condotta e licenza
+```
+
+</details>
+
+## 🗺️ Roadmap e limiti noti
+
+**Limiti noti oggi**
+
+* Nessun programma della suite usa ancora la libreria, quindi il formato è stato letto e scritto solo dai suoi test.
+* Il pacchetto non è firmato né cifrato e la libreria non ha avuto una revisione indipendente.
+* Non c'è migrazione, perché 1.0.0 è il primo formato.
+* La base del firmware è stata esercitata solo tramite EH3D-NODE-BUNGARD e non è mai stata eseguita su una scheda; un secondo nodo non esiste ancora.
+* La libreria non è pubblicata su crates.io.
+
+**Prossimi passi**
+
+* Far aprire e salvare un progetto con essa al primo programma della suite (prima EH3D-CORE-LIBS).
+* Aggiungere il secondo nodo alla base del firmware e verificare che le copie restino identiche.
+* Decidere se i pacchetti richiedono una firma facoltativa.
+
+## 🌍 Lingue
+
+Il README e i testi esistono in inglese, spagnolo, francese, italiano, tedesco, cinese, giapponese e portoghese europeo.
 
 ## 🔗 Progetti correlati
 
-* [EH3D-CORE-LIBS](https://github.com/JuanenRac/EH3D-CORE-LIBS): previsto: parser e motori geometrici che useranno questi tipi
-* [EH3D-SUITE-LAUNCHER](https://github.com/JuanenRac/EH3D-SUITE-LAUNCHER): previsto: il centro che aprirà e salverà i progetti
-* [HYDRA-UMC](https://github.com/JuanenRac/HYDRA-UMC): la piattaforma robotica le cui macchine la suite dovrà pilotare in futuro
+* [EH3D-CORE-LIBS](https://github.com/JuanenRac/EH3D-CORE-LIBS): i parser (Excellon, Gerber) e la geometria che useranno questi tipi
+* [EH3D-NODE-BUNGARD](https://github.com/JuanenRac/EH3D-NODE-BUNGARD): il primo nodo che tiene una copia della base del firmware
+* [EH3D-SERVER](https://github.com/JuanenRac/EH3D-SERVER): il centro della famiglia; non usa ancora il contenitore di progetto
+* [EH3D-DOCS](https://github.com/JuanenRac/EH3D-DOCS): il centro di documentazione della suite e la sua mappa dei progetti
+* [HYDRA-UMC](https://github.com/JuanenRac/HYDRA-UMC): la piattaforma di robotica le cui macchine la suite dovrà pilotare in futuro
 
-## 📚 Documentazione e community
+## 📚 Documentazione
 
-* [Formato del progetto](docs/FORMAT.md): le voci, i metadati, il registro di integrità e le regole per chi legge.
-* [La base del firmware](docs/FIRMWARE_BASE.md): cosa si condivide, come si mantiene identico e come aggiungere un nodo.
+* [Formato di progetto](docs/FORMAT.md): le voci, i metadati, il registro di integrità e le regole per i lettori.
+* [La base del firmware](docs/FIRMWARE_BASE.md): cosa è condiviso, come si mantiene identico e come aggiungere un nodo.
 * [Registro delle modifiche](CHANGELOG.md)
-* [Contribuire](CONTRIBUTING.md)
-* [Politica di sicurezza](SECURITY.md)
-* [Supporto](SUPPORT.md)
+
+## 🤝 Contribuire e comunità
+
+* Prima di una pull request esegui `cargo fmt --check`, `cargo clippy --all-targets -- -D warnings`, `cargo test`, `python -I tools/ci_validate.py` e `python -I tools/sync_firmware_base.py check`: tutto deve passare. Vedi [CONTRIBUTING.md](CONTRIBUTING.md) e il [codice di condotta](CODE_OF_CONDUCT.md).
+* Il README esiste in otto lingue: una modifica al testo si fa in tutti e otto i file, e le due immagini sono disegnate da `docs/architecture.json` e `docs/structure.json` con `tools/make_architecture.py` e `tools/make_structure.py`.
+* Una modifica alla base del firmware si fa in un nodo, si importa con `tools/sync_firmware_base.py import` e si sincronizza negli altri; non modificare mai una copia a mano.
+* Segnala una vulnerabilità in privato: [SECURITY.md](SECURITY.md). Domande, idee e segnalazioni: electrohobby3d@gmail.com ([SUPPORT.md](SUPPORT.md)).
 
 ## 👤 AUTORE
 

@@ -1,0 +1,167 @@
+{
+  "repo": "EH3D-COMMON",
+  "ecosystem": "eh3d",
+  "tagline": "The shared data model of the suite and the shared part of the node firmware.",
+  "description": "EH3D-COMMON holds the .eh3dproj project container with its metadata and SHA-256 integrity record, the machine telemetry types, the colours of the suite, and the firmware base that every ESP32 node copies. Programs that open or save a project are planned to depend on it; today the only user is the firmware base inside EH3D-NODE-BUNGARD. Everything is tested on a computer; nothing has run on a board.",
+  "columns": [
+    "WHO USES IT",
+    "THIS REPOSITORY",
+    "WHAT IT DEPENDS ON"
+  ],
+  "nodes": [
+    {
+      "id": "apps",
+      "column": 0,
+      "level": "external",
+      "title": "Suite programs",
+      "lines": [
+        "planned: the programs that",
+        "open or save a project; none",
+        "uses the crate yet"
+      ]
+    },
+    {
+      "id": "file",
+      "column": 0,
+      "level": "external",
+      "title": "A .eh3dproj file",
+      "lines": [
+        "a ZIP package from any person:",
+        "untrusted input"
+      ]
+    },
+    {
+      "id": "node",
+      "column": 0,
+      "level": "external",
+      "title": "EH3D-NODE-BUNGARD",
+      "lines": [
+        "the one node that keeps a copy",
+        "of the firmware base"
+      ]
+    },
+    {
+      "id": "container",
+      "column": 1,
+      "level": "tested",
+      "title": "Container",
+      "lines": [
+        "reads and writes the package;",
+        "refuses unsafe names, big or",
+        "altered entries"
+      ],
+      "code": [
+        "src/container.rs::MAX_ENTRIES",
+        "src/container.rs::check_entry_name"
+      ]
+    },
+    {
+      "id": "meta",
+      "column": 1,
+      "level": "tested",
+      "title": "Metadata",
+      "lines": [
+        "project.json: layers, tools,",
+        "toolpaths, fiducials; format",
+        "version 1.0.0"
+      ],
+      "code": [
+        "src/project.rs::FORMAT_VERSION"
+      ]
+    },
+    {
+      "id": "types",
+      "column": 1,
+      "level": "tested",
+      "title": "Telemetry and theme",
+      "lines": [
+        "axes, spindle, states, alarm",
+        "codes; colours with a contrast",
+        "check"
+      ],
+      "code": [
+        "src/telemetry.rs::AlarmCode",
+        "src/theme.rs::contrast"
+      ]
+    },
+    {
+      "id": "base",
+      "column": 1,
+      "level": "untested",
+      "title": "Firmware base",
+      "lines": [
+        "49 shared files of the node",
+        "firmware; never run on a board"
+      ],
+      "code": [
+        "firmware_base/manifest.json",
+        "tools/sync_firmware_base.py"
+      ]
+    },
+    {
+      "id": "crates",
+      "column": 2,
+      "level": "external",
+      "title": "Rust crates",
+      "lines": [
+        "zip (deflate only), sha2, serde,",
+        "serde_json, semver, uuid, chrono"
+      ],
+      "code": [
+        "Cargo.toml::sha2"
+      ]
+    },
+    {
+      "id": "idf",
+      "column": 2,
+      "level": "external",
+      "title": "ESP-IDF",
+      "lines": [
+        "builds the firmware base inside",
+        "a node; not needed here"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "apps",
+      "to": "container",
+      "label": "planned",
+      "level": "config"
+    },
+    {
+      "from": "file",
+      "to": "container",
+      "label": "read",
+      "level": "tested"
+    },
+    {
+      "from": "node",
+      "to": "base",
+      "label": "copy",
+      "level": "untested"
+    },
+    {
+      "from": "container",
+      "to": "meta",
+      "level": "tested"
+    },
+    {
+      "from": "container",
+      "to": "crates",
+      "level": "tested"
+    },
+    {
+      "from": "base",
+      "to": "idf",
+      "level": "config"
+    }
+  ],
+  "legend": {
+    "tested": "covered by tests on a computer",
+    "config": "planned or needed only to build a node",
+    "untested": "has not run on a board",
+    "external": "another repository or a person"
+  },
+  "footer": "No program of the suite uses the crate yet."
+}
