@@ -130,6 +130,8 @@ texts! {
     ConnWorks => ["Connection works", "La conexión funciona", "La connessione funziona", "Verbindung funktioniert", "La connexion fonctionne", "A ligação funciona", "连接正常", "接続できます"],
     BoardTitle => ["Board", "Placa", "Piastra", "Platine", "Carte", "Placa", "电路板", "基板"],
     ToolsTitle => ["Tools", "Herramientas", "Utensili", "Werkzeuge", "Outils", "Ferramentas", "刀具", "工具"],
+    SetAskOperator => ["Ask me at tool changes and when the spindle starts", "Preguntarme en los cambios de herramienta y al arrancar el husillo", "Chiedere ai cambi utensile e all'avvio del mandrino", "Bei Werkzeugwechsel und Spindelstart nachfragen", "Me demander aux changements d'outil et au démarrage de la broche", "Perguntar nas trocas de ferramenta e no arranque do fuso", "换刀和主轴启动时询问我", "工具交換と主軸始動のときに確認する"],
+    SetSkipLauncher => ["Open this window directly next time", "Abrir esta ventana directamente la próxima vez", "Aprire direttamente questa finestra la prossima volta", "Dieses Fenster beim nächsten Mal direkt öffnen", "Ouvrir directement cette fenêtre la prochaine fois", "Abrir esta janela diretamente da próxima vez", "下次直接打开此窗口", "次回からこの画面を直接開く"],
 }
 
 pub fn tr(lang: Lang, text: Text) -> &'static str {
