@@ -122,6 +122,12 @@ texts! {
     Saved => ["Saved", "Guardado", "Salvato", "Gespeichert", "Enregistré", "Guardado", "已保存", "保存しました"],
     OpenFolderUp => ["Parent folder", "Carpeta superior", "Cartella superiore", "Übergeordneter Ordner", "Dossier parent", "Pasta superior", "上级文件夹", "親フォルダー"],
     ShowDrill => ["Drilling", "Taladrado", "Foratura", "Bohren", "Perçage", "Furação", "钻孔", "穴あけ"],
+    ConnPort => ["Port", "Puerto", "Porta", "Anschluss", "Port", "Porta", "端口", "ポート"],
+    ConnAddress => ["Address", "Dirección", "Indirizzo", "Adresse", "Adresse", "Endereço", "地址", "アドレス"],
+    ConnToken => ["Access token", "Token de acceso", "Token di accesso", "Zugriffstoken", "Jeton d'accès", "Token de acesso", "访问令牌", "アクセストークン"],
+    ConnMachine => ["Machine id", "Id de máquina", "Id macchina", "Maschinen-ID", "Id de la machine", "Id da máquina", "机器编号", "マシンID"],
+    ConnTest => ["Test connection", "Probar conexión", "Prova connessione", "Verbindung testen", "Tester la connexion", "Testar ligação", "测试连接", "接続をテスト"],
+    ConnWorks => ["Connection works", "La conexión funciona", "La connessione funziona", "Verbindung funktioniert", "La connexion fonctionne", "A ligação funciona", "连接正常", "接続できます"],
 }
 
 pub fn tr(lang: Lang, text: Text) -> &'static str {
