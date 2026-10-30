@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Texts of the catalogue of bits:** the kinds of bit and the notes of the window, in the eight languages.
 ## [0.0.4] - The height map of the table, the texts of the new windows, a serial port for GRBL and the fleet of machines
 
 - **Texts of the calibration of the table:** the tab, its buttons and its readings, in the eight languages.
