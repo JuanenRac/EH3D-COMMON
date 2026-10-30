@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The client of the node of the drill head (`eh3d-aux`):** the status, the measure of the table and the camera as MJPEG of EH3D-NODE-BUNGARD-AUX read into types, the requests with the token, a small blocking HTTP client and a splitter that cuts the MJPEG stream into pictures.
 - **Texts of the catalogue of bits:** the kinds of bit and the notes of the window, in the eight languages.
 ## [0.0.4] - The height map of the table, the texts of the new windows, a serial port for GRBL and the fleet of machines
 

@@ -166,6 +166,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "eh3d-aux"
+version = "0.0.1"
+dependencies = [
+ "serde_json",
+]
+
+[[package]]
 name = "eh3d-bungard-formats"
 version = "0.0.1"
 
