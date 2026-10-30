@@ -9,6 +9,7 @@
 
 pub mod grbl;
 pub mod mock;
+pub mod serial;
 pub mod sim;
 
 use std::fmt;
