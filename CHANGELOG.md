@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.0.4] - The height map of the table, the texts of the new windows, a serial port for GRBL and the fleet of machines
+
 - **Texts of the calibration of the table:** the tab, its buttons and its readings, in the eight languages.
 - **Height map of the table (`eh3d-levelling`):** the grid a probe measures, the surface between the points, the tilt and the spread of the table, the correction of the Z of a job (also along long moves) and a text form to keep the map with the machine.
 - **Texts for the job that was left in the middle:** the question and its two answers, in the eight languages.
