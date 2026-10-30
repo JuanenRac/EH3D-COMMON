@@ -4,6 +4,9 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The node of the drill head through the server:** `eh3d-aux::Link::via_server` asks EH3D-SERVER for the status, the measure and the camera of the node of a machine (`/api/v1/machines/:id/head/...`), and the status carries `camera_model` (`ov2640` or `ov5640`, empty for an older node). 2 more tests.
+- **Texts of the head node window:** the note of the way through the server, the missing server data and the camera model, in the eight languages.
+
 ## [0.0.5] - The client of the drill head node, the texts of the catalogue, the voices and the head node window
 
 - **Texts of the spoken voices and of the catalogue:** the words of the list of sounds (voice, female, male) and of the catalogue of bits, in the eight languages.

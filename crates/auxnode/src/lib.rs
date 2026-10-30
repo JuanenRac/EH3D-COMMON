@@ -35,6 +35,8 @@ pub struct Status {
     pub node: String,
     pub version: String,
     pub camera: bool,
+    /// What the camera sensor says it is (`ov2640`, `ov5640`); empty when the node does not say or has no camera.
+    pub camera_model: String,
     pub laser: bool,
     pub rpm_sensor: bool,
     pub rpm: f64,
@@ -65,6 +67,11 @@ impl Status {
                 .unwrap_or("")
                 .to_string(),
             camera: flag("camera")?,
+            camera_model: v
+                .get("camera_model")
+                .and_then(Value::as_str)
+                .unwrap_or("")
+                .to_string(),
             laser: flag("laser")?,
             rpm_sensor: flag("rpm_sensor")?,
             rpm: v.get("rpm").and_then(Value::as_f64).unwrap_or(0.0),
@@ -150,6 +157,8 @@ pub struct Link {
     pub port: u16,
     pub token: String,
     pub timeout: Duration,
+    /// Through EH3D-SERVER: the id of the machine whose node it is. Empty: the node itself.
+    pub machine: String,
 }
 
 impl Link {
@@ -159,6 +168,36 @@ impl Link {
             port,
             token: token.to_string(),
             timeout: Duration::from_millis(2500),
+            machine: String::new(),
+        }
+    }
+
+    /// The node of a machine through EH3D-SERVER: the address and the token are the server's (a login or the token of a program), and the server holds the node's own.
+    pub fn via_server(host: &str, port: u16, token: &str, machine: &str) -> Link {
+        let mut l = Link::new(host, port, token);
+        l.machine = machine.to_string();
+        l
+    }
+
+    /// The path of a request of the node (`/api/status`, `/api/measure`, `/stream`) as this link asks for it: the same on the node, under the machine on the server.
+    pub fn path(&self, node_path: &str) -> String {
+        if self.machine.is_empty() {
+            return node_path.to_string();
+        }
+        let base = format!("/api/v1/machines/{}/head", self.machine);
+        let (path, query) = match node_path.split_once('?') {
+            Some((p, q)) => (p, Some(q)),
+            None => (node_path, None),
+        };
+        let tail = match path {
+            "/api/status" => "/status",
+            "/api/measure" => "/measure",
+            "/stream" => "/stream",
+            other => other,
+        };
+        match query {
+            Some(q) => format!("{base}{tail}?{q}"),
+            None => format!("{base}{tail}"),
         }
     }
 
@@ -177,7 +216,7 @@ impl Link {
 
     fn call(&self, method: &str, path: &str) -> Result<(u16, Vec<u8>), String> {
         let mut s = self.connect()?;
-        s.write_all(request_text(method, &self.host, path, &self.token).as_bytes())
+        s.write_all(request_text(method, &self.host, &self.path(path), &self.token).as_bytes())
             .map_err(|e| e.to_string())?;
         let mut all = Vec::new();
         s.read_to_end(&mut all).map_err(|e| e.to_string())?;
@@ -210,7 +249,7 @@ impl Link {
     /// Opens the camera stream: the connection is returned after the headers, ready to be read with an [`MjpegSplitter`].
     pub fn open_stream(&self) -> Result<TcpStream, String> {
         let mut s = self.connect()?;
-        s.write_all(request_text("GET", &self.host, "/stream", &self.token).as_bytes())
+        s.write_all(request_text("GET", &self.host, &self.path("/stream"), &self.token).as_bytes())
             .map_err(|e| e.to_string())?;
         Ok(s)
     }
@@ -264,7 +303,7 @@ mod tests {
     use super::*;
     use std::net::TcpListener;
 
-    const STATUS: &str = r#"{"node":"head-1","version":"0.0.1","camera":true,"laser":true,"rpm_sensor":true,"rpm":23998,"temp_c":41.3,"heat":"ok","protect_open":false,"uptime_s":90}"#;
+    const STATUS: &str = r#"{"node":"head-1","version":"0.0.1","camera":true,"camera_model":"ov5640","laser":true,"rpm_sensor":true,"rpm":23998,"temp_c":41.3,"heat":"ok","protect_open":false,"uptime_s":90}"#;
     const MEASURE: &str = r#"{"ok":true,"why":"ok","distance_mm":100.012,"sigma_mm":0.021,"asked":7,"used":6,"rejected":1}"#;
 
     #[test]
@@ -272,6 +311,10 @@ mod tests {
         let s = Status::from_json(STATUS).unwrap();
         assert_eq!((s.node.as_str(), s.version.as_str()), ("head-1", "0.0.1"));
         assert!(s.camera && s.laser && s.rpm_sensor && !s.protect_open);
+        assert_eq!(s.camera_model, "ov5640");
+        // an older node does not say which camera it has
+        let old = STATUS.replace(r#""camera_model":"ov5640","#, "");
+        assert_eq!(Status::from_json(&old).unwrap().camera_model, "");
         assert_eq!(
             (s.rpm, s.temp_c, s.heat, s.uptime_s),
             (23998.0, Some(41.3), Heat::Ok, 90)
@@ -355,6 +398,36 @@ mod tests {
             .unwrap()
             .port();
         assert!(Link::new("127.0.0.1", free, "").status().is_err());
+    }
+
+    #[test]
+    fn through_the_server_the_paths_are_the_ones_of_the_machine() {
+        let node = Link::new("h", 80, "t");
+        assert_eq!(node.path("/api/status"), "/api/status");
+        let via = Link::via_server("srv", 18200, "login", "bench-1");
+        assert_eq!(
+            via.path("/api/status"),
+            "/api/v1/machines/bench-1/head/status"
+        );
+        assert_eq!(
+            via.path("/api/measure?samples=5"),
+            "/api/v1/machines/bench-1/head/measure?samples=5"
+        );
+        assert_eq!(via.path("/stream"), "/api/v1/machines/bench-1/head/stream");
+    }
+
+    #[test]
+    fn the_link_asks_the_server_for_the_node_of_a_machine() {
+        let (port, node) = fake_node(format!("HTTP/1.0 200 OK\r\n\r\n{MEASURE}"));
+        let m = Link::via_server("127.0.0.1", port, "login-token", "bench-1")
+            .measure(0)
+            .unwrap();
+        assert!(m.ok);
+        let request = node.join().unwrap();
+        assert!(
+            request.starts_with("POST /api/v1/machines/bench-1/head/measure HTTP/1.0")
+                && request.contains("Bearer login-token")
+        );
     }
 
     #[test]
