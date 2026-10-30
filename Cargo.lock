@@ -203,6 +203,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "eh3d-levelling"
+version = "0.0.1"
+
+[[package]]
 name = "eh3d-view"
 version = "0.0.1"
 dependencies = [

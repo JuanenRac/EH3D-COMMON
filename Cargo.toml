@@ -13,7 +13,7 @@ categories = ["data-structures", "parser-implementations"]
 
 [workspace]
 # the data crate of the suite is the root package; the crates beside it may draw, read files or talk to machines
-members = [".", "crates/view", "crates/archive", "crates/controller", "crates/formats", "crates/filedialog", "crates/fleet"]
+members = [".", "crates/view", "crates/archive", "crates/controller", "crates/formats", "crates/filedialog", "crates/fleet", "crates/levelling"]
 resolver = "2"
 
 [dependencies]

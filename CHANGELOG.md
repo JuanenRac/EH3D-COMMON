@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Height map of the table (`eh3d-levelling`):** the grid a probe measures, the surface between the points, the tilt and the spread of the table, the correction of the Z of a job (also along long moves) and a text form to keep the map with the machine.
 - **Texts for the job that was left in the middle:** the question and its two answers, in the eight languages.
 - **Texts of the tabs and the maker:** the panel window's routing with tabs (how many, how wide, where) and the maker of the board, in the eight languages.
 - **One more text of the window of the settings:** the check box that shows the tools window when a file is opened, in the eight languages.
