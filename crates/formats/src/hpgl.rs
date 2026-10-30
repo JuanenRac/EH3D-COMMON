@@ -117,6 +117,17 @@ pub(crate) fn arc_points(
         .collect()
 }
 
+/// The chords of a whole circle that a chord angle (in degrees, the line of the routing configuration; a minus sign only says which way the
+/// circle is cut, as in the original program) asks for. A zero gives the usual number.
+pub fn segments_for_chord(angle_deg: i32) -> u32 {
+    if angle_deg == 0 {
+        return SEGMENTS_PER_CIRCLE;
+    }
+    (360.0 / f64::from(angle_deg.abs()))
+        .round()
+        .clamp(6.0, 720.0) as u32
+}
+
 /// Reads a plotter file; the arcs and the circles are cut into `SEGMENTS_PER_CIRCLE` chords to a whole circle.
 pub fn parse(text: &str) -> Plot {
     parse_with(text, SEGMENTS_PER_CIRCLE)
@@ -334,6 +345,16 @@ mod tests {
         assert_eq!(p.paths[1].pen, 2);
         assert_eq!(p.ignored, 0);
         assert_eq!(parse("LT2;").ignored, 1);
+    }
+
+    #[test]
+    fn the_chord_angle_of_the_configuration_gives_the_chords_of_a_circle() {
+        assert_eq!(segments_for_chord(5), 72);
+        assert_eq!(segments_for_chord(-5), 72);
+        assert_eq!(segments_for_chord(10), 36);
+        assert_eq!(segments_for_chord(0), SEGMENTS_PER_CIRCLE);
+        assert_eq!(segments_for_chord(60), 6);
+        assert_eq!(segments_for_chord(1), 360);
     }
 
     #[test]
