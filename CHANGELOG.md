@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Two words for the count of the holes:** "Holes drilled in all" and "Reset the counts" in the eight languages of the interface.
 - **The chord angle of a routing configuration as chords of a circle:** `hpgl::segments_for_chord` turns the angle of the routing configuration line (a minus sign only gives the direction) into the chords of a whole circle, for the arcs and circles of a plotter file.
 - **The outline of a Gerber board as a routing path:** `eh3d_bungard_formats::gerber` reads the lines and the arcs of the profile layer (the `G01`, `G02` and `G03` strokes, in millimetres or inches, with the zeros left out at either end) into the paths of a plot, which can be written as an HP-GL file with `to_hpgl`; the archives list the usual outline extensions as routing files.
 - **A message for a job that does not fit:** the interface words in eight languages have the sentence that tells the operator to move the board or make the table bigger.
