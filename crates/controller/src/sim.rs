@@ -21,6 +21,8 @@ pub struct SimController {
     coolant: bool,
     state: State,
     alarm: Option<String>,
+    /// The two stored positions, `G28` and `G30` (machine mm), set with `G28.1` and `G30.1`.
+    stored: [[f64; AXES]; 2],
     /// The limits of the travel, in mm, per axis (min, max).
     pub travel: [(f64, f64); AXES],
     /// Every line taken, for the tests and the log of the program.
@@ -45,6 +47,11 @@ impl Default for SimController {
             state: State::Idle,
             alarm: None,
             travel,
+            stored: {
+                let mut a = [[0.0; AXES]; 2];
+                a[0][2] = 50.0;
+                a
+            },
             log: Vec::new(),
         }
     }
@@ -260,8 +267,14 @@ impl Controller for SimController {
         self.log.push(line.to_string());
         let words = Self::words(line)?;
         let mut target_present = [None::<f64>; AXES];
+        // the stored positions: `G28` and `G30` go to them, `G28.1` and `G30.1` store where the machine is
+        let (mut goto, mut store) = (None::<usize>, None::<usize>);
         for &(l, v) in &words {
             match l {
+                'G' if (v - 28.0).abs() < 1e-9 => goto = Some(0),
+                'G' if (v - 30.0).abs() < 1e-9 => goto = Some(1),
+                'G' if (v - 28.1).abs() < 1e-9 => store = Some(0),
+                'G' if (v - 30.1).abs() < 1e-9 => store = Some(1),
                 'G' => match v as i32 {
                     0 | 1 => {}
                     90 => self.absolute = true,
@@ -290,6 +303,15 @@ impl Controller for SimController {
                     }
                 }
             }
+        }
+        if let Some(k) = store {
+            self.stored[k] = self.machine;
+            return Ok(());
+        }
+        if let Some(k) = goto {
+            let to = self.stored[k];
+            self.go_to(to)?;
+            return Ok(());
         }
         // G92 sets the work zero where the machine is, to the values given
         if words.iter().any(|&(l, v)| l == 'G' && v as i32 == 92) {
@@ -363,6 +385,23 @@ mod tests {
         assert_eq!((st.work_mm[0], st.work_mm[1]), (0.0, 0.0));
         s.send_line("G90 G1 X10").unwrap();
         assert!((s.status().unwrap().machine_mm[0] - 35.4).abs() < 1e-9);
+    }
+
+    #[test]
+    fn the_stored_positions_are_set_and_gone_to() {
+        let mut s = SimController::new();
+        s.send_line("G0 X30 Y40 Z-5").unwrap();
+        s.send_line("G30.1").unwrap();
+        s.send_line("G0 X100").unwrap();
+        s.send_line("G30").unwrap();
+        let st = s.status().unwrap();
+        assert_eq!(
+            (st.machine_mm[0], st.machine_mm[1], st.machine_mm[2]),
+            (30.0, 40.0, -5.0)
+        );
+        // G28 is the home until it is set
+        s.send_line("G28").unwrap();
+        assert_eq!(s.status().unwrap().machine_mm[2], 50.0);
     }
 
     #[test]
