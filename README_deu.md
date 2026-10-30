@@ -18,7 +18,7 @@
 
 ---
 
-**Ehrlichkeitscheck - was heute tatsächlich läuft:** eine Rust-Bibliothek mit dem Projektcontainer (`.eh3dproj`), den Metadaten eines Projekts, SHA-256-Integritätsprüfungen, den Typen der Maschinentelemetrie und den Farben der Suite, dazu die Firmware-Basis, die jeder ESP32-Knoten der Suite kopiert (49 Dateien und das Werkzeug, das die Kopien identisch hält). 79 Tests laufen auf einem Computer. Die Bohr- und Fräsprogramme und die moderne Oberfläche lesen ihre Dateien und zeichnen ihre Aufträge mit den gemeinsamen Crates; nichts davon lief auf einer Maschine oder einer Platine.
+**Ehrlichkeitscheck - was heute tatsächlich läuft:** eine Rust-Bibliothek mit dem Projektcontainer (`.eh3dproj`), den Metadaten eines Projekts, SHA-256-Integritätsprüfungen, den Typen der Maschinentelemetrie und den Farben der Suite, dazu die Firmware-Basis, die jeder ESP32-Knoten der Suite kopiert (70 Dateien und das Werkzeug, das die Kopien identisch hält). 100 Tests laufen auf einem Computer. Die Bohr- und Fräsprogramme und die moderne Oberfläche lesen ihre Dateien und zeichnen ihre Aufträge mit den gemeinsamen Crates; nichts davon lief auf einer Maschine oder einer Platine.
 
 ---
 
@@ -30,7 +30,7 @@
 |---|---|
 | Version | `0.0.3` |
 | Reifegrad | Gerüst |
-| Tests | 79 |
+| Tests | 100 |
 | Technologie-Stack | Rust (Bibliotheks-Crate) und C++17 (Firmware-Basis) |
 | Auf echter Hardware | Nicht zutreffend: eine Datenbibliothek, nichts hier spricht mit einer Maschine; die Firmware-Basis lief noch nie auf einer Platine |
 
@@ -47,10 +47,10 @@ Jede Zeile ist ein Teil dieses Repositorys, und die Ampel sagt, wie weit er heut
 | Container | 🟡 | `.eh3dproj` ist ein Standard-ZIP mit einem SHA-256-Eintrag je Eintrag; es liest, schreibt und weist beschädigte, veränderte, nicht gelistete und unsichere Einträge ab. Bisher lesen und schreiben es nur die eigenen Tests. |
 | Metadaten | 🟡 | Die Metadaten eines Projekts (Einheiten, Nullpunkt, Ebenen, Werkzeuge, Werkzeugwege, Passmarken) werden geprüft und tragen eine semantische Formatversion; eine Migration gibt es noch nicht, da 1.0.0 das erste Format ist. |
 | Telemetrie und Theme | 🟢 | Achsen, Spindel, Maschinenzustände, die GRBL-Alarmcodes mit ihrer Schwere und die Farben der Suite mit Kontrastprüfung, alles getestet. |
-| Tests | 🟢 | 79 Tests bestehen (`cargo test --workspace`): 16 in den Modulen und 14 am Container des Hauptcrates sowie 49 in den vier gemeinsamen Crates. |
+| Tests | 🟢 | 100 Tests bestehen (`cargo test --workspace`): 16 in den Modulen und 14 am Container des Hauptcrates sowie 70 in den sechs gemeinsamen Crates. |
 | Sicherheit | 🟡 | Unsichere Namen, zu große oder zu viele Einträge und jeder veränderte Eintrag werden abgewiesen; das Paket ist weder signiert noch verschlüsselt und wurde nicht unabhängig geprüft. |
 | Firmware-Basis | 🟠 | 49 Dateien, die die ESP32-Knoten teilen und die `tools/sync_firmware_base.py` identisch hält; nur über EH3D-NODE-BUNGARD getestet, den einzigen Knoten, der sie nutzt, und nie auf einer Platine gelaufen. |
-| Nutzung durch andere Programme | 🔴 | Noch kein Programm der Suite hängt von dem Crate ab. |
+| Nutzung durch andere Programme | 🟡 | Die Crates des Workspace werden von EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC und EH3D-SERVER benutzt (per Pfad, die Repositories liegen nebeneinander); den Projektcontainer selbst benutzt noch kein Programm. |
 | Dokumentation | 🟢 | README in acht Sprachen, die Formatbeschreibung und der Leitfaden zur Firmware-Basis; die CI vergleicht sie mit Manifest und Änderungsprotokoll. |
 
 ## 🎯 Überblick
@@ -62,10 +62,11 @@ Jede Zeile ist ein Teil dieses Repositorys, und die Ampel sagt, wie weit er heut
 * Die **Telemetrietypen**: Achsen, Spindel, aus Statuswörtern gelesene Maschinenzustände und die neun GRBL-Alarmcodes mit ihrer Schwere (Warnung oder kritisch; ein unbekannter Code gilt als kritisch).
 * Das **Theme**: die Farben der Suite, mit einer WCAG-Kontrastprüfung, die die Tests für jede Text- und Zustandsfarbe ausführen.
 * Die **Firmware-Basis der Knoten** (`firmware_base/`, mit `tools/sync_firmware_base.py`): der Teil der ESP32-Knoten-Firmware, den jeder EH3D-Knoten teilt - das Einstellungsdokument, das Netzwerk, der Server des Panels, Benutzer und Sitzungen, das Update mit Rückfall, das Protokoll, der Selbstschutz und die zugehörigen Tests - einmal geschrieben, mit dem Projektnamen als Platzhalter. Jeder Knoten behält seine eigene Kopie und baut für sich; das Werkzeug schreibt die Basis in jeden Knoten und meldet, wenn eine Kopie abgewichen ist.
+* Die **gemeinsamen Crates** des Workspace: `eh3d-view` (der Auftrag auf dem Tisch, elf Themen, die Wörter der Oberfläche in acht Sprachen), `eh3d-archive` (Aufträge in ZIP-Archiven), `eh3d-bungard-formats` (die Dateien Excellon, HP-GL, Werkzeugtabellen und Konfiguration, die Gerber- und DXF-Umrisse), `eh3d-controller` (die Schnittstelle der Maschinensteuerungen, GRBL und eine simulierte), `eh3d-filedialog` (die Fenster Öffnen und Speichern) und `eh3d-fleet` (die Maschinen und Stationen des Servers).
 
 ## 🧩 Rolle in EH3D
 
-EH3D-COMMON ist die Basis der Suite: Die Bibliotheken und Programme, die ein Projekt öffnen oder speichern, sollen später davon abhängen. Noch gibt es keines davon. Hier liegt auch die Firmware-Basis der Knoten: EH3D-NODE-BUNGARD ist der erste Knoten, der sie nutzt.
+EH3D-COMMON ist die Basis der Suite. Die Crates seines Workspace (die Ansicht und die Themen, die ZIP-Archive, die Dateien der Bungard-Maschinen, die Maschinensteuerungen, die Dateifenster und die Flotte des Servers) benutzen heute EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC und EH3D-SERVER; die Bibliotheken und Programme, die ein Projekt öffnen oder speichern, sollen vom Container abhängen, und keines davon existiert noch. Auch die Firmware-Basis der Knoten liegt hier: EH3D-NODE-BUNGARD ist der erste Knoten, der sie benutzt.
 
 ## 🏛️ Architektur
 
@@ -155,7 +156,7 @@ python -I tools/sync_firmware_base.py check
 
 ## 🧪 Tests
 
-Die Suite hat 79 Tests (`cargo test --workspace`, in der CI unter Windows und Linux ausgeführt): 16 in den Modulen (die Metadaten und ihre Prüfung, die Alarmcodes und Maschinenzustände, die Farben und ihr WCAG-Kontrast) und 14 am Container (Hin- und Rückweg über Speicher und Datei, gleiche Bytes bei gleichem Inhalt, der Integritätseintrag, ein geänderter Eintrag, eine geänderte Größe, ein nicht gelisteter Eintrag, ein fehlender Eintrag, bearbeitete Metadaten, eine Datei, die kein Paket ist, unsichere und feindliche Eintragsnamen, ein ersetzter Eintrag und ein ungültiges Projekt). Die CI führt außerdem `cargo fmt --check` und `cargo clippy` mit Warnungen als Fehlern, `python -I tools/ci_validate.py` (Manifest, Versionen, Änderungsprotokoll und die acht READMEs) und `tools/sync_firmware_base.py check` (die Kopien der Firmware-Basis) aus. Die Host-Tests der Firmware-Basis (`firmware_base/tests/`) laufen in EH3D-NODE-BUNGARD, nicht hier. Die vier gemeinsamen Crates fügen 49 weitere hinzu: die Auftragsarchive (6), die Dateien der Bungard-Maschinen mit den HP-GL-Bögen, -Kreisen und der Skalierung und den Gerber- und DXF-Umrissen (16), die Maschinensteuerungen auf einer geskripteten Leitung (7) sowie die Szene, die Ansichten, die Themen und die Wörter der Oberfläche in acht Sprachen (20).
+Die Suite hat 100 Tests (`cargo test --workspace`, in der CI unter Windows und Linux ausgeführt): 16 in den Modulen (die Metadaten und ihre Prüfung, die Alarmcodes und Maschinenzustände, die Farben und ihr WCAG-Kontrast) und 14 am Container (Hin- und Rückweg über Speicher und Datei, gleiche Bytes bei gleichem Inhalt, der Integritätseintrag, ein geänderter Eintrag, eine geänderte Größe, ein nicht gelisteter Eintrag, ein fehlender Eintrag, bearbeitete Metadaten, eine Datei, die kein Paket ist, unsichere und feindliche Eintragsnamen, ein ersetzter Eintrag und ein ungültiges Projekt). Die CI führt außerdem `cargo fmt --check` und `cargo clippy` mit Warnungen als Fehlern, `python -I tools/ci_validate.py` (Manifest, Versionen, Änderungsprotokoll und die acht READMEs) und `tools/sync_firmware_base.py check` (die Kopien der Firmware-Basis) aus. Die Host-Tests der Firmware-Basis (`firmware_base/tests/`) laufen in EH3D-NODE-BUNGARD, nicht hier. Die sechs gemeinsamen Crates fügen 70 weitere hinzu: die Auftragsarchive (6), die Dateien der Bungard-Maschinen mit den HP-GL-Bögen, -Kreisen und der Skalierung und den Gerber- und DXF-Umrissen (16), die Maschinensteuerungen auf einer geskripteten Leitung (16) sowie die Szene, die Ansichten, die Themen und die Wörter der Oberfläche in acht Sprachen (20), die Fenster Öffnen und Speichern (7) und die Maschinen und Stationen des Servers (5).
 
 ## 🏗️ Build und Veröffentlichung
 
@@ -202,7 +203,7 @@ EH3D-COMMON/
 
 **Bekannte Grenzen heute**
 
-* Noch kein Programm der Suite nutzt die Bibliothek, daher haben das Format bisher nur die eigenen Tests gelesen und geschrieben.
+* Noch kein Programm benutzt den Projektcontainer, deshalb wurde das Format nur von seinen eigenen Tests gelesen und geschrieben.
 * Das Paket ist weder signiert noch verschlüsselt, und die Bibliothek wurde nicht unabhängig geprüft.
 * Es gibt keine Migration, weil 1.0.0 das erste Format ist.
 * Die Firmware-Basis wurde nur über EH3D-NODE-BUNGARD erprobt und lief nie auf einer Platine; einen zweiten Knoten gibt es noch nicht.
