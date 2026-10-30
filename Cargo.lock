@@ -177,6 +177,13 @@ name = "eh3d-filedialog"
 version = "0.0.1"
 
 [[package]]
+name = "eh3d-fleet"
+version = "0.0.1"
+dependencies = [
+ "serde_json",
+]
+
+[[package]]
 name = "eh3d-view"
 version = "0.0.1"
 dependencies = [
