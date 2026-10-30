@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Texts for the job that was left in the middle:** the question and its two answers, in the eight languages.
 - **Texts of the tabs and the maker:** the panel window's routing with tabs (how many, how wide, where) and the maker of the board, in the eight languages.
 - **One more text of the window of the settings:** the check box that shows the tools window when a file is opened, in the eight languages.
 - **A real serial port for GRBL:** `eh3d_controller::serial` cuts the bytes of a port into lines (tested on its own, with noise and half lines) and, with the `serial` feature, `SerialTransport` opens a port and lists the ports of the computer; it plugs into `GrblController` as its line transport.
