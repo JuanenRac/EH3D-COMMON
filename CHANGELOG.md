@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The outline of a Gerber board as a routing path:** `eh3d_bungard_formats::gerber` reads the lines and the arcs of the profile layer (the `G01`, `G02` and `G03` strokes, in millimetres or inches, with the zeros left out at either end) into the paths of a plot, which can be written as an HP-GL file with `to_hpgl`; the archives list the usual outline extensions as routing files.
 - **A message for a job that does not fit:** the interface words in eight languages have the sentence that tells the operator to move the board or make the table bigger.
 
 ## [0.0.2] - The shared crates for the drilling and routing programs and the modern interface: the job view, the ZIP archives, the machine files with the HP-GL arcs and circles, and the machine controllers

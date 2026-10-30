@@ -11,9 +11,9 @@ use std::path::{Path, PathBuf};
 pub enum Kind {
     /// A drilling file.
     Drill,
-    /// A routing file (HP-GL).
+    /// A routing file (HP-GL, or the outline of a board in Gerber).
     Route,
-    /// Anything else (notes, pictures, Gerber files): listed, not loaded.
+    /// Anything else (notes, pictures, the Gerber layers of copper): listed, not loaded.
     Other,
 }
 
@@ -26,6 +26,8 @@ pub fn kind_of(name: &str) -> Kind {
     match ext.as_str() {
         "ncd" | "drl" | "exc" | "xln" | "drd" => Kind::Drill,
         "plt" | "hpgl" | "hpg" | "plot" => Kind::Route,
+        // the outline of a board in Gerber: its edge is what a router cuts
+        "gko" | "gm1" | "gml" | "gm2" | "gm3" | "gbr" => Kind::Route,
         _ => Kind::Other,
     }
 }

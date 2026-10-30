@@ -48,6 +48,25 @@ impl Plot {
             * UNIT_MM
     }
 
+    /// The plot as the text of a plotter file: every path with its pen, the pen lifted to the first point and put down along the rest.
+    pub fn to_hpgl(&self) -> String {
+        let mut out = String::from("IN;\n");
+        for p in &self.paths {
+            let Some(first) = p.points.first() else {
+                continue;
+            };
+            out.push_str(&format!("SP{};PU{},{};PD", p.pen, first.0, first.1));
+            let rest: Vec<String> = p.points[1..]
+                .iter()
+                .map(|(x, y)| format!("{x},{y}"))
+                .collect();
+            out.push_str(&rest.join(","));
+            out.push_str(";\n");
+        }
+        out.push_str("PU;SP0;\n");
+        out
+    }
+
     pub fn pens(&self) -> Vec<u8> {
         let mut v: Vec<u8> = Vec::new();
         for p in &self.paths {
@@ -76,7 +95,12 @@ fn round(p: (f64, f64)) -> (i32, i32) {
 
 /// The points of an arc round `center` from the point `from`, `sweep` degrees counterclockwise, in chords of at most `chord` degrees
 /// (the first point, `from`, is not in the list).
-fn arc_points(from: (f64, f64), center: (f64, f64), sweep: f64, chord: f64) -> Vec<(f64, f64)> {
+pub(crate) fn arc_points(
+    from: (f64, f64),
+    center: (f64, f64),
+    sweep: f64,
+    chord: f64,
+) -> Vec<(f64, f64)> {
     let (dx, dy) = (from.0 - center.0, from.1 - center.1);
     let r = dx.hypot(dy);
     if r == 0.0 || sweep == 0.0 {
@@ -310,5 +334,12 @@ mod tests {
         assert_eq!(p.paths[1].pen, 2);
         assert_eq!(p.ignored, 0);
         assert_eq!(parse("LT2;").ignored, 1);
+    }
+
+    #[test]
+    fn a_plot_written_as_hpgl_reads_back_the_same() {
+        let p = parse("SP1;PU0,0;PD400,0,400,800;SP2;PU40,40;PD80,80,120,40;");
+        let back = parse(&p.to_hpgl());
+        assert_eq!(back, p);
     }
 }
