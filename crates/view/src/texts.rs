@@ -303,6 +303,21 @@ texts! {
     SoundTool => ["Sound when a tool is asked for", "Sonido al pedir una herramienta", "Suono alla richiesta di un utensile", "Ton bei Werkzeuganforderung", "Son à la demande d'un outil", "Som ao pedir uma ferramenta", "请求刀具时的声音", "工具を求めるときの音"],
     SoundFileHint => ["WAV file (empty: the default tone)", "Archivo WAV (vacío: el tono por defecto)", "File WAV (vuoto: il tono predefinito)", "WAV-Datei (leer: der Standardton)", "Fichier WAV (vide : la tonalité par défaut)", "Ficheiro WAV (vazio: o tom predefinido)", "WAV 文件（留空：默认提示音）", "WAV ファイル（空欄：既定の音）"],
     SoundTest => ["Test", "Probar", "Prova", "Testen", "Tester", "Testar", "试听", "試す"],
+    SndOff => ["No sound", "Sin sonido", "Nessun suono", "Kein Ton", "Aucun son", "Sem som", "无声", "音なし"],
+    SndDefault => ["The standard tone", "El tono estándar", "Il tono standard", "Der Standardton", "La tonalité standard", "O tom padrão", "标准音调", "標準の音"],
+    SndFile => ["A file of mine (WAV)", "Un fichero mío (WAV)", "Un mio file (WAV)", "Meine Datei (WAV)", "Mon fichier (WAV)", "Um ficheiro meu (WAV)", "我的文件 (WAV)", "自分のファイル (WAV)"],
+    SndChime => ["chime", "carillón", "scampanio", "Glocke", "carillon", "carrilhão", "钟声", "チャイム"],
+    SndRise => ["rising notes", "notas que suben", "note che salgono", "steigende Töne", "notes montantes", "notas a subir", "上行音阶", "上がる音"],
+    SndFall => ["falling notes", "notas que bajan", "note che scendono", "fallende Töne", "notes descendantes", "notas a descer", "下行音阶", "下がる音"],
+    SndFanfare => ["fanfare", "fanfarria", "fanfara", "Fanfare", "fanfare", "fanfarra", "号角", "ファンファーレ"],
+    SndTriple => ["three notes", "tres notas", "tre note", "drei Töne", "trois notes", "três notas", "三个音", "3 つの音"],
+    SndBell => ["bell", "campana", "campana", "Glocke groß", "cloche", "sino", "大钟", "ベル"],
+    SndBeep => ["beep", "pitido", "bip", "Piep", "bip", "apito", "哔声", "ビープ"],
+    SndDouble => ["double beep", "pitido doble", "doppio bip", "Doppelpiep", "double bip", "apito duplo", "双哔声", "ダブルビープ"],
+    SndTripleBeep => ["triple beep", "pitido triple", "triplo bip", "Dreifachpiep", "triple bip", "apito triplo", "三哔声", "トリプルビープ"],
+    SndAlarm => ["alarm", "alarma", "allarme", "Alarm", "alarme", "alarme", "警报", "アラーム"],
+    SndKnock => ["knock", "golpe", "colpo", "Klopfen", "coups", "pancada", "敲击", "ノック"],
+    SndSiren => ["siren", "sirena", "sirena", "Sirene", "sirène", "sirene", "警笛", "サイレン"],
 }
 
 impl crate::theme::ThemeId {
