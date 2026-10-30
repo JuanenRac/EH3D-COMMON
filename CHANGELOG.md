@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **One word more:** "Recent" in the eight languages of the interface.
 - **The drawing of a board in DXF as a routing path:** `eh3d_bungard_formats::dxf` reads the lines, the light polylines with their bulges, the arcs and the circles of a text DXF file (in the unit its header says) into the paths of a plot, joining the strokes that meet end to end; the archives list `.dxf` files as routing files.
 - **Two words for the count of the holes:** "Holes drilled in all" and "Reset the counts" in the eight languages of the interface.
 - **The chord angle of a routing configuration as chords of a circle:** `hpgl::segments_for_chord` turns the angle of the routing configuration line (a minus sign only gives the direction) into the chords of a whole circle, for the arcs and circles of a plotter file.
