@@ -175,6 +175,7 @@ texts! {
     OnTable => ["On the table", "En la mesa", "Sul piano", "Auf dem Tisch", "Sur la table", "Na mesa", "在工作台上", "テーブル上"],
     OnBoard => ["On the board", "En la placa", "Sulla piastra", "Auf der Platine", "Sur la carte", "Na placa", "在电路板上", "基板上"],
     Resume => ["Resume", "Continuar", "Riprendi", "Fortsetzen", "Reprendre", "Continuar", "继续", "再開"],
+    JobOutsideTable => ["The job does not fit on the table: move the board or make the table bigger", "El trabajo no cabe en la mesa: mueve la placa o agranda la mesa", "Il lavoro non sta sul piano: sposta la piastra o ingrandisci il piano", "Der Auftrag passt nicht auf den Tisch: Platine verschieben oder Tisch vergrößern", "Le travail ne tient pas sur la table : déplacez la carte ou agrandissez la table", "O trabalho não cabe na mesa: mova a placa ou aumente a mesa", "作业超出工作台：请移动电路板或加大工作台", "ジョブがテーブルに収まりません。基板を移動するかテーブルを大きくしてください"],
     LblThickness => ["Thickness (mm)", "Grosor (mm)", "Spessore (mm)", "Dicke (mm)", "Épaisseur (mm)", "Espessura (mm)", "厚度 (mm)", "厚さ (mm)"],
     LblCopper => ["Copper (µm)", "Cobre (µm)", "Rame (µm)", "Kupfer (µm)", "Cuivre (µm)", "Cobre (µm)", "铜箔 (µm)", "銅 (µm)"],
     LblCopperSides => ["Copper sides", "Caras de cobre", "Facce di rame", "Kupferseiten", "Faces cuivrées", "Faces de cobre", "覆铜面", "銅の面"],
