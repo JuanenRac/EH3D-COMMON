@@ -32,7 +32,7 @@ impl Default for SimController {
         let mut travel = [(0.0, 0.0); AXES];
         travel[0] = (0.0, 500.0);
         travel[1] = (0.0, 300.0);
-        travel[2] = (-100.0, 0.0);
+        travel[2] = (-100.0, 50.0);
         SimController {
             machine: [0.0; AXES],
             zero: [0.0; AXES],
@@ -422,7 +422,7 @@ mod tests {
         let st = s.status().unwrap();
         assert_eq!(
             (st.machine_mm[0], st.machine_mm[1], st.machine_mm[2]),
-            (0.0, 0.0, 0.0)
+            (0.0, 0.0, 50.0)
         );
     }
 }
