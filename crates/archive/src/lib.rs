@@ -11,7 +11,7 @@ use std::path::{Path, PathBuf};
 pub enum Kind {
     /// A drilling file.
     Drill,
-    /// A routing file (HP-GL, or the outline of a board in Gerber).
+    /// A routing file (HP-GL, or the outline of a board in Gerber or DXF).
     Route,
     /// Anything else (notes, pictures, the Gerber layers of copper): listed, not loaded.
     Other,
@@ -28,6 +28,8 @@ pub fn kind_of(name: &str) -> Kind {
         "plt" | "hpgl" | "hpg" | "plot" => Kind::Route,
         // the outline of a board in Gerber: its edge is what a router cuts
         "gko" | "gm1" | "gml" | "gm2" | "gm3" | "gbr" => Kind::Route,
+        // a drawing of the board: its lines, arcs and circles are what a router cuts
+        "dxf" => Kind::Route,
         _ => Kind::Other,
     }
 }
