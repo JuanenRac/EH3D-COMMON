@@ -262,6 +262,11 @@ impl Controller for SimController {
         }
     }
 
+    fn set_travel(&mut self, travel: [(f64, f64); AXES]) -> bool {
+        self.travel = travel;
+        true
+    }
+
     fn send_line(&mut self, line: &str) -> Result<(), Error> {
         self.check_free()?;
         self.log.push(line.to_string());
@@ -385,6 +390,20 @@ mod tests {
         assert_eq!((st.work_mm[0], st.work_mm[1]), (0.0, 0.0));
         s.send_line("G90 G1 X10").unwrap();
         assert!((s.status().unwrap().machine_mm[0] - 35.4).abs() < 1e-9);
+    }
+
+    #[test]
+    fn the_travel_can_be_told_and_the_limits_follow() {
+        let mut s = SimController::new();
+        let mut t = s.travel;
+        t[0] = (0.0, 100.0);
+        assert!(s.set_travel(t));
+        assert!(matches!(s.send_line("G0 X150"), Err(Error::Alarm(_))));
+        s.command(Command::Unlock).unwrap();
+        s.send_line("G0 X90").unwrap();
+        // a controller that keeps its own limits says it cannot be told
+        let mut g = crate::grbl::GrblController::new(crate::mock::MockTransport::default());
+        assert!(!g.set_travel(t));
     }
 
     #[test]

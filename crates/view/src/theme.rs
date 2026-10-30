@@ -1,6 +1,6 @@
 //! The themes of the modern interface. A theme is data: the colours, how the corners of the cards are cut and whether the accents glow.
-//! There are four made ones (Forge, the default; Neon Arcade; Glass Pro; the classic Windows grey) and one that follows the colours of
-//! Windows (light or dark and the accent colour the user chose there). A user can write their own in a small text file.
+//! There are ten made ones (Forge, the default; Neon Arcade; Glass Pro; the classic Windows grey; Midnight; Paper, a light one; Forest;
+//! Retro; Ocean; High contrast) and one that follows the colours of Windows (light or dark and the accent colour the user chose there). A user can write their own in a small text file.
 
 /// The colour type of the suite.
 pub use eh3d_common::theme::Rgb;
@@ -22,15 +22,27 @@ pub enum ThemeId {
     WindowsClassic,
     /// Follows the colours of Windows.
     System,
+    Midnight,
+    Paper,
+    Forest,
+    Retro,
+    Ocean,
+    Contrast,
 }
 
 impl ThemeId {
-    pub const ALL: [ThemeId; 5] = [
+    pub const ALL: [ThemeId; 11] = [
         ThemeId::Forge,
         ThemeId::Neon,
         ThemeId::Glass,
         ThemeId::WindowsClassic,
         ThemeId::System,
+        ThemeId::Midnight,
+        ThemeId::Paper,
+        ThemeId::Forest,
+        ThemeId::Retro,
+        ThemeId::Ocean,
+        ThemeId::Contrast,
     ];
 
     /// The word of the configuration file (`theme = forge`).
@@ -41,6 +53,12 @@ impl ThemeId {
             ThemeId::Glass => "glass",
             ThemeId::WindowsClassic => "windows-classic",
             ThemeId::System => "system",
+            ThemeId::Midnight => "midnight",
+            ThemeId::Paper => "paper",
+            ThemeId::Forest => "forest",
+            ThemeId::Retro => "retro",
+            ThemeId::Ocean => "ocean",
+            ThemeId::Contrast => "contrast",
         }
     }
 
@@ -215,6 +233,155 @@ impl Theme {
         t
     }
 
+    /// Deep indigo with a violet accent.
+    pub fn midnight() -> Theme {
+        Theme {
+            id: ThemeId::Midnight,
+            background: (c("#0b0b1a"), c("#16163a")),
+            panel: c("#11112b"),
+            panel_raised: c("#1a1a40"),
+            line: c("#8b7bff"),
+            text: c("#ececff"),
+            dim: c("#9a9ac8"),
+            accent: c("#8b7bff"),
+            accent2: c("#ff7bd0"),
+            ok: c("#5be3a0"),
+            warn: c("#ffd36b"),
+            danger: c("#ff6b8b"),
+            table: c("#0c0c26"),
+            grid: c("#232356"),
+            board: c("#14263a"),
+            sizes: [c("#8b7bff"), c("#5be3a0"), c("#ffd36b"), c("#ff7bd0")],
+            corner: Corner::Round,
+            glow: true,
+        }
+    }
+
+    /// A light theme: dark ink on warm paper, with a blue accent.
+    pub fn paper() -> Theme {
+        Theme {
+            id: ThemeId::Paper,
+            background: (c("#f4f1ea"), c("#e8e3d6")),
+            panel: c("#fbf9f4"),
+            panel_raised: c("#ffffff"),
+            line: c("#2a5db0"),
+            text: c("#1d2330"),
+            dim: c("#5b6372"),
+            accent: c("#2a5db0"),
+            accent2: c("#c2410c"),
+            ok: c("#15803d"),
+            warn: c("#b45309"),
+            danger: c("#b91c1c"),
+            table: c("#efece3"),
+            grid: c("#d6d0c0"),
+            board: c("#cfe3d0"),
+            sizes: [c("#2a5db0"), c("#15803d"), c("#b45309"), c("#c2410c")],
+            corner: Corner::Square,
+            glow: false,
+        }
+    }
+
+    /// Dark green with leaf-green accents.
+    pub fn forest() -> Theme {
+        Theme {
+            id: ThemeId::Forest,
+            background: (c("#0a120d"), c("#14241a")),
+            panel: c("#101c14"),
+            panel_raised: c("#172a1d"),
+            line: c("#6bd18a"),
+            text: c("#e6f4ea"),
+            dim: c("#8fae9b"),
+            accent: c("#6bd18a"),
+            accent2: c("#e3c14a"),
+            ok: c("#9be34a"),
+            warn: c("#e3c14a"),
+            danger: c("#ff6b6b"),
+            table: c("#0c1710"),
+            grid: c("#1f3526"),
+            board: c("#17331f"),
+            sizes: [c("#6bd18a"), c("#e3c14a"), c("#4cc9f0"), c("#ff8a5c")],
+            corner: Corner::Cut,
+            glow: false,
+        }
+    }
+
+    /// An amber terminal on black.
+    pub fn retro() -> Theme {
+        Theme {
+            id: ThemeId::Retro,
+            background: (c("#000000"), c("#0a0800")),
+            panel: c("#0a0800"),
+            panel_raised: c("#141000"),
+            line: c("#ffb000"),
+            text: c("#ffcf5a"),
+            dim: c("#b8861f"),
+            accent: c("#ffb000"),
+            accent2: c("#ff7a00"),
+            ok: c("#ffd24a"),
+            warn: c("#ffb000"),
+            danger: c("#ff4d2e"),
+            table: c("#050400"),
+            grid: c("#2a1f00"),
+            board: c("#1a1400"),
+            sizes: [c("#ffb000"), c("#ffd24a"), c("#ff7a00"), c("#ffe9a8")],
+            corner: Corner::Square,
+            glow: true,
+        }
+    }
+
+    /// Deep blue-green with a teal accent.
+    pub fn ocean() -> Theme {
+        Theme {
+            id: ThemeId::Ocean,
+            background: (c("#06141c"), c("#0c2a38")),
+            panel: c("#0b1f2b"),
+            panel_raised: c("#123246"),
+            line: c("#35c4d8"),
+            text: c("#e4f6fb"),
+            dim: c("#86abba"),
+            accent: c("#35c4d8"),
+            accent2: c("#ff9f5a"),
+            ok: c("#5be3b0"),
+            warn: c("#ffd36b"),
+            danger: c("#ff6b7a"),
+            table: c("#081a24"),
+            grid: c("#17384a"),
+            board: c("#0f3a3a"),
+            sizes: [c("#35c4d8"), c("#5be3b0"), c("#ffd36b"), c("#ff9f5a")],
+            corner: Corner::Round,
+            glow: false,
+        }
+    }
+
+    /// High contrast: white on black with yellow accents.
+    pub fn contrast() -> Theme {
+        Theme {
+            id: ThemeId::Contrast,
+            background: (c("#000000"), c("#000000")),
+            panel: c("#000000"),
+            panel_raised: c("#1a1a1a"),
+            line: c("#ffffff"),
+            text: c("#ffffff"),
+            dim: c("#c8c8c8"),
+            accent: c("#ffee00"),
+            accent2: c("#00e5ff"),
+            ok: c("#00ff6a"),
+            warn: c("#ffee00"),
+            danger: c("#ff4040"),
+            table: c("#000000"),
+            grid: c("#4a4a4a"),
+            board: c("#002b00"),
+            sizes: [c("#ffee00"), c("#00e5ff"), c("#00ff6a"), c("#ff4040")],
+            corner: Corner::Square,
+            glow: false,
+        }
+    }
+
+    /// Whether the theme is a light one (dark ink on a light panel), for the toolkits that have a light and a dark base.
+    pub fn is_light(&self) -> bool {
+        self.panel.luminance() > 0.5
+    }
+
     /// The theme for the colours Windows is using now. Where there is no Windows, a dark one with the standard accent.
     pub fn system() -> Theme {
         let (light, accent) = read_windows_colours();
@@ -228,6 +395,12 @@ impl Theme {
             ThemeId::Glass => Theme::glass(),
             ThemeId::WindowsClassic => Theme::windows_classic(),
             ThemeId::System => Theme::system(),
+            ThemeId::Midnight => Theme::midnight(),
+            ThemeId::Paper => Theme::paper(),
+            ThemeId::Forest => Theme::forest(),
+            ThemeId::Retro => Theme::retro(),
+            ThemeId::Ocean => Theme::ocean(),
+            ThemeId::Contrast => Theme::contrast(),
         }
     }
 
@@ -408,7 +581,7 @@ mod tests {
     }
 
     #[test]
-    fn the_five_themes_have_a_name_in_the_file_and_come_back() {
+    fn every_theme_has_a_name_in_the_file_and_come_back() {
         for id in ThemeId::ALL {
             assert_eq!(ThemeId::from_key(id.key()), Some(id));
             assert_eq!(Theme::for_id(id).id, id);

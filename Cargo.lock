@@ -173,6 +173,10 @@ name = "eh3d-controller"
 version = "0.0.1"
 
 [[package]]
+name = "eh3d-filedialog"
+version = "0.0.1"
+
+[[package]]
 name = "eh3d-view"
 version = "0.0.1"
 dependencies = [

@@ -291,6 +291,11 @@ pub trait Controller {
     fn command(&mut self, command: Command) -> Result<(), Error>;
     /// Sends a line of G-code and waits until the controller has taken it.
     fn send_line(&mut self, line: &str) -> Result<(), Error>;
+    /// Tells the controller the limits of the travel of each axis, in mm (minimum and maximum). A controller that has them in its own
+    /// settings cannot be told: it answers `false`.
+    fn set_travel(&mut self, _travel: [(f64, f64); AXES]) -> bool {
+        false
+    }
 }
 
 #[cfg(test)]
