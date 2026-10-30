@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The words of a machine-control window:** position, work and machine, jog, step, home, zero, unlock, program, MDI, log, toolpath, the states of a controller and the rest of what such a program shows, in the eight languages of the interface.
 - **A simulated machine controller (`eh3d_controller::sim`):** a machine in memory that takes the orders (jog, home, zero, stop, emergency stop, spindle, coolant) and the lines of basic G-code (`G0`, `G1`, `G90`, `G91`, `G20`, `G21`, `G92`, `M3` to `M9`) as a real one would, with travel limits that raise an alarm, so that a machine-control program can be tried with nothing connected.
 ## [0.0.3] - The outlines of a board in Gerber and DXF as routing paths, the chord angle for arcs and circles, and the words for the recent files and the counts of holes
 
