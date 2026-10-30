@@ -12,13 +12,13 @@
   <img src="https://img.shields.io/badge/License-GPL%203.0--or--later-blue.svg" alt="GPL 3.0 or later">
   <img src="https://img.shields.io/badge/Stack-Rust-DEA584.svg" alt="Rust">
   <img src="https://img.shields.io/badge/Languages-8-00E5FF.svg" alt="Languages">
-  <img src="https://img.shields.io/badge/Version-0.0.1-0f6cbd.svg" alt="Version">
+  <img src="https://img.shields.io/badge/Version-0.0.2-0f6cbd.svg" alt="Version">
   <img src="https://img.shields.io/badge/Maturity-scaffolding-FFB020.svg" alt="Maturity">
 </p>
 
 ---
 
-**诚实性核对 - 今天真正能运行的内容：** 一个 Rust 库，包含项目容器（`.eh3dproj`）、项目元数据、SHA-256 完整性检查、机床遥测类型和套件的配色，另有套件中每个 ESP32 节点都会复制的固件基础（49 个文件和保持副本一致的工具）。29 个测试在计算机上运行。套件中还没有任何程序使用该库，这里的内容也从未在机床或电路板上运行过。
+**诚实性核对 - 今天真正能运行的内容：** 一个 Rust 库，包含项目容器（`.eh3dproj`）、项目元数据、SHA-256 完整性检查、机床遥测类型和套件的配色，另有套件中每个 ESP32 节点都会复制的固件基础（49 个文件和保持副本一致的工具）。67 个测试在计算机上运行。钻孔和铣削程序以及现代界面用共享 crate 读取文件并绘制作业；这里的内容也从未在机床或电路板上运行过。
 
 ---
 
@@ -28,9 +28,9 @@
 
 | | |
 |---|---|
-| 版本 | `0.0.1` |
+| 版本 | `0.0.2` |
 | 成熟度 | 脚手架 |
-| 测试 | 29 |
+| 测试 | 67 |
 | 技术栈 | Rust（库 crate）和 C++17（固件基础） |
 | 真实硬件 | 不适用：这是数据库，不与机床通信；固件基础从未在电路板上运行 |
 
@@ -47,7 +47,7 @@
 | 容器 | 🟡 | `.eh3dproj` 是标准 ZIP，带有每个条目的 SHA-256 记录；能读写，并拒绝损坏、被改动、未登记和不安全的条目。目前只有它自己的测试在读写。 |
 | 元数据 | 🟡 | 项目元数据（单位、零点、图层、刀具、刀路、基准点）会被校验，并带有语义化的格式版本；因为 1.0.0 是第一个格式，所以暂时没有迁移。 |
 | 遥测与主题 | 🟢 | 轴、主轴、机床状态、带严重程度的 GRBL 报警码，以及带对比度检查的套件配色，均已测试。 |
-| 测试 | 🟢 | 29 个测试通过（`cargo test`）：模块内 15 个，容器 14 个。 |
+| 测试 | 🟢 | 67 个测试通过（`cargo test --workspace`）：主 crate 的模块内 16 个、容器 14 个，四个共享 crate 中 37 个。 |
 | 安全 | 🟡 | 不安全的名称、过大或过多的条目以及任何被改动的条目都会被拒绝；包没有签名也没有加密，也未经独立审查。 |
 | 固件基础 | 🟠 | ESP32 节点共享的 49 个文件，由 `tools/sync_firmware_base.py` 保持一致；只通过唯一使用它的节点 EH3D-NODE-BUNGARD 测试过，从未在电路板上运行。 |
 | 被其他程序使用 | 🔴 | 套件中还没有任何程序依赖该 crate。 |
@@ -155,7 +155,7 @@ python -I tools/sync_firmware_base.py check
 
 ## 🧪 测试
 
-测试共 29 个（`cargo test`，CI 中在 Windows 和 Linux 上运行）：模块内 15 个（元数据及其校验、报警码和机床状态、配色及其 WCAG 对比度），容器 14 个（内存和文件的往返、相同内容得到相同字节、完整性记录、被改动的条目、被改动的大小、未登记的条目、缺失的条目、被编辑的元数据、不是包的文件、不安全和恶意的条目名称、被替换的条目、无效的项目）。CI 还运行 `cargo fmt --check`、将警告视为错误的 `cargo clippy`、`python -I tools/ci_validate.py`（清单、版本、变更日志和八个 README）以及 `tools/sync_firmware_base.py check`（固件基础的副本）。固件基础的主机测试（`firmware_base/tests/`）在 EH3D-NODE-BUNGARD 中运行，而不在这里。
+测试共 67 个（`cargo test --workspace`，CI 中在 Windows 和 Linux 上运行）：模块内 16 个（元数据及其校验、报警码和机床状态、配色及其 WCAG 对比度），容器 14 个（内存和文件的往返、相同内容得到相同字节、完整性记录、被改动的条目、被改动的大小、未登记的条目、缺失的条目、被编辑的元数据、不是包的文件、不安全和恶意的条目名称、被替换的条目、无效的项目）。CI 还运行 `cargo fmt --check`、将警告视为错误的 `cargo clippy`、`python -I tools/ci_validate.py`（清单、版本、变更日志和八个 README）以及 `tools/sync_firmware_base.py check`（固件基础的副本）。固件基础的主机测试（`firmware_base/tests/`）在 EH3D-NODE-BUNGARD 中运行，而不在这里。四个共享 crate 另有 37 个：作业压缩包（6 个）、Bungard 机器的文件及 HP-GL 圆弧、圆和缩放（4 个）、在模拟线路上的机器控制器（7 个）、场景、视图、主题以及八种语言的界面文字（20 个）。
 
 ## 🏗️ 构建与发布
 

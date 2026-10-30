@@ -12,13 +12,13 @@
   <img src="https://img.shields.io/badge/License-GPL%203.0--or--later-blue.svg" alt="GPL 3.0 or later">
   <img src="https://img.shields.io/badge/Stack-Rust-DEA584.svg" alt="Rust">
   <img src="https://img.shields.io/badge/Languages-8-00E5FF.svg" alt="Languages">
-  <img src="https://img.shields.io/badge/Version-0.0.1-0f6cbd.svg" alt="Version">
+  <img src="https://img.shields.io/badge/Version-0.0.2-0f6cbd.svg" alt="Version">
   <img src="https://img.shields.io/badge/Maturity-scaffolding-FFB020.svg" alt="Maturity">
 </p>
 
 ---
 
-**Verificação de honestidade - o que funciona hoje:** uma biblioteca em Rust com o contentor de projeto (`.eh3dproj`), os metadados de um projeto, as verificações de integridade SHA-256, os tipos de telemetria de máquina e as cores da suite, mais a base de firmware que cada nó ESP32 da suite copia (49 ficheiros e a ferramenta que mantém as cópias idênticas). 29 testes correm num computador. Nenhum programa da suite usa ainda a biblioteca e nada aqui foi executado numa máquina nem numa placa.
+**Verificação de honestidade - o que funciona hoje:** uma biblioteca em Rust com o contentor de projeto (`.eh3dproj`), os metadados de um projeto, as verificações de integridade SHA-256, os tipos de telemetria de máquina e as cores da suite, mais a base de firmware que cada nó ESP32 da suite copia (49 ficheiros e a ferramenta que mantém as cópias idênticas). 67 testes correm num computador. Os programas de furação e de fresagem e a interface moderna leem os seus ficheiros e desenham os seus trabalhos com os crates partilhados; nada aqui foi executado numa máquina nem numa placa.
 
 ---
 
@@ -28,9 +28,9 @@
 
 | | |
 |---|---|
-| Versão | `0.0.1` |
+| Versão | `0.0.2` |
 | Maturidade | Estrutura inicial |
-| Testes | 29 |
+| Testes | 67 |
 | Tecnologias | Rust (crate de biblioteca) e C++17 (base de firmware) |
 | Em hardware real | Não se aplica: uma biblioteca de dados, nada aqui fala com uma máquina; a base de firmware nunca correu numa placa |
 
@@ -47,7 +47,7 @@ Cada linha é uma parte deste repositório e a luz diz até onde chega hoje. É 
 | Contentor | 🟡 | `.eh3dproj` é um ZIP padrão com um registo SHA-256 de cada entrada; lê, escreve e recusa entradas danificadas, alteradas, não listadas ou inseguras. Até agora só os seus próprios testes o leem e escrevem. |
 | Metadados | 🟡 | Os metadados de um projeto (unidades, zero, camadas, ferramentas, trajetórias, fiduciais) são validados e levam uma versão de formato semântica; ainda não há migração porque 1.0.0 é o primeiro formato. |
 | Telemetria e tema | 🟢 | Eixos, fuso, estados da máquina, os códigos de alarme GRBL com a sua gravidade e as cores da suite com verificação de contraste, tudo testado. |
-| Testes | 🟢 | Passam 29 testes (`cargo test`): 15 nos módulos e 14 sobre o contentor. |
+| Testes | 🟢 | Passam 67 testes (`cargo test --workspace`): 16 nos módulos e 14 sobre o contentor do crate principal, e 37 nos quatro crates partilhados. |
 | Segurança | 🟡 | Recusam-se nomes inseguros, entradas demasiado grandes ou numerosas e qualquer entrada alterada; o pacote não está assinado nem cifrado e não teve revisão independente. |
 | Base de firmware | 🟠 | 49 ficheiros partilhados pelos nós ESP32, mantidos idênticos por `tools/sync_firmware_base.py`; testada só através do EH3D-NODE-BUNGARD, o único nó que a usa, e nunca executada numa placa. |
 | Uso por outros programas | 🔴 | Nenhum programa da suite depende ainda do crate. |
@@ -155,7 +155,7 @@ python -I tools/sync_firmware_base.py check
 
 ## 🧪 Testes
 
-A suite tem 29 testes (`cargo test`, executados em Windows e Linux na CI): 15 dentro dos módulos (os metadados e a sua validação, os códigos de alarme e os estados da máquina, as cores e o seu contraste WCAG) e 14 sobre o contentor (ida e volta em memória e em ficheiro, os mesmos bytes para o mesmo conteúdo, o registo de integridade, uma entrada alterada, um tamanho alterado, uma entrada não listada, uma entrada em falta, metadados editados, um ficheiro que não é um pacote, nomes de entrada inseguros e hostis, uma entrada substituída e um projeto inválido). A CI executa também `cargo fmt --check` e `cargo clippy` com avisos como erros, `python -I tools/ci_validate.py` (manifesto, versões, registo de alterações e os oito README) e `tools/sync_firmware_base.py check` (as cópias da base de firmware). Os testes no computador da base de firmware (`firmware_base/tests/`) correm dentro do EH3D-NODE-BUNGARD, não aqui.
+A suite tem 67 testes (`cargo test --workspace`, executados em Windows e Linux na CI): 16 dentro dos módulos (os metadados e a sua validação, os códigos de alarme e os estados da máquina, as cores e o seu contraste WCAG) e 14 sobre o contentor (ida e volta em memória e em ficheiro, os mesmos bytes para o mesmo conteúdo, o registo de integridade, uma entrada alterada, um tamanho alterado, uma entrada não listada, uma entrada em falta, metadados editados, um ficheiro que não é um pacote, nomes de entrada inseguros e hostis, uma entrada substituída e um projeto inválido). A CI executa também `cargo fmt --check` e `cargo clippy` com avisos como erros, `python -I tools/ci_validate.py` (manifesto, versões, registo de alterações e os oito README) e `tools/sync_firmware_base.py check` (as cópias da base de firmware). Os testes no computador da base de firmware (`firmware_base/tests/`) correm dentro do EH3D-NODE-BUNGARD, não aqui. Os quatro crates partilhados acrescentam 37: os arquivos de trabalho (6), os ficheiros das máquinas Bungard, com os arcos, círculos e escala do HP-GL (4), os controladores de máquina numa linha simulada (7) e a cena, as vistas, os temas e as palavras da interface em oito idiomas (20).
 
 ## 🏗️ Compilação e publicação
 
