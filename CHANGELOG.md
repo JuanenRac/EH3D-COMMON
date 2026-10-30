@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Texts of the spoken voices and of the catalogue:** the words of the list of sounds (voice, female, male) and of the catalogue of bits, in the eight languages.
 - **Texts of the node of the drill head:** the window, its three ways of reaching the node, the camera, the speed, the temperature and the protect output, in the eight languages.
 - **The client of the node of the drill head (`eh3d-aux`):** the status, the measure of the table and the camera as MJPEG of EH3D-NODE-BUNGARD-AUX read into types, the requests with the token, a small blocking HTTP client and a splitter that cuts the MJPEG stream into pictures.
 - **Texts of the catalogue of bits:** the kinds of bit and the notes of the window, in the eight languages.
