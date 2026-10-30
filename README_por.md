@@ -30,7 +30,7 @@
 |---|---|
 | Versão | `0.0.3` |
 | Maturidade | Estrutura inicial |
-| Testes | 100 |
+| Testes | 103 |
 | Tecnologias | Rust (crate de biblioteca) e C++17 (base de firmware) |
 | Em hardware real | Não se aplica: uma biblioteca de dados, nada aqui fala com uma máquina; a base de firmware nunca correu numa placa |
 
@@ -47,7 +47,7 @@ Cada linha é uma parte deste repositório e a luz diz até onde chega hoje. É 
 | Contentor | 🟡 | `.eh3dproj` é um ZIP padrão com um registo SHA-256 de cada entrada; lê, escreve e recusa entradas danificadas, alteradas, não listadas ou inseguras. Até agora só os seus próprios testes o leem e escrevem. |
 | Metadados | 🟡 | Os metadados de um projeto (unidades, zero, camadas, ferramentas, trajetórias, fiduciais) são validados e levam uma versão de formato semântica; ainda não há migração porque 1.0.0 é o primeiro formato. |
 | Telemetria e tema | 🟢 | Eixos, fuso, estados da máquina, os códigos de alarme GRBL com a sua gravidade e as cores da suite com verificação de contraste, tudo testado. |
-| Testes | 🟢 | Passam 100 testes (`cargo test --workspace`): 16 nos módulos e 14 sobre o contentor do crate principal, e 70 nos seis crates partilhados. |
+| Testes | 🟢 | Passam 103 testes (`cargo test --workspace`): 16 nos módulos e 14 sobre o contentor do crate principal, e 70 nos seis crates partilhados. |
 | Segurança | 🟡 | Recusam-se nomes inseguros, entradas demasiado grandes ou numerosas e qualquer entrada alterada; o pacote não está assinado nem cifrado e não teve revisão independente. |
 | Base de firmware | 🟠 | 49 ficheiros partilhados pelos nós ESP32, mantidos idênticos por `tools/sync_firmware_base.py`; testada só através do EH3D-NODE-BUNGARD, o único nó que a usa, e nunca executada numa placa. |
 | Uso por outros programas | 🟡 | Os crates do workspace são usados por EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC e EH3D-SERVER (por caminho, com os repositórios lado a lado); o contentor de projeto em si ainda não é usado por nenhum programa. |
@@ -156,7 +156,7 @@ python -I tools/sync_firmware_base.py check
 
 ## 🧪 Testes
 
-A suite tem 100 testes (`cargo test --workspace`, executados em Windows e Linux na CI): 16 dentro dos módulos (os metadados e a sua validação, os códigos de alarme e os estados da máquina, as cores e o seu contraste WCAG) e 14 sobre o contentor (ida e volta em memória e em ficheiro, os mesmos bytes para o mesmo conteúdo, o registo de integridade, uma entrada alterada, um tamanho alterado, uma entrada não listada, uma entrada em falta, metadados editados, um ficheiro que não é um pacote, nomes de entrada inseguros e hostis, uma entrada substituída e um projeto inválido). A CI executa também `cargo fmt --check` e `cargo clippy` com avisos como erros, `python -I tools/ci_validate.py` (manifesto, versões, registo de alterações e os oito README) e `tools/sync_firmware_base.py check` (as cópias da base de firmware). Os testes no computador da base de firmware (`firmware_base/tests/`) correm dentro do EH3D-NODE-BUNGARD, não aqui. Os seis crates partilhados acrescentam 70: os arquivos de trabalho (6), os ficheiros das máquinas Bungard, com os arcos, círculos e escala do HP-GL e os contornos Gerber e DXF (16), os controladores de máquina numa linha simulada (16) e a cena, as vistas, os temas e as palavras da interface em oito idiomas (20), as janelas Abrir e Guardar (7) e as máquinas e estações do servidor (5).
+A suite tem 103 testes (`cargo test --workspace`, executados em Windows e Linux na CI): 16 dentro dos módulos (os metadados e a sua validação, os códigos de alarme e os estados da máquina, as cores e o seu contraste WCAG) e 14 sobre o contentor (ida e volta em memória e em ficheiro, os mesmos bytes para o mesmo conteúdo, o registo de integridade, uma entrada alterada, um tamanho alterado, uma entrada não listada, uma entrada em falta, metadados editados, um ficheiro que não é um pacote, nomes de entrada inseguros e hostis, uma entrada substituída e um projeto inválido). A CI executa também `cargo fmt --check` e `cargo clippy` com avisos como erros, `python -I tools/ci_validate.py` (manifesto, versões, registo de alterações e os oito README) e `tools/sync_firmware_base.py check` (as cópias da base de firmware). Os testes no computador da base de firmware (`firmware_base/tests/`) correm dentro do EH3D-NODE-BUNGARD, não aqui. Os seis crates partilhados acrescentam 73: os arquivos de trabalho (6), os ficheiros das máquinas Bungard, com os arcos, círculos e escala do HP-GL e os contornos Gerber e DXF (16), os controladores de máquina numa linha simulada (19) e a cena, as vistas, os temas e as palavras da interface em oito idiomas (20), as janelas Abrir e Guardar (7) e as máquinas e estações do servidor (5).
 
 ## 🏗️ Compilação e publicação
 
