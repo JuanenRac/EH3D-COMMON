@@ -18,7 +18,7 @@
 
 ---
 
-**Comprobación de honestidad - lo que se ejecuta hoy:** una biblioteca en Rust con el contenedor de proyecto (`.eh3dproj`), los metadatos de un proyecto, las comprobaciones de integridad SHA-256, los tipos de telemetría de máquina y los colores de la suite, más la base de firmware que copia cada nodo ESP32 de la suite (70 ficheros y la herramienta que mantiene las copias idénticas). 111 pruebas se ejecutan en un ordenador. Los programas de taladrado y de fresado y la interfaz moderna leen sus ficheros y dibujan sus trabajos con los crates compartidos; nada de aquí se ha ejecutado en una máquina ni en una placa.
+**Comprobación de honestidad - lo que se ejecuta hoy:** una biblioteca en Rust con el contenedor de proyecto (`.eh3dproj`), los metadatos de un proyecto, las comprobaciones de integridad SHA-256, los tipos de telemetría de máquina y los colores de la suite, más la base de firmware que copia cada nodo ESP32 de la suite (70 ficheros y la herramienta que mantiene las copias idénticas). 115 pruebas se ejecutan en un ordenador. Los programas de taladrado y de fresado y la interfaz moderna leen sus ficheros y dibujan sus trabajos con los crates compartidos; nada de aquí se ha ejecutado en una máquina ni en una placa.
 
 ---
 
@@ -30,7 +30,7 @@
 |---|---|
 | Versión | `0.0.4` |
 | Madurez | Andamiaje |
-| Pruebas | 111 |
+| Pruebas | 115 |
 | Pila tecnológica | Rust (crate de biblioteca) y C++17 (base de firmware) |
 | En hardware real | No aplica: una biblioteca de datos, nada aquí habla con una máquina; la base de firmware nunca se ha ejecutado en una placa |
 
@@ -47,7 +47,7 @@ Cada línea es una parte de este repositorio y la luz dice hasta dónde llega ho
 | Contenedor | 🟡 | `.eh3dproj` es un ZIP estándar con un registro SHA-256 de cada entrada; lee, escribe y rechaza entradas dañadas, alteradas, sin listar o inseguras. Hasta ahora solo lo leen y escriben sus propias pruebas. |
 | Metadatos | 🟡 | Los metadatos de un proyecto (unidades, cero, capas, herramientas, trayectorias, fiduciales) se validan y llevan una versión de formato semántica; aún no hay migración porque 1.0.0 es el primer formato. |
 | Telemetría y tema | 🟢 | Ejes, husillo, estados de la máquina, los códigos de alarma GRBL con su gravedad y los colores de la suite con comprobación de contraste, todo probado. |
-| Pruebas | 🟢 | Pasan 111 pruebas (`cargo test --workspace`): 16 en los módulos y 14 sobre el contenedor del crate principal, y 81 en los siete crates compartidos. |
+| Pruebas | 🟢 | Pasan 115 pruebas (`cargo test --workspace`): 16 en los módulos y 14 sobre el contenedor del crate principal, y 85 en los ocho crates compartidos. |
 | Seguridad | 🟡 | Se rechazan los nombres inseguros, las entradas demasiado grandes o numerosas y cualquier entrada alterada; el paquete no está firmado ni cifrado y no ha tenido revisión independiente. |
 | Base de firmware | 🟠 | 49 ficheros compartidos por los nodos ESP32, mantenidos idénticos por `tools/sync_firmware_base.py`; probada solo a través de EH3D-NODE-BUNGARD, el único nodo que la usa, y nunca ejecutada en una placa. |
 | Uso por otros programas | 🟡 | Los crates del workspace los usan EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC y EH3D-SERVER (por ruta, con los repositorios uno junto a otro); el contenedor de proyectos todavía no lo usa ningún programa. |
@@ -63,6 +63,7 @@ Cada línea es una parte de este repositorio y la luz dice hasta dónde llega ho
 * El **tema**: los colores de la suite, con una comprobación de contraste WCAG que las pruebas aplican a cada color de texto y de estado.
 * La **base de firmware de los nodos** (`firmware_base/`, con `tools/sync_firmware_base.py`): la parte del firmware de los nodos ESP32 que comparten todos los nodos EH3D - el documento de ajustes, la red, el servidor del panel, usuarios y sesiones, la actualización con vuelta atrás, el registro, la autoprotección y las pruebas que los acompañan - escrita una vez con el nombre del proyecto como marcadores. Cada nodo guarda su propia copia y compila por su cuenta; la herramienta escribe la base en cada nodo y avisa cuando una copia se ha desviado.
 * Los **crates compartidos** del workspace: `eh3d-view` (el trabajo en la mesa, once temas, las palabras de la interfaz en ocho idiomas), `eh3d-archive` (trabajos en archivos ZIP), `eh3d-bungard-formats` (los ficheros Excellon, HP-GL, tablas de herramientas y configuración, los contornos Gerber y DXF), `eh3d-controller` (la interfaz de los controladores de máquina, GRBL y uno simulado), `eh3d-filedialog` (las ventanas Abrir y Guardar) y `eh3d-fleet` (las máquinas y estaciones del servidor).
+* **La altura de la mesa y el nodo del cabezal de taladro:** `eh3d-levelling` guarda el mapa de alturas de la mesa de una máquina (una malla de puntos medidos, la superficie entre ellos por interpolación, la inclinación y la diferencia, la corrección de la Z de un trabajo y una forma de texto para guardar el mapa), y `eh3d-aux` es el cliente de EH3D-NODE-BUNGARD-AUX (su estado, su medida de la mesa, su cámara como MJPEG, las peticiones con el token y un pequeño cliente HTTP).
 
 ## 🧩 Papel en EH3D
 
@@ -156,7 +157,7 @@ python -I tools/sync_firmware_base.py check
 
 ## 🧪 Pruebas
 
-La suite tiene 111 pruebas (`cargo test --workspace`, ejecutadas en Windows y Linux en el CI): 16 dentro de los módulos (los metadatos y su validación, los códigos de alarma y los estados de la máquina, los colores y su contraste WCAG) y 14 sobre el contenedor (ida y vuelta en memoria y en fichero, los mismos bytes para el mismo contenido, el registro de integridad, una entrada cambiada, un tamaño cambiado, una entrada sin listar, una entrada ausente, metadatos editados, un fichero que no es un paquete, nombres de entrada inseguros y hostiles, una entrada reemplazada y un proyecto no válido). El CI también ejecuta `cargo fmt --check` y `cargo clippy` con advertencias como errores, `python -I tools/ci_validate.py` (manifiesto, versiones, registro de cambios y los ocho README) y `tools/sync_firmware_base.py check` (las copias de la base de firmware). Las pruebas en el ordenador de la base de firmware (`firmware_base/tests/`) se ejecutan dentro de EH3D-NODE-BUNGARD, no aquí. Los siete crates compartidos añaden 81 más: los archivos de trabajo (6), los ficheros de las máquinas Bungard, con los arcos, círculos y escalado de HP-GL y los contornos Gerber y DXF (16), los controladores de máquina sobre una línea simulada (19) y la escena, las vistas, los temas y las palabras de la interfaz en ocho idiomas (20), las ventanas Abrir y Guardar (7), las máquinas y estaciones del servidor (5) y el mapa de alturas de la mesa (8).
+La suite tiene 115 pruebas (`cargo test --workspace`, ejecutadas en Windows y Linux en el CI): 16 dentro de los módulos (los metadatos y su validación, los códigos de alarma y los estados de la máquina, los colores y su contraste WCAG) y 14 sobre el contenedor (ida y vuelta en memoria y en fichero, los mismos bytes para el mismo contenido, el registro de integridad, una entrada cambiada, un tamaño cambiado, una entrada sin listar, una entrada ausente, metadatos editados, un fichero que no es un paquete, nombres de entrada inseguros y hostiles, una entrada reemplazada y un proyecto no válido). El CI también ejecuta `cargo fmt --check` y `cargo clippy` con advertencias como errores, `python -I tools/ci_validate.py` (manifiesto, versiones, registro de cambios y los ocho README) y `tools/sync_firmware_base.py check` (las copias de la base de firmware). Las pruebas en el ordenador de la base de firmware (`firmware_base/tests/`) se ejecutan dentro de EH3D-NODE-BUNGARD, no aquí. Los ocho crates compartidos añaden 85 más: los archivos de trabajo (6), los ficheros de las máquinas Bungard, con los arcos, círculos y escalado de HP-GL y los contornos Gerber y DXF (16), los controladores de máquina sobre una línea simulada (19) y la escena, las vistas, los temas y las palabras de la interfaz en ocho idiomas (20), las ventanas Abrir y Guardar (7), las máquinas y estaciones del servidor (5) y el mapa de alturas de la mesa (8) y el cliente del nodo del cabezal de taladro (4).
 
 ## 🏗️ Compilación y publicación
 
