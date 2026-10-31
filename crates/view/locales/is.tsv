@@ -448,3 +448,5 @@ CatNoteLowerRpm	Þetta efni krefst færri snúninga en verkfærið: hraðinn var
 CatNoteBelowSpindle	Þetta efni krefst færri snúninga en snældan getur gefið: lágmark snældunnar var notað, of hratt fyrir efnið.
 CatNoteFluteShort	Skurðlengd verkfærisins nær ekki í gegnum plötuna og umframmálið: það sker ekki alveg í gegn.
 ToolBitWarn	Athugaðu verkfæri úr skránni
+PreviewShow	Forskoðun
+PreviewNone	Engin forskoðun

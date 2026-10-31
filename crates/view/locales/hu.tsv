@@ -448,3 +448,5 @@ CatNoteLowerRpm	Ez az anyag kevesebb fordulatot kér, mint a szerszám: a sebess
 CatNoteBelowSpindle	Ez az anyag kevesebb fordulatot kér, mint amennyit a főorsó adni tud: a főorsó minimumát használtuk, ami túl gyors az anyagnak.
 CatNoteFluteShort	A szerszám vágóhossza nem ér át a lemezen és a ráhagyáson: nem vág át teljesen.
 ToolBitWarn	Ellenőrizze a katalógus szerszámát
+PreviewShow	Előnézet
+PreviewNone	Nincs előnézet

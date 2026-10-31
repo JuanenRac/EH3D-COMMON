@@ -448,3 +448,5 @@ CatNoteLowerRpm	Ta material zahteva manj vrtljajev kot orodje: hitrost je zniža
 CatNoteBelowSpindle	Ta material zahteva manj vrtljajev, kot jih lahko da vreteno: uporabljen je minimum vretena, ki je za material prehiter.
 CatNoteFluteShort	Dolžina rezanja orodja ne sega skozi ploščo in dodatek: ne bo prerezalo do konca.
 ToolBitWarn	Preverite orodje iz kataloga
+PreviewShow	Predogled
+PreviewNone	Brez predogleda

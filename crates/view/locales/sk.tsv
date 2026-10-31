@@ -448,3 +448,5 @@ CatNoteLowerRpm	Tento materiál vyžaduje menej otáčok, než udáva nástroj: 
 CatNoteBelowSpindle	Tento materiál vyžaduje menej otáčok, než dokáže vreteno: použili sa minimálne otáčky vretena, príliš rýchle pre materiál.
 CatNoteFluteShort	Dĺžka ostria nástroja nestačí na dosku a prídavok: neprereže ju celú.
 ToolBitWarn	Skontrolujte nástroj z katalógu
+PreviewShow	Náhľad
+PreviewNone	Bez náhľadu

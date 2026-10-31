@@ -448,3 +448,5 @@ CatNoteLowerRpm	Tämä materiaali vaatii vähemmän kierroksia kuin terä: nopeu
 CatNoteBelowSpindle	Tämä materiaali vaatii vähemmän kierroksia kuin karan pienin nopeus: käytetty karan minimiä, joka on materiaalille liian nopea.
 CatNoteFluteShort	Terän leikkuupituus ei riitä levyn ja varan läpi: se ei leikkaa kokonaan läpi.
 ToolBitWarn	Tarkista luettelon terä
+PreviewShow	Esikatselu
+PreviewNone	Ei esikatselua

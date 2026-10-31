@@ -448,3 +448,5 @@ CatNoteLowerRpm	Šis materiāls prasa mazāk apgriezienu nekā instruments: ātr
 CatNoteBelowSpindle	Šis materiāls prasa mazāk apgriezienu, nekā var dot šī vārpsta: izmantots vārpstas minimums, kas materiālam ir pārāk ātrs.
 CatNoteFluteShort	Instrumenta griešanas garums neaizsniedz cauri platei un rezervei: tas nepārgriezīs līdz galam.
 ToolBitWarn	Pārbaudiet kataloga instrumentu
+PreviewShow	Priekšskatījums
+PreviewNone	Nav priekšskatījuma

@@ -448,3 +448,5 @@ CatNoteLowerRpm	Tento materiál vyžaduje méně otáček, než nástroj udává
 CatNoteBelowSpindle	Tento materiál vyžaduje méně otáček, než vřeteno dokáže: použity minimální otáčky vřetena, pro materiál příliš rychlé.
 CatNoteFluteShort	Délka břitu tohoto nástroje nestačí na desku a přídavek: neprořízne celou tloušťku.
 ToolBitWarn	Zkontrolujte nástroj z katalogu
+PreviewShow	Náhled
+PreviewNone	Bez náhledu

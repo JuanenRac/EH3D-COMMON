@@ -448,3 +448,5 @@ CatNoteLowerRpm	Ovaj materijal traži manje okretaja nego alat: brzina je smanje
 CatNoteBelowSpindle	Ovaj materijal traži manje okretaja nego što vreteno može dati: korišten je minimum vretena, prebrz za materijal.
 CatNoteFluteShort	Duljina rezanja ovog alata ne prolazi kroz ploču i dodatak: neće prerezati do kraja.
 ToolBitWarn	Provjerite alat iz kataloga
+PreviewShow	Pregled
+PreviewNone	Nema pregleda

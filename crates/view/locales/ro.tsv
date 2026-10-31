@@ -448,3 +448,5 @@ CatNoteLowerRpm	Acest material cere mai puține rotații decât scula: viteza a 
 CatNoteBelowSpindle	Acest material cere mai puține rotații decât poate da acest ax: s-a folosit minimul axului, prea rapid pentru material.
 CatNoteFluteShort	Lungimea de tăiere a sculei nu trece prin placă plus adaos: nu va tăia complet.
 ToolBitWarn	Verificați scula din catalog
+PreviewShow	Previzualizare
+PreviewNone	Fără previzualizare

@@ -448,3 +448,5 @@ CatNoteLowerRpm	Este material pide menos voltas ca a ferramenta: baixouse a velo
 CatNoteBelowSpindle	Este material pide menos voltas das que pode dar este fuso: úsase o mínimo do fuso, demasiado rápido para o material.
 CatNoteFluteShort	A lonxitude de corte desta ferramenta non atravesa a placa máis o sobrante: non cortará por completo.
 ToolBitWarn	Revisa a ferramenta do catálogo
+PreviewShow	Previsualización
+PreviewNone	Sen previsualización

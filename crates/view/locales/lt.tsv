@@ -448,3 +448,5 @@ CatNoteLowerRpm	Ši medžiaga reikalauja mažiau apsisukimų nei įrankis: greit
 CatNoteBelowSpindle	Ši medžiaga reikalauja mažiau apsisukimų, nei gali suteikti šis suklys: naudojamas mažiausias suklio greitis, per didelis šiai medžiagai.
 CatNoteFluteShort	Įrankio pjovimo ilgis neprasiskverbia per plokštę ir atsargą: jis nepjaus iki galo.
 ToolBitWarn	Patikrinkite katalogo įrankį
+PreviewShow	Peržiūra
+PreviewNone	Peržiūros nėra

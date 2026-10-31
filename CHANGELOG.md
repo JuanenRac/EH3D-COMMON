@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Texts of the preview in the Open window (eh3d-view):** the name of the switch and the note for a file that cannot be drawn, in the 37 languages.
 - **Texts of the bits taken from the catalogue (eh3d-view):** the board material that was applied, the three notes (the material wants fewer turns than the bit, fewer than the spindle can give, the cutting length does not go through the board and the extra) and the short warning of the window of tools, in the 37 languages.
 - **Texts for the bar of the job, the kinds of link, the catalogue and the materials (eh3d-view):** job, Z feed, spindle, tool, the tag of the modern interface, series, tip, demo, EH3D node, EH3D server, the maker "Generic" and eight material names, in the 37 languages. Four labels of the switches of the plan view were shortened in Greek, Dutch, Russian and Ukrainian so they fit.
 

@@ -375,6 +375,8 @@ texts! {
     ToolsTitle => ["Tools", "Herramientas", "Utensili", "Werkzeuge", "Outils", "Ferramentas", "刀具", "工具"],
     SetAskOperator => ["Ask me at tool changes and when the spindle starts", "Preguntarme en los cambios de herramienta y al arrancar el husillo", "Chiedere ai cambi utensile e all'avvio del mandrino", "Bei Werkzeugwechsel und Spindelstart nachfragen", "Me demander aux changements d'outil et au démarrage de la broche", "Perguntar nas trocas de ferramenta e no arranque do fuso", "换刀和主轴启动时询问我", "工具交換と主軸始動のときに確認する"],
     SetToolsOnOpen => ["Show the tools window when I open a file", "Mostrar la ventana de herramientas al abrir un fichero", "Mostrare la finestra degli utensili quando apro un file", "Werkzeugfenster beim Öffnen einer Datei zeigen", "Afficher la fenêtre des outils à l'ouverture d'un fichier", "Mostrar a janela de ferramentas ao abrir um ficheiro", "打开文件时显示刀具窗口", "ファイルを開くときに工具ウィンドウを表示する"],
+    PreviewShow => ["Preview", "Vista previa", "Anteprima", "Vorschau", "Aperçu", "Pré-visualização", "预览", "プレビュー"],
+    PreviewNone => ["No preview", "Sin vista previa", "Nessuna anteprima", "Keine Vorschau", "Pas d'aperçu", "Sem pré-visualização", "无预览", "プレビューなし"],
     SndVoice => ["Voice", "Voz", "Voce", "Stimme", "Voix", "Voz", "语音", "音声"],
     SndFemale => ["female", "mujer", "donna", "weiblich", "femme", "mulher", "女声", "女性"],
     SndMale => ["male", "hombre", "uomo", "männlich", "homme", "homem", "男声", "男性"],

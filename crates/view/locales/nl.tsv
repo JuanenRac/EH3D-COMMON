@@ -448,3 +448,5 @@ CatNoteLowerRpm	Dit materiaal vraagt minder toeren dan het gereedschap: de snelh
 CatNoteBelowSpindle	Dit materiaal vraagt minder toeren dan deze spindel kan geven: het minimum van de spindel is gebruikt, te snel voor het materiaal.
 CatNoteFluteShort	De snijlengte van dit gereedschap reikt niet door de plaat plus de extra marge: het snijdt er niet helemaal doorheen.
 ToolBitWarn	Controleer het catalogusgereedschap
+PreviewShow	Voorbeeld
+PreviewNone	Geen voorbeeld

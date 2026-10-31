@@ -448,3 +448,5 @@ CatNoteLowerRpm	Dette materiale kræver færre omdrejninger end værktøjet angi
 CatNoteBelowSpindle	Dette materiale kræver færre omdrejninger, end spindlen kan give: spindlens minimum er brugt, hvilket er for hurtigt til materialet.
 CatNoteFluteShort	Værktøjets skærelængde rækker ikke gennem pladen og tillægget: det skærer ikke helt igennem.
 ToolBitWarn	Kontrollér katalogværktøjet
+PreviewShow	Forhåndsvisning
+PreviewNone	Ingen forhåndsvisning

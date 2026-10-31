@@ -448,3 +448,5 @@ CatNoteLowerRpm	Detta material kräver färre varv än verktyget: hastigheten ha
 CatNoteBelowSpindle	Detta material kräver färre varv än spindeln kan ge: spindelns minimum har använts, för snabbt för materialet.
 CatNoteFluteShort	Verktygets skärlängd räcker inte genom skivan och tillägget: det skär inte hela vägen igenom.
 ToolBitWarn	Kontrollera katalogverktyget
+PreviewShow	Förhandsgranskning
+PreviewNone	Ingen förhandsgranskning

@@ -448,3 +448,5 @@ CatNoteLowerRpm	Aquest material demana menys voltes que l'eina: s'ha baixat la v
 CatNoteBelowSpindle	Aquest material demana menys voltes de les que pot donar aquest fus: s'usa el mínim del fus, massa ràpid per al material.
 CatNoteFluteShort	La longitud de tall d'aquesta eina no travessa la placa més el sobrant: no tallarà del tot.
 ToolBitWarn	Reviseu l'eina del catàleg
+PreviewShow	Previsualització
+PreviewNone	Sense previsualització

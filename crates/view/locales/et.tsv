@@ -448,3 +448,5 @@ CatNoteLowerRpm	See materjal nõuab vähem pöördeid, kui tööriist ette näeb
 CatNoteBelowSpindle	See materjal nõuab vähem pöördeid, kui spindel suudab anda: kasutati spindli miinimumi, mis on materjalile liiga kiire.
 CatNoteFluteShort	Tööriista lõikepikkus ei ulatu läbi plaadi ja varu: see ei lõika päris läbi.
 ToolBitWarn	Kontrollige kataloogi tööriista
+PreviewShow	Eelvaade
+PreviewNone	Eelvaadet pole
