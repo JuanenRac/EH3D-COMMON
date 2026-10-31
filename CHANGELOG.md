@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Texts of the catalogue of bits:** the three new kinds (chip-breaker routers, slot drills, diamond-coated routers), the words of the list (series, cutting length, schematic drawing, the top speed of the spindle) and what each kind of bit is for, in eight languages; and the label of the button that moves only the design.
+
 - **The node of the drill head through the server:** `eh3d-aux::Link::via_server` asks EH3D-SERVER for the status, the measure and the camera of the node of a machine (`/api/v1/machines/:id/head/...`), and the status carries `camera_model` (`ov2640` or `ov5640`, empty for an older node). 2 more tests.
 - **Texts of the head node window:** the note of the way through the server, the missing server data and the camera model, in the eight languages.
 
