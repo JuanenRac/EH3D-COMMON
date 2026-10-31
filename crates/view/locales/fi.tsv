@@ -450,3 +450,8 @@ CatNoteFluteShort	Terän leikkuupituus ei riitä levyn ja varan läpi: se ei lei
 ToolBitWarn	Tarkista luettelon terä
 PreviewShow	Esikatselu
 PreviewNone	Ei esikatselua
+SelectTool	Valitse
+CopySel	Kopioi
+PasteSel	Liitä
+DeleteSel	Poista
+RemoveTool	Poista työkalu työstä

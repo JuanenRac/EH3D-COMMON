@@ -450,3 +450,8 @@ CatNoteFluteShort	Verktygets skärlängd räcker inte genom skivan och tillägge
 ToolBitWarn	Kontrollera katalogverktyget
 PreviewShow	Förhandsgranskning
 PreviewNone	Ingen förhandsgranskning
+SelectTool	Markera
+CopySel	Kopiera
+PasteSel	Klistra in
+DeleteSel	Ta bort
+RemoveTool	Ta bort verktyget från jobbet

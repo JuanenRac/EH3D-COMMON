@@ -450,3 +450,8 @@ CatNoteFluteShort	Длина режущей части инструмента н
 ToolBitWarn	Проверьте инструмент из каталога
 PreviewShow	Предпросмотр
 PreviewNone	Нет предпросмотра
+SelectTool	Выделить
+CopySel	Копировать
+PasteSel	Вставить
+DeleteSel	Удалить
+RemoveTool	Убрать инструмент из задания

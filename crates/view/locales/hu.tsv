@@ -450,3 +450,8 @@ CatNoteFluteShort	A szerszám vágóhossza nem ér át a lemezen és a ráhagyá
 ToolBitWarn	Ellenőrizze a katalógus szerszámát
 PreviewShow	Előnézet
 PreviewNone	Nincs előnézet
+SelectTool	Kijelölés
+CopySel	Másolás
+PasteSel	Beillesztés
+DeleteSel	Törlés
+RemoveTool	Szerszám eltávolítása a munkából

@@ -450,3 +450,8 @@ CatNoteFluteShort	Skjærelengden til verktøyet rekker ikke gjennom platen og ti
 ToolBitWarn	Kontroller katalogverktøyet
 PreviewShow	Forhåndsvisning
 PreviewNone	Ingen forhåndsvisning
+SelectTool	Velg
+CopySel	Kopier
+PasteSel	Lim inn
+DeleteSel	Slett
+RemoveTool	Fjern verktøyet fra jobben

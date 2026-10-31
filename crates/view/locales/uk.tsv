@@ -450,3 +450,8 @@ CatNoteFluteShort	Довжина різальної частини інстру�
 ToolBitWarn	Перевірте інструмент із каталогу
 PreviewShow	Попередній перегляд
 PreviewNone	Немає перегляду
+SelectTool	Виділити
+CopySel	Копіювати
+PasteSel	Вставити
+DeleteSel	Видалити
+RemoveTool	Прибрати інструмент із завдання

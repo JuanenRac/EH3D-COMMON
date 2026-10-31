@@ -450,3 +450,8 @@ CatNoteFluteShort	Dolžina rezanja orodja ne sega skozi ploščo in dodatek: ne 
 ToolBitWarn	Preverite orodje iz kataloga
 PreviewShow	Predogled
 PreviewNone	Brez predogleda
+SelectTool	Izberi
+CopySel	Kopiraj
+PasteSel	Prilepi
+DeleteSel	Izbriši
+RemoveTool	Odstrani orodje iz naloge
