@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.0.6] - The quality analyser, the ring of LEDs and the picture of the drill head node
+
 - **The quality analyser (`eh3d-inspect`):** judges a picture of the camera of the drill head: every hole of the job (there, round, the right size, in place, clean around), the milled channels (their width from the exact distance to the copper, how even they are, where they pinch) and the picture itself (light, contrast, focus), with a profile of tolerances (presets standard, fine pitch and prototype, kept as JSON) and one verdict: ok, not ok or cannot judge. It also suggests the level of the ring of LEDs that would give a good picture. 43 tests.
 - **The ring of LEDs and the picture in the node client (`eh3d-aux`):** `Link::set_light`, `Link::light`, `Link::snapshot` and `Link::put_inspect_profile`, the colour signals (`Cue`), and the light of the status; older nodes that do not say it count as without a ring.
 - **Texts of the quality check and of the light:** 58 texts in the eight languages for the window of the quality check, its tolerances and the findings of the analyser.
