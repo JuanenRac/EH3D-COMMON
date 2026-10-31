@@ -424,3 +424,22 @@ SndAlarm	aláram
 SndKnock	cnag
 SndSiren	sioréad
 OpenManyHint	Roghnaíonn Ctrl+cliceáil nó Shift+cliceáil roinnt comhad (druileáil agus ródú); osclaítear le chéile iad
+HudJob	Obair
+HudFeedZ	Beathú Z
+HudSpindle	Fearsaid
+HudTool	Uirlis
+LauncherModernTag	Nua-aimseartha
+CatSeries	sraith
+MakerGeneric	Gineasach
+MatFr4PositiveResist	FR4 eapocsa, fótaraeisistiú dearfach
+MatFr4Bare	FR4 eapocsa, copar lom
+MatPaperResist	Páipéar lannaithe (FR2), fótaraeisistiú
+MatSheets	Bileoga FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 sraith 500, 1.6 mm
+MatFr4Series08	FR4 sraith 500, 0.8 mm
+MatThermalClad	Thermal Clad (alúmanam)
+MatPyralux	Pyralux AP solúbtha
+LinkNode	Nód EH3D
+LinkServer	Freastalaí EH3D
+CatTip	barr
+LinkDemo	Taispeántas

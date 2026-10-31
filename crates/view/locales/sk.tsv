@@ -424,3 +424,22 @@ SndAlarm	alarm
 SndKnock	klopanie
 SndSiren	siréna
 OpenManyHint	Ctrl+kliknutie alebo Shift+kliknutie vyberie viac súborov (vŕtanie a frézovanie); otvoria sa spolu
+HudJob	Úloha
+HudFeedZ	Posuv Z
+HudSpindle	Vreteno
+HudTool	Nástroj
+LauncherModernTag	Moderný
+CatSeries	rad
+MakerGeneric	Všeobecný
+MatFr4PositiveResist	FR4 epoxid, pozitívny fotorezist
+MatFr4Bare	FR4 epoxid, holá meď
+MatPaperResist	Laminovaný papier (FR2), fotorezist
+MatSheets	Dosky FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 rad 500, 1,6 mm
+MatFr4Series08	FR4 rad 500, 0,8 mm
+MatThermalClad	Thermal Clad (hliník)
+MatPyralux	Pyralux AP flexibilný
+LinkNode	EH3D uzol
+LinkServer	EH3D server
+CatTip	hrot
+LinkDemo	Demo

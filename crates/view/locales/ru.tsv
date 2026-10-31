@@ -276,9 +276,9 @@ EmergencyStop	Аварийная остановка
 EmergencyShow	Показать кнопку аварийной остановки (её можно перетащить куда угодно)
 RackPlaces	мест инструмента
 Rotate	Повернуть
-FollowTool	Следовать за инструментом
+FollowTool	За инструментом
 Enlarge2d	Увеличить вид 2D
-MoveDesign	Переместить только рисунок
+MoveDesign	Двигать только рисунок
 MoveBoard	Переместить плату
 ShowBoth	Показать вид 3D
 OnTable	На столе
@@ -424,3 +424,22 @@ SndAlarm	тревога
 SndKnock	стук
 SndSiren	сирена
 OpenManyHint	Ctrl+щелчок или Shift+щелчок выбирает несколько файлов (сверление и фрезерование); они открываются вместе
+HudJob	Задание
+HudFeedZ	Подача Z
+HudSpindle	Шпиндель
+HudTool	Инструмент
+LauncherModernTag	Современный
+CatSeries	серия
+MakerGeneric	Универсальный
+MatFr4PositiveResist	FR4 эпоксид, позитивный фоторезист
+MatFr4Bare	FR4 эпоксид, голая медь
+MatPaperResist	Слоистая бумага (FR2), фоторезист
+MatSheets	Листы FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 серия 500, 1,6 mm
+MatFr4Series08	FR4 серия 500, 0,8 mm
+MatThermalClad	Thermal Clad (алюминий)
+MatPyralux	Pyralux AP гибкий
+LinkNode	EH3D узел
+LinkServer	EH3D сервер
+CatTip	кончик
+LinkDemo	Демо

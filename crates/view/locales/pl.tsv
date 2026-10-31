@@ -424,3 +424,22 @@ SndAlarm	alarm
 SndKnock	stukanie
 SndSiren	syrena
 OpenManyHint	Ctrl+klik lub Shift+klik wybiera kilka plików (wiercenie i frezowanie); otwierają się razem
+HudJob	Zadanie
+HudFeedZ	Posuw Z
+HudSpindle	Wrzeciono
+HudTool	Narzędzie
+LauncherModernTag	Nowoczesny
+CatSeries	seria
+MakerGeneric	Ogólny
+MatFr4PositiveResist	FR4 epoksyd, fotorezyst pozytywny
+MatFr4Bare	FR4 epoksyd, goła miedź
+MatPaperResist	Papier laminowany (FR2), fotorezyst
+MatSheets	Arkusze FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 seria 500, 1,6 mm
+MatFr4Series08	FR4 seria 500, 0,8 mm
+MatThermalClad	Thermal Clad (aluminium)
+MatPyralux	Pyralux AP elastyczny
+LinkNode	EH3D węzeł
+LinkServer	EH3D serwer
+CatTip	końcówka
+LinkDemo	Demo

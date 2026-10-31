@@ -424,3 +424,22 @@ SndAlarm	hälytys
 SndKnock	koputus
 SndSiren	sireeni
 OpenManyHint	Ctrl+napsautus tai Shift+napsautus valitsee useita tiedostoja (poraus ja jyrsintä); ne avataan yhdessä
+HudJob	Työ
+HudFeedZ	Z-syöttö
+HudSpindle	Kara
+HudTool	Työkalu
+LauncherModernTag	Moderni
+CatSeries	sarja
+MakerGeneric	Yleinen
+MatFr4PositiveResist	FR4-epoksi, positiivinen valoresisti
+MatFr4Bare	FR4-epoksi, paljas kupari
+MatPaperResist	Laminoitu paperi (FR2), valoresisti
+MatSheets	Levyt FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 500-sarja, 1,6 mm
+MatFr4Series08	FR4 500-sarja, 0,8 mm
+MatThermalClad	Thermal Clad (alumiini)
+MatPyralux	Pyralux AP joustava
+LinkNode	EH3D solmu
+LinkServer	EH3D palvelin
+CatTip	kärki
+LinkDemo	Demo

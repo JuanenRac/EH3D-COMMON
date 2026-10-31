@@ -424,3 +424,22 @@ SndAlarm	alarma
 SndKnock	kolpea
 SndSiren	sirena
 OpenManyHint	Ctrl+klik edo Shift+klik egin hainbat fitxategi aukeratzeko (zulaketa eta fresaketa); batera irekitzen dira
+HudJob	Lana
+HudFeedZ	Z aurrerapena
+HudSpindle	Ardatza
+HudTool	Erreminta
+LauncherModernTag	Modernoa
+CatSeries	seriea
+MakerGeneric	Generikoa
+MatFr4PositiveResist	FR4 epoxia, fotorresist positiboa
+MatFr4Bare	FR4 epoxia, kobre biluzia
+MatPaperResist	Paper laminatua (FR2), fotorresista
+MatSheets	FR2 / FR3 / CEM-1 xaflak
+MatFr4Series16	FR4 500 seriea, 1,6 mm
+MatFr4Series08	FR4 500 seriea, 0,8 mm
+MatThermalClad	Thermal Clad (aluminioa)
+MatPyralux	Pyralux AP malgua
+LinkNode	EH3D nodoa
+LinkServer	EH3D zerbitzaria
+CatTip	muturra
+LinkDemo	Demoa

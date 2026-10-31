@@ -424,3 +424,22 @@ SndAlarm	alarm
 SndKnock	koputus
 SndSiren	sireen
 OpenManyHint	Ctrl+klõps või Shift+klõps valib mitu faili (puurimine ja freesimine); need avatakse koos
+HudJob	Töö
+HudFeedZ	Z-ette
+HudSpindle	Spindel
+HudTool	Tööriist
+LauncherModernTag	Kaasaegne
+CatSeries	seeria
+MakerGeneric	Üldine
+MatFr4PositiveResist	FR4 epoksiid, positiivne fotoresist
+MatFr4Bare	FR4 epoksiid, paljas vask
+MatPaperResist	Lamineeritud paber (FR2), fotoresist
+MatSheets	Plaadid FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 500-seeria, 1,6 mm
+MatFr4Series08	FR4 500-seeria, 0,8 mm
+MatThermalClad	Thermal Clad (alumiinium)
+MatPyralux	Pyralux AP painduv
+LinkNode	EH3D sõlm
+LinkServer	EH3D server
+CatTip	ots
+LinkDemo	Demo

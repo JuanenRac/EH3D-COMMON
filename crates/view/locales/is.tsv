@@ -424,3 +424,22 @@ SndAlarm	viðvörun
 SndKnock	bank
 SndSiren	sírena
 OpenManyHint	Ctrl+smellur eða Shift+smellur velur margar skrár (borun og fræsing); þær opnast saman
+HudJob	Verk
+HudFeedZ	Z-færsla
+HudSpindle	Snælda
+HudTool	Verkfæri
+LauncherModernTag	Nútímalegt
+CatSeries	röð
+MakerGeneric	Almennt
+MatFr4PositiveResist	FR4 epoxí, jákvætt ljósnæmt lakk
+MatFr4Bare	FR4 epoxí, ber kopar
+MatPaperResist	Lagskipt pappír (FR2), ljósnæmt lakk
+MatSheets	Plötur FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 500-röð, 1,6 mm
+MatFr4Series08	FR4 500-röð, 0,8 mm
+MatThermalClad	Thermal Clad (ál)
+MatPyralux	Pyralux AP sveigjanlegt
+LinkNode	EH3D hnútur
+LinkServer	EH3D netþjónn
+CatTip	oddur
+LinkDemo	Sýnishorn

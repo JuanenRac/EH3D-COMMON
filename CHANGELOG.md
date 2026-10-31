@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Texts for the bar of the job, the kinds of link, the catalogue and the materials (eh3d-view):** job, Z feed, spindle, tool, the tag of the modern interface, series, tip, demo, EH3D node, EH3D server, the maker "Generic" and eight material names, in the 37 languages. Four labels of the switches of the plan view were shortened in Greek, Dutch, Russian and Ukrainian so they fit.
+
 ## [0.0.7] - More languages, the spindles and the texts of the parts of a job
 
 - **Twenty-nine more languages (eh3d-view):** Bulgarian, Croatian, Czech, Danish, Dutch, Estonian, Finnish, Greek, Hungarian, Irish, Latvian, Lithuanian, Maltese, Polish, Romanian, Slovak, Slovenian, Swedish, Norwegian, Icelandic, Ukrainian, Russian, Serbian, Albanian, Catalan, Galician, Basque, Brazilian Portuguese and Canadian French, read from the files of `crates/view/locales` (one line per text); a text a file does not have is taken from English, or from Portuguese and French for the two variants. `Lang::ALL` lists the 37, with `native_name`, `fallback`, `coverage` and codes such as `pt-br`. The translations are the work of the model and are open to review by native speakers. A test checks that each new language has all its texts and its own alphabet.

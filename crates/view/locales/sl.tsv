@@ -424,3 +424,22 @@ SndAlarm	alarm
 SndKnock	trkanje
 SndSiren	sirena
 OpenManyHint	Ctrl+klik ali Shift+klik izbere več datotek (vrtanje in frezanje); odprejo se skupaj
+HudJob	Delo
+HudFeedZ	Podajanje Z
+HudSpindle	Vreteno
+HudTool	Orodje
+LauncherModernTag	Sodoben
+CatSeries	serija
+MakerGeneric	Splošno
+MatFr4PositiveResist	FR4 epoksi, pozitivni fotorezist
+MatFr4Bare	FR4 epoksi, gol baker
+MatPaperResist	Laminiran papir (FR2), fotorezist
+MatSheets	Plošče FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 serija 500, 1,6 mm
+MatFr4Series08	FR4 serija 500, 0,8 mm
+MatThermalClad	Thermal Clad (aluminij)
+MatPyralux	Pyralux AP upogljiv
+LinkNode	EH3D vozlišče
+LinkServer	EH3D strežnik
+CatTip	konica
+LinkDemo	Predstavitev

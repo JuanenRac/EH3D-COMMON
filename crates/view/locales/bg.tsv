@@ -424,3 +424,22 @@ SndAlarm	аларма
 SndKnock	почукване
 SndSiren	сирена
 OpenManyHint	Ctrl+щракване или Shift+щракване избира няколко файла (пробиване и фрезоване); отварят се заедно
+HudJob	Задача
+HudFeedZ	Подаване Z
+HudSpindle	Шпиндел
+HudTool	Инструмент
+LauncherModernTag	Модерен
+CatSeries	серия
+MakerGeneric	Универсален
+MatFr4PositiveResist	FR4 епоксид, позитивен фоторезист
+MatFr4Bare	FR4 епоксид, гол мед
+MatPaperResist	Ламинирана хартия (FR2), фоторезист
+MatSheets	Листове FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 серия 500, 1,6 mm
+MatFr4Series08	FR4 серия 500, 0,8 mm
+MatThermalClad	Thermal Clad (алуминий)
+MatPyralux	Pyralux AP гъвкав
+LinkNode	EH3D възел
+LinkServer	EH3D сървър
+CatTip	връх
+LinkDemo	Демо

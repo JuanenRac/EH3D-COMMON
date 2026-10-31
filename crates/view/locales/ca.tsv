@@ -424,3 +424,22 @@ SndAlarm	alarma
 SndKnock	cop
 SndSiren	sirena
 OpenManyHint	Ctrl+clic o Maj+clic tria diversos fitxers (perforació i fresat); s'obren junts
+HudJob	Treball
+HudFeedZ	Avanç Z
+HudSpindle	Eix principal
+HudTool	Eina
+LauncherModernTag	Modern
+CatSeries	sèrie
+MakerGeneric	Genèric
+MatFr4PositiveResist	FR4 epoxi, fotoresina positiva
+MatFr4Bare	FR4 epoxi, coure nu
+MatPaperResist	Paper laminat (FR2), fotoresina
+MatSheets	Plaques FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 sèrie 500, 1,6 mm
+MatFr4Series08	FR4 sèrie 500, 0,8 mm
+MatThermalClad	Thermal Clad (alumini)
+MatPyralux	Pyralux AP flexible
+LinkNode	Node EH3D
+LinkServer	Servidor EH3D
+CatTip	punta
+LinkDemo	Demo

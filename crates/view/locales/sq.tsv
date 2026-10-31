@@ -424,3 +424,22 @@ SndAlarm	alarm
 SndKnock	trokitje
 SndSiren	sirenë
 OpenManyHint	Ctrl+klik ose Shift+klik zgjedh disa skedarë (shpim dhe frezim); hapen së bashku
+HudJob	Puna
+HudFeedZ	Avancimi Z
+HudSpindle	Boshti
+HudTool	Mjeti
+LauncherModernTag	Modern
+CatSeries	seria
+MakerGeneric	I përgjithshëm
+MatFr4PositiveResist	FR4 epoksi, fotorezist pozitiv
+MatFr4Bare	FR4 epoksi, bakër i zhveshur
+MatPaperResist	Letër e laminuar (FR2), fotorezist
+MatSheets	Fletë FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 seria 500, 1,6 mm
+MatFr4Series08	FR4 seria 500, 0,8 mm
+MatThermalClad	Thermal Clad (alumin)
+MatPyralux	Pyralux AP i lakueshëm
+LinkNode	Nyje EH3D
+LinkServer	Server EH3D
+CatTip	maja
+LinkDemo	Demo

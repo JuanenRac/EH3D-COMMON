@@ -424,3 +424,22 @@ SndAlarm	alarm
 SndKnock	banken
 SndSiren	sirene
 OpenManyHint	Ctrl+klik eller Shift+klik vælger flere filer (boring og fræsning); de åbnes sammen
+HudJob	Job
+HudFeedZ	Tilspænding Z
+HudSpindle	Spindel
+HudTool	Værktøj
+LauncherModernTag	Moderne
+CatSeries	serie
+MakerGeneric	Generisk
+MatFr4PositiveResist	FR4 epoxy, positiv fotoresist
+MatFr4Bare	FR4 epoxy, bar kobber
+MatPaperResist	Laminatpapir (FR2), fotoresist
+MatSheets	Plader FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 500-serien, 1,6 mm
+MatFr4Series08	FR4 500-serien, 0,8 mm
+MatThermalClad	Thermal Clad (aluminium)
+MatPyralux	Pyralux AP fleksibel
+LinkNode	EH3D knude
+LinkServer	EH3D server
+CatTip	spids
+LinkDemo	Demo

@@ -278,7 +278,7 @@ RackPlaces	θέσεις εργαλείων
 Rotate	Περιστροφή
 FollowTool	Παρακολούθηση εργαλείου
 Enlarge2d	Μεγέθυνση της προβολής 2D
-MoveDesign	Μετακίνηση μόνο του σχεδίου
+MoveDesign	Μόνο το σχέδιο
 MoveBoard	Μετακίνηση της πλακέτας
 ShowBoth	Εμφάνιση της προβολής 3D
 OnTable	Στο τραπέζι
@@ -424,3 +424,22 @@ SndAlarm	συναγερμός
 SndKnock	χτύπημα
 SndSiren	σειρήνα
 OpenManyHint	Ctrl+κλικ ή Shift+κλικ επιλέγει πολλά αρχεία (διάτρηση και φρεζάρισμα). Ανοίγουν μαζί
+HudJob	Εργασία
+HudFeedZ	Πρόωση Z
+HudSpindle	Άξονας
+HudTool	Εργαλείο
+LauncherModernTag	Μοντέρνο
+CatSeries	σειρά
+MakerGeneric	Γενικό
+MatFr4PositiveResist	FR4 εποξική, θετική φωτορητίνη
+MatFr4Bare	FR4 εποξική, γυμνός χαλκός
+MatPaperResist	Πολυστρωματικό χαρτί (FR2), φωτορητίνη
+MatSheets	Φύλλα FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 σειρά 500, 1,6 mm
+MatFr4Series08	FR4 σειρά 500, 0,8 mm
+MatThermalClad	Thermal Clad (αλουμίνιο)
+MatPyralux	Pyralux AP εύκαμπτο
+LinkNode	EH3D κόμβος
+LinkServer	EH3D διακομιστής
+CatTip	άκρο
+LinkDemo	Επίδειξη

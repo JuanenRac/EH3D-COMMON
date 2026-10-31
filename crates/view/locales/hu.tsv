@@ -424,3 +424,22 @@ SndAlarm	riasztás
 SndKnock	kopogás
 SndSiren	sziréna
 OpenManyHint	Ctrl+kattintás vagy Shift+kattintás több fájlt jelöl ki (fúrás és marás); együtt nyílnak meg
+HudJob	Munka
+HudFeedZ	Z előtolás
+HudSpindle	Főorsó
+HudTool	Szerszám
+LauncherModernTag	Modern
+CatSeries	sorozat
+MakerGeneric	Általános
+MatFr4PositiveResist	FR4 epoxi, pozitív fotoreziszt
+MatFr4Bare	FR4 epoxi, csupasz réz
+MatPaperResist	Laminált papír (FR2), fotoreziszt
+MatSheets	FR2 / FR3 / CEM-1 lapok
+MatFr4Series16	FR4 500-as sorozat, 1,6 mm
+MatFr4Series08	FR4 500-as sorozat, 0,8 mm
+MatThermalClad	Thermal Clad (alumínium)
+MatPyralux	Pyralux AP hajlékony
+LinkNode	EH3D csomópont
+LinkServer	EH3D szerver
+CatTip	csúcs
+LinkDemo	Demó

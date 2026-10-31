@@ -424,3 +424,22 @@ SndAlarm	aliarmas
 SndKnock	beldimas
 SndSiren	sirena
 OpenManyHint	Ctrl+spustelėjimas arba Shift+spustelėjimas pasirenka kelis failus (gręžimas ir frezavimas); jie atidaromi kartu
+HudJob	Darbas
+HudFeedZ	Z paduotis
+HudSpindle	Suklys
+HudTool	Įrankis
+LauncherModernTag	Modernus
+CatSeries	serija
+MakerGeneric	Bendrinis
+MatFr4PositiveResist	FR4 epoksidas, teigiamas fotorezistas
+MatFr4Bare	FR4 epoksidas, plika varis
+MatPaperResist	Laminuotas popierius (FR2), fotorezistas
+MatSheets	Plokštės FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 500 serija, 1,6 mm
+MatFr4Series08	FR4 500 serija, 0,8 mm
+MatThermalClad	Thermal Clad (aliuminis)
+MatPyralux	Pyralux AP lankstus
+LinkNode	EH3D mazgas
+LinkServer	EH3D serveris
+CatTip	galas
+LinkDemo	Demo

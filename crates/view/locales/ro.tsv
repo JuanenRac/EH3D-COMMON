@@ -424,3 +424,22 @@ SndAlarm	alarmă
 SndKnock	ciocănit
 SndSiren	sirenă
 OpenManyHint	Ctrl+clic sau Shift+clic alege mai multe fișiere (găurire și frezare); se deschid împreună
+HudJob	Lucrare
+HudFeedZ	Avans Z
+HudSpindle	Arbore
+HudTool	Sculă
+LauncherModernTag	Modern
+CatSeries	serie
+MakerGeneric	Generic
+MatFr4PositiveResist	FR4 epoxidic, fotorezist pozitiv
+MatFr4Bare	FR4 epoxidic, cupru gol
+MatPaperResist	Hârtie laminată (FR2), fotorezist
+MatSheets	Plăci FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 seria 500, 1,6 mm
+MatFr4Series08	FR4 seria 500, 0,8 mm
+MatThermalClad	Thermal Clad (aluminiu)
+MatPyralux	Pyralux AP flexibil
+LinkNode	Nod EH3D
+LinkServer	Server EH3D
+CatTip	vârf
+LinkDemo	Demo

@@ -424,3 +424,22 @@ SndAlarm	аларм
 SndKnock	куцање
 SndSiren	сирена
 OpenManyHint	Ctrl+клик или Shift+клик бира више датотека (бушење и глодање); отварају се заједно
+HudJob	Посао
+HudFeedZ	Помак Z
+HudSpindle	Вретено
+HudTool	Алат
+LauncherModernTag	Модеран
+CatSeries	серија
+MakerGeneric	Општи
+MatFr4PositiveResist	FR4 епоксид, позитивни фоторезист
+MatFr4Bare	FR4 епоксид, голи бакар
+MatPaperResist	Ламинирани папир (FR2), фоторезист
+MatSheets	Плоче FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 серија 500, 1,6 mm
+MatFr4Series08	FR4 серија 500, 0,8 mm
+MatThermalClad	Thermal Clad (алуминијум)
+MatPyralux	Pyralux AP савитљив
+LinkNode	EH3D чвор
+LinkServer	EH3D сервер
+CatTip	врх
+LinkDemo	Демо

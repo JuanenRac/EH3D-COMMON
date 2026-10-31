@@ -424,3 +424,22 @@ SndAlarm	trauksme
 SndKnock	klauvējiens
 SndSiren	sirēna
 OpenManyHint	Ctrl+klikšķis vai Shift+klikšķis izvēlas vairākus failus (urbšana un frēzēšana); tie tiek atvērti kopā
+HudJob	Darbs
+HudFeedZ	Z padeve
+HudSpindle	Vārpsta
+HudTool	Rīks
+LauncherModernTag	Moderns
+CatSeries	sērija
+MakerGeneric	Vispārīgs
+MatFr4PositiveResist	FR4 epoksīds, pozitīvais fotorezists
+MatFr4Bare	FR4 epoksīds, kails varš
+MatPaperResist	Lamināts papīrs (FR2), fotorezists
+MatSheets	Loksnes FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 500 sērija, 1,6 mm
+MatFr4Series08	FR4 500 sērija, 0,8 mm
+MatThermalClad	Thermal Clad (alumīnijs)
+MatPyralux	Pyralux AP elastīgs
+LinkNode	EH3D mezgls
+LinkServer	EH3D serveris
+CatTip	gals
+LinkDemo	Demo

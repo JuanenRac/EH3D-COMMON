@@ -424,3 +424,22 @@ SndAlarm	allarm
 SndKnock	taqtiq
 SndSiren	sirena
 OpenManyHint	Ctrl+click jew Shift+click jagħżel diversi fajls (it-tqegħid u l-frieżar); jinfetħu flimkien
+HudJob	Xogħol
+HudFeedZ	Avanz Z
+HudSpindle	Mandrin
+HudTool	Għodda
+LauncherModernTag	Modern
+CatSeries	serje
+MakerGeneric	Ġenerku
+MatFr4PositiveResist	FR4 epossidiku, fotoreżist pożittiv
+MatFr4Bare	FR4 epossidiku, ram għarwien
+MatPaperResist	Karta laminata (FR2), fotoreżist
+MatSheets	Folji FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 serje 500, 1.6 mm
+MatFr4Series08	FR4 serje 500, 0.8 mm
+MatThermalClad	Thermal Clad (aluminju)
+MatPyralux	Pyralux AP flessibbli
+LinkNode	Nodu EH3D
+LinkServer	Server EH3D
+CatTip	ponta
+LinkDemo	Demo

@@ -424,3 +424,22 @@ SndAlarm	alarma
 SndKnock	golpe
 SndSiren	sirena
 OpenManyHint	Ctrl+clic ou Maiús+clic escolle varios ficheiros (furado e fresado); ábrense xuntos
+HudJob	Traballo
+HudFeedZ	Avance Z
+HudSpindle	Fuso
+HudTool	Ferramenta
+LauncherModernTag	Moderno
+CatSeries	serie
+MakerGeneric	Xenérico
+MatFr4PositiveResist	FR4 epoxi, fotorresina positiva
+MatFr4Bare	FR4 epoxi, cobre espido
+MatPaperResist	Papel laminado (FR2), fotorresina
+MatSheets	Placas FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 serie 500, 1,6 mm
+MatFr4Series08	FR4 serie 500, 0,8 mm
+MatThermalClad	Thermal Clad (aluminio)
+MatPyralux	Pyralux AP flexible
+LinkNode	Nodo EH3D
+LinkServer	Servidor EH3D
+CatTip	punta
+LinkDemo	Demo

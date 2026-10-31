@@ -278,7 +278,7 @@ RackPlaces	gereedschapsplaatsen
 Rotate	Draaien
 FollowTool	Gereedschap volgen
 Enlarge2d	2D-weergave vergroten
-MoveDesign	Alleen het ontwerp verplaatsen
+MoveDesign	Alleen ontwerp verplaatsen
 MoveBoard	De print verplaatsen
 ShowBoth	3D-weergave tonen
 OnTable	Op de tafel
@@ -424,3 +424,22 @@ SndAlarm	alarm
 SndKnock	klop
 SndSiren	sirene
 OpenManyHint	Ctrl+klik of Shift+klik kiest meerdere bestanden (boren en frezen); ze worden samen geopend
+HudJob	Taak
+HudFeedZ	Z-voeding
+HudSpindle	Spil
+HudTool	Gereedschap
+LauncherModernTag	Modern
+CatSeries	serie
+MakerGeneric	Generiek
+MatFr4PositiveResist	FR4 epoxy, positieve fotoresist
+MatFr4Bare	FR4 epoxy, blank koper
+MatPaperResist	Gelaagd papier (FR2), fotoresist
+MatSheets	Platen FR2 / FR3 / CEM-1
+MatFr4Series16	FR4 500-serie, 1,6 mm
+MatFr4Series08	FR4 500-serie, 0,8 mm
+MatThermalClad	Thermal Clad (aluminium)
+MatPyralux	Pyralux AP flexibel
+LinkNode	EH3D node
+LinkServer	EH3D server
+CatTip	punt
+LinkDemo	Demo
