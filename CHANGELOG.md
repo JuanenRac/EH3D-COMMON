@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Texts of the connection to the server (eh3d-view):** the Server section of the settings, the address, the access token and the machine id, and the entry that sends a program to the server, in the 37 languages.
 - **Texts of the serial ports, of undo, redo and cut, and of starting a job at a tool (eh3d-view):** no ports found, look for ports again, undo, redo, cut and start the job from this tool, in the 37 languages.
 ## [0.0.8] - Texts for the editing of the plan view, the preview and the catalogue
 

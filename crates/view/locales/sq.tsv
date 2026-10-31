@@ -455,3 +455,14 @@ CopySel	Kopjo
 PasteSel	Ngjit
 DeleteSel	Fshi
 RemoveTool	Hiq mjetin nga puna
+McSecServer	Serveri
+McServerAddress	Adresa e serverit (host:port)
+McServerToken	Token i qasjes
+McServerMachine	ID e makinës
+McSendServer	Dërgo te serveri
+PortsNone	Nuk u gjetën porta serike
+PortsRefresh	Kërko portat përsëri
+UndoEdit	Zhbëj
+RedoEdit	Ribëj
+CutSel	Prit
+StartAtTool	Nise punën me këtë mjet

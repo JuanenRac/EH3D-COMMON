@@ -455,3 +455,14 @@ CopySel	Copia
 PasteSel	Enganxa
 DeleteSel	Elimina
 RemoveTool	Treu l'eina del treball
+McSecServer	Servidor
+McServerAddress	Adreça del servidor (amfitrió:port)
+McServerToken	Testimoni d'accés
+McServerMachine	Identificador de la màquina
+McSendServer	Envia al servidor
+PortsNone	No s'han trobat ports sèrie
+PortsRefresh	Torna a cercar els ports
+UndoEdit	Desfés
+RedoEdit	Refés
+CutSel	Retalla
+StartAtTool	Comença el treball per aquesta eina

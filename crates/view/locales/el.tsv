@@ -455,3 +455,14 @@ CopySel	Αντιγραφή
 PasteSel	Επικόλληση
 DeleteSel	Διαγραφή
 RemoveTool	Αφαίρεση εργαλείου από την εργασία
+McSecServer	Διακομιστής
+McServerAddress	Διεύθυνση διακομιστή (host:port)
+McServerToken	Διακριτικό πρόσβασης
+McServerMachine	Αναγνωριστικό μηχανήματος
+McSendServer	Αποστολή στον διακομιστή
+PortsNone	Δεν βρέθηκαν σειριακές θύρες
+PortsRefresh	Αναζήτηση θυρών ξανά
+UndoEdit	Αναίρεση
+RedoEdit	Επανάληψη
+CutSel	Αποκοπή
+StartAtTool	Έναρξη της εργασίας από αυτό το εργαλείο

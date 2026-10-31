@@ -455,3 +455,14 @@ CopySel	Kopiuj
 PasteSel	Wklej
 DeleteSel	Usuń
 RemoveTool	Usuń narzędzie z zadania
+McSecServer	Serwer
+McServerAddress	Adres serwera (host:port)
+McServerToken	Token dostępu
+McServerMachine	Identyfikator maszyny
+McSendServer	Wyślij na serwer
+PortsNone	Nie znaleziono portów szeregowych
+PortsRefresh	Wyszukaj porty ponownie
+UndoEdit	Cofnij
+RedoEdit	Ponów
+CutSel	Wytnij
+StartAtTool	Zacznij zadanie od tego narzędzia

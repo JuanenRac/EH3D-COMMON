@@ -455,3 +455,14 @@ CopySel	Kopier
 PasteSel	Lim inn
 DeleteSel	Slett
 RemoveTool	Fjern verktøyet fra jobben
+McSecServer	Server
+McServerAddress	Serveradresse (vert:port)
+McServerToken	Tilgangstoken
+McServerMachine	Maskin-ID
+McSendServer	Send til serveren
+PortsNone	Ingen serielle porter funnet
+PortsRefresh	Søk etter porter på nytt
+UndoEdit	Angre
+RedoEdit	Gjør om
+CutSel	Klipp ut
+StartAtTool	Start jobben med dette verktøyet

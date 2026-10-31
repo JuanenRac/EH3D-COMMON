@@ -455,3 +455,14 @@ CopySel	Ikkopja
 PasteSel	Waħħal
 DeleteSel	Ħassar
 RemoveTool	Neħħi l-għodda mix-xogħol
+McSecServer	Server
+McServerAddress	Indirizz tas-server (host:port)
+McServerToken	Token ta' aċċess
+McServerMachine	ID tal-magna
+McSendServer	Ibgħat lis-server
+PortsNone	L-ebda port serjali misjub
+PortsRefresh	Fittex il-portijiet mill-ġdid
+UndoEdit	Annulla
+RedoEdit	Erġa' agħmel
+CutSel	Aqta'
+StartAtTool	Ibda x-xogħol minn din l-għodda

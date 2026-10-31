@@ -455,3 +455,14 @@ CopySel	Kopiera
 PasteSel	Klistra in
 DeleteSel	Ta bort
 RemoveTool	Ta bort verktyget från jobbet
+McSecServer	Server
+McServerAddress	Serveradress (värd:port)
+McServerToken	Åtkomsttoken
+McServerMachine	Maskin-id
+McSendServer	Skicka till servern
+PortsNone	Inga seriella portar hittades
+PortsRefresh	Sök efter portar igen
+UndoEdit	Ångra
+RedoEdit	Gör om
+CutSel	Klipp ut
+StartAtTool	Starta jobbet med det här verktyget

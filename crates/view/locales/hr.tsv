@@ -455,3 +455,14 @@ CopySel	Kopiraj
 PasteSel	Zalijepi
 DeleteSel	Izbriši
 RemoveTool	Ukloni alat iz posla
+McSecServer	Poslužitelj
+McServerAddress	Adresa poslužitelja (host:port)
+McServerToken	Pristupni token
+McServerMachine	Oznaka stroja
+McSendServer	Pošalji poslužitelju
+PortsNone	Nema serijskih portova
+PortsRefresh	Ponovno potraži portove
+UndoEdit	Poništi
+RedoEdit	Ponovi
+CutSel	Izreži
+StartAtTool	Započni posao ovim alatom

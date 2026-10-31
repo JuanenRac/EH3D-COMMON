@@ -455,3 +455,14 @@ CopySel	Kopiatu
 PasteSel	Itsatsi
 DeleteSel	Ezabatu
 RemoveTool	Kendu erreminta lanetik
+McSecServer	Zerbitzaria
+McServerAddress	Zerbitzariaren helbidea (ostalaria:ataka)
+McServerToken	Sarbide-tokena
+McServerMachine	Makinaren IDa
+McSendServer	Bidali zerbitzariari
+PortsNone	Ez da serie-portturik aurkitu
+PortsRefresh	Bilatu portuak berriro
+UndoEdit	Desegin
+RedoEdit	Berregin
+CutSel	Ebaki
+StartAtTool	Hasi lana erreminta honekin

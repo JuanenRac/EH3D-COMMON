@@ -455,3 +455,14 @@ CopySel	Cóipeáil
 PasteSel	Greamaigh
 DeleteSel	Scrios
 RemoveTool	Bain an uirlis den obair
+McSecServer	Freastalaí
+McServerAddress	Seoladh an fhreastalaí (óstríomhaire:port)
+McServerToken	Comhartha rochtana
+McServerMachine	Aitheantas an innill
+McSendServer	Seol chuig an bhfreastalaí
+PortsNone	Níor aimsíodh aon phort sraitheach
+PortsRefresh	Cuardaigh na poirt arís
+UndoEdit	Cealaigh
+RedoEdit	Athdhéan
+CutSel	Gearr
+StartAtTool	Tosaigh an obair leis an uirlis seo

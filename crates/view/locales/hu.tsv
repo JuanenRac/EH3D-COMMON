@@ -455,3 +455,14 @@ CopySel	Másolás
 PasteSel	Beillesztés
 DeleteSel	Törlés
 RemoveTool	Szerszám eltávolítása a munkából
+McSecServer	Kiszolgáló
+McServerAddress	A kiszolgáló címe (gép:port)
+McServerToken	Hozzáférési token
+McServerMachine	A gép azonosítója
+McSendServer	Küldés a kiszolgálóra
+PortsNone	Nem található soros port
+PortsRefresh	Portok újrakeresése
+UndoEdit	Visszavonás
+RedoEdit	Újra
+CutSel	Kivágás
+StartAtTool	A munka kezdése ezzel a szerszámmal

@@ -455,3 +455,14 @@ CopySel	Afrita
 PasteSel	Líma
 DeleteSel	Eyða
 RemoveTool	Fjarlægja verkfæri úr verkinu
+McSecServer	Þjónn
+McServerAddress	Heimilisfang þjóns (hýsill:gátt)
+McServerToken	Aðgangsteikn
+McServerMachine	Auðkenni vélar
+McSendServer	Senda á þjóninn
+PortsNone	Engin raðtengi fundust
+PortsRefresh	Leita aftur að tengjum
+UndoEdit	Afturkalla
+RedoEdit	Endurtaka
+CutSel	Klippa
+StartAtTool	Byrja verkið á þessu verkfæri

@@ -455,3 +455,14 @@ CopySel	Kopēt
 PasteSel	Ielīmēt
 DeleteSel	Dzēst
 RemoveTool	Noņemt rīku no darba
+McSecServer	Serveris
+McServerAddress	Servera adrese (resursdators:ports)
+McServerToken	Piekļuves marķieris
+McServerMachine	Iekārtas ID
+McSendServer	Sūtīt uz serveri
+PortsNone	Seriālie porti nav atrasti
+PortsRefresh	Meklēt portus vēlreiz
+UndoEdit	Atsaukt
+RedoEdit	Atkārtot
+CutSel	Izgriezt
+StartAtTool	Sākt darbu ar šo rīku

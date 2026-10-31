@@ -455,3 +455,14 @@ CopySel	Kopiëren
 PasteSel	Plakken
 DeleteSel	Verwijderen
 RemoveTool	Gereedschap uit de taak halen
+McSecServer	Server
+McServerAddress	Serveradres (host:poort)
+McServerToken	Toegangstoken
+McServerMachine	Machine-id
+McSendServer	Naar de server sturen
+PortsNone	Geen seriële poorten gevonden
+PortsRefresh	Poorten opnieuw zoeken
+UndoEdit	Ongedaan maken
+RedoEdit	Opnieuw
+CutSel	Knippen
+StartAtTool	Begin de taak met dit gereedschap

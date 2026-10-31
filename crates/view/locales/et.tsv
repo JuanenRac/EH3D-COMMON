@@ -455,3 +455,14 @@ CopySel	Kopeeri
 PasteSel	Kleebi
 DeleteSel	Kustuta
 RemoveTool	Eemalda tööriist tööst
+McSecServer	Server
+McServerAddress	Serveri aadress (host:port)
+McServerToken	Juurdepääsuvõti
+McServerMachine	Masina ID
+McSendServer	Saada serverisse
+PortsNone	Jadaporte ei leitud
+PortsRefresh	Otsi porte uuesti
+UndoEdit	Võta tagasi
+RedoEdit	Tee uuesti
+CutSel	Lõika
+StartAtTool	Alusta tööd selle tööriistaga

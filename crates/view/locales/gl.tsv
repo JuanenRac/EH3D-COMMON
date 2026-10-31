@@ -455,3 +455,14 @@ CopySel	Copiar
 PasteSel	Pegar
 DeleteSel	Eliminar
 RemoveTool	Quitar a ferramenta do traballo
+McSecServer	Servidor
+McServerAddress	Enderezo do servidor (host:porto)
+McServerToken	Token de acceso
+McServerMachine	Identificador da máquina
+McSendServer	Enviar ao servidor
+PortsNone	Non se atopan portos serie
+PortsRefresh	Buscar os portos de novo
+UndoEdit	Desfacer
+RedoEdit	Refacer
+CutSel	Cortar
+StartAtTool	Comezar o traballo por esta ferramenta

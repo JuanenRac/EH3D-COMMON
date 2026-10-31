@@ -455,3 +455,14 @@ CopySel	Копирај
 PasteSel	Налепи
 DeleteSel	Обриши
 RemoveTool	Уклони алат из посла
+McSecServer	Сервер
+McServerAddress	Адреса сервера (хост:порт)
+McServerToken	Приступни токен
+McServerMachine	Ознака машине
+McSendServer	Пошаљи на сервер
+PortsNone	Серијски портови нису пронађени
+PortsRefresh	Поново потражи портове
+UndoEdit	Опозови
+RedoEdit	Понови
+CutSel	Исеци
+StartAtTool	Почни посао овим алатом

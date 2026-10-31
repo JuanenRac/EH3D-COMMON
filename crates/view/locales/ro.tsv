@@ -455,3 +455,14 @@ CopySel	Copiază
 PasteSel	Lipește
 DeleteSel	Șterge
 RemoveTool	Elimină unealta din lucrare
+McSecServer	Server
+McServerAddress	Adresa serverului (gazdă:port)
+McServerToken	Jeton de acces
+McServerMachine	ID-ul mașinii
+McSendServer	Trimite la server
+PortsNone	Nu s-au găsit porturi seriale
+PortsRefresh	Caută din nou porturile
+UndoEdit	Anulează
+RedoEdit	Refă
+CutSel	Decupează
+StartAtTool	Începe lucrarea cu această unealtă

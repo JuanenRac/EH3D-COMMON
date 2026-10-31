@@ -455,3 +455,14 @@ CopySel	Kopioi
 PasteSel	Liitä
 DeleteSel	Poista
 RemoveTool	Poista työkalu työstä
+McSecServer	Palvelin
+McServerAddress	Palvelimen osoite (isäntä:portti)
+McServerToken	Käyttötunnus
+McServerMachine	Koneen tunnus
+McSendServer	Lähetä palvelimelle
+PortsNone	Sarjaportteja ei löytynyt
+PortsRefresh	Etsi portit uudelleen
+UndoEdit	Kumoa
+RedoEdit	Tee uudelleen
+CutSel	Leikkaa
+StartAtTool	Aloita työ tästä työkalusta

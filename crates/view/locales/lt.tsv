@@ -455,3 +455,14 @@ CopySel	Kopijuoti
 PasteSel	Įklijuoti
 DeleteSel	Ištrinti
 RemoveTool	Pašalinti įrankį iš darbo
+McSecServer	Serveris
+McServerAddress	Serverio adresas (kompiuteris:prievadas)
+McServerToken	Prieigos raktas
+McServerMachine	Staklių ID
+McSendServer	Siųsti į serverį
+PortsNone	Nerasta nuosekliųjų prievadų
+PortsRefresh	Ieškoti prievadų iš naujo
+UndoEdit	Atšaukti
+RedoEdit	Kartoti
+CutSel	Iškirpti
+StartAtTool	Pradėti darbą nuo šio įrankio

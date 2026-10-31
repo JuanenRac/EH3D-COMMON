@@ -455,3 +455,14 @@ CopySel	Копировать
 PasteSel	Вставить
 DeleteSel	Удалить
 RemoveTool	Убрать инструмент из задания
+McSecServer	Сервер
+McServerAddress	Адрес сервера (хост:порт)
+McServerToken	Токен доступа
+McServerMachine	Идентификатор станка
+McSendServer	Отправить на сервер
+PortsNone	Последовательные порты не найдены
+PortsRefresh	Искать порты снова
+UndoEdit	Отменить
+RedoEdit	Повторить
+CutSel	Вырезать
+StartAtTool	Начать задание с этого инструмента

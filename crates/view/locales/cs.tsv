@@ -455,3 +455,14 @@ CopySel	Kopírovat
 PasteSel	Vložit
 DeleteSel	Smazat
 RemoveTool	Odebrat nástroj z úlohy
+McSecServer	Server
+McServerAddress	Adresa serveru (host:port)
+McServerToken	Přístupový token
+McServerMachine	ID stroje
+McSendServer	Odeslat na server
+PortsNone	Nenalezen žádný sériový port
+PortsRefresh	Znovu vyhledat porty
+UndoEdit	Zpět
+RedoEdit	Znovu
+CutSel	Vyjmout
+StartAtTool	Začít úlohu tímto nástrojem

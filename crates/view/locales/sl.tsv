@@ -455,3 +455,14 @@ CopySel	Kopiraj
 PasteSel	Prilepi
 DeleteSel	Izbriši
 RemoveTool	Odstrani orodje iz naloge
+McSecServer	Strežnik
+McServerAddress	Naslov strežnika (gostitelj:vrata)
+McServerToken	Dostopni žeton
+McServerMachine	ID stroja
+McSendServer	Pošlji strežniku
+PortsNone	Serijska vrata niso najdena
+PortsRefresh	Znova poišči vrata
+UndoEdit	Razveljavi
+RedoEdit	Uveljavi
+CutSel	Izreži
+StartAtTool	Začni nalogo s tem orodjem
