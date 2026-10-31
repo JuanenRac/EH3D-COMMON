@@ -466,3 +466,7 @@ UndoEdit	Afturkalla
 RedoEdit	Endurtaka
 CutSel	Klippa
 StartAtTool	Byrja verkið á þessu verkfæri
+RackTitle	Verkfærarekki
+RackTestTool	Rauf 0: prófunarverkfæri í snældunni, raufin er laus
+RackReload	Settu þessi verkfæri í raufarnar og ýttu á Halda áfram
+RackGroup	Hleðsla

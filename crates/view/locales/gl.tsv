@@ -466,3 +466,7 @@ UndoEdit	Desfacer
 RedoEdit	Refacer
 CutSel	Cortar
 StartAtTool	Comezar o traballo por esta ferramenta
+RackTitle	Barra de ferramentas
+RackTestTool	Ranura 0: ferramenta de proba no fuso, a ranura queda libre
+RackReload	Pon estas ferramentas nas ranuras e preme Continuar
+RackGroup	Carga

@@ -466,3 +466,7 @@ UndoEdit	Võta tagasi
 RedoEdit	Tee uuesti
 CutSel	Lõika
 StartAtTool	Alusta tööd selle tööriistaga
+RackTitle	Tööriistariiul
+RackTestTool	Pesa 0: katsetööriist spindlis, pesa jääb vabaks
+RackReload	Pane need tööriistad pesadesse ja vajuta Jätka
+RackGroup	Laadimine

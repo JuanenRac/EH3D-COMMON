@@ -466,3 +466,7 @@ UndoEdit	Ångra
 RedoEdit	Gör om
 CutSel	Klipp ut
 StartAtTool	Starta jobbet med det här verktyget
+RackTitle	Verktygsmagasin
+RackTestTool	Plats 0: testverktyg i spindeln, platsen förblir ledig
+RackReload	Sätt dessa verktyg i platserna och tryck Fortsätt
+RackGroup	Laddning

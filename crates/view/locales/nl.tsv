@@ -466,3 +466,7 @@ UndoEdit	Ongedaan maken
 RedoEdit	Opnieuw
 CutSel	Knippen
 StartAtTool	Begin de taak met dit gereedschap
+RackTitle	Gereedschapsmagazijn
+RackTestTool	Plaats 0: testgereedschap in de spil, de plaats blijft vrij
+RackReload	Plaats deze gereedschappen in de plaatsen en druk op Doorgaan
+RackGroup	Lading

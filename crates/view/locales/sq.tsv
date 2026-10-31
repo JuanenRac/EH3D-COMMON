@@ -466,3 +466,7 @@ UndoEdit	Zhbëj
 RedoEdit	Ribëj
 CutSel	Prit
 StartAtTool	Nise punën me këtë mjet
+RackTitle	Dhoma e veglave
+RackTestTool	Vendi 0: vegla provë në bosht, vendi mbetet bosh
+RackReload	Vendosni këto vegla në vende dhe shtypni Vazhdo
+RackGroup	Ngarkimi

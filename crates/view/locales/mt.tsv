@@ -466,3 +466,7 @@ UndoEdit	Annulla
 RedoEdit	Erġa' agħmel
 CutSel	Aqta'
 StartAtTool	Ibda x-xogħol minn din l-għodda
+RackTitle	Il-ħażna tal-għodda
+RackTestTool	Pożizzjoni 0: għodda tat-test fl-ispindle, il-pożizzjoni tibqa' vojta
+RackReload	Poġġi dawn l-għodod fil-pożizzjonijiet u agħfas Kompli
+RackGroup	Tagħbija

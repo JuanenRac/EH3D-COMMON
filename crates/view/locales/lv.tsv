@@ -466,3 +466,7 @@ UndoEdit	Atsaukt
 RedoEdit	Atkārtot
 CutSel	Izgriezt
 StartAtTool	Sākt darbu ar šo rīku
+RackTitle	Instrumentu statīvs
+RackTestTool	0. vieta: testa instruments vārpstā, vieta paliek brīva
+RackReload	Ielieciet šos instrumentus vietās un nospiediet Turpināt
+RackGroup	Ielāde

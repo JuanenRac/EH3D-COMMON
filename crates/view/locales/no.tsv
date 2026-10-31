@@ -466,3 +466,7 @@ UndoEdit	Angre
 RedoEdit	Gjør om
 CutSel	Klipp ut
 StartAtTool	Start jobben med dette verktøyet
+RackTitle	Verktøymagasin
+RackTestTool	Plass 0: testverktøy i spindelen, plassen forblir fri
+RackReload	Sett disse verktøyene i plassene og trykk Fortsett
+RackGroup	Lasting

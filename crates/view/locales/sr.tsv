@@ -466,3 +466,7 @@ UndoEdit	Опозови
 RedoEdit	Понови
 CutSel	Исеци
 StartAtTool	Почни посао овим алатом
+RackTitle	Магацин алата
+RackTestTool	Место 0: пробни алат у вретену, место остаје слободно
+RackReload	Ставите ове алате у места и притисните Настави
+RackGroup	Пуњење

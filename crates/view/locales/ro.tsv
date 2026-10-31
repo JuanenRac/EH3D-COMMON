@@ -466,3 +466,7 @@ UndoEdit	Anulează
 RedoEdit	Refă
 CutSel	Decupează
 StartAtTool	Începe lucrarea cu această unealtă
+RackTitle	Magazie de scule
+RackTestTool	Locul 0: scula de test în ax, locul rămâne liber
+RackReload	Puneți aceste scule în locuri și apăsați Continuă
+RackGroup	Încărcare

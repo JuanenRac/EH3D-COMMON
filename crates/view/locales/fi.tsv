@@ -466,3 +466,7 @@ UndoEdit	Kumoa
 RedoEdit	Tee uudelleen
 CutSel	Leikkaa
 StartAtTool	Aloita työ tästä työkalusta
+RackTitle	Työkalumakasiini
+RackTestTool	Paikka 0: testityökalu karassa, paikka jää vapaaksi
+RackReload	Aseta nämä työkalut paikkoihin ja paina Jatka
+RackGroup	Lataus

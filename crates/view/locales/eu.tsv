@@ -466,3 +466,7 @@ UndoEdit	Desegin
 RedoEdit	Berregin
 CutSel	Ebaki
 StartAtTool	Hasi lana erreminta honekin
+RackTitle	Erreminta-apala
+RackTestTool	0 zirrikitua: proba-erreminta ardatzean, zirrikitua libre geratzen da
+RackReload	Jarri erreminta hauek zirrikituetan eta sakatu Jarraitu
+RackGroup	Zamalanketa

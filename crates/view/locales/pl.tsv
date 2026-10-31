@@ -466,3 +466,7 @@ UndoEdit	Cofnij
 RedoEdit	Ponów
 CutSel	Wytnij
 StartAtTool	Zacznij zadanie od tego narzędzia
+RackTitle	Magazyn narzędzi
+RackTestTool	Miejsce 0: narzędzie testowe we wrzecionie, miejsce zostaje wolne
+RackReload	Włóż te narzędzia do miejsc i naciśnij Dalej
+RackGroup	Załadunek

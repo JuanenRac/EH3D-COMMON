@@ -466,3 +466,7 @@ UndoEdit	Visszavonás
 RedoEdit	Újra
 CutSel	Kivágás
 StartAtTool	A munka kezdése ezzel a szerszámmal
+RackTitle	Szerszámtár
+RackTestTool	0. hely: tesztszerszám a főorsóban, a hely szabadon marad
+RackReload	Tegye ezeket a szerszámokat a helyekre, és nyomja meg a Folytatás gombot
+RackGroup	Feltöltés

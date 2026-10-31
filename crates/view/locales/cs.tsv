@@ -466,3 +466,7 @@ UndoEdit	Zpět
 RedoEdit	Znovu
 CutSel	Vyjmout
 StartAtTool	Začít úlohu tímto nástrojem
+RackTitle	Zásobník nástrojů
+RackTestTool	Pozice 0: zkušební nástroj ve vřetenu, pozice zůstává volná
+RackReload	Vložte tyto nástroje do pozic a stiskněte Pokračovat
+RackGroup	Osazení

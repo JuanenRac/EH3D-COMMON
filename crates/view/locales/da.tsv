@@ -466,3 +466,7 @@ UndoEdit	Fortryd
 RedoEdit	Gentag
 CutSel	Klip
 StartAtTool	Start jobbet med dette værktøj
+RackTitle	Værktøjsmagasin
+RackTestTool	Plads 0: testværktøj i spindlen, pladsen forbliver fri
+RackReload	Sæt disse værktøjer i pladserne og tryk Fortsæt
+RackGroup	Ilægning

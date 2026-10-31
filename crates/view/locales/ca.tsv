@@ -466,3 +466,7 @@ UndoEdit	Desfés
 RedoEdit	Refés
 CutSel	Retalla
 StartAtTool	Comença el treball per aquesta eina
+RackTitle	Barra d'eines
+RackTestTool	Ranura 0: eina de prova al capçal, la ranura queda lliure
+RackReload	Posa aquestes eines a les ranures i prem Continua
+RackGroup	Càrrega
