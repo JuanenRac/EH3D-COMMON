@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The name of a board material in the 37 languages (eh3d-view):** FR4 600 series, positive presensitized.
 - **Texts of the tool rack of the ATC models (eh3d-view):** the title, the slot 0 of the test tool, the request to load the rack and the name of a load, in the 37 languages.
 - **Texts of the connection to the server (eh3d-view):** the Server section of the settings, the address, the access token and the machine id, and the entry that sends a program to the server, in the 37 languages.
 - **Texts of the serial ports, of undo, redo and cut, and of starting a job at a tool (eh3d-view):** no ports found, look for ports again, undo, redo, cut and start the job from this tool, in the 37 languages.

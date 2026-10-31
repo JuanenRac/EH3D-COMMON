@@ -755,6 +755,7 @@ texts! {
     MatSheets => ["FR2 / FR3 / CEM-1 sheets", "Planchas FR2 / FR3 / CEM-1", "Lastre FR2 / FR3 / CEM-1", "Platten FR2 / FR3 / CEM-1", "Plaques FR2 / FR3 / CEM-1", "Placas FR2 / FR3 / CEM-1", "FR2 / FR3 / CEM-1 板材", "FR2 / FR3 / CEM-1 シート"],
     MatFr4Series16 => ["FR4 500 series, 1.6 mm", "FR4 serie 500, 1,6 mm", "FR4 serie 500, 1,6 mm", "FR4 Serie 500, 1,6 mm", "FR4 série 500, 1,6 mm", "FR4 série 500, 1,6 mm", "FR4 500 系列，1.6 mm", "FR4 500 シリーズ、1.6 mm"],
     MatFr4Series08 => ["FR4 500 series, 0.8 mm", "FR4 serie 500, 0,8 mm", "FR4 serie 500, 0,8 mm", "FR4 Serie 500, 0,8 mm", "FR4 série 500, 0,8 mm", "FR4 série 500, 0,8 mm", "FR4 500 系列，0.8 mm", "FR4 500 シリーズ、0.8 mm"],
+    MatFr4Series600 => ["FR4 600 series, positive presensitized", "FR4 serie 600, presensibilizada positiva", "FR4 serie 600, presensibilizzata positiva", "FR4 Serie 600, positiv vorsensibilisiert", "FR4 série 600, présensibilisée positive", "FR4 série 600, pré-sensibilizada positiva", "FR4 600 系列，正性预涂感光", "FR4 600シリーズ、ポジ感光済み"],
     MatThermalClad => ["Thermal Clad (aluminium)", "Thermal Clad (aluminio)", "Thermal Clad (alluminio)", "Thermal Clad (Aluminium)", "Thermal Clad (aluminium)", "Thermal Clad (alumínio)", "Thermal Clad（铝基）", "Thermal Clad（アルミ）"],
     MatPyralux => ["Pyralux AP flexible", "Pyralux AP flexible", "Pyralux AP flessibile", "Pyralux AP flexibel", "Pyralux AP flexible", "Pyralux AP flexível", "Pyralux AP 柔性板", "Pyralux AP フレキシブル"],
     LinkNode => ["EH3D node", "Nodo EH3D", "Nodo EH3D", "EH3D-Knoten", "Nœud EH3D", "Nó EH3D", "EH3D 节点", "EH3D ノード"],
