@@ -45,6 +45,10 @@ pub struct Status {
     /// The protect output is open: the spindle must stop.
     pub protect_open: bool,
     pub uptime_s: u64,
+    /// The node has the ring of LEDs around the camera (older nodes do not say, and count as without it).
+    pub light: bool,
+    pub light_on: bool,
+    pub light_level: u32,
 }
 
 impl Status {
@@ -79,7 +83,166 @@ impl Status {
             heat: Heat::from_word(v.get("heat").and_then(Value::as_str).unwrap_or("")),
             protect_open: flag("protect_open")?,
             uptime_s: v.get("uptime_s").and_then(Value::as_u64).unwrap_or(0),
+            light: v.get("light").and_then(Value::as_bool).unwrap_or(false),
+            light_on: v.get("light_on").and_then(Value::as_bool).unwrap_or(false),
+            light_level: v.get("light_level").and_then(Value::as_u64).unwrap_or(0) as u32,
         })
+    }
+}
+
+/// The ring of LEDs around the camera, as the node says it.
+#[derive(Debug, Clone, PartialEq)]
+pub struct Light {
+    pub on: bool,
+    pub level: u32,
+    /// The ceiling the node keeps, whatever is asked.
+    pub max_level: u32,
+    /// `white`, `cool`, `warm`, `red`, `green`, `blue` or `custom`.
+    pub tone: String,
+    /// Which eighths of the ring are lit (bit k is the k-th eighth).
+    pub sectors: u8,
+    pub leds: u32,
+    /// Seconds before the light turns itself off; `None` when it does not.
+    pub auto_off_s: Option<u32>,
+    /// The colour as six hexadecimal digits.
+    pub color: String,
+    /// The signal the ring is giving (`ok`, `nok`, `busy`, `warn`, `alarm`) or `none`.
+    pub cue: String,
+}
+
+impl Light {
+    pub fn from_json(text: &str) -> Result<Light, String> {
+        let v: Value = serde_json::from_str(text).map_err(|e| e.to_string())?;
+        if let Some(e) = v.get("error").and_then(Value::as_str) {
+            return Err(match v.get("key").and_then(Value::as_str) {
+                Some(k) => format!("{e}: {k}"),
+                None => e.to_string(),
+            });
+        }
+        let num = |k: &str| v.get(k).and_then(Value::as_u64).unwrap_or(0) as u32;
+        Ok(Light {
+            on: v
+                .get("on")
+                .and_then(Value::as_bool)
+                .ok_or("no `on` in the light")?,
+            level: num("level"),
+            max_level: num("max_level"),
+            tone: v
+                .get("tone")
+                .and_then(Value::as_str)
+                .unwrap_or("white")
+                .to_string(),
+            sectors: num("sectors").min(255) as u8,
+            leds: num("leds"),
+            auto_off_s: v
+                .get("auto_off_s")
+                .and_then(Value::as_i64)
+                .filter(|s| *s >= 0)
+                .map(|s| s as u32),
+            color: v
+                .get("color")
+                .and_then(Value::as_str)
+                .unwrap_or("ffffff")
+                .to_string(),
+            cue: v
+                .get("cue")
+                .and_then(Value::as_str)
+                .unwrap_or("none")
+                .to_string(),
+        })
+    }
+}
+
+/// A signal in colour that the ring gives for a while.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Cue {
+    Ok,
+    NotOk,
+    Busy,
+    Warn,
+    Alarm,
+    None,
+}
+
+impl Cue {
+    pub fn word(self) -> &'static str {
+        match self {
+            Cue::Ok => "ok",
+            Cue::NotOk => "nok",
+            Cue::Busy => "busy",
+            Cue::Warn => "warn",
+            Cue::Alarm => "alarm",
+            Cue::None => "none",
+        }
+    }
+}
+
+/// What to ask of the ring: only what is set goes in the request, so the node keeps the rest as it was.
+#[derive(Debug, Clone, Default, PartialEq)]
+pub struct LightRequest {
+    pub on: Option<bool>,
+    pub level: Option<u32>,
+    pub tone: Option<String>,
+    /// Six hexadecimal digits (`ff8800`).
+    pub color: Option<String>,
+    /// A name (`all`, `front`, `right`, `back`, `left`, `front_back`, `left_right`) or `0x` and two hexadecimal digits.
+    pub sectors: Option<String>,
+    pub cue: Option<Cue>,
+    pub cue_ms: Option<u32>,
+}
+
+impl LightRequest {
+    /// The light on at a level, in the plain white of the camera.
+    pub fn camera(level: u32) -> LightRequest {
+        LightRequest {
+            on: Some(true),
+            level: Some(level),
+            tone: Some("white".to_string()),
+            sectors: Some("all".to_string()),
+            ..Default::default()
+        }
+    }
+
+    pub fn off() -> LightRequest {
+        LightRequest {
+            on: Some(false),
+            ..Default::default()
+        }
+    }
+
+    pub fn cue(cue: Cue, ms: Option<u32>) -> LightRequest {
+        LightRequest {
+            cue: Some(cue),
+            cue_ms: ms,
+            ..Default::default()
+        }
+    }
+
+    /// The query of the request (`on=1&level=70`), without the question mark.
+    pub fn query(&self) -> String {
+        let mut q: Vec<String> = Vec::new();
+        if let Some(on) = self.on {
+            q.push(format!("on={}", u8::from(on)));
+        }
+        if let Some(l) = self.level {
+            q.push(format!("level={l}"));
+        }
+        if let Some(t) = &self.tone {
+            q.push(format!("tone={t}"));
+        }
+        if let Some(c) = &self.color {
+            q.push(format!("color={}", c.trim_start_matches('#')));
+        }
+        if let Some(s) = &self.sectors {
+            q.push(format!("sectors={s}"));
+        }
+        if let Some(c) = self.cue {
+            q.push(format!("cue={}", c.word()));
+        }
+        if let Some(ms) = self.cue_ms {
+            q.push(format!("cue_ms={ms}"));
+        }
+        q.join("&")
     }
 }
 
@@ -192,6 +355,8 @@ impl Link {
         let tail = match path {
             "/api/status" => "/status",
             "/api/measure" => "/measure",
+            "/api/light" => "/light",
+            "/api/snapshot" => "/snapshot",
             "/stream" => "/stream",
             other => other,
         };
@@ -242,6 +407,76 @@ impl Link {
         match code {
             200 => Measure::from_json(&String::from_utf8_lossy(&body)),
             401 => Err("the node refused the token".to_string()),
+            c => Err(format!("the node answered {c}")),
+        }
+    }
+
+    /// The ring of LEDs around the camera.
+    pub fn light(&self) -> Result<Light, String> {
+        let (code, body) = self.call("GET", "/api/light")?;
+        Self::light_answer(code, &body)
+    }
+
+    /// Asks the ring for something (see [`LightRequest`]); the node answers with the light as it is now.
+    pub fn set_light(&self, request: &LightRequest) -> Result<Light, String> {
+        let q = request.query();
+        let path = if q.is_empty() {
+            "/api/light".to_string()
+        } else {
+            format!("/api/light?{q}")
+        };
+        let (code, body) = self.call("POST", &path)?;
+        Self::light_answer(code, &body)
+    }
+
+    fn light_answer(code: u16, body: &[u8]) -> Result<Light, String> {
+        match code {
+            200 => Light::from_json(&String::from_utf8_lossy(body)),
+            400 => Err(Light::from_json(&String::from_utf8_lossy(body))
+                .err()
+                .unwrap_or_else(|| "the node did not understand the request".to_string())),
+            401 => Err("the node refused the token".to_string()),
+            503 => Err("the node has no ring of LEDs".to_string()),
+            c => Err(format!("the node answered {c}")),
+        }
+    }
+
+    /// Gives the server the analyser profile of this machine (the tolerances of the quality check, as JSON), so the screen next to the machine checks with the same one. Only
+    /// through the server: the node itself keeps no profile.
+    pub fn put_inspect_profile(&self, json: &str) -> Result<(), String> {
+        if self.machine.is_empty() {
+            return Err("the profile is kept by the server".to_string());
+        }
+        let path = format!("/api/v1/machines/{}/head/inspect/profile", self.machine);
+        let mut request = format!(
+            "PUT {path} HTTP/1.0\r\nHost: {}\r\nContent-Type: application/json\r\nContent-Length: {}\r\nConnection: close\r\n",
+            self.host,
+            json.len()
+        );
+        if !self.token.is_empty() {
+            request.push_str(&format!("Authorization: Bearer {}\r\n", self.token));
+        }
+        request.push_str("\r\n");
+        request.push_str(json);
+        let mut s = self.connect()?;
+        s.write_all(request.as_bytes()).map_err(|e| e.to_string())?;
+        let mut all = Vec::new();
+        s.read_to_end(&mut all).map_err(|e| e.to_string())?;
+        match parse_response(&all)?.0 {
+            200 => Ok(()),
+            401 | 403 => Err("the server refused the login".to_string()),
+            c => Err(format!("the server answered {c}")),
+        }
+    }
+
+    /// One picture of the camera as JPEG (the bytes of the file).
+    pub fn snapshot(&self) -> Result<Vec<u8>, String> {
+        let (code, body) = self.call("GET", "/api/snapshot")?;
+        match code {
+            200 if body.starts_with(&[0xFF, 0xD8]) => Ok(body),
+            200 => Err("the node did not send a picture".to_string()),
+            401 => Err("the node refused the token".to_string()),
+            503 => Err("the node has no camera working".to_string()),
             c => Err(format!("the node answered {c}")),
         }
     }
@@ -453,5 +688,120 @@ mod tests {
             c.push(&[0xFF, 0xD9]),
             vec![vec![0xFF, 0xD8, 9, 9, 0xFF, 0xD9]]
         );
+    }
+
+    const LIGHT: &str = r#"{"light":true,"on":true,"level":60,"max_level":80,"tone":"white","sectors":255,"leds":8,"auto_off_s":540,"color":"ffffff","cue":"none"}"#;
+
+    #[test]
+    fn the_light_is_read_and_asked_for() {
+        let l = Light::from_json(LIGHT).unwrap();
+        assert!(l.on && l.level == 60 && l.max_level == 80 && l.leds == 8);
+        assert_eq!(
+            (l.tone.as_str(), l.sectors, l.auto_off_s, l.color.as_str()),
+            ("white", 255, Some(540), "ffffff")
+        );
+        assert_eq!(l.cue, "none");
+        // a light that does not turn itself off says -1
+        let never = LIGHT.replace("540", "-1");
+        assert_eq!(Light::from_json(&never).unwrap().auto_off_s, None);
+        // an error of the node keeps its words
+        let e = Light::from_json(r#"{"error":"bad_request","key":"tone"}"#).unwrap_err();
+        assert_eq!(e, "bad_request: tone");
+        assert!(Light::from_json("{}").is_err());
+        // an older node has no light and the status says so
+        let old = Status::from_json(STATUS).unwrap();
+        assert!(!old.light && !old.light_on && old.light_level == 0);
+        let with = STATUS.replace(
+            r#""uptime_s":90"#,
+            r#""uptime_s":90,"light":true,"light_on":true,"light_level":55"#,
+        );
+        let s = Status::from_json(&with).unwrap();
+        assert!(s.light && s.light_on && s.light_level == 55);
+    }
+
+    #[test]
+    fn the_request_for_the_light_names_only_what_changes() {
+        assert_eq!(LightRequest::default().query(), "");
+        assert_eq!(LightRequest::off().query(), "on=0");
+        assert_eq!(
+            LightRequest::camera(70).query(),
+            "on=1&level=70&tone=white&sectors=all"
+        );
+        let r = LightRequest {
+            color: Some("#ff8800".to_string()),
+            cue: Some(Cue::NotOk),
+            cue_ms: Some(3000),
+            ..Default::default()
+        };
+        assert_eq!(r.query(), "color=ff8800&cue=nok&cue_ms=3000");
+        assert_eq!(LightRequest::cue(Cue::Ok, None).query(), "cue=ok");
+        assert_eq!(Cue::Busy.word(), "busy");
+        let via = Link::via_server("srv", 18200, "login", "bench-1");
+        assert_eq!(
+            via.path("/api/light?on=1"),
+            "/api/v1/machines/bench-1/head/light?on=1"
+        );
+        assert_eq!(
+            via.path("/api/snapshot"),
+            "/api/v1/machines/bench-1/head/snapshot"
+        );
+    }
+
+    #[test]
+    fn the_link_turns_the_light_on_and_takes_a_picture() {
+        let (port, node) = fake_node(format!("HTTP/1.0 200 OK\r\n\r\n{LIGHT}"));
+        let l = Link::new("127.0.0.1", port, "abcdefgh12")
+            .set_light(&LightRequest::camera(60))
+            .unwrap();
+        assert!(l.on);
+        let request = node.join().unwrap();
+        assert!(
+            request.starts_with("POST /api/light?on=1&level=60&tone=white&sectors=all HTTP/1.0")
+                && request.contains("Bearer abcdefgh12")
+        );
+        let (port, node) = fake_node(format!("HTTP/1.0 200 OK\r\n\r\n{LIGHT}"));
+        assert!(Link::new("127.0.0.1", port, "").light().unwrap().on);
+        assert!(node.join().unwrap().starts_with("GET /api/light HTTP/1.0"));
+        // the node says what it did not understand, and that it has no ring
+        let (port, node) = fake_node(
+            "HTTP/1.0 400 Bad Request\r\n\r\n{\"error\":\"bad_request\",\"key\":\"level\"}"
+                .to_string(),
+        );
+        let e = Link::new("127.0.0.1", port, "t")
+            .set_light(&LightRequest {
+                level: Some(500),
+                ..Default::default()
+            })
+            .unwrap_err();
+        assert_eq!(e, "bad_request: level");
+        node.join().unwrap();
+        let (port, node) = fake_node("HTTP/1.0 503 Service Unavailable\r\n\r\n{}".to_string());
+        assert!(Link::new("127.0.0.1", port, "t")
+            .set_light(&LightRequest::off())
+            .unwrap_err()
+            .contains("no ring"));
+        node.join().unwrap();
+        // a picture is a JPEG
+        let (port, node) = fake_node("HTTP/1.0 200 OK\r\n\r\n\u{0}".to_string());
+        assert!(Link::new("127.0.0.1", port, "t").snapshot().is_err());
+        node.join().unwrap();
+    }
+
+    #[test]
+    fn the_profile_goes_to_the_server_with_its_body() {
+        let (port, node) = fake_node("HTTP/1.0 200 OK\r\n\r\n{}".to_string());
+        Link::via_server("127.0.0.1", port, "login", "bench-1")
+            .put_inspect_profile("{\"px_per_mm\":60}")
+            .unwrap();
+        let request = node.join().unwrap();
+        assert!(
+            request.starts_with("PUT /api/v1/machines/bench-1/head/inspect/profile HTTP/1.0")
+                && request.contains("Bearer login")
+                && request.contains("Content-Length: 16")
+        );
+        // the node itself keeps no profile
+        assert!(Link::new("127.0.0.1", 1, "t")
+            .put_inspect_profile("{}")
+            .is_err());
     }
 }

@@ -4,6 +4,10 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The quality analyser (`eh3d-inspect`):** judges a picture of the camera of the drill head: every hole of the job (there, round, the right size, in place, clean around), the milled channels (their width from the exact distance to the copper, how even they are, where they pinch) and the picture itself (light, contrast, focus), with a profile of tolerances (presets standard, fine pitch and prototype, kept as JSON) and one verdict: ok, not ok or cannot judge. It also suggests the level of the ring of LEDs that would give a good picture. 43 tests.
+- **The ring of LEDs and the picture in the node client (`eh3d-aux`):** `Link::set_light`, `Link::light`, `Link::snapshot` and `Link::put_inspect_profile`, the colour signals (`Cue`), and the light of the status; older nodes that do not say it count as without a ring.
+- **Texts of the quality check and of the light:** 58 texts in the eight languages for the window of the quality check, its tolerances and the findings of the analyser.
+
 - **Texts of the catalogue of bits:** the three new kinds (chip-breaker routers, slot drills, diamond-coated routers), the words of the list (series, cutting length, schematic drawing, the top speed of the spindle) and what each kind of bit is for, in eight languages; and the label of the button that moves only the design.
 
 - **The node of the drill head through the server:** `eh3d-aux::Link::via_server` asks EH3D-SERVER for the status, the measure and the camera of the node of a machine (`/api/v1/machines/:id/head/...`), and the status carries `camera_model` (`ov2640` or `ov5640`, empty for an older node). 2 more tests.

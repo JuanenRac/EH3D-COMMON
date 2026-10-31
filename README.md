@@ -18,7 +18,7 @@
 
 ---
 
-**Honesty check - what actually runs today:** a Rust library with the project container (`.eh3dproj`), the metadata of a project, SHA-256 integrity checks, the machine telemetry types and the colours of the suite, plus the firmware base that every ESP32 node of the suite copies (70 files and the tool that keeps the copies identical). 117 tests run on a computer. The drilling and routing programs and the modern interface read their files and draw their jobs with the shared crates; nothing here has run on a machine or on a board.
+**Honesty check - what actually runs today:** a Rust library with the project container (`.eh3dproj`), the metadata of a project, SHA-256 integrity checks, the machine telemetry types and the colours of the suite, plus the firmware base that every ESP32 node of the suite copies (70 files and the tool that keeps the copies identical). 164 tests run on a computer. The drilling and routing programs and the modern interface read their files and draw their jobs with the shared crates; nothing here has run on a machine or on a board.
 
 ---
 
@@ -30,7 +30,7 @@
 |---|---|
 | Version | `0.0.5` |
 | Maturity | Scaffolding |
-| Tests | 117 |
+| Tests | 164 |
 | Stack | Rust (library crate) and C++17 (firmware base) |
 | On real hardware | Not applicable: a data library, nothing here talks to a machine; the firmware base has never run on a board |
 
@@ -47,7 +47,7 @@ Each line is one part of this repository and the light says how far it is today.
 | Container | 🟡 | `.eh3dproj` is a standard ZIP with a SHA-256 record of every entry; it reads, writes, and refuses damaged, altered, unlisted and unsafe entries. Only its own tests read and write it so far. |
 | Metadata | 🟡 | The metadata of a project (units, zero, layers, tools, toolpaths, fiducials) is validated and carries a semantic format version; there is no migration yet because 1.0.0 is the first format. |
 | Telemetry and theme | 🟢 | Axes, spindle, machine states, the GRBL alarm codes with their severity and the colours of the suite with a contrast check, all tested. |
-| Tests | 🟢 | 117 tests pass (`cargo test --workspace`): 16 in the modules and 14 on the container of the main crate, and 87 in the eight shared crates. |
+| Tests | 🟢 | 164 tests pass (`cargo test --workspace`): 16 in the modules and 14 on the container of the main crate, and 134 in the nine shared crates. |
 | Security | 🟡 | Unsafe names, oversized or too many entries and any altered entry are refused; the package is not signed or encrypted and has had no independent review. |
 | Firmware base | 🟠 | 49 files shared by the ESP32 nodes, kept identical by `tools/sync_firmware_base.py`; tested only through EH3D-NODE-BUNGARD, the one node that uses it, and never run on a board. |
 | Use by other programs | 🟡 | The crates of the workspace are used by EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC and EH3D-SERVER (by path, so the repositories sit side by side); the project container itself is not used by any program yet. |
@@ -85,6 +85,7 @@ How the parts of this repository fit together: who uses it, what it holds and wh
 * **Readers stay compatible:** the same major version is read ignoring what it does not know; a newer major version is refused.
 * **Alarm codes that never get lost:** a code this crate does not know is kept as `Unknown(n)` and treated as critical.
 * **One firmware base for all nodes:** edit it where the need appeared, `import` it, `sync` it into the others, and `check` in the CI says when a copy drifted.
+* **The quality analyser and the ring of LEDs of the head:** `eh3d-inspect` judges a picture of the camera of the drill head (holes that are there, round, the right size and in place; milled channels as wide as the tool, even and without pinches; a picture good enough to judge) with a profile of tolerances, and says ok, not ok or cannot judge. `eh3d-aux` also turns the ring of LEDs around the camera on and off, shows how a check went in colour, takes a picture and gives the profile to the server.
 
 ## 🔒 Security & Safety
 
@@ -157,7 +158,7 @@ python -I tools/sync_firmware_base.py check
 
 ## 🧪 Testing
 
-The suite has 117 tests (`cargo test --workspace`, run on Windows and Linux in the CI): 16 inside the modules (the metadata and its validation, the alarm codes and machine states, the colours and their WCAG contrast) and 14 on the container (round trips through memory and through a file, the same bytes for the same content, the integrity record, a changed entry, a changed size, an unlisted entry, a missing entry, edited metadata, a file that is not a package, unsafe and hostile entry names, a replaced entry and an invalid project). The CI also runs `cargo fmt --check` and `cargo clippy` with warnings as errors, `python -I tools/ci_validate.py` (manifest, versions, changelog and the eight READMEs) and `tools/sync_firmware_base.py check` (the copies of the firmware base). The host tests of the firmware base (`firmware_base/tests/`) run inside EH3D-NODE-BUNGARD, not here. The eight shared crates add 87 more: the job archives (6), the files of the Bungard machines, with the HP-GL arcs, circles and scaling and the Gerber and DXF outlines (16), the machine controllers on a scripted line (19) and the scene, the views, the themes and the words of the interface in eight languages (20), the Open and Save windows (7), the machines and stations of the server (5) and the height map of the table (8) and the client of the node of the drill head (6).
+The suite has 164 tests (`cargo test --workspace`, run on Windows and Linux in the CI): 16 inside the modules (the metadata and its validation, the alarm codes and machine states, the colours and their WCAG contrast) and 14 on the container (round trips through memory and through a file, the same bytes for the same content, the integrity record, a changed entry, a changed size, an unlisted entry, a missing entry, edited metadata, a file that is not a package, unsafe and hostile entry names, a replaced entry and an invalid project). The CI also runs `cargo fmt --check` and `cargo clippy` with warnings as errors, `python -I tools/ci_validate.py` (manifest, versions, changelog and the eight READMEs) and `tools/sync_firmware_base.py check` (the copies of the firmware base). The host tests of the firmware base (`firmware_base/tests/`) run inside EH3D-NODE-BUNGARD, not here. The nine shared crates add 134 more: the job archives (6), the files of the Bungard machines, with the HP-GL arcs, circles and scaling and the Gerber and DXF outlines (16), the machine controllers on a scripted line (19) and the scene, the views, the themes and the words of the interface in eight languages (20), the Open and Save windows (7), the machines and stations of the server (5) and the height map of the table (8) the client of the node of the drill head, with the ring of LEDs and the picture (10) and the quality analyser (43): the holes, the milled channels, the quality of the picture, the profile and the verdict.
 
 ## 🏗️ Build & Release
 
@@ -179,7 +180,7 @@ EH3D-COMMON/
 │   ├── project.rs                               the metadata and its validation
 │   ├── telemetry.rs                             axes, spindle, states and alarm codes
 │   └── theme.rs error.rs lib.rs                 the colours with contrast, the errors and the crate root
-├── crates/                                      shared crates: job view, ZIP, machine files and controllers
+├── crates/                                      shared crates: view, ZIP, machine files, controllers, head node, quality analyser
 ├── firmware_base/
 │   ├── core/                                    no hardware: settings, auth, network plan
 │   ├── main/                                    ESP-IDF code: network, store, panel API

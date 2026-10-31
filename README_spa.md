@@ -18,7 +18,7 @@
 
 ---
 
-**Comprobación de honestidad - lo que se ejecuta hoy:** una biblioteca en Rust con el contenedor de proyecto (`.eh3dproj`), los metadatos de un proyecto, las comprobaciones de integridad SHA-256, los tipos de telemetría de máquina y los colores de la suite, más la base de firmware que copia cada nodo ESP32 de la suite (70 ficheros y la herramienta que mantiene las copias idénticas). 117 pruebas se ejecutan en un ordenador. Los programas de taladrado y de fresado y la interfaz moderna leen sus ficheros y dibujan sus trabajos con los crates compartidos; nada de aquí se ha ejecutado en una máquina ni en una placa.
+**Comprobación de honestidad - lo que se ejecuta hoy:** una biblioteca en Rust con el contenedor de proyecto (`.eh3dproj`), los metadatos de un proyecto, las comprobaciones de integridad SHA-256, los tipos de telemetría de máquina y los colores de la suite, más la base de firmware que copia cada nodo ESP32 de la suite (70 ficheros y la herramienta que mantiene las copias idénticas). 164 pruebas se ejecutan en un ordenador. Los programas de taladrado y de fresado y la interfaz moderna leen sus ficheros y dibujan sus trabajos con los crates compartidos; nada de aquí se ha ejecutado en una máquina ni en una placa.
 
 ---
 
@@ -30,7 +30,7 @@
 |---|---|
 | Versión | `0.0.5` |
 | Madurez | Andamiaje |
-| Pruebas | 117 |
+| Pruebas | 164 |
 | Pila tecnológica | Rust (crate de biblioteca) y C++17 (base de firmware) |
 | En hardware real | No aplica: una biblioteca de datos, nada aquí habla con una máquina; la base de firmware nunca se ha ejecutado en una placa |
 
@@ -47,7 +47,7 @@ Cada línea es una parte de este repositorio y la luz dice hasta dónde llega ho
 | Contenedor | 🟡 | `.eh3dproj` es un ZIP estándar con un registro SHA-256 de cada entrada; lee, escribe y rechaza entradas dañadas, alteradas, sin listar o inseguras. Hasta ahora solo lo leen y escriben sus propias pruebas. |
 | Metadatos | 🟡 | Los metadatos de un proyecto (unidades, cero, capas, herramientas, trayectorias, fiduciales) se validan y llevan una versión de formato semántica; aún no hay migración porque 1.0.0 es el primer formato. |
 | Telemetría y tema | 🟢 | Ejes, husillo, estados de la máquina, los códigos de alarma GRBL con su gravedad y los colores de la suite con comprobación de contraste, todo probado. |
-| Pruebas | 🟢 | Pasan 117 pruebas (`cargo test --workspace`): 16 en los módulos y 14 sobre el contenedor del crate principal, y 87 en los ocho crates compartidos. |
+| Pruebas | 🟢 | Pasan 164 pruebas (`cargo test --workspace`): 16 en los módulos y 14 sobre el contenedor del crate principal, y 134 en los nueve crates compartidos. |
 | Seguridad | 🟡 | Se rechazan los nombres inseguros, las entradas demasiado grandes o numerosas y cualquier entrada alterada; el paquete no está firmado ni cifrado y no ha tenido revisión independiente. |
 | Base de firmware | 🟠 | 49 ficheros compartidos por los nodos ESP32, mantenidos idénticos por `tools/sync_firmware_base.py`; probada solo a través de EH3D-NODE-BUNGARD, el único nodo que la usa, y nunca ejecutada en una placa. |
 | Uso por otros programas | 🟡 | Los crates del workspace los usan EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC y EH3D-SERVER (por ruta, con los repositorios uno junto a otro); el contenedor de proyectos todavía no lo usa ningún programa. |
@@ -85,6 +85,7 @@ Cómo encajan las partes de este repositorio: quién lo usa, qué contiene y de 
 * **Los lectores siguen siendo compatibles:** se lee la misma versión mayor ignorando lo que no se conoce; una versión mayor más nueva se rechaza.
 * **Códigos de alarma que no se pierden:** un código que este crate no conoce se conserva como `Unknown(n)` y se trata como crítico.
 * **Una base de firmware para todos los nodos:** se edita donde apareció la necesidad, se hace `import`, se hace `sync` en los demás y el `check` del CI avisa cuando una copia se desvía.
+* **El analizador de calidad y el aro de LEDs del cabezal:** `eh3d-inspect` juzga una foto de la cámara del cabezal de taladro (agujeros que están, redondos, del tamaño justo y en su sitio; canales fresados tan anchos como la herramienta, regulares y sin estrechamientos; una foto lo bastante buena para juzgar) con un perfil de tolerancias, y dice correcto, no correcto o no se puede juzgar. `eh3d-aux` también enciende y apaga el aro de LEDs de la cámara, muestra en color cómo fue una verificación, toma una foto y entrega el perfil al servidor.
 
 ## 🔒 Seguridad y protección
 
@@ -157,7 +158,7 @@ python -I tools/sync_firmware_base.py check
 
 ## 🧪 Pruebas
 
-La suite tiene 117 pruebas (`cargo test --workspace`, ejecutadas en Windows y Linux en el CI): 16 dentro de los módulos (los metadatos y su validación, los códigos de alarma y los estados de la máquina, los colores y su contraste WCAG) y 14 sobre el contenedor (ida y vuelta en memoria y en fichero, los mismos bytes para el mismo contenido, el registro de integridad, una entrada cambiada, un tamaño cambiado, una entrada sin listar, una entrada ausente, metadatos editados, un fichero que no es un paquete, nombres de entrada inseguros y hostiles, una entrada reemplazada y un proyecto no válido). El CI también ejecuta `cargo fmt --check` y `cargo clippy` con advertencias como errores, `python -I tools/ci_validate.py` (manifiesto, versiones, registro de cambios y los ocho README) y `tools/sync_firmware_base.py check` (las copias de la base de firmware). Las pruebas en el ordenador de la base de firmware (`firmware_base/tests/`) se ejecutan dentro de EH3D-NODE-BUNGARD, no aquí. Los ocho crates compartidos añaden 87 más: los archivos de trabajo (6), los ficheros de las máquinas Bungard, con los arcos, círculos y escalado de HP-GL y los contornos Gerber y DXF (16), los controladores de máquina sobre una línea simulada (19) y la escena, las vistas, los temas y las palabras de la interfaz en ocho idiomas (20), las ventanas Abrir y Guardar (7), las máquinas y estaciones del servidor (5) y el mapa de alturas de la mesa (8) y el cliente del nodo del cabezal de taladro (6).
+La suite tiene 164 pruebas (`cargo test --workspace`, ejecutadas en Windows y Linux en el CI): 16 dentro de los módulos (los metadatos y su validación, los códigos de alarma y los estados de la máquina, los colores y su contraste WCAG) y 14 sobre el contenedor (ida y vuelta en memoria y en fichero, los mismos bytes para el mismo contenido, el registro de integridad, una entrada cambiada, un tamaño cambiado, una entrada sin listar, una entrada ausente, metadatos editados, un fichero que no es un paquete, nombres de entrada inseguros y hostiles, una entrada reemplazada y un proyecto no válido). El CI también ejecuta `cargo fmt --check` y `cargo clippy` con advertencias como errores, `python -I tools/ci_validate.py` (manifiesto, versiones, registro de cambios y los ocho README) y `tools/sync_firmware_base.py check` (las copias de la base de firmware). Las pruebas en el ordenador de la base de firmware (`firmware_base/tests/`) se ejecutan dentro de EH3D-NODE-BUNGARD, no aquí. Los nueve crates compartidos añaden 134 más: los archivos de trabajo (6), los ficheros de las máquinas Bungard, con los arcos, círculos y escalado de HP-GL y los contornos Gerber y DXF (16), los controladores de máquina sobre una línea simulada (19) y la escena, las vistas, los temas y las palabras de la interfaz en ocho idiomas (20), las ventanas Abrir y Guardar (7), las máquinas y estaciones del servidor (5) y el mapa de alturas de la mesa (8) el cliente del nodo del cabezal de taladro, con el aro de LEDs y la foto (10) y el analizador de calidad (43): los agujeros, los canales fresados, la calidad de la foto, el perfil y el veredicto.
 
 ## 🏗️ Compilación y publicación
 
@@ -179,7 +180,7 @@ EH3D-COMMON/
 │   ├── project.rs                               los metadatos y su validación
 │   ├── telemetry.rs                             ejes, husillo, estados y códigos de alarma
 │   └── theme.rs error.rs lib.rs                 los colores con contraste, los errores y la raíz del crate
-├── crates/                                      crates compartidos: vista, ZIP, ficheros de máquina, controladores
+├── crates/                                      crates compartidos: vista, ZIP, ficheros de máquina, controladores, cabezal, calidad
 ├── firmware_base/
 │   ├── core/                                    sin hardware: ajustes, autenticación, plan de red
 │   ├── main/                                    código ESP-IDF: red, almacén, API del panel
