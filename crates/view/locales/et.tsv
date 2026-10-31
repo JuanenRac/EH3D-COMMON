@@ -423,3 +423,4 @@ SndTripleBeep	kolmikpiiks
 SndAlarm	alarm
 SndKnock	koputus
 SndSiren	sireen
+OpenManyHint	Ctrl+klõps või Shift+klõps valib mitu faili (puurimine ja freesimine); need avatakse koos

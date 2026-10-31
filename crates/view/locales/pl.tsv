@@ -423,3 +423,4 @@ SndTripleBeep	potrójny sygnał
 SndAlarm	alarm
 SndKnock	stukanie
 SndSiren	syrena
+OpenManyHint	Ctrl+klik lub Shift+klik wybiera kilka plików (wiercenie i frezowanie); otwierają się razem

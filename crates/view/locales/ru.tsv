@@ -423,3 +423,4 @@ SndTripleBeep	тройной сигнал
 SndAlarm	тревога
 SndKnock	стук
 SndSiren	сирена
+OpenManyHint	Ctrl+щелчок или Shift+щелчок выбирает несколько файлов (сверление и фрезерование); они открываются вместе

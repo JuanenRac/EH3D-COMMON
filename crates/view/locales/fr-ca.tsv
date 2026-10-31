@@ -25,3 +25,4 @@ McSettingsSaved	Les paramètres sont enregistrés et s'appliquent tout de suite.
 McTypeName	Entrez un nom de fichier.
 LblLayers	Couches
 LblWholeMachine	Machine au complet
+OpenManyHint	Ctrl+clic ou Maj+clic choisit plusieurs fichiers (perçage et fraisage); ils s'ouvrent ensemble

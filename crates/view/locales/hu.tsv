@@ -423,3 +423,4 @@ SndTripleBeep	hármas sípolás
 SndAlarm	riasztás
 SndKnock	kopogás
 SndSiren	sziréna
+OpenManyHint	Ctrl+kattintás vagy Shift+kattintás több fájlt jelöl ki (fúrás és marás); együtt nyílnak meg

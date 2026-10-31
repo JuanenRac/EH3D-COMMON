@@ -136,3 +136,4 @@ SndBeep	bipe
 SndDouble	bipe duplo
 SndTripleBeep	bipe triplo
 SndKnock	batida
+OpenManyHint	Ctrl+clique ou Shift+clique escolhe vários arquivos (furação e fresamento); abrem juntos

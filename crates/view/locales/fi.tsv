@@ -423,3 +423,4 @@ SndTripleBeep	kolmoispiippaus
 SndAlarm	hälytys
 SndKnock	koputus
 SndSiren	sireeni
+OpenManyHint	Ctrl+napsautus tai Shift+napsautus valitsee useita tiedostoja (poraus ja jyrsintä); ne avataan yhdessä
