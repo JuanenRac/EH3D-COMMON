@@ -1,1 +1,425 @@
 # Українська (uk): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Тема
+ThemeForge	Forge
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Класичний Windows
+ThemeSystem	Кольори Windows
+ThemeMidnight	Північ
+ThemePaper	Папір (світла)
+ThemeForest	Ліс
+ThemeRetro	Ретро-термінал
+ThemeOcean	Океан
+ThemeContrast	Висока контрастність
+LauncherAsk	Що ви хочете запустити?
+LauncherClassicMtc	Класична MTC
+LauncherClassicAtc	Класична ATC
+LauncherModern	Сучасна (MTC + ATC)
+Remember	Запам'ятати мій вибір
+PressEnter	Натисніть Enter
+ViewPlan	2D - вигляд зверху
+ViewMachine	3D - верстат
+LayerHoles	Отвори свердління
+LayerPaths	Траєкторії фрезерування
+LayerMachine	Верстат
+LayerGrid	Сітка
+Progress	Хід виконання
+TableFromConfig	Стіл із конфігурації
+Drilling	Свердління
+Routing	Фрезерування
+ClassicMissing	Класичної програми немає поруч із цією
+Start	Старт
+Pause	Пауза
+Stop	Стоп
+Language	Мова
+Holes	отворів
+Tools	інструментів
+SimulatedJob	Симуляція: верстат не рухається
+NoFile	Файл не завантажено
+Ok	Ок
+Abort	Скасувати
+AskSpindle	Запустити шпиндель?
+AskTool	Встановіть інструмент
+Connection	Підключення
+OutsideTable	Не вміщується на столі
+OpenFile	Відкрити файл
+About	Про програму
+Close	Закрити
+SettingsTitle	Налаштування
+PanelTitle	Панелізація
+Columns	Стовпці
+Rows	Рядки
+SpacingX	Крок X (мм)
+SpacingY	Крок Y (мм)
+PanelModePitch	Від центру до центру
+PanelModeGap	Зазор між платами
+PanelModeFit	Заповнити стіл
+PanelCopies	копій
+Apply	Застосувати
+ResetView	Скинути вигляд
+DropHint	Перетягніть сюди файл .ncd, .plt або .zip
+NavHint2d	Перетягніть для переміщення, коліщатко - масштаб
+NavHint3d	Перетягніть для обертання, коліщатко - масштаб
+Version	Версія
+Licence	Ліцензія
+AboutBody	Сучасний інтерфейс для верстатів свердління та фрезерування Bungard CCD.
+TableWidth	Робоча ширина X (мм)
+TableDepth	Робоча глибина Y (мм)
+Save	Зберегти
+Saved	Збережено
+OpenFolderUp	Батьківська папка
+ShowDrill	Свердління
+ConnPort	Порт
+ConnAddress	Адреса
+ConnToken	Токен доступу
+ConnMachine	Ідентифікатор верстата
+ConnTest	Перевірити підключення
+ConnWorks	Підключення працює
+BoardTitle	Плата
+ToolsTitle	Інструменти
+SetAskOperator	Питати при зміні інструмента та запуску шпинделя
+SetToolsOnOpen	Показувати вікно інструментів при відкритті файлу
+SndVoice	Голос
+SndFemale	жіночий
+SndMale	чоловічий
+HeadOpen	Вузол головки
+HeadTitle	Вузол свердлильної головки
+HeadOff	Не використовується
+HeadDirect	Напряму
+HeadServer	Через сервер
+HeadCamera	Показати камеру вузла
+HeadSpeed	Шпиндель
+HeadTemp	Температура
+HeadProtectOpen	Вихід захисту РОЗІМКНЕНО: шпиндель має зупинитися
+HeadProtectClosed	Вихід захисту замкнено
+HeadMeasure	Виміряти стіл тут
+HeadServerNote	Через сервер із вікна підключення: його адреса, токен та ідентифікатор верстата.
+HeadNoServer	Вкажіть адресу, токен та ідентифікатор верстата сервера у вікні підключення.
+HeadCameraModel	Модель камери
+HeadNoLink	Вкажіть адресу вузла (host або host:port).
+HeadWaiting	Очікування вузла...
+HeadCameraOff	Камеру вимкнено
+HeatOk	норма
+HeatWarm	тепло
+HeatHot	ГАРЯЧЕ
+HeatUnknown	невідомо
+LightTitle	Світлове кільце
+LightOn	Світло увімкнено
+LightOff	Світло вимкнено
+LightNone	на цьому вузлі немає кільця
+InspOpen	Контроль якості
+InspTitle	Контроль якості виконаної роботи
+InspRun	Перевірити
+InspRunning	Перевірка...
+InspVerdictOk	ОК
+InspVerdictNotOk	НЕ ОК
+InspVerdictUnknown	НЕ МОЖНА ОЦІНИТИ
+InspIdle	Ще не перевірено
+InspChecks	Перевірки
+InspCheckHoles	Просвердлені отвори
+InspCheckMilling	Фрезеровані канали
+InspProfile	Профіль аналізатора
+InspPresetStandard	Стандарт
+InspPresetFine	Дрібний крок
+InspPresetProto	Прототип
+InspLight	Світло для знімка
+InspLightKeep	без змін
+InspHolePick	Отвір завдання в центрі
+InspNoJob	Завантажте файл свердління, щоб перевірити отвори
+InspScale	Масштаб (пікселів на мм)
+InspCalibrate	Калібрувати за цим отвором
+InspSave	Зберегти профіль
+InspTune	Допуски
+InspNeedLink	Спершу вкажіть вузол свердлильної головки (вікно «Вузол головки»).
+InspHolesOk	отворів у нормі
+InspChannel	ширина каналу
+InspTuneHoleDia	Допуск розміру отвору (мм)
+InspTuneHolePos	Допуск положення отвору (мм)
+InspTuneRound	Мінімальна округлість (1 = коло)
+InspTuneDebris	Макс. забруднення навколо отвору
+InspTuneMillWidth	Ширина каналу (мм)
+InspTuneMillTol	Допуск ширини каналу
+InspTuneMillMin	Найвужчий канал (мм)
+InspTuneSpread	Макс. нерівність каналу
+InspTuneMinMean	Найтемніше прийнятне зображення
+InspTuneMinSharp	Мінімальна різкість
+InspFindHoleMissing	отвору немає
+InspFindHoleSize	неправильний розмір
+InspFindHoleOff	зміщений від центру
+InspFindHoleRound	не круглий
+InspFindHoleDebris	задирки або пил навколо
+InspFindHoleView	поза кадром
+InspFindMillNone	каналів не видно
+InspFindMillNarrow	канали занадто вузькі
+InspFindMillWide	канали занадто широкі
+InspFindMillPinch	канал звужується: ризик замикання
+InspFindMillUneven	канали нерівні
+InspFindDark	зображення занадто темне: додайте світла
+InspFindBright	зображення занадто світле: зменште світло
+InspFindContrast	зображення без контрасту
+InspFindBlurry	зображення не в фокусі
+InspFindScale	спершу задайте масштаб
+InspFindNothing	жодну перевірку не ввімкнено
+InspFindNoHoles	отворів завдання в кадрі немає
+CatOpen	Каталог інструментів
+CatTitle	Каталог інструментів для друкованих плат
+CatShank	Кожен інструмент має хвостовик 1/8 дюйма (3.175 мм), який тримає патрон верстата Bungard. Значення - це відправні точки для FR-4: випробуйте їх на відходах плати.
+CatAll	Усі види
+KindDrill	Свердла
+KindEndMill	Кінцеві фрези (прямі)
+KindDownCut	Фрези зі спіраллю вниз
+KindUpCut	Фрези зі спіраллю вгору
+KindDiamond	Фрези з алмазною насічкою (кукурудза)
+KindVBit	V-подібні фрези (гравірування, ізоляція)
+KindBall	Сферичні фрези
+KindSpot	Центрувальні свердла
+KindCountersink	Зенкери
+CatCount	інструментів
+KindChipBreaker	Фрези-стружколоми
+KindSlotDrill	Пазові свердла (для овальних отворів)
+KindCoated	Фрези з алмазним покриттям
+CatSeriesCol	серія
+CatFluteCol	L мм
+CatPick	Виберіть інструмент у списку, щоб побачити його та призначення.
+CatSpindle	Обертання та подачі - від виробника. Шпиндель, що не може обертатися так швидко, працює з тим самим інструментом на власній швидкості, з пропорційною подачею (однакове врізання на оберт).
+SpindleLbl	Шпиндель верстата
+SpindleOriginal	Оригінальний Bungard, 60000 rpm
+SpindleVfd	Шпиндель VFD GDZ 80-2.2, 24000 rpm
+SpindleNote	Кожен шпиндель має обмеження швидкості, подачі та розміру інструмента (їх можна змінити у файлі налаштувань). Каталог та інструменти попереджають, коли інструмент потребує більше, ніж може дати шпиндель.
+CatSpindleLbl	Шпиндель
+FitOk	Цей шпиндель підходить із заводськими значеннями.
+FitSlower	Цьому шпинделю потрібно повільніше. Рекомендовані значення:
+FitLowerRpm	Шпиндель обертається повільніше, ніж потрібно інструменту: XY та Z йдуть повільніше пропорційно.
+FitSlowZ	На цьому верстаті Z має йти повільніше.
+FitSlowXy	На цьому верстаті подача XY має бути повільнішою.
+FitNoThick	НЕСУМІСНО: інструмент товстіший, ніж приймає цей шпиндель.
+FitNoSlow	НЕСУМІСНО: цей шпиндель обертається занадто повільно для цього інструмента (він зламається або спалить плату).
+CatUseFor	Використати ці значення для інструмента
+ToolFromCat	Каталог
+CatTaken	Значення перенесено в інструмент.
+JobNothingOn	Нічого робити: увімкніть свердління або фрезерування та хоча б один його інструмент.
+JobPartHint	Натисніть, щоб увімкнути чи вимкнути; обидва ввімкнені: спочатку свердління, потім фрезерування
+ToolOffHint	Натисніть точку інструмента, щоб виключити його із завдання
+CatFlute	Довжина різальної частини
+CatShankLbl	Хвостовик
+CatTotal	Загальна довжина
+CatPoint	Кут при вершині
+CatSchematic	Схематичний рисунок, без масштабу.
+NoteDrill	Твердосплавне свердло для наскрізних отворів. Малі (менше 0.5 мм) - для перехідних отворів, середні - для виводів компонентів, великі - для роз'ємів і монтажних отворів. Виводьте швидко та міняйте після кількох тисяч отворів.
+NoteEndMill	Прямі канавки та плоский торець: пази, кишені, ізоляція широких доріжок і контур тонких плат. Залишає чисте дно.
+NoteDownCut	Ліва фреза: штовхає стружку вниз. Верхній край плати виходить без задирок, тому використовуйте її для контуру, коли видно верхню сторону (плату треба добре притиснути).
+NoteUpCut	Права фреза: тягне стружку вгору з прорізу. Добра для пазів і кишень; може піднімати плату й залишати задирки на верхньому краї.
+NoteDiamond	Фреза з алмазною насічкою (кукурудза): багато дрібних зубців, що перемелюють скловолокно, а не рвуть його. Звичайний вибір для контуру FR-4; залишає шорсткий, але чистий край і служить довго.
+NoteChip	Фреза-стружколом: зубці ламають стружку на короткі шматки, які легко виходять з прорізу. Ріже швидше за алмазну насічку та залишає малі задирки.
+NoteVBit	V-подібна фреза (гравірувальна): ширина канавки залежить від глибини, тож глибина задає ширину ізоляції. Малий кут із тонким кінчиком дозволяє робити тонкі доріжки.
+NoteBall	Сферична кінцева фреза: округла канавка, для гравірування та формування. Не для ізоляції доріжок.
+NoteSpot	Центрувальне свердло: коротке жорстке жало, що починає отвір точно в потрібному місці, щоб наступне свердло не відводило. Для великих отворів і твердих плат.
+NoteCountersink	Зенкер: знімає фаску з краю отвору, для головок гвинтів або щоб прибрати задир.
+NoteSlot	Пазове свердло: свердло з жорсткою перемичкою, що вирізає овальні отвори, рухаючись убік під час свердління (пази роз'ємів). Не використовуйте для круглих отворів: інші дешевші.
+NoteCoated	Плоска фреза з алмазним покриттям: для абразивних плат (FR-4 з високим Tg, без галогенів, вуглеволокно) та плат на алюмінієвій основі, де звичайна швидко зношується. Коштує дорожче й служить у кілька разів довше.
+LevTab	Калібрування столу
+LevMeasure	Виміряти стіл
+LevStop	Зупинити вимірювання
+LevClear	Очистити карту
+LevCols	Точок уздовж X
+LevRows	Точок уздовж Y
+LevPoints	Виміряно точок
+LevSpread	Розкид
+LevTilt	Нахил X / Y
+LevDemo	Симульований щуп: вузол щупа ще не підключено, висоти беруться із симульованого столу.
+LevApply	Виправити Z завдань за цією картою
+ResumeTitle	Завдання перервано
+ResumeBody	Останнє завдання залишилося на півдорозі (вікно, комп'ютер або зв'язок вимкнулися). Продовжити з того місця, де зупинилося?
+ResumeContinue	Продовжити завдання
+ResumeCancel	Скасувати
+TabsOn	Фрезерувати зовнішній контур із перемичками
+TabsPerSide	Перемичок на сторону
+TabWidth	Ширина перемички
+TabPlace	Розташування перемичок
+TabEven	Рівномірно вздовж сторони
+TabEnds	Ближче до країв сторони
+TabMiddle	Разом посередині
+SetSkipLauncher	Наступного разу відкривати це вікно одразу
+ColName	Ім'я
+ColDate	Дата зміни (UTC)
+ColType	Тип
+ColSize	Розмір
+TypeFolder	Папка
+TypeZip	Архів ZIP
+Places	Місця
+PlaceExamples	Приклади
+PlaceDesktop	Робочий стіл
+PlaceDocuments	Документи
+PlaceDownloads	Завантаження
+FileNameLabel	Ім'я файлу
+FilterSupported	Усі файли завдань
+FilterDrill	Файли свердління
+FilterRoute	Файли фрезерування
+FilterZip	Архіви ZIP
+FilterAny	Усі файли
+NavBack	Назад
+NavUp	Вгору
+ThisPc	Цей комп'ютер
+SimSpeed	Швидкість симуляції
+DefaultValues	Типові
+TypeValueHint	Натисніть значення, щоб ввести його
+TabGeneral	Загальні
+TabJob	Завдання
+Units	Одиниці
+UnitMm	Міліметри (мм)
+UnitMil	Міли (0.001 дюйма)
+ModelLabel	Модель верстата
+ToolChange	Зміна інструмента
+TcManual	Ручна (MTC)
+TcAuto	Автоматична (ATC)
+EmergencyStop	Аварійна зупинка
+EmergencyShow	Показати кнопку аварійної зупинки (її можна перетягнути куди завгодно)
+RackPlaces	місць інструмента
+Rotate	Повернути
+FollowTool	Слідувати за інструментом
+Enlarge2d	Збільшити вигляд 2D
+MoveDesign	Перемістити лише малюнок
+MoveBoard	Перемістити плату
+ShowBoth	Показати вигляд 3D
+OnTable	На столі
+OnBoard	На платі
+Resume	Продовжити
+NotAnOutline	не є контуром плати (відкрийте її шар профілю або краю)
+HolesDrilled	Просвердлено отворів загалом
+ResetCounts	Скинути лічильники
+Recent	Останні
+McPosition	Позиція
+McWork	Робоча
+McMachine	Машинна
+McJog	Ручний рух
+McStep	Крок (мм)
+McHome	Home
+McZero	Нуль тут
+McUnlock	Розблокувати
+McProgram	Програма
+McOpenGcode	Відкрити G-code
+McMdi	Команда (MDI)
+McSend	Надіслати
+McLog	Журнал
+McState	Стан
+McController	Контролер
+McSimulator	Симулятор
+McNotDriven	ще не керується
+McToolpath	Траєкторія
+McLine	Рядок
+McSpindle	Шпиндель
+McFeedRate	Подача
+McStIdle	Очікування
+McStRun	Виконується
+McStHold	Пауза
+McStHome	Пошук Home
+McStAlarm	ТРИВОГА
+McStUnknown	Невідомо
+McZeroXyz	Задати робочий нуль тут (X, Y і Z)
+McZeroXy	Задати робочий нуль тут (X і Y)
+McGoG28	Перейти в збережену позицію G28
+McGoG30	Перейти в збережену позицію G30
+McGoZeroXy	Перейти в робочий нуль по X і Y
+McGoZeroZ	Перейти в робочий нуль по Z
+McOperator	Оператор
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	Активні G-коди
+McActiveM	Активні M-коди
+McSpeed	Швидкість
+McZeroAxis	Задати нуль цієї осі тут
+McInputs	Входи
+McOutputs	Виходи
+McJogSpeed	Швидкість ручного руху
+MenuFile	Файл
+MenuView	Вигляд
+MenuHelp	Довідка
+MenuExit	Вихід
+McSaveGcode	Зберегти G-code ...
+McEditProgram	Редагувати програму ...
+McRewind	Перемотати на перший рядок
+McClearProgram	Очистити програму
+McFitTable	Вписати стіл
+McFitProgram	Вписати програму
+McShowButtons	Показати кнопки нулів
+McShowProgram	Показати програму
+McShowLog	Показати журнал
+McShowRapids	Показати швидкі переміщення
+McSpindleOn	Шпиндель увімкнено (M3)
+McSpindleOff	Шпиндель вимкнено (M5)
+McCoolantOn	Охолодження ввімкнено (M8)
+McCoolantOff	Охолодження вимкнено (M9)
+McSetG28	Зберегти цю позицію як G28
+McSetG30	Зберегти цю позицію як G30
+McCancel	Скасувати
+McSecGeneral	Загальні
+McSecInterface	Інтерфейс користувача
+McSecAxes	Осі та межі
+McSecJog	Ручний рух
+McUnitInch	Дюйми
+McLimits	Межі ходу (мм): мінімум і максимум кожної осі
+McDefaultStep	Початковий крок (мм)
+McDefaultFeed	Початкова швидкість ручного руху (мм/хв)
+McSettingsSaved	Налаштування збережено та діють зараз.
+McFilterGcode	Файли G-code
+McReplaceAsk	вже існує. Замінити його?
+McReplace	Замінити
+McTypeName	Введіть ім'я файлу.
+McNoSuchFile	Такого файлу немає.
+McSaveTitle	Зберегти програму
+McOpenTitle	Відкрити програму G-code
+McAboutBody	Програма керування верстатом EH3D: поки що керує симульованим верстатом.
+FleetTitle	Верстати та станції
+FleetNoStation	Немає станції
+FleetWaiting	Очікування оператора
+FleetReady	завдань готово
+FleetUse	Використовувати цей верстат
+FleetTarget	Верстат для завдань
+FleetNoServer	Підключення не є сервером EH3D: виберіть його в розділі «Підключення», щоб побачити верстати.
+FleetRefresh	Оновити
+JobOutsideTable	Завдання не вміщується на столі: перемістіть плату або збільште стіл
+LblThickness	Товщина (мм)
+LblCopper	Мідь (µm)
+LblCopperSides	Сторони з міддю
+LblOneSide	1 сторона
+LblTwoSides	2 сторони
+LblSize	Розмір (мм)
+LblFromFiles	З файлів
+LblMaker	Виробник
+LblWidth	Ширина
+LblDepth	Глибина
+LblPhotoresist	Фоточутливий резист
+LblExtraStroke	Додатковий хід (мм)
+LblFeed	Подача (мм/хв)
+LblSpeedRpm	Швидкість (rpm)
+LblDepthMm	Глибина (мм)
+LblPasses	Проходи
+LblFeedXy	Подача XY (мм/хв)
+LblFeedZ	Подача Z (мм/хв)
+LblDefault	Тип.
+LblFileCoords	Координати файлів
+LblNoRack	У файлі верстата ще немає позицій магазину
+LblWorkArea	Робоча зона
+LblWholeMachine	Весь верстат
+LblLayers	Шари
+SoundFinish	Звук по завершенні завдання
+SoundTool	Звук при запиті інструмента
+SoundCheckOk	Звук, коли візуальна перевірка пройдена
+SoundCheckBad	Звук, коли візуальна перевірка не пройдена
+SoundFileHint	Файл WAV (порожньо: стандартний тон)
+SoundTest	Тест
+SndOff	Без звуку
+SndDefault	Стандартний тон
+SndFile	Мій файл (WAV)
+SndChime	передзвін
+SndRise	висхідні ноти
+SndFall	низхідні ноти
+SndFanfare	фанфари
+SndTriple	три ноти
+SndBell	дзвін
+SndBeep	сигнал
+SndDouble	подвійний сигнал
+SndTripleBeep	потрійний сигнал
+SndAlarm	тривога
+SndKnock	стукіт
+SndSiren	сирена

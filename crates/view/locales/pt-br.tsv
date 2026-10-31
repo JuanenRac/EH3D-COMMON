@@ -1,1 +1,138 @@
 # Português (Brasil) (pt-br): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+LauncherAsk	O que você quer executar?
+Remember	Lembrar minha escolha
+PressEnter	Pressione Enter
+LayerGrid	Grade
+Routing	Fresamento
+LayerPaths	Trajetos de fresamento
+AskSpindle	Ligar o fuso?
+NoFile	Nenhum arquivo carregado
+Connection	Conexão
+OpenFile	Abrir arquivo
+SettingsTitle	Configurações
+ResetView	Redefinir visualização
+DropHint	Solte aqui um arquivo .ncd, .plt ou .zip
+NavHint2d	Arraste para mover, role a roda para ampliar
+NavHint3d	Arraste para girar, role a roda para ampliar
+Save	Salvar
+Saved	Salvo
+ConnMachine	ID da máquina
+ConnTest	Testar conexão
+ConnWorks	A conexão funciona
+SetToolsOnOpen	Mostrar a janela de ferramentas ao abrir um arquivo
+HeadOff	Não usar
+HeadCamera	Mostrar a câmera do nó
+HeadServerNote	Pelo servidor da janela de conexão: seu endereço, seu token e o ID da máquina.
+HeadNoServer	Digite o endereço, o token e o ID da máquina do servidor na janela de conexão.
+HeadCameraModel	Modelo de câmera
+HeadNoLink	Digite o endereço do nó (host ou host:porta).
+HeadWaiting	Aguardando o nó...
+HeadCameraOff	Câmera desligada
+HeatOk	normal
+InspRunning	Verificando...
+InspIdle	Ainda não verificado
+InspNoJob	Carregue um arquivo de furação para verificá-los
+InspScale	Escala (pixels por mm)
+InspSave	Salvar perfil
+InspNeedLink	Configure primeiro o nó da cabeça (janela Nó da cabeça).
+InspHolesOk	furos ok
+InspTuneRound	Circularidade mínima (1 = círculo)
+InspTuneDebris	Máx. rebarba em volta do furo
+InspTuneMinMean	Foto mais escura aceita
+InspFindHoleOff	fora do centro
+InspFindHoleDebris	rebarbas ou pó em volta
+InspFindMillNone	não aparecem canais
+InspFindMillNarrow	canais estreitos demais
+InspFindMillWide	canais largos demais
+InspFindMillPinch	um canal se estreita: risco de curto-circuito
+InspFindDark	foto escura demais: mais luz
+InspFindBright	foto clara demais: menos luz
+InspFindBlurry	foto fora de foco
+InspFindScale	defina primeiro a escala
+InspFindNoHoles	nenhum furo do trabalho visível
+CatShank	Todas as ferramentas têm a haste de 1/8 de polegada (3,175 mm) que o mandril de uma Bungard segura. Os números são pontos de partida para FR-4: experimente em uma placa de refugo.
+KindChipBreaker	Fresas quebra-cavacos
+CatPick	Clique em uma ferramenta da lista para vê-la e saber para que serve.
+CatSpindle	As rotações e os avanços são os do fabricante. Um fuso que não gira tão rápido usa a mesma ferramenta na sua velocidade, com o avanço proporcional (a mesma mordida por volta).
+SpindleNote	Cada fuso tem seus limites de velocidade, avanço e tamanho da ferramenta (editados no arquivo de configurações). O catálogo e as ferramentas avisam quando uma ferramenta exige mais do que o fuso pode dar.
+FitOk	Este fuso a aceita com os valores do fabricante.
+FitSlower	Este fuso precisa ir mais devagar. Valores recomendados:
+FitLowerRpm	O fuso gira menos do que a ferramenta exige: XY e Z devem ir mais devagar em proporção.
+FitNoSlow	INCOMPATÍVEL: este fuso gira devagar demais para esta ferramenta (ela quebraria ou queimaria a placa).
+JobNothingOn	Nada a fazer: ative a furação ou o fresamento e pelo menos uma de suas ferramentas.
+JobPartHint	Clique para ativar ou não; com os dois: primeiro a furação e depois o fresamento
+ToolOffHint	Clique no ponto de uma ferramenta para deixá-la fora do trabalho
+NoteDrill	Broca de metal duro para furos passantes. As pequenas (menos de 0,5 mm) são para vias, as médias para terminais de componentes e as grandes para conectores e furos de fixação. Recue rápido e troque-a depois de alguns milhares de furos.
+NoteEndMill	Fresas retas de ponta plana: ranhuras, cavidades, isolamento de trilhas largas e contorno de placas finas. Deixa um fundo limpo.
+NoteDownCut	Fresa com hélice à esquerda: empurra o cavaco para baixo. A borda superior da placa fica sem rebarbas; use-a no contorno quando a face de cima é a que aparece (a placa precisa estar bem presa).
+NoteUpCut	Fresa com hélice à direita: puxa o cavaco para cima. Boa para ranhuras e cavidades; pode levantar a placa e deixar rebarbas na borda superior.
+NoteDiamond	Fresa de diamante (corn): muitos dentes pequenos que trituram a fibra de vidro em vez de rasgá-la. A escolha habitual para o contorno do FR-4; deixa uma borda áspera mas limpa e dura muito.
+NoteChip	Fresa quebra-cavacos: os dentes partem o cavaco em pedaços curtos que saem facilmente do corte. Corta mais rápido que a de diamante e mantém as rebarbas pequenas.
+NoteVBit	Fresa em V (gravação): o sulco é tão largo quanto a profundidade o faz, por isso a profundidade define a largura do isolamento. Um ângulo estreito com ponta fina permite trilhas finas.
+NoteBall	Fresa de ponta esférica: sulco arredondado, para gravar e modelar. Não serve para isolar trilhas.
+NoteSpot	Broca de centrar: ponta curta e rígida que inicia o furo exatamente onde se quer, para que a broca seguinte não desvie. Para furos grandes e placas duras.
+NoteSlot	Broca para ranhuras: broca com núcleo rígido feita para cortar furos oblongos movendo-se de lado enquanto fura (as ranhuras dos conectores). Não a use para furos redondos: as outras são mais baratas.
+NoteCoated	Fresa de ponta plana com revestimento de diamante: para placas abrasivas (FR-4 de Tg alto, sem halogênio, fibra de carbono) e com base de alumínio, onde uma sem revestimento se desgasta. Custa mais e dura várias vezes mais.
+LevDemo	Apalpador simulado: ainda não há um nó apalpador conectado, as alturas vêm de uma mesa simulada.
+ResumeBody	O último trabalho ficou na metade (a janela, o computador ou a conexão falhou). Quer continuar de onde parou?
+TabEven	Distribuídas pelo lado
+TabMiddle	Juntas no centro
+SetSkipLauncher	Abrir esta janela direto da próxima vez
+PlaceDesktop	Área de trabalho
+PlaceDownloads	Downloads
+FileNameLabel	Nome do arquivo
+FilterSupported	Todos os arquivos de trabalho
+FilterDrill	Arquivos de furação
+FilterRoute	Arquivos de fresamento
+FilterZip	Arquivos ZIP
+FilterAny	Todos os arquivos
+NavBack	Voltar
+ThisPc	Este Computador
+DefaultValues	Valores padrão
+TypeValueHint	Clique em um valor para digitá-lo
+EmergencyStop	Parada de emergência
+EmergencyShow	Mostrar o botão de emergência (pode ser arrastado para qualquer lugar)
+Rotate	Girar
+Enlarge2d	Ampliar a visualização 2D
+ShowBoth	Mostrar a visualização 3D
+NotAnOutline	não é o contorno de uma placa (abra a camada de perfil ou de borda)
+ResetCounts	Zerar os contadores
+McLog	Registro
+McStHome	Referenciando
+McZeroXyz	Definir o zero da peça aqui (X, Y e Z)
+McZeroXy	Definir o zero da peça aqui (X e Y)
+McGoG28	Ir para a posição salva G28
+McGoG30	Ir para a posição salva G30
+McZeroAxis	Definir aqui o zero deste eixo
+MenuFile	Arquivo
+MenuView	Exibir
+McSaveGcode	Salvar G-code ...
+McClearProgram	Limpar o programa
+McShowButtons	Mostrar os botões de zero
+McShowLog	Mostrar o registro
+McSetG28	Salvar esta posição como G28
+McSetG30	Salvar esta posição como G30
+McSecInterface	Interface do usuário
+McSettingsSaved	As configurações foram salvas e já estão em uso.
+McFilterGcode	Arquivos G-code
+McReplaceAsk	já existe. Substituir?
+McTypeName	Digite um nome de arquivo.
+McNoSuchFile	Esse arquivo não existe.
+McSaveTitle	Salvar o programa
+McAboutBody	O programa de controle de máquina do EH3D: por enquanto comanda uma máquina simulada.
+FleetWaiting	Aguardando o operador
+FleetNoServer	A conexão não é um servidor EH3D: escolha-o em Conexão para ver as máquinas.
+LblFromFiles	Dos arquivos
+LblDefault	Padrão
+LblFileCoords	Coordenadas dos arquivos
+LblNoRack	O arquivo da máquina ainda não tem as posições do magazine
+SoundFinish	Som ao concluir o trabalho
+SoundFileHint	Arquivo WAV (vazio: o tom padrão)
+SndFile	Um arquivo meu (WAV)
+SndChime	sinos
+SndRise	notas subindo
+SndFall	notas descendo
+SndBeep	bipe
+SndDouble	bipe duplo
+SndTripleBeep	bipe triplo
+SndKnock	batida

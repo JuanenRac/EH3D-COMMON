@@ -1,1 +1,425 @@
 # Српски (sr): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Тема
+ThemeForge	Forge
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Класични Windows
+ThemeSystem	Боје система Windows
+ThemeMidnight	Поноћ
+ThemePaper	Папир (светла)
+ThemeForest	Шума
+ThemeRetro	Ретро терминал
+ThemeOcean	Океан
+ThemeContrast	Високи контраст
+LauncherAsk	Шта желите да покренете?
+LauncherClassicMtc	Класични MTC
+LauncherClassicAtc	Класични ATC
+LauncherModern	Савремени (MTC + ATC)
+Remember	Запамти мој избор
+PressEnter	Притисните Enter
+ViewPlan	2D - поглед одозго
+ViewMachine	3D - машина
+LayerHoles	Рупе за бушење
+LayerPaths	Путање глодања
+LayerMachine	Машина
+LayerGrid	Мрежа
+Progress	Напредак
+TableFromConfig	Сто из конфигурације
+Drilling	Бушење
+Routing	Глодање
+ClassicMissing	Класични програм није поред овог
+Start	Старт
+Pause	Пауза
+Stop	Стоп
+Language	Језик
+Holes	рупа
+Tools	алата
+SimulatedJob	Симулација: машина се не креће
+NoFile	Датотека није учитана
+Ok	У реду
+Abort	Откажи
+AskSpindle	Покренути вретено?
+AskTool	Уметните алат
+Connection	Веза
+OutsideTable	Не стаје на сто
+OpenFile	Отвори датотеку
+About	О програму
+Close	Затвори
+SettingsTitle	Подешавања
+PanelTitle	Панелизација
+Columns	Колоне
+Rows	Редови
+SpacingX	Корак X (mm)
+SpacingY	Корак Y (mm)
+PanelModePitch	Од центра до центра
+PanelModeGap	Размак између плоча
+PanelModeFit	Попуни сто
+PanelCopies	копија
+Apply	Примени
+ResetView	Ресетуј приказ
+DropHint	Превуците овде датотеку .ncd, .plt или .zip
+NavHint2d	Превуците за померање, точкић за зум
+NavHint3d	Превуците за ротацију, точкић за зум
+Version	Верзија
+Licence	Лиценца
+AboutBody	Савремени интерфејс за машине за бушење и глодање Bungard CCD.
+TableWidth	Употребљива ширина X (mm)
+TableDepth	Употребљива дубина Y (mm)
+Save	Сачувај
+Saved	Сачувано
+OpenFolderUp	Надређени фолдер
+ShowDrill	Бушење
+ConnPort	Порт
+ConnAddress	Адреса
+ConnToken	Токен за приступ
+ConnMachine	ИД машине
+ConnTest	Тестирај везу
+ConnWorks	Веза ради
+BoardTitle	Плоча
+ToolsTitle	Алати
+SetAskOperator	Питај ме при промени алата и покретању вретена
+SetToolsOnOpen	Прикажи прозор алата када отворим датотеку
+SndVoice	Глас
+SndFemale	женски
+SndMale	мушки
+HeadOpen	Чвор главе
+HeadTitle	Чвор главе за бушење
+HeadOff	Не користи се
+HeadDirect	Директно
+HeadServer	Преко сервера
+HeadCamera	Прикажи камеру чвора
+HeadSpeed	Вретено
+HeadTemp	Температура
+HeadProtectOpen	Излаз заштите ОТВОРЕН: вретено мора да стане
+HeadProtectClosed	Излаз заштите затворен
+HeadMeasure	Измери сто овде
+HeadServerNote	Преко сервера из прозора везе: његова адреса, токен и ИД машине.
+HeadNoServer	Упишите адресу, токен и ИД машине сервера у прозору везе.
+HeadCameraModel	Модел камере
+HeadNoLink	Упишите адресу чвора (host или host:port).
+HeadWaiting	Чекање на чвор...
+HeadCameraOff	Камера искључена
+HeatOk	у реду
+HeatWarm	топло
+HeatHot	ВРУЋЕ
+HeatUnknown	непознато
+LightTitle	Светлосни прстен
+LightOn	Светло укључено
+LightOff	Светло искључено
+LightNone	на овом чвору нема прстена
+InspOpen	Провера квалитета
+InspTitle	Провера квалитета рада
+InspRun	Провери сада
+InspRunning	Провера...
+InspVerdictOk	У РЕДУ
+InspVerdictNotOk	НИЈЕ У РЕДУ
+InspVerdictUnknown	НЕМОГУЋЕ ПРОЦЕНИТИ
+InspIdle	Још није проверено
+InspChecks	Провере
+InspCheckHoles	Избушене рупе
+InspCheckMilling	Углодани канали
+InspProfile	Профил анализатора
+InspPresetStandard	Стандардно
+InspPresetFine	Фини корак
+InspPresetProto	Прототип
+InspLight	Светло за слику
+InspLightKeep	непромењено
+InspHolePick	Рупа посла у центру
+InspNoJob	Учитајте датотеку бушења да проверите рупе
+InspScale	Размера (пиксела по mm)
+InspCalibrate	Калибриши према овој рупи
+InspSave	Сачувај профил
+InspTune	Толеранције
+InspNeedLink	Прво подесите чвор главе за бушење (прозор Чвор главе).
+InspHolesOk	рупа у реду
+InspChannel	ширина канала
+InspTuneHoleDia	Толеранција величине рупе (mm)
+InspTuneHolePos	Толеранција положаја рупе (mm)
+InspTuneRound	Најмања округлост (1 = круг)
+InspTuneDebris	Највише прљавштине око рупе
+InspTuneMillWidth	Ширина канала (mm)
+InspTuneMillTol	Толеранција ширине канала
+InspTuneMillMin	Најужи канал (mm)
+InspTuneSpread	Највећа неравнина канала
+InspTuneMinMean	Најтамнија прихваћена слика
+InspTuneMinSharp	Најмања оштрина
+InspFindHoleMissing	нема рупе
+InspFindHoleSize	погрешна величина
+InspFindHoleOff	ван центра
+InspFindHoleRound	није округла
+InspFindHoleDebris	ивери или прашина око рупе
+InspFindHoleView	ван кадра
+InspFindMillNone	канали се не виде
+InspFindMillNarrow	канали су преуски
+InspFindMillWide	канали су прешироки
+InspFindMillPinch	канал се сужава: ризик од кратког споја
+InspFindMillUneven	канали су неравни
+InspFindDark	слика је претамна: више светла
+InspFindBright	слика је превише светла: мање светла
+InspFindContrast	слика без контраста
+InspFindBlurry	слика је ван фокуса
+InspFindScale	прво подесите размеру
+InspFindNothing	ниједна провера није укључена
+InspFindNoHoles	ниједна рупа посла није у кадру
+CatOpen	Каталог алата
+CatTitle	Каталог алата за штампане плоче
+CatShank	Сваки алат има стабло од 1/8 инча (3.175 mm) које држи стезна глава машине Bungard. Бројеви су полазне тачке за FR-4: испробајте их на отпаду плоче.
+CatAll	Све врсте
+KindDrill	Бургије
+KindEndMill	Чеона глодала (равна)
+KindDownCut	Глодала са спиралом надоле
+KindUpCut	Глодала са спиралом нагоре
+KindDiamond	Глодала са дијамантским резом (кукуруз)
+KindVBit	V-глодала (гравирање, изолација)
+KindBall	Кугласта глодала
+KindSpot	Центрирне бургије
+KindCountersink	Упуштачи
+CatCount	алата
+KindChipBreaker	Глодала ломачи струготине
+KindSlotDrill	Бургије за жљебове (за овалне рупе)
+KindCoated	Глодала са дијамантском превлаком
+CatSeriesCol	серија
+CatFluteCol	L mm
+CatPick	Кликните на алат са листе да га видите и сазнате чему служи.
+CatSpindle	Обртаји и помаци су произвођачки. Вретено које не може тако брзо да се окреће користи исти алат својом брзином, са сразмерним помаком (исти зарез по обртају).
+SpindleLbl	Вретено машине
+SpindleOriginal	Оригинални Bungard, 60000 rpm
+SpindleVfd	VFD вретено GDZ 80-2.2, 24000 rpm
+SpindleNote	Свако вретено има границе брзине, помака и величине алата (могу се мењати у датотеци подешавања). Каталог и алати упозоравају када алат тражи више него што вретено може да да.
+CatSpindleLbl	Вретено
+FitOk	Ово вретено може да прими алат са вредностима произвођача.
+FitSlower	Ово вретено захтева спорије. Предложене вредности:
+FitLowerRpm	Вретено се окреће спорије него што алат тражи: XY и Z иду спорије сразмерно.
+FitSlowZ	Z мора да иде спорије на овој машини.
+FitSlowXy	XY помак мора да буде спорији на овој машини.
+FitNoThick	НЕКОМПАТИБИЛНО: алат је дебљи него што ово вретено прима.
+FitNoSlow	НЕКОМПАТИБИЛНО: ово вретено се окреће пресполо за овај алат (сломио би се или спалио плочу).
+CatUseFor	Користи ове вредности за алат
+ToolFromCat	Каталог
+CatTaken	Вредности пренете у алат.
+JobNothingOn	Нема шта да се ради: укључите бушење или глодање и бар један његов алат.
+JobPartHint	Кликните да укључите или искључите; оба укључена: прво бушење, затим глодање
+ToolOffHint	Кликните на тачку алата да га изоставите из посла
+CatFlute	Дужина резања
+CatShankLbl	Стабло
+CatTotal	Укупна дужина
+CatPoint	Угао врха
+CatSchematic	Шематски цртеж, није у размери.
+NoteDrill	Бургија од пуног тврдог метала за пролазне рупе. Мале (испод 0.5 mm) су за вије, средње за изводе компоненти, велике за конекторе и монтажне рупе. Брзо извлачите и мењајте после неколико хиљада рупа.
+NoteEndMill	Равни жљебови и равно чело: жљебови, џепови, изолација широких трака и контура танких плоча. Оставља чисто дно.
+NoteDownCut	Лево глодало: потискује струготину надоле. Горња ивица плоче излази без ивера, па га користите за контуру када је горња страна она која се види (плоча мора добро да буде притегнута).
+NoteUpCut	Десно глодало: извлачи струготину нагоре из реза. Добро за жљебове и џепове; може да подигне плочу и остави ивере на горњој ивици.
+NoteDiamond	Глодало са дијамантским резом (кукуруз): много ситних зуба који мељу стаклено влакно уместо да га кидају. Уобичајен избор за контуру FR-4; оставља храпаву али чисту ивицу и дуго траје.
+NoteChip	Глодало ломач струготине: зуби ломе струготину на кратке комаде који лако излазе из реза. Сече брже од дијамантског реза и оставља мале ивере.
+NoteVBit	V-глодало (за гравирање): жлеб је толико широк колико дубина одреди, па дубина одређује ширину изолације. Узак угао са финим врхом омогућава танке траке.
+NoteBall	Кугласто чеоно глодало: заобљен жлеб, за гравирање и обликовање. Није за изолацију трака.
+NoteSpot	Центрирна бургија: кратак крут врх који започиње рупу тачно где треба, да следећа бургија не одлута. За велике рупе и тврде плоче.
+NoteCountersink	Упуштач: скида ивицу рупе, за главе завртњева или за уклањање ивера.
+NoteSlot	Бургија за жљебове: бургија са крутом језгром направљена да сече овалне рупе померајући се у страну док буши (отвори конектора). Не користите је за округле рупе: остале су јефтиније.
+NoteCoated	Равно глодало са дијамантском превлаком: за абразивне плоче (FR-4 високог Tg, без халогена, угљенична влакна) и плоче на алуминијумској подлози, где се обично брзо истроши. Кошта више и траје неколико пута дуже.
+LevTab	Калибрација стола
+LevMeasure	Измери сто
+LevStop	Заустави мерење
+LevClear	Обриши мапу
+LevCols	Тачака по X
+LevRows	Тачака по Y
+LevPoints	Измерених тачака
+LevSpread	Распон
+LevTilt	Нагиб X / Y
+LevDemo	Симулирана сонда: чвор сонде још није повезан, висине долазе са симулираног стола.
+LevApply	Исправи Z послова овом мапом
+ResumeTitle	Посао прекинут
+ResumeBody	Последњи посао је остао на пола (прозор, рачунар или веза су отказали). Желите ли да наставите одакле је стао?
+ResumeContinue	Настави посао
+ResumeCancel	Откажи
+TabsOn	Глодај спољашњост са мостићима
+TabsPerSide	Мостића по страни
+TabWidth	Ширина мостића
+TabPlace	Где иду мостићи
+TabEven	Равномерно дуж стране
+TabEnds	Близу крајева стране
+TabMiddle	Заједно на средини
+SetSkipLauncher	Следећи пут отвори овај прозор директно
+ColName	Назив
+ColDate	Датум измене (UTC)
+ColType	Врста
+ColSize	Величина
+TypeFolder	Фолдер
+TypeZip	ZIP архива
+Places	Локације
+PlaceExamples	Примери
+PlaceDesktop	Радна површина
+PlaceDocuments	Документи
+PlaceDownloads	Преузимања
+FileNameLabel	Назив датотеке
+FilterSupported	Све датотеке послова
+FilterDrill	Датотеке бушења
+FilterRoute	Датотеке глодања
+FilterZip	ZIP архиве
+FilterAny	Све датотеке
+NavBack	Назад
+NavUp	Горе
+ThisPc	Овај рачунар
+SimSpeed	Брзина симулације
+DefaultValues	Подразумевано
+TypeValueHint	Кликните на вредност да је унесете
+TabGeneral	Опште
+TabJob	Посао
+Units	Јединице
+UnitMm	Милиметри (mm)
+UnitMil	Милови (0.001 инча)
+ModelLabel	Модел машине
+ToolChange	Промена алата
+TcManual	Ручна (MTC)
+TcAuto	Аутоматска (ATC)
+EmergencyStop	Хитно заустављање
+EmergencyShow	Прикажи дугме за хитно заустављање (може се превући било где)
+RackPlaces	места за алат
+Rotate	Ротирај
+FollowTool	Прати алат
+Enlarge2d	Увећај 2D приказ
+MoveDesign	Помери само дизајн
+MoveBoard	Помери плочу
+ShowBoth	Прикажи 3D приказ
+OnTable	На столу
+OnBoard	На плочи
+Resume	Настави
+NotAnOutline	није контура плоче (отворите њен слој профила или ивице)
+HolesDrilled	Избушених рупа укупно
+ResetCounts	Ресетуј бројаче
+Recent	Недавно
+McPosition	Положај
+McWork	Радни
+McMachine	Машински
+McJog	Ручно кретање
+McStep	Корак (mm)
+McHome	Home
+McZero	Нула овде
+McUnlock	Откључај
+McProgram	Програм
+McOpenGcode	Отвори G-code
+McMdi	Команда (MDI)
+McSend	Пошаљи
+McLog	Дневник
+McState	Стање
+McController	Контролер
+McSimulator	Симулатор
+McNotDriven	још се не управља
+McToolpath	Путања алата
+McLine	Ред
+McSpindle	Вретено
+McFeedRate	Помак
+McStIdle	Мирује
+McStRun	Ради
+McStHold	Паузирано
+McStHome	Home у току
+McStAlarm	АЛАРМ
+McStUnknown	Непознато
+McZeroXyz	Постави радну нулу овде (X, Y и Z)
+McZeroXy	Постави радну нулу овде (X и Y)
+McGoG28	Иди на сачувани положај G28
+McGoG30	Иди на сачувани положај G30
+McGoZeroXy	Иди на радну нулу по X и Y
+McGoZeroZ	Иди на радну нулу по Z
+McOperator	Оператер
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	Активни G-кодови
+McActiveM	Активни M-кодови
+McSpeed	Брзина
+McZeroAxis	Постави нулу ове осе овде
+McInputs	Улази
+McOutputs	Излази
+McJogSpeed	Брзина ручног кретања
+MenuFile	Датотека
+MenuView	Приказ
+MenuHelp	Помоћ
+MenuExit	Излаз
+McSaveGcode	Сачувај G-code ...
+McEditProgram	Уреди програм ...
+McRewind	Премотај на први ред
+McClearProgram	Обриши програм
+McFitTable	Прилагоди столу
+McFitProgram	Прилагоди програму
+McShowButtons	Прикажи дугмад нула
+McShowProgram	Прикажи програм
+McShowLog	Прикажи дневник
+McShowRapids	Прикажи брза кретања
+McSpindleOn	Вретено укључено (M3)
+McSpindleOff	Вретено искључено (M5)
+McCoolantOn	Хлађење укључено (M8)
+McCoolantOff	Хлађење искључено (M9)
+McSetG28	Сачувај овај положај као G28
+McSetG30	Сачувај овај положај као G30
+McCancel	Откажи
+McSecGeneral	Опште
+McSecInterface	Кориснички интерфејс
+McSecAxes	Осе и границе
+McSecJog	Ручно кретање
+McUnitInch	Инчи
+McLimits	Границе хода (mm): минимум и максимум сваке осе
+McDefaultStep	Корак на почетку (mm)
+McDefaultFeed	Брзина ручног кретања на почетку (mm/min)
+McSettingsSaved	Подешавања су сачувана и важе одмах.
+McFilterGcode	G-code датотеке
+McReplaceAsk	већ постоји. Заменити је?
+McReplace	Замени
+McTypeName	Унесите назив датотеке.
+McNoSuchFile	Таква датотека не постоји.
+McSaveTitle	Сачувај програм
+McOpenTitle	Отвори G-code програм
+McAboutBody	Програм за управљање машином EH3D: за сада управља симулираном машином.
+FleetTitle	Машине и станице
+FleetNoStation	Нема станице
+FleetWaiting	Чека се оператер
+FleetReady	послова спремно
+FleetUse	Користи ову машину
+FleetTarget	Машина за послове
+FleetNoServer	Веза није EH3D сервер: изаберите га у Вези да видите машине.
+FleetRefresh	Освежи
+JobOutsideTable	Посао не стаје на сто: померите плочу или повећајте сто
+LblThickness	Дебљина (mm)
+LblCopper	Бакар (µm)
+LblCopperSides	Стране са бакром
+LblOneSide	1 страна
+LblTwoSides	2 стране
+LblSize	Величина (mm)
+LblFromFiles	Из датотека
+LblMaker	Произвођач
+LblWidth	Ширина
+LblDepth	Дубина
+LblPhotoresist	Фотоосетљиви лак
+LblExtraStroke	Додатни ход (mm)
+LblFeed	Помак (mm/min)
+LblSpeedRpm	Брзина (rpm)
+LblDepthMm	Дубина (mm)
+LblPasses	Пролази
+LblFeedXy	Помак XY (mm/min)
+LblFeedZ	Помак Z (mm/min)
+LblDefault	Подр.
+LblFileCoords	Координате датотека
+LblNoRack	Датотека машине још нема положаје магацина
+LblWorkArea	Радна површина
+LblWholeMachine	Цела машина
+LblLayers	Слојеви
+SoundFinish	Звук када се посао заврши
+SoundTool	Звук када се тражи алат
+SoundCheckOk	Звук када је визуелна провера исправна
+SoundCheckBad	Звук када визуелна провера није исправна
+SoundFileHint	WAV датотека (празно: подразумевани тон)
+SoundTest	Тест
+SndOff	Без звука
+SndDefault	Стандардни тон
+SndFile	Моја датотека (WAV)
+SndChime	звоњава
+SndRise	узлазне ноте
+SndFall	силазне ноте
+SndFanfare	фанфаре
+SndTriple	три ноте
+SndBell	звоно
+SndBeep	писак
+SndDouble	двоструки писак
+SndTripleBeep	троструки писак
+SndAlarm	аларм
+SndKnock	куцање
+SndSiren	сирена

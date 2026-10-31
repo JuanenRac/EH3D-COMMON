@@ -864,4 +864,27 @@ mod tests {
         assert_eq!(Lang::from_code("pt-PT"), Some(Lang::Pt));
         assert_eq!(Lang::ALL.len(), 37);
     }
+
+    #[test]
+    fn every_new_language_has_all_its_texts_and_the_variants_their_own_words() {
+        for l in Lang::ALL.into_iter().filter(|l| !l.is_core()) {
+            let (have, total) = coverage(l);
+            if l.fallback().is_some() {
+                assert!(have >= 20 && have < total, "{l:?}: {have}/{total}");
+            } else {
+                assert_eq!(have, total, "{l:?} is missing {} texts", total - have);
+            }
+        }
+        // the alphabets are the language's own
+        let in_range = |l: Lang, lo: char, hi: char| {
+            ALL_TEXTS
+                .iter()
+                .filter(|t| tr(l, **t).chars().any(|c| (lo..=hi).contains(&c)))
+                .count()
+        };
+        for l in [Lang::Bg, Lang::Uk, Lang::Ru, Lang::Sr] {
+            assert!(in_range(l, '\u{400}', '\u{4ff}') > 300, "{l:?}");
+        }
+        assert!(in_range(Lang::El, '\u{370}', '\u{3ff}') > 300);
+    }
 }

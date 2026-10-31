@@ -1,1 +1,425 @@
 # Galego (gl): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Tema
+ThemeForge	Forxa
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Windows clásico
+ThemeSystem	Seguir as cores de Windows
+ThemeMidnight	Medianoite
+ThemePaper	Papel (claro)
+ThemeForest	Bosque
+ThemeRetro	Terminal retro
+ThemeOcean	Océano
+ThemeContrast	Alto contraste
+LauncherAsk	Que queres executar?
+LauncherClassicMtc	MTC clásico
+LauncherClassicAtc	ATC clásico
+LauncherModern	Moderno (MTC + ATC)
+Remember	Lembrar a miña escolla
+PressEnter	Preme Enter
+ViewPlan	2D - vista superior
+ViewMachine	3D - máquina
+LayerHoles	Furados
+LayerPaths	Camiños de fresado
+LayerMachine	Máquina
+LayerGrid	Grella
+Progress	Progreso
+TableFromConfig	Mesa da configuración
+Drilling	Furado
+Routing	Fresado
+ClassicMissing	O programa clásico non está xunto a este
+Start	Iniciar
+Pause	Pausa
+Stop	Parar
+Language	Idioma
+Holes	furados
+Tools	ferramentas
+SimulatedJob	Traballo simulado: non se move ningunha máquina
+NoFile	Ningún ficheiro cargado
+Ok	Aceptar
+Abort	Cancelar
+AskSpindle	Pódese arrincar o husillo?
+AskTool	Coloca a ferramenta
+Connection	Conexión
+OutsideTable	Non cabe na mesa
+OpenFile	Abrir ficheiro
+About	Acerca de
+Close	Pechar
+SettingsTitle	Configuración
+PanelTitle	Panelización
+Columns	Columnas
+Rows	Filas
+SpacingX	Espazado X (mm)
+SpacingY	Espazado Y (mm)
+PanelModePitch	Centro a centro
+PanelModeGap	Espazo entre placas
+PanelModeFit	Encher a mesa
+PanelCopies	copias
+Apply	Aplicar
+ResetView	Restablecer a vista
+DropHint	Solta aquí un ficheiro .ncd, .plt ou .zip
+NavHint2d	Arrastra para mover, roda para ampliar
+NavHint3d	Arrastra para xirar, roda para ampliar
+Version	Versión
+Licence	Licenza
+AboutBody	A interface moderna para as máquinas de furar e fresar Bungard CCD.
+TableWidth	Largura útil X (mm)
+TableDepth	Fondo útil Y (mm)
+Save	Gardar
+Saved	Gardado
+OpenFolderUp	Cartafol superior
+ShowDrill	Furado
+ConnPort	Porto
+ConnAddress	Enderezo
+ConnToken	Token de acceso
+ConnMachine	Id da máquina
+ConnTest	Probar a conexión
+ConnWorks	A conexión funciona
+BoardTitle	Placa
+ToolsTitle	Ferramentas
+SetAskOperator	Preguntarme nos cambios de ferramenta e ao arrincar o husillo
+SetToolsOnOpen	Mostrar a xanela de ferramentas ao abrir un ficheiro
+SndVoice	Voz
+SndFemale	feminina
+SndMale	masculina
+HeadOpen	Nodo do cabezal
+HeadTitle	Nodo do cabezal de furar
+HeadOff	Non se usa
+HeadDirect	Directamente
+HeadServer	Polo servidor
+HeadCamera	Mostrar a cámara do nodo
+HeadSpeed	Husillo
+HeadTemp	Temperatura
+HeadProtectOpen	Saída de protección ABERTA: o husillo ten que parar
+HeadProtectClosed	Saída de protección pechada
+HeadMeasure	Medir a mesa aquí
+HeadServerNote	Polo servidor da xanela de conexión: o seu enderezo, o seu token e o id da máquina.
+HeadNoServer	Escribe o enderezo, o token e o id da máquina do servidor na xanela de conexión.
+HeadCameraModel	Modelo de cámara
+HeadNoLink	Escribe o enderezo do nodo (host ou host:porto).
+HeadWaiting	Agardando polo nodo...
+HeadCameraOff	Cámara apagada
+HeatOk	ok
+HeatWarm	morna
+HeatHot	QUENTE
+HeatUnknown	descoñecida
+LightTitle	Aro de luz
+LightOn	Luz acendida
+LightOff	Luz apagada
+LightNone	este nodo non ten aro
+InspOpen	Verificación de calidade
+InspTitle	Verificación de calidade do traballo
+InspRun	Verificar agora
+InspRunning	Verificando...
+InspVerdictOk	CORRECTO
+InspVerdictNotOk	INCORRECTO
+InspVerdictUnknown	NON SE PODE XULGAR
+InspIdle	Aínda sen verificar
+InspChecks	Verificacións
+InspCheckHoles	Furados feitos
+InspCheckMilling	Canles fresadas
+InspProfile	Perfil do analizador
+InspPresetStandard	Estándar
+InspPresetFine	Paso fino
+InspPresetProto	Prototipo
+InspLight	Luz para a imaxe
+InspLightKeep	como está
+InspHolePick	Furado do traballo no centro
+InspNoJob	Carga un ficheiro de furado para verificar os seus furados
+InspScale	Escala (píxeles por mm)
+InspCalibrate	Calibrar con este furado
+InspSave	Gardar o perfil
+InspTune	Tolerancias
+InspNeedLink	Primeiro configura o nodo do cabezal de furar (xanela Nodo do cabezal).
+InspHolesOk	furados correctos
+InspChannel	largura da canle
+InspTuneHoleDia	Tolerancia do tamaño do furado (mm)
+InspTuneHolePos	Tolerancia da posición do furado (mm)
+InspTuneRound	Redondez mínima (1 = círculo)
+InspTuneDebris	Máximo de residuos arredor dun furado
+InspTuneMillWidth	Largura da canle (mm)
+InspTuneMillTol	Tolerancia da largura da canle
+InspTuneMillMin	Canle máis estreita (mm)
+InspTuneSpread	Máxima irregularidade da canle
+InspTuneMinMean	Imaxe máis escura aceptada
+InspTuneMinSharp	Nitidez mínima
+InspFindHoleMissing	non hai furado
+InspFindHoleSize	tamaño incorrecto
+InspFindHoleOff	descentrado
+InspFindHoleRound	non é redondo
+InspFindHoleDebris	rebarbas ou po arredor
+InspFindHoleView	fóra da vista
+InspFindMillNone	non se ven canles
+InspFindMillNarrow	canles demasiado estreitas
+InspFindMillWide	canles demasiado anchas
+InspFindMillPinch	unha canle estréitase: risco de curtocircuíto
+InspFindMillUneven	canles irregulares
+InspFindDark	imaxe demasiado escura: máis luz
+InspFindBright	imaxe demasiado brillante: menos luz
+InspFindContrast	imaxe sen contraste
+InspFindBlurry	imaxe desenfocada
+InspFindScale	primeiro configura a escala
+InspFindNothing	non hai ningunha verificación activada
+InspFindNoHoles	ningún furado do traballo á vista
+CatOpen	Catálogo de brocas
+CatTitle	Catálogo de brocas para PCB
+CatShank	Todas as brocas teñen o vástago de 1/8 de polgada (3,175 mm) que suxeita o mandril dunha máquina Bungard. Os valores son puntos de partida para FR-4: próbaos nunha placa de refugallo.
+CatAll	Todos os tipos
+KindDrill	Brocas
+KindEndMill	Fresas planas (rectas)
+KindDownCut	Fresas de corte descendente
+KindUpCut	Fresas de corte ascendente
+KindDiamond	Fresas de corte diamante (millo)
+KindVBit	Fresas en V (gravado, illamento)
+KindBall	Fresas de punta esférica
+KindSpot	Brocas de centrar
+KindCountersink	Abocardadores
+CatCount	brocas
+KindChipBreaker	Fresas rompecavacos
+KindSlotDrill	Brocas para ranuras (furados oblongos)
+KindCoated	Fresas con recubrimento de diamante
+CatSeriesCol	serie
+CatFluteCol	L mm
+CatPick	Fai clic nunha broca da lista para vela e saber para que serve.
+CatSpindle	As revolucións e os avances son os do fabricante. Un husillo que non pode xirar tan rápido usa a mesma broca á súa velocidade, co avance en proporción (a mesma pasada por volta).
+SpindleLbl	Husillo da máquina
+SpindleOriginal	Bungard orixinal, 60000 rpm
+SpindleVfd	Husillo VFD GDZ 80-2.2, 24000 rpm
+SpindleNote	Cada husillo ten os seus límites de velocidade, avance e tamaño de broca (pódense editar no ficheiro de configuración). O catálogo e as ferramentas avisan cando unha broca pide máis do que o husillo pode dar.
+CatSpindleLbl	Husillo
+FitOk	Este husillo pode con isto cos valores do fabricante.
+FitSlower	Este husillo precisa que sexa máis lento. Valores suxeridos:
+FitLowerRpm	O husillo xira máis lento do que pide a broca: XY e Z van máis lentos en proporción.
+FitSlowZ	Nesta máquina Z ten que ir máis lento.
+FitSlowXy	Nesta máquina o avance XY ten que ir máis lento.
+FitNoThick	NON COMPATIBLE: a broca é máis grosa do que admite este husillo.
+FitNoSlow	NON COMPATIBLE: este husillo xira demasiado lento para esta broca (rompería ou queimaría a placa).
+CatUseFor	Usar estes valores para a ferramenta
+ToolFromCat	Catálogo
+CatTaken	Valores pasados á ferramenta.
+JobNothingOn	Nada que facer: activa o furado ou o fresado e polo menos unha das súas ferramentas.
+JobPartHint	Fai clic para activar ou desactivar; os dous activados: primeiro o furado e despois o fresado
+ToolOffHint	Fai clic no punto dunha ferramenta para deixala fóra do traballo
+CatFlute	Lonxitude de corte
+CatShankLbl	Vástago
+CatTotal	Lonxitude total
+CatPoint	Ángulo da punta
+CatSchematic	Debuxo esquemático, sen escala.
+NoteDrill	Broca de metal duro maciza para furados pasantes. As pequenas (menos de 0,5 mm) son para vías, as medianas para patas de compoñentes e as grandes para conectores e furados de montaxe. Retírala rápido e cámbiala despois duns poucos miles de furados.
+NoteEndMill	Dentes rectos e extremo plano: ranuras, baleirados, illamento de pistas anchas e contorno de placas finas. Deixa un fondo limpo.
+NoteDownCut	Fresa de hélice á esquerda: empurra os cavacos cara abaixo. A beira superior da placa sae sen rebarbas; úsaa para o contorno cando a cara superior é a que se ve (a placa ten que estar ben suxeita).
+NoteUpCut	Fresa de hélice á dereita: arrastra os cavacos cara arriba e fóra do corte. Boa para ranuras e baleirados; pode levantar a placa e deixar rebarbas na beira superior.
+NoteDiamond	Fresa de corte diamante (millo): moitos dentes pequenos que moen a fibra de vidro en vez de rasgala. A opción habitual para o contorno do FR-4; deixa unha beira áspera pero limpa e dura moito.
+NoteChip	Fresa rompecavacos: os seus dentes rompen os cavacos en anacos curtos que saen do corte con facilidade. Corta máis rápido que o corte diamante e mantén as rebarbas pequenas.
+NoteVBit	Fresa en V (de gravado): o sulco é tan ancho como o fai a profundidade, así que a profundidade fixa a largura do illamento. Un ángulo estreito cunha punta fina permite pistas finas.
+NoteBall	Fresa de punta esférica: un sulco arredondado, para gravar e dar forma. Non serve para illar pistas.
+NoteSpot	Broca de centrar: unha punta curta e ríxida que inicia o furado exactamente onde se quere, para que a broca seguinte non se desvíe. Para os furados grandes e as placas duras.
+NoteCountersink	Abocardador: chafra a beira dun furado, para cabezas de parafuso ou para quitar a rebarba.
+NoteSlot	Broca para ranuras: unha broca con alma ríxida feita para cortar furados oblongos movéndose de lado mentres fura (as ranuras dos conectores). Non a uses para furados redondos: as outras son máis baratas.
+NoteCoated	Fresa de extremo plano con recubrimento de diamante: para placas abrasivas (FR-4 de Tg alto, sen halóxenos, fibra de carbono) e para placas con base de aluminio, onde unha sen recubrimento se desgasta. Custa máis e dura varias veces máis.
+LevTab	Calibración da mesa
+LevMeasure	Medir a mesa
+LevStop	Parar a medición
+LevClear	Borrar o mapa
+LevCols	Puntos ao longo de X
+LevRows	Puntos ao longo de Y
+LevPoints	Puntos medidos
+LevSpread	Dispersión
+LevTilt	Inclinación X / Y
+LevDemo	Apalpador simulado: aínda non hai ningún nodo apalpador conectado, as alturas veñen dunha mesa simulada.
+LevApply	Corrixir a Z dos traballos con este mapa
+ResumeTitle	Traballo interrompido
+ResumeBody	O último traballo quedou a medias (a xanela, o ordenador ou a ligazón caeron). Queres continuar desde onde estaba?
+ResumeContinue	Continuar o traballo
+ResumeCancel	Cancelalo
+TabsOn	Fresar o exterior con pontes
+TabsPerSide	Pontes por lado
+TabWidth	Largura da ponte
+TabPlace	Onde van as pontes
+TabEven	Repartidas por igual polo lado
+TabEnds	Preto dos extremos do lado
+TabMiddle	Xuntas no medio
+SetSkipLauncher	Abrir esta xanela directamente a próxima vez
+ColName	Nome
+ColDate	Data de modificación (UTC)
+ColType	Tipo
+ColSize	Tamaño
+TypeFolder	Cartafol
+TypeZip	Arquivo ZIP
+Places	Lugares
+PlaceExamples	Exemplos
+PlaceDesktop	Escritorio
+PlaceDocuments	Documentos
+PlaceDownloads	Descargas
+FileNameLabel	Nome do ficheiro
+FilterSupported	Todos os ficheiros de traballo
+FilterDrill	Ficheiros de furado
+FilterRoute	Ficheiros de fresado
+FilterZip	Arquivos ZIP
+FilterAny	Todos os ficheiros
+NavBack	Atrás
+NavUp	Subir
+ThisPc	Este equipo
+SimSpeed	Velocidade de simulación
+DefaultValues	Valores por defecto
+TypeValueHint	Fai clic nun valor para escribilo
+TabGeneral	Xeral
+TabJob	Traballo
+Units	Unidades
+UnitMm	Milímetros (mm)
+UnitMil	Mils (0,001 polgada)
+ModelLabel	Modelo de máquina
+ToolChange	Cambio de ferramenta
+TcManual	Manual (MTC)
+TcAuto	Automático (ATC)
+EmergencyStop	Parada de emerxencia
+EmergencyShow	Mostrar o botón de emerxencia (pódese arrastrar a calquera lugar)
+RackPlaces	prazas de ferramentas
+Rotate	Xirar
+FollowTool	Seguir a ferramenta
+Enlarge2d	Ampliar a vista 2D
+MoveDesign	Mover só o deseño
+MoveBoard	Mover a placa
+ShowBoth	Mostrar a vista 3D
+OnTable	Na mesa
+OnBoard	Na placa
+Resume	Retomar
+NotAnOutline	non é o contorno dunha placa (abre o seu perfil ou a capa de bordo)
+HolesDrilled	Furados feitos en total
+ResetCounts	Reiniciar os contadores
+Recent	Recentes
+McPosition	Posición
+McWork	Traballo
+McMachine	Máquina
+McJog	Jog
+McStep	Paso (mm)
+McHome	Home
+McZero	Cero aquí
+McUnlock	Desbloquear
+McProgram	Programa
+McOpenGcode	Abrir G-code
+McMdi	Comando (MDI)
+McSend	Enviar
+McLog	Rexistro
+McState	Estado
+McController	Controlador
+McSimulator	Simulador
+McNotDriven	aínda non se controla
+McToolpath	Traxectoria
+McLine	Liña
+McSpindle	Husillo
+McFeedRate	Avance
+McStIdle	Inactiva
+McStRun	En marcha
+McStHold	En pausa
+McStHome	Referenciando
+McStAlarm	ALARMA
+McStUnknown	Descoñecido
+McZeroXyz	Fixar aquí o cero de traballo (X, Y e Z)
+McZeroXy	Fixar aquí o cero de traballo (X e Y)
+McGoG28	Ir á posición almacenada G28
+McGoG30	Ir á posición almacenada G30
+McGoZeroXy	Ir ao cero de traballo en X e Y
+McGoZeroZ	Ir ao cero de traballo en Z
+McOperator	Operario
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	Códigos G activos
+McActiveM	Códigos M activos
+McSpeed	Velocidade
+McZeroAxis	Fixar aquí o cero deste eixe
+McInputs	Entradas
+McOutputs	Saídas
+McJogSpeed	Velocidade de jog
+MenuFile	Ficheiro
+MenuView	Ver
+MenuHelp	Axuda
+MenuExit	Saír
+McSaveGcode	Gardar G-code ...
+McEditProgram	Editar o programa ...
+McRewind	Volver á primeira liña
+McClearProgram	Borrar o programa
+McFitTable	Axustar á mesa
+McFitProgram	Axustar ao programa
+McShowButtons	Mostrar os botóns dos ceros
+McShowProgram	Mostrar o programa
+McShowLog	Mostrar o rexistro
+McShowRapids	Mostrar os movementos rápidos
+McSpindleOn	Husillo acendido (M3)
+McSpindleOff	Husillo apagado (M5)
+McCoolantOn	Refrixerante activado (M8)
+McCoolantOff	Refrixerante desactivado (M9)
+McSetG28	Gardar esta posición como G28
+McSetG30	Gardar esta posición como G30
+McCancel	Cancelar
+McSecGeneral	Xeral
+McSecInterface	Interface de usuario
+McSecAxes	Eixes e límites
+McSecJog	Jog
+McUnitInch	Polgadas
+McLimits	Límites de percorrido (mm): mínimo e máximo de cada eixe
+McDefaultStep	Paso ao inicio (mm)
+McDefaultFeed	Velocidade de jog ao inicio (mm/min)
+McSettingsSaved	A configuración gardouse e aplícase agora.
+McFilterGcode	Ficheiros G-code
+McReplaceAsk	xa existe. Queres substituílo?
+McReplace	Substituír
+McTypeName	Escribe un nome de ficheiro.
+McNoSuchFile	Ese ficheiro non existe.
+McSaveTitle	Gardar o programa
+McOpenTitle	Abrir un programa G-code
+McAboutBody	O programa de control de máquina de EH3D: de momento controla unha máquina simulada.
+FleetTitle	Máquinas e estacións
+FleetNoStation	Ningunha estación
+FleetWaiting	Agardando polo operario
+FleetReady	traballos listos
+FleetUse	Usar esta máquina
+FleetTarget	Máquina dos traballos
+FleetNoServer	A conexión non é un servidor EH3D: escólleo en Conexión para ver as máquinas.
+FleetRefresh	Actualizar
+JobOutsideTable	O traballo non cabe na mesa: move a placa ou fai a mesa máis grande
+LblThickness	Grosor (mm)
+LblCopper	Cobre (µm)
+LblCopperSides	Caras de cobre
+LblOneSide	1 cara
+LblTwoSides	2 caras
+LblSize	Tamaño (mm)
+LblFromFiles	Dos ficheiros
+LblMaker	Fabricante
+LblWidth	Largura
+LblDepth	Fondo
+LblPhotoresist	Reserva fotosensible
+LblExtraStroke	Carreira extra (mm)
+LblFeed	Avance (mm/min)
+LblSpeedRpm	Velocidade (rpm)
+LblDepthMm	Profundidade (mm)
+LblPasses	Pasadas
+LblFeedXy	Avance XY (mm/min)
+LblFeedZ	Avance Z (mm/min)
+LblDefault	Def.
+LblFileCoords	Coordenadas dos ficheiros
+LblNoRack	O ficheiro da máquina aínda non ten posicións de almacén
+LblWorkArea	Área de traballo
+LblWholeMachine	Toda a máquina
+LblLayers	Capas
+SoundFinish	Son ao acabar o traballo
+SoundTool	Son cando se pide unha ferramenta
+SoundCheckOk	Son cando a verificación visual é correcta
+SoundCheckBad	Son cando a verificación visual non é correcta
+SoundFileHint	Ficheiro WAV (baleiro: o ton por defecto)
+SoundTest	Probar
+SndOff	Sen son
+SndDefault	O ton estándar
+SndFile	Un ficheiro meu (WAV)
+SndChime	campaíña
+SndRise	notas ascendentes
+SndFall	notas descendentes
+SndFanfare	fanfarria
+SndTriple	tres notas
+SndBell	campá
+SndBeep	pitido
+SndDouble	pitido dobre
+SndTripleBeep	pitido triplo
+SndAlarm	alarma
+SndKnock	golpe
+SndSiren	sirena

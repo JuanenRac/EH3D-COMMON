@@ -1,1 +1,425 @@
 # Euskara (eu): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Gaia
+ThemeForge	Forja
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Windows klasikoa
+ThemeSystem	Jarraitu Windowsen koloreak
+ThemeMidnight	Gauerdia
+ThemePaper	Papera (argia)
+ThemeForest	Basoa
+ThemeRetro	Terminal retroa
+ThemeOcean	Ozeanoa
+ThemeContrast	Kontraste handia
+LauncherAsk	Zer exekutatu nahi duzu?
+LauncherClassicMtc	MTC klasikoa
+LauncherClassicAtc	ATC klasikoa
+LauncherModern	Modernoa (MTC + ATC)
+Remember	Gogoratu nire aukera
+PressEnter	Sakatu Enter
+ViewPlan	2D - goiko ikuspegia
+ViewMachine	3D - makina
+LayerHoles	Zulo-leheketak
+LayerPaths	Fresatze-bideak
+LayerMachine	Makina
+LayerGrid	Sareta
+Progress	Aurrerapena
+TableFromConfig	Konfigurazioko mahaia
+Drilling	Zulatzea
+Routing	Fresatzea
+ClassicMissing	Programa klasikoa ez dago honen ondoan
+Start	Hasi
+Pause	Pausatu
+Stop	Gelditu
+Language	Hizkuntza
+Holes	zulo
+Tools	erreminta
+SimulatedJob	Lan simulatua: ez da makinarik mugitzen
+NoFile	Ez dago fitxategirik kargatuta
+Ok	Ados
+Abort	Utzi
+AskSpindle	Ardatza abiarazi daiteke?
+AskTool	Sartu erreminta
+Connection	Konexioa
+OutsideTable	Ez da mahaian sartzen
+OpenFile	Ireki fitxategia
+About	Honi buruz
+Close	Itxi
+SettingsTitle	Ezarpenak
+PanelTitle	Panelizazioa
+Columns	Zutabeak
+Rows	Errenkadak
+SpacingX	X tartea (mm)
+SpacingY	Y tartea (mm)
+PanelModePitch	Zentrutik zentrora
+PanelModeGap	Plaken arteko tartea
+PanelModeFit	Mahaia bete
+PanelCopies	kopia
+Apply	Aplikatu
+ResetView	Berrezarri ikuspegia
+DropHint	Jaregin hemen .ncd, .plt edo .zip fitxategi bat
+NavHint2d	Arrastatu mugitzeko, gurpila handitzeko
+NavHint3d	Arrastatu biratzeko, gurpila handitzeko
+Version	Bertsioa
+Licence	Lizentzia
+AboutBody	Bungard CCD zulatzeko eta fresatzeko makinen interfaze modernoa.
+TableWidth	X zabalera erabilgarria (mm)
+TableDepth	Y sakonera erabilgarria (mm)
+Save	Gorde
+Saved	Gordeta
+OpenFolderUp	Goiko karpeta
+ShowDrill	Zulatzea
+ConnPort	Ataka
+ConnAddress	Helbidea
+ConnToken	Sarbide-tokena
+ConnMachine	Makinaren IDa
+ConnTest	Probatu konexioa
+ConnWorks	Konexioak funtzionatzen du
+BoardTitle	Plaka
+ToolsTitle	Erremintak
+SetAskOperator	Galdetu erreminta-aldaketetan eta ardatza abiarazterakoan
+SetToolsOnOpen	Erakutsi erremintak leihoa fitxategi bat irekitzean
+SndVoice	Ahotsa
+SndFemale	emakumezkoa
+SndMale	gizonezkoa
+HeadOpen	Buruaren nodoa
+HeadTitle	Zulatze-buruaren nodoa
+HeadOff	Erabiltzen ez da
+HeadDirect	Zuzenean
+HeadServer	Zerbitzariaren bidez
+HeadCamera	Erakutsi nodoaren kamera
+HeadSpeed	Ardatza
+HeadTemp	Tenperatura
+HeadProtectOpen	Babes-irteera IREKIA: ardatzak gelditu behar du
+HeadProtectClosed	Babes-irteera itxia
+HeadMeasure	Neurtu mahaia hemen
+HeadServerNote	Konexio-leihoko zerbitzariaren bidez: bere helbidea, bere tokena eta makinaren IDa.
+HeadNoServer	Idatzi zerbitzariaren helbidea, tokena eta makinaren IDa konexio-leihoan.
+HeadCameraModel	Kamera-eredua
+HeadNoLink	Idatzi nodoaren helbidea (host edo host:ataka).
+HeadWaiting	Nodoaren zain...
+HeadCameraOff	Kamera itzalita
+HeatOk	ongi
+HeatWarm	epela
+HeatHot	BEROA
+HeatUnknown	ezezaguna
+LightTitle	Argi-eraztuna
+LightOn	Argia piztuta
+LightOff	Argia itzalita
+LightNone	nodo honek ez du eraztunik
+InspOpen	Kalitate-egiaztapena
+InspTitle	Lanaren kalitate-egiaztapena
+InspRun	Egiaztatu orain
+InspRunning	Egiaztatzen...
+InspVerdictOk	ZUZENA
+InspVerdictNotOk	EZ DA ZUZENA
+InspVerdictUnknown	EZIN DA EBATZI
+InspIdle	Oraindik egiaztatu gabe
+InspChecks	Egiaztapenak
+InspCheckHoles	Egindako zuloak
+InspCheckMilling	Fresatutako kanalak
+InspProfile	Analizatzailearen profila
+InspPresetStandard	Estandarra
+InspPresetFine	Pauso fina
+InspPresetProto	Prototipoa
+InspLight	Irudirako argia
+InspLightKeep	dagoen bezala
+InspHolePick	Lanaren zuloa erdian
+InspNoJob	Kargatu zulatze-fitxategi bat bere zuloak egiaztatzeko
+InspScale	Eskala (pixel mm-ko)
+InspCalibrate	Kalibratu zulo honekin
+InspSave	Gorde profila
+InspTune	Tolerantziak
+InspNeedLink	Konfiguratu lehenik zulatze-buruaren nodoa (Buruaren nodoa leihoa).
+InspHolesOk	zulo zuzen
+InspChannel	kanalaren zabalera
+InspTuneHoleDia	Zuloaren tamainaren tolerantzia (mm)
+InspTuneHolePos	Zuloaren posizioaren tolerantzia (mm)
+InspTuneRound	Biribiltasun minimoa (1 = zirkulua)
+InspTuneDebris	Zulo baten inguruko hondakin gehienak
+InspTuneMillWidth	Kanalaren zabalera (mm)
+InspTuneMillTol	Kanalaren zabaleraren tolerantzia
+InspTuneMillMin	Kanalik estuena (mm)
+InspTuneSpread	Kanalaren irregulartasun handiena
+InspTuneMinMean	Onartutako irudirik ilunena
+InspTuneMinSharp	Zorroztasun minimoa
+InspFindHoleMissing	ez dago zulorik
+InspFindHoleSize	tamaina okerra
+InspFindHoleOff	zentratu gabe
+InspFindHoleRound	ez da biribila
+InspFindHoleDebris	bizarrak edo hautsa inguruan
+InspFindHoleView	ikuspegitik kanpo
+InspFindMillNone	ez da kanalik ikusten
+InspFindMillNarrow	kanalak estuegiak
+InspFindMillWide	kanalak zabalegiak
+InspFindMillPinch	kanal bat estutzen da: zirkuitulaburraren arriskua
+InspFindMillUneven	kanalak irregularrak
+InspFindDark	irudia ilunegia: argi gehiago
+InspFindBright	irudia distiratsuegia: argi gutxiago
+InspFindContrast	irudiak ez du kontrasterik
+InspFindBlurry	irudia fokuz kanpo
+InspFindScale	konfiguratu lehenik eskala
+InspFindNothing	ez dago egiaztapenik aktibatuta
+InspFindNoHoles	lanaren zulorik ez dago ikusgai
+CatOpen	Brokaren katalogoa
+CatTitle	PCBrako brokaren katalogoa
+CatShank	Broka guztiek 1/8 hazbeteko (3,175 mm) zangoa dute, Bungard makina baten mandrinak eusten diona. Zenbakiak FR-4rako abiapuntuak dira: probatu ezazu hondakin-plaka batean.
+CatAll	Mota guztiak
+KindDrill	Brokak
+KindEndMill	Fresa lauak (zuzenak)
+KindDownCut	Beherako ebakiko fresak
+KindUpCut	Goranzko ebakiko fresak
+KindDiamond	Diamante-ebakiko fresak (artoa)
+KindVBit	V fresak (grabatua, isolamendua)
+KindBall	Muturra esferikoko fresak
+KindSpot	Zentratzeko brokak
+KindCountersink	Zulo-zabalgailuak
+CatCount	broka
+KindChipBreaker	Txirbil-hausleko fresak
+KindSlotDrill	Zirrikituetarako brokak (zulo luzanga)
+KindCoated	Diamante estaldurako fresak
+CatSeriesCol	seriea
+CatFluteCol	L mm
+CatPick	Egin klik zerrendako broka batean hura ikusteko eta zertarako den jakiteko.
+CatSpindle	Biraketak eta aurrerapenak fabrikatzailearenak dira. Hain azkar biratu ezin duen ardatzak broka bera hartzen du bere abiaduran, aurrerapena proportzioan duela (bira bakoitzeko ebaki bera).
+SpindleLbl	Makinaren ardatza
+SpindleOriginal	Bungard jatorrizkoa, 60000 rpm
+SpindleVfd	VFD ardatza GDZ 80-2.2, 24000 rpm
+SpindleNote	Ardatz bakoitzak bere abiadura, aurrerapen eta broka-tamainaren mugak ditu (konfigurazio-fitxategian edita daitezke). Katalogoak eta erremintek ohartarazten dute broka batek ardatzak eman dezakeena baino gehiago eskatzen duenean.
+CatSpindleLbl	Ardatza
+FitOk	Ardatz honek fabrikatzailearen balioekin egin dezake.
+FitSlower	Ardatz honek astiroago behar du. Balio iradokiak:
+FitLowerRpm	Ardatza brokak eskatzen duena baino astiroago biratzen da: XY eta Z astiroago doaz proportzioan.
+FitSlowZ	Makina honetan Z astiroago joan behar da.
+FitSlowXy	Makina honetan XY aurrerapena astiroago joan behar da.
+FitNoThick	EZ DA BATERAGARRIA: broka ardatz honek hartzen duena baino lodiagoa da.
+FitNoSlow	EZ DA BATERAGARRIA: ardatz hau broka honentzat motelegi biratzen da (plaka hautsi edo erreko luke).
+CatUseFor	Erabili balio hauek erreminta honetarako
+ToolFromCat	Katalogoa
+CatTaken	Balioak erremintara pasatu dira.
+JobNothingOn	Ezer ez egiteko: aktibatu zulatzea edo fresatzea eta bere erreminta bat gutxienez.
+JobPartHint	Egin klik aktibatzeko edo desaktibatzeko; biak aktibo: lehenik zulatzea eta gero fresatzea
+ToolOffHint	Egin klik erreminta baten puntuan lanetik kanpo uzteko
+CatFlute	Ebaki-luzera
+CatShankLbl	Zangoa
+CatTotal	Luzera osoa
+CatPoint	Puntaren angelua
+CatSchematic	Marrazki eskematikoa, eskalarik gabe.
+NoteDrill	Zulo pasanteetarako karburo solidozko broka. Txikiak (0,5 mm baino gutxiago) via-zuloetarako dira, ertainak osagaien hankentzat eta handiak konektoreentzat eta muntatze-zuloentzat. Atera azkar, eta aldatu zulo-mila batzuen ondoren.
+NoteEndMill	Hortz zuzenak eta mutur laua: zirrikituak, hutsuneak, pista zabalen isolamendua eta plaka fineko ingerada. Hondo garbia uzten du.
+NoteDownCut	Ezkerreko helize-fresa: txirbilak behera bultzatzen ditu. Plakaren goiko ertza bizarrik gabe ateratzen da; erabili ingeradarako goiko aldea ikusten den aldea denean (plakak ondo finkatuta egon behar du).
+NoteUpCut	Eskuineko helize-fresa: txirbilak gora eta ebakitik kanpo eramaten ditu. Egokia zirrikituetarako eta hutsuneetarako; plaka altxa dezake eta goiko ertzean bizarrak utzi.
+NoteDiamond	Diamante-ebakiko fresa (artoa): hortz txiki asko, beirazko zuntza urratu beharrean artezten dutenak. FR-4ren ingeradarako ohiko aukera; ertz zakarra baina garbia uzten du eta asko irauten du.
+NoteChip	Txirbil-hausleko fresa: bere hortzek txirbilak zati labur-labur hausten dituzte, ebakitik erraz ateratzen direnak. Diamante-ebakia baino azkarrago ebakitzen du eta bizarrak txikiak mantentzen ditu.
+NoteVBit	V fresa (grabatu-fresa): zirrikitua sakonerak egiten duen bezain zabala da, beraz sakonerak ezartzen du isolamenduaren zabalera. Angelu estuak eta punta finak pista finak ahalbidetzen ditu.
+NoteBall	Muturra esferikoko fresa: zirrikitu biribildua, grabatzeko eta forma emateko. Ez da pistak isolatzeko.
+NoteSpot	Zentratzeko broka: punta labur eta zurruna, zuloa nahi den lekuan hasten duena, hurrengo brokak desbideratu ez dadin. Zulo handietarako eta plaka gogorretarako.
+NoteCountersink	Zulo-zabalgailua: zulo baten ertza alakatzen du, torloju-buruentzat edo bizarra kentzeko.
+NoteSlot	Zirrikituetarako broka: nukleo zurruneko broka, zulo luzangak ebakitzeko egina, zulatzen duen bitartean alboetara mugituz (konektoreen zirrikituak). Ez erabili zulo biribilentzat: besteak merkeagoak dira.
+NoteCoated	Mutur laua eta diamante-estaldurako fresa: plaka urratzaileetarako (Tg handiko FR-4, halogenorik gabea, karbono-zuntza) eta aluminio-oinarriko plakentzat, estali gabeko bat higatzen den lekuan. Gehiago balio du eta hainbat aldiz gehiago irauten du.
+LevTab	Mahaiaren kalibrazioa
+LevMeasure	Neurtu mahaia
+LevStop	Gelditu neurketa
+LevClear	Garbitu mapa
+LevCols	Puntuak X norabidean
+LevRows	Puntuak Y norabidean
+LevPoints	Neurtutako puntuak
+LevSpread	Sakabanatzea
+LevTilt	X / Y inklinazioa
+LevDemo	Palpagailu simulatua: oraindik ez dago palpagailu-nodorik konektatuta, altuerak mahai simulatu batetik datoz.
+LevApply	Zuzendu lanen Z mapa honekin
+ResumeTitle	Lana eten da
+ResumeBody	Azken lana erdian geratu zen (leihoa, ordenagailua edo esteka erori ziren). Zegoen lekutik jarraitu nahi duzu?
+ResumeContinue	Jarraitu lanarekin
+ResumeCancel	Utzi
+TabsOn	Fresatu kanpoaldea zubiekin
+TabsPerSide	Zubiak aldeko
+TabWidth	Zubiaren zabalera
+TabPlace	Zubiak non doazen
+TabEven	Alboan zehar berdin banatuta
+TabEnds	Alboaren muturren ondoan
+TabMiddle	Elkarrekin erdian
+SetSkipLauncher	Ireki leiho hau zuzenean hurrengoan
+ColName	Izena
+ColDate	Aldatze-data (UTC)
+ColType	Mota
+ColSize	Tamaina
+TypeFolder	Karpeta
+TypeZip	ZIP artxiboa
+Places	Lekuak
+PlaceExamples	Adibideak
+PlaceDesktop	Mahaigaina
+PlaceDocuments	Dokumentuak
+PlaceDownloads	Deskargak
+FileNameLabel	Fitxategiaren izena
+FilterSupported	Lan-fitxategi guztiak
+FilterDrill	Zulatze-fitxategiak
+FilterRoute	Fresatze-fitxategiak
+FilterZip	ZIP artxiboak
+FilterAny	Fitxategi guztiak
+NavBack	Atzera
+NavUp	Gora
+ThisPc	PC hau
+SimSpeed	Simulazio-abiadura
+DefaultValues	Lehenetsiak
+TypeValueHint	Egin klik balio batean idazteko
+TabGeneral	Orokorra
+TabJob	Lana
+Units	Unitateak
+UnitMm	Milimetroak (mm)
+UnitMil	Mil-ak (0,001 hazbete)
+ModelLabel	Makina-eredua
+ToolChange	Erreminta-aldaketa
+TcManual	Eskuzkoa (MTC)
+TcAuto	Automatikoa (ATC)
+EmergencyStop	Larrialdi-geldiketa
+EmergencyShow	Erakutsi larrialdi-botoia (edonora arrastatu daiteke)
+RackPlaces	erreminta-leku
+Rotate	Biratu
+FollowTool	Jarraitu erremintari
+Enlarge2d	Handitu 2D ikuspegia
+MoveDesign	Mugitu diseinua bakarrik
+MoveBoard	Mugitu plaka
+ShowBoth	Erakutsi 3D ikuspegia
+OnTable	Mahaian
+OnBoard	Plakan
+Resume	Berrekin
+NotAnOutline	ez da plaka baten ingerada (ireki bere profila edo ertz-geruza)
+HolesDrilled	Egindako zuloak guztira
+ResetCounts	Berrezarri kontagailuak
+Recent	Azkenak
+McPosition	Posizioa
+McWork	Lana
+McMachine	Makina
+McJog	Jog
+McStep	Urratsa (mm)
+McHome	Home
+McZero	Zero hemen
+McUnlock	Desblokeatu
+McProgram	Programa
+McOpenGcode	Ireki G-code
+McMdi	Komandoa (MDI)
+McSend	Bidali
+McLog	Erregistroa
+McState	Egoera
+McController	Kontrolagailua
+McSimulator	Simulagailua
+McNotDriven	oraindik ez da kontrolatzen
+McToolpath	Erreminta-bidea
+McLine	Lerroa
+McSpindle	Ardatza
+McFeedRate	Aurrerapena
+McStIdle	Geldirik
+McStRun	Martxan
+McStHold	Pausatuta
+McStHome	Erreferentziatzen
+McStAlarm	ALARMA
+McStUnknown	Ezezaguna
+McZeroXyz	Ezarri hemen lan-zeroa (X, Y eta Z)
+McZeroXy	Ezarri hemen lan-zeroa (X eta Y)
+McGoG28	Joan gordetako G28 posiziora
+McGoG30	Joan gordetako G30 posiziora
+McGoZeroXy	Joan lan-zerora X eta Y-n
+McGoZeroZ	Joan lan-zerora Z-n
+McOperator	Operarioa
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	G kode aktiboak
+McActiveM	M kode aktiboak
+McSpeed	Abiadura
+McZeroAxis	Ezarri hemen ardatz honen zeroa
+McInputs	Sarrerak
+McOutputs	Irteerak
+McJogSpeed	Jog abiadura
+MenuFile	Fitxategia
+MenuView	Ikusi
+MenuHelp	Laguntza
+MenuExit	Irten
+McSaveGcode	Gorde G-code ...
+McEditProgram	Editatu programa ...
+McRewind	Itzuli lehen lerrora
+McClearProgram	Garbitu programa
+McFitTable	Doitu mahaira
+McFitProgram	Doitu programara
+McShowButtons	Erakutsi zeroen botoiak
+McShowProgram	Erakutsi programa
+McShowLog	Erakutsi erregistroa
+McShowRapids	Erakutsi mugimendu azkarrak
+McSpindleOn	Ardatza piztuta (M3)
+McSpindleOff	Ardatza itzalita (M5)
+McCoolantOn	Hozgarria aktibatuta (M8)
+McCoolantOff	Hozgarria desaktibatuta (M9)
+McSetG28	Gorde posizio hau G28 gisa
+McSetG30	Gorde posizio hau G30 gisa
+McCancel	Utzi
+McSecGeneral	Orokorra
+McSecInterface	Erabiltzaile-interfazea
+McSecAxes	Ardatzak eta mugak
+McSecJog	Jog
+McUnitInch	Hazbeteak
+McLimits	Ibilbide-mugak (mm): ardatz bakoitzaren minimoa eta maximoa
+McDefaultStep	Urratsa hasieran (mm)
+McDefaultFeed	Jog abiadura hasieran (mm/min)
+McSettingsSaved	Ezarpenak gorde dira eta orain aplikatzen dira.
+McFilterGcode	G-code fitxategiak
+McReplaceAsk	badago jada. Ordezkatu nahi duzu?
+McReplace	Ordezkatu
+McTypeName	Idatzi fitxategi-izen bat.
+McNoSuchFile	Fitxategi hori ez dago.
+McSaveTitle	Gorde programa
+McOpenTitle	Ireki G-code programa bat
+McAboutBody	EH3Dren makina-kontroleko programa: oraingoz makina simulatu bat kontrolatzen du.
+FleetTitle	Makinak eta estazioak
+FleetNoStation	Estaziorik ez
+FleetWaiting	Operarioaren zain
+FleetReady	lan prest
+FleetUse	Erabili makina hau
+FleetTarget	Lanen makina
+FleetNoServer	Konexioa ez da EH3D zerbitzari bat: aukeratu Konexioan makinak ikusteko.
+FleetRefresh	Eguneratu
+JobOutsideTable	Lana ez da mahaian sartzen: mugitu plaka edo handitu mahaia
+LblThickness	Loditasuna (mm)
+LblCopper	Kobrea (µm)
+LblCopperSides	Kobre-aldeak
+LblOneSide	alde 1
+LblTwoSides	2 alde
+LblSize	Tamaina (mm)
+LblFromFiles	Fitxategietatik
+LblMaker	Fabrikatzailea
+LblWidth	Zabalera
+LblDepth	Sakonera
+LblPhotoresist	Erresistentzia fotosentikorra
+LblExtraStroke	Ibilaldi gehigarria (mm)
+LblFeed	Aurrerapena (mm/min)
+LblSpeedRpm	Abiadura (rpm)
+LblDepthMm	Sakonera (mm)
+LblPasses	Pasadak
+LblFeedXy	XY aurrerapena (mm/min)
+LblFeedZ	Z aurrerapena (mm/min)
+LblDefault	Leh.
+LblFileCoords	Fitxategien koordenatuak
+LblNoRack	Makinaren fitxategiak ez du oraindik biltegi-posiziorik
+LblWorkArea	Lan-eremua
+LblWholeMachine	Makina osoa
+LblLayers	Geruzak
+SoundFinish	Soinua lana amaitzean
+SoundTool	Soinua erreminta eskatzean
+SoundCheckOk	Soinua ikusizko egiaztapena zuzena denean
+SoundCheckBad	Soinua ikusizko egiaztapena zuzena ez denean
+SoundFileHint	WAV fitxategia (hutsik: tonu lehenetsia)
+SoundTest	Probatu
+SndOff	Soinurik ez
+SndDefault	Tonu estandarra
+SndFile	Nire fitxategi bat (WAV)
+SndChime	kanpai-hotsa
+SndRise	nota igoerakorrak
+SndFall	nota jaitsierakorrak
+SndFanfare	fanfarrea
+SndTriple	hiru nota
+SndBell	kanpaia
+SndBeep	bip
+SndDouble	bip bikoitza
+SndTripleBeep	bip hirukoitza
+SndAlarm	alarma
+SndKnock	kolpea
+SndSiren	sirena

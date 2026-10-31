@@ -1,1 +1,27 @@
 # Français (Canada) (fr-ca): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+SettingsTitle	Paramètres
+ConnMachine	ID de la machine
+HeadServerNote	Par le serveur de la fenêtre de connexion : son adresse, son jeton et l'ID de la machine.
+HeadNoServer	Entrez l'adresse, le jeton et l'ID de machine du serveur dans la fenêtre de connexion.
+HeadNoLink	Entrez l'adresse du nœud (hôte ou hôte:port).
+CatOpen	Catalogue de mèches et de fraises
+CatTitle	Catalogue de mèches et de fraises pour circuits imprimés
+KindDrill	Mèches
+KindSpot	Mèches à pointer
+KindSlotDrill	Mèches pour trous oblongs
+SpindleNote	Chaque broche a ses limites de vitesse, d'avance et de taille d'outil (modifiables dans le fichier de paramètres). Le catalogue et les outils avertissent quand un outil demande plus que la broche ne peut donner.
+NoteDrill	Mèche en carbure pour trous débouchants. Les petites (moins de 0,5 mm) sont pour les vias, les moyennes pour les pattes de composants, les grandes pour les connecteurs et les trous de fixation. Remonter vite et la changer après quelques milliers de trous.
+NoteSpot	Mèche à pointer : une pointe courte et rigide qui amorce le trou exactement là où il faut, pour que la mèche suivante ne dérive pas. Pour les grands trous et les cartes dures.
+NoteSlot	Mèche pour trous oblongs : une mèche à âme rigide faite pour couper des trous oblongs en se déplaçant de côté pendant qu'elle perce (les fentes des connecteurs). Ne pas l'utiliser pour des trous ronds : les autres coûtent moins.
+ResumeBody	Le dernier travail a été interrompu (fenêtre, ordinateur ou connexion tombés). Voulez-vous continuer là où il en était ?
+ThisPc	Cet ordinateur
+TypeValueHint	Cliquez sur une valeur pour l'entrer
+ResetCounts	Remettre les compteurs à zéro
+McHome	Retour à l'origine
+McStHome	Retour à l'origine
+McCoolantOn	Liquide de refroidissement en marche (M8)
+McCoolantOff	Liquide de refroidissement arrêté (M9)
+McSettingsSaved	Les paramètres sont enregistrés et s'appliquent tout de suite.
+McTypeName	Entrez un nom de fichier.
+LblLayers	Couches
+LblWholeMachine	Machine au complet

@@ -1,1 +1,425 @@
 # Íslenska (is): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Þema
+ThemeForge	Forge
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Klassískt Windows
+ThemeSystem	Fylgja litum Windows
+ThemeMidnight	Miðnætti
+ThemePaper	Pappír (ljóst)
+ThemeForest	Skógur
+ThemeRetro	Retro-útstöð
+ThemeOcean	Haf
+ThemeContrast	Mikil birtuskil
+LauncherAsk	Hvað viltu keyra?
+LauncherClassicMtc	Klassískt MTC
+LauncherClassicAtc	Klassískt ATC
+LauncherModern	Nútímalegt (MTC + ATC)
+Remember	Muna valið mitt
+PressEnter	Ýttu á Enter
+ViewPlan	2D - sýn að ofan
+ViewMachine	3D - vél
+LayerHoles	Borgöt
+LayerPaths	Fræsibrautir
+LayerMachine	Vél
+LayerGrid	Rist
+Progress	Framvinda
+TableFromConfig	Borð úr stillingum
+Drilling	Borun
+Routing	Fræsing
+ClassicMissing	Klassíska forritið er ekki við hliðina á þessu
+Start	Byrja
+Pause	Hlé
+Stop	Stöðva
+Language	Tungumál
+Holes	göt
+Tools	verkfæri
+SimulatedJob	Hermt verk: engin vél hreyfist
+NoFile	Engin skrá hlaðin
+Ok	Í lagi
+Abort	Hætta við
+AskSpindle	Ræsa snælduna?
+AskTool	Settu verkfæri í
+Connection	Tenging
+OutsideTable	Passar ekki á borðið
+OpenFile	Opna skrá
+About	Um
+Close	Loka
+SettingsTitle	Stillingar
+PanelTitle	Spjaldaskipting
+Columns	Dálkar
+Rows	Raðir
+SpacingX	Bil X (mm)
+SpacingY	Bil Y (mm)
+PanelModePitch	Miðja í miðju
+PanelModeGap	Bil milli korta
+PanelModeFit	Fylla borðið
+PanelCopies	eintök
+Apply	Nota
+ResetView	Endurstilla sýn
+DropHint	Slepptu .ncd, .plt eða .zip skrá hér
+NavHint2d	Dragðu til að færa, hjól til að renna
+NavHint3d	Dragðu til að snúa, hjól til að renna
+Version	Útgáfa
+Licence	Leyfi
+AboutBody	Nútímalegt viðmót fyrir CCD bor- og fræsivélar Bungard.
+TableWidth	Nýtanleg breidd X (mm)
+TableDepth	Nýtanleg dýpt Y (mm)
+Save	Vista
+Saved	Vistað
+OpenFolderUp	Yfirmappa
+ShowDrill	Borun
+ConnPort	Tengi
+ConnAddress	Vistfang
+ConnToken	Aðgangsteikn
+ConnMachine	Auðkenni vélar
+ConnTest	Prófa tengingu
+ConnWorks	Tengingin virkar
+BoardTitle	Kort
+ToolsTitle	Verkfæri
+SetAskOperator	Spyrja mig við verkfæraskipti og þegar snældan ræsist
+SetToolsOnOpen	Sýna verkfæragluggann þegar ég opna skrá
+SndVoice	Rödd
+SndFemale	kvenrödd
+SndMale	karlrödd
+HeadOpen	Hausnóða
+HeadTitle	Nóða borhaussins
+HeadOff	Ekki notað
+HeadDirect	Beint
+HeadServer	Í gegnum þjóninn
+HeadCamera	Sýna myndavél nóðunnar
+HeadSpeed	Snælda
+HeadTemp	Hitastig
+HeadProtectOpen	Varnarútgangur OPINN: snældan verður að stöðvast
+HeadProtectClosed	Varnarútgangur lokaður
+HeadMeasure	Mæla borðið hér
+HeadServerNote	Í gegnum þjóninn í tengingarglugganum: vistfang hans, teikn og auðkenni vélarinnar.
+HeadNoServer	Skrifaðu vistfang þjónsins, teiknið og auðkenni vélarinnar í tengingargluggann.
+HeadCameraModel	Gerð myndavélar
+HeadNoLink	Skrifaðu vistfang nóðunnar (hýsill eða hýsill:tengi).
+HeadWaiting	Bíð eftir nóðunni...
+HeadCameraOff	Slökkt á myndavél
+HeatOk	í lagi
+HeatWarm	volgt
+HeatHot	HEITT
+HeatUnknown	óþekkt
+LightTitle	Ljósahringur
+LightOn	Kveikt á ljósi
+LightOff	Slökkt á ljósi
+LightNone	enginn hringur á þessari nóðu
+InspOpen	Gæðaskoðun
+InspTitle	Gæðaskoðun verksins
+InspRun	Skoða núna
+InspRunning	Skoða...
+InspVerdictOk	Í LAGI
+InspVerdictNotOk	EKKI Í LAGI
+InspVerdictUnknown	ÓMÖGULEGT AÐ META
+InspIdle	Ekki skoðað enn
+InspChecks	Skoðanir
+InspCheckHoles	Boruð göt
+InspCheckMilling	Fræstar rásir
+InspProfile	Greiningarsnið
+InspPresetStandard	Staðlað
+InspPresetFine	Fín hæð
+InspPresetProto	Frumgerð
+InspLight	Ljós fyrir myndina
+InspLightKeep	óbreytt
+InspHolePick	Gat verksins í miðjunni
+InspNoJob	Hladdu inn borskrá til að skoða götin
+InspScale	Kvarði (díplar á mm)
+InspCalibrate	Kvarða út frá þessu gati
+InspSave	Vista snið
+InspTune	Vikmörk
+InspNeedLink	Stilltu fyrst nóðu borhaussins (glugginn Hausnóða).
+InspHolesOk	göt í lagi
+InspChannel	breidd rásar
+InspTuneHoleDia	Vikmörk gatastærðar (mm)
+InspTuneHolePos	Vikmörk gatastöðu (mm)
+InspTuneRound	Lágmarks kringlóttleiki (1 = hringur)
+InspTuneDebris	Mest rusl í kringum gat
+InspTuneMillWidth	Breidd rásar (mm)
+InspTuneMillTol	Vikmörk rásarbreiddar
+InspTuneMillMin	Þrengsta rás (mm)
+InspTuneSpread	Ójöfnust rás
+InspTuneMinMean	Dekksta mynd sem er samþykkt
+InspTuneMinSharp	Lágmarksskerpa
+InspFindHoleMissing	ekkert gat þar
+InspFindHoleSize	röng stærð
+InspFindHoleOff	ekki í miðju
+InspFindHoleRound	ekki kringlótt
+InspFindHoleDebris	rendur eða ryk í kring
+InspFindHoleView	utan sýnar
+InspFindMillNone	engar rásir sjást
+InspFindMillNarrow	rásirnar eru of þröngar
+InspFindMillWide	rásirnar eru of breiðar
+InspFindMillPinch	rás þrengist: hætta á skammhlaupi
+InspFindMillUneven	ójafnar rásir
+InspFindDark	myndin er of dökk: meira ljós
+InspFindBright	myndin er of björt: minna ljós
+InspFindContrast	myndin hefur engin birtuskil
+InspFindBlurry	myndin er úr fókus
+InspFindScale	stilltu fyrst kvarðann
+InspFindNothing	engin skoðun er virk
+InspFindNoHoles	ekkert gat verksins sést
+CatOpen	Verkfæraskrá
+CatTitle	Verkfæraskrá fyrir rafrásaplötur
+CatShank	Hvert verkfæri er með 1/8 tommu (3,175 mm) skaft sem patróna Bungard-vélar heldur. Tölurnar eru upphafspunktar fyrir FR-4: prófaðu þær á afgangsplötu.
+CatAll	Allar gerðir
+KindDrill	Borar
+KindEndMill	Endafræsar (beinar)
+KindDownCut	Fræsar sem skera niður
+KindUpCut	Fræsar sem skera upp
+KindDiamond	Fræsar með demantsskurði (maís)
+KindVBit	V-fræsar (leturgröftur, einangrun)
+KindBall	Kúlufræsar
+KindSpot	Miðjuborar
+KindCountersink	Úrsnúningsborar
+CatCount	verkfæri
+KindChipBreaker	Fræsar með spónabrjót
+KindSlotDrill	Raufarborar (fyrir aflöng göt)
+KindCoated	Demantshúðaðar fræsar
+CatSeriesCol	röð
+CatFluteCol	L mm
+CatPick	Smelltu á verkfæri á listanum til að sjá það og til hvers það er.
+CatSpindle	Snúningar og færsluhraði eru framleiðandans. Snælda sem getur ekki snúist svo hratt tekur sama verkfæri á sínum hraða, með færsluhraða í réttu hlutfalli (sami biti á hvern snúning).
+SpindleLbl	Snælda vélarinnar
+SpindleOriginal	Upprunalegt Bungard, 60000 rpm
+SpindleVfd	VFD-snælda GDZ 80-2.2, 24000 rpm
+SpindleNote	Hver snælda hefur sín mörk á hraða, færsluhraða og stærð verkfæris (hægt er að breyta þeim í stillingaskránni). Skráin og verkfærin vara við þegar verkfæri krefst meira en snældan getur gefið.
+CatSpindleLbl	Snælda
+FitOk	Þessi snælda ræður við þetta með gildum framleiðandans.
+FitSlower	Þessi snælda þarf hægari gildi. Tillögur:
+FitLowerRpm	Snældan snýst hægar en verkfærið krefst: XY og Z fara hægar í réttu hlutfalli.
+FitSlowZ	Z þarf að fara hægar á þessari vél.
+FitSlowXy	XY-færsluhraðinn þarf að vera hægari á þessari vél.
+FitNoThick	ÓSAMHÆFT: verkfærið er þykkara en snældan tekur.
+FitNoSlow	ÓSAMHÆFT: þessi snælda snýst alltof hægt fyrir þetta verkfæri (það myndi brotna eða brenna plötuna).
+CatUseFor	Nota þessi gildi fyrir verkfæri
+ToolFromCat	Skrá
+CatTaken	Gildin hafa verið færð í verkfærið.
+JobNothingOn	Ekkert að gera: kveiktu á borun eða fræsingu og að minnsta kosti einu verkfæri hennar.
+JobPartHint	Smelltu til að kveikja eða slökkva; bæði kveikt: fyrst borun, svo fræsing
+ToolOffHint	Smelltu á punkt verkfæris til að sleppa því úr verkinu
+CatFlute	Skurðlengd
+CatShankLbl	Skaft
+CatTotal	Heildarlengd
+CatPoint	Oddhorn
+CatSchematic	Skýringarmynd, ekki í réttum kvarða.
+NoteDrill	Bor úr heilu karbíði fyrir gegnumgöt. Þeir litlu (undir 0,5 mm) eru fyrir gegnumtengi (via), þeir meðalstóru fyrir fætur íhluta, þeir stóru fyrir tengi og festigöt. Dragðu hratt út og skiptu eftir nokkur þúsund göt.
+NoteEndMill	Beinar raufar og flatur endi: raufar, vasar, einangrun breiðra leiðara og útlínur þunnra korta. Skilur eftir hreinan botn.
+NoteDownCut	Vinstrisnúin fræsa: hún þrýstir spónum niður. Efri brún kortsins verður án rennda, svo notaðu hana fyrir útlínurnar þegar efri hliðin er sú sem sést (kortið þarf að vera vel fest).
+NoteUpCut	Hægrisnúin fræsa: hún dregur spóna upp og út úr skurðinum. Góð fyrir raufar og vasa; hún getur lyft kortinu og skilið eftir rendur á efri brún.
+NoteDiamond	Fræsa með demantsskurði (maís): margar litlar tennur sem mala glertrefjarnar í stað þess að rífa þær. Venjulegt val fyrir útlínur FR-4; skilur eftir grófa en hreina brún og endist lengi.
+NoteChip	Fræsa með spónabrjót: tennurnar brjóta spónana í stutta búta sem losna auðveldlega úr skurðinum. Sker hraðar en demantsskurður og heldur röndum litlum.
+NoteVBit	V-fræsa (grafarafræsa): grópin er jafn breið og dýptin gerir hana, svo dýptin ákvarðar breidd einangrunarinnar. Þröngt horn með fínum odd gerir fína leiðara mögulega.
+NoteBall	Kúlufræsa: ávöl gróp, fyrir leturgröft og mótun. Ekki til að einangra leiðara.
+NoteSpot	Miðjubor: stuttur, stífur oddur sem byrjar gat nákvæmlega þar sem það á að vera, svo næsti bor reiki ekki. Fyrir stór göt og hörð kort.
+NoteCountersink	Úrsnúningsbor: sníður brún gatsins, fyrir skrúfuhausa eða til að fjarlægja rendur.
+NoteSlot	Raufarbor: bor með stífum kjarna, gerður til að skera aflöng göt með því að hreyfast til hliðar við borun (raufar tengja). Ekki nota hann í kringlótt göt: hinir eru ódýrari.
+NoteCoated	Beinskorin fræsa með demantshúð: fyrir slípandi kort (FR-4 með háu Tg, halógenfrí, kolefnisþræðir) og kort með álbakhlið, þar sem óhúðuð fræsa slitnar. Hún kostar meira og endist margfalt lengur.
+LevTab	Kvörðun borðs
+LevMeasure	Mæla borðið
+LevStop	Stöðva mælingu
+LevClear	Hreinsa kortið
+LevCols	Punktar eftir X
+LevRows	Punktar eftir Y
+LevPoints	Mældir punktar
+LevSpread	Dreifing
+LevTilt	Halli X / Y
+LevDemo	Hermdur nemi: engin nemanóða er tengd enn, hæðirnar koma úr hermdu borði.
+LevApply	Leiðrétta Z verkanna með þessu korti
+ResumeTitle	Verk truflað
+ResumeBody	Síðasta verk stöðvaðist í miðju (glugginn, tölvan eða tengingin datt út). Viltu halda áfram þar sem það var?
+ResumeContinue	Halda verkinu áfram
+ResumeCancel	Hætta við það
+TabsOn	Fræsa jaðarinn með brúm
+TabsPerSide	Brýr á hverri hlið
+TabWidth	Breidd brúar
+TabPlace	Hvar brýrnar eru
+TabEven	Jafnt eftir hliðinni
+TabEnds	Nálægt endum hliðarinnar
+TabMiddle	Saman í miðjunni
+SetSkipLauncher	Opna þennan glugga beint næst
+ColName	Heiti
+ColDate	Dagsetning breytingar (UTC)
+ColType	Gerð
+ColSize	Stærð
+TypeFolder	Mappa
+TypeZip	ZIP-safn
+Places	Staðir
+PlaceExamples	Dæmi
+PlaceDesktop	Skjáborð
+PlaceDocuments	Skjöl
+PlaceDownloads	Niðurhal
+FileNameLabel	Skráarheiti
+FilterSupported	Allar verkskrár
+FilterDrill	Borskrár
+FilterRoute	Fræsiskrár
+FilterZip	ZIP-söfn
+FilterAny	Allar skrár
+NavBack	Til baka
+NavUp	Upp
+ThisPc	Þessi tölva
+SimSpeed	Hermunarhraði
+DefaultValues	Sjálfgefin gildi
+TypeValueHint	Smelltu á gildi til að skrifa það
+TabGeneral	Almennt
+TabJob	Verk
+Units	Einingar
+UnitMm	Millimetrar (mm)
+UnitMil	Mil (0,001 tomma)
+ModelLabel	Gerð vélar
+ToolChange	Verkfæraskipti
+TcManual	Handvirkt (MTC)
+TcAuto	Sjálfvirkt (ATC)
+EmergencyStop	Neyðarstöðvun
+EmergencyShow	Sýna neyðarhnappinn (hægt er að draga hann hvert sem er)
+RackPlaces	verkfærastæði
+Rotate	Snúa
+FollowTool	Fylgja verkfærinu
+Enlarge2d	Stækka 2D-sýnina
+MoveDesign	Færa aðeins hönnunina
+MoveBoard	Færa kortið
+ShowBoth	Sýna 3D-sýnina
+OnTable	Á borðinu
+OnBoard	Á kortinu
+Resume	Halda áfram
+NotAnOutline	er ekki útlínur korts (opnaðu útlínu- eða brúnalag þess)
+HolesDrilled	Boruð göt alls
+ResetCounts	Núllstilla talningar
+Recent	Nýlegt
+McPosition	Staða
+McWork	Verk
+McMachine	Vél
+McJog	Handfærsla
+McStep	Skref (mm)
+McHome	Heim
+McZero	Núll hér
+McUnlock	Aflæsa
+McProgram	Forrit
+McOpenGcode	Opna G-kóða
+McMdi	Skipun (MDI)
+McSend	Senda
+McLog	Annáll
+McState	Staða
+McController	Stýring
+McSimulator	Hermir
+McNotDriven	ekki stýrt enn
+McToolpath	Verkfærabraut
+McLine	Lína
+McSpindle	Snælda
+McFeedRate	Færsluhraði
+McStIdle	Aðgerðalaus
+McStRun	Í gangi
+McStHold	Í hléi
+McStHome	Heimfærsla
+McStAlarm	VIÐVÖRUN
+McStUnknown	Óþekkt
+McZeroXyz	Stilla verknúllpunkt hér (X, Y og Z)
+McZeroXy	Stilla verknúllpunkt hér (X og Y)
+McGoG28	Fara á vistuðu stöðuna G28
+McGoG30	Fara á vistuðu stöðuna G30
+McGoZeroXy	Fara á verknúllpunkt í X og Y
+McGoZeroZ	Fara á verknúllpunkt í Z
+McOperator	Stjórnandi
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	Virkir G-kóðar
+McActiveM	Virkir M-kóðar
+McSpeed	Hraði
+McZeroAxis	Stilla núllpunkt þessa áss hér
+McInputs	Inntök
+McOutputs	Úttök
+McJogSpeed	Handfærsluhraði
+MenuFile	Skrá
+MenuView	Skoða
+MenuHelp	Hjálp
+MenuExit	Hætta
+McSaveGcode	Vista G-kóða ...
+McEditProgram	Breyta forritinu ...
+McRewind	Spóla til baka í fyrstu línu
+McClearProgram	Hreinsa forritið
+McFitTable	Laga að borði
+McFitProgram	Laga að forriti
+McShowButtons	Sýna hnappa núllpunkta
+McShowProgram	Sýna forritið
+McShowLog	Sýna annálinn
+McShowRapids	Sýna hraðar hreyfingar
+McSpindleOn	Snælda á (M3)
+McSpindleOff	Snælda af (M5)
+McCoolantOn	Kæling á (M8)
+McCoolantOff	Kæling af (M9)
+McSetG28	Vista þessa stöðu sem G28
+McSetG30	Vista þessa stöðu sem G30
+McCancel	Hætta við
+McSecGeneral	Almennt
+McSecInterface	Notendaviðmót
+McSecAxes	Ásar og mörk
+McSecJog	Handfærsla
+McUnitInch	Tommur
+McLimits	Hreyfimörk (mm): lágmark og hámark hvers áss
+McDefaultStep	Skref við ræsingu (mm)
+McDefaultFeed	Handfærsluhraði við ræsingu (mm/min)
+McSettingsSaved	Stillingarnar eru vistaðar og taka gildi núna.
+McFilterGcode	G-kóðaskrár
+McReplaceAsk	er þegar til. Skipta henni út?
+McReplace	Skipta út
+McTypeName	Skrifaðu skráarheiti.
+McNoSuchFile	Þessi skrá er ekki til.
+McSaveTitle	Vista forritið
+McOpenTitle	Opna G-kóðaforrit
+McAboutBody	Vélstýringarforrit EH3D: það stýrir enn sem komið er hermdri vél.
+FleetTitle	Vélar og stöðvar
+FleetNoStation	Engin stöð
+FleetWaiting	Bíð eftir stjórnanda
+FleetReady	verk tilbúin
+FleetUse	Nota þessa vél
+FleetTarget	Vél verkanna
+FleetNoServer	Tengingin er ekki EH3D-þjónn: veldu hann undir Tenging til að sjá vélarnar.
+FleetRefresh	Endurnýja
+JobOutsideTable	Verkið passar ekki á borðið: færðu kortið eða stækkaðu borðið
+LblThickness	Þykkt (mm)
+LblCopper	Kopar (µm)
+LblCopperSides	Koparhliðar
+LblOneSide	1 hlið
+LblTwoSides	2 hliðar
+LblSize	Stærð (mm)
+LblFromFiles	Úr skránum
+LblMaker	Framleiðandi
+LblWidth	Breidd
+LblDepth	Dýpt
+LblPhotoresist	Ljósnæmt lakk
+LblExtraStroke	Aukahögg (mm)
+LblFeed	Færsluhraði (mm/min)
+LblSpeedRpm	Hraði (rpm)
+LblDepthMm	Dýpt (mm)
+LblPasses	Umferðir
+LblFeedXy	Færsluhraði XY (mm/min)
+LblFeedZ	Færsluhraði Z (mm/min)
+LblDefault	Sjálfg.
+LblFileCoords	Hnit skránna
+LblNoRack	Vélarskráin hefur engar stæðisstöður enn
+LblWorkArea	Vinnusvæði
+LblWholeMachine	Öll vélin
+LblLayers	Lög
+SoundFinish	Hljóð þegar verki lýkur
+SoundTool	Hljóð þegar beðið er um verkfæri
+SoundCheckOk	Hljóð þegar sjónræn skoðun er rétt
+SoundCheckBad	Hljóð þegar sjónræn skoðun er ekki rétt
+SoundFileHint	WAV-skrá (tómt: sjálfgefinn tónn)
+SoundTest	Prófa
+SndOff	Ekkert hljóð
+SndDefault	Staðaltónninn
+SndFile	Mín eigin skrá (WAV)
+SndChime	klukknahljóð
+SndRise	hækkandi tónar
+SndFall	lækkandi tónar
+SndFanfare	lúðraþytur
+SndTriple	þrír tónar
+SndBell	bjalla
+SndBeep	píp
+SndDouble	tvöfalt píp
+SndTripleBeep	þrefalt píp
+SndAlarm	viðvörun
+SndKnock	bank
+SndSiren	sírena

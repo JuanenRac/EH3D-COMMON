@@ -1,1 +1,425 @@
 # Norsk (no): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Tema
+ThemeForge	Forge
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Klassisk Windows
+ThemeSystem	Følg Windows-fargene
+ThemeMidnight	Midnatt
+ThemePaper	Papir (lyst)
+ThemeForest	Skog
+ThemeRetro	Retroterminal
+ThemeOcean	Hav
+ThemeContrast	Høy kontrast
+LauncherAsk	Hva vil du kjøre?
+LauncherClassicMtc	Klassisk MTC
+LauncherClassicAtc	Klassisk ATC
+LauncherModern	Moderne (MTC + ATC)
+Remember	Husk valget mitt
+PressEnter	Trykk Enter
+ViewPlan	2D - visning ovenfra
+ViewMachine	3D - maskin
+LayerHoles	Borehull
+LayerPaths	Frebaner
+LayerMachine	Maskin
+LayerGrid	Rutenett
+Progress	Fremdrift
+TableFromConfig	Bord fra konfigurasjonen
+Drilling	Boring
+Routing	Fresing
+ClassicMissing	Det klassiske programmet ligger ikke ved siden av dette
+Start	Start
+Pause	Pause
+Stop	Stopp
+Language	Språk
+Holes	hull
+Tools	verktøy
+SimulatedJob	Simulert jobb: ingen maskin beveger seg
+NoFile	Ingen fil lastet
+Ok	OK
+Abort	Avbryt
+AskSpindle	Starte spindelen?
+AskTool	Sett inn verktøy
+Connection	Tilkobling
+OutsideTable	Passer ikke på bordet
+OpenFile	Åpne fil
+About	Om
+Close	Lukk
+SettingsTitle	Innstillinger
+PanelTitle	Panelisering
+Columns	Kolonner
+Rows	Rader
+SpacingX	Avstand X (mm)
+SpacingY	Avstand Y (mm)
+PanelModePitch	Senter til senter
+PanelModeGap	Mellomrom mellom kort
+PanelModeFit	Fyll bordet
+PanelCopies	kopier
+Apply	Bruk
+ResetView	Tilbakestill visning
+DropHint	Slipp en .ncd-, .plt- eller .zip-fil her
+NavHint2d	Dra for å flytte, rull for å zoome
+NavHint3d	Dra for å rotere, rull for å zoome
+Version	Versjon
+Licence	Lisens
+AboutBody	Det moderne grensesnittet for Bungards CCD-maskiner for boring og fresing.
+TableWidth	Brukbar bredde X (mm)
+TableDepth	Brukbar dybde Y (mm)
+Save	Lagre
+Saved	Lagret
+OpenFolderUp	Overordnet mappe
+ShowDrill	Boring
+ConnPort	Port
+ConnAddress	Adresse
+ConnToken	Tilgangstoken
+ConnMachine	Maskin-ID
+ConnTest	Test tilkoblingen
+ConnWorks	Tilkoblingen fungerer
+BoardTitle	Kort
+ToolsTitle	Verktøy
+SetAskOperator	Spør meg ved verktøybytte og når spindelen starter
+SetToolsOnOpen	Vis verktøyvinduet når jeg åpner en fil
+SndVoice	Stemme
+SndFemale	kvinne
+SndMale	mann
+HeadOpen	Hodenode
+HeadTitle	Borehodets node
+HeadOff	Ikke i bruk
+HeadDirect	Direkte
+HeadServer	Via serveren
+HeadCamera	Vis nodens kamera
+HeadSpeed	Spindel
+HeadTemp	Temperatur
+HeadProtectOpen	Beskyttelsesutgang ÅPEN: spindelen må stoppe
+HeadProtectClosed	Beskyttelsesutgang lukket
+HeadMeasure	Mål bordet her
+HeadServerNote	Via serveren i tilkoblingsvinduet: adressen, tokenet og maskin-ID-en.
+HeadNoServer	Skriv serverens adresse, token og maskin-ID i tilkoblingsvinduet.
+HeadCameraModel	Kameramodell
+HeadNoLink	Skriv nodens adresse (vert eller vert:port).
+HeadWaiting	Venter på noden...
+HeadCameraOff	Kamera av
+HeatOk	ok
+HeatWarm	varm
+HeatHot	HET
+HeatUnknown	ukjent
+LightTitle	Lysring
+LightOn	Lys på
+LightOff	Lys av
+LightNone	ingen ring på denne noden
+InspOpen	Kvalitetskontroll
+InspTitle	Kvalitetskontroll av arbeidet
+InspRun	Kontroller nå
+InspRunning	Kontrollerer...
+InspVerdictOk	OK
+InspVerdictNotOk	IKKE OK
+InspVerdictUnknown	KAN IKKE VURDERES
+InspIdle	Ikke kontrollert ennå
+InspChecks	Kontroller
+InspCheckHoles	Borede hull
+InspCheckMilling	Fresespor
+InspProfile	Analyseprofil
+InspPresetStandard	Standard
+InspPresetFine	Fin delning
+InspPresetProto	Prototype
+InspLight	Lys til bildet
+InspLightKeep	som det er
+InspHolePick	Jobbens hull i midten
+InspNoJob	Last inn en borefil for å kontrollere hullene
+InspScale	Skala (piksler per mm)
+InspCalibrate	Kalibrer fra dette hullet
+InspSave	Lagre profil
+InspTune	Toleranser
+InspNeedLink	Still først inn borehodets node (vinduet Hodenode).
+InspHolesOk	hull ok
+InspChannel	sporbredde
+InspTuneHoleDia	Toleranse for hullstørrelse (mm)
+InspTuneHolePos	Toleranse for hullposisjon (mm)
+InspTuneRound	Minste rundhet (1 = sirkel)
+InspTuneDebris	Mest rusk rundt et hull
+InspTuneMillWidth	Sporbredde (mm)
+InspTuneMillTol	Toleranse for sporbredde
+InspTuneMillMin	Smaleste spor (mm)
+InspTuneSpread	Mest ujevne spor
+InspTuneMinMean	Mørkeste godtatte bilde
+InspTuneMinSharp	Minste skarphet
+InspFindHoleMissing	ikke noe hull der
+InspFindHoleSize	feil størrelse
+InspFindHoleOff	ikke sentrert
+InspFindHoleRound	ikke rundt
+InspFindHoleDebris	grader eller støv rundt
+InspFindHoleView	utenfor bildet
+InspFindMillNone	ingen spor synlige
+InspFindMillNarrow	sporene er for smale
+InspFindMillWide	sporene er for brede
+InspFindMillPinch	et spor smalner inn: fare for kortslutning
+InspFindMillUneven	ujevne spor
+InspFindDark	bildet er for mørkt: mer lys
+InspFindBright	bildet er for lyst: mindre lys
+InspFindContrast	bildet mangler kontrast
+InspFindBlurry	bildet er uskarpt
+InspFindScale	still først inn skalaen
+InspFindNothing	ingen kontroll er slått på
+InspFindNoHoles	ingen av jobbens hull i bildet
+CatOpen	Verktøykatalog
+CatTitle	Verktøykatalog for kretskort
+CatShank	Hvert verktøy har et 1/8 tommers (3,175 mm) skaft som chucken på en Bungard-maskin holder. Tallene er utgangspunkt for FR-4: prøv dem på et restkort.
+CatAll	Alle typer
+KindDrill	Bor
+KindEndMill	Sylindriske freser (rette)
+KindDownCut	Freser med nedadskjærende spiral
+KindUpCut	Freser med oppadskjærende spiral
+KindDiamond	Freser med diamantskjær (mais)
+KindVBit	V-freser (gravering, isolasjon)
+KindBall	Kulefreser
+KindSpot	Senterbor
+KindCountersink	Forsenkere
+CatCount	verktøy
+KindChipBreaker	Freser med sponbryter
+KindSlotDrill	Sporbor (for avlange hull)
+KindCoated	Diamantbelagte freser
+CatSeriesCol	serie
+CatFluteCol	L mm
+CatPick	Klikk på et verktøy i listen for å se det og hva det brukes til.
+CatSpindle	Turtall og matinger er produsentens. En spindel som ikke kan snurre så fort, tar det samme verktøyet med sitt eget turtall og en proporsjonal mating (samme skjær per omdreining).
+SpindleLbl	Maskinens spindel
+SpindleOriginal	Original Bungard, 60000 rpm
+SpindleVfd	VFD-spindel GDZ 80-2.2, 24000 rpm
+SpindleNote	Hver spindel har sine grenser for turtall, mating og verktøystørrelse (de kan endres i innstillingsfilen). Katalogen og verktøyene advarer når et verktøy krever mer enn spindelen kan gi.
+CatSpindleLbl	Spindel
+FitOk	Denne spindelen klarer det med produsentens verdier.
+FitSlower	Denne spindelen trenger det saktere. Foreslåtte verdier:
+FitLowerRpm	Spindelen snurrer saktere enn verktøyet krever: XY og Z går saktere i samme forhold.
+FitSlowZ	Z må gå saktere på denne maskinen.
+FitSlowXy	XY-matingen må være saktere på denne maskinen.
+FitNoThick	IKKE KOMPATIBELT: verktøyet er tykkere enn spindelen tar.
+FitNoSlow	IKKE KOMPATIBELT: denne spindelen snurrer altfor sakte for dette verktøyet (det ville knekke eller brenne kortet).
+CatUseFor	Bruk disse verdiene for verktøy
+ToolFromCat	Katalog
+CatTaken	Verdiene er overført til verktøyet.
+JobNothingOn	Ingenting å gjøre: slå på boringen eller fresingen og minst ett av verktøyene.
+JobPartHint	Klikk for å slå på eller av; begge på: først boring, så fresing
+ToolOffHint	Klikk på prikken til et verktøy for å utelate det fra jobben
+CatFlute	Skjærelengde
+CatShankLbl	Skaft
+CatTotal	Totallengde
+CatPoint	Spissvinkel
+CatSchematic	Skjematisk tegning, ikke i målestokk.
+NoteDrill	Bor i heldekkende hardmetall for gjennomgående hull. De små (under 0,5 mm) er for viaer, de mellomstore for komponentben, de store for kontakter og monteringshull. Trekk ut raskt, og skift etter noen tusen hull.
+NoteEndMill	Rette spor og flat ende: spor, lommer, isolasjon av brede ledere og omrisset av tynne kort. Gir en ren bunn.
+NoteDownCut	Venstreskjærende fres: den presser sponene nedover. Kortets overkant blir fri for grader, så bruk den til omrisset når oversiden er den som vises (kortet må holdes godt nede).
+NoteUpCut	Høyreskjærende fres: den drar sponene opp og ut av skjæret. God til spor og lommer; den kan løfte kortet og gi grader på overkanten.
+NoteDiamond	Fres med diamantskjær (mais): mange små tenner som maler glassfiberen i stedet for å rive den. Det vanlige valget for omrisset av FR-4; gir en ru, men ren kant og holder lenge.
+NoteChip	Fres med sponbryter: tennene bryter sponene i korte biter som lett forlater skjæret. Skjærer raskere enn diamantskjær og holder gradene små.
+NoteVBit	V-fres (graveringsfres): sporet er så bredt som dybden gjør det, så dybden bestemmer bredden på isolasjonen. En smal vinkel med fin spiss gjør fine ledere mulig.
+NoteBall	Kulefres: et avrundet spor, for gravering og forming. Ikke for isolasjon av ledere.
+NoteSpot	Senterbor: en kort, stiv spiss som starter et hull nøyaktig der det skal være, slik at neste bor ikke vandrer. For store hull og harde kort.
+NoteCountersink	Forsenker: faser hullkanten, for skruehoder eller for å fjerne graden.
+NoteSlot	Sporbor: et bor med stiv steg, laget for å skjære avlange hull ved å bevege seg sideveis mens det borer (kontaktsporene). Ikke bruk det til runde hull: de andre er billigere.
+NoteCoated	Rettskjærende fres med diamantbelegg: for slipende kort (FR-4 med høy Tg, halogenfri, karbonfiber) og kort med aluminiumsbunn, der en ubelagt slites ut. Den koster mer og holder flere ganger lenger.
+LevTab	Bordkalibrering
+LevMeasure	Mål bordet
+LevStop	Stopp målingen
+LevClear	Tøm kartet
+LevCols	Punkter langs X
+LevRows	Punkter langs Y
+LevPoints	Målte punkter
+LevSpread	Spredning
+LevTilt	Helning X / Y
+LevDemo	Simulert føler: ingen følernode er koblet til ennå, høydene kommer fra et simulert bord.
+LevApply	Korriger jobbenes Z med dette kartet
+ResumeTitle	Jobben ble avbrutt
+ResumeBody	Den siste jobben ble stående midt i (vinduet, datamaskinen eller forbindelsen falt ut). Vil du fortsette der den var?
+ResumeContinue	Fortsett jobben
+ResumeCancel	Avbryt den
+TabsOn	Frese ytterkanten med broer
+TabsPerSide	Broer per side
+TabWidth	Brobredde
+TabPlace	Hvor brodene plasseres
+TabEven	Jevnt fordelt langs siden
+TabEnds	Nær endene av siden
+TabMiddle	Samlet i midten
+SetSkipLauncher	Åpne dette vinduet direkte neste gang
+ColName	Navn
+ColDate	Endret (UTC)
+ColType	Type
+ColSize	Størrelse
+TypeFolder	Mappe
+TypeZip	ZIP-arkiv
+Places	Steder
+PlaceExamples	Eksempler
+PlaceDesktop	Skrivebord
+PlaceDocuments	Dokumenter
+PlaceDownloads	Nedlastinger
+FileNameLabel	Filnavn
+FilterSupported	Alle jobbfiler
+FilterDrill	Borefiler
+FilterRoute	Fresefiler
+FilterZip	ZIP-arkiver
+FilterAny	Alle filer
+NavBack	Tilbake
+NavUp	Opp
+ThisPc	Denne PC-en
+SimSpeed	Simuleringshastighet
+DefaultValues	Standardverdier
+TypeValueHint	Klikk på en verdi for å skrive den
+TabGeneral	Generelt
+TabJob	Jobb
+Units	Enheter
+UnitMm	Millimeter (mm)
+UnitMil	Mils (0,001 tomme)
+ModelLabel	Maskinmodell
+ToolChange	Verktøybytte
+TcManual	Manuelt (MTC)
+TcAuto	Automatisk (ATC)
+EmergencyStop	Nødstopp
+EmergencyShow	Vis nødstoppknappen (den kan dras hvor som helst)
+RackPlaces	verktøyplasser
+Rotate	Roter
+FollowTool	Følg verktøyet
+Enlarge2d	Forstørr 2D-visningen
+MoveDesign	Flytt bare mønsteret
+MoveBoard	Flytt kortet
+ShowBoth	Vis 3D-visningen
+OnTable	På bordet
+OnBoard	På kortet
+Resume	Gjenoppta
+NotAnOutline	er ikke omrisset av et kort (åpne profil- eller kantlaget)
+HolesDrilled	Borede hull totalt
+ResetCounts	Nullstill tellerne
+Recent	Nylige
+McPosition	Posisjon
+McWork	Arbeid
+McMachine	Maskin
+McJog	Jogg
+McStep	Steg (mm)
+McHome	Hjem
+McZero	Null her
+McUnlock	Lås opp
+McProgram	Program
+McOpenGcode	Åpne G-kode
+McMdi	Kommando (MDI)
+McSend	Send
+McLog	Logg
+McState	Status
+McController	Styreenhet
+McSimulator	Simulator
+McNotDriven	styres ikke ennå
+McToolpath	Verktøybane
+McLine	Linje
+McSpindle	Spindel
+McFeedRate	Mating
+McStIdle	Hviler
+McStRun	Kjører
+McStHold	Pauset
+McStHome	Hjemkjøring
+McStAlarm	ALARM
+McStUnknown	Ukjent
+McZeroXyz	Sett arbeidsnullpunkt her (X, Y og Z)
+McZeroXy	Sett arbeidsnullpunkt her (X og Y)
+McGoG28	Gå til lagret posisjon G28
+McGoG30	Gå til lagret posisjon G30
+McGoZeroXy	Gå til arbeidsnullpunktet i X og Y
+McGoZeroZ	Gå til arbeidsnullpunktet i Z
+McOperator	Operatør
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	Aktive G-koder
+McActiveM	Aktive M-koder
+McSpeed	Hastighet
+McZeroAxis	Sett nullpunktet for denne aksen her
+McInputs	Innganger
+McOutputs	Utganger
+McJogSpeed	Joggehastighet
+MenuFile	Fil
+MenuView	Visning
+MenuHelp	Hjelp
+MenuExit	Avslutt
+McSaveGcode	Lagre G-kode ...
+McEditProgram	Rediger programmet ...
+McRewind	Spol tilbake til første linje
+McClearProgram	Tøm programmet
+McFitTable	Tilpass til bordet
+McFitProgram	Tilpass til programmet
+McShowButtons	Vis nullpunktknappene
+McShowProgram	Vis programmet
+McShowLog	Vis loggen
+McShowRapids	Vis rask-bevegelsene
+McSpindleOn	Spindel på (M3)
+McSpindleOff	Spindel av (M5)
+McCoolantOn	Kjøling på (M8)
+McCoolantOff	Kjøling av (M9)
+McSetG28	Lagre denne posisjonen som G28
+McSetG30	Lagre denne posisjonen som G30
+McCancel	Avbryt
+McSecGeneral	Generelt
+McSecInterface	Brukergrensesnitt
+McSecAxes	Akser og grenser
+McSecJog	Jogging
+McUnitInch	Tommer
+McLimits	Bevegelsesgrenser (mm): minimum og maksimum for hver akse
+McDefaultStep	Steg ved start (mm)
+McDefaultFeed	Joggehastighet ved start (mm/min)
+McSettingsSaved	Innstillingene er lagret og gjelder nå.
+McFilterGcode	G-kodefiler
+McReplaceAsk	finnes allerede. Vil du erstatte den?
+McReplace	Erstatt
+McTypeName	Skriv et filnavn.
+McNoSuchFile	Filen finnes ikke.
+McSaveTitle	Lagre programmet
+McOpenTitle	Åpne et G-kodeprogram
+McAboutBody	EH3D-programmet for maskinstyring: det styrer foreløpig en simulert maskin.
+FleetTitle	Maskiner og stasjoner
+FleetNoStation	Ingen stasjon
+FleetWaiting	Venter på operatøren
+FleetReady	jobber klare
+FleetUse	Bruk denne maskinen
+FleetTarget	Jobbenes maskin
+FleetNoServer	Tilkoblingen er ikke en EH3D-server: velg den under Tilkobling for å se maskinene.
+FleetRefresh	Oppdater
+JobOutsideTable	Jobben passer ikke på bordet: flytt kortet eller gjør bordet større
+LblThickness	Tykkelse (mm)
+LblCopper	Kobber (µm)
+LblCopperSides	Kobbersider
+LblOneSide	1 side
+LblTwoSides	2 sider
+LblSize	Størrelse (mm)
+LblFromFiles	Fra filene
+LblMaker	Produsent
+LblWidth	Bredde
+LblDepth	Dybde
+LblPhotoresist	Lysfølsom resist
+LblExtraStroke	Ekstra slag (mm)
+LblFeed	Mating (mm/min)
+LblSpeedRpm	Turtall (rpm)
+LblDepthMm	Dybde (mm)
+LblPasses	Pass
+LblFeedXy	Mating XY (mm/min)
+LblFeedZ	Mating Z (mm/min)
+LblDefault	Std.
+LblFileCoords	Filenes koordinater
+LblNoRack	Maskinfilen har ingen magasinposisjoner ennå
+LblWorkArea	Arbeidsområde
+LblWholeMachine	Hele maskinen
+LblLayers	Lag
+SoundFinish	Lyd når jobben er ferdig
+SoundTool	Lyd når et verktøy etterspørres
+SoundCheckOk	Lyd når den visuelle kontrollen er riktig
+SoundCheckBad	Lyd når den visuelle kontrollen ikke er riktig
+SoundFileHint	WAV-fil (tomt: standardtonen)
+SoundTest	Test
+SndOff	Ingen lyd
+SndDefault	Standardtonen
+SndFile	En egen fil (WAV)
+SndChime	klokkespill
+SndRise	stigende toner
+SndFall	fallende toner
+SndFanfare	fanfare
+SndTriple	tre toner
+SndBell	klokke
+SndBeep	pip
+SndDouble	dobbelt pip
+SndTripleBeep	tredobbelt pip
+SndAlarm	alarm
+SndKnock	banking
+SndSiren	sirene

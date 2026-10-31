@@ -1,1 +1,425 @@
 # Slovenščina (sl): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Tema
+ThemeForge	Forge
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Klasični Windows
+ThemeSystem	Sledi barvam sistema Windows
+ThemeMidnight	Polnoč
+ThemePaper	Papir (svetla)
+ThemeForest	Gozd
+ThemeRetro	Retro terminal
+ThemeOcean	Ocean
+ThemeContrast	Visok kontrast
+LauncherAsk	Kaj želite zagnati?
+LauncherClassicMtc	Klasični MTC
+LauncherClassicAtc	Klasični ATC
+LauncherModern	Sodobni (MTC + ATC)
+Remember	Zapomni si mojo izbiro
+PressEnter	Pritisnite Enter
+ViewPlan	2D - pogled od zgoraj
+ViewMachine	3D - stroj
+LayerHoles	Izvrtine
+LayerPaths	Poti frezanja
+LayerMachine	Stroj
+LayerGrid	Mreža
+Progress	Napredek
+TableFromConfig	Miza iz konfiguracije
+Drilling	Vrtanje
+Routing	Frezanje
+ClassicMissing	Klasični program ni poleg tega programa
+Start	Začni
+Pause	Premor
+Stop	Ustavi
+Language	Jezik
+Holes	izvrtin
+Tools	orodij
+SimulatedJob	Simulirano opravilo: noben stroj se ne premika
+NoFile	Datoteka ni naložena
+Ok	V redu
+Abort	Prekini
+AskSpindle	Zagnati vreteno?
+AskTool	Vstavite orodje
+Connection	Povezava
+OutsideTable	Ne gre na mizo
+OpenFile	Odpri datoteko
+About	O programu
+Close	Zapri
+SettingsTitle	Nastavitve
+PanelTitle	Panelizacija
+Columns	Stolpci
+Rows	Vrstice
+SpacingX	Razmik X (mm)
+SpacingY	Razmik Y (mm)
+PanelModePitch	Od središča do središča
+PanelModeGap	Reža med ploščami
+PanelModeFit	Zapolni mizo
+PanelCopies	kopij
+Apply	Uporabi
+ResetView	Ponastavi pogled
+DropHint	Spustite datoteko .ncd, .plt ali .zip sem
+NavHint2d	Povlecite za premik, kolesce za povečavo
+NavHint3d	Povlecite za vrtenje, kolesce za povečavo
+Version	Različica
+Licence	Licenca
+AboutBody	Sodoben vmesnik za Bungardove CNC stroje za vrtanje in frezanje (CCD).
+TableWidth	Uporabna širina X (mm)
+TableDepth	Uporabna globina Y (mm)
+Save	Shrani
+Saved	Shranjeno
+OpenFolderUp	Nadrejena mapa
+ShowDrill	Vrtanje
+ConnPort	Vrata
+ConnAddress	Naslov
+ConnToken	Dostopni žeton
+ConnMachine	ID stroja
+ConnTest	Preizkusi povezavo
+ConnWorks	Povezava deluje
+BoardTitle	Plošča
+ToolsTitle	Orodja
+SetAskOperator	Vprašaj me pri menjavi orodja in ob zagonu vretena
+SetToolsOnOpen	Ob odprtju datoteke prikaži okno z orodji
+SndVoice	Glas
+SndFemale	ženski
+SndMale	moški
+HeadOpen	Vozlišče glave
+HeadTitle	Vozlišče vrtalne glave
+HeadOff	Se ne uporablja
+HeadDirect	Neposredno
+HeadServer	Prek strežnika
+HeadCamera	Pokaži kamero vozlišča
+HeadSpeed	Vreteno
+HeadTemp	Temperatura
+HeadProtectOpen	Zaščitni izhod ODPRT: vreteno se mora ustaviti
+HeadProtectClosed	Zaščitni izhod sklenjen
+HeadMeasure	Tu izmeri mizo
+HeadServerNote	Prek strežnika iz okna povezave: njegov naslov, žeton in ID stroja.
+HeadNoServer	V oknu povezave vpišite naslov, žeton in ID stroja strežnika.
+HeadCameraModel	Model kamere
+HeadNoLink	Vpišite naslov vozlišča (gostitelj ali gostitelj:vrata).
+HeadWaiting	Čakanje na vozlišče ...
+HeadCameraOff	Kamera izklopljena
+HeatOk	v redu
+HeatWarm	toplo
+HeatHot	VROČE
+HeatUnknown	neznano
+LightTitle	Svetlobni obroč
+LightOn	Luč vklopljena
+LightOff	Luč izklopljena
+LightNone	to vozlišče nima obroča
+InspOpen	Kontrola kakovosti
+InspTitle	Kontrola kakovosti izdelka
+InspRun	Preveri zdaj
+InspRunning	Preverjanje ...
+InspVerdictOk	V REDU
+InspVerdictNotOk	NI V REDU
+InspVerdictUnknown	NI MOGOČE OCENITI
+InspIdle	Še ni preverjeno
+InspChecks	Preverjanja
+InspCheckHoles	Izvrtane izvrtine
+InspCheckMilling	Frezani kanali
+InspProfile	Profil analizatorja
+InspPresetStandard	Standardno
+InspPresetFine	Fin korak
+InspPresetProto	Prototip
+InspLight	Luč za sliko
+InspLightKeep	kot je
+InspHolePick	Izvrtina opravila v središču
+InspNoJob	Naložite datoteko za vrtanje, da preverite izvrtine
+InspScale	Merilo (slikovnih pik na mm)
+InspCalibrate	Kalibriraj iz te izvrtine
+InspSave	Shrani profil
+InspTune	Tolerance
+InspNeedLink	Najprej nastavite vozlišče vrtalne glave (okno Vozlišče glave).
+InspHolesOk	izvrtin v redu
+InspChannel	širina kanala
+InspTuneHoleDia	Toleranca velikosti izvrtine (mm)
+InspTuneHolePos	Toleranca položaja izvrtine (mm)
+InspTuneRound	Najmanjša okroglost (1 = krog)
+InspTuneDebris	Največ ostankov okoli izvrtine
+InspTuneMillWidth	Širina kanala (mm)
+InspTuneMillTol	Toleranca širine kanala
+InspTuneMillMin	Najožji kanal (mm)
+InspTuneSpread	Najbolj neenakomeren kanal
+InspTuneMinMean	Najtemnejša sprejeta slika
+InspTuneMinSharp	Najmanjša ostrina
+InspFindHoleMissing	tam ni izvrtine
+InspFindHoleSize	napačna velikost
+InspFindHoleOff	izven središča
+InspFindHoleRound	ni okrogla
+InspFindHoleDebris	srha ali prah okoli
+InspFindHoleView	izven pogleda
+InspFindMillNone	kanalov ni videti
+InspFindMillNarrow	kanali preozki
+InspFindMillWide	kanali preširoki
+InspFindMillPinch	kanal se zoži: nevarnost kratkega stika
+InspFindMillUneven	kanali neenakomerni
+InspFindDark	slika preveč temna: več luči
+InspFindBright	slika preveč svetla: manj luči
+InspFindContrast	slika brez kontrasta
+InspFindBlurry	slika ni ostra
+InspFindScale	najprej nastavite merilo
+InspFindNothing	nobeno preverjanje ni vklopljeno
+InspFindNoHoles	v pogledu ni izvrtine opravila
+CatOpen	Katalog svedrov in frezal
+CatTitle	Katalog svedrov in frezal za tiskana vezja
+CatShank	Vsako orodje ima 1/8 palca (3,175 mm) debelo prijemalo, ki ga drži vpenjalna glava stroja Bungard. Številke so izhodišča za FR-4: preizkusite jih na odpadni plošči.
+CatAll	Vse vrste
+KindDrill	Svedri
+KindEndMill	Prstasta frezala (ravna)
+KindDownCut	Frezala z rezanjem navzdol
+KindUpCut	Frezala z rezanjem navzgor
+KindDiamond	Frezala z diamantnim brusom (koruza)
+KindVBit	V-frezala (graviranje, izolacija)
+KindBall	Krogelno frezalo
+KindSpot	Centrirni svedri
+KindCountersink	Grezila
+CatCount	orodij
+KindChipBreaker	Frezala z lomilcem ostružkov
+KindSlotDrill	Svedri za utore (za podolgovate izvrtine)
+KindCoated	Frezala z diamantno prevleko
+CatSeriesCol	serija
+CatFluteCol	L mm
+CatPick	Kliknite orodje na seznamu, da ga vidite in izveste, čemu služi.
+CatSpindle	Vrtljaji in podajanja so proizvajalčeva. Vreteno, ki se ne more vrteti tako hitro, vzame isto orodje s svojo hitrostjo, s sorazmernim podajanjem (enak odrez na vrtljaj).
+SpindleLbl	Vreteno stroja
+SpindleOriginal	Originalni Bungard, 60000 rpm
+SpindleVfd	Vreteno VFD GDZ 80-2.2, 24000 rpm
+SpindleNote	Vsako vreteno ima svoje omejitve hitrosti, podajanja in velikosti orodja (urejate jih v datoteki z nastavitvami). Katalog in orodja opozorijo, kadar orodje zahteva več, kot lahko vreteno da.
+CatSpindleLbl	Vreteno
+FitOk	To vreteno zmore s proizvajalčevimi vrednostmi.
+FitSlower	To vreteno potrebuje počasnejše vrednosti. Predlagane vrednosti:
+FitLowerRpm	Vreteno se vrti počasneje, kot zahteva orodje: XY in Z se gibljeta sorazmerno počasneje.
+FitSlowZ	Z mora na tem stroju iti počasneje.
+FitSlowXy	Podajanje XY mora na tem stroju biti počasnejše.
+FitNoThick	NEZDRUŽLJIVO: orodje je debelejše, kot ga vreteno sprejme.
+FitNoSlow	NEZDRUŽLJIVO: to vreteno se vrti veliko prepočasi za to orodje (zlomilo bi se ali opeklo ploščo).
+CatUseFor	Uporabi te vrednosti za orodje
+ToolFromCat	Katalog
+CatTaken	Vrednosti so prenesene v orodje.
+JobNothingOn	Nič za početi: vklopite vrtanje ali frezanje in vsaj eno njegovo orodje.
+JobPartHint	Kliknite za vklop ali izklop; oboje vklopljeno: najprej vrtanje, nato frezanje
+ToolOffHint	Kliknite piko orodja, da ga izpustite iz opravila
+CatFlute	Dolžina reza
+CatShankLbl	Prijemalo
+CatTotal	Skupna dolžina
+CatPoint	Kot konice
+CatSchematic	Shematska risba, ni v merilu.
+NoteDrill	Karbidni sveder za prehodne izvrtine. Majhni (pod 0,5 mm) so za prehodne kontakte (via), srednji za nožice komponent, veliki za konektorje in montažne izvrtine. Hitro ga izvlecite in zamenjajte po nekaj tisoč izvrtinah.
+NoteEndMill	Ravni utori in ravno čelo: utori, žepi, izolacija širokih prevodnikov in obris tankih plošč. Pusti čisto dno.
+NoteDownCut	Levosučno frezalo: potiska ostružke navzdol. Zgornji rob plošče ostane brez srha, zato ga uporabite za obris, kadar je vidna zgornja stran (ploščo je treba dobro pritrditi).
+NoteUpCut	Desnosučno frezalo: vleče ostružke navzgor, iz reza. Dobro za utore in žepe; lahko dvigne ploščo in pusti srh na zgornjem robu.
+NoteDiamond	Frezalo z diamantnim brusom (koruza): veliko majhnih zob, ki steklena vlakna zdrobijo, namesto da bi jih trgali. Običajna izbira za obris FR-4; pusti hrapav, a čist rob in dolgo traja.
+NoteChip	Frezalo z lomilcem ostružkov: zobje lomijo ostružke v kratke koščke, ki zlahka zapustijo rez. Reže hitreje kot diamantno brušeno in ohranja majhen srh.
+NoteVBit	V-frezalo (gravirno): širina utora je odvisna od globine, zato globina določa širino izolacije. Ozek kot s fino konico omogoča fine prevodnike.
+NoteBall	Krogelno prstasto frezalo: zaobljen utor, za graviranje in oblikovanje. Ni za izolacijo prevodnikov.
+NoteSpot	Centrirni sveder: kratka, toga konica, ki začne izvrtino natanko tam, kjer je treba, da naslednji sveder ne zdrsne. Za velike izvrtine in trde plošče.
+NoteCountersink	Grezilo: posname rob izvrtine, za glave vijakov ali odstranitev srha.
+NoteSlot	Sveder za utore: sveder s togo sredico, narejen za rezanje podolgovatih izvrtin s stranskim premikanjem med vrtanjem (utori za konektorje). Ne uporabljajte ga za okrogle izvrtine: drugi so cenejši.
+NoteCoated	Ravno frezalo z diamantno prevleko: za abrazivne plošče (FR-4 z visokim Tg, brez halogenov, ogljikova vlakna) in plošče z aluminijasto podlago, kjer se neprevlečeno izrabi. Stane več in zdrži večkrat dlje.
+LevTab	Kalibracija mize
+LevMeasure	Izmeri mizo
+LevStop	Ustavi merjenje
+LevClear	Počisti zemljevid
+LevCols	Točke vzdolž X
+LevRows	Točke vzdolž Y
+LevPoints	Izmerjene točke
+LevSpread	Razpon
+LevTilt	Nagib X / Y
+LevDemo	Simulirana tipalka: nobeno vozlišče s tipalko še ni povezano, višine prihajajo iz simulirane mize.
+LevApply	Popravi Z opravil s tem zemljevidom
+ResumeTitle	Opravilo prekinjeno
+ResumeBody	Zadnje opravilo je ostalo na pol poti (okno, računalnik ali povezava je odpovedala). Želite nadaljevati tam, kjer je ostalo?
+ResumeContinue	Nadaljuj opravilo
+ResumeCancel	Prekliči
+TabsOn	Frezaj zunanji rob z mostički
+TabsPerSide	Mostičkov na stran
+TabWidth	Širina mostička
+TabPlace	Kje so mostički
+TabEven	Enakomerno po stranici
+TabEnds	Blizu koncev stranice
+TabMiddle	Skupaj na sredini
+SetSkipLauncher	Naslednjič odpri to okno neposredno
+ColName	Ime
+ColDate	Datum spremembe (UTC)
+ColType	Vrsta
+ColSize	Velikost
+TypeFolder	Mapa
+TypeZip	Arhiv ZIP
+Places	Mesta
+PlaceExamples	Primeri
+PlaceDesktop	Namizje
+PlaceDocuments	Dokumenti
+PlaceDownloads	Prenosi
+FileNameLabel	Ime datoteke
+FilterSupported	Vse datoteke opravil
+FilterDrill	Datoteke za vrtanje
+FilterRoute	Datoteke za frezanje
+FilterZip	Arhivi ZIP
+FilterAny	Vse datoteke
+NavBack	Nazaj
+NavUp	Navzgor
+ThisPc	Ta računalnik
+SimSpeed	Hitrost simulacije
+DefaultValues	Privzeto
+TypeValueHint	Kliknite vrednost, da jo vtipkate
+TabGeneral	Splošno
+TabJob	Opravilo
+Units	Enote
+UnitMm	Milimetri (mm)
+UnitMil	Milovi (0,001 palca)
+ModelLabel	Model stroja
+ToolChange	Menjava orodja
+TcManual	Ročna (MTC)
+TcAuto	Samodejna (ATC)
+EmergencyStop	Zasilni izklop
+EmergencyShow	Pokaži gumb za zasilni izklop (lahko ga povlečete kamor koli)
+RackPlaces	mest za orodja
+Rotate	Zavrti
+FollowTool	Sledi orodju
+Enlarge2d	Povečaj pogled 2D
+MoveDesign	Premakni samo načrt
+MoveBoard	Premakni ploščo
+ShowBoth	Pokaži pogled 3D
+OnTable	Na mizi
+OnBoard	Na plošči
+Resume	Nadaljuj
+NotAnOutline	ni obris plošče (odprite njen profilni ali robni sloj)
+HolesDrilled	Skupaj izvrtanih izvrtin
+ResetCounts	Ponastavi števce
+Recent	Nedavne
+McPosition	Položaj
+McWork	Delovni
+McMachine	Stroj
+McJog	Ročni pomik
+McStep	Korak (mm)
+McHome	Referenca
+McZero	Ničla tu
+McUnlock	Odkleni
+McProgram	Program
+McOpenGcode	Odpri G-kodo
+McMdi	Ukaz (MDI)
+McSend	Pošlji
+McLog	Dnevnik
+McState	Stanje
+McController	Krmilnik
+McSimulator	Simulator
+McNotDriven	še ni krmiljeno
+McToolpath	Pot orodja
+McLine	Vrstica
+McSpindle	Vreteno
+McFeedRate	Podajanje
+McStIdle	Mirovanje
+McStRun	Teče
+McStHold	Premor
+McStHome	Referenciranje
+McStAlarm	ALARM
+McStUnknown	Neznano
+McZeroXyz	Tu nastavi delovno ničlo (X, Y in Z)
+McZeroXy	Tu nastavi delovno ničlo (X in Y)
+McGoG28	Pojdi na shranjeni položaj G28
+McGoG30	Pojdi na shranjeni položaj G30
+McGoZeroXy	Pojdi na delovno ničlo v X in Y
+McGoZeroZ	Pojdi na delovno ničlo v Z
+McOperator	Upravljavec
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	Aktivne G-kode
+McActiveM	Aktivne M-kode
+McSpeed	Hitrost
+McZeroAxis	Tu nastavi ničlo te osi
+McInputs	Vhodi
+McOutputs	Izhodi
+McJogSpeed	Hitrost ročnega pomika
+MenuFile	Datoteka
+MenuView	Pogled
+MenuHelp	Pomoč
+MenuExit	Izhod
+McSaveGcode	Shrani G-kodo ...
+McEditProgram	Uredi program ...
+McRewind	Previj na prvo vrstico
+McClearProgram	Počisti program
+McFitTable	Prilagodi mizi
+McFitProgram	Prilagodi programu
+McShowButtons	Pokaži gumbe za ničle
+McShowProgram	Pokaži program
+McShowLog	Pokaži dnevnik
+McShowRapids	Pokaži hitre premike
+McSpindleOn	Vreteno vklopljeno (M3)
+McSpindleOff	Vreteno izklopljeno (M5)
+McCoolantOn	Hlajenje vklopljeno (M8)
+McCoolantOff	Hlajenje izklopljeno (M9)
+McSetG28	Shrani ta položaj kot G28
+McSetG30	Shrani ta položaj kot G30
+McCancel	Prekliči
+McSecGeneral	Splošno
+McSecInterface	Uporabniški vmesnik
+McSecAxes	Osi in omejitve
+McSecJog	Ročni pomik
+McUnitInch	Palci
+McLimits	Meje hoda (mm): najmanj in največ za vsako os
+McDefaultStep	Korak ob zagonu (mm)
+McDefaultFeed	Hitrost ročnega pomika ob zagonu (mm/min)
+McSettingsSaved	Nastavitve so shranjene in veljajo zdaj.
+McFilterGcode	Datoteke G-kode
+McReplaceAsk	že obstaja. Ga zamenjam?
+McReplace	Zamenjaj
+McTypeName	Vpišite ime datoteke.
+McNoSuchFile	Taka datoteka ne obstaja.
+McSaveTitle	Shrani program
+McOpenTitle	Odpri program G-kode
+McAboutBody	Program EH3D za krmiljenje strojev: zaenkrat krmili simuliran stroj.
+FleetTitle	Stroji in postaje
+FleetNoStation	Brez postaje
+FleetWaiting	Čakanje na upravljavca
+FleetReady	opravil pripravljenih
+FleetUse	Uporabi ta stroj
+FleetTarget	Stroj za opravila
+FleetNoServer	Povezava ni strežnik EH3D: izberite ga v Povezavi, da vidite stroje.
+FleetRefresh	Osveži
+JobOutsideTable	Opravilo ne gre na mizo: premaknite ploščo ali povečajte mizo
+LblThickness	Debelina (mm)
+LblCopper	Baker (µm)
+LblCopperSides	Strani z bakrom
+LblOneSide	1 stran
+LblTwoSides	2 strani
+LblSize	Velikost (mm)
+LblFromFiles	Iz datotek
+LblMaker	Proizvajalec
+LblWidth	Širina
+LblDepth	Globina
+LblPhotoresist	Fotoobčutljivi lak
+LblExtraStroke	Dodatni hod (mm)
+LblFeed	Podajanje (mm/min)
+LblSpeedRpm	Hitrost (rpm)
+LblDepthMm	Globina (mm)
+LblPasses	Prehodi
+LblFeedXy	Podajanje XY (mm/min)
+LblFeedZ	Podajanje Z (mm/min)
+LblDefault	Priv.
+LblFileCoords	Koordinate datotek
+LblNoRack	Datoteka stroja še nima položajev stojala
+LblWorkArea	Delovno območje
+LblWholeMachine	Celoten stroj
+LblLayers	Sloji
+SoundFinish	Zvok ob koncu opravila
+SoundTool	Zvok ob zahtevi za orodje
+SoundCheckOk	Zvok, kadar je vizualni pregled v redu
+SoundCheckBad	Zvok, kadar vizualni pregled ni v redu
+SoundFileHint	Datoteka WAV (prazno: privzeti ton)
+SoundTest	Preizkus
+SndOff	Brez zvoka
+SndDefault	Standardni ton
+SndFile	Moja datoteka (WAV)
+SndChime	zvonec
+SndRise	naraščajoče note
+SndFall	padajoče note
+SndFanfare	fanfare
+SndTriple	tri note
+SndBell	zvonček
+SndBeep	pisk
+SndDouble	dvojni pisk
+SndTripleBeep	trojni pisk
+SndAlarm	alarm
+SndKnock	trkanje
+SndSiren	sirena

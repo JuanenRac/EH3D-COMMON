@@ -1,1 +1,425 @@
 # Català (ca): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Tema
+ThemeForge	Forja
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Windows clàssic
+ThemeSystem	Segueix els colors de Windows
+ThemeMidnight	Mitjanit
+ThemePaper	Paper (clar)
+ThemeForest	Bosc
+ThemeRetro	Terminal retro
+ThemeOcean	Oceà
+ThemeContrast	Alt contrast
+LauncherAsk	Què vols executar?
+LauncherClassicMtc	MTC clàssic
+LauncherClassicAtc	ATC clàssic
+LauncherModern	Modern (MTC + ATC)
+Remember	Recorda la meva elecció
+PressEnter	Prem Enter
+ViewPlan	2D - vista superior
+ViewMachine	3D - màquina
+LayerHoles	Forats de trepat
+LayerPaths	Camins de fresat
+LayerMachine	Màquina
+LayerGrid	Quadrícula
+Progress	Progrés
+TableFromConfig	Taula de la configuració
+Drilling	Trepat
+Routing	Fresat
+ClassicMissing	El programa clàssic no és al costat d'aquest
+Start	Inicia
+Pause	Pausa
+Stop	Atura
+Language	Idioma
+Holes	forats
+Tools	eines
+SimulatedJob	Treball simulat: no es mou cap màquina
+NoFile	Cap fitxer carregat
+Ok	D'acord
+Abort	Cancel·la
+AskSpindle	Es pot arrencar el broquer?
+AskTool	Col·loca l'eina
+Connection	Connexió
+OutsideTable	No cap a la taula
+OpenFile	Obre un fitxer
+About	Quant a
+Close	Tanca
+SettingsTitle	Configuració
+PanelTitle	Panelització
+Columns	Columnes
+Rows	Files
+SpacingX	Espaiat X (mm)
+SpacingY	Espaiat Y (mm)
+PanelModePitch	Centre a centre
+PanelModeGap	Espai entre plaques
+PanelModeFit	Omple la taula
+PanelCopies	còpies
+Apply	Aplica
+ResetView	Restableix la vista
+DropHint	Deixa aquí un fitxer .ncd, .plt o .zip
+NavHint2d	Arrossega per moure, roda per ampliar
+NavHint3d	Arrossega per girar, roda per ampliar
+Version	Versió
+Licence	Llicència
+AboutBody	La interfície moderna per a les màquines de trepar i fresar Bungard CCD.
+TableWidth	Amplada útil X (mm)
+TableDepth	Fondària útil Y (mm)
+Save	Desa
+Saved	Desat
+OpenFolderUp	Carpeta superior
+ShowDrill	Trepat
+ConnPort	Port
+ConnAddress	Adreça
+ConnToken	Testimoni d'accés
+ConnMachine	Id de la màquina
+ConnTest	Prova la connexió
+ConnWorks	La connexió funciona
+BoardTitle	Placa
+ToolsTitle	Eines
+SetAskOperator	Pregunta'm als canvis d'eina i en arrencar el broquer
+SetToolsOnOpen	Mostra la finestra d'eines en obrir un fitxer
+SndVoice	Veu
+SndFemale	femenina
+SndMale	masculina
+HeadOpen	Node del cap
+HeadTitle	Node del cap de trepar
+HeadOff	No s'usa
+HeadDirect	Directament
+HeadServer	Pel servidor
+HeadCamera	Mostra la càmera del node
+HeadSpeed	Broquer
+HeadTemp	Temperatura
+HeadProtectOpen	Sortida de protecció OBERTA: el broquer s'ha d'aturar
+HeadProtectClosed	Sortida de protecció tancada
+HeadMeasure	Mesura la taula aquí
+HeadServerNote	Pel servidor de la finestra de connexió: la seva adreça, el seu testimoni i l'id de la màquina.
+HeadNoServer	Escriu l'adreça, el testimoni i l'id de la màquina del servidor a la finestra de connexió.
+HeadCameraModel	Model de càmera
+HeadNoLink	Escriu l'adreça del node (host o host:port).
+HeadWaiting	Esperant el node...
+HeadCameraOff	Càmera apagada
+HeatOk	ok
+HeatWarm	tèbia
+HeatHot	CALENTA
+HeatUnknown	desconeguda
+LightTitle	Aro de llum
+LightOn	Llum encesa
+LightOff	Llum apagada
+LightNone	aquest node no té aro
+InspOpen	Verificació de qualitat
+InspTitle	Verificació de qualitat de la feina
+InspRun	Verifica ara
+InspRunning	Verificant...
+InspVerdictOk	CORRECTE
+InspVerdictNotOk	INCORRECTE
+InspVerdictUnknown	NO ES POT JUTJAR
+InspIdle	Encara no verificat
+InspChecks	Verificacions
+InspCheckHoles	Forats trepats
+InspCheckMilling	Canals fresats
+InspProfile	Perfil de l'analitzador
+InspPresetStandard	Estàndard
+InspPresetFine	Pas fi
+InspPresetProto	Prototip
+InspLight	Llum per a la imatge
+InspLightKeep	tal com està
+InspHolePick	Forat de la feina al centre
+InspNoJob	Carrega un fitxer de trepat per verificar-ne els forats
+InspScale	Escala (píxels per mm)
+InspCalibrate	Calibra amb aquest forat
+InspSave	Desa el perfil
+InspTune	Toleràncies
+InspNeedLink	Primer configura el node del cap de trepar (finestra Node del cap).
+InspHolesOk	forats correctes
+InspChannel	amplada del canal
+InspTuneHoleDia	Tolerància de mida del forat (mm)
+InspTuneHolePos	Tolerància de posició del forat (mm)
+InspTuneRound	Rodonesa mínima (1 = cercle)
+InspTuneDebris	Màxim de residus al voltant d'un forat
+InspTuneMillWidth	Amplada del canal (mm)
+InspTuneMillTol	Tolerància d'amplada del canal
+InspTuneMillMin	Canal més estret (mm)
+InspTuneSpread	Màxima irregularitat del canal
+InspTuneMinMean	Imatge més fosca acceptada
+InspTuneMinSharp	Nitidesa mínima
+InspFindHoleMissing	no hi ha forat
+InspFindHoleSize	mida incorrecta
+InspFindHoleOff	descentrat
+InspFindHoleRound	no és rodó
+InspFindHoleDebris	rebaves o pols al voltant
+InspFindHoleView	fora de la vista
+InspFindMillNone	no es veuen canals
+InspFindMillNarrow	canals massa estrets
+InspFindMillWide	canals massa amples
+InspFindMillPinch	un canal s'estreny: risc de curtcircuit
+InspFindMillUneven	canals irregulars
+InspFindDark	imatge massa fosca: més llum
+InspFindBright	imatge massa brillant: menys llum
+InspFindContrast	imatge sense contrast
+InspFindBlurry	imatge desenfocada
+InspFindScale	primer configura l'escala
+InspFindNothing	no hi ha cap verificació activada
+InspFindNoHoles	cap forat de la feina a la vista
+CatOpen	Catàleg de broques
+CatTitle	Catàleg de broques per a PCB
+CatShank	Totes les broques tenen la cua d'1/8 de polzada (3,175 mm) que subjecta el mandrí d'una màquina Bungard. Els valors són punts de partida per a FR-4: prova'ls en una placa de rebuig.
+CatAll	Tots els tipus
+KindDrill	Broques
+KindEndMill	Fresses planes (rectes)
+KindDownCut	Fresses de tall descendent
+KindUpCut	Fresses de tall ascendent
+KindDiamond	Fresses de tall diamant (blat de moro)
+KindVBit	Fresses en V (gravat, aïllament)
+KindBall	Fresses de punta esfèrica
+KindSpot	Broques de centrar
+KindCountersink	Avellanadors
+CatCount	broques
+KindChipBreaker	Fresses trencavirutes
+KindSlotDrill	Broques per a ranures (forats oblongs)
+KindCoated	Fresses amb recobriment de diamant
+CatSeriesCol	sèrie
+CatFluteCol	L mm
+CatPick	Fes clic en una broca de la llista per veure-la i saber per a què serveix.
+CatSpindle	Les revolucions i els avanços són els del fabricant. Un broquer que no pot girar tan ràpid fa servir la mateixa broca a la seva velocitat, amb l'avanç en proporció (la mateixa passada per volta).
+SpindleLbl	Broquer de la màquina
+SpindleOriginal	Bungard original, 60000 rpm
+SpindleVfd	Broquer VFD GDZ 80-2.2, 24000 rpm
+SpindleNote	Cada broquer té els seus límits de velocitat, avanç i mida de broca (es poden editar al fitxer de configuració). El catàleg i les eines avisen quan una broca demana més del que el broquer pot donar.
+CatSpindleLbl	Broquer
+FitOk	Aquest broquer ho pot fer amb els valors del fabricant.
+FitSlower	Aquest broquer ho necessita més lent. Valors suggerits:
+FitLowerRpm	El broquer gira més lent del que demana la broca: XY i Z van més lents en proporció.
+FitSlowZ	En aquesta màquina Z ha d'anar més lent.
+FitSlowXy	En aquesta màquina l'avanç XY ha d'anar més lent.
+FitNoThick	NO COMPATIBLE: la broca és més gruixuda del que admet aquest broquer.
+FitNoSlow	NO COMPATIBLE: aquest broquer gira massa lent per a aquesta broca (trencaria o cremaria la placa).
+CatUseFor	Usa aquests valors per a l'eina
+ToolFromCat	Catàleg
+CatTaken	Valors passats a l'eina.
+JobNothingOn	Res a fer: activa el trepat o el fresat i almenys una de les seves eines.
+JobPartHint	Fes clic per activar o desactivar; tots dos activats: primer el trepat i després el fresat
+ToolOffHint	Fes clic al punt d'una eina per deixar-la fora de la feina
+CatFlute	Longitud de tall
+CatShankLbl	Cua
+CatTotal	Longitud total
+CatPoint	Angle de punta
+CatSchematic	Dibuix esquemàtic, no a escala.
+NoteDrill	Broca de metall dur massís per a forats passants. Les petites (menys de 0,5 mm) són per a vies, les mitjanes per a potes de components i les grans per a connectors i forats de muntatge. Retira-la ràpid i canvia-la després d'uns quants milers de forats.
+NoteEndMill	Dents rectes i extrem pla: ranures, buidats, aïllament de pistes amples i contorn de plaques fines. Deixa un fons net.
+NoteDownCut	Fresa d'hèlice a l'esquerra: empeny les virutes cap avall. La vora superior de la placa surt sense rebaves; fes-la servir per al contorn quan la cara superior és la que es veu (la placa ha d'estar ben subjecta).
+NoteUpCut	Fresa d'hèlice a la dreta: arrossega les virutes cap amunt i fora del tall. Bona per a ranures i buidats; pot aixecar la placa i deixar rebaves a la vora superior.
+NoteDiamond	Fresa de tall diamant (blat de moro): moltes dents petites que mòlen la fibra de vidre en comptes d'esquinçar-la. L'opció habitual per al contorn de l'FR-4; deixa una vora rugosa però neta i dura molt.
+NoteChip	Fresa trencavirutes: les seves dents trenquen les virutes en trossos curts que surten fàcilment del tall. Talla més de pressa que el tall diamant i manté les rebaves petites.
+NoteVBit	Fresa en V (de gravat): el solc és tan ample com la fondària el fa, de manera que la fondària fixa l'amplada de l'aïllament. Un angle estret amb una punta fina permet pistes fines.
+NoteBall	Fresa de punta esfèrica: un solc arrodonit, per a gravar i modelar. No serveix per aïllar pistes.
+NoteSpot	Broca de centrar: una punta curta i rígida que inicia el forat exactament on es vol, perquè la broca següent no es desviï. Per als forats grans i les plaques dures.
+NoteCountersink	Avellanador: xamfrana la vora d'un forat, per a caps de cargol o per treure'n la rebava.
+NoteSlot	Broca per a ranures: una broca amb nucli rígid feta per tallar forats oblongs movent-se de costat mentre trepa (les ranures dels connectors). No la facis servir per a forats rodons: les altres són més barates.
+NoteCoated	Fresa d'extrem pla amb recobriment de diamant: per a plaques abrasives (FR-4 d'alt Tg, sense halògens, fibra de carboni) i per a plaques amb base d'alumini, on una sense recobriment es desgasta. Costa més i dura diverses vegades més.
+LevTab	Calibratge de la taula
+LevMeasure	Mesura la taula
+LevStop	Atura la mesura
+LevClear	Esborra el mapa
+LevCols	Punts al llarg de X
+LevRows	Punts al llarg de Y
+LevPoints	Punts mesurats
+LevSpread	Dispersió
+LevTilt	Inclinació X / Y
+LevDemo	Palpador simulat: encara no hi ha cap node palpador connectat, les alçades vénen d'una taula simulada.
+LevApply	Corregeix la Z de les feines amb aquest mapa
+ResumeTitle	Feina interrompuda
+ResumeBody	L'última feina va quedar a mitges (la finestra, l'ordinador o l'enllaç es van caure). Vols continuar des d'on era?
+ResumeContinue	Continua la feina
+ResumeCancel	Cancel·la-la
+TabsOn	Fresa l'exterior amb ponts
+TabsPerSide	Ponts per costat
+TabWidth	Amplada del pont
+TabPlace	On van els ponts
+TabEven	Repartits uniformement pel costat
+TabEnds	Prop dels extrems del costat
+TabMiddle	Junts al mig
+SetSkipLauncher	Obre aquesta finestra directament la propera vegada
+ColName	Nom
+ColDate	Data de modificació (UTC)
+ColType	Tipus
+ColSize	Mida
+TypeFolder	Carpeta
+TypeZip	Arxiu ZIP
+Places	Llocs
+PlaceExamples	Exemples
+PlaceDesktop	Escriptori
+PlaceDocuments	Documents
+PlaceDownloads	Baixades
+FileNameLabel	Nom del fitxer
+FilterSupported	Tots els fitxers de feina
+FilterDrill	Fitxers de trepat
+FilterRoute	Fitxers de fresat
+FilterZip	Arxius ZIP
+FilterAny	Tots els fitxers
+NavBack	Enrere
+NavUp	Amunt
+ThisPc	Aquest equip
+SimSpeed	Velocitat de simulació
+DefaultValues	Valors per defecte
+TypeValueHint	Fes clic en un valor per escriure'l
+TabGeneral	General
+TabJob	Feina
+Units	Unitats
+UnitMm	Mil·límetres (mm)
+UnitMil	Mils (0,001 polzada)
+ModelLabel	Model de màquina
+ToolChange	Canvi d'eina
+TcManual	Manual (MTC)
+TcAuto	Automàtic (ATC)
+EmergencyStop	Parada d'emergència
+EmergencyShow	Mostra el botó d'emergència (es pot arrossegar a qualsevol lloc)
+RackPlaces	places d'eines
+Rotate	Gira
+FollowTool	Segueix l'eina
+Enlarge2d	Amplia la vista 2D
+MoveDesign	Mou només el disseny
+MoveBoard	Mou la placa
+ShowBoth	Mostra la vista 3D
+OnTable	A la taula
+OnBoard	A la placa
+Resume	Reprèn
+NotAnOutline	no és el contorn d'una placa (obre'n el perfil o la capa de vora)
+HolesDrilled	Forats trepats en total
+ResetCounts	Reinicia els comptadors
+Recent	Recents
+McPosition	Posició
+McWork	Feina
+McMachine	Màquina
+McJog	Jog
+McStep	Pas (mm)
+McHome	Home
+McZero	Zero aquí
+McUnlock	Desbloqueja
+McProgram	Programa
+McOpenGcode	Obre G-code
+McMdi	Ordre (MDI)
+McSend	Envia
+McLog	Registre
+McState	Estat
+McController	Controlador
+McSimulator	Simulador
+McNotDriven	encara no es controla
+McToolpath	Trajectòria
+McLine	Línia
+McSpindle	Broquer
+McFeedRate	Avanç
+McStIdle	Inactiva
+McStRun	En marxa
+McStHold	En pausa
+McStHome	Referenciant
+McStAlarm	ALARMA
+McStUnknown	Desconegut
+McZeroXyz	Fixa aquí el zero de feina (X, Y i Z)
+McZeroXy	Fixa aquí el zero de feina (X i Y)
+McGoG28	Ves a la posició emmagatzemada G28
+McGoG30	Ves a la posició emmagatzemada G30
+McGoZeroXy	Ves al zero de feina en X i Y
+McGoZeroZ	Ves al zero de feina en Z
+McOperator	Operari
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	Codis G actius
+McActiveM	Codis M actius
+McSpeed	Velocitat
+McZeroAxis	Fixa aquí el zero d'aquest eix
+McInputs	Entrades
+McOutputs	Sortides
+McJogSpeed	Velocitat de jog
+MenuFile	Fitxer
+MenuView	Visualització
+MenuHelp	Ajuda
+MenuExit	Surt
+McSaveGcode	Desa G-code ...
+McEditProgram	Edita el programa ...
+McRewind	Torna a la primera línia
+McClearProgram	Esborra el programa
+McFitTable	Ajusta a la taula
+McFitProgram	Ajusta al programa
+McShowButtons	Mostra els botons dels zeros
+McShowProgram	Mostra el programa
+McShowLog	Mostra el registre
+McShowRapids	Mostra els moviments ràpids
+McSpindleOn	Broquer engegat (M3)
+McSpindleOff	Broquer aturat (M5)
+McCoolantOn	Refrigerant activat (M8)
+McCoolantOff	Refrigerant desactivat (M9)
+McSetG28	Desa aquesta posició com a G28
+McSetG30	Desa aquesta posició com a G30
+McCancel	Cancel·la
+McSecGeneral	General
+McSecInterface	Interfície d'usuari
+McSecAxes	Eixos i límits
+McSecJog	Jog
+McUnitInch	Polzades
+McLimits	Límits de recorregut (mm): mínim i màxim de cada eix
+McDefaultStep	Pas a l'inici (mm)
+McDefaultFeed	Velocitat de jog a l'inici (mm/min)
+McSettingsSaved	La configuració s'ha desat i s'aplica ara.
+McFilterGcode	Fitxers G-code
+McReplaceAsk	ja existeix. Vols substituir-lo?
+McReplace	Substitueix
+McTypeName	Escriu un nom de fitxer.
+McNoSuchFile	Aquest fitxer no existeix.
+McSaveTitle	Desa el programa
+McOpenTitle	Obre un programa G-code
+McAboutBody	El programa de control de màquina d'EH3D: de moment controla una màquina simulada.
+FleetTitle	Màquines i estacions
+FleetNoStation	Cap estació
+FleetWaiting	Esperant l'operari
+FleetReady	feines a punt
+FleetUse	Usa aquesta màquina
+FleetTarget	Màquina de les feines
+FleetNoServer	La connexió no és un servidor EH3D: tria'l a Connexió per veure les màquines.
+FleetRefresh	Actualitza
+JobOutsideTable	La feina no cap a la taula: mou la placa o fes la taula més gran
+LblThickness	Gruix (mm)
+LblCopper	Coure (µm)
+LblCopperSides	Cares de coure
+LblOneSide	1 cara
+LblTwoSides	2 cares
+LblSize	Mida (mm)
+LblFromFiles	Dels fitxers
+LblMaker	Fabricant
+LblWidth	Amplada
+LblDepth	Fondària
+LblPhotoresist	Reserva fotosensible
+LblExtraStroke	Cursa extra (mm)
+LblFeed	Avanç (mm/min)
+LblSpeedRpm	Velocitat (rpm)
+LblDepthMm	Fondària (mm)
+LblPasses	Passades
+LblFeedXy	Avanç XY (mm/min)
+LblFeedZ	Avanç Z (mm/min)
+LblDefault	Def.
+LblFileCoords	Coordenades dels fitxers
+LblNoRack	El fitxer de la màquina encara no té posicions de magatzem
+LblWorkArea	Àrea de treball
+LblWholeMachine	Tota la màquina
+LblLayers	Capes
+SoundFinish	So en acabar la feina
+SoundTool	So quan es demana una eina
+SoundCheckOk	So quan la verificació visual és correcta
+SoundCheckBad	So quan la verificació visual no és correcta
+SoundFileHint	Fitxer WAV (buit: el to per defecte)
+SoundTest	Prova
+SndOff	Sense so
+SndDefault	El to estàndard
+SndFile	Un fitxer meu (WAV)
+SndChime	campaneta
+SndRise	notes ascendents
+SndFall	notes descendents
+SndFanfare	fanfàrria
+SndTriple	tres notes
+SndBell	campana
+SndBeep	pip
+SndDouble	pip doble
+SndTripleBeep	pip triple
+SndAlarm	alarma
+SndKnock	cop
+SndSiren	sirena

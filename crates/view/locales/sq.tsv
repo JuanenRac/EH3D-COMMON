@@ -1,1 +1,425 @@
 # Shqip (sq): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Tema
+ThemeForge	Forge
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Windows klasik
+ThemeSystem	Ngjyrat e Windows
+ThemeMidnight	Mesnata
+ThemePaper	Letër (e çelët)
+ThemeForest	Pylli
+ThemeRetro	Terminal retro
+ThemeOcean	Oqeani
+ThemeContrast	Kontrast i lartë
+LauncherAsk	Çfarë dëshironi të nisni?
+LauncherClassicMtc	MTC klasik
+LauncherClassicAtc	ATC klasik
+LauncherModern	Modern (MTC + ATC)
+Remember	Mbaj mend zgjedhjen time
+PressEnter	Shtypni Enter
+ViewPlan	2D - pamje nga sipër
+ViewMachine	3D - makina
+LayerHoles	Vrimat e shpimit
+LayerPaths	Shtigjet e frezimit
+LayerMachine	Makina
+LayerGrid	Rrjeta
+Progress	Përparimi
+TableFromConfig	Tavolina nga konfigurimi
+Drilling	Shpim
+Routing	Frezim
+ClassicMissing	Programi klasik nuk është pranë këtij
+Start	Nis
+Pause	Pauzë
+Stop	Ndalo
+Language	Gjuha
+Holes	vrima
+Tools	mjete
+SimulatedJob	Punë e simuluar: asnjë makinë nuk lëviz
+NoFile	Asnjë skedar i ngarkuar
+Ok	Në rregull
+Abort	Anulo
+AskSpindle	Të niset boshti?
+AskTool	Vendosni mjetin
+Connection	Lidhja
+OutsideTable	Nuk del në tavolinë
+OpenFile	Hap skedarin
+About	Rreth
+Close	Mbyll
+SettingsTitle	Cilësimet
+PanelTitle	Panelizimi
+Columns	Kolonat
+Rows	Rreshtat
+SpacingX	Hapësira X (mm)
+SpacingY	Hapësira Y (mm)
+PanelModePitch	Nga qendra në qendër
+PanelModeGap	Hapësira mes pllakave
+PanelModeFit	Mbush tavolinën
+PanelCopies	kopje
+Apply	Zbato
+ResetView	Rivendos pamjen
+DropHint	Tërhiqni këtu një skedar .ncd, .plt ose .zip
+NavHint2d	Tërhiqni për të lëvizur, rrotëza për zmadhim
+NavHint3d	Tërhiqni për të rrotulluar, rrotëza për zmadhim
+Version	Versioni
+Licence	Licenca
+AboutBody	Ndërfaqja moderne për makinat e shpimit dhe frezimit Bungard CCD.
+TableWidth	Gjerësia e përdorshme X (mm)
+TableDepth	Thellësia e përdorshme Y (mm)
+Save	Ruaj
+Saved	U ruajt
+OpenFolderUp	Dosja mëmë
+ShowDrill	Shpim
+ConnPort	Porta
+ConnAddress	Adresa
+ConnToken	Token-i i hyrjes
+ConnMachine	ID e makinës
+ConnTest	Provo lidhjen
+ConnWorks	Lidhja funksionon
+BoardTitle	Pllaka
+ToolsTitle	Mjetet
+SetAskOperator	Më pyet gjatë ndërrimit të mjetit dhe nisjes së boshtit
+SetToolsOnOpen	Shfaq dritaren e mjeteve kur hap një skedar
+SndVoice	Zëri
+SndFemale	femëror
+SndMale	mashkullor
+HeadOpen	Nyja e kokës
+HeadTitle	Nyja e kokës së shpimit
+HeadOff	Nuk përdoret
+HeadDirect	Drejtpërdrejt
+HeadServer	Përmes serverit
+HeadCamera	Shfaq kamerën e nyjes
+HeadSpeed	Boshti
+HeadTemp	Temperatura
+HeadProtectOpen	Dalja e mbrojtjes E HAPUR: boshti duhet të ndalojë
+HeadProtectClosed	Dalja e mbrojtjes e mbyllur
+HeadMeasure	Mat tavolinën këtu
+HeadServerNote	Përmes serverit të dritares së lidhjes: adresa, token-i dhe ID e makinës së tij.
+HeadNoServer	Shkruani adresën, token-in dhe ID e makinës së serverit në dritaren e lidhjes.
+HeadCameraModel	Modeli i kamerës
+HeadNoLink	Shkruani adresën e nyjes (host ose host:port).
+HeadWaiting	Pritje për nyjen...
+HeadCameraOff	Kamera e fikur
+HeatOk	në rregull
+HeatWarm	e ngrohtë
+HeatHot	SHUMË E NXEHTË
+HeatUnknown	e panjohur
+LightTitle	Unaza e dritës
+LightOn	Drita ndezur
+LightOff	Drita fikur
+LightNone	nuk ka unazë në këtë nyje
+InspOpen	Kontrolli i cilësisë
+InspTitle	Kontrolli i cilësisë së punës
+InspRun	Kontrollo tani
+InspRunning	Duke kontrolluar...
+InspVerdictOk	NË RREGULL
+InspVerdictNotOk	JO NË RREGULL
+InspVerdictUnknown	NUK MUND TË GJYKOHET
+InspIdle	Ende pa kontrolluar
+InspChecks	Kontrollet
+InspCheckHoles	Vrimat e shpuara
+InspCheckMilling	Kanalet e frezuara
+InspProfile	Profili i analizuesit
+InspPresetStandard	Standard
+InspPresetFine	Hap i imët
+InspPresetProto	Prototip
+InspLight	Drita për fotografinë
+InspLightKeep	siç është
+InspHolePick	Vrima e punës në qendër
+InspNoJob	Ngarkoni një skedar shpimi për të kontrolluar vrimat
+InspScale	Shkalla (piksele për mm)
+InspCalibrate	Kalibro nga kjo vrimë
+InspSave	Ruaj profilin
+InspTune	Tolerancat
+InspNeedLink	Së pari caktoni nyjen e kokës së shpimit (dritarja Nyja e kokës).
+InspHolesOk	vrima në rregull
+InspChannel	gjerësia e kanalit
+InspTuneHoleDia	Toleranca e madhësisë së vrimës (mm)
+InspTuneHolePos	Toleranca e pozicionit të vrimës (mm)
+InspTuneRound	Rrumbullakësia minimale (1 = rreth)
+InspTuneDebris	Papastërtia maksimale rreth vrimës
+InspTuneMillWidth	Gjerësia e kanalit (mm)
+InspTuneMillTol	Toleranca e gjerësisë së kanalit
+InspTuneMillMin	Kanali më i ngushtë (mm)
+InspTuneSpread	Parregullsia maksimale e kanalit
+InspTuneMinMean	Fotografia më e errët e pranuar
+InspTuneMinSharp	Mprehtësia minimale
+InspFindHoleMissing	nuk ka vrimë aty
+InspFindHoleSize	madhësi e gabuar
+InspFindHoleOff	jashtë qendrës
+InspFindHoleRound	jo e rrumbullakët
+InspFindHoleDebris	gërvishtje ose pluhur përreth
+InspFindHoleView	jashtë pamjes
+InspFindMillNone	nuk shihen kanale
+InspFindMillNarrow	kanalet janë shumë të ngushta
+InspFindMillWide	kanalet janë shumë të gjera
+InspFindMillPinch	një kanal ngushtohet: rrezik për lidhje të shkurtër
+InspFindMillUneven	kanale të parregullta
+InspFindDark	fotografia është shumë e errët: më shumë dritë
+InspFindBright	fotografia është shumë e ndritshme: më pak dritë
+InspFindContrast	fotografi pa kontrast
+InspFindBlurry	fotografia është jashtë fokusit
+InspFindScale	së pari caktoni shkallën
+InspFindNothing	asnjë kontroll nuk është i ndezur
+InspFindNoHoles	asnjë vrimë e punës në pamje
+CatOpen	Katalogu i mjeteve
+CatTitle	Katalogu i mjeteve për PCB
+CatShank	Çdo mjet ka bishtin 1/8 inç (3.175 mm) që mban mandrina e një makine Bungard. Numrat janë pika nisjeje për FR-4: provojini në një copë pllake.
+CatAll	Të gjitha llojet
+KindDrill	Brima
+KindEndMill	Frezat ballore (të sheshta)
+KindDownCut	Freza me prerje poshtë
+KindUpCut	Freza me prerje lart
+KindDiamond	Freza me prerje diamanti (misër)
+KindVBit	Mjete V (gravim, izolim)
+KindBall	Freza me majë sferike
+KindSpot	Brima qendërzuese
+KindCountersink	Gropëzues
+CatCount	mjete
+KindChipBreaker	Freza thyese ashklash
+KindSlotDrill	Brima për kanale (për vrima të zgjatura)
+KindCoated	Freza me veshje diamanti
+CatSeriesCol	seria
+CatFluteCol	L mm
+CatPick	Klikoni një mjet të listës për ta parë dhe për çfarë shërben.
+CatSpindle	Rrotullimet dhe avancimet janë të prodhuesit. Një bosht që nuk rrotullohet kaq shpejt e merr të njëjtin mjet me shpejtësinë e vet, me avancim në përpjesëtim (i njëjti kafshim për çdo rrotullim).
+SpindleLbl	Boshti i makinës
+SpindleOriginal	Bungard origjinal, 60000 rpm
+SpindleVfd	Bosht VFD GDZ 80-2.2, 24000 rpm
+SpindleNote	Çdo bosht ka kufijtë e vet të shpejtësisë, avancimit dhe madhësisë së mjetit (mund të ndryshohen në skedarin e cilësimeve). Katalogu dhe mjetet paralajmërojnë kur një mjet kërkon më shumë se sa mund të japë boshti.
+CatSpindleLbl	Boshti
+FitOk	Ky bosht e pranon me vlerat e prodhuesit.
+FitSlower	Ky bosht e kërkon më ngadalë. Vlera të sugjeruara:
+FitLowerRpm	Boshti rrotullohet më ngadalë se sa kërkon mjeti: XY dhe Z shkojnë më ngadalë në përpjesëtim.
+FitSlowZ	Z duhet të shkojë më ngadalë në këtë makinë.
+FitSlowXy	Avancimi XY duhet të shkojë më ngadalë në këtë makinë.
+FitNoThick	JO I PËRSHTATSHËM: mjeti është më i trashë se sa pranon ky bosht.
+FitNoSlow	JO I PËRSHTATSHËM: ky bosht rrotullohet shumë ngadalë për këtë mjet (do të thyhej ose do ta digjte pllakën).
+CatUseFor	Përdor këto vlera për mjetin
+ToolFromCat	Katalogu
+CatTaken	Vlerat u morën në mjet.
+JobNothingOn	Asgjë për të bërë: ndizni shpimin ose frezimin dhe të paktën një mjet të tij.
+JobPartHint	Klikoni për ta ndezur ose fikur; të dyja ndezur: shpimi e pastaj frezimi
+ToolOffHint	Klikoni pikën e një mjeti për ta lënë jashtë punës
+CatFlute	Gjatësia e prerjes
+CatShankLbl	Bishti
+CatTotal	Gjatësia totale
+CatPoint	Këndi i majës
+CatSchematic	Vizatim skematik, jo në shkallë.
+NoteDrill	Brimë prej karbidi të plotë për vrima kalimtare. Të vogla (nën 0.5 mm) janë për via, të mesmet për këmbët e komponentëve, të mëdhenjtë për konektorë dhe vrima montimi. Tërhiqeni shpejt dhe ndërrojeni pas disa mijëra vrimash.
+NoteEndMill	Kanale të drejta dhe skaj i sheshtë: kanale, xhepa, izolim i shtigjeve të gjera dhe kontura e pllakave të holla. Lë një fund të pastër.
+NoteDownCut	Frezë e majtë: i shtyn ashklat poshtë. Skaji i sipërm i pllakës del pa gërvishtje, ndaj përdoreni për konturën kur ana e sipërme është ajo që shihet (pllaka duhet të mbahet mirë).
+NoteUpCut	Frezë e djathtë: i tërheq ashklat lart dhe jashtë prerjes. E mirë për kanale dhe xhepa; mund ta ngrejë pllakën dhe të lërë gërvishtje në skajin e sipërm.
+NoteDiamond	Frezë me prerje diamanti (misër): shumë dhëmbë të vegjël që bluajnë fibrën e qelqit në vend që ta çajnë. Zgjedhja e zakonshme për konturën e FR-4; lë një skaj të ashpër por të pastër dhe zgjat gjatë.
+NoteChip	Frezë thyese ashklash: dhëmbët e saj i thyejnë ashklat në copa të shkurtra që dalin lehtë nga prerja. Pret më shpejt se prerja me diamant dhe i mban gërvishtjet të vogla.
+NoteVBit	Mjet V (për gravim): hendeku është aq i gjerë sa e bën thellësia, ndaj thellësia përcakton gjerësinë e izolimit. Një kënd i ngushtë me majë të hollë lejon shtigje të holla.
+NoteBall	Frezë ballore me majë sferike: hendek i rrumbullakët, për gravim dhe formësim. Jo për izolimin e shtigjeve.
+NoteSpot	Brimë qendërzuese: majë e shkurtër dhe e ngurtë që fillon vrimën saktë ku duhet, që brima tjetër të mos endet. Për vrimat e mëdha dhe pllakat e forta.
+NoteCountersink	Gropëzues: pret një pjerrësi në skajin të vrimës, për koka vidash ose për të hequr gërvishtjen.
+NoteSlot	Brimë kanali: brimë me bërthamë të ngurtë e bërë për të prerë vrima të zgjatura duke lëvizur anash gjatë shpimit (kanalet e konektorëve). Mos e përdorni për vrima të rrumbullakëta: të tjerat janë më të lira.
+NoteCoated	Frezë e sheshtë me veshje diamanti: për pllaka gërryese (FR-4 me Tg të lartë, pa halogjene, fibër karboni) dhe pllaka me bazë alumini, ku ajo pa veshje konsumohet. Kushton më shumë dhe zgjat disa herë më gjatë.
+LevTab	Kalibrimi i tavolinës
+LevMeasure	Mat tavolinën
+LevStop	Ndalo matjen
+LevClear	Pastro hartën
+LevCols	Pika përgjatë X
+LevRows	Pika përgjatë Y
+LevPoints	Pika të matura
+LevSpread	Shpërndarja
+LevTilt	Pjerrësia X / Y
+LevDemo	Prekës i simuluar: asnjë nyje prekësi nuk është lidhur ende, lartësitë vijnë nga një tavolinë e simuluar.
+LevApply	Korrigjo Z-në e punëve me këtë hartë
+ResumeTitle	Puna u ndërpre
+ResumeBody	Puna e fundit mbeti në mes (dritarja, kompjuteri ose lidhja ra). Dëshironi të vazhdoni nga ku mbeti?
+ResumeContinue	Vazhdo punën
+ResumeCancel	Anuloje
+TabsOn	Frezo anën e jashtme me ura mbajtëse
+TabsPerSide	Ura për anë
+TabWidth	Gjerësia e urës
+TabPlace	Ku vendosen urat
+TabEven	Të shpërndara njëtrajtshëm përgjatë anës
+TabEnds	Afër skajeve të anës
+TabMiddle	Bashkë në mes
+SetSkipLauncher	Hap këtë dritare drejtpërdrejt herën tjetër
+ColName	Emri
+ColDate	Data e ndryshimit (UTC)
+ColType	Lloji
+ColSize	Madhësia
+TypeFolder	Dosje
+TypeZip	Arkiv ZIP
+Places	Vendet
+PlaceExamples	Shembuj
+PlaceDesktop	Desktopi
+PlaceDocuments	Dokumentet
+PlaceDownloads	Shkarkimet
+FileNameLabel	Emri i skedarit
+FilterSupported	Të gjithë skedarët e punës
+FilterDrill	Skedarët e shpimit
+FilterRoute	Skedarët e frezimit
+FilterZip	Arkivat ZIP
+FilterAny	Të gjithë skedarët
+NavBack	Prapa
+NavUp	Lart
+ThisPc	Ky kompjuter
+SimSpeed	Shpejtësia e simulimit
+DefaultValues	Parazgjedhjet
+TypeValueHint	Klikoni një vlerë për ta shkruar
+TabGeneral	Të përgjithshme
+TabJob	Puna
+Units	Njësitë
+UnitMm	Milimetra (mm)
+UnitMil	Mil (0.001 inç)
+ModelLabel	Modeli i makinës
+ToolChange	Ndërrimi i mjetit
+TcManual	Manual (MTC)
+TcAuto	Automatik (ATC)
+EmergencyStop	Ndalim emergjent
+EmergencyShow	Shfaq butonin e emergjencës (mund të zhvendoset kudo)
+RackPlaces	vende mjetesh
+Rotate	Rrotulloje
+FollowTool	Ndiq mjetin
+Enlarge2d	Zmadho pamjen 2D
+MoveDesign	Lëviz vetëm dizajnin
+MoveBoard	Lëviz pllakën
+ShowBoth	Shfaq pamjen 3D
+OnTable	Në tavolinë
+OnBoard	Në pllakë
+Resume	Vazhdo
+NotAnOutline	nuk është kontura e një pllake (hapni shtresën e profilit ose të skajit)
+HolesDrilled	Vrima të shpuara gjithsej
+ResetCounts	Rivendos numëruesit
+Recent	Të fundit
+McPosition	Pozicioni
+McWork	Pune
+McMachine	Makinë
+McJog	Lëvizje manuale
+McStep	Hapi (mm)
+McHome	Home
+McZero	Zero këtu
+McUnlock	Zhblloko
+McProgram	Programi
+McOpenGcode	Hap G-code
+McMdi	Komandë (MDI)
+McSend	Dërgo
+McLog	Regjistri
+McState	Gjendja
+McController	Kontrolluesi
+McSimulator	Simulatori
+McNotDriven	ende nuk drejtohet
+McToolpath	Shtegu i mjetit
+McLine	Rreshti
+McSpindle	Boshti
+McFeedRate	Avancimi
+McStIdle	Në pushim
+McStRun	Në punë
+McStHold	Në pauzë
+McStHome	Home në vazhdim
+McStAlarm	ALARM
+McStUnknown	E panjohur
+McZeroXyz	Cakto zeron e punës këtu (X, Y dhe Z)
+McZeroXy	Cakto zeron e punës këtu (X dhe Y)
+McGoG28	Shko te pozicioni i ruajtur G28
+McGoG30	Shko te pozicioni i ruajtur G30
+McGoZeroXy	Shko te zeroja e punës në X dhe Y
+McGoZeroZ	Shko te zeroja e punës në Z
+McOperator	Operatori
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	G-kodet aktive
+McActiveM	M-kodet aktive
+McSpeed	Shpejtësia
+McZeroAxis	Cakto zeron e këtij boshti këtu
+McInputs	Hyrjet
+McOutputs	Daljet
+McJogSpeed	Shpejtësia e lëvizjes manuale
+MenuFile	Skedari
+MenuView	Pamja
+MenuHelp	Ndihma
+MenuExit	Dil
+McSaveGcode	Ruaj G-code ...
+McEditProgram	Redakto programin ...
+McRewind	Kthe te rreshti i parë
+McClearProgram	Pastro programin
+McFitTable	Përshtat tavolinën
+McFitProgram	Përshtat programin
+McShowButtons	Shfaq butonat e zerove
+McShowProgram	Shfaq programin
+McShowLog	Shfaq regjistrin
+McShowRapids	Shfaq lëvizjet e shpejta
+McSpindleOn	Boshti ndezur (M3)
+McSpindleOff	Boshti fikur (M5)
+McCoolantOn	Ftohja ndezur (M8)
+McCoolantOff	Ftohja fikur (M9)
+McSetG28	Ruaj këtë pozicion si G28
+McSetG30	Ruaj këtë pozicion si G30
+McCancel	Anulo
+McSecGeneral	Të përgjithshme
+McSecInterface	Ndërfaqja e përdoruesit
+McSecAxes	Boshtet dhe kufijtë
+McSecJog	Lëvizje manuale
+McUnitInch	Inç
+McLimits	Kufijtë e lëvizjes (mm): minimumi dhe maksimumi i çdo boshti
+McDefaultStep	Hapi në fillim (mm)
+McDefaultFeed	Shpejtësia e lëvizjes manuale në fillim (mm/min)
+McSettingsSaved	Cilësimet u ruajtën dhe hyjnë në fuqi tani.
+McFilterGcode	Skedarët G-code
+McReplaceAsk	ekziston tashmë. Ta zëvendësoj?
+McReplace	Zëvendëso
+McTypeName	Shkruani një emër skedari.
+McNoSuchFile	Nuk ka një skedar të tillë.
+McSaveTitle	Ruaj programin
+McOpenTitle	Hap një program G-code
+McAboutBody	Programi i kontrollit të makinës i EH3D: për momentin drejton një makinë të simuluar.
+FleetTitle	Makinat dhe stacionet
+FleetNoStation	Pa stacion
+FleetWaiting	Në pritje të operatorit
+FleetReady	punë gati
+FleetUse	Përdor këtë makinë
+FleetTarget	Makina e punëve
+FleetNoServer	Lidhja nuk është server EH3D: zgjidheni te Lidhja për të parë makinat.
+FleetRefresh	Rifresko
+JobOutsideTable	Puna nuk del në tavolinë: lëvizni pllakën ose zmadhoni tavolinën
+LblThickness	Trashësia (mm)
+LblCopper	Bakri (µm)
+LblCopperSides	Anët me bakër
+LblOneSide	1 anë
+LblTwoSides	2 anë
+LblSize	Madhësia (mm)
+LblFromFiles	Nga skedarët
+LblMaker	Prodhuesi
+LblWidth	Gjerësia
+LblDepth	Thellësia
+LblPhotoresist	Llak fotosensitiv
+LblExtraStroke	Rrugë shtesë (mm)
+LblFeed	Avancimi (mm/min)
+LblSpeedRpm	Shpejtësia (rpm)
+LblDepthMm	Thellësia (mm)
+LblPasses	Kalime
+LblFeedXy	Avancimi XY (mm/min)
+LblFeedZ	Avancimi Z (mm/min)
+LblDefault	Par.
+LblFileCoords	Koordinatat e skedarëve
+LblNoRack	Skedari i makinës nuk ka ende pozicione magazine
+LblWorkArea	Zona e punës
+LblWholeMachine	E gjithë makina
+LblLayers	Shtresat
+SoundFinish	Tingull kur përfundon puna
+SoundTool	Tingull kur kërkohet një mjet
+SoundCheckOk	Tingull kur kontrolli vizual është i saktë
+SoundCheckBad	Tingull kur kontrolli vizual nuk është i saktë
+SoundFileHint	Skedar WAV (bosh: toni i parazgjedhur)
+SoundTest	Provo
+SndOff	Pa tingull
+SndDefault	Toni standard
+SndFile	Një skedar imi (WAV)
+SndChime	kambanë e lehtë
+SndRise	nota ngjitëse
+SndFall	nota zbritëse
+SndFanfare	fanfarë
+SndTriple	tri nota
+SndBell	zile
+SndBeep	bip
+SndDouble	bip i dyfishtë
+SndTripleBeep	bip i trefishtë
+SndAlarm	alarm
+SndKnock	trokitje
+SndSiren	sirenë
