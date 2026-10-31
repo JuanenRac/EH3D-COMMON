@@ -443,3 +443,8 @@ LinkNode	EH3D čvor
 LinkServer	EH3D poslužitelj
 CatTip	vrh
 LinkDemo	Demo
+CatBoardApplied	Materijal ploče:
+CatNoteLowerRpm	Ovaj materijal traži manje okretaja nego alat: brzina je smanjena.
+CatNoteBelowSpindle	Ovaj materijal traži manje okretaja nego što vreteno može dati: korišten je minimum vretena, prebrz za materijal.
+CatNoteFluteShort	Duljina rezanja ovog alata ne prolazi kroz ploču i dodatak: neće prerezati do kraja.
+ToolBitWarn	Provjerite alat iz kataloga

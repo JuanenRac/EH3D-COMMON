@@ -443,3 +443,8 @@ LinkNode	Node EH3D
 LinkServer	Servidor EH3D
 CatTip	punta
 LinkDemo	Demo
+CatBoardApplied	Material de la placa:
+CatNoteLowerRpm	Aquest material demana menys voltes que l'eina: s'ha baixat la velocitat.
+CatNoteBelowSpindle	Aquest material demana menys voltes de les que pot donar aquest fus: s'usa el mínim del fus, massa ràpid per al material.
+CatNoteFluteShort	La longitud de tall d'aquesta eina no travessa la placa més el sobrant: no tallarà del tot.
+ToolBitWarn	Reviseu l'eina del catàleg

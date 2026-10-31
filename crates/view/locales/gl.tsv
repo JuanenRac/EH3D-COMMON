@@ -443,3 +443,8 @@ LinkNode	Nodo EH3D
 LinkServer	Servidor EH3D
 CatTip	punta
 LinkDemo	Demo
+CatBoardApplied	Material da placa:
+CatNoteLowerRpm	Este material pide menos voltas ca a ferramenta: baixouse a velocidade.
+CatNoteBelowSpindle	Este material pide menos voltas das que pode dar este fuso: úsase o mínimo do fuso, demasiado rápido para o material.
+CatNoteFluteShort	A lonxitude de corte desta ferramenta non atravesa a placa máis o sobrante: non cortará por completo.
+ToolBitWarn	Revisa a ferramenta do catálogo

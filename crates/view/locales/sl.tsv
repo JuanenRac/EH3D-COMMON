@@ -443,3 +443,8 @@ LinkNode	EH3D vozlišče
 LinkServer	EH3D strežnik
 CatTip	konica
 LinkDemo	Predstavitev
+CatBoardApplied	Material plošče:
+CatNoteLowerRpm	Ta material zahteva manj vrtljajev kot orodje: hitrost je znižana.
+CatNoteBelowSpindle	Ta material zahteva manj vrtljajev, kot jih lahko da vreteno: uporabljen je minimum vretena, ki je za material prehiter.
+CatNoteFluteShort	Dolžina rezanja orodja ne sega skozi ploščo in dodatek: ne bo prerezalo do konca.
+ToolBitWarn	Preverite orodje iz kataloga

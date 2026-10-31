@@ -443,3 +443,8 @@ LinkNode	Nód EH3D
 LinkServer	Freastalaí EH3D
 CatTip	barr
 LinkDemo	Taispeántas
+CatBoardApplied	Ábhar an phláta:
+CatNoteLowerRpm	Iarrann an t-ábhar seo níos lú rothlaí ná an uirlis: laghdaíodh an luas.
+CatNoteBelowSpindle	Iarrann an t-ábhar seo níos lú rothlaí ná mar is féidir leis an seafta a thabhairt: úsáideadh íosmhéid an tseafta, atá róthapa don ábhar.
+CatNoteFluteShort	Ní théann fad gearrtha na huirlise seo tríd an bpláta móide an barrachas: ní ghearrfaidh sí go hiomlán.
+ToolBitWarn	Seiceáil uirlis an chatalóige

@@ -443,3 +443,8 @@ LinkNode	EH3D uzel
 LinkServer	EH3D server
 CatTip	hrot
 LinkDemo	Demo
+CatBoardApplied	Materiál desky:
+CatNoteLowerRpm	Tento materiál vyžaduje méně otáček, než nástroj udává: otáčky byly sníženy.
+CatNoteBelowSpindle	Tento materiál vyžaduje méně otáček, než vřeteno dokáže: použity minimální otáčky vřetena, pro materiál příliš rychlé.
+CatNoteFluteShort	Délka břitu tohoto nástroje nestačí na desku a přídavek: neprořízne celou tloušťku.
+ToolBitWarn	Zkontrolujte nástroj z katalogu

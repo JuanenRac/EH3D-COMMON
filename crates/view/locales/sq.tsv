@@ -443,3 +443,8 @@ LinkNode	Nyje EH3D
 LinkServer	Server EH3D
 CatTip	maja
 LinkDemo	Demo
+CatBoardApplied	Materiali i pllakës:
+CatNoteLowerRpm	Ky material kërkon më pak rrotullime se mjeti: shpejtësia u ul.
+CatNoteBelowSpindle	Ky material kërkon më pak rrotullime nga sa mund të japë ky bosht: u përdor minimumi i boshtit, shumë i shpejtë për materialin.
+CatNoteFluteShort	Gjatësia e prerjes së mjetit nuk kalon përmes pllakës dhe teprices: nuk do ta presë plotësisht.
+ToolBitWarn	Kontrolloni mjetin e katalogut

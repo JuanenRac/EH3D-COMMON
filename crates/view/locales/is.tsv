@@ -443,3 +443,8 @@ LinkNode	EH3D hnútur
 LinkServer	EH3D netþjónn
 CatTip	oddur
 LinkDemo	Sýnishorn
+CatBoardApplied	Efni plötunnar:
+CatNoteLowerRpm	Þetta efni krefst færri snúninga en verkfærið: hraðinn var lækkaður.
+CatNoteBelowSpindle	Þetta efni krefst færri snúninga en snældan getur gefið: lágmark snældunnar var notað, of hratt fyrir efnið.
+CatNoteFluteShort	Skurðlengd verkfærisins nær ekki í gegnum plötuna og umframmálið: það sker ekki alveg í gegn.
+ToolBitWarn	Athugaðu verkfæri úr skránni

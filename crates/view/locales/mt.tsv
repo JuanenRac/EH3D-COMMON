@@ -443,3 +443,8 @@ LinkNode	Nodu EH3D
 LinkServer	Server EH3D
 CatTip	ponta
 LinkDemo	Demo
+CatBoardApplied	Materjal tal-pjanċa:
+CatNoteLowerRpm	Dan il-materjal jitlob inqas dawriet mill-għodda: il-veloċità tnaqqset.
+CatNoteBelowSpindle	Dan il-materjal jitlob inqas dawriet minn dak li jista' jagħti dan l-assi: intuża l-minimu tal-assi, mgħaġġel wisq għall-materjal.
+CatNoteFluteShort	It-tul tal-qtugħ ta' din l-għodda ma jaqsamx il-pjanċa flimkien mal-estra: ma taqtax kollha kemm hi.
+ToolBitWarn	Iċċekkja l-għodda tal-katalgu

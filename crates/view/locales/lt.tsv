@@ -443,3 +443,8 @@ LinkNode	EH3D mazgas
 LinkServer	EH3D serveris
 CatTip	galas
 LinkDemo	Demo
+CatBoardApplied	Plokštės medžiaga:
+CatNoteLowerRpm	Ši medžiaga reikalauja mažiau apsisukimų nei įrankis: greitis sumažintas.
+CatNoteBelowSpindle	Ši medžiaga reikalauja mažiau apsisukimų, nei gali suteikti šis suklys: naudojamas mažiausias suklio greitis, per didelis šiai medžiagai.
+CatNoteFluteShort	Įrankio pjovimo ilgis neprasiskverbia per plokštę ir atsargą: jis nepjaus iki galo.
+ToolBitWarn	Patikrinkite katalogo įrankį

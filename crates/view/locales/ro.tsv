@@ -443,3 +443,8 @@ LinkNode	Nod EH3D
 LinkServer	Server EH3D
 CatTip	vârf
 LinkDemo	Demo
+CatBoardApplied	Materialul plăcii:
+CatNoteLowerRpm	Acest material cere mai puține rotații decât scula: viteza a fost redusă.
+CatNoteBelowSpindle	Acest material cere mai puține rotații decât poate da acest ax: s-a folosit minimul axului, prea rapid pentru material.
+CatNoteFluteShort	Lungimea de tăiere a sculei nu trece prin placă plus adaos: nu va tăia complet.
+ToolBitWarn	Verificați scula din catalog

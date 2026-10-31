@@ -443,3 +443,8 @@ LinkNode	EH3D sõlm
 LinkServer	EH3D server
 CatTip	ots
 LinkDemo	Demo
+CatBoardApplied	Plaadi materjal:
+CatNoteLowerRpm	See materjal nõuab vähem pöördeid, kui tööriist ette näeb: kiirust on vähendatud.
+CatNoteBelowSpindle	See materjal nõuab vähem pöördeid, kui spindel suudab anda: kasutati spindli miinimumi, mis on materjalile liiga kiire.
+CatNoteFluteShort	Tööriista lõikepikkus ei ulatu läbi plaadi ja varu: see ei lõika päris läbi.
+ToolBitWarn	Kontrollige kataloogi tööriista

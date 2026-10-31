@@ -137,3 +137,7 @@ SndDouble	bipe duplo
 SndTripleBeep	bipe triplo
 SndKnock	batida
 OpenManyHint	Ctrl+clique ou Shift+clique escolhe vários arquivos (furação e fresamento); abrem juntos
+CatNoteLowerRpm	Este material pede menos rotações que a ferramenta: a velocidade foi reduzida.
+CatNoteBelowSpindle	Este material pede menos rotações do que este fuso consegue dar: é usado o mínimo do fuso, rápido demais para o material.
+CatNoteFluteShort	O comprimento de corte desta ferramenta não atravessa a placa mais a sobra: ela não vai cortar por completo.
+ToolBitWarn	Verifique a ferramenta do catálogo

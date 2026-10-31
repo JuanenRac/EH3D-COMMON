@@ -443,3 +443,8 @@ LinkNode	EH3D węzeł
 LinkServer	EH3D serwer
 CatTip	końcówka
 LinkDemo	Demo
+CatBoardApplied	Materiał płytki:
+CatNoteLowerRpm	Ten materiał wymaga mniej obrotów niż narzędzie: prędkość obniżono.
+CatNoteBelowSpindle	Ten materiał wymaga mniej obrotów, niż może dać to wrzeciono: użyto minimum wrzeciona, zbyt szybkiego dla materiału.
+CatNoteFluteShort	Długość robocza narzędzia nie przechodzi przez płytkę i naddatek: nie przetnie jej do końca.
+ToolBitWarn	Sprawdź narzędzie z katalogu

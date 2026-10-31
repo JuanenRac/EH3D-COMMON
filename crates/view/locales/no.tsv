@@ -443,3 +443,8 @@ LinkNode	EH3D node
 LinkServer	EH3D server
 CatTip	spiss
 LinkDemo	Demo
+CatBoardApplied	Platens materiale:
+CatNoteLowerRpm	Dette materialet krever færre omdreininger enn verktøyet: hastigheten er senket.
+CatNoteBelowSpindle	Dette materialet krever færre omdreininger enn spindelen kan gi: spindelens minimum er brukt, for raskt for materialet.
+CatNoteFluteShort	Skjærelengden til verktøyet rekker ikke gjennom platen og tillegget: det skjærer ikke helt gjennom.
+ToolBitWarn	Kontroller katalogverktøyet

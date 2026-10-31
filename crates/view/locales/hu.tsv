@@ -443,3 +443,8 @@ LinkNode	EH3D csomópont
 LinkServer	EH3D szerver
 CatTip	csúcs
 LinkDemo	Demó
+CatBoardApplied	A lemez anyaga:
+CatNoteLowerRpm	Ez az anyag kevesebb fordulatot kér, mint a szerszám: a sebességet csökkentettük.
+CatNoteBelowSpindle	Ez az anyag kevesebb fordulatot kér, mint amennyit a főorsó adni tud: a főorsó minimumát használtuk, ami túl gyors az anyagnak.
+CatNoteFluteShort	A szerszám vágóhossza nem ér át a lemezen és a ráhagyáson: nem vág át teljesen.
+ToolBitWarn	Ellenőrizze a katalógus szerszámát

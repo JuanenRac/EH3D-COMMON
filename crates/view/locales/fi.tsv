@@ -443,3 +443,8 @@ LinkNode	EH3D solmu
 LinkServer	EH3D palvelin
 CatTip	kärki
 LinkDemo	Demo
+CatBoardApplied	Levyn materiaali:
+CatNoteLowerRpm	Tämä materiaali vaatii vähemmän kierroksia kuin terä: nopeutta on laskettu.
+CatNoteBelowSpindle	Tämä materiaali vaatii vähemmän kierroksia kuin karan pienin nopeus: käytetty karan minimiä, joka on materiaalille liian nopea.
+CatNoteFluteShort	Terän leikkuupituus ei riitä levyn ja varan läpi: se ei leikkaa kokonaan läpi.
+ToolBitWarn	Tarkista luettelon terä

@@ -443,3 +443,8 @@ LinkNode	EH3D nod
 LinkServer	EH3D server
 CatTip	spets
 LinkDemo	Demo
+CatBoardApplied	Skivans material:
+CatNoteLowerRpm	Detta material kräver färre varv än verktyget: hastigheten har sänkts.
+CatNoteBelowSpindle	Detta material kräver färre varv än spindeln kan ge: spindelns minimum har använts, för snabbt för materialet.
+CatNoteFluteShort	Verktygets skärlängd räcker inte genom skivan och tillägget: det skär inte hela vägen igenom.
+ToolBitWarn	Kontrollera katalogverktyget

@@ -443,3 +443,8 @@ LinkNode	EH3D nodoa
 LinkServer	EH3D zerbitzaria
 CatTip	muturra
 LinkDemo	Demoa
+CatBoardApplied	Plakaren materiala:
+CatNoteLowerRpm	Material honek erreminta baino bira gutxiago eskatzen du: abiadura jaitsi da.
+CatNoteBelowSpindle	Material honek ardatz honek eman dezakeena baino bira gutxiago eskatzen du: ardatzaren gutxienekoa erabili da, materialarentzat azkarregia.
+CatNoteFluteShort	Erreminta honen ebaketa-luzerak ez ditu plaka eta soberakina zeharkatzen: ez du guztiz ebakiko.
+ToolBitWarn	Egiaztatu katalogoko erreminta
