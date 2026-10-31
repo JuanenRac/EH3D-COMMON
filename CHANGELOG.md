@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Texts of the spindles:** the two spindles of the machine, the warnings of the catalogue and of the tools (fits, needs it slower, Z or XY slower, not compatible because of the thickness or of the speed) and the button that takes the values of a bit into a tool, in the eight languages.
 - **Texts of the sounds of the visual check:** the two rows of the list of sounds of the settings (when the check is correct, when it is not correct), in the eight languages.
 
 ## [0.0.6] - The quality analyser, the ring of LEDs and the picture of the drill head node
