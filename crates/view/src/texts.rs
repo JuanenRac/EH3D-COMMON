@@ -445,6 +445,8 @@ texts! {
     LblLayers => ["Layers", "Capas", "Livelli", "Ebenen", "Calques", "Camadas", "图层", "レイヤー"],
     SoundFinish => ["Sound when the job ends", "Sonido al terminar el trabajo", "Suono alla fine del lavoro", "Ton am Ende des Auftrags", "Son à la fin du travail", "Som ao terminar o trabalho", "作业结束时的声音", "作業終了時の音"],
     SoundTool => ["Sound when a tool is asked for", "Sonido al pedir una herramienta", "Suono alla richiesta di un utensile", "Ton bei Werkzeuganforderung", "Son à la demande d'un outil", "Som ao pedir uma ferramenta", "请求刀具时的声音", "工具を求めるときの音"],
+    SoundCheckOk => ["Sound when the visual check is correct", "Sonido cuando la comprobación visual es correcta", "Suono quando il controllo visivo è corretto", "Ton, wenn die Sichtprüfung in Ordnung ist", "Son quand le contrôle visuel est correct", "Som quando a verificação visual está correta", "目视检查合格时的声音", "目視チェックが合格のときの音"],
+    SoundCheckBad => ["Sound when the visual check is not correct", "Sonido cuando la comprobación visual no es correcta", "Suono quando il controllo visivo non è corretto", "Ton, wenn die Sichtprüfung nicht in Ordnung ist", "Son quand le contrôle visuel n'est pas correct", "Som quando a verificação visual não está correta", "目视检查不合格时的声音", "目視チェックが不合格のときの音"],
     SoundFileHint => ["WAV file (empty: the default tone)", "Archivo WAV (vacío: el tono por defecto)", "File WAV (vuoto: il tono predefinito)", "WAV-Datei (leer: der Standardton)", "Fichier WAV (vide : la tonalité par défaut)", "Ficheiro WAV (vazio: o tom predefinido)", "WAV 文件（留空：默认提示音）", "WAV ファイル（空欄：既定の音）"],
     SoundTest => ["Test", "Probar", "Prova", "Testen", "Tester", "Testar", "试听", "試す"],
     SndOff => ["No sound", "Sin sonido", "Nessun suono", "Kein Ton", "Aucun son", "Sem som", "无声", "音なし"],

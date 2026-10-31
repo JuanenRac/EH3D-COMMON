@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Texts of the sounds of the visual check:** the two rows of the list of sounds of the settings (when the check is correct, when it is not correct), in the eight languages.
+
 ## [0.0.6] - The quality analyser, the ring of LEDs and the picture of the drill head node
 
 - **The quality analyser (`eh3d-inspect`):** judges a picture of the camera of the drill head: every hole of the job (there, round, the right size, in place, clean around), the milled channels (their width from the exact distance to the copper, how even they are, where they pinch) and the picture itself (light, contrast, focus), with a profile of tolerances (presets standard, fine pitch and prototype, kept as JSON) and one verdict: ok, not ok or cannot judge. It also suggests the level of the ring of LEDs that would give a good picture. 43 tests.
