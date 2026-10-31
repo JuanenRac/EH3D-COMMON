@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Texts of the serial ports, of undo, redo and cut, and of starting a job at a tool (eh3d-view):** no ports found, look for ports again, undo, redo, cut and start the job from this tool, in the 37 languages.
 ## [0.0.8] - Texts for the editing of the plan view, the preview and the catalogue
 
 - **Texts of the editing of the plan view (eh3d-view):** choose, copy, paste, delete and remove the tool from the job, in the 37 languages.
