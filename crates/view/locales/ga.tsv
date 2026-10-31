@@ -1,1 +1,425 @@
 # Gaeilge (ga): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Téama
+ThemeForge	Forge
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Windows clasaiceach
+ThemeSystem	Lean dathanna Windows
+ThemeMidnight	Meán oíche
+ThemePaper	Páipéar (éadrom)
+ThemeForest	Foraoise
+ThemeRetro	Teirminéal retro
+ThemeOcean	Aigéan
+ThemeContrast	Codarsnacht ard
+LauncherAsk	Cad ba mhaith leat a rith?
+LauncherClassicMtc	MTC clasaiceach
+LauncherClassicAtc	ATC clasaiceach
+LauncherModern	Nua-aimseartha (MTC + ATC)
+Remember	Cuimhnigh ar mo rogha
+PressEnter	Brúigh Enter
+ViewPlan	2D - amharc ón mbarr
+ViewMachine	3D - meaisín
+LayerHoles	Poill druileála
+LayerPaths	Cosáin ródaithe
+LayerMachine	Meaisín
+LayerGrid	Greille
+Progress	Dul chun cinn
+TableFromConfig	Tábla ón gcumraíocht
+Drilling	Druileáil
+Routing	Ródú
+ClassicMissing	Níl an clár clasaiceach in aice leis an gclár seo
+Start	Tosaigh
+Pause	Sos
+Stop	Stop
+Language	Teanga
+Holes	poill
+Tools	uirlisí
+SimulatedJob	Obair insamhlaithe: ní bhogtar aon mheaisín
+NoFile	Níl comhad luchtaithe
+Ok	Ok
+Abort	Cealaigh
+AskSpindle	An bhfuil sé ceart go leor an fhearsaid a thosú?
+AskTool	Cuir isteach an uirlis
+Connection	Nasc
+OutsideTable	Ní fhóireann sé don tábla
+OpenFile	Oscail comhad
+About	Faoi
+Close	Dún
+SettingsTitle	Socruithe
+PanelTitle	Painéaladh
+Columns	Colúin
+Rows	Sraitheanna
+SpacingX	Spásáil X (mm)
+SpacingY	Spásáil Y (mm)
+PanelModePitch	Ó lár go lár
+PanelModeGap	Bearna idir plátaí
+PanelModeFit	Líon an tábla
+PanelCopies	cóipeanna
+Apply	Cuir i bhfeidhm
+ResetView	Athshocraigh an t-amharc
+DropHint	Scaoil comhad .ncd, .plt nó .zip anseo
+NavHint2d	Tarraing chun bogadh, roth chun zúmáil
+NavHint3d	Tarraing chun casadh, roth chun zúmáil
+Version	Leagan
+Licence	Ceadúnas
+AboutBody	An comhéadan nua-aimseartha do mheaisíní druileála agus ródaithe Bungard CCD.
+TableWidth	Leithead inúsáidte X (mm)
+TableDepth	Doimhneacht inúsáidte Y (mm)
+Save	Sábháil
+Saved	Sábháilte
+OpenFolderUp	Fillteán tuismitheora
+ShowDrill	Druileáil
+ConnPort	Port
+ConnAddress	Seoladh
+ConnToken	Comhartha rochtana
+ConnMachine	Aitheantas meaisín
+ConnTest	Tástáil an nasc
+ConnWorks	Oibríonn an nasc
+BoardTitle	Pláta
+ToolsTitle	Uirlisí
+SetAskOperator	Fiafraigh díom le linn athruithe uirlise agus nuair a thosaíonn an fhearsaid
+SetToolsOnOpen	Taispeáin fuinneog na n-uirlisí nuair a osclaím comhad
+SndVoice	Guth
+SndFemale	baineann
+SndMale	fireann
+HeadOpen	Nód an chinn
+HeadTitle	Nód cheann an druilí
+HeadOff	Gan úsáid
+HeadDirect	Go díreach
+HeadServer	Tríd an bhfreastalaí
+HeadCamera	Taispeáin ceamara an nóid
+HeadSpeed	Fearsaid
+HeadTemp	Teocht
+HeadProtectOpen	Aschur cosanta OSCAILTE: caithfidh an fhearsaid stopadh
+HeadProtectClosed	Aschur cosanta dúnta
+HeadMeasure	Tomhais an tábla anseo
+HeadServerNote	Tríd an bhfreastalaí i bhfuinneog an naisc: a sheoladh, a chomhartha agus aitheantas an mheaisín.
+HeadNoServer	Scríobh seoladh, comhartha agus aitheantas meaisín an fhreastalaí i bhfuinneog an naisc.
+HeadCameraModel	Samhail an cheamara
+HeadNoLink	Scríobh seoladh an nóid (óstríomhaire nó óstríomhaire:port).
+HeadWaiting	Ag fanacht leis an nód...
+HeadCameraOff	Ceamara as
+HeatOk	ceart go leor
+HeatWarm	te
+HeatHot	TÉ
+HeatUnknown	anaithnid
+LightTitle	Fáinne solais
+LightOn	Solas air
+LightOff	Solas as
+LightNone	gan fáinne ar an nód seo
+InspOpen	Seiceáil cáilíochta
+InspTitle	Seiceáil cáilíochta na hoibre
+InspRun	Seiceáil anois
+InspRunning	Ag seiceáil...
+InspVerdictOk	OK
+InspVerdictNotOk	NÍL OK
+InspVerdictUnknown	NÍ FÉIDIR BREITHNIÚ
+InspIdle	Gan seiceáil go fóill
+InspChecks	Seiceálacha
+InspCheckHoles	Poill druileáilte
+InspCheckMilling	Cainéil mhuilleáilte
+InspProfile	Próifíl anailísí
+InspPresetStandard	Caighdeánach
+InspPresetFine	Pit mhín
+InspPresetProto	Prótaitíopa
+InspLight	Solas don phictiúr
+InspLightKeep	mar atá
+InspHolePick	Poll na hoibre sa lár
+InspNoJob	Lódáil comhad druileála chun a phoill a sheiceáil
+InspScale	Scála (picteilíní in aghaidh an mm)
+InspCalibrate	Calabraigh ón bpoll seo
+InspSave	Sábháil próifíl
+InspTune	Lamháltais
+InspNeedLink	Socraigh nód cheann an druilí ar dtús (fuinneog Nód an chinn).
+InspHolesOk	poill ceart go leor
+InspChannel	leithead cainéil
+InspTuneHoleDia	Lamháltas méide poill (mm)
+InspTuneHolePos	Lamháltas suímh poill (mm)
+InspTuneRound	Cruinneas íosta (1 = ciorcal)
+InspTuneDebris	Brablach uasta timpeall poill
+InspTuneMillWidth	Leithead cainéil (mm)
+InspTuneMillTol	Lamháltas leithead cainéil
+InspTuneMillMin	An cainéal is cúinge (mm)
+InspTuneSpread	An cainéal is neamhchothroime
+InspTuneMinMean	An pictiúr is dorcha a ghlactar leis
+InspTuneMinSharp	Géire íosta
+InspFindHoleMissing	níl poll ansin
+InspFindHoleSize	méid mícheart
+InspFindHoleOff	as lár
+InspFindHoleRound	gan a bheith cruinn
+InspFindHoleDebris	ciumhaiseanna nó deannach timpeall
+InspFindHoleView	lasmuigh den amharc
+InspFindMillNone	níl aon chainéal le feiceáil
+InspFindMillNarrow	cainéil róchúng
+InspFindMillWide	cainéil ró-leathan
+InspFindMillPinch	cainéal cúngaithe: baol gearrchiorcaid
+InspFindMillUneven	cainéil neamhchothroma
+InspFindDark	pictiúr ródhorcha: tuilleadh solais
+InspFindBright	pictiúr ró-ghlé: níos lú solais
+InspFindContrast	pictiúr gan codarsnacht
+InspFindBlurry	pictiúr as fócas
+InspFindScale	socraigh an scála ar dtús
+InspFindNothing	níl aon seiceáil ar siúl
+InspFindNoHoles	níl poll den obair le feiceáil
+CatOpen	Catalóg bioráin
+CatTitle	Catalóg bioráin do PCB
+CatShank	Tá cos 1/8 orlach (3.175 mm) ag gach bior, an chos a choinníonn chuck meaisín Bungard. Is pointí tosaigh don FR-4 na huimhreacha: bain triail astu ar phláta dramhaíola.
+CatAll	Gach cineál
+KindDrill	Druilí
+KindEndMill	Muilte deiridh (cearnach)
+KindDownCut	Ródairí gearrtha síos
+KindUpCut	Ródairí gearrtha suas
+KindDiamond	Ródairí gearrtha diamaint (arbhar)
+KindVBit	Bioráin V (greanadh, inslíocht)
+KindBall	Srón liathróide
+KindSpot	Druilí lonnaithe
+KindCountersink	Frithsoithí
+CatCount	bioráin
+KindChipBreaker	Ródairí briseadh blúirí
+KindSlotDrill	Druilí sliotáin (do phoill fhada)
+KindCoated	Ródairí brataithe le diamant
+CatSeriesCol	sraith
+CatFluteCol	L mm
+CatPick	Cliceáil ar bhior den liosta chun é a fheiceáil agus a úsáid.
+CatSpindle	Is ón monaróir iad na casadh agus na bearta. Glacann fearsaid nach féidir casadh chomh tapa leis an mbior céanna ar a luas féin, agus an beart i gcomhréir (an greim céanna do gach casadh).
+SpindleLbl	Fearsaid an mheaisín
+SpindleOriginal	Bungard bunaidh, 60000 rpm
+SpindleVfd	Fearsaid VFD GDZ 80-2.2, 24000 rpm
+SpindleNote	Tá teorainneacha luais, beart agus méide bioráin ag gach fearsaid (is féidir iad a chur in eagar sa chomhad socruithe). Tugann an chatalóg agus na huirlisí rabhadh nuair a iarrann bior níos mó ná mar is féidir leis an bhfearsaid a thabhairt.
+CatSpindleLbl	Fearsaid
+FitOk	Is féidir leis an bhfearsaid seo é a láimhseáil le luachanna an mhonaróra.
+FitSlower	Teastaíonn sé níos moille ón bhfearsaid seo. Luachanna molta:
+FitLowerRpm	Casann an fhearsaid níos moille ná mar a iarrann an bior: téann XY agus Z níos moille i gcomhréir.
+FitSlowZ	Caithfidh Z dul níos moille ar an meaisín seo.
+FitSlowXy	Caithfidh beart XY dul níos moille ar an meaisín seo.
+FitNoThick	NÍL CUMASC: tá an bior níos tiubha ná mar a ghlacann an fhearsaid seo.
+FitNoSlow	NÍL CUMASC: casann an fhearsaid seo i bhfad ró-mhall don bhior seo (bhrisfeadh sé nó dhófadh sé an pláta).
+CatUseFor	Úsáid na luachanna seo don uirlis
+ToolFromCat	Catalóg
+CatTaken	Luachanna curtha san uirlis.
+JobNothingOn	Níl aon rud le déanamh: cuir an druileáil nó an ródú ar siúl agus uirlis amháin ar a laghad dá cuid.
+JobPartHint	Cliceáil chun casadh air nó as; an dá cheann air: an druileáil agus ansin an ródú
+ToolOffHint	Cliceáil ar phoncán uirlise chun í a fhágáil as an obair
+CatFlute	Fad gearrtha
+CatShankLbl	Cos
+CatTotal	Fad iomlán
+CatPoint	Uillinn an phointe
+CatSchematic	Líníocht scéimeach, gan a bheith i gcomhréir.
+NoteDrill	Druil charbaide soladach do phoill tríd. Is do vias na cinn bheaga (faoi 0.5 mm), do chosa comhpháirteanna na cinn mheánacha, do cheangail agus poill fheistithe na cinn mhóra. Tarraing amach go tapa, agus athraigh é tar éis cúpla míle poll.
+NoteEndMill	Fliúití díreacha agus deireadh cothrom: sliotáin, pócaí, inslíocht rianta leathana agus imlíne plátaí tanaí. Fágann sé bun glan.
+NoteDownCut	Ródaire láimhe clé: brúnn sé na blúirí síos. Tagann imeall uachtarach an phláta amach gan ciumhaiseanna, mar sin úsáid é don imlíne nuair is é an barr an taobh a thaispeántar (caithfear an pláta a choinneáil síos go maith).
+NoteUpCut	Ródaire láimhe deas: tarraingíonn sé na blúirí suas agus amach as an ngearradh. Maith do sliotáin agus pócaí; féadann sé an pláta a thógáil agus ciumhaiseanna a fhágáil ar an imeall uachtarach.
+NoteDiamond	Ródaire gearrtha diamaint (arbhar): fiacla beaga go leor a mhuileann an snáithín gloine in ionad é a stróiceadh. An rogha is gnách d'imlíne FR-4; fágann sé imeall garbh ach glan agus maireann sé i bhfad.
+NoteChip	Ródaire briseadh blúirí: briseann a fhiacla na blúirí ina ngiotaí gearra a fhágann an gearradh go héasca. Gearrann sé níos tapa ná an gearradh diamaint agus coinníonn sé na ciumhaiseanna beag.
+NoteVBit	Bior V (bior greanta): tá an clais chomh leathan agus a dhéanann an doimhneacht é, mar sin socraíonn an doimhneacht leithead na hinslíochta. Cuireann uillinn chúng le barr mín rianta míne ar fáil.
+NoteBall	Muileann deiridh srón liathróide: clais chruinn, le haghaidh greanta agus múnlaithe. Ní le haghaidh rianta a insliú.
+NoteSpot	Druil lonnaithe: pointe gearr, righin a thosaíonn poll go díreach san áit a dteastaíonn, ionas nach n-imíonn an chéad druil eile ar strae. Do na poill mhóra agus do phláta crua.
+NoteCountersink	Frithsoitheach: déanann sé iamh d'imeall poill, do cheann scriúanna nó chun an chiumhais a bhaint.
+NoteSlot	Druil sliotáin: druil le gréasán righin a dhéantar chun poill fhada a ghearradh trí bhogadh go cliathánach agus í ag druileáil (sliotáin na gceangal). Ná húsáid é do phoill chruinne: tá na cinn eile níos saoire.
+NoteCoated	Ródaire deiridh cothrom le brat diamaint: do phláta scrabach (FR-4 ard-Tg, saor ó haileagain, snáithín carbóin) agus do phláta le cúl alúmanaim, áit a ndeachaíonn ceann gan brat in aois. Costaíonn sé níos mó agus maireann sé i bhfad níos faide.
+LevTab	Calabrú an tábla
+LevMeasure	Tomhais an tábla
+LevStop	Stop ag tomhas
+LevClear	Glan an léarscáil
+LevCols	Pointí feadh X
+LevRows	Pointí feadh Y
+LevPoints	Pointí tomhaiste
+LevSpread	Scaipeadh
+LevTilt	Claonadh X / Y
+LevDemo	Tóireadóir insamhlaithe: níl nód tóireadóra ceangailte go fóill, tagann na hairde ó tábla insamhlaithe.
+LevApply	Ceartaigh Z na n-oibreacha leis an léarscáil seo
+ResumeTitle	Obair idirbhriste
+ResumeBody	Fágadh an obair dheireanach i lár a ndéanta (thit an fhuinneog, an ríomhaire nó an nasc). Ar mhaith leat leanúint ón áit ar stop sí?
+ResumeContinue	Lean ar aghaidh leis an obair
+ResumeCancel	Cealaigh í
+TabsOn	Ródaigh an taobh amuigh le droichid
+TabsPerSide	Droichid in aghaidh an taobh
+TabWidth	Leithead droichid
+TabPlace	An áit a mbíonn na droichid
+TabEven	Scaipthe go cothrom feadh an taobh
+TabEnds	In aice le foircinn an taobh
+TabMiddle	Le chéile sa lár
+SetSkipLauncher	Oscail an fhuinneog seo go díreach an chéad uair eile
+ColName	Ainm
+ColDate	Dáta athraithe (UTC)
+ColType	Cineál
+ColSize	Méid
+TypeFolder	Fillteán
+TypeZip	Cartlann ZIP
+Places	Áiteanna
+PlaceExamples	Samplaí
+PlaceDesktop	Deasc
+PlaceDocuments	Cáipéisí
+PlaceDownloads	Íoslódálacha
+FileNameLabel	Ainm comhaid
+FilterSupported	Gach comhad oibre
+FilterDrill	Comhaid druileála
+FilterRoute	Comhaid ródaithe
+FilterZip	Cartlanna ZIP
+FilterAny	Gach comhad
+NavBack	Siar
+NavUp	Suas
+ThisPc	An ríomhaire seo
+SimSpeed	Luas an insamhlaithe
+DefaultValues	Réamhshocruithe
+TypeValueHint	Cliceáil ar luach chun é a chlóscríobh
+TabGeneral	Ginearálta
+TabJob	Obair
+Units	Aonaid
+UnitMm	Milliméadair (mm)
+UnitMil	Milseanna (0.001 orlach)
+ModelLabel	Samhail meaisín
+ToolChange	Athrú uirlise
+TcManual	Láimhe (MTC)
+TcAuto	Uathoibríoch (ATC)
+EmergencyStop	Stop éigeandála
+EmergencyShow	Taispeáin an cnaipe éigeandála (is féidir é a tharraingt áit ar bith)
+RackPlaces	áiteanna uirlisí
+Rotate	Rothlaigh
+FollowTool	Lean an uirlis
+Enlarge2d	Méadaigh an t-amharc 2D
+MoveDesign	Bog an dearadh amháin
+MoveBoard	Bog an pláta
+ShowBoth	Taispeáin an t-amharc 3D
+OnTable	Ar an tábla
+OnBoard	Ar an bpláta
+Resume	Lean ar aghaidh
+NotAnOutline	ní imlíne pláta é (oscail a phróifíl nó a chiseal imill)
+HolesDrilled	Poill druileáilte san iomlán
+ResetCounts	Athshocraigh na comhairimh
+Recent	Le déanaí
+McPosition	Suíomh
+McWork	Obair
+McMachine	Meaisín
+McJog	Jog
+McStep	Céim (mm)
+McHome	Baile
+McZero	Nialas anseo
+McUnlock	Díghlasáil
+McProgram	Clár
+McOpenGcode	Oscail G-code
+McMdi	Ordú (MDI)
+McSend	Seol
+McLog	Logleabhar
+McState	Staid
+McController	Rialaitheoir
+McSimulator	Insamhlóir
+McNotDriven	gan tiomáint go fóill
+McToolpath	Cosán uirlise
+McLine	Líne
+McSpindle	Fearsaid
+McFeedRate	Beart
+McStIdle	Díomhaoin
+McStRun	Ag rith
+McStHold	Ar sos
+McStHome	Ag filleadh abhaile
+McStAlarm	ALT
+McStUnknown	Anaithnid
+McZeroXyz	Socraigh nialas na hoibre anseo (X, Y agus Z)
+McZeroXy	Socraigh nialas na hoibre anseo (X agus Y)
+McGoG28	Téigh go dtí an suíomh stóráilte G28
+McGoG30	Téigh go dtí an suíomh stóráilte G30
+McGoZeroXy	Téigh go nialas na hoibre in X agus Y
+McGoZeroZ	Téigh go nialas na hoibre i Z
+McOperator	Oibreoir
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	G-codes gníomhacha
+McActiveM	M-codes gníomhacha
+McSpeed	Luas
+McZeroAxis	Socraigh nialas an ais seo anseo
+McInputs	Ionchuir
+McOutputs	Aschuir
+McJogSpeed	Luas jog
+MenuFile	Comhad
+MenuView	Amharc
+MenuHelp	Cabhair
+MenuExit	Scoir
+McSaveGcode	Sábháil G-code ...
+McEditProgram	Cuir an clár in eagar ...
+McRewind	Athchas go dtí an chéad líne
+McClearProgram	Glan an clár
+McFitTable	Feistigh an tábla
+McFitProgram	Feistigh an clár
+McShowButtons	Taispeáin cnaipí na nialas
+McShowProgram	Taispeáin an clár
+McShowLog	Taispeáin an logleabhar
+McShowRapids	Taispeáin na gluaiseachtaí tapa
+McSpindleOn	Fearsaid air (M3)
+McSpindleOff	Fearsaid as (M5)
+McCoolantOn	Fuaraitheoir air (M8)
+McCoolantOff	Fuaraitheoir as (M9)
+McSetG28	Stóráil an suíomh seo mar G28
+McSetG30	Stóráil an suíomh seo mar G30
+McCancel	Cealaigh
+McSecGeneral	Ginearálta
+McSecInterface	Comhéadan úsáideora
+McSecAxes	Aiseanna agus teorainneacha
+McSecJog	Jog
+McUnitInch	Orlaí
+McLimits	Teorainneacha taistil (mm): íosmhéid agus uasmhéid gach aise
+McDefaultStep	Céim ag an tús (mm)
+McDefaultFeed	Luas jog ag an tús (mm/min)
+McSettingsSaved	Tá na socruithe sábháilte agus tagann siad i bhfeidhm anois.
+McFilterGcode	Comhaid G-code
+McReplaceAsk	ann cheana. An gcuirfear ina áit é?
+McReplace	Cuir ina áit
+McTypeName	Clóscríobh ainm comhaid.
+McNoSuchFile	Níl a leithéid de chomhad ann.
+McSaveTitle	Sábháil an clár
+McOpenTitle	Oscail clár G-code
+McAboutBody	Clár rialaithe meaisín EH3D: tiomáineann sé meaisín insamhlaithe go fóill.
+FleetTitle	Meaisíní agus stáisiúin
+FleetNoStation	Gan stáisiún
+FleetWaiting	Ag fanacht leis an oibreoir
+FleetReady	oibreacha réidh
+FleetUse	Úsáid an meaisín seo
+FleetTarget	Meaisín na n-oibreacha
+FleetNoServer	Ní freastalaí EH3D é an nasc: roghnaigh ceann in Nasc chun na meaisíní a fheiceáil.
+FleetRefresh	Athnuaigh
+JobOutsideTable	Ní fhóireann an obair don tábla: bog an pláta nó déan an tábla níos mó
+LblThickness	Tiús (mm)
+LblCopper	Copar (µm)
+LblCopperSides	Taobhanna copair
+LblOneSide	1 taobh
+LblTwoSides	2 thaobh
+LblSize	Méid (mm)
+LblFromFiles	Ó na comhaid
+LblMaker	Monaróir
+LblWidth	Leithead
+LblDepth	Doimhneacht
+LblPhotoresist	Friotaíoch fótaruthach
+LblExtraStroke	Buille breise (mm)
+LblFeed	Beart (mm/min)
+LblSpeedRpm	Luas (rpm)
+LblDepthMm	Doimhneacht (mm)
+LblPasses	Pasanna
+LblFeedXy	Beart XY (mm/min)
+LblFeedZ	Beart Z (mm/min)
+LblDefault	Réamh.
+LblFileCoords	Comhordanáidí na gcomhad
+LblNoRack	Níl aon suíomh raca i gcomhad an mheaisín go fóill
+LblWorkArea	Limistéar oibre
+LblWholeMachine	An meaisín ar fad
+LblLayers	Sraitheanna
+SoundFinish	Fuaim nuair a chríochnaíonn an obair
+SoundTool	Fuaim nuair a iarrtar uirlis
+SoundCheckOk	Fuaim nuair a bhíonn an tseiceáil amhairc ceart
+SoundCheckBad	Fuaim nuair nach bhfuil an tseiceáil amhairc ceart
+SoundFileHint	Comhad WAV (folamh: an ton réamhshocraithe)
+SoundTest	Tástáil
+SndOff	Gan fuaim
+SndDefault	An ton caighdeánach
+SndFile	Comhad dem chuid (WAV)
+SndChime	cloigín
+SndRise	nótaí ag ardú
+SndFall	nótaí ag titim
+SndFanfare	fanfár
+SndTriple	trí nóta
+SndBell	clog
+SndBeep	bíp
+SndDouble	bíp dúbailte
+SndTripleBeep	bíp triopail
+SndAlarm	aláram
+SndKnock	cnag
+SndSiren	sioréad

@@ -1,1 +1,425 @@
 # Čeština (cs): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Motiv
+ThemeForge	Kovárna
+ThemeNeon	Neonová herna
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Klasický Windows
+ThemeSystem	Podle barev Windows
+ThemeMidnight	Půlnoc
+ThemePaper	Papír (světlý)
+ThemeForest	Les
+ThemeRetro	Retro terminál
+ThemeOcean	Oceán
+ThemeContrast	Vysoký kontrast
+LauncherAsk	Co chcete spustit?
+LauncherClassicMtc	Klasický MTC
+LauncherClassicAtc	Klasický ATC
+LauncherModern	Moderní (MTC + ATC)
+Remember	Zapamatovat si můj výběr
+PressEnter	Stiskněte Enter
+ViewPlan	2D - pohled shora
+ViewMachine	3D - stroj
+LayerHoles	Vrtané otvory
+LayerPaths	Dráhy frézování
+LayerMachine	Stroj
+LayerGrid	Mřížka
+Progress	Průběh
+TableFromConfig	Stůl z konfigurace
+Drilling	Vrtání
+Routing	Frézování
+ClassicMissing	Klasický program není vedle tohoto
+Start	Start
+Pause	Pauza
+Stop	Stop
+Language	Jazyk
+Holes	otvorů
+Tools	nástrojů
+SimulatedJob	Simulovaná úloha: stroj se nehýbe
+NoFile	Není načten žádný soubor
+Ok	OK
+Abort	Přerušit
+AskSpindle	Spustit vřeteno?
+AskTool	Vložte nástroj
+Connection	Připojení
+OutsideTable	Nevejde se na stůl
+OpenFile	Otevřít soubor
+About	O programu
+Close	Zavřít
+SettingsTitle	Nastavení
+PanelTitle	Panelizace
+Columns	Sloupce
+Rows	Řádky
+SpacingX	Rozteč X (mm)
+SpacingY	Rozteč Y (mm)
+PanelModePitch	Od středu ke středu
+PanelModeGap	Mezera mezi deskami
+PanelModeFit	Vyplnit stůl
+PanelCopies	kopií
+Apply	Použít
+ResetView	Obnovit pohled
+DropHint	Přetáhněte sem soubor .ncd, .plt nebo .zip
+NavHint2d	Tažením posunete, kolečkem změníte zvětšení
+NavHint3d	Tažením otočíte, kolečkem změníte zvětšení
+Version	Verze
+Licence	Licence
+AboutBody	Moderní rozhraní pro vrtací a frézovací stroje Bungard CCD.
+TableWidth	Využitelná šířka X (mm)
+TableDepth	Využitelná hloubka Y (mm)
+Save	Uložit
+Saved	Uloženo
+OpenFolderUp	Nadřazená složka
+ShowDrill	Vrtání
+ConnPort	Port
+ConnAddress	Adresa
+ConnToken	Přístupový token
+ConnMachine	ID stroje
+ConnTest	Vyzkoušet připojení
+ConnWorks	Připojení funguje
+BoardTitle	Deska
+ToolsTitle	Nástroje
+SetAskOperator	Ptát se při výměně nástroje a při spuštění vřetena
+SetToolsOnOpen	Při otevření souboru zobrazit okno nástrojů
+SndVoice	Hlas
+SndFemale	ženský
+SndMale	mužský
+HeadOpen	Uzel hlavy
+HeadTitle	Uzel vrtací hlavy
+HeadOff	Nepoužívá se
+HeadDirect	Přímo
+HeadServer	Přes server
+HeadCamera	Zobrazit kameru uzlu
+HeadSpeed	Vřeteno
+HeadTemp	Teplota
+HeadProtectOpen	Ochranný výstup ROZEPNUT: vřeteno se musí zastavit
+HeadProtectClosed	Ochranný výstup sepnut
+HeadMeasure	Změřit stůl zde
+HeadServerNote	Přes server z okna připojení: jeho adresa, token a ID stroje.
+HeadNoServer	Zadejte v okně připojení adresu serveru, token a ID stroje.
+HeadCameraModel	Model kamery
+HeadNoLink	Zadejte adresu uzlu (host nebo host:port).
+HeadWaiting	Čekání na uzel...
+HeadCameraOff	Kamera vypnuta
+HeatOk	v pořádku
+HeatWarm	teplé
+HeatHot	HORKÉ
+HeatUnknown	neznámé
+LightTitle	Světelný kruh
+LightOn	Světlo zap.
+LightOff	Světlo vyp.
+LightNone	tento uzel nemá kruh
+InspOpen	Kontrola kvality
+InspTitle	Kontrola kvality práce
+InspRun	Zkontrolovat
+InspRunning	Kontroluji...
+InspVerdictOk	V POŘÁDKU
+InspVerdictNotOk	VADNÉ
+InspVerdictUnknown	NELZE POSOUDIT
+InspIdle	Dosud nezkontrolováno
+InspChecks	Kontroly
+InspCheckHoles	Vyvrtané otvory
+InspCheckMilling	Vyfrézované kanály
+InspProfile	Profil analyzátoru
+InspPresetStandard	Standardní
+InspPresetFine	Jemná rozteč
+InspPresetProto	Prototyp
+InspLight	Světlo pro snímek
+InspLightKeep	beze změny
+InspHolePick	Otvor úlohy ve středu
+InspNoJob	Načtěte vrtací soubor, abyste zkontrolovali jeho otvory
+InspScale	Měřítko (pixelů na mm)
+InspCalibrate	Kalibrovat podle tohoto otvoru
+InspSave	Uložit profil
+InspTune	Tolerance
+InspNeedLink	Nejdřív nastavte uzel vrtací hlavy (okno Uzel hlavy).
+InspHolesOk	otvorů v pořádku
+InspChannel	šířka kanálu
+InspTuneHoleDia	Tolerance velikosti otvoru (mm)
+InspTuneHolePos	Tolerance polohy otvoru (mm)
+InspTuneRound	Nejmenší kruhovitost (1 = kruh)
+InspTuneDebris	Nejvíc nečistot kolem otvoru
+InspTuneMillWidth	Šířka kanálu (mm)
+InspTuneMillTol	Tolerance šířky kanálu
+InspTuneMillMin	Nejužší kanál (mm)
+InspTuneSpread	Největší nerovnoměrnost kanálu
+InspTuneMinMean	Nejtmavší přijatý snímek
+InspTuneMinSharp	Nejmenší ostrost
+InspFindHoleMissing	otvor tam není
+InspFindHoleSize	špatná velikost
+InspFindHoleOff	mimo střed
+InspFindHoleRound	není kulatý
+InspFindHoleDebris	otřepy nebo prach kolem
+InspFindHoleView	mimo záběr
+InspFindMillNone	nejsou vidět žádné kanály
+InspFindMillNarrow	kanály příliš úzké
+InspFindMillWide	kanály příliš široké
+InspFindMillPinch	kanál se zužuje: hrozí zkrat
+InspFindMillUneven	kanály nerovnoměrné
+InspFindDark	snímek příliš tmavý: více světla
+InspFindBright	snímek příliš světlý: méně světla
+InspFindContrast	snímek bez kontrastu
+InspFindBlurry	snímek je rozostřený
+InspFindScale	nejdřív nastavte měřítko
+InspFindNothing	není zapnuta žádná kontrola
+InspFindNoHoles	v záběru není žádný otvor úlohy
+CatOpen	Katalog nástrojů
+CatTitle	Katalog nástrojů pro desky plošných spojů
+CatShank	Každý nástroj má stopku 1/8 palce (3,175 mm), kterou drží sklíčidlo stroje Bungard. Čísla jsou výchozí hodnoty pro FR-4: vyzkoušejte je na odřezku desky.
+CatAll	Všechny druhy
+KindDrill	Vrtáky
+KindEndMill	Stopkové frézy (rovné)
+KindDownCut	Frézy s výstupem třísek dolů
+KindUpCut	Frézy s výstupem třísek nahoru
+KindDiamond	Frézy s diamantovým řezem (kukuřice)
+KindVBit	V-frézy (rytí, izolace)
+KindBall	Kulové frézy
+KindSpot	Navrtávací vrtáky
+KindCountersink	Záhlubníky
+CatCount	nástrojů
+KindChipBreaker	Frézy s lamačem třísek
+KindSlotDrill	Drážkovací vrtáky (pro podlouhlé otvory)
+KindCoated	Frézy s diamantovým povlakem
+CatSeriesCol	série
+CatFluteCol	L mm
+CatPick	Klikněte na nástroj v seznamu, abyste ho viděli a zjistili, k čemu slouží.
+CatSpindle	Otáčky a posuvy jsou od výrobce. Vřeteno, které se nemůže točit tak rychle, použije stejný nástroj na svých otáčkách s úměrným posuvem (stejný záběr na otáčku).
+SpindleLbl	Vřeteno stroje
+SpindleOriginal	Původní Bungard, 60000 rpm
+SpindleVfd	Vřeteno VFD GDZ 80-2.2, 24000 rpm
+SpindleNote	Každé vřeteno má své meze rychlosti, posuvu a velikosti nástroje (lze je upravit v souboru nastavení). Katalog a nástroje varují, když nástroj požaduje víc, než vřeteno zvládne.
+CatSpindleLbl	Vřeteno
+FitOk	Toto vřeteno to zvládne s hodnotami výrobce.
+FitSlower	Toto vřeteno potřebuje pomaleji. Navržené hodnoty:
+FitLowerRpm	Vřeteno se točí pomaleji, než nástroj žádá: XY a Z jedou úměrně pomaleji.
+FitSlowZ	Na tomto stroji musí Z jet pomaleji.
+FitSlowXy	Na tomto stroji musí být posuv XY pomalejší.
+FitNoThick	NEKOMPATIBILNÍ: nástroj je silnější, než toto vřeteno přijme.
+FitNoSlow	NEKOMPATIBILNÍ: toto vřeteno se pro tento nástroj točí příliš pomalu (zlomilo by ho nebo spálilo desku).
+CatUseFor	Použít tyto hodnoty pro nástroj
+ToolFromCat	Katalog
+CatTaken	Hodnoty převzaty do nástroje.
+JobNothingOn	Není co dělat: zapněte vrtání nebo frézování a alespoň jeden jeho nástroj.
+JobPartHint	Kliknutím zapnete nebo vypnete; obojí zapnuto: nejdřív vrtání, potom frézování
+ToolOffHint	Kliknutím na tečku nástroje ho z úlohy vyřadíte
+CatFlute	Délka řezu
+CatShankLbl	Stopka
+CatTotal	Celková délka
+CatPoint	Úhel hrotu
+CatSchematic	Schematický nákres, není v měřítku.
+NoteDrill	Vrták z tvrdokovu pro průchozí otvory. Malé (pod 0,5 mm) jsou pro prokovy, střední pro vývody součástek, velké pro konektory a montážní otvory. Vytahujte rychle a po několika tisících otvorů vyměňte.
+NoteEndMill	Rovné drážky a rovné čelo: drážky, kapsy, izolace širokých cest a obrys tenkých desek. Zanechává čisté dno.
+NoteDownCut	Levořezná fréza: tlačí třísky dolů. Horní hrana desky vychází bez otřepů, proto ji použijte na obrys, když je viditelná horní strana (deska musí být dobře upnutá).
+NoteUpCut	Pravořezná fréza: vytahuje třísky nahoru a ven z řezu. Dobrá pro drážky a kapsy; může desku nadzvedávat a zanechat otřepy na horní hraně.
+NoteDiamond	Fréza s diamantovým řezem (kukuřice): mnoho drobných zubů, které skelná vlákna drtí místo trhání. Obvyklá volba pro obrys FR-4; zanechává drsnou, ale čistou hranu a dlouho vydrží.
+NoteChip	Fréza s lamačem třísek: zuby lámou třísky na krátké kousky, které z řezu snadno odcházejí. Řeže rychleji než diamantová a udržuje otřepy malé.
+NoteVBit	V-fréza (rycí): rýha je tak široká, jak ji hloubka udělá, takže hloubka určuje šířku izolace. Úzký úhel s jemným hrotem umožňuje jemné cesty.
+NoteBall	Kulová stopková fréza: zaoblená rýha, pro rytí a tvarování. Není pro izolaci cest.
+NoteSpot	Navrtávák: krátký, tuhý hrot, který začne otvor přesně tam, kde má být, aby další vrták nebloudil. Pro velké otvory a tvrdé desky.
+NoteCountersink	Záhlubník: sráží hranu otvoru, pro hlavy šroubů nebo odstranění otřepů.
+NoteSlot	Drážkovací vrták: vrták s tuhým jádrem určený k řezání podlouhlých otvorů pohybem do strany při vrtání (drážky konektorů). Nepoužívejte ho na kulaté otvory: ostatní jsou levnější.
+NoteCoated	Fréza s rovným čelem a diamantovým povlakem: pro abrazivní desky (FR-4 s vysokým Tg, bezhalogenové, uhlíková vlákna) a desky s hliníkovým podkladem, kde se nepovlakovaná opotřebí. Stojí víc a vydrží několikrát déle.
+LevTab	Kalibrace stolu
+LevMeasure	Změřit stůl
+LevStop	Zastavit měření
+LevClear	Vymazat mapu
+LevCols	Body podél X
+LevRows	Body podél Y
+LevPoints	Změřené body
+LevSpread	Rozptyl
+LevTilt	Náklon X / Y
+LevDemo	Simulovaná sonda: dosud není připojen uzel sondy, výšky pocházejí ze simulovaného stolu.
+LevApply	Opravit Z úloh touto mapou
+ResumeTitle	Úloha přerušena
+ResumeBody	Poslední úloha zůstala nedokončená (okno, počítač nebo spojení spadly). Chcete pokračovat od místa, kde skončila?
+ResumeContinue	Pokračovat v úloze
+ResumeCancel	Zrušit
+TabsOn	Frézovat vnější obrys s můstky
+TabsPerSide	Můstků na stranu
+TabWidth	Šířka můstku
+TabPlace	Kde budou můstky
+TabEven	Rovnoměrně po straně
+TabEnds	U konců strany
+TabMiddle	Pohromadě uprostřed
+SetSkipLauncher	Příště otevřít toto okno přímo
+ColName	Název
+ColDate	Datum změny (UTC)
+ColType	Typ
+ColSize	Velikost
+TypeFolder	Složka
+TypeZip	Archiv ZIP
+Places	Místa
+PlaceExamples	Příklady
+PlaceDesktop	Plocha
+PlaceDocuments	Dokumenty
+PlaceDownloads	Stažené soubory
+FileNameLabel	Název souboru
+FilterSupported	Všechny soubory úloh
+FilterDrill	Soubory vrtání
+FilterRoute	Soubory frézování
+FilterZip	Archivy ZIP
+FilterAny	Všechny soubory
+NavBack	Zpět
+NavUp	Nahoru
+ThisPc	Tento počítač
+SimSpeed	Rychlost simulace
+DefaultValues	Výchozí
+TypeValueHint	Kliknutím na hodnotu ji zadáte
+TabGeneral	Obecné
+TabJob	Úloha
+Units	Jednotky
+UnitMm	Milimetry (mm)
+UnitMil	Mily (0,001 palce)
+ModelLabel	Model stroje
+ToolChange	Výměna nástroje
+TcManual	Ruční (MTC)
+TcAuto	Automatická (ATC)
+EmergencyStop	Nouzové zastavení
+EmergencyShow	Zobrazit tlačítko nouze (lze ho přetáhnout kamkoli)
+RackPlaces	pozic nástrojů
+Rotate	Otočit
+FollowTool	Sledovat nástroj
+Enlarge2d	Zvětšit pohled 2D
+MoveDesign	Posunout jen návrh
+MoveBoard	Posunout desku
+ShowBoth	Zobrazit pohled 3D
+OnTable	Na stole
+OnBoard	Na desce
+Resume	Pokračovat
+NotAnOutline	není obrys desky (otevřete její profil nebo vrstvu hrany)
+HolesDrilled	Celkem vyvrtaných otvorů
+ResetCounts	Vynulovat počítadla
+Recent	Nedávné
+McPosition	Poloha
+McWork	Pracovní
+McMachine	Strojní
+McJog	Ruční pojezd
+McStep	Krok (mm)
+McHome	Home
+McZero	Nula zde
+McUnlock	Odemknout
+McProgram	Program
+McOpenGcode	Otevřít G-code
+McMdi	Příkaz (MDI)
+McSend	Odeslat
+McLog	Záznam
+McState	Stav
+McController	Řídicí jednotka
+McSimulator	Simulátor
+McNotDriven	zatím neřízeno
+McToolpath	Dráha nástroje
+McLine	Řádek
+McSpindle	Vřeteno
+McFeedRate	Posuv
+McStIdle	Nečinný
+McStRun	Běží
+McStHold	Pozastaveno
+McStHome	Najíždění do Home
+McStAlarm	ALARM
+McStUnknown	Neznámý
+McZeroXyz	Nastavit zde pracovní nulu (X, Y a Z)
+McZeroXy	Nastavit zde pracovní nulu (X a Y)
+McGoG28	Jet na uloženou polohu G28
+McGoG30	Jet na uloženou polohu G30
+McGoZeroXy	Jet na pracovní nulu v X a Y
+McGoZeroZ	Jet na pracovní nulu v Z
+McOperator	Operátor
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	Aktivní G-kódy
+McActiveM	Aktivní M-kódy
+McSpeed	Rychlost
+McZeroAxis	Nastavit zde nulu této osy
+McInputs	Vstupy
+McOutputs	Výstupy
+McJogSpeed	Rychlost ručního pojezdu
+MenuFile	Soubor
+MenuView	Zobrazení
+MenuHelp	Nápověda
+MenuExit	Konec
+McSaveGcode	Uložit G-code ...
+McEditProgram	Upravit program ...
+McRewind	Přetočit na první řádek
+McClearProgram	Vymazat program
+McFitTable	Přizpůsobit stolu
+McFitProgram	Přizpůsobit programu
+McShowButtons	Zobrazit tlačítka nul
+McShowProgram	Zobrazit program
+McShowLog	Zobrazit záznam
+McShowRapids	Zobrazit rychloposuvy
+McSpindleOn	Vřeteno zap. (M3)
+McSpindleOff	Vřeteno vyp. (M5)
+McCoolantOn	Chlazení zap. (M8)
+McCoolantOff	Chlazení vyp. (M9)
+McSetG28	Uložit tuto polohu jako G28
+McSetG30	Uložit tuto polohu jako G30
+McCancel	Zrušit
+McSecGeneral	Obecné
+McSecInterface	Uživatelské rozhraní
+McSecAxes	Osy a limity
+McSecJog	Ruční pojezd
+McUnitInch	Palce
+McLimits	Meze pojezdu (mm): minimum a maximum každé osy
+McDefaultStep	Krok na začátku (mm)
+McDefaultFeed	Rychlost ručního pojezdu na začátku (mm/min)
+McSettingsSaved	Nastavení je uloženo a platí hned.
+McFilterGcode	Soubory G-code
+McReplaceAsk	již existuje. Nahradit?
+McReplace	Nahradit
+McTypeName	Zadejte název souboru.
+McNoSuchFile	Takový soubor neexistuje.
+McSaveTitle	Uložit program
+McOpenTitle	Otevřít program G-code
+McAboutBody	Program EH3D pro řízení stroje: zatím řídí simulovaný stroj.
+FleetTitle	Stroje a stanice
+FleetNoStation	Žádná stanice
+FleetWaiting	Čeká se na operátora
+FleetReady	úloh připraveno
+FleetUse	Použít tento stroj
+FleetTarget	Stroj pro úlohy
+FleetNoServer	Připojení není server EH3D: vyberte ho v části Připojení, abyste viděli stroje.
+FleetRefresh	Obnovit
+JobOutsideTable	Úloha se nevejde na stůl: posuňte desku nebo zvětšete stůl
+LblThickness	Tloušťka (mm)
+LblCopper	Měď (µm)
+LblCopperSides	Strany s mědí
+LblOneSide	1 strana
+LblTwoSides	2 strany
+LblSize	Velikost (mm)
+LblFromFiles	Ze souborů
+LblMaker	Výrobce
+LblWidth	Šířka
+LblDepth	Hloubka
+LblPhotoresist	Fotocitlivý lak
+LblExtraStroke	Přídavný zdvih (mm)
+LblFeed	Posuv (mm/min)
+LblSpeedRpm	Otáčky (rpm)
+LblDepthMm	Hloubka (mm)
+LblPasses	Průchody
+LblFeedXy	Posuv XY (mm/min)
+LblFeedZ	Posuv Z (mm/min)
+LblDefault	Výchozí
+LblFileCoords	Souřadnice souborů
+LblNoRack	Soubor stroje zatím nemá pozice zásobníku
+LblWorkArea	Pracovní oblast
+LblWholeMachine	Celý stroj
+LblLayers	Vrstvy
+SoundFinish	Zvuk na konci úlohy
+SoundTool	Zvuk při žádosti o nástroj
+SoundCheckOk	Zvuk, když je vizuální kontrola v pořádku
+SoundCheckBad	Zvuk, když vizuální kontrola není v pořádku
+SoundFileHint	Soubor WAV (prázdné: výchozí tón)
+SoundTest	Test
+SndOff	Bez zvuku
+SndDefault	Standardní tón
+SndFile	Můj soubor (WAV)
+SndChime	zvonkohra
+SndRise	stoupající tóny
+SndFall	klesající tóny
+SndFanfare	fanfára
+SndTriple	tři tóny
+SndBell	zvon
+SndBeep	pípnutí
+SndDouble	dvojité pípnutí
+SndTripleBeep	trojité pípnutí
+SndAlarm	alarm
+SndKnock	klepání
+SndSiren	siréna

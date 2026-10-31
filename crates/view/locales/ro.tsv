@@ -1,1 +1,425 @@
 # Română (ro): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Temă
+ThemeForge	Forge
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Windows clasic
+ThemeSystem	Urmează culorile Windows
+ThemeMidnight	Miezul nopții
+ThemePaper	Hârtie (deschis)
+ThemeForest	Pădure
+ThemeRetro	Terminal retro
+ThemeOcean	Ocean
+ThemeContrast	Contrast ridicat
+LauncherAsk	Ce vrei să rulezi?
+LauncherClassicMtc	MTC clasic
+LauncherClassicAtc	ATC clasic
+LauncherModern	Modern (MTC + ATC)
+Remember	Ține minte alegerea mea
+PressEnter	Apasă Enter
+ViewPlan	2D - vedere de sus
+ViewMachine	3D - mașină
+LayerHoles	Găuri de burghiere
+LayerPaths	Trasee de frezare
+LayerMachine	Mașină
+LayerGrid	Grilă
+Progress	Progres
+TableFromConfig	Masă din configurație
+Drilling	Burghiere
+Routing	Frezare
+ClassicMissing	Programul clasic nu se află lângă acesta
+Start	Start
+Pause	Pauză
+Stop	Stop
+Language	Limbă
+Holes	găuri
+Tools	scule
+SimulatedJob	Lucrare simulată: nicio mașină nu se mișcă
+NoFile	Niciun fișier încărcat
+Ok	Ok
+Abort	Anulează
+AskSpindle	Pornesc axul?
+AskTool	Introdu scula
+Connection	Conexiune
+OutsideTable	Nu încape pe masă
+OpenFile	Deschide fișier
+About	Despre
+Close	Închide
+SettingsTitle	Setări
+PanelTitle	Panelizare
+Columns	Coloane
+Rows	Rânduri
+SpacingX	Spațiere X (mm)
+SpacingY	Spațiere Y (mm)
+PanelModePitch	De la centru la centru
+PanelModeGap	Spațiu între plăci
+PanelModeFit	Umple masa
+PanelCopies	copii
+Apply	Aplică
+ResetView	Resetează vederea
+DropHint	Trage aici un fișier .ncd, .plt sau .zip
+NavHint2d	Trage pentru a muta, rotița pentru zoom
+NavHint3d	Trage pentru a roti, rotița pentru zoom
+Version	Versiune
+Licence	Licență
+AboutBody	Interfața modernă pentru mașinile de burghiat și frezat Bungard CCD.
+TableWidth	Lățime utilă X (mm)
+TableDepth	Adâncime utilă Y (mm)
+Save	Salvează
+Saved	Salvat
+OpenFolderUp	Dosar părinte
+ShowDrill	Burghiere
+ConnPort	Port
+ConnAddress	Adresă
+ConnToken	Token de acces
+ConnMachine	ID mașină
+ConnTest	Testează conexiunea
+ConnWorks	Conexiunea funcționează
+BoardTitle	Placă
+ToolsTitle	Scule
+SetAskOperator	Întreabă-mă la schimbarea sculei și la pornirea axului
+SetToolsOnOpen	Arată fereastra sculelor când deschid un fișier
+SndVoice	Voce
+SndFemale	feminină
+SndMale	masculină
+HeadOpen	Nod cap
+HeadTitle	Nodul capului de burghiere
+HeadOff	Nefolosit
+HeadDirect	Direct
+HeadServer	Prin server
+HeadCamera	Arată camera nodului
+HeadSpeed	Ax
+HeadTemp	Temperatură
+HeadProtectOpen	Ieșire de protecție DESCHISĂ: axul trebuie să se oprească
+HeadProtectClosed	Ieșire de protecție închisă
+HeadMeasure	Măsoară masa aici
+HeadServerNote	Prin serverul din fereastra de conexiune: adresa, token-ul și ID-ul mașinii.
+HeadNoServer	Scrie adresa, token-ul și ID-ul mașinii serverului în fereastra de conexiune.
+HeadCameraModel	Model cameră
+HeadNoLink	Scrie adresa nodului (host sau host:port).
+HeadWaiting	Se așteaptă nodul...
+HeadCameraOff	Cameră oprită
+HeatOk	ok
+HeatWarm	cald
+HeatHot	FIERBINTE
+HeatUnknown	necunoscută
+LightTitle	Inel de lumină
+LightOn	Lumină aprinsă
+LightOff	Lumină stinsă
+LightNone	niciun inel pe acest nod
+InspOpen	Verificare calitate
+InspTitle	Verificarea calității lucrării
+InspRun	Verifică acum
+InspRunning	Se verifică...
+InspVerdictOk	OK
+InspVerdictNotOk	NU E OK
+InspVerdictUnknown	NU SE POATE JUDECA
+InspIdle	Încă neverificat
+InspChecks	Verificări
+InspCheckHoles	Găuri burghiate
+InspCheckMilling	Canale frezate
+InspProfile	Profil analizor
+InspPresetStandard	Standard
+InspPresetFine	Pas fin
+InspPresetProto	Prototip
+InspLight	Lumină pentru imagine
+InspLightKeep	neschimbată
+InspHolePick	Gaura lucrării în centru
+InspNoJob	Încarcă un fișier de burghiere pentru a verifica găurile
+InspScale	Scară (pixeli pe mm)
+InspCalibrate	Calibrează după această gaură
+InspSave	Salvează profilul
+InspTune	Toleranțe
+InspNeedLink	Setează mai întâi nodul capului de burghiere (fereastra Nod cap).
+InspHolesOk	găuri ok
+InspChannel	lățime canal
+InspTuneHoleDia	Toleranța dimensiunii găurii (mm)
+InspTuneHolePos	Toleranța poziției găurii (mm)
+InspTuneRound	Rotunjime minimă (1 = cerc)
+InspTuneDebris	Maxim de reziduuri în jurul găurii
+InspTuneMillWidth	Lățime canal (mm)
+InspTuneMillTol	Toleranța lățimii canalului
+InspTuneMillMin	Cel mai îngust canal (mm)
+InspTuneSpread	Cel mai neuniform canal
+InspTuneMinMean	Cea mai întunecată imagine acceptată
+InspTuneMinSharp	Claritate minimă
+InspFindHoleMissing	nicio gaură acolo
+InspFindHoleSize	dimensiune greșită
+InspFindHoleOff	decentrată
+InspFindHoleRound	neregulat rotundă
+InspFindHoleDebris	bavuri sau praf în jur
+InspFindHoleView	în afara câmpului
+InspFindMillNone	niciun canal vizibil
+InspFindMillNarrow	canale prea înguste
+InspFindMillWide	canale prea late
+InspFindMillPinch	un canal se îngustează: risc de scurtcircuit
+InspFindMillUneven	canale neuniforme
+InspFindDark	imagine prea întunecată: mai multă lumină
+InspFindBright	imagine prea luminoasă: mai puțină lumină
+InspFindContrast	imagine fără contrast
+InspFindBlurry	imagine neclară
+InspFindScale	setează mai întâi scara
+InspFindNothing	nicio verificare nu este activă
+InspFindNoHoles	nicio gaură a lucrării în câmp
+CatOpen	Catalog de scule
+CatTitle	Catalog de scule pentru PCB
+CatShank	Fiecare sculă are coada de 1/8 inch (3,175 mm) pe care o ține mandrina unei mașini Bungard. Cifrele sunt puncte de plecare pentru FR-4: încearcă-le pe o placă de rebut.
+CatAll	Toate tipurile
+KindDrill	Burghie
+KindEndMill	Freze cilindrice (drepte)
+KindDownCut	Freze cu tăiere în jos
+KindUpCut	Freze cu tăiere în sus
+KindDiamond	Freze cu tăiere diamant (corn)
+KindVBit	Scule V (gravură, izolare)
+KindBall	Freze sferice
+KindSpot	Burghie de centruire
+KindCountersink	Adâncitoare
+CatCount	scule
+KindChipBreaker	Freze sparge-așchii
+KindSlotDrill	Burghie pentru canale (găuri ovale)
+KindCoated	Freze cu strat de diamant
+CatSeriesCol	serie
+CatFluteCol	L mm
+CatPick	Fă clic pe o sculă din listă pentru a o vedea și a afla la ce folosește.
+CatSpindle	Turațiile și avansurile sunt ale producătorului. Un ax care nu poate turaționa atât de repede folosește aceeași sculă la viteza proprie, cu avansul proporțional (aceeași așchiere pe rotație).
+SpindleLbl	Axul mașinii
+SpindleOriginal	Bungard original, 60000 rpm
+SpindleVfd	Ax VFD GDZ 80-2.2, 24000 rpm
+SpindleNote	Fiecare ax are limitele sale de viteză, avans și dimensiune a sculei (pot fi editate în fișierul de setări). Catalogul și sculele avertizează când o sculă cere mai mult decât poate da axul.
+CatSpindleLbl	Ax
+FitOk	Acest ax poate folosi valorile producătorului.
+FitSlower	Acest ax o cere mai lent. Valori sugerate:
+FitLowerRpm	Axul se rotește mai încet decât cere scula: XY și Z merg proporțional mai încet.
+FitSlowZ	Z trebuie să meargă mai încet pe această mașină.
+FitSlowXy	Avansul XY trebuie să fie mai lent pe această mașină.
+FitNoThick	INCOMPATIBIL: scula este mai groasă decât acceptă acest ax.
+FitNoSlow	INCOMPATIBIL: acest ax se rotește mult prea încet pentru această sculă (ar rupe sau arde placa).
+CatUseFor	Folosește aceste valori pentru scula
+ToolFromCat	Catalog
+CatTaken	Valorile au fost preluate în sculă.
+JobNothingOn	Nimic de făcut: activează burghierea sau frezarea și cel puțin una dintre sculele lor.
+JobPartHint	Clic pentru a activa sau dezactiva; ambele active: întâi burghierea, apoi frezarea
+ToolOffHint	Fă clic pe punctul unei scule pentru a o exclude din lucrare
+CatFlute	Lungime de tăiere
+CatShankLbl	Coadă
+CatTotal	Lungime totală
+CatPoint	Unghi la vârf
+CatSchematic	Desen schematic, fără scară.
+NoteDrill	Burghiu din carbură masivă pentru găuri trecătoare. Cele mici (sub 0,5 mm) sunt pentru via, cele medii pentru piciorușe de componente, cele mari pentru conectori și găuri de montaj. Retrage-l repede și schimbă-l după câteva mii de găuri.
+NoteEndMill	Canale drepte și vârf plat: canale, buzunare, izolarea traseelor late și conturul plăcilor subțiri. Lasă un fund curat.
+NoteDownCut	Freză stângă: împinge așchiile în jos. Muchia de sus a plăcii iese fără bavuri, deci folosește-o la contur când partea de sus este cea vizibilă (placa trebuie bine fixată).
+NoteUpCut	Freză dreaptă: trage așchiile în sus și afară din tăietură. Bună pentru canale și buzunare; poate ridica placa și lăsa bavuri pe muchia de sus.
+NoteDiamond	Freză cu tăiere diamant (corn): mulți dinți mici care macină fibra de sticlă în loc s-o rupă. Alegerea obișnuită pentru conturul FR-4; lasă o muchie aspră, dar curată, și durează mult.
+NoteChip	Freză sparge-așchii: dinții ei sparg așchiile în bucăți scurte care ies ușor din tăietură. Taie mai repede decât tăierea diamant și păstrează bavurile mici.
+NoteVBit	Sculă V (de gravat): canelura are lățimea pe care o dă adâncimea, deci adâncimea stabilește lățimea izolării. Un unghi îngust cu vârf fin face posibile trasee fine.
+NoteBall	Freză sferică: o canelură rotunjită, pentru gravură și modelare. Nu pentru izolarea traseelor.
+NoteSpot	Burghiu de centruire: vârf scurt și rigid care începe o gaură exact unde trebuie, ca următorul burghiu să nu alunece. Pentru găurile mari și plăcile dure.
+NoteCountersink	Adâncitor: șanfrenează marginea unei găuri, pentru capetele de șuruburi sau pentru a elimina bavura.
+NoteSlot	Burghiu pentru canale: burghiu cu miez rigid făcut să taie găuri ovale deplasându-se lateral în timp ce burghiază (canalele conectorilor). Nu-l folosi pentru găuri rotunde: celelalte sunt mai ieftine.
+NoteCoated	Freză cu vârf plat și strat de diamant: pentru plăci abrazive (FR-4 cu Tg ridicat, fără halogeni, fibră de carbon) și plăci pe aluminiu, unde una fără strat se uzează. Costă mai mult și durează de câteva ori mai mult.
+LevTab	Calibrarea mesei
+LevMeasure	Măsoară masa
+LevStop	Oprește măsurarea
+LevClear	Șterge harta
+LevCols	Puncte pe X
+LevRows	Puncte pe Y
+LevPoints	Puncte măsurate
+LevSpread	Dispersie
+LevTilt	Înclinare X / Y
+LevDemo	Palpator simulat: încă nu este conectat niciun nod palpator, înălțimile vin dintr-o masă simulată.
+LevApply	Corectează Z-ul lucrărilor cu această hartă
+ResumeTitle	Lucrare întreruptă
+ResumeBody	Ultima lucrare a rămas la jumătate (s-a închis fereastra, a căzut calculatorul sau legătura). Vrei să continui de unde a rămas?
+ResumeContinue	Continuă lucrarea
+ResumeCancel	Anuleaz-o
+TabsOn	Frezează exteriorul cu punți
+TabsPerSide	Punți pe latură
+TabWidth	Lățimea punții
+TabPlace	Unde se pun punțile
+TabEven	Distribuite uniform pe latură
+TabEnds	Aproape de capetele laturii
+TabMiddle	Împreună la mijloc
+SetSkipLauncher	Deschide direct această fereastră data viitoare
+ColName	Nume
+ColDate	Data modificării (UTC)
+ColType	Tip
+ColSize	Dimensiune
+TypeFolder	Dosar
+TypeZip	Arhivă ZIP
+Places	Locuri
+PlaceExamples	Exemple
+PlaceDesktop	Desktop
+PlaceDocuments	Documente
+PlaceDownloads	Descărcări
+FileNameLabel	Nume fișier
+FilterSupported	Toate fișierele de lucrare
+FilterDrill	Fișiere de burghiere
+FilterRoute	Fișiere de frezare
+FilterZip	Arhive ZIP
+FilterAny	Toate fișierele
+NavBack	Înapoi
+NavUp	Sus
+ThisPc	Acest PC
+SimSpeed	Viteza simulării
+DefaultValues	Implicite
+TypeValueHint	Fă clic pe o valoare pentru a o scrie
+TabGeneral	General
+TabJob	Lucrare
+Units	Unități
+UnitMm	Milimetri (mm)
+UnitMil	Miluri (0,001 inch)
+ModelLabel	Model mașină
+ToolChange	Schimbare sculă
+TcManual	Manuală (MTC)
+TcAuto	Automată (ATC)
+EmergencyStop	Oprire de urgență
+EmergencyShow	Arată butonul de urgență (poate fi tras oriunde)
+RackPlaces	locuri de scule
+Rotate	Rotește
+FollowTool	Urmărește scula
+Enlarge2d	Mărește vederea 2D
+MoveDesign	Mută doar designul
+MoveBoard	Mută placa
+ShowBoth	Arată vederea 3D
+OnTable	Pe masă
+OnBoard	Pe placă
+Resume	Reia
+NotAnOutline	nu este conturul unei plăci (deschide stratul de profil sau de margine)
+HolesDrilled	Găuri burghiate în total
+ResetCounts	Resetează contoarele
+Recent	Recente
+McPosition	Poziție
+McWork	Lucru
+McMachine	Mașină
+McJog	Jog
+McStep	Pas (mm)
+McHome	Home
+McZero	Zero aici
+McUnlock	Deblochează
+McProgram	Program
+McOpenGcode	Deschide G-code
+McMdi	Comandă (MDI)
+McSend	Trimite
+McLog	Jurnal
+McState	Stare
+McController	Controler
+McSimulator	Simulator
+McNotDriven	încă necomandată
+McToolpath	Traseu sculă
+McLine	Linie
+McSpindle	Ax
+McFeedRate	Avans
+McStIdle	Inactiv
+McStRun	În lucru
+McStHold	În pauză
+McStHome	Homing
+McStAlarm	ALARMĂ
+McStUnknown	Necunoscut
+McZeroXyz	Setează aici zero de lucru (X, Y și Z)
+McZeroXy	Setează aici zero de lucru (X și Y)
+McGoG28	Du-te la poziția memorată G28
+McGoG30	Du-te la poziția memorată G30
+McGoZeroXy	Du-te la zero de lucru în X și Y
+McGoZeroZ	Du-te la zero de lucru în Z
+McOperator	Operator
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	Coduri G active
+McActiveM	Coduri M active
+McSpeed	Viteză
+McZeroAxis	Setează aici zero-ul acestei axe
+McInputs	Intrări
+McOutputs	Ieșiri
+McJogSpeed	Viteză jog
+MenuFile	Fișier
+MenuView	Vizualizare
+MenuHelp	Ajutor
+MenuExit	Ieșire
+McSaveGcode	Salvează G-code ...
+McEditProgram	Editează programul ...
+McRewind	Înapoi la prima linie
+McClearProgram	Șterge programul
+McFitTable	Potrivește la masă
+McFitProgram	Potrivește la program
+McShowButtons	Arată butoanele zerourilor
+McShowProgram	Arată programul
+McShowLog	Arată jurnalul
+McShowRapids	Arată mișcările rapide
+McSpindleOn	Ax pornit (M3)
+McSpindleOff	Ax oprit (M5)
+McCoolantOn	Răcire pornită (M8)
+McCoolantOff	Răcire oprită (M9)
+McSetG28	Memorează această poziție ca G28
+McSetG30	Memorează această poziție ca G30
+McCancel	Anulează
+McSecGeneral	General
+McSecInterface	Interfața cu utilizatorul
+McSecAxes	Axe și limite
+McSecJog	Jog
+McUnitInch	Inci
+McLimits	Limite de cursă (mm): minimul și maximul fiecărei axe
+McDefaultStep	Pas la pornire (mm)
+McDefaultFeed	Viteză jog la pornire (mm/min)
+McSettingsSaved	Setările au fost salvate și se aplică acum.
+McFilterGcode	Fișiere G-code
+McReplaceAsk	există deja. Îl înlocuiești?
+McReplace	Înlocuiește
+McTypeName	Scrie un nume de fișier.
+McNoSuchFile	Nu există un asemenea fișier.
+McSaveTitle	Salvează programul
+McOpenTitle	Deschide un program G-code
+McAboutBody	Programul de control al mașinii EH3D: deocamdată comandă o mașină simulată.
+FleetTitle	Mașini și stații
+FleetNoStation	Nicio stație
+FleetWaiting	Se așteaptă operatorul
+FleetReady	lucrări gata
+FleetUse	Folosește această mașină
+FleetTarget	Mașina lucrărilor
+FleetNoServer	Conexiunea nu este un server EH3D: alege-l în Conexiune pentru a vedea mașinile.
+FleetRefresh	Reîmprospătează
+JobOutsideTable	Lucrarea nu încape pe masă: mută placa sau mărește masa
+LblThickness	Grosime (mm)
+LblCopper	Cupru (µm)
+LblCopperSides	Fețe cu cupru
+LblOneSide	1 față
+LblTwoSides	2 fețe
+LblSize	Dimensiune (mm)
+LblFromFiles	Din fișiere
+LblMaker	Producător
+LblWidth	Lățime
+LblDepth	Adâncime
+LblPhotoresist	Rezist fotosensibil
+LblExtraStroke	Cursă suplimentară (mm)
+LblFeed	Avans (mm/min)
+LblSpeedRpm	Turație (rpm)
+LblDepthMm	Adâncime (mm)
+LblPasses	Treceri
+LblFeedXy	Avans XY (mm/min)
+LblFeedZ	Avans Z (mm/min)
+LblDefault	Impl.
+LblFileCoords	Coordonatele fișierelor
+LblNoRack	Fișierul mașinii nu are încă poziții de magazie
+LblWorkArea	Zonă de lucru
+LblWholeMachine	Toată mașina
+LblLayers	Straturi
+SoundFinish	Sunet la terminarea lucrării
+SoundTool	Sunet când se cere o sculă
+SoundCheckOk	Sunet când verificarea vizuală este corectă
+SoundCheckBad	Sunet când verificarea vizuală nu este corectă
+SoundFileHint	Fișier WAV (gol: tonul implicit)
+SoundTest	Test
+SndOff	Fără sunet
+SndDefault	Tonul standard
+SndFile	Un fișier al meu (WAV)
+SndChime	clopoțel
+SndRise	note ascendente
+SndFall	note descendente
+SndFanfare	fanfară
+SndTriple	trei note
+SndBell	clopot
+SndBeep	bip
+SndDouble	bip dublu
+SndTripleBeep	bip triplu
+SndAlarm	alarmă
+SndKnock	ciocănit
+SndSiren	sirenă

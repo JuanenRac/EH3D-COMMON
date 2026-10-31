@@ -1,1 +1,425 @@
 # Dansk (da): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Tema
+ThemeForge	Smedje
+ThemeNeon	Neon-arkade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Klassisk Windows
+ThemeSystem	Følg Windows-farver
+ThemeMidnight	Midnat
+ThemePaper	Papir (lyst)
+ThemeForest	Skov
+ThemeRetro	Retroterminal
+ThemeOcean	Hav
+ThemeContrast	Høj kontrast
+LauncherAsk	Hvad vil du køre?
+LauncherClassicMtc	Klassisk MTC
+LauncherClassicAtc	Klassisk ATC
+LauncherModern	Moderne (MTC + ATC)
+Remember	Husk mit valg
+PressEnter	Tryk på Enter
+ViewPlan	2D - set oppefra
+ViewMachine	3D - maskine
+LayerHoles	Borehuller
+LayerPaths	Fræsebaner
+LayerMachine	Maskine
+LayerGrid	Gitter
+Progress	Fremdrift
+TableFromConfig	Bord fra konfiguration
+Drilling	Boring
+Routing	Fræsning
+ClassicMissing	Det klassiske program ligger ikke ved siden af dette
+Start	Start
+Pause	Pause
+Stop	Stop
+Language	Sprog
+Holes	huller
+Tools	værktøjer
+SimulatedJob	Simuleret job: maskinen bevæger sig ikke
+NoFile	Ingen fil indlæst
+Ok	OK
+Abort	Afbryd
+AskSpindle	Må spindlen startes?
+AskTool	Sæt værktøj i
+Connection	Forbindelse
+OutsideTable	Passer ikke på bordet
+OpenFile	Åbn fil
+About	Om
+Close	Luk
+SettingsTitle	Indstillinger
+PanelTitle	Panelisering
+Columns	Kolonner
+Rows	Rækker
+SpacingX	Afstand X (mm)
+SpacingY	Afstand Y (mm)
+PanelModePitch	Centrum til centrum
+PanelModeGap	Mellemrum mellem print
+PanelModeFit	Udfyld bordet
+PanelCopies	kopier
+Apply	Anvend
+ResetView	Nulstil visning
+DropHint	Slip en .ncd-, .plt- eller .zip-fil her
+NavHint2d	Træk for at flytte, hjul for at zoome
+NavHint3d	Træk for at dreje, hjul for at zoome
+Version	Version
+Licence	Licens
+AboutBody	Den moderne brugerflade til Bungard CCD bore- og fræsemaskiner.
+TableWidth	Anvendelig bredde X (mm)
+TableDepth	Anvendelig dybde Y (mm)
+Save	Gem
+Saved	Gemt
+OpenFolderUp	Overordnet mappe
+ShowDrill	Boring
+ConnPort	Port
+ConnAddress	Adresse
+ConnToken	Adgangstoken
+ConnMachine	Maskine-id
+ConnTest	Test forbindelsen
+ConnWorks	Forbindelsen virker
+BoardTitle	Print
+ToolsTitle	Værktøjer
+SetAskOperator	Spørg mig ved værktøjsskift og når spindlen starter
+SetToolsOnOpen	Vis værktøjsvinduet, når jeg åbner en fil
+SndVoice	Stemme
+SndFemale	kvinde
+SndMale	mand
+HeadOpen	Hovednode
+HeadTitle	Borehovedets node
+HeadOff	Bruges ikke
+HeadDirect	Direkte
+HeadServer	Via serveren
+HeadCamera	Vis nodens kamera
+HeadSpeed	Spindel
+HeadTemp	Temperatur
+HeadProtectOpen	Beskyttelsesudgang ÅBEN: spindlen skal stoppe
+HeadProtectClosed	Beskyttelsesudgang lukket
+HeadMeasure	Mål bordet her
+HeadServerNote	Via serveren i forbindelsesvinduet: dens adresse, token og maskine-id.
+HeadNoServer	Skriv serverens adresse, token og maskine-id i forbindelsesvinduet.
+HeadCameraModel	Kameramodel
+HeadNoLink	Skriv nodens adresse (vært eller vært:port).
+HeadWaiting	Venter på noden...
+HeadCameraOff	Kamera slukket
+HeatOk	ok
+HeatWarm	varm
+HeatHot	HEDT
+HeatUnknown	ukendt
+LightTitle	Lysring
+LightOn	Lys tændt
+LightOff	Lys slukket
+LightNone	ingen ring på denne node
+InspOpen	Kvalitetskontrol
+InspTitle	Kvalitetskontrol af arbejdet
+InspRun	Kontrollér nu
+InspRunning	Kontrollerer...
+InspVerdictOk	OK
+InspVerdictNotOk	IKKE OK
+InspVerdictUnknown	KAN IKKE VURDERES
+InspIdle	Endnu ikke kontrolleret
+InspChecks	Kontroller
+InspCheckHoles	Borede huller
+InspCheckMilling	Fræsede kanaler
+InspProfile	Analyseprofil
+InspPresetStandard	Standard
+InspPresetFine	Fin delingsafstand
+InspPresetProto	Prototype
+InspLight	Lys til billedet
+InspLightKeep	som det er
+InspHolePick	Jobbets hul i midten
+InspNoJob	Indlæs en borefil for at kontrollere dens huller
+InspScale	Skala (pixel pr. mm)
+InspCalibrate	Kalibrér ud fra dette hul
+InspSave	Gem profil
+InspTune	Tolerancer
+InspNeedLink	Angiv først borehovedets node (vinduet Hovednode).
+InspHolesOk	huller ok
+InspChannel	kanalbredde
+InspTuneHoleDia	Tolerance for hulstørrelse (mm)
+InspTuneHolePos	Tolerance for hulposition (mm)
+InspTuneRound	Mindste rundhed (1 = cirkel)
+InspTuneDebris	Mest affald omkring et hul
+InspTuneMillWidth	Kanalbredde (mm)
+InspTuneMillTol	Tolerance for kanalbredde
+InspTuneMillMin	Smalleste kanal (mm)
+InspTuneSpread	Mest ujævne kanal
+InspTuneMinMean	Mørkeste accepterede billede
+InspTuneMinSharp	Mindste skarphed
+InspFindHoleMissing	intet hul der
+InspFindHoleSize	forkert størrelse
+InspFindHoleOff	ude af centrum
+InspFindHoleRound	ikke rundt
+InspFindHoleDebris	grater eller støv omkring
+InspFindHoleView	uden for billedet
+InspFindMillNone	ingen kanaler set
+InspFindMillNarrow	kanalerne er for smalle
+InspFindMillWide	kanalerne er for brede
+InspFindMillPinch	en kanal indsnævres: risiko for kortslutning
+InspFindMillUneven	kanalerne er ujævne
+InspFindDark	billedet er for mørkt: mere lys
+InspFindBright	billedet er for lyst: mindre lys
+InspFindContrast	billede uden kontrast
+InspFindBlurry	billedet er ude af fokus
+InspFindScale	angiv først skalaen
+InspFindNothing	ingen kontrol er slået til
+InspFindNoHoles	intet af jobbets huller er i billedet
+CatOpen	Værktøjskatalog
+CatTitle	Katalog over bor og fræsere til printplader
+CatShank	Alle værktøjer har et 1/8 tommer (3,175 mm) skaft, som chucken på en Bungard-maskine kan holde. Tallene er startværdier til FR-4: prøv dem på et restprint.
+CatAll	Alle typer
+KindDrill	Bor
+KindEndMill	Fingerfræsere (lige)
+KindDownCut	Fræsere med nedadgående spån
+KindUpCut	Fræsere med opadgående spån
+KindDiamond	Fræsere med diamantskær (majs)
+KindVBit	V-fræsere (gravering, isolering)
+KindBall	Kugleformede fræsere
+KindSpot	Centerbor
+KindCountersink	Sænkere
+CatCount	værktøjer
+KindChipBreaker	Fræsere med spånbryder
+KindSlotDrill	Slidsbor (til aflange huller)
+KindCoated	Diamantbelagte fræsere
+CatSeriesCol	serie
+CatFluteCol	L mm
+CatPick	Klik på et værktøj på listen for at se det og hvad det bruges til.
+CatSpindle	Omdrejninger og tilspænding er producentens. En spindel, der ikke kan dreje så hurtigt, bruger det samme værktøj ved sit eget omdrejningstal, med forholdsmæssig tilspænding (samme skær pr. omdrejning).
+SpindleLbl	Maskinens spindel
+SpindleOriginal	Original Bungard, 60000 rpm
+SpindleVfd	VFD-spindel GDZ 80-2.2, 24000 rpm
+SpindleNote	Hver spindel har sine grænser for hastighed, tilspænding og værktøjsstørrelse (de kan redigeres i indstillingsfilen). Kataloget og værktøjerne advarer, når et værktøj kræver mere, end spindlen kan give.
+CatSpindleLbl	Spindel
+FitOk	Denne spindel kan klare det med producentens værdier.
+FitSlower	Denne spindel skal køre langsommere. Foreslåede værdier:
+FitLowerRpm	Spindlen drejer langsommere, end værktøjet kræver: XY og Z kører forholdsmæssigt langsommere.
+FitSlowZ	Z skal køre langsommere på denne maskine.
+FitSlowXy	XY-tilspændingen skal være langsommere på denne maskine.
+FitNoThick	IKKE KOMPATIBELT: værktøjet er tykkere, end denne spindel kan tage.
+FitNoSlow	IKKE KOMPATIBELT: denne spindel drejer alt for langsomt til dette værktøj (det ville knække eller brænde printet).
+CatUseFor	Brug disse værdier til værktøj
+ToolFromCat	Katalog
+CatTaken	Værdierne er overført til værktøjet.
+JobNothingOn	Intet at gøre: slå boringen eller fræsningen til og mindst ét af dens værktøjer.
+JobPartHint	Klik for at slå til eller fra; begge til: først boringen og derefter fræsningen
+ToolOffHint	Klik på værktøjets prik for at udelade det fra jobbet
+CatFlute	Skærelængde
+CatShankLbl	Skaft
+CatTotal	Samlet længde
+CatPoint	Spidsvinkel
+CatSchematic	Skematisk tegning, ikke i målestok.
+NoteDrill	Massivt hårdmetalbor til gennemgående huller. De små (under 0,5 mm) er til vias, de mellemstore til komponentben, de store til stik og monteringshuller. Træk hurtigt ud, og skift det efter nogle tusinde huller.
+NoteEndMill	Lige spånriller og flad ende: slidser, lommer, isolering af brede baner og omrids af tynde print. Efterlader en ren bund.
+NoteDownCut	Venstreskærende fræser: presser spånerne nedad. Printets overkant bliver uden grater, så brug den til omridset, når oversiden er den synlige (printet skal være godt fastholdt).
+NoteUpCut	Højreskærende fræser: trækker spånerne opad og ud af snittet. God til slidser og lommer; den kan løfte printet og efterlade grater på overkanten.
+NoteDiamond	Fræser med diamantskær (majs): mange små tænder, der maler glasfiberen i stedet for at rive den. Det sædvanlige valg til omridset af FR-4; giver en ru, men ren kant og holder længe.
+NoteChip	Fræser med spånbryder: tænderne bryder spånerne i korte stykker, som let forlader snittet. Skærer hurtigere end diamantskær og holder gratene små.
+NoteVBit	V-fræser (graveringsfræser): rillen er så bred, som dybden gør den, så dybden bestemmer isoleringens bredde. En smal vinkel med fin spids gør fine baner mulige.
+NoteBall	Kuglefræser: en afrundet rille, til gravering og formgivning. Ikke til isolering af baner.
+NoteSpot	Centerbor: en kort, stiv spids, der starter et hul præcis det rigtige sted, så det næste bor ikke vandrer. Til de store huller og til hårde print.
+NoteCountersink	Sænker: bryder kanten på et hul, til skruehoveder eller for at fjerne grater.
+NoteSlot	Slidsbor: et bor med stiv kerne, lavet til at skære aflange huller ved at bevæge sig sidelæns under boringen (stikkenes slidser). Brug det ikke til runde huller: de andre er billigere.
+NoteCoated	Flad fræser med diamantbelægning: til slibende print (FR-4 med høj Tg, halogenfri, kulfiber) og print med aluminiumsbagside, hvor en ubelagt slides op. Den koster mere og holder flere gange længere.
+LevTab	Kalibrering af bord
+LevMeasure	Mål bordet
+LevStop	Stop måling
+LevClear	Ryd kortet
+LevCols	Punkter langs X
+LevRows	Punkter langs Y
+LevPoints	Målte punkter
+LevSpread	Spredning
+LevTilt	Hældning X / Y
+LevDemo	Simuleret føler: ingen følernode er tilsluttet endnu, højderne kommer fra et simuleret bord.
+LevApply	Ret Z i jobbene med dette kort
+ResumeTitle	Job afbrudt
+ResumeBody	Det sidste job blev afbrudt midtvejs (vinduet, computeren eller forbindelsen gik ned). Vil du fortsætte, hvor det slap?
+ResumeContinue	Fortsæt jobbet
+ResumeCancel	Annullér det
+TabsOn	Fræs yderkanten med tabs
+TabsPerSide	Tabs pr. side
+TabWidth	Tabbredde
+TabPlace	Hvor tabs placeres
+TabEven	Jævnt fordelt langs siden
+TabEnds	Nær siderne ender
+TabMiddle	Samlet i midten
+SetSkipLauncher	Åbn dette vindue direkte næste gang
+ColName	Navn
+ColDate	Ændringsdato (UTC)
+ColType	Type
+ColSize	Størrelse
+TypeFolder	Mappe
+TypeZip	ZIP-arkiv
+Places	Steder
+PlaceExamples	Eksempler
+PlaceDesktop	Skrivebord
+PlaceDocuments	Dokumenter
+PlaceDownloads	Downloads
+FileNameLabel	Filnavn
+FilterSupported	Alle jobfiler
+FilterDrill	Borefiler
+FilterRoute	Fræsefiler
+FilterZip	ZIP-arkiver
+FilterAny	Alle filer
+NavBack	Tilbage
+NavUp	Op
+ThisPc	Denne pc
+SimSpeed	Simuleringshastighed
+DefaultValues	Standard
+TypeValueHint	Klik på en værdi for at skrive den
+TabGeneral	Generelt
+TabJob	Job
+Units	Enheder
+UnitMm	Millimeter (mm)
+UnitMil	Mil (0,001 tomme)
+ModelLabel	Maskinmodel
+ToolChange	Værktøjsskift
+TcManual	Manuelt (MTC)
+TcAuto	Automatisk (ATC)
+EmergencyStop	Nødstop
+EmergencyShow	Vis nødknappen (den kan trækkes hvorhen som helst)
+RackPlaces	værktøjspladser
+Rotate	Roter
+FollowTool	Følg værktøjet
+Enlarge2d	Forstør 2D-visningen
+MoveDesign	Flyt kun designet
+MoveBoard	Flyt printet
+ShowBoth	Vis 3D-visningen
+OnTable	På bordet
+OnBoard	På printet
+Resume	Genoptag
+NotAnOutline	er ikke et printomrids (åbn dets profil- eller kantlag)
+HolesDrilled	Huller boret i alt
+ResetCounts	Nulstil tællerne
+Recent	Seneste
+McPosition	Position
+McWork	Arbejde
+McMachine	Maskine
+McJog	Jog
+McStep	Trin (mm)
+McHome	Home
+McZero	Nul her
+McUnlock	Lås op
+McProgram	Program
+McOpenGcode	Åbn G-code
+McMdi	Kommando (MDI)
+McSend	Send
+McLog	Log
+McState	Tilstand
+McController	Controller
+McSimulator	Simulator
+McNotDriven	endnu ikke styret
+McToolpath	Værktøjsbane
+McLine	Linje
+McSpindle	Spindel
+McFeedRate	Tilspænding
+McStIdle	Inaktiv
+McStRun	Kører
+McStHold	Pauset
+McStHome	Referencekørsel
+McStAlarm	ALARM
+McStUnknown	Ukendt
+McZeroXyz	Sæt arbejdsnulpunktet her (X, Y og Z)
+McZeroXy	Sæt arbejdsnulpunktet her (X og Y)
+McGoG28	Kør til den gemte position G28
+McGoG30	Kør til den gemte position G30
+McGoZeroXy	Kør til arbejdsnulpunktet i X og Y
+McGoZeroZ	Kør til arbejdsnulpunktet i Z
+McOperator	Operatør
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	Aktive G-koder
+McActiveM	Aktive M-koder
+McSpeed	Hastighed
+McZeroAxis	Sæt nulpunktet for denne akse her
+McInputs	Indgange
+McOutputs	Udgange
+McJogSpeed	Jog-hastighed
+MenuFile	Filer
+MenuView	Vis
+MenuHelp	Hjælp
+MenuExit	Afslut
+McSaveGcode	Gem G-code ...
+McEditProgram	Rediger programmet ...
+McRewind	Spol tilbage til første linje
+McClearProgram	Ryd programmet
+McFitTable	Tilpas til bordet
+McFitProgram	Tilpas til programmet
+McShowButtons	Vis nulpunktsknapperne
+McShowProgram	Vis programmet
+McShowLog	Vis loggen
+McShowRapids	Vis ilgangsbevægelserne
+McSpindleOn	Spindel til (M3)
+McSpindleOff	Spindel fra (M5)
+McCoolantOn	Kølevæske til (M8)
+McCoolantOff	Kølevæske fra (M9)
+McSetG28	Gem denne position som G28
+McSetG30	Gem denne position som G30
+McCancel	Annullér
+McSecGeneral	Generelt
+McSecInterface	Brugerflade
+McSecAxes	Akser og grænser
+McSecJog	Jog
+McUnitInch	Tommer
+McLimits	Kørselsgrænser (mm): minimum og maksimum for hver akse
+McDefaultStep	Trin ved start (mm)
+McDefaultFeed	Jog-hastighed ved start (mm/min)
+McSettingsSaved	Indstillingerne er gemt og gælder nu.
+McFilterGcode	G-code-filer
+McReplaceAsk	findes allerede. Skal den erstattes?
+McReplace	Erstat
+McTypeName	Skriv et filnavn.
+McNoSuchFile	Filen findes ikke.
+McSaveTitle	Gem programmet
+McOpenTitle	Åbn et G-code-program
+McAboutBody	EH3D's maskinstyringsprogram: det styrer indtil videre en simuleret maskine.
+FleetTitle	Maskiner og stationer
+FleetNoStation	Ingen station
+FleetWaiting	Venter på operatøren
+FleetReady	job klar
+FleetUse	Brug denne maskine
+FleetTarget	Maskine til jobbene
+FleetNoServer	Forbindelsen er ikke en EH3D-server: vælg den under Forbindelse for at se maskinerne.
+FleetRefresh	Opdater
+JobOutsideTable	Jobbet passer ikke på bordet: flyt printet eller gør bordet større
+LblThickness	Tykkelse (mm)
+LblCopper	Kobber (µm)
+LblCopperSides	Kobbersider
+LblOneSide	1 side
+LblTwoSides	2 sider
+LblSize	Størrelse (mm)
+LblFromFiles	Fra filerne
+LblMaker	Producent
+LblWidth	Bredde
+LblDepth	Dybde
+LblPhotoresist	Lysfølsom resist
+LblExtraStroke	Ekstra slag (mm)
+LblFeed	Tilspænding (mm/min)
+LblSpeedRpm	Hastighed (rpm)
+LblDepthMm	Dybde (mm)
+LblPasses	Gennemløb
+LblFeedXy	Tilspænding XY (mm/min)
+LblFeedZ	Tilspænding Z (mm/min)
+LblDefault	Std.
+LblFileCoords	Filernes koordinater
+LblNoRack	Maskinfilen har endnu ingen magasinpositioner
+LblWorkArea	Arbejdsområde
+LblWholeMachine	Hele maskinen
+LblLayers	Lag
+SoundFinish	Lyd når jobbet slutter
+SoundTool	Lyd når et værktøj efterspørges
+SoundCheckOk	Lyd når den visuelle kontrol er i orden
+SoundCheckBad	Lyd når den visuelle kontrol ikke er i orden
+SoundFileHint	WAV-fil (tom: standardtonen)
+SoundTest	Test
+SndOff	Ingen lyd
+SndDefault	Standardtonen
+SndFile	Min egen fil (WAV)
+SndChime	klokkespil
+SndRise	stigende toner
+SndFall	faldende toner
+SndFanfare	fanfare
+SndTriple	tre toner
+SndBell	klokke
+SndBeep	bip
+SndDouble	dobbelt bip
+SndTripleBeep	tredobbelt bip
+SndAlarm	alarm
+SndKnock	banken
+SndSiren	sirene

@@ -1,1 +1,425 @@
 # Magyar (hu): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Téma
+ThemeForge	Forge
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Klasszikus Windows
+ThemeSystem	Windows-színek követése
+ThemeMidnight	Éjfél
+ThemePaper	Papír (világos)
+ThemeForest	Erdő
+ThemeRetro	Retró terminál
+ThemeOcean	Óceán
+ThemeContrast	Nagy kontraszt
+LauncherAsk	Mit szeretne futtatni?
+LauncherClassicMtc	Klasszikus MTC
+LauncherClassicAtc	Klasszikus ATC
+LauncherModern	Modern (MTC + ATC)
+Remember	Választás megjegyzése
+PressEnter	Nyomja meg az Entert
+ViewPlan	2D - felülnézet
+ViewMachine	3D - gép
+LayerHoles	Furatok
+LayerPaths	Marási pályák
+LayerMachine	Gép
+LayerGrid	Rács
+Progress	Előrehaladás
+TableFromConfig	Asztal a konfigurációból
+Drilling	Fúrás
+Routing	Marás
+ClassicMissing	A klasszikus program nincs ennek a mellett
+Start	Indítás
+Pause	Szünet
+Stop	Leállítás
+Language	Nyelv
+Holes	furat
+Tools	szerszám
+SimulatedJob	Szimulált munka: a gép nem mozog
+NoFile	Nincs betöltött fájl
+Ok	Ok
+Abort	Megszakítás
+AskSpindle	Indíthatja a főorsót?
+AskTool	Helyezze be a szerszámot
+Connection	Kapcsolat
+OutsideTable	Nem fér rá az asztalra
+OpenFile	Fájl megnyitása
+About	Névjegy
+Close	Bezárás
+SettingsTitle	Beállítások
+PanelTitle	Panelezés
+Columns	Oszlopok
+Rows	Sorok
+SpacingX	X távolság (mm)
+SpacingY	Y távolság (mm)
+PanelModePitch	Középtől középig
+PanelModeGap	Rés a lapok között
+PanelModeFit	Az asztal kitöltése
+PanelCopies	másolat
+Apply	Alkalmaz
+ResetView	Nézet visszaállítása
+DropHint	Húzzon ide egy .ncd, .plt vagy .zip fájlt
+NavHint2d	Húzás: mozgatás, görgő: nagyítás
+NavHint3d	Húzás: forgatás, görgő: nagyítás
+Version	Verzió
+Licence	Licenc
+AboutBody	A Bungard CCD fúró- és marógépek modern felülete.
+TableWidth	Használható szélesség X (mm)
+TableDepth	Használható mélység Y (mm)
+Save	Mentés
+Saved	Mentve
+OpenFolderUp	Szülőmappa
+ShowDrill	Fúrás
+ConnPort	Port
+ConnAddress	Cím
+ConnToken	Hozzáférési token
+ConnMachine	Gép azonosítója
+ConnTest	Kapcsolat tesztelése
+ConnWorks	A kapcsolat működik
+BoardTitle	Lap
+ToolsTitle	Szerszámok
+SetAskOperator	Kérdezzen szerszámcserénél és a főorsó indításakor
+SetToolsOnOpen	Fájl megnyitásakor mutassa a szerszámablakot
+SndVoice	Hang
+SndFemale	női
+SndMale	férfi
+HeadOpen	Fej csomópont
+HeadTitle	A fúrófej csomópontja
+HeadOff	Nincs használatban
+HeadDirect	Közvetlenül
+HeadServer	A szerveren át
+HeadCamera	A csomópont kamerájának megjelenítése
+HeadSpeed	Főorsó
+HeadTemp	Hőmérséklet
+HeadProtectOpen	Védelmi kimenet NYITVA: a főorsónak le kell állnia
+HeadProtectClosed	Védelmi kimenet zárva
+HeadMeasure	Asztal mérése itt
+HeadServerNote	A kapcsolat ablakának szerverén át: annak címe, tokenje és a gép azonosítója.
+HeadNoServer	Írja be a szerver címét, tokenjét és a gép azonosítóját a kapcsolat ablakban.
+HeadCameraModel	Kameramodell
+HeadNoLink	Írja be a csomópont címét (host vagy host:port).
+HeadWaiting	Várakozás a csomópontra...
+HeadCameraOff	Kamera kikapcsolva
+HeatOk	rendben
+HeatWarm	meleg
+HeatHot	FORRÓ
+HeatUnknown	ismeretlen
+LightTitle	Fénygyűrű
+LightOn	Fény be
+LightOff	Fény ki
+LightNone	nincs gyűrű ezen a csomóponton
+InspOpen	Minőségellenőrzés
+InspTitle	A munka minőségellenőrzése
+InspRun	Ellenőrzés most
+InspRunning	Ellenőrzés...
+InspVerdictOk	RENDBEN
+InspVerdictNotOk	NEM RENDBEN
+InspVerdictUnknown	NEM ÍTÉLHETŐ MEG
+InspIdle	Még nincs ellenőrizve
+InspChecks	Ellenőrzések
+InspCheckHoles	Fúrt furatok
+InspCheckMilling	Mart csatornák
+InspProfile	Elemző profil
+InspPresetStandard	Szabványos
+InspPresetFine	Finom raszter
+InspPresetProto	Prototípus
+InspLight	Fény a képhez
+InspLightKeep	változatlan
+InspHolePick	A munka furata középen
+InspNoJob	Töltsön be fúrófájlt a furatok ellenőrzéséhez
+InspScale	Skála (pixel/mm)
+InspCalibrate	Kalibrálás ebből a furatból
+InspSave	Profil mentése
+InspTune	Tűrések
+InspNeedLink	Előbb állítsa be a fúrófej csomópontját (Fej csomópont ablak).
+InspHolesOk	furat rendben
+InspChannel	csatornaszélesség
+InspTuneHoleDia	Furatméret tűrése (mm)
+InspTuneHolePos	Furatpozíció tűrése (mm)
+InspTuneRound	Legkisebb kerekség (1 = kör)
+InspTuneDebris	Legtöbb törmelék a furat körül
+InspTuneMillWidth	Csatornaszélesség (mm)
+InspTuneMillTol	Csatornaszélesség tűrése
+InspTuneMillMin	Legkeskenyebb csatorna (mm)
+InspTuneSpread	Legegyenetlenebb csatorna
+InspTuneMinMean	Legsötétebb elfogadott kép
+InspTuneMinSharp	Legkisebb élesség
+InspFindHoleMissing	nincs ott furat
+InspFindHoleSize	rossz méret
+InspFindHoleOff	nem középen
+InspFindHoleRound	nem kerek
+InspFindHoleDebris	sorja vagy por körülötte
+InspFindHoleView	a képen kívül
+InspFindMillNone	nem látszik csatorna
+InspFindMillNarrow	a csatornák túl keskenyek
+InspFindMillWide	a csatornák túl szélesek
+InspFindMillPinch	egy csatorna beszűkül: zárlat veszélye
+InspFindMillUneven	egyenetlen csatornák
+InspFindDark	túl sötét kép: több fény kell
+InspFindBright	túl világos kép: kevesebb fény kell
+InspFindContrast	kontraszt nélküli kép
+InspFindBlurry	életlen kép
+InspFindScale	előbb állítsa be a skálát
+InspFindNothing	nincs ellenőrzés bekapcsolva
+InspFindNoHoles	a munka egy furata sincs a képen
+CatOpen	Szerszámkatalógus
+CatTitle	Szerszámkatalógus NYÁK-hoz
+CatShank	Minden szerszámnak 1/8 hüvelykes (3,175 mm) szára van, amelyet a Bungard gép tokmánya fog. A számok FR-4-hez kiindulási értékek: próbálja ki őket egy hulladéklapon.
+CatAll	Minden fajta
+KindDrill	Fúrók
+KindEndMill	Ujjmaró (egyenes)
+KindDownCut	Lefelé vágó marók
+KindUpCut	Felfelé vágó marók
+KindDiamond	Gyémántfogazású marók (kukorica)
+KindVBit	V-marók (gravírozás, szigetelés)
+KindBall	Gömbvégű maró
+KindSpot	Központfúrók
+KindCountersink	Süllyesztők
+CatCount	szerszám
+KindChipBreaker	Forgácstörő marók
+KindSlotDrill	Hornyolófúrók (hosszúkás furatokhoz)
+KindCoated	Gyémántbevonatú marók
+CatSeriesCol	sorozat
+CatFluteCol	L mm
+CatPick	Kattintson a lista egy szerszámára, hogy lássa, mire való.
+CatSpindle	A fordulatszámok és az előtolások a gyártó adatai. Az a főorsó, amely nem forog ilyen gyorsan, ugyanezt a szerszámot a saját fordulatszámán használja, arányosan csökkentett előtolással (fordulatonként ugyanaz a forgácsvastagság).
+SpindleLbl	A gép főorsója
+SpindleOriginal	Eredeti Bungard, 60000 rpm
+SpindleVfd	VFD főorsó GDZ 80-2.2, 24000 rpm
+SpindleNote	Minden főorsónak megvannak a maga fordulatszám-, előtolás- és szerszámméret-határai (a beállítófájlban szerkeszthetők). A katalógus és a szerszámok figyelmeztetnek, ha egy szerszám többet kér, mint amennyit a főorsó adni tud.
+CatSpindleLbl	Főorsó
+FitOk	Ez a főorsó a gyártó értékeivel is bírja.
+FitSlower	Ehhez ennek a főorsónak lassabban kell mennie. Javasolt értékek:
+FitLowerRpm	A főorsó lassabban forog, mint amit a szerszám kér: az XY és a Z arányosan lassabban megy.
+FitSlowZ	A Z-nek lassabban kell mennie ezen a gépen.
+FitSlowXy	Az XY előtolásnak lassabbnak kell lennie ezen a gépen.
+FitNoThick	NEM KOMPATIBILIS: a szerszám vastagabb, mint amit ez a főorsó befog.
+FitNoSlow	NEM KOMPATIBILIS: ez a főorsó messze túl lassan forog ehhez a szerszámhoz (eltörne vagy megégetné a lapot).
+CatUseFor	Ezen értékek használata a szerszámhoz
+ToolFromCat	Katalógus
+CatTaken	Az értékek átvéve a szerszámba.
+JobNothingOn	Nincs mit tenni: kapcsolja be a fúrást vagy a marást és legalább egy szerszámát.
+JobPartHint	Kattintson a be- vagy kikapcsoláshoz; mindkettő bekapcsolva: előbb a fúrás, majd a marás
+ToolOffHint	Kattintson a szerszám pontjára, hogy kimaradjon a munkából
+CatFlute	Vágóhossz
+CatShankLbl	Szár
+CatTotal	Teljes hossz
+CatPoint	Csúcsszög
+CatSchematic	Vázlatrajz, nem méretarányos.
+NoteDrill	Tömör keményfém fúró átmenő furatokhoz. A kicsik (0,5 mm alatt) átvezetésekhez (via), a közepesek alkatrészlábakhoz, a nagyok csatlakozókhoz és rögzítőfuratokhoz valók. Gyorsan húzza vissza, és néhány ezer furat után cserélje.
+NoteEndMill	Egyenes hornyok és lapos vég: hornyok, zsebek, széles vezetősávok szigetelése és vékony lapok körvonala. Tiszta fenéket hagy.
+NoteDownCut	Balos maró: lefelé nyomja a forgácsot. A lap felső éle sorjamentes lesz, ezért akkor használja a körvonalhoz, ha a felső oldal a látszó (a lapot jól le kell fogni).
+NoteUpCut	Jobbos maró: felfelé húzza a forgácsot, ki a vágatból. Jó hornyokhoz és zsebekhez; megemelheti a lapot és sorját hagyhat a felső élen.
+NoteDiamond	Gyémántfogazású (kukorica) maró: sok apró fog, amely őrli az üvegszálat ahelyett, hogy szakítaná. Az FR-4 körvonalának szokásos választása; érdes, de tiszta élt hagy, és sokáig bírja.
+NoteChip	Forgácstörő maró: a fogai rövid darabokra törik a forgácsot, amely könnyen távozik a vágatból. Gyorsabban vág, mint a gyémántfogazású, és kicsi marad a sorja.
+NoteVBit	V-maró (gravírozó szerszám): a barázda olyan széles, amilyenre a mélység teszi, így a mélység szabja meg a szigetelés szélességét. A keskeny szög és a finom hegy finom vezetősávokat tesz lehetővé.
+NoteBall	Gömbvégű ujjmaró: lekerekített barázda, gravírozáshoz és formázáshoz. Nem vezetősávok szigetelésére való.
+NoteSpot	Központfúró: rövid, merev hegy, amely pontosan ott kezd furatot, ahol kell, így a következő fúró nem csúszik el. Nagy furatokhoz és kemény lapokhoz.
+NoteCountersink	Süllyesztő: letöri a furat élét, csavarfejek számára vagy a sorja eltávolítására.
+NoteSlot	Hornyolófúró: merev maggal készült fúró, amely fúrás közben oldalra mozogva hosszúkás furatokat (a csatlakozók réseit) vág. Ne használja kerek furatokhoz: a többi olcsóbb.
+NoteCoated	Gyémántbevonatú, lapos végű maró: koptató lapokhoz (magas Tg-jű FR-4, halogénmentes, szénszál) és alumíniumhátú lapokhoz, ahol a bevonat nélküli elkopik. Drágább, és többszörösen tovább bírja.
+LevTab	Asztalkalibrálás
+LevMeasure	Asztal mérése
+LevStop	Mérés leállítása
+LevClear	Térkép törlése
+LevCols	Pontok X mentén
+LevRows	Pontok Y mentén
+LevPoints	Mért pontok
+LevSpread	Szórás
+LevTilt	Dőlés X / Y
+LevDemo	Szimulált tapintó: még nincs tapintó csomópont csatlakoztatva, a magasságok egy szimulált asztalból származnak.
+LevApply	A munkák Z értékének korrigálása ezzel a térképpel
+ResumeTitle	Megszakadt munka
+ResumeBody	Az utolsó munka félbemaradt (az ablak, a számítógép vagy a kapcsolat leállt). Folytatja onnan, ahol abbamaradt?
+ResumeContinue	Munka folytatása
+ResumeCancel	Elvetés
+TabsOn	Külső kontúr marása hidakkal
+TabsPerSide	Híd oldalanként
+TabWidth	Híd szélessége
+TabPlace	A hidak helye
+TabEven	Egyenletesen elosztva az oldal mentén
+TabEnds	Az oldal végei közelében
+TabMiddle	Együtt középen
+SetSkipLauncher	Legközelebb nyissa meg közvetlenül ezt az ablakot
+ColName	Név
+ColDate	Módosítás dátuma (UTC)
+ColType	Típus
+ColSize	Méret
+TypeFolder	Mappa
+TypeZip	ZIP-archívum
+Places	Helyek
+PlaceExamples	Példák
+PlaceDesktop	Asztal
+PlaceDocuments	Dokumentumok
+PlaceDownloads	Letöltések
+FileNameLabel	Fájlnév
+FilterSupported	Minden munkafájl
+FilterDrill	Fúrófájlok
+FilterRoute	Marófájlok
+FilterZip	ZIP-archívumok
+FilterAny	Minden fájl
+NavBack	Vissza
+NavUp	Fel
+ThisPc	Ez a gép
+SimSpeed	Szimuláció sebessége
+DefaultValues	Alapértékek
+TypeValueHint	Kattintson egy értékre a beírásához
+TabGeneral	Általános
+TabJob	Munka
+Units	Mértékegységek
+UnitMm	Milliméter (mm)
+UnitMil	Mil (0,001 hüvelyk)
+ModelLabel	Gépmodell
+ToolChange	Szerszámcsere
+TcManual	Kézi (MTC)
+TcAuto	Automatikus (ATC)
+EmergencyStop	Vészleállítás
+EmergencyShow	Vészgomb megjelenítése (bárhová húzható)
+RackPlaces	szerszámhely
+Rotate	Forgatás
+FollowTool	A szerszám követése
+Enlarge2d	A 2D nézet nagyítása
+MoveDesign	Csak a terv mozgatása
+MoveBoard	A lap mozgatása
+ShowBoth	A 3D nézet megjelenítése
+OnTable	Az asztalon
+OnBoard	A lapon
+Resume	Folytatás
+NotAnOutline	nem lap körvonala (nyissa meg a profil- vagy élrétegét)
+HolesDrilled	Összes fúrt furat
+ResetCounts	Számlálók nullázása
+Recent	Legutóbbiak
+McPosition	Pozíció
+McWork	Munka
+McMachine	Gép
+McJog	Léptetés
+McStep	Lépés (mm)
+McHome	Referencia
+McZero	Nulla itt
+McUnlock	Feloldás
+McProgram	Program
+McOpenGcode	G-kód megnyitása
+McMdi	Parancs (MDI)
+McSend	Küldés
+McLog	Napló
+McState	Állapot
+McController	Vezérlő
+McSimulator	Szimulátor
+McNotDriven	még nem vezérelt
+McToolpath	Szerszámpálya
+McLine	Sor
+McSpindle	Főorsó
+McFeedRate	Előtolás
+McStIdle	Tétlen
+McStRun	Fut
+McStHold	Szüneteltetve
+McStHome	Referenciafutás
+McStAlarm	RIASZTÁS
+McStUnknown	Ismeretlen
+McZeroXyz	Munkanulla beállítása itt (X, Y és Z)
+McZeroXy	Munkanulla beállítása itt (X és Y)
+McGoG28	Ugrás a tárolt G28 pozícióra
+McGoG30	Ugrás a tárolt G30 pozícióra
+McGoZeroXy	Ugrás a munkanullára X-ben és Y-ban
+McGoZeroZ	Ugrás a munkanullára Z-ben
+McOperator	Kezelő
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	Aktív G-kódok
+McActiveM	Aktív M-kódok
+McSpeed	Sebesség
+McZeroAxis	Ezen tengely nullájának beállítása itt
+McInputs	Bemenetek
+McOutputs	Kimenetek
+McJogSpeed	Léptetési sebesség
+MenuFile	Fájl
+MenuView	Nézet
+MenuHelp	Súgó
+MenuExit	Kilépés
+McSaveGcode	G-kód mentése ...
+McEditProgram	Program szerkesztése ...
+McRewind	Vissza az első sorra
+McClearProgram	Program törlése
+McFitTable	Az asztal illesztése
+McFitProgram	A program illesztése
+McShowButtons	A nullák gombjainak megjelenítése
+McShowProgram	A program megjelenítése
+McShowLog	A napló megjelenítése
+McShowRapids	A gyorsmozgások megjelenítése
+McSpindleOn	Főorsó be (M3)
+McSpindleOff	Főorsó ki (M5)
+McCoolantOn	Hűtés be (M8)
+McCoolantOff	Hűtés ki (M9)
+McSetG28	Pozíció tárolása G28-ként
+McSetG30	Pozíció tárolása G30-ként
+McCancel	Mégse
+McSecGeneral	Általános
+McSecInterface	Felhasználói felület
+McSecAxes	Tengelyek és határok
+McSecJog	Léptetés
+McUnitInch	Hüvelyk
+McLimits	Mozgási határok (mm): az egyes tengelyek minimuma és maximuma
+McDefaultStep	Lépés induláskor (mm)
+McDefaultFeed	Léptetési sebesség induláskor (mm/min)
+McSettingsSaved	A beállítások mentve, és most lépnek érvénybe.
+McFilterGcode	G-kód fájlok
+McReplaceAsk	már létezik. Felülírja?
+McReplace	Felülírás
+McTypeName	Írjon be egy fájlnevet.
+McNoSuchFile	Nincs ilyen fájl.
+McSaveTitle	Program mentése
+McOpenTitle	G-kód program megnyitása
+McAboutBody	Az EH3D gépvezérlő programja: egyelőre szimulált gépet vezérel.
+FleetTitle	Gépek és állomások
+FleetNoStation	Nincs állomás
+FleetWaiting	Várakozás a kezelőre
+FleetReady	kész munka
+FleetUse	Ennek a gépnek a használata
+FleetTarget	A munkák gépe
+FleetNoServer	A kapcsolat nem EH3D szerver: válasszon egyet a Kapcsolatban a gépek megtekintéséhez.
+FleetRefresh	Frissítés
+JobOutsideTable	A munka nem fér rá az asztalra: mozgassa a lapot, vagy növelje az asztalt
+LblThickness	Vastagság (mm)
+LblCopper	Réz (µm)
+LblCopperSides	Rézoldalak
+LblOneSide	1 oldal
+LblTwoSides	2 oldal
+LblSize	Méret (mm)
+LblFromFiles	A fájlokból
+LblMaker	Gyártó
+LblWidth	Szélesség
+LblDepth	Mélység
+LblPhotoresist	Fényérzékeny lakk
+LblExtraStroke	Extra löket (mm)
+LblFeed	Előtolás (mm/min)
+LblSpeedRpm	Fordulatszám (rpm)
+LblDepthMm	Mélység (mm)
+LblPasses	Fogások
+LblFeedXy	Előtolás XY (mm/min)
+LblFeedZ	Előtolás Z (mm/min)
+LblDefault	Alap.
+LblFileCoords	A fájlok koordinátái
+LblNoRack	A gépfájlban még nincsenek tárhelyek
+LblWorkArea	Munkaterület
+LblWholeMachine	Teljes gép
+LblLayers	Rétegek
+SoundFinish	Hang a munka végén
+SoundTool	Hang szerszám kérésekor
+SoundCheckOk	Hang, ha a vizuális ellenőrzés rendben van
+SoundCheckBad	Hang, ha a vizuális ellenőrzés nem rendben van
+SoundFileHint	WAV fájl (üres: az alapértelmezett hang)
+SoundTest	Teszt
+SndOff	Nincs hang
+SndDefault	Az alapértelmezett hang
+SndFile	Saját fájl (WAV)
+SndChime	csengettyű
+SndRise	emelkedő hangok
+SndFall	süllyedő hangok
+SndFanfare	fanfár
+SndTriple	három hang
+SndBell	harang
+SndBeep	sípolás
+SndDouble	dupla sípolás
+SndTripleBeep	hármas sípolás
+SndAlarm	riasztás
+SndKnock	kopogás
+SndSiren	sziréna

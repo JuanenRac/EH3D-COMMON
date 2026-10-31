@@ -1,1 +1,425 @@
 # Suomi (fi): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Teema
+ThemeForge	Paja
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Klassinen Windows
+ThemeSystem	Seuraa Windowsin värejä
+ThemeMidnight	Keskiyö
+ThemePaper	Paperi (vaalea)
+ThemeForest	Metsä
+ThemeRetro	Retropääte
+ThemeOcean	Valtameri
+ThemeContrast	Korkea kontrasti
+LauncherAsk	Mitä haluat suorittaa?
+LauncherClassicMtc	Klassinen MTC
+LauncherClassicAtc	Klassinen ATC
+LauncherModern	Moderni (MTC + ATC)
+Remember	Muista valintani
+PressEnter	Paina Enter
+ViewPlan	2D - yläkuva
+ViewMachine	3D - kone
+LayerHoles	Porausreiät
+LayerPaths	Jyrsintäradat
+LayerMachine	Kone
+LayerGrid	Ruudukko
+Progress	Eteneminen
+TableFromConfig	Pöytä asetuksista
+Drilling	Poraus
+Routing	Jyrsintä
+ClassicMissing	Klassinen ohjelma ei ole tämän vieressä
+Start	Käynnistä
+Pause	Tauko
+Stop	Pysäytä
+Language	Kieli
+Holes	reikää
+Tools	työkalua
+SimulatedJob	Simuloitu työ: mitään konetta ei liikuteta
+NoFile	Tiedostoa ei ole ladattu
+Ok	Ok
+Abort	Keskeytä
+AskSpindle	Käynnistetäänkö kara?
+AskTool	Aseta työkalu
+Connection	Yhteys
+OutsideTable	Ei mahdu pöydälle
+OpenFile	Avaa tiedosto
+About	Tietoja
+Close	Sulje
+SettingsTitle	Asetukset
+PanelTitle	Paneelointi
+Columns	Sarakkeet
+Rows	Rivit
+SpacingX	Väli X (mm)
+SpacingY	Väli Y (mm)
+PanelModePitch	Keskeltä keskelle
+PanelModeGap	Korttien väli
+PanelModeFit	Täytä pöytä
+PanelCopies	kopiota
+Apply	Käytä
+ResetView	Palauta näkymä
+DropHint	Pudota tähän .ncd-, .plt- tai .zip-tiedosto
+NavHint2d	Vedä siirtääksesi, rullalla zoomaat
+NavHint3d	Vedä kääntääksesi, rullalla zoomaat
+Version	Versio
+Licence	Lisenssi
+AboutBody	Moderni käyttöliittymä Bungard CCD -poraus- ja jyrsintäkoneille.
+TableWidth	Käyttökelpoinen leveys X (mm)
+TableDepth	Käyttökelpoinen syvyys Y (mm)
+Save	Tallenna
+Saved	Tallennettu
+OpenFolderUp	Ylempi kansio
+ShowDrill	Poraus
+ConnPort	Portti
+ConnAddress	Osoite
+ConnToken	Käyttötunniste
+ConnMachine	Koneen tunnus
+ConnTest	Testaa yhteys
+ConnWorks	Yhteys toimii
+BoardTitle	Kortti
+ToolsTitle	Työkalut
+SetAskOperator	Kysy työkalunvaihdoissa ja karan käynnistyessä
+SetToolsOnOpen	Näytä työkaluikkuna, kun avaan tiedoston
+SndVoice	Ääni
+SndFemale	nainen
+SndMale	mies
+HeadOpen	Pään solmu
+HeadTitle	Poraspään solmu
+HeadOff	Ei käytössä
+HeadDirect	Suoraan
+HeadServer	Palvelimen kautta
+HeadCamera	Näytä solmun kamera
+HeadSpeed	Kara
+HeadTemp	Lämpötila
+HeadProtectOpen	Suojalähtö AUKI: karan on pysähdyttävä
+HeadProtectClosed	Suojalähtö kiinni
+HeadMeasure	Mittaa pöytä tässä
+HeadServerNote	Yhteysikkunan palvelimen kautta: sen osoite, tunniste ja koneen tunnus.
+HeadNoServer	Kirjoita palvelimen osoite, tunniste ja koneen tunnus yhteysikkunaan.
+HeadCameraModel	Kameramalli
+HeadNoLink	Kirjoita solmun osoite (isäntä tai isäntä:portti).
+HeadWaiting	Odotetaan solmua...
+HeadCameraOff	Kamera pois päältä
+HeatOk	ok
+HeatWarm	lämmin
+HeatHot	KUUMA
+HeatUnknown	tuntematon
+LightTitle	Valorengas
+LightOn	Valo päällä
+LightOff	Valo pois
+LightNone	tässä solmussa ei ole rengasta
+InspOpen	Laatutarkastus
+InspTitle	Työn laatutarkastus
+InspRun	Tarkasta nyt
+InspRunning	Tarkastetaan...
+InspVerdictOk	HYVÄKSYTTY
+InspVerdictNotOk	HYLÄTTY
+InspVerdictUnknown	EI ARVIOITAVISSA
+InspIdle	Ei vielä tarkastettu
+InspChecks	Tarkastukset
+InspCheckHoles	Porausreiät
+InspCheckMilling	Jyrsityt urat
+InspProfile	Analysaattorin profiili
+InspPresetStandard	Vakio
+InspPresetFine	Hieno jako
+InspPresetProto	Prototyyppi
+InspLight	Valo kuvaa varten
+InspLightKeep	sellaisenaan
+InspHolePick	Työn reikä keskellä
+InspNoJob	Lataa porausmuotoinen tiedosto tarkastaaksesi sen reiät
+InspScale	Mittakaava (pikseliä / mm)
+InspCalibrate	Kalibroi tämän reiän mukaan
+InspSave	Tallenna profiili
+InspTune	Toleranssit
+InspNeedLink	Määritä ensin poraspään solmu (ikkuna Pään solmu).
+InspHolesOk	reikää kunnossa
+InspChannel	uran leveys
+InspTuneHoleDia	Reiän koon toleranssi (mm)
+InspTuneHolePos	Reiän sijainnin toleranssi (mm)
+InspTuneRound	Pienin pyöreys (1 = ympyrä)
+InspTuneDebris	Suurin purse reiän ympärillä
+InspTuneMillWidth	Uran leveys (mm)
+InspTuneMillTol	Uran leveyden toleranssi
+InspTuneMillMin	Kapein ura (mm)
+InspTuneSpread	Epätasaisin ura
+InspTuneMinMean	Tummin hyväksytty kuva
+InspTuneMinSharp	Pienin terävyys
+InspFindHoleMissing	ei reikää
+InspFindHoleSize	väärä koko
+InspFindHoleOff	keskittämätön
+InspFindHoleRound	ei pyöreä
+InspFindHoleDebris	purseita tai pölyä ympärillä
+InspFindHoleView	kuvan ulkopuolella
+InspFindMillNone	uria ei näy
+InspFindMillNarrow	urat liian kapeita
+InspFindMillWide	urat liian leveitä
+InspFindMillPinch	ura kapenee: oikosulun vaara
+InspFindMillUneven	urat epätasaisia
+InspFindDark	kuva liian tumma: lisää valoa
+InspFindBright	kuva liian kirkas: vähemmän valoa
+InspFindContrast	kuvassa ei ole kontrastia
+InspFindBlurry	kuva epätarkka
+InspFindScale	määritä ensin mittakaava
+InspFindNothing	mikään tarkastus ei ole päällä
+InspFindNoHoles	työn reikiä ei näy kuvassa
+CatOpen	Poranterien ja jyrsimien luettelo
+CatTitle	PCB-poranterien ja -jyrsimien luettelo
+CatShank	Jokaisessa työkalussa on 1/8 tuuman (3,175 mm) varsi, jota Bungard-koneen istukka pitää. Luvut ovat FR-4:n lähtöarvoja: kokeile niitä hukkakortilla.
+CatAll	Kaikki tyypit
+KindDrill	Poranterät
+KindEndMill	Päätyjyrsimet (suorat)
+KindDownCut	Alasleikkaavat jyrsimet
+KindUpCut	Ylösleikkaavat jyrsimet
+KindDiamond	Timanttihammastetut jyrsimet (corn)
+KindVBit	V-jyrsimet (kaiverrus, eristys)
+KindBall	Pallopääjyrsimet
+KindSpot	Keskiöporat
+KindCountersink	Upotusporat
+CatCount	työkalua
+KindChipBreaker	Lastunmurtajajyrsimet
+KindSlotDrill	Urapoarat (pitkänomaisille rei'ille)
+KindCoated	Timanttipinnoitetut jyrsimet
+CatSeriesCol	sarja
+CatFluteCol	L mm
+CatPick	Napsauta luettelon työkalua nähdäksesi sen ja tietääksesi, mihin se on tarkoitettu.
+CatSpindle	Kierrosluvut ja syötöt ovat valmistajan. Kara, joka ei pyöri yhtä nopeasti, käyttää samaa työkalua omalla nopeudellaan, syöttö suhteessa (sama leikkuusyvyys kierrosta kohti).
+SpindleLbl	Koneen kara
+SpindleOriginal	Alkuperäinen Bungard, 60000 rpm
+SpindleVfd	VFD-kara GDZ 80-2.2, 24000 rpm
+SpindleNote	Jokaisella karalla on omat rajansa nopeudelle, syötölle ja työkalun koolle (muokattavissa asetustiedostossa). Luettelo ja työkalut varoittavat, kun työkalu vaatii enemmän kuin kara pystyy antamaan.
+CatSpindleLbl	Kara
+FitOk	Tämä kara kestää tämän valmistajan arvoilla.
+FitSlower	Tämän karan on mentävä hitaammin. Suositellut arvot:
+FitLowerRpm	Kara pyörii hitaammin kuin työkalu vaatii: XY:n ja Z:n on mentävä suhteessa hitaammin.
+FitSlowZ	Z:n on mentävä hitaammin tällä koneella.
+FitSlowXy	XY-syötön on oltava hitaampi tällä koneella.
+FitNoThick	EI YHTEENSOPIVA: työkalu on paksumpi kuin tämä kara ottaa.
+FitNoSlow	EI YHTEENSOPIVA: tämä kara pyörii aivan liian hitaasti tälle työkalulle (se katkeaisi tai polttaisi kortin).
+CatUseFor	Käytä näitä arvoja työkalulle
+ToolFromCat	Luettelo
+CatTaken	Arvot siirretty työkaluun.
+JobNothingOn	Ei tehtävää: ota käyttöön poraus tai jyrsintä ja vähintään yksi sen työkaluista.
+JobPartHint	Napsauta ottaaksesi käyttöön tai poistaaksesi; molemmat päällä: ensin poraus ja sitten jyrsintä
+ToolOffHint	Napsauta työkalun pistettä jättääksesi sen pois työstä
+CatFlute	Leikkuupituus
+CatShankLbl	Varsi
+CatTotal	Kokonaispituus
+CatPoint	Kärkikulma
+CatSchematic	Kaaviopiirros, ei mittakaavassa.
+NoteDrill	Kovametalliporanterä läpireikiin. Pienet (alle 0,5 mm) ovat läpivientejä varten, keskikokoiset komponenttien jalkoja varten, suuret liittimiä ja kiinnitysreikiä varten. Vedä nopeasti ulos ja vaihda muutaman tuhannen reiän jälkeen.
+NoteEndMill	Suorat urat ja tasainen pää: urat, taskut, leveiden johtimien eristys ja ohuiden korttien ääriviiva. Jättää puhtaan pohjan.
+NoteDownCut	Vasenkätinen jyrsin: työntää lastut alas. Kortin yläreuna jää purseettomaksi; käytä sitä ääriviivaan, kun yläpuoli on näkyvä puoli (kortin on oltava hyvin kiinni).
+NoteUpCut	Oikeakätinen jyrsin: vetää lastut ylös ja pois leikkauksesta. Hyvä uriin ja taskuihin; voi nostaa korttia ja jättää purseita yläreunaan.
+NoteDiamond	Timanttihammastettu (corn) jyrsin: monta pientä hammasta, jotka murskaavat lasikuidun repimisen sijaan. FR-4:n ääriviivan tavallinen valinta; jättää karhean mutta puhtaan reunan ja kestää pitkään.
+NoteChip	Lastunmurtajajyrsin: sen hampaat katkovat lastut lyhyiksi paloiksi, jotka poistuvat leikkauksesta helposti. Leikkaa nopeammin kuin timanttijyrsin ja pitää purseet pieninä.
+NoteVBit	V-jyrsin (kaiverrusjyrsin): ura on niin leveä kuin syvyys sen tekee, joten syvyys määrää eristyksen leveyden. Kapea kulma ja hieno kärki mahdollistavat hienot johtimet.
+NoteBall	Pallopääjyrsin: pyöristetty ura kaiverrukseen ja muotoiluun. Ei johtimien eristykseen.
+NoteSpot	Keskiöpora: lyhyt, jäykkä kärki, joka aloittaa reiän täsmälleen oikeasta kohdasta, jotta seuraava pora ei karkaa. Suuria reikiä ja koville korteille.
+NoteCountersink	Upotuspora: viistää reiän reunan ruuvinkantoja varten tai purseen poistamiseksi.
+NoteSlot	Urapora: jäykkäytimeinen pora, joka on tehty leikkaamaan pitkänomaisia reikiä liikkumalla sivuttain porauksen aikana (liittimien urat). Älä käytä pyöreisiin reikiin: muut ovat halvempia.
+NoteCoated	Tasapäinen jyrsin timanttipinnoitteella: hankaaville korteille (korkean Tg:n FR-4, halogeeniton, hiilikuitu) ja alumiinipohjaisille korteille, joilla pinnoittamaton kuluu. Maksaa enemmän ja kestää moninkertaisesti pidempään.
+LevTab	Pöydän kalibrointi
+LevMeasure	Mittaa pöytä
+LevStop	Lopeta mittaus
+LevClear	Tyhjennä kartta
+LevCols	Pisteet X-suunnassa
+LevRows	Pisteet Y-suunnassa
+LevPoints	Mitatut pisteet
+LevSpread	Ero
+LevTilt	Kallistus X / Y
+LevDemo	Simuloitu kosketusanturi: kosketusanturisolmua ei ole vielä liitetty, korkeudet tulevat simuloidulta pöydältä.
+LevApply	Korjaa töiden Z tällä kartalla
+ResumeTitle	Työ keskeytyi
+ResumeBody	Viimeisin työ jäi kesken (ikkuna, tietokone tai yhteys katkesi). Haluatko jatkaa siitä, mihin jäi?
+ResumeContinue	Jatka työtä
+ResumeCancel	Peruuta
+TabsOn	Jyrsi ulkoreuna sillakkeilla
+TabsPerSide	Sillakkeita sivua kohti
+TabWidth	Sillakkeen leveys
+TabPlace	Sillakkeiden paikat
+TabEven	Tasaisesti sivun varrelle
+TabEnds	Sivun päiden lähelle
+TabMiddle	Yhdessä keskelle
+SetSkipLauncher	Avaa tämä ikkuna suoraan ensi kerralla
+ColName	Nimi
+ColDate	Muokkauspäivä (UTC)
+ColType	Tyyppi
+ColSize	Koko
+TypeFolder	Kansio
+TypeZip	ZIP-arkisto
+Places	Sijainnit
+PlaceExamples	Esimerkit
+PlaceDesktop	Työpöytä
+PlaceDocuments	Asiakirjat
+PlaceDownloads	Lataukset
+FileNameLabel	Tiedostonimi
+FilterSupported	Kaikki työtiedostot
+FilterDrill	Porastiedostot
+FilterRoute	Jyrsintätiedostot
+FilterZip	ZIP-arkistot
+FilterAny	Kaikki tiedostot
+NavBack	Takaisin
+NavUp	Ylös
+ThisPc	Tämä tietokone
+SimSpeed	Simulaation nopeus
+DefaultValues	Oletusarvot
+TypeValueHint	Napsauta arvoa kirjoittaaksesi sen
+TabGeneral	Yleiset
+TabJob	Työ
+Units	Yksiköt
+UnitMm	Millimetrit (mm)
+UnitMil	Milsit (0,001 tuumaa)
+ModelLabel	Konemalli
+ToolChange	Työkalunvaihto
+TcManual	Manuaalinen (MTC)
+TcAuto	Automaattinen (ATC)
+EmergencyStop	Hätäpysäytys
+EmergencyShow	Näytä hätäpysäytyspainike (voi vetää minne tahansa)
+RackPlaces	työkalupaikkaa
+Rotate	Kierrä
+FollowTool	Seuraa työkalua
+Enlarge2d	Suurenna 2D-näkymää
+MoveDesign	Siirrä vain suunnittelua
+MoveBoard	Siirrä korttia
+ShowBoth	Näytä 3D-näkymä
+OnTable	Pöydällä
+OnBoard	Kortilla
+Resume	Jatka
+NotAnOutline	ei ole kortin ääriviiva (avaa sen profiili- tai reunakerros)
+HolesDrilled	Porattuja reikiä yhteensä
+ResetCounts	Nollaa laskurit
+Recent	Viimeisimmät
+McPosition	Sijainti
+McWork	Työkappale
+McMachine	Kone
+McJog	Käsiajo
+McStep	Askel (mm)
+McHome	Home
+McZero	Nolla tähän
+McUnlock	Avaa lukitus
+McProgram	Ohjelma
+McOpenGcode	Avaa G-koodi
+McMdi	Komento (MDI)
+McSend	Lähetä
+McLog	Loki
+McState	Tila
+McController	Ohjain
+McSimulator	Simulaattori
+McNotDriven	ei vielä ohjattu
+McToolpath	Työkalurata
+McLine	Rivi
+McSpindle	Kara
+McFeedRate	Syöttö
+McStIdle	Lepotila
+McStRun	Käynnissä
+McStHold	Tauolla
+McStHome	Home-ajo
+McStAlarm	HÄLYTYS
+McStUnknown	Tuntematon
+McZeroXyz	Aseta työnolla tähän (X, Y ja Z)
+McZeroXy	Aseta työnolla tähän (X ja Y)
+McGoG28	Siirry tallennettuun sijaintiin G28
+McGoG30	Siirry tallennettuun sijaintiin G30
+McGoZeroXy	Siirry työnollaan X:ssä ja Y:ssä
+McGoZeroZ	Siirry työnollaan Z:ssä
+McOperator	Käyttäjä
+McGcodeTab	G-koodi
+McIoTab	IO
+McActiveG	Aktiiviset G-koodit
+McActiveM	Aktiiviset M-koodit
+McSpeed	Nopeus
+McZeroAxis	Aseta tämän akselin nolla tähän
+McInputs	Tulot
+McOutputs	Lähdöt
+McJogSpeed	Jog-nopeus
+MenuFile	Tiedosto
+MenuView	Näytä
+MenuHelp	Ohje
+MenuExit	Lopeta
+McSaveGcode	Tallenna G-koodi ...
+McEditProgram	Muokkaa ohjelmaa ...
+McRewind	Palaa ensimmäiselle riville
+McClearProgram	Tyhjennä ohjelma
+McFitTable	Sovita pöytään
+McFitProgram	Sovita ohjelmaan
+McShowButtons	Näytä nollien painikkeet
+McShowProgram	Näytä ohjelma
+McShowLog	Näytä loki
+McShowRapids	Näytä pikaliikkeet
+McSpindleOn	Kara päälle (M3)
+McSpindleOff	Kara pois (M5)
+McCoolantOn	Jäähdytys päälle (M8)
+McCoolantOff	Jäähdytys pois (M9)
+McSetG28	Tallenna tämä sijainti G28:ksi
+McSetG30	Tallenna tämä sijainti G30:ksi
+McCancel	Peruuta
+McSecGeneral	Yleiset
+McSecInterface	Käyttöliittymä
+McSecAxes	Akselit ja rajat
+McSecJog	Käsiajo
+McUnitInch	Tuumat
+McLimits	Liikerajat (mm): kunkin akselin minimi ja maksimi
+McDefaultStep	Askel käynnistettäessä (mm)
+McDefaultFeed	Jog-nopeus käynnistettäessä (mm/min)
+McSettingsSaved	Asetukset on tallennettu ja ne ovat voimassa heti.
+McFilterGcode	G-koodi-tiedostot
+McReplaceAsk	on jo olemassa. Korvataanko se?
+McReplace	Korvaa
+McTypeName	Kirjoita tiedostonimi.
+McNoSuchFile	Tällaista tiedostoa ei ole.
+McSaveTitle	Tallenna ohjelma
+McOpenTitle	Avaa G-koodiohjelma
+McAboutBody	EH3D:n koneenohjausohjelma: toistaiseksi se ohjaa simuloitua konetta.
+FleetTitle	Koneet ja asemat
+FleetNoStation	Ei asemaa
+FleetWaiting	Odotetaan käyttäjää
+FleetReady	työtä valmiina
+FleetUse	Käytä tätä konetta
+FleetTarget	Töiden kone
+FleetNoServer	Yhteys ei ole EH3D-palvelin: valitse se kohdassa Yhteys nähdäksesi koneet.
+FleetRefresh	Päivitä
+JobOutsideTable	Työ ei mahdu pöydälle: siirrä korttia tai suurenna pöytää
+LblThickness	Paksuus (mm)
+LblCopper	Kupari (µm)
+LblCopperSides	Kuparipuolet
+LblOneSide	1 puoli
+LblTwoSides	2 puolta
+LblSize	Koko (mm)
+LblFromFiles	Tiedostoista
+LblMaker	Valmistaja
+LblWidth	Leveys
+LblDepth	Syvyys
+LblPhotoresist	Valoherkkä lakka
+LblExtraStroke	Lisäliike (mm)
+LblFeed	Syöttö (mm/min)
+LblSpeedRpm	Nopeus (rpm)
+LblDepthMm	Syvyys (mm)
+LblPasses	Kierrokset
+LblFeedXy	Syöttö XY (mm/min)
+LblFeedZ	Syöttö Z (mm/min)
+LblDefault	Olet.
+LblFileCoords	Tiedostojen koordinaatit
+LblNoRack	Konetiedostossa ei ole vielä lipaston paikkoja
+LblWorkArea	Työalue
+LblWholeMachine	Koko kone
+LblLayers	Kerrokset
+SoundFinish	Ääni työn päättyessä
+SoundTool	Ääni työkalua pyydettäessä
+SoundCheckOk	Ääni, kun visuaalinen tarkastus on kunnossa
+SoundCheckBad	Ääni, kun visuaalinen tarkastus ei ole kunnossa
+SoundFileHint	WAV-tiedosto (tyhjä: oletusääni)
+SoundTest	Testaa
+SndOff	Ei ääntä
+SndDefault	Vakioääni
+SndFile	Oma tiedostoni (WAV)
+SndChime	kellopeli
+SndRise	nousevat nuotit
+SndFall	laskevat nuotit
+SndFanfare	fanfaari
+SndTriple	kolme nuottia
+SndBell	kello
+SndBeep	piippaus
+SndDouble	kaksoispiippaus
+SndTripleBeep	kolmoispiippaus
+SndAlarm	hälytys
+SndKnock	koputus
+SndSiren	sireeni

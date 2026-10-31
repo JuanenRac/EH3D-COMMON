@@ -1,1 +1,425 @@
 # Malti (mt): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Tema
+ThemeForge	Forge
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Windows klassiku
+ThemeSystem	Segwi l-kuluri tal-Windows
+ThemeMidnight	Nofsillejl
+ThemePaper	Karta (ċar)
+ThemeForest	Foresta
+ThemeRetro	Terminal retro
+ThemeOcean	Oċean
+ThemeContrast	Kuntrast għoli
+LauncherAsk	X'tixtieq iddur?
+LauncherClassicMtc	MTC klassiku
+LauncherClassicAtc	ATC klassiku
+LauncherModern	Modern (MTC + ATC)
+Remember	Ftakar l-għażla tiegħi
+PressEnter	Agħfas Enter
+ViewPlan	2D - veduta minn fuq
+ViewMachine	3D - magna
+LayerHoles	Toqob tat-tqib
+LayerPaths	Mogħdijiet tal-qtugħ
+LayerMachine	Magna
+LayerGrid	Griglja
+Progress	Progress
+TableFromConfig	Mejda mill-konfigurazzjoni
+Drilling	Tqib
+Routing	Qtugħ bil-frieża
+ClassicMissing	Il-programm klassiku mhuwiex ħdejn dan
+Start	Ibda
+Pause	Waqfa
+Stop	Waqqaf
+Language	Lingwa
+Holes	toqob
+Tools	għodod
+SimulatedJob	Xogħol simulat: ebda magna ma titreddaq
+NoFile	Ebda fajl mgħobbi
+Ok	Ok
+Abort	Ittermina
+AskSpindle	Nibdew il-mandrin?
+AskTool	Daħħal l-għodda
+Connection	Konnessjoni
+OutsideTable	Ma jidħolx fil-mejda
+OpenFile	Iftaħ fajl
+About	Dwar
+Close	Għalaq
+SettingsTitle	Settings
+PanelTitle	Panelizzazzjoni
+Columns	Kolonni
+Rows	Ringieli
+SpacingX	Ispazju X (mm)
+SpacingY	Ispazju Y (mm)
+PanelModePitch	Ċentru għaċ-ċentru
+PanelModeGap	Distakk bejn il-boards
+PanelModeFit	Imla l-mejda
+PanelCopies	kopji
+Apply	Applika
+ResetView	Irrisettja l-veduta
+DropHint	Ħalli hawn fajl .ncd, .plt jew .zip
+NavHint2d	Kaxkar biex tmexxi, rota biex tkabbar
+NavHint3d	Kaxkar biex iddawwar, rota biex tkabbar
+Version	Verżjoni
+Licence	Liċenzja
+AboutBody	L-interfaċċa moderna għall-magni tat-tqib u tal-qtugħ Bungard CCD.
+TableWidth	Wisa' utli X (mm)
+TableDepth	Fond utli Y (mm)
+Save	Salva
+Saved	Salvat
+OpenFolderUp	Folder superjuri
+ShowDrill	Tqib
+ConnPort	Port
+ConnAddress	Indirizz
+ConnToken	Token tal-aċċess
+ConnMachine	ID tal-magna
+ConnTest	Ittestja l-konnessjoni
+ConnWorks	Il-konnessjoni taħdem
+BoardTitle	Board
+ToolsTitle	Għodod
+SetAskOperator	Staqsini fil-bidliet tal-għodda u meta jibda l-mandrin
+SetToolsOnOpen	Uri t-tieqa tal-għodod meta niftaħ fajl
+SndVoice	Vuċi
+SndFemale	femminili
+SndMale	maskili
+HeadOpen	Nodu tar-ras
+HeadTitle	Nodu tar-ras tat-tqib
+HeadOff	Mhux użat
+HeadDirect	Direttament
+HeadServer	Permezz tas-server
+HeadCamera	Uri l-kamera tan-nodu
+HeadSpeed	Mandrin
+HeadTemp	Temperatura
+HeadProtectOpen	Ħruġ tal-protezzjoni MIFTUĦ: il-mandrin għandu jieqaf
+HeadProtectClosed	Ħruġ tal-protezzjoni magħluq
+HeadMeasure	Kejjel il-mejda hawn
+HeadServerNote	Permezz tas-server tat-tieqa tal-konnessjoni: l-indirizz tiegħu, it-token tiegħu u l-ID tal-magna.
+HeadNoServer	Ikteb l-indirizz, it-token u l-ID tal-magna tas-server fit-tieqa tal-konnessjoni.
+HeadCameraModel	Mudell tal-kamera
+HeadNoLink	Ikteb l-indirizz tan-nodu (host jew host:port).
+HeadWaiting	Qed nistenna lin-nodu...
+HeadCameraOff	Kamera mitfija
+HeatOk	ok
+HeatWarm	sħun
+HeatHot	SĦUN
+HeatUnknown	mhux magħruf
+LightTitle	Ċirku tad-dawl
+LightOn	Dawl mixgħul
+LightOff	Dawl mitfi
+LightNone	ebda ċirku fuq dan in-nodu
+InspOpen	Verifika tal-kwalità
+InspTitle	Verifika tal-kwalità tax-xogħol
+InspRun	Iċċekkja issa
+InspRunning	Qed niċċekkja...
+InspVerdictOk	OK
+InspVerdictNotOk	MHUX OK
+InspVerdictUnknown	MA NISTAX NIĠĠUDIKA
+InspIdle	Għadu ma ġiex iċċekkjat
+InspChecks	Kontrolli
+InspCheckHoles	Toqob imtaqqba
+InspCheckMilling	Kanali maqtugħin
+InspProfile	Profil tal-analizzatur
+InspPresetStandard	Standard
+InspPresetFine	Pass fin
+InspPresetProto	Prototip
+InspLight	Dawl għall-istampa
+InspLightKeep	kif inhu
+InspHolePick	Toqba tax-xogħol fiċ-ċentru
+InspNoJob	Ilqa' fajl tat-tqib biex jiġu ċċekkjati t-toqob tiegħu
+InspScale	Skala (pixels għal kull mm)
+InspCalibrate	Ikkalibra minn din it-toqba
+InspSave	Salva il-profil
+InspTune	Tolleranzi
+InspNeedLink	Waqqaf qabel in-nodu tar-ras tat-tqib (tieqa Nodu tar-ras).
+InspHolesOk	toqob ok
+InspChannel	wisa' tal-kanal
+InspTuneHoleDia	Tolleranza tal-qies tat-toqba (mm)
+InspTuneHolePos	Tolleranza tal-pożizzjoni tat-toqba (mm)
+InspTuneRound	L-inqas rotondità (1 = ċirku)
+InspTuneDebris	L-aktar frak madwar toqba
+InspTuneMillWidth	Wisa' tal-kanal (mm)
+InspTuneMillTol	Tolleranza tal-wisa' tal-kanal
+InspTuneMillMin	L-idjaq kanal (mm)
+InspTuneSpread	L-aktar kanal irregolari
+InspTuneMinMean	L-iskur stampa aċċettata
+InspTuneMinSharp	L-inqas ċarezza
+InspFindHoleMissing	ebda toqba hemm
+InspFindHoleSize	qies ħażin
+InspFindHoleOff	mhux iċċentrata
+InspFindHoleRound	mhix tonda
+InspFindHoleDebris	xewk jew trab madwarha
+InspFindHoleView	barra mill-veduta
+InspFindMillNone	ma dehru l-ebda kanali
+InspFindMillNarrow	kanali dejqin wisq
+InspFindMillWide	kanali wiesgħin wisq
+InspFindMillPinch	kanal jidjaq: riskju ta' short
+InspFindMillUneven	kanali irregolari
+InspFindDark	stampa skura wisq: iżjed dawl
+InspFindBright	stampa qawwija wisq: inqas dawl
+InspFindContrast	stampa mingħajr kuntrast
+InspFindBlurry	stampa mhux fuq il-fokus
+InspFindScale	waqqaf l-iskala qabel
+InspFindNothing	ebda kontroll mhu mixgħul
+InspFindNoHoles	ebda toqba tax-xogħol fil-veduta
+CatOpen	Katalgu tal-brieme
+CatTitle	Katalgu tal-brieme għall-PCB
+CatShank	Kull briema għandha l-geddum ta' 1/8 pulzier (3.175 mm) li żżomm il-mandrin ta' magna Bungard. In-numri huma punti tal-bidu għall-FR-4: ipprovahom fuq board skart.
+CatAll	It-tipi kollha
+KindDrill	Brieme tat-tqib
+KindEndMill	Frieżi ċatti (kwadri)
+KindDownCut	Frieżi tal-qtugħ 'l isfel
+KindUpCut	Frieżi tal-qtugħ 'l fuq
+KindDiamond	Frieżi bi qtugħ djamant (corn)
+KindVBit	Brieme V (inċiżjoni, iżolament)
+KindBall	Ras tonda
+KindSpot	Brieme tal-ċentrar
+KindCountersink	Brieme tal-ċanfrin
+CatCount	brieme
+KindChipBreaker	Frieżi tat-tkissir tal-frak
+KindSlotDrill	Brieme tal-iskanalar (għal toqob ovali)
+KindCoated	Frieżi bil-kisja tad-djamant
+CatSeriesCol	serje
+CatFluteCol	L mm
+CatPick	Ikklikkja fuq briema tal-lista biex tarha u għal xiex hija.
+CatSpindle	Id-dawriet u l-avvanzi huma tal-manifattur. Mandrin li ma jistax idur daqshekk malajr jieħu l-istess briema bil-veloċità tiegħu, bl-avvanz proporzjonali (l-istess gidma għal kull dawra).
+SpindleLbl	Mandrin tal-magna
+SpindleOriginal	Bungard oriġinali, 60000 rpm
+SpindleVfd	Mandrin VFD GDZ 80-2.2, 24000 rpm
+SpindleNote	Kull mandrin għandu l-limiti tiegħu ta' veloċità, avvanz u qies tal-briema (jistgħu jiġu editjati fil-fajl tas-settings). Il-katalgu u l-għodod iwissu meta briema titlob aktar milli jista' jagħti l-mandrin.
+CatSpindleLbl	Mandrin
+FitOk	Dan il-mandrin jista' jlaħħaqha mal-valuri tal-manifattur.
+FitSlower	Dan il-mandrin jeħtieġha aktar bil-mod. Valuri suġġeriti:
+FitLowerRpm	Il-mandrin idur aktar bil-mod milli titlob il-briema: XY u Z jmorru aktar bil-mod proporzjonalment.
+FitSlowZ	Z għandu jmur aktar bil-mod fuq din il-magna.
+FitSlowXy	L-avvanz XY għandu jmur aktar bil-mod fuq din il-magna.
+FitNoThick	MHUX KOMPATIBBLI: il-briema hija oħxon milli jieħu dan il-mandrin.
+FitNoSlow	MHUX KOMPATIBBLI: dan il-mandrin idur bil-mod wisq għal din il-briema (tinkiser jew tħarraq il-board).
+CatUseFor	Uża dawn il-valuri għall-għodda
+ToolFromCat	Katalgu
+CatTaken	Valuri meħuda fl-għodda.
+JobNothingOn	Xejn x'jagħmel: ixgħel it-tqib jew il-qtugħ u tal-inqas għodda waħda tiegħu.
+JobPartHint	Ikklikkja biex tixgħel jew titfi; it-tnejn mixgħulin: l-ewwel it-tqib u mbagħad il-qtugħ
+ToolOffHint	Ikklikkja n-nuqqa tal-għodda biex tħalliha barra mix-xogħol
+CatFlute	Tul tal-qtugħ
+CatShankLbl	Geddum
+CatTotal	Tul totali
+CatPoint	Angolu tat-tarf
+CatSchematic	Disinn skematiku, mhux bl-iskala.
+NoteDrill	Briema tal-karbur solidu għal toqob li jgħaddu. Il-ċkejknin (taħt 0.5 mm) huma għal vias, il-medji għal saqajn tal-komponenti, il-kbar għal konnetturi u toqob tal-immuntar. Ħreġha malajr, u biddilha wara ftit eluf ta' toqob.
+NoteEndMill	Skanalaturi dritti u tarf ċatt: skanalaturi, bwiet, iżolament ta' traċċi wiesgħin u kontorn ta' boards irqaq. Iħalli qiegħ nadif.
+NoteDownCut	Frieża xellugija: tbaxxi l-frak 'l isfel. It-tarf ta' fuq tal-board joħroġ mingħajr xewk, għalhekk uża għall-kontorn meta l-wiċċ ta' fuq huwa dak li jidher (il-board trid tinżamm tajjeb).
+NoteUpCut	Frieża leminija: tiġbed il-frak 'il fuq u 'l barra mill-qtugħ. Tajba għal skanalaturi u bwiet; tista' tgħolli l-board u thalli xewk fuq it-tarf ta' fuq.
+NoteDiamond	Frieża bi qtugħ djamant (corn): ħafna snien żgħar li jtaħnu l-fibra tal-ħġieġ minflok ma jqatgħuha. L-għażla tas-soltu għall-kontorn tal-FR-4; iħalli tarf mhux lixx imma nadif u jdum.
+NoteChip	Frieża tat-tkissir tal-frak: snienha jkissru l-frak f'biċċiet qosra li joħorġu faċilment mill-qtugħ. Taqta' aktar malajr mill-qtugħ djamant u żżomm ix-xewk żgħir.
+NoteVBit	Briema V (inċiżjoni): l-iskanalatura hija wiesgħa kemm tagħmilha l-fond, għalhekk il-fond jistabbilixxi l-wisa' tal-iżolament. Angolu dejjaq b'ponta fina jagħmel possibbli traċċi fini.
+NoteBall	Frieża b'ras tonda: skanalatura mdawra, għal inċiżjoni u għal tiswir. Mhux għall-iżolament ta' traċċi.
+NoteSpot	Briema tal-ċentrar: ponta qasira u riġida li tibda toqba eżatt fejn trid, biex it-tieni briema ma timxix. Għat-toqob il-kbar u għal boards iebsa.
+NoteCountersink	Briema tal-ċanfrin: tiċċanfrin it-tarf ta' toqba, għal rjus tal-viti jew biex tneħħi x-xewk.
+NoteSlot	Briema tal-iskanalar: briema b'web riġida magħmula biex taqta' toqob ovali billi tiċċaqlaq 'il ġenb waqt li ttaqqab (l-iskanalaturi tal-konnetturi). Tużahiex għal toqob tondi: l-oħrajn huma irħas.
+NoteCoated	Frieża b'tarf ċatt bil-kisja tad-djamant: għal boards abrażivi (FR-4 high-Tg, mingħajr alogenu, fibra tal-karbonju) u għal boards bl-aluminju wara, fejn waħda mingħajr kisja tiekol. Tiswa aktar u ddum diversi drabi aktar.
+LevTab	Kalibrazzjoni tal-mejda
+LevMeasure	Kejjel il-mejda
+LevStop	Waqqaf il-kejl
+LevClear	Ħassar il-mappa
+LevCols	Punti tul X
+LevRows	Punti tul Y
+LevPoints	Punti mkejla
+LevSpread	Firxa
+LevTilt	Inklinazzjoni X / Y
+LevDemo	Probe simulat: għadu ma hemm ebda nodu tal-probe konness, l-għoli ġej minn mejda simulata.
+LevApply	Ikkoreġi Z tax-xogħlijiet b'din il-mappa
+ResumeTitle	Xogħol interrott
+ResumeBody	L-aħħar xogħol thalla f'nofsu (waqgħet it-tieqa, il-kompjuter jew il-konnessjoni). Tixtieq tkompli minn fejn kien?
+ResumeContinue	Kompli x-xogħol
+ResumeCancel	Ikkanċellah
+TabsOn	Aqta' barra b'pontijiet
+TabsPerSide	Pontijiet għal kull naħa
+TabWidth	Wisa' tal-ponta
+TabPlace	Fejn imorru l-pontijiet
+TabEven	Mqassmin indaqs tul in-naħa
+TabEnds	Qrib it-truf tan-naħa
+TabMiddle	Flimkien f'nofs
+SetSkipLauncher	Iftaħ din it-tieqa direttament id-darba li jmiss
+ColName	Isem
+ColDate	Data tal-bidla (UTC)
+ColType	Tip
+ColSize	Daqs
+TypeFolder	Folder
+TypeZip	Arkivju ZIP
+Places	Postijiet
+PlaceExamples	Eżempji
+PlaceDesktop	Desktop
+PlaceDocuments	Dokumenti
+PlaceDownloads	Downloads
+FileNameLabel	Isem tal-fajl
+FilterSupported	Fajls tax-xogħol kollha
+FilterDrill	Fajls tat-tqib
+FilterRoute	Fajls tal-qtugħ
+FilterZip	Arkivji ZIP
+FilterAny	Il-fajls kollha
+NavBack	Lura
+NavUp	'Il fuq
+ThisPc	Dan il-PC
+SimSpeed	Veloċità tas-simulazzjoni
+DefaultValues	Valuri default
+TypeValueHint	Ikklikkja valur biex tikteb
+TabGeneral	Ġenerali
+TabJob	Xogħol
+Units	Unitajiet
+UnitMm	Millimetri (mm)
+UnitMil	Mils (0.001 pulzier)
+ModelLabel	Mudell tal-magna
+ToolChange	Bidla tal-għodda
+TcManual	Manwali (MTC)
+TcAuto	Awtomatika (ATC)
+EmergencyStop	Waqfa ta' emerġenza
+EmergencyShow	Uri l-buttuna ta' emerġenza (tista' tinġarr kullimkien)
+RackPlaces	postijiet tal-għodod
+Rotate	Dawwar
+FollowTool	Segwi l-għodda
+Enlarge2d	Kabbar il-veduta 2D
+MoveDesign	Mexxi d-disinn biss
+MoveBoard	Mexxi l-board
+ShowBoth	Uri l-veduta 3D
+OnTable	Fuq il-mejda
+OnBoard	Fuq il-board
+Resume	Kompli
+NotAnOutline	mhuwiex il-kontorn ta' board (iftaħ il-profil jew is-saff tat-tarf tiegħu)
+HolesDrilled	Toqob imtaqqba b'kollox
+ResetCounts	Irrisettja l-għadd
+Recent	Riċenti
+McPosition	Pożizzjoni
+McWork	Xogħol
+McMachine	Magna
+McJog	Jog
+McStep	Pass (mm)
+McHome	Home
+McZero	Zero hawn
+McUnlock	Iżblokka
+McProgram	Programm
+McOpenGcode	Iftaħ G-code
+McMdi	Kmand (MDI)
+McSend	Ibgħat
+McLog	Reġistru
+McState	Stat
+McController	Kontrollur
+McSimulator	Simulatur
+McNotDriven	għadu mhux immexxi
+McToolpath	Mogħdija tal-għodda
+McLine	Linja
+McSpindle	Mandrin
+McFeedRate	Avvanz
+McStIdle	Waqfa
+McStRun	Għaddej
+McStHold	Waqqaf
+McStHome	Home għaddej
+McStAlarm	ALLARM
+McStUnknown	Mhux magħruf
+McZeroXyz	Stabbilixxi z-zero tax-xogħol hawn (X, Y u Z)
+McZeroXy	Stabbilixxi z-zero tax-xogħol hawn (X u Y)
+McGoG28	Mur fil-pożizzjoni maħżuna G28
+McGoG30	Mur fil-pożizzjoni maħżuna G30
+McGoZeroXy	Mur fiz-zero tax-xogħol f'X u Y
+McGoZeroZ	Mur fiz-zero tax-xogħol f'Z
+McOperator	Operatur
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	G-codes attivi
+McActiveM	M-codes attivi
+McSpeed	Veloċità
+McZeroAxis	Stabbilixxi hawn iz-zero ta' dan l-assi
+McInputs	Dħul
+McOutputs	Ħruġ
+McJogSpeed	Veloċità tal-jog
+MenuFile	Fajl
+MenuView	Veduta
+MenuHelp	Għajnuna
+MenuExit	Oħroġ
+McSaveGcode	Salva G-code ...
+McEditProgram	Editja l-programm ...
+McRewind	Erġa' lura għall-ewwel linja
+McClearProgram	Ħassar il-programm
+McFitTable	Adatta għall-mejda
+McFitProgram	Adatta għall-programm
+McShowButtons	Uri l-buttuni taz-zeros
+McShowProgram	Uri l-programm
+McShowLog	Uri r-reġistru
+McShowRapids	Uri l-movimenti rapidi
+McSpindleOn	Mandrin mixgħul (M3)
+McSpindleOff	Mandrin mitfi (M5)
+McCoolantOn	Coolant mixgħul (M8)
+McCoolantOff	Coolant mitfi (M9)
+McSetG28	Aħżen din il-pożizzjoni bħala G28
+McSetG30	Aħżen din il-pożizzjoni bħala G30
+McCancel	Ikkanċella
+McSecGeneral	Ġenerali
+McSecInterface	Interfaċċa tal-utent
+McSecAxes	Assi u limiti
+McSecJog	Jog
+McUnitInch	Pulzieri
+McLimits	Limiti tal-ivvjaġġar (mm): minimu u massimu ta' kull assi
+McDefaultStep	Pass fil-bidu (mm)
+McDefaultFeed	Veloċità tal-jog fil-bidu (mm/min)
+McSettingsSaved	Is-settings ġew maħżuna u jaħdmu issa.
+McFilterGcode	Fajls G-code
+McReplaceAsk	diġà jeżisti. Tibdlu?
+McReplace	Ibdel
+McTypeName	Ikteb isem tal-fajl.
+McNoSuchFile	Ma hemm l-ebda fajl bħal dan.
+McSaveTitle	Salva il-programm
+McOpenTitle	Iftaħ programm G-code
+McAboutBody	Il-programm tal-kontroll tal-magna ta' EH3D: għalissa jmexxi magna simulata.
+FleetTitle	Magni u stazzjonijiet
+FleetNoStation	Ebda stazzjon
+FleetWaiting	Qed nistenna lill-operatur
+FleetReady	xogħlijiet lesti
+FleetUse	Uża din il-magna
+FleetTarget	Magna tax-xogħlijiet
+FleetNoServer	Il-konnessjoni mhix server EH3D: agħżilha f'Konnessjoni biex tara l-magni.
+FleetRefresh	Aġġorna
+JobOutsideTable	Ix-xogħol ma jidħolx fil-mejda: mexxi l-board jew kabbar il-mejda
+LblThickness	Ħxuna (mm)
+LblCopper	Ram (µm)
+LblCopperSides	Naħat tar-ram
+LblOneSide	1 naħa
+LblTwoSides	2 naħat
+LblSize	Qies (mm)
+LblFromFiles	Mill-fajls
+LblMaker	Manifattur
+LblWidth	Wisa'
+LblDepth	Fond
+LblPhotoresist	Resist fotosensittiv
+LblExtraStroke	Korsa żejda (mm)
+LblFeed	Avvanz (mm/min)
+LblSpeedRpm	Veloċità (rpm)
+LblDepthMm	Fond (mm)
+LblPasses	Passati
+LblFeedXy	Avvanz XY (mm/min)
+LblFeedZ	Avvanz Z (mm/min)
+LblDefault	Def.
+LblFileCoords	Koordinati tal-fajls
+LblNoRack	Il-fajl tal-magna għad m'għandu l-ebda pożizzjoni tar-rack
+LblWorkArea	Żona tax-xogħol
+LblWholeMachine	Il-magna kollha
+LblLayers	Saffi
+SoundFinish	Ħoss meta jispiċċa x-xogħol
+SoundTool	Ħoss meta tintalab għodda
+SoundCheckOk	Ħoss meta l-verifika viżiva tkun korretta
+SoundCheckBad	Ħoss meta l-verifika viżiva ma tkunx korretta
+SoundFileHint	Fajl WAV (vojt: il-ħoss default)
+SoundTest	Test
+SndOff	Ebda ħoss
+SndDefault	Il-ħoss standard
+SndFile	Fajl tiegħi (WAV)
+SndChime	qanpiena ħafifa
+SndRise	noti li jitilgħu
+SndFall	noti li jinżlu
+SndFanfare	fanfara
+SndTriple	tliet noti
+SndBell	qanpiena
+SndBeep	beep
+SndDouble	beep doppju
+SndTripleBeep	beep tripplu
+SndAlarm	allarm
+SndKnock	taqtiq
+SndSiren	sirena

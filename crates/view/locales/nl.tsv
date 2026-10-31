@@ -1,1 +1,425 @@
 # Nederlands (nl): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Thema
+ThemeForge	Smederij
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Klassiek Windows
+ThemeSystem	Windows-kleuren volgen
+ThemeMidnight	Middernacht
+ThemePaper	Papier (licht)
+ThemeForest	Bos
+ThemeRetro	Retroterminal
+ThemeOcean	Oceaan
+ThemeContrast	Hoog contrast
+LauncherAsk	Wat wilt u uitvoeren?
+LauncherClassicMtc	Klassiek MTC
+LauncherClassicAtc	Klassiek ATC
+LauncherModern	Modern (MTC + ATC)
+Remember	Mijn keuze onthouden
+PressEnter	Druk op Enter
+ViewPlan	2D - bovenaanzicht
+ViewMachine	3D - machine
+LayerHoles	Boorgaten
+LayerPaths	Freesbanen
+LayerMachine	Machine
+LayerGrid	Raster
+Progress	Voortgang
+TableFromConfig	Tafel uit configuratie
+Drilling	Boren
+Routing	Frezen
+ClassicMissing	Het klassieke programma staat niet naast dit programma
+Start	Starten
+Pause	Pauze
+Stop	Stoppen
+Language	Taal
+Holes	gaten
+Tools	gereedschappen
+SimulatedJob	Gesimuleerde opdracht: er beweegt geen machine
+NoFile	Geen bestand geladen
+Ok	Ok
+Abort	Afbreken
+AskSpindle	Spindel starten?
+AskTool	Plaats het gereedschap
+Connection	Verbinding
+OutsideTable	Past niet op de tafel
+OpenFile	Bestand openen
+About	Info
+Close	Sluiten
+SettingsTitle	Instellingen
+PanelTitle	Panelisatie
+Columns	Kolommen
+Rows	Rijen
+SpacingX	Afstand X (mm)
+SpacingY	Afstand Y (mm)
+PanelModePitch	Hart op hart
+PanelModeGap	Ruimte tussen printen
+PanelModeFit	Tafel vullen
+PanelCopies	kopieën
+Apply	Toepassen
+ResetView	Weergave herstellen
+DropHint	Sleep hier een .ncd-, .plt- of .zip-bestand heen
+NavHint2d	Slepen om te verplaatsen, wiel om te zoomen
+NavHint3d	Slepen om te draaien, wiel om te zoomen
+Version	Versie
+Licence	Licentie
+AboutBody	De moderne interface voor de Bungard CCD boor- en freesmachines.
+TableWidth	Bruikbare breedte X (mm)
+TableDepth	Bruikbare diepte Y (mm)
+Save	Opslaan
+Saved	Opgeslagen
+OpenFolderUp	Bovenliggende map
+ShowDrill	Boren
+ConnPort	Poort
+ConnAddress	Adres
+ConnToken	Toegangstoken
+ConnMachine	Machine-id
+ConnTest	Verbinding testen
+ConnWorks	Verbinding werkt
+BoardTitle	Print
+ToolsTitle	Gereedschappen
+SetAskOperator	Vraag het mij bij gereedschapswissels en bij het starten van de spindel
+SetToolsOnOpen	Toon het gereedschapsvenster wanneer ik een bestand open
+SndVoice	Stem
+SndFemale	vrouw
+SndMale	man
+HeadOpen	Kopnode
+HeadTitle	Node van de boorkop
+HeadOff	Niet gebruikt
+HeadDirect	Direct
+HeadServer	Via de server
+HeadCamera	Camera van de node tonen
+HeadSpeed	Spindel
+HeadTemp	Temperatuur
+HeadProtectOpen	Beveiligingsuitgang OPEN: de spindel moet stoppen
+HeadProtectClosed	Beveiligingsuitgang gesloten
+HeadMeasure	Tafel hier meten
+HeadServerNote	Via de server van het verbindingsvenster: het adres, het token en de id van de machine.
+HeadNoServer	Voer het adres, het token en de machine-id van de server in het verbindingsvenster in.
+HeadCameraModel	Cameramodel
+HeadNoLink	Voer het adres van de node in (host of host:poort).
+HeadWaiting	Wachten op de node...
+HeadCameraOff	Camera uit
+HeatOk	ok
+HeatWarm	warm
+HeatHot	HEET
+HeatUnknown	onbekend
+LightTitle	Lichtring
+LightOn	Licht aan
+LightOff	Licht uit
+LightNone	geen ring op deze node
+InspOpen	Kwaliteitscontrole
+InspTitle	Kwaliteitscontrole van het werk
+InspRun	Nu controleren
+InspRunning	Controleren...
+InspVerdictOk	GOEDGEKEURD
+InspVerdictNotOk	AFGEKEURD
+InspVerdictUnknown	NIET TE BEOORDELEN
+InspIdle	Nog niet gecontroleerd
+InspChecks	Controles
+InspCheckHoles	Geboorde gaten
+InspCheckMilling	Gefreesde kanalen
+InspProfile	Analyseprofiel
+InspPresetStandard	Standaard
+InspPresetFine	Fijne steek
+InspPresetProto	Prototype
+InspLight	Licht voor de foto
+InspLightKeep	ongewijzigd
+InspHolePick	Gat van de opdracht in het midden
+InspNoJob	Laad een boorbestand om de gaten te controleren
+InspScale	Schaal (pixels per mm)
+InspCalibrate	Kalibreren met dit gat
+InspSave	Profiel opslaan
+InspTune	Toleranties
+InspNeedLink	Stel eerst de node van de boorkop in (venster Kopnode).
+InspHolesOk	gaten in orde
+InspChannel	kanaalbreedte
+InspTuneHoleDia	Tolerantie gatgrootte (mm)
+InspTuneHolePos	Tolerantie gatpositie (mm)
+InspTuneRound	Minimale rondheid (1 = cirkel)
+InspTuneDebris	Max. bramen rond een gat
+InspTuneMillWidth	Kanaalbreedte (mm)
+InspTuneMillTol	Tolerantie kanaalbreedte
+InspTuneMillMin	Smalste kanaal (mm)
+InspTuneSpread	Meest ongelijk kanaal
+InspTuneMinMean	Donkerste geaccepteerde foto
+InspTuneMinSharp	Minimale scherpte
+InspFindHoleMissing	geen gat aanwezig
+InspFindHoleSize	verkeerde maat
+InspFindHoleOff	niet gecentreerd
+InspFindHoleRound	niet rond
+InspFindHoleDebris	bramen of stof eromheen
+InspFindHoleView	buiten beeld
+InspFindMillNone	geen kanalen zichtbaar
+InspFindMillNarrow	kanalen te smal
+InspFindMillWide	kanalen te breed
+InspFindMillPinch	een kanaal vernauwt: kans op kortsluiting
+InspFindMillUneven	kanalen ongelijk
+InspFindDark	foto te donker: meer licht
+InspFindBright	foto te helder: minder licht
+InspFindContrast	foto zonder contrast
+InspFindBlurry	foto onscherp
+InspFindScale	stel eerst de schaal in
+InspFindNothing	er is geen controle ingeschakeld
+InspFindNoHoles	geen gat van de opdracht in beeld
+CatOpen	Catalogus van boren en frezen
+CatTitle	Catalogus van boren en frezen voor PCB
+CatShank	Elk gereedschap heeft de 1/8-inch-schacht (3,175 mm) die de spantang van een Bungard-machine vasthoudt. De getallen zijn uitgangspunten voor FR-4: probeer ze op een restplaat.
+CatAll	Alle soorten
+KindDrill	Boren
+KindEndMill	Vingerfrezen (recht)
+KindDownCut	Frezen met neerwaartse snede
+KindUpCut	Frezen met opwaartse snede
+KindDiamond	Diamantfrezen (corn)
+KindVBit	V-frezen (graveren, isoleren)
+KindBall	Kogelfrezen
+KindSpot	Centerboren
+KindCountersink	Verzinkfrezen
+CatCount	gereedschappen
+KindChipBreaker	Spaanbrekende frezen
+KindSlotDrill	Sleufboren (voor langgaten)
+KindCoated	Frezen met diamantcoating
+CatSeriesCol	serie
+CatFluteCol	L mm
+CatPick	Klik op een gereedschap in de lijst om het te zien en te weten waarvoor het dient.
+CatSpindle	Toerentallen en voedingen zijn die van de fabrikant. Een spindel die niet zo snel draait gebruikt hetzelfde gereedschap op zijn eigen toerental, met de voeding naar verhouding (dezelfde snededikte per omwenteling).
+SpindleLbl	Spindel van de machine
+SpindleOriginal	Originele Bungard, 60000 rpm
+SpindleVfd	VFD-spindel GDZ 80-2.2, 24000 rpm
+SpindleNote	Elke spindel heeft zijn grenzen voor toerental, voeding en gereedschapsmaat (te bewerken in het instellingenbestand). De catalogus en de gereedschappen waarschuwen wanneer een gereedschap meer vraagt dan de spindel kan leveren.
+CatSpindleLbl	Spindel
+FitOk	Deze spindel kan dit aan met de waarden van de fabrikant.
+FitSlower	Deze spindel moet langzamer. Aanbevolen waarden:
+FitLowerRpm	De spindel draait langzamer dan het gereedschap vraagt: XY en Z moeten naar verhouding langzamer.
+FitSlowZ	Z moet op deze machine langzamer.
+FitSlowXy	De XY-voeding moet op deze machine langzamer.
+FitNoThick	NIET COMPATIBEL: het gereedschap is dikker dan deze spindel aankan.
+FitNoSlow	NIET COMPATIBEL: deze spindel draait veel te langzaam voor dit gereedschap (het zou breken of de print verbranden).
+CatUseFor	Gebruik deze waarden voor gereedschap
+ToolFromCat	Catalogus
+CatTaken	Waarden overgenomen in het gereedschap.
+JobNothingOn	Niets te doen: schakel het boren of frezen in en minstens één van de gereedschappen ervan.
+JobPartHint	Klik om in of uit te schakelen; beide aan: eerst het boren en daarna het frezen
+ToolOffHint	Klik op de stip van een gereedschap om het buiten de opdracht te laten
+CatFlute	Snijlengte
+CatShankLbl	Schacht
+CatTotal	Totale lengte
+CatPoint	Punthoek
+CatSchematic	Schematische tekening, niet op schaal.
+NoteDrill	Hardmetalen boor voor doorlopende gaten. De kleine (onder 0,5 mm) zijn voor via's, de middelgrote voor componentpootjes, de grote voor connectoren en bevestigingsgaten. Snel terugtrekken en na enkele duizenden gaten vervangen.
+NoteEndMill	Rechte groeven en een vlak uiteinde: sleuven, uitsparingen, isolatie van brede banen en de contour van dunne printen. Laat een schone bodem achter.
+NoteDownCut	Linkssnijdende frees: duwt de spanen naar beneden. De bovenrand van de print wordt braamvrij; gebruik hem voor de contour wanneer de bovenkant de zichtbare kant is (de print moet goed vastgezet zijn).
+NoteUpCut	Rechtssnijdende frees: trekt de spanen omhoog en uit de snede. Goed voor sleuven en uitsparingen; kan de print optillen en bramen op de bovenrand achterlaten.
+NoteDiamond	Diamantfrees (corn): veel kleine tandjes die de glasvezel vermalen in plaats van scheuren. De gebruikelijke keuze voor de contour van FR-4; laat een ruwe maar schone rand achter en gaat lang mee.
+NoteChip	Spaanbrekende frees: de tanden breken de spanen in korte stukjes die gemakkelijk uit de snede komen. Snijdt sneller dan de diamantfrees en houdt de bramen klein.
+NoteVBit	V-frees (graveerfrees): de groef is zo breed als de diepte hem maakt, dus de diepte bepaalt de breedte van de isolatie. Een smalle hoek met een fijne punt maakt fijne banen mogelijk.
+NoteBall	Kogelfrees: een afgeronde groef, voor graveren en vormgeven. Niet geschikt voor het isoleren van banen.
+NoteSpot	Centerboor: een korte, stijve punt die een gat precies op de gewenste plek begint, zodat de volgende boor niet afdwaalt. Voor de grote gaten en voor harde printen.
+NoteCountersink	Verzinkfrees: breekt de rand van een gat af, voor schroefkoppen of om de braam te verwijderen.
+NoteSlot	Sleufboor: een boor met een stijve kern, gemaakt om langgaten te snijden door zijwaarts te bewegen tijdens het boren (de sleuven van connectoren). Niet gebruiken voor ronde gaten: de andere zijn goedkoper.
+NoteCoated	Vlakke frees met diamantcoating: voor schurende printen (FR-4 met hoge Tg, halogeenvrij, koolstofvezel) en printen met aluminium basis, waar een ongecoate slijt. Kost meer en gaat meerdere malen langer mee.
+LevTab	Tafelkalibratie
+LevMeasure	Tafel meten
+LevStop	Meten stoppen
+LevClear	Kaart wissen
+LevCols	Punten langs X
+LevRows	Punten langs Y
+LevPoints	Gemeten punten
+LevSpread	Verschil
+LevTilt	Helling X / Y
+LevDemo	Gesimuleerde tastsensor: er is nog geen tastnode aangesloten, de hoogten komen van een gesimuleerde tafel.
+LevApply	Z van de opdrachten corrigeren met deze kaart
+ResumeTitle	Opdracht onderbroken
+ResumeBody	De laatste opdracht is halverwege gestopt (het venster, de computer of de verbinding viel weg). Wilt u verdergaan waar het was gebleven?
+ResumeContinue	Opdracht hervatten
+ResumeCancel	Annuleren
+TabsOn	De buitenkant frezen met bruggetjes
+TabsPerSide	Bruggetjes per zijde
+TabWidth	Breedte van het bruggetje
+TabPlace	Waar de bruggetjes komen
+TabEven	Gelijkmatig verdeeld langs de zijde
+TabEnds	Nabij de uiteinden van de zijde
+TabMiddle	Samen in het midden
+SetSkipLauncher	Dit venster de volgende keer direct openen
+ColName	Naam
+ColDate	Wijzigingsdatum (UTC)
+ColType	Type
+ColSize	Grootte
+TypeFolder	Map
+TypeZip	ZIP-archief
+Places	Locaties
+PlaceExamples	Voorbeelden
+PlaceDesktop	Bureaublad
+PlaceDocuments	Documenten
+PlaceDownloads	Downloads
+FileNameLabel	Bestandsnaam
+FilterSupported	Alle opdrachtbestanden
+FilterDrill	Boorbestanden
+FilterRoute	Freesbestanden
+FilterZip	ZIP-archieven
+FilterAny	Alle bestanden
+NavBack	Terug
+NavUp	Omhoog
+ThisPc	Deze pc
+SimSpeed	Simulatiesnelheid
+DefaultValues	Standaardwaarden
+TypeValueHint	Klik op een waarde om deze in te typen
+TabGeneral	Algemeen
+TabJob	Opdracht
+Units	Eenheden
+UnitMm	Millimeters (mm)
+UnitMil	Mils (0,001 inch)
+ModelLabel	Machinemodel
+ToolChange	Gereedschapswissel
+TcManual	Handmatig (MTC)
+TcAuto	Automatisch (ATC)
+EmergencyStop	Noodstop
+EmergencyShow	Noodstopknop tonen (kan overal naartoe gesleept worden)
+RackPlaces	gereedschapsplaatsen
+Rotate	Draaien
+FollowTool	Gereedschap volgen
+Enlarge2d	2D-weergave vergroten
+MoveDesign	Alleen het ontwerp verplaatsen
+MoveBoard	De print verplaatsen
+ShowBoth	3D-weergave tonen
+OnTable	Op de tafel
+OnBoard	Op de print
+Resume	Hervatten
+NotAnOutline	is niet de contour van een print (open de profiel- of randlaag ervan)
+HolesDrilled	Totaal geboorde gaten
+ResetCounts	Tellers op nul zetten
+Recent	Recent
+McPosition	Positie
+McWork	Werkstuk
+McMachine	Machine
+McJog	Handbediening
+McStep	Stap (mm)
+McHome	Home
+McZero	Nul hier
+McUnlock	Ontgrendelen
+McProgram	Programma
+McOpenGcode	G-code openen
+McMdi	Opdracht (MDI)
+McSend	Verzenden
+McLog	Logboek
+McState	Status
+McController	Controller
+McSimulator	Simulator
+McNotDriven	nog niet aangestuurd
+McToolpath	Gereedschapsbaan
+McLine	Regel
+McSpindle	Spindel
+McFeedRate	Voeding
+McStIdle	Inactief
+McStRun	Actief
+McStHold	Gepauzeerd
+McStHome	Homing
+McStAlarm	ALARM
+McStUnknown	Onbekend
+McZeroXyz	Werknul hier instellen (X, Y en Z)
+McZeroXy	Werknul hier instellen (X en Y)
+McGoG28	Naar de opgeslagen positie G28
+McGoG30	Naar de opgeslagen positie G30
+McGoZeroXy	Naar de werknul in X en Y
+McGoZeroZ	Naar de werknul in Z
+McOperator	Operator
+McGcodeTab	G-code
+McIoTab	IO
+McActiveG	Actieve G-codes
+McActiveM	Actieve M-codes
+McSpeed	Snelheid
+McZeroAxis	Nul van deze as hier instellen
+McInputs	Ingangen
+McOutputs	Uitgangen
+McJogSpeed	Jog-snelheid
+MenuFile	Bestand
+MenuView	Beeld
+MenuHelp	Help
+MenuExit	Afsluiten
+McSaveGcode	G-code opslaan ...
+McEditProgram	Programma bewerken ...
+McRewind	Terug naar de eerste regel
+McClearProgram	Programma wissen
+McFitTable	Aanpassen aan de tafel
+McFitProgram	Aanpassen aan het programma
+McShowButtons	Knoppen voor de nulpunten tonen
+McShowProgram	Programma tonen
+McShowLog	Logboek tonen
+McShowRapids	Ijlgangen tonen
+McSpindleOn	Spindel aan (M3)
+McSpindleOff	Spindel uit (M5)
+McCoolantOn	Koelmiddel aan (M8)
+McCoolantOff	Koelmiddel uit (M9)
+McSetG28	Deze positie opslaan als G28
+McSetG30	Deze positie opslaan als G30
+McCancel	Annuleren
+McSecGeneral	Algemeen
+McSecInterface	Gebruikersinterface
+McSecAxes	Assen en limieten
+McSecJog	Handbediening
+McUnitInch	Inches
+McLimits	Verplaatsingslimieten (mm): minimum en maximum van elke as
+McDefaultStep	Stap bij het starten (mm)
+McDefaultFeed	Jog-snelheid bij het starten (mm/min)
+McSettingsSaved	De instellingen zijn opgeslagen en gelden nu.
+McFilterGcode	G-code-bestanden
+McReplaceAsk	bestaat al. Vervangen?
+McReplace	Vervangen
+McTypeName	Typ een bestandsnaam.
+McNoSuchFile	Dat bestand bestaat niet.
+McSaveTitle	Programma opslaan
+McOpenTitle	Een G-code-programma openen
+McAboutBody	Het machinebesturingsprogramma van EH3D: het stuurt voorlopig een gesimuleerde machine aan.
+FleetTitle	Machines en stations
+FleetNoStation	Geen station
+FleetWaiting	Wachten op de operator
+FleetReady	opdrachten gereed
+FleetUse	Deze machine gebruiken
+FleetTarget	Machine van de opdrachten
+FleetNoServer	De verbinding is geen EH3D-server: kies deze onder Verbinding om de machines te zien.
+FleetRefresh	Vernieuwen
+JobOutsideTable	De opdracht past niet op de tafel: verplaats de print of maak de tafel groter
+LblThickness	Dikte (mm)
+LblCopper	Koper (µm)
+LblCopperSides	Koperzijden
+LblOneSide	1 zijde
+LblTwoSides	2 zijden
+LblSize	Afmeting (mm)
+LblFromFiles	Uit de bestanden
+LblMaker	Fabrikant
+LblWidth	Breedte
+LblDepth	Diepte
+LblPhotoresist	Fotogevoelige lak
+LblExtraStroke	Extra slag (mm)
+LblFeed	Voeding (mm/min)
+LblSpeedRpm	Toerental (rpm)
+LblDepthMm	Diepte (mm)
+LblPasses	Gangen
+LblFeedXy	Voeding XY (mm/min)
+LblFeedZ	Voeding Z (mm/min)
+LblDefault	Std.
+LblFileCoords	Coördinaten van de bestanden
+LblNoRack	Het machinebestand heeft nog geen magazijnposities
+LblWorkArea	Werkgebied
+LblWholeMachine	Hele machine
+LblLayers	Lagen
+SoundFinish	Geluid wanneer de opdracht eindigt
+SoundTool	Geluid wanneer om een gereedschap gevraagd wordt
+SoundCheckOk	Geluid wanneer de visuele controle goed is
+SoundCheckBad	Geluid wanneer de visuele controle niet goed is
+SoundFileHint	WAV-bestand (leeg: de standaardtoon)
+SoundTest	Testen
+SndOff	Geen geluid
+SndDefault	De standaardtoon
+SndFile	Een eigen bestand (WAV)
+SndChime	beltoon
+SndRise	stijgende noten
+SndFall	dalende noten
+SndFanfare	fanfare
+SndTriple	drie noten
+SndBell	bel
+SndBeep	piep
+SndDouble	dubbele piep
+SndTripleBeep	driedubbele piep
+SndAlarm	alarm
+SndKnock	klop
+SndSiren	sirene

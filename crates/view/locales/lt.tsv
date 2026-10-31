@@ -1,1 +1,425 @@
 # Lietuvių (lt): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Tema
+ThemeForge	Forge
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Klasikinis Windows
+ThemeSystem	Sekti Windows spalvas
+ThemeMidnight	Vidurnaktis
+ThemePaper	Popierius (šviesi)
+ThemeForest	Miškas
+ThemeRetro	Retro terminalas
+ThemeOcean	Vandenynas
+ThemeContrast	Didelis kontrastas
+LauncherAsk	Ką norite paleisti?
+LauncherClassicMtc	Klasikinis MTC
+LauncherClassicAtc	Klasikinis ATC
+LauncherModern	Šiuolaikinis (MTC + ATC)
+Remember	Prisiminti mano pasirinkimą
+PressEnter	Paspauskite Enter
+ViewPlan	2D - vaizdas iš viršaus
+ViewMachine	3D - staklės
+LayerHoles	Gręžiamos skylės
+LayerPaths	Frezavimo trajektorijos
+LayerMachine	Staklės
+LayerGrid	Tinklelis
+Progress	Eiga
+TableFromConfig	Stalas iš konfigūracijos
+Drilling	Gręžimas
+Routing	Frezavimas
+ClassicMissing	Klasikinė programa nėra šalia šios
+Start	Pradėti
+Pause	Pauzė
+Stop	Stabdyti
+Language	Kalba
+Holes	skylės
+Tools	įrankiai
+SimulatedJob	Imituojamas darbas: staklės nejuda
+NoFile	Failas neįkeltas
+Ok	Ok
+Abort	Nutraukti
+AskSpindle	Ar galima paleisti suklį?
+AskTool	Įdėkite įrankį
+Connection	Ryšys
+OutsideTable	Netelpa ant stalo
+OpenFile	Atidaryti failą
+About	Apie
+Close	Uždaryti
+SettingsTitle	Nustatymai
+PanelTitle	Panelizavimas
+Columns	Stulpeliai
+Rows	Eilutės
+SpacingX	Tarpas X (mm)
+SpacingY	Tarpas Y (mm)
+PanelModePitch	Nuo centro iki centro
+PanelModeGap	Tarpas tarp plokščių
+PanelModeFit	Užpildyti stalą
+PanelCopies	kopijos
+Apply	Taikyti
+ResetView	Atkurti vaizdą
+DropHint	Nutempkite čia .ncd, .plt arba .zip failą
+NavHint2d	Tempkite judinti, ratukas - mastelis
+NavHint3d	Tempkite sukti, ratukas - mastelis
+Version	Versija
+Licence	Licencija
+AboutBody	Šiuolaikinė Bungard CCD gręžimo ir frezavimo staklių sąsaja.
+TableWidth	Naudojamas plotis X (mm)
+TableDepth	Naudojamas gylis Y (mm)
+Save	Išsaugoti
+Saved	Išsaugota
+OpenFolderUp	Aukštesnis aplankas
+ShowDrill	Gręžimas
+ConnPort	Prievadas
+ConnAddress	Adresas
+ConnToken	Prieigos raktas
+ConnMachine	Staklių ID
+ConnTest	Patikrinti ryšį
+ConnWorks	Ryšys veikia
+BoardTitle	Plokštė
+ToolsTitle	Įrankiai
+SetAskOperator	Klausti keičiant įrankį ir paleidžiant suklį
+SetToolsOnOpen	Atidarant failą rodyti įrankių langą
+SndVoice	Balsas
+SndFemale	moteriškas
+SndMale	vyriškas
+HeadOpen	Galvutės mazgas
+HeadTitle	Gręžimo galvutės mazgas
+HeadOff	Nenaudojamas
+HeadDirect	Tiesiogiai
+HeadServer	Per serverį
+HeadCamera	Rodyti mazgo kamerą
+HeadSpeed	Suklys
+HeadTemp	Temperatūra
+HeadProtectOpen	Apsaugos išėjimas ATVIRAS: suklys turi sustoti
+HeadProtectClosed	Apsaugos išėjimas uždarytas
+HeadMeasure	Matuoti stalą čia
+HeadServerNote	Per ryšio lango serverį: jo adresas, raktas ir staklių ID.
+HeadNoServer	Ryšio lange įrašykite serverio adresą, raktą ir staklių ID.
+HeadCameraModel	Kameros modelis
+HeadNoLink	Įrašykite mazgo adresą (kompiuteris arba kompiuteris:prievadas).
+HeadWaiting	Laukiama mazgo...
+HeadCameraOff	Kamera išjungta
+HeatOk	gerai
+HeatWarm	šilta
+HeatHot	KARŠTA
+HeatUnknown	nežinoma
+LightTitle	Šviesos žiedas
+LightOn	Šviesa įjungta
+LightOff	Šviesa išjungta
+LightNone	šiame mazge nėra žiedo
+InspOpen	Kokybės patikra
+InspTitle	Darbo kokybės patikra
+InspRun	Tikrinti dabar
+InspRunning	Tikrinama...
+InspVerdictOk	GERAI
+InspVerdictNotOk	NEGERAI
+InspVerdictUnknown	NEGALIMA NUSPRĘSTI
+InspIdle	Dar netikrinta
+InspChecks	Patikros
+InspCheckHoles	Išgręžtos skylės
+InspCheckMilling	Išfrezuoti kanalai
+InspProfile	Analizės profilis
+InspPresetStandard	Standartinis
+InspPresetFine	Smulkus žingsnis
+InspPresetProto	Prototipas
+InspLight	Šviesa paveikslėliui
+InspLightKeep	kaip yra
+InspHolePick	Darbo skylė centre
+InspNoJob	Įkelkite gręžimo failą, kad patikrintumėte jo skyles
+InspScale	Mastelis (pikseliai vienam mm)
+InspCalibrate	Kalibruoti pagal šią skylę
+InspSave	Išsaugoti profilį
+InspTune	Leidžiamieji nuokrypiai
+InspNeedLink	Pirmiausia nustatykite gręžimo galvutės mazgą (langas Galvutės mazgas).
+InspHolesOk	skylės gerai
+InspChannel	kanalo plotis
+InspTuneHoleDia	Skylės dydžio nuokrypis (mm)
+InspTuneHolePos	Skylės padėties nuokrypis (mm)
+InspTuneRound	Mažiausias apvalumas (1 = apskritimas)
+InspTuneDebris	Daugiausia nuolaužų aplink skylę
+InspTuneMillWidth	Kanalo plotis (mm)
+InspTuneMillTol	Kanalo pločio nuokrypis
+InspTuneMillMin	Siauriausias kanalas (mm)
+InspTuneSpread	Nelygiausias kanalas
+InspTuneMinMean	Tamsiausias priimamas paveikslėlis
+InspTuneMinSharp	Mažiausias ryškumas
+InspFindHoleMissing	ten nėra skylės
+InspFindHoleSize	neteisingas dydis
+InspFindHoleOff	ne centre
+InspFindHoleRound	neapvali
+InspFindHoleDebris	aplink aštrios briaunos arba dulkės
+InspFindHoleView	už vaizdo ribų
+InspFindMillNone	kanalų nematyti
+InspFindMillNarrow	kanalai per siauri
+InspFindMillWide	kanalai per platūs
+InspFindMillPinch	kanalas susiaurėja: trumpojo jungimo rizika
+InspFindMillUneven	kanalai nelygūs
+InspFindDark	paveikslėlis per tamsus: daugiau šviesos
+InspFindBright	paveikslėlis per šviesus: mažiau šviesos
+InspFindContrast	paveikslėlis be kontrasto
+InspFindBlurry	paveikslėlis neryškus
+InspFindScale	pirmiausia nustatykite mastelį
+InspFindNothing	neįjungta jokia patikra
+InspFindNoHoles	vaizde nėra jokios darbo skylės
+CatOpen	Įrankių katalogas
+CatTitle	Įrankių katalogas spausdintinėms plokštėms
+CatShank	Kiekvieno įrankio kotelis yra 1/8 colio (3,175 mm), kurį laiko Bungard staklių griebtuvas. Skaičiai yra FR-4 pradiniai taškai: išbandykite juos su atliekų plokšte.
+CatAll	Visi tipai
+KindDrill	Grąžtai
+KindEndMill	Kotinės frezos (tiesios)
+KindDownCut	Frezos su pjovimu žemyn
+KindUpCut	Frezos su pjovimu aukštyn
+KindDiamond	Deimantinio dantų profilio frezos (kukurūza)
+KindVBit	V formos frezos (graviravimas, izoliavimas)
+KindBall	Sferinė kotinė freza
+KindSpot	Centravimo grąžtai
+KindCountersink	Gilintuvai
+CatCount	įrankiai
+KindChipBreaker	Drožlių laužymo frezos
+KindSlotDrill	Grioveliniai grąžtai (pailgoms skylėms)
+KindCoated	Deimantine danga dengtos frezos
+CatSeriesCol	serija
+CatFluteCol	L mm
+CatPick	Spustelėkite sąrašo įrankį, kad pamatytumėte jį ir jo paskirtį.
+CatSpindle	Apsukos ir paduotys yra gamintojo. Suklys, kuris negali suktis taip greitai, tą patį įrankį naudoja savo greičiu, paduotį sumažinus proporcingai (toks pat pjūvio storis vienam apsisukimui).
+SpindleLbl	Staklių suklys
+SpindleOriginal	Originalus Bungard, 60000 rpm
+SpindleVfd	VFD suklys GDZ 80-2.2, 24000 rpm
+SpindleNote	Kiekvienas suklys turi savo greičio, paduoties ir įrankio dydžio ribas (jas galima redaguoti nustatymų faile). Katalogas ir įrankiai įspėja, kai įrankis reikalauja daugiau, nei suklys gali duoti.
+CatSpindleLbl	Suklys
+FitOk	Šis suklys gali dirbti su gamintojo vertėmis.
+FitSlower	Šis suklys turi dirbti lėčiau. Siūlomos vertės:
+FitLowerRpm	Suklys sukasi lėčiau, nei reikalauja įrankis: XY ir Z juda proporcingai lėčiau.
+FitSlowZ	Z šiose staklėse turi judėti lėčiau.
+FitSlowXy	XY paduotis šiose staklėse turi būti lėtesnė.
+FitNoThick	NEDERINAMA: įrankis storesnis, nei šis suklys priima.
+FitNoSlow	NEDERINAMA: šis suklys sukasi per lėtai šiam įrankiui (jis lūžtų arba sudegintų plokštę).
+CatUseFor	Naudoti šias vertes įrankiui
+ToolFromCat	Katalogas
+CatTaken	Vertės perkeltos į įrankį.
+JobNothingOn	Nėra ką daryti: įjunkite gręžimą arba frezavimą ir bent vieną jo įrankį.
+JobPartHint	Spustelėkite įjungti ar išjungti; abu įjungti: pirma gręžimas, paskui frezavimas
+ToolOffHint	Spustelėkite įrankio tašką, kad jis nebūtų darbe
+CatFlute	Pjovimo ilgis
+CatShankLbl	Kotelis
+CatTotal	Bendras ilgis
+CatPoint	Viršūnės kampas
+CatSchematic	Principinis brėžinys, ne mastelio.
+NoteDrill	Vientisas kietmetalio grąžtas skylėms per visą storį. Mažiausi (iki 0,5 mm) skirti perėjimo skylėms, vidutiniai - komponentų kojelėms, dideli - jungtims ir tvirtinimo skylėms. Ištraukite greitai ir keiskite po kelių tūkstančių skylių.
+NoteEndMill	Tiesios griovelių briaunos ir plokščias galas: grioveliai, kišenės, plačių takelių izoliavimas ir plonų plokščių kontūras. Palieka švarų dugną.
+NoteDownCut	Kairinė freza: stumia drožles žemyn. Plokštės viršutinis kraštas lieka be aštrių briaunų, todėl naudokite kontūrui, kai matoma viršutinė pusė (plokštė turi būti gerai prispausta).
+NoteUpCut	Dešininė freza: traukia drožles aukštyn iš pjūvio. Gera grioveliams ir kišenėms; gali pakelti plokštę ir palikti aštrių briaunų viršutiniame krašte.
+NoteDiamond	Deimantinio dantų profilio (kukurūzų) freza: daug mažų dantukų, kurie malą stiklo pluoštą, o ne plėšo. Įprastas pasirinkimas FR-4 kontūrui; palieka šiurkštų, bet švarų kraštą ir tarnauja ilgai.
+NoteChip	Drožlių laužymo freza: jos dantys sulaužo drožles į trumpus gabalėlius, kurie lengvai išeina iš pjūvio. Pjauna greičiau nei deimantinė ir palieka mažai aštrių briaunų.
+NoteVBit	V formos freza (graviravimo įrankis): griovelis tiek platus, kiek lemia gylis, todėl gylis nustato izoliacijos plotį. Siauras kampas su smulkia viršūne leidžia gaminti smulkius takelius.
+NoteBall	Sferinė kotinė freza: suapvalintas griovelis graviravimui ir formavimui. Netinka takeliams izoliuoti.
+NoteSpot	Centravimo grąžtas: trumpa, standi viršūnė, pradedanti skylę tiksliai ten, kur reikia, kad kitas grąžtas nenukryptų. Didelėms skylėms ir kietoms plokštėms.
+NoteCountersink	Gilintuvas: nuima skylės krašto nuožulą varžtų galvutėms arba aštrioms briaunoms pašalinti.
+NoteSlot	Griovelinis grąžtas: grąžtas su standžia šerdimi, skirtas pailgoms skylėms (jungčių plyšiams) pjauti judant į šoną gręžiant. Nenaudokite apvalioms skylėms: kiti pigesni.
+NoteCoated	Plokščiagalė freza su deimantine danga: abrazyvinėms plokštėms (didelio Tg FR-4, be halogenų, anglies pluoštas) ir plokštėms su aluminio pagrindu, kur nedengta greitai nusidėvi. Kainuoja daugiau ir tarnauja kelis kartus ilgiau.
+LevTab	Stalo kalibravimas
+LevMeasure	Matuoti stalą
+LevStop	Nutraukti matavimą
+LevClear	Išvalyti žemėlapį
+LevCols	Taškai išilgai X
+LevRows	Taškai išilgai Y
+LevPoints	Išmatuoti taškai
+LevSpread	Sklaida
+LevTilt	Posvyris X / Y
+LevDemo	Imituojamas zondas: zondo mazgas dar neprijungtas, aukščiai imami iš imituojamo stalo.
+LevApply	Pataisyti darbų Z pagal šį žemėlapį
+ResumeTitle	Darbas nutrauktas
+ResumeBody	Paskutinis darbas liko nebaigtas (langas, kompiuteris ar ryšys nutrūko). Ar tęsti nuo vietos, kurioje sustota?
+ResumeContinue	Tęsti darbą
+ResumeCancel	Atšaukti
+TabsOn	Frezuoti išorę su tilteliais
+TabsPerSide	Tilteliai vienoje pusėje
+TabWidth	Tiltelio plotis
+TabPlace	Kur dedami tilteliai
+TabEven	Tolygiai išdėstyti išilgai pusės
+TabEnds	Arti pusės galų
+TabMiddle	Kartu viduryje
+SetSkipLauncher	Kitą kartą atidaryti šį langą tiesiogiai
+ColName	Pavadinimas
+ColDate	Keitimo data (UTC)
+ColType	Tipas
+ColSize	Dydis
+TypeFolder	Aplankas
+TypeZip	ZIP archyvas
+Places	Vietos
+PlaceExamples	Pavyzdžiai
+PlaceDesktop	Darbalaukis
+PlaceDocuments	Dokumentai
+PlaceDownloads	Atsisiuntimai
+FileNameLabel	Failo pavadinimas
+FilterSupported	Visi darbo failai
+FilterDrill	Gręžimo failai
+FilterRoute	Frezavimo failai
+FilterZip	ZIP archyvai
+FilterAny	Visi failai
+NavBack	Atgal
+NavUp	Aukštyn
+ThisPc	Šis kompiuteris
+SimSpeed	Imitavimo greitis
+DefaultValues	Numatytosios vertės
+TypeValueHint	Spustelėkite vertę, kad ją įvestumėte
+TabGeneral	Bendra
+TabJob	Darbas
+Units	Vienetai
+UnitMm	Milimetrai (mm)
+UnitMil	Milai (0,001 colio)
+ModelLabel	Staklių modelis
+ToolChange	Įrankio keitimas
+TcManual	Rankinis (MTC)
+TcAuto	Automatinis (ATC)
+EmergencyStop	Avarinis stabdymas
+EmergencyShow	Rodyti avarinį mygtuką (jį galima nutempti bet kur)
+RackPlaces	įrankių vietos
+Rotate	Sukti
+FollowTool	Sekti įrankį
+Enlarge2d	Padidinti 2D vaizdą
+MoveDesign	Perkelti tik dizainą
+MoveBoard	Perkelti plokštę
+ShowBoth	Rodyti 3D vaizdą
+OnTable	Ant stalo
+OnBoard	Ant plokštės
+Resume	Tęsti
+NotAnOutline	nėra plokštės kontūras (atidarykite jos profilio arba krašto sluoksnį)
+HolesDrilled	Iš viso išgręžta skylių
+ResetCounts	Nunulinti skaitiklius
+Recent	Naujausi
+McPosition	Padėtis
+McWork	Darbas
+McMachine	Staklės
+McJog	Jog
+McStep	Žingsnis (mm)
+McHome	Home
+McZero	Nulis čia
+McUnlock	Atrakinti
+McProgram	Programa
+McOpenGcode	Atidaryti G-kodą
+McMdi	Komanda (MDI)
+McSend	Siųsti
+McLog	Žurnalas
+McState	Būsena
+McController	Valdiklis
+McSimulator	Simuliatorius
+McNotDriven	dar nevaldoma
+McToolpath	Įrankio trajektorija
+McLine	Eilutė
+McSpindle	Suklys
+McFeedRate	Paduotis
+McStIdle	Laukia
+McStRun	Vykdoma
+McStHold	Pristabdyta
+McStHome	Važiuoja į Home
+McStAlarm	SIGNALAS
+McStUnknown	Nežinoma
+McZeroXyz	Nustatyti darbo nulį čia (X, Y ir Z)
+McZeroXy	Nustatyti darbo nulį čia (X ir Y)
+McGoG28	Eiti į išsaugotą padėtį G28
+McGoG30	Eiti į išsaugotą padėtį G30
+McGoZeroXy	Eiti į darbo nulį pagal X ir Y
+McGoZeroZ	Eiti į darbo nulį pagal Z
+McOperator	Operatorius
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	Aktyvūs G-kodai
+McActiveM	Aktyvūs M-kodai
+McSpeed	Greitis
+McZeroAxis	Nustatyti šios ašies nulį čia
+McInputs	Įėjimai
+McOutputs	Išėjimai
+McJogSpeed	Jog greitis
+MenuFile	Failas
+MenuView	Rodinys
+MenuHelp	Pagalba
+MenuExit	Išeiti
+McSaveGcode	Išsaugoti G-kodą ...
+McEditProgram	Redaguoti programą ...
+McRewind	Grįžti į pirmą eilutę
+McClearProgram	Išvalyti programą
+McFitTable	Priderinti prie stalo
+McFitProgram	Priderinti prie programos
+McShowButtons	Rodyti nulių mygtukus
+McShowProgram	Rodyti programą
+McShowLog	Rodyti žurnalą
+McShowRapids	Rodyti greituosius judesius
+McSpindleOn	Suklys įjungtas (M3)
+McSpindleOff	Suklys išjungtas (M5)
+McCoolantOn	Aušinimas įjungtas (M8)
+McCoolantOff	Aušinimas išjungtas (M9)
+McSetG28	Išsaugoti šią padėtį kaip G28
+McSetG30	Išsaugoti šią padėtį kaip G30
+McCancel	Atšaukti
+McSecGeneral	Bendra
+McSecInterface	Naudotojo sąsaja
+McSecAxes	Ašys ir ribos
+McSecJog	Jog
+McUnitInch	Coliai
+McLimits	Eigos ribos (mm): kiekvienos ašies minimumas ir maksimumas
+McDefaultStep	Žingsnis pradžioje (mm)
+McDefaultFeed	Jog greitis pradžioje (mm/min)
+McSettingsSaved	Nustatymai išsaugoti ir įsigalioja dabar.
+McFilterGcode	G-kodo failai
+McReplaceAsk	jau yra. Pakeisti?
+McReplace	Pakeisti
+McTypeName	Įveskite failo pavadinimą.
+McNoSuchFile	Tokio failo nėra.
+McSaveTitle	Išsaugoti programą
+McOpenTitle	Atidaryti G-kodo programą
+McAboutBody	EH3D staklių valdymo programa: kol kas valdo imituojamas stakles.
+FleetTitle	Staklės ir stotys
+FleetNoStation	Nėra stoties
+FleetWaiting	Laukiama operatoriaus
+FleetReady	darbai paruošti
+FleetUse	Naudoti šias stakles
+FleetTarget	Darbų staklės
+FleetNoServer	Ryšys nėra EH3D serveris: pasirinkite jį skiltyje Ryšys, kad pamatytumėte stakles.
+FleetRefresh	Atnaujinti
+JobOutsideTable	Darbas netelpa ant stalo: perkelkite plokštę arba padidinkite stalą
+LblThickness	Storis (mm)
+LblCopper	Varis (µm)
+LblCopperSides	Vario pusės
+LblOneSide	1 pusė
+LblTwoSides	2 pusės
+LblSize	Dydis (mm)
+LblFromFiles	Iš failų
+LblMaker	Gamintojas
+LblWidth	Plotis
+LblDepth	Gylis
+LblPhotoresist	Šviesai jautrus fotorezistas
+LblExtraStroke	Papildoma eiga (mm)
+LblFeed	Paduotis (mm/min)
+LblSpeedRpm	Greitis (rpm)
+LblDepthMm	Gylis (mm)
+LblPasses	Praėjimai
+LblFeedXy	Paduotis XY (mm/min)
+LblFeedZ	Paduotis Z (mm/min)
+LblDefault	Num.
+LblFileCoords	Failų koordinatės
+LblNoRack	Staklių faile dar nėra lentynos pozicijų
+LblWorkArea	Darbo sritis
+LblWholeMachine	Visos staklės
+LblLayers	Sluoksniai
+SoundFinish	Garsas, kai darbas baigiasi
+SoundTool	Garsas, kai prašoma įrankio
+SoundCheckOk	Garsas, kai vizualinė patikra teisinga
+SoundCheckBad	Garsas, kai vizualinė patikra neteisinga
+SoundFileHint	WAV failas (tuščia: numatytasis signalas)
+SoundTest	Bandyti
+SndOff	Be garso
+SndDefault	Standartinis signalas
+SndFile	Mano failas (WAV)
+SndChime	varpelis
+SndRise	kylantys garsai
+SndFall	krintantys garsai
+SndFanfare	fanfaros
+SndTriple	trys garsai
+SndBell	varpas
+SndBeep	pyptelėjimas
+SndDouble	dvigubas pyptelėjimas
+SndTripleBeep	trigubas pyptelėjimas
+SndAlarm	aliarmas
+SndKnock	beldimas
+SndSiren	sirena

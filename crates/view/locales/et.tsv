@@ -1,1 +1,425 @@
 # Eesti (et): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Teema
+ThemeForge	Sepikoda
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Klassikaline Windows
+ThemeSystem	Järgi Windowsi värve
+ThemeMidnight	Kesköö
+ThemePaper	Paber (hele)
+ThemeForest	Mets
+ThemeRetro	Retroterminal
+ThemeOcean	Ookean
+ThemeContrast	Kõrge kontrast
+LauncherAsk	Mida soovite käivitada?
+LauncherClassicMtc	Klassikaline MTC
+LauncherClassicAtc	Klassikaline ATC
+LauncherModern	Kaasaegne (MTC + ATC)
+Remember	Jäta mu valik meelde
+PressEnter	Vajutage Enter
+ViewPlan	2D - vaade ülalt
+ViewMachine	3D - masin
+LayerHoles	Puuritavad augud
+LayerPaths	Freesimisrajad
+LayerMachine	Masin
+LayerGrid	Ruudustik
+Progress	Edenemine
+TableFromConfig	Laud konfiguratsioonist
+Drilling	Puurimine
+Routing	Freesimine
+ClassicMissing	Klassikaline programm ei asu selle kõrval
+Start	Käivita
+Pause	Paus
+Stop	Peata
+Language	Keel
+Holes	auku
+Tools	tööriista
+SimulatedJob	Simuleeritud töö: ühtegi masinat ei liigutata
+NoFile	Faili pole laaditud
+Ok	Ok
+Abort	Katkesta
+AskSpindle	Kas käivitada spindel?
+AskTool	Pange tööriist sisse
+Connection	Ühendus
+OutsideTable	Ei mahu lauale
+OpenFile	Ava fail
+About	Teave
+Close	Sulge
+SettingsTitle	Seaded
+PanelTitle	Paneelimine
+Columns	Veerud
+Rows	Read
+SpacingX	Vahe X (mm)
+SpacingY	Vahe Y (mm)
+PanelModePitch	Keskmest keskmesse
+PanelModeGap	Vahe plaatide vahel
+PanelModeFit	Täida laud
+PanelCopies	koopiat
+Apply	Rakenda
+ResetView	Lähtesta vaade
+DropHint	Lohistage siia .ncd-, .plt- või .zip-fail
+NavHint2d	Lohistage liigutamiseks, ratas suumimiseks
+NavHint3d	Lohistage pööramiseks, ratas suumimiseks
+Version	Versioon
+Licence	Litsents
+AboutBody	Kaasaegne liides Bungard CCD puur- ja freesmasinatele.
+TableWidth	Kasutatav laius X (mm)
+TableDepth	Kasutatav sügavus Y (mm)
+Save	Salvesta
+Saved	Salvestatud
+OpenFolderUp	Ülemkaust
+ShowDrill	Puurimine
+ConnPort	Port
+ConnAddress	Aadress
+ConnToken	Juurdepääsuloa tunnus
+ConnMachine	Masina ID
+ConnTest	Testi ühendust
+ConnWorks	Ühendus töötab
+BoardTitle	Plaat
+ToolsTitle	Tööriistad
+SetAskOperator	Küsi minult tööriistavahetuse ja spindli käivitamise ajal
+SetToolsOnOpen	Näita tööriistade akent faili avamisel
+SndVoice	Hääl
+SndFemale	naine
+SndMale	mees
+HeadOpen	Pea sõlm
+HeadTitle	Puuripea sõlm
+HeadOff	Kasutamata
+HeadDirect	Otse
+HeadServer	Serveri kaudu
+HeadCamera	Näita sõlme kaamerat
+HeadSpeed	Spindel
+HeadTemp	Temperatuur
+HeadProtectOpen	Kaitseväljund AVATUD: spindel peab peatuma
+HeadProtectClosed	Kaitseväljund suletud
+HeadMeasure	Mõõda laud siin
+HeadServerNote	Ühenduse akna serveri kaudu: selle aadress, tunnus ja masina ID.
+HeadNoServer	Sisestage serveri aadress, tunnus ja masina ID ühenduse aknas.
+HeadCameraModel	Kaamera mudel
+HeadNoLink	Sisestage sõlme aadress (host või host:port).
+HeadWaiting	Ootan sõlme...
+HeadCameraOff	Kaamera väljas
+HeatOk	korras
+HeatWarm	soe
+HeatHot	KUUM
+HeatUnknown	teadmata
+LightTitle	Valgusrõngas
+LightOn	Valgus sees
+LightOff	Valgus väljas
+LightNone	sellel sõlmel pole rõngast
+InspOpen	Kvaliteedikontroll
+InspTitle	Töö kvaliteedikontroll
+InspRun	Kontrolli kohe
+InspRunning	Kontrollin...
+InspVerdictOk	SOBIB
+InspVerdictNotOk	EI SOBI
+InspVerdictUnknown	EI SAA HINNATA
+InspIdle	Pole veel kontrollitud
+InspChecks	Kontrollid
+InspCheckHoles	Puuritud augud
+InspCheckMilling	Freesitud kanalid
+InspProfile	Analüsaatori profiil
+InspPresetStandard	Standardne
+InspPresetFine	Peen samm
+InspPresetProto	Prototüüp
+InspLight	Valgus pildi jaoks
+InspLightKeep	nagu on
+InspHolePick	Töö auk keskel
+InspNoJob	Laadige puurimisfail, et selle auke kontrollida
+InspScale	Mõõtkava (pikslit mm kohta)
+InspCalibrate	Kalibreeri selle augu järgi
+InspSave	Salvesta profiil
+InspTune	Tolerantsid
+InspNeedLink	Seadistage esmalt puuripea sõlm (aken Pea sõlm).
+InspHolesOk	auku korras
+InspChannel	kanali laius
+InspTuneHoleDia	Augu suuruse tolerants (mm)
+InspTuneHolePos	Augu asendi tolerants (mm)
+InspTuneRound	Väikseim ümarus (1 = ring)
+InspTuneDebris	Maks. kraat augu ümber
+InspTuneMillWidth	Kanali laius (mm)
+InspTuneMillTol	Kanali laiuse tolerants
+InspTuneMillMin	Kitsaim kanal (mm)
+InspTuneSpread	Ebaühtlaseim kanal
+InspTuneMinMean	Tumedaim lubatud pilt
+InspTuneMinSharp	Väikseim terävus
+InspFindHoleMissing	seal pole auku
+InspFindHoleSize	vale suurus
+InspFindHoleOff	nihkes
+InspFindHoleRound	pole ümar
+InspFindHoleDebris	kraat või tolm ümber
+InspFindHoleView	pildist väljas
+InspFindMillNone	kanaleid pole näha
+InspFindMillNarrow	kanalid liiga kitsad
+InspFindMillWide	kanalid liiga laiad
+InspFindMillPinch	kanal kitseneb: lühise oht
+InspFindMillUneven	kanalid ebaühtlased
+InspFindDark	pilt liiga tume: rohkem valgust
+InspFindBright	pilt liiga hele: vähem valgust
+InspFindContrast	pildil pole kontrasti
+InspFindBlurry	pilt on fookusest väljas
+InspFindScale	määrake esmalt mõõtkava
+InspFindNothing	ühtegi kontrolli pole sisse lülitatud
+InspFindNoHoles	töö auke pole pildis
+CatOpen	Puuride ja freeside kataloog
+CatTitle	PCB puuride ja freeside kataloog
+CatShank	Igal tööriistal on 1/8-tolline (3,175 mm) vars, mida Bungardi masina padrun hoiab. Arvud on FR-4 lähtepunktid: proovige neid jäägiplaadil.
+CatAll	Kõik tüübid
+KindDrill	Puurid
+KindEndMill	Otsafreesid (sirged)
+KindDownCut	Allapoole lõikavad freesid
+KindUpCut	Ülespoole lõikavad freesid
+KindDiamond	Teemanthambaga freesid (corn)
+KindVBit	V-freesid (graveerimine, isoleerimine)
+KindBall	Kerafreesid
+KindSpot	Tsentreerpuurid
+KindCountersink	Süvistid
+CatCount	tööriista
+KindChipBreaker	Laastumurdjaga freesd
+KindSlotDrill	Soonepuurid (piklike aukude jaoks)
+KindCoated	Teemantkattega freesid
+CatSeriesCol	seeria
+CatFluteCol	L mm
+CatPick	Klõpsake nimekirjas tööriistal, et seda näha ja teada, milleks see on.
+CatSpindle	Pöörded ja ettenihked on tootja omad. Spindel, mis nii kiiresti ei pöörle, kasutab sama tööriista oma kiirusel, ettenihe proportsionaalselt (sama lõikesügavus pöörde kohta).
+SpindleLbl	Masina spindel
+SpindleOriginal	Originaalne Bungard, 60000 rpm
+SpindleVfd	VFD-spindel GDZ 80-2.2, 24000 rpm
+SpindleNote	Igal spindlil on oma kiiruse, ettenihke ja tööriista suuruse piirid (neid saab muuta seadete failis). Kataloog ja tööriistad hoiatavad, kui tööriist nõuab rohkem, kui spindel suudab anda.
+CatSpindleLbl	Spindel
+FitOk	See spindel saab sellega tootja väärtustega hakkama.
+FitSlower	See spindel vajab aeglasemat tööd. Soovitatavad väärtused:
+FitLowerRpm	Spindel pöörleb aeglasemalt, kui tööriist nõuab: XY ja Z peavad olema proportsionaalselt aeglasemad.
+FitSlowZ	Z peab sellel masinal olema aeglasem.
+FitSlowXy	XY ettenihe peab sellel masinal olema aeglasem.
+FitNoThick	POLE ÜHILDUV: tööriist on jämedam, kui see spindel võtab.
+FitNoSlow	POLE ÜHILDUV: see spindel pöörleb selle tööriista jaoks liiga aeglaselt (see murduks või kõrvetaks plaadi).
+CatUseFor	Kasuta neid väärtusi tööriistal
+ToolFromCat	Kataloog
+CatTaken	Väärtused kantud tööriistale.
+JobNothingOn	Pole midagi teha: lülitage sisse puurimine või freesimine ja vähemalt üks selle tööriistadest.
+JobPartHint	Klõpsake sisse- või väljalülitamiseks; mõlemad sees: kõigepealt puurimine, siis freesimine
+ToolOffHint	Klõpsake tööriista punktil, et jätta see töö juurest välja
+CatFlute	Lõikepikkus
+CatShankLbl	Vars
+CatTotal	Kogupikkus
+CatPoint	Tippnurk
+CatSchematic	Skemaatiline joonis, mõõtkavata.
+NoteDrill	Kõvasulamist puur läbivate aukude jaoks. Väikesed (alla 0,5 mm) on läbiviikude jaoks, keskmised komponendijalgade jaoks, suured pistikute ja kinnitusaukude jaoks. Tõmmake kiiresti välja ja vahetage mõne tuhande augu järel.
+NoteEndMill	Sirged soonid ja lame ots: sooned, taskud, laiade radade isoleerimine ja õhukeste plaatide kontuur. Jätab puhta põhja.
+NoteDownCut	Vasakkeermeline frees: surub laastud alla. Plaadi ülemine serv jääb kraadita; kasutage seda kontuuri jaoks, kui nähtav pool on pealmine (plaat peab olema hästi kinni).
+NoteUpCut	Paremkeermeline frees: tõmbab laastud üles ja lõikest välja. Hea soonte ja taskute jaoks; võib plaati üles tõsta ja jätta ülemisele servale kraate.
+NoteDiamond	Teemanthambaga (corn) frees: palju väikesi hambaid, mis jahvatavad klaaskiu, selle asemel et rebida. FR-4 kontuuri tavaline valik; jätab kareda, kuid puhta serva ja peab kaua vastu.
+NoteChip	Laastumurdjaga frees: selle hambad murravad laastud lühikesteks tükkideks, mis lõikest kergesti väljuvad. Lõikab kiiremini kui teemantfreesi ja hoiab kraadid väikesed.
+NoteVBit	V-frees (graveerimisfrees): soon on nii lai, kui sügavus selle teeb, seega sügavus määrab isolatsiooni laiuse. Kitsas nurk peene tipuga võimaldab peeneid radu.
+NoteBall	Kerafrees: ümar soon graveerimiseks ja vormimiseks. Ei sobi radade isoleerimiseks.
+NoteSpot	Tsentreerpuur: lühike jäik tipp, mis alustab augu täpselt õiges kohas, et järgmine puur ei nihkuks. Suurte aukude ja kõvade plaatide jaoks.
+NoteCountersink	Süvisti: faasib augu serva, kruvipeade jaoks või kraadi eemaldamiseks.
+NoteSlot	Soonepuur: jäiga südamikuga puur, mis lõikab piklikke auke, liikudes puurimise ajal küljele (pistikute pilud). Ärge kasutage ümarate aukude jaoks: teised on odavamad.
+NoteCoated	Lameotsaga frees teemantkattega: abrasiivsete plaatide (kõrge Tg-ga FR-4, halogeenivaba, süsinikkiud) ja alumiiniumpõhjaga plaatide jaoks, kus katteta freesi kulub. Maksab rohkem ja peab mitu korda kauem vastu.
+LevTab	Laua kalibreerimine
+LevMeasure	Mõõda laud
+LevStop	Peata mõõtmine
+LevClear	Kustuta kaart
+LevCols	Punkte piki X
+LevRows	Punkte piki Y
+LevPoints	Mõõdetud punkte
+LevSpread	Erinevus
+LevTilt	Kalle X / Y
+LevDemo	Simuleeritud tapp: tapisõlme pole veel ühendatud, kõrgused pärinevad simuleeritud lauast.
+LevApply	Korrigeeri tööde Z selle kaardiga
+ResumeTitle	Töö katkestatud
+ResumeBody	Viimane töö jäi pooleli (aken, arvuti või ühendus katkes). Kas soovite jätkata sealt, kus pooleli jäi?
+ResumeContinue	Jätka tööd
+ResumeCancel	Tühista
+TabsOn	Freesi välisserv sildadega
+TabsPerSide	Sildu küljel
+TabWidth	Silla laius
+TabPlace	Kuhu sillad tulevad
+TabEven	Ühtlaselt piki külge
+TabEnds	Külje otste lähedal
+TabMiddle	Koos keskel
+SetSkipLauncher	Ava see aken järgmine kord otse
+ColName	Nimi
+ColDate	Muutmise kuupäev (UTC)
+ColType	Tüüp
+ColSize	Suurus
+TypeFolder	Kaust
+TypeZip	ZIP-arhiiv
+Places	Asukohad
+PlaceExamples	Näited
+PlaceDesktop	Töölaud
+PlaceDocuments	Dokumendid
+PlaceDownloads	Allalaadimised
+FileNameLabel	Faili nimi
+FilterSupported	Kõik tööfailid
+FilterDrill	Puurimisfailid
+FilterRoute	Freesimisfailid
+FilterZip	ZIP-arhiivid
+FilterAny	Kõik failid
+NavBack	Tagasi
+NavUp	Üles
+ThisPc	See arvuti
+SimSpeed	Simulatsiooni kiirus
+DefaultValues	Vaikeväärtused
+TypeValueHint	Klõpsake väärtusel, et seda sisestada
+TabGeneral	Üldine
+TabJob	Töö
+Units	Ühikud
+UnitMm	Millimeetrid (mm)
+UnitMil	Millid (0,001 tolli)
+ModelLabel	Masinamudel
+ToolChange	Tööriistavahetus
+TcManual	Käsitsi (MTC)
+TcAuto	Automaatne (ATC)
+EmergencyStop	Hädaseiskamine
+EmergencyShow	Näita hädaseiskamisnuppu (seda saab lohistada kuhu tahes)
+RackPlaces	tööriistakohta
+Rotate	Pööra
+FollowTool	Järgi tööriista
+Enlarge2d	Suurenda 2D-vaadet
+MoveDesign	Liiguta ainult kujundust
+MoveBoard	Liiguta plaati
+ShowBoth	Näita 3D-vaadet
+OnTable	Laual
+OnBoard	Plaadil
+Resume	Jätka
+NotAnOutline	pole plaadi kontuur (avage selle profiili- või servakiht)
+HolesDrilled	Puuritud auke kokku
+ResetCounts	Nulli loendurid
+Recent	Hiljutised
+McPosition	Asend
+McWork	Töödetail
+McMachine	Masin
+McJog	Käsiliigutus
+McStep	Samm (mm)
+McHome	Home
+McZero	Null siia
+McUnlock	Ava lukustus
+McProgram	Programm
+McOpenGcode	Ava G-kood
+McMdi	Käsk (MDI)
+McSend	Saada
+McLog	Logi
+McState	Olek
+McController	Kontroller
+McSimulator	Simulaator
+McNotDriven	pole veel juhitud
+McToolpath	Tööriistarada
+McLine	Rida
+McSpindle	Spindel
+McFeedRate	Ettenihe
+McStIdle	Jõudeolek
+McStRun	Töötab
+McStHold	Pausil
+McStHome	Home-liikumine
+McStAlarm	ALARM
+McStUnknown	Teadmata
+McZeroXyz	Sea töö null siia (X, Y ja Z)
+McZeroXy	Sea töö null siia (X ja Y)
+McGoG28	Mine salvestatud asendisse G28
+McGoG30	Mine salvestatud asendisse G30
+McGoZeroXy	Mine töö nulli X-is ja Y-is
+McGoZeroZ	Mine töö nulli Z-is
+McOperator	Operaator
+McGcodeTab	G-kood
+McIoTab	IO
+McActiveG	Aktiivsed G-koodid
+McActiveM	Aktiivsed M-koodid
+McSpeed	Kiirus
+McZeroAxis	Sea selle telje null siia
+McInputs	Sisendid
+McOutputs	Väljundid
+McJogSpeed	Jog-kiirus
+MenuFile	Fail
+MenuView	Vaade
+MenuHelp	Spikker
+MenuExit	Välju
+McSaveGcode	Salvesta G-kood ...
+McEditProgram	Muuda programmi ...
+McRewind	Tagasi esimesele reale
+McClearProgram	Tühjenda programm
+McFitTable	Sobita lauale
+McFitProgram	Sobita programmile
+McShowButtons	Näita nullide nuppe
+McShowProgram	Näita programmi
+McShowLog	Näita logi
+McShowRapids	Näita kiirliikumisi
+McSpindleOn	Spindel sees (M3)
+McSpindleOff	Spindel väljas (M5)
+McCoolantOn	Jahutusvedelik sees (M8)
+McCoolantOff	Jahutusvedelik väljas (M9)
+McSetG28	Salvesta see asend kui G28
+McSetG30	Salvesta see asend kui G30
+McCancel	Tühista
+McSecGeneral	Üldine
+McSecInterface	Kasutajaliides
+McSecAxes	Teljed ja piirid
+McSecJog	Käsiliigutus
+McUnitInch	Tollid
+McLimits	Liikumispiirid (mm): iga telje miinimum ja maksimum
+McDefaultStep	Samm käivitamisel (mm)
+McDefaultFeed	Jog-kiirus käivitamisel (mm/min)
+McSettingsSaved	Seaded on salvestatud ja kehtivad kohe.
+McFilterGcode	G-koodi failid
+McReplaceAsk	on juba olemas. Kas asendada?
+McReplace	Asenda
+McTypeName	Sisestage failinimi.
+McNoSuchFile	Sellist faili pole.
+McSaveTitle	Salvesta programm
+McOpenTitle	Ava G-koodi programm
+McAboutBody	EH3D masinajuhtimisprogramm: praegu juhib see simuleeritud masinat.
+FleetTitle	Masinad ja jaamad
+FleetNoStation	Jaama pole
+FleetWaiting	Ootan operaatorit
+FleetReady	tööd valmis
+FleetUse	Kasuta seda masinat
+FleetTarget	Tööde masin
+FleetNoServer	Ühendus ei ole EH3D server: valige see jaotises Ühendus, et masinaid näha.
+FleetRefresh	Värskenda
+JobOutsideTable	Töö ei mahu lauale: liigutage plaati või suurendage lauda
+LblThickness	Paksus (mm)
+LblCopper	Vask (µm)
+LblCopperSides	Vasepoolsed küljed
+LblOneSide	1 külg
+LblTwoSides	2 külge
+LblSize	Suurus (mm)
+LblFromFiles	Failidest
+LblMaker	Tootja
+LblWidth	Laius
+LblDepth	Sügavus
+LblPhotoresist	Valgustundlik lakk
+LblExtraStroke	Lisakäik (mm)
+LblFeed	Ettenihe (mm/min)
+LblSpeedRpm	Kiirus (rpm)
+LblDepthMm	Sügavus (mm)
+LblPasses	Käike
+LblFeedXy	Ettenihe XY (mm/min)
+LblFeedZ	Ettenihe Z (mm/min)
+LblDefault	Vaik.
+LblFileCoords	Failide koordinaadid
+LblNoRack	Masina failis pole veel magasini asendeid
+LblWorkArea	Tööala
+LblWholeMachine	Terve masin
+LblLayers	Kihid
+SoundFinish	Heli töö lõppedes
+SoundTool	Heli tööriista küsimisel
+SoundCheckOk	Heli, kui visuaalne kontroll on korras
+SoundCheckBad	Heli, kui visuaalne kontroll ei ole korras
+SoundFileHint	WAV-fail (tühi: vaiketoon)
+SoundTest	Testi
+SndOff	Heli puudub
+SndDefault	Standardtoon
+SndFile	Minu enda fail (WAV)
+SndChime	kellamäng
+SndRise	tõusvad noodid
+SndFall	langevad noodid
+SndFanfare	fanfaar
+SndTriple	kolm nooti
+SndBell	kell
+SndBeep	piiks
+SndDouble	topeltpiiks
+SndTripleBeep	kolmikpiiks
+SndAlarm	alarm
+SndKnock	koputus
+SndSiren	sireen

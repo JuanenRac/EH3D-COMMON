@@ -1,1 +1,425 @@
 # Polski (pl): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Motyw
+ThemeForge	Forge
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Klasyczny Windows
+ThemeSystem	Użyj kolorów Windows
+ThemeMidnight	Północ
+ThemePaper	Papier (jasny)
+ThemeForest	Las
+ThemeRetro	Terminal retro
+ThemeOcean	Ocean
+ThemeContrast	Wysoki kontrast
+LauncherAsk	Co chcesz uruchomić?
+LauncherClassicMtc	Klasyczny MTC
+LauncherClassicAtc	Klasyczny ATC
+LauncherModern	Nowoczesny (MTC + ATC)
+Remember	Zapamiętaj mój wybór
+PressEnter	Naciśnij Enter
+ViewPlan	2D - widok z góry
+ViewMachine	3D - maszyna
+LayerHoles	Otwory wiercone
+LayerPaths	Ścieżki frezowania
+LayerMachine	Maszyna
+LayerGrid	Siatka
+Progress	Postęp
+TableFromConfig	Stół z konfiguracji
+Drilling	Wiercenie
+Routing	Frezowanie
+ClassicMissing	Program klasyczny nie znajduje się obok tego programu
+Start	Start
+Pause	Pauza
+Stop	Stop
+Language	Język
+Holes	otwory
+Tools	narzędzia
+SimulatedJob	Zadanie symulowane: maszyna się nie porusza
+NoFile	Nie wczytano pliku
+Ok	Ok
+Abort	Przerwij
+AskSpindle	Uruchomić wrzeciono?
+AskTool	Włóż narzędzie
+Connection	Połączenie
+OutsideTable	Nie mieści się na stole
+OpenFile	Otwórz plik
+About	Informacje
+Close	Zamknij
+SettingsTitle	Ustawienia
+PanelTitle	Panelizacja
+Columns	Kolumny
+Rows	Wiersze
+SpacingX	Odstęp X (mm)
+SpacingY	Odstęp Y (mm)
+PanelModePitch	Od środka do środka
+PanelModeGap	Odstęp między płytkami
+PanelModeFit	Wypełnij stół
+PanelCopies	kopie
+Apply	Zastosuj
+ResetView	Resetuj widok
+DropHint	Upuść tutaj plik .ncd, .plt lub .zip
+NavHint2d	Przeciągnij, aby przesunąć; kółko, aby powiększyć
+NavHint3d	Przeciągnij, aby obrócić; kółko, aby powiększyć
+Version	Wersja
+Licence	Licencja
+AboutBody	Nowoczesny interfejs do wiertarek i frezarek Bungard CCD.
+TableWidth	Użyteczna szerokość X (mm)
+TableDepth	Użyteczna głębokość Y (mm)
+Save	Zapisz
+Saved	Zapisano
+OpenFolderUp	Folder nadrzędny
+ShowDrill	Wiercenie
+ConnPort	Port
+ConnAddress	Adres
+ConnToken	Token dostępu
+ConnMachine	ID maszyny
+ConnTest	Testuj połączenie
+ConnWorks	Połączenie działa
+BoardTitle	Płytka
+ToolsTitle	Narzędzia
+SetAskOperator	Pytaj mnie przy zmianie narzędzia i uruchomieniu wrzeciona
+SetToolsOnOpen	Pokaż okno narzędzi po otwarciu pliku
+SndVoice	Głos
+SndFemale	żeński
+SndMale	męski
+HeadOpen	Węzeł głowicy
+HeadTitle	Węzeł głowicy wiercącej
+HeadOff	Nie używany
+HeadDirect	Bezpośrednio
+HeadServer	Przez serwer
+HeadCamera	Pokaż kamerę węzła
+HeadSpeed	Wrzeciono
+HeadTemp	Temperatura
+HeadProtectOpen	Wyjście zabezpieczenia OTWARTE: wrzeciono musi się zatrzymać
+HeadProtectClosed	Wyjście zabezpieczenia zamknięte
+HeadMeasure	Zmierz stół tutaj
+HeadServerNote	Przez serwer z okna połączenia: jego adres, token i ID maszyny.
+HeadNoServer	Wpisz adres, token i ID maszyny serwera w oknie połączenia.
+HeadCameraModel	Model kamery
+HeadNoLink	Wpisz adres węzła (host lub host:port).
+HeadWaiting	Oczekiwanie na węzeł...
+HeadCameraOff	Kamera wyłączona
+HeatOk	ok
+HeatWarm	ciepło
+HeatHot	GORĄCO
+HeatUnknown	nieznana
+LightTitle	Pierścień świetlny
+LightOn	Światło włączone
+LightOff	Światło wyłączone
+LightNone	brak pierścienia w tym węźle
+InspOpen	Kontrola jakości
+InspTitle	Kontrola jakości wykonania
+InspRun	Sprawdź teraz
+InspRunning	Sprawdzanie...
+InspVerdictOk	OK
+InspVerdictNotOk	NIE OK
+InspVerdictUnknown	NIE MOŻNA OCENIĆ
+InspIdle	Jeszcze nie sprawdzono
+InspChecks	Kontrole
+InspCheckHoles	Wywiercone otwory
+InspCheckMilling	Wyfrezowane ścieżki
+InspProfile	Profil analizatora
+InspPresetStandard	Standardowy
+InspPresetFine	Drobny raster
+InspPresetProto	Prototyp
+InspLight	Światło do zdjęcia
+InspLightKeep	bez zmian
+InspHolePick	Otwór zadania na środku
+InspNoJob	Wczytaj plik wiercenia, aby sprawdzić jego otwory
+InspScale	Skala (piksele na mm)
+InspCalibrate	Kalibruj według tego otworu
+InspSave	Zapisz profil
+InspTune	Tolerancje
+InspNeedLink	Najpierw ustaw węzeł głowicy wiercącej (okno Węzeł głowicy).
+InspHolesOk	otworów ok
+InspChannel	szerokość ścieżki
+InspTuneHoleDia	Tolerancja średnicy otworu (mm)
+InspTuneHolePos	Tolerancja położenia otworu (mm)
+InspTuneRound	Minimalna okrągłość (1 = koło)
+InspTuneDebris	Maks. zanieczyszczenie wokół otworu
+InspTuneMillWidth	Szerokość ścieżki (mm)
+InspTuneMillTol	Tolerancja szerokości ścieżki
+InspTuneMillMin	Najwęższa ścieżka (mm)
+InspTuneSpread	Maks. nierównomierność ścieżki
+InspTuneMinMean	Najciemniejszy akceptowany obraz
+InspTuneMinSharp	Minimalna ostrość
+InspFindHoleMissing	brak otworu
+InspFindHoleSize	zły rozmiar
+InspFindHoleOff	przesunięty
+InspFindHoleRound	nieokrągły
+InspFindHoleDebris	zadziory lub pył wokół
+InspFindHoleView	poza widokiem
+InspFindMillNone	nie widać ścieżek
+InspFindMillNarrow	ścieżki zbyt wąskie
+InspFindMillWide	ścieżki zbyt szerokie
+InspFindMillPinch	ścieżka się zwęża: ryzyko zwarcia
+InspFindMillUneven	ścieżki nierówne
+InspFindDark	obraz zbyt ciemny: więcej światła
+InspFindBright	obraz zbyt jasny: mniej światła
+InspFindContrast	obraz bez kontrastu
+InspFindBlurry	obraz nieostry
+InspFindScale	najpierw ustaw skalę
+InspFindNothing	żadna kontrola nie jest włączona
+InspFindNoHoles	w widoku nie ma otworu zadania
+CatOpen	Katalog wierteł i frezów
+CatTitle	Katalog wierteł i frezów do PCB
+CatShank	Każde narzędzie ma chwyt 1/8 cala (3,175 mm), który mieści uchwyt maszyny Bungard. Liczby to wartości wyjściowe dla FR-4: wypróbuj je na odpadzie.
+CatAll	Wszystkie rodzaje
+KindDrill	Wiertła
+KindEndMill	Frezy walcowe (proste)
+KindDownCut	Frezy lewozwojne (wióry w dół)
+KindUpCut	Frezy prawozwojne (wióry w górę)
+KindDiamond	Frezy z nacięciem diamentowym (corn)
+KindVBit	Frezy V (grawerowanie, izolacja)
+KindBall	Frezy kuliste
+KindSpot	Nawiertaki
+KindCountersink	Pogłębiacze
+CatCount	narzędzia
+KindChipBreaker	Frezy łamiące wióry
+KindSlotDrill	Wiertła do rowków (do otworów podłużnych)
+KindCoated	Frezy powlekane diamentem
+CatSeriesCol	seria
+CatFluteCol	L mm
+CatPick	Kliknij narzędzie na liście, aby je zobaczyć i dowiedzieć się, do czego służy.
+CatSpindle	Obroty i posuwy podaje producent. Wrzeciono, które nie osiąga takich obrotów, użyje tego samego narzędzia przy własnej prędkości, z proporcjonalnym posuwem (ten sam skrawany materiał na obrót).
+SpindleLbl	Wrzeciono maszyny
+SpindleOriginal	Oryginalne Bungard, 60000 rpm
+SpindleVfd	Wrzeciono VFD GDZ 80-2.2, 24000 rpm
+SpindleNote	Każde wrzeciono ma swoje limity prędkości, posuwu i rozmiaru narzędzia (można je edytować w pliku ustawień). Katalog i narzędzia ostrzegają, gdy narzędzie wymaga więcej, niż wrzeciono może dać.
+CatSpindleLbl	Wrzeciono
+FitOk	To wrzeciono poradzi sobie z wartościami producenta.
+FitSlower	To wrzeciono wymaga wolniejszych wartości. Sugerowane:
+FitLowerRpm	Wrzeciono obraca się wolniej, niż wymaga narzędzie: XY i Z jadą proporcjonalnie wolniej.
+FitSlowZ	Na tej maszynie Z musi jechać wolniej.
+FitSlowXy	Na tej maszynie posuw XY musi być wolniejszy.
+FitNoThick	NIEKOMPATYBILNE: narzędzie jest grubsze, niż przyjmuje to wrzeciono.
+FitNoSlow	NIEKOMPATYBILNE: to wrzeciono obraca się zdecydowanie zbyt wolno dla tego narzędzia (złamałoby się lub spaliło płytkę).
+CatUseFor	Użyj tych wartości dla narzędzia
+ToolFromCat	Katalog
+CatTaken	Wartości przeniesione do narzędzia.
+JobNothingOn	Nic do zrobienia: włącz wiercenie lub frezowanie i co najmniej jedno ich narzędzie.
+JobPartHint	Kliknij, aby włączyć lub wyłączyć; oba włączone: najpierw wiercenie, potem frezowanie
+ToolOffHint	Kliknij kropkę narzędzia, aby pominąć je w zadaniu
+CatFlute	Długość robocza
+CatShankLbl	Chwyt
+CatTotal	Długość całkowita
+CatPoint	Kąt wierzchołkowy
+CatSchematic	Rysunek poglądowy, bez zachowania skali.
+NoteDrill	Wiertło z węglika spiekanego do otworów przelotowych. Małe (poniżej 0,5 mm) służą do przelotek, średnie do wyprowadzeń elementów, duże do złączy i otworów montażowych. Wysuwaj szybko i wymieniaj po kilku tysiącach otworów.
+NoteEndMill	Proste rowki i płaskie czoło: rowki, kieszenie, izolacja szerokich ścieżek i kontur cienkich płytek. Zostawia czyste dno.
+NoteDownCut	Frez lewy: spycha wióry w dół. Górna krawędź płytki wychodzi bez zadziorów, więc używaj go do konturu, gdy widoczna jest strona górna (płytka musi być dobrze docisnięta).
+NoteUpCut	Frez prawy: wyciąga wióry w górę i na zewnątrz z cięcia. Dobry do rowków i kieszeni; może unosić płytkę i zostawiać zadziory na górnej krawędzi.
+NoteDiamond	Frez z nacięciem diamentowym (corn): wiele małych zębów, które szlifują włókno szklane zamiast je szarpać. Zwykły wybór do konturu FR-4; daje szorstką, ale czystą krawędź i długo służy.
+NoteChip	Frez łamiący wióry: jego zęby kruszą wióry na krótkie kawałki, które łatwo opuszczają cięcie. Tnie szybciej niż frez diamentowy i ogranicza zadziory.
+NoteVBit	Frez V (do grawerowania): rowek ma tyle szerokości, ile pozwala głębokość, więc głębokość ustala szerokość izolacji. Wąski kąt i cienka końcówka umożliwiają drobne ścieżki.
+NoteBall	Frez kulisty: zaokrąglony rowek, do grawerowania i kształtowania. Nie do izolacji ścieżek.
+NoteSpot	Nawiertak: krótka, sztywna końcówka, która zaczyna otwór dokładnie tam, gdzie trzeba, żeby kolejne wiertło nie zbaczało. Do dużych otworów i twardych płytek.
+NoteCountersink	Pogłębiacz: fazuje krawędź otworu, pod łby śrub lub do usunięcia zadziorów.
+NoteSlot	Wiertło do rowków: wiertło ze sztywnym rdzeniem, które wycina otwory podłużne, przesuwając się na boki podczas wiercenia (rowki złączy). Nie używaj go do otworów okrągłych: inne są tańsze.
+NoteCoated	Frez z płaskim czołem i powłoką diamentową: do płytek ściernych (FR-4 o wysokim Tg, bezhalogenowych, z włókna węglowego) i płytek na aluminium, gdzie frez bez powłoki szybko się zużywa. Kosztuje więcej i służy kilka razy dłużej.
+LevTab	Kalibracja stołu
+LevMeasure	Zmierz stół
+LevStop	Zatrzymaj pomiar
+LevClear	Wyczyść mapę
+LevCols	Punkty wzdłuż X
+LevRows	Punkty wzdłuż Y
+LevPoints	Zmierzone punkty
+LevSpread	Rozrzut
+LevTilt	Pochylenie X / Y
+LevDemo	Sonda symulowana: nie podłączono jeszcze węzła sondy, wysokości pochodzą z symulowanego stołu.
+LevApply	Koryguj Z zadań według tej mapy
+ResumeTitle	Zadanie przerwane
+ResumeBody	Ostatnie zadanie zostało przerwane w środku (zamknięto okno, komputer lub połączenie padło). Chcesz kontynuować od miejsca przerwania?
+ResumeContinue	Kontynuuj zadanie
+ResumeCancel	Anuluj
+TabsOn	Frezuj kontur z mostkami
+TabsPerSide	Mostki na bok
+TabWidth	Szerokość mostka
+TabPlace	Rozmieszczenie mostków
+TabEven	Równomiernie wzdłuż boku
+TabEnds	Blisko końców boku
+TabMiddle	Razem na środku
+SetSkipLauncher	Następnym razem otwórz to okno od razu
+ColName	Nazwa
+ColDate	Data modyfikacji (UTC)
+ColType	Typ
+ColSize	Rozmiar
+TypeFolder	Folder
+TypeZip	Archiwum ZIP
+Places	Miejsca
+PlaceExamples	Przykłady
+PlaceDesktop	Pulpit
+PlaceDocuments	Dokumenty
+PlaceDownloads	Pobrane
+FileNameLabel	Nazwa pliku
+FilterSupported	Wszystkie pliki zadań
+FilterDrill	Pliki wiercenia
+FilterRoute	Pliki frezowania
+FilterZip	Archiwa ZIP
+FilterAny	Wszystkie pliki
+NavBack	Wstecz
+NavUp	W górę
+ThisPc	Ten komputer
+SimSpeed	Prędkość symulacji
+DefaultValues	Domyślne
+TypeValueHint	Kliknij wartość, aby ją wpisać
+TabGeneral	Ogólne
+TabJob	Zadanie
+Units	Jednostki
+UnitMm	Milimetry (mm)
+UnitMil	Mil (0,001 cala)
+ModelLabel	Model maszyny
+ToolChange	Zmiana narzędzia
+TcManual	Ręczna (MTC)
+TcAuto	Automatyczna (ATC)
+EmergencyStop	Zatrzymanie awaryjne
+EmergencyShow	Pokaż przycisk awaryjny (można go przeciągnąć w dowolne miejsce)
+RackPlaces	miejsca narzędzi
+Rotate	Obróć
+FollowTool	Śledź narzędzie
+Enlarge2d	Powiększ widok 2D
+MoveDesign	Przesuń tylko projekt
+MoveBoard	Przesuń płytkę
+ShowBoth	Pokaż widok 3D
+OnTable	Na stole
+OnBoard	Na płytce
+Resume	Wznów
+NotAnOutline	nie jest konturem płytki (otwórz jej warstwę profilu lub krawędzi)
+HolesDrilled	Wywiercone otwory łącznie
+ResetCounts	Zeruj liczniki
+Recent	Ostatnie
+McPosition	Pozycja
+McWork	Robocza
+McMachine	Maszyna
+McJog	Jog
+McStep	Krok (mm)
+McHome	Home
+McZero	Zeruj tutaj
+McUnlock	Odblokuj
+McProgram	Program
+McOpenGcode	Otwórz G-code
+McMdi	Polecenie (MDI)
+McSend	Wyślij
+McLog	Dziennik
+McState	Stan
+McController	Sterownik
+McSimulator	Symulator
+McNotDriven	jeszcze nie sterowana
+McToolpath	Ścieżka narzędzia
+McLine	Wiersz
+McSpindle	Wrzeciono
+McFeedRate	Posuw
+McStIdle	Bezczynna
+McStRun	Praca
+McStHold	Wstrzymana
+McStHome	Bazowanie
+McStAlarm	ALARM
+McStUnknown	Nieznany
+McZeroXyz	Ustaw tutaj zero robocze (X, Y i Z)
+McZeroXy	Ustaw tutaj zero robocze (X i Y)
+McGoG28	Jedź do zapamiętanej pozycji G28
+McGoG30	Jedź do zapamiętanej pozycji G30
+McGoZeroXy	Jedź do zera roboczego w X i Y
+McGoZeroZ	Jedź do zera roboczego w Z
+McOperator	Operator
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	Aktywne kody G
+McActiveM	Aktywne kody M
+McSpeed	Prędkość
+McZeroAxis	Ustaw tutaj zero tej osi
+McInputs	Wejścia
+McOutputs	Wyjścia
+McJogSpeed	Prędkość jog
+MenuFile	Plik
+MenuView	Widok
+MenuHelp	Pomoc
+MenuExit	Zakończ
+McSaveGcode	Zapisz G-code ...
+McEditProgram	Edytuj program ...
+McRewind	Przewiń do pierwszego wiersza
+McClearProgram	Wyczyść program
+McFitTable	Dopasuj do stołu
+McFitProgram	Dopasuj do programu
+McShowButtons	Pokaż przyciski zer
+McShowProgram	Pokaż program
+McShowLog	Pokaż dziennik
+McShowRapids	Pokaż ruchy szybkie
+McSpindleOn	Wrzeciono wł. (M3)
+McSpindleOff	Wrzeciono wył. (M5)
+McCoolantOn	Chłodziwo wł. (M8)
+McCoolantOff	Chłodziwo wył. (M9)
+McSetG28	Zapamiętaj tę pozycję jako G28
+McSetG30	Zapamiętaj tę pozycję jako G30
+McCancel	Anuluj
+McSecGeneral	Ogólne
+McSecInterface	Interfejs użytkownika
+McSecAxes	Osie i limity
+McSecJog	Jog
+McUnitInch	Cale
+McLimits	Limity przejazdu (mm): minimum i maksimum każdej osi
+McDefaultStep	Krok na początku (mm)
+McDefaultFeed	Prędkość jog na początku (mm/min)
+McSettingsSaved	Ustawienia zapisano i obowiązują od teraz.
+McFilterGcode	Pliki G-code
+McReplaceAsk	już istnieje. Zastąpić go?
+McReplace	Zastąp
+McTypeName	Wpisz nazwę pliku.
+McNoSuchFile	Nie ma takiego pliku.
+McSaveTitle	Zapisz program
+McOpenTitle	Otwórz program G-code
+McAboutBody	Program sterowania maszyną EH3D: na razie steruje maszyną symulowaną.
+FleetTitle	Maszyny i stanowiska
+FleetNoStation	Brak stanowiska
+FleetWaiting	Oczekiwanie na operatora
+FleetReady	zadań gotowych
+FleetUse	Użyj tej maszyny
+FleetTarget	Maszyna zadań
+FleetNoServer	Połączenie nie jest serwerem EH3D: wybierz je w oknie Połączenie, aby zobaczyć maszyny.
+FleetRefresh	Odśwież
+JobOutsideTable	Zadanie nie mieści się na stole: przesuń płytkę lub powiększ stół
+LblThickness	Grubość (mm)
+LblCopper	Miedź (µm)
+LblCopperSides	Strony z miedzią
+LblOneSide	1 strona
+LblTwoSides	2 strony
+LblSize	Rozmiar (mm)
+LblFromFiles	Z plików
+LblMaker	Producent
+LblWidth	Szerokość
+LblDepth	Głębokość
+LblPhotoresist	Rezyst światłoczuły
+LblExtraStroke	Dodatkowy skok (mm)
+LblFeed	Posuw (mm/min)
+LblSpeedRpm	Prędkość (rpm)
+LblDepthMm	Głębokość (mm)
+LblPasses	Przejścia
+LblFeedXy	Posuw XY (mm/min)
+LblFeedZ	Posuw Z (mm/min)
+LblDefault	Dom.
+LblFileCoords	Współrzędne plików
+LblNoRack	Plik maszyny nie ma jeszcze pozycji magazynka
+LblWorkArea	Obszar roboczy
+LblWholeMachine	Cała maszyna
+LblLayers	Warstwy
+SoundFinish	Dźwięk po zakończeniu zadania
+SoundTool	Dźwięk przy żądaniu narzędzia
+SoundCheckOk	Dźwięk, gdy kontrola wzrokowa jest poprawna
+SoundCheckBad	Dźwięk, gdy kontrola wzrokowa jest niepoprawna
+SoundFileHint	Plik WAV (puste: dźwięk domyślny)
+SoundTest	Test
+SndOff	Bez dźwięku
+SndDefault	Dźwięk standardowy
+SndFile	Mój plik (WAV)
+SndChime	dzwonek
+SndRise	dźwięki rosnące
+SndFall	dźwięki opadające
+SndFanfare	fanfara
+SndTriple	trzy dźwięki
+SndBell	dzwon
+SndBeep	sygnał
+SndDouble	podwójny sygnał
+SndTripleBeep	potrójny sygnał
+SndAlarm	alarm
+SndKnock	stukanie
+SndSiren	syrena

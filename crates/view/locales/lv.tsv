@@ -1,1 +1,425 @@
 # Latviešu (lv): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Motīvs
+ThemeForge	Forge
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Klasiskais Windows
+ThemeSystem	Sekot Windows krāsām
+ThemeMidnight	Pusnakts
+ThemePaper	Papīrs (gaišs)
+ThemeForest	Mežs
+ThemeRetro	Retro terminālis
+ThemeOcean	Okeāns
+ThemeContrast	Augsts kontrasts
+LauncherAsk	Ko vēlaties palaist?
+LauncherClassicMtc	Klasiskais MTC
+LauncherClassicAtc	Klasiskais ATC
+LauncherModern	Mūsdienīgais (MTC + ATC)
+Remember	Atcerēties manu izvēli
+PressEnter	Nospiediet Enter
+ViewPlan	2D - skats no augšas
+ViewMachine	3D - iekārta
+LayerHoles	Urbumi
+LayerPaths	Frēzēšanas ceļi
+LayerMachine	Iekārta
+LayerGrid	Režģis
+Progress	Progress
+TableFromConfig	Galds no konfigurācijas
+Drilling	Urbšana
+Routing	Frēzēšana
+ClassicMissing	Klasiskā programma neatrodas blakus šai
+Start	Sākt
+Pause	Pauze
+Stop	Apturēt
+Language	Valoda
+Holes	urbumi
+Tools	instrumenti
+SimulatedJob	Simulēts darbs: iekārta netiek kustināta
+NoFile	Nav ielādēts fails
+Ok	Ok
+Abort	Pārtraukt
+AskSpindle	Vai drīkst iedarbināt vārpstu?
+AskTool	Ievietojiet instrumentu
+Connection	Savienojums
+OutsideTable	Neietilpst galdā
+OpenFile	Atvērt failu
+About	Par programmu
+Close	Aizvērt
+SettingsTitle	Iestatījumi
+PanelTitle	Panelizācija
+Columns	Kolonnas
+Rows	Rindas
+SpacingX	Atstarpe X (mm)
+SpacingY	Atstarpe Y (mm)
+PanelModePitch	No centra līdz centram
+PanelModeGap	Sprauga starp plāksnēm
+PanelModeFit	Aizpildīt galdu
+PanelCopies	kopijas
+Apply	Lietot
+ResetView	Atiestatīt skatu
+DropHint	Ievelciet šeit .ncd, .plt vai .zip failu
+NavHint2d	Velciet, lai pārvietotu, ritenis - tālummaiņa
+NavHint3d	Velciet, lai pagrieztu, ritenis - tālummaiņa
+Version	Versija
+Licence	Licence
+AboutBody	Mūsdienīgā saskarne Bungard CCD urbšanas un frēzēšanas iekārtām.
+TableWidth	Izmantojamais platums X (mm)
+TableDepth	Izmantojamais dziļums Y (mm)
+Save	Saglabāt
+Saved	Saglabāts
+OpenFolderUp	Augšējā mape
+ShowDrill	Urbšana
+ConnPort	Ports
+ConnAddress	Adrese
+ConnToken	Piekļuves žetons
+ConnMachine	Iekārtas ID
+ConnTest	Pārbaudīt savienojumu
+ConnWorks	Savienojums darbojas
+BoardTitle	Plāksne
+ToolsTitle	Instrumenti
+SetAskOperator	Jautāt instrumentu maiņas laikā un vārpstas iedarbināšanas brīdī
+SetToolsOnOpen	Rādīt instrumentu logu, atverot failu
+SndVoice	Balss
+SndFemale	sieviešu
+SndMale	vīriešu
+HeadOpen	Galvas mezgls
+HeadTitle	Urbjgalvas mezgls
+HeadOff	Neizmanto
+HeadDirect	Tieši
+HeadServer	Caur serveri
+HeadCamera	Rādīt mezgla kameru
+HeadSpeed	Vārpsta
+HeadTemp	Temperatūra
+HeadProtectOpen	Aizsardzības izeja ATVĒRTA: vārpstai jāapstājas
+HeadProtectClosed	Aizsardzības izeja aizvērta
+HeadMeasure	Mērīt galdu šeit
+HeadServerNote	Caur savienojuma loga serveri: tā adrese, žetons un iekārtas ID.
+HeadNoServer	Ierakstiet servera adresi, žetonu un iekārtas ID savienojuma logā.
+HeadCameraModel	Kameras modelis
+HeadNoLink	Ierakstiet mezgla adresi (resursdators vai resursdators:ports).
+HeadWaiting	Gaida mezglu...
+HeadCameraOff	Kamera izslēgta
+HeatOk	labi
+HeatWarm	silts
+HeatHot	KARSTS
+HeatUnknown	nezināms
+LightTitle	Gaismas gredzens
+LightOn	Gaisma ieslēgta
+LightOff	Gaisma izslēgta
+LightNone	šim mezglam nav gredzena
+InspOpen	Kvalitātes pārbaude
+InspTitle	Darba kvalitātes pārbaude
+InspRun	Pārbaudīt tagad
+InspRunning	Pārbauda...
+InspVerdictOk	ATBILST
+InspVerdictNotOk	NEATBILST
+InspVerdictUnknown	NEVAR NOVĒRTĒT
+InspIdle	Vēl nav pārbaudīts
+InspChecks	Pārbaudes
+InspCheckHoles	Izurbtie urbumi
+InspCheckMilling	Frēzētie kanāli
+InspProfile	Analīzes profils
+InspPresetStandard	Standarta
+InspPresetFine	Smalks solis
+InspPresetProto	Prototips
+InspLight	Gaisma attēlam
+InspLightKeep	kā ir
+InspHolePick	Darba urbums centrā
+InspNoJob	Ielādējiet urbšanas failu, lai pārbaudītu tā urbumus
+InspScale	Mērogs (pikseļi uz mm)
+InspCalibrate	Kalibrēt pēc šī urbuma
+InspSave	Saglabāt profilu
+InspTune	Pielaides
+InspNeedLink	Vispirms iestatiet urbjgalvas mezglu (logs Galvas mezgls).
+InspHolesOk	urbumi kārtībā
+InspChannel	kanāla platums
+InspTuneHoleDia	Urbuma izmēra pielaide (mm)
+InspTuneHolePos	Urbuma pozīcijas pielaide (mm)
+InspTuneRound	Mazākā apaļība (1 = aplis)
+InspTuneDebris	Lielākais gružu daudzums ap urbumu
+InspTuneMillWidth	Kanāla platums (mm)
+InspTuneMillTol	Kanāla platuma pielaide
+InspTuneMillMin	Šaurākais kanāls (mm)
+InspTuneSpread	Visnevienmērīgākais kanāls
+InspTuneMinMean	Tumšākais pieņemtais attēls
+InspTuneMinSharp	Mazākā asība
+InspFindHoleMissing	tur nav urbuma
+InspFindHoleSize	nepareizs izmērs
+InspFindHoleOff	nav centrā
+InspFindHoleRound	nav apaļš
+InspFindHoleDebris	ap to ir atskabargas vai putekļi
+InspFindHoleView	ārpus skata
+InspFindMillNone	kanāli nav redzami
+InspFindMillNarrow	kanāli pārāk šauri
+InspFindMillWide	kanāli pārāk plati
+InspFindMillPinch	kanāls sašaurinās: īssavienojuma risks
+InspFindMillUneven	kanāli nevienmērīgi
+InspFindDark	attēls pārāk tumšs: vairāk gaismas
+InspFindBright	attēls pārāk gaišs: mazāk gaismas
+InspFindContrast	attēls bez kontrasta
+InspFindBlurry	attēls nav fokusā
+InspFindScale	vispirms iestatiet mērogu
+InspFindNothing	neviena pārbaude nav ieslēgta
+InspFindNoHoles	skatā nav neviena darba urbuma
+CatOpen	Instrumentu katalogs
+CatTitle	Instrumentu katalogs iespiedshēmu plātnēm
+CatShank	Katram instrumentam ir 1/8 collas (3,175 mm) kāts, ko satver Bungard iekārtas patrona. Skaitļi ir sākumpunkti FR-4: izmēģiniet tos uz atgriezumu plāksnes.
+CatAll	Visi veidi
+KindDrill	Urbji
+KindEndMill	Gala frēzes (taisnas)
+KindDownCut	Frēzes ar griešanu uz leju
+KindUpCut	Frēzes ar griešanu uz augšu
+KindDiamond	Dimanta zobojuma frēzes (kukurūza)
+KindVBit	V veida frēzes (gravēšana, izolēšana)
+KindBall	Lodveida gala frēze
+KindSpot	Centrēšanas urbji
+KindCountersink	Konusa lūku urbji
+CatCount	instrumenti
+KindChipBreaker	Skaidu lauzējfrēzes
+KindSlotDrill	Slota urbji (iegarenajiem urbumiem)
+KindCoated	Dimanta pārklājuma frēzes
+CatSeriesCol	sērija
+CatFluteCol	L mm
+CatPick	Noklikšķiniet uz saraksta instrumenta, lai to apskatītu un uzzinātu, kam tas domāts.
+CatSpindle	Apgriezieni un padeves ir ražotāja. Vārpsta, kas nevar griezties tik ātri, to pašu instrumentu izmanto ar savu ātrumu, padevi samazinot proporcionāli (tas pats grieziena dziļums uz apgriezienu).
+SpindleLbl	Iekārtas vārpsta
+SpindleOriginal	Oriģinālā Bungard, 60000 rpm
+SpindleVfd	VFD vārpsta GDZ 80-2.2, 24000 rpm
+SpindleNote	Katrai vārpstai ir savi ātruma, padeves un instrumenta izmēra ierobežojumi (tos var rediģēt iestatījumu failā). Katalogs un instrumenti brīdina, kad instruments prasa vairāk, nekā vārpsta var dot.
+CatSpindleLbl	Vārpsta
+FitOk	Šī vārpsta var strādāt ar ražotāja vērtībām.
+FitSlower	Šai vārpstai jādarbojas lēnāk. Ieteiktās vērtības:
+FitLowerRpm	Vārpsta griežas lēnāk, nekā prasa instruments: XY un Z kustas proporcionāli lēnāk.
+FitSlowZ	Z šajā iekārtā jākustas lēnāk.
+FitSlowXy	XY padevei šajā iekārtā jābūt lēnākai.
+FitNoThick	NESADERĪGS: instruments ir resnāks, nekā šī vārpsta pieņem.
+FitNoSlow	NESADERĪGS: šī vārpsta griežas pārāk lēni šim instrumentam (tas salūztu vai sadedzinātu plāksni).
+CatUseFor	Izmantot šīs vērtības instrumentam
+ToolFromCat	Katalogs
+CatTaken	Vērtības pārņemtas instrumentā.
+JobNothingOn	Nav ko darīt: ieslēdziet urbšanu vai frēzēšanu un vismaz vienu tās instrumentu.
+JobPartHint	Noklikšķiniet, lai ieslēgtu vai izslēgtu; abi ieslēgti: vispirms urbšana, tad frēzēšana
+ToolOffHint	Noklikšķiniet uz instrumenta punkta, lai izslēgtu to no darba
+CatFlute	Griešanas garums
+CatShankLbl	Kāts
+CatTotal	Kopējais garums
+CatPoint	Gala leņķis
+CatSchematic	Shematisks zīmējums, nav mērogā.
+NoteDrill	Cietmetāla urbis cauriem urbumiem. Mazie (zem 0,5 mm) ir paredzēti pārejas urbumiem, vidējie - komponentu kājiņām, lielie - savienotājiem un stiprinājuma urbumiem. Izvelciet ātri un nomainiet pēc dažiem tūkstošiem urbumu.
+NoteEndMill	Taisnas rievas un plakans gals: rievas, kabatas, platu celiņu izolēšana un plānu plākšņu kontūra. Atstāj tīru dibenu.
+NoteDownCut	Kreisās rotācijas frēze: spiež skaidas uz leju. Plāksnes augšējā mala iznāk bez atskabargām, tāpēc izmantojiet kontūrai, kad augšpuse ir redzamā (plāksne jānostiprina labi).
+NoteUpCut	Labās rotācijas frēze: velk skaidas uz augšu un ārā no griezuma. Piemērota rievām un kabatām; var pacelt plāksni un atstāt atskabargas augšējā malā.
+NoteDiamond	Dimanta zobojuma (kukurūzas) frēze: daudz mazu zobu, kas samal stiklašķiedru, nevis plēš to. Parasta izvēle FR-4 kontūrai; atstāj raupju, bet tīru malu un kalpo ilgi.
+NoteChip	Skaidu lauzējfrēze: tās zobi sasmalcina skaidas īsos gabalos, kas viegli izvadās no griezuma. Griež ātrāk nekā dimanta zobojuma un atstāj mazas atskabargas.
+NoteVBit	V veida frēze (gravēšanas instruments): rieva ir tik plata, cik to nosaka dziļums, tāpēc dziļums nosaka izolācijas platumu. Šaurs leņķis ar smalku galu ļauj izveidot smalkus celiņus.
+NoteBall	Lodveida gala frēze: noapaļota rieva gravēšanai un formēšanai. Nav paredzēta celiņu izolēšanai.
+NoteSpot	Centrēšanas urbis: īss, stingrs gals, kas sāk urbumu tieši tur, kur vajag, lai nākamais urbis nenovirzītos. Lieliem urbumiem un cietām plāksnēm.
+NoteCountersink	Konusa lūka urbis: noslīpē urbuma malu skrūvju galvām vai lai noņemtu atskabargu.
+NoteSlot	Slota urbis: urbis ar stingru serdi, kas paredzēts iegarenu urbumu (savienotāju spraugu) izgriešanai, urbjot virzoties sāniski. Neizmantojiet apaļiem urbumiem: citi ir lētāki.
+NoteCoated	Plakana gala frēze ar dimanta pārklājumu: abrazīvām plāksnēm (augsta Tg FR-4, bez halogēniem, oglekļa šķiedra) un plāksnēm ar alumīnija pamatni, kur nepārklātā ātri nolietojas. Maksā vairāk un kalpo vairākas reizes ilgāk.
+LevTab	Galda kalibrēšana
+LevMeasure	Mērīt galdu
+LevStop	Pārtraukt mērīšanu
+LevClear	Notīrīt karti
+LevCols	Punkti pa X
+LevRows	Punkti pa Y
+LevPoints	Izmērītie punkti
+LevSpread	Izkliede
+LevTilt	Slīpums X / Y
+LevDemo	Simulēta zonde: zondes mezgls vēl nav pievienots, augstumi nāk no simulēta galda.
+LevApply	Koriģēt darbu Z ar šo karti
+ResumeTitle	Darbs pārtraukts
+ResumeBody	Pēdējais darbs palika pusē (logs, dators vai savienojums apstājās). Vai turpināt no vietas, kur apstājās?
+ResumeContinue	Turpināt darbu
+ResumeCancel	Atcelt
+TabsOn	Frēzēt ārējo kontūru ar tiltiņiem
+TabsPerSide	Tiltiņi uz malu
+TabWidth	Tiltiņa platums
+TabPlace	Kur atrodas tiltiņi
+TabEven	Vienmērīgi sadalīti pa malu
+TabEnds	Tuvu malas galiem
+TabMiddle	Kopā vidū
+SetSkipLauncher	Nākamreiz atvērt šo logu tieši
+ColName	Nosaukums
+ColDate	Izmaiņu datums (UTC)
+ColType	Veids
+ColSize	Izmērs
+TypeFolder	Mape
+TypeZip	ZIP arhīvs
+Places	Vietas
+PlaceExamples	Piemēri
+PlaceDesktop	Darbvirsma
+PlaceDocuments	Dokumenti
+PlaceDownloads	Lejupielādes
+FileNameLabel	Faila nosaukums
+FilterSupported	Visi darba faili
+FilterDrill	Urbšanas faili
+FilterRoute	Frēzēšanas faili
+FilterZip	ZIP arhīvi
+FilterAny	Visi faili
+NavBack	Atpakaļ
+NavUp	Uz augšu
+ThisPc	Šis dators
+SimSpeed	Simulācijas ātrums
+DefaultValues	Noklusējuma vērtības
+TypeValueHint	Noklikšķiniet uz vērtības, lai to ierakstītu
+TabGeneral	Vispārīgi
+TabJob	Darbs
+Units	Mērvienības
+UnitMm	Milimetri (mm)
+UnitMil	Milsi (0,001 collas)
+ModelLabel	Iekārtas modelis
+ToolChange	Instrumenta maiņa
+TcManual	Manuāla (MTC)
+TcAuto	Automātiska (ATC)
+EmergencyStop	Avārijas apturēšana
+EmergencyShow	Rādīt avārijas pogu (to var pārvietot jebkur)
+RackPlaces	instrumentu vietas
+Rotate	Pagriezt
+FollowTool	Sekot instrumentam
+Enlarge2d	Palielināt 2D skatu
+MoveDesign	Pārvietot tikai dizainu
+MoveBoard	Pārvietot plāksni
+ShowBoth	Rādīt 3D skatu
+OnTable	Uz galda
+OnBoard	Uz plāksnes
+Resume	Turpināt
+NotAnOutline	nav plāksnes kontūra (atveriet tās profila vai malu slāni)
+HolesDrilled	Kopā izurbtie urbumi
+ResetCounts	Atiestatīt skaitītājus
+Recent	Nesenie
+McPosition	Pozīcija
+McWork	Darbs
+McMachine	Iekārta
+McJog	Jog
+McStep	Solis (mm)
+McHome	Home
+McZero	Nulle šeit
+McUnlock	Atbloķēt
+McProgram	Programma
+McOpenGcode	Atvērt G-kodu
+McMdi	Komanda (MDI)
+McSend	Sūtīt
+McLog	Žurnāls
+McState	Stāvoklis
+McController	Kontrolieris
+McSimulator	Simulators
+McNotDriven	vēl netiek vadīts
+McToolpath	Instrumenta trajektorija
+McLine	Rinda
+McSpindle	Vārpsta
+McFeedRate	Padeve
+McStIdle	Dīkstāve
+McStRun	Darbojas
+McStHold	Apturēts
+McStHome	Ceļš uz Home
+McStAlarm	SIGNALIZĀCIJA
+McStUnknown	Nezināms
+McZeroXyz	Iestatīt darba nulli šeit (X, Y un Z)
+McZeroXy	Iestatīt darba nulli šeit (X un Y)
+McGoG28	Doties uz saglabāto pozīciju G28
+McGoG30	Doties uz saglabāto pozīciju G30
+McGoZeroXy	Doties uz darba nulli pa X un Y
+McGoZeroZ	Doties uz darba nulli pa Z
+McOperator	Operators
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	Aktīvie G-kodi
+McActiveM	Aktīvie M-kodi
+McSpeed	Ātrums
+McZeroAxis	Iestatīt šīs ass nulli šeit
+McInputs	Ieejas
+McOutputs	Izejas
+McJogSpeed	Jog ātrums
+MenuFile	Fails
+MenuView	Skats
+MenuHelp	Palīdzība
+MenuExit	Iziet
+McSaveGcode	Saglabāt G-kodu ...
+McEditProgram	Rediģēt programmu ...
+McRewind	Atgriezties pie pirmās rindas
+McClearProgram	Notīrīt programmu
+McFitTable	Ietilpināt galdu
+McFitProgram	Ietilpināt programmu
+McShowButtons	Rādīt nulles pogas
+McShowProgram	Rādīt programmu
+McShowLog	Rādīt žurnālu
+McShowRapids	Rādīt ātrās kustības
+McSpindleOn	Vārpsta ieslēgta (M3)
+McSpindleOff	Vārpsta izslēgta (M5)
+McCoolantOn	Dzesēšana ieslēgta (M8)
+McCoolantOff	Dzesēšana izslēgta (M9)
+McSetG28	Saglabāt šo pozīciju kā G28
+McSetG30	Saglabāt šo pozīciju kā G30
+McCancel	Atcelt
+McSecGeneral	Vispārīgi
+McSecInterface	Lietotāja saskarne
+McSecAxes	Asis un robežas
+McSecJog	Jog
+McUnitInch	Collas
+McLimits	Gājiena robežas (mm): katras ass minimums un maksimums
+McDefaultStep	Solis sākumā (mm)
+McDefaultFeed	Jog ātrums sākumā (mm/min)
+McSettingsSaved	Iestatījumi saglabāti un stājas spēkā tagad.
+McFilterGcode	G-koda faili
+McReplaceAsk	jau pastāv. Vai aizstāt?
+McReplace	Aizstāt
+McTypeName	Ierakstiet faila nosaukumu.
+McNoSuchFile	Šāda faila nav.
+McSaveTitle	Saglabāt programmu
+McOpenTitle	Atvērt G-koda programmu
+McAboutBody	EH3D iekārtas vadības programma: pagaidām vada simulētu iekārtu.
+FleetTitle	Iekārtas un stacijas
+FleetNoStation	Nav stacijas
+FleetWaiting	Gaida operatoru
+FleetReady	darbi gatavi
+FleetUse	Izmantot šo iekārtu
+FleetTarget	Darbu iekārta
+FleetNoServer	Savienojums nav EH3D serveris: izvēlieties to sadaļā Savienojums, lai redzētu iekārtas.
+FleetRefresh	Atsvaidzināt
+JobOutsideTable	Darbs neietilpst galdā: pārvietojiet plāksni vai palieliniet galdu
+LblThickness	Biezums (mm)
+LblCopper	Varš (µm)
+LblCopperSides	Vara puses
+LblOneSide	1 puse
+LblTwoSides	2 puses
+LblSize	Izmērs (mm)
+LblFromFiles	No failiem
+LblMaker	Ražotājs
+LblWidth	Platums
+LblDepth	Dziļums
+LblPhotoresist	Gaismjutīgais fotorezists
+LblExtraStroke	Papildu gājiens (mm)
+LblFeed	Padeve (mm/min)
+LblSpeedRpm	Ātrums (rpm)
+LblDepthMm	Dziļums (mm)
+LblPasses	Gājieni
+LblFeedXy	Padeve XY (mm/min)
+LblFeedZ	Padeve Z (mm/min)
+LblDefault	Noklus.
+LblFileCoords	Failu koordinātas
+LblNoRack	Iekārtas failā vēl nav statīva pozīciju
+LblWorkArea	Darba zona
+LblWholeMachine	Visa iekārta
+LblLayers	Slāņi
+SoundFinish	Skaņa, kad darbs beidzas
+SoundTool	Skaņa, kad tiek pieprasīts instruments
+SoundCheckOk	Skaņa, kad vizuālā pārbaude ir pareiza
+SoundCheckBad	Skaņa, kad vizuālā pārbaude nav pareiza
+SoundFileHint	WAV fails (tukšs: noklusējuma signāls)
+SoundTest	Pārbaude
+SndOff	Bez skaņas
+SndDefault	Standarta signāls
+SndFile	Mans fails (WAV)
+SndChime	zvaniņš
+SndRise	augoši toņi
+SndFall	krītoši toņi
+SndFanfare	fanfāras
+SndTriple	trīs toņi
+SndBell	zvans
+SndBeep	pīkstiens
+SndDouble	dubults pīkstiens
+SndTripleBeep	trīskāršs pīkstiens
+SndAlarm	trauksme
+SndKnock	klauvējiens
+SndSiren	sirēna

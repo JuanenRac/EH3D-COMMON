@@ -1,1 +1,425 @@
 # Hrvatski (hr): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Tema
+ThemeForge	Kovačnica
+ThemeNeon	Neonski arkadni
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Klasični Windows
+ThemeSystem	Prati boje sustava Windows
+ThemeMidnight	Ponoć
+ThemePaper	Papir (svijetla)
+ThemeForest	Šuma
+ThemeRetro	Retro terminal
+ThemeOcean	Ocean
+ThemeContrast	Visoki kontrast
+LauncherAsk	Što želite pokrenuti?
+LauncherClassicMtc	Klasični MTC
+LauncherClassicAtc	Klasični ATC
+LauncherModern	Moderni (MTC + ATC)
+Remember	Zapamti moj odabir
+PressEnter	Pritisnite Enter
+ViewPlan	2D - pogled odozgo
+ViewMachine	3D - stroj
+LayerHoles	Rupe za bušenje
+LayerPaths	Putanje glodanja
+LayerMachine	Stroj
+LayerGrid	Mreža
+Progress	Napredak
+TableFromConfig	Stol iz konfiguracije
+Drilling	Bušenje
+Routing	Glodanje
+ClassicMissing	Klasični program nije pokraj ovoga
+Start	Start
+Pause	Pauza
+Stop	Stop
+Language	Jezik
+Holes	rupa
+Tools	alata
+SimulatedJob	Simulirani posao: stroj se ne pomiče
+NoFile	Nema učitane datoteke
+Ok	U redu
+Abort	Prekini
+AskSpindle	Pokrenuti vreteno?
+AskTool	Umetnite alat
+Connection	Veza
+OutsideTable	Ne stane na stol
+OpenFile	Otvori datoteku
+About	O programu
+Close	Zatvori
+SettingsTitle	Postavke
+PanelTitle	Panelizacija
+Columns	Stupci
+Rows	Redovi
+SpacingX	Razmak X (mm)
+SpacingY	Razmak Y (mm)
+PanelModePitch	Od središta do središta
+PanelModeGap	Razmak između ploča
+PanelModeFit	Ispuni stol
+PanelCopies	kopija
+Apply	Primijeni
+ResetView	Vrati pogled
+DropHint	Ovdje ispustite datoteku .ncd, .plt ili .zip
+NavHint2d	Povucite za pomicanje, kotačić za zumiranje
+NavHint3d	Povucite za okretanje, kotačić za zumiranje
+Version	Verzija
+Licence	Licenca
+AboutBody	Moderno sučelje za Bungard CCD strojeve za bušenje i glodanje.
+TableWidth	Iskoristiva širina X (mm)
+TableDepth	Iskoristiva dubina Y (mm)
+Save	Spremi
+Saved	Spremljeno
+OpenFolderUp	Nadređena mapa
+ShowDrill	Bušenje
+ConnPort	Port
+ConnAddress	Adresa
+ConnToken	Pristupni token
+ConnMachine	ID stroja
+ConnTest	Testiraj vezu
+ConnWorks	Veza radi
+BoardTitle	Ploča
+ToolsTitle	Alati
+SetAskOperator	Pitaj me pri promjeni alata i pokretanju vretena
+SetToolsOnOpen	Prikaži prozor alata kad otvorim datoteku
+SndVoice	Glas
+SndFemale	ženski
+SndMale	muški
+HeadOpen	Čvor glave
+HeadTitle	Čvor glave za bušenje
+HeadOff	Ne koristi se
+HeadDirect	Izravno
+HeadServer	Preko poslužitelja
+HeadCamera	Prikaži kameru čvora
+HeadSpeed	Vreteno
+HeadTemp	Temperatura
+HeadProtectOpen	Zaštitni izlaz OTVOREN: vreteno se mora zaustaviti
+HeadProtectClosed	Zaštitni izlaz zatvoren
+HeadMeasure	Izmjeri stol ovdje
+HeadServerNote	Preko poslužitelja iz prozora veze: njegova adresa, token i ID stroja.
+HeadNoServer	Upišite adresu, token i ID stroja poslužitelja u prozoru veze.
+HeadCameraModel	Model kamere
+HeadNoLink	Upišite adresu čvora (host ili host:port).
+HeadWaiting	Čekanje čvora...
+HeadCameraOff	Kamera isključena
+HeatOk	ok
+HeatWarm	toplo
+HeatHot	VRUĆE
+HeatUnknown	nepoznato
+LightTitle	Svjetlosni prsten
+LightOn	Svjetlo uklj.
+LightOff	Svjetlo isklj.
+LightNone	nema prstena na ovom čvoru
+InspOpen	Provjera kvalitete
+InspTitle	Provjera kvalitete rada
+InspRun	Provjeri sada
+InspRunning	Provjera...
+InspVerdictOk	U REDU
+InspVerdictNotOk	NIJE U REDU
+InspVerdictUnknown	NE MOŽE SE PROCIJENITI
+InspIdle	Još nije provjereno
+InspChecks	Provjere
+InspCheckHoles	Izbušene rupe
+InspCheckMilling	Izglodani kanali
+InspProfile	Profil analizatora
+InspPresetStandard	Standardni
+InspPresetFine	Fini korak
+InspPresetProto	Prototip
+InspLight	Svjetlo za snimku
+InspLightKeep	kakvo jest
+InspHolePick	Rupa posla u sredini
+InspNoJob	Učitajte datoteku bušenja da provjerite njezine rupe
+InspScale	Mjerilo (pikseli po mm)
+InspCalibrate	Kalibriraj prema ovoj rupi
+InspSave	Spremi profil
+InspTune	Tolerancije
+InspNeedLink	Najprije postavite čvor glave za bušenje (prozor Čvor glave).
+InspHolesOk	rupa u redu
+InspChannel	širina kanala
+InspTuneHoleDia	Tolerancija veličine rupe (mm)
+InspTuneHolePos	Tolerancija položaja rupe (mm)
+InspTuneRound	Najmanja okruglost (1 = krug)
+InspTuneDebris	Najviše ostataka oko rupe
+InspTuneMillWidth	Širina kanala (mm)
+InspTuneMillTol	Tolerancija širine kanala
+InspTuneMillMin	Najuži kanal (mm)
+InspTuneSpread	Najveća neujednačenost kanala
+InspTuneMinMean	Najtamnija prihvaćena snimka
+InspTuneMinSharp	Najmanja oštrina
+InspFindHoleMissing	tamo nema rupe
+InspFindHoleSize	pogrešna veličina
+InspFindHoleOff	izvan središta
+InspFindHoleRound	nije okrugla
+InspFindHoleDebris	srh ili prašina oko rupe
+InspFindHoleView	izvan kadra
+InspFindMillNone	kanali se ne vide
+InspFindMillNarrow	kanali preuski
+InspFindMillWide	kanali preširoki
+InspFindMillPinch	kanal se sužava: opasnost od kratkog spoja
+InspFindMillUneven	kanali neujednačeni
+InspFindDark	snimka pretamna: više svjetla
+InspFindBright	snimka presvijetla: manje svjetla
+InspFindContrast	snimka bez kontrasta
+InspFindBlurry	snimka nije u fokusu
+InspFindScale	najprije postavite mjerilo
+InspFindNothing	nijedna provjera nije uključena
+InspFindNoHoles	nijedna rupa posla nije u kadru
+CatOpen	Katalog svrdala i glodala
+CatTitle	Katalog svrdala i glodala za tiskane ploče
+CatShank	Svaki alat ima držak od 1/8 inča (3,175 mm) koji drži stezna glava Bungard stroja. Brojke su polazne vrijednosti za FR-4: isprobajte ih na otpadnoj ploči.
+CatAll	Sve vrste
+KindDrill	Svrdla
+KindEndMill	Prstasta glodala (ravna)
+KindDownCut	Glodala s rezom prema dolje
+KindUpCut	Glodala s rezom prema gore
+KindDiamond	Glodala s dijamantnim rezom (kukuruz)
+KindVBit	V-glodala (graviranje, izolacija)
+KindBall	Kuglasta glodala
+KindSpot	Centar-svrdla
+KindCountersink	Upuštala
+CatCount	alata
+KindChipBreaker	Glodala s lomačem strugotine
+KindSlotDrill	Svrdla za utore (za duguljaste rupe)
+KindCoated	Glodala s dijamantnom prevlakom
+CatSeriesCol	serija
+CatFluteCol	L mm
+CatPick	Kliknite alat na popisu da vidite što je i čemu služi.
+CatSpindle	Okretaji i posmaci su proizvođačevi. Vreteno koje se ne može toliko brzo vrtjeti prima isti alat svojom brzinom, uz razmjerni posmak (isti zalogaj po okretaju).
+SpindleLbl	Vreteno stroja
+SpindleOriginal	Originalni Bungard, 60000 rpm
+SpindleVfd	VFD vreteno GDZ 80-2.2, 24000 rpm
+SpindleNote	Svako vreteno ima granice brzine, posmaka i veličine alata (mogu se urediti u datoteci postavki). Katalog i alati upozoravaju kad alat traži više nego što vreteno može dati.
+CatSpindleLbl	Vreteno
+FitOk	Ovo vreteno to može s proizvođačevim vrijednostima.
+FitSlower	Ovo vreteno traži sporije. Predložene vrijednosti:
+FitLowerRpm	Vreteno se vrti sporije nego što alat traži: XY i Z idu razmjerno sporije.
+FitSlowZ	Z mora ići sporije na ovom stroju.
+FitSlowXy	XY posmak mora biti sporiji na ovom stroju.
+FitNoThick	NEKOMPATIBILNO: alat je deblji nego što ovo vreteno prima.
+FitNoSlow	NEKOMPATIBILNO: ovo vreteno se vrti prespro za ovaj alat (slomio bi se ili spalio ploču).
+CatUseFor	Upotrijebi ove vrijednosti za alat
+ToolFromCat	Katalog
+CatTaken	Vrijednosti preuzete u alat.
+JobNothingOn	Nema posla: uključite bušenje ili glodanje i barem jedan njegov alat.
+JobPartHint	Kliknite za uključivanje ili isključivanje; oboje uključeno: prvo bušenje, zatim glodanje
+ToolOffHint	Kliknite točku alata da ga izostavite iz posla
+CatFlute	Duljina rezanja
+CatShankLbl	Držak
+CatTotal	Ukupna duljina
+CatPoint	Kut vrha
+CatSchematic	Shematski crtež, nije u mjerilu.
+NoteDrill	Svrdlo od tvrdog metala za prolazne rupe. Male (ispod 0,5 mm) su za prokovine, srednje za nožice komponenti, velike za konektore i montažne rupe. Brzo izvlačite i mijenjajte nakon nekoliko tisuća rupa.
+NoteEndMill	Ravni utori i ravno čelo: utori, džepovi, izolacija širokih staza i kontura tankih ploča. Ostavlja čisto dno.
+NoteDownCut	Lijevo glodalo: gura strugotinu prema dolje. Gornji rub ploče ispada bez srha, pa ga koristite za konturu kad je gornja strana vidljiva (ploča mora biti dobro stegnuta).
+NoteUpCut	Desno glodalo: vuče strugotinu prema gore i iz reza. Dobro za utore i džepove; može podići ploču i ostaviti srh na gornjem rubu.
+NoteDiamond	Glodalo s dijamantnim rezom (kukuruz): mnogo sitnih zubi koji melju staklena vlakna umjesto da ih trgaju. Uobičajen izbor za konturu FR-4; ostavlja hrapav, ali čist rub i dugo traje.
+NoteChip	Glodalo s lomačem strugotine: zubi lome strugotinu na kratke komade koji lako izlaze iz reza. Reže brže od dijamantnog i drži srh malim.
+NoteVBit	V-glodalo (za graviranje): utor je širok koliko dopušta dubina, pa dubina određuje širinu izolacije. Uzak kut s finim vrhom omogućuje fine staze.
+NoteBall	Kuglasto prstasto glodalo: zaobljeni utor, za graviranje i oblikovanje. Nije za izolaciju staza.
+NoteSpot	Centar-svrdlo: kratak, krut vrh koji počinje rupu točno gdje treba, da sljedeće svrdlo ne luta. Za velike rupe i tvrde ploče.
+NoteCountersink	Upuštalo: skida rub rupe, za glave vijaka ili uklanjanje srha.
+NoteSlot	Svrdlo za utore: svrdlo s krutom jezgrom za rezanje duguljastih rupa pomicanjem u stranu tijekom bušenja (utori konektora). Ne koristite ga za okrugle rupe: ostala su jeftinija.
+NoteCoated	Ravno glodalo s dijamantnom prevlakom: za abrazivne ploče (FR-4 visokog Tg, bez halogena, ugljična vlakna) i ploče s aluminijskom podlogom, gdje se neobloženo istroši. Skuplje je i traje nekoliko puta dulje.
+LevTab	Kalibracija stola
+LevMeasure	Izmjeri stol
+LevStop	Zaustavi mjerenje
+LevClear	Očisti kartu
+LevCols	Točke po X
+LevRows	Točke po Y
+LevPoints	Izmjerene točke
+LevSpread	Raspon
+LevTilt	Nagib X / Y
+LevDemo	Simulirana sonda: još nije spojen čvor sonde, visine dolaze iz simuliranog stola.
+LevApply	Ispravi Z poslova ovom kartom
+ResumeTitle	Posao prekinut
+ResumeBody	Posljednji posao ostao je na pola (prozor, računalo ili veza su pali). Želite li nastaviti od mjesta gdje je stao?
+ResumeContinue	Nastavi posao
+ResumeCancel	Otkaži
+TabsOn	Glodaj vanjski rub s mostićima
+TabsPerSide	Mostića po strani
+TabWidth	Širina mostića
+TabPlace	Gdje idu mostići
+TabEven	Ravnomjerno po strani
+TabEnds	Blizu krajeva strane
+TabMiddle	Zajedno u sredini
+SetSkipLauncher	Sljedeći put otvori ovaj prozor izravno
+ColName	Naziv
+ColDate	Datum izmjene (UTC)
+ColType	Vrsta
+ColSize	Veličina
+TypeFolder	Mapa
+TypeZip	ZIP arhiva
+Places	Mjesta
+PlaceExamples	Primjeri
+PlaceDesktop	Radna površina
+PlaceDocuments	Dokumenti
+PlaceDownloads	Preuzimanja
+FileNameLabel	Naziv datoteke
+FilterSupported	Sve datoteke poslova
+FilterDrill	Datoteke bušenja
+FilterRoute	Datoteke glodanja
+FilterZip	ZIP arhive
+FilterAny	Sve datoteke
+NavBack	Natrag
+NavUp	Gore
+ThisPc	Ovo računalo
+SimSpeed	Brzina simulacije
+DefaultValues	Zadano
+TypeValueHint	Kliknite vrijednost da je upišete
+TabGeneral	Općenito
+TabJob	Posao
+Units	Jedinice
+UnitMm	Milimetri (mm)
+UnitMil	Mili (0,001 inča)
+ModelLabel	Model stroja
+ToolChange	Promjena alata
+TcManual	Ručna (MTC)
+TcAuto	Automatska (ATC)
+EmergencyStop	Zaustavljanje u nuždi
+EmergencyShow	Prikaži gumb za nuždu (može se povući bilo kamo)
+RackPlaces	mjesta za alate
+Rotate	Zakreni
+FollowTool	Prati alat
+Enlarge2d	Povećaj 2D pogled
+MoveDesign	Pomakni samo dizajn
+MoveBoard	Pomakni ploču
+ShowBoth	Prikaži 3D pogled
+OnTable	Na stolu
+OnBoard	Na ploči
+Resume	Nastavi
+NotAnOutline	nije kontura ploče (otvorite njezin profil ili rubni sloj)
+HolesDrilled	Ukupno izbušenih rupa
+ResetCounts	Poništi brojače
+Recent	Nedavno
+McPosition	Položaj
+McWork	Radni
+McMachine	Strojni
+McJog	Ručni pomak
+McStep	Korak (mm)
+McHome	Home
+McZero	Nula ovdje
+McUnlock	Otključaj
+McProgram	Program
+McOpenGcode	Otvori G-code
+McMdi	Naredba (MDI)
+McSend	Pošalji
+McLog	Dnevnik
+McState	Stanje
+McController	Kontroler
+McSimulator	Simulator
+McNotDriven	još se ne upravlja
+McToolpath	Putanja alata
+McLine	Redak
+McSpindle	Vreteno
+McFeedRate	Posmak
+McStIdle	Mirovanje
+McStRun	Radi
+McStHold	Pauzirano
+McStHome	Referenciranje
+McStAlarm	ALARM
+McStUnknown	Nepoznato
+McZeroXyz	Postavi radnu nulu ovdje (X, Y i Z)
+McZeroXy	Postavi radnu nulu ovdje (X i Y)
+McGoG28	Idi na spremljeni položaj G28
+McGoG30	Idi na spremljeni položaj G30
+McGoZeroXy	Idi na radnu nulu u X i Y
+McGoZeroZ	Idi na radnu nulu u Z
+McOperator	Operater
+McGcodeTab	GCode
+McIoTab	IO
+McActiveG	Aktivni G-kodovi
+McActiveM	Aktivni M-kodovi
+McSpeed	Brzina
+McZeroAxis	Postavi nulu ove osi ovdje
+McInputs	Ulazi
+McOutputs	Izlazi
+McJogSpeed	Brzina ručnog pomaka
+MenuFile	Datoteka
+MenuView	Prikaz
+MenuHelp	Pomoć
+MenuExit	Izlaz
+McSaveGcode	Spremi G-code ...
+McEditProgram	Uredi program ...
+McRewind	Premotaj na prvi redak
+McClearProgram	Očisti program
+McFitTable	Prilagodi stolu
+McFitProgram	Prilagodi programu
+McShowButtons	Prikaži gumbe nula
+McShowProgram	Prikaži program
+McShowLog	Prikaži dnevnik
+McShowRapids	Prikaži brze pomake
+McSpindleOn	Vreteno uklj. (M3)
+McSpindleOff	Vreteno isklj. (M5)
+McCoolantOn	Hlađenje uklj. (M8)
+McCoolantOff	Hlađenje isklj. (M9)
+McSetG28	Spremi ovaj položaj kao G28
+McSetG30	Spremi ovaj položaj kao G30
+McCancel	Otkaži
+McSecGeneral	Općenito
+McSecInterface	Korisničko sučelje
+McSecAxes	Osi i granice
+McSecJog	Ručni pomak
+McUnitInch	Inči
+McLimits	Granice hoda (mm): minimum i maksimum svake osi
+McDefaultStep	Korak na početku (mm)
+McDefaultFeed	Brzina ručnog pomaka na početku (mm/min)
+McSettingsSaved	Postavke su spremljene i odmah vrijede.
+McFilterGcode	G-code datoteke
+McReplaceAsk	već postoji. Zamijeniti je?
+McReplace	Zamijeni
+McTypeName	Upišite naziv datoteke.
+McNoSuchFile	Takva datoteka ne postoji.
+McSaveTitle	Spremi program
+McOpenTitle	Otvori G-code program
+McAboutBody	Program za upravljanje strojem tvrtke EH3D: zasad upravlja simuliranim strojem.
+FleetTitle	Strojevi i postaje
+FleetNoStation	Nema postaje
+FleetWaiting	Čeka se operater
+FleetReady	poslova spremno
+FleetUse	Koristi ovaj stroj
+FleetTarget	Stroj za poslove
+FleetNoServer	Veza nije EH3D poslužitelj: odaberite ga u Vezi da vidite strojeve.
+FleetRefresh	Osvježi
+JobOutsideTable	Posao ne stane na stol: pomaknite ploču ili povećajte stol
+LblThickness	Debljina (mm)
+LblCopper	Bakar (µm)
+LblCopperSides	Strane s bakrom
+LblOneSide	1 strana
+LblTwoSides	2 strane
+LblSize	Veličina (mm)
+LblFromFiles	Iz datoteka
+LblMaker	Proizvođač
+LblWidth	Širina
+LblDepth	Dubina
+LblPhotoresist	Fotoosjetljivi lak
+LblExtraStroke	Dodatni hod (mm)
+LblFeed	Posmak (mm/min)
+LblSpeedRpm	Brzina (rpm)
+LblDepthMm	Dubina (mm)
+LblPasses	Prolazi
+LblFeedXy	Posmak XY (mm/min)
+LblFeedZ	Posmak Z (mm/min)
+LblDefault	Zad.
+LblFileCoords	Koordinate datoteka
+LblNoRack	Datoteka stroja još nema položaja u stalku
+LblWorkArea	Radno područje
+LblWholeMachine	Cijeli stroj
+LblLayers	Slojevi
+SoundFinish	Zvuk na kraju posla
+SoundTool	Zvuk kad se traži alat
+SoundCheckOk	Zvuk kad je vizualna provjera ispravna
+SoundCheckBad	Zvuk kad vizualna provjera nije ispravna
+SoundFileHint	WAV datoteka (prazno: zadani ton)
+SoundTest	Test
+SndOff	Bez zvuka
+SndDefault	Standardni ton
+SndFile	Moja datoteka (WAV)
+SndChime	zvončić
+SndRise	uzlazne note
+SndFall	silazne note
+SndFanfare	fanfara
+SndTriple	tri note
+SndBell	zvono
+SndBeep	bip
+SndDouble	dvostruki bip
+SndTripleBeep	trostruki bip
+SndAlarm	alarm
+SndKnock	kucanje
+SndSiren	sirena

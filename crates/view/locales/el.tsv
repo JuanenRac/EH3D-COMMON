@@ -1,1 +1,425 @@
 # Ελληνικά (el): Name<TAB>text, one per line; a text that is missing is taken from English (or from the main language of a variant).
+ThemeLabel	Θέμα
+ThemeForge	Σφυρήλατο
+ThemeNeon	Neon Arcade
+ThemeGlass	Glass Pro
+ThemeWindowsClassic	Κλασικό Windows
+ThemeSystem	Χρώματα των Windows
+ThemeMidnight	Μεσάνυχτα
+ThemePaper	Χαρτί (ανοιχτό)
+ThemeForest	Δάσος
+ThemeRetro	Ρετρό τερματικό
+ThemeOcean	Ωκεανός
+ThemeContrast	Υψηλή αντίθεση
+LauncherAsk	Τι θέλετε να εκτελέσετε;
+LauncherClassicMtc	Κλασικό MTC
+LauncherClassicAtc	Κλασικό ATC
+LauncherModern	Μοντέρνο (MTC + ATC)
+Remember	Να θυμάται την επιλογή μου
+PressEnter	Πατήστε Enter
+ViewPlan	2D - κάτοψη
+ViewMachine	3D - μηχανή
+LayerHoles	Τρύπες διάτρησης
+LayerPaths	Διαδρομές φρεζαρίσματος
+LayerMachine	Μηχανή
+LayerGrid	Πλέγμα
+Progress	Πρόοδος
+TableFromConfig	Τραπέζι από τις ρυθμίσεις
+Drilling	Διάτρηση
+Routing	Φρεζάρισμα
+ClassicMissing	Το κλασικό πρόγραμμα δεν βρίσκεται δίπλα σε αυτό
+Start	Έναρξη
+Pause	Παύση
+Stop	Διακοπή
+Language	Γλώσσα
+Holes	τρύπες
+Tools	εργαλεία
+SimulatedJob	Προσομοιωμένη εργασία: καμία μηχανή δεν κινείται
+NoFile	Δεν έχει φορτωθεί αρχείο
+Ok	Ok
+Abort	Ακύρωση
+AskSpindle	Να ξεκινήσει ο άξονας;
+AskTool	Τοποθετήστε το εργαλείο
+Connection	Σύνδεση
+OutsideTable	Δεν χωράει στο τραπέζι
+OpenFile	Άνοιγμα αρχείου
+About	Πληροφορίες
+Close	Κλείσιμο
+SettingsTitle	Ρυθμίσεις
+PanelTitle	Πάνελ
+Columns	Στήλες
+Rows	Γραμμές
+SpacingX	Απόσταση X (mm)
+SpacingY	Απόσταση Y (mm)
+PanelModePitch	Από κέντρο σε κέντρο
+PanelModeGap	Κενό μεταξύ πλακετών
+PanelModeFit	Γέμισμα τραπεζιού
+PanelCopies	αντίγραφα
+Apply	Εφαρμογή
+ResetView	Επαναφορά προβολής
+DropHint	Αφήστε εδώ ένα αρχείο .ncd, .plt ή .zip
+NavHint2d	Σύρετε για μετακίνηση, τροχός για ζουμ
+NavHint3d	Σύρετε για περιστροφή, τροχός για ζουμ
+Version	Έκδοση
+Licence	Άδεια
+AboutBody	Η σύγχρονη διεπαφή για τις μηχανές διάτρησης και φρεζαρίσματος Bungard CCD.
+TableWidth	Ωφέλιμο πλάτος X (mm)
+TableDepth	Ωφέλιμο βάθος Y (mm)
+Save	Αποθήκευση
+Saved	Αποθηκεύτηκε
+OpenFolderUp	Γονικός φάκελος
+ShowDrill	Διάτρηση
+ConnPort	Θύρα
+ConnAddress	Διεύθυνση
+ConnToken	Διακριτικό πρόσβασης
+ConnMachine	Αναγνωριστικό μηχανής
+ConnTest	Δοκιμή σύνδεσης
+ConnWorks	Η σύνδεση λειτουργεί
+BoardTitle	Πλακέτα
+ToolsTitle	Εργαλεία
+SetAskOperator	Ερώτηση στις αλλαγές εργαλείου και στην εκκίνηση του άξονα
+SetToolsOnOpen	Εμφάνιση του παραθύρου εργαλείων όταν ανοίγω αρχείο
+SndVoice	Φωνή
+SndFemale	γυναίκα
+SndMale	άνδρας
+HeadOpen	Κόμβος κεφαλής
+HeadTitle	Κόμβος της κεφαλής διάτρησης
+HeadOff	Δεν χρησιμοποιείται
+HeadDirect	Άμεσα
+HeadServer	Μέσω του διακομιστή
+HeadCamera	Εμφάνιση της κάμερας του κόμβου
+HeadSpeed	Άξονας
+HeadTemp	Θερμοκρασία
+HeadProtectOpen	Έξοδος προστασίας ΑΝΟΙΧΤΗ: ο άξονας πρέπει να σταματήσει
+HeadProtectClosed	Έξοδος προστασίας κλειστή
+HeadMeasure	Μέτρηση του τραπεζιού εδώ
+HeadServerNote	Μέσω του διακομιστή του παραθύρου σύνδεσης: η διεύθυνσή του, το διακριτικό και το αναγνωριστικό της μηχανής.
+HeadNoServer	Γράψτε τη διεύθυνση, το διακριτικό και το αναγνωριστικό μηχανής του διακομιστή στο παράθυρο σύνδεσης.
+HeadCameraModel	Μοντέλο κάμερας
+HeadNoLink	Γράψτε τη διεύθυνση του κόμβου (host ή host:θύρα).
+HeadWaiting	Αναμονή για τον κόμβο...
+HeadCameraOff	Κάμερα απενεργοποιημένη
+HeatOk	ok
+HeatWarm	ζεστό
+HeatHot	ΚΑΥΤΟ
+HeatUnknown	άγνωστη
+LightTitle	Δακτύλιος φωτός
+LightOn	Φως αναμμένο
+LightOff	Φως σβηστό
+LightNone	αυτός ο κόμβος δεν έχει δακτύλιο
+InspOpen	Έλεγχος ποιότητας
+InspTitle	Έλεγχος ποιότητας της εργασίας
+InspRun	Έλεγχος τώρα
+InspRunning	Έλεγχος...
+InspVerdictOk	ΕΠΙΤΥΧΙΑ
+InspVerdictNotOk	ΑΠΟΤΥΧΙΑ
+InspVerdictUnknown	ΑΔΥΝΑΤΗ ΚΡΙΣΗ
+InspIdle	Δεν έχει ελεγχθεί ακόμη
+InspChecks	Έλεγχοι
+InspCheckHoles	Τρύπες διάτρησης
+InspCheckMilling	Φρεζαρισμένα κανάλια
+InspProfile	Προφίλ αναλυτή
+InspPresetStandard	Τυπικό
+InspPresetFine	Λεπτό βήμα
+InspPresetProto	Πρωτότυπο
+InspLight	Φως για τη φωτογραφία
+InspLightKeep	όπως είναι
+InspHolePick	Τρύπα της εργασίας στο κέντρο
+InspNoJob	Φορτώστε ένα αρχείο διάτρησης για να ελέγξετε τις τρύπες του
+InspScale	Κλίμακα (pixel ανά mm)
+InspCalibrate	Βαθμονόμηση από αυτή την τρύπα
+InspSave	Αποθήκευση προφίλ
+InspTune	Ανοχές
+InspNeedLink	Ορίστε πρώτα τον κόμβο της κεφαλής διάτρησης (παράθυρο Κόμβος κεφαλής).
+InspHolesOk	τρύπες εντάξει
+InspChannel	πλάτος καναλιού
+InspTuneHoleDia	Ανοχή μεγέθους τρύπας (mm)
+InspTuneHolePos	Ανοχή θέσης τρύπας (mm)
+InspTuneRound	Ελάχιστη στρογγυλότητα (1 = κύκλος)
+InspTuneDebris	Μέγ. γρέζια γύρω από την τρύπα
+InspTuneMillWidth	Πλάτος καναλιού (mm)
+InspTuneMillTol	Ανοχή πλάτους καναλιού
+InspTuneMillMin	Στενότερο κανάλι (mm)
+InspTuneSpread	Πιο ανώμαλο κανάλι
+InspTuneMinMean	Πιο σκούρα αποδεκτή φωτογραφία
+InspTuneMinSharp	Ελάχιστη ευκρίνεια
+InspFindHoleMissing	δεν υπάρχει τρύπα
+InspFindHoleSize	λάθος μέγεθος
+InspFindHoleOff	εκτός κέντρου
+InspFindHoleRound	όχι στρογγυλή
+InspFindHoleDebris	γρέζια ή σκόνη γύρω
+InspFindHoleView	εκτός εικόνας
+InspFindMillNone	δεν φαίνονται κανάλια
+InspFindMillNarrow	κανάλια πολύ στενά
+InspFindMillWide	κανάλια πολύ πλατιά
+InspFindMillPinch	ένα κανάλι στενεύει: κίνδυνος βραχυκυκλώματος
+InspFindMillUneven	κανάλια ανώμαλα
+InspFindDark	φωτογραφία πολύ σκούρα: περισσότερο φως
+InspFindBright	φωτογραφία πολύ φωτεινή: λιγότερο φως
+InspFindContrast	φωτογραφία χωρίς αντίθεση
+InspFindBlurry	φωτογραφία εκτός εστίασης
+InspFindScale	ορίστε πρώτα την κλίμακα
+InspFindNothing	κανένας έλεγχος δεν είναι ενεργός
+InspFindNoHoles	καμία τρύπα της εργασίας στην εικόνα
+CatOpen	Κατάλογος τρυπανιών και φρεζών
+CatTitle	Κατάλογος τρυπανιών και φρεζών για PCB
+CatShank	Κάθε εργαλείο έχει στέλεχος 1/8 ιντσών (3,175 mm), που κρατά το τσοκ μιας μηχανής Bungard. Οι αριθμοί είναι σημεία εκκίνησης για FR-4: δοκιμάστε τους σε μια άχρηστη πλακέτα.
+CatAll	Όλοι οι τύποι
+KindDrill	Τρυπάνια
+KindEndMill	Φρέζες άκρου (ίσιες)
+KindDownCut	Φρέζες κάθοδης κοπής
+KindUpCut	Φρέζες ανοδικής κοπής
+KindDiamond	Διαμαντένιες φρέζες (corn)
+KindVBit	Φρέζες V (χάραξη, απομόνωση)
+KindBall	Φρέζες σφαιρικής μύτης
+KindSpot	Κεντραριστήρια
+KindCountersink	Κωνικές φρέζες (countersink)
+CatCount	εργαλεία
+KindChipBreaker	Φρέζες θραύσης ρινισμάτων
+KindSlotDrill	Τρυπάνια εγκοπών (για επιμήκεις τρύπες)
+KindCoated	Φρέζες με επίστρωση διαμαντιού
+CatSeriesCol	σειρά
+CatFluteCol	L mm
+CatPick	Κάντε κλικ σε ένα εργαλείο της λίστας για να το δείτε και να μάθετε σε τι χρησιμεύει.
+CatSpindle	Οι στροφές και οι τροφοδοσίες είναι του κατασκευαστή. Ένας άξονας που δεν γυρίζει τόσο γρήγορα χρησιμοποιεί το ίδιο εργαλείο με τη δική του ταχύτητα, με την τροφοδοσία ανάλογα (ίδιο βάθος κοπής ανά περιστροφή).
+SpindleLbl	Άξονας της μηχανής
+SpindleOriginal	Αρχική Bungard, 60000 rpm
+SpindleVfd	Άξονας VFD GDZ 80-2.2, 24000 rpm
+SpindleNote	Κάθε άξονας έχει τα όριά του σε ταχύτητα, τροφοδοσία και μέγεθος εργαλείου (επεξεργάζονται στο αρχείο ρυθμίσεων). Ο κατάλογος και τα εργαλεία προειδοποιούν όταν ένα εργαλείο ζητά περισσότερα από όσα μπορεί να δώσει ο άξονας.
+CatSpindleLbl	Άξονας
+FitOk	Αυτός ο άξονας το αντέχει με τις τιμές του κατασκευαστή.
+FitSlower	Αυτός ο άξονας χρειάζεται να πάει πιο αργά. Προτεινόμενες τιμές:
+FitLowerRpm	Ο άξονας γυρίζει πιο αργά από όσο ζητά το εργαλείο: τα XY και Z πρέπει να πάνε αναλογικά πιο αργά.
+FitSlowZ	Το Z πρέπει να πάει πιο αργά σε αυτή τη μηχανή.
+FitSlowXy	Η τροφοδοσία XY πρέπει να είναι πιο αργή σε αυτή τη μηχανή.
+FitNoThick	ΜΗ ΣΥΜΒΑΤΟ: το εργαλείο είναι παχύτερο από όσο δέχεται αυτός ο άξονας.
+FitNoSlow	ΜΗ ΣΥΜΒΑΤΟ: αυτός ο άξονας γυρίζει πολύ πιο αργά για αυτό το εργαλείο (θα έσπαγε ή θα έκαιγε την πλακέτα).
+CatUseFor	Χρήση αυτών των τιμών για το εργαλείο
+ToolFromCat	Κατάλογος
+CatTaken	Οι τιμές μεταφέρθηκαν στο εργαλείο.
+JobNothingOn	Δεν υπάρχει τίποτα να γίνει: ενεργοποιήστε τη διάτρηση ή το φρεζάρισμα και τουλάχιστον ένα από τα εργαλεία τους.
+JobPartHint	Κάντε κλικ για ενεργοποίηση ή απενεργοποίηση· και τα δύο: πρώτα η διάτρηση και μετά το φρεζάρισμα
+ToolOffHint	Κάντε κλικ στην τελεία ενός εργαλείου για να το εξαιρέσετε από την εργασία
+CatFlute	Μήκος κοπής
+CatShankLbl	Στέλεχος
+CatTotal	Συνολικό μήκος
+CatPoint	Γωνία μύτης
+CatSchematic	Σχηματικό σχέδιο, χωρίς κλίμακα.
+NoteDrill	Τρυπάνι από συμπαγές καρβίδιο για διαμπερείς τρύπες. Τα μικρά (κάτω από 0,5 mm) είναι για vias, τα μεσαία για πόδια εξαρτημάτων, τα μεγάλα για βύσματα και τρύπες στερέωσης. Τραβήξτε το γρήγορα προς τα έξω και αλλάξτε το μετά από μερικές χιλιάδες τρύπες.
+NoteEndMill	Ίσιες αυλακώσεις και επίπεδο άκρο: εγκοπές, θήκες, απομόνωση φαρδιών αγωγών και περίγραμμα λεπτών πλακετών. Αφήνει καθαρό πάτο.
+NoteDownCut	Αριστερόστροφη φρέζα: σπρώχνει τα ρινίσματα προς τα κάτω. Η πάνω άκρη της πλακέτας βγαίνει χωρίς γρέζια· χρησιμοποιήστε την για το περίγραμμα όταν η πάνω όψη είναι αυτή που φαίνεται (η πλακέτα πρέπει να είναι καλά στερεωμένη).
+NoteUpCut	Δεξιόστροφη φρέζα: τραβά τα ρινίσματα προς τα πάνω και έξω από την κοπή. Καλή για εγκοπές και θήκες· μπορεί να σηκώσει την πλακέτα και να αφήσει γρέζια στην πάνω άκρη.
+NoteDiamond	Διαμαντένια φρέζα (corn): πολλά μικρά δόντια που αλέθουν τις ίνες γυαλιού αντί να τη σκίζουν. Η συνήθης επιλογή για το περίγραμμα του FR-4· αφήνει τραχιά αλλά καθαρή άκρη και διαρκεί πολύ.
+NoteChip	Φρέζα θραύσης ρινισμάτων: τα δόντια της σπάνε τα ρινίσματα σε κοντά κομμάτια που βγαίνουν εύκολα από την κοπή. Κόβει πιο γρήγορα από τη διαμαντένια και κρατά τα γρέζια μικρά.
+NoteVBit	Φρέζα V (χάραξης): η αυλάκωση είναι τόσο πλατιά όσο την κάνει το βάθος, άρα το βάθος καθορίζει το πλάτος της απομόνωσης. Μια στενή γωνία με λεπτή μύτη επιτρέπει λεπτούς αγωγούς.
+NoteBall	Φρέζα σφαιρικής μύτης: στρογγυλεμένη αυλάκωση, για χάραξη και διαμόρφωση. Όχι για απομόνωση αγωγών.
+NoteSpot	Κεντραριστήριο: κοντή, άκαμπτη μύτη που ξεκινά την τρύπα ακριβώς εκεί που χρειάζεται, ώστε το επόμενο τρυπάνι να μην ξεφεύγει. Για τις μεγάλες τρύπες και τις σκληρές πλακέτες.
+NoteCountersink	Κωνική φρέζα (countersink): λοξοτομεί την άκρη μιας τρύπας, για κεφαλές βιδών ή για να αφαιρεθούν τα γρέζια.
+NoteSlot	Τρυπάνι εγκοπών: τρυπάνι με άκαμπτο πυρήνα φτιαγμένο για να κόβει επιμήκεις τρύπες κινούμενο πλάγια ενώ τρυπά (οι εγκοπές των βυσμάτων). Μην το χρησιμοποιείτε για στρογγυλές τρύπες: τα άλλα είναι φθηνότερα.
+NoteCoated	Φρέζα επίπεδου άκρου με επίστρωση διαμαντιού: για λειαντικές πλακέτες (FR-4 υψηλού Tg, χωρίς αλογόνα, ίνες άνθρακα) και πλακέτες με βάση αλουμινίου, όπου μια χωρίς επίστρωση φθείρεται. Κοστίζει περισσότερο και διαρκεί πολλαπλάσια.
+LevTab	Βαθμονόμηση τραπεζιού
+LevMeasure	Μέτρηση τραπεζιού
+LevStop	Διακοπή μέτρησης
+LevClear	Εκκαθάριση χάρτη
+LevCols	Σημεία κατά X
+LevRows	Σημεία κατά Y
+LevPoints	Σημεία που μετρήθηκαν
+LevSpread	Διαφορά
+LevTilt	Κλίση X / Y
+LevDemo	Προσομοιωμένος ανιχνευτής: δεν έχει συνδεθεί ακόμη κόμβος ανιχνευτή, τα ύψη προέρχονται από προσομοιωμένο τραπέζι.
+LevApply	Διόρθωση του Z των εργασιών με αυτόν τον χάρτη
+ResumeTitle	Η εργασία διακόπηκε
+ResumeBody	Η τελευταία εργασία έμεινε στη μέση (έκλεισε το παράθυρο, ο υπολογιστής ή η σύνδεση). Θέλετε να συνεχίσετε από εκεί που έμεινε;
+ResumeContinue	Συνέχεια της εργασίας
+ResumeCancel	Ακύρωση
+TabsOn	Φρεζάρισμα του εξωτερικού με γέφυρες
+TabsPerSide	Γέφυρες ανά πλευρά
+TabWidth	Πλάτος γέφυρας
+TabPlace	Πού μπαίνουν οι γέφυρες
+TabEven	Ομοιόμορφα κατά μήκος της πλευράς
+TabEnds	Κοντά στα άκρα της πλευράς
+TabMiddle	Μαζί στη μέση
+SetSkipLauncher	Άμεσο άνοιγμα αυτού του παραθύρου την επόμενη φορά
+ColName	Όνομα
+ColDate	Ημερομηνία τροποποίησης (UTC)
+ColType	Τύπος
+ColSize	Μέγεθος
+TypeFolder	Φάκελος
+TypeZip	Αρχείο ZIP
+Places	Τοποθεσίες
+PlaceExamples	Παραδείγματα
+PlaceDesktop	Επιφάνεια εργασίας
+PlaceDocuments	Έγγραφα
+PlaceDownloads	Λήψεις
+FileNameLabel	Όνομα αρχείου
+FilterSupported	Όλα τα αρχεία εργασίας
+FilterDrill	Αρχεία διάτρησης
+FilterRoute	Αρχεία φρεζαρίσματος
+FilterZip	Αρχεία ZIP
+FilterAny	Όλα τα αρχεία
+NavBack	Πίσω
+NavUp	Πάνω
+ThisPc	Αυτός ο υπολογιστής
+SimSpeed	Ταχύτητα προσομοίωσης
+DefaultValues	Προεπιλογές
+TypeValueHint	Κάντε κλικ σε μια τιμή για να την πληκτρολογήσετε
+TabGeneral	Γενικά
+TabJob	Εργασία
+Units	Μονάδες
+UnitMm	Χιλιοστά (mm)
+UnitMil	Mil (0,001 ίντσα)
+ModelLabel	Μοντέλο μηχανής
+ToolChange	Αλλαγή εργαλείου
+TcManual	Χειροκίνητη (MTC)
+TcAuto	Αυτόματη (ATC)
+EmergencyStop	Διακοπή έκτακτης ανάγκης
+EmergencyShow	Εμφάνιση του κουμπιού έκτακτης ανάγκης (μπορεί να σύρεται οπουδήποτε)
+RackPlaces	θέσεις εργαλείων
+Rotate	Περιστροφή
+FollowTool	Παρακολούθηση εργαλείου
+Enlarge2d	Μεγέθυνση της προβολής 2D
+MoveDesign	Μετακίνηση μόνο του σχεδίου
+MoveBoard	Μετακίνηση της πλακέτας
+ShowBoth	Εμφάνιση της προβολής 3D
+OnTable	Στο τραπέζι
+OnBoard	Στην πλακέτα
+Resume	Συνέχεια
+NotAnOutline	δεν είναι το περίγραμμα μιας πλακέτας (ανοίξτε το επίπεδο προφίλ ή άκρων της)
+HolesDrilled	Συνολικές τρύπες που ανοίχτηκαν
+ResetCounts	Μηδενισμός μετρητών
+Recent	Πρόσφατα
+McPosition	Θέση
+McWork	Τεμάχιο
+McMachine	Μηχανή
+McJog	Χειροκίνηση
+McStep	Βήμα (mm)
+McHome	Home
+McZero	Μηδέν εδώ
+McUnlock	Ξεκλείδωμα
+McProgram	Πρόγραμμα
+McOpenGcode	Άνοιγμα G-code
+McMdi	Εντολή (MDI)
+McSend	Αποστολή
+McLog	Αρχείο καταγραφής
+McState	Κατάσταση
+McController	Ελεγκτής
+McSimulator	Προσομοιωτής
+McNotDriven	δεν ελέγχεται ακόμη
+McToolpath	Διαδρομή εργαλείου
+McLine	Γραμμή
+McSpindle	Άξονας
+McFeedRate	Τροφοδοσία
+McStIdle	Αδράνεια
+McStRun	Σε λειτουργία
+McStHold	Σε παύση
+McStHome	Homing
+McStAlarm	ΣΥΝΑΓΕΡΜΟΣ
+McStUnknown	Άγνωστη
+McZeroXyz	Ορισμός του μηδενός τεμαχίου εδώ (X, Y και Z)
+McZeroXy	Ορισμός του μηδενός τεμαχίου εδώ (X και Y)
+McGoG28	Μετάβαση στην αποθηκευμένη θέση G28
+McGoG30	Μετάβαση στην αποθηκευμένη θέση G30
+McGoZeroXy	Μετάβαση στο μηδέν τεμαχίου σε X και Y
+McGoZeroZ	Μετάβαση στο μηδέν τεμαχίου σε Z
+McOperator	Χειριστής
+McGcodeTab	G-code
+McIoTab	IO
+McActiveG	Ενεργοί G-code
+McActiveM	Ενεργοί M-code
+McSpeed	Ταχύτητα
+McZeroAxis	Ορισμός του μηδενός αυτού του άξονα εδώ
+McInputs	Είσοδοι
+McOutputs	Έξοδοι
+McJogSpeed	Ταχύτητα jog
+MenuFile	Αρχείο
+MenuView	Προβολή
+MenuHelp	Βοήθεια
+MenuExit	Έξοδος
+McSaveGcode	Αποθήκευση G-code ...
+McEditProgram	Επεξεργασία προγράμματος ...
+McRewind	Επιστροφή στην πρώτη γραμμή
+McClearProgram	Εκκαθάριση προγράμματος
+McFitTable	Προσαρμογή στο τραπέζι
+McFitProgram	Προσαρμογή στο πρόγραμμα
+McShowButtons	Εμφάνιση των κουμπιών των μηδενικών
+McShowProgram	Εμφάνιση του προγράμματος
+McShowLog	Εμφάνιση του αρχείου καταγραφής
+McShowRapids	Εμφάνιση των ταχέων κινήσεων
+McSpindleOn	Άξονας ON (M3)
+McSpindleOff	Άξονας OFF (M5)
+McCoolantOn	Ψυκτικό ON (M8)
+McCoolantOff	Ψυκτικό OFF (M9)
+McSetG28	Αποθήκευση αυτής της θέσης ως G28
+McSetG30	Αποθήκευση αυτής της θέσης ως G30
+McCancel	Ακύρωση
+McSecGeneral	Γενικά
+McSecInterface	Διεπαφή χρήστη
+McSecAxes	Άξονες και όρια
+McSecJog	Χειροκίνηση
+McUnitInch	Ίντσες
+McLimits	Όρια διαδρομής (mm): ελάχιστο και μέγιστο κάθε άξονα
+McDefaultStep	Βήμα κατά την εκκίνηση (mm)
+McDefaultFeed	Ταχύτητα jog κατά την εκκίνηση (mm/min)
+McSettingsSaved	Οι ρυθμίσεις αποθηκεύτηκαν και ισχύουν τώρα.
+McFilterGcode	Αρχεία G-code
+McReplaceAsk	υπάρχει ήδη. Να αντικατασταθεί;
+McReplace	Αντικατάσταση
+McTypeName	Πληκτρολογήστε ένα όνομα αρχείου.
+McNoSuchFile	Δεν υπάρχει τέτοιο αρχείο.
+McSaveTitle	Αποθήκευση προγράμματος
+McOpenTitle	Άνοιγμα προγράμματος G-code
+McAboutBody	Το πρόγραμμα ελέγχου μηχανής του EH3D: προς το παρόν ελέγχει μια προσομοιωμένη μηχανή.
+FleetTitle	Μηχανές και σταθμοί
+FleetNoStation	Χωρίς σταθμό
+FleetWaiting	Αναμονή για τον χειριστή
+FleetReady	εργασίες έτοιμες
+FleetUse	Χρήση αυτής της μηχανής
+FleetTarget	Μηχανή των εργασιών
+FleetNoServer	Η σύνδεση δεν είναι διακομιστής EH3D: επιλέξτε τον στη Σύνδεση για να δείτε τις μηχανές.
+FleetRefresh	Ανανέωση
+JobOutsideTable	Η εργασία δεν χωράει στο τραπέζι: μετακινήστε την πλακέτα ή μεγαλώστε το τραπέζι
+LblThickness	Πάχος (mm)
+LblCopper	Χαλκός (µm)
+LblCopperSides	Όψεις χαλκού
+LblOneSide	1 όψη
+LblTwoSides	2 όψεις
+LblSize	Μέγεθος (mm)
+LblFromFiles	Από τα αρχεία
+LblMaker	Κατασκευαστής
+LblWidth	Πλάτος
+LblDepth	Βάθος
+LblPhotoresist	Φωτοευαίσθητη ρητίνη
+LblExtraStroke	Επιπλέον διαδρομή (mm)
+LblFeed	Τροφοδοσία (mm/min)
+LblSpeedRpm	Ταχύτητα (rpm)
+LblDepthMm	Βάθος (mm)
+LblPasses	Περάσματα
+LblFeedXy	Τροφοδοσία XY (mm/min)
+LblFeedZ	Τροφοδοσία Z (mm/min)
+LblDefault	Προεπ.
+LblFileCoords	Συντεταγμένες των αρχείων
+LblNoRack	Το αρχείο της μηχανής δεν έχει ακόμη θέσεις αποθήκης
+LblWorkArea	Περιοχή εργασίας
+LblWholeMachine	Ολόκληρη η μηχανή
+LblLayers	Επίπεδα
+SoundFinish	Ήχος όταν τελειώνει η εργασία
+SoundTool	Ήχος όταν ζητείται εργαλείο
+SoundCheckOk	Ήχος όταν ο οπτικός έλεγχος είναι σωστός
+SoundCheckBad	Ήχος όταν ο οπτικός έλεγχος δεν είναι σωστός
+SoundFileHint	Αρχείο WAV (κενό: ο προεπιλεγμένος τόνος)
+SoundTest	Δοκιμή
+SndOff	Χωρίς ήχο
+SndDefault	Ο τυπικός τόνος
+SndFile	Δικό μου αρχείο (WAV)
+SndChime	καμπανάκι
+SndRise	νότες που ανεβαίνουν
+SndFall	νότες που κατεβαίνουν
+SndFanfare	φανφάρα
+SndTriple	τρεις νότες
+SndBell	κουδούνι
+SndBeep	μπιπ
+SndDouble	διπλό μπιπ
+SndTripleBeep	τριπλό μπιπ
+SndAlarm	συναγερμός
+SndKnock	χτύπημα
+SndSiren	σειρήνα
