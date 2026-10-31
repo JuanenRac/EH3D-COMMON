@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.0.7] - More languages, the spindles and the texts of the parts of a job
+
 - **Twenty-nine more languages (eh3d-view):** Bulgarian, Croatian, Czech, Danish, Dutch, Estonian, Finnish, Greek, Hungarian, Irish, Latvian, Lithuanian, Maltese, Polish, Romanian, Slovak, Slovenian, Swedish, Norwegian, Icelandic, Ukrainian, Russian, Serbian, Albanian, Catalan, Galician, Basque, Brazilian Portuguese and Canadian French, read from the files of `crates/view/locales` (one line per text); a text a file does not have is taken from English, or from Portuguese and French for the two variants. `Lang::ALL` lists the 37, with `native_name`, `fallback`, `coverage` and codes such as `pt-br`. The translations are the work of the model and are open to review by native speakers. A test checks that each new language has all its texts and its own alphabet.
 - **Text of the choice of several files** in the eight first languages (and the new ones as they are translated).
 
