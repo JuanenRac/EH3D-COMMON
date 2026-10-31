@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Free G-code jobs in the fleet (eh3d-fleet):** a job of `kind` `gcode` is read with its state, its `line` (0 when the fleet answer does not carry it), the question it waits at (`hold` when the operator held it, `resume` when it goes on after a stop and waits before its first move) and the tool of a tool change; `Job::is_gcode`, `is_held`, `is_going_on` and `wants_resume` tell the answer to give (`resume` or `confirm`). `Machine::takes` says which kinds of job a connection takes (a node drilling and routing, a GRBL controller G-code, the simulator all three) and `Fleet::pick_free_for` picks the free machine for a kind of job. The text table shows the line and the question. 3 tests more.
 - **The name of a board material in the 37 languages (eh3d-view):** FR4 600 series, positive presensitized.
 - **Texts of the tool rack of the ATC models (eh3d-view):** the title, the slot 0 of the test tool, the request to load the rack and the name of a load, in the 37 languages.
 - **Texts of the connection to the server (eh3d-view):** the Server section of the settings, the address, the access token and the machine id, and the entry that sends a program to the server, in the 37 languages.

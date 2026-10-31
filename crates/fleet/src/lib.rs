@@ -12,7 +12,7 @@ pub enum MachineState {
     Idle,
     /// A job is running.
     Busy,
-    /// A job is held at a question for the operator (the tool change, the spindle).
+    /// A job is held at a question for the operator (the tool change, the spindle, a hold of a G-code job, or the wait of a job that goes on).
     Waiting,
 }
 
@@ -40,16 +40,46 @@ impl MachineState {
 pub struct Job {
     pub id: String,
     pub name: String,
-    /// `drill` or `route`.
+    /// `drill`, `route` or `gcode` (a free G-code program). A kind this crate does not know is kept as the server wrote it.
     pub kind: String,
+    /// The state of the job (`running`, `waiting_operator`...), empty when the answer does not say.
+    pub state: String,
     /// How far it has got, 0 to 100.
     pub percent: u8,
     pub items_done: usize,
     pub items_total: usize,
     /// Who asked for it.
     pub by: String,
-    /// The question it waits at (`tool_change` or `spindle_start`), if any.
+    /// The question it waits at, if any: `tool_change` or `spindle_start` (drilling and routing), `hold` (a G-code job the operator held) or `resume`
+    /// (a G-code job that goes on after a stop and waits before its first move).
     pub question: Option<String>,
+    /// The tool a `tool_change` question asks for.
+    pub question_tool: Option<u32>,
+    /// A G-code job: the line of the program text it has got to (where a job that goes on starts from). The fleet answer of the server does not
+    /// carry it today, so it is 0 unless the answer has a `line`; the full job (`GET /api/v1/jobs/:id`) always does.
+    pub line: usize,
+}
+
+impl Job {
+    /// Is it a free G-code program?
+    pub fn is_gcode(&self) -> bool {
+        self.kind == "gcode"
+    }
+
+    /// A G-code job the operator held: `POST /api/v1/jobs/:id/resume` lets it go.
+    pub fn is_held(&self) -> bool {
+        self.question.as_deref() == Some("hold")
+    }
+
+    /// A G-code job that goes on after a stop and waits for the operator before its first move.
+    pub fn is_going_on(&self) -> bool {
+        self.question.as_deref() == Some("resume")
+    }
+
+    /// Is the question one that is answered with `resume` (a hold, or the wait of a job that goes on) rather than with `confirm`?
+    pub fn wants_resume(&self) -> bool {
+        self.is_held() || self.is_going_on()
+    }
 }
 
 #[derive(Debug, Clone, PartialEq)]
@@ -59,12 +89,23 @@ pub struct Machine {
     pub model: String,
     /// The station it belongs to; empty when it has none.
     pub station: String,
-    /// `demo` (the simulator) or `node`.
+    /// `demo` (the simulator), `node` or `grbl`.
     pub connection: String,
     pub state: MachineState,
     pub job: Option<Job>,
     /// How many jobs are ready on it, waiting for an operator to start them.
     pub ready: usize,
+}
+
+impl Machine {
+    /// Does this machine take this kind of job (`drill`, `route` or `gcode`)? A node takes drilling and routing, a GRBL controller takes G-code, the
+    /// simulator takes all three; the server refuses the rest with `wrong_machine`.
+    pub fn takes(&self, kind: &str) -> bool {
+        matches!(
+            (self.connection.as_str(), kind),
+            ("node", "drill" | "route") | ("grbl", "gcode") | ("demo", "drill" | "route" | "gcode")
+        )
+    }
 }
 
 /// The machines of one station (the station without a name holds the machines that have none).
@@ -121,10 +162,17 @@ impl Fleet {
                 items_done: count(j, "items_done"),
                 items_total: count(j, "items_total"),
                 by: text(j, "by"),
+                state: text(j, "state"),
                 question: j
                     .get("pause")
                     .filter(|p| p.is_object())
                     .map(|p| text(p, "kind")),
+                question_tool: j
+                    .get("pause")
+                    .and_then(|p| p.get("tool"))
+                    .and_then(Value::as_u64)
+                    .map(|t| t as u32),
+                line: count(j, "line"),
             });
             machines.push(Machine {
                 name: if text(m, "name").is_empty() {
@@ -206,6 +254,16 @@ impl Fleet {
             .min_by_key(|m| m.ready)
     }
 
+    /// Like [`Fleet::pick_free`], but only among the machines that take this kind of job: a `node` takes `drill` and `route`, a `grbl` machine
+    /// takes `gcode`, the simulator (`demo`) takes all three. A kind that is not known goes to no machine.
+    pub fn pick_free_for(&self, station: &str, kind: &str) -> Option<&Machine> {
+        self.free()
+            .into_iter()
+            .filter(|m| station.is_empty() || m.station == station)
+            .filter(|m| m.takes(kind))
+            .min_by_key(|m| m.ready)
+    }
+
     pub fn summary(&self) -> Summary {
         let mut s = Summary {
             machines: self.machines.len(),
@@ -232,10 +290,19 @@ impl Fleet {
             ));
             for m in self.machines_of(&st.id) {
                 let job = match &m.job {
-                    Some(j) => format!(
-                        "{} {}% ({}/{})",
-                        j.name, j.percent, j.items_done, j.items_total
-                    ),
+                    Some(j) => {
+                        let mut line = format!(
+                            "{} {}% ({}/{})",
+                            j.name, j.percent, j.items_done, j.items_total
+                        );
+                        if j.is_gcode() && j.line > 0 {
+                            line.push_str(&format!(" line {}", j.line));
+                        }
+                        if let Some(q) = &j.question {
+                            line.push_str(&format!(" [{q}]"));
+                        }
+                        line
+                    }
                     None => String::new(),
                 };
                 out.push_str(&format!(
@@ -296,6 +363,79 @@ mod tests {
         );
         assert!(f.find("bench-2").unwrap().job.is_none());
         assert!(f.find("none").is_none());
+    }
+
+    fn gcode_sample() -> Value {
+        json!({
+            "stations": [{"id": "router", "machines": ["grbl-1", "grbl-2", "sim", "drill-1"]}],
+            "machines": [
+                {"id": "grbl-1", "name": "Router", "station": "router", "connection": "grbl", "state": "waiting",
+                 "job": {"id": "g1", "name": "frame", "kind": "gcode", "state": "waiting_operator", "by": "ana", "items_done": 40,
+                         "items_total": 100, "holes_done": 0, "holes_total": 0, "percent": 40, "line": 57, "pause": {"kind": "hold"}}, "ready": 0},
+                {"id": "grbl-2", "name": "Second", "station": "router", "connection": "grbl", "state": "waiting",
+                 "job": {"id": "g2", "name": "again", "kind": "gcode", "state": "waiting_operator", "items_done": 0, "items_total": 60,
+                         "percent": 0, "pause": {"kind": "resume"}}, "ready": 1},
+                {"id": "sim", "name": "Simulator", "station": "router", "connection": "demo", "state": "idle", "job": null, "ready": 2},
+                {"id": "drill-1", "name": "Drill", "station": "router", "connection": "node", "state": "idle", "job": null, "ready": 0}
+            ]
+        })
+    }
+
+    #[test]
+    fn a_gcode_job_with_its_line_and_its_hold_or_wait_to_go_on_is_read() {
+        let f = Fleet::from_json(&gcode_sample()).unwrap();
+        let held = f.find("grbl-1").unwrap().job.as_ref().unwrap();
+        assert!(held.is_gcode() && held.is_held() && !held.is_going_on() && held.wants_resume());
+        assert_eq!(
+            (held.line, held.state.as_str(), held.question.as_deref()),
+            (57, "waiting_operator", Some("hold"))
+        );
+        // the fleet answer of the server has no line: it is 0, and the job that goes on is told apart from a held one
+        let again = f.find("grbl-2").unwrap().job.as_ref().unwrap();
+        assert!(again.is_going_on() && !again.is_held() && again.wants_resume());
+        assert_eq!(again.line, 0);
+        assert_eq!(f.summary().waiting, 2);
+        // a tool change is answered with confirm, not resume, and its tool is read
+        let d = Fleet::from_json(&sample()).unwrap();
+        let q = d.find("bench-1").unwrap().job.as_ref().unwrap();
+        assert!(!q.is_gcode() && !q.wants_resume());
+        assert_eq!(
+            (q.question.as_deref(), q.question_tool),
+            (Some("tool_change"), Some(2))
+        );
+        assert_eq!(q.state, "waiting_operator");
+        // a job with no state, no line and no pause is still read
+        let plain = d.find("room-1").unwrap().job.as_ref().unwrap();
+        assert_eq!((plain.question_tool, plain.line), (None, 0));
+    }
+
+    #[test]
+    fn each_kind_of_job_goes_only_to_a_machine_that_takes_it() {
+        let f = Fleet::from_json(&gcode_sample()).unwrap();
+        let sim = f.find("sim").unwrap();
+        let drill = f.find("drill-1").unwrap();
+        let grbl = f.find("grbl-1").unwrap();
+        assert!(sim.takes("drill") && sim.takes("route") && sim.takes("gcode"));
+        assert!(drill.takes("drill") && drill.takes("route") && !drill.takes("gcode"));
+        assert!(grbl.takes("gcode") && !grbl.takes("drill") && !grbl.takes("route"));
+        assert!(!sim.takes("laser"));
+        // both GRBL machines are waiting, so the only free machine for G-code is the simulator; drilling goes to the node (no jobs ready)
+        assert_eq!(f.pick_free_for("", "gcode").unwrap().id, "sim");
+        assert_eq!(f.pick_free_for("router", "drill").unwrap().id, "drill-1");
+        assert!(f.pick_free_for("nowhere", "gcode").is_none());
+        assert!(f.pick_free_for("", "laser").is_none());
+        // pick_free is unchanged: it does not look at the kind
+        assert_eq!(f.pick_free("").unwrap().id, "drill-1");
+    }
+
+    #[test]
+    fn the_text_says_the_line_and_the_question_of_a_gcode_job() {
+        let t = Fleet::from_json(&gcode_sample()).unwrap().to_text();
+        assert!(t.contains("frame 40% (40/100) line 57 [hold]"), "{t}");
+        assert!(t.contains("again 0% (0/60) [resume]"), "{t}");
+        assert!(t
+            .lines()
+            .any(|l| l.contains("grbl-1") && l.contains("grbl")));
     }
 
     #[test]
