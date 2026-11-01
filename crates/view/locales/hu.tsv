@@ -484,3 +484,4 @@ MatG10Plain	G10 (FR4 réz nélkül)
 MatPhenolicPaper	Fenolpapír (pertinax)
 LblNoCopper	Réz nélkül
 RackTips	Szerszámok 38 mm hosszúak, a gyűrűtől a hegyig 21 mm; levegő 6-8 bar; a mélységhatároló nyílása a helyek felé nézzen.
+ResumeChanged	A fájlok vagy a beállítások megváltoztak a munka leállása óta: nem folytatható biztonságosan

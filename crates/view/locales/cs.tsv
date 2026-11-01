@@ -484,3 +484,4 @@ MatG10Plain	G10 (FR4 bez mědi)
 MatPhenolicPaper	Fenolický papír (pertinax)
 LblNoCopper	Bez mědi
 RackTips	Nástroje 38 mm dlouhé, 21 mm od kroužku ke špičce; vzduch 6-8 bar; omezovač hloubky otvorem k pozicím.
+ResumeChanged	Soubory nebo nastavení se od zastavení úlohy změnily: nelze bezpečně pokračovat

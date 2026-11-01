@@ -484,3 +484,4 @@ MatG10Plain	G10 (FR4 uden kobber)
 MatPhenolicPaper	Fenolpapir (pertinax)
 LblNoCopper	Uden kobber
 RackTips	Værktøj på 38 mm, 21 mm fra ringen til spidsen; luft 6-8 bar; dybdebegrænseren med åbningen mod pladserne.
+ResumeChanged	Filerne eller indstillingerne er ændret, siden jobbet stoppede: det kan ikke fortsætte sikkert

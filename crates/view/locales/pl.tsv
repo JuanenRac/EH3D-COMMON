@@ -484,3 +484,4 @@ MatG10Plain	G10 (FR4 bez miedzi)
 MatPhenolicPaper	Papier fenolowy (pertynaks)
 LblNoCopper	Bez miedzi
 RackTips	Narzędzia 38 mm, 21 mm od pierścienia do końcówki; powietrze 6-8 bar; ogranicznik głębokości otworem do miejsc.
+ResumeChanged	Pliki lub ustawienia zmieniły się od zatrzymania zadania: nie można bezpiecznie kontynuować

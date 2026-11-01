@@ -484,3 +484,4 @@ MatG10Plain	G10 (FR4 bez medi)
 MatPhenolicPaper	Fenolický papier (pertinax)
 LblNoCopper	Bez medi
 RackTips	Nástroje 38 mm, 21 mm od krúžka po hrot; vzduch 6-8 bar; obmedzovač hĺbky otvorom k pozíciám.
+ResumeChanged	Súbory alebo nastavenia sa od zastavenia úlohy zmenili: nemožno bezpečne pokračovať
