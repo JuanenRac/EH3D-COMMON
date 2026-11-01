@@ -11,20 +11,58 @@ pub struct Tool {
     pub spindle_rpm: u32,
 }
 
-/// Lines 1-19 are comments; data starts on line 20.
+/// A line of the table that is not a comment and cannot be read: its number (from 1) and its text.
+#[derive(Debug, Clone, PartialEq)]
+pub struct BadLine {
+    pub line: usize,
+    pub text: String,
+}
+
+/// A number written with a decimal comma (`0,5`, as a Spanish or German Windows writes it) or a point.
+fn number<T: std::str::FromStr>(word: &str) -> Option<T> {
+    word.replace(',', ".").parse().ok()
+}
+
+/// Whether a line of the data part is a comment or empty (nothing to read).
+fn is_blank(l: &str) -> bool {
+    let t = l.trim();
+    t.is_empty() || t.starts_with(';')
+}
+
+fn read_line(l: &str) -> Option<Tool> {
+    let mut it = l.split_whitespace();
+    let tool = Tool {
+        number: number(it.next()?)?,
+        extra_stroke_mm: number(it.next()?)?,
+        feed_mm_min: number(it.next()?)?,
+        spindle_rpm: number(it.next()?)?,
+    };
+    // a fifth word is not part of the line of a tool
+    it.next().is_none().then_some(tool)
+}
+
+/// The tools of the table and the lines of the data part that cannot be read (a number with a letter, a missing field): nothing is dropped without being named.
+/// Lines 1-19 are comments; data starts on line 20. The decimal may be a point or a comma.
+pub fn parse_report(text: &str) -> (Vec<Tool>, Vec<BadLine>) {
+    let (mut tools, mut bad) = (Vec::new(), Vec::new());
+    for (i, l) in text.lines().enumerate().skip(19) {
+        if is_blank(l) {
+            continue;
+        }
+        match read_line(l) {
+            Some(t) => tools.push(t),
+            None => bad.push(BadLine {
+                line: i + 1,
+                text: l.trim().to_string(),
+            }),
+        }
+    }
+    (tools, bad)
+}
+
+/// The tools of the table (see [`parse_report`] for the lines that could not be read).
 pub fn parse(text: &str) -> Vec<Tool> {
-    text.lines()
-        .skip(19)
-        .filter_map(|l| {
-            let mut it = l.split_whitespace();
-            Some(Tool {
-                number: it.next()?.parse().ok()?,
-                extra_stroke_mm: it.next()?.parse().ok()?,
-                feed_mm_min: it.next()?.parse().ok()?,
-                spindle_rpm: it.next()?.parse().ok()?,
-            })
-        })
-        .collect()
+    parse_report(text).0
 }
 
 /// The text of a tool table file: the 19 comment lines of `original` followed by one line per tool.
@@ -56,6 +94,48 @@ pub fn rewrite(original: &str, tools: &[Tool]) -> String {
 #[cfg(test)]
 mod table_tests {
     use super::*;
+
+    fn table(lines: &str) -> String {
+        format!(
+            "{}{lines}",
+            ";
+"
+            .repeat(19)
+        )
+    }
+
+    #[test]
+    fn a_decimal_comma_is_read_and_a_bad_line_is_named() {
+        let (tools, bad) = parse_report(&table(
+            "05 0,5 1200 24000
+06 0.25 800 20000
+07 0.5 abc 24000
+08 0.5 900
+; a note
+
+",
+        ));
+        assert_eq!(tools.len(), 2);
+        assert_eq!(
+            (
+                tools[0].number,
+                tools[0].extra_stroke_mm,
+                tools[0].feed_mm_min,
+                tools[0].spindle_rpm
+            ),
+            (5, 0.5, 1200, 24000)
+        );
+        assert_eq!(bad.iter().map(|b| b.line).collect::<Vec<_>>(), vec![22, 23]);
+        assert_eq!(bad[0].text, "07 0.5 abc 24000");
+        // the comments of the first nineteen lines are never bad lines
+        assert!(parse_report(
+            "anything
+at all
+"
+        )
+        .1
+        .is_empty());
+    }
 
     #[test]
     fn a_table_saved_without_an_original_is_read_back() {

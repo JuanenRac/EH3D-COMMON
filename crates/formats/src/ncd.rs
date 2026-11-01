@@ -33,6 +33,16 @@ pub struct DrillFile {
     pub diameters: Vec<(u8, f64)>,
     /// True when the header declares metric units.
     pub metric: bool,
+    /// The lines that move the head in ways a drill file of holes does not hold (a slot written as `G00`/`G01`, `M15`/`M16` up and down) and are not part of the holes:
+    /// they are named, not dropped without a word.
+    pub ignored: Vec<Ignored>,
+}
+
+/// A line of the file that is not a hole and was left out: its number (from 1) and its text.
+#[derive(Debug, Clone, PartialEq)]
+pub struct Ignored {
+    pub line: usize,
+    pub text: String,
 }
 
 #[derive(Debug, PartialEq)]
@@ -178,15 +188,30 @@ fn parse_coord(s: &str, fmt: &Format, x: &mut i32, y: &mut i32) -> Option<()> {
     seen.then_some(())
 }
 
+/// Whether a first line is the start of an Excellon file and not the free text of an old teach-in file.
+fn looks_like_excellon(l: &str) -> bool {
+    let mut c = l.chars();
+    match c.next() {
+        Some('T') => c.next().is_some_and(|d| d.is_ascii_digit()),
+        Some('X') | Some('Y') => c
+            .next()
+            .is_some_and(|d| d.is_ascii_digit() || d == '-' || d == '+' || d == '.'),
+        Some(';') => true,
+        Some('M') => l == "M71" || l == "M72",
+        _ => l.starts_with("METRIC") || l.starts_with("INCH"),
+    }
+}
+
 pub fn parse(text: &str) -> Result<DrillFile, ParseError> {
     let mut out = DrillFile::default();
     let (mut tool, mut x, mut y) = (None::<u8>, 0, 0);
     let mut in_header = false;
     let mut fmt = Format::default();
     // Old teach-in files start with free text (title, unit note) that ends at the first `%`.
+    // (a file whose first line is already Excellon - a tool, a coordinate, a comment, a unit - has no such text: a `%` at its end is not the end of a title)
     let free_text = text.lines().next().is_some_and(|l| {
         let l = l.trim();
-        l != "M48" && !l.starts_with('%')
+        l != "M48" && !l.starts_with('%') && !looks_like_excellon(l)
     }) && text.lines().any(|l| l.trim().starts_with('%'))
         && !text.lines().any(|l| l.trim() == "M48");
     let mut skipping = free_text;
@@ -225,7 +250,13 @@ pub fn parse(text: &str) -> Result<DrillFile, ParseError> {
             continue;
         }
         if line.starts_with('M') {
-            // M30 end of program; others carry no geometry
+            // M30 end of program; M15/M16 put the tool down and up for a routed slot, which this format of holes does not hold: said, not lost
+            if line == "M15" || line == "M16" {
+                out.ignored.push(Ignored {
+                    line: n + 1,
+                    text: raw.trim().into(),
+                });
+            }
             continue;
         }
         if in_header {
@@ -243,6 +274,13 @@ pub fn parse(text: &str) -> Result<DrillFile, ParseError> {
             continue;
         }
         if line.starts_with('G') || line.starts_with("INCH") || line.starts_with("METRIC") {
+            // `G05` (drill mode) and `G90` (absolute) say nothing to do; a `G00`/`G01`/`G85` with a position is a slot, which is not read
+            if line.len() > 3 && line[1..].chars().any(|c| c == 'X' || c == 'Y') {
+                out.ignored.push(Ignored {
+                    line: n + 1,
+                    text: raw.trim().into(),
+                });
+            }
             continue;
         }
         if let Some(num) = line.strip_prefix('T') {
@@ -346,6 +384,77 @@ M30
         assert!((f.holes[0].x_mm() - 12.7).abs() < 0.02);
         assert!((f.holes[0].y_mm() + 25.4).abs() < 0.02);
         assert_eq!(f.tools, vec![1]);
+    }
+
+    #[test]
+    fn a_metric_file_is_read_in_millimetres_so_the_holes_are_where_they_were_drawn() {
+        // 3.3 metric: X12345 is 12.345 mm, not 12345 mils (313.6 mm)
+        let f = parse(
+            "M48
+METRIC
+T1C0.8
+%
+T1
+X12345Y20000
+M30
+",
+        )
+        .unwrap();
+        assert!(
+            (f.holes[0].x_mm() - 12.345).abs() < 0.02,
+            "{}",
+            f.holes[0].x_mm()
+        );
+        assert!((f.holes[0].y_mm() - 20.0).abs() < 0.02);
+        assert!(f.metric);
+    }
+
+    #[test]
+    fn slots_are_named_and_a_body_with_a_percent_at_its_end_keeps_its_holes() {
+        let f = parse(
+            "M48
+INCH
+T1C0.0315
+%
+T1
+X1000Y1000
+G00X2000Y2000
+M15
+G01X3000Y2000
+M16
+G05
+M30
+",
+        )
+        .unwrap();
+        assert_eq!(f.holes.len(), 1);
+        assert_eq!(
+            f.ignored.iter().map(|i| i.line).collect::<Vec<_>>(),
+            vec![7, 8, 9, 10]
+        );
+        assert_eq!(f.ignored[0].text, "G00X2000Y2000");
+        // a file with no header whose first line is a tool is a file of holes, though a `%` closes it
+        let g = parse(
+            "T01
+X1000Y1000
+X2000Y2000
+M30
+%
+",
+        )
+        .unwrap();
+        assert_eq!(g.holes.len(), 2);
+        // an old teach-in file with a title still has it skipped
+        let h = parse(
+            "TEACH IN FILE
+%
+T01
+X1000Y1000
+M30
+",
+        )
+        .unwrap();
+        assert_eq!(h.holes.len(), 1);
     }
 
     #[test]
