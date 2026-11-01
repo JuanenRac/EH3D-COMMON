@@ -35,6 +35,10 @@ pub fn rewrite(original: &str, tools: &[Tool]) -> String {
     if !out.is_empty() && !out.ends_with('\n') {
         out.push('\n');
     }
+    // the data starts on line 20: a file with fewer comment lines (or none) is filled up to it, or the tools would be read back as comments
+    for _ in out.lines().count()..19 {
+        out.push_str(";\r\n");
+    }
     for t in tools {
         // one decimal as in the file's own format, two when the depth needs them
         let depth = if ((t.depth_mm * 10.0).round() - t.depth_mm * 10.0).abs() < 1e-6 {
@@ -48,4 +52,23 @@ pub fn rewrite(original: &str, tools: &[Tool]) -> String {
         ));
     }
     out
+}
+
+#[cfg(test)]
+mod table_tests {
+    use super::*;
+
+    #[test]
+    fn a_table_saved_without_an_original_is_read_back() {
+        let tools = vec![Tool {
+            number: 1,
+            depth_mm: 1.7,
+            iterations: 2,
+            feed_xy_mm_min: 900,
+            feed_z_mm_min: 300,
+            spindle_rpm: 40000,
+        }];
+        let text = rewrite("", &tools);
+        assert_eq!(parse(&text), tools);
+    }
 }
