@@ -10,6 +10,8 @@ use crate::grbl::LineTransport;
 pub struct MockTransport {
     pub written: Vec<u8>,
     pub replies: VecDeque<String>,
+    /// The time each read was allowed to wait.
+    pub timeouts: Vec<Duration>,
 }
 
 impl MockTransport {
@@ -17,6 +19,7 @@ impl MockTransport {
         MockTransport {
             written: Vec::new(),
             replies: lines.iter().map(|l| l.to_string()).collect(),
+            timeouts: Vec::new(),
         }
     }
 
@@ -32,7 +35,8 @@ impl LineTransport for MockTransport {
         Ok(())
     }
 
-    fn read_line(&mut self, _timeout: Duration) -> io::Result<Option<String>> {
+    fn read_line(&mut self, timeout: Duration) -> io::Result<Option<String>> {
+        self.timeouts.push(timeout);
         Ok(self.replies.pop_front())
     }
 }

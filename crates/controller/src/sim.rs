@@ -3,6 +3,13 @@
 //!
 //! The G-code it understands is the basic one: `G0`/`G1` (with `X Y Z A` and `F`), `G90`/`G91`, `G20`/`G21`, `G92` (the work zero),
 //! `M3`/`M4`/`M5` with `S`, `M7`/`M8`/`M9`. A line that is anything else is refused with the controller's own kind of message.
+//!
+//! The `$` lines of GRBL that are safe are taken too: `$H` (a homing cycle that lasts [`SimController::home_duration`] on the clock of the
+//! simulator and leaves the machine at its home), `$X`, `$G`, `$$`, `$#`, `$I`, `$N`, `$J=...` and the numbered settings (`$100=250`).
+//! `$RST` (which wipes the memory of the controller) and every other `$` line are refused.
+
+use std::collections::BTreeMap;
+use std::time::Duration;
 
 use crate::{Capabilities, Command, Controller, Error, Family, State, Status, AXES};
 
@@ -27,6 +34,16 @@ pub struct SimController {
     pub travel: [(f64, f64); AXES],
     /// Every line taken, for the tests and the log of the program.
     pub log: Vec<String>,
+    /// How long a homing cycle (`$H`) lasts.
+    pub home_duration: Duration,
+    /// The time the simulated machine has spent in cycles that last (homing); it adds up.
+    pub clock: Duration,
+    /// Whether a cycle that lasts really waits that long (off by default, so that a program can be tried at once).
+    pub real_time: bool,
+    /// The numbered settings written with `$N=value`.
+    pub settings: BTreeMap<u32, f64>,
+    /// Check mode (`$C`): the lines are read and judged but the machine does not move.
+    check_mode: bool,
 }
 
 impl Default for SimController {
@@ -53,6 +70,11 @@ impl Default for SimController {
                 a
             },
             log: Vec::new(),
+            home_duration: Duration::from_secs(20),
+            clock: Duration::ZERO,
+            real_time: false,
+            settings: BTreeMap::new(),
+            check_mode: false,
         }
     }
 }
@@ -85,8 +107,108 @@ impl SimController {
                 return Err(Error::Alarm(msg));
             }
         }
-        self.machine = to;
+        if !self.check_mode {
+            self.machine = to;
+        }
         Ok(())
+    }
+
+    /// A `$` line of GRBL. Only the safe ones are taken; `$RST` and the rest are refused as the controller would.
+    fn dollar(&mut self, line: &str) -> Result<(), Error> {
+        let rest = line.trim()[1..].trim().to_ascii_uppercase();
+        let rest = rest.as_str();
+        match rest {
+            // reports: they only say something
+            "" | "$" | "#" | "G" | "I" | "N" => Ok(()),
+            // the unlock and the homing cycle are taken in an alarm, which they end
+            "C" => {
+                self.check_free()?;
+                self.check_mode = !self.check_mode;
+                self.state = if self.check_mode {
+                    State::Check
+                } else {
+                    State::Idle
+                };
+                Ok(())
+            }
+            "X" => {
+                self.alarm = None;
+                self.state = State::Idle;
+                Ok(())
+            }
+            "H" => {
+                let mut to = self.machine;
+                to[0] = self.travel[0].0;
+                to[1] = self.travel[1].0;
+                to[2] = self.travel[2].1;
+                self.alarm = None;
+                self.check_mode = false;
+                self.state = State::Idle;
+                self.go_to(to)?;
+                self.clock += self.home_duration;
+                if self.real_time {
+                    std::thread::sleep(self.home_duration);
+                }
+                Ok(())
+            }
+            _ if rest.starts_with("RST") => Err(Error::Refused(
+                "error:3 ($RST wipes the memory of the controller and is not taken)".into(),
+            )),
+            _ if rest.starts_with("J=") => self.jog_line(&rest[2..]),
+            _ => {
+                if let Some((n, v)) = rest.split_once('=') {
+                    if let (Ok(n), Ok(v)) = (n.trim().parse::<u32>(), v.trim().parse::<f64>()) {
+                        self.settings.insert(n, v);
+                        return Ok(());
+                    }
+                }
+                Err(Error::Refused(format!(
+                    "error:3 (${rest} is not supported)"
+                )))
+            }
+        }
+    }
+
+    /// `$J=...`: one move that changes no mode and needs a feed.
+    fn jog_line(&mut self, body: &str) -> Result<(), Error> {
+        self.check_free()?;
+        let (mut absolute, mut inches) = (self.absolute, self.inches);
+        let mut target = [None::<f64>; AXES];
+        let mut feed = None;
+        for (l, v) in Self::words(body)? {
+            match l {
+                'G' => match v as i32 {
+                    90 => absolute = true,
+                    91 => absolute = false,
+                    20 => inches = true,
+                    21 => inches = false,
+                    _ => return Err(Error::Refused(format!("error:20 (G{v} in a jog)"))),
+                },
+                'F' => feed = Some(v),
+                other => match Self::axis_of(other) {
+                    Some(i) => target[i] = Some(v),
+                    None => return Err(Error::Refused(format!("error:20 ({other} in a jog)"))),
+                },
+            }
+        }
+        if feed.is_none() {
+            return Err(Error::Refused("error:33 (a jog needs a feed)".into()));
+        }
+        if target.iter().all(Option::is_none) {
+            return Err(Error::Refused("error:33 (a jog needs an axis)".into()));
+        }
+        let scale = if inches { 25.4 } else { 1.0 };
+        let mut to = self.machine;
+        for (i, t) in target.iter().enumerate() {
+            if let Some(v) = t {
+                to[i] = if absolute {
+                    self.zero[i] + v * scale
+                } else {
+                    self.machine[i] + v * scale
+                };
+            }
+        }
+        self.go_to(to)
     }
 
     fn check_free(&self) -> Result<(), Error> {
@@ -268,6 +390,10 @@ impl Controller for SimController {
     }
 
     fn send_line(&mut self, line: &str) -> Result<(), Error> {
+        if line.trim_start().starts_with('$') {
+            self.log.push(line.to_string());
+            return self.dollar(line);
+        }
         self.check_free()?;
         self.log.push(line.to_string());
         let words = Self::words(line)?;
@@ -341,7 +467,9 @@ impl Controller for SimController {
                 }
             }
             self.go_to(to)?;
-            self.state = State::Idle;
+            if !self.check_mode {
+                self.state = State::Idle;
+            }
         }
         Ok(())
     }
@@ -482,5 +610,70 @@ mod tests {
             (st.machine_mm[0], st.machine_mm[1], st.machine_mm[2]),
             (0.0, 0.0, 50.0)
         );
+    }
+
+    #[test]
+    fn the_dollar_lines_that_are_safe_are_taken_and_homing_takes_its_time() {
+        let mut s = SimController::new();
+        s.send_line("G0 X50 Y60 Z-20").unwrap();
+        s.send_line("$H").unwrap();
+        let st = s.status().unwrap();
+        assert_eq!(
+            (st.machine_mm[0], st.machine_mm[1], st.machine_mm[2]),
+            (0.0, 0.0, 50.0)
+        );
+        assert_eq!(s.clock, Duration::from_secs(20));
+        s.home_duration = Duration::from_secs(5);
+        s.send_line("$H").unwrap();
+        assert_eq!(s.clock, Duration::from_secs(25));
+        for l in ["$G", "$$", "$#", "$I", "$N", "$X", "$100=250.000"] {
+            s.send_line(l).unwrap();
+        }
+        assert_eq!(s.settings.get(&100), Some(&250.0));
+        // a jog moves without changing the modes and wants a feed
+        s.send_line("$J=G91 X10 F200").unwrap();
+        assert_eq!(s.status().unwrap().machine_mm[0], 10.0);
+        assert!(matches!(s.send_line("$J=G91 X1"), Err(Error::Refused(_))));
+        assert!(matches!(s.send_line("$J=G91 F10"), Err(Error::Refused(_))));
+        assert!(matches!(
+            s.send_line("$J=G91 X900 F10"),
+            Err(Error::Alarm(_))
+        ));
+    }
+
+    #[test]
+    fn what_is_dangerous_among_the_dollar_lines_is_still_refused() {
+        let mut s = SimController::new();
+        s.send_line("$100=250").unwrap();
+        for l in [
+            "$RST=$", "$rst=*", "$RST=#", "$SLP", "$N0=G54", "$Z", "$100=abc",
+        ] {
+            assert!(matches!(s.send_line(l), Err(Error::Refused(_))), "{l}");
+        }
+        // nothing was changed by them
+        assert_eq!(s.settings.len(), 1);
+    }
+
+    #[test]
+    fn the_check_mode_judges_the_lines_and_does_not_move_the_machine() {
+        let mut s = SimController::new();
+        s.send_line("$C").unwrap();
+        assert_eq!(s.status().unwrap().state, State::Check);
+        s.send_line("G0 X40").unwrap();
+        assert_eq!(s.status().unwrap().machine_mm[0], 0.0);
+        s.send_line("$C").unwrap();
+        assert_eq!(s.status().unwrap().state, State::Idle);
+        s.send_line("G0 X40").unwrap();
+        assert_eq!(s.status().unwrap().machine_mm[0], 40.0);
+    }
+
+    #[test]
+    fn homing_and_unlocking_are_taken_in_an_alarm_and_end_it_while_a_jog_is_not() {
+        let mut s = SimController::new();
+        assert!(s.send_line("G0 X900").is_err());
+        assert!(matches!(s.send_line("$J=G91 X1 F10"), Err(Error::Alarm(_))));
+        s.send_line("$G").unwrap();
+        s.send_line("$H").unwrap();
+        assert_eq!(s.status().unwrap().state, State::Idle);
     }
 }

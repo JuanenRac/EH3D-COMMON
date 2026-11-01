@@ -4,6 +4,9 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Waits of the GRBL controller by the kind of line (eh3d-controller):** `Timeouts` (an ordinary line 5 s, the homing cycle `$H` 120 s, a jog `$J=...` 60 s, all set with `GrblController::with_timeouts`) instead of one short wait for everything, and the wait is the total for the line, not the time between two lines of the controller. A line that does not end in time holds the machine by its kind (the homing cycle is reset, because it ignores a hold; a jog is cancelled; anything else is held) before the `Timeout` is returned, so a failure never leaves it moving. The test transport keeps the waits it was given. 2 tests more.
+- **The simulator takes the safe `$` lines of GRBL (eh3d-controller):** `$H` (a homing cycle that lasts `home_duration`, 20 s on the clock of the simulator, really waited only with `real_time`, and leaves the machine at its home; it also ends an alarm), `$X`, `$G`, `$$`, `$#`, `$I`, `$N`, `$C` (check mode: the lines are judged and nothing moves), `$J=...` (one move that changes no mode and needs a feed) and the numbered settings (`$100=250`, kept in `settings`). `$RST`, `$N0=...`, `$SLP` and any other `$` line are still refused. 4 tests more.
+
 - **Tips for loading the tool rack (eh3d-view):** the size of the tools, the air and the depth limiter with the changer, in the 37 languages.
 
 - **Texts for the sheets without copper of the board library (eh3d-view):** the names with words of aluminium, copper, birch plywood, balsa, basswood, PTFE, acrylic, polycarbonate, nylon, G10 and phenolic paper, and "No copper", in the 37 languages (the eight inside the program and the 27 files of `locales/`); the designations that are the same everywhere (MDF, ABS, POM, PVC, HDPE, PETG) need none.

@@ -4,7 +4,7 @@
 //! The lines are sent one at a time and each one waits for its `ok` (or `error:N`): simple and safe, not the fastest way to stream.
 
 use std::io;
-use std::time::Duration;
+use std::time::{Duration, Instant};
 
 use crate::{Capabilities, Command, Controller, Error, Family, State, Status, AXES};
 
@@ -22,10 +22,53 @@ const RESUME: u8 = b'~';
 const RESET: u8 = 0x18;
 const JOG_CANCEL: u8 = 0x85;
 
+/// How long the controller waits for the end of a line, by the kind of line. Most lines are taken at once; a homing cycle (`$H`) and a
+/// jog (`$J=...`) answer only when the machine has finished moving, which can take a long time.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub struct Timeouts {
+    /// Any line that is not one of the two below, the status report and the settings.
+    pub line: Duration,
+    /// The homing cycle (`$H`).
+    pub homing: Duration,
+    /// A jog (`$J=...`).
+    pub jog: Duration,
+}
+
+impl Default for Timeouts {
+    fn default() -> Self {
+        Timeouts {
+            line: Duration::from_secs(5),
+            homing: Duration::from_secs(120),
+            jog: Duration::from_secs(60),
+        }
+    }
+}
+
+/// The kinds of line that wait for different times.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+enum Kind {
+    Plain,
+    Homing,
+    Jog,
+}
+
+impl Kind {
+    fn of(text: &str) -> Kind {
+        let t = text.trim().to_ascii_uppercase();
+        if t.starts_with("$J=") {
+            Kind::Jog
+        } else if t.starts_with("$H") {
+            Kind::Homing
+        } else {
+            Kind::Plain
+        }
+    }
+}
+
 pub struct GrblController<T: LineTransport> {
     transport: T,
     family: Family,
-    timeout: Duration,
+    timeouts: Timeouts,
     /// The offset of the work from the machine, which GRBL reports from time to time (`WCO:`).
     wco: [f64; AXES],
 }
@@ -35,7 +78,7 @@ impl<T: LineTransport> GrblController<T> {
         GrblController {
             transport,
             family: Family::Grbl,
-            timeout: Duration::from_secs(5),
+            timeouts: Timeouts::default(),
             wco: [0.0; AXES],
         }
     }
@@ -46,8 +89,15 @@ impl<T: LineTransport> GrblController<T> {
         self
     }
 
+    /// The time to wait for an ordinary line (the others keep theirs).
     pub fn with_timeout(mut self, timeout: Duration) -> Self {
-        self.timeout = timeout;
+        self.timeouts.line = timeout;
+        self
+    }
+
+    /// The times to wait for each kind of line.
+    pub fn with_timeouts(mut self, timeouts: Timeouts) -> Self {
+        self.timeouts = timeouts;
         self
     }
 
@@ -59,10 +109,16 @@ impl<T: LineTransport> GrblController<T> {
         Error::Link(e.to_string())
     }
 
-    /// Waits for the end of an order: `ok` is done; `error:N` and `ALARM:N` are refused; the other lines (messages, reports) are skipped.
-    fn wait_ok(&mut self) -> Result<(), Error> {
+    /// Waits for the end of an order, at most `limit` in all: `ok` is done; `error:N` and `ALARM:N` are refused; the other lines
+    /// (messages, reports) are skipped.
+    fn wait_ok(&mut self, limit: Duration) -> Result<(), Error> {
+        let end = Instant::now() + limit;
         loop {
-            match self.transport.read_line(self.timeout).map_err(Self::link)? {
+            let left = end.saturating_duration_since(Instant::now());
+            if left.is_zero() {
+                return Err(Error::Timeout);
+            }
+            match self.transport.read_line(left).map_err(Self::link)? {
                 None => return Err(Error::Timeout),
                 Some(l) => {
                     let l = l.trim();
@@ -81,10 +137,25 @@ impl<T: LineTransport> GrblController<T> {
     }
 
     fn line(&mut self, text: &str) -> Result<(), Error> {
+        let kind = Kind::of(text);
+        let limit = match kind {
+            Kind::Plain => self.timeouts.line,
+            Kind::Homing => self.timeouts.homing,
+            Kind::Jog => self.timeouts.jog,
+        };
         self.transport
             .write_all(format!("{text}\n").as_bytes())
             .map_err(Self::link)?;
-        self.wait_ok()
+        let done = self.wait_ok(limit);
+        if done == Err(Error::Timeout) {
+            // never leave the machine moving: a homing cycle ignores a hold, so it is reset; a jog is cancelled; the rest is held
+            let _ = self.byte(match kind {
+                Kind::Homing => RESET,
+                Kind::Jog => JOG_CANCEL,
+                Kind::Plain => HOLD,
+            });
+        }
+        done
     }
 
     fn byte(&mut self, b: u8) -> Result<(), Error> {
@@ -202,7 +273,11 @@ impl<T: LineTransport> Controller for GrblController<T> {
     fn status(&mut self) -> Result<Status, Error> {
         self.byte(STATUS)?;
         loop {
-            match self.transport.read_line(self.timeout).map_err(Self::link)? {
+            match self
+                .transport
+                .read_line(self.timeouts.line)
+                .map_err(Self::link)?
+            {
                 None => return Err(Error::Timeout),
                 Some(l) => {
                     if let Some(st) = parse_status(&l, &mut self.wco) {
@@ -370,6 +445,43 @@ mod tests {
         assert_eq!(c.send_line("   "), Ok(()));
         assert_eq!(c.send_line("G0 X0"), Ok(()));
         assert_eq!(c.transport().text(), "G0 X1\nG99\nG1 X5\nG0 X0\n");
+    }
+
+    #[test]
+    fn each_kind_of_line_waits_its_own_time() {
+        let mut c =
+            GrblController::new(MockTransport::with_replies(&["ok"; 4])).with_timeouts(Timeouts {
+                line: Duration::from_secs(2),
+                homing: Duration::from_secs(90),
+                jog: Duration::from_secs(30),
+            });
+        c.send_line("G0 X1").unwrap();
+        c.send_line("$H").unwrap();
+        c.send_line("$J=G91X5F100").unwrap();
+        c.send_line("$G").unwrap();
+        let secs: Vec<u64> = c.transport().timeouts.iter().map(|t| t.as_secs()).collect();
+        // each wait is at most the time of its kind (a little less: the time already spent is taken off)
+        assert!(secs[0] <= 2 && secs[1] <= 90 && secs[1] >= 89);
+        assert!(secs[2] <= 30 && secs[2] >= 29 && secs[3] <= 2);
+        assert_eq!(Timeouts::default().homing, Duration::from_secs(120));
+    }
+
+    #[test]
+    fn a_line_that_does_not_end_stops_the_machine_by_its_kind() {
+        let quick = Timeouts {
+            line: Duration::from_millis(1),
+            homing: Duration::from_millis(1),
+            jog: Duration::from_millis(1),
+        };
+        let mut c = GrblController::new(MockTransport::default()).with_timeouts(quick);
+        assert_eq!(c.send_line("$H"), Err(Error::Timeout));
+        assert_eq!(c.transport().written.last(), Some(&0x18));
+        let mut c = GrblController::new(MockTransport::default()).with_timeouts(quick);
+        assert_eq!(c.send_line("$J=G91X5F100"), Err(Error::Timeout));
+        assert_eq!(c.transport().written.last(), Some(&0x85));
+        let mut c = GrblController::new(MockTransport::default()).with_timeouts(quick);
+        assert_eq!(c.send_line("G1 X5 F100"), Err(Error::Timeout));
+        assert_eq!(c.transport().written.last(), Some(&b'!'));
     }
 
     #[test]
