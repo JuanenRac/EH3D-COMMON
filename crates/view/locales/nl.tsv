@@ -491,3 +491,6 @@ ClipPaste	Plakken
 ClipSelectAll	Alles selecteren
 ClipUndo	Ongedaan maken
 FullScreen	Volledig scherm
+BoardTooBig	Past niet op de tafel van de actieve machine, ook niet 90 graden gedraaid
+TableNoun	Tafel
+AllMakers	Alle fabrikanten

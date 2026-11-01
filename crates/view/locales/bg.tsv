@@ -491,3 +491,6 @@ ClipPaste	Поставяне
 ClipSelectAll	Избери всичко
 ClipUndo	Отмяна
 FullScreen	Цял екран
+BoardTooBig	Не се побира на масата на активната машина, дори завъртяна на 90 градуса
+TableNoun	Маса
+AllMakers	Всички производители

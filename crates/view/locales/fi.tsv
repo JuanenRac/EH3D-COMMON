@@ -491,3 +491,6 @@ ClipPaste	Liitä
 ClipSelectAll	Valitse kaikki
 ClipUndo	Kumoa
 FullScreen	Koko näyttö
+BoardTooBig	Ei mahdu aktiivisen koneen pöydälle, vaikka sen kääntäisi 90 astetta
+TableNoun	Pöytä
+AllMakers	Kaikki valmistajat

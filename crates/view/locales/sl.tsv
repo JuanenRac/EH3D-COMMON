@@ -491,3 +491,6 @@ ClipPaste	Prilepi
 ClipSelectAll	Izberi vse
 ClipUndo	Razveljavi
 FullScreen	Čez cel zaslon
+BoardTooBig	Ne ustreza mizi aktivnega stroja, niti zasukana za 90 stopinj
+TableNoun	Miza
+AllMakers	Vsi proizvajalci

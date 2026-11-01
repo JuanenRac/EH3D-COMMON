@@ -491,3 +491,6 @@ ClipPaste	Líma
 ClipSelectAll	Velja allt
 ClipUndo	Afturkalla
 FullScreen	Allur skjárinn
+BoardTooBig	Passar ekki á borð virku vélarinnar, ekki einu sinni snúið 90 gráður
+TableNoun	Borð
+AllMakers	Allir framleiðendur

@@ -491,3 +491,6 @@ ClipPaste	Greamaigh
 ClipSelectAll	Roghnaigh gach rud
 ClipUndo	Cealaigh
 FullScreen	Lánscáileán
+BoardTooBig	Ní luíonn sí ar tábla an mheaisín ghníomhaigh, fiú má chastar 90 céim í
+TableNoun	Tábla
+AllMakers	Gach monaróir

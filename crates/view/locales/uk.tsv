@@ -491,3 +491,6 @@ ClipPaste	Вставити
 ClipSelectAll	Вибрати все
 ClipUndo	Скасувати
 FullScreen	Повний екран
+BoardTooBig	Не вміщується на стіл активного верстата, навіть повернута на 90 градусів
+TableNoun	Стіл
+AllMakers	Усі виробники

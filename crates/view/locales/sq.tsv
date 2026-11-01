@@ -491,3 +491,6 @@ ClipPaste	Ngjit
 ClipSelectAll	Zgjidh të gjitha
 ClipUndo	Zhbëj
 FullScreen	Ekran i plotë
+BoardTooBig	Nuk përshtatet në tavolinën e makinës aktive, madje as e rrotulluar 90 gradë
+TableNoun	Tavolina
+AllMakers	Të gjithë prodhuesit

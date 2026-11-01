@@ -491,3 +491,6 @@ ClipPaste	Wklej
 ClipSelectAll	Zaznacz wszystko
 ClipUndo	Cofnij
 FullScreen	Pełny ekran
+BoardTooBig	Nie mieści się na stole aktywnej maszyny, nawet obrócona o 90 stopni
+TableNoun	Stół
+AllMakers	Wszyscy producenci

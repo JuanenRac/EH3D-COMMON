@@ -491,3 +491,6 @@ ClipPaste	Klistra in
 ClipSelectAll	Markera alla
 ClipUndo	Ångra
 FullScreen	Helskärm
+BoardTooBig	Ryms inte på den aktiva maskinens bord, inte ens vriden 90 grader
+TableNoun	Bord
+AllMakers	Alla tillverkare

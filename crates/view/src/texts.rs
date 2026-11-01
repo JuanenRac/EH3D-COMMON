@@ -787,6 +787,9 @@ texts! {
     ClipSelectAll => ["Select all", "Seleccionar todo", "Seleziona tutto", "Alles auswählen", "Tout sélectionner", "Selecionar tudo", "全选", "すべて選択"],
     ClipUndo => ["Undo", "Deshacer", "Annulla", "Rückgängig", "Annuler", "Anular", "撤销", "元に戻す"],
     FullScreen => ["Full screen", "Pantalla completa", "Schermo intero", "Vollbild", "Plein écran", "Ecrã inteiro", "全屏", "全画面表示"],
+    BoardTooBig => ["Does not fit the table of the active machine, even turned 90 degrees", "No cabe en la mesa de la máquina activa, ni girada 90 grados", "Non entra nel piano della macchina attiva, nemmeno ruotata di 90 gradi", "Passt nicht auf den Tisch der aktiven Maschine, auch nicht um 90 Grad gedreht", "Ne tient pas sur la table de la machine active, même tournée de 90 degrés", "Não cabe na mesa da máquina ativa, nem rodada 90 graus", "放不到当前机器的工作台上，即使旋转 90 度也不行", "90度回転させても、有効な機械のテーブルに収まりません"],
+    TableNoun => ["Table", "Mesa", "Piano", "Tisch", "Table", "Mesa", "工作台", "テーブル"],
+    AllMakers => ["All makers", "Todos los fabricantes", "Tutti i produttori", "Alle Hersteller", "Tous les fabricants", "Todos os fabricantes", "所有制造商", "すべてのメーカー"],
 }
 
 impl crate::theme::ThemeId {

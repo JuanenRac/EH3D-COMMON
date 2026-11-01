@@ -491,3 +491,6 @@ ClipPaste	Lim inn
 ClipSelectAll	Merk alt
 ClipUndo	Angre
 FullScreen	Fullskjerm
+BoardTooBig	Passer ikke på den aktive maskinens bord, heller ikke dreid 90 grader
+TableNoun	Bord
+AllMakers	Alle produsenter

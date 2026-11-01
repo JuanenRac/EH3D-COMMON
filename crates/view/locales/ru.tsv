@@ -491,3 +491,6 @@ ClipPaste	Вставить
 ClipSelectAll	Выделить всё
 ClipUndo	Отменить
 FullScreen	Во весь экран
+BoardTooBig	Не помещается на стол активного станка, даже повёрнутая на 90 градусов
+TableNoun	Стол
+AllMakers	Все производители

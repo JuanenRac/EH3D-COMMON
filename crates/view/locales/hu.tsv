@@ -491,3 +491,6 @@ ClipPaste	Beillesztés
 ClipSelectAll	Összes kijelölése
 ClipUndo	Visszavonás
 FullScreen	Teljes képernyő
+BoardTooBig	Nem fér rá az aktív gép asztalára, még 90 fokkal elforgatva sem
+TableNoun	Asztal
+AllMakers	Minden gyártó

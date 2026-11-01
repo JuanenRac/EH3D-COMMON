@@ -491,3 +491,6 @@ ClipPaste	Vložit
 ClipSelectAll	Vybrat vše
 ClipUndo	Zpět
 FullScreen	Celá obrazovka
+BoardTooBig	Nevejde se na stůl aktivního stroje, ani otočená o 90 stupňů
+TableNoun	Stůl
+AllMakers	Všichni výrobci

@@ -147,3 +147,6 @@ ClipPaste	Colar
 ClipSelectAll	Selecionar tudo
 ClipUndo	Desfazer
 FullScreen	Tela cheia
+BoardTooBig	Não cabe na mesa da máquina ativa, nem girada 90 graus
+TableNoun	Mesa
+AllMakers	Todos os fabricantes

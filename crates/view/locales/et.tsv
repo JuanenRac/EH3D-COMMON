@@ -491,3 +491,6 @@ ClipPaste	Aseta
 ClipSelectAll	Vali kõik
 ClipUndo	Võta tagasi
 FullScreen	Täisekraan
+BoardTooBig	Ei mahu aktiivse masina lauale, isegi 90 kraadi keerates
+TableNoun	Laud
+AllMakers	Kõik tootjad
