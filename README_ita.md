@@ -46,12 +46,12 @@ Ogni riga è una parte di questo repository e il semaforo dice a che punto è og
 |---|---|---|
 | Contenitore | 🟡 | `.eh3dproj` è uno ZIP standard con un registro SHA-256 di ogni voce; legge, scrive e rifiuta voci danneggiate, alterate, non elencate o non sicure. Finora lo leggono e scrivono solo i suoi test. |
 | Metadati | 🟡 | I metadati di un progetto (unità, zero, livelli, utensili, percorsi, fiduciali) sono convalidati e portano una versione di formato semantica; non c'è ancora migrazione perché 1.0.0 è il primo formato. |
-| Telemetria e tema | 🟢 | Assi, mandrino, stati della macchina, codici di allarme GRBL con la loro gravità e colori della suite con controllo del contrasto, tutto testato. |
-| Test | 🟢 | Passano 171 test (`cargo test --workspace`): 16 nei moduli e 14 sul contenitore del crate principale, e 137 nei nove crate condivisi. |
+| Telemetria e tema | 🟡 | Assi, mandrino, stati della macchina, codici di allarme GRBL con la loro gravità e colori della suite con controllo del contrasto, tutto testato. |
+| Test | 🟡 | Passano 171 test (`cargo test --workspace`): 16 nei moduli e 14 sul contenitore del crate principale, e 137 nei nove crate condivisi. |
 | Sicurezza | 🟡 | Nomi non sicuri, voci troppo grandi o troppo numerose e qualsiasi voce alterata vengono rifiutati; il pacchetto non è firmato né cifrato e non ha avuto una revisione indipendente. |
 | Base del firmware | 🟠 | 49 file condivisi dai nodi ESP32, mantenuti identici da `tools/sync_firmware_base.py`; provata solo tramite EH3D-NODE-BUNGARD, l'unico nodo che la usa, e mai eseguita su una scheda. |
 | Uso da altri programmi | 🟡 | I crate del workspace sono usati da EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC ed EH3D-SERVER (per percorso, con i repository affiancati); il contenitore di progetto in sé non è ancora usato da alcun programma. |
-| Documentazione | 🟢 | README in otto lingue, la descrizione del formato e la guida alla base del firmware; la CI le confronta con il manifesto e il registro delle modifiche. |
+| Documentazione | 🟡 | README in otto lingue, la descrizione del formato e la guida alla base del firmware; la CI le confronta con il manifesto e il registro delle modifiche. |
 
 ## 🎯 Panoramica
 

@@ -46,12 +46,12 @@ Jede Zeile ist ein Teil dieses Repositorys, und die Ampel sagt, wie weit er heut
 |---|---|---|
 | Container | 🟡 | `.eh3dproj` ist ein Standard-ZIP mit einem SHA-256-Eintrag je Eintrag; es liest, schreibt und weist beschädigte, veränderte, nicht gelistete und unsichere Einträge ab. Bisher lesen und schreiben es nur die eigenen Tests. |
 | Metadaten | 🟡 | Die Metadaten eines Projekts (Einheiten, Nullpunkt, Ebenen, Werkzeuge, Werkzeugwege, Passmarken) werden geprüft und tragen eine semantische Formatversion; eine Migration gibt es noch nicht, da 1.0.0 das erste Format ist. |
-| Telemetrie und Theme | 🟢 | Achsen, Spindel, Maschinenzustände, die GRBL-Alarmcodes mit ihrer Schwere und die Farben der Suite mit Kontrastprüfung, alles getestet. |
-| Tests | 🟢 | 171 Tests bestehen (`cargo test --workspace`): 16 in den Modulen und 14 am Container des Hauptcrates sowie 137 in den neun gemeinsamen Crates. |
+| Telemetrie und Theme | 🟡 | Achsen, Spindel, Maschinenzustände, die GRBL-Alarmcodes mit ihrer Schwere und die Farben der Suite mit Kontrastprüfung, alles getestet. |
+| Tests | 🟡 | 171 Tests bestehen (`cargo test --workspace`): 16 in den Modulen und 14 am Container des Hauptcrates sowie 137 in den neun gemeinsamen Crates. |
 | Sicherheit | 🟡 | Unsichere Namen, zu große oder zu viele Einträge und jeder veränderte Eintrag werden abgewiesen; das Paket ist weder signiert noch verschlüsselt und wurde nicht unabhängig geprüft. |
 | Firmware-Basis | 🟠 | 49 Dateien, die die ESP32-Knoten teilen und die `tools/sync_firmware_base.py` identisch hält; nur über EH3D-NODE-BUNGARD getestet, den einzigen Knoten, der sie nutzt, und nie auf einer Platine gelaufen. |
 | Nutzung durch andere Programme | 🟡 | Die Crates des Workspace werden von EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC und EH3D-SERVER benutzt (per Pfad, die Repositories liegen nebeneinander); den Projektcontainer selbst benutzt noch kein Programm. |
-| Dokumentation | 🟢 | README in acht Sprachen, die Formatbeschreibung und der Leitfaden zur Firmware-Basis; die CI vergleicht sie mit Manifest und Änderungsprotokoll. |
+| Dokumentation | 🟡 | README in acht Sprachen, die Formatbeschreibung und der Leitfaden zur Firmware-Basis; die CI vergleicht sie mit Manifest und Änderungsprotokoll. |
 
 ## 🎯 Überblick
 

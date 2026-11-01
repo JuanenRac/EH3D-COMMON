@@ -46,12 +46,12 @@ Each line is one part of this repository and the light says how far it is today.
 |---|---|---|
 | Container | 🟡 | `.eh3dproj` is a standard ZIP with a SHA-256 record of every entry; it reads, writes, and refuses damaged, altered, unlisted and unsafe entries. Only its own tests read and write it so far. |
 | Metadata | 🟡 | The metadata of a project (units, zero, layers, tools, toolpaths, fiducials) is validated and carries a semantic format version; there is no migration yet because 1.0.0 is the first format. |
-| Telemetry and theme | 🟢 | Axes, spindle, machine states, the GRBL alarm codes with their severity and the colours of the suite with a contrast check, all tested. |
-| Tests | 🟢 | 171 tests pass (`cargo test --workspace`): 16 in the modules and 14 on the container of the main crate, and 137 in the nine shared crates. |
+| Telemetry and theme | 🟡 | Axes, spindle, machine states, the GRBL alarm codes with their severity and the colours of the suite with a contrast check, all tested. |
+| Tests | 🟡 | 171 tests pass (`cargo test --workspace`): 16 in the modules and 14 on the container of the main crate, and 137 in the nine shared crates. |
 | Security | 🟡 | Unsafe names, oversized or too many entries and any altered entry are refused; the package is not signed or encrypted and has had no independent review. |
 | Firmware base | 🟠 | 49 files shared by the ESP32 nodes, kept identical by `tools/sync_firmware_base.py`; tested only through EH3D-NODE-BUNGARD, the one node that uses it, and never run on a board. |
 | Use by other programs | 🟡 | The crates of the workspace are used by EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC and EH3D-SERVER (by path, so the repositories sit side by side); the project container itself is not used by any program yet. |
-| Documentation | 🟢 | README in eight languages, the format description and the firmware-base guide; the CI compares them with the manifest and the changelog. |
+| Documentation | 🟡 | README in eight languages, the format description and the firmware-base guide; the CI compares them with the manifest and the changelog. |
 
 ## 🎯 Overview
 

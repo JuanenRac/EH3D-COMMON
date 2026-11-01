@@ -13,6 +13,7 @@
   ],
   "deployment_target": "user-pc",
   "maturity": "scaffolding",
+  "evidence": "host-test",
   "family": "Platform Foundation",
   "parent": null,
   "build": "cargo build --release; cargo test",

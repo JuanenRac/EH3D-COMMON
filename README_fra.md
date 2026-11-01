@@ -46,12 +46,12 @@ Chaque ligne est une partie de ce dépôt et le feu dit où elle en est aujourd'
 |---|---|---|
 | Conteneur | 🟡 | `.eh3dproj` est un ZIP standard avec un enregistrement SHA-256 de chaque entrée ; il lit, écrit et refuse les entrées endommagées, modifiées, non listées ou dangereuses. Pour l'instant, seuls ses propres tests le lisent et l'écrivent. |
 | Métadonnées | 🟡 | Les métadonnées d'un projet (unités, zéro, couches, outils, parcours, repères) sont validées et portent une version de format sémantique ; il n'y a pas encore de migration, car 1.0.0 est le premier format. |
-| Télémétrie et thème | 🟢 | Axes, broche, états de la machine, codes d'alarme GRBL avec leur gravité et couleurs de la suite avec contrôle du contraste, le tout testé. |
-| Tests | 🟢 | 171 tests réussissent (`cargo test --workspace`) : 16 dans les modules et 14 sur le conteneur du crate principal, et 137 dans les neuf crates partagés. |
+| Télémétrie et thème | 🟡 | Axes, broche, états de la machine, codes d'alarme GRBL avec leur gravité et couleurs de la suite avec contrôle du contraste, le tout testé. |
+| Tests | 🟡 | 171 tests réussissent (`cargo test --workspace`) : 16 dans les modules et 14 sur le conteneur du crate principal, et 137 dans les neuf crates partagés. |
 | Sécurité | 🟡 | Les noms dangereux, les entrées trop grosses ou trop nombreuses et toute entrée modifiée sont refusés ; le paquet n'est ni signé ni chiffré et n'a pas eu de revue indépendante. |
 | Base de firmware | 🟠 | 49 fichiers partagés par les nœuds ESP32, gardés identiques par `tools/sync_firmware_base.py` ; testée seulement via EH3D-NODE-BUNGARD, le seul nœud qui l'utilise, et jamais exécutée sur une carte. |
 | Utilisation par d'autres programmes | 🟡 | Les crates du workspace sont utilisés par EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC et EH3D-SERVER (par chemin, les dépôts côte à côte) ; le conteneur de projet lui-même n'est encore utilisé par aucun programme. |
-| Documentation | 🟢 | README en huit langues, la description du format et le guide de la base de firmware ; la CI les compare au manifeste et au journal des modifications. |
+| Documentation | 🟡 | README en huit langues, la description du format et le guide de la base de firmware ; la CI les compare au manifeste et au journal des modifications. |
 
 ## 🎯 Présentation
 
