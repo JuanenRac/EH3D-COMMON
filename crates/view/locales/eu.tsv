@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Egin klik zerrendako broka batean hura ikusteko eta zertarako den jakiteko.
 CatSpindle	Biraketak eta aurrerapenak fabrikatzailearenak dira. Hain azkar biratu ezin duen ardatzak broka bera hartzen du bere abiaduran, aurrerapena proportzioan duela (bira bakoitzeko ebaki bera).
 SpindleLbl	Makinaren ardatza
-SpindleOriginal	Bungard jatorrizkoa, 60000 rpm
+SpindleOriginal	Bungard jatorrizkoa, 63000 rpm
 SpindleVfd	VFD ardatza GDZ 80-2.2, 24000 rpm
 SpindleNote	Ardatz bakoitzak bere abiadura, aurrerapen eta broka-tamainaren mugak ditu (konfigurazio-fitxategian edita daitezke). Katalogoak eta erremintek ohartarazten dute broka batek ardatzak eman dezakeena baino gehiago eskatzen duenean.
 CatSpindleLbl	Ardatza

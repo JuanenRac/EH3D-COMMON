@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Cliceáil ar bhior den liosta chun é a fheiceáil agus a úsáid.
 CatSpindle	Is ón monaróir iad na casadh agus na bearta. Glacann fearsaid nach féidir casadh chomh tapa leis an mbior céanna ar a luas féin, agus an beart i gcomhréir (an greim céanna do gach casadh).
 SpindleLbl	Fearsaid an mheaisín
-SpindleOriginal	Bungard bunaidh, 60000 rpm
+SpindleOriginal	Bungard bunaidh, 63000 rpm
 SpindleVfd	Fearsaid VFD GDZ 80-2.2, 24000 rpm
 SpindleNote	Tá teorainneacha luais, beart agus méide bioráin ag gach fearsaid (is féidir iad a chur in eagar sa chomhad socruithe). Tugann an chatalóg agus na huirlisí rabhadh nuair a iarrann bior níos mó ná mar is féidir leis an bhfearsaid a thabhairt.
 CatSpindleLbl	Fearsaid

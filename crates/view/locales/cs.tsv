@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Klikněte na nástroj v seznamu, abyste ho viděli a zjistili, k čemu slouží.
 CatSpindle	Otáčky a posuvy jsou od výrobce. Vřeteno, které se nemůže točit tak rychle, použije stejný nástroj na svých otáčkách s úměrným posuvem (stejný záběr na otáčku).
 SpindleLbl	Vřeteno stroje
-SpindleOriginal	Původní Bungard, 60000 rpm
+SpindleOriginal	Původní Bungard, 63000 rpm
 SpindleVfd	Vřeteno VFD GDZ 80-2.2, 24000 rpm
 SpindleNote	Každé vřeteno má své meze rychlosti, posuvu a velikosti nástroje (lze je upravit v souboru nastavení). Katalog a nástroje varují, když nástroj požaduje víc, než vřeteno zvládne.
 CatSpindleLbl	Vřeteno

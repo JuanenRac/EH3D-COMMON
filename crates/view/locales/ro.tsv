@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Fă clic pe o sculă din listă pentru a o vedea și a afla la ce folosește.
 CatSpindle	Turațiile și avansurile sunt ale producătorului. Un ax care nu poate turaționa atât de repede folosește aceeași sculă la viteza proprie, cu avansul proporțional (aceeași așchiere pe rotație).
 SpindleLbl	Axul mașinii
-SpindleOriginal	Bungard original, 60000 rpm
+SpindleOriginal	Bungard original, 63000 rpm
 SpindleVfd	Ax VFD GDZ 80-2.2, 24000 rpm
 SpindleNote	Fiecare ax are limitele sale de viteză, avans și dimensiune a sculei (pot fi editate în fișierul de setări). Catalogul și sculele avertizează când o sculă cere mai mult decât poate da axul.
 CatSpindleLbl	Ax

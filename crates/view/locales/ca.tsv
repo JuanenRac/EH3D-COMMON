@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Fes clic en una broca de la llista per veure-la i saber per a què serveix.
 CatSpindle	Les revolucions i els avanços són els del fabricant. Un broquer que no pot girar tan ràpid fa servir la mateixa broca a la seva velocitat, amb l'avanç en proporció (la mateixa passada per volta).
 SpindleLbl	Broquer de la màquina
-SpindleOriginal	Bungard original, 60000 rpm
+SpindleOriginal	Bungard original, 63000 rpm
 SpindleVfd	Broquer VFD GDZ 80-2.2, 24000 rpm
 SpindleNote	Cada broquer té els seus límits de velocitat, avanç i mida de broca (es poden editar al fitxer de configuració). El catàleg i les eines avisen quan una broca demana més del que el broquer pot donar.
 CatSpindleLbl	Broquer

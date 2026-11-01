@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Noklikšķiniet uz saraksta instrumenta, lai to apskatītu un uzzinātu, kam tas domāts.
 CatSpindle	Apgriezieni un padeves ir ražotāja. Vārpsta, kas nevar griezties tik ātri, to pašu instrumentu izmanto ar savu ātrumu, padevi samazinot proporcionāli (tas pats grieziena dziļums uz apgriezienu).
 SpindleLbl	Iekārtas vārpsta
-SpindleOriginal	Oriģinālā Bungard, 60000 rpm
+SpindleOriginal	Oriģinālā Bungard, 63000 rpm
 SpindleVfd	VFD vārpsta GDZ 80-2.2, 24000 rpm
 SpindleNote	Katrai vārpstai ir savi ātruma, padeves un instrumenta izmēra ierobežojumi (tos var rediģēt iestatījumu failā). Katalogs un instrumenti brīdina, kad instruments prasa vairāk, nekā vārpsta var dot.
 CatSpindleLbl	Vārpsta

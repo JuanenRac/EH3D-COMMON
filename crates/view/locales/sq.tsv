@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Klikoni një mjet të listës për ta parë dhe për çfarë shërben.
 CatSpindle	Rrotullimet dhe avancimet janë të prodhuesit. Një bosht që nuk rrotullohet kaq shpejt e merr të njëjtin mjet me shpejtësinë e vet, me avancim në përpjesëtim (i njëjti kafshim për çdo rrotullim).
 SpindleLbl	Boshti i makinës
-SpindleOriginal	Bungard origjinal, 60000 rpm
+SpindleOriginal	Bungard origjinal, 63000 rpm
 SpindleVfd	Bosht VFD GDZ 80-2.2, 24000 rpm
 SpindleNote	Çdo bosht ka kufijtë e vet të shpejtësisë, avancimit dhe madhësisë së mjetit (mund të ndryshohen në skedarin e cilësimeve). Katalogu dhe mjetet paralajmërojnë kur një mjet kërkon më shumë se sa mund të japë boshti.
 CatSpindleLbl	Boshti

@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Spustelėkite sąrašo įrankį, kad pamatytumėte jį ir jo paskirtį.
 CatSpindle	Apsukos ir paduotys yra gamintojo. Suklys, kuris negali suktis taip greitai, tą patį įrankį naudoja savo greičiu, paduotį sumažinus proporcingai (toks pat pjūvio storis vienam apsisukimui).
 SpindleLbl	Staklių suklys
-SpindleOriginal	Originalus Bungard, 60000 rpm
+SpindleOriginal	Originalus Bungard, 63000 rpm
 SpindleVfd	VFD suklys GDZ 80-2.2, 24000 rpm
 SpindleNote	Kiekvienas suklys turi savo greičio, paduoties ir įrankio dydžio ribas (jas galima redaguoti nustatymų faile). Katalogas ir įrankiai įspėja, kai įrankis reikalauja daugiau, nei suklys gali duoti.
 CatSpindleLbl	Suklys

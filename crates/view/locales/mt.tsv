@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Ikklikkja fuq briema tal-lista biex tarha u għal xiex hija.
 CatSpindle	Id-dawriet u l-avvanzi huma tal-manifattur. Mandrin li ma jistax idur daqshekk malajr jieħu l-istess briema bil-veloċità tiegħu, bl-avvanz proporzjonali (l-istess gidma għal kull dawra).
 SpindleLbl	Mandrin tal-magna
-SpindleOriginal	Bungard oriġinali, 60000 rpm
+SpindleOriginal	Bungard oriġinali, 63000 rpm
 SpindleVfd	Mandrin VFD GDZ 80-2.2, 24000 rpm
 SpindleNote	Kull mandrin għandu l-limiti tiegħu ta' veloċità, avvanz u qies tal-briema (jistgħu jiġu editjati fil-fajl tas-settings). Il-katalgu u l-għodod iwissu meta briema titlob aktar milli jista' jagħti l-mandrin.
 CatSpindleLbl	Mandrin

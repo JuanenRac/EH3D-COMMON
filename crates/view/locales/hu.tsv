@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Kattintson a lista egy szerszámára, hogy lássa, mire való.
 CatSpindle	A fordulatszámok és az előtolások a gyártó adatai. Az a főorsó, amely nem forog ilyen gyorsan, ugyanezt a szerszámot a saját fordulatszámán használja, arányosan csökkentett előtolással (fordulatonként ugyanaz a forgácsvastagság).
 SpindleLbl	A gép főorsója
-SpindleOriginal	Eredeti Bungard, 60000 rpm
+SpindleOriginal	Eredeti Bungard, 63000 rpm
 SpindleVfd	VFD főorsó GDZ 80-2.2, 24000 rpm
 SpindleNote	Minden főorsónak megvannak a maga fordulatszám-, előtolás- és szerszámméret-határai (a beállítófájlban szerkeszthetők). A katalógus és a szerszámok figyelmeztetnek, ha egy szerszám többet kér, mint amennyit a főorsó adni tud.
 CatSpindleLbl	Főorsó

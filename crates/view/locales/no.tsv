@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Klikk på et verktøy i listen for å se det og hva det brukes til.
 CatSpindle	Turtall og matinger er produsentens. En spindel som ikke kan snurre så fort, tar det samme verktøyet med sitt eget turtall og en proporsjonal mating (samme skjær per omdreining).
 SpindleLbl	Maskinens spindel
-SpindleOriginal	Original Bungard, 60000 rpm
+SpindleOriginal	Original Bungard, 63000 rpm
 SpindleVfd	VFD-spindel GDZ 80-2.2, 24000 rpm
 SpindleNote	Hver spindel har sine grenser for turtall, mating og verktøystørrelse (de kan endres i innstillingsfilen). Katalogen og verktøyene advarer når et verktøy krever mer enn spindelen kan gi.
 CatSpindleLbl	Spindel

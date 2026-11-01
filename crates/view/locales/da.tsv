@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Klik på et værktøj på listen for at se det og hvad det bruges til.
 CatSpindle	Omdrejninger og tilspænding er producentens. En spindel, der ikke kan dreje så hurtigt, bruger det samme værktøj ved sit eget omdrejningstal, med forholdsmæssig tilspænding (samme skær pr. omdrejning).
 SpindleLbl	Maskinens spindel
-SpindleOriginal	Original Bungard, 60000 rpm
+SpindleOriginal	Original Bungard, 63000 rpm
 SpindleVfd	VFD-spindel GDZ 80-2.2, 24000 rpm
 SpindleNote	Hver spindel har sine grænser for hastighed, tilspænding og værktøjsstørrelse (de kan redigeres i indstillingsfilen). Kataloget og værktøjerne advarer, når et værktøj kræver mere, end spindlen kan give.
 CatSpindleLbl	Spindel

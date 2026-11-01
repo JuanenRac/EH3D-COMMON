@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Fai clic nunha broca da lista para vela e saber para que serve.
 CatSpindle	As revolucións e os avances son os do fabricante. Un husillo que non pode xirar tan rápido usa a mesma broca á súa velocidade, co avance en proporción (a mesma pasada por volta).
 SpindleLbl	Husillo da máquina
-SpindleOriginal	Bungard orixinal, 60000 rpm
+SpindleOriginal	Bungard orixinal, 63000 rpm
 SpindleVfd	Husillo VFD GDZ 80-2.2, 24000 rpm
 SpindleNote	Cada husillo ten os seus límites de velocidade, avance e tamaño de broca (pódense editar no ficheiro de configuración). O catálogo e as ferramentas avisan cando unha broca pide máis do que o husillo pode dar.
 CatSpindleLbl	Husillo

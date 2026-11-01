@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Kliknite alat na popisu da vidite što je i čemu služi.
 CatSpindle	Okretaji i posmaci su proizvođačevi. Vreteno koje se ne može toliko brzo vrtjeti prima isti alat svojom brzinom, uz razmjerni posmak (isti zalogaj po okretaju).
 SpindleLbl	Vreteno stroja
-SpindleOriginal	Originalni Bungard, 60000 rpm
+SpindleOriginal	Originalni Bungard, 63000 rpm
 SpindleVfd	VFD vreteno GDZ 80-2.2, 24000 rpm
 SpindleNote	Svako vreteno ima granice brzine, posmaka i veličine alata (mogu se urediti u datoteci postavki). Katalog i alati upozoravaju kad alat traži više nego što vreteno može dati.
 CatSpindleLbl	Vreteno

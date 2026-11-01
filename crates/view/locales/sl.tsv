@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Kliknite orodje na seznamu, da ga vidite in izveste, čemu služi.
 CatSpindle	Vrtljaji in podajanja so proizvajalčeva. Vreteno, ki se ne more vrteti tako hitro, vzame isto orodje s svojo hitrostjo, s sorazmernim podajanjem (enak odrez na vrtljaj).
 SpindleLbl	Vreteno stroja
-SpindleOriginal	Originalni Bungard, 60000 rpm
+SpindleOriginal	Originalni Bungard, 63000 rpm
 SpindleVfd	Vreteno VFD GDZ 80-2.2, 24000 rpm
 SpindleNote	Vsako vreteno ima svoje omejitve hitrosti, podajanja in velikosti orodja (urejate jih v datoteki z nastavitvami). Katalog in orodja opozorijo, kadar orodje zahteva več, kot lahko vreteno da.
 CatSpindleLbl	Vreteno

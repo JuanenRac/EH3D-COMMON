@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Klik op een gereedschap in de lijst om het te zien en te weten waarvoor het dient.
 CatSpindle	Toerentallen en voedingen zijn die van de fabrikant. Een spindel die niet zo snel draait gebruikt hetzelfde gereedschap op zijn eigen toerental, met de voeding naar verhouding (dezelfde snededikte per omwenteling).
 SpindleLbl	Spindel van de machine
-SpindleOriginal	Originele Bungard, 60000 rpm
+SpindleOriginal	Originele Bungard, 63000 rpm
 SpindleVfd	VFD-spindel GDZ 80-2.2, 24000 rpm
 SpindleNote	Elke spindel heeft zijn grenzen voor toerental, voeding en gereedschapsmaat (te bewerken in het instellingenbestand). De catalogus en de gereedschappen waarschuwen wanneer een gereedschap meer vraagt dan de spindel kan leveren.
 CatSpindleLbl	Spindel

@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Kliknij narzędzie na liście, aby je zobaczyć i dowiedzieć się, do czego służy.
 CatSpindle	Obroty i posuwy podaje producent. Wrzeciono, które nie osiąga takich obrotów, użyje tego samego narzędzia przy własnej prędkości, z proporcjonalnym posuwem (ten sam skrawany materiał na obrót).
 SpindleLbl	Wrzeciono maszyny
-SpindleOriginal	Oryginalne Bungard, 60000 rpm
+SpindleOriginal	Oryginalne Bungard, 63000 rpm
 SpindleVfd	Wrzeciono VFD GDZ 80-2.2, 24000 rpm
 SpindleNote	Każde wrzeciono ma swoje limity prędkości, posuwu i rozmiaru narzędzia (można je edytować w pliku ustawień). Katalog i narzędzia ostrzegają, gdy narzędzie wymaga więcej, niż wrzeciono może dać.
 CatSpindleLbl	Wrzeciono

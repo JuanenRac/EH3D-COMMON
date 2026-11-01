@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Smelltu á verkfæri á listanum til að sjá það og til hvers það er.
 CatSpindle	Snúningar og færsluhraði eru framleiðandans. Snælda sem getur ekki snúist svo hratt tekur sama verkfæri á sínum hraða, með færsluhraða í réttu hlutfalli (sami biti á hvern snúning).
 SpindleLbl	Snælda vélarinnar
-SpindleOriginal	Upprunalegt Bungard, 60000 rpm
+SpindleOriginal	Upprunalegt Bungard, 63000 rpm
 SpindleVfd	VFD-snælda GDZ 80-2.2, 24000 rpm
 SpindleNote	Hver snælda hefur sín mörk á hraða, færsluhraða og stærð verkfæris (hægt er að breyta þeim í stillingaskránni). Skráin og verkfærin vara við þegar verkfæri krefst meira en snældan getur gefið.
 CatSpindleLbl	Snælda

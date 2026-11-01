@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Napsauta luettelon työkalua nähdäksesi sen ja tietääksesi, mihin se on tarkoitettu.
 CatSpindle	Kierrosluvut ja syötöt ovat valmistajan. Kara, joka ei pyöri yhtä nopeasti, käyttää samaa työkalua omalla nopeudellaan, syöttö suhteessa (sama leikkuusyvyys kierrosta kohti).
 SpindleLbl	Koneen kara
-SpindleOriginal	Alkuperäinen Bungard, 60000 rpm
+SpindleOriginal	Alkuperäinen Bungard, 63000 rpm
 SpindleVfd	VFD-kara GDZ 80-2.2, 24000 rpm
 SpindleNote	Jokaisella karalla on omat rajansa nopeudelle, syötölle ja työkalun koolle (muokattavissa asetustiedostossa). Luettelo ja työkalut varoittavat, kun työkalu vaatii enemmän kuin kara pystyy antamaan.
 CatSpindleLbl	Kara

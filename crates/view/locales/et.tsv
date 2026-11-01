@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Klõpsake nimekirjas tööriistal, et seda näha ja teada, milleks see on.
 CatSpindle	Pöörded ja ettenihked on tootja omad. Spindel, mis nii kiiresti ei pöörle, kasutab sama tööriista oma kiirusel, ettenihe proportsionaalselt (sama lõikesügavus pöörde kohta).
 SpindleLbl	Masina spindel
-SpindleOriginal	Originaalne Bungard, 60000 rpm
+SpindleOriginal	Originaalne Bungard, 63000 rpm
 SpindleVfd	VFD-spindel GDZ 80-2.2, 24000 rpm
 SpindleNote	Igal spindlil on oma kiiruse, ettenihke ja tööriista suuruse piirid (neid saab muuta seadete failis). Kataloog ja tööriistad hoiatavad, kui tööriist nõuab rohkem, kui spindel suudab anda.
 CatSpindleLbl	Spindel

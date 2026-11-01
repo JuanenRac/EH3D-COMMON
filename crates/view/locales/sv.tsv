@@ -183,7 +183,7 @@ CatFluteCol	L mm
 CatPick	Klicka på ett verktyg i listan för att se det och vad det används till.
 CatSpindle	Varvtal och matningar är tillverkarens. En spindel som inte kan snurra så snabbt tar samma verktyg med sitt eget varvtal och en proportionell matning (samma skär per varv).
 SpindleLbl	Maskinens spindel
-SpindleOriginal	Original Bungard, 60000 rpm
+SpindleOriginal	Original Bungard, 63000 rpm
 SpindleVfd	VFD-spindel GDZ 80-2.2, 24000 rpm
 SpindleNote	Varje spindel har sina gränser för varvtal, matning och verktygsstorlek (de kan ändras i inställningsfilen). Katalogen och verktygen varnar när ett verktyg kräver mer än spindeln kan ge.
 CatSpindleLbl	Spindel
