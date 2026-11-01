@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Tips for loading the tool rack (eh3d-view):** the size of the tools, the air and the depth limiter with the changer, in the 37 languages.
+
 - **Texts for the sheets without copper of the board library (eh3d-view):** the names with words of aluminium, copper, birch plywood, balsa, basswood, PTFE, acrylic, polycarbonate, nylon, G10 and phenolic paper, and "No copper", in the 37 languages (the eight inside the program and the 27 files of `locales/`); the designations that are the same everywhere (MDF, ABS, POM, PVC, HDPE, PETG) need none.
 
 ## [0.0.9] - G-code jobs in the fleet and the texts of editing, the rack and the serial ports
