@@ -133,7 +133,7 @@ La base del firmware ha un proprio documento di impostazioni (`node_settings.hpp
 
 ## 🚀 Avvio rapido
 
-Serve una toolchain Rust stabile (1.75 o successiva).
+Serve una toolchain Rust stabile (1.89 o successiva).
 
 ```rust
 use eh3d_common::{Package, ProjectMetadata};

@@ -133,7 +133,7 @@ La base de firmware a son propre document de réglages (`node_settings.hpp`, `co
 
 ## 🚀 Démarrage rapide
 
-Il faut une chaîne d'outils Rust stable (1.75 ou plus récente).
+Il faut une chaîne d'outils Rust stable (1.89 ou plus récente).
 
 ```rust
 use eh3d_common::{Package, ProjectMetadata};

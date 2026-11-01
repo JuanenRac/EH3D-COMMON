@@ -133,7 +133,7 @@ A base de firmware tem o seu próprio documento de definições (`node_settings.
 
 ## 🚀 Início rápido
 
-Precisa de uma toolchain Rust estável (1.75 ou mais recente).
+Precisa de uma toolchain Rust estável (1.89 ou mais recente).
 
 ```rust
 use eh3d_common::{Package, ProjectMetadata};

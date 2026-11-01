@@ -2,7 +2,7 @@
 name = "eh3d-common"
 version = "0.1.0"
 edition = "2021"
-rust-version = "1.75"
+rust-version = "1.89"
 description = "Shared data model of the EH3D Fabrication Suite: the .eh3dproj project container, its metadata, integrity checks and the machine telemetry types."
 license = "GPL-3.0-or-later"
 authors = ["JuanenRac (Electro Hobby 3D) <electrohobby3d@gmail.com>"]

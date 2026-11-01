@@ -133,7 +133,7 @@ Die Firmware-Basis hat ein eigenes Einstellungsdokument (`node_settings.hpp`, `c
 
 ## 🚀 Schnellstart
 
-Du brauchst eine stabile Rust-Toolchain (1.75 oder neuer).
+Du brauchst eine stabile Rust-Toolchain (1.89 oder neuer).
 
 ```rust
 use eh3d_common::{Package, ProjectMetadata};

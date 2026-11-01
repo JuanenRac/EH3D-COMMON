@@ -103,9 +103,11 @@ pub(crate) fn arc_points(
 ) -> Vec<(f64, f64)> {
     let (dx, dy) = (from.0 - center.0, from.1 - center.1);
     let r = dx.hypot(dy);
-    if r == 0.0 || sweep == 0.0 {
+    if r == 0.0 || sweep == 0.0 || !sweep.is_finite() || !r.is_finite() {
         return Vec::new();
     }
+    // a whole turn at most: a damaged file must not ask for millions of points
+    let sweep = sweep.clamp(-360.0, 360.0);
     let a0 = dy.atan2(dx);
     let chord = chord.abs().clamp(0.5, 90.0);
     let n = (sweep.abs() / chord).ceil().max(1.0) as usize;

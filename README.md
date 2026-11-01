@@ -133,7 +133,7 @@ The firmware base has its own settings document (`node_settings.hpp`, `config_co
 
 ## 🚀 Quick start
 
-You need a stable Rust toolchain (1.75 or newer).
+You need a stable Rust toolchain (1.89 or newer).
 
 ```rust
 use eh3d_common::{Package, ProjectMetadata};

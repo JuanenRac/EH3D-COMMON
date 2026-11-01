@@ -133,7 +133,7 @@ EH3D-COMMON 是套件的基础。其工作区的 crate（视图和主题、ZIP �
 
 ## 🚀 快速开始
 
-需要稳定版 Rust 工具链（1.75 或更高）。
+需要稳定版 Rust 工具链（1.89 或更高）。
 
 ```rust
 use eh3d_common::{Package, ProjectMetadata};

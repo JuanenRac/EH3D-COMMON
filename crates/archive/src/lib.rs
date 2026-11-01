@@ -120,7 +120,19 @@ impl Archive {
 
     /// Writes a file of the archive into `dir` (which is made when it does not exist) under its safe name; says where it went.
     pub fn extract(&mut self, name: &str, dir: &Path) -> Result<PathBuf, String> {
-        let target = safe_name(name).ok_or(format!("{name}: not a safe name"))?;
+        let mut target = safe_name(name).ok_or(format!("{name}: not a safe name"))?;
+        // two files of different folders with the same last part must not land on each other: the second one keeps its folders in its name
+        let same_last_part = self
+            .entries
+            .iter()
+            .filter(|e| e.name != name && safe_name(&e.name).as_deref() == Some(target.as_str()))
+            .count();
+        if same_last_part > 0 {
+            let flat = name.replace('\\', "/").replace('/', "__");
+            if let Some(unique) = safe_name(&flat) {
+                target = unique;
+            }
+        }
         let bytes = self.read(name)?;
         std::fs::create_dir_all(dir).map_err(|e| format!("{}: {e}", dir.display()))?;
         let path = dir.join(target);
@@ -177,6 +189,29 @@ mod tests {
         ] {
             assert_eq!(safe_name(bad), None, "{bad}");
         }
+    }
+
+    #[test]
+    fn files_with_the_same_name_in_different_folders_do_not_overwrite_each_other() {
+        let d = scratch("same");
+        let z = d.join("job.zip");
+        make(
+            &z,
+            &[
+                ("top/job.ncd", b"top"),
+                ("bottom/job.ncd", b"bottom"),
+                ("only/one.ncd", b"one"),
+            ],
+        );
+        let mut a = Archive::open(&z).unwrap();
+        let out = d.join("out");
+        let top = a.extract("top/job.ncd", &out).unwrap();
+        let bottom = a.extract("bottom/job.ncd", &out).unwrap();
+        let one = a.extract("only/one.ncd", &out).unwrap();
+        assert_ne!(top, bottom);
+        assert_eq!(std::fs::read(&top).unwrap(), b"top");
+        assert_eq!(std::fs::read(&bottom).unwrap(), b"bottom");
+        assert_eq!(one.file_name().unwrap(), "one.ncd");
     }
 
     #[test]

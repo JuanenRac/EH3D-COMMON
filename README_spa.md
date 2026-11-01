@@ -133,7 +133,7 @@ La base de firmware tiene su propio documento de ajustes (`node_settings.hpp`, `
 
 ## 🚀 Inicio rápido
 
-Necesitas una cadena de herramientas estable de Rust (1.75 o posterior).
+Necesitas una cadena de herramientas estable de Rust (1.89 o posterior).
 
 ```rust
 use eh3d_common::{Package, ProjectMetadata};

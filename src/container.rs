@@ -116,6 +116,22 @@ impl Package {
         Ok(())
     }
 
+    /// Every layer and toolpath that the metadata names must be in the package.
+    fn check_references(&self) -> Result<()> {
+        let named = self
+            .metadata
+            .layers
+            .iter()
+            .map(|l| &l.path)
+            .chain(self.metadata.toolpaths.iter().map(|p| &p.path));
+        for path in named {
+            if !self.entries.contains_key(path.as_str()) {
+                return Err(Error::MissingEntry(path.clone()));
+            }
+        }
+        Ok(())
+    }
+
     /// The bytes of a data entry.
     pub fn entry(&self, name: &str) -> Option<&[u8]> {
         self.entries.get(name).map(Vec::as_slice)
@@ -155,6 +171,7 @@ impl Package {
     /// Writes the package. The result does not depend on the clock: the same content gives the
     /// same bytes, so two copies of a project can be compared by hash.
     pub fn write<W: Write + Seek>(&self, writer: W) -> Result<()> {
+        self.check_references()?;
         let project = self.metadata.to_json()?;
         let integrity = serde_json::to_string_pretty(&self.integrity()?)?;
         let options = SimpleFileOptions::default()
@@ -271,6 +288,7 @@ impl Package {
         for (name, bytes) in raw {
             package.add_entry(&name, bytes)?;
         }
+        package.check_references()?;
         Ok(package)
     }
 

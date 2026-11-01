@@ -2,7 +2,7 @@
 name = "eh3d-aux"
 version = "0.0.1"
 edition = "2021"
-rust-version = "1.75"
+rust-version = "1.89"
 description = "The client of EH3D-NODE-BUNGARD-AUX, the node of the drill head: its status, its measure of the table, the camera as MJPEG and the plain HTTP that reaches it"
 license = "GPL-3.0-or-later"
 authors = ["JuanenRac (Electro Hobby 3D) <electrohobby3d@gmail.com>"]

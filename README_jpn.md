@@ -133,7 +133,7 @@ EH3D-COMMON はスイートの土台です。ワークスペースのクレー�
 
 ## 🚀 クイックスタート
 
-安定版の Rust ツールチェーン（1.75 以降）が必要です。
+安定版の Rust ツールチェーン（1.89 以降）が必要です。
 
 ```rust
 use eh3d_common::{Package, ProjectMetadata};
