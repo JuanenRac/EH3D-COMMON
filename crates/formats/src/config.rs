@@ -344,12 +344,27 @@ pub fn text_to_bytes(t: &str) -> Vec<u8> {
 
 /// Writes `text` to `path`, keeping the old file as `<name>.BAK` next to it.
 pub fn write_with_backup(path: &std::path::Path, text: &str) -> Result<(), String> {
+    // the files are DOS text, one byte for each character: a character the file cannot hold is refused instead of becoming a question mark
+    if let Some(c) = text.chars().find(|&c| u32::from(c) > 255) {
+        return Err(format!(
+            "the character '{c}' cannot be written in the file {}: it is a DOS text file, one byte for each character",
+            path.display()
+        ));
+    }
     if path.exists() {
         let mut bak = path.as_os_str().to_owned();
         bak.push(".BAK");
         std::fs::copy(path, std::path::PathBuf::from(bak)).map_err(|e| e.to_string())?;
     }
-    std::fs::write(path, text_to_bytes(text)).map_err(|e| e.to_string())
+    // through a temporary file and a rename, so that a cut in the middle never leaves the file half written
+    let mut tmp = path.as_os_str().to_owned();
+    tmp.push(".TMP");
+    let tmp = std::path::PathBuf::from(tmp);
+    std::fs::write(&tmp, text_to_bytes(text)).map_err(|e| e.to_string())?;
+    std::fs::rename(&tmp, path).map_err(|e| {
+        let _ = std::fs::remove_file(&tmp);
+        e.to_string()
+    })
 }
 
 /// Where the program looks for its files when no folder is given: the current folder, the folder of the program, and
@@ -373,4 +388,31 @@ pub fn find_data_dir(file: &str) -> std::path::PathBuf {
         .into_iter()
         .find(|d| d.join(file).is_file())
         .unwrap_or_else(|| std::path::PathBuf::from("."))
+}
+
+#[cfg(test)]
+mod write_tests {
+    use super::*;
+
+    #[test]
+    fn a_text_is_written_through_a_temporary_file_and_a_character_that_does_not_fit_is_refused() {
+        let dir = std::env::temp_dir().join(format!("eh3d-config-write-{}", std::process::id()));
+        std::fs::create_dir_all(&dir).unwrap();
+        let file = dir.join("MACHINE.DCF");
+        write_with_backup(&file, "one\r\n").unwrap();
+        write_with_backup(&file, "two\r\n").unwrap();
+        assert_eq!(std::fs::read(&file).unwrap(), b"two\r\n");
+        assert_eq!(
+            std::fs::read(dir.join("MACHINE.DCF.BAK")).unwrap(),
+            b"one\r\n"
+        );
+        assert!(!dir.join("MACHINE.DCF.TMP").exists());
+        assert!(write_with_backup(&file, "Łukasz").is_err());
+        assert_eq!(
+            std::fs::read(&file).unwrap(),
+            b"two\r\n",
+            "the file is not touched when the text is refused"
+        );
+        let _ = std::fs::remove_dir_all(&dir);
+    }
 }
