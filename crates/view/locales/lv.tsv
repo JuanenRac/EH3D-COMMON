@@ -471,3 +471,15 @@ RackTestTool	0. vieta: testa instruments vārpstā, vieta paliek brīva
 RackReload	Ielieciet šos instrumentus vietās un nospiediet Turpināt
 RackGroup	Ielāde
 MatFr4Series600	FR4 600 sērija, pozitīvi presensibilizēta
+MatAluminiumSheet	Alumīnija loksne (5052 / 6061)
+MatCopperSheet	Vara loksne (C110)
+MatBirchPlywood	Bērza saplāksnis
+MatBalsa	Balsas koks
+MatBasswood	Liepas koks
+MatPtfeSheet	PTFE plāksne
+MatAcrylic	Akrils (PMMA)
+MatPolycarbonate	Polikarbonāts (PC)
+MatNylon	Neilons (PA6)
+MatG10Plain	G10 (FR4 bez vara)
+MatPhenolicPaper	Fenola papīrs (pertinakss)
+LblNoCopper	Bez vara

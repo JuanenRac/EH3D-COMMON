@@ -471,3 +471,15 @@ RackTestTool	Место 0: пробни алат у вретену, место �
 RackReload	Ставите ове алате у места и притисните Настави
 RackGroup	Пуњење
 MatFr4Series600	FR4 серија 600, позитивно пресензибилизована
+MatAluminiumSheet	Алуминијумски лим (5052 / 6061)
+MatCopperSheet	Бакарни лим (C110)
+MatBirchPlywood	Брезова шперплоча
+MatBalsa	Балза дрво
+MatBasswood	Липово дрво
+MatPtfeSheet	PTFE плоча
+MatAcrylic	Акрил (PMMA)
+MatPolycarbonate	Поликарбонат (PC)
+MatNylon	Најлон (PA6)
+MatG10Plain	G10 (FR4 без бакра)
+MatPhenolicPaper	Фенолни папир (пертинакс)
+LblNoCopper	Без бакра

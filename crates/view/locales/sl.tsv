@@ -471,3 +471,15 @@ RackTestTool	Mesto 0: preizkusno orodje v vretenu, mesto ostane prosto
 RackReload	Vstavite ta orodja v mesta in pritisnite Nadaljuj
 RackGroup	Polnjenje
 MatFr4Series600	FR4 serija 600, pozitivno presenzibilizirana
+MatAluminiumSheet	Aluminijasta pločevina (5052 / 6061)
+MatCopperSheet	Bakrena pločevina (C110)
+MatBirchPlywood	Brezova vezana plošča
+MatBalsa	Balzin les
+MatBasswood	Lipov les
+MatPtfeSheet	Plošča iz PTFE
+MatAcrylic	Akril (PMMA)
+MatPolycarbonate	Polikarbonat (PC)
+MatNylon	Najlon (PA6)
+MatG10Plain	G10 (FR4 brez bakra)
+MatPhenolicPaper	Fenolni papir (pertinaks)
+LblNoCopper	Brez bakra

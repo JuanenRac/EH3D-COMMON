@@ -471,3 +471,15 @@ RackTestTool	Pozice 0: zkušební nástroj ve vřetenu, pozice zůstává volná
 RackReload	Vložte tyto nástroje do pozic a stiskněte Pokračovat
 RackGroup	Osazení
 MatFr4Series600	FR4 řada 600, pozitivní presenzibilizovaná
+MatAluminiumSheet	Hliníkový plech (5052 / 6061)
+MatCopperSheet	Měděný plech (C110)
+MatBirchPlywood	Březová překližka
+MatBalsa	Balsové dřevo
+MatBasswood	Lipové dřevo
+MatPtfeSheet	Deska z PTFE
+MatAcrylic	Akryl (PMMA)
+MatPolycarbonate	Polykarbonát (PC)
+MatNylon	Nylon (PA6)
+MatG10Plain	G10 (FR4 bez mědi)
+MatPhenolicPaper	Fenolický papír (pertinax)
+LblNoCopper	Bez mědi

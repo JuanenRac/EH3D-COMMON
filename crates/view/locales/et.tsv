@@ -471,3 +471,15 @@ RackTestTool	Pesa 0: katsetööriist spindlis, pesa jääb vabaks
 RackReload	Pane need tööriistad pesadesse ja vajuta Jätka
 RackGroup	Laadimine
 MatFr4Series600	FR4 600 seeria, positiivne eelsensibiliseeritud
+MatAluminiumSheet	Alumiiniumleht (5052 / 6061)
+MatCopperSheet	Vaskleht (C110)
+MatBirchPlywood	Kasevineer
+MatBalsa	Balsapuit
+MatBasswood	Pärnapuit
+MatPtfeSheet	PTFE-plaat
+MatAcrylic	Akrüül (PMMA)
+MatPolycarbonate	Polükarbonaat (PC)
+MatNylon	Nailon (PA6)
+MatG10Plain	G10 (FR4 ilma vaseta)
+MatPhenolicPaper	Fenoolpaber (pertinax)
+LblNoCopper	Ilma vaseta

@@ -471,3 +471,15 @@ RackTestTool	Ranura 0: ferramenta de proba no fuso, a ranura queda libre
 RackReload	Pon estas ferramentas nas ranuras e preme Continuar
 RackGroup	Carga
 MatFr4Series600	FR4 serie 600, presensibilizada positiva
+MatAluminiumSheet	Chapa de aluminio (5052 / 6061)
+MatCopperSheet	Chapa de cobre (C110)
+MatBirchPlywood	Contrachapado de bidueiro
+MatBalsa	Madeira de balsa
+MatBasswood	Madeira de tileiro
+MatPtfeSheet	Placa de PTFE
+MatAcrylic	Acrílico (PMMA)
+MatPolycarbonate	Policarbonato (PC)
+MatNylon	Nailon (PA6)
+MatG10Plain	G10 (FR4 sen cobre)
+MatPhenolicPaper	Papel fenólico (pertinax)
+LblNoCopper	Sen cobre

@@ -471,3 +471,15 @@ RackTestTool	Pożizzjoni 0: għodda tat-test fl-ispindle, il-pożizzjoni tibqa' 
 RackReload	Poġġi dawn l-għodod fil-pożizzjonijiet u agħfas Kompli
 RackGroup	Tagħbija
 MatFr4Series600	FR4 serje 600, presensibilizzata pożittiva
+MatAluminiumSheet	Folja tal-aluminju (5052 / 6061)
+MatCopperSheet	Folja tar-ram (C110)
+MatBirchPlywood	Plywood tal-betula
+MatBalsa	Injam tal-balsa
+MatBasswood	Injam tal-linden
+MatPtfeSheet	Folja tal-PTFE
+MatAcrylic	Akriliku (PMMA)
+MatPolycarbonate	Polikarbonat (PC)
+MatNylon	Nylon (PA6)
+MatG10Plain	G10 (FR4 mingħajr ram)
+MatPhenolicPaper	Karta fenolika (pertinax)
+LblNoCopper	Mingħajr ram

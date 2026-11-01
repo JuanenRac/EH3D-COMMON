@@ -471,3 +471,15 @@ RackTestTool	Mjesto 0: probni alat u vretenu, mjesto ostaje slobodno
 RackReload	Stavite ove alate u mjesta i pritisnite Nastavi
 RackGroup	Punjenje
 MatFr4Series600	FR4 serija 600, pozitivno presenzibilizirana
+MatAluminiumSheet	Aluminijski lim (5052 / 6061)
+MatCopperSheet	Bakreni lim (C110)
+MatBirchPlywood	Brezova šperploča
+MatBalsa	Balsa drvo
+MatBasswood	Lipovo drvo
+MatPtfeSheet	PTFE ploča
+MatAcrylic	Akril (PMMA)
+MatPolycarbonate	Polikarbonat (PC)
+MatNylon	Najlon (PA6)
+MatG10Plain	G10 (FR4 bez bakra)
+MatPhenolicPaper	Fenolni papir (pertinaks)
+LblNoCopper	Bez bakra

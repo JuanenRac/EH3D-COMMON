@@ -471,3 +471,15 @@ RackTestTool	Plass 0: testverktøy i spindelen, plassen forblir fri
 RackReload	Sett disse verktøyene i plassene og trykk Fortsett
 RackGroup	Lasting
 MatFr4Series600	FR4 600-serien, positiv presensibilisert
+MatAluminiumSheet	Aluminiumsplate (5052 / 6061)
+MatCopperSheet	Kobberplate (C110)
+MatBirchPlywood	Bjørkekrysspon
+MatBalsa	Balsatre
+MatBasswood	Lindetre
+MatPtfeSheet	PTFE-plate
+MatAcrylic	Akryl (PMMA)
+MatPolycarbonate	Polykarbonat (PC)
+MatNylon	Nylon (PA6)
+MatG10Plain	G10 (FR4 uten kobber)
+MatPhenolicPaper	Fenolpapir (pertinax)
+LblNoCopper	Uten kobber

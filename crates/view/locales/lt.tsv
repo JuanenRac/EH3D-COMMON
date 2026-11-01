@@ -471,3 +471,15 @@ RackTestTool	0 lizdas: bandomasis įrankis ištraukoje, lizdas lieka laisvas
 RackReload	Įdėkite šiuos įrankius į lizdus ir spauskite Tęsti
 RackGroup	Pakrovimas
 MatFr4Series600	FR4 600 serija, teigiamai presensibilizuota
+MatAluminiumSheet	Aliuminio lakštas (5052 / 6061)
+MatCopperSheet	Vario lakštas (C110)
+MatBirchPlywood	Beržo fanera
+MatBalsa	Balzos mediena
+MatBasswood	Liepos mediena
+MatPtfeSheet	PTFE plokštė
+MatAcrylic	Akrilas (PMMA)
+MatPolycarbonate	Polikarbonatas (PC)
+MatNylon	Nailonas (PA6)
+MatG10Plain	G10 (FR4 be vario)
+MatPhenolicPaper	Fenolinis popierius (pertinaksas)
+LblNoCopper	Be vario

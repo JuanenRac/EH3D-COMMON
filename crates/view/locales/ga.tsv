@@ -471,3 +471,15 @@ RackTestTool	Sliotán 0: uirlis tástála sa fhuaircín, fanann an sliotán saor
 RackReload	Cuir na huirlisí seo sna sliotáin agus brúigh Lean ar aghaidh
 RackGroup	Luchtú
 MatFr4Series600	FR4 sraith 600, réamhíogaireach dearfach
+MatAluminiumSheet	Bileog alúmanaim (5052 / 6061)
+MatCopperSheet	Bileog chopair (C110)
+MatBirchPlywood	Pluaiseadh beithe
+MatBalsa	Adhmad balsa
+MatBasswood	Adhmad teile
+MatPtfeSheet	Bileog PTFE
+MatAcrylic	Aicrileach (PMMA)
+MatPolycarbonate	Polaicarbónáit (PC)
+MatNylon	Níolón (PA6)
+MatG10Plain	G10 (FR4 gan copar)
+MatPhenolicPaper	Páipéar feanólach (pertinax)
+LblNoCopper	Gan copar

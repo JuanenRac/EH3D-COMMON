@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Texts for the sheets without copper of the board library (eh3d-view):** the names with words of aluminium, copper, birch plywood, balsa, basswood, PTFE, acrylic, polycarbonate, nylon, G10 and phenolic paper, and "No copper", in the 37 languages (the eight inside the program and the 27 files of `locales/`); the designations that are the same everywhere (MDF, ABS, POM, PVC, HDPE, PETG) need none.
+
 ## [0.0.9] - G-code jobs in the fleet and the texts of editing, the rack and the serial ports
 
 - **Free G-code jobs in the fleet (eh3d-fleet):** a job of `kind` `gcode` is read with its state, its `line` (0 when the fleet answer does not carry it), the question it waits at (`hold` when the operator held it, `resume` when it goes on after a stop and waits before its first move) and the tool of a tool change; `Job::is_gcode`, `is_held`, `is_going_on` and `wants_resume` tell the answer to give (`resume` or `confirm`). `Machine::takes` says which kinds of job a connection takes (a node drilling and routing, a GRBL controller G-code, the simulator all three) and `Fleet::pick_free_for` picks the free machine for a kind of job. The text table shows the line and the question. 3 tests more.

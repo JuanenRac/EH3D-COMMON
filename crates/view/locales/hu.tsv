@@ -471,3 +471,15 @@ RackTestTool	0. hely: tesztszerszám a főorsóban, a hely szabadon marad
 RackReload	Tegye ezeket a szerszámokat a helyekre, és nyomja meg a Folytatás gombot
 RackGroup	Feltöltés
 MatFr4Series600	FR4 600-as sorozat, pozitív előszenzibilizált
+MatAluminiumSheet	Alumíniumlemez (5052 / 6061)
+MatCopperSheet	Rézlemez (C110)
+MatBirchPlywood	Nyír rétegelt lemez
+MatBalsa	Balsafa
+MatBasswood	Hársfa
+MatPtfeSheet	PTFE lap
+MatAcrylic	Akril (PMMA)
+MatPolycarbonate	Polikarbonát (PC)
+MatNylon	Nejlon (PA6)
+MatG10Plain	G10 (FR4 réz nélkül)
+MatPhenolicPaper	Fenolpapír (pertinax)
+LblNoCopper	Réz nélkül

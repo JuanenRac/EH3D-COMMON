@@ -471,3 +471,15 @@ RackTestTool	Paikka 0: testityökalu karassa, paikka jää vapaaksi
 RackReload	Aseta nämä työkalut paikkoihin ja paina Jatka
 RackGroup	Lataus
 MatFr4Series600	FR4 600-sarja, positiivinen esiherkistetty
+MatAluminiumSheet	Alumiinilevy (5052 / 6061)
+MatCopperSheet	Kuparilevy (C110)
+MatBirchPlywood	Koivuvaneri
+MatBalsa	Balsapuu
+MatBasswood	Lehmuspuu
+MatPtfeSheet	PTFE-levy
+MatAcrylic	Akryyli (PMMA)
+MatPolycarbonate	Polykarbonaatti (PC)
+MatNylon	Nailon (PA6)
+MatG10Plain	G10 (FR4 ilman kuparia)
+MatPhenolicPaper	Fenolipaperi (pertinax)
+LblNoCopper	Ei kuparia

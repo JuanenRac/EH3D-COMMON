@@ -471,3 +471,15 @@ RackTestTool	Locul 0: scula de test în ax, locul rămâne liber
 RackReload	Puneți aceste scule în locuri și apăsați Continuă
 RackGroup	Încărcare
 MatFr4Series600	FR4 seria 600, presensibilizată pozitiv
+MatAluminiumSheet	Tablă de aluminiu (5052 / 6061)
+MatCopperSheet	Tablă de cupru (C110)
+MatBirchPlywood	Placaj de mesteacăn
+MatBalsa	Lemn de balsa
+MatBasswood	Lemn de tei
+MatPtfeSheet	Placă de PTFE
+MatAcrylic	Acril (PMMA)
+MatPolycarbonate	Policarbonat (PC)
+MatNylon	Nailon (PA6)
+MatG10Plain	G10 (FR4 fără cupru)
+MatPhenolicPaper	Hârtie fenolică (pertinax)
+LblNoCopper	Fără cupru

@@ -471,3 +471,15 @@ RackTestTool	Θέση 0: εργαλείο δοκιμής στην άτρακτο
 RackReload	Βάλτε αυτά τα εργαλεία στις θέσεις και πατήστε Συνέχεια
 RackGroup	Φόρτωση
 MatFr4Series600	FR4 σειρά 600, θετικά προευαισθητοποιημένο
+MatAluminiumSheet	Φύλλο αλουμινίου (5052 / 6061)
+MatCopperSheet	Φύλλο χαλκού (C110)
+MatBirchPlywood	Κόντρα πλακέ σημύδας
+MatBalsa	Ξύλο μπάλσα
+MatBasswood	Ξύλο φλαμουριάς
+MatPtfeSheet	Πλάκα PTFE
+MatAcrylic	Ακρυλικό (PMMA)
+MatPolycarbonate	Πολυανθρακικό (PC)
+MatNylon	Νάιλον (PA6)
+MatG10Plain	G10 (FR4 χωρίς χαλκό)
+MatPhenolicPaper	Φαινολικό χαρτί (περτινάξ)
+LblNoCopper	Χωρίς χαλκό

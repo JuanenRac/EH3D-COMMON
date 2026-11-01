@@ -471,3 +471,15 @@ RackTestTool	Слот 0: тестов инструмент във вретено
 RackReload	Сложете тези инструменти в слотовете и натиснете Продължи
 RackGroup	Зареждане
 MatFr4Series600	FR4 серия 600, позитивно пресенсибилизиран
+MatAluminiumSheet	Алуминиева ламарина (5052 / 6061)
+MatCopperSheet	Медна ламарина (C110)
+MatBirchPlywood	Брезов шперплат
+MatBalsa	Балсово дърво
+MatBasswood	Липово дърво
+MatPtfeSheet	PTFE плоча
+MatAcrylic	Акрил (PMMA)
+MatPolycarbonate	Поликарбонат (PC)
+MatNylon	Найлон (PA6)
+MatG10Plain	G10 (FR4 без мед)
+MatPhenolicPaper	Фенолна хартия (пертинакс)
+LblNoCopper	Без мед

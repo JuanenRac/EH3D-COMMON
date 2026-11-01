@@ -471,3 +471,15 @@ RackTestTool	Ranura 0: eina de prova al capçal, la ranura queda lliure
 RackReload	Posa aquestes eines a les ranures i prem Continua
 RackGroup	Càrrega
 MatFr4Series600	FR4 sèrie 600, presensibilitzada positiva
+MatAluminiumSheet	Xapa d'alumini (5052 / 6061)
+MatCopperSheet	Xapa de coure (C110)
+MatBirchPlywood	Contraplacat de bedoll
+MatBalsa	Fusta de balsa
+MatBasswood	Fusta de tell
+MatPtfeSheet	Placa de PTFE
+MatAcrylic	Acrílic (PMMA)
+MatPolycarbonate	Policarbonat (PC)
+MatNylon	Niló (PA6)
+MatG10Plain	G10 (FR4 sense coure)
+MatPhenolicPaper	Paper fenòlic (pertinax)
+LblNoCopper	Sense coure

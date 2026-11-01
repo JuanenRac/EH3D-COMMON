@@ -471,3 +471,15 @@ RackTestTool	Plaats 0: testgereedschap in de spil, de plaats blijft vrij
 RackReload	Plaats deze gereedschappen in de plaatsen en druk op Doorgaan
 RackGroup	Lading
 MatFr4Series600	FR4 600-serie, positief voorgesensibiliseerd
+MatAluminiumSheet	Aluminiumplaat (5052 / 6061)
+MatCopperSheet	Koperplaat (C110)
+MatBirchPlywood	Berkenmultiplex
+MatBalsa	Balsahout
+MatBasswood	Lindehout
+MatPtfeSheet	PTFE-plaat
+MatAcrylic	Acryl (PMMA)
+MatPolycarbonate	Polycarbonaat (PC)
+MatNylon	Nylon (PA6)
+MatG10Plain	G10 (FR4 zonder koper)
+MatPhenolicPaper	Fenolpapier (pertinax)
+LblNoCopper	Zonder koper

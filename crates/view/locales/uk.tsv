@@ -471,3 +471,15 @@ RackTestTool	Гніздо 0: тестовий інструмент у шпинд
 RackReload	Вставте ці інструменти в гнізда та натисніть Продовжити
 RackGroup	Завантаження
 MatFr4Series600	FR4 серія 600, позитивний фоторезист
+MatAluminiumSheet	Алюмінієвий лист (5052 / 6061)
+MatCopperSheet	Мідний лист (C110)
+MatBirchPlywood	Березова фанера
+MatBalsa	Деревина бальзи
+MatBasswood	Деревина липи
+MatPtfeSheet	Плита з PTFE
+MatAcrylic	Акрил (PMMA)
+MatPolycarbonate	Полікарбонат (PC)
+MatNylon	Нейлон (PA6)
+MatG10Plain	G10 (FR4 без міді)
+MatPhenolicPaper	Фенольний папір (пертинакс)
+LblNoCopper	Без міді

@@ -471,3 +471,15 @@ RackTestTool	0 zirrikitua: proba-erreminta ardatzean, zirrikitua libre geratzen 
 RackReload	Jarri erreminta hauek zirrikituetan eta sakatu Jarraitu
 RackGroup	Zamalanketa
 MatFr4Series600	FR4 600 seriea, aurresentsibilizatu positiboa
+MatAluminiumSheet	Aluminiozko xafla (5052 / 6061)
+MatCopperSheet	Kobrezko xafla (C110)
+MatBirchPlywood	Urkiazko kontrachapatua
+MatBalsa	Balsa-zura
+MatBasswood	Ezki-zura
+MatPtfeSheet	PTFEzko xafla
+MatAcrylic	Akrilikoa (PMMA)
+MatPolycarbonate	Polikarbonatoa (PC)
+MatNylon	Nylona (PA6)
+MatG10Plain	G10 (FR4 kobrerik gabe)
+MatPhenolicPaper	Paper fenolikoa (pertinax)
+LblNoCopper	Kobrerik gabe
