@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# @PROJECT@ - guard against the stack overflows that only show on a board: reads main/*.cpp (nothing is compiled; the ESP-IDF headers are not needed) and fails when
+# EH3D-NODE-BUNGARD - guard against the stack overflows that only show on a board: reads main/*.cpp (nothing is compiled; the ESP-IDF headers are not needed) and fails when
 #   1. a FreeRTOS task is created with a stack below the minimum, or below the one its job needs (the table of tasks is printed with --table);
 #   2. a function a task can reach (the call graph is followed by name, so it may over-reach) keeps a whole config::Settings, or a buffer of more than 1 KB, on its stack;
 #   3. the HTTP client that fetches the release from GitHub has a header buffer below what GitHub's redirects need (about 5.2 KB), or sets a size that is not header_buffer().
@@ -14,18 +14,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 MIN_STACK = 3072                       # no task of the node has less
 BUFFER_LIMIT = 1024                    # a local array above this goes to the heap
-# What a task needs at least, by its name. Every number is the size it has now or more: shrinking one has to be a decision, not an accident.
-NEEDS = {
-    "telemetry": (6144, "builds and publishes the whole telemetry JSON and the settings"),
-    "heartbeat": (4096, "builds the node info JSON"),
-    "mqtt-link": (6144, "TLS and the MQTT client"),
-    "mqtt-out": (4096, "queue to the broker"),
-    "github-check": (12288, "TLS and the release JSON"),
-    "github-ota": (12288, "TLS, the download and the signature check"),
-    "slot-copy": (6144, "copies a firmware slot"),
-    "ble-worker": (16384, "NimBLE requests that apply a whole settings document"),
-    "radar": (6144, "parses the sensor frames"),
-}
+# What a task needs at least, by its name: the table of the node, in task_needs.py next to this script (the script is shared by the nodes, the tasks are not).
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from task_needs import NEEDS  # noqa: E402
 SAFE = ("task-stack-ok:",)
 KEYWORDS = {"if", "for", "while", "switch", "catch", "return", "sizeof", "else", "do", "static_cast", "reinterpret_cast", "const_cast", "dynamic_cast", "decltype", "alignof", "defined"}
 
@@ -150,6 +141,8 @@ def analyse(root: Path) -> tuple[list[tuple[str, int, str, str]], list[str]]:
                 problems.append(f"{where}: the stack of task '{name}' is not a number ({size_text.strip()!r}): write it as a literal so it can be checked")
                 continue
             tasks.append((name, size, function, path.name))
+            if name not in NEEDS:
+                problems.append(f"{where}: task '{name}' is not in the table of tasks: say what stack its job needs")
             need, why = NEEDS.get(name, (MIN_STACK, "default minimum"))
             if size < max(need, MIN_STACK):
                 problems.append(f"{where}: task '{name}' has a {size}-byte stack, below the {max(need, MIN_STACK)} it needs ({why})")
