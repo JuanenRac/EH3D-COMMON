@@ -45,3 +45,7 @@ python -I tools/sync_firmware_base.py status    # which file goes where
 ## State
 
 Today there is one node, so the base is the copy of EH3D-NODE-BUNGARD with placeholders. It starts to pay for itself when the second node exists. Nothing in the base has run on a board yet.
+
+## The touch screens
+
+The two touch-screen projects (EH3D-NODE-BUNGARD-HMI and EH3D-NODE-HMI-GUI) are registered in the same tool with their own list of files (`HMI_CANDIDATES`): the flow of a job, the link to the server and its sockets, the job memory, the tool reader, the files of the card, the keyboard, the notices, the orientation, the quality reading, the voice, the board and the host tests that go with them. Their gate, texts, settings and screens differ by the kind of machine and stay in each project. Use `import EH3D-NODE-HMI-GUI` (or the other) after editing a shared file in one of them, then `sync`.

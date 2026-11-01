@@ -49,7 +49,7 @@ Cada línea es una parte de este repositorio y la luz dice hasta dónde llega ho
 | Telemetría y tema | 🟡 | Ejes, husillo, estados de la máquina, los códigos de alarma GRBL con su gravedad y los colores de la suite con comprobación de contraste, todo probado. |
 | Pruebas | 🟡 | Pasan 171 pruebas (`cargo test --workspace`): 16 en los módulos y 14 sobre el contenedor del crate principal, y 137 en los nueve crates compartidos. |
 | Seguridad | 🟡 | Se rechazan los nombres inseguros, las entradas demasiado grandes o numerosas y cualquier entrada alterada; el paquete no está firmado ni cifrado y no ha tenido revisión independiente. |
-| Base de firmware | 🟠 | 49 ficheros compartidos por los nodos ESP32, mantenidos idénticos por `tools/sync_firmware_base.py`; probada solo a través de EH3D-NODE-BUNGARD, el único nodo que la usa, y nunca ejecutada en una placa. |
+| Base de firmware | 🟠 | 70 ficheros mantenidos idénticos por `tools/sync_firmware_base.py`: 49 compartidos por los nodos ESP32 (probados solo a través de EH3D-NODE-BUNGARD, el único nodo que los usa) y 21 compartidos por las dos pantallas táctiles EH3D-NODE-BUNGARD-HMI y EH3D-NODE-HMI-GUI; nunca ejecutada en una placa. |
 | Uso por otros programas | 🟡 | Los crates del workspace los usan EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC y EH3D-SERVER (por ruta, con los repositorios uno junto a otro); el contenedor de proyectos todavía no lo usa ningún programa. |
 | Documentación | 🟡 | README en ocho idiomas, la descripción del formato y la guía de la base de firmware; el CI las compara con el manifiesto y el registro de cambios. |
 

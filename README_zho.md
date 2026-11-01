@@ -49,7 +49,7 @@
 | 遥测与主题 | 🟡 | 轴、主轴、机床状态、带严重程度的 GRBL 报警码，以及带对比度检查的套件配色，均已测试。 |
 | 测试 | 🟡 | 171 个测试通过（`cargo test --workspace`）：主 crate 的模块内 16 个、容器 14 个，九个共享 crate 中 137 个。 |
 | 安全 | 🟡 | 不安全的名称、过大或过多的条目以及任何被改动的条目都会被拒绝；包没有签名也没有加密，也未经独立审查。 |
-| 固件基础 | 🟠 | ESP32 节点共享的 49 个文件，由 `tools/sync_firmware_base.py` 保持一致；只通过唯一使用它的节点 EH3D-NODE-BUNGARD 测试过，从未在电路板上运行。 |
+| 固件基础 | 🟠 | 由 `tools/sync_firmware_base.py` 保持一致的 70 个文件：ESP32 节点共享 49 个（只通过唯一使用它们的节点 EH3D-NODE-BUNGARD 测试过），两块触摸屏 EH3D-NODE-BUNGARD-HMI 和 EH3D-NODE-HMI-GUI 共享 21 个；从未在电路板上运行。 |
 | 被其他程序使用 | 🟡 | 工作区的 crate 已被 EH3D-DRILLPRO、EH3D-ROUTEPRO、EH3D-BUNGARD-GUI、EH3D-MOTIONCNC 和 EH3D-SERVER 使用（通过路径，仓库并排放置）；项目容器本身还没有任何程序使用。 |
 | 文档 | 🟡 | 八种语言的 README、格式说明和固件基础指南；CI 会将它们与清单和变更日志对照。 |
 

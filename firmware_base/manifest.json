@@ -35,9 +35,33 @@
         "EH3D-NODE-BUNGARD": "core/improv.hpp"
       }
     },
+    "core/job_memory.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/job_memory.hpp",
+        "EH3D-NODE-HMI-GUI": "core/job_memory.hpp"
+      }
+    },
+    "core/job_tools.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/job_tools.hpp",
+        "EH3D-NODE-HMI-GUI": "core/job_tools.hpp"
+      }
+    },
     "core/json.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD": "core/json.hpp"
+      }
+    },
+    "core/keyboard.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/keyboard.hpp",
+        "EH3D-NODE-HMI-GUI": "core/keyboard.hpp"
+      }
+    },
+    "core/lang.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/lang.hpp",
+        "EH3D-NODE-HMI-GUI": "core/lang.hpp"
       }
     },
     "core/memory_budget.hpp": {
@@ -70,9 +94,39 @@
         "EH3D-NODE-BUNGARD": "core/node_settings.hpp"
       }
     },
+    "core/notices.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/notices.hpp",
+        "EH3D-NODE-HMI-GUI": "core/notices.hpp"
+      }
+    },
+    "core/orientation.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/orientation.hpp",
+        "EH3D-NODE-HMI-GUI": "core/orientation.hpp"
+      }
+    },
+    "core/quality.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/quality.hpp",
+        "EH3D-NODE-HMI-GUI": "core/quality.hpp"
+      }
+    },
+    "core/sdfiles.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/sdfiles.hpp",
+        "EH3D-NODE-HMI-GUI": "core/sdfiles.hpp"
+      }
+    },
     "core/semver.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD": "core/semver.hpp"
+      }
+    },
+    "core/server_link.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/server_link.hpp",
+        "EH3D-NODE-HMI-GUI": "core/server_link.hpp"
       }
     },
     "core/stored_load.hpp": {
@@ -85,9 +139,27 @@
         "EH3D-NODE-BUNGARD": "core/task_health.hpp"
       }
     },
+    "core/voice.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/voice.hpp",
+        "EH3D-NODE-HMI-GUI": "core/voice.hpp"
+      }
+    },
+    "core/wav.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/wav.hpp",
+        "EH3D-NODE-HMI-GUI": "core/wav.hpp"
+      }
+    },
     "core/web_policy.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD": "core/web_policy.hpp"
+      }
+    },
+    "core/workflow.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/workflow.hpp",
+        "EH3D-NODE-HMI-GUI": "core/workflow.hpp"
       }
     },
     "main/api_shared.cpp": {
@@ -100,6 +172,12 @@
         "EH3D-NODE-BUNGARD": "main/api_shared.hpp"
       }
     },
+    "main/board.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "main/board.hpp",
+        "EH3D-NODE-HMI-GUI": "main/board.hpp"
+      }
+    },
     "main/board_ethernet.cpp": {
       "targets": {
         "EH3D-NODE-BUNGARD": "main/board_ethernet.cpp"
@@ -108,6 +186,12 @@
     "main/board_ethernet.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD": "main/board_ethernet.hpp"
+      }
+    },
+    "main/board_p4.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "main/board_p4.cpp",
+        "EH3D-NODE-HMI-GUI": "main/board_p4.cpp"
       }
     },
     "main/clock_sync.cpp": {
@@ -190,6 +274,18 @@
         "EH3D-NODE-BUNGARD": "main/psram_mem.hpp"
       }
     },
+    "main/server_link.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "main/server_link.cpp",
+        "EH3D-NODE-HMI-GUI": "main/server_link.cpp"
+      }
+    },
+    "main/server_link.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "main/server_link.hpp",
+        "EH3D-NODE-HMI-GUI": "main/server_link.hpp"
+      }
+    },
     "main/task_health.cpp": {
       "targets": {
         "EH3D-NODE-BUNGARD": "main/task_health.cpp"
@@ -230,9 +326,39 @@
         "EH3D-NODE-BUNGARD": "tests/test_clock.cpp"
       }
     },
+    "tests/test_hmi.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "tests/test_hmi.cpp",
+        "EH3D-NODE-HMI-GUI": "tests/test_hmi.cpp"
+      }
+    },
+    "tests/test_keyboard.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "tests/test_keyboard.cpp",
+        "EH3D-NODE-HMI-GUI": "tests/test_keyboard.cpp"
+      }
+    },
+    "tests/test_notices.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "tests/test_notices.cpp",
+        "EH3D-NODE-HMI-GUI": "tests/test_notices.cpp"
+      }
+    },
+    "tests/test_quality.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "tests/test_quality.cpp",
+        "EH3D-NODE-HMI-GUI": "tests/test_quality.cpp"
+      }
+    },
     "tests/test_shared.cpp": {
       "targets": {
         "EH3D-NODE-BUNGARD": "tests/test_shared.cpp"
+      }
+    },
+    "tests/test_workflow.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "tests/test_workflow.cpp",
+        "EH3D-NODE-HMI-GUI": "tests/test_workflow.cpp"
       }
     },
     "tools/check_sdkconfig.py": {

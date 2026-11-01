@@ -7,7 +7,7 @@
 """Keeps the part of the node firmware that the EH3D node projects share (the settings, the network, the panel's server, the log, the
 certificate, the JSON reader...) identical in every one of them.
 
-The node projects (EH3D-NODE-BUNGARD today, the next ones tomorrow) grow from one base, and a fix made in one used to have to be made in each. The files
+The node projects (EH3D-NODE-BUNGARD today, the next ones tomorrow; the two touch screens, EH3D-NODE-BUNGARD-HMI and EH3D-NODE-HMI-GUI, share their own part) grow from one base, and a fix made in one used to have to be made in each. The files
 they share are kept here, once, in `firmware_base/`, with the name of the project written as placeholders; this tool writes them into every project that uses
 them, and `check` says when a copy has drifted (a fix made in one project only). A project keeps its own copy in its own tree, so each builds on its own:
 nothing is shared at build time.
@@ -36,6 +36,9 @@ ROOT = HERE.parent.parent                 # the folder that holds the EH3D repos
 # project -> (EH3D-X, eh3d-x, eh3d_x, x); the forms in this order become the placeholders below
 PROJECTS = {
     "EH3D-NODE-BUNGARD": ("EH3D-NODE-BUNGARD", "eh3d-node-bungard", "eh3d_node_bungard", "bungard"),
+    # the two touch-screen projects share the flow of a job, the link to the server and the rest of the screen's logic
+    "EH3D-NODE-BUNGARD-HMI": ("EH3D-NODE-BUNGARD-HMI", "eh3d-node-bungard-hmi", "eh3d_node_bungard_hmi", "bungard-hmi"),
+    "EH3D-NODE-HMI-GUI": ("EH3D-NODE-HMI-GUI", "eh3d-node-hmi-gui", "eh3d_node_hmi_gui", "hmi-gui"),
 }
 PLACEHOLDERS = ("@PROJECT@", "@project-@", "@project_@", "@kind@")
 
@@ -52,6 +55,16 @@ CANDIDATES = [
     "tools/pack_panel.py", "tools/check_sdkconfig.py",
     "tests/test_base.cpp", "tests/test_shared.cpp", "tests/test_clock.cpp", "tests/check_task_safety.py",
 ]
+
+# The files the two touch-screen projects (EH3D-NODE-BUNGARD-HMI and EH3D-NODE-HMI-GUI) share. The gate, the texts, the settings and the screens (app_main.cpp, ui.cpp)
+# differ by the kind of machine the screen serves and stay each project's own.
+HMI_CANDIDATES = [
+    "core/job_memory.hpp", "core/job_tools.hpp", "core/keyboard.hpp", "core/lang.hpp", "core/notices.hpp", "core/orientation.hpp", "core/quality.hpp",
+    "core/sdfiles.hpp", "core/server_link.hpp", "core/voice.hpp", "core/wav.hpp", "core/workflow.hpp",
+    "main/board.hpp", "main/board_p4.cpp", "main/server_link.cpp", "main/server_link.hpp",
+    "tests/test_hmi.cpp", "tests/test_keyboard.cpp", "tests/test_notices.cpp", "tests/test_quality.cpp", "tests/test_workflow.cpp",
+]
+CANDIDATES_OF = {"EH3D-NODE-BUNGARD-HMI": HMI_CANDIDATES, "EH3D-NODE-HMI-GUI": HMI_CANDIDATES}
 
 
 def to_base(text: str, names: tuple[str, ...]) -> str:
@@ -91,7 +104,7 @@ def command_import(project: str) -> int:
     names = PROJECTS[project]
     manifest = load_manifest()
     taken = 0
-    for rel in CANDIDATES:
+    for rel in CANDIDATES_OF.get(project, CANDIDATES):
         source = read(ROOT / project / rel)
         if source is None:
             continue
