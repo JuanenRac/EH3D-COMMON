@@ -44,6 +44,15 @@ impl Default for Timeouts {
     }
 }
 
+/// The most a line may wait for its answer while the machine says it is working.
+const MAX_BUSY_WAIT: Duration = Duration::from_secs(4 * 3600);
+
+enum Probe {
+    Answered(Result<(), Error>),
+    Busy,
+    Silent,
+}
+
 /// The kinds of line that wait for different times.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 enum Kind {
@@ -109,6 +118,35 @@ impl<T: LineTransport> GrblController<T> {
         Error::Link(e.to_string())
     }
 
+    /// Asks for the state until the hold is complete (`Hold:0`, or idle or alarm), at most `limit`.
+    fn wait_hold_done(&mut self, limit: Duration) {
+        let end = Instant::now() + limit;
+        while Instant::now() < end {
+            if self.byte(STATUS).is_err() {
+                return;
+            }
+            let ask_until = Instant::now() + Duration::from_millis(250);
+            while Instant::now() < ask_until {
+                let left = ask_until.saturating_duration_since(Instant::now());
+                match self.transport.read_line(left) {
+                    Ok(Some(l)) => {
+                        let l = l.trim();
+                        if l.starts_with("<Hold:0")
+                            || l.starts_with("<Idle")
+                            || l.starts_with("<Alarm")
+                        {
+                            return;
+                        }
+                        if l.starts_with('<') {
+                            break;
+                        }
+                    }
+                    Ok(None) | Err(_) => return,
+                }
+            }
+        }
+    }
+
     /// Waits for the end of an order, at most `limit` in all: `ok` is done; `error:N` and `ALARM:N` are refused; the other lines
     /// (messages, reports) are skipped.
     fn wait_ok(&mut self, limit: Duration) -> Result<(), Error> {
@@ -146,7 +184,23 @@ impl<T: LineTransport> GrblController<T> {
         self.transport
             .write_all(format!("{text}\n").as_bytes())
             .map_err(Self::link)?;
-        let done = self.wait_ok(limit);
+        let mut done = self.wait_ok(limit);
+        // GRBL answers `ok` when the line enters its buffer, which with the buffer full is when an older block ends: a slow move, a dwell or
+        // a spindle change can keep it from answering far longer than the limit while the machine works. As long as it says it is busy, wait on.
+        let mut waited = limit;
+        while kind == Kind::Plain && done == Err(Error::Timeout) && waited < MAX_BUSY_WAIT {
+            match self.probe_busy() {
+                Probe::Answered(r) => {
+                    done = r;
+                    break;
+                }
+                Probe::Busy => {
+                    done = self.wait_ok(limit);
+                    waited += limit;
+                }
+                Probe::Silent => break,
+            }
+        }
         if done == Err(Error::Timeout) {
             // never leave the machine moving: a homing cycle ignores a hold, so it is reset; a jog is cancelled; the rest is held
             let _ = self.byte(match kind {
@@ -156,6 +210,45 @@ impl<T: LineTransport> GrblController<T> {
             });
         }
         done
+    }
+
+    /// Asks for the state while an order has not been answered: tells whether the answer came meanwhile, the machine is working or it is silent.
+    fn probe_busy(&mut self) -> Probe {
+        if self.byte(STATUS).is_err() {
+            return Probe::Silent;
+        }
+        let end = Instant::now() + Duration::from_secs(2);
+        loop {
+            let left = end.saturating_duration_since(Instant::now());
+            if left.is_zero() {
+                return Probe::Silent;
+            }
+            match self.transport.read_line(left) {
+                Ok(Some(l)) => {
+                    let l = l.trim();
+                    if l == "ok" {
+                        return Probe::Answered(Ok(()));
+                    }
+                    if let Some(code) = l.strip_prefix("error:") {
+                        return Probe::Answered(Err(Error::Refused(format!("error {code}"))));
+                    }
+                    if let Some(code) = l.strip_prefix("ALARM:") {
+                        return Probe::Answered(Err(Error::Alarm(format!("alarm {code}"))));
+                    }
+                    if l.starts_with("<Run")
+                        || l.starts_with("<Hold")
+                        || l.starts_with("<Jog")
+                        || l.starts_with("<Home")
+                    {
+                        return Probe::Busy;
+                    }
+                    if l.starts_with('<') {
+                        return Probe::Silent;
+                    }
+                }
+                _ => return Probe::Silent,
+            }
+        }
     }
 
     fn byte(&mut self, b: u8) -> Result<(), Error> {
@@ -310,8 +403,10 @@ impl<T: LineTransport> Controller for GrblController<T> {
             Command::Pause => self.byte(HOLD),
             Command::Resume => self.byte(RESUME),
             Command::Stop => {
-                // hold first so that the machine stops moving, then reset to clear what is queued
+                // hold first so that the machine stops moving; the reset waits until it has (a reset while it still moves loses steps
+                // and raises ALARM:3); when it does not say so in time the reset goes anyway and the position must be taken as lost
                 self.byte(HOLD)?;
+                self.wait_hold_done(Duration::from_secs(3));
                 self.byte(RESET)
             }
             Command::EmergencyStop => self.byte(RESET),
@@ -432,7 +527,50 @@ mod tests {
         // Stop holds and then resets
         let mut c = GrblController::new(MockTransport::default());
         c.command(Command::Stop).unwrap();
-        assert_eq!(c.transport().written, vec![b'!', 0x18]);
+        assert_eq!(c.transport().written, vec![b'!', b'?', 0x18]);
+    }
+
+    #[test]
+    fn a_line_keeps_waiting_while_the_machine_is_working() {
+        let quick = Timeouts {
+            line: Duration::from_millis(1),
+            homing: Duration::from_millis(1),
+            jog: Duration::from_millis(1),
+        };
+        // no answer within the limit, the machine says it runs, then the ok comes
+        struct Script(std::collections::VecDeque<Option<&'static str>>, Vec<u8>);
+        impl LineTransport for Script {
+            fn write_all(&mut self, bytes: &[u8]) -> io::Result<()> {
+                self.1.extend_from_slice(bytes);
+                Ok(())
+            }
+            fn read_line(&mut self, _timeout: Duration) -> io::Result<Option<String>> {
+                Ok(self.0.pop_front().flatten().map(String::from))
+            }
+        }
+        let t = Script(
+            [None, Some("<Run|MPos:0.000,0.000,0.000>"), Some("ok")]
+                .into_iter()
+                .collect(),
+            Vec::new(),
+        );
+        let mut c = GrblController::new(t).with_timeouts(quick);
+        assert_eq!(c.send_line("G1 X100 F60"), Ok(()));
+        assert!(
+            !c.transport().1.contains(&HOLD),
+            "the machine was working: no feed hold"
+        );
+    }
+
+    #[test]
+    fn stop_resets_only_after_the_hold_is_complete() {
+        let t = MockTransport::with_replies(&[
+            "<Hold:1|MPos:0.000,0.000,0.000>",
+            "<Hold:0|MPos:0.000,0.000,0.000>",
+        ]);
+        let mut c = GrblController::new(t);
+        c.command(Command::Stop).unwrap();
+        assert_eq!(c.transport().written, vec![b'!', b'?', b'?', 0x18]);
     }
 
     #[test]
