@@ -256,6 +256,25 @@ impl<T: LineTransport> GrblController<T> {
     }
 }
 
+/// A line without its comments (`( ... )` and `;` to the end) and without the characters that GRBL takes as real-time commands wherever they
+/// are in the stream (`!`, `~`, `?`, the reset and everything that is not ASCII): a comment such as `(tool change!)` would otherwise hold the feed.
+fn without_comments_and_realtime(line: &str) -> String {
+    let mut out = String::with_capacity(line.len());
+    let mut depth = 0u32;
+    for c in line.chars() {
+        match c {
+            ';' if depth == 0 => break,
+            '(' => depth += 1,
+            ')' if depth > 0 => depth -= 1,
+            _ if depth > 0 => {}
+            '!' | '~' | '?' | '\u{18}' => {}
+            c if c.is_ascii() && !c.is_ascii_control() || c == ' ' || c == '\t' => out.push(c),
+            _ => {}
+        }
+    }
+    out
+}
+
 fn axis_name(axis: usize) -> Result<char, Error> {
     ['X', 'Y', 'Z', 'A', 'B', 'C']
         .get(axis)
@@ -431,7 +450,8 @@ impl<T: LineTransport> Controller for GrblController<T> {
     }
 
     fn send_line(&mut self, line: &str) -> Result<(), Error> {
-        let l = line.trim();
+        let clean = without_comments_and_realtime(line);
+        let l = clean.trim();
         if l.is_empty() {
             return Ok(());
         }
@@ -560,6 +580,15 @@ mod tests {
             !c.transport().1.contains(&HOLD),
             "the machine was working: no feed hold"
         );
+    }
+
+    #[test]
+    fn comments_and_real_time_characters_do_not_reach_the_controller() {
+        let mut c = GrblController::new(MockTransport::with_replies(&["ok", "ok", "ok"]));
+        c.send_line("G1 X1 (tool change!) F100 ; what?").unwrap();
+        c.send_line("(only a comment!)").unwrap();
+        c.send_line("M3 S1000 ?!~é").unwrap();
+        assert_eq!(c.transport().text(), "G1 X1  F100\nM3 S1000\n");
     }
 
     #[test]

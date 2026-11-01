@@ -63,6 +63,8 @@ struct Format {
     digits: Option<(u32, u32)>,
     /// `LZ`: the leading zeros are written and the trailing ones left out; `TZ` (and the default): the other way.
     trailing_suppressed: bool,
+    /// An `INCH` (or `M72`) header with nothing else: the files of the machine, and the ones this suite writes, say it and then give whole mils.
+    plain_inch: bool,
 }
 
 impl Format {
@@ -105,6 +107,10 @@ impl Format {
             if let Some((i, d)) = f.trim().split_once(':') {
                 if let (Ok(i), Ok(d)) = (i.parse(), d.parse()) {
                     self.digits = Some((i, d));
+                    if self.plain_inch {
+                        // a format given in numbers: the digits of the file, not mils
+                        self.metric = Some(false);
+                    }
                 }
             }
             return;
@@ -112,12 +118,20 @@ impl Format {
         let mut parts = line.split(',');
         match parts.next().map(str::trim) {
             Some("METRIC") => self.metric = Some(true),
-            Some("INCH") => self.metric = Some(false),
+            Some("INCH") => {
+                self.metric = Some(false);
+                self.plain_inch = true;
+            }
             Some("M71") => self.metric = Some(true),
-            Some("M72") => self.metric = Some(false),
+            Some("M72") => {
+                self.metric = Some(false);
+                self.plain_inch = true;
+            }
             _ => return,
         }
+        let mut options = false;
         for part in parts {
+            options = true;
             match part.trim() {
                 "LZ" => self.trailing_suppressed = true,
                 "TZ" => self.trailing_suppressed = false,
@@ -129,6 +143,13 @@ impl Format {
                     }
                 }
             }
+        }
+        if options {
+            self.plain_inch = false;
+        }
+        if self.plain_inch {
+            // no options: whole mils
+            self.metric = None;
         }
     }
 }
@@ -325,6 +346,12 @@ M30
         assert!((f.holes[0].x_mm() - 12.7).abs() < 0.02);
         assert!((f.holes[0].y_mm() + 25.4).abs() < 0.02);
         assert_eq!(f.tools, vec![1]);
+    }
+
+    #[test]
+    fn a_plain_inch_header_keeps_whole_mils_as_the_machine_files_have_them() {
+        let f = parse("M48\nINCH\nT1C0.0315\n%\nT1\nX1000Y2000\nM30\n").unwrap();
+        assert_eq!((f.holes[0].x_mil, f.holes[0].y_mil), (1000, 2000));
     }
 
     #[test]
