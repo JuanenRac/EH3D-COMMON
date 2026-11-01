@@ -23,7 +23,9 @@ impl Gray {
             return Err("the picture has the wrong number of pixels".to_string());
         }
         let px = rgb
-            .chunks_exact(3)
+            .as_chunks::<3>()
+            .0
+            .iter()
             .map(|p| ((p[0] as u32 * 299 + p[1] as u32 * 587 + p[2] as u32 * 114) / 1000) as u8)
             .collect();
         Ok(Gray { w, h, px })
