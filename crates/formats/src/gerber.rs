@@ -67,6 +67,21 @@ fn word(block: &str, axis: char) -> Option<&str> {
     Some(&rest[..end])
 }
 
+/// The values of all the words that begin with `letter` in a block (`G01X0D02` gives 1 for `G`), so that `G1` and `G01` are the same code.
+fn codes(block: &str, letter: char) -> Vec<u32> {
+    let mut out = Vec::new();
+    let mut rest = block;
+    while let Some(i) = rest.find(letter) {
+        let after = &rest[i + 1..];
+        let digits: String = after.chars().take_while(|c| c.is_ascii_digit()).collect();
+        if let Ok(v) = digits.parse() {
+            out.push(v);
+        }
+        rest = after;
+    }
+    out
+}
+
 /// The outline of the board: every closed or open run of strokes as a path of the plot, in plotter units. `segments_per_circle` is how
 /// many chords a whole circle is cut into. An error says what in the file cannot be read.
 pub fn outline(text: &str, segments_per_circle: u32) -> Result<Plot, String> {
@@ -79,6 +94,7 @@ pub fn outline(text: &str, segments_per_circle: u32) -> Result<Plot, String> {
     let mut mm_per_unit = 25.4;
     let mut saw_format = false;
     let (mut x, mut y) = (0.0f64, 0.0f64);
+    let mut last_op = 0u32;
     let mut mode = 1u8; // 1 line, 2 clockwise arc, 3 counterclockwise arc
     let mut run: Vec<(f64, f64)> = Vec::new();
     let mut runs: Vec<Vec<(f64, f64)>> = Vec::new();
@@ -131,16 +147,31 @@ pub fn outline(text: &str, segments_per_circle: u32) -> Result<Plot, String> {
         if block.starts_with("G04") || block.starts_with("M02") {
             continue;
         }
-        for (code, m) in [("G01", 1u8), ("G02", 2), ("G03", 3)] {
-            if block.contains(code) {
-                mode = m;
+        for g in codes(&block, 'G') {
+            if (1..=3).contains(&g) {
+                mode = g as u8;
             }
         }
         let has_move = ["X", "Y", "I", "J"].iter().any(|a| block.contains(a));
-        let op = ["D01", "D02", "D03", "D1", "D2", "D3"]
-            .iter()
-            .find(|d| block.ends_with(**d))
-            .map(|d| d.trim_start_matches('D').trim_start_matches('0'));
+        // D01/D02/D03 draw, move and flash; a block with coordinates and no D keeps the last one (the old files do not repeat it)
+        let drawn = codes(&block, 'D')
+            .into_iter()
+            .rfind(|d| (1..=3).contains(d));
+        if let Some(d) = drawn {
+            last_op = d;
+        }
+        let op = match (drawn, has_move) {
+            (Some(1), _) => Some("1"),
+            (Some(2), _) => Some("2"),
+            (Some(_), _) => Some("3"),
+            (None, true) => match last_op {
+                1 => Some("1"),
+                2 => Some("2"),
+                3 => Some("3"),
+                _ => None,
+            },
+            (None, false) => None,
+        };
         if !has_move && op.is_none() {
             continue;
         }
@@ -228,6 +259,32 @@ mod tests {
     use super::*;
 
     const SQUARE: &str = "%FSLAX24Y24*%\n%MOMM*%\n%ADD10C,0.1*%\nD10*\nG01*\nX0Y0D02*\nX500000Y0D01*\nX500000Y300000D01*\nX0Y300000D01*\nX0Y0D01*\nM02*\n";
+
+    #[test]
+    fn arcs_written_with_short_codes_and_a_modal_d_are_followed() {
+        // G3 (not G03) is a counterclockwise arc; a block with coordinates and no D keeps the last D01
+        let arc = "%FSLAX24Y24*%
+%MOMM*%
+G01*
+X100000Y0D02*
+G3*
+X0Y100000I-100000J0D01*
+M02*
+";
+        let p = outline(arc, 72).unwrap();
+        assert!(p.paths[0].points.len() > 10, "{}", p.paths[0].points.len());
+        let modal = "%FSLAX24Y24*%
+%MOMM*%
+G1*
+X0Y0D02*
+X100000Y0D01*
+X100000Y100000*
+X0Y100000*
+M02*
+";
+        let p = outline(modal, 72).unwrap();
+        assert_eq!(p.paths[0].points.len(), 4, "{:?}", p.paths[0].points);
+    }
 
     #[test]
     fn a_square_outline_is_one_closed_path_in_plotter_units() {
