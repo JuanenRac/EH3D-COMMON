@@ -12,7 +12,7 @@ they share are kept here, once, in `firmware_base/`, with the name of the projec
 them, and `check` says when a copy has drifted (a fix made in one project only). A project keeps its own copy in its own tree, so each builds on its own:
 nothing is shared at build time.
 
-    python tools/sync_firmware_base.py check     # exit 1 when a copy differs from the base
+    python tools/sync_firmware_base.py check     # exit 1 when a copy differs from the base; --strict also fails when a project's folder is missing (CI)
     python tools/sync_firmware_base.py sync      # write the base into every project that uses each file
     python tools/sync_firmware_base.py import    # (re)make the base from the files of a project: python ... import EH3D-NODE-BUNGARD
     python tools/sync_firmware_base.py status    # which file goes where
@@ -36,6 +36,7 @@ ROOT = HERE.parent.parent                 # the folder that holds the EH3D repos
 # project -> (EH3D-X, eh3d-x, eh3d_x, x); the forms in this order become the placeholders below
 PROJECTS = {
     "EH3D-NODE-BUNGARD": ("EH3D-NODE-BUNGARD", "eh3d-node-bungard", "eh3d_node_bungard", "bungard"),
+    "EH3D-NODE-BUNGARD-AUX": ("EH3D-NODE-BUNGARD-AUX", "eh3d-node-bungard-aux", "eh3d_node_bungard_aux", "bungard-aux"),
     # the two touch-screen projects share the flow of a job, the link to the server and the rest of the screen's logic
     "EH3D-NODE-BUNGARD-HMI": ("EH3D-NODE-BUNGARD-HMI", "eh3d-node-bungard-hmi", "eh3d_node_bungard_hmi", "bungard-hmi"),
     "EH3D-NODE-HMI-GUI": ("EH3D-NODE-HMI-GUI", "eh3d-node-hmi-gui", "eh3d_node_hmi_gui", "hmi-gui"),
@@ -118,7 +119,7 @@ def command_import(project: str) -> int:
     return 0
 
 
-def command_sync(check_only: bool) -> int:
+def command_sync(check_only: bool, strict: bool = False) -> int:
     manifest = load_manifest()
     drift = []
     skipped: set[str] = set()
@@ -148,6 +149,10 @@ def command_sync(check_only: bool) -> int:
             print("  DRIFT", line)
         for project in sorted(skipped):
             print(f"  (skipped {project}: its folder is not next to this repository)")
+        if strict and skipped:
+            # the CI clones every project next to this repository: a project that is not there is not compared, and that must not pass unseen
+            print("  FAIL --strict: " + ", ".join(sorted(skipped)) + " not found next to this repository")
+            return 1
         print("FIRMWARE_BASE=" + ("PASS" if not drift else "FAIL"))
         return 0 if not drift else 1
     for line in drift:
@@ -168,9 +173,10 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Keeps the shared part of the node firmware identical in every project")
     parser.add_argument("command", choices=["check", "sync", "import", "status"])
     parser.add_argument("project", nargs="?", default="EH3D-NODE-BUNGARD", help="for import: the project whose files become the base")
+    parser.add_argument("--strict", action="store_true", help="for check: a project whose folder is not next to this repository is a failure (CI), not a skip")
     args = parser.parse_args()
     if args.command == "check":
-        return command_sync(True)
+        return command_sync(True, args.strict)
     if args.command == "sync":
         return command_sync(False)
     if args.command == "import":

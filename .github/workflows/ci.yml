@@ -24,8 +24,13 @@ jobs:
         run: |
           python -I tools/make_architecture.py --check
           python -I tools/make_structure.py --check --readmes
+      - name: Projects that keep a copy of the firmware base
+        run: |
+          for project in EH3D-NODE-BUNGARD EH3D-NODE-BUNGARD-AUX EH3D-NODE-BUNGARD-HMI EH3D-NODE-HMI-GUI; do
+            git clone --depth 1 "https://github.com/JuanenRac/${project}.git" "../${project}"
+          done
       - name: Firmware base copies
-        run: python -I tools/sync_firmware_base.py check
+        run: python -I tools/sync_firmware_base.py check --strict
 
   rust:
     name: Rust (${{ matrix.os }})

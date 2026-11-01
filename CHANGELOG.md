@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The firmware base is current and watched in the CI:** the base took back the node's 37 languages and the packing of the language file of the panel (a `sync` would have reverted them), EH3D-NODE-BUNGARD-AUX is registered with its own names (web_server.hpp and check_sdkconfig.py stay the node's own), and the CI now clones every project next to this repository and runs `check --strict`, which fails when a project is missing instead of skipping it.
+
 - **The firmware base also serves the two touch screens:** `tools/sync_firmware_base.py` now knows EH3D-NODE-BUNGARD-HMI and EH3D-NODE-HMI-GUI and keeps 21 of their files identical (the flow of a job, the link to the server, the job memory, the tool reader, the card files, the keyboard, the notices, the orientation, the quality reading, the voice, the board and their host tests); the gate, the texts, the settings and the screens stay each project's own. `import` for a screen project takes its own list of files, and `check` in the CI reports a drift in a screen as it does in a node.
 
 ## [0.1.0] - Texts of the tool rack and the loading tips, the sheets without copper and the homing of GRBL

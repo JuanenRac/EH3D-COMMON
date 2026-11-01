@@ -2,37 +2,44 @@
   "files": {
     "core/admin_sources.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "core/admin_sources.hpp"
+        "EH3D-NODE-BUNGARD": "core/admin_sources.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/admin_sources.hpp"
       }
     },
     "core/auth.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "core/auth.hpp"
+        "EH3D-NODE-BUNGARD": "core/auth.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/auth.hpp"
       }
     },
     "core/backoff.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "core/backoff.hpp"
+        "EH3D-NODE-BUNGARD": "core/backoff.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/backoff.hpp"
       }
     },
     "core/board_s3.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "core/board_s3.hpp"
+        "EH3D-NODE-BUNGARD": "core/board_s3.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/board_s3.hpp"
       }
     },
     "core/civil_time.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "core/civil_time.hpp"
+        "EH3D-NODE-BUNGARD": "core/civil_time.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/civil_time.hpp"
       }
     },
     "core/config_common.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "core/config_common.hpp"
+        "EH3D-NODE-BUNGARD": "core/config_common.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/config_common.hpp"
       }
     },
     "core/improv.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "core/improv.hpp"
+        "EH3D-NODE-BUNGARD": "core/improv.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/improv.hpp"
       }
     },
     "core/job_memory.hpp": {
@@ -49,7 +56,8 @@
     },
     "core/json.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "core/json.hpp"
+        "EH3D-NODE-BUNGARD": "core/json.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/json.hpp"
       }
     },
     "core/keyboard.hpp": {
@@ -66,32 +74,38 @@
     },
     "core/memory_budget.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "core/memory_budget.hpp"
+        "EH3D-NODE-BUNGARD": "core/memory_budget.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/memory_budget.hpp"
       }
     },
     "core/net_text.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "core/net_text.hpp"
+        "EH3D-NODE-BUNGARD": "core/net_text.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/net_text.hpp"
       }
     },
     "core/netplan.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "core/netplan.hpp"
+        "EH3D-NODE-BUNGARD": "core/netplan.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/netplan.hpp"
       }
     },
     "core/node_guard.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "core/node_guard.hpp"
+        "EH3D-NODE-BUNGARD": "core/node_guard.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/node_guard.hpp"
       }
     },
     "core/node_id.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "core/node_id.hpp"
+        "EH3D-NODE-BUNGARD": "core/node_id.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/node_id.hpp"
       }
     },
     "core/node_settings.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "core/node_settings.hpp"
+        "EH3D-NODE-BUNGARD": "core/node_settings.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/node_settings.hpp"
       }
     },
     "core/notices.hpp": {
@@ -120,7 +134,8 @@
     },
     "core/semver.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "core/semver.hpp"
+        "EH3D-NODE-BUNGARD": "core/semver.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/semver.hpp"
       }
     },
     "core/server_link.hpp": {
@@ -131,12 +146,14 @@
     },
     "core/stored_load.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "core/stored_load.hpp"
+        "EH3D-NODE-BUNGARD": "core/stored_load.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/stored_load.hpp"
       }
     },
     "core/task_health.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "core/task_health.hpp"
+        "EH3D-NODE-BUNGARD": "core/task_health.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/task_health.hpp"
       }
     },
     "core/voice.hpp": {
@@ -153,7 +170,8 @@
     },
     "core/web_policy.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "core/web_policy.hpp"
+        "EH3D-NODE-BUNGARD": "core/web_policy.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/web_policy.hpp"
       }
     },
     "core/workflow.hpp": {
@@ -164,12 +182,14 @@
     },
     "main/api_shared.cpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/api_shared.cpp"
+        "EH3D-NODE-BUNGARD": "main/api_shared.cpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/api_shared.cpp"
       }
     },
     "main/api_shared.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/api_shared.hpp"
+        "EH3D-NODE-BUNGARD": "main/api_shared.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/api_shared.hpp"
       }
     },
     "main/board.hpp": {
@@ -180,12 +200,14 @@
     },
     "main/board_ethernet.cpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/board_ethernet.cpp"
+        "EH3D-NODE-BUNGARD": "main/board_ethernet.cpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/board_ethernet.cpp"
       }
     },
     "main/board_ethernet.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/board_ethernet.hpp"
+        "EH3D-NODE-BUNGARD": "main/board_ethernet.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/board_ethernet.hpp"
       }
     },
     "main/board_p4.cpp": {
@@ -196,82 +218,98 @@
     },
     "main/clock_sync.cpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/clock_sync.cpp"
+        "EH3D-NODE-BUNGARD": "main/clock_sync.cpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/clock_sync.cpp"
       }
     },
     "main/clock_sync.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/clock_sync.hpp"
+        "EH3D-NODE-BUNGARD": "main/clock_sync.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/clock_sync.hpp"
       }
     },
     "main/entropy.cpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/entropy.cpp"
+        "EH3D-NODE-BUNGARD": "main/entropy.cpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/entropy.cpp"
       }
     },
     "main/entropy.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/entropy.hpp"
+        "EH3D-NODE-BUNGARD": "main/entropy.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/entropy.hpp"
       }
     },
     "main/improv_serial.cpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/improv_serial.cpp"
+        "EH3D-NODE-BUNGARD": "main/improv_serial.cpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/improv_serial.cpp"
       }
     },
     "main/improv_serial.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/improv_serial.hpp"
+        "EH3D-NODE-BUNGARD": "main/improv_serial.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/improv_serial.hpp"
       }
     },
     "main/log_buffer.cpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/log_buffer.cpp"
+        "EH3D-NODE-BUNGARD": "main/log_buffer.cpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/log_buffer.cpp"
       }
     },
     "main/log_buffer.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/log_buffer.hpp"
+        "EH3D-NODE-BUNGARD": "main/log_buffer.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/log_buffer.hpp"
       }
     },
     "main/network.cpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/network.cpp"
+        "EH3D-NODE-BUNGARD": "main/network.cpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/network.cpp"
       }
     },
     "main/network.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/network.hpp"
+        "EH3D-NODE-BUNGARD": "main/network.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/network.hpp"
       }
     },
     "main/node_guard.cpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/node_guard.cpp"
+        "EH3D-NODE-BUNGARD": "main/node_guard.cpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/node_guard.cpp"
       }
     },
     "main/node_guard.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/node_guard.hpp"
+        "EH3D-NODE-BUNGARD": "main/node_guard.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/node_guard.hpp"
       }
     },
     "main/node_store.cpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/node_store.cpp"
+        "EH3D-NODE-BUNGARD": "main/node_store.cpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/node_store.cpp"
       }
     },
     "main/node_store.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/node_store.hpp"
+        "EH3D-NODE-BUNGARD": "main/node_store.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/node_store.hpp"
       }
     },
     "main/psram_mem.cpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/psram_mem.cpp"
+        "EH3D-NODE-BUNGARD": "main/psram_mem.cpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/psram_mem.cpp"
       }
     },
     "main/psram_mem.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/psram_mem.hpp"
+        "EH3D-NODE-BUNGARD": "main/psram_mem.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/psram_mem.hpp"
       }
     },
     "main/server_link.cpp": {
@@ -288,22 +326,26 @@
     },
     "main/task_health.cpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/task_health.cpp"
+        "EH3D-NODE-BUNGARD": "main/task_health.cpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/task_health.cpp"
       }
     },
     "main/task_health.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/task_health.hpp"
+        "EH3D-NODE-BUNGARD": "main/task_health.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/task_health.hpp"
       }
     },
     "main/tls_cert.cpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/tls_cert.cpp"
+        "EH3D-NODE-BUNGARD": "main/tls_cert.cpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/tls_cert.cpp"
       }
     },
     "main/tls_cert.hpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "main/tls_cert.hpp"
+        "EH3D-NODE-BUNGARD": "main/tls_cert.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "main/tls_cert.hpp"
       }
     },
     "main/web_server.hpp": {
@@ -313,17 +355,20 @@
     },
     "tests/check_task_safety.py": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "tests/check_task_safety.py"
+        "EH3D-NODE-BUNGARD": "tests/check_task_safety.py",
+        "EH3D-NODE-BUNGARD-AUX": "tests/check_task_safety.py"
       }
     },
     "tests/test_base.cpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "tests/test_base.cpp"
+        "EH3D-NODE-BUNGARD": "tests/test_base.cpp",
+        "EH3D-NODE-BUNGARD-AUX": "tests/test_base.cpp"
       }
     },
     "tests/test_clock.cpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "tests/test_clock.cpp"
+        "EH3D-NODE-BUNGARD": "tests/test_clock.cpp",
+        "EH3D-NODE-BUNGARD-AUX": "tests/test_clock.cpp"
       }
     },
     "tests/test_hmi.cpp": {
@@ -352,7 +397,8 @@
     },
     "tests/test_shared.cpp": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "tests/test_shared.cpp"
+        "EH3D-NODE-BUNGARD": "tests/test_shared.cpp",
+        "EH3D-NODE-BUNGARD-AUX": "tests/test_shared.cpp"
       }
     },
     "tests/test_workflow.cpp": {
@@ -368,7 +414,8 @@
     },
     "tools/pack_panel.py": {
       "targets": {
-        "EH3D-NODE-BUNGARD": "tools/pack_panel.py"
+        "EH3D-NODE-BUNGARD": "tools/pack_panel.py",
+        "EH3D-NODE-BUNGARD-AUX": "tools/pack_panel.py"
       }
     }
   }
