@@ -494,3 +494,15 @@ FullScreen	Volledig scherm
 BoardTooBig	Past niet op de tafel van de actieve machine, ook niet 90 graden gedraaid
 TableNoun	Tafel
 AllMakers	Alle fabrikanten
+RackSetupTitle	Gereedschapsbalk
+RackFirst	Eerste gereedschap
+RackLast	Laatste gereedschap
+RackToolLength	Lengte van het gereedschap
+RackRingToTip	Van ring tot punt
+RackClearance	Hoogte boven de gereedschappen
+RackApproach	Aanloop van opzij
+RackSetupNote	De plaatsen tussen de eerste en de laatste liggen op gelijke afstand. Niet op een echte machine geprobeerd: controleer elk punt met stilstaande spindel.
+RackInHead	In de kop
+RackToTake	Op te pakken
+RackToLeave	Neer te leggen
+RackOutside	Een punt van de balk ligt buiten het bereik van de machine

@@ -494,3 +494,15 @@ FullScreen	Fuld skærm
 BoardTooBig	Passer ikke på den aktive maskines bord, heller ikke drejet 90 grader
 TableNoun	Bord
 AllMakers	Alle producenter
+RackSetupTitle	Værktøjsbar
+RackFirst	Første værktøj
+RackLast	Sidste værktøj
+RackToolLength	Værktøjets længde
+RackRingToTip	Fra ringen til spidsen
+RackClearance	Højde over værktøjerne
+RackApproach	Indkørsel fra siden
+RackSetupNote	Pladserne mellem den første og den sidste er fordelt jævnt. Ikke prøvet på en rigtig maskine: kontrollér hvert punkt med spindlen standset.
+RackInHead	I hovedet
+RackToTake	Skal hentes
+RackToLeave	Skal afleveres
+RackOutside	Et punkt på listen ligger uden for maskinens rækkevidde

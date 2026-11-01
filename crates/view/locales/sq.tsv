@@ -494,3 +494,15 @@ FullScreen	Ekran i plotë
 BoardTooBig	Nuk përshtatet në tavolinën e makinës aktive, madje as e rrotulluar 90 gradë
 TableNoun	Tavolina
 AllMakers	Të gjithë prodhuesit
+RackSetupTitle	Shiriti i mjeteve
+RackFirst	Mjeti i parë
+RackLast	Mjeti i fundit
+RackToolLength	Gjatësia e mjetit
+RackRingToTip	Nga unaza te maja
+RackClearance	Lartësia mbi mjetet
+RackApproach	Afrimi nga ana
+RackSetupNote	Vendet midis të parit dhe të fundit shpërndahen në mënyrë të barabartë. Nuk është provuar në një makinë të vërtetë: kontrolloni çdo pikë me boshtin të ndalur.
+RackInHead	Në kokë
+RackToTake	Për t'u marrë
+RackToLeave	Për t'u lënë
+RackOutside	Një pikë e shiritit është jashtë shtrirjes së makinës

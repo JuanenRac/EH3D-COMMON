@@ -494,3 +494,15 @@ FullScreen	Helskärm
 BoardTooBig	Ryms inte på den aktiva maskinens bord, inte ens vriden 90 grader
 TableNoun	Bord
 AllMakers	Alla tillverkare
+RackSetupTitle	Verktygslist
+RackFirst	Första verktyget
+RackLast	Sista verktyget
+RackToolLength	Verktygets längd
+RackRingToTip	Från ringen till spetsen
+RackClearance	Höjd över verktygen
+RackApproach	Inkörning från sidan
+RackSetupNote	Platserna mellan den första och den sista fördelas jämnt. Inte prövat på en riktig maskin: kontrollera varje punkt med spindeln stoppad.
+RackInHead	I huvudet
+RackToTake	Att hämta
+RackToLeave	Att lämna
+RackOutside	En punkt på listen ligger utanför maskinens räckvidd

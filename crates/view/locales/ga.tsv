@@ -494,3 +494,15 @@ FullScreen	Lánscáileán
 BoardTooBig	Ní luíonn sí ar tábla an mheaisín ghníomhaigh, fiú má chastar 90 céim í
 TableNoun	Tábla
 AllMakers	Gach monaróir
+RackSetupTitle	Barra uirlisí
+RackFirst	An chéad uirlis
+RackLast	An uirlis dheireanach
+RackToolLength	Fad an uirlis
+RackRingToTip	Ón fháinne go dtí an barr
+RackClearance	Airde os cionn na n-uirlisí
+RackApproach	Teacht ón taobh
+RackSetupNote	Tá na háiteanna idir an chéad cheann agus an ceann deireanach scartha go cothrom. Níor triaileadh ar fhíorinneall é: seiceáil gach pointe agus an fearsaid stoptha.
+RackInHead	Sa chloigeann
+RackToTake	Le tógáil
+RackToLeave	Le fágáil
+RackOutside	Tá pointe den bharra lasmuigh de réim an innill

@@ -494,3 +494,15 @@ FullScreen	Allur skjárinn
 BoardTooBig	Passar ekki á borð virku vélarinnar, ekki einu sinni snúið 90 gráður
 TableNoun	Borð
 AllMakers	Allir framleiðendur
+RackSetupTitle	Verkfærastika
+RackFirst	Fyrsta verkfæri
+RackLast	Síðasta verkfæri
+RackToolLength	Lengd verkfæris
+RackRingToTip	Frá hring að odd
+RackClearance	Hæð yfir verkfærum
+RackApproach	Aðkoma frá hlið
+RackSetupNote	Staðirnir milli fyrsta og síðasta eru jafnt dreifðir. Þetta hefur ekki verið reynt á alvöru vél: athugaðu hvern punkt með spindilinn stöðvaðan.
+RackInHead	Í hausnum
+RackToTake	Til að taka
+RackToLeave	Til að skila
+RackOutside	Punktur á stikunni er utan seilingar vélarinnar

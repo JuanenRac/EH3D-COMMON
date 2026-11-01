@@ -494,3 +494,15 @@ FullScreen	Skrin sħiħ
 BoardTooBig	Ma tidholx fuq il-mejda tal-magna attiva, anke jekk iddawwarha 90 grad
 TableNoun	Mejda
 AllMakers	Il-manifatturi kollha
+RackSetupTitle	Bar tal-għodod
+RackFirst	L-ewwel għodda
+RackLast	L-aħħar għodda
+RackToolLength	Tul tal-għodda
+RackRingToTip	Mill-ċirku sal-ponta
+RackClearance	Għoli fuq l-għodod
+RackApproach	Approċċ mill-ġenb
+RackSetupNote	Il-postijiet bejn l-ewwel u l-aħħar huma mqassma b'mod ugwali. Ma ġiex ittestjat fuq magna vera: iċċekkja kull punt bl-ispindlu waqfa.
+RackInHead	Fir-ras
+RackToTake	Biex tittieħed
+RackToLeave	Biex titħalla
+RackOutside	Punt tal-bar huwa barra mill-firxa tal-magna

@@ -494,3 +494,15 @@ FullScreen	Pantalla completa
 BoardTooBig	Non cabe na mesa da máquina activa, nin xirada 90 graos
 TableNoun	Mesa
 AllMakers	Todos os fabricantes
+RackSetupTitle	Barra de ferramentas
+RackFirst	Primeira ferramenta
+RackLast	Última ferramenta
+RackToolLength	Lonxitude da ferramenta
+RackRingToTip	Do anel á punta
+RackClearance	Altura sobre as ferramentas
+RackApproach	Entrada polo lado
+RackSetupNote	Os lugares entre o primeiro e o último repártense a partes iguais. Non se probou nunha máquina real: comprobe cada punto co fuso parado.
+RackInHead	No cabezal
+RackToTake	Para coller
+RackToLeave	Para deixar
+RackOutside	Un punto da barra está fóra do alcance da máquina

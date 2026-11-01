@@ -494,3 +494,15 @@ FullScreen	Teljes képernyő
 BoardTooBig	Nem fér rá az aktív gép asztalára, még 90 fokkal elforgatva sem
 TableNoun	Asztal
 AllMakers	Minden gyártó
+RackSetupTitle	Szerszámsor
+RackFirst	Első szerszám
+RackLast	Utolsó szerszám
+RackToolLength	Szerszám hossza
+RackRingToTip	Gyűrűtől a hegyig
+RackClearance	Magasság a szerszámok felett
+RackApproach	Oldalirányú közelítés
+RackSetupNote	Az első és az utolsó hely közötti helyek egyenlő távolságra vannak. Valódi gépen nem próbálták ki: minden pontot álló orsóval ellenőrizzen.
+RackInHead	A fejben
+RackToTake	Felvenni
+RackToLeave	Letenni
+RackOutside	A sor egy pontja a gép hatókörén kívül esik

@@ -494,3 +494,15 @@ FullScreen	Cijeli zaslon
 BoardTooBig	Ne stane na stol aktivnog stroja, ni zakrenuta za 90 stupnjeva
 TableNoun	Stol
 AllMakers	Svi proizvođači
+RackSetupTitle	Letva alata
+RackFirst	Prvi alat
+RackLast	Zadnji alat
+RackToolLength	Duljina alata
+RackRingToTip	Od prstena do vrha
+RackClearance	Visina iznad alata
+RackApproach	Prilaz sa strane
+RackSetupNote	Mjesta između prvog i zadnjeg raspoređena su jednako. Nije isprobano na pravom stroju: provjerite svaku točku sa zaustavljenim vretenom.
+RackInHead	U glavi
+RackToTake	Za uzimanje
+RackToLeave	Za odlaganje
+RackOutside	Točka letve izvan je dosega stroja

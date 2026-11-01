@@ -494,3 +494,15 @@ FullScreen	Celá obrazovka
 BoardTooBig	Nevejde se na stůl aktivního stroje, ani otočená o 90 stupňů
 TableNoun	Stůl
 AllMakers	Všichni výrobci
+RackSetupTitle	Lišta nástrojů
+RackFirst	První nástroj
+RackLast	Poslední nástroj
+RackToolLength	Délka nástroje
+RackRingToTip	Od kroužku ke špičce
+RackClearance	Výška nad nástroji
+RackApproach	Příjezd z boku
+RackSetupNote	Místa mezi prvním a posledním jsou rozložena rovnoměrně. Na skutečném stroji to nebylo vyzkoušeno: každý bod zkontrolujte se zastaveným vřetenem.
+RackInHead	V hlavě
+RackToTake	K vyzvednutí
+RackToLeave	K odložení
+RackOutside	Bod lišty je mimo dosah stroje

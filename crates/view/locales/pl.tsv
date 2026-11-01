@@ -494,3 +494,15 @@ FullScreen	Pełny ekran
 BoardTooBig	Nie mieści się na stole aktywnej maszyny, nawet obrócona o 90 stopni
 TableNoun	Stół
 AllMakers	Wszyscy producenci
+RackSetupTitle	Listwa narzędzi
+RackFirst	Pierwsze narzędzie
+RackLast	Ostatnie narzędzie
+RackToolLength	Długość narzędzia
+RackRingToTip	Od pierścienia do końcówki
+RackClearance	Wysokość nad narzędziami
+RackApproach	Dojazd z boku
+RackSetupNote	Miejsca między pierwszym a ostatnim są rozmieszczone równomiernie. Nie sprawdzono na prawdziwej maszynie: sprawdź każdy punkt przy zatrzymanym wrzecionie.
+RackInHead	W głowicy
+RackToTake	Do pobrania
+RackToLeave	Do odłożenia
+RackOutside	Punkt listwy jest poza zasięgiem maszyny

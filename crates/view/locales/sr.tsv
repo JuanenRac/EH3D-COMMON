@@ -494,3 +494,15 @@ FullScreen	Цео екран
 BoardTooBig	Не стаје на сто активне машине, ни окренута за 90 степени
 TableNoun	Сто
 AllMakers	Сви произвођачи
+RackSetupTitle	Трака са алатима
+RackFirst	Први алат
+RackLast	Последњи алат
+RackToolLength	Дужина алата
+RackRingToTip	Од прстена до врха
+RackClearance	Висина изнад алата
+RackApproach	Прилаз са стране
+RackSetupNote	Места између првог и последњег распоређена су равномерно. Није испробано на правој машини: проверите сваку тачку са заустављеним вретеном.
+RackInHead	У глави
+RackToTake	За узимање
+RackToLeave	За остављање
+RackOutside	Тачка траке је ван домашаја машине

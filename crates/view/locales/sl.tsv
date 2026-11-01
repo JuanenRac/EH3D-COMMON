@@ -494,3 +494,15 @@ FullScreen	Čez cel zaslon
 BoardTooBig	Ne ustreza mizi aktivnega stroja, niti zasukana za 90 stopinj
 TableNoun	Miza
 AllMakers	Vsi proizvajalci
+RackSetupTitle	Letev orodij
+RackFirst	Prvo orodje
+RackLast	Zadnje orodje
+RackToolLength	Dolžina orodja
+RackRingToTip	Od obročka do konice
+RackClearance	Višina nad orodji
+RackApproach	Pristop s strani
+RackSetupNote	Mesta med prvim in zadnjim so razporejena enakomerno. Na pravem stroju ni preizkušeno: vsako točko preverite z ustavljenim vretenom.
+RackInHead	V glavi
+RackToTake	Za prevzem
+RackToLeave	Za odložitev
+RackOutside	Točka letve je zunaj dosega stroja

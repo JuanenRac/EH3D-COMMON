@@ -494,3 +494,15 @@ FullScreen	Ecran complet
 BoardTooBig	Nu încape pe masa mașinii active, nici rotită cu 90 de grade
 TableNoun	Masă
 AllMakers	Toți producătorii
+RackSetupTitle	Bara de scule
+RackFirst	Prima sculă
+RackLast	Ultima sculă
+RackToolLength	Lungimea sculei
+RackRingToTip	De la inel la vârf
+RackClearance	Înălțimea deasupra sculelor
+RackApproach	Apropiere din lateral
+RackSetupNote	Locurile dintre primul și ultimul sunt distribuite uniform. Nu a fost încercat pe o mașină reală: verificați fiecare punct cu axul oprit.
+RackInHead	În cap
+RackToTake	De luat
+RackToLeave	De lăsat
+RackOutside	Un punct al barei este în afara razei de acțiune a mașinii

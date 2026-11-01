@@ -494,3 +494,15 @@ FullScreen	Visas ekranas
 BoardTooBig	Netelpa aktyvaus staklių stalo, net pasukta 90 laipsnių
 TableNoun	Stalas
 AllMakers	Visi gamintojai
+RackSetupTitle	Įrankių juosta
+RackFirst	Pirmas įrankis
+RackLast	Paskutinis įrankis
+RackToolLength	Įrankio ilgis
+RackRingToTip	Nuo žiedo iki galiuko
+RackClearance	Aukštis virš įrankių
+RackApproach	Artėjimas iš šono
+RackSetupNote	Vietos tarp pirmosios ir paskutinės išdėstomos vienodais tarpais. Tikrame stake neišbandyta: kiekvieną tašką patikrinkite sustabdę suklį.
+RackInHead	Galvutėje
+RackToTake	Paimti
+RackToLeave	Padėti
+RackOutside	Juostos taškas yra už staklių pasiekiamumo ribų

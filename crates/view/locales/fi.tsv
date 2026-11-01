@@ -494,3 +494,15 @@ FullScreen	Koko näyttö
 BoardTooBig	Ei mahdu aktiivisen koneen pöydälle, vaikka sen kääntäisi 90 astetta
 TableNoun	Pöytä
 AllMakers	Kaikki valmistajat
+RackSetupTitle	Työkalupalkki
+RackFirst	Ensimmäinen työkalu
+RackLast	Viimeinen työkalu
+RackToolLength	Työkalun pituus
+RackRingToTip	Renkaasta kärkeen
+RackClearance	Korkeus työkalujen yläpuolella
+RackApproach	Lähestyminen sivulta
+RackSetupNote	Ensimmäisen ja viimeisen paikan väliset paikat jaetaan tasavälein. Ei kokeiltu oikealla koneella: tarkista jokainen piste karan ollessa pysäytetty.
+RackInHead	Päässä
+RackToTake	Otettava
+RackToLeave	Jätettävä
+RackOutside	Palkin yksi piste on koneen ulottumattomissa

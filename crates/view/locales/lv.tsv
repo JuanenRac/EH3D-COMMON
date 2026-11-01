@@ -494,3 +494,15 @@ FullScreen	Pilnekrāns
 BoardTooBig	Neietilpst aktīvās iekārtas galdā pat pagriezta par 90 grādiem
 TableNoun	Galds
 AllMakers	Visi ražotāji
+RackSetupTitle	Instrumentu josla
+RackFirst	Pirmais instruments
+RackLast	Pēdējais instruments
+RackToolLength	Instrumenta garums
+RackRingToTip	No gredzena līdz galam
+RackClearance	Augstums virs instrumentiem
+RackApproach	Pietuvošanās no sāniem
+RackSetupNote	Vietas starp pirmo un pēdējo ir izvietotas vienādos attālumos. Īstā iekārtā nav izmēģināts: pārbaudiet katru punktu ar apturētu vārpstu.
+RackInHead	Galvā
+RackToTake	Jāņem
+RackToLeave	Jānoliek
+RackOutside	Joslas punkts atrodas ārpus iekārtas sasniedzamības

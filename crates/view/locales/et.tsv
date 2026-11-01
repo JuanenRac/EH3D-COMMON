@@ -494,3 +494,15 @@ FullScreen	Täisekraan
 BoardTooBig	Ei mahu aktiivse masina lauale, isegi 90 kraadi keerates
 TableNoun	Laud
 AllMakers	Kõik tootjad
+RackSetupTitle	Tööriistariba
+RackFirst	Esimene tööriist
+RackLast	Viimane tööriist
+RackToolLength	Tööriista pikkus
+RackRingToTip	Rõngast tipuni
+RackClearance	Kõrgus tööriistadest kõrgemal
+RackApproach	Lähenemine küljelt
+RackSetupNote	Esimese ja viimase koha vahelised kohad paigutatakse võrdse vahega. Päris masinal pole seda proovitud: kontrollige iga punkti seisva spindliga.
+RackInHead	Peas
+RackToTake	Võtta
+RackToLeave	Jätta
+RackOutside	Riba üks punkt jääb masina ulatusest välja
