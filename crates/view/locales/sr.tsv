@@ -485,3 +485,9 @@ MatPhenolicPaper	Фенолни папир (пертинакс)
 LblNoCopper	Без бакра
 RackTips	Алати 38 mm, 21 mm од прстена до врха; ваздух 6-8 бара; ограничивач дубине са отвором према местима.
 ResumeChanged	Датотеке или подешавања су промењени откако је посао стао: не може безбедно да настави
+ClipCut	Исеци
+ClipCopy	Копирај
+ClipPaste	Налепи
+ClipSelectAll	Изабери све
+ClipUndo	Поништи
+FullScreen	Цео екран

@@ -485,3 +485,9 @@ MatPhenolicPaper	Fenolpapier (pertinax)
 LblNoCopper	Zonder koper
 RackTips	Gereedschap van 38 mm, 21 mm van de ring tot de punt; lucht 6-8 bar; dieptebegrenzer met de opening naar de plaatsen.
 ResumeChanged	De bestanden of instellingen zijn veranderd sinds de taak stopte: hij kan niet veilig verdergaan
+ClipCut	Knippen
+ClipCopy	Kopiëren
+ClipPaste	Plakken
+ClipSelectAll	Alles selecteren
+ClipUndo	Ongedaan maken
+FullScreen	Volledig scherm

@@ -141,3 +141,9 @@ CatNoteLowerRpm	Este material pede menos rotações que a ferramenta: a velocida
 CatNoteBelowSpindle	Este material pede menos rotações do que este fuso consegue dar: é usado o mínimo do fuso, rápido demais para o material.
 CatNoteFluteShort	O comprimento de corte desta ferramenta não atravessa a placa mais a sobra: ela não vai cortar por completo.
 ToolBitWarn	Verifique a ferramenta do catálogo
+ClipCut	Recortar
+ClipCopy	Copiar
+ClipPaste	Colar
+ClipSelectAll	Selecionar tudo
+ClipUndo	Desfazer
+FullScreen	Tela cheia

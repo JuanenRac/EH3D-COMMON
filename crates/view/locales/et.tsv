@@ -485,3 +485,9 @@ MatPhenolicPaper	Fenoolpaber (pertinax)
 LblNoCopper	Ilma vaseta
 RackTips	Tööriistad 38 mm, 21 mm rõngast otsani; õhk 6-8 baari; sügavuspiiriku ava pesade poole.
 ResumeChanged	Failid või seaded on pärast töö peatumist muutunud: seda ei saa ohutult jätkata
+ClipCut	Lõika
+ClipCopy	Kopeeri
+ClipPaste	Aseta
+ClipSelectAll	Vali kõik
+ClipUndo	Võta tagasi
+FullScreen	Täisekraan

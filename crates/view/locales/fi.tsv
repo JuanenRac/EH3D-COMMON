@@ -485,3 +485,9 @@ MatPhenolicPaper	Fenolipaperi (pertinax)
 LblNoCopper	Ei kuparia
 RackTips	Työkalut 38 mm, 21 mm renkaasta kärkeen; ilma 6-8 bar; syvyydenrajoittimen aukko paikkoja kohti.
 ResumeChanged	Tiedostot tai asetukset ovat muuttuneet työn pysähtymisen jälkeen: sitä ei voi jatkaa turvallisesti
+ClipCut	Leikkaa
+ClipCopy	Kopioi
+ClipPaste	Liitä
+ClipSelectAll	Valitse kaikki
+ClipUndo	Kumoa
+FullScreen	Koko näyttö
