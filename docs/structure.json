@@ -87,26 +87,26 @@
       "span": 3,
       "accent": "a",
       "tree": {
-        "en": "shared crates: view, ZIP, machine files, controllers, head node, quality analyser",
-        "es": "crates compartidos: vista, ZIP, ficheros de máquina, controladores, cabezal, calidad",
-        "de": "gemeinsame Crates: Ansicht, ZIP, Maschinendateien, Steuerungen, Kopf, Qualität",
-        "fr": "crates partagés : vue, ZIP, fichiers machine, contrôleurs, tête, qualité",
-        "it": "crate condivisi: vista, ZIP, file macchina, controllori, testa, qualità",
-        "ja": "共有クレート：表示、ZIP、機械ファイル、コントローラー、ヘッド、品質解析",
-        "zh": "共享 crate：视图、ZIP、机器文件、控制器、钻头节点、质量分析",
-        "pt": "crates partilhados: vista, ZIP, ficheiros de máquina, controladores, cabeça, qualidade"
+        "en": "shared crates: view, ZIP, machine files, controllers, head node, quality, pictures",
+        "es": "crates compartidos: vista, ZIP, ficheros de máquina, controladores, cabezal, calidad, imágenes",
+        "de": "gemeinsame Crates: Ansicht, ZIP, Maschinendateien, Steuerungen, Kopf, Qualität, Bilder",
+        "fr": "crates partagés : vue, ZIP, fichiers machine, contrôleurs, tête, qualité, images",
+        "it": "crate condivisi: vista, ZIP, file macchina, controllori, testa, qualità, immagini",
+        "ja": "共有クレート：表示、ZIP、機械ファイル、コントローラー、ヘッド、品質解析、画像",
+        "zh": "共享 crate：视图、ZIP、机器文件、控制器、钻头节点、质量分析、图像",
+        "pt": "crates partilhados: vista, ZIP, ficheiros de máquina, controladores, cabeça, qualidade, imagens"
       },
       "rows": [
         {
           "desc": {
-            "en": "shared crates: view, ZIP, machine files, controllers, head node, quality analyser",
-            "es": "crates compartidos: vista, ZIP, ficheros de máquina, controladores, cabezal, calidad",
-            "de": "gemeinsame Crates: Ansicht, ZIP, Maschinendateien, Steuerungen, Kopf, Qualität",
-            "fr": "crates partagés : vue, ZIP, fichiers machine, contrôleurs, tête, qualité",
-            "it": "crate condivisi: vista, ZIP, file macchina, controllori, testa, qualità",
-            "ja": "共有クレート：表示、ZIP、機械ファイル、コントローラー、ヘッド、品質解析",
-            "zh": "共享 crate：视图、ZIP、机器文件、控制器、钻头节点、质量分析",
-            "pt": "crates partilhados: vista, ZIP, ficheiros de máquina, controladores, cabeça, qualidade"
+            "en": "shared crates: view, ZIP, machine files, controllers, head node, quality, pictures",
+            "es": "crates compartidos: vista, ZIP, ficheros de máquina, controladores, cabezal, calidad, imágenes",
+            "de": "gemeinsame Crates: Ansicht, ZIP, Maschinendateien, Steuerungen, Kopf, Qualität, Bilder",
+            "fr": "crates partagés : vue, ZIP, fichiers machine, contrôleurs, tête, qualité, images",
+            "it": "crate condivisi: vista, ZIP, file macchina, controllori, testa, qualità, immagini",
+            "ja": "共有クレート：表示、ZIP、機械ファイル、コントローラー、ヘッド、品質解析、画像",
+            "zh": "共享 crate：视图、ZIP、机器文件、控制器、钻头节点、质量分析、图像",
+            "pt": "crates partilhados: vista, ZIP, ficheiros de máquina, controladores, cabeça, qualidade, imagens"
           }
         }
       ]

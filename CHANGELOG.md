@@ -3,6 +3,7 @@
 All notable changes to this project are documented here.
 
 ## [Unreleased]
+- **The reader of pictures is shared (`eh3d-image`):** the grey levels of a PGM (P2, P5) or PNG file (grey, colour, palette or transparent, 8 or 16 bits) with limits on the size so that a hostile file cannot ask for gigabytes, `resize` with a box filter, `blank` and `disc`. The laser engraving and the fiducial finder read their pictures with it instead of a copy each. 7 tests.
 - **The crate that uses `eh3d-common` by path says the version it needs** (`eh3d-view`: `>=0.1.1`).
 
 - **The CI builds the repositories that depend on this one:** a `consumers` job reads which repositories name this one in `depends_on` of their manifest and runs `cargo check --all-targets` on each with the change in place of the sibling, so a break reaches the author before the merge.

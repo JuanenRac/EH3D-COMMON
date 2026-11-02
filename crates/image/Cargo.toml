@@ -1,0 +1,13 @@
+[package]
+name = "eh3d-image"
+version = "0.0.1"
+edition = "2021"
+rust-version = "1.75"
+description = "Grey levels read from a PGM or a PNG file with limits so that a hostile file cannot ask for gigabytes, a box-filter resize and the marks to draw on a picture"
+license = "GPL-3.0-or-later"
+authors = ["JuanenRac (Electro Hobby 3D) <electrohobby3d@gmail.com>"]
+repository = "https://github.com/JuanenRac/EH3D-COMMON"
+
+[dependencies]
+# the PNG decoder (grey, colour, palette, 8 and 16 bits)
+png = "0.17"
