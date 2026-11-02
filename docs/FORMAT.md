@@ -71,6 +71,10 @@ A package from another person is untrusted input. A reader refuses:
 
 The writer does not use the clock: the same content gives the same bytes, so two copies of a project can be compared by hash. `write_to_path` writes a temporary file next to the target and renames it, so a crash never leaves half a project.
 
+## Shared pieces
+
+The integrity record, its verification, the entry-name rule above and a content hash live in the crate `eh3d-container`, so that another container format can use them. The crate also has a description of the parameters of a format (`ContainerSpec`) with a preset for this one, and canonical JSON (RFC 8785) for formats that need one text form per value. `.eh3dproj` 1.0.0 does not use canonical JSON: its two JSON files keep the form recorded by the reference packages. The content hash is the SHA-256 of the canonical JSON array of `[name, size, sha256]` of every entry except those under `audit/`, in the order of the bytes of the names. The ZIP reader and writer stay in this crate and behave as before; a stricter name and ZIP policy and numbered container diagnostics are not part of this format yet.
+
 ## Reference packages
 
 `tests/golden/` holds three valid packages (an empty project, a typical one, and one with names beyond ASCII), nineteen damaged ones in `tests/golden/rejected/` and a `SHA256SUMS` for all of them. The tests check that the writer reproduces the valid packages byte for byte, that the reader reads them back, and that the reader gives the recorded verdict on each damaged one (for example, a name with `..` is refused as unsafe and a changed entry fails its integrity check).
