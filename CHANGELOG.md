@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- Add the `eh3d-diagnostic` crate: the diagnostic of the suite with a stable code, severity, category, recoverability, location and translatable arguments, a stable JSON form and a redacted form for private corpora; its only dependency is the optional `serde`.
+
 - Record how the `.eh3dproj` container behaves today as tests: entry order, the exact form of `project.json` and `integrity.json`, ZIP flags, compression, time stamps, no ZIP64 and the verdict on damaged packages.
 - Add a corpus of reference packages (three valid, nineteen damaged) that the writer must reproduce byte for byte and the reader must judge as recorded.
 

@@ -18,7 +18,7 @@
 
 ---
 
-**Honesty check - what actually runs today:** a Rust library with the project container (`.eh3dproj`), the metadata of a project, SHA-256 integrity checks, the machine telemetry types and the colours of the suite, plus the firmware base that every ESP32 node of the suite copies (70 files and the tool that keeps the copies identical). 250 tests run on a computer. The drilling and routing programs and the modern interface read their files and draw their jobs with the shared crates; nothing here has run on a machine or on a board.
+**Honesty check - what actually runs today:** a Rust library with the project container (`.eh3dproj`), the metadata of a project, SHA-256 integrity checks, the machine telemetry types and the colours of the suite, plus the firmware base that every ESP32 node of the suite copies (70 files and the tool that keeps the copies identical). 256 tests run on a computer. The drilling and routing programs and the modern interface read their files and draw their jobs with the shared crates; nothing here has run on a machine or on a board.
 
 ---
 
@@ -30,7 +30,7 @@
 |---|---|
 | Version | `0.1.4` |
 | Maturity | Scaffolding |
-| Tests | 250 |
+| Tests | 256 |
 | Stack | Rust (library crate) and C++17 (firmware base) |
 | On real hardware | Not applicable: a data library, nothing here talks to a machine; the firmware base has never run on a board |
 
@@ -47,7 +47,7 @@ Each line is one part of this repository and the light says how far it is today.
 | Container | 🟡 | `.eh3dproj` is a standard ZIP with a SHA-256 record of every entry; it reads, writes, and refuses damaged, altered, unlisted and unsafe entries. Only its own tests read and write it so far. |
 | Metadata | 🟡 | The metadata of a project (units, zero, layers, tools, toolpaths, fiducials) is validated and carries a semantic format version; there is no migration yet because 1.0.0 is the first format. |
 | Telemetry and theme | 🟡 | Axes, spindle, machine states, the GRBL alarm codes with their severity and the colours of the suite with a contrast check, all tested. |
-| Tests | 🟡 | 250 tests pass (`cargo test --workspace`): 16 in the modules and 28 on the container of the main crate, and 206 in the eleven shared crates. |
+| Tests | 🟡 | 256 tests pass (`cargo test --workspace`): 16 in the modules and 28 on the container of the main crate, and 212 in the twelve shared crates. |
 | Security | 🟡 | Unsafe names, oversized or too many entries and any altered entry are refused; the package is not signed or encrypted and has had no independent review. |
 | Firmware base | 🟠 | 70 files kept identical by `tools/sync_firmware_base.py`: 49 shared by the ESP32 nodes (tested only through EH3D-NODE-BUNGARD, the one node that uses them) and 21 shared by the two touch screens EH3D-NODE-BUNGARD-HMI and EH3D-NODE-HMI-GUI; never run on a board. |
 | Use by other programs | 🟡 | The crates of the workspace are used by EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC and EH3D-SERVER (by path, so the repositories sit side by side); the project container itself is not used by any program yet. |
@@ -161,7 +161,7 @@ python -I tools/sync_firmware_base.py check
 
 ## 🧪 Testing
 
-The suite has 250 tests (`cargo test --workspace`, run on Windows and Linux in the CI): 16 inside the modules (the metadata and its validation, the alarm codes and machine states, the colours and their WCAG contrast) and 28 on the container (14 of them record how the format behaves today: entry order, exact JSON, ZIP flags and the verdict on 19 damaged packages; the others cover round trips through memory and through a file, the same bytes for the same content, the integrity record, a changed entry, a changed size, an unlisted entry, a missing entry, edited metadata, a file that is not a package, unsafe and hostile entry names, a replaced entry and an invalid project). The CI also runs `cargo fmt --check` and `cargo clippy` with warnings as errors, `python -I tools/ci_validate.py` (manifest, versions, changelog and the eight READMEs) and `tools/sync_firmware_base.py check` (the copies of the firmware base). The host tests of the firmware base (`firmware_base/tests/`) run inside EH3D-NODE-BUNGARD, not here. The eleven shared crates add 206 more: the job archives (7), the files of the Bungard machines, with the HP-GL arcs, circles and scaling and the Gerber and DXF outlines (33), the machine controllers on a scripted line (28) and the scene, the views, the themes and the words of the interface in eight languages (29), the Open and Save windows (7), the machines and stations of the server (8) and the height map of the table (8) the client of the node of the drill head, with the ring of LEDs and the picture (10), the reader of PGM and PNG pictures (7), the dry run and the summary before a job (21) and the quality analyser (43): the holes, the milled channels, the quality of the picture, the profile and the verdict.
+The suite has 256 tests (`cargo test --workspace`, run on Windows and Linux in the CI): 16 inside the modules (the metadata and its validation, the alarm codes and machine states, the colours and their WCAG contrast) and 28 on the container (14 of them record how the format behaves today: entry order, exact JSON, ZIP flags and the verdict on 19 damaged packages; the others cover round trips through memory and through a file, the same bytes for the same content, the integrity record, a changed entry, a changed size, an unlisted entry, a missing entry, edited metadata, a file that is not a package, unsafe and hostile entry names, a replaced entry and an invalid project). The CI also runs `cargo fmt --check` and `cargo clippy` with warnings as errors, `python -I tools/ci_validate.py` (manifest, versions, changelog and the eight READMEs) and `tools/sync_firmware_base.py check` (the copies of the firmware base). The host tests of the firmware base (`firmware_base/tests/`) run inside EH3D-NODE-BUNGARD, not here. The twelve shared crates add 212 more: the job archives (7), the files of the Bungard machines, with the HP-GL arcs, circles and scaling and the Gerber and DXF outlines (33), the machine controllers on a scripted line (28) and the scene, the views, the themes and the words of the interface in eight languages (29), the Open and Save windows (7), the machines and stations of the server (8) and the height map of the table (8) the client of the node of the drill head, with the ring of LEDs and the picture (10), the reader of PGM and PNG pictures (7), the dry run and the summary before a job (21) and the quality analyser (43): the holes, the milled channels, the quality of the picture, the profile and the verdict.
 
 ## 🏗️ Build & Release
 
