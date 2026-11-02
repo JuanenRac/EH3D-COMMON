@@ -4,6 +4,9 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.1.1] - The words of the tool changer bar, of the text boxes and of a board that is turned, and the firmware base for the two touch screens
+
+- **A text to swap the width and the depth of a board (eh3d-view):** one new text, in the 37 languages, for the button that gives a board the other way round (a board that does not go into the machine often does turned).
 - **The bar of the tool changer in the machine file (eh3d-bungard-formats):** `RackSetup` (the length of the tools, from the ring to the tip, the clearance over the tools, the side the chuck comes in from and how far past the table the bar may be) is read from lines of the form `RACK_TOOL_LENGTH 38.00` after the places, with defaults when they are missing, so the files that exist read as before; `rack_line` spaces the places evenly between the first and the last tool and `rack_ends` finds them again; `rewrite` writes the places and those lines back (and the line of the changer to a file of the manual layout) only when they changed. The words of the window of the bar are in the 37 languages of eh3d-view.
 
 - **The words of the text-box menu, of the full-screen setting, of the board warning and of the list of makers (eh3d-view):** `ClipCut`, `ClipCopy`, `ClipPaste`, `ClipSelectAll`, `ClipUndo`, `FullScreen`, `BoardTooBig`, `TableNoun` and `AllMakers` in the 37 languages, and `eh3d_view::clip`, which says which entries of the menu of a text box can be used (a selection to cut or copy, a box that can be changed, a clipboard with text) and who gets a clipboard key (the text box when it has the keyboard, the drawing otherwise). 5 tests.

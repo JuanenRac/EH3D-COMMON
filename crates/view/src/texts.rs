@@ -800,6 +800,7 @@ texts! {
     RackToLeave => ["To leave", "Para dejar", "Da lasciare", "Abzulegen", "À déposer", "A deixar", "待放", "戻す位置"],
     RackOutside => ["A point of the bar is outside the reach of the machine", "Un punto de la barra está fuera del alcance de la máquina", "Un punto della barra è fuori dalla portata della macchina", "Ein Punkt der Leiste liegt außerhalb der Reichweite der Maschine", "Un point de la barre est hors de portée de la machine", "Um ponto da barra está fora do alcance da máquina", "刀具排上有一个点超出了机床的行程范围", "バーの1点が機械の可動範囲外です"],
     BoardTooBig => ["Does not fit the table of the active machine, even turned 90 degrees", "No cabe en la mesa de la máquina activa, ni girada 90 grados", "Non entra nel piano della macchina attiva, nemmeno ruotata di 90 gradi", "Passt nicht auf den Tisch der aktiven Maschine, auch nicht um 90 Grad gedreht", "Ne tient pas sur la table de la machine active, même tournée de 90 degrés", "Não cabe na mesa da máquina ativa, nem rodada 90 graus", "放不到当前机器的工作台上，即使旋转 90 度也不行", "90度回転させても、有効な機械のテーブルに収まりません"],
+    BoardSwap => ["Swap width and depth", "Intercambiar ancho y fondo", "Scambia larghezza e profondità", "Breite und Tiefe tauschen", "Échanger largeur et profondeur", "Trocar largura e profundidade", "交换宽度和深度", "幅と奥行きを入れ替える"],
     TableNoun => ["Table", "Mesa", "Piano", "Tisch", "Table", "Mesa", "工作台", "テーブル"],
     AllMakers => ["All makers", "Todos los fabricantes", "Tutti i produttori", "Alle Hersteller", "Tous les fabricants", "Todos os fabricantes", "所有制造商", "すべてのメーカー"],
 }
