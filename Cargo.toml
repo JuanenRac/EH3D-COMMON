@@ -13,7 +13,7 @@ categories = ["data-structures", "parser-implementations"]
 
 [workspace]
 # the data crate of the suite is the root package; the crates beside it may draw, read files or talk to machines
-members = [".", "crates/view", "crates/archive", "crates/controller", "crates/formats", "crates/filedialog", "crates/fleet", "crates/levelling", "crates/auxnode", "crates/inspect", "crates/image", "crates/summary", "crates/diagnostic"]
+members = [".", "crates/view", "crates/archive", "crates/controller", "crates/formats", "crates/filedialog", "crates/fleet", "crates/levelling", "crates/auxnode", "crates/inspect", "crates/image", "crates/summary", "crates/diagnostic", "crates/container"]
 resolver = "2"
 
 [dependencies]
@@ -25,6 +25,8 @@ sha2 = "0.10"
 # zip: the container is a standard ZIP archive (deflate only), so any archive tool can look inside.
 zip = { version = "2", default-features = false, features = ["deflate"] }
 thiserror = "2"
+# eh3d-container: the integrity record, the name rule and canonical JSON that every container format shares.
+eh3d-container = { path = "crates/container" }
 # uuid / chrono: stable project identity and ISO 8601 timestamps.
 uuid = { version = "1", features = ["v4", "serde"] }
 chrono = { version = "0.4", default-features = false, features = ["clock", "serde", "std"] }

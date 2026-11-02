@@ -12,18 +12,21 @@
 //! not recorded at all, when an entry name could leave the package folder, or when it is larger
 //! than the limits below (they stop a decompression bomb).
 
-use std::collections::{BTreeMap, HashSet};
+use std::collections::BTreeMap;
 use std::fs::{self, File};
 use std::io::{Cursor, Read, Seek, Write};
 use std::path::Path;
 
-use serde::{Deserialize, Serialize};
-use sha2::{Digest, Sha256};
+use eh3d_container::{IntegrityError, NameError};
 use zip::write::SimpleFileOptions;
 use zip::{CompressionMethod, ZipArchive, ZipWriter};
 
 use crate::error::{Error, Result};
 use crate::project::{read_metadata, ProjectMetadata, DATA_FOLDERS};
+
+// The integrity record and the name rule are shared with the other container formats; they live
+// in `eh3d-container` and keep their shape and behaviour here.
+pub use eh3d_container::{Integrity, IntegrityEntry};
 
 /// The file extension of a project package, without the dot.
 pub const EXTENSION: &str = "eh3dproj";
@@ -38,46 +41,31 @@ pub const MAX_TOTAL_BYTES: u64 = 1024 * 1024 * 1024;
 /// The most entries a package may have.
 pub const MAX_ENTRIES: usize = 10_000;
 
-/// The checksum record of one entry.
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
-pub struct IntegrityEntry {
-    /// The SHA-256 of the entry, in lowercase hexadecimal.
-    pub sha256: String,
-    /// The size of the entry in bytes.
-    pub size: u64,
-}
-
-/// What `integrity.json` holds.
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
-pub struct Integrity {
-    /// Always `sha256`.
-    pub algorithm: String,
-    /// One record per entry other than `integrity.json` itself.
-    pub files: BTreeMap<String, IntegrityEntry>,
-}
-
 /// Checks that `name` is a portable path inside the package: relative, forward slashes only, no
 /// `.`/`..` parts, no empty parts, no drive letters, no control characters, a reasonable length.
 pub fn check_entry_name(name: &str) -> Result<()> {
-    let unsafe_name = || Err(Error::UnsafePath(name.to_owned()));
-    if name.is_empty() || name.len() > 240 || name.starts_with('/') || name.ends_with('/') {
-        return unsafe_name();
-    }
-    if name.contains('\\') || name.contains(':') || name.chars().any(char::is_control) {
-        return unsafe_name();
-    }
-    if name
-        .split('/')
-        .any(|part| part.is_empty() || part == "." || part == "..")
-    {
-        return unsafe_name();
-    }
-    Ok(())
+    eh3d_container::check_entry_name(name)
+        .map_err(|NameError::Unsafe(name)| Error::UnsafePath(name))
 }
 
-fn sha256_hex(bytes: &[u8]) -> String {
-    let digest = Sha256::digest(bytes);
-    digest.iter().map(|b| format!("{b:02x}")).collect()
+/// The error a failed integrity check becomes in this crate.
+fn integrity_error(error: IntegrityError) -> Error {
+    let integrity = |path: String, reason: &str| Error::Integrity {
+        path,
+        reason: reason.into(),
+    };
+    match error {
+        IntegrityError::UnknownAlgorithm(algorithm) => Error::Integrity {
+            path: INTEGRITY_ENTRY.into(),
+            reason: format!("unknown algorithm '{algorithm}'"),
+        },
+        IntegrityError::MissingEntry(name) => Error::MissingEntry(name),
+        IntegrityError::SizeDiffers(name) => integrity(name, "the size differs from the record"),
+        IntegrityError::HashDiffers(name) => integrity(name, "the SHA-256 differs from the record"),
+        IntegrityError::NotListed(name) => {
+            integrity(name, "the entry is not listed in integrity.json")
+        }
+    }
 }
 
 /// A project in memory: its metadata and the bytes of every data entry.
@@ -145,27 +133,12 @@ impl Package {
     /// The integrity record that [`Package::write`] stores for the current content.
     pub fn integrity(&self) -> Result<Integrity> {
         let project = self.metadata.to_json()?;
-        let mut files = BTreeMap::new();
-        files.insert(
-            PROJECT_ENTRY.to_owned(),
-            IntegrityEntry {
-                sha256: sha256_hex(project.as_bytes()),
-                size: project.len() as u64,
-            },
+        let entries = std::iter::once((PROJECT_ENTRY, project.as_bytes())).chain(
+            self.entries
+                .iter()
+                .map(|(name, bytes)| (name.as_str(), bytes.as_slice())),
         );
-        for (name, bytes) in &self.entries {
-            files.insert(
-                name.clone(),
-                IntegrityEntry {
-                    sha256: sha256_hex(bytes),
-                    size: bytes.len() as u64,
-                },
-            );
-        }
-        Ok(Integrity {
-            algorithm: "sha256".into(),
-            files,
-        })
+        Ok(Integrity::for_entries(entries))
     }
 
     /// Writes the package. The result does not depend on the clock: the same content gives the
@@ -246,37 +219,7 @@ impl Package {
             .remove(INTEGRITY_ENTRY)
             .ok_or_else(|| Error::MissingEntry(INTEGRITY_ENTRY.into()))?;
         let integrity: Integrity = serde_json::from_slice(&integrity_bytes)?;
-        if integrity.algorithm != "sha256" {
-            return Err(Error::Integrity {
-                path: INTEGRITY_ENTRY.into(),
-                reason: format!("unknown algorithm '{}'", integrity.algorithm),
-            });
-        }
-        let mut seen = HashSet::new();
-        for (name, record) in &integrity.files {
-            let bytes = raw
-                .get(name)
-                .ok_or_else(|| Error::MissingEntry(name.clone()))?;
-            if bytes.len() as u64 != record.size {
-                return Err(Error::Integrity {
-                    path: name.clone(),
-                    reason: "the size differs from the record".into(),
-                });
-            }
-            if sha256_hex(bytes) != record.sha256 {
-                return Err(Error::Integrity {
-                    path: name.clone(),
-                    reason: "the SHA-256 differs from the record".into(),
-                });
-            }
-            seen.insert(name.as_str());
-        }
-        if let Some(extra) = raw.keys().find(|name| !seen.contains(name.as_str())) {
-            return Err(Error::Integrity {
-                path: extra.clone(),
-                reason: "the entry is not listed in integrity.json".into(),
-            });
-        }
+        integrity.verify(&raw).map_err(integrity_error)?;
         let project = raw
             .remove(PROJECT_ENTRY)
             .ok_or_else(|| Error::MissingEntry(PROJECT_ENTRY.into()))?;

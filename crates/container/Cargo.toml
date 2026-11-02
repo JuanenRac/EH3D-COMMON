@@ -1,0 +1,16 @@
+[package]
+name = "eh3d-container"
+version = "0.0.1"
+edition = "2021"
+rust-version = "1.89"
+description = "The pieces every project container of the suite shares: the parameters of a container format, the integrity record with its checks and content hash, the name rules and canonical JSON (RFC 8785)"
+license = "GPL-3.0-or-later"
+authors = ["JuanenRac (Electro Hobby 3D) <electrohobby3d@gmail.com>"]
+repository = "https://github.com/JuanenRac/EH3D-COMMON"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+# float_roundtrip: reading a number back gives the same double, which canonical JSON relies on.
+serde_json = { version = "1", features = ["float_roundtrip"] }
+sha2 = "0.10"
+thiserror = "2"

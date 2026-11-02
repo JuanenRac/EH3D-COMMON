@@ -181,6 +181,7 @@ name = "eh3d-common"
 version = "0.1.5"
 dependencies = [
  "chrono",
+ "eh3d-container",
  "semver",
  "serde",
  "serde_json",
@@ -189,6 +190,16 @@ dependencies = [
  "thiserror",
  "uuid",
  "zip",
+]
+
+[[package]]
+name = "eh3d-container"
+version = "0.0.1"
+dependencies = [
+ "serde",
+ "serde_json",
+ "sha2",
+ "thiserror",
 ]
 
 [[package]]
