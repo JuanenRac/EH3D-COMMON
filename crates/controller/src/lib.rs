@@ -297,6 +297,11 @@ pub trait Controller {
     fn set_travel(&mut self, _travel: [(f64, f64); AXES]) -> bool {
         false
     }
+    /// The longest travel of X, Y and Z in mm that the controller holds in its own settings (GRBL `$130` to `$132`). `Ok(None)` when it
+    /// does not keep them or does not give all three; an error when it did not answer.
+    fn max_travel(&mut self) -> Result<Option<[f64; 3]>, Error> {
+        Ok(None)
+    }
 }
 
 #[cfg(test)]

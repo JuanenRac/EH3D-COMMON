@@ -275,6 +275,15 @@ fn without_comments_and_realtime(line: &str) -> String {
     out
 }
 
+/// Reads a line of the settings (`$130=500.000`): the number and the value. `None` when the line is not one.
+fn parse_setting(line: &str) -> Option<(u32, f64)> {
+    let (key, value) = line.trim().strip_prefix('$')?.split_once('=')?;
+    let value: f64 = value.split_whitespace().next()?.parse().ok()?;
+    value
+        .is_finite()
+        .then_some((key.trim().parse().ok()?, value))
+}
+
 fn axis_name(axis: usize) -> Result<char, Error> {
     ['X', 'Y', 'Z', 'A', 'B', 'C']
         .get(axis)
@@ -449,6 +458,39 @@ impl<T: LineTransport> Controller for GrblController<T> {
         }
     }
 
+    fn max_travel(&mut self) -> Result<Option<[f64; 3]>, Error> {
+        self.transport.write_all(b"$$\n").map_err(Self::link)?;
+        let end = Instant::now() + self.timeouts.line;
+        let mut found: [Option<f64>; 3] = [None; 3];
+        loop {
+            let left = end.saturating_duration_since(Instant::now());
+            if left.is_zero() {
+                return Err(Error::Timeout);
+            }
+            match self.transport.read_line(left).map_err(Self::link)? {
+                None => return Err(Error::Timeout),
+                Some(l) => {
+                    let l = l.trim();
+                    if l == "ok" {
+                        break;
+                    }
+                    if let Some(code) = l.strip_prefix("error:") {
+                        return Err(Error::Refused(format!("error {code}")));
+                    }
+                    if let Some((n, v)) = parse_setting(l) {
+                        if (130..=132).contains(&n) {
+                            found[(n - 130) as usize] = Some(v);
+                        }
+                    }
+                }
+            }
+        }
+        Ok(match found {
+            [Some(x), Some(y), Some(z)] if x > 0.0 && y > 0.0 && z > 0.0 => Some([x, y, z]),
+            _ => None,
+        })
+    }
+
     fn send_line(&mut self, line: &str) -> Result<(), Error> {
         let clean = without_comments_and_realtime(line);
         let l = clean.trim();
@@ -463,6 +505,46 @@ impl<T: LineTransport> Controller for GrblController<T> {
 mod tests {
     use super::*;
     use crate::mock::MockTransport;
+
+    #[test]
+    fn the_longest_travel_is_read_from_the_settings_of_the_controller() {
+        let mock = MockTransport::with_replies(&[
+            "$100=250.000",
+            "$130=300.000",
+            "$131=200.500",
+            "$132=45.000",
+            "ok",
+        ]);
+        let mut g = GrblController::new(mock);
+        assert_eq!(g.max_travel(), Ok(Some([300.0, 200.5, 45.0])));
+        assert_eq!(g.transport().text(), "$$\n");
+    }
+
+    #[test]
+    fn a_controller_that_does_not_give_all_three_travels_or_does_not_answer_says_so() {
+        // one of the three is missing, or it is not a positive number: nothing is claimed
+        let mut g = GrblController::new(MockTransport::with_replies(&[
+            "$130=300.000",
+            "$131=200.000",
+            "ok",
+        ]));
+        assert_eq!(g.max_travel(), Ok(None));
+        let mut g = GrblController::new(MockTransport::with_replies(&[
+            "$130=300.000",
+            "$131=0.000",
+            "$132=45.000",
+            "ok",
+        ]));
+        assert_eq!(g.max_travel(), Ok(None));
+        // silence is a timeout; a refusal is a refusal
+        let mut g = GrblController::new(MockTransport::with_replies(&["$130=300.000"]));
+        assert_eq!(g.max_travel(), Err(Error::Timeout));
+        let mut g = GrblController::new(MockTransport::with_replies(&["error:3"]));
+        assert!(matches!(g.max_travel(), Err(Error::Refused(_))));
+        assert_eq!(parse_setting("$130=300.000"), Some((130, 300.0)));
+        assert_eq!(parse_setting("<Idle>"), None);
+        assert_eq!(parse_setting("$130=abc"), None);
+    }
 
     #[test]
     fn a_status_report_is_read_with_the_work_offset() {
