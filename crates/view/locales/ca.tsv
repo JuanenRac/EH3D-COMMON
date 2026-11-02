@@ -519,3 +519,15 @@ WarnFar	La feina comença a {} mm de la cantonada de la taula: revisa el despla�
 WarnScale	El fitxer de la màquina estira la feina (escala {} x {}, no 1)
 DryOut	El pla porta l'eix {} {} mm més enllà del seu recorregut
 DryOk	Prova en sec: el pla exacte queda dins del recorregut de cada eix
+McSumMoves	Moviments (ràpids / de tall)
+McSumCut	Distància de tall (mm)
+McSumArcs	{} moviments en arc (G2/G3) no es compten en el temps ni en l'abast
+McSumNoFeed	{} moviments de tall van abans de qualsevol avanç (F): se suposa l'avanç del jog
+McSumStartAnyway	Comença igualment
+McConfirmStart	Mostra el resum abans de començar un programa
+McRapidFeed	Velocitat ràpida (mm/min)
+McShortcuts	Dreceres de teclat
+McShowToolbar	Barra d'eines
+McOpenFailed	No es pot obrir el fitxer: {}
+McSecSafety	Seguretat
+McSumReject	Rebutja un programa que surt del recorregut de la màquina

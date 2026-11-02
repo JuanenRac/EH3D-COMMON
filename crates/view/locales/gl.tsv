@@ -519,3 +519,15 @@ WarnFar	O traballo comeza a {} mm da esquina da mesa: revisa o desprazamento e a
 WarnScale	O ficheiro da máquina estira o traballo (escala {} x {}, non 1)
 DryOut	O plan leva o eixe {} {} mm máis aló do seu percorrido
 DryOk	Proba en seco: o plan exacto queda dentro do percorrido de cada eixe
+McSumMoves	Movementos (rápidos / de corte)
+McSumCut	Distancia de corte (mm)
+McSumArcs	{} movementos en arco (G2/G3) non se contan no tempo nin no alcance
+McSumNoFeed	{} movementos de corte van antes de calquera avance (F): suponse o avance do jog
+McSumStartAnyway	Comezar igualmente
+McConfirmStart	Mostrar o resumo antes de comezar un programa
+McRapidFeed	Velocidade rápida (mm/min)
+McShortcuts	Atallos de teclado
+McShowToolbar	Barra de ferramentas
+McOpenFailed	Non se pode abrir o ficheiro: {}
+McSecSafety	Seguranza
+McSumReject	Rexeitar un programa que sae do percorrido da máquina

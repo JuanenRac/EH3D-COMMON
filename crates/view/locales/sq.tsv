@@ -519,3 +519,15 @@ WarnFar	Puna fillon {} mm nga këndi i tavolinës: kontrolloni zhvendosjen dhe n
 WarnScale	Skedari i makinës e shtrin punën (shkalla {} x {}, jo 1)
 DryOut	Plani e çon boshtin {} {} mm përtej udhëtimit të tij
 DryOk	Ecje e thatë: plani i saktë mbetet brenda udhëtimit të çdo boshti
+McSumMoves	Lëvizje (të shpejta / prerje)
+McSumCut	Largësia e prerjes (mm)
+McSumArcs	{} lëvizje harku (G2/G3) nuk llogariten në kohë as në shtrirje
+McSumNoFeed	{} lëvizje prerjeje vijnë para çdo avancimi (F): merret avancimi i jog-ut
+McSumStartAnyway	Nise sidoqoftë
+McConfirmStart	Shfaq përmbledhjen para nisjes së një programi
+McRapidFeed	Shpejtësia e shpejtë (mm/min)
+McShortcuts	Shkurtore tastiere
+McShowToolbar	Shiriti i veglave
+McOpenFailed	Skedari nuk hapet: {}
+McSecSafety	Siguria
+McSumReject	Refuzo një program që del nga udhëtimi i makinës

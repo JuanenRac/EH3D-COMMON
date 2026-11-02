@@ -519,3 +519,15 @@ WarnFar	Lucrarea începe la {} mm de colțul mesei: verificați deplasarea și u
 WarnScale	Fișierul mașinii întinde lucrarea (scară {} x {}, nu 1)
 DryOut	Planul duce axa {} cu {} mm dincolo de cursa ei
 DryOk	Rulare în gol: planul exact rămâne în cursa fiecărei axe
+McSumMoves	Mișcări (rapide / de tăiere)
+McSumCut	Distanța de tăiere (mm)
+McSumArcs	{} mișcări în arc (G2/G3) nu sunt numărate în timp sau în raza de acțiune
+McSumNoFeed	{} mișcări de tăiere vin înaintea oricărui avans (F): se presupune avansul jogului
+McSumStartAnyway	Pornește oricum
+McConfirmStart	Arată rezumatul înainte de pornirea unui program
+McRapidFeed	Viteză rapidă (mm/min)
+McShortcuts	Comenzi rapide de la tastatură
+McShowToolbar	Bară de instrumente
+McOpenFailed	Fișierul nu poate fi deschis: {}
+McSecSafety	Siguranță
+McSumReject	Refuză un program care iese din cursa mașinii

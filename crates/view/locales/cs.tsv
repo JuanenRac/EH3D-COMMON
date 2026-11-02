@@ -519,3 +519,15 @@ WarnFar	Práce začíná {} mm od rohu stolu: zkontrolujte posun a jednotku
 WarnScale	Soubor stroje práci natahuje (měřítko {} x {}, ne 1)
 DryOut	Plán vede osu {} o {} mm za její dráhu
 DryOk	Suchý běh: přesný plán zůstává v dráze každé osy
+McSumMoves	Pohyby (rychloposuv / řezání)
+McSumCut	Délka řezání (mm)
+McSumArcs	{} obloukových pohybů (G2/G3) se nezapočítává do času ani do dosahu
+McSumNoFeed	{} řezných pohybů předchází jakémukoli posuvu (F): předpokládá se posuv ručního pojezdu
+McSumStartAnyway	Přesto spustit
+McConfirmStart	Před spuštěním programu zobrazit souhrn
+McRapidFeed	Rychlost rychloposuvu (mm/min)
+McShortcuts	Klávesové zkratky
+McShowToolbar	Panel nástrojů
+McOpenFailed	Soubor nelze otevřít: {}
+McSecSafety	Bezpečnost
+McSumReject	Odmítnout program, který opouští dráhu stroje

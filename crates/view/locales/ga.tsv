@@ -519,3 +519,15 @@ WarnFar	Tosaíonn an obair {} mm ón gcúinne den tábla: seiceáil an fritháir
 WarnScale	Síneann comhad an mheaisín an obair (scála {} x {}, ní 1)
 DryOut	Tógann an plean ais {} {} mm thar a haistear
 DryOk	Rith tirim: fanann an plean cruinn laistigh d'aistear gach aise
+McSumMoves	Gluaiseachtaí (tapa / gearradh)
+McSumCut	Fad gearrtha (mm)
+McSumArcs	Ní chuirtear {} gluaiseacht stuaire (G2/G3) san áireamh san am ná sa raon
+McSumNoFeed	Tagann {} gluaiseacht ghearrtha roimh aon ráta beatha (F): glactar le beatha an jog
+McSumStartAnyway	Tosaigh ar aon nós
+McConfirmStart	Taispeáin an achoimre sula dtosaíonn clár
+McRapidFeed	Luas tapa (mm/min)
+McShortcuts	Aicearraí méarchláir
+McShowToolbar	Barra uirlisí
+McOpenFailed	Ní féidir an comhad a oscailt: {}
+McSecSafety	Sábháilteacht
+McSumReject	Diúltaigh do chlár a théann thar chonair an mheaisín

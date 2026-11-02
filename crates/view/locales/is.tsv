@@ -519,3 +519,15 @@ WarnFar	Verkið byrjar {} mm frá horni borðsins: athugaðu hliðrunina og eini
 WarnScale	Vélarskráin teygir verkið (kvarði {} x {}, ekki 1)
 DryOut	Áætlunin fer með ás {} um {} mm út fyrir ferilinn
 DryOk	Þurrkeyrsla: nákvæm áætlun helst innan ferils hvers áss
+McSumMoves	Hreyfingar (hraðar / skurður)
+McSumCut	Skurðarlengd (mm)
+McSumArcs	{} bogahreyfingar (G2/G3) eru ekki taldar með í tíma eða drægi
+McSumNoFeed	{} skurðarhreyfingar koma á undan öllum matarhraða (F): gert er ráð fyrir hraða stigstýringar
+McSumStartAnyway	Byrja samt
+McConfirmStart	Sýna yfirlit áður en forrit hefst
+McRapidFeed	Hraðhreyfing (mm/mín)
+McShortcuts	Flýtilyklar
+McShowToolbar	Verkfærastika
+McOpenFailed	Ekki er hægt að opna skrána: {}
+McSecSafety	Öryggi
+McSumReject	Hafna forriti sem fer út fyrir hreyfisvið vélarinnar

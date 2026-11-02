@@ -519,3 +519,15 @@ WarnFar	Darbs sākas {} mm no galda stūra: pārbaudiet nobīdi un mērvienību
 WarnScale	Iekārtas fails izstiepj darbu (mērogs {} x {}, nevis 1)
 DryOut	Plāns izved asi {} {} mm ārpus tās gājiena
 DryOk	Sausā darbība: precīzais plāns paliek katras ass gājiena robežās
+McSumMoves	Kustības (ātrās / griešana)
+McSumCut	Griešanas garums (mm)
+McSumArcs	{} loka kustības (G2/G3) netiek ieskaitītas laikā un sasniedzamībā
+McSumNoFeed	{} griešanas kustības ir pirms jebkuras padeves (F): tiek pieņemta rokas pārbīdes padeve
+McSumStartAnyway	Tomēr sākt
+McConfirmStart	Rādīt kopsavilkumu pirms programmas sākšanas
+McRapidFeed	Ātrās kustības ātrums (mm/min)
+McShortcuts	Tastatūras īsinājumtaustiņi
+McShowToolbar	Rīkjosla
+McOpenFailed	Failu nevar atvērt: {}
+McSecSafety	Drošība
+McSumReject	Noraidīt programmu, kas iziet ārpus iekārtas gājiena

@@ -519,3 +519,15 @@ WarnFar	Arbetet börjar {} mm från bordets hörn: kontrollera förskjutning och
 WarnScale	Maskinfilen sträcker arbetet (skala {} x {}, inte 1)
 DryOut	Planen tar axel {} {} mm förbi dess slaglängd
 DryOk	Torrkörning: den exakta planen håller sig inom varje axels slaglängd
+McSumMoves	Rörelser (snabba / skärande)
+McSumCut	Skärlängd (mm)
+McSumArcs	{} cirkelrörelser (G2/G3) räknas inte med i tid eller räckvidd
+McSumNoFeed	{} skärrörelser kommer före varje matning (F): joggens matning antas
+McSumStartAnyway	Starta ändå
+McConfirmStart	Visa sammanfattningen innan ett program startar
+McRapidFeed	Snabb hastighet (mm/min)
+McShortcuts	Kortkommandon
+McShowToolbar	Verktygsfält
+McOpenFailed	Filen kan inte öppnas: {}
+McSecSafety	Säkerhet
+McSumReject	Avvisa ett program som lämnar maskinens rörelseområde

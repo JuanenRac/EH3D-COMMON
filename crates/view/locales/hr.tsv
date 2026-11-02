@@ -519,3 +519,15 @@ WarnFar	Posao počinje {} mm od kuta stola: provjerite pomak i jedinicu
 WarnScale	Datoteka stroja rasteže posao (mjerilo {} x {}, a ne 1)
 DryOut	Plan odvodi os {} za {} mm izvan njezina hoda
 DryOk	Suhi hod: točan plan ostaje unutar hoda svake osi
+McSumMoves	Pomaci (brzi / rezanje)
+McSumCut	Duljina rezanja (mm)
+McSumArcs	{} kružnih pomaka (G2/G3) ne ulazi u vrijeme ni u doseg
+McSumNoFeed	{} pomaka rezanja dolazi prije bilo kojeg posmaka (F): pretpostavlja se posmak ručnog pomicanja
+McSumStartAnyway	Ipak pokreni
+McConfirmStart	Prikaži sažetak prije pokretanja programa
+McRapidFeed	Brzina brzog hoda (mm/min)
+McShortcuts	Tipkovnički prečaci
+McShowToolbar	Alatna traka
+McOpenFailed	Datoteka se ne može otvoriti: {}
+McSecSafety	Sigurnost
+McSumReject	Odbij program koji izlazi iz hoda stroja

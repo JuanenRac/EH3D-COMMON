@@ -519,3 +519,15 @@ WarnFar	Darbas prasideda {} mm nuo stalo kampo: patikrinkite poslinkį ir vienet
 WarnScale	Staklių failas ištempia darbą (mastelis {} x {}, ne 1)
 DryOut	Planas išveda ašį {} {} mm už jos eigos
 DryOk	Bandomoji eiga be darbo: tikslus planas lieka kiekvienos ašies eigos ribose
+McSumMoves	Judesiai (greiti / pjovimo)
+McSumCut	Pjovimo ilgis (mm)
+McSumArcs	{} lanko judesių (G2/G3) neįskaičiuota į laiką ir pasiekiamumą
+McSumNoFeed	{} pjovimo judesių yra prieš bet kokią pastūmą (F): daroma prielaida, kad pastūma kaip rankinio judinimo
+McSumStartAnyway	Vis tiek pradėti
+McConfirmStart	Rodyti santrauką prieš paleidžiant programą
+McRapidFeed	Greito judėjimo greitis (mm/min)
+McShortcuts	Sparčiojo klavišai
+McShowToolbar	Įrankių juosta
+McOpenFailed	Failo atidaryti nepavyksta: {}
+McSecSafety	Sauga
+McSumReject	Atmesti programą, išeinančią už staklių eigos ribų

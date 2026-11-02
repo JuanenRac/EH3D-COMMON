@@ -519,3 +519,15 @@ WarnFar	Työ alkaa {} mm päässä pöydän kulmasta: tarkista siirtymä ja yksi
 WarnScale	Konetiedosto venyttää työtä (mittakaava {} x {}, ei 1)
 DryOut	Suunnitelma vie akselin {} {} mm sen liikealueen yli
 DryOk	Kuivajo: tarkka suunnitelma pysyy jokaisen akselin liikealueella
+McSumMoves	Liikkeet (pikaliike / leikkaus)
+McSumCut	Leikkausmatka (mm)
+McSumArcs	{} kaarliikettä (G2/G3) ei lasketa aikaan eikä ulottuvuuteen
+McSumNoFeed	{} leikkausliikettä on ennen mitään syöttönopeutta (F): oletetaan jogin syöttö
+McSumStartAnyway	Käynnistä silti
+McConfirmStart	Näytä yhteenveto ennen ohjelman käynnistystä
+McRapidFeed	Pikaliikkeen nopeus (mm/min)
+McShortcuts	Pikanäppäimet
+McShowToolbar	Työkalupalkki
+McOpenFailed	Tiedostoa ei voi avata: {}
+McSecSafety	Turvallisuus
+McSumReject	Hylkää ohjelma, joka ylittää koneen liikealueen

@@ -519,3 +519,15 @@ WarnFar	Töö algab {} mm laua nurgast: kontrolli nihet ja ühikut
 WarnScale	Masinafail venitab tööd (mõõtkava {} x {}, mitte 1)
 DryOut	Plaan viib telje {} {} mm üle tema käigu
 DryOk	Kuivjooks: täpne plaan jääb iga telje käigu piiresse
+McSumMoves	Liikumised (kiir / lõikus)
+McSumCut	Lõikepikkus (mm)
+McSumArcs	{} ringliigutust (G2/G3) ei arvestata aja ega ulatuse hulka
+McSumNoFeed	{} lõikeliigutust tuleb enne mis tahes etteannet (F): eeldatakse jogi etteannet
+McSumStartAnyway	Alusta ikkagi
+McConfirmStart	Näita kokkuvõtet enne programmi käivitamist
+McRapidFeed	Kiirliikumise kiirus (mm/min)
+McShortcuts	Klaviatuuri otseteed
+McShowToolbar	Tööriistariba
+McOpenFailed	Faili ei saa avada: {}
+McSecSafety	Ohutus
+McSumReject	Keeldu programmist, mis väljub masina liikumisulatusest

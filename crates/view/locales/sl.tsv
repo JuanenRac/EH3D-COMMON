@@ -519,3 +519,15 @@ WarnFar	Delo se začne {} mm od vogala mize: preverite zamik in enoto
 WarnScale	Datoteka stroja razteguje delo (merilo {} x {}, ne 1)
 DryOut	Načrt odpelje os {} za {} mm čez njen hod
 DryOk	Suhi tek: natančen načrt ostane znotraj hoda vsake osi
+McSumMoves	Premiki (hitri / rezanje)
+McSumCut	Dolžina rezanja (mm)
+McSumArcs	{} krožnih premikov (G2/G3) se ne šteje v čas in doseg
+McSumNoFeed	{} rezalnih premikov je pred kakršnim koli podajanjem (F): predpostavlja se podajanje ročnega premika
+McSumStartAnyway	Vseeno zaženi
+McConfirmStart	Pokaži povzetek pred zagonom programa
+McRapidFeed	Hitrost hitrega teka (mm/min)
+McShortcuts	Bližnjice na tipkovnici
+McShowToolbar	Orodna vrstica
+McOpenFailed	Datoteke ni mogoče odpreti: {}
+McSecSafety	Varnost
+McSumReject	Zavrni program, ki zapusti hod stroja

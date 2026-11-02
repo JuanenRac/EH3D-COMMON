@@ -4,6 +4,10 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The record of a crash is shared (`eh3d_view::crash`):** a panic is appended, with the program, its version and the place, to `eh3d-crash.log` in the configuration folder of the user, so a window program that has no console leaves something to read; the record and the append are tested.
+
+- **The words of the machine-control window for the summary before a start, the safety settings and the shortcuts, in the 37 languages:** the moves and the cutting distance of a G-code program, the arcs and the missing feed that the estimate leaves out, Start anyway, showing the summary, the rapid speed, refusing a program that leaves the travel, the keyboard shortcuts, the toolbar, the safety section and the message of a file that cannot be opened.
+
 ## [0.1.2] - Shared pictures reader and shared dry run
 
 - **The dry run and the summary before a start are shared (`eh3d-summary`):** the exact steps of a plan are followed on paper (`dryrun::Tracker`, fed by the program that plans the job) to know how far each axis goes and how long it takes, and the plan that leaves the course of the machine is found before a motor turns; `summary` holds the sanity checks of the work (wrong unit, bigger than the table, far from the corner, a scale that is not 1), with thresholds (`Limits`) that come from the tuning of the machine, the refusal and the lines of the summary. The drilling and routing programs, the modern interface and the server say the same. 21 tests.

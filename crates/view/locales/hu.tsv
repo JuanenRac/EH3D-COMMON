@@ -519,3 +519,15 @@ WarnFar	A munka az asztal sarkától {} mm-re kezdődik: ellenőrizze az eltolá
 WarnScale	A gépfájl nyújtja a munkát (méretarány {} x {}, nem 1)
 DryOut	A terv a(z) {} tengelyt {} mm-rel a lépéshatárán túlra viszi
 DryOk	Szárazfutás: a pontos terv minden tengely lépéshatárán belül marad
+McSumMoves	Mozgások (gyors / vágás)
+McSumCut	Vágási hossz (mm)
+McSumArcs	{} körívmozgás (G2/G3) nem számít bele az időbe és a hatótávolságba
+McSumNoFeed	{} vágómozgás megelőz minden előtolást (F): a léptetés előtolását feltételezzük
+McSumStartAnyway	Indítás mégis
+McConfirmStart	Összegzés megjelenítése a program indítása előtt
+McRapidFeed	Gyorsmenet sebessége (mm/min)
+McShortcuts	Billentyűparancsok
+McShowToolbar	Eszköztár
+McOpenFailed	A fájl nem nyitható meg: {}
+McSecSafety	Biztonság
+McSumReject	Utasítsa el a gép útját elhagyó programot

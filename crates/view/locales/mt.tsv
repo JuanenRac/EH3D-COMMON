@@ -519,3 +519,15 @@ WarnFar	Ix-xogħol jibda {} mm mill-kantuniera tal-mejda: iċċekkja l-offset u 
 WarnScale	Il-fajl tal-magna jifrex ix-xogħol (skala {} x {}, mhux 1)
 DryOut	Il-pjan jieħu l-assi {} {} mm lil hinn mill-korsa tiegħu
 DryOk	Mixja niexfa: il-pjan eżatt jibqa' fil-korsa ta' kull assi
+McSumMoves	Movimenti (veloċi / qtugħ)
+McSumCut	Distanza tal-qtugħ (mm)
+McSumArcs	{} movimenti f'arkata (G2/G3) ma jingħaddux fil-ħin jew fil-firxa
+McSumNoFeed	{} movimenti ta' qtugħ jiġu qabel kwalunkwe veloċità tal-avvanz (F): jittieħed l-avvanz tal-jog
+McSumStartAnyway	Ibda xorta waħda
+McConfirmStart	Uri s-sommarju qabel jibda programm
+McRapidFeed	Veloċità mgħaġġla (mm/min)
+McShortcuts	Shortcuts tat-tastiera
+McShowToolbar	Toolbar
+McOpenFailed	Il-fajl ma jistax jinfetaħ: {}
+McSecSafety	Sigurtà
+McSumReject	Irrifjuta programm li joħroġ barra mill-ġiri tal-magna

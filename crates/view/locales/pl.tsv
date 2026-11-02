@@ -519,3 +519,15 @@ WarnFar	Praca zaczyna się {} mm od rogu stołu: sprawdź przesunięcie i jednos
 WarnScale	Plik maszyny rozciąga pracę (skala {} x {}, nie 1)
 DryOut	Plan wyprowadza oś {} o {} mm poza jej skok
 DryOk	Bieg na sucho: dokładny plan mieści się w skoku każdej osi
+McSumMoves	Ruchy (szybkie / skrawanie)
+McSumCut	Długość skrawania (mm)
+McSumArcs	{} ruchów łukowych (G2/G3) nie wlicza się do czasu ani zasięgu
+McSumNoFeed	{} ruchów skrawania występuje przed jakimkolwiek posuwem (F): przyjmuje się posuw ręcznego przesuwu
+McSumStartAnyway	Uruchom mimo to
+McConfirmStart	Pokaż podsumowanie przed uruchomieniem programu
+McRapidFeed	Prędkość posuwu szybkiego (mm/min)
+McShortcuts	Skróty klawiszowe
+McShowToolbar	Pasek narzędzi
+McOpenFailed	Nie można otworzyć pliku: {}
+McSecSafety	Bezpieczeństwo
+McSumReject	Odrzuć program wychodzący poza zakres ruchu maszyny

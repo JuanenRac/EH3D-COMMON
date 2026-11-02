@@ -519,3 +519,15 @@ WarnFar	Lana mahaiaren izkinatik {} mm-ra hasten da: egiaztatu desplazamendua et
 WarnScale	Makinaren fitxategiak lana luzatzen du (eskala {} x {}, ez 1)
 DryOut	Planak {} ardatza {} mm eramaten du bere ibilbidetik kanpo
 DryOk	Proba lehorra: plan zehatza ardatz bakoitzaren ibilbidearen barruan geratzen da
+McSumMoves	Mugimenduak (azkarrak / mozketa)
+McSumCut	Mozketa-distantzia (mm)
+McSumArcs	{} arku-mugimendu (G2/G3) ez dira kontatzen denboran ezta irismenean ere
+McSumNoFeed	{} mozketa-mugimendu edozein aurrerapenen (F) aurretik datoz: jog-aren aurrerapena suposatzen da
+McSumStartAnyway	Hasi hala ere
+McConfirmStart	Erakutsi laburpena programa hasi aurretik
+McRapidFeed	Abiadura azkarra (mm/min)
+McShortcuts	Teklatuko lasterbideak
+McShowToolbar	Tresna-barra
+McOpenFailed	Ezin da fitxategia ireki: {}
+McSecSafety	Segurtasuna
+McSumReject	Baztertu makinaren ibilbidetik ateratzen den programa

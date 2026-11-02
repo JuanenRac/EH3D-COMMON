@@ -3,6 +3,7 @@
 //! the interface (the colour type is the one of `eh3d-common`) and the words of the interface in the eight languages of the project.
 
 pub mod clip;
+pub mod crash;
 pub mod scene;
 pub mod texts;
 pub mod theme;

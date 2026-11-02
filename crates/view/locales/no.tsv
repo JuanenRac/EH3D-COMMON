@@ -519,3 +519,15 @@ WarnFar	Arbeidet starter {} mm fra hjørnet av bordet: kontroller forskyvningen 
 WarnScale	Maskinfilen strekker arbeidet (skala {} x {}, ikke 1)
 DryOut	Planen kjører akse {} {} mm forbi slaglengden
 DryOk	Tørrkjøring: den nøyaktige planen holder seg innenfor slaglengden til hver akse
+McSumMoves	Bevegelser (hurtig / skjæring)
+McSumCut	Skjærelengde (mm)
+McSumArcs	{} buebevegelser (G2/G3) telles ikke med i tid eller rekkevidde
+McSumNoFeed	{} skjærebevegelser kommer før enhver mating (F): matingen til jog antas
+McSumStartAnyway	Start likevel
+McConfirmStart	Vis sammendraget før et program starter
+McRapidFeed	Hurtig hastighet (mm/min)
+McShortcuts	Hurtigtaster
+McShowToolbar	Verktøylinje
+McOpenFailed	Filen kan ikke åpnes: {}
+McSecSafety	Sikkerhet
+McSumReject	Avvis et program som går utenfor maskinens kjøreområde

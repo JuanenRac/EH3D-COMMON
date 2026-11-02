@@ -519,3 +519,15 @@ WarnFar	Het werk begint {} mm van de hoek van de tafel: controleer de verschuivi
 WarnScale	Het machinebestand rekt het werk uit (schaal {} x {}, niet 1)
 DryOut	Het plan voert as {} {} mm voorbij zijn bereik
 DryOk	Droogloop: het exacte plan blijft binnen het bereik van elke as
+McSumMoves	Bewegingen (ijlgang / snijden)
+McSumCut	Snijlengte (mm)
+McSumArcs	{} boogbewegingen (G2/G3) tellen niet mee in tijd of bereik
+McSumNoFeed	{} snijbewegingen komen vóór elke voeding (F): de voeding van het handmatig verplaatsen wordt aangenomen
+McSumStartAnyway	Toch starten
+McConfirmStart	Samenvatting tonen voordat een programma start
+McRapidFeed	Ijlgangsnelheid (mm/min)
+McShortcuts	Sneltoetsen
+McShowToolbar	Werkbalk
+McOpenFailed	Het bestand kan niet worden geopend: {}
+McSecSafety	Veiligheid
+McSumReject	Een programma weigeren dat buiten de verplaatsing van de machine komt
