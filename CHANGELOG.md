@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.1.3] - Crash record and words for the new windows
+
 - **The record of a crash is shared (`eh3d_view::crash`):** a panic is appended, with the program, its version and the place, to `eh3d-crash.log` in the configuration folder of the user, so a window program that has no console leaves something to read; the record and the append are tested.
 
 - **The words of the machine-control window for the summary before a start, the safety settings and the shortcuts, in the 37 languages:** the moves and the cutting distance of a G-code program, the arcs and the missing feed that the estimate leaves out, Start anyway, showing the summary, the rapid speed, refusing a program that leaves the travel, the keyboard shortcuts, the toolbar, the safety section and the message of a file that cannot be opened.
