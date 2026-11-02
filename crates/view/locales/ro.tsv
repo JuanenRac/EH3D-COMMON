@@ -542,3 +542,28 @@ McQueueClear	Golește coada
 McQueueContinue	Continuă coada
 McQueueHalted	Coada s-a oprit: un program nu s-a terminat
 McGrblTravel	Citește cursa mașinii din controler și folosește-o pe cea mai mică
+UpdTitle	Actualizări
+UpdButton	Actualizează
+UpdInstalled	Instalată
+UpdLatest	Ultima de pe GitHub
+UpdCheck	Verifică acum
+UpdInstall	Descarcă și instalează
+UpdUndo	Anulează actualizarea
+UpdRestart	Repornește acum
+UpdNotes	Noutăți
+UpdUpToDate	Aceasta este cea mai recentă versiune
+UpdAvailable	Este disponibilă o versiune nouă
+UpdStepAsk	Întreabă GitHub de versiune
+UpdStepDownload	Descarcă pachetul
+UpdStepVerify	Verifică SHA-256
+UpdStepInstall	Pune-l la locul lui
+UpdHistory	Istoric
+UpdOff	Actualizările sunt dezactivate
+UpdAllow	Permite actualizarea de pe GitHub
+UpdAtStart	Caută o versiune nouă la pornire
+UpdNoPackage	Această versiune nu are pachet pentru acest sistem
+UpdFailed	Actualizarea a eșuat
+UpdDone	Gata. Repornește programul pentru a o folosi
+UpdPrivacy	Nu se instalează nimic fără acordul tău. Se cer doar versiunea și pachetul ei; nu se trimite nimic despre tine sau mașina ta.
+UpdHistUpdated	Actualizat
+UpdHistUndone	Revenit

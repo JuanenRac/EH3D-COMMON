@@ -542,3 +542,28 @@ McQueueClear	Очистить очередь
 McQueueContinue	Продолжить очередь
 McQueueHalted	Очередь остановлена: программа не завершилась
 McGrblTravel	Считать ход станка из контроллера и использовать меньший
+UpdTitle	Обновления
+UpdButton	Обновить
+UpdInstalled	Установлена
+UpdLatest	Последняя на GitHub
+UpdCheck	Проверить
+UpdInstall	Скачать и установить
+UpdUndo	Отменить обновление
+UpdRestart	Перезапустить
+UpdNotes	Что нового
+UpdUpToDate	Это последняя версия
+UpdAvailable	Доступна новая версия
+UpdStepAsk	Запрос версии у GitHub
+UpdStepDownload	Загрузка пакета
+UpdStepVerify	Проверка SHA-256
+UpdStepInstall	Установка на место
+UpdHistory	История
+UpdOff	Обновления отключены
+UpdAllow	Разрешить обновление с GitHub
+UpdAtStart	Искать новую версию при запуске
+UpdNoPackage	В этой версии нет пакета для этой системы
+UpdFailed	Не удалось обновить
+UpdDone	Готово. Перезапустите программу
+UpdPrivacy	Ничего не устанавливается без вашего согласия. Запрашиваются только версия и её пакет; ничего о вас или станке не отправляется.
+UpdHistUpdated	Обновлено
+UpdHistUndone	Откат

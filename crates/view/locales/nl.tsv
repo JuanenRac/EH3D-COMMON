@@ -542,3 +542,28 @@ McQueueClear	Wachtrij leegmaken
 McQueueContinue	Doorgaan met de wachtrij
 McQueueHalted	De wachtrij is gestopt: een programma is niet voltooid
 McGrblTravel	Het verplaatsingsbereik van de machine uit de besturing lezen en het kleinste gebruiken
+UpdTitle	Updates
+UpdButton	Bijwerken
+UpdInstalled	Geïnstalleerd
+UpdLatest	Nieuwste op GitHub
+UpdCheck	Nu controleren
+UpdInstall	Downloaden en installeren
+UpdUndo	Update ongedaan maken
+UpdRestart	Nu herstarten
+UpdNotes	Wat is er nieuw
+UpdUpToDate	Dit is de nieuwste versie
+UpdAvailable	Er is een nieuwe versie
+UpdStepAsk	GitHub om de versie vragen
+UpdStepDownload	Pakket downloaden
+UpdStepVerify	SHA-256 controleren
+UpdStepInstall	Op zijn plaats zetten
+UpdHistory	Geschiedenis
+UpdOff	Updates staan uit
+UpdAllow	Bijwerken vanaf GitHub toestaan
+UpdAtStart	Bij het starten naar een nieuwe versie zoeken
+UpdNoPackage	Deze versie heeft geen pakket voor dit systeem
+UpdFailed	Het bijwerken is mislukt
+UpdDone	Klaar. Herstart het programma om het te gebruiken
+UpdPrivacy	Er wordt niets geïnstalleerd zonder uw toestemming. Alleen de versie en het pakket worden opgevraagd; er wordt niets over u of uw machine verstuurd.
+UpdHistUpdated	Bijgewerkt
+UpdHistUndone	Teruggezet

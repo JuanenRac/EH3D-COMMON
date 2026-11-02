@@ -542,3 +542,28 @@ McQueueClear	Hustu ilara
 McQueueContinue	Jarraitu ilararekin
 McQueueHalted	Ilara gelditu da: programa batek ez du amaitu
 McGrblTravel	Irakurri makinaren ibilbidea kontrolagailutik eta erabili txikiena
+UpdTitle	Eguneratzeak
+UpdButton	Eguneratu
+UpdInstalled	Instalatuta
+UpdLatest	Azkena GitHub-en
+UpdCheck	Begiratu orain
+UpdInstall	Deskargatu eta instalatu
+UpdUndo	Desegin eguneratzea
+UpdRestart	Berrabiarazi orain
+UpdNotes	Berritasunak
+UpdUpToDate	Hau da azken bertsioa
+UpdAvailable	Bertsio berri bat dago
+UpdStepAsk	Galdetu GitHub-i bertsioa
+UpdStepDownload	Deskargatu paketea
+UpdStepVerify	Egiaztatu SHA-256
+UpdStepInstall	Jarri bere tokian
+UpdHistory	Historia
+UpdOff	Eguneratzeak desaktibatuta daude
+UpdAllow	Onartu GitHub-etik eguneratzea
+UpdAtStart	Bilatu bertsio berria abiaraztean
+UpdNoPackage	Bertsio honek ez dauka sistema honetarako paketerik
+UpdFailed	Eguneratzeak huts egin du
+UpdDone	Eginda. Berrabiarazi programa erabiltzeko
+UpdPrivacy	Ez da ezer instalatzen zuk eskatu gabe. Bertsioa eta bere paketea eskatzen dira bakarrik; ez da zuri edo zure makinari buruzko ezer bidaltzen.
+UpdHistUpdated	Eguneratuta
+UpdHistUndone	Atzera egin da

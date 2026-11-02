@@ -542,3 +542,28 @@ McQueueClear	Tühjenda järjekord
 McQueueContinue	Jätka järjekorraga
 McQueueHalted	Järjekord peatus: üks programm ei lõppenud
 McGrblTravel	Loe masina käik kontrollerist ja kasuta väiksemat
+UpdTitle	Uuendused
+UpdButton	Uuenda
+UpdInstalled	Paigaldatud
+UpdLatest	Uusim GitHubis
+UpdCheck	Kontrolli kohe
+UpdInstall	Laadi alla ja paigalda
+UpdUndo	Võta uuendus tagasi
+UpdRestart	Taaskäivita kohe
+UpdNotes	Uuendused
+UpdUpToDate	See on uusim versioon
+UpdAvailable	Saadaval on uus versioon
+UpdStepAsk	Küsi GitHubilt versiooni
+UpdStepDownload	Laadi pakett alla
+UpdStepVerify	Kontrolli SHA-256
+UpdStepInstall	Pane oma kohale
+UpdHistory	Ajalugu
+UpdOff	Uuendused on välja lülitatud
+UpdAllow	Luba uuendada GitHubist
+UpdAtStart	Otsi käivitamisel uut versiooni
+UpdNoPackage	Sellel versioonil pole selle süsteemi paketti
+UpdFailed	Uuendamine ebaõnnestus
+UpdDone	Valmis. Taaskäivita programm
+UpdPrivacy	Midagi ei paigaldata ilma sinu loata. Küsitakse ainult versiooni ja selle paketti; sinu ega masina kohta ei saadeta midagi.
+UpdHistUpdated	Uuendatud
+UpdHistUndone	Tagasi võetud

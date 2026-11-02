@@ -542,3 +542,28 @@ McQueueClear	Isprazni red
 McQueueContinue	Nastavi s redom
 McQueueHalted	Red je zaustavljen: program nije dovršen
 McGrblTravel	Pročitaj hod stroja iz upravljača i koristi manji
+UpdTitle	Ažuriranja
+UpdButton	Ažuriraj
+UpdInstalled	Instalirano
+UpdLatest	Najnovija na GitHubu
+UpdCheck	Provjeri sada
+UpdInstall	Preuzmi i instaliraj
+UpdUndo	Poništi ažuriranje
+UpdRestart	Ponovno pokreni
+UpdNotes	Novosti
+UpdUpToDate	Ovo je najnovija verzija
+UpdAvailable	Dostupna je nova verzija
+UpdStepAsk	Pitaj GitHub za verziju
+UpdStepDownload	Preuzmi paket
+UpdStepVerify	Provjeri SHA-256
+UpdStepInstall	Postavi na mjesto
+UpdHistory	Povijest
+UpdOff	Ažuriranja su isključena
+UpdAllow	Dopusti ažuriranje s GitHuba
+UpdAtStart	Traži novu verziju pri pokretanju
+UpdNoPackage	Ova verzija nema paket za ovaj sustav
+UpdFailed	Ažuriranje nije uspjelo
+UpdDone	Gotovo. Ponovno pokrenite program
+UpdPrivacy	Ništa se ne instalira bez vašeg odobrenja. Traže se samo verzija i njezin paket; ništa o vama ni vašem stroju ne šalje se.
+UpdHistUpdated	Ažurirano
+UpdHistUndone	Vraćeno

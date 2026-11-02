@@ -542,3 +542,28 @@ McQueueClear	Baleirar a cola
 McQueueContinue	Seguir coa cola
 McQueueHalted	A cola detívose: un programa non rematou
 McGrblTravel	Ler o percorrido da máquina do controlador e usar o menor
+UpdTitle	Actualizacións
+UpdButton	Actualizar
+UpdInstalled	Instalada
+UpdLatest	Última en GitHub
+UpdCheck	Buscar agora
+UpdInstall	Descargar e instalar
+UpdUndo	Desfacer a actualización
+UpdRestart	Reiniciar agora
+UpdNotes	Novidades
+UpdUpToDate	Esta é a última versión
+UpdAvailable	Hai unha versión nova
+UpdStepAsk	Preguntar a GitHub pola versión
+UpdStepDownload	Descargar o paquete
+UpdStepVerify	Comprobar o SHA-256
+UpdStepInstall	Poñelo no seu sitio
+UpdHistory	Historial
+UpdOff	As actualizacións están desactivadas
+UpdAllow	Permitir actualizar desde GitHub
+UpdAtStart	Buscar unha versión nova ao arrancar
+UpdNoPackage	Esta versión non ten paquete para este sistema
+UpdFailed	A actualización fallou
+UpdDone	Feito. Reinicia o programa para usala
+UpdPrivacy	Non se instala nada sen que o pidas. Só se piden a versión e o seu paquete; non se envía nada teu nin da túa máquina.
+UpdHistUpdated	Actualizada
+UpdHistUndone	Volveuse atrás

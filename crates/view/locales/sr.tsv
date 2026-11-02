@@ -542,3 +542,28 @@ McQueueClear	Испразни ред
 McQueueContinue	Настави са редом
 McQueueHalted	Ред је заустављен: програм није завршен
 McGrblTravel	Прочитај ход машине из контролера и користи мањи
+UpdTitle	Ажурирања
+UpdButton	Ажурирај
+UpdInstalled	Инсталирано
+UpdLatest	Најновија на GitHub-у
+UpdCheck	Провери сада
+UpdInstall	Преузми и инсталирај
+UpdUndo	Поништи ажурирање
+UpdRestart	Поново покрени
+UpdNotes	Новине
+UpdUpToDate	Ово је најновија верзија
+UpdAvailable	Доступна је нова верзија
+UpdStepAsk	Питај GitHub за верзију
+UpdStepDownload	Преузми пакет
+UpdStepVerify	Провери SHA-256
+UpdStepInstall	Постави на место
+UpdHistory	Историја
+UpdOff	Ажурирања су искључена
+UpdAllow	Дозволи ажурирање са GitHub-а
+UpdAtStart	Тражи нову верзију при покретању
+UpdNoPackage	Ова верзија нема пакет за овај систем
+UpdFailed	Ажурирање није успело
+UpdDone	Готово. Поново покрените програм
+UpdPrivacy	Ништа се не инсталира без вашег одобрења. Траже се само верзија и њен пакет; ништа о вама или машини се не шаље.
+UpdHistUpdated	Ажурирано
+UpdHistUndone	Враћено

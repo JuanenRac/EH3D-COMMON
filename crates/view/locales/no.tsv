@@ -542,3 +542,28 @@ McQueueClear	Tøm køen
 McQueueContinue	Fortsett med køen
 McQueueHalted	Køen stoppet: et program ble ikke fullført
 McGrblTravel	Les maskinens verdi for kjørevei fra styringen og bruk den minste
+UpdTitle	Oppdateringer
+UpdButton	Oppdater
+UpdInstalled	Installert
+UpdLatest	Nyeste på GitHub
+UpdCheck	Sjekk nå
+UpdInstall	Last ned og installer
+UpdUndo	Angre oppdateringen
+UpdRestart	Start på nytt
+UpdNotes	Hva er nytt
+UpdUpToDate	Dette er den nyeste versjonen
+UpdAvailable	Det finnes en ny versjon
+UpdStepAsk	Spør GitHub om versjonen
+UpdStepDownload	Last ned pakken
+UpdStepVerify	Kontroller SHA-256
+UpdStepInstall	Sett det på plass
+UpdHistory	Historikk
+UpdOff	Oppdateringer er slått av
+UpdAllow	Tillat oppdatering fra GitHub
+UpdAtStart	Se etter ny versjon ved oppstart
+UpdNoPackage	Denne versjonen har ingen pakke for dette systemet
+UpdFailed	Oppdateringen mislyktes
+UpdDone	Ferdig. Start programmet på nytt for å bruke den
+UpdPrivacy	Ingenting installeres uten ditt samtykke. Bare versjonen og pakken hentes; ingenting om deg eller maskinen din sendes.
+UpdHistUpdated	Oppdatert
+UpdHistUndone	Gått tilbake

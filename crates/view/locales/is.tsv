@@ -542,3 +542,28 @@ McQueueClear	Tæma biðröðina
 McQueueContinue	Halda áfram með biðröðina
 McQueueHalted	Biðröðin stöðvaðist: forrit kláraðist ekki
 McGrblTravel	Lesa færslusvið vélarinnar úr stýringunni og nota það minna
+UpdTitle	Uppfærslur
+UpdButton	Uppfæra
+UpdInstalled	Uppsett
+UpdLatest	Nýjasta á GitHub
+UpdCheck	Athuga núna
+UpdInstall	Sækja og setja upp
+UpdUndo	Afturkalla uppfærslu
+UpdRestart	Endurræsa núna
+UpdNotes	Nýjungar
+UpdUpToDate	Þetta er nýjasta útgáfan
+UpdAvailable	Ný útgáfa er tiltæk
+UpdStepAsk	Spyrja GitHub um útgáfuna
+UpdStepDownload	Sækja pakkann
+UpdStepVerify	Athuga SHA-256
+UpdStepInstall	Setja á sinn stað
+UpdHistory	Ferill
+UpdOff	Slökkt er á uppfærslum
+UpdAllow	Leyfa uppfærslu frá GitHub
+UpdAtStart	Leita að nýrri útgáfu við ræsingu
+UpdNoPackage	Þessi útgáfa hefur engan pakka fyrir þetta kerfi
+UpdFailed	Uppfærslan mistókst
+UpdDone	Búið. Endurræstu forritið til að nota hana
+UpdPrivacy	Ekkert er sett upp án þíns samþykkis. Aðeins útgáfan og pakkinn hennar eru sótt; ekkert um þig eða vélina þína er sent.
+UpdHistUpdated	Uppfært
+UpdHistUndone	Afturkallað

@@ -542,3 +542,28 @@ McQueueClear	Tøm køen
 McQueueContinue	Fortsæt med køen
 McQueueHalted	Køen stoppede: et program blev ikke afsluttet
 McGrblTravel	Læs maskinens kørselsvej fra styringen og brug den mindste
+UpdTitle	Opdateringer
+UpdButton	Opdater
+UpdInstalled	Installeret
+UpdLatest	Seneste på GitHub
+UpdCheck	Tjek nu
+UpdInstall	Hent og installer
+UpdUndo	Fortryd opdateringen
+UpdRestart	Genstart nu
+UpdNotes	Nyheder
+UpdUpToDate	Dette er den nyeste version
+UpdAvailable	Der er en ny version
+UpdStepAsk	Spørg GitHub om versionen
+UpdStepDownload	Hent pakken
+UpdStepVerify	Kontroller SHA-256
+UpdStepInstall	Sæt det på plads
+UpdHistory	Historik
+UpdOff	Opdateringer er slået fra
+UpdAllow	Tillad opdatering fra GitHub
+UpdAtStart	Søg efter ny version ved start
+UpdNoPackage	Denne version har ingen pakke til dette system
+UpdFailed	Opdateringen mislykkedes
+UpdDone	Færdig. Genstart programmet for at bruge den
+UpdPrivacy	Intet installeres uden din accept. Kun versionen og dens pakke hentes; intet om dig eller din maskine sendes.
+UpdHistUpdated	Opdateret
+UpdHistUndone	Gået tilbage

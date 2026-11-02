@@ -542,3 +542,28 @@ McQueueClear	Išvalyti eilę
 McQueueContinue	Tęsti eilę
 McQueueHalted	Eilė sustojo: programa nebaigta
 McGrblTravel	Nuskaityti staklių eigą iš valdiklio ir naudoti mažesnę
+UpdTitle	Atnaujinimai
+UpdButton	Atnaujinti
+UpdInstalled	Įdiegta
+UpdLatest	Naujausia „GitHub“
+UpdCheck	Tikrinti dabar
+UpdInstall	Atsisiųsti ir įdiegti
+UpdUndo	Atšaukti atnaujinimą
+UpdRestart	Paleisti iš naujo
+UpdNotes	Naujienos
+UpdUpToDate	Tai naujausia versija
+UpdAvailable	Yra nauja versija
+UpdStepAsk	Paklausti „GitHub“ apie versiją
+UpdStepDownload	Atsisiųsti paketą
+UpdStepVerify	Patikrinti SHA-256
+UpdStepInstall	Padėti į vietą
+UpdHistory	Istorija
+UpdOff	Atnaujinimai išjungti
+UpdAllow	Leisti atnaujinti iš „GitHub“
+UpdAtStart	Ieškoti naujos versijos paleidžiant
+UpdNoPackage	Šioje versijoje nėra šios sistemos paketo
+UpdFailed	Atnaujinti nepavyko
+UpdDone	Atlikta. Paleiskite programą iš naujo
+UpdPrivacy	Nieko neįdiegiama be jūsų leidimo. Prašoma tik versijos ir jos paketo; nieko apie jus ar jūsų mašiną nesiunčiama.
+UpdHistUpdated	Atnaujinta
+UpdHistUndone	Grąžinta

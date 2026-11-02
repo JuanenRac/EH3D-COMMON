@@ -542,3 +542,28 @@ McQueueClear	Очистити чергу
 McQueueContinue	Продовжити чергу
 McQueueHalted	Чергу зупинено: програма не завершилась
 McGrblTravel	Зчитати хід верстата з контролера і використати менший
+UpdTitle	Оновлення
+UpdButton	Оновити
+UpdInstalled	Встановлена
+UpdLatest	Остання на GitHub
+UpdCheck	Перевірити
+UpdInstall	Завантажити й встановити
+UpdUndo	Скасувати оновлення
+UpdRestart	Перезапустити
+UpdNotes	Що нового
+UpdUpToDate	Це остання версія
+UpdAvailable	Доступна нова версія
+UpdStepAsk	Запит версії в GitHub
+UpdStepDownload	Завантажити пакет
+UpdStepVerify	Перевірити SHA-256
+UpdStepInstall	Поставити на місце
+UpdHistory	Історія
+UpdOff	Оновлення вимкнено
+UpdAllow	Дозволити оновлення з GitHub
+UpdAtStart	Шукати нову версію під час запуску
+UpdNoPackage	У цій версії немає пакета для цієї системи
+UpdFailed	Не вдалося оновити
+UpdDone	Готово. Перезапустіть програму
+UpdPrivacy	Нічого не встановлюється без вашої згоди. Запитуються лише версія та її пакет; нічого про вас чи верстат не надсилається.
+UpdHistUpdated	Оновлено
+UpdHistUndone	Відкочено

@@ -542,3 +542,28 @@ McQueueClear	Töm kön
 McQueueContinue	Fortsätt med kön
 McQueueHalted	Kön stoppades: ett program slutfördes inte
 McGrblTravel	Läs maskinens rörelseområde från styrningen och använd det minsta
+UpdTitle	Uppdateringar
+UpdButton	Uppdatera
+UpdInstalled	Installerad
+UpdLatest	Senaste på GitHub
+UpdCheck	Sök nu
+UpdInstall	Hämta och installera
+UpdUndo	Ångra uppdateringen
+UpdRestart	Starta om nu
+UpdNotes	Nyheter
+UpdUpToDate	Detta är den senaste versionen
+UpdAvailable	En ny version finns
+UpdStepAsk	Fråga GitHub efter versionen
+UpdStepDownload	Hämta paketet
+UpdStepVerify	Kontrollera SHA-256
+UpdStepInstall	Lägg det på plats
+UpdHistory	Historik
+UpdOff	Uppdateringar är avstängda
+UpdAllow	Tillåt uppdatering från GitHub
+UpdAtStart	Sök efter ny version vid start
+UpdNoPackage	Den här versionen har inget paket för detta system
+UpdFailed	Uppdateringen misslyckades
+UpdDone	Klart. Starta om programmet för att använda den
+UpdPrivacy	Inget installeras utan ditt medgivande. Bara versionen och dess paket hämtas; inget om dig eller din maskin skickas.
+UpdHistUpdated	Uppdaterad
+UpdHistUndone	Återställd

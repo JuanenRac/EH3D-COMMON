@@ -542,3 +542,28 @@ McQueueClear	Zbraz radhën
 McQueueContinue	Vazhdo me radhën
 McQueueHalted	Radha u ndal: një program nuk përfundoi
 McGrblTravel	Lexo lëvizjen e makinës nga kontrolluesi dhe përdor më të voglën
+UpdTitle	Përditësime
+UpdButton	Përditëso
+UpdInstalled	Instaluar
+UpdLatest	E fundit në GitHub
+UpdCheck	Kontrollo tani
+UpdInstall	Shkarko dhe instalo
+UpdUndo	Anulo përditësimin
+UpdRestart	Rinis tani
+UpdNotes	Të rejat
+UpdUpToDate	Kjo është versioni i fundit
+UpdAvailable	Ka një version të ri
+UpdStepAsk	Pyet GitHub për versionin
+UpdStepDownload	Shkarko paketën
+UpdStepVerify	Kontrollo SHA-256
+UpdStepInstall	Vendose në vend
+UpdHistory	Historiku
+UpdOff	Përditësimet janë çaktivizuar
+UpdAllow	Lejo përditësimin nga GitHub
+UpdAtStart	Kërko version të ri në nisje
+UpdNoPackage	Ky version nuk ka paketë për këtë sistem
+UpdFailed	Përditësimi dështoi
+UpdDone	U krye. Rinise programin për ta përdorur
+UpdPrivacy	Asgjë nuk instalohet pa pëlqimin tuaj. Kërkohen vetëm versioni dhe paketa e tij; asgjë për ju ose makinën tuaj nuk dërgohet.
+UpdHistUpdated	Përditësuar
+UpdHistUndone	U kthye mbrapa

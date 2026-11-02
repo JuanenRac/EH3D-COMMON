@@ -542,3 +542,28 @@ McQueueClear	Izprazni vrsto
 McQueueContinue	Nadaljuj z vrsto
 McQueueHalted	Vrsta se je ustavila: program ni končal
 McGrblTravel	Preberi hod stroja iz krmilnika in uporabi manjšega
+UpdTitle	Posodobitve
+UpdButton	Posodobi
+UpdInstalled	Nameščeno
+UpdLatest	Najnovejša na GitHubu
+UpdCheck	Preveri zdaj
+UpdInstall	Prenesi in namesti
+UpdUndo	Razveljavi posodobitev
+UpdRestart	Znova zaženi
+UpdNotes	Novosti
+UpdUpToDate	To je najnovejša različica
+UpdAvailable	Na voljo je nova različica
+UpdStepAsk	Vprašaj GitHub za različico
+UpdStepDownload	Prenesi paket
+UpdStepVerify	Preveri SHA-256
+UpdStepInstall	Postavi na mesto
+UpdHistory	Zgodovina
+UpdOff	Posodobitve so izklopljene
+UpdAllow	Dovoli posodobitev z GitHuba
+UpdAtStart	Ob zagonu poišči novo različico
+UpdNoPackage	Ta različica nima paketa za ta sistem
+UpdFailed	Posodobitev ni uspela
+UpdDone	Končano. Znova zaženite program
+UpdPrivacy	Nič se ne namesti brez vašega dovoljenja. Zahteva se le različica in njen paket; nič o vas ali stroju se ne pošilja.
+UpdHistUpdated	Posodobljeno
+UpdHistUndone	Vrnjeno

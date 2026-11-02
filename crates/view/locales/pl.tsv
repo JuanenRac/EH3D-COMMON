@@ -542,3 +542,28 @@ McQueueClear	Wyczyść kolejkę
 McQueueContinue	Kontynuuj kolejkę
 McQueueHalted	Kolejka zatrzymana: program nie został ukończony
 McGrblTravel	Odczytaj zakres ruchu maszyny ze sterownika i użyj mniejszego
+UpdTitle	Aktualizacje
+UpdButton	Aktualizuj
+UpdInstalled	Zainstalowana
+UpdLatest	Najnowsza na GitHubie
+UpdCheck	Sprawdź teraz
+UpdInstall	Pobierz i zainstaluj
+UpdUndo	Cofnij aktualizację
+UpdRestart	Uruchom ponownie
+UpdNotes	Co nowego
+UpdUpToDate	To najnowsza wersja
+UpdAvailable	Dostępna jest nowa wersja
+UpdStepAsk	Zapytaj GitHub o wersję
+UpdStepDownload	Pobierz pakiet
+UpdStepVerify	Sprawdź SHA-256
+UpdStepInstall	Umieść na miejscu
+UpdHistory	Historia
+UpdOff	Aktualizacje są wyłączone
+UpdAllow	Zezwalaj na aktualizację z GitHuba
+UpdAtStart	Szukaj nowej wersji przy uruchomieniu
+UpdNoPackage	Ta wersja nie ma pakietu dla tego systemu
+UpdFailed	Aktualizacja się nie powiodła
+UpdDone	Gotowe. Uruchom program ponownie
+UpdPrivacy	Nic nie jest instalowane bez Twojej zgody. Pobierana jest tylko wersja i jej pakiet; nic o Tobie ani maszynie nie jest wysyłane.
+UpdHistUpdated	Zaktualizowano
+UpdHistUndone	Cofnięto

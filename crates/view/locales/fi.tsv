@@ -542,3 +542,28 @@ McQueueClear	Tyhjennä jono
 McQueueContinue	Jatka jonoa
 McQueueHalted	Jono pysähtyi: ohjelma ei valmistunut
 McGrblTravel	Lue koneen liikematka ohjaimesta ja käytä pienempää
+UpdTitle	Päivitykset
+UpdButton	Päivitä
+UpdInstalled	Asennettu
+UpdLatest	Uusin GitHubissa
+UpdCheck	Tarkista nyt
+UpdInstall	Lataa ja asenna
+UpdUndo	Peru päivitys
+UpdRestart	Käynnistä uudelleen
+UpdNotes	Uutta
+UpdUpToDate	Tämä on uusin versio
+UpdAvailable	Uusi versio on saatavilla
+UpdStepAsk	Kysy GitHubilta versiota
+UpdStepDownload	Lataa paketti
+UpdStepVerify	Tarkista SHA-256
+UpdStepInstall	Aseta paikalleen
+UpdHistory	Historia
+UpdOff	Päivitykset on poissa käytöstä
+UpdAllow	Salli päivitys GitHubista
+UpdAtStart	Etsi uutta versiota käynnistettäessä
+UpdNoPackage	Tässä versiossa ei ole pakettia tälle järjestelmälle
+UpdFailed	Päivitys epäonnistui
+UpdDone	Valmis. Käynnistä ohjelma uudelleen
+UpdPrivacy	Mitään ei asenneta ilman lupaasi. Pyydetään vain versio ja sen paketti; mitään sinusta tai koneestasi ei lähetetä.
+UpdHistUpdated	Päivitetty
+UpdHistUndone	Palautettu

@@ -542,3 +542,28 @@ McQueueClear	Battal il-kju
 McQueueContinue	Kompli bil-kju
 McQueueHalted	Il-kju waqaf: programm ma spiċċax
 McGrblTravel	Aqra l-ġirja tal-magna mill-kontrollur u uża l-iżgħar
+UpdTitle	Aġġornamenti
+UpdButton	Aġġorna
+UpdInstalled	Installata
+UpdLatest	L-aħħar fuq GitHub
+UpdCheck	Iċċekkja issa
+UpdInstall	Niżżel u installa
+UpdUndo	Ireġġa l-aġġornament
+UpdRestart	Erġa' ibda issa
+UpdNotes	X'hemm ġdid
+UpdUpToDate	Din hija l-aħħar verżjoni
+UpdAvailable	Hemm verżjoni ġdida
+UpdStepAsk	Staqsi lil GitHub dwar il-verżjoni
+UpdStepDownload	Niżżel il-pakkett
+UpdStepVerify	Iċċekkja l-SHA-256
+UpdStepInstall	Poġġih f'postu
+UpdHistory	Storja
+UpdOff	L-aġġornamenti huma mitfija
+UpdAllow	Ippermetti aġġornament minn GitHub
+UpdAtStart	Fittex verżjoni ġdida mat-tnedija
+UpdNoPackage	Din il-verżjoni m'għandhiex pakkett għal din is-sistema
+UpdFailed	L-aġġornament falla
+UpdDone	Lest. Erġa' ibda l-programm biex tużah
+UpdPrivacy	Xejn ma jiġi installat mingħajr il-kunsens tiegħek. Jintalbu biss il-verżjoni u l-pakkett tagħha; ma jintbagħat xejn dwarek jew il-magna tiegħek.
+UpdHistUpdated	Aġġornat
+UpdHistUndone	Rritorna lura

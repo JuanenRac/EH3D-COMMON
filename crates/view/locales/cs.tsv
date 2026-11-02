@@ -542,3 +542,28 @@ McQueueClear	Vyprázdnit frontu
 McQueueContinue	Pokračovat ve frontě
 McQueueHalted	Fronta se zastavila: program nebyl dokončen
 McGrblTravel	Přečíst zdvih stroje z řídicí jednotky a použít menší
+UpdTitle	Aktualizace
+UpdButton	Aktualizovat
+UpdInstalled	Nainstalováno
+UpdLatest	Nejnovější na GitHubu
+UpdCheck	Zkontrolovat
+UpdInstall	Stáhnout a nainstalovat
+UpdUndo	Vrátit aktualizaci
+UpdRestart	Restartovat
+UpdNotes	Novinky
+UpdUpToDate	Toto je nejnovější verze
+UpdAvailable	Je dostupná nová verze
+UpdStepAsk	Dotaz na verzi na GitHubu
+UpdStepDownload	Stažení balíčku
+UpdStepVerify	Kontrola SHA-256
+UpdStepInstall	Nahrazení programu
+UpdHistory	Historie
+UpdOff	Aktualizace jsou vypnuty
+UpdAllow	Povolit aktualizace z GitHubu
+UpdAtStart	Hledat novou verzi při spuštění
+UpdNoPackage	Tato verze nemá balíček pro tento systém
+UpdFailed	Aktualizace selhala
+UpdDone	Hotovo. Restartujte program
+UpdPrivacy	Nic se neinstaluje bez vašeho souhlasu. Žádá se jen o verzi a její balíček; nic o vás ani o stroji se neodesílá.
+UpdHistUpdated	Aktualizováno
+UpdHistUndone	Vráceno zpět

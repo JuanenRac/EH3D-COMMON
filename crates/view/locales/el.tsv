@@ -542,3 +542,28 @@ McQueueClear	Εκκαθάριση της ουράς
 McQueueContinue	Συνέχιση της ουράς
 McQueueHalted	Η ουρά σταμάτησε: ένα πρόγραμμα δεν ολοκληρώθηκε
 McGrblTravel	Ανάγνωση της διαδρομής του μηχανήματος από τον ελεγκτή και χρήση της μικρότερης
+UpdTitle	Ενημερώσεις
+UpdButton	Ενημέρωση
+UpdInstalled	Εγκατεστημένη
+UpdLatest	Τελευταία στο GitHub
+UpdCheck	Έλεγχος τώρα
+UpdInstall	Λήψη και εγκατάσταση
+UpdUndo	Αναίρεση ενημέρωσης
+UpdRestart	Επανεκκίνηση τώρα
+UpdNotes	Τι νέο υπάρχει
+UpdUpToDate	Αυτή είναι η τελευταία έκδοση
+UpdAvailable	Υπάρχει νέα έκδοση
+UpdStepAsk	Ερώτηση στο GitHub για την έκδοση
+UpdStepDownload	Λήψη του πακέτου
+UpdStepVerify	Έλεγχος SHA-256
+UpdStepInstall	Τοποθέτηση
+UpdHistory	Ιστορικό
+UpdOff	Οι ενημερώσεις είναι απενεργοποιημένες
+UpdAllow	Να επιτρέπεται η ενημέρωση από το GitHub
+UpdAtStart	Έλεγχος για νέα έκδοση κατά την εκκίνηση
+UpdNoPackage	Αυτή η έκδοση δεν έχει πακέτο για αυτό το σύστημα
+UpdFailed	Η ενημέρωση απέτυχε
+UpdDone	Έτοιμο. Επανεκκινήστε το πρόγραμμα
+UpdPrivacy	Τίποτα δεν εγκαθίσταται χωρίς τη συγκατάθεσή σας. Ζητούνται μόνο η έκδοση και το πακέτο της· δεν στέλνεται τίποτα για εσάς ή το μηχάνημά σας.
+UpdHistUpdated	Ενημερώθηκε
+UpdHistUndone	Επαναφορά

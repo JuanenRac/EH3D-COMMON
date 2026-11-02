@@ -542,3 +542,28 @@ McQueueClear	Notīrīt rindu
 McQueueContinue	Turpināt rindu
 McQueueHalted	Rinda apstājās: programma netika pabeigta
 McGrblTravel	Nolasīt iekārtas gājienu no kontrollera un izmantot mazāko
+UpdTitle	Atjauninājumi
+UpdButton	Atjaunināt
+UpdInstalled	Instalēta
+UpdLatest	Jaunākā GitHub
+UpdCheck	Pārbaudīt tagad
+UpdInstall	Lejupielādēt un instalēt
+UpdUndo	Atcelt atjauninājumu
+UpdRestart	Restartēt tagad
+UpdNotes	Jaunumi
+UpdUpToDate	Šī ir jaunākā versija
+UpdAvailable	Ir pieejama jauna versija
+UpdStepAsk	Pajautāt GitHub par versiju
+UpdStepDownload	Lejupielādēt pakotni
+UpdStepVerify	Pārbaudīt SHA-256
+UpdStepInstall	Novietot savā vietā
+UpdHistory	Vēsture
+UpdOff	Atjauninājumi ir izslēgti
+UpdAllow	Atļaut atjaunināšanu no GitHub
+UpdAtStart	Meklēt jaunu versiju startējot
+UpdNoPackage	Šai versijai nav pakotnes šai sistēmai
+UpdFailed	Atjaunināšana neizdevās
+UpdDone	Gatavs. Restartējiet programmu
+UpdPrivacy	Nekas netiek instalēts bez jūsu piekrišanas. Tiek pieprasīta tikai versija un tās pakotne; nekas par jums vai mašīnu netiek sūtīts.
+UpdHistUpdated	Atjaunināta
+UpdHistUndone	Atcelts

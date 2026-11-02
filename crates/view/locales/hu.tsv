@@ -542,3 +542,28 @@ McQueueClear	Sor ürítése
 McQueueContinue	A sor folytatása
 McQueueHalted	A sor leállt: egy program nem fejeződött be
 McGrblTravel	A gép lépésköze beolvasása a vezérlőből, a kisebb használata
+UpdTitle	Frissítések
+UpdButton	Frissítés
+UpdInstalled	Telepítve
+UpdLatest	Legújabb a GitHubon
+UpdCheck	Keresés most
+UpdInstall	Letöltés és telepítés
+UpdUndo	Frissítés visszavonása
+UpdRestart	Újraindítás most
+UpdNotes	Újdonságok
+UpdUpToDate	Ez a legújabb verzió
+UpdAvailable	Új verzió érhető el
+UpdStepAsk	Verzió lekérdezése a GitHubtól
+UpdStepDownload	A csomag letöltése
+UpdStepVerify	SHA-256 ellenőrzése
+UpdStepInstall	A helyére tétel
+UpdHistory	Előzmények
+UpdOff	A frissítések ki vannak kapcsolva
+UpdAllow	Frissítés engedélyezése a GitHubról
+UpdAtStart	Új verzió keresése induláskor
+UpdNoPackage	Ehhez a verzióhoz nincs csomag erre a rendszerre
+UpdFailed	A frissítés nem sikerült
+UpdDone	Kész. Indítsa újra a programot
+UpdPrivacy	Semmi nem települ az Ön kérése nélkül. Csak a verziót és a csomagját kéri le; Önről vagy a gépéről semmit nem küld.
+UpdHistUpdated	Frissítve
+UpdHistUndone	Visszaállítva

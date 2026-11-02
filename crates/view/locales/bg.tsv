@@ -542,3 +542,28 @@ McQueueClear	Изчисти опашката
 McQueueContinue	Продължи опашката
 McQueueHalted	Опашката спря: програма не завърши
 McGrblTravel	Чети хода на машината от контролера и използвай по-малкия
+UpdTitle	Актуализации
+UpdButton	Актуализирай
+UpdInstalled	Инсталирана
+UpdLatest	Последна в GitHub
+UpdCheck	Провери сега
+UpdInstall	Свали и инсталирай
+UpdUndo	Върни актуализацията
+UpdRestart	Рестартирай сега
+UpdNotes	Какво е новото
+UpdUpToDate	Това е последната версия
+UpdAvailable	Има нова версия
+UpdStepAsk	Питане към GitHub за версията
+UpdStepDownload	Изтегляне на пакета
+UpdStepVerify	Проверка на SHA-256
+UpdStepInstall	Поставяне на мястото му
+UpdHistory	История
+UpdOff	Актуализациите са изключени
+UpdAllow	Позволи актуализация от GitHub
+UpdAtStart	Търси нова версия при стартиране
+UpdNoPackage	Тази версия няма пакет за тази система
+UpdFailed	Актуализацията не успя
+UpdDone	Готово. Рестартирайте програмата
+UpdPrivacy	Нищо не се инсталира без ваше разрешение. Искат се само версията и пакетът ѝ; нищо за вас или машината не се изпраща.
+UpdHistUpdated	Актуализирана
+UpdHistUndone	Върнато назад

@@ -542,3 +542,28 @@ McQueueClear	Folmhaigh an scuaine
 McQueueContinue	Lean ar aghaidh leis an scuaine
 McQueueHalted	Stop an scuaine: níor chríochnaigh clár
 McGrblTravel	Léigh taisteal an mheaisín ón rialaitheoir agus úsáid an ceann is lú
+UpdTitle	Nuashonruithe
+UpdButton	Nuashonraigh
+UpdInstalled	Suiteáilte
+UpdLatest	Is déanaí ar GitHub
+UpdCheck	Seiceáil anois
+UpdInstall	Íoslódáil agus suiteáil
+UpdUndo	Cealaigh an nuashonrú
+UpdRestart	Atosaigh anois
+UpdNotes	Nuacht
+UpdUpToDate	Is é seo an leagan is déanaí
+UpdAvailable	Tá leagan nua ar fáil
+UpdStepAsk	Fiafraigh de GitHub faoin leagan
+UpdStepDownload	Íoslódáil an pacáiste
+UpdStepVerify	Seiceáil an SHA-256
+UpdStepInstall	Cuir ina áit é
+UpdHistory	Stair
+UpdOff	Tá nuashonruithe múchta
+UpdAllow	Ceadaigh nuashonrú ó GitHub
+UpdAtStart	Cuardaigh leagan nua ag tosú
+UpdNoPackage	Níl pacáiste don chóras seo sa leagan seo
+UpdFailed	Theip ar an nuashonrú
+UpdDone	Déanta. Atosaigh an clár chun é a úsáid
+UpdPrivacy	Ní shuiteáiltear aon rud gan do thoiliú. Iarrtar an leagan agus a phacáiste amháin; ní sheoltar aon rud fút ná faoi do mheaisín.
+UpdHistUpdated	Nuashonraithe
+UpdHistUndone	Ar ais

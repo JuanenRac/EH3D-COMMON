@@ -542,3 +542,28 @@ McQueueClear	Buida la cua
 McQueueContinue	Continua amb la cua
 McQueueHalted	La cua s'ha aturat: un programa no ha acabat
 McGrblTravel	Llegeix el recorregut de la màquina del controlador i usa el menor
+UpdTitle	Actualitzacions
+UpdButton	Actualitza
+UpdInstalled	Instal·lada
+UpdLatest	Última a GitHub
+UpdCheck	Cerca ara
+UpdInstall	Descarrega i instal·la
+UpdUndo	Desfés l'actualització
+UpdRestart	Reinicia ara
+UpdNotes	Novetats
+UpdUpToDate	Aquesta és l'última versió
+UpdAvailable	Hi ha una versió nova
+UpdStepAsk	Pregunta a GitHub per la versió
+UpdStepDownload	Descarrega el paquet
+UpdStepVerify	Comprova el SHA-256
+UpdStepInstall	Posa'l al seu lloc
+UpdHistory	Historial
+UpdOff	Les actualitzacions estan desactivades
+UpdAllow	Permet actualitzar des de GitHub
+UpdAtStart	Cerca una versió nova en arrencar
+UpdNoPackage	Aquesta versió no té paquet per a aquest sistema
+UpdFailed	L'actualització ha fallat
+UpdDone	Fet. Reinicia el programa per fer-la servir
+UpdPrivacy	No s'instal·la res sense que ho demanis. Només es demanen la versió i el seu paquet; no s'envia res teu ni de la teva màquina.
+UpdHistUpdated	Actualitzada
+UpdHistUndone	S'ha tornat enrere

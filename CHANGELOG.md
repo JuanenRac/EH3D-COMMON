@@ -3,6 +3,9 @@
 All notable changes to this project are documented here.
 
 ## [Unreleased]
+
+## [0.1.4] - Travel of a GRBL controller and words for the queue of programs
+
 - **The travel of a GRBL controller can be read:** the controller trait has a `max_travel` call (default: none) and the GRBL controller answers it from `$130`, `$131` and `$132`.
 - **Words for the queue of programs and the travel reading** in the 37 languages.
 
