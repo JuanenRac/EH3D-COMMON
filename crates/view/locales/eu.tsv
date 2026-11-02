@@ -507,3 +507,15 @@ RackToTake	Hartzeko
 RackToLeave	Uzteko
 RackOutside	Barraren puntu bat makinaren irispidetik kanpo dago
 BoardSwap	Trukatu zabalera eta sakonera
+SummaryTitle	Egiaztatu hasi aurretik
+SummaryHoles	Zuloak
+SummaryTools	Erremintak
+SummarySize	Tamaina (mm)
+SummaryTime	Aurreikusitako denbora
+SummaryReach	Ardatzen irispidea (mm)
+WarnTiny	Lan osoak {} x {} mm baino ez ditu: egiaztatu fitxategiaren unitatea
+WarnBig	Lana ({} x {} mm) mahaia ({} x {} mm) baino handiagoa da
+WarnFar	Lana mahaiaren izkinatik {} mm-ra hasten da: egiaztatu desplazamendua eta unitatea
+WarnScale	Makinaren fitxategiak lana luzatzen du (eskala {} x {}, ez 1)
+DryOut	Planak {} ardatza {} mm eramaten du bere ibilbidetik kanpo
+DryOk	Proba lehorra: plan zehatza ardatz bakoitzaren ibilbidearen barruan geratzen da

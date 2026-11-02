@@ -507,3 +507,15 @@ RackToTake	Le tógáil
 RackToLeave	Le fágáil
 RackOutside	Tá pointe den bharra lasmuigh de réim an innill
 BoardSwap	Malartaigh leithead agus doimhneacht
+SummaryTitle	Seiceáil sula dtosaíonn tú
+SummaryHoles	Poill
+SummaryTools	Uirlisí
+SummarySize	Méid (mm)
+SummaryTime	An t-am measta
+SummaryReach	Raon na n-aiseanna (mm)
+WarnTiny	Níl san obair ar fad ach {} x {} mm: seiceáil aonad an chomhaid
+WarnBig	Tá an obair ({} x {} mm) níos mó ná an tábla ({} x {} mm)
+WarnFar	Tosaíonn an obair {} mm ón gcúinne den tábla: seiceáil an fritháireamh agus an t-aonad
+WarnScale	Síneann comhad an mheaisín an obair (scála {} x {}, ní 1)
+DryOut	Tógann an plean ais {} {} mm thar a haistear
+DryOk	Rith tirim: fanann an plean cruinn laistigh d'aistear gach aise

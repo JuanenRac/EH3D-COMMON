@@ -507,3 +507,15 @@ RackToTake	Jāņem
 RackToLeave	Jānoliek
 RackOutside	Joslas punkts atrodas ārpus iekārtas sasniedzamības
 BoardSwap	Apmainīt platumu un dziļumu
+SummaryTitle	Pārbaudiet pirms sākšanas
+SummaryHoles	Caurumi
+SummaryTools	Rīki
+SummarySize	Izmērs (mm)
+SummaryTime	Aptuvenais laiks
+SummaryReach	Asu sasniedzamība (mm)
+WarnTiny	Viss darbs ir tikai {} x {} mm: pārbaudiet faila mērvienību
+WarnBig	Darbs ({} x {} mm) ir lielāks par galdu ({} x {} mm)
+WarnFar	Darbs sākas {} mm no galda stūra: pārbaudiet nobīdi un mērvienību
+WarnScale	Iekārtas fails izstiepj darbu (mērogs {} x {}, nevis 1)
+DryOut	Plāns izved asi {} {} mm ārpus tās gājiena
+DryOk	Sausā darbība: precīzais plāns paliek katras ass gājiena robežās

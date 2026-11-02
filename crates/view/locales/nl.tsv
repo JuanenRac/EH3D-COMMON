@@ -507,3 +507,15 @@ RackToTake	Op te pakken
 RackToLeave	Neer te leggen
 RackOutside	Een punt van de balk ligt buiten het bereik van de machine
 BoardSwap	Breedte en diepte omwisselen
+SummaryTitle	Controleer vóór de start
+SummaryHoles	Gaten
+SummaryTools	Gereedschap
+SummarySize	Afmeting (mm)
+SummaryTime	Geschatte tijd
+SummaryReach	Bereik van de assen (mm)
+WarnTiny	Het hele werk is slechts {} x {} mm: controleer de eenheid van het bestand
+WarnBig	Het werk ({} x {} mm) is groter dan de tafel ({} x {} mm)
+WarnFar	Het werk begint {} mm van de hoek van de tafel: controleer de verschuiving en de eenheid
+WarnScale	Het machinebestand rekt het werk uit (schaal {} x {}, niet 1)
+DryOut	Het plan voert as {} {} mm voorbij zijn bereik
+DryOk	Droogloop: het exacte plan blijft binnen het bereik van elke as

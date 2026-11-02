@@ -507,3 +507,15 @@ RackToTake	Za uzimanje
 RackToLeave	Za odlaganje
 RackOutside	Točka letve izvan je dosega stroja
 BoardSwap	Zamijeni širinu i dubinu
+SummaryTitle	Provjera prije početka
+SummaryHoles	Rupe
+SummaryTools	Alati
+SummarySize	Veličina (mm)
+SummaryTime	Procijenjeno vrijeme
+SummaryReach	Doseg osi (mm)
+WarnTiny	Cijeli posao je velik samo {} x {} mm: provjerite jedinicu datoteke
+WarnBig	Posao ({} x {} mm) veći je od stola ({} x {} mm)
+WarnFar	Posao počinje {} mm od kuta stola: provjerite pomak i jedinicu
+WarnScale	Datoteka stroja rasteže posao (mjerilo {} x {}, a ne 1)
+DryOut	Plan odvodi os {} za {} mm izvan njezina hoda
+DryOk	Suhi hod: točan plan ostaje unutar hoda svake osi

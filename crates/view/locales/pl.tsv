@@ -507,3 +507,15 @@ RackToTake	Do pobrania
 RackToLeave	Do odłożenia
 RackOutside	Punkt listwy jest poza zasięgiem maszyny
 BoardSwap	Zamień szerokość i głębokość
+SummaryTitle	Sprawdź przed startem
+SummaryHoles	Otwory
+SummaryTools	Narzędzia
+SummarySize	Rozmiar (mm)
+SummaryTime	Szacowany czas
+SummaryReach	Zasięg osi (mm)
+WarnTiny	Cała praca ma tylko {} x {} mm: sprawdź jednostkę pliku
+WarnBig	Praca ({} x {} mm) jest większa niż stół ({} x {} mm)
+WarnFar	Praca zaczyna się {} mm od rogu stołu: sprawdź przesunięcie i jednostkę
+WarnScale	Plik maszyny rozciąga pracę (skala {} x {}, nie 1)
+DryOut	Plan wyprowadza oś {} o {} mm poza jej skok
+DryOk	Bieg na sucho: dokładny plan mieści się w skoku każdej osi

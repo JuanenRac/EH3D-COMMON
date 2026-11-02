@@ -507,3 +507,15 @@ RackToTake	Til að taka
 RackToLeave	Til að skila
 RackOutside	Punktur á stikunni er utan seilingar vélarinnar
 BoardSwap	Skipta á breidd og dýpt
+SummaryTitle	Athugaðu áður en byrjað er
+SummaryHoles	Göt
+SummaryTools	Verkfæri
+SummarySize	Stærð (mm)
+SummaryTime	Áætlaður tími
+SummaryReach	Ná ásanna (mm)
+WarnTiny	Allt verkið er aðeins {} x {} mm: athugaðu einingu skrárinnar
+WarnBig	Verkið ({} x {} mm) er stærra en borðið ({} x {} mm)
+WarnFar	Verkið byrjar {} mm frá horni borðsins: athugaðu hliðrunina og eininguna
+WarnScale	Vélarskráin teygir verkið (kvarði {} x {}, ekki 1)
+DryOut	Áætlunin fer með ás {} um {} mm út fyrir ferilinn
+DryOk	Þurrkeyrsla: nákvæm áætlun helst innan ferils hvers áss

@@ -507,3 +507,15 @@ RackToTake	Paimti
 RackToLeave	Padėti
 RackOutside	Juostos taškas yra už staklių pasiekiamumo ribų
 BoardSwap	Sukeisti plotį ir gylį
+SummaryTitle	Patikrinkite prieš pradėdami
+SummaryHoles	Skylės
+SummaryTools	Įrankiai
+SummarySize	Dydis (mm)
+SummaryTime	Apskaičiuotas laikas
+SummaryReach	Ašių pasiekiamumas (mm)
+WarnTiny	Visas darbas yra tik {} x {} mm: patikrinkite failo vienetą
+WarnBig	Darbas ({} x {} mm) didesnis už stalą ({} x {} mm)
+WarnFar	Darbas prasideda {} mm nuo stalo kampo: patikrinkite poslinkį ir vienetą
+WarnScale	Staklių failas ištempia darbą (mastelis {} x {}, ne 1)
+DryOut	Planas išveda ašį {} {} mm už jos eigos
+DryOk	Bandomoji eiga be darbo: tikslus planas lieka kiekvienos ašies eigos ribose

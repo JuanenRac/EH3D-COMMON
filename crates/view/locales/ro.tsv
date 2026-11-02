@@ -507,3 +507,15 @@ RackToTake	De luat
 RackToLeave	De lăsat
 RackOutside	Un punct al barei este în afara razei de acțiune a mașinii
 BoardSwap	Schimbă lățimea cu adâncimea
+SummaryTitle	Verificați înainte de pornire
+SummaryHoles	Găuri
+SummaryTools	Scule
+SummarySize	Dimensiune (mm)
+SummaryTime	Timp estimat
+SummaryReach	Raza de acțiune a axelor (mm)
+WarnTiny	Întreaga lucrare are doar {} x {} mm: verificați unitatea fișierului
+WarnBig	Lucrarea ({} x {} mm) este mai mare decât masa ({} x {} mm)
+WarnFar	Lucrarea începe la {} mm de colțul mesei: verificați deplasarea și unitatea
+WarnScale	Fișierul mașinii întinde lucrarea (scară {} x {}, nu 1)
+DryOut	Planul duce axa {} cu {} mm dincolo de cursa ei
+DryOk	Rulare în gol: planul exact rămâne în cursa fiecărei axe

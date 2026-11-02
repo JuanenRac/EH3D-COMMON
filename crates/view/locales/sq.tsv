@@ -507,3 +507,15 @@ RackToTake	Për t'u marrë
 RackToLeave	Për t'u lënë
 RackOutside	Një pikë e shiritit është jashtë shtrirjes së makinës
 BoardSwap	Këmbe gjerësinë dhe thellësinë
+SummaryTitle	Kontrolloni para nisjes
+SummaryHoles	Vrimat
+SummaryTools	Mjetet
+SummarySize	Madhësia (mm)
+SummaryTime	Koha e vlerësuar
+SummaryReach	Shtrirja e akseve (mm)
+WarnTiny	I gjithë puna është vetëm {} x {} mm: kontrolloni njësinë e skedarit
+WarnBig	Puna ({} x {} mm) është më e madhe se tavolina ({} x {} mm)
+WarnFar	Puna fillon {} mm nga këndi i tavolinës: kontrolloni zhvendosjen dhe njësinë
+WarnScale	Skedari i makinës e shtrin punën (shkalla {} x {}, jo 1)
+DryOut	Plani e çon boshtin {} {} mm përtej udhëtimit të tij
+DryOk	Ecje e thatë: plani i saktë mbetet brenda udhëtimit të çdo boshti

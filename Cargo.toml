@@ -1,4 +1,4 @@
-[package]
+﻿[package]
 name = "eh3d-common"
 version = "0.1.1"
 edition = "2021"
@@ -13,7 +13,7 @@ categories = ["data-structures", "parser-implementations"]
 
 [workspace]
 # the data crate of the suite is the root package; the crates beside it may draw, read files or talk to machines
-members = [".", "crates/view", "crates/archive", "crates/controller", "crates/formats", "crates/filedialog", "crates/fleet", "crates/levelling", "crates/auxnode", "crates/inspect", "crates/image"]
+members = [".", "crates/view", "crates/archive", "crates/controller", "crates/formats", "crates/filedialog", "crates/fleet", "crates/levelling", "crates/auxnode", "crates/inspect", "crates/image", "crates/summary"]
 resolver = "2"
 
 [dependencies]

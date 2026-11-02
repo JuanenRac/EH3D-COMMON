@@ -18,7 +18,7 @@
 
 ---
 
-**Ehrlichkeitscheck - was heute tatsächlich läuft:** eine Rust-Bibliothek mit dem Projektcontainer (`.eh3dproj`), den Metadaten eines Projekts, SHA-256-Integritätsprüfungen, den Typen der Maschinentelemetrie und den Farben der Suite, dazu die Firmware-Basis, die jeder ESP32-Knoten der Suite kopiert (70 Dateien und das Werkzeug, das die Kopien identisch hält). 210 Tests laufen auf einem Computer. Die Bohr- und Fräsprogramme und die moderne Oberfläche lesen ihre Dateien und zeichnen ihre Aufträge mit den gemeinsamen Crates; nichts davon lief auf einer Maschine oder einer Platine.
+**Ehrlichkeitscheck - was heute tatsächlich läuft:** eine Rust-Bibliothek mit dem Projektcontainer (`.eh3dproj`), den Metadaten eines Projekts, SHA-256-Integritätsprüfungen, den Typen der Maschinentelemetrie und den Farben der Suite, dazu die Firmware-Basis, die jeder ESP32-Knoten der Suite kopiert (70 Dateien und das Werkzeug, das die Kopien identisch hält). 231 Tests laufen auf einem Computer. Die Bohr- und Fräsprogramme und die moderne Oberfläche lesen ihre Dateien und zeichnen ihre Aufträge mit den gemeinsamen Crates; nichts davon lief auf einer Maschine oder einer Platine.
 
 ---
 
@@ -30,7 +30,7 @@
 |---|---|
 | Version | `0.1.1` |
 | Reifegrad | Gerüst |
-| Tests | 210 |
+| Tests | 231 |
 | Technologie-Stack | Rust (Bibliotheks-Crate) und C++17 (Firmware-Basis) |
 | Auf echter Hardware | Nicht zutreffend: eine Datenbibliothek, nichts hier spricht mit einer Maschine; die Firmware-Basis lief noch nie auf einer Platine |
 
@@ -47,7 +47,7 @@ Jede Zeile ist ein Teil dieses Repositorys, und die Ampel sagt, wie weit er heut
 | Container | 🟡 | `.eh3dproj` ist ein Standard-ZIP mit einem SHA-256-Eintrag je Eintrag; es liest, schreibt und weist beschädigte, veränderte, nicht gelistete und unsichere Einträge ab. Bisher lesen und schreiben es nur die eigenen Tests. |
 | Metadaten | 🟡 | Die Metadaten eines Projekts (Einheiten, Nullpunkt, Ebenen, Werkzeuge, Werkzeugwege, Passmarken) werden geprüft und tragen eine semantische Formatversion; eine Migration gibt es noch nicht, da 1.0.0 das erste Format ist. |
 | Telemetrie und Theme | 🟡 | Achsen, Spindel, Maschinenzustände, die GRBL-Alarmcodes mit ihrer Schwere und die Farben der Suite mit Kontrastprüfung, alles getestet. |
-| Tests | 🟡 | 210 Tests bestehen (`cargo test --workspace`): 16 in den Modulen und 14 am Container des Hauptcrates sowie 180 in den zehn gemeinsamen Crates. |
+| Tests | 🟡 | 231 Tests bestehen (`cargo test --workspace`): 16 in den Modulen und 14 am Container des Hauptcrates sowie 201 in den elf gemeinsamen Crates. |
 | Sicherheit | 🟡 | Unsichere Namen, zu große oder zu viele Einträge und jeder veränderte Eintrag werden abgewiesen; das Paket ist weder signiert noch verschlüsselt und wurde nicht unabhängig geprüft. |
 | Firmware-Basis | 🟠 | 70 Dateien, die `tools/sync_firmware_base.py` identisch hält: 49 von den ESP32-Knoten geteilt (nur über EH3D-NODE-BUNGARD getestet, den einzigen Knoten, der sie nutzt) und 21 von den beiden Touch-Bildschirmen EH3D-NODE-BUNGARD-HMI und EH3D-NODE-HMI-GUI geteilt; nie auf einer Platine gelaufen. |
 | Nutzung durch andere Programme | 🟡 | Die Crates des Workspace werden von EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC und EH3D-SERVER benutzt (per Pfad, die Repositories liegen nebeneinander); den Projektcontainer selbst benutzt noch kein Programm. |
@@ -87,6 +87,7 @@ Wie die Teile dieses Repositorys zusammenpassen: wer es nutzt, was es enthält u
 * **Eine Firmware-Basis für alle Knoten:** dort ändern, wo der Bedarf entstand, `import`, per `sync` in die anderen schreiben, und das `check` der CI meldet, wenn eine Kopie abweicht.
 * **Der Qualitätsanalysator und der LED-Ring des Kopfes:** `eh3d-inspect` beurteilt ein Bild der Kamera des Bohrkopfes (Bohrungen vorhanden, rund, in der richtigen Größe und an ihrem Platz; gefräste Kanäle so breit wie das Werkzeug, gleichmäßig und ohne Engstellen; ein Bild, das gut genug zum Beurteilen ist) mit einem Toleranzprofil und sagt in Ordnung, nicht in Ordnung oder nicht beurteilbar. `eh3d-aux` schaltet außerdem den LED-Ring um die Kamera ein und aus, zeigt in Farbe, wie eine Prüfung ausging, macht ein Bild und gibt das Profil an den Server.
 * **Der Bildleser:** `eh3d-image` liest PGM- und PNG-Dateien als Graustufen (Grau, Farbe, Palette oder transparent, 8 oder 16 Bit, Transparenz zählt als Weiß) mit Größengrenzen, damit eine feindliche Datei keine Gigabytes verlangen kann, skaliert ein Bild mit einem Kastenfilter und zeichnet Scheiben darauf. Die Lasergravur und die Passmarkensuche nutzen ihn statt je einer eigenen Kopie.
+* **Die Prüfung vor dem Start eines Auftrags:** `eh3d-summary` verfolgt die genauen Schritte eines Plans auf dem Papier (das Schritt- und das Richtungsbit jeder Achse, die Endschalter, die verschlucken, was dahinter liegt), um zu wissen, wie weit jede Achse fährt und wie lange der Auftrag dauert, findet den Plan, der den Verfahrweg der Maschine verlässt, bevor sich ein Motor dreht, führt die Plausibilitätsprüfungen der Arbeit aus (eine falsche Einheit, eine Arbeit, die größer als der Tisch oder weit von ihrer Ecke entfernt ist, ein Maßstab ungleich 1) mit Schwellen aus der Abstimmung der Maschine und sagt das alles in den 37 Sprachen. Das Bohrprogramm, das Fräsprogramm, die moderne Oberfläche und der Server zeigen dieselbe Zusammenfassung.
 * **37 Sprachen:** die Wörter der gemeinsamen Oberfläche (`eh3d-view`) gibt es in Englisch, Spanisch, Italienisch, Deutsch, Französisch, Portugiesisch, Chinesisch, Japanisch, Bulgarisch, Kroatisch, Tschechisch, Dänisch, Niederländisch, Estnisch, Finnisch, Griechisch, Ungarisch, Irisch, Lettisch, Litauisch, Maltesisch, Polnisch, Rumänisch, Slowakisch, Slowenisch, Schwedisch, Norwegisch, Isländisch, Ukrainisch, Russisch, Serbisch, Albanisch, Katalanisch, Galicisch, Baskisch, brasilianisches Portugiesisch und kanadisches Französisch. Die Wörter der 29 Sprachen nach den ersten acht stammen vom Modell und warten auf die Durchsicht durch Muttersprachler; ein fehlender Text wird auf Englisch gezeigt.
 
 ## 🔒 Sicherheit und Schutz
@@ -160,7 +161,7 @@ python -I tools/sync_firmware_base.py check
 
 ## 🧪 Tests
 
-Die Suite hat 210 Tests (`cargo test --workspace`, in der CI unter Windows und Linux ausgeführt): 16 in den Modulen (die Metadaten und ihre Prüfung, die Alarmcodes und Maschinenzustände, die Farben und ihr WCAG-Kontrast) und 14 am Container (Hin- und Rückweg über Speicher und Datei, gleiche Bytes bei gleichem Inhalt, der Integritätseintrag, ein geänderter Eintrag, eine geänderte Größe, ein nicht gelisteter Eintrag, ein fehlender Eintrag, bearbeitete Metadaten, eine Datei, die kein Paket ist, unsichere und feindliche Eintragsnamen, ein ersetzter Eintrag und ein ungültiges Projekt). Die CI führt außerdem `cargo fmt --check` und `cargo clippy` mit Warnungen als Fehlern, `python -I tools/ci_validate.py` (Manifest, Versionen, Änderungsprotokoll und die acht READMEs) und `tools/sync_firmware_base.py check` (die Kopien der Firmware-Basis) aus. Die Host-Tests der Firmware-Basis (`firmware_base/tests/`) laufen in EH3D-NODE-BUNGARD, nicht hier. Die zehn gemeinsamen Crates fügen 180 weitere hinzu: die Auftragsarchive (7), die Dateien der Bungard-Maschinen mit den HP-GL-Bögen, -Kreisen und der Skalierung und den Gerber- und DXF-Umrissen (33), die Maschinensteuerungen auf einer geskripteten Leitung (28) sowie die Szene, die Ansichten, die Themen und die Wörter der Oberfläche in acht Sprachen (29), die Fenster Öffnen und Speichern (7), die Maschinen und Stationen des Servers (8) und die Höhenkarte des Tisches (8) der Client des Knotens am Bohrkopf mit LED-Ring und Bild (10), der Leser für PGM- und PNG-Bilder (7) und der Qualitätsanalysator (43): die Bohrungen, die gefrästen Kanäle, die Bildqualität, das Profil und das Urteil.
+Die Suite hat 231 Tests (`cargo test --workspace`, in der CI unter Windows und Linux ausgeführt): 16 in den Modulen (die Metadaten und ihre Prüfung, die Alarmcodes und Maschinenzustände, die Farben und ihr WCAG-Kontrast) und 14 am Container (Hin- und Rückweg über Speicher und Datei, gleiche Bytes bei gleichem Inhalt, der Integritätseintrag, ein geänderter Eintrag, eine geänderte Größe, ein nicht gelisteter Eintrag, ein fehlender Eintrag, bearbeitete Metadaten, eine Datei, die kein Paket ist, unsichere und feindliche Eintragsnamen, ein ersetzter Eintrag und ein ungültiges Projekt). Die CI führt außerdem `cargo fmt --check` und `cargo clippy` mit Warnungen als Fehlern, `python -I tools/ci_validate.py` (Manifest, Versionen, Änderungsprotokoll und die acht READMEs) und `tools/sync_firmware_base.py check` (die Kopien der Firmware-Basis) aus. Die Host-Tests der Firmware-Basis (`firmware_base/tests/`) laufen in EH3D-NODE-BUNGARD, nicht hier. Die elf gemeinsamen Crates fügen 201 weitere hinzu: die Auftragsarchive (7), die Dateien der Bungard-Maschinen mit den HP-GL-Bögen, -Kreisen und der Skalierung und den Gerber- und DXF-Umrissen (33), die Maschinensteuerungen auf einer geskripteten Leitung (28) sowie die Szene, die Ansichten, die Themen und die Wörter der Oberfläche in acht Sprachen (29), die Fenster Öffnen und Speichern (7), die Maschinen und Stationen des Servers (8) und die Höhenkarte des Tisches (8) der Client des Knotens am Bohrkopf mit LED-Ring und Bild (10), der Leser für PGM- und PNG-Bilder (7), die Trockenfahrt und die Zusammenfassung vor einem Auftrag (21) und der Qualitätsanalysator (43): die Bohrungen, die gefrästen Kanäle, die Bildqualität, das Profil und das Urteil.
 
 ## 🏗️ Build und Veröffentlichung
 
@@ -182,7 +183,7 @@ EH3D-COMMON/
 │   ├── project.rs                               die Metadaten und ihre Prüfung
 │   ├── telemetry.rs                             Achsen, Spindel, Zustände und Alarmcodes
 │   └── theme.rs error.rs lib.rs                 die Farben mit Kontrast, die Fehler und die Crate-Wurzel
-├── crates/                                      gemeinsame Crates: Ansicht, ZIP, Maschinendateien, Steuerungen, Kopf, Qualität, Bilder
+├── crates/                                      gemeinsame Crates: Ansicht, ZIP, Maschinendateien, Steuerungen, Kopf, Qualität, Bilder, Prüfung
 ├── firmware_base/
 │   ├── core/                                    ohne Hardware: Einstellungen, Auth, Netzplan
 │   ├── main/                                    ESP-IDF-Code: Netzwerk, Speicher, Panel-API

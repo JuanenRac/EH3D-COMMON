@@ -507,3 +507,15 @@ RackToTake	K vyzvednutí
 RackToLeave	K odložení
 RackOutside	Bod lišty je mimo dosah stroje
 BoardSwap	Prohodit šířku a hloubku
+SummaryTitle	Kontrola před spuštěním
+SummaryHoles	Díry
+SummaryTools	Nástroje
+SummarySize	Rozměr (mm)
+SummaryTime	Odhadovaná doba
+SummaryReach	Dosah os (mm)
+WarnTiny	Celá práce má jen {} x {} mm: zkontrolujte jednotku souboru
+WarnBig	Práce ({} x {} mm) je větší než stůl ({} x {} mm)
+WarnFar	Práce začíná {} mm od rohu stolu: zkontrolujte posun a jednotku
+WarnScale	Soubor stroje práci natahuje (měřítko {} x {}, ne 1)
+DryOut	Plán vede osu {} o {} mm za její dráhu
+DryOk	Suchý běh: přesný plán zůstává v dráze každé osy

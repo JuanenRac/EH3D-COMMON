@@ -507,3 +507,15 @@ RackToTake	Felvenni
 RackToLeave	Letenni
 RackOutside	A sor egy pontja a gép hatókörén kívül esik
 BoardSwap	Szélesség és mélység felcserélése
+SummaryTitle	Ellenőrzés indítás előtt
+SummaryHoles	Furatok
+SummaryTools	Szerszámok
+SummarySize	Méret (mm)
+SummaryTime	Becsült idő
+SummaryReach	A tengelyek elérése (mm)
+WarnTiny	A teljes munka csak {} x {} mm: ellenőrizze a fájl mértékegységét
+WarnBig	A munka ({} x {} mm) nagyobb az asztalnál ({} x {} mm)
+WarnFar	A munka az asztal sarkától {} mm-re kezdődik: ellenőrizze az eltolást és a mértékegységet
+WarnScale	A gépfájl nyújtja a munkát (méretarány {} x {}, nem 1)
+DryOut	A terv a(z) {} tengelyt {} mm-rel a lépéshatárán túlra viszi
+DryOk	Szárazfutás: a pontos terv minden tengely lépéshatárán belül marad

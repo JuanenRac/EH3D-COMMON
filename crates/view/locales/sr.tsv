@@ -507,3 +507,15 @@ RackToTake	За узимање
 RackToLeave	За остављање
 RackOutside	Тачка траке је ван домашаја машине
 BoardSwap	Замени ширину и дубину
+SummaryTitle	Проверите пре почетка
+SummaryHoles	Рупе
+SummaryTools	Алати
+SummarySize	Величина (mm)
+SummaryTime	Процењено време
+SummaryReach	Домет оса (mm)
+WarnTiny	Цео посао је само {} x {} mm: проверите јединицу датотеке
+WarnBig	Посао ({} x {} mm) је већи од стола ({} x {} mm)
+WarnFar	Посао почиње {} mm од угла стола: проверите помак и јединицу
+WarnScale	Датотека машине развлачи посао (размера {} x {}, не 1)
+DryOut	План води осу {} {} mm изван њеног хода
+DryOk	Суви ход: тачан план остаје унутар хода сваке осе

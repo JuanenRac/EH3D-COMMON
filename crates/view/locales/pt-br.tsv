@@ -150,3 +150,8 @@ FullScreen	Tela cheia
 BoardTooBig	Não cabe na mesa da máquina ativa, nem girada 90 graus
 TableNoun	Mesa
 AllMakers	Todos os fabricantes
+SummaryTitle	Verifique antes de iniciar
+WarnTiny	O trabalho inteiro mede apenas {} x {} mm: verifique a unidade do arquivo
+WarnScale	O arquivo da máquina estica o trabalho (escala {} x {}, não 1)
+DryOut	O plano leva o eixo {} {} mm além do seu curso
+DryOk	Simulação a seco: o plano exato fica dentro do curso de cada eixo

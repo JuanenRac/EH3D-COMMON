@@ -229,6 +229,14 @@ name = "eh3d-levelling"
 version = "0.0.1"
 
 [[package]]
+name = "eh3d-summary"
+version = "0.0.1"
+dependencies = [
+ "eh3d-bungard-formats",
+ "eh3d-view",
+]
+
+[[package]]
 name = "eh3d-view"
 version = "0.0.1"
 dependencies = [

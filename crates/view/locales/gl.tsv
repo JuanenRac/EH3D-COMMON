@@ -507,3 +507,15 @@ RackToTake	Para coller
 RackToLeave	Para deixar
 RackOutside	Un punto da barra está fóra do alcance da máquina
 BoardSwap	Intercambiar largo e fondo
+SummaryTitle	Revisa antes de comezar
+SummaryHoles	Furados
+SummaryTools	Ferramentas
+SummarySize	Tamaño (mm)
+SummaryTime	Tempo estimado
+SummaryReach	Alcance dos eixes (mm)
+WarnTiny	Todo o traballo mide só {} x {} mm: revisa a unidade do ficheiro
+WarnBig	O traballo ({} x {} mm) é maior que a mesa ({} x {} mm)
+WarnFar	O traballo comeza a {} mm da esquina da mesa: revisa o desprazamento e a unidade
+WarnScale	O ficheiro da máquina estira o traballo (escala {} x {}, non 1)
+DryOut	O plan leva o eixe {} {} mm máis aló do seu percorrido
+DryOk	Proba en seco: o plan exacto queda dentro do percorrido de cada eixe

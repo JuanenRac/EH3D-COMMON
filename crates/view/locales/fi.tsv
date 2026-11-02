@@ -507,3 +507,15 @@ RackToTake	Otettava
 RackToLeave	Jätettävä
 RackOutside	Palkin yksi piste on koneen ulottumattomissa
 BoardSwap	Vaihda leveys ja syvyys
+SummaryTitle	Tarkista ennen aloitusta
+SummaryHoles	Reiät
+SummaryTools	Työkalut
+SummarySize	Koko (mm)
+SummaryTime	Arvioitu aika
+SummaryReach	Akselien ulottuvuus (mm)
+WarnTiny	Koko työ on vain {} x {} mm: tarkista tiedoston yksikkö
+WarnBig	Työ ({} x {} mm) on pöytää ({} x {} mm) suurempi
+WarnFar	Työ alkaa {} mm päässä pöydän kulmasta: tarkista siirtymä ja yksikkö
+WarnScale	Konetiedosto venyttää työtä (mittakaava {} x {}, ei 1)
+DryOut	Suunnitelma vie akselin {} {} mm sen liikealueen yli
+DryOk	Kuivajo: tarkka suunnitelma pysyy jokaisen akselin liikealueella

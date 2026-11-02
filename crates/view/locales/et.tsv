@@ -507,3 +507,15 @@ RackToTake	Võtta
 RackToLeave	Jätta
 RackOutside	Riba üks punkt jääb masina ulatusest välja
 BoardSwap	Vaheta laius ja sügavus
+SummaryTitle	Kontrolli enne algust
+SummaryHoles	Augud
+SummaryTools	Tööriistad
+SummarySize	Mõõt (mm)
+SummaryTime	Hinnanguline aeg
+SummaryReach	Telgede ulatus (mm)
+WarnTiny	Kogu töö on vaid {} x {} mm: kontrolli faili ühikut
+WarnBig	Töö ({} x {} mm) on suurem kui laud ({} x {} mm)
+WarnFar	Töö algab {} mm laua nurgast: kontrolli nihet ja ühikut
+WarnScale	Masinafail venitab tööd (mõõtkava {} x {}, mitte 1)
+DryOut	Plaan viib telje {} {} mm üle tema käigu
+DryOk	Kuivjooks: täpne plaan jääb iga telje käigu piiresse

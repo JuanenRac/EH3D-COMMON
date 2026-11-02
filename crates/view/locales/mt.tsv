@@ -507,3 +507,15 @@ RackToTake	Biex tittieħed
 RackToLeave	Biex titħalla
 RackOutside	Punt tal-bar huwa barra mill-firxa tal-magna
 BoardSwap	Biddel il-wisa' u l-fond
+SummaryTitle	Iċċekkja qabel tibda
+SummaryHoles	Toqob
+SummaryTools	Għodod
+SummarySize	Daqs (mm)
+SummaryTime	Ħin stmat
+SummaryReach	Firxa tal-assi (mm)
+WarnTiny	Ix-xogħol kollu huwa biss {} x {} mm: iċċekkja l-unità tal-fajl
+WarnBig	Ix-xogħol ({} x {} mm) huwa akbar mill-mejda ({} x {} mm)
+WarnFar	Ix-xogħol jibda {} mm mill-kantuniera tal-mejda: iċċekkja l-offset u l-unità
+WarnScale	Il-fajl tal-magna jifrex ix-xogħol (skala {} x {}, mhux 1)
+DryOut	Il-pjan jieħu l-assi {} {} mm lil hinn mill-korsa tiegħu
+DryOk	Mixja niexfa: il-pjan eżatt jibqa' fil-korsa ta' kull assi

@@ -507,3 +507,15 @@ RackToTake	Att hämta
 RackToLeave	Att lämna
 RackOutside	En punkt på listen ligger utanför maskinens räckvidd
 BoardSwap	Byt bredd och djup
+SummaryTitle	Kontrollera före start
+SummaryHoles	Hål
+SummaryTools	Verktyg
+SummarySize	Storlek (mm)
+SummaryTime	Beräknad tid
+SummaryReach	Axlarnas räckvidd (mm)
+WarnTiny	Hela arbetet är bara {} x {} mm: kontrollera filens enhet
+WarnBig	Arbetet ({} x {} mm) är större än bordet ({} x {} mm)
+WarnFar	Arbetet börjar {} mm från bordets hörn: kontrollera förskjutning och enhet
+WarnScale	Maskinfilen sträcker arbetet (skala {} x {}, inte 1)
+DryOut	Planen tar axel {} {} mm förbi dess slaglängd
+DryOk	Torrkörning: den exakta planen håller sig inom varje axels slaglängd
