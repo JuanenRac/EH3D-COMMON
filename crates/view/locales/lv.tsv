@@ -531,3 +531,14 @@ McShowToolbar	Rīkjosla
 McOpenFailed	Failu nevar atvērt: {}
 McSecSafety	Drošība
 McSumReject	Noraidīt programmu, kas iziet ārpus iekārtas gājiena
+McQueue	Rinda
+McQueueWaiting	Gaida
+McQueueDone	Gatavs
+McQueueFailed	Nepabeigts
+McQueueSkipped	Izlaists
+McQueueRemove	Noņemt no rindas
+McQueueSkip	Izlaist šo programmu
+McQueueClear	Notīrīt rindu
+McQueueContinue	Turpināt rindu
+McQueueHalted	Rinda apstājās: programma netika pabeigta
+McGrblTravel	Nolasīt iekārtas gājienu no kontrollera un izmantot mazāko

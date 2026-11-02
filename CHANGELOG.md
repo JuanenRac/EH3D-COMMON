@@ -3,6 +3,7 @@
 All notable changes to this project are documented here.
 
 ## [Unreleased]
+- **Words for the queue of programs and the travel reading** in the 37 languages.
 
 ## [0.1.3] - Crash record and words for the new windows
 

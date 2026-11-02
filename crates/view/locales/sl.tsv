@@ -531,3 +531,14 @@ McShowToolbar	Orodna vrstica
 McOpenFailed	Datoteke ni mogoče odpreti: {}
 McSecSafety	Varnost
 McSumReject	Zavrni program, ki zapusti hod stroja
+McQueue	Čakalna vrsta
+McQueueWaiting	Čaka
+McQueueDone	Končano
+McQueueFailed	Ni končano
+McQueueSkipped	Preskočeno
+McQueueRemove	Odstrani iz vrste
+McQueueSkip	Preskoči ta program
+McQueueClear	Izprazni vrsto
+McQueueContinue	Nadaljuj z vrsto
+McQueueHalted	Vrsta se je ustavila: program ni končal
+McGrblTravel	Preberi hod stroja iz krmilnika in uporabi manjšega

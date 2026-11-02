@@ -531,3 +531,14 @@ McShowToolbar	Лента с инструменти
 McOpenFailed	Файлът не може да се отвори: {}
 McSecSafety	Безопасност
 McSumReject	Откажи програма, която излиза извън хода на машината
+McQueue	Опашка
+McQueueWaiting	Чака
+McQueueDone	Готово
+McQueueFailed	Незавършено
+McQueueSkipped	Пропуснато
+McQueueRemove	Премахване от опашката
+McQueueSkip	Пропусни тази програма
+McQueueClear	Изчисти опашката
+McQueueContinue	Продължи опашката
+McQueueHalted	Опашката спря: програма не завърши
+McGrblTravel	Чети хода на машината от контролера и използвай по-малкия

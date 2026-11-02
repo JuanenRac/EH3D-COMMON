@@ -531,3 +531,14 @@ McShowToolbar	Verkfærastika
 McOpenFailed	Ekki er hægt að opna skrána: {}
 McSecSafety	Öryggi
 McSumReject	Hafna forriti sem fer út fyrir hreyfisvið vélarinnar
+McQueue	Biðröð
+McQueueWaiting	Bíður
+McQueueDone	Lokið
+McQueueFailed	Ekki lokið
+McQueueSkipped	Sleppt
+McQueueRemove	Fjarlægja úr biðröð
+McQueueSkip	Sleppa þessu forriti
+McQueueClear	Tæma biðröðina
+McQueueContinue	Halda áfram með biðröðina
+McQueueHalted	Biðröðin stöðvaðist: forrit kláraðist ekki
+McGrblTravel	Lesa færslusvið vélarinnar úr stýringunni og nota það minna

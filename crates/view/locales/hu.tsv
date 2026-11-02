@@ -531,3 +531,14 @@ McShowToolbar	Eszköztár
 McOpenFailed	A fájl nem nyitható meg: {}
 McSecSafety	Biztonság
 McSumReject	Utasítsa el a gép útját elhagyó programot
+McQueue	Sor
+McQueueWaiting	Várakozik
+McQueueDone	Kész
+McQueueFailed	Nem fejeződött be
+McQueueSkipped	Kihagyva
+McQueueRemove	Eltávolítás a sorból
+McQueueSkip	Program kihagyása
+McQueueClear	Sor ürítése
+McQueueContinue	A sor folytatása
+McQueueHalted	A sor leállt: egy program nem fejeződött be
+McGrblTravel	A gép lépésköze beolvasása a vezérlőből, a kisebb használata

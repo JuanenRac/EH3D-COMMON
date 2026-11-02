@@ -531,3 +531,14 @@ McShowToolbar	Toolbar
 McOpenFailed	Il-fajl ma jistax jinfetaħ: {}
 McSecSafety	Sigurtà
 McSumReject	Irrifjuta programm li joħroġ barra mill-ġiri tal-magna
+McQueue	Kju
+McQueueWaiting	Qed jistenna
+McQueueDone	Lest
+McQueueFailed	Mhux lest
+McQueueSkipped	Maqbuż
+McQueueRemove	Neħħi mill-kju
+McQueueSkip	Aqbeż dan il-programm
+McQueueClear	Battal il-kju
+McQueueContinue	Kompli bil-kju
+McQueueHalted	Il-kju waqaf: programm ma spiċċax
+McGrblTravel	Aqra l-ġirja tal-magna mill-kontrollur u uża l-iżgħar

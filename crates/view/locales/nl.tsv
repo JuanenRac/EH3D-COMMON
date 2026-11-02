@@ -531,3 +531,14 @@ McShowToolbar	Werkbalk
 McOpenFailed	Het bestand kan niet worden geopend: {}
 McSecSafety	Veiligheid
 McSumReject	Een programma weigeren dat buiten de verplaatsing van de machine komt
+McQueue	Wachtrij
+McQueueWaiting	Wacht
+McQueueDone	Klaar
+McQueueFailed	Niet voltooid
+McQueueSkipped	Overgeslagen
+McQueueRemove	Uit de wachtrij verwijderen
+McQueueSkip	Dit programma overslaan
+McQueueClear	Wachtrij leegmaken
+McQueueContinue	Doorgaan met de wachtrij
+McQueueHalted	De wachtrij is gestopt: een programma is niet voltooid
+McGrblTravel	Het verplaatsingsbereik van de machine uit de besturing lezen en het kleinste gebruiken

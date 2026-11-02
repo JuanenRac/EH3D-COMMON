@@ -531,3 +531,14 @@ McShowToolbar	Панель інструментів
 McOpenFailed	Не вдається відкрити файл: {}
 McSecSafety	Безпека
 McSumReject	Відхиляти програму, що виходить за хід верстата
+McQueue	Черга
+McQueueWaiting	Очікує
+McQueueDone	Готово
+McQueueFailed	Не завершено
+McQueueSkipped	Пропущено
+McQueueRemove	Прибрати з черги
+McQueueSkip	Пропустити цю програму
+McQueueClear	Очистити чергу
+McQueueContinue	Продовжити чергу
+McQueueHalted	Чергу зупинено: програма не завершилась
+McGrblTravel	Зчитати хід верстата з контролера і використати менший

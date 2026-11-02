@@ -531,3 +531,14 @@ McShowToolbar	Værktøjslinje
 McOpenFailed	Filen kan ikke åbnes: {}
 McSecSafety	Sikkerhed
 McSumReject	Afvis et program, der forlader maskinens kørselsområde
+McQueue	Kø
+McQueueWaiting	Venter
+McQueueDone	Færdig
+McQueueFailed	Ikke afsluttet
+McQueueSkipped	Sprunget over
+McQueueRemove	Fjern fra køen
+McQueueSkip	Spring dette program over
+McQueueClear	Tøm køen
+McQueueContinue	Fortsæt med køen
+McQueueHalted	Køen stoppede: et program blev ikke afsluttet
+McGrblTravel	Læs maskinens kørselsvej fra styringen og brug den mindste

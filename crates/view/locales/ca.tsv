@@ -531,3 +531,14 @@ McShowToolbar	Barra d'eines
 McOpenFailed	No es pot obrir el fitxer: {}
 McSecSafety	Seguretat
 McSumReject	Rebutja un programa que surt del recorregut de la màquina
+McQueue	Cua
+McQueueWaiting	En espera
+McQueueDone	Fet
+McQueueFailed	Sense acabar
+McQueueSkipped	Omès
+McQueueRemove	Treu de la cua
+McQueueSkip	Omet aquest programa
+McQueueClear	Buida la cua
+McQueueContinue	Continua amb la cua
+McQueueHalted	La cua s'ha aturat: un programa no ha acabat
+McGrblTravel	Llegeix el recorregut de la màquina del controlador i usa el menor

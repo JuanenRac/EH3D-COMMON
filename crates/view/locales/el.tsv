@@ -531,3 +531,14 @@ McShowToolbar	Γραμμή εργαλείων
 McOpenFailed	Δεν είναι δυνατό το άνοιγμα του αρχείου: {}
 McSecSafety	Ασφάλεια
 McSumReject	Απόρριψη προγράμματος που βγαίνει εκτός διαδρομής του μηχανήματος
+McQueue	Ουρά
+McQueueWaiting	Σε αναμονή
+McQueueDone	Ολοκληρώθηκε
+McQueueFailed	Μη ολοκληρωμένο
+McQueueSkipped	Παραλείφθηκε
+McQueueRemove	Αφαίρεση από την ουρά
+McQueueSkip	Παράλειψη αυτού του προγράμματος
+McQueueClear	Εκκαθάριση της ουράς
+McQueueContinue	Συνέχιση της ουράς
+McQueueHalted	Η ουρά σταμάτησε: ένα πρόγραμμα δεν ολοκληρώθηκε
+McGrblTravel	Ανάγνωση της διαδρομής του μηχανήματος από τον ελεγκτή και χρήση της μικρότερης

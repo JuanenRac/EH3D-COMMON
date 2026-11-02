@@ -531,3 +531,14 @@ McShowToolbar	Panel nástrojov
 McOpenFailed	Súbor sa nedá otvoriť: {}
 McSecSafety	Bezpečnosť
 McSumReject	Odmietnuť program, ktorý opúšťa dráhu stroja
+McQueue	Fronta
+McQueueWaiting	Čaká
+McQueueDone	Hotovo
+McQueueFailed	Nedokončené
+McQueueSkipped	Preskočené
+McQueueRemove	Odstrániť z frontu
+McQueueSkip	Preskočiť tento program
+McQueueClear	Vyprázdniť frontu
+McQueueContinue	Pokračovať vo fronte
+McQueueHalted	Fronta sa zastavila: program nebol dokončený
+McGrblTravel	Prečítať zdvih stroja z riadiacej jednotky a použiť menší

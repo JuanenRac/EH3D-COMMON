@@ -531,3 +531,14 @@ McShowToolbar	Barra uirlisí
 McOpenFailed	Ní féidir an comhad a oscailt: {}
 McSecSafety	Sábháilteacht
 McSumReject	Diúltaigh do chlár a théann thar chonair an mheaisín
+McQueue	Scuaine
+McQueueWaiting	Ag fanacht
+McQueueDone	Déanta
+McQueueFailed	Gan chríochnú
+McQueueSkipped	Scipeáilte
+McQueueRemove	Bain den scuaine
+McQueueSkip	Scipeáil an clár seo
+McQueueClear	Folmhaigh an scuaine
+McQueueContinue	Lean ar aghaidh leis an scuaine
+McQueueHalted	Stop an scuaine: níor chríochnaigh clár
+McGrblTravel	Léigh taisteal an mheaisín ón rialaitheoir agus úsáid an ceann is lú

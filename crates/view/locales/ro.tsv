@@ -531,3 +531,14 @@ McShowToolbar	Bară de instrumente
 McOpenFailed	Fișierul nu poate fi deschis: {}
 McSecSafety	Siguranță
 McSumReject	Refuză un program care iese din cursa mașinii
+McQueue	Coadă
+McQueueWaiting	În așteptare
+McQueueDone	Gata
+McQueueFailed	Neterminat
+McQueueSkipped	Omis
+McQueueRemove	Elimină din coadă
+McQueueSkip	Omite acest program
+McQueueClear	Golește coada
+McQueueContinue	Continuă coada
+McQueueHalted	Coada s-a oprit: un program nu s-a terminat
+McGrblTravel	Citește cursa mașinii din controler și folosește-o pe cea mai mică

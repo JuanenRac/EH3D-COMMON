@@ -531,3 +531,14 @@ McShowToolbar	Įrankių juosta
 McOpenFailed	Failo atidaryti nepavyksta: {}
 McSecSafety	Sauga
 McSumReject	Atmesti programą, išeinančią už staklių eigos ribų
+McQueue	Eilė
+McQueueWaiting	Laukia
+McQueueDone	Atlikta
+McQueueFailed	Nebaigta
+McQueueSkipped	Praleista
+McQueueRemove	Pašalinti iš eilės
+McQueueSkip	Praleisti šią programą
+McQueueClear	Išvalyti eilę
+McQueueContinue	Tęsti eilę
+McQueueHalted	Eilė sustojo: programa nebaigta
+McGrblTravel	Nuskaityti staklių eigą iš valdiklio ir naudoti mažesnę

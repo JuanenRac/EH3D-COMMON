@@ -531,3 +531,14 @@ McShowToolbar	Tresna-barra
 McOpenFailed	Ezin da fitxategia ireki: {}
 McSecSafety	Segurtasuna
 McSumReject	Baztertu makinaren ibilbidetik ateratzen den programa
+McQueue	Ilara
+McQueueWaiting	Zain
+McQueueDone	Eginda
+McQueueFailed	Amaitu gabe
+McQueueSkipped	Saltatuta
+McQueueRemove	Kendu ilaratik
+McQueueSkip	Saltatu programa hau
+McQueueClear	Hustu ilara
+McQueueContinue	Jarraitu ilararekin
+McQueueHalted	Ilara gelditu da: programa batek ez du amaitu
+McGrblTravel	Irakurri makinaren ibilbidea kontrolagailutik eta erabili txikiena

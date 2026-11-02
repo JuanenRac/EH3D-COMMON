@@ -531,3 +531,14 @@ McShowToolbar	Трака са алаткама
 McOpenFailed	Датотека се не може отворити: {}
 McSecSafety	Безбедност
 McSumReject	Одбиј програм који излази из хода машине
+McQueue	Ред
+McQueueWaiting	Чека
+McQueueDone	Готово
+McQueueFailed	Није завршено
+McQueueSkipped	Прескочено
+McQueueRemove	Уклони из реда
+McQueueSkip	Прескочи овај програм
+McQueueClear	Испразни ред
+McQueueContinue	Настави са редом
+McQueueHalted	Ред је заустављен: програм није завршен
+McGrblTravel	Прочитај ход машине из контролера и користи мањи

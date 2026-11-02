@@ -531,3 +531,14 @@ McShowToolbar	Barra de ferramentas
 McOpenFailed	Non se pode abrir o ficheiro: {}
 McSecSafety	Seguranza
 McSumReject	Rexeitar un programa que sae do percorrido da máquina
+McQueue	Cola
+McQueueWaiting	En espera
+McQueueDone	Feito
+McQueueFailed	Sen rematar
+McQueueSkipped	Omitido
+McQueueRemove	Quitar da cola
+McQueueSkip	Omitir este programa
+McQueueClear	Baleirar a cola
+McQueueContinue	Seguir coa cola
+McQueueHalted	A cola detívose: un programa non rematou
+McGrblTravel	Ler o percorrido da máquina do controlador e usar o menor

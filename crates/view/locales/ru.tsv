@@ -531,3 +531,14 @@ McShowToolbar	Панель инструментов
 McOpenFailed	Не удаётся открыть файл: {}
 McSecSafety	Безопасность
 McSumReject	Отклонять программу, выходящую за ход станка
+McQueue	Очередь
+McQueueWaiting	Ожидает
+McQueueDone	Готово
+McQueueFailed	Не завершено
+McQueueSkipped	Пропущено
+McQueueRemove	Убрать из очереди
+McQueueSkip	Пропустить эту программу
+McQueueClear	Очистить очередь
+McQueueContinue	Продолжить очередь
+McQueueHalted	Очередь остановлена: программа не завершилась
+McGrblTravel	Считать ход станка из контроллера и использовать меньший

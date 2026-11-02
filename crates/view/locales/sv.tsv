@@ -531,3 +531,14 @@ McShowToolbar	Verktygsfält
 McOpenFailed	Filen kan inte öppnas: {}
 McSecSafety	Säkerhet
 McSumReject	Avvisa ett program som lämnar maskinens rörelseområde
+McQueue	Kö
+McQueueWaiting	Väntar
+McQueueDone	Klart
+McQueueFailed	Inte slutfört
+McQueueSkipped	Överhoppad
+McQueueRemove	Ta bort från kön
+McQueueSkip	Hoppa över detta program
+McQueueClear	Töm kön
+McQueueContinue	Fortsätt med kön
+McQueueHalted	Kön stoppades: ett program slutfördes inte
+McGrblTravel	Läs maskinens rörelseområde från styrningen och använd det minsta

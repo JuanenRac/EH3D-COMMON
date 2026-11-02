@@ -531,3 +531,14 @@ McShowToolbar	Alatna traka
 McOpenFailed	Datoteka se ne može otvoriti: {}
 McSecSafety	Sigurnost
 McSumReject	Odbij program koji izlazi iz hoda stroja
+McQueue	Red čekanja
+McQueueWaiting	Čeka
+McQueueDone	Gotovo
+McQueueFailed	Nije dovršeno
+McQueueSkipped	Preskočeno
+McQueueRemove	Ukloni iz reda
+McQueueSkip	Preskoči ovaj program
+McQueueClear	Isprazni red
+McQueueContinue	Nastavi s redom
+McQueueHalted	Red je zaustavljen: program nije dovršen
+McGrblTravel	Pročitaj hod stroja iz upravljača i koristi manji

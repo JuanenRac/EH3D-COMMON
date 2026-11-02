@@ -531,3 +531,14 @@ McShowToolbar	Pasek narzędzi
 McOpenFailed	Nie można otworzyć pliku: {}
 McSecSafety	Bezpieczeństwo
 McSumReject	Odrzuć program wychodzący poza zakres ruchu maszyny
+McQueue	Kolejka
+McQueueWaiting	Oczekuje
+McQueueDone	Gotowe
+McQueueFailed	Nieukończone
+McQueueSkipped	Pominięto
+McQueueRemove	Usuń z kolejki
+McQueueSkip	Pomiń ten program
+McQueueClear	Wyczyść kolejkę
+McQueueContinue	Kontynuuj kolejkę
+McQueueHalted	Kolejka zatrzymana: program nie został ukończony
+McGrblTravel	Odczytaj zakres ruchu maszyny ze sterownika i użyj mniejszego

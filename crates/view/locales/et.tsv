@@ -531,3 +531,14 @@ McShowToolbar	Tööriistariba
 McOpenFailed	Faili ei saa avada: {}
 McSecSafety	Ohutus
 McSumReject	Keeldu programmist, mis väljub masina liikumisulatusest
+McQueue	Järjekord
+McQueueWaiting	Ootel
+McQueueDone	Valmis
+McQueueFailed	Lõpetamata
+McQueueSkipped	Vahele jäetud
+McQueueRemove	Eemalda järjekorrast
+McQueueSkip	Jäta see programm vahele
+McQueueClear	Tühjenda järjekord
+McQueueContinue	Jätka järjekorraga
+McQueueHalted	Järjekord peatus: üks programm ei lõppenud
+McGrblTravel	Loe masina käik kontrollerist ja kasuta väiksemat

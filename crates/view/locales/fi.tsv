@@ -531,3 +531,14 @@ McShowToolbar	Työkalupalkki
 McOpenFailed	Tiedostoa ei voi avata: {}
 McSecSafety	Turvallisuus
 McSumReject	Hylkää ohjelma, joka ylittää koneen liikealueen
+McQueue	Jono
+McQueueWaiting	Odottaa
+McQueueDone	Valmis
+McQueueFailed	Ei valmis
+McQueueSkipped	Ohitettu
+McQueueRemove	Poista jonosta
+McQueueSkip	Ohita tämä ohjelma
+McQueueClear	Tyhjennä jono
+McQueueContinue	Jatka jonoa
+McQueueHalted	Jono pysähtyi: ohjelma ei valmistunut
+McGrblTravel	Lue koneen liikematka ohjaimesta ja käytä pienempää

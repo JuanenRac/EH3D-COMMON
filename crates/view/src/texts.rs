@@ -828,6 +828,17 @@ texts! {
     McOpenFailed => ["The file cannot be opened: {}", "No se puede abrir el archivo: {}", "Impossibile aprire il file: {}", "Die Datei kann nicht geöffnet werden: {}", "Le fichier ne peut pas être ouvert : {}", "Não é possível abrir o ficheiro: {}", "无法打开文件：{}", "ファイルを開けません：{}"],
     McSecSafety => ["Safety", "Seguridad", "Sicurezza", "Sicherheit", "Sécurité", "Segurança", "安全", "安全"],
     McSumReject => ["Refuse a program that leaves the travel of the machine", "Rechazar un programa que sale del recorrido de la máquina", "Rifiuta un programma che esce dalla corsa della macchina", "Programm ablehnen, das den Verfahrweg der Maschine verlässt", "Refuser un programme qui sort de la course de la machine", "Recusar um programa que sai do curso da máquina", "拒绝超出机器行程的程序", "機械の可動範囲を超えるプログラムを拒否する"],
+    McQueue => ["Queue", "Cola", "Coda", "Warteschlange", "File d'attente", "Fila", "队列", "キュー"],
+    McQueueWaiting => ["Waiting", "En espera", "In attesa", "Wartet", "En attente", "A aguardar", "等待中", "待機中"],
+    McQueueDone => ["Done", "Hecho", "Fatto", "Fertig", "Terminé", "Concluído", "已完成", "完了"],
+    McQueueFailed => ["Not finished", "Sin terminar", "Non terminato", "Nicht beendet", "Non terminé", "Não terminado", "未完成", "未完了"],
+    McQueueSkipped => ["Skipped", "Omitido", "Saltato", "Übersprungen", "Ignoré", "Ignorado", "已跳过", "スキップ済み"],
+    McQueueRemove => ["Remove from the queue", "Quitar de la cola", "Rimuovi dalla coda", "Aus der Warteschlange entfernen", "Retirer de la file", "Retirar da fila", "从队列中移除", "キューから削除"],
+    McQueueSkip => ["Skip this program", "Saltar este programa", "Salta questo programma", "Dieses Programm überspringen", "Ignorer ce programme", "Ignorar este programa", "跳过此程序", "このプログラムをスキップ"],
+    McQueueClear => ["Clear the queue", "Vaciar la cola", "Svuota la coda", "Warteschlange leeren", "Vider la file", "Esvaziar a fila", "清空队列", "キューを空にする"],
+    McQueueContinue => ["Go on with the queue", "Seguir con la cola", "Continua con la coda", "Warteschlange fortsetzen", "Reprendre la file", "Continuar com a fila", "继续队列", "キューを続ける"],
+    McQueueHalted => ["The queue stopped: a program did not finish", "La cola se detuvo: un programa no terminó", "La coda si è fermata: un programma non è terminato", "Die Warteschlange hält an: ein Programm wurde nicht beendet", "La file s'est arrêtée : un programme ne s'est pas terminé", "A fila parou: um programa não terminou", "队列已停止：有程序未完成", "キューが停止しました：未完了のプログラムがあります"],
+    McGrblTravel => ["Read the travel of the machine from the controller and use the smaller one", "Leer el recorrido de la máquina del controlador y usar el menor", "Leggi la corsa della macchina dal controllore e usa la minore", "Verfahrweg der Maschine von der Steuerung lesen und den kleineren verwenden", "Lire la course de la machine depuis le contrôleur et utiliser la plus petite", "Ler o curso da máquina do controlador e usar o menor", "从控制器读取机器行程并使用较小的值", "コントローラーから機械のストロークを読み取り、小さい方を使う"],
 }
 
 impl crate::theme::ThemeId {

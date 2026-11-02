@@ -531,3 +531,14 @@ McShowToolbar	Shiriti i veglave
 McOpenFailed	Skedari nuk hapet: {}
 McSecSafety	Siguria
 McSumReject	Refuzo një program që del nga udhëtimi i makinës
+McQueue	Radha
+McQueueWaiting	Në pritje
+McQueueDone	U krye
+McQueueFailed	Pa përfunduar
+McQueueSkipped	U anashkalua
+McQueueRemove	Hiqe nga radha
+McQueueSkip	Anashkalo këtë program
+McQueueClear	Zbraz radhën
+McQueueContinue	Vazhdo me radhën
+McQueueHalted	Radha u ndal: një program nuk përfundoi
+McGrblTravel	Lexo lëvizjen e makinës nga kontrolluesi dhe përdor më të voglën
