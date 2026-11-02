@@ -199,6 +199,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "eh3d-diagnostic"
+version = "0.0.1"
+dependencies = [
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "eh3d-filedialog"
 version = "0.0.1"
 
