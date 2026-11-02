@@ -4,6 +4,9 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- Record how the `.eh3dproj` container behaves today as tests: entry order, the exact form of `project.json` and `integrity.json`, ZIP flags, compression, time stamps, no ZIP64 and the verdict on damaged packages.
+- Add a corpus of reference packages (three valid, nineteen damaged) that the writer must reproduce byte for byte and the reader must judge as recorded.
+
 ## [0.1.4] - Travel of a GRBL controller and words for the queue of programs
 
 - **The travel of a GRBL controller can be read:** the controller trait has a `max_travel` call (default: none) and the GRBL controller answers it from `$130`, `$131` and `$132`.

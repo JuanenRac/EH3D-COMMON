@@ -70,3 +70,9 @@ A package from another person is untrusted input. A reader refuses:
 ## Writing
 
 The writer does not use the clock: the same content gives the same bytes, so two copies of a project can be compared by hash. `write_to_path` writes a temporary file next to the target and renames it, so a crash never leaves half a project.
+
+## Reference packages
+
+`tests/golden/` holds three valid packages (an empty project, a typical one, and one with names beyond ASCII), nineteen damaged ones in `tests/golden/rejected/` and a `SHA256SUMS` for all of them. The tests check that the writer reproduces the valid packages byte for byte, that the reader reads them back, and that the reader gives the recorded verdict on each damaged one (for example, a name with `..` is refused as unsafe and a changed entry fails its integrity check).
+
+The tests also record behaviour that this page does not promise: the order of the entries in the archive, the exact form of the two JSON files, the ZIP flags, deflate compression, the fixed time stamp of 1980-01-01, the absence of ZIP64, and the fact that data after the end of the archive and two names that differ only in letter case are accepted today. A change that alters any of these has to change the reference files on purpose. To rebuild them after such a change run `cargo test --test characterization regenerate_golden -- --ignored`.
