@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The CI builds the repositories that depend on this one:** a `consumers` job reads which repositories name this one in `depends_on` of their manifest and runs `cargo check --all-targets` on each with the change in place of the sibling, so a break reaches the author before the merge.
+
 ## [0.1.1] - The words of the tool changer bar, of the text boxes and of a board that is turned, and the firmware base for the two touch screens
 
 - **A text to swap the width and the depth of a board (eh3d-view):** one new text, in the 37 languages, for the button that gives a board the other way round (a board that does not go into the machine often does turned).
