@@ -5,3 +5,6 @@
 *.sh text eol=lf
 *.bat text eol=crlf
 *.cmd text eol=crlf
+
+# The reference packages are binary: never convert their line ends
+tests/golden/** -text
