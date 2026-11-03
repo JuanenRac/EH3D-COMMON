@@ -50,7 +50,7 @@ Jede Zeile ist ein Teil dieses Repositorys, und die Ampel sagt, wie weit er heut
 | Tests | 🟡 | 319 Tests bestehen (`cargo test --workspace`): 16 in den Modulen und 33 am Container des Hauptcrates sowie 270 in den dreizehn gemeinsamen Crates. |
 | Sicherheit | 🟡 | Unsichere Namen, zu große oder zu viele Einträge und jeder veränderte Eintrag werden abgewiesen; das Paket ist weder signiert noch verschlüsselt und wurde nicht unabhängig geprüft. |
 | Firmware-Basis | 🟠 | 71 Dateien, die `tools/sync_firmware_base.py` identisch hält: 49 von den ESP32-Knoten geteilt (nur über EH3D-NODE-BUNGARD getestet, den einzigen Knoten, der sie nutzt) und 22 von den beiden Touch-Bildschirmen EH3D-NODE-BUNGARD-HMI und EH3D-NODE-HMI-GUI geteilt; nie auf einer Platine gelaufen. |
-| Nutzung durch andere Programme | 🟡 | Die Crates des Workspace werden von EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC und EH3D-SERVER benutzt (per Pfad, die Repositories liegen nebeneinander); den Projektcontainer selbst benutzt noch kein Programm. |
+| Nutzung durch andere Programme | 🟡 | Die Crates des Workspace werden von EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-PHOENIX-CNC und EH3D-SERVER benutzt (per Pfad, die Repositories liegen nebeneinander); den Projektcontainer selbst benutzt noch kein Programm. |
 | Dokumentation | 🟡 | README in acht Sprachen, die Formatbeschreibung und der Leitfaden zur Firmware-Basis; die CI vergleicht sie mit Manifest und Änderungsprotokoll. |
 
 ## 🎯 Überblick
@@ -67,7 +67,7 @@ Jede Zeile ist ein Teil dieses Repositorys, und die Ampel sagt, wie weit er heut
 
 ## 🧩 Rolle in EH3D
 
-EH3D-COMMON ist die Basis der Suite. Die Crates seines Workspace (die Ansicht und die Themen, die ZIP-Archive, die Dateien der Bungard-Maschinen, die Maschinensteuerungen, die Dateifenster und die Flotte des Servers) benutzen heute EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC und EH3D-SERVER; die Bibliotheken und Programme, die ein Projekt öffnen oder speichern, sollen vom Container abhängen, und keines davon existiert noch. Auch die Firmware-Basis der Knoten liegt hier: EH3D-NODE-BUNGARD ist der erste Knoten, der sie benutzt.
+EH3D-COMMON ist die Basis der Suite. Die Crates seines Workspace (die Ansicht und die Themen, die ZIP-Archive, die Dateien der Bungard-Maschinen, die Maschinensteuerungen, die Dateifenster und die Flotte des Servers) benutzen heute EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-PHOENIX-CNC und EH3D-SERVER; die Bibliotheken und Programme, die ein Projekt öffnen oder speichern, sollen vom Container abhängen, und keines davon existiert noch. Auch die Firmware-Basis der Knoten liegt hier: EH3D-NODE-BUNGARD ist der erste Knoten, der sie benutzt.
 
 ## 🏛️ Architektur
 

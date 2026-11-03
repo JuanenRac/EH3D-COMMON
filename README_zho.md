@@ -50,7 +50,7 @@
 | 测试 | 🟡 | 319 个测试通过（`cargo test --workspace`）：主 crate 的模块内 16 个、容器 33 个，十三个共享 crate 中 270 个。 |
 | 安全 | 🟡 | 不安全的名称、过大或过多的条目以及任何被改动的条目都会被拒绝；包没有签名也没有加密，也未经独立审查。 |
 | 固件基础 | 🟠 | 由 `tools/sync_firmware_base.py` 保持一致的 71 个文件：ESP32 节点共享 49 个（只通过唯一使用它们的节点 EH3D-NODE-BUNGARD 测试过），两块触摸屏 EH3D-NODE-BUNGARD-HMI 和 EH3D-NODE-HMI-GUI 共享 22 个；从未在电路板上运行。 |
-| 被其他程序使用 | 🟡 | 工作区的 crate 已被 EH3D-DRILLPRO、EH3D-ROUTEPRO、EH3D-BUNGARD-GUI、EH3D-MOTIONCNC 和 EH3D-SERVER 使用（通过路径，仓库并排放置）；项目容器本身还没有任何程序使用。 |
+| 被其他程序使用 | 🟡 | 工作区的 crate 已被 EH3D-DRILLPRO、EH3D-ROUTEPRO、EH3D-BUNGARD-GUI、EH3D-PHOENIX-CNC 和 EH3D-SERVER 使用（通过路径，仓库并排放置）；项目容器本身还没有任何程序使用。 |
 | 文档 | 🟡 | 八种语言的 README、格式说明和固件基础指南；CI 会将它们与清单和变更日志对照。 |
 
 ## 🎯 概述
@@ -67,7 +67,7 @@
 
 ## 🧩 在 EH3D 中的角色
 
-EH3D-COMMON 是套件的基础。其工作区的 crate（视图和主题、ZIP 压缩包、Bungard 机床的文件、机床控制器、文件窗口和服务器的机群）如今被 EH3D-DRILLPRO、EH3D-ROUTEPRO、EH3D-BUNGARD-GUI、EH3D-MOTIONCNC 和 EH3D-SERVER 使用；打开或保存项目的库和程序计划依赖该容器，目前还没有一个存在。节点的固件基础也在这里：EH3D-NODE-BUNGARD 是第一个使用它的节点。
+EH3D-COMMON 是套件的基础。其工作区的 crate（视图和主题、ZIP 压缩包、Bungard 机床的文件、机床控制器、文件窗口和服务器的机群）如今被 EH3D-DRILLPRO、EH3D-ROUTEPRO、EH3D-BUNGARD-GUI、EH3D-PHOENIX-CNC 和 EH3D-SERVER 使用；打开或保存项目的库和程序计划依赖该容器，目前还没有一个存在。节点的固件基础也在这里：EH3D-NODE-BUNGARD 是第一个使用它的节点。
 
 ## 🏛️ 架构
 

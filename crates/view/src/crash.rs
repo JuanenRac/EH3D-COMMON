@@ -82,8 +82,8 @@ mod tests {
 
     #[test]
     fn a_record_is_one_line_with_the_program_the_version_and_the_place() {
-        let l = line(7, "motioncnc", "0.1.0", "boom\nsecond", "src/a.rs:3");
-        assert_eq!(l, "[7] motioncnc 0.1.0: boom second at src/a.rs:3");
+        let l = line(7, "phoenix-cnc", "0.1.0", "boom\nsecond", "src/a.rs:3");
+        assert_eq!(l, "[7] phoenix-cnc 0.1.0: boom second at src/a.rs:3");
         assert_eq!(l.lines().count(), 1);
     }
 

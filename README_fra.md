@@ -50,7 +50,7 @@ Chaque ligne est une partie de ce dépôt et le feu dit où elle en est aujourd'
 | Tests | 🟡 | 319 tests réussissent (`cargo test --workspace`) : 16 dans les modules et 33 sur le conteneur du crate principal, et 270 dans les treize crates partagés. |
 | Sécurité | 🟡 | Les noms dangereux, les entrées trop grosses ou trop nombreuses et toute entrée modifiée sont refusés ; le paquet n'est ni signé ni chiffré et n'a pas eu de revue indépendante. |
 | Base de firmware | 🟠 | 71 fichiers gardés identiques par `tools/sync_firmware_base.py` : 49 partagés par les nœuds ESP32 (testés seulement via EH3D-NODE-BUNGARD, le seul nœud qui les utilise) et 22 partagés par les deux écrans tactiles EH3D-NODE-BUNGARD-HMI et EH3D-NODE-HMI-GUI ; jamais exécutée sur une carte. |
-| Utilisation par d'autres programmes | 🟡 | Les crates du workspace sont utilisés par EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC et EH3D-SERVER (par chemin, les dépôts côte à côte) ; le conteneur de projet lui-même n'est encore utilisé par aucun programme. |
+| Utilisation par d'autres programmes | 🟡 | Les crates du workspace sont utilisés par EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-PHOENIX-CNC et EH3D-SERVER (par chemin, les dépôts côte à côte) ; le conteneur de projet lui-même n'est encore utilisé par aucun programme. |
 | Documentation | 🟡 | README en huit langues, la description du format et le guide de la base de firmware ; la CI les compare au manifeste et au journal des modifications. |
 
 ## 🎯 Présentation
@@ -67,7 +67,7 @@ Chaque ligne est une partie de ce dépôt et le feu dit où elle en est aujourd'
 
 ## 🧩 Rôle dans EH3D
 
-EH3D-COMMON est la base de la suite. Les crates de son workspace (la vue et les thèmes, les archives ZIP, les fichiers des machines Bungard, les contrôleurs de machine, les fenêtres de fichiers et la flotte du serveur) sont utilisés aujourd'hui par EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC et EH3D-SERVER ; les bibliothèques et les programmes qui ouvrent ou enregistrent un projet doivent dépendre du conteneur, et aucun n'existe encore. La base du firmware des nœuds vit aussi ici : EH3D-NODE-BUNGARD est le premier nœud qui l'utilise.
+EH3D-COMMON est la base de la suite. Les crates de son workspace (la vue et les thèmes, les archives ZIP, les fichiers des machines Bungard, les contrôleurs de machine, les fenêtres de fichiers et la flotte du serveur) sont utilisés aujourd'hui par EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-PHOENIX-CNC et EH3D-SERVER ; les bibliothèques et les programmes qui ouvrent ou enregistrent un projet doivent dépendre du conteneur, et aucun n'existe encore. La base du firmware des nœuds vit aussi ici : EH3D-NODE-BUNGARD est le premier nœud qui l'utilise.
 
 ## 🏛️ Architecture
 
