@@ -9,6 +9,8 @@
 //! * [`integrity`]: the integrity record (SHA-256 and size of every entry), its verification and
 //!   the content hash that ignores variable audit data;
 //! * [`canonical`]: canonical JSON (RFC 8785) for every new JSON entry;
+//! * [`id`]: object identities (UUID version 7) with an injectable clock and random source, for
+//!   the formats that name their objects;
 //! * [`codes`] and [`error`]: the stable codes `EH3D-PKG-001` to `EH3D-PKG-014`, and the
 //!   diagnostics built from them;
 //! * [`policy`]: the name policy (the rule of 1.0.0, or the strict one for new formats);
@@ -29,6 +31,7 @@ pub mod atomic;
 pub mod canonical;
 pub mod codes;
 pub mod error;
+pub mod id;
 pub mod integrity;
 pub mod policy;
 pub mod reader;
@@ -41,6 +44,10 @@ pub use canonical::{
 };
 pub use codes::PkgCode;
 pub use error::{violation_in, ContainerError, Violation};
+pub use id::{
+    Clock, DeterministicRandom, IdError, IdGenerator, ObjectId, RandomSource, StepClock,
+    SystemClock, SystemRandom,
+};
 pub use integrity::{sha256_hex, Integrity, IntegrityEntry, IntegrityError};
 pub use policy::{check_name, collision_key, is_windows_reserved, Policy};
 pub use reader::{Container, EntryInfo, EntryReader};

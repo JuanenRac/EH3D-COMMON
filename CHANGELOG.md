@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- Add the object identity to `eh3d-container`: `ObjectId` (UUID version 7 in canonical lowercase text), the `IdGenerator` over an injected `Clock` and `RandomSource` (a system clock and a seeded one for tests), and `IdError` with the codes `EH3D-ID-001` and `EH3D-ID-002`, so that every program of the suite names its objects the same way. The design tool and the mechanical tool use it instead of each having its own.
 - Add the stable codes `EH3D-PKG-001` to `EH3D-PKG-014` (`PkgCode`) with the common diagnostic for each, and a test that checks the list against the registry of the documentation repository when it is checked out next to this one.
 - Add the strict name and ZIP policy for new formats: names in Unicode normal form C with the UTF-8 flag, duplicates that differ only in case or form, links, devices, directory entries, ZIP64, encryption, methods outside the preset, other flags, data after the end of the archive and entries outside the roots are refused with their code; the `.eh3dproj` 1.0.0 policy keeps its rules.
 - Add `Container`, a bounded reader that opens from the central directory only, refuses a package before decompressing or reserving memory for what it announces, checks the format version before the roots, and streams entries under the limits and a time budget whatever the archive claims.
