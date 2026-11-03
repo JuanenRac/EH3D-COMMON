@@ -6,7 +6,10 @@
 
 use std::collections::BTreeMap;
 
+use serde::{Deserialize, Serialize};
 use thiserror::Error;
+
+use crate::policy::Policy;
 
 /// Longest entry name in bytes that the 1.0.0 rule accepts.
 pub const MAX_NAME_BYTES: usize = 240;
@@ -86,7 +89,7 @@ pub enum NewerMinor {
 }
 
 /// The size limits of a container.
-#[derive(Debug, Clone, PartialEq, Eq)]
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct Limits {
     /// The most entries.
     pub max_entries: usize,
@@ -111,8 +114,27 @@ impl Limits {
     }
 }
 
-/// What one container format allows. The time and memory budget of a decompression is not a
-/// parameter yet: its values are still to be set.
+/// The budget of one open container: how long its entries may take to decompress and how much
+/// memory a read that keeps its bytes may use. Both are settings, meant to be read from a
+/// configuration file.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+pub struct Budget {
+    /// The most milliseconds of decompression in total; 0 means no time limit.
+    pub max_millis: u64,
+    /// The most bytes a single read into memory may hold.
+    pub max_memory_bytes: u64,
+}
+
+impl Default for Budget {
+    fn default() -> Self {
+        Budget {
+            max_millis: 120_000,
+            max_memory_bytes: 256 * 1024 * 1024,
+        }
+    }
+}
+
+/// What one container format allows.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct ContainerSpec {
     /// The short name shown in messages.
@@ -141,6 +163,10 @@ pub struct ContainerSpec {
     pub newer_minor: NewerMinor,
     /// The identifier of the deterministic writing profile.
     pub writer_profile: String,
+    /// How strictly names and the ZIP structure are judged.
+    pub policy: Policy,
+    /// The time and memory budget of the reader.
+    pub budget: Budget,
 }
 
 impl ContainerSpec {
@@ -171,7 +197,71 @@ impl ContainerSpec {
             known_minor: 0,
             newer_minor: NewerMinor::Accept,
             writer_profile: "eh3dproj-1.0.0".to_owned(),
+            policy: Policy::Legacy,
+            budget: Budget::default(),
         }
+    }
+
+    /// The preset of `.phoenixproj`. The format version it supports is a parameter because the
+    /// version policy of that format is not decided. The size limits are starting values: an
+    /// application reads its own from its configuration and replaces them.
+    pub fn phoenixproj(major_version: u64, known_minor: u64) -> ContainerSpec {
+        let mut per_root = BTreeMap::new();
+        per_root.insert("results/".to_owned(), 1024 * 1024 * 1024);
+        per_root.insert("models/".to_owned(), 1024 * 1024 * 1024);
+        let roots = [
+            "design/",
+            "mechanical/",
+            "simulation/",
+            "thermal/",
+            "rf/",
+            "results/",
+            "history/",
+            "passport/",
+            "models/",
+            "exports/",
+            "opaque/",
+            "audit/",
+        ];
+        ContainerSpec {
+            format_id: "phoenixproj".to_owned(),
+            required_entries: vec![PROJECT_ENTRY.to_owned(), INTEGRITY_ENTRY.to_owned()],
+            allowed_roots: roots.iter().map(|r| (*r).to_owned()).collect(),
+            extension_roots: vec!["x-".to_owned()],
+            limits: Limits {
+                max_entries: 50_000,
+                max_name_bytes: MAX_NAME_BYTES,
+                max_total_bytes: 4 * 1024 * 1024 * 1024 - 1,
+                default_max_entry_bytes: 256 * 1024 * 1024,
+                per_root_max_entry_bytes: per_root,
+            },
+            allow_zip64: false,
+            methods: vec![Method::Deflate],
+            json_form: JsonForm::Jcs,
+            entry_order: EntryOrder::SortedThenProjectThenIntegrity,
+            major_version,
+            known_minor,
+            newer_minor: NewerMinor::Refuse,
+            writer_profile: "phoenixproj-jcs-1".to_owned(),
+            policy: Policy::Strict,
+            budget: Budget::default(),
+        }
+    }
+
+    /// The preset of `.eh3dproj` 1.1.0: the folders of 1.0.0 plus `assembly/` and `heightmaps/`,
+    /// canonical JSON, the sorted entry order and the strict policy. A 1.0.0 reader refuses a
+    /// 1.1.0 package, so writers keep producing 1.0.0 unless 1.1.0 is asked for.
+    pub fn eh3dproj_v1_1() -> ContainerSpec {
+        let mut spec = ContainerSpec::eh3dproj_v1();
+        spec.allowed_roots.push("assembly/".to_owned());
+        spec.allowed_roots.push("heightmaps/".to_owned());
+        spec.json_form = JsonForm::Jcs;
+        spec.entry_order = EntryOrder::SortedThenProjectThenIntegrity;
+        spec.known_minor = 1;
+        spec.newer_minor = NewerMinor::Refuse;
+        spec.writer_profile = "eh3dproj-1.1.0-jcs-1".to_owned();
+        spec.policy = Policy::Strict;
+        spec
     }
 
     /// True when `name` is under one of the allowed roots.

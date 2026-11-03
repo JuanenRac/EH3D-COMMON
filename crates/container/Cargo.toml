@@ -14,3 +14,9 @@ serde = { version = "1", features = ["derive"] }
 serde_json = { version = "1", features = ["float_roundtrip"] }
 sha2 = "0.10"
 thiserror = "2"
+# the codes build common diagnostics
+eh3d-diagnostic = { version = ">=0.0.1", path = "../diagnostic" }
+# zip: the reader and the writer of the generic container (deflate only), as in eh3d-common.
+zip = { version = "2", default-features = false, features = ["deflate"] }
+# unicode-normalization: the strict name policy needs normal form C.
+unicode-normalization = "0.1"
