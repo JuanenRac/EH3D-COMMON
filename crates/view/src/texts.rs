@@ -1073,7 +1073,10 @@ mod tests {
             let (own, all) = coverage(l);
             assert_eq!(own, all, "{l:?} has {own} of {all} texts of its own");
             for key in extra(l).keys() {
-                assert!(names.contains(key), "{l:?}: the file has '{key}', which is not a text");
+                assert!(
+                    names.contains(key),
+                    "{l:?}: the file has '{key}', which is not a text"
+                );
             }
         }
     }
@@ -1087,9 +1090,19 @@ mod tests {
                 assert_eq!(v, v.trim(), "{t:?} in {l:?} has blanks around it");
                 assert!(!v.contains('\t'), "{t:?} in {l:?} has a tab");
                 assert!(!v.contains('\r'), "{t:?} in {l:?} has a carriage return");
-                assert!(!v.contains("\\n"), "{t:?} in {l:?} has a line break that was not turned into one");
-                assert!(!v.contains("TODO") && !v.contains("FIXME") && !v.contains("???"), "{t:?} in {l:?}");
-                assert_eq!(v.matches('{').count(), v.matches('}').count(), "{t:?} in {l:?}: unbalanced braces: {v}");
+                assert!(
+                    !v.contains("\\n"),
+                    "{t:?} in {l:?} has a line break that was not turned into one"
+                );
+                assert!(
+                    !v.contains("TODO") && !v.contains("FIXME") && !v.contains("???"),
+                    "{t:?} in {l:?}"
+                );
+                assert_eq!(
+                    v.matches('{').count(),
+                    v.matches('}').count(),
+                    "{t:?} in {l:?}: unbalanced braces: {v}"
+                );
             }
         }
     }
@@ -1100,7 +1113,12 @@ mod tests {
         for &t in ALL_TEXTS {
             let english = tr(Lang::En, t).matches("{}").count();
             for l in Lang::ALL {
-                assert_eq!(tr(l, t).matches("{}").count(), english, "{t:?} in {l:?}: {}", tr(l, t));
+                assert_eq!(
+                    tr(l, t).matches("{}").count(),
+                    english,
+                    "{t:?} in {l:?}: {}",
+                    tr(l, t)
+                );
             }
         }
     }
@@ -1136,7 +1154,10 @@ mod tests {
         names.dedup();
         assert_eq!(names.len(), n, "two texts have the same name");
         for &t in ALL_TEXTS {
-            assert!(!t.name().is_empty() && t.name().chars().all(|c| c.is_ascii_alphanumeric()), "{t:?}");
+            assert!(
+                !t.name().is_empty() && t.name().chars().all(|c| c.is_ascii_alphanumeric()),
+                "{t:?}"
+            );
         }
     }
 
@@ -1149,8 +1170,13 @@ mod tests {
                 if line.starts_with('#') || line.trim().is_empty() {
                     continue;
                 }
-                let (k, v) = line.split_once('\t').unwrap_or_else(|| panic!("{l:?}: a line without a tab: {line}"));
-                assert!(!v.contains('\t'), "{l:?}: more than one tab in the line of {k}");
+                let (k, v) = line
+                    .split_once('\t')
+                    .unwrap_or_else(|| panic!("{l:?}: a line without a tab: {line}"));
+                assert!(
+                    !v.contains('\t'),
+                    "{l:?}: more than one tab in the line of {k}"
+                );
                 assert_eq!(k, k.trim(), "{l:?}: blanks around the key {k}");
                 assert!(seen.insert(k.to_string()), "{l:?}: the key {k} is twice");
             }

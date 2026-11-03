@@ -39,7 +39,9 @@ pub fn check_name(policy: Policy, name: &str, max_name_bytes: usize) -> Result<(
                 return Err(bad("a part of the name ends with a dot or a space"));
             }
             if is_windows_reserved(part) {
-                return Err(bad("a part of the name is a reserved device name on Windows"));
+                return Err(bad(
+                    "a part of the name is a reserved device name on Windows",
+                ));
             }
         }
     }
@@ -49,11 +51,18 @@ pub fn check_name(policy: Policy, name: &str, max_name_bytes: usize) -> Result<(
 /// True for the names Windows treats as devices (`CON`, `NUL`, `COM1`, ...), with or without an
 /// extension and in any letter case.
 pub fn is_windows_reserved(part: &str) -> bool {
-    let stem = part.split('.').next().unwrap_or(part).trim_end().to_ascii_uppercase();
+    let stem = part
+        .split('.')
+        .next()
+        .unwrap_or(part)
+        .trim_end()
+        .to_ascii_uppercase();
     match stem.as_str() {
         "CON" | "PRN" | "AUX" | "NUL" | "CONIN$" | "CONOUT$" => true,
         _ => {
-            let digits = stem.strip_prefix("COM").or_else(|| stem.strip_prefix("LPT"));
+            let digits = stem
+                .strip_prefix("COM")
+                .or_else(|| stem.strip_prefix("LPT"));
             matches!(digits, Some(d) if d.len() == 1 && d.as_bytes()[0].is_ascii_digit() && d != "0")
         }
     }
@@ -107,13 +116,31 @@ mod tests {
     #[test]
     fn strict_refuses_windows_device_names_and_trailing_dots_or_spaces() {
         for bad in [
-            "design/CON", "design/nul.json", "design/Aux.txt", "design/com1", "design/LPT9.x",
-            "com5/a", "design/a.", "design/a ", "design/dir./a", "design/CONIN$",
+            "design/CON",
+            "design/nul.json",
+            "design/Aux.txt",
+            "design/com1",
+            "design/LPT9.x",
+            "com5/a",
+            "design/a.",
+            "design/a ",
+            "design/dir./a",
+            "design/CONIN$",
         ] {
             assert!(check_name(Policy::Strict, bad, 240).is_err(), "{bad}");
-            assert!(check_name(Policy::Legacy, bad, 240).is_ok(), "{bad}: legacy keeps its rule");
+            assert!(
+                check_name(Policy::Legacy, bad, 240).is_ok(),
+                "{bad}: legacy keeps its rule"
+            );
         }
-        for ok in ["design/console.json", "design/com10", "design/com0", "design/lpt", "design/a.b", "design/auxiliary"] {
+        for ok in [
+            "design/console.json",
+            "design/com10",
+            "design/com0",
+            "design/lpt",
+            "design/a.b",
+            "design/auxiliary",
+        ] {
             assert!(check_name(Policy::Strict, ok, 240).is_ok(), "{ok}");
         }
     }
