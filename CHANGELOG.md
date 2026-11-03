@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **A height map with a huge grid is an error:** reading a saved map checks the number of points (at most `MAX_MAP_POINTS`) before anything is reserved for it, so a map that announces billions of points no longer aborts the program; a move is cut in at most `MAX_PATH_PIECES` pieces.
+
 ## [0.1.6] - Strict container, PKG codes, shared object identifier and the 37-language texts of the machine and the job bar
 
 - Add the object identity to `eh3d-container`: `ObjectId` (UUID version 7 in canonical lowercase text), the `IdGenerator` over an injected `Clock` and `RandomSource` (a system clock and a seeded one for tests), and `IdError` with the codes `EH3D-ID-001` and `EH3D-ID-002`, so that every program of the suite names its objects the same way. The design tool and the mechanical tool use it instead of each having its own.

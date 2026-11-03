@@ -4,6 +4,12 @@
 
 use std::fmt;
 
+/// The most points a map read from text may have (a table is probed in tens or hundreds of points).
+pub const MAX_MAP_POINTS: usize = 1_000_000;
+
+/// The most pieces [`HeightMap::corrected_path`] cuts one move in.
+pub const MAX_PATH_PIECES: usize = 1_000_000;
+
 /// The grid of points that is measured: `cols` by `rows` points, from one corner of the area to the other.
 #[derive(Debug, Clone, Copy, PartialEq)]
 pub struct Grid {
@@ -29,7 +35,7 @@ impl Grid {
     }
 
     pub fn len(&self) -> usize {
-        self.cols * self.rows
+        self.cols.saturating_mul(self.rows)
     }
 
     pub fn is_empty(&self) -> bool {
@@ -241,7 +247,7 @@ impl HeightMap {
     ) -> Option<Vec<(f64, f64, f64)>> {
         let length = (b.0 - a.0).hypot(b.1 - a.1);
         let pieces = if max_len > 0.0 {
-            (length / max_len).ceil().max(1.0) as usize
+            ((length / max_len).ceil().max(1.0) as usize).min(MAX_PATH_PIECES)
         } else {
             1
         };
@@ -299,11 +305,16 @@ impl HeightMap {
             u(head[5])?,
             u(head[6])?,
         );
-        let mut map = HeightMap::new(grid);
+        // the size comes from the text: it is checked before anything is reserved for it
+        let points = grid.cols.checked_mul(grid.rows);
+        if !points.is_some_and(|n| n <= MAX_MAP_POINTS) {
+            return Err(bad("the grid has more points than a map may have"));
+        }
         let rows: Vec<&str> = lines.filter(|l| !l.trim().is_empty()).collect();
         if rows.len() != grid.rows {
             return Err(bad("the rows are not as many as the grid says"));
         }
+        let mut map = HeightMap::new(grid);
         for (r, line) in rows.iter().enumerate() {
             let cells: Vec<&str> = line.split_whitespace().collect();
             if cells.len() != grid.cols {
@@ -480,6 +491,37 @@ mod tests {
         assert!(HeightMap::from_text("").is_err());
         assert!(HeightMap::from_text("levelling 1\ngrid 0 0 1 1 2 2\n1 2\n").is_err());
         assert!(HeightMap::from_text("levelling 1\ngrid 0 0 1 1 2 2\n1 2\n3\n").is_err());
+    }
+
+    #[test]
+    fn a_map_that_asks_for_a_huge_grid_is_refused_before_anything_is_reserved() {
+        for size in [
+            "100000 100000",
+            "4294967296 4294967296",
+            "18446744073709551615 2",
+        ] {
+            let text = format!("levelling 1\ngrid 0 0 1 1 {size}\n");
+            assert!(
+                matches!(HeightMap::from_text(&text), Err(Error::BadMap(_))),
+                "{size}"
+            );
+        }
+        // the largest map allowed has its rows, so it is refused for them and not for its size
+        let text = format!("levelling 1\ngrid 0 0 1 1 {MAX_MAP_POINTS} 1\n");
+        assert!(HeightMap::from_text(&text).is_err());
+        assert_eq!(
+            Grid::new((0.0, 0.0, 1.0, 1.0), usize::MAX, usize::MAX).len(),
+            usize::MAX
+        );
+    }
+
+    #[test]
+    fn a_move_is_cut_in_a_limited_number_of_pieces() {
+        let m = measured();
+        let path = m
+            .corrected_path((0.0, 0.0, 0.0), (100.0, 0.0, 0.0), 1e-12, (0.0, 0.0))
+            .unwrap();
+        assert_eq!(path.len(), MAX_PATH_PIECES + 1);
     }
 
     #[test]
