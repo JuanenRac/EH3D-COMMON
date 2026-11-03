@@ -18,7 +18,7 @@
 
 ---
 
-**Honesty check - what actually runs today:** a Rust library with the project container (`.eh3dproj`), the metadata of a project, SHA-256 integrity checks, the machine telemetry types and the colours of the suite, plus the firmware base that every ESP32 node of the suite copies (70 files and the tool that keeps the copies identical). 319 tests run on a computer. The drilling and routing programs and the modern interface read their files and draw their jobs with the shared crates; nothing here has run on a machine or on a board.
+**Honesty check - what actually runs today:** a Rust library with the project container (`.eh3dproj`), the metadata of a project, SHA-256 integrity checks, the machine telemetry types and the colours of the suite, plus the firmware base that every ESP32 node of the suite copies (71 files and the tool that keeps the copies identical). 319 tests run on a computer. The drilling and routing programs and the modern interface read their files and draw their jobs with the shared crates; nothing here has run on a machine or on a board.
 
 ---
 
@@ -49,7 +49,7 @@ Each line is one part of this repository and the light says how far it is today.
 | Telemetry and theme | 🟡 | Axes, spindle, machine states, the GRBL alarm codes with their severity and the colours of the suite with a contrast check, all tested. |
 | Tests | 🟡 | 319 tests pass (`cargo test --workspace`): 16 in the modules and 33 on the container of the main crate, and 270 in the thirteen shared crates. |
 | Security | 🟡 | Unsafe names, oversized or too many entries and any altered entry are refused; the package is not signed or encrypted and has had no independent review. |
-| Firmware base | 🟠 | 70 files kept identical by `tools/sync_firmware_base.py`: 49 shared by the ESP32 nodes (tested only through EH3D-NODE-BUNGARD, the one node that uses them) and 21 shared by the two touch screens EH3D-NODE-BUNGARD-HMI and EH3D-NODE-HMI-GUI; never run on a board. |
+| Firmware base | 🟠 | 71 files kept identical by `tools/sync_firmware_base.py`: 49 shared by the ESP32 nodes (tested only through EH3D-NODE-BUNGARD, the one node that uses them) and 22 shared by the two touch screens EH3D-NODE-BUNGARD-HMI and EH3D-NODE-HMI-GUI; never run on a board. |
 | Use by other programs | 🟡 | The crates of the workspace are used by EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC and EH3D-SERVER (by path, so the repositories sit side by side); the project container itself is not used by any program yet. |
 | Documentation | 🟡 | README in eight languages, the format description and the firmware-base guide; the CI compares them with the manifest and the changelog. |
 

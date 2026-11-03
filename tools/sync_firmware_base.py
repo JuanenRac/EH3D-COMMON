@@ -60,7 +60,7 @@ CANDIDATES = [
 # The files the two touch-screen projects (EH3D-NODE-BUNGARD-HMI and EH3D-NODE-HMI-GUI) share. The gate, the texts, the settings and the screens (app_main.cpp, ui.cpp)
 # differ by the kind of machine the screen serves and stay each project's own.
 HMI_CANDIDATES = [
-    "core/job_memory.hpp", "core/job_tools.hpp", "core/keyboard.hpp", "core/lang.hpp", "core/notices.hpp", "core/orientation.hpp", "core/quality.hpp",
+    "core/job_bar.hpp", "core/job_memory.hpp", "core/job_tools.hpp", "core/keyboard.hpp", "core/lang.hpp", "core/notices.hpp", "core/orientation.hpp", "core/quality.hpp",
     "core/sdfiles.hpp", "core/server_link.hpp", "core/voice.hpp", "core/wav.hpp", "core/workflow.hpp",
     "main/board.hpp", "main/board_p4.cpp", "main/server_link.cpp", "main/server_link.hpp",
     "tests/test_hmi.cpp", "tests/test_keyboard.cpp", "tests/test_notices.cpp", "tests/test_quality.cpp", "tests/test_workflow.cpp",

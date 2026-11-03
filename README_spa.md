@@ -18,7 +18,7 @@
 
 ---
 
-**Comprobación de honestidad - lo que se ejecuta hoy:** una biblioteca en Rust con el contenedor de proyecto (`.eh3dproj`), los metadatos de un proyecto, las comprobaciones de integridad SHA-256, los tipos de telemetría de máquina y los colores de la suite, más la base de firmware que copia cada nodo ESP32 de la suite (70 ficheros y la herramienta que mantiene las copias idénticas). 319 pruebas se ejecutan en un ordenador. Los programas de taladrado y de fresado y la interfaz moderna leen sus ficheros y dibujan sus trabajos con los crates compartidos; nada de aquí se ha ejecutado en una máquina ni en una placa.
+**Comprobación de honestidad - lo que se ejecuta hoy:** una biblioteca en Rust con el contenedor de proyecto (`.eh3dproj`), los metadatos de un proyecto, las comprobaciones de integridad SHA-256, los tipos de telemetría de máquina y los colores de la suite, más la base de firmware que copia cada nodo ESP32 de la suite (71 ficheros y la herramienta que mantiene las copias idénticas). 319 pruebas se ejecutan en un ordenador. Los programas de taladrado y de fresado y la interfaz moderna leen sus ficheros y dibujan sus trabajos con los crates compartidos; nada de aquí se ha ejecutado en una máquina ni en una placa.
 
 ---
 
@@ -49,7 +49,7 @@ Cada línea es una parte de este repositorio y la luz dice hasta dónde llega ho
 | Telemetría y tema | 🟡 | Ejes, husillo, estados de la máquina, los códigos de alarma GRBL con su gravedad y los colores de la suite con comprobación de contraste, todo probado. |
 | Pruebas | 🟡 | Pasan 319 pruebas (`cargo test --workspace`): 16 en los módulos y 33 sobre el contenedor del crate principal, y 270 en los trece crates compartidos. |
 | Seguridad | 🟡 | Se rechazan los nombres inseguros, las entradas demasiado grandes o numerosas y cualquier entrada alterada; el paquete no está firmado ni cifrado y no ha tenido revisión independiente. |
-| Base de firmware | 🟠 | 70 ficheros mantenidos idénticos por `tools/sync_firmware_base.py`: 49 compartidos por los nodos ESP32 (probados solo a través de EH3D-NODE-BUNGARD, el único nodo que los usa) y 21 compartidos por las dos pantallas táctiles EH3D-NODE-BUNGARD-HMI y EH3D-NODE-HMI-GUI; nunca ejecutada en una placa. |
+| Base de firmware | 🟠 | 71 ficheros mantenidos idénticos por `tools/sync_firmware_base.py`: 49 compartidos por los nodos ESP32 (probados solo a través de EH3D-NODE-BUNGARD, el único nodo que los usa) y 22 compartidos por las dos pantallas táctiles EH3D-NODE-BUNGARD-HMI y EH3D-NODE-HMI-GUI; nunca ejecutada en una placa. |
 | Uso por otros programas | 🟡 | Los crates del workspace los usan EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC y EH3D-SERVER (por ruta, con los repositorios uno junto a otro); el contenedor de proyectos todavía no lo usa ningún programa. |
 | Documentación | 🟡 | README en ocho idiomas, la descripción del formato y la guía de la base de firmware; el CI las compara con el manifiesto y el registro de cambios. |
 

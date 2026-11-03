@@ -42,6 +42,12 @@
         "EH3D-NODE-BUNGARD-AUX": "core/improv.hpp"
       }
     },
+    "core/job_bar.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/job_bar.hpp",
+        "EH3D-NODE-HMI-GUI": "core/job_bar.hpp"
+      }
+    },
     "core/job_memory.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD-HMI": "core/job_memory.hpp",

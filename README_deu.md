@@ -18,7 +18,7 @@
 
 ---
 
-**Ehrlichkeitscheck - was heute tatsächlich läuft:** eine Rust-Bibliothek mit dem Projektcontainer (`.eh3dproj`), den Metadaten eines Projekts, SHA-256-Integritätsprüfungen, den Typen der Maschinentelemetrie und den Farben der Suite, dazu die Firmware-Basis, die jeder ESP32-Knoten der Suite kopiert (70 Dateien und das Werkzeug, das die Kopien identisch hält). 319 Tests laufen auf einem Computer. Die Bohr- und Fräsprogramme und die moderne Oberfläche lesen ihre Dateien und zeichnen ihre Aufträge mit den gemeinsamen Crates; nichts davon lief auf einer Maschine oder einer Platine.
+**Ehrlichkeitscheck - was heute tatsächlich läuft:** eine Rust-Bibliothek mit dem Projektcontainer (`.eh3dproj`), den Metadaten eines Projekts, SHA-256-Integritätsprüfungen, den Typen der Maschinentelemetrie und den Farben der Suite, dazu die Firmware-Basis, die jeder ESP32-Knoten der Suite kopiert (71 Dateien und das Werkzeug, das die Kopien identisch hält). 319 Tests laufen auf einem Computer. Die Bohr- und Fräsprogramme und die moderne Oberfläche lesen ihre Dateien und zeichnen ihre Aufträge mit den gemeinsamen Crates; nichts davon lief auf einer Maschine oder einer Platine.
 
 ---
 
@@ -49,7 +49,7 @@ Jede Zeile ist ein Teil dieses Repositorys, und die Ampel sagt, wie weit er heut
 | Telemetrie und Theme | 🟡 | Achsen, Spindel, Maschinenzustände, die GRBL-Alarmcodes mit ihrer Schwere und die Farben der Suite mit Kontrastprüfung, alles getestet. |
 | Tests | 🟡 | 319 Tests bestehen (`cargo test --workspace`): 16 in den Modulen und 33 am Container des Hauptcrates sowie 270 in den dreizehn gemeinsamen Crates. |
 | Sicherheit | 🟡 | Unsichere Namen, zu große oder zu viele Einträge und jeder veränderte Eintrag werden abgewiesen; das Paket ist weder signiert noch verschlüsselt und wurde nicht unabhängig geprüft. |
-| Firmware-Basis | 🟠 | 70 Dateien, die `tools/sync_firmware_base.py` identisch hält: 49 von den ESP32-Knoten geteilt (nur über EH3D-NODE-BUNGARD getestet, den einzigen Knoten, der sie nutzt) und 21 von den beiden Touch-Bildschirmen EH3D-NODE-BUNGARD-HMI und EH3D-NODE-HMI-GUI geteilt; nie auf einer Platine gelaufen. |
+| Firmware-Basis | 🟠 | 71 Dateien, die `tools/sync_firmware_base.py` identisch hält: 49 von den ESP32-Knoten geteilt (nur über EH3D-NODE-BUNGARD getestet, den einzigen Knoten, der sie nutzt) und 22 von den beiden Touch-Bildschirmen EH3D-NODE-BUNGARD-HMI und EH3D-NODE-HMI-GUI geteilt; nie auf einer Platine gelaufen. |
 | Nutzung durch andere Programme | 🟡 | Die Crates des Workspace werden von EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-MOTIONCNC und EH3D-SERVER benutzt (per Pfad, die Repositories liegen nebeneinander); den Projektcontainer selbst benutzt noch kein Programm. |
 | Dokumentation | 🟡 | README in acht Sprachen, die Formatbeschreibung und der Leitfaden zur Firmware-Basis; die CI vergleicht sie mit Manifest und Änderungsprotokoll. |
 
