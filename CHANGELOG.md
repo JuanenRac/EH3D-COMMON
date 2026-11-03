@@ -16,6 +16,7 @@ All notable changes to this project are documented here.
 - Add the `eh3d-container` crate with the pieces that every container format shares: the integrity record with its verification and a content hash that leaves out audit entries, the entry-name rule of version 1.0.0 and canonical JSON (RFC 8785) with the vectors of the standard.
 - Describe the parameters of a container format (roots, limits, JSON form, entry order, versions) in a `ContainerSpec` and add the preset that records `.eh3dproj` 1.0.0 as it behaves; a test keeps the preset and the code in agreement.
 - Use the shared integrity record and name rule inside the `.eh3dproj` container without changing a byte of what it reads or writes: the reference packages and their tests pass unchanged.
+- **The workflows are hardened:** every action is pinned by its commit with its version in a comment, and the checkouts keep no credentials.
 
 ## [0.1.5] - Diagnostic crate and reference packages of the project container
 
