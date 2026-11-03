@@ -3,6 +3,7 @@
 All notable changes to this project are documented here.
 
 ## [Unreleased]
+- **Shared checks updated:** the validator also compares the badge and the Version row of the README with the manifest, fails when one of its checks cannot run, and the CHANGELOG step of the workflow reads the base branch from the environment.
 
 - **A height map with a huge grid is an error:** reading a saved map checks the number of points (at most `MAX_MAP_POINTS`) before anything is reserved for it, so a map that announces billions of points no longer aborts the program; a move is cut in at most `MAX_PATH_PIECES` pieces.
 
