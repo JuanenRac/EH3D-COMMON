@@ -567,3 +567,16 @@ UpdDone	Kész. Indítsa újra a programot
 UpdPrivacy	Semmi nem települ az Ön kérése nélkül. Csak a verziót és a csomagját kéri le; Önről vagy a gépéről semmit nem küld.
 UpdHistUpdated	Frissítve
 UpdHistUndone	Visszaállítva
+MachineNameLbl	Gép neve
+MachineMakeLbl	Márka és típus
+SpindleCopyNote	A CCD MTC-ről másolt ideiglenes értékek (KaVo 4010 orsó): ehhez a típushoz még nincsenek hivatalos adatok. Ehhez a géphez külön tárolódnak, és módosításuk nem érinti a többi típust.
+DesignLocked	A terv zárolva van, amíg a gép dolgozik
+HudHolesLbl	furatok
+HudSegmentsLbl	szakaszok
+HudNext	Következő
+HudToolsLbl	szerszámok
+HudLeft	hátra van
+HudChanging	Szerszámcsere
+HudKindDrill	fúró
+HudKindCutter	maró
+HudRackSlot	hely

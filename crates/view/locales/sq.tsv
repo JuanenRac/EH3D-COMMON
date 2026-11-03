@@ -567,3 +567,16 @@ UpdDone	U krye. Rinise programin për ta përdorur
 UpdPrivacy	Asgjë nuk instalohet pa pëlqimin tuaj. Kërkohen vetëm versioni dhe paketa e tij; asgjë për ju ose makinën tuaj nuk dërgohet.
 UpdHistUpdated	Përditësuar
 UpdHistUndone	U kthye mbrapa
+MachineNameLbl	Emri i makinës
+MachineMakeLbl	Marka dhe modeli
+SpindleCopyNote	Vlera të përkohshme të kopjuara nga CCD MTC (boshti KaVo 4010): për këtë model ende nuk ka të dhëna zyrtare. Ruhen veçmas për këtë makinë dhe ndryshimi i tyre këtu nuk prek modele të tjera.
+DesignLocked	Dizajni është i kyçur ndërsa makina punon
+HudHolesLbl	vrima
+HudSegmentsLbl	segmente
+HudNext	Tjetri
+HudToolsLbl	mjete
+HudLeft	mbetur
+HudChanging	Ndërrimi i mjetit
+HudKindDrill	turjelë
+HudKindCutter	frezë
+HudRackSlot	vend

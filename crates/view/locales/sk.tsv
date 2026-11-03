@@ -567,3 +567,16 @@ UpdDone	Hotovo. Reštartujte program
 UpdPrivacy	Nič sa neinštaluje bez vášho súhlasu. Žiada sa len o verziu a jej balík; nič o vás ani o stroji sa neodosiela.
 UpdHistUpdated	Aktualizované
 UpdHistUndone	Vrátené
+MachineNameLbl	Názov stroja
+MachineMakeLbl	Značka a model
+SpindleCopyNote	Dočasné hodnoty skopírované z CCD MTC (vreteno KaVo 4010): pre tento model zatiaľ nie sú oficiálne údaje. Ukladajú sa osobitne pre tento stroj a ich zmena neovplyvní iné modely.
+DesignLocked	Návrh je zamknutý, kým stroj pracuje
+HudHolesLbl	otvory
+HudSegmentsLbl	úseky
+HudNext	Ďalší
+HudToolsLbl	nástroje
+HudLeft	zostáva
+HudChanging	Výmena nástroja
+HudKindDrill	vrták
+HudKindCutter	fréza
+HudRackSlot	pozícia

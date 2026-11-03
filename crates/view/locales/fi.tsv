@@ -567,3 +567,16 @@ UpdDone	Valmis. Käynnistä ohjelma uudelleen
 UpdPrivacy	Mitään ei asenneta ilman lupaasi. Pyydetään vain versio ja sen paketti; mitään sinusta tai koneestasi ei lähetetä.
 UpdHistUpdated	Päivitetty
 UpdHistUndone	Palautettu
+MachineNameLbl	Koneen nimi
+MachineMakeLbl	Merkki ja malli
+SpindleCopyNote	Väliaikaiset arvot kopioitu CCD MTC:stä (kara KaVo 4010): tälle mallille ei ole vielä virallisia tietoja. Ne tallennetaan erikseen tälle koneelle, eikä niiden muuttaminen vaikuta muihin malleihin.
+DesignLocked	Suunnittelu lukittu koneen työskennellessä
+HudHolesLbl	reiät
+HudSegmentsLbl	osuudet
+HudNext	Seuraava
+HudToolsLbl	työkalut
+HudLeft	jäljellä
+HudChanging	Työkalun vaihto
+HudKindDrill	pora
+HudKindCutter	jyrsin
+HudRackSlot	paikka

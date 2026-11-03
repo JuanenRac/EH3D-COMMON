@@ -567,3 +567,16 @@ UpdDone	Fet. Reinicia el programa per fer-la servir
 UpdPrivacy	No s'instal·la res sense que ho demanis. Només es demanen la versió i el seu paquet; no s'envia res teu ni de la teva màquina.
 UpdHistUpdated	Actualitzada
 UpdHistUndone	S'ha tornat enrere
+MachineNameLbl	Nom de la màquina
+MachineMakeLbl	Marca i model
+SpindleCopyNote	Valors provisionals copiats de la CCD MTC (fus KaVo 4010): per a aquest model encara no hi ha dades oficials. Es guarden a part per a aquesta màquina i canviar-los aquí no afecta cap altre model.
+DesignLocked	Disseny bloquejat mentre la màquina treballa
+HudHolesLbl	forats
+HudSegmentsLbl	trams
+HudNext	Següent
+HudToolsLbl	eines
+HudLeft	restant
+HudChanging	Canvi d'eina
+HudKindDrill	broca
+HudKindCutter	fresa
+HudRackSlot	posició

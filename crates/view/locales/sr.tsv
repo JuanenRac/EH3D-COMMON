@@ -567,3 +567,16 @@ UpdDone	Готово. Поново покрените програм
 UpdPrivacy	Ништа се не инсталира без вашег одобрења. Траже се само верзија и њен пакет; ништа о вама или машини се не шаље.
 UpdHistUpdated	Ажурирано
 UpdHistUndone	Враћено
+MachineNameLbl	Назив машине
+MachineMakeLbl	Марка и модел
+SpindleCopyNote	Привремене вредности копиране из CCD MTC (вретено KaVo 4010): за овај модел још нема службених података. Чувају се засебно за ову машину и њихова измена не утиче на друге моделе.
+DesignLocked	Дизајн је закључан док машина ради
+HudHolesLbl	рупе
+HudSegmentsLbl	сегменти
+HudNext	Следећи
+HudToolsLbl	алати
+HudLeft	преостало
+HudChanging	Замена алата
+HudKindDrill	сврдло
+HudKindCutter	глодало
+HudRackSlot	лежиште

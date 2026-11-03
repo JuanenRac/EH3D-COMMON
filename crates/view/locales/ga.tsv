@@ -567,3 +567,16 @@ UpdDone	Déanta. Atosaigh an clár chun é a úsáid
 UpdPrivacy	Ní shuiteáiltear aon rud gan do thoiliú. Iarrtar an leagan agus a phacáiste amháin; ní sheoltar aon rud fút ná faoi do mheaisín.
 UpdHistUpdated	Nuashonraithe
 UpdHistUndone	Ar ais
+MachineNameLbl	Ainm an mheaisín
+MachineMakeLbl	Déantóir agus samhail
+SpindleCopyNote	Luachanna sealadacha cóipeáilte ón CCD MTC (spindle KaVo 4010): níl sonraí oifigiúla ann fós don tsamhail seo. Stóráiltear scartha iad don mheaisín seo agus ní théann athrú orthu anseo i bhfeidhm ar shamhlacha eile.
+DesignLocked	Dearadh faoi ghlas cé go bhfuil an meaisín ag obair
+HudHolesLbl	poill
+HudSegmentsLbl	míreanna
+HudNext	Ar aghaidh
+HudToolsLbl	uirlisí
+HudLeft	fágtha
+HudChanging	Uirlis á hathrú
+HudKindDrill	druilire
+HudKindCutter	gearrthóir
+HudRackSlot	sliotán

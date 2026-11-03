@@ -567,3 +567,16 @@ UpdDone	Atlikta. Paleiskite programą iš naujo
 UpdPrivacy	Nieko neįdiegiama be jūsų leidimo. Prašoma tik versijos ir jos paketo; nieko apie jus ar jūsų mašiną nesiunčiama.
 UpdHistUpdated	Atnaujinta
 UpdHistUndone	Grąžinta
+MachineNameLbl	Staklių pavadinimas
+MachineMakeLbl	Gamintojas ir modelis
+SpindleCopyNote	Laikinos reikšmės, nukopijuotos iš CCD MTC (suklys KaVo 4010): šiam modeliui oficialių duomenų dar nėra. Jos saugomos atskirai šioms staklėms, o jų keitimas čia kitų modelių neliečia.
+DesignLocked	Dizainas užrakintas, kol staklės dirba
+HudHolesLbl	skylės
+HudSegmentsLbl	atkarpos
+HudNext	Kitas
+HudToolsLbl	įrankiai
+HudLeft	liko
+HudChanging	Įrankio keitimas
+HudKindDrill	grąžtas
+HudKindCutter	freza
+HudRackSlot	vieta

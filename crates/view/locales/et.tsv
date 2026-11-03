@@ -567,3 +567,16 @@ UpdDone	Valmis. Taaskäivita programm
 UpdPrivacy	Midagi ei paigaldata ilma sinu loata. Küsitakse ainult versiooni ja selle paketti; sinu ega masina kohta ei saadeta midagi.
 UpdHistUpdated	Uuendatud
 UpdHistUndone	Tagasi võetud
+MachineNameLbl	Masina nimi
+MachineMakeLbl	Mark ja mudel
+SpindleCopyNote	Ajutised väärtused, kopeeritud CCD MTC-st (spindel KaVo 4010): sellel mudelil pole veel ametlikke andmeid. Need salvestatakse selle masina jaoks eraldi ja nende muutmine ei mõjuta teisi mudeleid.
+DesignLocked	Kujundus on lukus, kuni masin töötab
+HudHolesLbl	augud
+HudSegmentsLbl	lõigud
+HudNext	Järgmine
+HudToolsLbl	tööriistad
+HudLeft	järel
+HudChanging	Tööriista vahetus
+HudKindDrill	puur
+HudKindCutter	freesi
+HudRackSlot	koht

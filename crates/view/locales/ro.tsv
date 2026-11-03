@@ -567,3 +567,16 @@ UpdDone	Gata. Repornește programul pentru a o folosi
 UpdPrivacy	Nu se instalează nimic fără acordul tău. Se cer doar versiunea și pachetul ei; nu se trimite nimic despre tine sau mașina ta.
 UpdHistUpdated	Actualizat
 UpdHistUndone	Revenit
+MachineNameLbl	Numele mașinii
+MachineMakeLbl	Marca și modelul
+SpindleCopyNote	Valori provizorii copiate de la CCD MTC (axul KaVo 4010): pentru acest model nu există încă date oficiale. Se păstrează separat pentru această mașină, iar modificarea lor aici nu afectează alte modele.
+DesignLocked	Designul este blocat cât timp mașina lucrează
+HudHolesLbl	găuri
+HudSegmentsLbl	segmente
+HudNext	Următorul
+HudToolsLbl	scule
+HudLeft	rămas
+HudChanging	Schimbarea sculei
+HudKindDrill	burghiu
+HudKindCutter	freză
+HudRackSlot	loc

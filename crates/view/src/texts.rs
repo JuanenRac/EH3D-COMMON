@@ -864,6 +864,19 @@ texts! {
     McQueueContinue => ["Go on with the queue", "Seguir con la cola", "Continua con la coda", "Warteschlange fortsetzen", "Reprendre la file", "Continuar com a fila", "继续队列", "キューを続ける"],
     McQueueHalted => ["The queue stopped: a program did not finish", "La cola se detuvo: un programa no terminó", "La coda si è fermata: un programma non è terminato", "Die Warteschlange hält an: ein Programm wurde nicht beendet", "La file s'est arrêtée : un programme ne s'est pas terminé", "A fila parou: um programa não terminou", "队列已停止：有程序未完成", "キューが停止しました：未完了のプログラムがあります"],
     McGrblTravel => ["Read the travel of the machine from the controller and use the smaller one", "Leer el recorrido de la máquina del controlador y usar el menor", "Leggi la corsa della macchina dal controllore e usa la minore", "Verfahrweg der Maschine von der Steuerung lesen und den kleineren verwenden", "Lire la course de la machine depuis le contrôleur et utiliser la plus petite", "Ler o curso da máquina do controlador e usar o menor", "从控制器读取机器行程并使用较小的值", "コントローラーから機械のストロークを読み取り、小さい方を使う"],
+    MachineNameLbl => ["Machine name", "Nombre de la máquina", "Nome della macchina", "Maschinenname", "Nom de la machine", "Nome da máquina", "机器名称", "機械名"],
+    MachineMakeLbl => ["Make and model", "Marca y modelo", "Marca e modello", "Hersteller und Modell", "Marque et modèle", "Marca e modelo", "品牌和型号", "メーカーと型式"],
+    SpindleCopyNote => ["Provisional values copied from the CCD MTC (KaVo 4010 spindle): there is no official data for this model yet. They are kept apart for this machine and changing them here does not touch any other model.", "Valores provisionales copiados de la CCD MTC (husillo KaVo 4010): aún no hay datos oficiales de este modelo. Se guardan aparte para esta máquina y cambiarlos aquí no toca ningún otro modelo.", "Valori provvisori copiati dalla CCD MTC (mandrino KaVo 4010): per questo modello non ci sono ancora dati ufficiali. Sono conservati a parte per questa macchina e modificarli qui non tocca nessun altro modello.", "Vorläufige Werte, von der CCD MTC kopiert (Spindel KaVo 4010): Für dieses Modell gibt es noch keine offiziellen Daten. Sie werden für diese Maschine getrennt gespeichert; eine Änderung hier betrifft kein anderes Modell.", "Valeurs provisoires copiées de la CCD MTC (broche KaVo 4010) : il n'y a pas encore de données officielles pour ce modèle. Elles sont conservées à part pour cette machine et les modifier ici ne touche aucun autre modèle.", "Valores provisórios copiados da CCD MTC (fuso KaVo 4010): ainda não há dados oficiais deste modelo. Ficam guardados à parte para esta máquina e alterá-los aqui não afeta nenhum outro modelo.", "临时值，复制自 CCD MTC（KaVo 4010 主轴）：该型号暂无官方数据。它们为本机单独保存，在此修改不会影响其他型号。", "CCD MTC（KaVo 4010 スピンドル）からコピーした暫定値です。この機種の公式データはまだありません。この機械用に別保存され、ここで変更しても他の機種には影響しません。"],
+    DesignLocked => ["Design locked while the machine works", "Diseño bloqueado mientras la máquina trabaja", "Disegno bloccato mentre la macchina lavora", "Design gesperrt, solange die Maschine arbeitet", "Conception verrouillée pendant que la machine travaille", "Desenho bloqueado enquanto a máquina trabalha", "机器工作时设计已锁定", "機械の稼働中はデザインをロック"],
+    HudHolesLbl => ["holes", "agujeros", "fori", "Bohrungen", "trous", "furos", "孔", "穴"],
+    HudSegmentsLbl => ["segments", "tramos", "tratti", "Abschnitte", "tronçons", "troços", "段", "区間"],
+    HudNext => ["Next", "Siguiente", "Prossimo", "Nächstes", "Suivant", "Seguinte", "下一个", "次"],
+    HudToolsLbl => ["tools", "herramientas", "utensili", "Werkzeuge", "outils", "ferramentas", "刀具", "工具"],
+    HudLeft => ["left", "restante", "restano", "verbleibend", "restant", "restante", "剩余", "残り"],
+    HudChanging => ["Changing tool", "Cambiando herramienta", "Cambio utensile", "Werkzeugwechsel", "Changement d'outil", "A trocar a ferramenta", "正在换刀", "工具交換中"],
+    HudKindDrill => ["drill", "broca", "punta", "Bohrer", "foret", "broca", "钻头", "ドリル"],
+    HudKindCutter => ["cutter", "fresa", "fresa", "Fräser", "fraise", "fresa", "铣刀", "カッター"],
+    HudRackSlot => ["rack", "rack", "rack", "Magazin", "magasin", "rack", "刀库", "ラック"],
 }
 
 impl crate::theme::ThemeId {
@@ -1030,5 +1043,117 @@ mod tests {
             assert!(in_range(l, '\u{400}', '\u{4ff}') > 300, "{l:?}");
         }
         assert!(in_range(Lang::El, '\u{370}', '\u{3ff}') > 300);
+    }
+
+    /// The languages that have a file of their own with every text (the variants are the two with a main language to fall back on).
+    fn full_languages() -> Vec<Lang> {
+        Lang::ALL
+            .into_iter()
+            .filter(|l| !l.is_core() && l.fallback().is_none())
+            .collect()
+    }
+
+    #[test]
+    fn the_project_has_thirty_seven_languages_with_different_codes_and_the_core_ones_come_first() {
+        assert_eq!(Lang::ALL.len(), 37);
+        let mut codes: Vec<&str> = Lang::ALL.iter().map(|l| l.code()).collect();
+        codes.sort_unstable();
+        codes.dedup();
+        assert_eq!(codes.len(), 37);
+        assert_eq!(full_languages().len(), 27);
+        for (i, l) in Lang::ALL.iter().enumerate() {
+            assert_eq!(l.is_core(), i < CORE_LANGS, "{l:?}");
+        }
+    }
+
+    #[test]
+    fn every_language_that_has_a_file_has_every_text_in_it_and_no_text_that_does_not_exist() {
+        let names: std::collections::HashSet<&str> = ALL_TEXTS.iter().map(|t| t.name()).collect();
+        for l in full_languages() {
+            let (own, all) = coverage(l);
+            assert_eq!(own, all, "{l:?} has {own} of {all} texts of its own");
+            for key in extra(l).keys() {
+                assert!(names.contains(key), "{l:?}: the file has '{key}', which is not a text");
+            }
+        }
+    }
+
+    #[test]
+    fn no_text_of_any_language_is_empty_has_blanks_around_it_a_tab_or_a_broken_marker() {
+        for &t in ALL_TEXTS {
+            for l in Lang::ALL {
+                let v = tr(l, t);
+                assert!(!v.trim().is_empty(), "{t:?} in {l:?} is empty");
+                assert_eq!(v, v.trim(), "{t:?} in {l:?} has blanks around it");
+                assert!(!v.contains('\t'), "{t:?} in {l:?} has a tab");
+                assert!(!v.contains('\r'), "{t:?} in {l:?} has a carriage return");
+                assert!(!v.contains("\\n"), "{t:?} in {l:?} has a line break that was not turned into one");
+                assert!(!v.contains("TODO") && !v.contains("FIXME") && !v.contains("???"), "{t:?} in {l:?}");
+                assert_eq!(v.matches('{').count(), v.matches('}').count(), "{t:?} in {l:?}: unbalanced braces: {v}");
+            }
+        }
+    }
+
+    #[test]
+    fn the_markers_of_a_text_are_the_same_in_every_language() {
+        // `{}` is where a number or a name goes: a language that has more or fewer of them than English would print a wrong sentence or panic
+        for &t in ALL_TEXTS {
+            let english = tr(Lang::En, t).matches("{}").count();
+            for l in Lang::ALL {
+                assert_eq!(tr(l, t).matches("{}").count(), english, "{t:?} in {l:?}: {}", tr(l, t));
+            }
+        }
+    }
+
+    #[test]
+    fn a_line_break_in_a_text_is_in_the_same_places_in_every_language() {
+        for &t in ALL_TEXTS {
+            let english = tr(Lang::En, t).matches('\n').count();
+            for l in Lang::ALL {
+                assert_eq!(tr(l, t).matches('\n').count(), english, "{t:?} in {l:?}");
+            }
+        }
+    }
+
+    #[test]
+    fn the_variants_have_only_what_they_change_and_the_rest_is_their_main_language() {
+        for (variant, main) in [(Lang::PtBr, Lang::Pt), (Lang::FrCa, Lang::Fr)] {
+            let (own, all) = coverage(variant);
+            assert!(own < all, "{variant:?} would be a full copy of {main:?}");
+            for &t in ALL_TEXTS {
+                if !extra(variant).contains_key(t.name()) {
+                    assert_eq!(tr(variant, t), tr(main, t), "{t:?} in {variant:?}");
+                }
+            }
+        }
+    }
+
+    #[test]
+    fn the_names_of_the_texts_are_unique_and_each_text_is_found_by_its_name() {
+        let mut names: Vec<&str> = ALL_TEXTS.iter().map(|t| t.name()).collect();
+        let n = names.len();
+        names.sort_unstable();
+        names.dedup();
+        assert_eq!(names.len(), n, "two texts have the same name");
+        for &t in ALL_TEXTS {
+            assert!(!t.name().is_empty() && t.name().chars().all(|c| c.is_ascii_alphanumeric()), "{t:?}");
+        }
+    }
+
+    #[test]
+    fn every_file_of_a_language_has_one_tab_in_each_line_and_no_key_twice() {
+        for l in full_languages() {
+            let mut seen = std::collections::HashSet::new();
+            for line in source(l).lines() {
+                let line = line.trim_end_matches('\r');
+                if line.starts_with('#') || line.trim().is_empty() {
+                    continue;
+                }
+                let (k, v) = line.split_once('\t').unwrap_or_else(|| panic!("{l:?}: a line without a tab: {line}"));
+                assert!(!v.contains('\t'), "{l:?}: more than one tab in the line of {k}");
+                assert_eq!(k, k.trim(), "{l:?}: blanks around the key {k}");
+                assert!(seen.insert(k.to_string()), "{l:?}: the key {k} is twice");
+            }
+        }
     }
 }

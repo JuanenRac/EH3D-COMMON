@@ -567,3 +567,16 @@ UpdDone	Klaar. Herstart het programma om het te gebruiken
 UpdPrivacy	Er wordt niets geïnstalleerd zonder uw toestemming. Alleen de versie en het pakket worden opgevraagd; er wordt niets over u of uw machine verstuurd.
 UpdHistUpdated	Bijgewerkt
 UpdHistUndone	Teruggezet
+MachineNameLbl	Machinenaam
+MachineMakeLbl	Merk en model
+SpindleCopyNote	Voorlopige waarden gekopieerd van de CCD MTC (spindel KaVo 4010): voor dit model zijn er nog geen officiële gegevens. Ze worden apart bewaard voor deze machine en ze hier wijzigen raakt andere modellen niet.
+DesignLocked	Ontwerp vergrendeld terwijl de machine werkt
+HudHolesLbl	gaten
+HudSegmentsLbl	trajecten
+HudNext	Volgende
+HudToolsLbl	gereedschappen
+HudLeft	resterend
+HudChanging	Gereedschap wisselen
+HudKindDrill	boor
+HudKindCutter	frees
+HudRackSlot	positie

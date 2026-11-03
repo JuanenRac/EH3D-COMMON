@@ -567,3 +567,16 @@ UpdDone	Gatavs. Restartējiet programmu
 UpdPrivacy	Nekas netiek instalēts bez jūsu piekrišanas. Tiek pieprasīta tikai versija un tās pakotne; nekas par jums vai mašīnu netiek sūtīts.
 UpdHistUpdated	Atjaunināta
 UpdHistUndone	Atcelts
+MachineNameLbl	Iekārtas nosaukums
+MachineMakeLbl	Marka un modelis
+SpindleCopyNote	Pagaidu vērtības, kopētas no CCD MTC (vārpsta KaVo 4010): šim modelim vēl nav oficiālu datu. Tās tiek glabātas atsevišķi šai iekārtai, un to maiņa šeit neietekmē citus modeļus.
+DesignLocked	Dizains ir bloķēts, kamēr iekārta strādā
+HudHolesLbl	caurumi
+HudSegmentsLbl	posmi
+HudNext	Nākamais
+HudToolsLbl	instrumenti
+HudLeft	atlicis
+HudChanging	Instrumenta maiņa
+HudKindDrill	urbis
+HudKindCutter	freze
+HudRackSlot	vieta

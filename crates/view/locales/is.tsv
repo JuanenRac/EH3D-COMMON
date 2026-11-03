@@ -567,3 +567,16 @@ UpdDone	Búið. Endurræstu forritið til að nota hana
 UpdPrivacy	Ekkert er sett upp án þíns samþykkis. Aðeins útgáfan og pakkinn hennar eru sótt; ekkert um þig eða vélina þína er sent.
 UpdHistUpdated	Uppfært
 UpdHistUndone	Afturkallað
+MachineNameLbl	Heiti vélar
+MachineMakeLbl	Tegund og gerð
+SpindleCopyNote	Tímabundin gildi afrituð úr CCD MTC (snælda KaVo 4010): engin opinber gögn eru til enn fyrir þessa gerð. Þau eru geymd sér fyrir þessa vél og breyting hér hefur ekki áhrif á aðrar gerðir.
+DesignLocked	Hönnun er læst meðan vélin vinnur
+HudHolesLbl	göt
+HudSegmentsLbl	kaflar
+HudNext	Næsta
+HudToolsLbl	verkfæri
+HudLeft	eftir
+HudChanging	Verkfæraskipti
+HudKindDrill	bor
+HudKindCutter	fræsari
+HudRackSlot	staða

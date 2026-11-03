@@ -567,3 +567,16 @@ UpdDone	Готово. Перезапустіть програму
 UpdPrivacy	Нічого не встановлюється без вашої згоди. Запитуються лише версія та її пакет; нічого про вас чи верстат не надсилається.
 UpdHistUpdated	Оновлено
 UpdHistUndone	Відкочено
+MachineNameLbl	Назва верстата
+MachineMakeLbl	Марка і модель
+SpindleCopyNote	Тимчасові значення, скопійовані з CCD MTC (шпиндель KaVo 4010): для цієї моделі ще немає офіційних даних. Вони зберігаються окремо для цього верстата, і зміна їх тут не впливає на інші моделі.
+DesignLocked	Дизайн заблоковано, поки верстат працює
+HudHolesLbl	отвори
+HudSegmentsLbl	ділянки
+HudNext	Наступний
+HudToolsLbl	інструменти
+HudLeft	залишилось
+HudChanging	Заміна інструмента
+HudKindDrill	свердло
+HudKindCutter	фреза
+HudRackSlot	гніздо

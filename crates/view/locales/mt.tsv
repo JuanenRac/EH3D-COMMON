@@ -567,3 +567,16 @@ UpdDone	Lest. Erġa' ibda l-programm biex tużah
 UpdPrivacy	Xejn ma jiġi installat mingħajr il-kunsens tiegħek. Jintalbu biss il-verżjoni u l-pakkett tagħha; ma jintbagħat xejn dwarek jew il-magna tiegħek.
 UpdHistUpdated	Aġġornat
 UpdHistUndone	Rritorna lura
+MachineNameLbl	Isem tal-magna
+MachineMakeLbl	Marka u mudell
+SpindleCopyNote	Valuri provviżorji kopjati mis-CCD MTC (spindle KaVo 4010): għal dan il-mudell għad m'hemmx dejta uffiċjali. Jinżammu separatament għal din il-magna u t-tibdil tagħhom hawn ma jolqotx mudelli oħra.
+DesignLocked	Id-disinn magħluq waqt li l-magna taħdem
+HudHolesLbl	toqob
+HudSegmentsLbl	segmenti
+HudNext	Li jmiss
+HudToolsLbl	għodod
+HudLeft	fadal
+HudChanging	Bidla tal-għodda
+HudKindDrill	trapann
+HudKindCutter	frża
+HudRackSlot	pożizzjoni

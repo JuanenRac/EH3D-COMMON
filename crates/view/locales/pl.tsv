@@ -567,3 +567,16 @@ UpdDone	Gotowe. Uruchom program ponownie
 UpdPrivacy	Nic nie jest instalowane bez Twojej zgody. Pobierana jest tylko wersja i jej pakiet; nic o Tobie ani maszynie nie jest wysyłane.
 UpdHistUpdated	Zaktualizowano
 UpdHistUndone	Cofnięto
+MachineNameLbl	Nazwa maszyny
+MachineMakeLbl	Marka i model
+SpindleCopyNote	Wartości tymczasowe skopiowane z CCD MTC (wrzeciono KaVo 4010): dla tego modelu nie ma jeszcze danych oficjalnych. Są przechowywane osobno dla tej maszyny, a ich zmiana nie wpływa na inne modele.
+DesignLocked	Projekt zablokowany, gdy maszyna pracuje
+HudHolesLbl	otwory
+HudSegmentsLbl	odcinki
+HudNext	Następne
+HudToolsLbl	narzędzia
+HudLeft	pozostało
+HudChanging	Wymiana narzędzia
+HudKindDrill	wiertło
+HudKindCutter	frez
+HudRackSlot	miejsce

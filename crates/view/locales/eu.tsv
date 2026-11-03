@@ -567,3 +567,16 @@ UpdDone	Eginda. Berrabiarazi programa erabiltzeko
 UpdPrivacy	Ez da ezer instalatzen zuk eskatu gabe. Bertsioa eta bere paketea eskatzen dira bakarrik; ez da zuri edo zure makinari buruzko ezer bidaltzen.
 UpdHistUpdated	Eguneratuta
 UpdHistUndone	Atzera egin da
+MachineNameLbl	Makinaren izena
+MachineMakeLbl	Marka eta eredua
+SpindleCopyNote	CCD MTC-tik kopiatutako balio behin-behinekoak (KaVo 4010 ardatza): eredu honetarako oraindik ez dago datu ofizialik. Makina honetarako bereizita gordetzen dira eta hemen aldatzeak ez die beste ereduei eragiten.
+DesignLocked	Diseinua blokeatuta dago makinak lan egiten duen bitartean
+HudHolesLbl	zuloak
+HudSegmentsLbl	zatiak
+HudNext	Hurrengoa
+HudToolsLbl	erremintak
+HudLeft	geratzen da
+HudChanging	Erremintaren aldaketa
+HudKindDrill	zulagailua
+HudKindCutter	fresa
+HudRackSlot	posizioa
