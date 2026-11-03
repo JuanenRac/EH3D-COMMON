@@ -4,6 +4,15 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- Add the stable codes `EH3D-PKG-001` to `EH3D-PKG-014` (`PkgCode`) with the common diagnostic for each, and a test that checks the list against the registry of the documentation repository when it is checked out next to this one.
+- Add the strict name and ZIP policy for new formats: names in Unicode normal form C with the UTF-8 flag, duplicates that differ only in case or form, links, devices, directory entries, ZIP64, encryption, methods outside the preset, other flags, data after the end of the archive and entries outside the roots are refused with their code; the `.eh3dproj` 1.0.0 policy keeps its rules.
+- Add `Container`, a bounded reader that opens from the central directory only, refuses a package before decompressing or reserving memory for what it announces, checks the format version before the roots, and streams entries under the limits and a time budget whatever the archive claims.
+- Add `ContainerWriter`: entries are added in any order from a stream, compressed once into a temporary file while their SHA-256 is computed, and assembled in the order of the preset with a canonical `integrity.json` last; the same content gives the same bytes in any insertion order.
+- Add `write_atomic`: temporary file in the target folder, flush and sync, rename, a bounded retry (2 s by default) when another program holds the file on Windows, `EH3D-PKG-014` with the target untouched when it fails, an optional backup copy and a cleaner for old temporary files.
+- Add `Budget` (time and memory) next to `Limits` and `AtomicOptions`, all plain data that a program can read from its configuration file.
+- Refuse in the strict policy the parts of a name that end with a dot or a space and the names that Windows treats as devices (`CON`, `NUL`, `COM1`, ...), with the code `EH3D-PKG-001`.
+- Add the presets `ContainerSpec::phoenixproj` and `ContainerSpec::eh3dproj_v1_1` (with the `assembly/` and `heightmaps/` folders); exports stay at 1.0.0 unless 1.1.0 is asked for.
+- Add the acceptance tests of the container: the generic writer with the 1.0.0 preset reproduces the three reference packages byte for byte, the new reader reads them, and a reader of 1.0.0 refuses a package of the new formats without panicking.
 - Add the `eh3d-container` crate with the pieces that every container format shares: the integrity record with its verification and a content hash that leaves out audit entries, the entry-name rule of version 1.0.0 and canonical JSON (RFC 8785) with the vectors of the standard.
 - Describe the parameters of a container format (roots, limits, JSON form, entry order, versions) in a `ContainerSpec` and add the preset that records `.eh3dproj` 1.0.0 as it behaves; a test keeps the preset and the code in agreement.
 - Use the shared integrity record and name rule inside the `.eh3dproj` container without changing a byte of what it reads or writes: the reference packages and their tests pass unchanged.
