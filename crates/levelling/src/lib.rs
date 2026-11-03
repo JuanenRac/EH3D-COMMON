@@ -169,9 +169,21 @@ impl HeightMap {
     /// `None` when the four points were not measured.
     pub fn height_at(&self, x: f64, y: f64) -> Option<f64> {
         let g = &self.grid;
+        if !(x.is_finite() && y.is_finite()) {
+            return None;
+        }
         let (sx, sy) = g.step();
-        let fx = ((x - g.x0) / sx).clamp(0.0, (g.cols - 1) as f64);
-        let fy = ((y - g.y0) / sy).clamp(0.0, (g.rows - 1) as f64);
+        // an area with no width (or no height) has all its points in one column (or row)
+        let fx = if sx > 0.0 {
+            ((x - g.x0) / sx).clamp(0.0, (g.cols - 1) as f64)
+        } else {
+            0.0
+        };
+        let fy = if sy > 0.0 {
+            ((y - g.y0) / sy).clamp(0.0, (g.rows - 1) as f64)
+        } else {
+            0.0
+        };
         let (c0, r0) = (
             (fx.floor() as usize).min(g.cols - 2),
             (fy.floor() as usize).min(g.rows - 2),
@@ -513,6 +525,19 @@ mod tests {
             Grid::new((0.0, 0.0, 1.0, 1.0), usize::MAX, usize::MAX).len(),
             usize::MAX
         );
+    }
+
+    #[test]
+    fn an_area_with_no_width_gives_a_height_and_not_nan() {
+        let g = Grid::new((5.0, 0.0, 5.0, 100.0), 3, 3);
+        let mut m = HeightMap::new(g);
+        for i in 0..g.len() {
+            m.set(i, 0.01 * g.point(i).1).unwrap();
+        }
+        let z = m.height_at(5.0, 50.0).unwrap();
+        assert!(z.is_finite() && (z - 0.5).abs() < 1e-9, "{z}");
+        assert_eq!(m.height_at(f64::NAN, 1.0), None);
+        assert_eq!(m.height_at(1.0, f64::INFINITY), None);
     }
 
     #[test]
