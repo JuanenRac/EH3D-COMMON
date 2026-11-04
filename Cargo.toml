@@ -26,6 +26,9 @@ license = "GPL-3.0-or-later"
 authors = ["JuanenRac (Electro Hobby 3D) <electrohobby3d@gmail.com>"]
 repository = "https://github.com/JuanenRac/EH3D-COMMON"
 
+[workspace.lints.clippy]
+# the lints every crate is held to, written once; empty today: the CI already runs clippy with warnings as errors and nothing more is asked of the crates yet
+
 [dependencies]
 # serde / serde_json: project.json and integrity.json are plain JSON, readable without this crate.
 serde = { version = "1", features = ["derive"] }
@@ -53,3 +56,6 @@ lto = true
 [profile.dev]
 # a lighter debug build: the file and line of a panic stay, the full debug symbols (the bulk of the target folder) do not
 debug = "line-tables-only"
+
+[lints]
+workspace = true

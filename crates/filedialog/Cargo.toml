@@ -7,3 +7,6 @@ description = "The state of an Open and Save window like the one of any Windows 
 license.workspace = true
 authors.workspace = true
 repository.workspace = true
+
+[lints]
+workspace = true

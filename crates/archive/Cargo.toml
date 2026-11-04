@@ -11,3 +11,6 @@ repository.workspace = true
 [dependencies]
 # the container of the suite is a standard ZIP archive (deflate only)
 zip = { version = "2", default-features = false, features = ["deflate"] }
+
+[lints]
+workspace = true

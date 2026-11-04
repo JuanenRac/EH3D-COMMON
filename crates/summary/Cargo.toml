@@ -13,3 +13,6 @@ repository.workspace = true
 eh3d-bungard-formats = { version = ">=0.0.1", path = "../formats" }
 # the words of the summary in the 37 languages of the suite
 eh3d-view = { version = ">=0.0.1", path = "../view" }
+
+[lints]
+workspace = true
