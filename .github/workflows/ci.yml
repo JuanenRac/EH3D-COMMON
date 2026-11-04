@@ -54,6 +54,23 @@ jobs:
       - name: Tests
         run: cargo ci-test
 
+  firmware-host-tests:
+    name: Host tests of the firmware base
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      # the tests of the shared headers need no board and no other header than the ones of firmware_base/core: they are compiled with the warnings on and run
+      - name: Compile and run the tests that need no board
+        run: |
+          set -eu
+          for test in test_base test_shared; do
+            g++ -std=c++17 -Wall -Wextra -O1 -o "/tmp/$test" "firmware_base/tests/$test.cpp"
+            "/tmp/$test"
+          done
+
   consumers-list:
     name: Repositories that depend on this one
     runs-on: ubuntu-latest
