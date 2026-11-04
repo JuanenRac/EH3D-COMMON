@@ -3,6 +3,7 @@
 All notable changes to this project are documented here.
 
 ## [Unreleased]
+- **The sample files of the machine programs are tested here:** `crates/formats/tests/data` holds the sample configuration, tool tables, drill files and plots of the drilling and routing programs, and the round trips (a configuration and a tool table written back keep their comments and values) are tests of this crate.
 - **Writing a configuration file gives a typed error:** `write_with_backup` returns a `WriteError` with its `kind` (character, backup, write, rename) that reads as its message (`Deref<Target = str>`, `Display`, `From` it to a `String`), so the callers go on working.
 - **A place for the lints of every crate:** `[workspace.lints]` (empty for now) is inherited by all of them.
 - **The CI compiles and runs the host tests of the firmware base** (`test_base` and `test_shared`) with the warnings on.
