@@ -239,6 +239,7 @@ README und Texte gibt es auf Englisch, Spanisch, Französisch, Italienisch, Deut
 * [Projektformat](docs/FORMAT.md): die Einträge, die Metadaten, der Integritätseintrag und die Regeln für Leser.
 * [Die Firmware-Basis](docs/FIRMWARE_BASE.md): was geteilt wird, wie es identisch gehalten wird und wie man einen Knoten hinzufügt.
 * [Änderungsprotokoll](CHANGELOG.md)
+* [Die Crates verwenden](docs/CONSUMING.md): die Nachbarordner, die Zeile mit Pfad und Version, die Features und die Tags, gegen die die CI baut.
 
 ## 🤝 Mitwirken und Community
 

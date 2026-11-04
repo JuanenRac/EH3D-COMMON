@@ -239,6 +239,7 @@ README and texts exist in English, Spanish, French, Italian, German, Chinese, Ja
 * [Project format](docs/FORMAT.md): the entries, the metadata, the integrity record and the rules for readers.
 * [The firmware base](docs/FIRMWARE_BASE.md): what is shared, how it is kept identical and how to add a node.
 * [Changelog](CHANGELOG.md)
+* [Using the crates](docs/CONSUMING.md): the sibling folders, the path and version line, the features and the tags the CI builds against.
 
 ## 🤝 Contributing & Community
 

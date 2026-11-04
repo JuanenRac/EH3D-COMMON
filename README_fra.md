@@ -239,6 +239,7 @@ Le README et les textes existent en anglais, espagnol, français, italien, allem
 * [Format de projet](docs/FORMAT.md) : les entrées, les métadonnées, l'enregistrement d'intégrité et les règles pour les lecteurs.
 * [La base de firmware](docs/FIRMWARE_BASE.md) : ce qui est partagé, comment cela reste identique et comment ajouter un nœud.
 * [Journal des modifications](CHANGELOG.md)
+* [Utiliser les crates](docs/CONSUMING.md) : les dossiers voisins, la ligne de chemin et de version, les fonctionnalités et les étiquettes avec lesquelles la CI compile.
 
 ## 🤝 Contribuer et communauté
 

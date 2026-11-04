@@ -3,6 +3,11 @@
 All notable changes to this project are documented here.
 
 ## [Unreleased]
+- **The CI commands run the same on the computer:** `cargo ci-lint` and `cargo ci-test` (aliases in `.cargo/config.toml`) are what the CI runs, and a plain `cargo test` covers every crate of the workspace (`default-members`).
+- **The crates share what they have in common:** edition, rust-version, licence, authors and repository are written once in `[workspace.package]` and inherited.
+- **A refusal of GRBL has its number and its words:** `Error::code()` gives the number of an `error:N` or `ALARM:N`, and `Error::official_text()` the text of the table of GRBL 1.1 (`codes::grbl_error_text`, `codes::grbl_alarm_text`).
+- **The transport of the tests can delay a reply:** `MockTransport::with_delayed` has replies that become readable at a moment of a virtual clock, so a timeout of the controller is tested without waiting.
+- **A guide to use the crates from another repository:** `docs/CONSUMING.md`.
 
 ## [0.1.7] - Height over an area with no width, the shared job bar of the touch screens, new texts and the application icon
 
