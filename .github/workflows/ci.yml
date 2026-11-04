@@ -67,7 +67,7 @@ jobs:
         run: |
           set -eu
           for test in test_base test_shared; do
-            g++ -std=c++17 -Wall -Wextra -O1 -o "/tmp/$test" "firmware_base/tests/$test.cpp"
+            g++ -std=c++17 -Wall -Wextra -O1 -Ifirmware_base/tests/stub -o "/tmp/$test" "firmware_base/tests/$test.cpp"
             "/tmp/$test"
           done
 
