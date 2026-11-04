@@ -7,6 +7,7 @@
 //! [`grbl`]. A controller that has no implementation yet is still listed, so that the program can say that it is not driven yet rather
 //! than pretend it is.
 
+pub mod codes;
 pub mod grbl;
 pub mod mock;
 pub mod serial;
@@ -276,6 +277,29 @@ impl fmt::Display for Error {
             Error::Refused(e) => write!(f, "refused: {e}"),
             Error::Unsupported(w) => write!(f, "not supported: {w}"),
             Error::Alarm(e) => write!(f, "alarm: {e}"),
+        }
+    }
+}
+
+impl Error {
+    /// The number the controller gave in a refusal (`error:20`) or an alarm (`ALARM:3`); `None` for the other errors and for a text with no number.
+    pub fn code(&self) -> Option<u32> {
+        match self {
+            Error::Refused(text) | Error::Alarm(text) => text
+                .split(|c: char| !c.is_ascii_digit())
+                .find(|part| !part.is_empty())
+                .and_then(|part| part.parse().ok()),
+            _ => None,
+        }
+    }
+
+    /// The text GRBL documents for that number (see [`codes`]), when the error is a refusal or an alarm of a number it uses.
+    pub fn official_text(&self) -> Option<&'static str> {
+        let code = self.code()?;
+        match self {
+            Error::Refused(_) => codes::grbl_error_text(code),
+            Error::Alarm(_) => codes::grbl_alarm_text(code),
+            _ => None,
         }
     }
 }

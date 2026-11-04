@@ -1,12 +1,12 @@
 [package]
 name = "eh3d-summary"
 version = "0.0.1"
-edition = "2021"
-rust-version = "1.89"
+edition.workspace = true
+rust-version.workspace = true
 description = "What a person is shown before a job starts on a machine that moves: the dry run of the exact plan against the course of the axes, the sanity checks of the work and the summary in the languages of the suite"
-license = "GPL-3.0-or-later"
-authors = ["JuanenRac (Electro Hobby 3D) <electrohobby3d@gmail.com>"]
-repository = "https://github.com/JuanenRac/EH3D-COMMON"
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
 
 [dependencies]
 # the machine file: the table and the scale of the machine the work is checked against

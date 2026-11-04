@@ -1,11 +1,11 @@
 [package]
 name = "eh3d-levelling"
 version = "0.0.1"
-edition = "2021"
-rust-version = "1.89"
+edition.workspace = true
+rust-version.workspace = true
 description = "The height map of a machine table: the grid of points a probe measures, the surface between them and the correction of the Z of a job so that it follows the table"
-license = "GPL-3.0-or-later"
-authors = ["JuanenRac (Electro Hobby 3D) <electrohobby3d@gmail.com>"]
-repository = "https://github.com/JuanenRac/EH3D-COMMON"
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
 
 [dependencies]

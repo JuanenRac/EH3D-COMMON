@@ -50,9 +50,9 @@ jobs:
       - name: Format
         run: cargo fmt --all --check
       - name: Lints
-        run: cargo clippy --workspace --all-targets -- -D warnings
+        run: cargo ci-lint
       - name: Tests
-        run: cargo test --workspace --all-targets
+        run: cargo ci-test
 
   consumers-list:
     name: Repositories that depend on this one

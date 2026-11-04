@@ -1,0 +1,6 @@
+# The two commands the CI runs, so that a person runs exactly the same on the computer:
+#   cargo ci-lint    formatting is checked apart (cargo fmt --all --check); this is clippy on everything, warnings are errors
+#   cargo ci-test    the tests of every crate of the workspace
+[alias]
+ci-lint = "clippy --workspace --all-targets -- -D warnings"
+ci-test = "test --workspace --all-targets"
