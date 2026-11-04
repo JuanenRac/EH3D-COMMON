@@ -528,28 +528,102 @@ pub fn text_to_bytes(t: &str) -> Vec<u8> {
         .collect()
 }
 
+/// What went wrong when a configuration file was written.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum WriteErrorKind {
+    /// The text has a character the DOS file cannot hold (above 255).
+    Character,
+    /// The old file could not be copied to `<name>.BAK`.
+    Backup,
+    /// The temporary file could not be written.
+    Write,
+    /// The temporary file could not be put in the place of the file.
+    Rename,
+}
+
+/// The error of [`write_with_backup`]: a kind to tell what happened and the message. It reads as the text of the message (`Deref<Target = str>`, `Display`, `AsRef<str>`,
+/// `PartialEq<str>`, `From` it to a `String`), so that a caller that used the text of the error before goes on working.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct WriteError {
+    /// What went wrong.
+    pub kind: WriteErrorKind,
+    message: String,
+}
+
+impl WriteError {
+    fn new(kind: WriteErrorKind, message: impl Into<String>) -> WriteError {
+        WriteError {
+            kind,
+            message: message.into(),
+        }
+    }
+
+    /// The message.
+    pub fn message(&self) -> &str {
+        &self.message
+    }
+}
+
+impl std::ops::Deref for WriteError {
+    type Target = str;
+    fn deref(&self) -> &str {
+        &self.message
+    }
+}
+
+impl std::fmt::Display for WriteError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        f.write_str(&self.message)
+    }
+}
+
+impl std::error::Error for WriteError {}
+
+impl AsRef<str> for WriteError {
+    fn as_ref(&self) -> &str {
+        &self.message
+    }
+}
+
+impl PartialEq<str> for WriteError {
+    fn eq(&self, other: &str) -> bool {
+        self.message == other
+    }
+}
+
+impl From<WriteError> for String {
+    fn from(error: WriteError) -> String {
+        error.message
+    }
+}
+
 /// Writes `text` to `path`, keeping the old file as `<name>.BAK` next to it.
-pub fn write_with_backup(path: &std::path::Path, text: &str) -> Result<(), String> {
+pub fn write_with_backup(path: &std::path::Path, text: &str) -> Result<(), WriteError> {
     // the files are DOS text, one byte for each character: a character the file cannot hold is refused instead of becoming a question mark
     if let Some(c) = text.chars().find(|&c| u32::from(c) > 255) {
-        return Err(format!(
-            "the character '{c}' cannot be written in the file {}: it is a DOS text file, one byte for each character",
-            path.display()
+        return Err(WriteError::new(
+            WriteErrorKind::Character,
+            format!(
+                "the character '{c}' cannot be written in the file {}: it is a DOS text file, one byte for each character",
+                path.display()
+            ),
         ));
     }
     if path.exists() {
         let mut bak = path.as_os_str().to_owned();
         bak.push(".BAK");
-        std::fs::copy(path, std::path::PathBuf::from(bak)).map_err(|e| e.to_string())?;
+        std::fs::copy(path, std::path::PathBuf::from(bak))
+            .map_err(|e| WriteError::new(WriteErrorKind::Backup, e.to_string()))?;
     }
     // through a temporary file and a rename, so that a cut in the middle never leaves the file half written
     let mut tmp = path.as_os_str().to_owned();
     tmp.push(".TMP");
     let tmp = std::path::PathBuf::from(tmp);
-    std::fs::write(&tmp, text_to_bytes(text)).map_err(|e| e.to_string())?;
+    std::fs::write(&tmp, text_to_bytes(text))
+        .map_err(|e| WriteError::new(WriteErrorKind::Write, e.to_string()))?;
     std::fs::rename(&tmp, path).map_err(|e| {
         let _ = std::fs::remove_file(&tmp);
-        e.to_string()
+        WriteError::new(WriteErrorKind::Rename, e.to_string())
     })
 }
 
@@ -593,7 +667,14 @@ mod write_tests {
             b"one\r\n"
         );
         assert!(!dir.join("MACHINE.DCF.TMP").exists());
-        assert!(write_with_backup(&file, "Łukasz").is_err());
+        let refused = write_with_backup(&file, "Łukasz").unwrap_err();
+        assert_eq!(refused.kind, WriteErrorKind::Character);
+        // it reads as its message, as the String it replaced did
+        assert!(refused.contains("DOS text file"));
+        assert_eq!(String::from(refused.clone()), refused.to_string());
+        assert!(refused.as_ref().starts_with("the character"));
+        let missing_folder = write_with_backup(&dir.join("none").join("X.DCF"), "a").unwrap_err();
+        assert_eq!(missing_folder.kind, WriteErrorKind::Write);
         assert_eq!(
             std::fs::read(&file).unwrap(),
             b"two\r\n",

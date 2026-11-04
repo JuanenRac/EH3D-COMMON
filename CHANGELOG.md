@@ -3,6 +3,9 @@
 All notable changes to this project are documented here.
 
 ## [Unreleased]
+- **Writing a configuration file gives a typed error:** `write_with_backup` returns a `WriteError` with its `kind` (character, backup, write, rename) that reads as its message (`Deref<Target = str>`, `Display`, `From` it to a `String`), so the callers go on working.
+- **A place for the lints of every crate:** `[workspace.lints]` (empty for now) is inherited by all of them.
+- **The CI compiles and runs the host tests of the firmware base** (`test_base` and `test_shared`) with the warnings on.
 - **The CI commands run the same on the computer:** `cargo ci-lint` and `cargo ci-test` (aliases in `.cargo/config.toml`) are what the CI runs, and a plain `cargo test` covers every crate of the workspace (`default-members`).
 - **The crates share what they have in common:** edition, rust-version, licence, authors and repository are written once in `[workspace.package]` and inherited.
 - **A refusal of GRBL has its number and its words:** `Error::code()` gives the number of an `error:N` or `ALARM:N`, and `Error::official_text()` the text of the table of GRBL 1.1 (`codes::grbl_error_text`, `codes::grbl_alarm_text`).
