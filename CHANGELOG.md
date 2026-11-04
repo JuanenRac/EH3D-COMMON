@@ -3,6 +3,9 @@
 All notable changes to this project are documented here.
 
 ## [Unreleased]
+
+## [0.1.7] - Height over an area with no width, the shared job bar of the touch screens, new texts and the application icon
+
 - **Brand:** Add the application icon and the logos of the program.
 
 - **A height map over an area with no width or no height gives a height:** the interpolation no longer returns NaN when all the points are in one column or row, and a position that is not a finite number has no height.- **Shared checks updated:** the validator also compares the badge and the Version row of the README with the manifest, fails when one of its checks cannot run, and the CHANGELOG step of the workflow reads the base branch from the environment.
