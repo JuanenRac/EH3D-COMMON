@@ -8,8 +8,16 @@ pub const DOCUMENTS: (&str, &str) = ("documents.json", include_str!("../data/doc
 
 /// The embedded files as `(file name, JSON text)`.
 pub const FILES: &[(&str, &str)] = &[
+    (
+        "agc-nelco_lote2_t3.json",
+        include_str!("../data/agc-nelco_lote2_t3.json"),
+    ),
     ("aismalibar.json", include_str!("../data/aismalibar.json")),
     ("arlon.json", include_str!("../data/arlon.json")),
+    (
+        "arlon_lote2_t3.json",
+        include_str!("../data/arlon_lote2_t3.json"),
+    ),
     ("bungard.json", include_str!("../data/bungard.json")),
     ("doosan.json", include_str!("../data/doosan.json")),
     ("dupont.json", include_str!("../data/dupont.json")),
@@ -27,14 +35,18 @@ pub const FILES: &[(&str, &str)] = &[
     ),
     ("panasonic.json", include_str!("../data/panasonic.json")),
     ("rogers.json", include_str!("../data/rogers.json")),
+    (
+        "rogers_lote2_t3.json",
+        include_str!("../data/rogers_lote2_t3.json"),
+    ),
     ("shengyi.json", include_str!("../data/shengyi.json")),
     (
         "shengyi_lote2_t1.json",
         include_str!("../data/shengyi_lote2_t1.json"),
-        (
-            "shengyi_lote2_t2.json",
-            include_str!("../data/shengyi_lote2_t2.json"),
-        ),
+    ),
+    (
+        "shengyi_lote2_t2.json",
+        include_str!("../data/shengyi_lote2_t2.json"),
     ),
     ("taconic.json", include_str!("../data/taconic.json")),
     ("thinflex.json", include_str!("../data/thinflex.json")),
@@ -42,40 +54,28 @@ pub const FILES: &[(&str, &str)] = &[
     (
         "ventec_lote2_t1.json",
         include_str!("../data/ventec_lote2_t1.json"),
-        (
-            "ventec_lote2_t2.json",
-            include_str!("../data/ventec_lote2_t2.json"),
-        ),
     ),
     (
-        "wazam_lote2_t1.json",
-        include_str!("../data/wazam_lote2_t1.json"),
-        (
-            "wazam_lote2_t2.json",
-            include_str!("../data/wazam_lote2_t2.json"),
-        ),
-    ),
-    ("yuxinda.json", include_str!("../data/yuxinda.json")),
-    (
-        "agc-nelco_lote2_t3.json",
-        include_str!("../data/agc-nelco_lote2_t3.json"),
-    ),
-    (
-        "arlon_lote2_t3.json",
-        include_str!("../data/arlon_lote2_t3.json"),
-    ),
-    (
-        "rogers_lote2_t3.json",
-        include_str!("../data/rogers_lote2_t3.json"),
+        "ventec_lote2_t2.json",
+        include_str!("../data/ventec_lote2_t2.json"),
     ),
     (
         "ventec_lote2_t3.json",
         include_str!("../data/ventec_lote2_t3.json"),
     ),
     (
+        "wazam_lote2_t1.json",
+        include_str!("../data/wazam_lote2_t1.json"),
+    ),
+    (
+        "wazam_lote2_t2.json",
+        include_str!("../data/wazam_lote2_t2.json"),
+    ),
+    (
         "wazam_lote2_t3.json",
         include_str!("../data/wazam_lote2_t3.json"),
     ),
+    ("yuxinda.json", include_str!("../data/yuxinda.json")),
 ];
 
 #[cfg(test)]
