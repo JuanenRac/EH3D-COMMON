@@ -4,6 +4,23 @@
  "materials": [
   {
    "id": "ventec/vt-870-l330",
+   "processing": {
+     "drilling": {
+       "retract_notes": "Suggested parameters (diameter mm: spindle krpm, infeed IPM, retract IPM, hit count): 0.20: 55, 75, 500, 500; 0.25: 55, 75, 500, 500; 0.30: 40, 52, 500, 500; 0.40: 55, 75, 1000, 500; 0.60: 46, 70, 1000, 500; 1.00: 38, 76, 1000, 500; 2.53: 21, 63, 1000, 500. Adjust to hole size, layer count, panel thickness and stack height and check the through holes; excessive wear of carbide bits, diamond coated bits recommended; LE aluminium entry sheet and white phenolic entry board preferred."
+     },
+     "bake_note": "Optional bake cycles: after cutting (laminate under 10 mil) 2 hours at 150 C for dimensional stabilization; after oxide 1 to 2 hours at 120 C; before HASL 2 hours at 125 C; before shipment, if stored for over 3 months, 2 to 4 hours at 105 C."
+   },
+   "sources": [
+     {
+       "pdf": "211015tecspeed20-vt-870.pdf",
+       "pages": "1-3",
+       "revision": "B1.0"
+     },
+     {
+       "pdf": "tec-speed200-vt-870-pgl-202411.pdf",
+       "pages": "1-4"
+     }
+   ],
    "manufacturer": "Ventec",
    "name": "VT-870 L330",
    "kind": "ceramic_filled",
@@ -58,6 +75,23 @@
   },
   {
    "id": "ventec/vt-870-h348",
+   "processing": {
+     "drilling": {
+       "retract_notes": "Suggested parameters (diameter mm: spindle krpm, infeed IPM, retract IPM, hit count): 0.20: 55, 75, 500, 500; 0.25: 55, 75, 500, 500; 0.30: 40, 52, 500, 500; 0.40: 55, 75, 1000, 500; 0.60: 46, 70, 1000, 500; 1.00: 38, 76, 1000, 500; 2.53: 21, 63, 1000, 500. Adjust to hole size, layer count, panel thickness and stack height and check the through holes; excessive wear of carbide bits, diamond coated bits recommended; LE aluminium entry sheet and white phenolic entry board preferred."
+     },
+     "bake_note": "Optional bake cycles: after cutting (laminate under 10 mil) 2 hours at 150 C for dimensional stabilization; after oxide 1 to 2 hours at 120 C; before HASL 2 hours at 125 C; before shipment, if stored for over 3 months, 2 to 4 hours at 105 C."
+   },
+   "sources": [
+     {
+       "pdf": "211015tecspeed20-vt-870.pdf",
+       "pages": "1-3",
+       "revision": "B1.0"
+     },
+     {
+       "pdf": "tec-speed200-vt-870-pgl-202411.pdf",
+       "pages": "1-4"
+     }
+   ],
    "manufacturer": "Ventec",
    "name": "VT-870 H348",
    "kind": "ceramic_filled",
@@ -112,6 +146,22 @@
   },
   {
    "id": "ventec/vt-870-bondply",
+   "processing": {
+     "lamination": {
+       "notes": "Heating rate of the material 3.0 to 4.0 C/min between 80 and 110 C and between 130 and 150 C, and 1 C/min between 110 and 130 C with a 20 min dwell at 110 to 130 C; cure more than 60 min above 210 C with a peak temperature above 215 C; full pressure of 500 to 750 psi applied before the material reaches 60 C (as printed); a cushion for pressure evenness is needed; more than 12 layers is not recommended. May be pressed as single or sequential lamination and bonded with VT-870 H348/L330 cores or FR-4 cores. Storage below 5 C for 6 months or at room temperature for 24 months (airproof)."
+     }
+   },
+   "sources": [
+     {
+       "pdf": "211015tecspeed20-vt-870.pdf",
+       "pages": "1-3",
+       "revision": "B1.0"
+     },
+     {
+       "pdf": "tec-speed200-vt-870-pgl-202411.pdf",
+       "pages": "1-4"
+     }
+   ],
    "manufacturer": "Ventec",
    "name": "VT-870 Bondply",
    "kind": "prepreg",
@@ -138,6 +188,22 @@
   },
   {
    "id": "ventec/vt-870-h1000",
+   "processing": {
+     "drilling": {
+       "retract_notes": "Suggested parameters (diameter mm: spindle krpm, infeed IPM, retract IPM, hit count): 0.20: 55, 75, 500, 500; 0.25: 55, 75, 500, 500; 0.30: 40, 52, 500, 500; 0.40: 55, 75, 1000, 500; 0.60: 46, 70, 1000, 500; 1.00: 38, 76, 1000, 500; 2.53: 21, 63, 1000, 500. Adjust to hole size, layer count, panel thickness and stack height and check the through holes; excessive wear of carbide bits, diamond coated bits recommended; LE aluminium entry sheet and white phenolic entry board preferred."
+     }
+   },
+   "sources": [
+     {
+       "pdf": "231122-tecspeed20-vt-870-h1000.pdf",
+       "pages": "1-2",
+       "revision": "22/11/2023"
+     },
+     {
+       "pdf": "tec-speed200-vt-870-h1000-pgl-202411.pdf",
+       "pages": "1-4"
+     }
+   ],
    "manufacturer": "Ventec",
    "name": "VT-870 H1000",
    "kind": "ceramic_filled",
@@ -221,6 +287,22 @@
   },
   {
    "id": "ventec/vtm1000i",
+   "processing": {
+     "drilling": {
+       "retract_notes": "Suggested parameters (diameter mm: spindle krpm, infeed IPM, retract IPM, hit count): 0.50: 55, 150, 1000, 500; 0.60: 46, 130, 1000, 500; 1.00: 30, 86, 1000, 500; 2.53: 15, 45, 1000, 500. Chip load 0.0025 to 0.005 in per revolution; surface speed 300 to 400 SFM. Excessive wear of carbide bits, diamond coated bits recommended; LE aluminium entry sheet and white phenolic entry board preferred; tooling and pinning holes drilled or routed, punching forbidden."
+     }
+   },
+   "sources": [
+     {
+       "pdf": "230320tecspeed20-vtm1000i.pdf",
+       "pages": "1-2",
+       "revision": "Prelim 1"
+     },
+     {
+       "pdf": "tec-speed200-vtm1000i-pgl-202411.pdf",
+       "pages": "1-4"
+     }
+   ],
    "manufacturer": "Ventec",
    "name": "VTM1000i",
    "kind": "ceramic_filled",
@@ -401,6 +483,22 @@
   },
   {
    "id": "ventec/vt-6702",
+   "processing": {
+     "drilling": {
+       "retract_notes": "Suggested parameters (diameter mm: spindle krpm, infeed IPM, retract IPM, hit count): 0.50: 48, 95, 500, 400; 0.65: 37, 74, 500, 400; 1.00: 24, 48, 500, 400; 1.25: 20, 40, 500, 400; 1.59: 20, 40, 500, 400; 2.00: 20, 40, 500, 400; 3.00: 20, 40, 500, 400. Chip load 0.002 to 0.004 in per revolution; surface speed 200 to 300 SFM; carbide or diamond coated bits recommended; LE aluminium entry sheet and white phenolic entry board preferred. "
+     }
+   },
+   "sources": [
+     {
+       "pdf": "221011-tec-speed30-vt-6702.pdf",
+       "pages": "1-2",
+       "revision": "11/10/2022"
+     },
+     {
+       "pdf": "tec-speed300-vt-6702-pgl-202411.pdf",
+       "pages": "1-4"
+     }
+   ],
    "manufacturer": "Ventec",
    "name": "VT-6702",
    "kind": "laminate",
@@ -445,6 +543,23 @@
   },
   {
    "id": "ventec/vt-6880",
+   "processing": {
+     "drilling": {
+       "retract_notes": "Suggested parameters (diameter mm: spindle krpm, infeed IPM, retract IPM, hit count): 0.50: 40, 78, 500, 300; 0.65: 30, 60, 500, 300; 1.00: 20, 40, 500, 300; 1.25: 20, 40, 500, 300; 1.59: 20, 40, 500, 200; 2.00: 20, 40, 500, 200; 3.00: 20, 40, 500, 200. Chip load 0.0015 to 0.003 in per revolution; surface speed 150 to 300 SFM; carbide drills should be used to minimize wear of the cutting edges; LE aluminium entry sheet and white phenolic entry board preferred. "
+     },
+     "desmear_note": "Plasma desmear is necessary, with the material baked more than 1 hour at 120 C before plasma and no high pressure washing or scrubbing before metallization; half the FR-4 plasma time is recommended. Printed cycles (pressure mT, temperature C, power W, duration min): 150, 90, 1800, 15 in 80 % H2 and 20 % N2; 150, 95, 2000, 15 in 10 % CF4 and 90 % N2; 170, 95, 1800, 10 in 100 % O2; 180, 95, 1800, 10 in 100 % N2. Permanganate desmear is not recommended."
+   },
+   "sources": [
+     {
+       "pdf": "230601-tec-speed30-vt-6880.pdf",
+       "pages": "1-2",
+       "revision": "A1"
+     },
+     {
+       "pdf": "tec-speed300-vt-6880-pgl-202411.pdf",
+       "pages": "1-4"
+     }
+   ],
    "manufacturer": "Ventec",
    "name": "VT-6880",
    "kind": "ptfe",
@@ -609,6 +724,23 @@
   },
   {
    "id": "ventec/vt-6710",
+   "processing": {
+     "drilling": {
+       "retract_notes": "Suggested parameters (diameter mm: spindle krpm, infeed IPM, retract IPM, hit count): 0.50: 48, 95, 500, 400; 0.65: 37, 74, 500, 400; 1.00: 24, 48, 500, 400; 1.25: 20, 40, 500, 400; 1.59: 20, 40, 500, 400; 2.00: 20, 40, 500, 400; 3.00: 20, 40, 500, 400. Chip load 0.002 to 0.004 in per revolution; surface speed 200 to 300 SFM; carbide or diamond coated bits recommended; LE aluminium entry sheet and white phenolic entry board preferred. "
+     },
+     "desmear_note": "Plasma desmear is necessary, with the material baked more than 1 hour at 120 C before plasma and no high pressure washing or scrubbing before metallization; half the FR-4 plasma time is recommended. Printed cycles (pressure mT, temperature C, power W, duration min): 250, 90, 4500, 5 in 90 % H2 and 10 % N2; 250, 100, 4000, 10 in 10 % CF4 and 90 % N2; 250, 100, 4000, 5 in 100 % O2; 250, 100, 4200, 30 in 100 % N2. Permanganate desmear is not recommended."
+   },
+   "sources": [
+     {
+       "pdf": "250424-tec-speed30-vt-6710.pdf",
+       "pages": "1-2",
+       "revision": "24/04/2025"
+     },
+     {
+       "pdf": "tec-speed300-vt-6710-pgl-202411.pdf",
+       "pages": "1-4"
+     }
+   ],
    "manufacturer": "Ventec",
    "name": "VT-6710",
    "kind": "laminate",
