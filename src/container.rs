@@ -195,7 +195,7 @@ impl Package {
             if file.is_dir() {
                 continue;
             }
-            let name = file.name().to_owned();
+            let name = file.name()?.into_owned();
             check_entry_name(&name)?;
             if raw.contains_key(&name) {
                 return Err(Error::DuplicateEntry(name));

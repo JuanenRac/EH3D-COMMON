@@ -81,13 +81,16 @@ impl Archive {
         let mut entries = Vec::new();
         for i in 0..zip.len() {
             let f = zip.by_index(i).map_err(|e| e.to_string())?;
-            if f.is_dir() || safe_name(f.name()).is_none() {
+            let Ok(name) = f.name().map(|n| n.into_owned()) else {
+                continue;
+            };
+            if f.is_dir() || safe_name(&name).is_none() {
                 continue;
             }
             entries.push(Entry {
-                name: f.name().to_string(),
                 size: f.size(),
-                kind: kind_of(f.name()),
+                kind: kind_of(&name),
+                name,
             });
         }
         Ok(Archive { zip, entries })
