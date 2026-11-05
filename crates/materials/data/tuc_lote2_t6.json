@@ -1,0 +1,2291 @@
+{
+  "schema_version": 1,
+  "manufacturer": "TUC",
+  "materials": [
+    {
+      "id": "tuc/thunderclad-1-plus",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 1 Plus",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 1+_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2407018A"
+      },
+      "family": "ThunderClad",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/130",
+      "tg_dma_c": 210,
+      "tg_dsc_c": 180,
+      "tg_tma_c": 170,
+      "td_c": 375,
+      "cte_z_50_260_pct": 2.2,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 13.0,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 210.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.45,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0072,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 26.0,
+        "crosswise": 24.0
+      },
+      "water_absorption_pct": 0.13,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "Hi-Tg Halogen free Low Loss laminate and prepreg. Core TU-863+, prepreg TU-863P+. IPC-4101 type designations /127, /128, /130. UL ANSI grade FR-4.1. Maximum operating temperature 130 C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 30 min. Impedance simulation Dk 3.22. Peel strength 4-7 lb/in (1.0 oz RTF copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 5 oz for built-up & double sides and H to 2 oz. Prepreg glass styles: 106, 1080, 3313, 2116 etc and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/thunderclad-1",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 1",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 1_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1801004A"
+      },
+      "family": "ThunderClad",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/130",
+      "tg_dma_c": 210,
+      "tg_dsc_c": 180,
+      "tg_tma_c": 170,
+      "td_c": 365,
+      "cte_z_50_260_pct": 2.6,
+      "dk": [
+        {
+          "freq_ghz": 5.0,
+          "value": 4.0,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.9,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 5.0,
+          "value": 0.009,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0095,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 26.0,
+        "crosswise": 24.0
+      },
+      "water_absorption_pct": 0.13,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "Hi-Tg Halogen free Low Loss laminate and prepreg. Core TU-863, prepreg TU-863P. IPC-4101 type designations /127, /128, /130. UL ANSI grade FR-4.1. Maximum operating temperature 130 C. CTE x and y 11-15 ppm/C (ambient to Tg). Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 30 min. Dk at 1GHz printed as 4.1/3.9 (two methods). Df at 1GHz printed as 0.008/0.006 (two methods). Peel strength 5-7 lb/in (1.0 oz RTF copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 5 oz (HTE) for built-up & double sides and H to 2 oz (MLS). Prepreg glass styles: 106, 1080, 3313, 2116 etc and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/thunderclad-2-sp",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 2 Sp",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 2 sp_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2407009A"
+      },
+      "family": "ThunderClad",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/134",
+      "tg_dma_c": 220,
+      "tg_tma_c": 170,
+      "td_c": 420,
+      "cte_z_50_260_pct": 2.5,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 13.0,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 240.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.15,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0028,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 28.0,
+        "crosswise": 26.0
+      },
+      "water_absorption_pct": 0.08,
+      "notes": "Very Low Loss and High Thermal Reliability Laminate and Prepreg. Core TU-883 Sp, prepreg TU-883P. IPC-4101 type designation /134. UL ANSI grade No-ANSI. Maximum operating temperature 160 C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Impedance simulation Dk 2.80. Peel strength 4-6 lb/in (1.0 oz HTE copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 3 oz for built-up & double sides. Prepreg glass styles: 106, 1080, 2113, 2116 and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/thunderclad-200g",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 200G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 200g_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2407004A"
+      },
+      "family": "ThunderClad",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/134",
+      "tg_dma_c": 240,
+      "tg_tma_c": 200,
+      "td_c": 430,
+      "cte_z_50_260_pct": 2.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 13.0,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 200.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.45,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0032,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 31.0,
+        "crosswise": 29.0
+      },
+      "water_absorption_pct": 0.08,
+      "notes": "Very Low Loss and High Thermal Reliability Laminate and Prepreg. Core TU-885, prepreg TU-885P. IPC-4101 type designation /134. UL ANSI grade No-ANSI. Maximum operating temperature 160 C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Impedance simulation Dk 2.93. Peel strength 4-6 lb/in (1.0 oz HVLP copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 2 oz for built-up & double sides. Prepreg glass styles: 106, 1078, 3313, 2116 and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/thunderclad-2",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 2",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 2_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2407008A"
+      },
+      "sources": [
+        {
+          "pdf": "TU-883_thunderclad 2_datasheet.pdf",
+          "pages": "1-2",
+          "revision": "DS2001001A"
+        }
+      ],
+      "family": "ThunderClad",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/134",
+      "tg_dma_c": 220,
+      "tg_tma_c": 170,
+      "td_c": 420,
+      "cte_z_50_260_pct": 2.5,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 13.0,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 240.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.39,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0045,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 28.0,
+        "crosswise": 26.0
+      },
+      "water_absorption_pct": 0.08,
+      "notes": "Very Low Loss and High Thermal Reliability Laminate and Prepreg. Core TU-883, prepreg TU-883P. IPC-4101 type designation /134. UL ANSI grade No-ANSI. Maximum operating temperature 160 C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Impedance simulation Dk 2.83. Peel strength 4-6 lb/in (1.0 oz copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 5 oz for built-up & double sides. Prepreg glass styles: 106, 1080, 3313, 2116 and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/thunderclad-2a-sp",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 2A Sp",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 2a sp_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2407007A"
+      },
+      "family": "ThunderClad",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 240,
+      "tg_tma_c": 200,
+      "td_c": 430,
+      "cte_z_50_260_pct": 2.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 13.0,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 200.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.17,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0018,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 31.0,
+        "crosswise": 29.0
+      },
+      "water_absorption_pct": 0.08,
+      "notes": "Super Low Loss and High Thermal Reliability Laminate and repreg. Core TU-883A Sp, prepreg TU-883P A. IPC-4101 type designation /134. UL ANSI grade No-ANSI. Maximum operating temperature 160 C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Impedance simulation Dk 2.91. Peel strength 4-6 lb/in (1.0 oz HVLP copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 3 oz for built-up & double sides. Prepreg glass styles: 1035, 1078, 2113, 2116 and other prepreg grades are available upon request Super."
+    },
+    {
+      "id": "tuc/thunderclad-2a",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 2A",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 2a_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2407006A"
+      },
+      "family": "ThunderClad",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/134",
+      "tg_dma_c": 240,
+      "tg_tma_c": 200,
+      "td_c": 430,
+      "cte_z_50_260_pct": 2.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 13.0,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 200.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.44,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0032,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 31.0,
+        "crosswise": 29.0
+      },
+      "water_absorption_pct": 0.08,
+      "notes": "Very Low Loss and High Thermal Reliability Laminate and Prepreg. Core TU-883A, prepreg TU-883P A. IPC-4101 type designation /134. UL ANSI grade No-ANSI. Maximum operating temperature 160 C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Impedance simulation Dk 2.92. Peel strength 4-6 lb/in (1.0 oz HVLP copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 2 oz for built-up & double sides. Prepreg glass styles: 106, 1078, 3313, 2116 and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/thunderclad-2c",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 2C",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 2c_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2407010A"
+      },
+      "family": "ThunderClad",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/134",
+      "tg_dma_c": 220,
+      "tg_tma_c": 170,
+      "td_c": 420,
+      "cte_z_50_260_pct": 2.5,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 13.0,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 240.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.39,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0045,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 28.0,
+        "crosswise": 26.0
+      },
+      "water_absorption_pct": 0.08,
+      "notes": "Very Low Loss and High Thermal Reliability Laminate and Prepreg. Core TU-883C, prepreg TU-883P C. IPC-4101 type designation /134. UL ANSI grade No-ANSI. Maximum operating temperature 160 C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Impedance simulation Dk 2.83. Peel strength 4-6 lb/in (1.0 oz copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 5 oz for built-up & double sides. Prepreg glass styles: 106, 1080, 3313, 2116 and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/thunderclad-3-plus",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 3 Plus",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 3+_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2407011A"
+      },
+      "sources": [
+        {
+          "pdf": "TU-933_thunderclad 3+_datasheet.pdf",
+          "pages": "1-2",
+          "revision": "DS2003002A"
+        }
+      ],
+      "family": "ThunderClad",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/102",
+      "tg_dma_c": 220,
+      "tg_tma_c": 170,
+      "td_c": 390,
+      "cte_z_50_260_pct": 2.5,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 13.0,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 240.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.08,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.002,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 23.0,
+        "crosswise": 21.0
+      },
+      "water_absorption_pct": 0.06,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "Laminate and Prepreg. Core TU-933+, prepreg TU-933P+. IPC-4101 type designation /102. UL ANSI grade No-ANSI. Maximum operating temperature 140 C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Impedance simulation Dk 2.54. Peel strength 4-7 lb/in (1.0 oz copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 5 oz for built-up & double sides. Prepreg glass styles: 1035, 1078, 2116 and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/thunderclad-3",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 3",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 3_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2003003A"
+      },
+      "family": "ThunderClad",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/102",
+      "tg_dma_c": 220,
+      "tg_tma_c": 170,
+      "td_c": 390,
+      "cte_z_50_260_pct": 2.7,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 250.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0025,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 24.0,
+        "crosswise": 22.0
+      },
+      "water_absorption_pct": 0.06,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "Laminate and Prepreg. Core TU-933, prepreg TU-933P. IPC-4101 type designation /102. UL ANSI grade No-ANSI. Maximum operating temperature 140 C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Peel strength 4-6 lb/in (1.0 oz copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 5 oz for built-up & double sides. Prepreg glass styles: 1035, 1078, 2113, 2116 and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/thunderclad-3e",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 3E",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 3e_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2005004A"
+      },
+      "family": "ThunderClad",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/102",
+      "tg_dma_c": 220,
+      "tg_tma_c": 170,
+      "td_c": 390,
+      "cte_z_50_260_pct": 2.7,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 250.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "SPC method",
+          "resin_content_pct": 65
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0036,
+          "method": "SPC method",
+          "resin_content_pct": 65
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 23.0,
+        "crosswise": 21.0
+      },
+      "water_absorption_pct": 0.06,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "Laminate and Prepreg. Core TU-933E, prepreg TU-933P E. IPC-4101 type designation /102. UL ANSI grade no-ANSI. Maximum operating temperature 140 C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Peel strength 4-7 lb/in (1.0 oz copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 3 oz for built-up & double sides. Prepreg glass styles: 1078, 1086, and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/thunderclad-400g",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 400G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 400g_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2407005A"
+      },
+      "family": "ThunderClad",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/134",
+      "tg_dma_c": 240,
+      "tg_tma_c": 200,
+      "td_c": 430,
+      "cte_z_50_260_pct": 2.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 13.0,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 200.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.17,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0018,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 31.0,
+        "crosswise": 29.0
+      },
+      "water_absorption_pct": 0.08,
+      "notes": "Super Low Loss and High Thermal Reliability Laminate and Prepreg. Core TU-885 Sp, prepreg TU-885P. IPC-4101 type designation /134. UL ANSI grade No-ANSI. Maximum operating temperature 160 C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Impedance simulation Dk 2.90. Peel strength 4-6 lb/in (1.0 oz HVLP copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 3 oz for built-up & double sides. Prepreg glass styles: 1035, 1078, 2113, 2116 and other prepreg grades are available upon request Super."
+    },
+    {
+      "id": "tuc/thunderclad-4hn",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 4HN",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 4hn_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2607010A"
+      },
+      "family": "ThunderClad",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 210,
+      "td_c": 430,
+      "cte_z_50_260_pct": 2.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 13.0,
+      "cte_z_below_tg_ppm": 40.0,
+      "cte_z_above_tg_ppm": 220.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.16,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0013,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 23.0,
+        "crosswise": 22.0
+      },
+      "water_absorption_pct": 0.08,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.71,
+        "steps_note": "0.002 to 0.028 in, in sheet or panel form"
+      },
+      "notes": "Reliability Laminate and Prepreg. Core TU-943HN. IPC-4101 type designation /134. UL ANSI grade No-ANSI. Maximum operating temperature 160 C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Impedance simulation Dk 2.83. Peel strength 4-6 lb/in (1.0 oz HVLP copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 2 oz for built-up & double sides. Prepreg glass styles: 1035, 1078 and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/thunderclad-4hr",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 4HR",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 4hr_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2607009A"
+      },
+      "family": "ThunderClad",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 210,
+      "td_c": 430,
+      "cte_z_50_260_pct": 2.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 13.0,
+      "cte_z_below_tg_ppm": 40.0,
+      "cte_z_above_tg_ppm": 220.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.14,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0011,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 23.0,
+        "crosswise": 22.0
+      },
+      "water_absorption_pct": 0.08,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.71,
+        "steps_note": "0.002 to 0.028 in, in sheet or panel form"
+      },
+      "notes": "Reliability Laminate and Prepreg. Core TU-943HR. IPC-4101 type designation /134. UL ANSI grade No-ANSI. Maximum operating temperature 160 C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Impedance simulation Dk 2.73. Peel strength 4-6 lb/in (1.0 oz HVLP copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 2 oz for built-up & double sides. Prepreg glass styles: 1035, 1078 and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/thunderclad-4sn",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 4SN",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 4sn_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2407012A"
+      },
+      "family": "ThunderClad",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/102",
+      "tg_dma_c": 225,
+      "tg_tma_c": 195,
+      "td_c": 420,
+      "cte_z_50_260_pct": 1.7,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 13.0,
+      "cte_z_below_tg_ppm": 32.0,
+      "cte_z_above_tg_ppm": 210.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.16,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0014,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 24.0,
+        "crosswise": 23.0
+      },
+      "water_absorption_pct": 0.08,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.71,
+        "steps_note": "0.002 to 0.028 in, in sheet or panel form"
+      },
+      "notes": "Laminate and Prepreg. Core TU-943SN. IPC-4101 type designation /102. UL ANSI grade non-ANSI. Maximum operating temperature 140 C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Impedance simulation Dk 2.71. Peel strength 4-6 lb/in (1.0 oz HVLP copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 2 oz for built-up & double sides. Prepreg glass styles: 1035, 1078 and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/thunderclad-4sr",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 4SR",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 4sr_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2408004A"
+      },
+      "family": "ThunderClad",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/102",
+      "tg_dma_c": 225,
+      "tg_tma_c": 195,
+      "td_c": 420,
+      "cte_z_50_260_pct": 1.7,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 13.0,
+      "cte_z_below_tg_ppm": 32.0,
+      "cte_z_above_tg_ppm": 210.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.16,
+          "method": "SPC method",
+          "resin_content_pct": 64
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0013,
+          "method": "SPC method",
+          "resin_content_pct": 64
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 24.0,
+        "crosswise": 23.0
+      },
+      "water_absorption_pct": 0.08,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.71,
+        "steps_note": "0.002 to 0.028 in, in sheet or panel form"
+      },
+      "notes": "Reliability Laminate and Prepreg. Core TU-943SR. IPC-4101 type designation /102. UL ANSI grade non-ANSI. Maximum operating temperature 140 C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Impedance simulation Dk 2.92. Peel strength 4-6 lb/in (1.0 oz HVLP copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 2 oz for built-up & double sides. Prepreg glass styles: 1035, 1078 and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/thunderclad-5n",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 5N",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 5n_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2606004A"
+      },
+      "family": "ThunderClad",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 200,
+      "td_c": 430,
+      "cte_z_50_260_pct": 1.2,
+      "cte_x_ppm": 4.0,
+      "cte_y_ppm": 6.0,
+      "cte_z_below_tg_ppm": 30.0,
+      "cte_z_above_tg_ppm": 135.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.21,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.00113,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 23.0,
+        "crosswise": 22.0
+      },
+      "water_absorption_pct": 0.05,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.71,
+        "steps_note": "0.002 to 0.028 in, in sheet or panel form"
+      },
+      "notes": "Reliability Laminate and Prepreg. Core TU-953N. IPC-4101 type designation /134. UL ANSI grade No-ANSI. Maximum operating temperature 170 C. CTE x/y 7/8 ppm/C by compression and 4/6 ppm/C by tensile measurement. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Peel strength above 3 lb/in (1 oz HVLP copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 2 oz for built-up & double sides. Prepreg glass styles: 1035, 1078,2116 and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/thunderclad-5q",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 5Q",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 5q_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2606006A"
+      },
+      "family": "ThunderClad",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 200,
+      "td_c": 430,
+      "cte_z_50_260_pct": 1.2,
+      "cte_x_ppm": 3.0,
+      "cte_y_ppm": 4.0,
+      "cte_z_below_tg_ppm": 30.0,
+      "cte_z_above_tg_ppm": 135.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.99,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.00074,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 25.0,
+        "crosswise": 24.0
+      },
+      "water_absorption_pct": 0.03,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.71,
+        "steps_note": "0.002 to 0.028 in, in sheet or panel form"
+      },
+      "notes": "Reliability Laminate and Prepreg. Core TU-953Q. IPC-4101 type designation /134. UL ANSI grade No-ANSI. Maximum operating temperature 170 C. CTE x/y 4/6 ppm/C by compression and 3/4 ppm/C by tensile measurement. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Peel strength above 3 lb/in (1 oz HVLP4 copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 2 oz for built-up & double sides. Prepreg glass styles: 1035, 1078."
+    },
+    {
+      "id": "tuc/thunderclad-5r",
+      "manufacturer": "TUC",
+      "name": "ThunderClad 5R",
+      "kind": "laminate",
+      "source": {
+        "pdf": "thunderclad 5r_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2606005A"
+      },
+      "family": "ThunderClad",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 200,
+      "td_c": 430,
+      "cte_z_50_260_pct": 1.2,
+      "cte_x_ppm": 4.0,
+      "cte_y_ppm": 6.0,
+      "cte_z_below_tg_ppm": 30.0,
+      "cte_z_above_tg_ppm": 135.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.19,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.00091,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 23.0,
+        "crosswise": 22.0
+      },
+      "water_absorption_pct": 0.05,
+      "peel_strength_n_mm": 0.525,
+      "peel_condition": "1 oz HVLP copper foil (3 lb/in on the sheet)",
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.71,
+        "steps_note": "0.002 to 0.028 in, in sheet or panel form"
+      },
+      "notes": "Reliability Laminate and Prepreg. Core TU-953R. IPC-4101 type designation /134. UL ANSI grade No-ANSI. Maximum operating temperature 170 C. CTE x/y 7/8 ppm/C by compression and 4/6 ppm/C by tensile measurement. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 2 oz for built-up & double sides. Prepreg glass styles: 1035, 1078."
+    },
+    {
+      "id": "tuc/tu-662",
+      "manufacturer": "TUC",
+      "name": "TU-662",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-662_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1709001A"
+      },
+      "family": "TU",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 160,
+      "tg_dsc_c": 150,
+      "tg_tma_c": 140,
+      "td_c": 340,
+      "cte_z_50_260_pct": 3.2,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.7,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.016,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "water_absorption_pct": 0.13,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "Mid-Tg and High Thermal Reliability Laminate and Prepreg. Core TU-662. IPC-4101 type designations /21, /98, /99, /101. UL ANSI grade FR-4.0. Maximum operating temperature 130 C. CTE x and y 11-15 ppm/C (ambient to Tg). Time to delamination: T260 above 60 min, T288 above 10 min. Dk at 1GHz printed as 4.4/4.3 (two methods). Df at 1GHz printed as 0.018/0.014 (two methods). Peel strength 8-11 lb/in (1.0 oz copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 6 oz (HTE) for built-up; 1/3 to 3 oz (HTE) for double sides and H to 2 oz (MLS). Prepreg glass styles: 106, 1080, 2113, 2116, 1506 and 7628 etc."
+    },
+    {
+      "id": "tuc/tu-662f",
+      "manufacturer": "TUC",
+      "name": "TU-662F",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-662f_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1412001A"
+      },
+      "family": "TU",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 165,
+      "tg_dsc_c": 155,
+      "tg_tma_c": 145,
+      "td_c": 345,
+      "cte_z_50_260_pct": 2.8,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.7,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.4,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.018,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.02,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "water_absorption_pct": 0.11,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "Mid-Tg and High Thermal Reliability Laminate and Prepreg. Core TU-662 F. IPC-4101 type designations /21, /98, /99, /101. UL ANSI grade FR-4.0. Maximum operating temperature 130 C. CTE x and y 11-15 ppm/C (ambient to Tg). Time to delamination: T260 above 60 min, T288 above 20 min. Peel strength 7-9 lb/in (1.0 oz copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 6 oz (HTE) for built-up; 1/3 to 3 oz (HTE) for double sides and H to 2 oz (MLS). Prepreg glass styles: 106, 1080, 2113, 2116, 1506 and 7628 etc."
+    },
+    {
+      "id": "tuc/tu-668",
+      "manufacturer": "TUC",
+      "name": "TU-668",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-668_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1402005A"
+      },
+      "family": "TU",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 160,
+      "tg_dsc_c": 150,
+      "tg_tma_c": 140,
+      "td_c": 340,
+      "cte_z_50_260_pct": 3.2,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.7,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.016,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "water_absorption_pct": 0.13,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "Mid-Tg and High Thermal Reliability Laminate and Prepreg. Core TU-668 TU-668. IPC-4101 type designations /21, /98, /99, /101. UL ANSI grade FR-4.0. Maximum operating temperature 130 C. CTE x and y 11-15 ppm/C (ambient to Tg). Time to delamination: T260 above 60 min, T288 above 10 min. Dk at 1GHz printed as 4.4/4.3 (two methods). Df at 1GHz printed as 0.018/0.014 (two methods). Peel strength 8-11 lb/in (1.0 oz copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 6 oz (HTE) for built-up; 1/3 to 3 oz (HTE) for double sides and H to 2 oz (MLS). Prepreg glass styles: 106, 1080, 2113, 2116, 1506 and 7628 etc."
+    },
+    {
+      "id": "tuc/tu-722",
+      "manufacturer": "TUC",
+      "name": "TU-722",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-722_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1402007A"
+      },
+      "family": "TU",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 185,
+      "tg_dsc_c": 175,
+      "tg_tma_c": 165,
+      "td_c": 330,
+      "cte_z_50_260_pct": 3.5,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.5,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.016,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 25.0,
+        "crosswise": 22.0
+      },
+      "water_absorption_pct": 0.18,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "High-Tg Thermal Resistance Laminate and Prepreg. Core TU-722 TU-722. IPC-4101 type designations /21, /24, /26, /28, /121, /124. UL ANSI grade FR-4.0. Maximum operating temperature 130 C. CTE x and y 12-16 ppm/C (ambient to Tg). Time to delamination: T260 above 30 min, T288 above 5 min. Dk at 1GHz printed as 4.3/4.2 (two methods). Df at 1GHz printed as 0.017/0.016 (two methods). Peel strength 8-11 lb/in (1.0 oz copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 5 oz (HTE) for built-up; 1/8 to 12 oz (HTE) for double sides and H to 2 oz (MLS). Prepreg glass styles: 106, 1080, 2113, 2116, 1506 and 7628, etc. High-."
+    },
+    {
+      "id": "tuc/tu-742-hf",
+      "manufacturer": "TUC",
+      "name": "TU-742 HF",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-742 hf_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1402008A"
+      },
+      "family": "TU",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_tma_c": 150,
+      "td_c": 370,
+      "cte_z_50_260_pct": 3.1,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.7,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.013,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "water_absorption_pct": 0.15,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "Halogen Free Laminate and Prepreg. Core TU-742 HF TU-742 HF. IPC-4101 type designations /127, /128. UL ANSI grade FR-4.1. Maximum operating temperature 130 C. CTE x and y 11-15 ppm/C (ambient to Tg). Time to delamination: T260 above 60 min, T288 above 60 min. Dk at 1GHz printed as 4.6/4.4 (two methods). Df at 1GHz printed as 0.012/0.010 (two methods). Peel strength 8-11 lb/in (1.0 oz copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 5 oz (HTE) for built-up; 1/3 to 3 oz (HTE) for double sides and H to 2 oz (MLS). Prepreg glass styles: 106, 1080, 2113, 2116, 1506 and 7628 etc."
+    },
+    {
+      "id": "tuc/tu-747-hf",
+      "manufacturer": "TUC",
+      "name": "TU-747 HF",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-747 hf_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1507003A"
+      },
+      "family": "TU",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_tma_c": 150,
+      "td_c": 360,
+      "cte_z_50_260_pct": 2.9,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.2,
+          "method": "SPC method",
+          "resin_content_pct": 75
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.007,
+          "method": "SPC method",
+          "resin_content_pct": 75
+        }
+      ],
+      "water_absorption_pct": 0.08,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "Mid-Tg Halogen Free Laminate and Prepreg. Core TU-747 HF. IPC-4101 type designations /127, /128. UL ANSI grade FR-4.1. Maximum operating temperature 130 C. CTE x and y 11-15 ppm/C (ambient to Tg). Dk at 1GHz printed as 3.8/3.6 (two methods). Df at 1GHz printed as 0.014/0.012 (two methods). Peel strength 8-11 lb/in (1.0 oz copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 5 oz. Prepreg glass styles: 1027, 1037, 1067, 1078, 106, 1080, 2113 and 2116 etc."
+    },
+    {
+      "id": "tuc/tu-747-lk",
+      "manufacturer": "TUC",
+      "name": "TU-747 LK",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-747 lk_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1602002A"
+      },
+      "family": "TU",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_tma_c": 150,
+      "td_c": 360,
+      "cte_z_50_260_pct": 2.8,
+      "water_absorption_pct": 0.08,
+      "peel_strength_n_mm": 1.226,
+      "peel_condition": "1.0 oz copper foil (7 lb/in on the sheet)",
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.3,
+          "method": "4291B",
+          "resin_content_pct": 75
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.011,
+          "method": "4291B",
+          "resin_content_pct": 75
+        }
+      ],
+      "notes": "Mid-Tg Halogen Free Laminate and Prepreg. Core TU-747 LK. IPC-4101 type designations /127, /128. UL ANSI grade FR-4.1. Maximum operating temperature 130 C. CTE x and y 11-15 ppm/C (ambient to Tg). CTE x and y 40 ppm/C (ambient to Tg). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 5 oz. Prepreg glass styles: 1027, 1037, 1067, 1078, 3313, etc."
+    },
+    {
+      "id": "tuc/tu-747t",
+      "manufacturer": "TUC",
+      "name": "TU-747T",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-747t_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1512001A"
+      },
+      "family": "TU",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_tma_c": 150,
+      "td_c": 380,
+      "cte_z_50_260_pct": 2.9,
+      "water_absorption_pct": 0.12,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "Halogen Free Laminate and Prepreg. IPC-4101 type designations /127, /128. UL ANSI grade FR-4.1. Maximum operating temperature 130 C. CTE x and y 11-15 ppm/C (ambient to Tg). Time to delamination: T260 above 60 min, T288 above 60 min. Dk at 1GHz printed as 3.8/3.6 (two methods). Df at 1GHz printed as 0.014/0.012 (two methods). Peel strength 8-11 lb/in (1.0 oz copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 5 oz, HTE or RTF grade foil upon request. Prepreg glass styles: 1027, 1037, 106, 1067, 1078, 1080, 2113, 2116, 1506 and 7628 etc. Others fabric types upon request."
+    },
+    {
+      "id": "tuc/tu-768",
+      "manufacturer": "TUC",
+      "name": "TU-768",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-768_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1801007A"
+      },
+      "family": "TU",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/126",
+      "tg_dma_c": 190,
+      "tg_dsc_c": 180,
+      "tg_tma_c": 170,
+      "td_c": 350,
+      "cte_z_50_260_pct": 2.7,
+      "dk": [
+        {
+          "freq_ghz": 5.0,
+          "value": 4.3,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.3,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 5.0,
+          "value": 0.021,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.023,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 25.0,
+        "crosswise": 22.0
+      },
+      "water_absorption_pct": 0.18,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "High-Tg and High Thermal Reliability Laminate and Prepreg. Core TU-768. IPC-4101 type designations /98, /99, /101, /126. UL ANSI grade FR-4.0. Maximum operating temperature 130 C. CTE x and y 11-15 ppm/C (ambient to Tg). Time to delamination: T260 above 60 min, T288 above 15 min, T300 above 2 min. Dk at 1GHz printed as 4.4/4.3 (two methods). Df at 1GHz printed as 0.019/0.018 (two methods). Peel strength 7-9 lb/in (1.0 oz RTF copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/8 to 12 oz (HTE) for built-up; 1/8 to 3 oz (HTE) for double sides and H to 2 oz (MLS). Prepreg glass styles: 106, 1080, 2113, 2116, 1506 and 7628 etc."
+    },
+    {
+      "id": "tuc/tu-768f",
+      "manufacturer": "TUC",
+      "name": "TU-768F",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-768f_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1402013A"
+      },
+      "family": "TU",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 190,
+      "tg_dsc_c": 180,
+      "tg_tma_c": 170,
+      "td_c": 350,
+      "cte_z_50_260_pct": 2.3,
+      "dk": [
+        {
+          "freq_ghz": 5.0,
+          "value": 4.4,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.4,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 5.0,
+          "value": 0.021,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.023,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 25.0,
+        "crosswise": 22.0
+      },
+      "water_absorption_pct": 0.18,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "High-Tg and High Thermal Reliability Laminate and Prepreg. Core TU-768 F TU-768 F. IPC-4101 type designations /21, /24, /26, /28, /98, /99, /101, /126. UL ANSI grade FR-4.0. Maximum operating temperature 130 C. CTE x and y 11-15 ppm/C (ambient to Tg). Time to delamination: T260 above 60 min, T288 above 15 min. Dk at 1GHz printed as 4.5/4.4 (two methods). Df at 1GHz printed as 0.019/0.018 (two methods). Peel strength 7-9 lb/in. Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/8 to 12 oz (HTE) for built-up; 1/8 to 3 oz (HTE) for double sides and H to 2 oz (MLS). Prepreg glass styles: 106, 1080, 2113, 2116, 1506 and 7628 etc. High-."
+    },
+    {
+      "id": "tuc/tu-787-lk",
+      "manufacturer": "TUC",
+      "name": "TU-787 LK",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-787 lk_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2203002A"
+      },
+      "family": "TU",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_tma_c": 160,
+      "td_c": 380,
+      "cte_z_50_260_pct": 2.7,
+      "water_absorption_pct": 0.08,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.15,
+        "steps_note": "0.002 to 0.006 in, in sheet or panel form"
+      },
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": "SPC method",
+          "resin_content_pct": 75
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.009,
+          "method": "SPC method",
+          "resin_content_pct": 75
+        }
+      ],
+      "notes": "Halogen Free Laminate and Prepreg. Core TU-787 LK. IPC-4101 type designations /127, /128, /130. Maximum operating temperature 130 C. CTE x and y 11-15 ppm/C (ambient to Tg). CTE x and y 40 ppm/C (ambient to Tg). Peel strength 5-7 lb/in (1.0 oz copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 2 oz. Prepreg glass styles: 1017, 1027, 1037, 1067, 1078, etc. Dk at 1 GHz printed as 3.2/3.4 and Df at 1 GHz as 0.005/0.007 (4291B and SPC methods), resin content 75 %."
+    },
+    {
+      "id": "tuc/tu-84p-mf",
+      "manufacturer": "TUC",
+      "name": "TU-84P MF",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-84p mf_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1802001A"
+      },
+      "family": "TU",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/130",
+      "tg_dma_c": 190,
+      "tg_tma_c": 165,
+      "td_c": 390,
+      "cte_z_50_260_pct": 2.1,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.4,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 5.0,
+          "value": 4.5,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.4,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.01,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 5.0,
+          "value": 0.014,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.015,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 26.0,
+        "crosswise": 24.0
+      },
+      "water_absorption_pct": 0.15,
+      "notes": "High-Tg Halogen Free Medium Flow Prepreg. IPC-4101 type designations /127, /128, /130. UL ANSI grade FR-4.1. Maximum operating temperature 130 C. CTE x and y 11-15 ppm/C (ambient to Tg). Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 30 min. Peel strength 9-12 lb/in (1.0 oz RTF copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Prepreg glass styles: 106 and 1080, other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/tu-84p-nf",
+      "manufacturer": "TUC",
+      "name": "TU-84P NF",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-84p nf_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1802002A"
+      },
+      "family": "TU",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/130",
+      "tg_dma_c": 190,
+      "tg_tma_c": 165,
+      "td_c": 390,
+      "cte_z_50_260_pct": 2.1,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.4,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 5.0,
+          "value": 4.5,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.4,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.01,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 5.0,
+          "value": 0.014,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.015,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 26.0,
+        "crosswise": 24.0
+      },
+      "water_absorption_pct": 0.15,
+      "notes": "High-Tg Halogen Free No-flow Prepreg. IPC-4101 type designations /127, /128, /130. UL ANSI grade FR-4.1. Maximum operating temperature 130 C. CTE x and y 11-15 ppm/C (ambient to Tg). Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 30 min. Peel strength 9-12 lb/in (1.0 oz RTF copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Prepreg glass styles: 106 and 1080, other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/tu-862-hf",
+      "manufacturer": "TUC",
+      "name": "TU-862 HF",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-862 hf_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1801008A"
+      },
+      "family": "TU",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/130",
+      "tg_dma_c": 200,
+      "tg_tma_c": 170,
+      "td_c": 390,
+      "cte_z_50_260_pct": 2.1,
+      "dk": [
+        {
+          "freq_ghz": 5.0,
+          "value": 4.5,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.4,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 5.0,
+          "value": 0.014,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.015,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 26.0,
+        "crosswise": 24.0
+      },
+      "water_absorption_pct": 0.15,
+      "notes": "High Tg Halogen Free Laminate and Prepreg. Core TU-862 HF. IPC-4101 type designations /127, /128, /130. UL ANSI grade FR-4.1. Maximum operating temperature 130 C. CTE x and y 11-15 ppm/C (ambient to Tg). Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 30 min. Dk at 1GHz printed as 4.5/4.4 (two methods). Df at 1GHz printed as 0.013/0.010 (two methods). Peel strength 7-10 lb/in (1.0 oz RTF copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 5 oz (HTE) for built-up & double sides and H to 2 oz (MLS). Prepreg glass styles: 106, 1080, 2113, 2116, 1506 and 7628, etc."
+    },
+    {
+      "id": "tuc/tu-862s",
+      "manufacturer": "TUC",
+      "name": "TU-862S",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-862s_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1801009A"
+      },
+      "family": "TU",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/130",
+      "tg_dma_c": 200,
+      "tg_dsc_c": 175,
+      "tg_tma_c": 165,
+      "td_c": 370,
+      "cte_z_50_260_pct": 2.2,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.3,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 5.0,
+          "value": 4.2,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.2,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.011,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 5.0,
+          "value": 0.011,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.012,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "water_absorption_pct": 0.13,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "Hi-Tg Halogen free Mid-Loss laminate and prepreg. Core TU-862S. IPC-4101 type designations /127, /128, /130. UL ANSI grade FR-4.1. Maximum operating temperature 130 C. CTE x and y 11-15 ppm/C (ambient to Tg). Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 30 min. Peel strength 5-8 lb/in (1.0 oz RTF copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 4 oz for built-up & double sides. Prepreg glass styles: 106, 1080, 3313, 2116 etc and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/tu-862t",
+      "manufacturer": "TUC",
+      "name": "TU-862T",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-862t_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1801010A"
+      },
+      "family": "TU",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/130",
+      "tg_dsc_c": 190,
+      "tg_tma_c": 175,
+      "td_c": 370,
+      "cte_z_50_260_pct": 2.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.5,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.4,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.013,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.015,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "water_absorption_pct": 0.13,
+      "notes": "High Tg Halogen Free Laminate and Prepreg. Core TU-862T. IPC-4101 type designations /127, /128, /130. UL ANSI grade FR-4.1. Maximum operating temperature 130 C. CTE x and y 11-15 ppm/C (ambient to Tg). Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 30 min. Peel strength 5-8 lb/in (1.0 oz RTF copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 5 oz (HTE) for built-up & double sides and H to 2 oz (MLS). Prepreg glass styles: 106, 1080, 2113, 2116, 1506 and 7628, etc."
+    },
+    {
+      "id": "tuc/tu-865",
+      "manufacturer": "TUC",
+      "name": "TU-865",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-865_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1801018A"
+      },
+      "family": "TU",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/130",
+      "tg_dma_c": 220,
+      "tg_dsc_c": 200,
+      "tg_tma_c": 185,
+      "td_c": 370,
+      "cte_z_50_260_pct": 1.8,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 4.4,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.014,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "water_absorption_pct": 0.13,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "Tg 200 C Halogen Free Laminate and Prepreg. Core TU-865. IPC-4101 type designations /127, /128, /130. UL ANSI grade FR-4.1. Maximum operating temperature 130 C. CTE x and y 11-15 ppm/C (ambient to Tg). Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 30 min. Dk at 1GHz printed as 4.6/4.3 (two methods). Df at 1GHz printed as 0.013/0.010 (two methods). Peel strength 6-9 lb/in (1.0 oz copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 12 oz. Prepreg glass styles: 106, 1080, 2113, 2116, 1506 and 7628 etc."
+    },
+    {
+      "id": "tuc/tu-865s",
+      "manufacturer": "TUC",
+      "name": "TU-865S",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-865s_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2502001A"
+      },
+      "family": "TU",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dsc_c": 170,
+      "tg_tma_c": 165,
+      "td_c": 400,
+      "cte_z_50_260_pct": 2.8,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 5.0,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.9,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.014,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.015,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "water_absorption_pct": 0.13,
+      "cti_v": 600,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "Hi-CTI Halogen Free Laminate and Prepreg. Core TU-865S. IPC-4101 type designations /127, /128, /130. UL ANSI grade FR-15.1. Maximum operating temperature 150 C. Tg by DMA above 200 C. CTE x and y 11-15 ppm/C (ambient to Tg). Time to delamination: T260 above 60 min, T288 above 60 min. Peel strength 5-8 lb/in (1.0 oz copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 6 oz. Prepreg glass styles: 106, 1080, 2113, 2116, 1506 and 7628 etc."
+    },
+    {
+      "id": "tuc/tu-872-lk",
+      "manufacturer": "TUC",
+      "name": "TU-872 LK",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-872 lk_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2309002A"
+      },
+      "family": "TU",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/126",
+      "tg_dma_c": 220,
+      "tg_dsc_c": 200,
+      "tg_tma_c": 190,
+      "td_c": 340,
+      "cte_z_50_260_pct": 2.5,
+      "dk": [
+        {
+          "freq_ghz": 5.0,
+          "value": 3.8,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.8,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 5.0,
+          "value": 0.008,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.009,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 26.0,
+        "crosswise": 24.0
+      },
+      "water_absorption_pct": 0.15,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "Low Dk/Df and High Thermal Reliability Laminate. Core TU-872 LK. IPC-4101 type designations /29, /98, /99, /101, /126. UL ANSI grade FR-4.0. Maximum operating temperature 130 C. CTE x and y 12-15 ppm/C (ambient to Tg). Time to delamination: T260 60 min, T288 20 min, T300 5 min. Dk at 1GHz printed as 4.0/3.8 (two methods). Df at 1GHz printed as 0.008/0.006 (two methods). Peel strength 4-7 lb/in. Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 5 oz for built-up & double sides. Prepreg glass styles: 106, 1080, 3313, 2116 and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/tu-872-slk-sp",
+      "manufacturer": "TUC",
+      "name": "TU-872 SLK Sp",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-872 slk sp_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1801012A"
+      },
+      "family": "TU",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/126",
+      "tg_dma_c": 220,
+      "tg_dsc_c": 200,
+      "tg_tma_c": 190,
+      "td_c": 340,
+      "cte_z_50_260_pct": 2.3,
+      "dk": [
+        {
+          "freq_ghz": 5.0,
+          "value": 3.5,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 5.0,
+          "value": 0.007,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.008,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 26.0,
+        "crosswise": 24.0
+      },
+      "water_absorption_pct": 0.13,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "Prepreg: TU-87P SLK Sp. Core TU-872 SLK Sp, prepreg TU-87P SLK. IPC-4101 type designations /29, /99, /101, /126. UL ANSI grade FR-4.0. Maximum operating temperature 130 C. CTE x and y 12-15 ppm/C (ambient to Tg). Time to delamination: T260 60 min, T288 20 min, T300 5 min. Dk at 1GHz printed as 3.6/3.4 (two methods). Df at 1GHz printed as 0.006/0.004 (two methods). Peel strength 4-7 lb/in. Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 5 oz for built-up & double sides. Prepreg glass styles: 106, 1080 and 2116."
+    },
+    {
+      "id": "tuc/tu-872-slk",
+      "manufacturer": "TUC",
+      "name": "TU-872 SLK",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-872 slk_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS1801013A"
+      },
+      "family": "TU",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/126",
+      "tg_dma_c": 220,
+      "tg_dsc_c": 200,
+      "tg_tma_c": 190,
+      "td_c": 340,
+      "cte_z_50_260_pct": 2.3,
+      "dk": [
+        {
+          "freq_ghz": 5.0,
+          "value": 3.9,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.8,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 5.0,
+          "value": 0.008,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.009,
+          "method": "SPC method",
+          "resin_content_pct": 50
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 26.0,
+        "crosswise": 24.0
+      },
+      "water_absorption_pct": 0.13,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 1.58,
+        "steps_note": "0.002 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "Laminate and Prepreg. Core TU-872 SLK. IPC-4101 type designations /29, /99, /101, /126. UL ANSI grade FR-4.0. Maximum operating temperature 130 C. CTE x and y 12-15 ppm/C (ambient to Tg). Time to delamination: T260 60 min, T288 20 min, T300 5 min. Dk at 1GHz printed as 4.0/3.8 (two methods). Df at 1GHz printed as 0.008/0.006 (two methods). Peel strength 4-7 lb/in (1.0 oz RTF copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 5 oz for built-up & double sides. Prepreg glass styles: 106, 1080, 3313, 2116 and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/tu-901-t",
+      "manufacturer": "TUC",
+      "name": "TU-901 (T)",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-901 (t)_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2607005A"
+      },
+      "family": "TU",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 240,
+      "tg_tma_c": 180,
+      "td_c": 430,
+      "cte_z_50_260_pct": 0.8,
+      "cte_x_ppm": 6.0,
+      "cte_y_ppm": 8.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.64,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0034,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.08,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.51,
+        "steps_note": "0.002 to 0.020 in, in sheet or panel form"
+      },
+      "notes": "Tg 240 C Halogen Free Laminate and Prepreg. IPC-4101 type designation /134. UL ANSI grade N/A. Maximum operating temperature 160 C. CTE x/y 10/11 ppm/C by compression and 6/8 ppm/C by tensile measurement. CTE z below Tg 20-30 ppm/C. CTE z above Tg 70-80 ppm/C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Impedance simulation Dk 3.15. Peel strength above 3.5 lb/in (1 oz RTF copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 2 oz. Prepreg glass styles: 1027, 1067, 1078, 3313 and 2116 etc. and others upon request Ultra."
+    },
+    {
+      "id": "tuc/tu-901",
+      "manufacturer": "TUC",
+      "name": "TU-901",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-901_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2607004A"
+      },
+      "family": "TU",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/134",
+      "tg_dma_c": 260,
+      "tg_tma_c": 180,
+      "td_c": 430,
+      "cte_z_50_260_pct": 1.0,
+      "cte_x_ppm": 8.0,
+      "cte_y_ppm": 10.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.59,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0036,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "peel_strength_n_mm": 0.701,
+      "peel_condition": "1 oz RTF copper foil (4 lb/in on the sheet)",
+      "thickness_range": {
+        "min_mm": 0.03,
+        "max_mm": 1.58,
+        "steps_note": "0.0012 to 0.062 in, in sheet or panel form"
+      },
+      "notes": "Tg 260 C Halogen Free Laminate and Prepreg. IPC-4101 type designation /134. UL ANSI grade No-ANSI. Maximum operating temperature 160 C. CTE z below Tg 25-35 ppm/C. CTE z above Tg 140-150 ppm/C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Impedance simulation Dk 3.10. Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 3 oz. Prepreg glass styles: 1017, 1027, 1037, 1067, 1078, 3313 and 2116 etc. and others upon request."
+    },
+    {
+      "id": "tuc/tu-901n-t",
+      "manufacturer": "TUC",
+      "name": "TU-901N (T)",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-901n (t)_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2607006A"
+      },
+      "family": "TU",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 240,
+      "tg_tma_c": 180,
+      "td_c": 430,
+      "cte_z_50_260_pct": 0.8,
+      "cte_x_ppm": 6.0,
+      "cte_y_ppm": 8.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.36,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0018,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.08,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.51,
+        "steps_note": "0.002 to 0.020 in, in sheet or panel form"
+      },
+      "notes": "Tg 240 C Halogen Free Laminate and Prepreg. IPC-4101 type designation /134. UL ANSI grade N/A. Maximum operating temperature 160 C. CTE x/y 10/11 ppm/C by compression and 6/8 ppm/C by tensile measurement. CTE z below Tg 20-30 ppm/C. CTE z above Tg 70-80 ppm/C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Impedance simulation Dk 2.87. Peel strength above 3.5 lb/in (1 oz RTF copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 2 oz. Prepreg glass styles: 1027, 1035, 1078, 3313 and 2116 etc. and others upon request Ultra."
+    },
+    {
+      "id": "tuc/tu-901n",
+      "manufacturer": "TUC",
+      "name": "TU-901N",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-901n_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2607003A"
+      },
+      "family": "TU",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 260,
+      "tg_tma_c": 180,
+      "td_c": 430,
+      "cte_z_50_260_pct": 1.0,
+      "cte_x_ppm": 8.0,
+      "cte_y_ppm": 10.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.3,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0018,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "peel_strength_n_mm": 0.701,
+      "peel_condition": "1 oz RTF copper foil (4 lb/in on the sheet)",
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.58,
+        "steps_note": "0.002 to 0.02 in, in sheet or panel form"
+      },
+      "notes": "Tg 260 C Halogen Free Laminate and Prepreg. IPC-4101 type designation /134. CTE z below Tg 25-35 ppm/C. CTE z above Tg 140-150 ppm/C. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Impedance simulation Dk 2.81. Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 2 oz. Prepreg glass styles: 1017,1027, 1035, 1037, 1078, 3313 and 2116 etc. and others upon request."
+    },
+    {
+      "id": "tuc/tu-902n",
+      "manufacturer": "TUC",
+      "name": "TU-902N",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-902n_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2607007A"
+      },
+      "family": "TU",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 200,
+      "td_c": 430,
+      "cte_z_50_260_pct": 1.2,
+      "cte_x_ppm": 4.0,
+      "cte_y_ppm": 6.0,
+      "cte_z_below_tg_ppm": 30.0,
+      "cte_z_above_tg_ppm": 135.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.23,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.00122,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 23.0,
+        "crosswise": 22.0
+      },
+      "water_absorption_pct": 0.05,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.508,
+        "steps_note": "0.002 to 0.020 in, in sheet or panel form"
+      },
+      "notes": "Reliability Laminate and Prepreg. Core TU-902N. IPC-4101 type designation /134. UL ANSI grade NA. CTE x/y 7/8 ppm/C by compression and 4/6 ppm/C by tensile measurement. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Peel strength above 3 lb/in (1 oz HVLP copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 2 oz for built-up & double sides. Prepreg glass styles: 1027, 1035, 1078, 2116 and other prepreg grades are available upon request."
+    },
+    {
+      "id": "tuc/tu-902r",
+      "manufacturer": "TUC",
+      "name": "TU-902R",
+      "kind": "laminate",
+      "source": {
+        "pdf": "tu-902r_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2606003A"
+      },
+      "family": "TU",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 200,
+      "td_c": 430,
+      "cte_z_50_260_pct": 1.2,
+      "cte_x_ppm": 4.0,
+      "cte_y_ppm": 6.0,
+      "cte_z_below_tg_ppm": 30.0,
+      "cte_z_above_tg_ppm": 135.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.21,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.00107,
+          "method": "SPC method",
+          "resin_content_pct": 70
+        }
+      ],
+      "youngs_modulus_gpa": {
+        "lengthwise": 23.0,
+        "crosswise": 22.0
+      },
+      "water_absorption_pct": 0.05,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.508,
+        "steps_note": "0.002 to 0.020 in, in sheet or panel form"
+      },
+      "notes": "Reliability Laminate and Prepreg. Core TU-902R. IPC-4101 type designation /134. UL ANSI grade NA. CTE x/y 7/8 ppm/C by compression and 4/6 ppm/C by tensile measurement. Time to delamination: T260 above 60 min, T288 above 60 min, T300 above 60 min. Peel strength above 3 lb/in (1 oz HVLP copper foil). Volume resistivity above 10^10 M-ohm cm and surface resistivity above 10^8 M-ohm; electric strength above 40 kV/mm and breakdown voltage above 50 kV; flexural strength above 60000 psi lengthwise and 50000 psi crosswise. Copper cladding: 1/3 to 2 oz for built-up & double sides. Prepreg glass styles: 1035, 1078 upon request."
+    }
+  ]
+}
