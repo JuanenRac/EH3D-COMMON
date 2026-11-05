@@ -1790,6 +1790,679 @@
         "pages": "1-4",
         "revision": "Version 04/11/2025"
       }
+    },
+    {
+      "id": "ventec/vt-463h-rcc",
+      "manufacturer": "Ventec",
+      "name": "VT-463H RCC",
+      "kind": "bonding_film",
+      "family": "pro-bond 8C",
+      "resin": "High Tg ceramic-filled halogen-free thermoset, resin coated copper",
+      "filler": "Ceramic",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_dma_c": 230,
+      "td_c": 410,
+      "cte_z_below_tg_ppm": 18,
+      "cte_z_above_tg_ppm": 50,
+      "thermal_conductivity_w_mk": 0.5,
+      "dk": [
+        {
+          "freq_ghz": 1,
+          "value": 3.2,
+          "method": "IPC-TM-650 2.5.5.13, RC 50 %",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 2.9,
+          "method": "IPC-TM-650 2.5.5.13, RC 50 %",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1,
+          "value": 0.0011,
+          "method": "IPC-TM-650 2.5.5.13, RC 50 %",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.0016,
+          "method": "IPC-TM-650 2.5.5.13, RC 50 %",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 0.61,
+      "peel_condition": "5 um copper plated to 20 um (3.5 lb/in)",
+      "water_absorption_pct": 0.08,
+      "thicknesses_mm": [
+        0.025,
+        0.05
+      ],
+      "copper": [
+        {
+          "weight_oz": null,
+          "thickness_um": 1.5,
+          "foil_type": null
+        },
+        {
+          "weight_oz": null,
+          "thickness_um": 2.0,
+          "foil_type": null
+        },
+        {
+          "weight_oz": null,
+          "thickness_um": 3.0,
+          "foil_type": null
+        },
+        {
+          "weight_oz": null,
+          "thickness_um": 5.0,
+          "foil_type": null
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 610,
+          "height_mm": 457,
+          "label": "24\" x 18\""
+        }
+      ],
+      "notes": "Unreinforced adhesive coated on ultra-thin copper (1.5-5.0 um on an 18 um carrier foil) for sequential lamination of multilayers; laser drillable; Dk 2.9 and Df 0.0016 at 10 GHz (RC 50 %). Dielectric thickness 25 and 50 um (0.001 and 0.002 in); part numbers 463H-C15/C20/C30/C50 with -25 or -50. Thermal stress at 288 C (10 s per cycle) over 300 s. Tensile modulus 8-10 GPa at 40 C. Shelf life: stored below 23 C and 55 % RH or below 5 C.",
+      "source": {
+        "pdf": "240320-pro-bond-8c-vt-463h-rcc.pdf",
+        "pages": "1-3",
+        "revision": "pro-bond 8C"
+      }
+    },
+    {
+      "id": "ventec/vt-464lt-rcc",
+      "manufacturer": "Ventec",
+      "name": "VT-464LT RCC",
+      "kind": "bonding_film",
+      "family": "pro-bond 4C",
+      "resin": "High Tg ceramic-filled halogen-free thermoset, resin coated copper",
+      "filler": "Ceramic",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_dma_c": 295,
+      "td_c": 380,
+      "cte_z_below_tg_ppm": 15.5,
+      "cte_z_above_tg_ppm": 45,
+      "thermal_conductivity_w_mk": 0.5,
+      "dk": [
+        {
+          "freq_ghz": 1,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.13, RC 50 %",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.05,
+          "method": "IPC-TM-650 2.5.5.13, RC 50 %",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1,
+          "value": 0.005,
+          "method": "IPC-TM-650 2.5.5.13, RC 50 %",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.0065,
+          "method": "IPC-TM-650 2.5.5.13, RC 50 %",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 0.65,
+      "peel_condition": "5 um copper plated to 20 um (3.7 lb/in)",
+      "water_absorption_pct": 0.08,
+      "youngs_modulus_gpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 9.2
+      },
+      "thicknesses_mm": [
+        0.025,
+        0.05
+      ],
+      "copper": [
+        {
+          "weight_oz": null,
+          "thickness_um": 1.5,
+          "foil_type": null
+        },
+        {
+          "weight_oz": null,
+          "thickness_um": 2.0,
+          "foil_type": null
+        },
+        {
+          "weight_oz": null,
+          "thickness_um": 3.0,
+          "foil_type": null
+        },
+        {
+          "weight_oz": null,
+          "thickness_um": 5.0,
+          "foil_type": null
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 610,
+          "height_mm": 457,
+          "label": "24\" x 18\""
+        }
+      ],
+      "notes": "Unreinforced adhesive coated on ultra-thin copper (1.5-5.0 um on an 18 um carrier foil) for sequential lamination of multilayers; laser drillable; Dk 3.05 and Df 0.0065 at 10 GHz (RC 50 %). Dielectric thickness 25 and 50 um; part numbers 464LT-C15/C20/C30/C50 with -025 or -050. Thermal stress at 288 C (10 s per cycle) over 300 s. Tensile modulus 9.2 GPa at 40 C (stored value). Shelf life: stored below 23 C and 55 % RH or below 5 C.",
+      "source": {
+        "pdf": "240323-pro-bond-4c-vt-464lt-rcc.pdf",
+        "pages": "1-3",
+        "revision": "pro-bond 4C"
+      }
+    },
+    {
+      "id": "ventec/vt-8728-rcf",
+      "manufacturer": "Ventec",
+      "name": "VT-8728 RCF",
+      "kind": "bonding_film",
+      "family": "pro-bond 20F",
+      "resin": "Ceramic-filled hydrocarbon, halogen-free thermoset, resin coated film on PET",
+      "filler": "Ceramic",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_dma_c": 210,
+      "td_c": 400,
+      "cte_z_below_tg_ppm": 65,
+      "cte_z_above_tg_ppm": 85,
+      "thermal_conductivity_w_mk": 0.6,
+      "dk": [
+        {
+          "freq_ghz": 1,
+          "value": 3.15,
+          "method": "IPC-TM-650 2.5.5.13, RC 50 %, 8728-FN/FL",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 1,
+          "value": 3.05,
+          "method": "IPC-TM-650 2.5.5.13, RC 50 %, 8728-FR",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 2.96,
+          "method": "IPC-TM-650 2.5.5.13, RC 50 %, 8728-FN/FL",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 2.85,
+          "method": "IPC-TM-650 2.5.5.13, RC 50 %, 8728-FR",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1,
+          "value": 0.0015,
+          "method": "IPC-TM-650 2.5.5.13, RC 50 %",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.002,
+          "method": "IPC-TM-650 2.5.5.13, RC 50 %",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 1.14,
+      "peel_condition": "1 oz copper (6.5 lb/in)",
+      "water_absorption_pct": 0.08,
+      "youngs_modulus_gpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 5.5
+      },
+      "thicknesses_mm": [
+        0.05,
+        0.11
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 610,
+          "height_mm": 457,
+          "label": "24\" x 18\""
+        }
+      ],
+      "notes": "Ultra-low Dk/Df unreinforced adhesive on PET film, for use with tec-speed 20.0 and 30.0 laminates and prepregs; stable Dk over temperature. Dk and Df at 1 and 10 GHz are given for the no flow / low flow types (8728-FN/FL) and for the regular flow type (8728-FR, Dk 3.05 and 2.85); the Df is a single value for both. Pressed ply 50 um (no flow, flow 10-30 mil, part 8728-FT N-050; low flow 30-80 mil, L-050) and 110 um (no flow 10-60 mil, N-110; low flow 60-120 mil, L-110; regular flow 120-180 mil, R-110); flow is in mil, so it is not stored as a percentage. CTE below Tg 65 ppm/C is measured from -50 to 125 C. Thermal stress at 288 C (10 s per cycle) over 300 s. Tensile modulus 5.5 GPa at 40 C. Shelf life: stored below 23 C and 55 % RH or below 5 C.",
+      "source": {
+        "pdf": "240809-pro-bond-20f-vt-8728-rcf.pdf",
+        "pages": "1-3",
+        "revision": "pro-bond 20F"
+      }
+    },
+    {
+      "id": "ventec/vt-770-rcc-rcf",
+      "manufacturer": "Ventec",
+      "name": "VT-770 RCC / RCF",
+      "kind": "bonding_film",
+      "family": "pro-bond 7C / 7F",
+      "resin": "High Tg ceramic-filled halogen-free thermoset, resin coated copper and resin coated film",
+      "filler": "Ceramic",
+      "halogen_free": true,
+      "tg_dma_c": 260,
+      "td_c": 410,
+      "cte_z_below_tg_ppm": 17,
+      "cte_z_above_tg_ppm": 50,
+      "thermal_conductivity_w_mk": 0.55,
+      "dk": [
+        {
+          "freq_ghz": 1,
+          "value": 3.1,
+          "method": "IPC-TM-650 2.5.5.13, RC 50 %",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 2.8,
+          "method": "IPC-TM-650 2.5.5.13, RC 50 %",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1,
+          "value": 0.002,
+          "method": "IPC-TM-650 2.5.5.13, RC 50 %",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.0025,
+          "method": "IPC-TM-650 2.5.5.13, RC 50 %",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 0.61,
+      "peel_condition": "5 um copper plated to 20 um (3.5 lb/in)",
+      "water_absorption_pct": 0.1,
+      "thicknesses_mm": [
+        0.025,
+        0.05,
+        0.075
+      ],
+      "copper": [
+        {
+          "weight_oz": null,
+          "thickness_um": 5.0,
+          "foil_type": null
+        },
+        {
+          "weight_oz": null,
+          "thickness_um": 9.0,
+          "foil_type": null
+        },
+        {
+          "weight_oz": null,
+          "thickness_um": 12.0,
+          "foil_type": null
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 610,
+          "height_mm": 457,
+          "label": "24\" x 18\""
+        },
+        {
+          "width_mm": 610,
+          "height_mm": 460,
+          "label": "24\" x 18.11\""
+        }
+      ],
+      "notes": "Ultra low Dk (2.8) and Df (0.0025 at 10 GHz) unreinforced adhesive: RCC on 5, 9 or 12 um copper with an 18 um carrier foil (parts 770-C50/C90/C12 with -025 or -050) and RCF on PET (no flow and regular flow, parts 770-FTN-025, -FTR-025, -FTN-050, -FTR-050 and -FTR-075, which the sheet lists with a 50 um PPT). Dielectric thickness 25, 50 and 75 um; the RCF panel is 610 x 460 mm. The sheet states no UL 94 class in the property table. Thermal stress at 288 C (10 s per cycle) over 300 s. Tensile modulus 8-10 GPa at 40 C. Shelf life: stored below 23 C and 55 % RH or below 5 C.",
+      "source": {
+        "pdf": "260528-pro-bond-7c-vt-770-rcc-and-rcf-tds.pdf",
+        "pages": "1-3",
+        "revision": "pro-bond 7C and 7F"
+      }
+    },
+    {
+      "id": "ventec/vt-4b3h-rcf",
+      "manufacturer": "Ventec",
+      "name": "VT-4B3H RCF",
+      "kind": "bonding_film",
+      "family": "thermal-bond 3.0F",
+      "resin": "High Tg ceramic-filled halogen-free thermoset, thermally conductive resin coated film on PET",
+      "filler": "Ceramic",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_dma_c": 180,
+      "td_c": 395,
+      "thermal_conductivity_w_mk": 3.2,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.8,
+          "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.016,
+          "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 1.401,
+      "peel_condition": "1 oz, as received (8.0 lb/in)",
+      "volume_resistivity_ohm_cm": 500000000000000.0,
+      "surface_resistivity_ohm": 20000000000000.0,
+      "cti_v": 600,
+      "thicknesses_mm": [
+        0.075,
+        0.1,
+        0.125,
+        0.15
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 460,
+          "height_mm": 610,
+          "label": "18.11\" x 24.02\""
+        },
+        {
+          "width_mm": 510,
+          "height_mm": 610,
+          "label": "20.08\" x 24.02\""
+        },
+        {
+          "width_mm": 533,
+          "height_mm": 610,
+          "label": "20.98\" x 24.02\""
+        }
+      ],
+      "notes": "Thermally conductive (3.2 W/mK, ISO 22007-2) unreinforced adhesive on PET for multilayer metal-core PCBs, heavy copper filling and metal-in-board constructions. Types: medium flow (4B3H-FTM), regular flow (FTR) and high flow (FTH), each in 75, 100, 125 and 150 um. Thermal impedance 0.036, 0.048, 0.061 and 0.072 C in2/W for 75, 100, 125 and 150 um; hi-pot 2000, 3000, 4000 and 5000 V DC; AC breakdown 7000, 8000, 9000 and 10000 V. Z CTE above Tg 85-90 ppm/C (range, not stored). Dk and Df at 1 MHz. Tg 180 C by DMA. Hi-pot withstand DC and AC breakdown voltage are given per thickness; X/Y and Z CTE and thermal impedance are as listed. Thermal stress at 288 C solder dip 5 min. Volume and surface resistance after moisture 5.0e8 MOhm cm and 2.0e7 MOhm (E-24/125 3.0e7 MOhm cm and 5.0e6 MOhm). UL MOT 155 C. Shelf life: stored below 23 C and 55 % RH or below 5 C.",
+      "cte_x_ppm": 17,
+      "cte_y_ppm": 17,
+      "cte_z_below_tg_ppm": 40,
+      "cte_z_50_260_pct": 1.9,
+      "source": {
+        "pdf": "261014-vt-4b3h-rcf-tds.pdf",
+        "pages": "1-3",
+        "revision": "thermal-bond 3.0F"
+      }
+    },
+    {
+      "id": "ventec/vt-4b7h-rcf",
+      "manufacturer": "Ventec",
+      "name": "VT-4B7H RCF",
+      "kind": "bonding_film",
+      "family": "thermal-bond 5.0F",
+      "resin": "High Tg ceramic-filled halogen-free thermoset, thermally conductive resin coated film on PET",
+      "filler": "Ceramic",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_dma_c": 210,
+      "td_c": 420,
+      "thermal_conductivity_w_mk": 7.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.25,
+          "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 4.57,
+          "method": "C-24/23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0015,
+          "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.0017,
+          "method": "C-24/23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 0.911,
+      "peel_condition": "1 oz, as received (5.2 lb/in)",
+      "volume_resistivity_ohm_cm": 500000000000000.0,
+      "surface_resistivity_ohm": 20000000000000.0,
+      "cti_v": 600,
+      "thicknesses_mm": [
+        0.1,
+        0.125,
+        0.15
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 460,
+          "height_mm": 610,
+          "label": "18.11\" x 24.02\""
+        },
+        {
+          "width_mm": 510,
+          "height_mm": 610,
+          "label": "20.08\" x 24.02\""
+        },
+        {
+          "width_mm": 533,
+          "height_mm": 610,
+          "label": "20.98\" x 24.02\""
+        }
+      ],
+      "notes": "Thermally conductive (7.0 W/mK, ISO 22007-2) unreinforced adhesive on PET: regular flow (4B7H-FTR) and high flow (FTH) in 100, 125 and 150 um. Thermal impedance 0.022, 0.028 and 0.035 C in2/W; hi-pot 2800, 3500 and 4000 V DC; AC breakdown 8000, 9000 and 10000 V. The unit labels of the CTE rows are shifted in the sheet; the values read as X/Y CTE 16 ppm/C, total Z expansion 1.35 % (50-260 C) and Z CTE 30 ppm/C before and 35 ppm/C after Tg. Dk and Df at 1 MHz and at 10 GHz (the 10 GHz method is not stated). Tg 210 C by DMA. Hi-pot withstand DC and AC breakdown voltage are given per thickness; X/Y and Z CTE and thermal impedance are as listed. Thermal stress at 288 C solder dip 5 min. Volume and surface resistance after moisture 5.0e8 MOhm cm and 2.0e7 MOhm (E-24/125 3.0e7 MOhm cm and 5.0e6 MOhm). UL MOT 155 C. Shelf life: stored below 23 C and 55 % RH or below 5 C.",
+      "cte_x_ppm": 16,
+      "cte_y_ppm": 16,
+      "cte_z_below_tg_ppm": 30,
+      "cte_z_above_tg_ppm": 35,
+      "cte_z_50_260_pct": 1.35,
+      "source": {
+        "pdf": "261014-vt-4b7h-rcf_tds.pdf",
+        "pages": "1-3",
+        "revision": "thermal-bond 5.0F"
+      }
+    },
+    {
+      "id": "ventec/vt-4bc-ht1-rcf",
+      "manufacturer": "Ventec",
+      "name": "VT-4BC(HT1) RCF",
+      "kind": "bonding_film",
+      "family": "thermal-bond 7.1F",
+      "resin": "High Tg ceramic-filled halogen-free thermoset, thermally conductive resin coated film on PET",
+      "filler": "Ceramic",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_dma_c": 200,
+      "td_c": 400,
+      "thermal_conductivity_w_mk": 12.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.25,
+          "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 4.57,
+          "method": "C-24/23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0015,
+          "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.0017,
+          "method": "C-24/23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 0.438,
+      "peel_condition": "1 oz, as received (2.5 lb/in)",
+      "volume_resistivity_ohm_cm": 500000000000000.0,
+      "surface_resistivity_ohm": 20000000000000.0,
+      "cti_v": 600,
+      "thicknesses_mm": [
+        0.125,
+        0.15
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 460,
+          "height_mm": 610,
+          "label": "18.11\" x 24.02\""
+        },
+        {
+          "width_mm": 460,
+          "height_mm": 305,
+          "label": "18.11\" x 12.01\""
+        }
+      ],
+      "notes": "Thermally conductive (12 W/mK, ISO 22007-2) unreinforced adhesive on PET or PI film, regular flow only (4BC(HT1)-FTR-125 and -150); the text lists the press ply thickness as 120 and 150 um while the part numbers and the property table give 125 and 150 um. Thermal impedance 0.016 and 0.019 C in2/W; hi-pot 3000 and 4000 V DC; AC breakdown 5000 and 7000 V. X/Y CTE below Tg 8.4-11.2 ppm/C, Z CTE 15-20 ppm/C below Tg and 30-35 ppm/C above Tg (ranges, not stored). Dk (the sheet labels the 4.57 value as Df at 10 GHz, which is read here as Dk at 10 GHz) and Df at 1 MHz. Tg 200 C by DMA. Hi-pot withstand DC and AC breakdown voltage are given per thickness; X/Y and Z CTE and thermal impedance are as listed. Thermal stress at 288 C solder dip 5 min. Volume and surface resistance after moisture 5.0e8 MOhm cm and 2.0e7 MOhm (E-24/125 3.0e7 MOhm cm and 5.0e6 MOhm). UL MOT 155 C. Shelf life: stored below 23 C and 55 % RH or below 5 C.",
+      "cte_z_50_260_pct": 0.65,
+      "source": {
+        "pdf": "261014-vt-4bc-ht1-rcf.pdf",
+        "pages": "1-3",
+        "revision": "thermal-bond 7.1F"
+      }
+    },
+    {
+      "id": "ventec/vt-4bc-rcf",
+      "manufacturer": "Ventec",
+      "name": "VT-4BC RCF",
+      "kind": "bonding_film",
+      "family": "thermal-bond 7.0F",
+      "resin": "High Tg ceramic-filled halogen-free thermoset, thermally conductive resin coated film on PET",
+      "filler": "Ceramic",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_dma_c": 210,
+      "td_c": 400,
+      "thermal_conductivity_w_mk": 9.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.25,
+          "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 4.57,
+          "method": "C-24/23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0015,
+          "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.0017,
+          "method": "C-24/23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 0.753,
+      "peel_condition": "1 oz, as received (4.3 lb/in)",
+      "volume_resistivity_ohm_cm": 500000000000000.0,
+      "surface_resistivity_ohm": 20000000000000.0,
+      "cti_v": 600,
+      "thicknesses_mm": [
+        0.12,
+        0.15
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 460,
+          "height_mm": 610,
+          "label": "18.11\" x 24.02\""
+        },
+        {
+          "width_mm": 510,
+          "height_mm": 610,
+          "label": "20.08\" x 24.02\""
+        },
+        {
+          "width_mm": 533,
+          "height_mm": 610,
+          "label": "20.98\" x 24.02\""
+        }
+      ],
+      "notes": "Thermally conductive (9.0 W/mK, ISO 22007-2) unreinforced adhesive on PET or PI film, regular flow (4BC-FTR-120 and -150). Thermal impedance 0.021 and 0.026 C in2/W; hi-pot 3000 and 3500 V DC; AC breakdown 8000 and 10000 V. Dk (the sheet labels the 4.57 value as Df at 10 GHz, which is read here as Dk at 10 GHz) and Df at 1 MHz. Tg 210 C by DMA. Hi-pot withstand DC and AC breakdown voltage are given per thickness; X/Y and Z CTE and thermal impedance are as listed. Thermal stress at 288 C solder dip 5 min. Volume and surface resistance after moisture 5.0e8 MOhm cm and 2.0e7 MOhm (E-24/125 3.0e7 MOhm cm and 5.0e6 MOhm). UL MOT 155 C. Shelf life: stored below 23 C and 55 % RH or below 5 C.",
+      "cte_x_ppm": 8,
+      "cte_y_ppm": 8,
+      "cte_z_below_tg_ppm": 20,
+      "cte_z_above_tg_ppm": 29,
+      "cte_z_50_260_pct": 0.8,
+      "source": {
+        "pdf": "261014-vt-4bc-rcf-tds.pdf",
+        "pages": "1-3",
+        "revision": "thermal-bond 7.0F"
+      }
     }
   ]
 }
