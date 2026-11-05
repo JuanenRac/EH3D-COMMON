@@ -149,6 +149,7 @@ impl Package {
         let integrity = serde_json::to_string_pretty(&self.integrity()?)?;
         let options = SimpleFileOptions::default()
             .compression_method(CompressionMethod::Deflated)
+            .system(zip::System::Unix)
             .last_modified_time(zip::DateTime::default());
         let mut zip = ZipWriter::new(writer);
         zip.start_file(PROJECT_ENTRY, options)?;

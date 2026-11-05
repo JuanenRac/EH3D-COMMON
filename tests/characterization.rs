@@ -164,6 +164,7 @@ fn raw_entries(bytes: &[u8]) -> Vec<(String, Vec<u8>)> {
 fn build_zip(entries: &[(String, Vec<u8>)]) -> Vec<u8> {
     let options = SimpleFileOptions::default()
         .compression_method(CompressionMethod::Deflated)
+        .system(zip::System::Unix)
         .last_modified_time(DateTime::default());
     let mut out = ZipWriter::new(Cursor::new(Vec::new()));
     for (name, content) in entries {

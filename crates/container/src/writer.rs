@@ -52,10 +52,11 @@ fn zip_error(e: zip::result::ZipError) -> ContainerError {
 }
 
 /// The options that reproduce `.eh3dproj` 1.0.0 byte for byte: deflate, the fixed DOS time of
-/// 1980-01-01, no extra fields, the default permissions.
+/// 1980-01-01, no extra fields, the default permissions, written by a Unix host on every platform.
 fn entry_options() -> SimpleFileOptions {
     SimpleFileOptions::default()
         .compression_method(CompressionMethod::Deflated)
+        .system(zip::System::Unix)
         .last_modified_time(zip::DateTime::default())
 }
 
