@@ -13,9 +13,9 @@ categories = ["data-structures", "parser-implementations"]
 
 [workspace]
 # the data crate of the suite is the root package; the crates beside it may draw, read files or talk to machines
-members = [".", "crates/view", "crates/archive", "crates/controller", "crates/formats", "crates/filedialog", "crates/fleet", "crates/levelling", "crates/auxnode", "crates/inspect", "crates/image", "crates/summary", "crates/diagnostic", "crates/container"]
+members = [".", "crates/view", "crates/archive", "crates/controller", "crates/formats", "crates/filedialog", "crates/fleet", "crates/levelling", "crates/auxnode", "crates/inspect", "crates/image", "crates/summary", "crates/diagnostic", "crates/container", "crates/materials"]
 # a plain `cargo test` or `cargo clippy` covers the same crates as the CI
-default-members = [".", "crates/view", "crates/archive", "crates/controller", "crates/formats", "crates/filedialog", "crates/fleet", "crates/levelling", "crates/auxnode", "crates/inspect", "crates/image", "crates/summary", "crates/diagnostic", "crates/container"]
+default-members = [".", "crates/view", "crates/archive", "crates/controller", "crates/formats", "crates/filedialog", "crates/fleet", "crates/levelling", "crates/auxnode", "crates/inspect", "crates/image", "crates/summary", "crates/diagnostic", "crates/container", "crates/materials"]
 resolver = "2"
 
 [workspace.package]

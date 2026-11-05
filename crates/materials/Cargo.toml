@@ -1,0 +1,17 @@
+[package]
+name = "eh3d-materials"
+version = "0.0.1"
+edition.workspace = true
+rust-version.workspace = true
+description = "The database of board materials of the suite (laminates, prepregs, flex, metal core, PTFE): every value as its datasheet publishes it, the checks of the data, the queries and the interpolation of Dk and Df by frequency"
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+
+[lints]
+workspace = true

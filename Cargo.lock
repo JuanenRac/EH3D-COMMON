@@ -251,6 +251,15 @@ name = "eh3d-levelling"
 version = "0.0.1"
 
 [[package]]
+name = "eh3d-materials"
+version = "0.0.1"
+dependencies = [
+ "serde",
+ "serde_json",
+ "thiserror",
+]
+
+[[package]]
 name = "eh3d-summary"
 version = "0.0.1"
 dependencies = [
