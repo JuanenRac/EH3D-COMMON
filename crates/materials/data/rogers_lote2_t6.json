@@ -2233,7 +2233,17 @@
           "label": "18\" x 24\""
         }
       ],
-      "notes": "RT/duroid glass microfiber reinforced PTFE composite. Dk process value at 10 GHz is the specification value (+/- 0.02); a 1 MHz value is also given by IPC-TM-650 2.5.5.3. Df at 1 MHz is 0.0004. Tensile modulus at 23 C: 1070 MPa (X) and 860 MPa (Y). Specific heat 0.96 J/g/K; moisture absorption of a 1.6 mm sample; CTE X, Y and Z from 0 to 100 C; thermal conductivity at 80 C; ultimate tensile and compressive properties are given on the sheet at 23 C and 100 C and are not loaded. Volume resistivity 2e7 M-ohm cm converted. Non-standard thicknesses are available from 0.0035 to 0.375 in. Surface resistivity 3e7 M-ohm converted."
+      "notes": "RT/duroid glass microfiber reinforced PTFE composite. Dk process value at 10 GHz is the specification value (+/- 0.02); a 1 MHz value is also given by IPC-TM-650 2.5.5.3. Df at 1 MHz is 0.0004. Tensile modulus at 23 C: 1070 MPa (X) and 860 MPa (Y). Specific heat 0.96 J/g/K; moisture absorption of a 1.6 mm sample; CTE X, Y and Z from 0 to 100 C; thermal conductivity at 80 C; ultimate tensile and compressive properties are given on the sheet at 23 C and 100 C and are not loaded. Volume resistivity 2e7 M-ohm cm converted. Non-standard thicknesses are available from 0.0035 to 0.375 in. Surface resistivity 3e7 M-ohm converted.",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "HMIS rating health 1, fire 1, reactivity 0; flash point, flammable limits and flammability not established (NE)."
+      },
+      "sources": [
+        {
+          "pdf": "psis---rt-duroid-5880-laminates.pdf",
+          "pages": "1-4"
+        }
+      ]
     },
     {
       "id": "rogers/rt-duroid-5880lz",
@@ -2317,8 +2327,16 @@
         {
           "pdf": "quick-reference-processing-guidelines-rt-duroid-5880lz-high-frequency-laminates.pdf",
           "pages": "1"
+        },
+        {
+          "pdf": "psis---rt-duroid-5880-lz.pdf",
+          "pages": "1-4"
         }
-      ]
+      ],
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "HMIS rating health 1, fire 1, reactivity 0; flash point, flammable limits and flammability not applicable (NA)."
+      }
     },
     {
       "id": "rogers/rt-duroid-5280lz",
@@ -2462,7 +2480,17 @@
           "label": "18\" x 24\""
         }
       ],
-      "notes": "Ceramic filled PTFE microwave laminate. Tensile modulus 828 MPa (X, Y), ultimate stress 6.9 MPa, ultimate strain 7.3 %, compressive modulus 2482 MPa (Z); CTE from -55 to 288 C (Z stored as below Tg); thermal conductivity at 80 C; thermal coefficient of Dk +12 ppm/C from 0 to 100 C; resistivities printed as 10^6 M-ohm cm and 10^7 M-ohm, converted. Additional thicknesses from 0.005 to 0.250 in in 0.005 in steps."
+      "notes": "Ceramic filled PTFE microwave laminate. Tensile modulus 828 MPa (X, Y), ultimate stress 6.9 MPa, ultimate strain 7.3 %, compressive modulus 2482 MPa (Z); CTE from -55 to 288 C (Z stored as below Tg); thermal conductivity at 80 C; thermal coefficient of Dk +12 ppm/C from 0 to 100 C; resistivities printed as 10^6 M-ohm cm and 10^7 M-ohm, converted. Additional thicknesses from 0.005 to 0.250 in in 0.005 in steps.",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "The sheet states that the material is not classified as hazardous under the criteria of the US hazard communication standard; flash point, flammable limits and flammability not established (NE)."
+      },
+      "sources": [
+        {
+          "pdf": "psis---rt-duroid-6002-laminates.pdf",
+          "pages": "1-4"
+        }
+      ]
     },
     {
       "id": "rogers/rt-duroid-6035htc",
@@ -2568,8 +2596,16 @@
         {
           "pdf": "quick-reference-processing-guidelines-rt-duroid-6035htc-high-frequency-laminates.pdf",
           "pages": "1"
+        },
+        {
+          "pdf": "psis---rt-duroid-6035htc-high-frequency-material.pdf",
+          "pages": "1-4"
         }
-      ]
+      ],
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "HMIS rating health 1, fire 1, reactivity 0; flash point, flammable limits and flammability not applicable (NA)."
+      }
     },
     {
       "id": "rogers/rt-duroid-6202",
@@ -2654,7 +2690,17 @@
           "label": "24\" x 18\""
         }
       ],
-      "notes": "Low loss, low Dk PTFE laminate with limited woven glass reinforcement for excellent dimensional stability (0.07 mm/m X, Y). Tensile modulus 1007 MPa (X, Y), ultimate stress 30 MPa, strain 4.9 %, compressive modulus 1035 MPa (Z); CTE from -55 to 288 C; thermal conductivity at 80 C. Additional thicknesses from 0.005 to 0.060 in. Resistivity exponents cannot be read and are not loaded."
+      "notes": "Low loss, low Dk PTFE laminate with limited woven glass reinforcement for excellent dimensional stability (0.07 mm/m X, Y). Tensile modulus 1007 MPa (X, Y), ultimate stress 30 MPa, strain 4.9 %, compressive modulus 1035 MPa (Z); CTE from -55 to 288 C; thermal conductivity at 80 C. Additional thicknesses from 0.005 to 0.060 in. Resistivity exponents cannot be read and are not loaded.",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "HMIS rating health 1, fire 1, reactivity 0; flash point not established (NE), flammable limits and flammability not applicable (NA)."
+      },
+      "sources": [
+        {
+          "pdf": "psis---rt-duroid-6202---6202pr-microwave-laminate.pdf",
+          "pages": "1-4"
+        }
+      ]
     },
     {
       "id": "rogers/rt-duroid-6202pr",
@@ -2675,7 +2721,17 @@
         0.381,
         0.508
       ],
-      "notes": "Planar resistor version of RT/duroid 6202: low loss, low Dk laminate with limited woven glass reinforcement giving dimensional stability of 0.05 to 0.07 mils/inch for tight tolerance planar resistors. Cladding options: 1/2 to 2 oz ED, 1/2, 1 and 2 oz rolled, 1/2, 1 and 2 oz reverse treated, and 1/2 and 1 oz ED with a resistive layer, on the standard dielectric thicknesses of 0.005, 0.010, 0.015 and 0.020 in. The non-reinforced RT/duroid 6002PR is offered in 0.020 and 0.030 in. The property table of the sheet cannot be read reliably and is not loaded; see RT/duroid 6202 for the base material."
+      "notes": "Planar resistor version of RT/duroid 6202: low loss, low Dk laminate with limited woven glass reinforcement giving dimensional stability of 0.05 to 0.07 mils/inch for tight tolerance planar resistors. Cladding options: 1/2 to 2 oz ED, 1/2, 1 and 2 oz rolled, 1/2, 1 and 2 oz reverse treated, and 1/2 and 1 oz ED with a resistive layer, on the standard dielectric thicknesses of 0.005, 0.010, 0.015 and 0.020 in. The non-reinforced RT/duroid 6002PR is offered in 0.020 and 0.030 in. The property table of the sheet cannot be read reliably and is not loaded; see RT/duroid 6202 for the base material.",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "HMIS rating health 1, fire 1, reactivity 0; flash point not established (NE), flammable limits and flammability not applicable (NA)."
+      },
+      "sources": [
+        {
+          "pdf": "psis---rt-duroid-6202---6202pr-microwave-laminate.pdf",
+          "pages": "1-4"
+        }
+      ]
     },
     {
       "id": "rogers/tc350",
@@ -2799,7 +2855,17 @@
           "label": "18\" x 24\""
         }
       ],
-      "notes": "Fiberglass reinforced, ceramic filled PTFE composite with high thermal conductivity. Dk 3.50 at 1 MHz, 1.8 GHz and 10 GHz; the 0.010 in thickness is offered in 18 x 12 and 18 x 24 in panels with reverse treated ED foil, the other thicknesses in 12 x 18 and 24 x 18 in panels with ED foil. Td initial 520 C and 567 C at 5 % loss (5 % stored); time to delamination above 60 min at 260, 288 and 300 C; dielectric breakdown 40 kV; arc resistance above 240 s; CTE 7, 7 and 23 ppm/C (X, Y, Z) from 50 to 150 C and 1.2 % z expansion from 50 to 260 C; copper peel 9 lb/in at 150 C and 7 lb/in after process solutions; resistivity 7.4e6 M-ohm cm and 3.2e7 M-ohm (C96/35/90) converted, 1.4e8 and 4.3e8 after E24/125. Electrical strength 780 V/mil (31 kV/mm). Tensile strength 11 and 8 kpsi and flexural strength 14 and 10 kpsi (MD, CMD). NASA outgassing 0.02 % TML, 0.01 % CVCM and 0.01 % WVR."
+      "notes": "Fiberglass reinforced, ceramic filled PTFE composite with high thermal conductivity. Dk 3.50 at 1 MHz, 1.8 GHz and 10 GHz; the 0.010 in thickness is offered in 18 x 12 and 18 x 24 in panels with reverse treated ED foil, the other thicknesses in 12 x 18 and 24 x 18 in panels with ED foil. Td initial 520 C and 567 C at 5 % loss (5 % stored); time to delamination above 60 min at 260, 288 and 300 C; dielectric breakdown 40 kV; arc resistance above 240 s; CTE 7, 7 and 23 ppm/C (X, Y, Z) from 50 to 150 C and 1.2 % z expansion from 50 to 260 C; copper peel 9 lb/in at 150 C and 7 lb/in after process solutions; resistivity 7.4e6 M-ohm cm and 3.2e7 M-ohm (C96/35/90) converted, 1.4e8 and 4.3e8 after E24/125. Electrical strength 780 V/mil (31 kV/mm). Tensile strength 11 and 8 kpsi and flexural strength 14 and 10 kpsi (MD, CMD). NASA outgassing 0.02 % TML, 0.01 % CVCM and 0.01 % WVR.",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "HMIS rating health 1, fire 1, reactivity 0; flash point not established (NE), flammable limits and flammability not applicable (NA)."
+      },
+      "sources": [
+        {
+          "pdf": "psis---tc-series-laminates.pdf",
+          "pages": "1-4"
+        }
+      ]
     },
     {
       "id": "rogers/tc350-plus",
@@ -2889,7 +2955,17 @@
           "label": "24\" x 18\""
         }
       ],
-      "notes": "Ceramic filled PTFE woven glass laminate, thermal conductivity 1.24 W/mK. Dielectric breakdown 38.9 kV (X/Y direction); comparative tracking index class 0 at 600 V; CTE X, Y and Z from -55 to 288 C (Z stored as below Tg); flexural modulus 7791 MPa (MD) and 7171 MPa (CMD); dimensional stability 0.05 and 0.15 mils/inch (MD/CMD); NASA outgassing 0.02 % TML and below 0.01 % CVCM; resistivities 9.4e11 M-ohm cm and 3.3e12 M-ohm converted. Additional thicknesses from 0.010 to 0.060 in in 0.005 in steps."
+      "notes": "Ceramic filled PTFE woven glass laminate, thermal conductivity 1.24 W/mK. Dielectric breakdown 38.9 kV (X/Y direction); comparative tracking index class 0 at 600 V; CTE X, Y and Z from -55 to 288 C (Z stored as below Tg); flexural modulus 7791 MPa (MD) and 7171 MPa (CMD); dimensional stability 0.05 and 0.15 mils/inch (MD/CMD); NASA outgassing 0.02 % TML and below 0.01 % CVCM; resistivities 9.4e11 M-ohm cm and 3.3e12 M-ohm converted. Additional thicknesses from 0.010 to 0.060 in in 0.005 in steps.",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "HMIS rating health 1, fire 1, reactivity 0; flash point not established (NE), flammable limits and flammability not applicable (NA)."
+      },
+      "sources": [
+        {
+          "pdf": "psis---tc-series-laminates.pdf",
+          "pages": "1-4"
+        }
+      ]
     },
     {
       "id": "rogers/tc600",
@@ -2956,7 +3032,17 @@
       },
       "water_absorption_pct": 0.03,
       "density_g_cm3": 3.0,
-      "notes": "Enhanced thermal conductivity ceramic filled PTFE woven fiberglass laminate for 6.15 Dk microwave boards. Thermal conductivity 1.1 W/mK in the z axis and 1.4 W/mK in x, y (ASTM E1461); Dk stated at 1.8 GHz (resonant cavity; the sheet prints MHz in one row) and at 10 GHz, and it may vary by thickness; Td initial 512 C and 572 C at 5 % loss (5 % stored); time to delamination above 60 min at 260, 288 and 300 C; CTE 9, 9 and 35 ppm/C (X, Y, Z) from 50 to 150 C; z expansion 1.5 % from 50 to 260 C; electrical strength 850 V/mil (34 kV/mm), dielectric breakdown 62 kV; arc resistance above 240 s; resistivity 1.6e9 M-ohm cm and 3.1e9 M-ohm (C96/35/90) converted, 2.4e8 and 9.0e8 after E24/125; copper peel 10 lb/in after thermal stress and at 150 C and 9 lb/in after process solutions; Young modulus 280 kpsi; NASA outgassing 0.02 % TML and 0.00 % CVCM."
+      "notes": "Enhanced thermal conductivity ceramic filled PTFE woven fiberglass laminate for 6.15 Dk microwave boards. Thermal conductivity 1.1 W/mK in the z axis and 1.4 W/mK in x, y (ASTM E1461); Dk stated at 1.8 GHz (resonant cavity; the sheet prints MHz in one row) and at 10 GHz, and it may vary by thickness; Td initial 512 C and 572 C at 5 % loss (5 % stored); time to delamination above 60 min at 260, 288 and 300 C; CTE 9, 9 and 35 ppm/C (X, Y, Z) from 50 to 150 C; z expansion 1.5 % from 50 to 260 C; electrical strength 850 V/mil (34 kV/mm), dielectric breakdown 62 kV; arc resistance above 240 s; resistivity 1.6e9 M-ohm cm and 3.1e9 M-ohm (C96/35/90) converted, 2.4e8 and 9.0e8 after E24/125; copper peel 10 lb/in after thermal stress and at 150 C and 9 lb/in after process solutions; Young modulus 280 kpsi; NASA outgassing 0.02 % TML and 0.00 % CVCM.",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "HMIS rating health 1, fire 1, reactivity 0; flash point not established (NE), flammable limits and flammability not applicable (NA)."
+      },
+      "sources": [
+        {
+          "pdf": "psis---tc-series-laminates.pdf",
+          "pages": "1-4"
+        }
+      ]
     },
     {
       "id": "rogers/tmm3",
@@ -3036,8 +3122,16 @@
         {
           "pdf": "tmm-handling-guidance-for-laminates.pdf",
           "pages": "1"
+        },
+        {
+          "pdf": "psis---tmm-series-laminates.pdf",
+          "pages": "1-4"
         }
-      ]
+      ],
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "HMIS rating health 1, fire 0, reactivity 0; the ingredients are listed as not classified under directive 67/548/EEC."
+      }
     },
     {
       "id": "rogers/tmm4",
@@ -3118,8 +3212,16 @@
         {
           "pdf": "tmm-handling-guidance-for-laminates.pdf",
           "pages": "1"
+        },
+        {
+          "pdf": "psis---tmm-series-laminates.pdf",
+          "pages": "1-4"
         }
-      ]
+      ],
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "HMIS rating health 1, fire 0, reactivity 0; the ingredients are listed as not classified under directive 67/548/EEC."
+      }
     },
     {
       "id": "rogers/tmm6",
@@ -3200,8 +3302,16 @@
         {
           "pdf": "tmm-handling-guidance-for-laminates.pdf",
           "pages": "1"
+        },
+        {
+          "pdf": "psis---tmm-series-laminates.pdf",
+          "pages": "1-4"
         }
-      ]
+      ],
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "HMIS rating health 1, fire 0, reactivity 0; the ingredients are listed as not classified under directive 67/548/EEC."
+      }
     },
     {
       "id": "rogers/tmm10",
@@ -3282,8 +3392,16 @@
         {
           "pdf": "tmm-handling-guidance-for-laminates.pdf",
           "pages": "1"
+        },
+        {
+          "pdf": "psis---tmm-series-laminates.pdf",
+          "pages": "1-4"
         }
-      ]
+      ],
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "HMIS rating health 1, fire 0, reactivity 0; the ingredients are listed as not classified under directive 67/548/EEC."
+      }
     },
     {
       "id": "rogers/tmm10i",
@@ -3361,8 +3479,16 @@
         {
           "pdf": "tmm-handling-guidance-for-laminates.pdf",
           "pages": "1"
+        },
+        {
+          "pdf": "psis---tmm-series-laminates.pdf",
+          "pages": "1-4"
         }
-      ]
+      ],
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "HMIS rating health 1, fire 0, reactivity 0; the ingredients are listed as not classified under directive 67/548/EEC."
+      }
     },
     {
       "id": "rogers/tmm13i",
@@ -3436,8 +3562,16 @@
         {
           "pdf": "tmm-handling-guidance-for-laminates.pdf",
           "pages": "1"
+        },
+        {
+          "pdf": "psis---tmm-series-laminates.pdf",
+          "pages": "1-4"
         }
-      ]
+      ],
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "HMIS rating health 1, fire 0, reactivity 0; the ingredients are listed as not classified under directive 67/548/EEC."
+      }
     },
     {
       "id": "rogers/speedwave-300p",
