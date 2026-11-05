@@ -156,7 +156,7 @@ fn raw_entries(bytes: &[u8]) -> Vec<(String, Vec<u8>)> {
             let mut file = archive.by_index(i).unwrap();
             let mut content = Vec::new();
             std::io::copy(&mut file, &mut content).unwrap();
-            (file.name().to_owned(), content)
+            (file.name().unwrap().into_owned(), content)
         })
         .collect()
 }

@@ -34,7 +34,7 @@ fn tamper(bytes: &[u8], change: impl Fn(&str, &mut Vec<u8>) -> bool) -> Vec<u8> 
     let mut out = ZipWriter::new(Cursor::new(Vec::new()));
     for index in 0..archive.len() {
         let mut file = archive.by_index(index).unwrap();
-        let name = file.name().to_owned();
+        let name = file.name().unwrap().into_owned();
         let mut content = Vec::new();
         std::io::copy(&mut file, &mut content).unwrap();
         if change(&name, &mut content) {
@@ -136,7 +136,7 @@ fn an_entry_that_is_not_listed_is_refused() {
     let mut out = ZipWriter::new(Cursor::new(Vec::new()));
     for index in 0..archive.len() {
         let mut file = archive.by_index(index).unwrap();
-        let name = file.name().to_owned();
+        let name = file.name().unwrap().into_owned();
         out.start_file(name.as_str(), SimpleFileOptions::default())
             .unwrap();
         std::io::copy(&mut file, &mut out).unwrap();
