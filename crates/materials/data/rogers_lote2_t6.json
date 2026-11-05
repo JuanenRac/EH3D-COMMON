@@ -1,0 +1,3238 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Rogers",
+  "materials": [
+    {
+      "id": "rogers/ro1200",
+      "manufacturer": "Rogers",
+      "name": "RO1200",
+      "kind": "ceramic_filled",
+      "family": "XtremeSpeed",
+      "source": {
+        "pdf": "ro1200-data-sheet.pdf",
+        "pages": "1-2",
+        "revision": "Revised 1588 080122, Publication 92-173"
+      },
+      "reinforcement": "Woven fiberglass",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 500,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.05,
+          "method": "IPC-TM-650 2.5.5.5, 23 C (process)"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0017,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "cte_x_ppm": 8,
+      "cte_y_ppm": 8,
+      "cte_z_below_tg_ppm": 30,
+      "thermal_conductivity_w_mk": 0.42,
+      "density_g_cm3": 2.1,
+      "specific_heat_j_gk": 0.93,
+      "water_absorption_pct": 0.03,
+      "dielectric_strength_kv_mm": 24.8,
+      "thicknesses_mm": [
+        0.076,
+        0.102,
+        0.127,
+        0.152,
+        0.178,
+        0.203,
+        0.254
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": 70
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 304.8,
+          "height_mm": 457.2,
+          "label": "12\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        }
+      ],
+      "notes": "Extremely low loss ceramic filled digital circuit laminate reinforced with spread woven fiberglass, processed with standard PTFE circuit board techniques; for high speed digital designs up to 112 Gbps. Design Dk 3.05 from 1 GHz to 20 GHz by the differential phase length method. Dk and Df at 10 GHz; X and Y CTE 8 ppm/C and Z CTE 30 ppm/C from -55 to 288 C; time to delamination above 60 min at 260 C and at 288 C; copper peel strength above 4.5 lb/in (1 oz ED foil). Dielectric strength 630 V/mil converted to kV/mm. IPC slash sheet not given. Volume resistivity, surface resistivity and dimensional stability are not loaded because the layout of the table cannot be read reliably. Standard claddings: reverse treated ED, rolled and standard foil in 1/2, 1 and 2 oz."
+    },
+    {
+      "id": "rogers/ro1200-bondply",
+      "manufacturer": "Rogers",
+      "name": "RO1200 Bondply",
+      "kind": "bonding_film",
+      "family": "XtremeSpeed",
+      "source": {
+        "pdf": "ro1200-bondply-data-sheet.pdf",
+        "pages": "1-3",
+        "revision": "Issued 1587 072822, Publication 92-199"
+      },
+      "ipc_slash_sheet": "IPC-4103B/530",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "reinforcement": "None (non-glass reinforced)",
+      "filler": "Ceramic",
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.04,
+          "method": "Design table, 2.5-5 mil bondply"
+        },
+        {
+          "freq_ghz": 5.0,
+          "value": 3.0,
+          "method": "Design table, 2.5-5 mil bondply"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.97,
+          "method": "IPC-TM-650 2.5.5.5 differential phase length, 23 C (process)"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.99,
+          "method": "Design table, 2.5-5 mil bondply"
+        },
+        {
+          "freq_ghz": 20.0,
+          "value": 2.98,
+          "method": "Design table, 2.5-5 mil bondply"
+        },
+        {
+          "freq_ghz": 30.0,
+          "value": 2.98,
+          "method": "Design table, 2.5-5 mil bondply"
+        },
+        {
+          "freq_ghz": 40.0,
+          "value": 2.97,
+          "method": "Design table, 2.5-5 mil bondply"
+        },
+        {
+          "freq_ghz": 50.0,
+          "value": 2.97,
+          "method": "Design table, 2.5-5 mil bondply"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0008,
+          "method": "Design table, 2.5-5 mil bondply"
+        },
+        {
+          "freq_ghz": 5.0,
+          "value": 0.0008,
+          "method": "Design table, 2.5-5 mil bondply"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0009,
+          "method": "Design table, 2.5-5 mil bondply"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0012,
+          "method": "IPC-TM-650 2.5.5.5 differential phase length, 23 C (process)"
+        },
+        {
+          "freq_ghz": 20.0,
+          "value": 0.001,
+          "method": "Design table, 2.5-5 mil bondply"
+        },
+        {
+          "freq_ghz": 30.0,
+          "value": 0.0011,
+          "method": "Design table, 2.5-5 mil bondply"
+        },
+        {
+          "freq_ghz": 40.0,
+          "value": 0.0013,
+          "method": "Design table, 2.5-5 mil bondply"
+        },
+        {
+          "freq_ghz": 50.0,
+          "value": 0.0014,
+          "method": "Design table, 2.5-5 mil bondply"
+        }
+      ],
+      "cte_x_ppm": 29,
+      "cte_y_ppm": 29,
+      "cte_z_below_tg_ppm": 29,
+      "thermal_conductivity_w_mk": 0.13,
+      "thicknesses_mm": [
+        0.064,
+        0.076,
+        0.102,
+        0.127
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 304.8,
+          "height_mm": 457.2,
+          "label": "12\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 914.4,
+          "label": "24\" x 36\""
+        }
+      ],
+      "notes": "Extremely low loss, ceramic filled, non-glass reinforced PTFE bondply for all-RO1200 multilayer constructions (up to 42 metal layers demonstrated); plies can be stacked in any combination. X, Y and Z CTE 29 ppm/C from -55 to 288 C; thermal conductivity 0.13 W/mK at 50 C; insertion loss -0.74 dB/in at 28 GHz in a stripline with 5 mil signal to ground spacing. The sheet prints Df 0.0012 at 10 GHz in the property table and 0.0009 at 10 GHz in the design table; both are listed. The remaining rows of the property table (resistivity, electric strength, moisture, peel strength) cannot be read reliably and are not loaded. UL file E102763."
+    },
+    {
+      "id": "rogers/ro3035",
+      "manufacturer": "Rogers",
+      "name": "RO3035",
+      "kind": "ptfe",
+      "family": "RO3000",
+      "source": {
+        "pdf": "ro3000-laminate-data-sheet-ro3003----ro3006----ro3010----ro3035.pdf",
+        "pages": "2,4",
+        "revision": "Revised 1687 013024, Publication 92-130"
+      },
+      "resin": "PTFE",
+      "filler": "Ceramic",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 500,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C",
+          "tolerance": 0.05
+        },
+        {
+          "value": 3.6,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0015,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": -45,
+      "cte_x_ppm": 17,
+      "cte_y_ppm": 17,
+      "cte_z_below_tg_ppm": 24,
+      "thermal_conductivity_w_mk": 0.5,
+      "density_g_cm3": 2.1,
+      "peel_strength_n_mm": 1.786,
+      "peel_condition": "1 oz EDC foil after solder float (10.2 lb/in on the sheet)",
+      "water_absorption_pct": 0.04,
+      "youngs_modulus_gpa": {
+        "lengthwise": 1.025,
+        "crosswise": 1.006
+      },
+      "volume_resistivity_ohm_cm": 10000000000000.0,
+      "surface_resistivity_ohm": 10000000000000.0,
+      "thicknesses_mm": [
+        0.25,
+        0.51,
+        1.52
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 304.8,
+          "height_mm": 457.2,
+          "label": "12\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        }
+      ],
+      "notes": "Ceramic filled PTFE composite for commercial microwave and RF circuits with X and Y CTE matched to copper. CTE from -55 to 288 C (Z stored as below Tg); Td 500 C by TGA; thermal conductivity at 50 C; Young modulus given in MPa for the two directions (1025 and 1006); resistivities 10^7 M-ohm cm and 10^7 M-ohm as printed, converted. Dk 3.50 +/- 0.05 (process) and 3.60 (design)."
+    },
+    {
+      "id": "rogers/ro3003g2",
+      "manufacturer": "Rogers",
+      "name": "RO3003G2",
+      "kind": "ptfe",
+      "family": "RO3000",
+      "source": {
+        "pdf": "ro3003g2--data-sheet.pdf",
+        "pages": "1-4",
+        "revision": "Revised 1625 102522, Publication 92-547"
+      },
+      "resin": "PTFE",
+      "filler": "Ceramic",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 500,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C",
+          "tolerance": 0.04
+        },
+        {
+          "freq_ghz": 77.0,
+          "value": 3.07,
+          "method": "Microstrip differential phase length (design)"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0011,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": -35,
+      "cte_x_ppm": 16,
+      "cte_y_ppm": 17,
+      "cte_z_below_tg_ppm": 18,
+      "thermal_conductivity_w_mk": 0.43,
+      "density_g_cm3": 2.15,
+      "specific_heat_j_gk": 0.83,
+      "peel_strength_n_mm": 2.102,
+      "peel_condition": "1/2 oz EDC foil after solder float (12.0 lb/in on the sheet)",
+      "water_absorption_pct": 0.06,
+      "thicknesses_mm": [
+        0.13,
+        0.25
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.25,
+          "foil_type": "VLP ED"
+        },
+        {
+          "weight_oz": 0.5,
+          "foil_type": "VLP ED"
+        },
+        {
+          "weight_oz": 1,
+          "foil_type": "VLP ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 533.4,
+          "label": "24\" x 21\""
+        }
+      ],
+      "notes": "Ceramic filled PTFE laminate for millimetre-wave automotive radar with very low profile ED copper; Dk 3.00 at 10 GHz (clamped stripline) and 3.07 at 77 GHz (microstrip differential phase length), insertion loss 1.3 dB/in for 5 mil laminates. Specific heat 0.73 J/g/K at 0 C and 0.83 J/g/K at 50 C (the 50 C value is stored). Tensile modulus 378 ksi (X) and 396 ksi (Y); dimensional stability -0.16 and -0.14 mm/m (X, Y). Foil roughness is listed per weight (1/2 oz Sa 0.34 um, Sz 3.73 um, Sq 0.43 um, surface area index 2.82). Resistivity exponents cannot be read and are not loaded."
+    },
+    {
+      "id": "rogers/ro3203",
+      "manufacturer": "Rogers",
+      "name": "RO3203",
+      "kind": "ceramic_filled",
+      "family": "RO3200",
+      "source": {
+        "pdf": "ro3200-series-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "filler": "Ceramic",
+      "reinforcement": "Woven fiberglass",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 500,
+      "panel_sizes": [
+        {
+          "width_mm": 304.8,
+          "height_mm": 457.2,
+          "label": "12\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        }
+      ],
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.02,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C",
+          "tolerance": 0.04
+        },
+        {
+          "value": 3.02,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0016,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": -13,
+      "cte_x_ppm": 13,
+      "cte_y_ppm": 13,
+      "cte_z_below_tg_ppm": 58,
+      "thermal_conductivity_w_mk": 0.48,
+      "specific_heat_j_gk": 0.95,
+      "density_g_cm3": 2.1,
+      "peel_strength_n_mm": 1.786,
+      "peel_condition": "1 oz EDC foil after solder float (10.2 lb/in on the sheet)",
+      "thicknesses_mm": [
+        0.25,
+        0.51,
+        0.76,
+        1.52
+      ],
+      "notes": "Ceramic filled laminate reinforced with woven fiberglass, extension of the RO3000 series with better mechanical stability; processed with standard PTFE techniques. Water absorption below 0.1 %; thermal conductivity at 80 C; CTE is for X, Y and Z from -55 to 288 C (Z stored as below Tg); resistivity exponents and tensile modulus pairing cannot be read reliably and are not loaded."
+    },
+    {
+      "id": "rogers/ro3206",
+      "manufacturer": "Rogers",
+      "name": "RO3206",
+      "kind": "ceramic_filled",
+      "family": "RO3200",
+      "source": {
+        "pdf": "ro3200-series-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "filler": "Ceramic",
+      "reinforcement": "Woven fiberglass",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 500,
+      "panel_sizes": [
+        {
+          "width_mm": 304.8,
+          "height_mm": 457.2,
+          "label": "12\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        }
+      ],
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 6.15,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C",
+          "tolerance": 0.15
+        },
+        {
+          "value": 6.6,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0027,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": -212,
+      "cte_x_ppm": 13,
+      "cte_y_ppm": 13,
+      "cte_z_below_tg_ppm": 34,
+      "thermal_conductivity_w_mk": 0.67,
+      "specific_heat_j_gk": 0.85,
+      "density_g_cm3": 2.7,
+      "peel_strength_n_mm": 1.874,
+      "peel_condition": "1 oz EDC foil after solder float (10.7 lb/in on the sheet)",
+      "thicknesses_mm": [
+        0.64,
+        1.28
+      ],
+      "notes": "Ceramic filled laminate reinforced with woven fiberglass, extension of the RO3000 series with better mechanical stability; processed with standard PTFE techniques. Water absorption below 0.1 %; thermal conductivity at 80 C; CTE is for X, Y and Z from -55 to 288 C (Z stored as below Tg); resistivity exponents and tensile modulus pairing cannot be read reliably and are not loaded. Non-standard thicknesses are available from 0.010 to 0.250 in."
+    },
+    {
+      "id": "rogers/ro3210",
+      "manufacturer": "Rogers",
+      "name": "RO3210",
+      "kind": "ceramic_filled",
+      "family": "RO3200",
+      "source": {
+        "pdf": "ro3200-series-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "filler": "Ceramic",
+      "reinforcement": "Woven fiberglass",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 500,
+      "panel_sizes": [
+        {
+          "width_mm": 304.8,
+          "height_mm": 457.2,
+          "label": "12\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        }
+      ],
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 10.2,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C",
+          "tolerance": 0.5
+        },
+        {
+          "value": 10.8,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0027,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": -459,
+      "cte_x_ppm": 13,
+      "cte_y_ppm": 13,
+      "cte_z_below_tg_ppm": 34,
+      "thermal_conductivity_w_mk": 0.81,
+      "specific_heat_j_gk": 0.79,
+      "density_g_cm3": 3.0,
+      "peel_strength_n_mm": 1.926,
+      "peel_condition": "1 oz EDC foil after solder float (11.0 lb/in on the sheet)",
+      "thicknesses_mm": [
+        0.64,
+        1.28
+      ],
+      "notes": "Ceramic filled laminate reinforced with woven fiberglass, extension of the RO3000 series with better mechanical stability; processed with standard PTFE techniques. Water absorption below 0.1 %; thermal conductivity at 80 C; CTE is for X, Y and Z from -55 to 288 C (Z stored as below Tg); resistivity exponents and tensile modulus pairing cannot be read reliably and are not loaded. Non-standard thicknesses are available from 0.010 to 0.250 in."
+    },
+    {
+      "id": "rogers/ro3003-bondply",
+      "manufacturer": "Rogers",
+      "name": "RO3003 Bondply",
+      "kind": "bonding_film",
+      "family": "RO3000",
+      "source": {
+        "pdf": "ro3000-series-bondply--data-sheet--processing-guidelines.pdf",
+        "pages": "1-3"
+      },
+      "resin": "PTFE",
+      "filler": "Ceramic",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 500,
+      "panel_sizes": [
+        {
+          "width_mm": 647.7,
+          "height_mm": 457.2,
+          "label": "25.5\" x 18\""
+        }
+      ],
+      "thicknesses_mm": [
+        0.13
+      ],
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C",
+          "tolerance": 0.04
+        },
+        {
+          "value": 3.0,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.001,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": -3,
+      "cte_x_ppm": 17,
+      "cte_y_ppm": 16,
+      "cte_z_below_tg_ppm": 25,
+      "thermal_conductivity_w_mk": 0.5,
+      "specific_heat_j_gk": 0.9,
+      "density_g_cm3": 2.1,
+      "water_absorption_pct": 0.04,
+      "youngs_modulus_gpa": {
+        "value": 0.9
+      },
+      "processing": {
+        "lamination": {
+          "max_temp_c": 371,
+          "heat_rate_c_min": 5.5,
+          "notes": "Bond at up to 371 C (700 F), pressure 250 to 500 psi (about 1720 to 3450 kPa), dwell 30 to 60 min at 371 C. Ramp up to 315 C (600 F) at up to 5.5 C/min, then 2.7 C/min from 315 to 371 C; cool at 1.1 C/min down to 260 C (500 F) and keep the package in the press until it is below 121 C (250 F). Control of the temperature is most critical between 315 and 371 C on the way up and between 371 and 260 C on the way down."
+        },
+        "bake_note": "Bake inner layers at 125 to 150 C for at least one hour before bonding."
+      },
+      "notes": "Bondply of the RO3000 series (same ceramic filled PTFE system as the core) for homogeneous multilayer boards, with the electrical and thermal-mechanical advantages over other adhesive systems. Dk process value is the 10 GHz clamped stripline value; the sheet notes that the nominal Dk of a 0.060 in laminate measured by 2.5.5.5 is 3.02 for RO3003. Moisture absorption at D48/50; thermal conductivity at 80 C; CTE from -55 to 288 C (Z stored as below Tg). Type 304 stainless steel separator plates and 5-10 mil aluminium sheets between the multilayers and the separators are recommended; use entry material when drilling or routing; avoid sodium or plasma PTFE activation. Standard thickness 0.005 in and size 25.5 x 18 in. Resistivity exponents are not loaded. Tensile modulus 900 MPa (X, Y)."
+    },
+    {
+      "id": "rogers/ro3006-bondply",
+      "manufacturer": "Rogers",
+      "name": "RO3006 Bondply",
+      "kind": "bonding_film",
+      "family": "RO3000",
+      "source": {
+        "pdf": "ro3000-series-bondply--data-sheet--processing-guidelines.pdf",
+        "pages": "1-3"
+      },
+      "resin": "PTFE",
+      "filler": "Ceramic",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 500,
+      "panel_sizes": [
+        {
+          "width_mm": 647.7,
+          "height_mm": 457.2,
+          "label": "25.5\" x 18\""
+        }
+      ],
+      "thicknesses_mm": [
+        0.13
+      ],
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 6.15,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C",
+          "tolerance": 0.15
+        },
+        {
+          "value": 6.5,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.002,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": -262,
+      "cte_x_ppm": 17,
+      "cte_y_ppm": 17,
+      "cte_z_below_tg_ppm": 24,
+      "thermal_conductivity_w_mk": 0.79,
+      "specific_heat_j_gk": 0.86,
+      "density_g_cm3": 2.6,
+      "water_absorption_pct": 0.02,
+      "youngs_modulus_gpa": {
+        "value": 2.068
+      },
+      "processing": {
+        "lamination": {
+          "max_temp_c": 371,
+          "heat_rate_c_min": 5.5,
+          "notes": "Bond at up to 371 C (700 F), pressure 250 to 500 psi (about 1720 to 3450 kPa), dwell 30 to 60 min at 371 C. Ramp up to 315 C (600 F) at up to 5.5 C/min, then 2.7 C/min from 315 to 371 C; cool at 1.1 C/min down to 260 C (500 F) and keep the package in the press until it is below 121 C (250 F). Control of the temperature is most critical between 315 and 371 C on the way up and between 371 and 260 C on the way down."
+        },
+        "bake_note": "Bake inner layers at 125 to 150 C for at least one hour before bonding."
+      },
+      "notes": "Bondply of the RO3000 series (same ceramic filled PTFE system as the core) for homogeneous multilayer boards, with the electrical and thermal-mechanical advantages over other adhesive systems. Dk process value is the 10 GHz clamped stripline value; the sheet notes that the nominal Dk of a 0.060 in laminate measured by 2.5.5.5 is 3.02 for RO3003. Moisture absorption at D48/50; thermal conductivity at 80 C; CTE from -55 to 288 C (Z stored as below Tg). Type 304 stainless steel separator plates and 5-10 mil aluminium sheets between the multilayers and the separators are recommended; use entry material when drilling or routing; avoid sodium or plasma PTFE activation. Standard thickness 0.005 in and size 25.5 x 18 in. Resistivity exponents are not loaded. Tensile modulus 2068 MPa (X, Y)."
+    },
+    {
+      "id": "rogers/ro3010-bondply",
+      "manufacturer": "Rogers",
+      "name": "RO3010 Bondply",
+      "kind": "bonding_film",
+      "family": "RO3000",
+      "source": {
+        "pdf": "ro3000-series-bondply--data-sheet--processing-guidelines.pdf",
+        "pages": "1-3"
+      },
+      "resin": "PTFE",
+      "filler": "Ceramic",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 500,
+      "panel_sizes": [
+        {
+          "width_mm": 647.7,
+          "height_mm": 457.2,
+          "label": "25.5\" x 18\""
+        }
+      ],
+      "thicknesses_mm": [
+        0.13
+      ],
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 10.2,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C",
+          "tolerance": 0.3
+        },
+        {
+          "value": 11.2,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0022,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": -395,
+      "cte_x_ppm": 13,
+      "cte_y_ppm": 11,
+      "cte_z_below_tg_ppm": 16,
+      "thermal_conductivity_w_mk": 0.95,
+      "specific_heat_j_gk": 0.8,
+      "density_g_cm3": 2.8,
+      "water_absorption_pct": 0.05,
+      "youngs_modulus_gpa": {
+        "value": 1.5
+      },
+      "processing": {
+        "lamination": {
+          "max_temp_c": 371,
+          "heat_rate_c_min": 5.5,
+          "notes": "Bond at up to 371 C (700 F), pressure 250 to 500 psi (about 1720 to 3450 kPa), dwell 30 to 60 min at 371 C. Ramp up to 315 C (600 F) at up to 5.5 C/min, then 2.7 C/min from 315 to 371 C; cool at 1.1 C/min down to 260 C (500 F) and keep the package in the press until it is below 121 C (250 F). Control of the temperature is most critical between 315 and 371 C on the way up and between 371 and 260 C on the way down."
+        },
+        "bake_note": "Bake inner layers at 125 to 150 C for at least one hour before bonding."
+      },
+      "notes": "Bondply of the RO3000 series (same ceramic filled PTFE system as the core) for homogeneous multilayer boards, with the electrical and thermal-mechanical advantages over other adhesive systems. Dk process value is the 10 GHz clamped stripline value; the sheet notes that the nominal Dk of a 0.060 in laminate measured by 2.5.5.5 is 3.02 for RO3003. Moisture absorption at D48/50; thermal conductivity at 80 C; CTE from -55 to 288 C (Z stored as below Tg). Type 304 stainless steel separator plates and 5-10 mil aluminium sheets between the multilayers and the separators are recommended; use entry material when drilling or routing; avoid sodium or plasma PTFE activation. Standard thickness 0.005 in and size 25.5 x 18 in. Resistivity exponents are not loaded. Tensile modulus 1500 MPa (X, Y)."
+    },
+    {
+      "id": "rogers/ro4003c-lopro",
+      "manufacturer": "Rogers",
+      "name": "RO4003C LoPro",
+      "kind": "ceramic_filled",
+      "family": "RO4000",
+      "source": {
+        "pdf": "ro4000-lopro-laminates.pdf",
+        "pages": "1-4"
+      },
+      "resin": "Hydrocarbon thermoset",
+      "filler": "Ceramic",
+      "reinforcement": "Woven glass",
+      "lead_free_compatible": true,
+      "td_c": 425,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.38,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C",
+          "tolerance": 0.05
+        },
+        {
+          "value": 3.5,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0027,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        },
+        {
+          "freq_ghz": 2.5,
+          "value": 0.0021,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": 40,
+      "volume_resistivity_ohm_cm": 1.7e+16,
+      "surface_resistivity_ohm": 4200000000000000.0,
+      "dielectric_strength_kv_mm": 31.2,
+      "youngs_modulus_gpa": {
+        "value": 26.889
+      },
+      "tensile_strength_mpa": {
+        "value": 141
+      },
+      "flexural_strength_mpa": {
+        "value": 276
+      },
+      "cte_x_ppm": 11,
+      "cte_y_ppm": 14,
+      "cte_z_below_tg_ppm": 46,
+      "thermal_conductivity_w_mk": 0.64,
+      "water_absorption_pct": 0.06,
+      "density_g_cm3": 1.79,
+      "peel_strength_n_mm": 1.05,
+      "peel_condition": "1 oz TC foil after solder float (6.0 lb/in)",
+      "thicknesses_mm": [
+        0.221,
+        0.323,
+        0.424,
+        0.526,
+        0.831,
+        1.542
+      ],
+      "notes": "RO4000 LoPro laminate (RO4000 resin system modified to bond reverse treated foil). The values are those of the corresponding RO4000 laminate without the LoPro resin; with LoPro foil a double-sided core gains about 0.0007 in of thickness and the LoPro resin has a Dk of about 2.4, so the design Dk depends strongly on the core thickness. Tg above 280 C (TMA); dimensional stability <0.3 mm/m (X, Y) after etch plus E2/150 C; CTE X, Y and Z from -55 to 288 C (Z stored as below Tg); thermal conductivity at 80 C; moisture absorption after 48 h immersion of a 0.060 in sample at 50 C; peel strength after solder float with 1 oz TC foil; electric strength for 0.51 mm; tensile modulus and strength in the Y direction. Resistivities converted from M-ohm cm and M-ohm. UL 94 flammability is not applicable (N/A) for this grade."
+    },
+    {
+      "id": "rogers/ro4350b-lopro",
+      "manufacturer": "Rogers",
+      "name": "RO4350B LoPro",
+      "kind": "ceramic_filled",
+      "family": "RO4000",
+      "source": {
+        "pdf": "ro4000-lopro-laminates.pdf",
+        "pages": "1-4"
+      },
+      "resin": "Hydrocarbon thermoset",
+      "filler": "Ceramic",
+      "reinforcement": "Woven glass",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "td_c": 390,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.48,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C",
+          "tolerance": 0.05
+        },
+        {
+          "value": 3.55,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0037,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        },
+        {
+          "freq_ghz": 2.5,
+          "value": 0.0031,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": 50,
+      "volume_resistivity_ohm_cm": 1.2e+16,
+      "surface_resistivity_ohm": 5700000000000000.0,
+      "dielectric_strength_kv_mm": 31.2,
+      "youngs_modulus_gpa": {
+        "value": 11.473
+      },
+      "tensile_strength_mpa": {
+        "value": 175
+      },
+      "flexural_strength_mpa": {
+        "value": 255
+      },
+      "cte_x_ppm": 14,
+      "cte_y_ppm": 16,
+      "cte_z_below_tg_ppm": 35,
+      "thermal_conductivity_w_mk": 0.62,
+      "water_absorption_pct": 0.06,
+      "density_g_cm3": 1.86,
+      "peel_strength_n_mm": 0.88,
+      "peel_condition": "1 oz TC foil after solder float (5.0 lb/in)",
+      "thicknesses_mm": [
+        0.102,
+        0.185,
+        0.272,
+        0.526,
+        0.78,
+        1.542
+      ],
+      "notes": "RO4000 LoPro laminate (RO4000 resin system modified to bond reverse treated foil). The values are those of the corresponding RO4000 laminate without the LoPro resin; with LoPro foil a double-sided core gains about 0.0007 in of thickness and the LoPro resin has a Dk of about 2.4, so the design Dk depends strongly on the core thickness. Tg above 280 C (TMA); dimensional stability <0.5 mm/m (X, Y) after etch plus E2/150 C; CTE X, Y and Z from -55 to 288 C (Z stored as below Tg); thermal conductivity at 80 C; moisture absorption after 48 h immersion of a 0.060 in sample at 50 C; peel strength after solder float with 1 oz TC foil; electric strength for 0.51 mm; tensile modulus and strength in the Y direction. Resistivities converted from M-ohm cm and M-ohm. RO4350B LoPro laminates do not share the UL designation of standard RO4350B; a separate UL qualification may be necessary."
+    },
+    {
+      "id": "rogers/ro4835-lopro",
+      "manufacturer": "Rogers",
+      "name": "RO4835 LoPro",
+      "kind": "ceramic_filled",
+      "family": "RO4000",
+      "source": {
+        "pdf": "ro4000-lopro-laminates.pdf",
+        "pages": "1-4"
+      },
+      "resin": "Hydrocarbon thermoset",
+      "filler": "Ceramic",
+      "reinforcement": "Woven glass",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "td_c": 390,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.48,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C",
+          "tolerance": 0.05
+        },
+        {
+          "value": 3.55,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0037,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        },
+        {
+          "freq_ghz": 2.5,
+          "value": 0.0031,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": 50,
+      "volume_resistivity_ohm_cm": 1e+16,
+      "surface_resistivity_ohm": 1000000000000000.0,
+      "dielectric_strength_kv_mm": 30.2,
+      "youngs_modulus_gpa": {
+        "value": 17.781
+      },
+      "tensile_strength_mpa": {
+        "value": 133
+      },
+      "flexural_strength_mpa": {
+        "value": 186
+      },
+      "cte_x_ppm": 11,
+      "cte_y_ppm": 14,
+      "cte_z_below_tg_ppm": 24,
+      "thermal_conductivity_w_mk": 0.73,
+      "water_absorption_pct": 0.05,
+      "density_g_cm3": 1.92,
+      "peel_strength_n_mm": 0.88,
+      "peel_condition": "1 oz TC foil after solder float (5.0 lb/in)",
+      "thicknesses_mm": [
+        0.102,
+        0.185,
+        0.272,
+        0.526,
+        0.78
+      ],
+      "notes": "RO4000 LoPro laminate (RO4000 resin system modified to bond reverse treated foil). The values are those of the corresponding RO4000 laminate without the LoPro resin; with LoPro foil a double-sided core gains about 0.0007 in of thickness and the LoPro resin has a Dk of about 2.4, so the design Dk depends strongly on the core thickness. Tg above 280 C (TMA); dimensional stability <0.5 mm/m (X, Y) after etch plus E2/150 C; CTE X, Y and Z from -55 to 288 C (Z stored as below Tg); thermal conductivity at 80 C; moisture absorption after 48 h immersion of a 0.060 in sample at 50 C; peel strength after solder float with 1 oz TC foil; electric strength for 0.51 mm; tensile modulus and strength in the Y direction. Resistivities converted from M-ohm cm and M-ohm. The thickness list is the part of the standard thicknesses visible in the text layer of the sheet."
+    },
+    {
+      "id": "rogers/ro4360g2",
+      "manufacturer": "Rogers",
+      "name": "RO4360G2",
+      "kind": "ceramic_filled",
+      "family": "RO4000",
+      "source": {
+        "pdf": "ro4360g2-high-frequency-laminates-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "reinforcement": "Glass",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 407,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 6.15,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C",
+          "tolerance": 0.15
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0038,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": -131,
+      "thermal_conductivity_w_mk": 0.75,
+      "dielectric_strength_kv_mm": 30.9,
+      "cte_x_ppm": 13,
+      "cte_y_ppm": 14,
+      "cte_z_below_tg_ppm": 28,
+      "water_absorption_pct": 0.08,
+      "density_g_cm3": 2.16,
+      "peel_strength_n_mm": 0.91,
+      "peel_condition": "Condition B, 1 oz foil (5.2 lb/in)",
+      "thicknesses_mm": [
+        0.203,
+        0.406,
+        0.508,
+        0.61,
+        0.813,
+        1.524
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 533.4,
+          "label": "24\" x 21\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 914.4,
+          "label": "24\" x 36\""
+        },
+        {
+          "width_mm": 1219.2,
+          "height_mm": 914.4,
+          "label": "48\" x 36\""
+        }
+      ],
+      "notes": "Dk 6.15 (+/- 0.15 process, 10 GHz clamped stripline; the clamped stripline method can read lower than the Dk found in practice), low loss, glass reinforced hydrocarbon ceramic laminate that processes like FR-4 and pairs with RO4400 bondply and lower Dk RO4000 laminates. Tg above 280 C (TMA); T288 above 30 min after a 30 min / 125 C prebake; CTE X, Y and Z from -50 to 288 C after a replicated heat cycle; tensile strength 131 MPa (X) and 97 MPa (Y); flexural strength 213 MPa (X) and 145 MPa (Y); electrical strength 784 V/mil converted to kV/mm; moisture absorption 0.08 % after 48 h at 50 C; UL 94 file QMTS2.E102763. The volume and surface resistivity units cannot be read reliably and are not loaded."
+    },
+    {
+      "id": "rogers/ro4450f",
+      "manufacturer": "Rogers",
+      "name": "RO4450F",
+      "kind": "prepreg",
+      "family": "RO4400",
+      "source": {
+        "pdf": "ro4400-series-bondply-data-sheet---ro4450f-and-ro4460g2-bondply.pdf",
+        "pages": "1-2",
+        "revision": "Issued 1595 090826, Publication 92-150"
+      },
+      "reinforcement": "Glass",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4103B/540",
+      "thicknesses_mm": [
+        0.102
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 406.4,
+          "height_mm": 457.2,
+          "label": "16\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        },
+        {
+          "width_mm": 622.3,
+          "height_mm": 469.9,
+          "label": "24.5\" x 18.5\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 914.4,
+          "label": "24\" x 36\""
+        }
+      ],
+      "td_c": 390,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.52,
+          "method": "IPC-TM-650 2.5.5.5, 23 C, 50 % RH",
+          "resin_content_pct": 74,
+          "tolerance": 0.05
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.004,
+          "method": "IPC-TM-650 2.5.5.5, 23 C, 50 % RH",
+          "resin_content_pct": 74
+        }
+      ],
+      "dielectric_strength_kv_mm": 39.4,
+      "cte_x_ppm": 19,
+      "cte_y_ppm": 17,
+      "cte_z_below_tg_ppm": 50,
+      "thermal_conductivity_w_mk": 0.65,
+      "water_absorption_pct": 0.04,
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "After thermal stress, 10 s at 288 C, 35 um foil (4.0 lb/in)",
+      "prepreg": [
+        {
+          "style": "1080",
+          "resin_content_pct": 74,
+          "dk": 3.52,
+          "df": 0.004,
+          "test_freq_ghz": 10.0
+        }
+      ],
+      "notes": "RO4400 series bondply (prepreg) based on the RO4000 core materials: high postcure Tg suitable for sequential lamination, FR-4 compatible bond temperatures, low Z-axis expansion (43 to 60 ppm/C across the family), CAF resistant, UL file E102763. Glass style 1080; Dk and Df at 10 GHz, 23 C and 50 % RH; electrical strength 1000 V/mil converted to kV/mm; CTE from -55 to 288 C; thermal conductivity at 80 C; peel strength after 10 s at 288 C with 35 um foil. Resistivity exponents cannot be read and are not loaded. Tg above 280 C (TMA); lateral flow improved over the earlier RO4450B, preferred for designs with difficult fill requirements."
+    },
+    {
+      "id": "rogers/ro4460g2",
+      "manufacturer": "Rogers",
+      "name": "RO4460G2",
+      "kind": "prepreg",
+      "family": "RO4400",
+      "source": {
+        "pdf": "ro4400-series-bondply-data-sheet---ro4450f-and-ro4460g2-bondply.pdf",
+        "pages": "1-2",
+        "revision": "Issued 1595 090826, Publication 92-150"
+      },
+      "reinforcement": "Glass",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4103B/540",
+      "thicknesses_mm": [
+        0.102
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 406.4,
+          "height_mm": 457.2,
+          "label": "16\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        },
+        {
+          "width_mm": 622.3,
+          "height_mm": 469.9,
+          "label": "24.5\" x 18.5\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 914.4,
+          "label": "24\" x 36\""
+        }
+      ],
+      "td_c": 405,
+      "tg_tma_c": 170,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 6.15,
+          "method": "IPC-TM-650 2.5.5.5, 23 C, 50 % RH",
+          "resin_content_pct": 79,
+          "tolerance": 0.15
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.004,
+          "method": "IPC-TM-650 2.5.5.5, 23 C, 50 % RH",
+          "resin_content_pct": 79
+        }
+      ],
+      "dielectric_strength_kv_mm": 39.4,
+      "cte_x_ppm": 15,
+      "cte_y_ppm": 18,
+      "cte_z_below_tg_ppm": 43,
+      "thermal_conductivity_w_mk": 0.67,
+      "water_absorption_pct": 0.05,
+      "peel_strength_n_mm": 1.04,
+      "peel_condition": "After thermal stress, 10 s at 288 C, 35 um foil (5.0 lb/in)",
+      "prepreg": [
+        {
+          "style": "1080",
+          "resin_content_pct": 79,
+          "dk": 6.15,
+          "df": 0.004,
+          "test_freq_ghz": 10.0
+        }
+      ],
+      "notes": "RO4400 series bondply (prepreg) based on the RO4000 core materials: high postcure Tg suitable for sequential lamination, FR-4 compatible bond temperatures, low Z-axis expansion (43 to 60 ppm/C across the family), CAF resistant, UL file E102763. Glass style 1080; Dk and Df at 10 GHz, 23 C and 50 % RH; electrical strength 1000 V/mil converted to kV/mm; CTE from -55 to 288 C; thermal conductivity at 80 C; peel strength after 10 s at 288 C with 35 um foil. Resistivity exponents cannot be read and are not loaded. A 6.15 Dk bonding layer with good Dk control."
+    },
+    {
+      "id": "rogers/ro4450t",
+      "manufacturer": "Rogers",
+      "name": "RO4450T",
+      "kind": "prepreg",
+      "family": "RO4400",
+      "source": {
+        "pdf": "ro4450t-bondply-data-sheet.pdf",
+        "pages": "1-3"
+      },
+      "filler": "Ceramic",
+      "reinforcement": "Spread glass",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "thicknesses_mm": [
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.152
+      ],
+      "prepreg": [
+        {
+          "style": "106",
+          "resin_content_pct": 79,
+          "pressed_thickness_um": 64,
+          "dk": 3.26,
+          "df": 0.0037,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "106",
+          "resin_content_pct": 82,
+          "pressed_thickness_um": 76,
+          "dk": 3.23,
+          "df": 0.0039,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "106",
+          "resin_content_pct": 84,
+          "pressed_thickness_um": 89,
+          "dk": 3.19,
+          "df": 0.0033,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 75,
+          "pressed_thickness_um": 102,
+          "dk": 3.35,
+          "df": 0.0042,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 77,
+          "pressed_thickness_um": 114,
+          "dk": 3.29,
+          "df": 0.0044,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 79,
+          "pressed_thickness_um": 127,
+          "dk": 3.28,
+          "df": 0.0038,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 83,
+          "pressed_thickness_um": 152,
+          "dk": 3.24,
+          "df": 0.0044,
+          "test_freq_ghz": 10.0
+        }
+      ],
+      "notes": "RO4450T 3.2-3.3 Dk, low loss, spread glass reinforced, ceramic filled bonding ply. One row per thickness: 2.5 mil (0.064 mm) to 6 mil (0.152 mm), glass 106 for the three thinnest and 1078 for the others, Dk 3.19 to 3.35 +/- 0.05 and Df 0.0033 to 0.0044 at 10 GHz, 23 C and 50 % RH. Td 397 to 408 C; Tg 176 to 188 C (TMA); CTE X 15-20, Y 16-21 and Z 52-64 ppm/C from -55 to 288 C; thermal conductivity 0.50-0.55 W/mK at 50 C; copper peel strength after thermal stress 4.3 to 4.6 lb/in; moisture absorption 0.05 to 0.06 %; electrical strength 972 to 1070 V/mil. The volume and surface resistivity exponents cannot be read and are not loaded."
+    },
+    {
+      "id": "rogers/ro4533",
+      "manufacturer": "Rogers",
+      "name": "RO4533",
+      "kind": "ceramic_filled",
+      "family": "RO4500",
+      "source": {
+        "pdf": "ro4500-series-cost-performance-antenna-grade-laminates.pdf",
+        "pages": "1-2"
+      },
+      "reinforcement": "Glass",
+      "lead_free_compatible": true,
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 533.4,
+          "label": "24\" x 21\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 914.4,
+          "label": "24\" x 36\""
+        },
+        {
+          "width_mm": 1219.2,
+          "height_mm": 914.4,
+          "label": "48\" x 36\""
+        }
+      ],
+      "density_g_cm3": 1.8,
+      "thermal_conductivity_w_mk": 0.6,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.3,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C",
+          "tolerance": 0.08
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.5,
+          "value": 0.002,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0025,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "cte_x_ppm": 13,
+      "cte_y_ppm": 11,
+      "cte_z_below_tg_ppm": 37,
+      "water_absorption_pct": 0.02,
+      "peel_strength_n_mm": 1.2,
+      "peel_condition": "1 oz EDC after solder float (6.9 lb/in)",
+      "thicknesses_mm": [
+        0.508,
+        0.762,
+        1.524
+      ],
+      "notes": "RO4500 series antenna grade laminate (cost/performance, non flame retardant). Dk at 10 GHz and 2.5 GHz process values; PIM -157 dBc typical (reverse treated ED foil, 43 dBm reflected, swept tones, 0.060 in laminate; standard ED foil is below -145 dBc); dielectric strength above 500 V/mil for 0.51 mm; dimensional stability <0.2 mm/m (X, Y) after etch; CTE X, Y and Z from -55 to 288 C; thermal conductivity at 80 C; Tg above 280 C (TMA); not UL 94 rated (NON FR); copper peel strength after solder float with 1 oz EDC."
+    },
+    {
+      "id": "rogers/ro4534",
+      "manufacturer": "Rogers",
+      "name": "RO4534",
+      "kind": "ceramic_filled",
+      "family": "RO4500",
+      "source": {
+        "pdf": "ro4500-series-cost-performance-antenna-grade-laminates.pdf",
+        "pages": "1-2"
+      },
+      "reinforcement": "Glass",
+      "lead_free_compatible": true,
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 533.4,
+          "label": "24\" x 21\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 914.4,
+          "label": "24\" x 36\""
+        },
+        {
+          "width_mm": 1219.2,
+          "height_mm": 914.4,
+          "label": "48\" x 36\""
+        }
+      ],
+      "density_g_cm3": 1.8,
+      "thermal_conductivity_w_mk": 0.6,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C",
+          "tolerance": 0.08
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.5,
+          "value": 0.0022,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0027,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "cte_x_ppm": 11,
+      "cte_y_ppm": 14,
+      "cte_z_below_tg_ppm": 46,
+      "water_absorption_pct": 0.06,
+      "peel_strength_n_mm": 1.1,
+      "peel_condition": "1 oz EDC after solder float (6.3 lb/in)",
+      "thicknesses_mm": [
+        0.508,
+        0.813,
+        1.524
+      ],
+      "notes": "RO4500 series antenna grade laminate (cost/performance, non flame retardant). Dk at 10 GHz and 2.5 GHz process values; PIM -157 dBc typical (reverse treated ED foil, 43 dBm reflected, swept tones, 0.060 in laminate; standard ED foil is below -145 dBc); dielectric strength above 500 V/mil for 0.51 mm; dimensional stability <0.3 mm/m (X, Y) after etch; CTE X, Y and Z from -55 to 288 C; thermal conductivity at 80 C; Tg above 280 C (TMA); not UL 94 rated (NON FR); copper peel strength after solder float with 1 oz EDC. Non-standard thicknesses are available from 0.020 to 0.060 in."
+    },
+    {
+      "id": "rogers/ro4725jxr",
+      "manufacturer": "Rogers",
+      "name": "RO4725JXR",
+      "kind": "laminate",
+      "family": "RO4700",
+      "source": {
+        "pdf": "ro4725jxr-ro4730g3-antenna-grade-laminates-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "reinforcement": "Glass",
+      "lead_free_compatible": true,
+      "tcdk_ppm_per_c": 34,
+      "panel_sizes": [
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 533.4,
+          "label": "24\" x 21\""
+        }
+      ],
+      "td_c": 439,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.55,
+          "method": "IPC-TM-650 2.5.5.5, 23 C",
+          "tolerance": 0.05
+        },
+        {
+          "value": 2.64,
+          "method": "Differential phase length (design), 1.7-5 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0026,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "volume_resistivity_ohm_cm": 216000000000000.0,
+      "surface_resistivity_ohm": 48000000000000.0,
+      "dielectric_strength_kv_mm": 24.8,
+      "flexural_strength_mpa": {
+        "lengthwise": 121,
+        "crosswise": 92
+      },
+      "cte_x_ppm": 13.9,
+      "cte_y_ppm": 19.0,
+      "cte_z_below_tg_ppm": 25.6,
+      "thermal_conductivity_w_mk": 0.38,
+      "water_absorption_pct": 0.24,
+      "density_g_cm3": 1.27,
+      "peel_strength_n_mm": 1.489,
+      "peel_condition": "1 oz LoPro EDC (8.5 lb/in on the sheet)",
+      "thicknesses_mm": [
+        0.78,
+        1.542
+      ],
+      "notes": "RO4700 series antenna grade laminate, an alternative to PTFE based antenna materials. Design Dk 2.64 by differential phase length from 1.7 to 5 GHz; PIM -166 dBc (0.060 in, 43 dBm, 1900 MHz); volume and surface resistivity are for 0.030 in and are converted from M-ohm cm and M-ohm; electrical strength 0.030 in converted from V/mil; flexural strength by ASTM D790 in the machine and cross machine directions; dimensional stability below 0.4 mm/m (X, Y); CTE X, Y and Z from -55 to 288 C; thermal conductivity at 50 C; Tg above 280 C; peel strength with 1 oz LoPro EDC. Dissipation factor value taken with LoPro reverse treated ED foil. Standard thicknesses are for the LoPro version; UL 94 flammability not applicable (N/A)."
+    },
+    {
+      "id": "rogers/ro4730g3",
+      "manufacturer": "Rogers",
+      "name": "RO4730G3",
+      "kind": "laminate",
+      "family": "RO4700",
+      "source": {
+        "pdf": "ro4725jxr-ro4730g3-antenna-grade-laminates-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "reinforcement": "Glass",
+      "lead_free_compatible": true,
+      "tcdk_ppm_per_c": 34,
+      "panel_sizes": [
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 533.4,
+          "label": "24\" x 21\""
+        }
+      ],
+      "ul94": "V-0",
+      "td_c": 411,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "IPC-TM-650 2.5.5.5, 23 C",
+          "tolerance": 0.05
+        },
+        {
+          "value": 2.98,
+          "method": "Differential phase length (design), 1.7-5 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0028,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        },
+        {
+          "freq_ghz": 2.5,
+          "value": 0.0022,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "volume_resistivity_ohm_cm": 90000000000000.0,
+      "surface_resistivity_ohm": 720000000000.0,
+      "dielectric_strength_kv_mm": 28.7,
+      "flexural_strength_mpa": {
+        "lengthwise": 181,
+        "crosswise": 139
+      },
+      "cte_x_ppm": 15.9,
+      "cte_y_ppm": 14.4,
+      "cte_z_below_tg_ppm": 35.2,
+      "thermal_conductivity_w_mk": 0.45,
+      "water_absorption_pct": 0.093,
+      "density_g_cm3": 1.58,
+      "peel_strength_n_mm": 0.718,
+      "peel_condition": "1 oz LoPro EDC (4.1 lb/in on the sheet)",
+      "thicknesses_mm": [
+        0.508,
+        0.762,
+        1.524
+      ],
+      "notes": "RO4700 series antenna grade laminate, an alternative to PTFE based antenna materials. Design Dk 2.98 by differential phase length from 1.7 to 5 GHz; PIM -165 dBc (0.060 in, 43 dBm, 1900 MHz); volume and surface resistivity are for 0.030 in and are converted from M-ohm cm and M-ohm; electrical strength 0.030 in converted from V/mil; flexural strength by ASTM D790 in the machine and cross machine directions; dimensional stability below 0.4 mm/m (X, Y); CTE X, Y and Z from -55 to 288 C; thermal conductivity at 50 C; Tg above 280 C; peel strength with 1 oz LoPro EDC. Dissipation factor value taken with LoPro reverse treated ED foil. The LoPro version is offered in 0.145, 0.272, 0.526, 0.780 and 1.542 mm. The 2.5 GHz dissipation factor line of the sheet (0.0022) sits beside this column and is stored with the RO4730G3 values."
+    },
+    {
+      "id": "rogers/ro4830",
+      "manufacturer": "Rogers",
+      "name": "RO4830",
+      "kind": "laminate",
+      "family": "RO4800",
+      "source": {
+        "pdf": "ro4830-high-frequency-laminates-data-sheet.pdf",
+        "pages": "1-4",
+        "revision": "Revised 1598 080422, Publication 92-182"
+      },
+      "resin": "Thermoset",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "dk": [
+        {
+          "freq_ghz": 77.0,
+          "value": 3.24,
+          "method": "Microstrip differential phase length (design), both thicknesses"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0033,
+          "method": "Split-post dielectric resonator, 0.005 in dielectric"
+        }
+      ],
+      "tcdk_ppm_per_c": -30,
+      "peel_strength_n_mm": 0.67,
+      "peel_condition": "After thermal stress, 18 um reverse treated ED foil (3.8 lb/in)",
+      "notes": "Thermoset laminate for price sensitive millimetre-wave applications; values are given for two dielectric thicknesses, 0.005 in and 0.0095 in. Design Dk 3.24 at 77 GHz for both; transmission line loss 2.2 and 1.8 dB/in at 77 GHz; Df 0.0033 (0.005 in) and 0.0032 (0.0095 in) at 10 GHz; thermal coefficient of Dk -30 ppm/C (-50 to 150 C); dielectric strength 78.7 and 59.1 kV/mm; water absorption 0.15 and 0.13 %; Td 408 and 412 C; T288 above 30 min with copper; dimensional stability about -1.8 and -1.5 mm/m (MD) and -1.8 and -1.6 mm/m (CMD); thermal conductivity 0.45 and 0.47 W/mK (calculated); CTE X, Y 23 and 21 ppm/C and Z 110 and 83 ppm/C (0 to 150 C); the top-level values are for the 0.005 in dielectric where a single value is stored. Surface area index of the foil 2.0 and average nodule size 0.2 um.",
+      "td_c": 408,
+      "water_absorption_pct": 0.15,
+      "thermal_conductivity_w_mk": 0.45,
+      "dielectric_strength_kv_mm": 78.7,
+      "cte_x_ppm": 23,
+      "cte_y_ppm": 23,
+      "cte_z_below_tg_ppm": 110
+    },
+    {
+      "id": "rogers/ro4830-plus",
+      "manufacturer": "Rogers",
+      "name": "RO4830 Plus",
+      "kind": "laminate",
+      "family": "RO4800",
+      "source": {
+        "pdf": "ro4830-plus-laminates-data-sheet.pdf",
+        "pages": "1-4",
+        "revision": "Issued 1422 070126, Publication 92-217"
+      },
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 285,
+      "td_c": 357,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "IPC-TM-650 2.5.5.5, 23 C, 50 % RH (process)",
+          "tolerance": 0.04
+        },
+        {
+          "freq_ghz": 77.0,
+          "value": 3.03,
+          "method": "Microstrip differential phase length (design)"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0015,
+          "method": "IPC-TM-650 2.5.5.5, 23 C, 50 % RH"
+        }
+      ],
+      "tcdk_ppm_per_c": -54,
+      "volume_resistivity_ohm_cm": 1.1e+19,
+      "surface_resistivity_ohm": 4.1e+17,
+      "cte_x_ppm": 46,
+      "cte_y_ppm": 47,
+      "cte_z_below_tg_ppm": 56,
+      "thermal_conductivity_w_mk": 0.5,
+      "peel_strength_n_mm": 0.788,
+      "peel_condition": "After thermal stress and solder float, 18 um foil (4.5 lb/in on the sheet)",
+      "water_absorption_pct": 0.02,
+      "density_g_cm3": 1.64,
+      "thicknesses_mm": [
+        0.13
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "VLP ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 508.0,
+          "label": "24\" x 20\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 533.4,
+          "label": "24\" x 21\""
+        }
+      ],
+      "notes": "Rogers RO4830 Plus circuit material for millimetre-wave automotive radar; Dk 3.00 +/- 0.04 at 10 GHz and 3.03 design at 77 GHz. Tg 285 C by DMA; CTE X, Y and Z from -40 to 140 C; thermal conductivity in the z direction; tensile modulus 540 and 580 ksi (X, Y); flexural modulus 340 and 340 ksi (X, Y); dimensional stability -0.67 and -0.68 % (X, Y); resistivities 1.1e13 M-ohm cm and 4.1e11 M-ohm converted. Standard thickness 0.005 in with 1/2 oz VLP ED copper."
+    },
+    {
+      "id": "rogers/ro4835",
+      "manufacturer": "Rogers",
+      "name": "RO4835",
+      "kind": "ceramic_filled",
+      "family": "RO4000",
+      "source": {
+        "pdf": "ro4835-laminate-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 390,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.48,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C",
+          "tolerance": 0.05
+        },
+        {
+          "value": 3.66,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0037,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": 50,
+      "volume_resistivity_ohm_cm": 500000000000000.0,
+      "surface_resistivity_ohm": 700000000000000.0,
+      "dielectric_strength_kv_mm": 30.2,
+      "cte_x_ppm": 10,
+      "cte_y_ppm": 12,
+      "cte_z_below_tg_ppm": 31,
+      "thermal_conductivity_w_mk": 0.66,
+      "peel_strength_n_mm": 0.88,
+      "peel_condition": "After solder float, 35 um ED foil (5.0 lb/in)",
+      "youngs_modulus_gpa": {
+        "value": 7.78
+      },
+      "tensile_strength_mpa": {
+        "value": 136
+      },
+      "flexural_strength_mpa": {
+        "value": 186
+      },
+      "water_absorption_pct": 0.05,
+      "density_g_cm3": 1.92,
+      "notes": "RO4835 laminate. Tg above 280 C (TMA). The 4 mil laminate has a process Dk of 3.33 +/- 0.05 and conforms to IPC-4103A/240; the other thicknesses are /11 and /240 compliant. Volume resistivity 5e8 M-ohm cm and surface resistivity 7e8 M-ohm converted; dimensional stability below 0.5 mm/m (X, Y) after etch plus E2/150 C; CTE from -55 to 288 C (Z stored as below Tg); thermal conductivity at 80 C; moisture absorption at 50 C for 48 h."
+    },
+    {
+      "id": "rogers/ro4835ind-lopro",
+      "manufacturer": "Rogers",
+      "name": "RO4835IND LoPro",
+      "kind": "ceramic_filled",
+      "family": "RO4000",
+      "source": {
+        "pdf": "ro4835ind-lopro-laminate-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 390,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.48,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C",
+          "tolerance": 0.05
+        },
+        {
+          "freq_ghz": 60.0,
+          "value": 3.48,
+          "method": "Microstrip differential phase length (design)"
+        },
+        {
+          "freq_ghz": 77.0,
+          "value": 3.49,
+          "method": "Microstrip differential phase length (design)"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0037,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        },
+        {
+          "freq_ghz": 2.5,
+          "value": 0.0031,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "water_absorption_pct": 0.05,
+      "peel_strength_n_mm": 0.88,
+      "peel_condition": "After solder float, 1 oz EDC foil (5.0 lb/in)",
+      "thicknesses_mm": [
+        0.102
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 304.8,
+          "height_mm": 457.2,
+          "label": "12\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 914.4,
+          "label": "24\" x 36\""
+        },
+        {
+          "width_mm": 1219.2,
+          "height_mm": 914.4,
+          "label": "48\" x 36\""
+        }
+      ],
+      "notes": "RO4835IND LoPro thermoset laminate designed for 60-81 GHz short range sensing applications. Transmission line loss 2.13 dB/in at 60 GHz and 2.75 dB/in at 77 GHz (microstrip differential phase length). Tg above 280 C (TMA); dimensional stability below 0.5 mm/m (X, Y); moisture absorption after 48 h immersion of a 0.060 in sample at 50 C. Standard thickness 0.004 in."
+    },
+    {
+      "id": "rogers/ro4835t",
+      "manufacturer": "Rogers",
+      "name": "RO4835T",
+      "kind": "ceramic_filled",
+      "family": "RO4000",
+      "source": {
+        "pdf": "ro4835t-laminate-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 389,
+      "reinforcement": "Spread glass",
+      "thicknesses_mm": [
+        0.064,
+        0.076,
+        0.102,
+        0.127
+      ],
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.33,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C (2.5, 3 and 5 mil; 4 mil 3.32)"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0034,
+          "method": "IPC-TM-650 2.5.5.5, 23 C (3 mil value)"
+        }
+      ],
+      "thermal_conductivity_w_mk": 0.52,
+      "density_g_cm3": 1.81,
+      "notes": "RO4835T, a 3.3 Dk low loss, spread glass reinforced, ceramic filled laminate for thin multilayers, used with RO4450F and RO4450T bondply. Values are given for 2.5, 3, 4 and 5 mil (0.064, 0.076, 0.101 and 0.127 mm) dielectrics: process Dk 3.33, 3.33, 3.32 and 3.33; design Dk 3.52, 3.50, 3.49 and 3.48 (8-40 GHz differential phase length); Df 0.0030, 0.0034, 0.0036 and 0.003 at 10 GHz (the value stored is the 3 mil one); electrical strength 1320, 1260, 1265 and 1960 V/mil; Td 389 C and Tg above 280 C (TMA) for all; CTE X 14-17, Y 13-16 and Z 60-62 ppm/C from -55 to 288 C; thermal conductivity 0.52-0.54 W/mK at 50 C; copper adhesion 3.7-3.9 lb/in (0.65-0.68 N/mm); density 1.80-1.81; moisture absorption 0.20, 0.15, 0.13 and 0.12 %; dimensional stability below 0.5 mm/m. Resistivity exponents cannot be read reliably and are not loaded."
+    },
+    {
+      "id": "rogers/rt-duroid-5870",
+      "manufacturer": "Rogers",
+      "name": "RT/duroid 5870",
+      "kind": "ptfe",
+      "family": "RT/duroid",
+      "source": {
+        "pdf": "rt-duroid-5870---5880-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "resin": "PTFE",
+      "reinforcement": "Glass microfiber",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 500,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 2.33,
+          "method": "IPC-TM-650 2.5.5.3, 23 C"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.33,
+          "method": "IPC-TM-650 2.5.5.5, 23 C",
+          "tolerance": 0.02
+        },
+        {
+          "value": 2.33,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0005,
+          "method": "IPC-TM-650 2.5.5.3, 23 C"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0012,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": -115,
+      "volume_resistivity_ohm_cm": 20000000000000.0,
+      "surface_resistivity_ohm": 20000000000000.0,
+      "specific_heat_j_gk": 0.96,
+      "water_absorption_pct": 0.02,
+      "thermal_conductivity_w_mk": 0.22,
+      "cte_x_ppm": 22,
+      "cte_y_ppm": 28,
+      "cte_z_below_tg_ppm": 173,
+      "density_g_cm3": 2.2,
+      "peel_strength_n_mm": 4.8,
+      "peel_condition": "1 oz (35 um) EDC foil after solder float (27.2 lb/in)",
+      "thicknesses_mm": [
+        0.127,
+        0.252,
+        0.508,
+        0.787,
+        1.575
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "RA"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "RA"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 457.2,
+          "height_mm": 304.8,
+          "label": "18\" x 12\""
+        },
+        {
+          "width_mm": 457.2,
+          "height_mm": 609.6,
+          "label": "18\" x 24\""
+        }
+      ],
+      "notes": "RT/duroid glass microfiber reinforced PTFE composite. Dk process value at 10 GHz is the specification value (+/- 0.02); a 1 MHz value is also given by IPC-TM-650 2.5.5.3. Df at 1 MHz is 0.0005. Tensile modulus at 23 C: 1300 MPa (X) and 1280 MPa (Y). Specific heat 0.96 J/g/K; moisture absorption of a 1.6 mm sample; CTE X, Y and Z from 0 to 100 C; thermal conductivity at 80 C; ultimate tensile and compressive properties are given on the sheet at 23 C and 100 C and are not loaded. Volume resistivity 2e7 M-ohm cm converted. Non-standard thicknesses are available from 0.0035 to 0.375 in."
+    },
+    {
+      "id": "rogers/rt-duroid-5880",
+      "manufacturer": "Rogers",
+      "name": "RT/duroid 5880",
+      "kind": "ptfe",
+      "family": "RT/duroid",
+      "source": {
+        "pdf": "rt-duroid-5870---5880-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "resin": "PTFE",
+      "reinforcement": "Glass microfiber",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 500,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 2.2,
+          "method": "IPC-TM-650 2.5.5.3, 23 C"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.2,
+          "method": "IPC-TM-650 2.5.5.5, 23 C",
+          "tolerance": 0.02
+        },
+        {
+          "value": 2.2,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0004,
+          "method": "IPC-TM-650 2.5.5.3, 23 C"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0009,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": -125,
+      "volume_resistivity_ohm_cm": 20000000000000.0,
+      "surface_resistivity_ohm": 30000000000000.0,
+      "specific_heat_j_gk": 0.96,
+      "water_absorption_pct": 0.02,
+      "thermal_conductivity_w_mk": 0.2,
+      "cte_x_ppm": 31,
+      "cte_y_ppm": 48,
+      "cte_z_below_tg_ppm": 237,
+      "density_g_cm3": 2.2,
+      "peel_strength_n_mm": 5.5,
+      "peel_condition": "1 oz (35 um) EDC foil after solder float (31.2 lb/in)",
+      "thicknesses_mm": [
+        0.127,
+        0.252,
+        0.508,
+        0.787,
+        1.575
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "RA"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "RA"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 457.2,
+          "height_mm": 304.8,
+          "label": "18\" x 12\""
+        },
+        {
+          "width_mm": 457.2,
+          "height_mm": 609.6,
+          "label": "18\" x 24\""
+        }
+      ],
+      "notes": "RT/duroid glass microfiber reinforced PTFE composite. Dk process value at 10 GHz is the specification value (+/- 0.02); a 1 MHz value is also given by IPC-TM-650 2.5.5.3. Df at 1 MHz is 0.0004. Tensile modulus at 23 C: 1070 MPa (X) and 860 MPa (Y). Specific heat 0.96 J/g/K; moisture absorption of a 1.6 mm sample; CTE X, Y and Z from 0 to 100 C; thermal conductivity at 80 C; ultimate tensile and compressive properties are given on the sheet at 23 C and 100 C and are not loaded. Volume resistivity 2e7 M-ohm cm converted. Non-standard thicknesses are available from 0.0035 to 0.375 in. Surface resistivity 3e7 M-ohm converted."
+    },
+    {
+      "id": "rogers/rt-duroid-5880lz",
+      "manufacturer": "Rogers",
+      "name": "RT/duroid 5880LZ",
+      "kind": "ptfe",
+      "family": "RT/duroid",
+      "source": {
+        "pdf": "rt-duroid-5880lz-high-frequency-laminates.pdf",
+        "pages": "1-2"
+      },
+      "resin": "PTFE",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.0,
+          "method": "IPC-TM-650 2.5.5.5, 23 C",
+          "tolerance": 0.04
+        },
+        {
+          "value": 2.0,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0021,
+          "method": "IPC-TM-650 2.5.5.5, 23 C (typical; maximum 0.0027)"
+        }
+      ],
+      "tcdk_ppm_per_c": 20,
+      "volume_resistivity_ohm_cm": 17400000000000.0,
+      "surface_resistivity_ohm": 2080000000000.0,
+      "water_absorption_pct": 0.31,
+      "thermal_conductivity_w_mk": 0.33,
+      "cte_x_ppm": 54,
+      "cte_y_ppm": 47,
+      "cte_z_below_tg_ppm": 40,
+      "density_g_cm3": 1.4,
+      "thicknesses_mm": [
+        0.252,
+        0.508,
+        1.27
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 304.8,
+          "height_mm": 457.2,
+          "label": "12\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        }
+      ],
+      "notes": "Low density, low Dk PTFE composite. Df 0.0021 typical and 0.0027 maximum at 10 GHz; electrical strength 40 kV; dimensional stability -0.38 % (X, Y); moisture absorption 0.31 % after 24 h at 23 C; CTE 54 and 47 ppm/C (X, Y) and 40 ppm/C (Z) from 0 to 150 C; thermal conductivity at 80 C; outgassing TML, CVCM and WVR 0.01 % each; copper peel above 4.0 lb/in. Additional thicknesses 0.0075 in and 0.010 to 0.200 in in 0.005 in steps. Resistivities 1.74e7 M-ohm cm and 2.08e6 M-ohm converted."
+    },
+    {
+      "id": "rogers/rt-duroid-5280lz",
+      "manufacturer": "Rogers",
+      "name": "RT/duroid 5280LZ",
+      "kind": "ptfe",
+      "family": "RT/duroid",
+      "source": {
+        "pdf": "rt-duroid-5280lz-high-frequency-laminates-data-sheet.pdf",
+        "pages": "1-3",
+        "revision": "Issued 1604 031125, Publication 92-217"
+      },
+      "resin": "PTFE",
+      "ul94": "V-0",
+      "td_c": 500,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.06,
+          "method": "IPC-TM-650 2.5.5.5, 23 C, 50 % RH, 3313 glass"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.1,
+          "method": "IPC-TM-650 2.5.5.5, 23 C, 50 % RH, 1080 glass"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0028,
+          "method": "IPC-TM-650 2.5.5.5, 23 C, 50 % RH"
+        }
+      ],
+      "volume_resistivity_ohm_cm": 1030000000000.0,
+      "surface_resistivity_ohm": 60100000000.0,
+      "dielectric_strength_kv_mm": 17.2,
+      "cte_x_ppm": 46,
+      "cte_y_ppm": 47,
+      "cte_z_below_tg_ppm": 56,
+      "peel_strength_n_mm": 2.399,
+      "peel_condition": "After thermal stress, 18 um foil (13.7 lb/in on the sheet)",
+      "water_absorption_pct": 0.02,
+      "density_g_cm3": 1.64,
+      "thicknesses_mm": [
+        0.457,
+        0.533,
+        0.61,
+        1.067,
+        1.168,
+        2.362
+      ],
+      "notes": "Low density, low Dk PTFE composite with woven glass; Dk 2.06 with 3313 glass and 2.10 with 1080 glass, Df 0.0028 at 10 GHz. Dielectric breakdown 47.6 kV; time to delamination above 60 min at 288 C as received; CTE 46, 47 and 56 ppm/C (X, Y, Z) from -55 to 288 C; Young modulus 770 ksi; Poisson ratio 0.036; the tensile and flexural modulus rows are printed in psi with an unclear scale and are not loaded; NASA outgassing 0.02 % total mass lost, below 0.01 % collected volatiles and 0.01 % water vapour recovered. The thicknesses listed (0.018 to 0.093 in) are the ones of the design Dk and insertion loss table. The Df and Dk values by thickness are 2.10 (0.018, 0.024, 0.046 in) and 2.06 (0.021, 0.042, 0.093 in)."
+    },
+    {
+      "id": "rogers/rt-duroid-6002",
+      "manufacturer": "Rogers",
+      "name": "RT/duroid 6002",
+      "kind": "ptfe",
+      "family": "RT/duroid",
+      "source": {
+        "pdf": "rt-duroid-6002-laminate-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "resin": "PTFE",
+      "filler": "Ceramic",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 500,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.94,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C",
+          "tolerance": 0.04
+        },
+        {
+          "value": 2.94,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0012,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": 12,
+      "volume_resistivity_ohm_cm": 1000000000000.0,
+      "surface_resistivity_ohm": 10000000000000.0,
+      "water_absorption_pct": 0.02,
+      "thermal_conductivity_w_mk": 0.6,
+      "cte_x_ppm": 16,
+      "cte_y_ppm": 16,
+      "cte_z_below_tg_ppm": 24,
+      "density_g_cm3": 2.1,
+      "specific_heat_j_gk": 0.93,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "8.9 lb/in on the sheet",
+      "youngs_modulus_gpa": {
+        "value": 0.828
+      },
+      "thicknesses_mm": [
+        0.252,
+        0.508,
+        0.762,
+        1.524
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "RA"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "RA"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 457.2,
+          "height_mm": 304.8,
+          "label": "18\" x 12\""
+        },
+        {
+          "width_mm": 457.2,
+          "height_mm": 609.6,
+          "label": "18\" x 24\""
+        }
+      ],
+      "notes": "Ceramic filled PTFE microwave laminate. Tensile modulus 828 MPa (X, Y), ultimate stress 6.9 MPa, ultimate strain 7.3 %, compressive modulus 2482 MPa (Z); CTE from -55 to 288 C (Z stored as below Tg); thermal conductivity at 80 C; thermal coefficient of Dk +12 ppm/C from 0 to 100 C; resistivities printed as 10^6 M-ohm cm and 10^7 M-ohm, converted. Additional thicknesses from 0.005 to 0.250 in in 0.005 in steps."
+    },
+    {
+      "id": "rogers/rt-duroid-6035htc",
+      "manufacturer": "Rogers",
+      "name": "RT/duroid 6035HTC",
+      "kind": "ptfe",
+      "family": "RT/duroid",
+      "source": {
+        "pdf": "rt-duroid-6035htc-high-frequency-laminates.pdf",
+        "pages": "1-4"
+      },
+      "resin": "PTFE",
+      "filler": "Ceramic",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C",
+          "tolerance": 0.05
+        },
+        {
+          "value": 3.6,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0013,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": -66,
+      "dielectric_strength_kv_mm": 32.9,
+      "cte_x_ppm": 19,
+      "cte_y_ppm": 19,
+      "cte_z_below_tg_ppm": 39,
+      "thermal_conductivity_w_mk": 1.44,
+      "water_absorption_pct": 0.06,
+      "density_g_cm3": 2.2,
+      "peel_strength_n_mm": 1.384,
+      "peel_condition": "20 s at 288 C (7.9 lb/in on the sheet)",
+      "youngs_modulus_gpa": {
+        "lengthwise": 2.268,
+        "crosswise": 1.682
+      },
+      "thicknesses_mm": [
+        0.254,
+        0.508,
+        0.762,
+        1.524
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": 70,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "reverse treated"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "reverse treated"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 304.8,
+          "height_mm": 457.2,
+          "label": "12\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        }
+      ],
+      "notes": "High thermal conductivity ceramic filled PTFE laminate for power amplifiers. Dielectric strength 835 V/mil and breakdown voltage 12.59 kV for a 15 mil thickness; tensile modulus 329 kpsi (MD) and 244 kpsi (CMD) converted; dimensional stability -0.11 and -0.08 mm/m (CMD, MD) for 0.030 in with 1 oz EDC foil; CTE from -55 to 288 C (Z stored as below Tg); thermal conductivity at 80 C. Volume and surface resistivity exponents cannot be read and are not loaded."
+    },
+    {
+      "id": "rogers/rt-duroid-6202",
+      "manufacturer": "Rogers",
+      "name": "RT/duroid 6202",
+      "kind": "ptfe",
+      "family": "RT/duroid",
+      "source": {
+        "pdf": "rt-duroid-6202-laminate-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "resin": "PTFE",
+      "filler": "Ceramic",
+      "reinforcement": "Woven glass (limited)",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 500,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.94,
+          "method": "IPC-TM-650 2.5.5.5, 23 C",
+          "tolerance": 0.04
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0015,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": 5,
+      "water_absorption_pct": 0.04,
+      "thermal_conductivity_w_mk": 0.68,
+      "cte_x_ppm": 15,
+      "cte_y_ppm": 15,
+      "cte_z_below_tg_ppm": 30,
+      "density_g_cm3": 2.1,
+      "specific_heat_j_gk": 0.93,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "9.1 lb/in on the sheet",
+      "youngs_modulus_gpa": {
+        "value": 1.007
+      },
+      "thicknesses_mm": [
+        0.127,
+        0.508,
+        0.762
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "RA"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "RA"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 304.8,
+          "height_mm": 457.2,
+          "label": "12\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        }
+      ],
+      "notes": "Low loss, low Dk PTFE laminate with limited woven glass reinforcement for excellent dimensional stability (0.07 mm/m X, Y). Tensile modulus 1007 MPa (X, Y), ultimate stress 30 MPa, strain 4.9 %, compressive modulus 1035 MPa (Z); CTE from -55 to 288 C; thermal conductivity at 80 C. Additional thicknesses from 0.005 to 0.060 in. Resistivity exponents cannot be read and are not loaded."
+    },
+    {
+      "id": "rogers/rt-duroid-6202pr",
+      "manufacturer": "Rogers",
+      "name": "RT/duroid 6202PR",
+      "kind": "ptfe",
+      "family": "RT/duroid",
+      "source": {
+        "pdf": "rt-duroid-6202pr-laminate-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "resin": "PTFE",
+      "filler": "Ceramic",
+      "reinforcement": "Woven glass (limited)",
+      "thicknesses_mm": [
+        0.127,
+        0.254,
+        0.381,
+        0.508
+      ],
+      "notes": "Planar resistor version of RT/duroid 6202: low loss, low Dk laminate with limited woven glass reinforcement giving dimensional stability of 0.05 to 0.07 mils/inch for tight tolerance planar resistors. Cladding options: 1/2 to 2 oz ED, 1/2, 1 and 2 oz rolled, 1/2, 1 and 2 oz reverse treated, and 1/2 and 1 oz ED with a resistive layer, on the standard dielectric thicknesses of 0.005, 0.010, 0.015 and 0.020 in. The non-reinforced RT/duroid 6002PR is offered in 0.020 and 0.030 in. The property table of the sheet cannot be read reliably and is not loaded; see RT/duroid 6202 for the base material."
+    },
+    {
+      "id": "rogers/tc350",
+      "manufacturer": "Rogers",
+      "name": "TC350",
+      "kind": "ptfe",
+      "family": "TC",
+      "source": {
+        "pdf": "tc350-laminates-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "resin": "PTFE",
+      "filler": "Ceramic",
+      "reinforcement": "Fiberglass",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 567,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.3, 23 C"
+        },
+        {
+          "freq_ghz": 1.8,
+          "value": 3.5,
+          "method": "Resonant cavity"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0015,
+          "method": "IPC-TM-650 2.5.5.3, 23 C"
+        },
+        {
+          "freq_ghz": 1.8,
+          "value": 0.0018,
+          "method": "Resonant cavity"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.002,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": -9,
+      "volume_resistivity_ohm_cm": 7400000000000.0,
+      "surface_resistivity_ohm": 32000000000000.0,
+      "dielectric_strength_kv_mm": 31,
+      "cte_x_ppm": 7,
+      "cte_y_ppm": 7,
+      "cte_z_below_tg_ppm": 23,
+      "cte_z_50_260_pct": 1.2,
+      "thermal_conductivity_w_mk": 0.72,
+      "specific_heat_j_gk": 0.9,
+      "peel_strength_n_mm": 1.226,
+      "peel_condition": "35 um foil after thermal stress (7 lb/in)",
+      "tensile_strength_mpa": {
+        "lengthwise": 76,
+        "crosswise": 55
+      },
+      "flexural_strength_mpa": {
+        "lengthwise": 97,
+        "crosswise": 69
+      },
+      "water_absorption_pct": 0.05,
+      "density_g_cm3": 2.3,
+      "thicknesses_mm": [
+        0.252,
+        0.508,
+        0.762,
+        1.524
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "RTED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "RTED"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 304.8,
+          "height_mm": 457.2,
+          "label": "12\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        },
+        {
+          "width_mm": 457.2,
+          "height_mm": 304.8,
+          "label": "18\" x 12\""
+        },
+        {
+          "width_mm": 457.2,
+          "height_mm": 609.6,
+          "label": "18\" x 24\""
+        }
+      ],
+      "notes": "Fiberglass reinforced, ceramic filled PTFE composite with high thermal conductivity. Dk 3.50 at 1 MHz, 1.8 GHz and 10 GHz; the 0.010 in thickness is offered in 18 x 12 and 18 x 24 in panels with reverse treated ED foil, the other thicknesses in 12 x 18 and 24 x 18 in panels with ED foil. Td initial 520 C and 567 C at 5 % loss (5 % stored); time to delamination above 60 min at 260, 288 and 300 C; dielectric breakdown 40 kV; arc resistance above 240 s; CTE 7, 7 and 23 ppm/C (X, Y, Z) from 50 to 150 C and 1.2 % z expansion from 50 to 260 C; copper peel 9 lb/in at 150 C and 7 lb/in after process solutions; resistivity 7.4e6 M-ohm cm and 3.2e7 M-ohm (C96/35/90) converted, 1.4e8 and 4.3e8 after E24/125. Electrical strength 780 V/mil (31 kV/mm). Tensile strength 11 and 8 kpsi and flexural strength 14 and 10 kpsi (MD, CMD). NASA outgassing 0.02 % TML, 0.01 % CVCM and 0.01 % WVR."
+    },
+    {
+      "id": "rogers/tc350-plus",
+      "manufacturer": "Rogers",
+      "name": "TC350 Plus",
+      "kind": "ptfe",
+      "family": "TC",
+      "source": {
+        "pdf": "tc350-plus-laminates-data-sheet.pdf",
+        "pages": "1-2",
+        "revision": "Revised 1610 080922, Publication 92-191"
+      },
+      "resin": "PTFE",
+      "filler": "Ceramic",
+      "reinforcement": "Woven glass",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 500,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.5, 23 C, 50 % RH (process)"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.62,
+          "method": "Microstrip differential phase length (design)"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0017,
+          "method": "IPC-TM-650 2.5.5.5, 23 C, 50 % RH"
+        }
+      ],
+      "tcdk_ppm_per_c": -42,
+      "volume_resistivity_ohm_cm": 9.4e+17,
+      "surface_resistivity_ohm": 3.3e+18,
+      "dielectric_strength_kv_mm": 25.6,
+      "cti_v": 600,
+      "cte_x_ppm": 10,
+      "cte_y_ppm": 9,
+      "cte_z_below_tg_ppm": 38,
+      "thermal_conductivity_w_mk": 1.24,
+      "specific_heat_j_gk": 0.8,
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "After thermal stress, 10 s at 288 C, 35 um foil (4.0 lb/in)",
+      "tensile_strength_mpa": {
+        "lengthwise": 49.0,
+        "crosswise": 46.2
+      },
+      "flexural_strength_mpa": {
+        "lengthwise": 75.2,
+        "crosswise": 64.8
+      },
+      "water_absorption_pct": 0.05,
+      "density_g_cm3": 2.22,
+      "thicknesses_mm": [
+        0.252,
+        0.508,
+        0.762,
+        1.524
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "reverse treated ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "reverse treated ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 304.8,
+          "height_mm": 457.2,
+          "label": "12\" x 18\""
+        },
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        }
+      ],
+      "notes": "Ceramic filled PTFE woven glass laminate, thermal conductivity 1.24 W/mK. Dielectric breakdown 38.9 kV (X/Y direction); comparative tracking index class 0 at 600 V; CTE X, Y and Z from -55 to 288 C (Z stored as below Tg); flexural modulus 7791 MPa (MD) and 7171 MPa (CMD); dimensional stability 0.05 and 0.15 mils/inch (MD/CMD); NASA outgassing 0.02 % TML and below 0.01 % CVCM; resistivities 9.4e11 M-ohm cm and 3.3e12 M-ohm converted. Additional thicknesses from 0.010 to 0.060 in in 0.005 in steps."
+    },
+    {
+      "id": "rogers/tc600",
+      "manufacturer": "Rogers",
+      "name": "TC600",
+      "kind": "ptfe",
+      "family": "TC",
+      "source": {
+        "pdf": "tc600-laminates-data-sheet.pdf",
+        "pages": "1-4"
+      },
+      "resin": "PTFE",
+      "filler": "Ceramic",
+      "reinforcement": "Woven fiberglass",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 572,
+      "dk": [
+        {
+          "freq_ghz": 1.8,
+          "value": 6.15,
+          "method": "Resonant cavity"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 6.15,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.8,
+          "value": 0.0017,
+          "method": "Resonant cavity"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.002,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "tcdk_ppm_per_c": -75,
+      "volume_resistivity_ohm_cm": 1600000000000000.0,
+      "surface_resistivity_ohm": 3100000000000000.0,
+      "dielectric_strength_kv_mm": 34,
+      "cte_x_ppm": 9,
+      "cte_y_ppm": 9,
+      "cte_z_below_tg_ppm": 35,
+      "cte_z_50_260_pct": 1.5,
+      "thermal_conductivity_w_mk": 1.1,
+      "specific_heat_j_gk": 0.94,
+      "peel_strength_n_mm": 1.8,
+      "peel_condition": "1 oz (35 um) foil after thermal stress (10 lb/in)",
+      "youngs_modulus_gpa": {
+        "value": 1.93
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 34,
+        "crosswise": 30
+      },
+      "flexural_strength_mpa": {
+        "lengthwise": 66,
+        "crosswise": 64
+      },
+      "water_absorption_pct": 0.03,
+      "density_g_cm3": 3.0,
+      "notes": "Enhanced thermal conductivity ceramic filled PTFE woven fiberglass laminate for 6.15 Dk microwave boards. Thermal conductivity 1.1 W/mK in the z axis and 1.4 W/mK in x, y (ASTM E1461); Dk stated at 1.8 GHz (resonant cavity; the sheet prints MHz in one row) and at 10 GHz, and it may vary by thickness; Td initial 512 C and 572 C at 5 % loss (5 % stored); time to delamination above 60 min at 260, 288 and 300 C; CTE 9, 9 and 35 ppm/C (X, Y, Z) from 50 to 150 C; z expansion 1.5 % from 50 to 260 C; electrical strength 850 V/mil (34 kV/mm), dielectric breakdown 62 kV; arc resistance above 240 s; resistivity 1.6e9 M-ohm cm and 3.1e9 M-ohm (C96/35/90) converted, 2.4e8 and 9.0e8 after E24/125; copper peel 10 lb/in after thermal stress and at 150 C and 9 lb/in after process solutions; Young modulus 280 kpsi; NASA outgassing 0.02 % TML and 0.00 % CVCM."
+    },
+    {
+      "id": "rogers/tmm3",
+      "manufacturer": "Rogers",
+      "name": "TMM3",
+      "kind": "ceramic_filled",
+      "family": "TMM",
+      "source": {
+        "pdf": "tmm-thermoset-laminate-data-sheet-tmm3----tmm4----tmm6----tmm10----tmm10i----tmm13i.pdf",
+        "pages": "1-2"
+      },
+      "resin": "Thermoset polymer",
+      "filler": "Ceramic",
+      "lead_free_compatible": true,
+      "td_c": 425,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.27,
+          "method": "IPC-TM-650 2.5.5.5",
+          "tolerance": 0.032
+        },
+        {
+          "value": 3.45,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.002,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "tcdk_ppm_per_c": 37,
+      "dielectric_strength_kv_mm": 17.4,
+      "cte_x_ppm": 15,
+      "cte_y_ppm": 15,
+      "cte_z_below_tg_ppm": 23,
+      "density_g_cm3": 1.78,
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "After solder float, 1 oz EDC (5.7 lb/in)",
+      "thicknesses_mm": [
+        0.381,
+        0.635,
+        0.762,
+        1.27,
+        1.524,
+        1.9,
+        2.5,
+        3.175,
+        3.81,
+        5.08,
+        6.35,
+        12.7
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 457.2,
+          "height_mm": 304.8,
+          "label": "18\" x 12\""
+        },
+        {
+          "width_mm": 457.2,
+          "height_mm": 609.6,
+          "label": "18\" x 24\""
+        }
+      ],
+      "notes": "TMM thermoset microwave material. Dk process value at 10 GHz by IPC-TM-650 2.5.5.5 and design Dk from 8 to 40 GHz by the differential phase length method; thermal coefficient of Dk from -55 to 125 C; insulation resistance above 2000 Gohm; Td 425 C (TGA); CTE from 0 to 140 C (ASTM E831); peel strength after solder float with 1 oz EDC; electrical strength in V/mil converted; moisture absorption 0.06 % for 1.27 mm (0.050 in) and 0.12 % for 3.18 mm (0.125 in) samples; specific gravity 1.78. Resistivity values in M-ohm cm and M-ohm are converted; the surface resistivity of TMM3 is printed as above 9e9 M-ohm and is not loaded. Flexural strength 16.53 kpsi and flexural modulus 1.72 Mpsi (MD/CMD) as printed; the strength is stored in MPa.",
+      "thermal_conductivity_w_mk": 0.7,
+      "specific_heat_j_gk": 0.87,
+      "volume_resistivity_ohm_cm": 3000000000000000.0,
+      "flexural_strength_mpa": {
+        "value": 114.0
+      }
+    },
+    {
+      "id": "rogers/tmm4",
+      "manufacturer": "Rogers",
+      "name": "TMM4",
+      "kind": "ceramic_filled",
+      "family": "TMM",
+      "source": {
+        "pdf": "tmm-thermoset-laminate-data-sheet-tmm3----tmm4----tmm6----tmm10----tmm10i----tmm13i.pdf",
+        "pages": "1-2"
+      },
+      "resin": "Thermoset polymer",
+      "filler": "Ceramic",
+      "lead_free_compatible": true,
+      "td_c": 425,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 4.5,
+          "method": "IPC-TM-650 2.5.5.5",
+          "tolerance": 0.045
+        },
+        {
+          "value": 4.7,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.002,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "tcdk_ppm_per_c": 15,
+      "dielectric_strength_kv_mm": 14.6,
+      "cte_x_ppm": 16,
+      "cte_y_ppm": 16,
+      "cte_z_below_tg_ppm": 21,
+      "density_g_cm3": 2.07,
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "After solder float, 1 oz EDC (5.7 lb/in)",
+      "thicknesses_mm": [
+        0.381,
+        0.635,
+        0.762,
+        1.27,
+        1.524,
+        1.9,
+        2.5,
+        3.175,
+        3.81,
+        5.08,
+        6.35,
+        12.7
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 457.2,
+          "height_mm": 304.8,
+          "label": "18\" x 12\""
+        },
+        {
+          "width_mm": 457.2,
+          "height_mm": 609.6,
+          "label": "18\" x 24\""
+        }
+      ],
+      "notes": "TMM thermoset microwave material. Dk process value at 10 GHz by IPC-TM-650 2.5.5.5 and design Dk from 8 to 40 GHz by the differential phase length method; thermal coefficient of Dk from -55 to 125 C; insulation resistance above 2000 Gohm; Td 425 C (TGA); CTE from 0 to 140 C (ASTM E831); peel strength after solder float with 1 oz EDC; electrical strength in V/mil converted; moisture absorption 0.07 % for 1.27 mm (0.050 in) and 0.18 % for 3.18 mm (0.125 in) samples; specific gravity 2.07. Resistivity values in M-ohm cm and M-ohm are converted. Flexural strength 15.91 kpsi and flexural modulus 1.76 Mpsi (MD/CMD) as printed; the strength is stored in MPa.",
+      "thermal_conductivity_w_mk": 0.7,
+      "specific_heat_j_gk": 0.83,
+      "volume_resistivity_ohm_cm": 600000000000000.0,
+      "surface_resistivity_ohm": 1000000000000000.0,
+      "flexural_strength_mpa": {
+        "value": 109.7
+      }
+    },
+    {
+      "id": "rogers/tmm6",
+      "manufacturer": "Rogers",
+      "name": "TMM6",
+      "kind": "ceramic_filled",
+      "family": "TMM",
+      "source": {
+        "pdf": "tmm-thermoset-laminate-data-sheet-tmm3----tmm4----tmm6----tmm10----tmm10i----tmm13i.pdf",
+        "pages": "1-2"
+      },
+      "resin": "Thermoset polymer",
+      "filler": "Ceramic",
+      "lead_free_compatible": true,
+      "td_c": 425,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 6.0,
+          "method": "IPC-TM-650 2.5.5.5",
+          "tolerance": 0.08
+        },
+        {
+          "value": 6.3,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0023,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "tcdk_ppm_per_c": -11,
+      "dielectric_strength_kv_mm": 14.3,
+      "cte_x_ppm": 18,
+      "cte_y_ppm": 18,
+      "cte_z_below_tg_ppm": 26,
+      "density_g_cm3": 2.37,
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "After solder float, 1 oz EDC (5.7 lb/in)",
+      "thicknesses_mm": [
+        0.381,
+        0.635,
+        0.762,
+        1.27,
+        1.524,
+        1.9,
+        2.5,
+        3.175,
+        3.81,
+        5.08,
+        6.35,
+        12.7
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 457.2,
+          "height_mm": 304.8,
+          "label": "18\" x 12\""
+        },
+        {
+          "width_mm": 457.2,
+          "height_mm": 609.6,
+          "label": "18\" x 24\""
+        }
+      ],
+      "notes": "TMM thermoset microwave material. Dk process value at 10 GHz by IPC-TM-650 2.5.5.5 and design Dk from 8 to 40 GHz by the differential phase length method; thermal coefficient of Dk from -55 to 125 C; insulation resistance above 2000 Gohm; Td 425 C (TGA); CTE from 0 to 140 C (ASTM E831); peel strength after solder float with 1 oz EDC; electrical strength in V/mil converted; moisture absorption 0.06 % for 1.27 mm (0.050 in) and 0.2 % for 3.18 mm (0.125 in) samples; specific gravity 2.37. Resistivity values in M-ohm cm and M-ohm are converted. Flexural strength 15.02 kpsi and flexural modulus 1.75 Mpsi (MD/CMD) as printed; the strength is stored in MPa.",
+      "thermal_conductivity_w_mk": 0.72,
+      "specific_heat_j_gk": 0.78,
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "surface_resistivity_ohm": 1000000000000000.0,
+      "flexural_strength_mpa": {
+        "value": 103.6
+      }
+    },
+    {
+      "id": "rogers/tmm10",
+      "manufacturer": "Rogers",
+      "name": "TMM10",
+      "kind": "ceramic_filled",
+      "family": "TMM",
+      "source": {
+        "pdf": "tmm-thermoset-laminate-data-sheet-tmm3----tmm4----tmm6----tmm10----tmm10i----tmm13i.pdf",
+        "pages": "1-2"
+      },
+      "resin": "Thermoset polymer",
+      "filler": "Ceramic",
+      "lead_free_compatible": true,
+      "td_c": 425,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 9.2,
+          "method": "IPC-TM-650 2.5.5.5",
+          "tolerance": 0.23
+        },
+        {
+          "value": 9.8,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0022,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "tcdk_ppm_per_c": -38,
+      "dielectric_strength_kv_mm": 11.2,
+      "cte_x_ppm": 21,
+      "cte_y_ppm": 21,
+      "cte_z_below_tg_ppm": 20,
+      "density_g_cm3": 2.77,
+      "peel_strength_n_mm": 0.9,
+      "peel_condition": "After solder float, 1 oz EDC (5.0 lb/in)",
+      "thicknesses_mm": [
+        0.381,
+        0.635,
+        0.762,
+        1.27,
+        1.524,
+        1.9,
+        2.5,
+        3.175,
+        3.81,
+        5.08,
+        6.35,
+        12.7
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 457.2,
+          "height_mm": 304.8,
+          "label": "18\" x 12\""
+        },
+        {
+          "width_mm": 457.2,
+          "height_mm": 609.6,
+          "label": "18\" x 24\""
+        }
+      ],
+      "notes": "TMM thermoset microwave material. Dk process value at 10 GHz by IPC-TM-650 2.5.5.5 and design Dk from 8 to 40 GHz by the differential phase length method; thermal coefficient of Dk from -55 to 125 C; insulation resistance above 2000 Gohm; Td 425 C (TGA); CTE from 0 to 140 C (ASTM E831); peel strength after solder float with 1 oz EDC; electrical strength in V/mil converted; moisture absorption 0.09 % for 1.27 mm (0.050 in) and 0.2 % for 3.18 mm (0.125 in) samples; specific gravity 2.77. Resistivity values in M-ohm cm and M-ohm are converted. Flexural strength 13.62 kpsi and flexural modulus 1.79 Mpsi (MD/CMD) as printed; the strength is stored in MPa.",
+      "thermal_conductivity_w_mk": 0.76,
+      "specific_heat_j_gk": 0.74,
+      "volume_resistivity_ohm_cm": 200000000000000.0,
+      "surface_resistivity_ohm": 40000000000000.0,
+      "flexural_strength_mpa": {
+        "value": 93.9
+      }
+    },
+    {
+      "id": "rogers/tmm10i",
+      "manufacturer": "Rogers",
+      "name": "TMM10i",
+      "kind": "ceramic_filled",
+      "family": "TMM",
+      "source": {
+        "pdf": "tmm-thermoset-laminate-data-sheet-tmm3----tmm4----tmm6----tmm10----tmm10i----tmm13i.pdf",
+        "pages": "1-2"
+      },
+      "resin": "Thermoset polymer",
+      "filler": "Ceramic",
+      "lead_free_compatible": true,
+      "td_c": 425,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 9.8,
+          "method": "IPC-TM-650 2.5.5.5",
+          "tolerance": 0.245
+        },
+        {
+          "value": 9.9,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.002,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "tcdk_ppm_per_c": -43,
+      "dielectric_strength_kv_mm": 10.5,
+      "cte_x_ppm": 19,
+      "cte_y_ppm": 19,
+      "cte_z_below_tg_ppm": 20,
+      "density_g_cm3": 2.77,
+      "peel_strength_n_mm": 0.9,
+      "peel_condition": "After solder float, 1 oz EDC (5.0 lb/in)",
+      "thicknesses_mm": [
+        0.381,
+        0.635,
+        0.762,
+        1.27,
+        1.524,
+        1.9,
+        2.5,
+        3.175,
+        3.81,
+        5.08,
+        6.35,
+        12.7
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 457.2,
+          "height_mm": 304.8,
+          "label": "18\" x 12\""
+        },
+        {
+          "width_mm": 457.2,
+          "height_mm": 609.6,
+          "label": "18\" x 24\""
+        }
+      ],
+      "notes": "TMM thermoset microwave material. Dk process value at 10 GHz by IPC-TM-650 2.5.5.5 and design Dk from 8 to 40 GHz by the differential phase length method; thermal coefficient of Dk from -55 to 125 C; insulation resistance above 2000 Gohm; Td 425 C (TGA); CTE from 0 to 140 C (ASTM E831); peel strength after solder float with 1 oz EDC; electrical strength in V/mil converted; moisture absorption 0.16 % for 1.27 mm (0.050 in) and 0.13 % for 3.18 mm (0.125 in) samples; specific gravity 2.77. Resistivity values in M-ohm cm and M-ohm are converted. The thermal coefficient of Dk, flexural modulus and specific heat carry an asterisk on the sheet.",
+      "thermal_conductivity_w_mk": 0.76,
+      "specific_heat_j_gk": 0.72,
+      "volume_resistivity_ohm_cm": 200000000000000.0,
+      "surface_resistivity_ohm": 40000000000000.0
+    },
+    {
+      "id": "rogers/tmm13i",
+      "manufacturer": "Rogers",
+      "name": "TMM13i",
+      "kind": "ceramic_filled",
+      "family": "TMM",
+      "source": {
+        "pdf": "tmm-thermoset-laminate-data-sheet-tmm3----tmm4----tmm6----tmm10----tmm10i----tmm13i.pdf",
+        "pages": "1-2"
+      },
+      "resin": "Thermoset polymer",
+      "filler": "Ceramic",
+      "lead_free_compatible": true,
+      "td_c": 425,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 12.85,
+          "method": "IPC-TM-650 2.5.5.5",
+          "tolerance": 0.35
+        },
+        {
+          "value": 12.2,
+          "method": "Differential phase length (design), 8-40 GHz"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0019,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "tcdk_ppm_per_c": -70,
+      "dielectric_strength_kv_mm": 8.4,
+      "cte_x_ppm": 19,
+      "cte_y_ppm": 19,
+      "cte_z_below_tg_ppm": 20,
+      "density_g_cm3": 3.0,
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "After solder float, 1 oz EDC (4.0 lb/in)",
+      "thicknesses_mm": [
+        0.381,
+        0.635,
+        0.762,
+        1.27,
+        1.524,
+        1.9,
+        2.5,
+        3.175,
+        3.81,
+        5.08,
+        6.35,
+        12.7
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 457.2,
+          "height_mm": 304.8,
+          "label": "18\" x 12\""
+        },
+        {
+          "width_mm": 457.2,
+          "height_mm": 609.6,
+          "label": "18\" x 24\""
+        }
+      ],
+      "notes": "TMM thermoset microwave material. Dk process value at 10 GHz by IPC-TM-650 2.5.5.5 and design Dk from 8 to 40 GHz by the differential phase length method; thermal coefficient of Dk from -55 to 125 C; insulation resistance above 2000 Gohm; Td 425 C (TGA); CTE from 0 to 140 C (ASTM E831); peel strength after solder float with 1 oz EDC; electrical strength in V/mil converted; moisture absorption 0.16 % for 1.27 mm (0.050 in) and 0.13 % for 3.18 mm (0.125 in) samples; specific gravity 3.0. Resistivity values in M-ohm cm and M-ohm are converted."
+    }
+  ]
+}

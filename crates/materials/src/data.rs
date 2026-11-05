@@ -136,6 +136,10 @@ pub const FILES: &[(&str, &str)] = &[
         "tuc_lote2_t6.json",
         include_str!("../data/tuc_lote2_t6.json"),
     ),
+    (
+        "rogers_lote2_t6.json",
+        include_str!("../data/rogers_lote2_t6.json"),
+    ),
 ];
 
 #[cfg(test)]
