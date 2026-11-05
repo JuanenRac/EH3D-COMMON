@@ -3,6 +3,7 @@
 All notable changes to this project are documented here.
 
 ## [Unreleased]
+- **The board materials database:** the new crate `eh3d-materials` holds laminates, prepregs, flex, metal cores and PTFE boards of Shengyi, Isola, Panasonic, Rogers, Taconic, Arlon, ITEQ, Ventec, DuPont, Doosan, Bungard and other makers, every value as the sheet publishes it with the PDF it comes from. It checks the data when it loads it (the codes `EH3D-MAT-001` to `EH3D-MAT-009`), answers by identifier, maker, kind and minimum Tg, Dk and Df, interpolates Dk and Df between the published frequencies without extrapolating, and gives the small view that the machine program needs. A catalogue of the reference documents classifies each by category and by whether it serves a CNC that drills and mills boards or the design tool.
 - **The sample files of the machine programs are tested here:** `crates/formats/tests/data` holds the sample configuration, tool tables, drill files and plots of the drilling and routing programs, and the round trips (a configuration and a tool table written back keep their comments and values) are tests of this crate.
 - **Writing a configuration file gives a typed error:** `write_with_backup` returns a `WriteError` with its `kind` (character, backup, write, rename) that reads as its message (`Deref<Target = str>`, `Display`, `From` it to a `String`), so the callers go on working.
 - **A place for the lints of every crate:** `[workspace.lints]` (empty for now) is inherited by all of them.
