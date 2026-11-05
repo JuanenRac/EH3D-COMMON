@@ -2288,7 +2288,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Ventec VT-47 HP PP phenolic cured no flow / low flow prepreg data sheet."
+   "note": "Ventec VT-47 HP PP phenolic cured no flow / low flow prepreg data sheet.",
+   "material_ids": [
+    "ventec/vt-47-hp-pp"
+   ]
   },
   {
    "file": "04abd4d5ac259f6a09188fedd4fd3460.pdf",
@@ -4767,7 +4770,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Ventec VT-47PP NF/LF no flow and low flow prepreg data sheet."
+   "note": "Ventec VT-47PP NF/LF no flow and low flow prepreg data sheet.",
+   "material_ids": [
+    "ventec/vt-47pp-nf-lf"
+   ]
   },
   {
    "file": "190723ntrf-sm-25d-de.pdf",
@@ -7633,7 +7639,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Shengyi Q360G CEM laminate data sheet (scanned); the material is not in the base yet."
+   "note": "Shengyi Q360G CEM laminate data sheet (scanned); the material is not in the base yet.",
+   "material_ids": [
+    "shengyi/q360g"
+   ]
   },
   {
    "file": "20200213103425598.pdf",
@@ -7649,7 +7658,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Shengyi Q260 CEM laminate data sheet (scanned); the material is not in the base yet."
+   "note": "Shengyi Q260 CEM laminate data sheet (scanned); the material is not in the base yet.",
+   "material_ids": [
+    "shengyi/q260"
+   ]
   },
   {
    "file": "20200213105518976.pdf",
@@ -7684,7 +7696,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Shengyi S3110 CEM laminate data sheet (scanned); the material is not in the base yet."
+   "note": "Shengyi S3110 CEM laminate data sheet (scanned); the material is not in the base yet.",
+   "material_ids": [
+    "shengyi/s3110"
+   ]
   },
   {
    "file": "20200213105856089.pdf",
@@ -7700,7 +7715,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Shengyi S3116 CEM laminate data sheet (scanned); the material is not in the base yet."
+   "note": "Shengyi S3116 CEM laminate data sheet (scanned); the material is not in the base yet.",
+   "material_ids": [
+    "shengyi/s3116"
+   ]
   },
   {
    "file": "20200213105910654.pdf",
@@ -7831,7 +7849,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Shengyi SF335C polyimide film coverlay data sheet."
+   "note": "Shengyi SF335C polyimide film coverlay data sheet.",
+   "material_ids": [
+    "shengyi/sf335c"
+   ]
   },
   {
    "file": "20200218181242743.pdf",
@@ -7847,7 +7868,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Shengyi SF315B halogen-free epoxy bonding film data sheet."
+   "note": "Shengyi SF315B halogen-free epoxy bonding film data sheet.",
+   "material_ids": [
+    "shengyi/sf315b"
+   ]
   },
   {
    "file": "20200218181404946.pdf",
@@ -12758,7 +12782,11 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Ventec hole fill prepreg (VT-901PP HW and VT-47PP VF types) data sheet."
+   "note": "Ventec hole fill prepreg (VT-901PP HW and VT-47PP VF types) data sheet.",
+   "material_ids": [
+    "ventec/vt-47pp-vf",
+    "ventec/vt-901pp-hw"
+   ]
   },
   {
    "file": "230929-vt-901n.pdf",
@@ -12885,7 +12913,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Ventec pro-bond 8C VT-463H ultra low Dk/Df resin coated copper bondply data sheet."
+   "note": "Ventec pro-bond 8C VT-463H ultra low Dk/Df resin coated copper bondply data sheet.",
+   "material_ids": [
+    "ventec/vt-463h-rcc"
+   ]
   },
   {
    "file": "240323-pro-bond-4c-vt-464lt-rcc.pdf",
@@ -12901,7 +12932,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Ventec pro-bond 4C VT-464LT resin coated copper bondply data sheet (the laminate VT-464LT is a different record)."
+   "note": "Ventec pro-bond 4C VT-464LT resin coated copper bondply data sheet (the laminate VT-464LT is a different record).",
+   "material_ids": [
+    "ventec/vt-464lt-rcc"
+   ]
   },
   {
    "file": "240730vt-447pp-nflf.pdf",
@@ -12917,7 +12951,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Ventec VT-447PP NF/LF no flow and low flow prepreg data sheet."
+   "note": "Ventec VT-447PP NF/LF no flow and low flow prepreg data sheet.",
+   "material_ids": [
+    "ventec/vt-447pp-nf-lf"
+   ]
   },
   {
    "file": "240809-pro-bond-20f-vt-8728-rcf.pdf",
@@ -12933,7 +12970,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Ventec pro-bond 20F VT-8728 ultra low Dk/Df resin coated film bondply data sheet."
+   "note": "Ventec pro-bond 20F VT-8728 ultra low Dk/Df resin coated film bondply data sheet.",
+   "material_ids": [
+    "ventec/vt-8728-rcf"
+   ]
   },
   {
    "file": "240831-vt-441c.pdf",
@@ -13003,7 +13043,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Ventec tec-speed 6.0 H-LF VT-462SH ultra low loss no flow / low flow prepreg data sheet."
+   "note": "Ventec tec-speed 6.0 H-LF VT-462SH ultra low loss no flow / low flow prepreg data sheet.",
+   "material_ids": [
+    "ventec/vt-462sh-nf-lf"
+   ]
   },
   {
    "file": "241212-vt-447-b-pgl.pdf",
@@ -13460,7 +13503,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Ventec VT-4B5L metal base laminate data sheet (3.6 W/m K, ceramic filled, halogen free)."
+   "note": "Ventec VT-4B5L metal base laminate data sheet (3.6 W/m K, ceramic filled, halogen free).",
+   "material_ids": [
+    "ventec/vt-4b5l"
+   ]
   },
   {
    "file": "260118-vt-447-rcf_prelim.pdf",
@@ -13495,7 +13541,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Ventec pro-bond 7C / 7F VT-770 ultra low Dk/Df resin coated copper and resin coated film data sheet."
+   "note": "Ventec pro-bond 7C / 7F VT-770 ultra low Dk/Df resin coated copper and resin coated film data sheet.",
+   "material_ids": [
+    "ventec/vt-770-rcc-rcf"
+   ]
   },
   {
    "file": "260918-vt-447c-pgl.pdf",
@@ -13579,7 +13628,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Ventec VT-4B3H RCF (thermal-bond 3.0F) thermally conductive resin coated film bondply data sheet."
+   "note": "Ventec VT-4B3H RCF (thermal-bond 3.0F) thermally conductive resin coated film bondply data sheet.",
+   "material_ids": [
+    "ventec/vt-4b3h-rcf"
+   ]
   },
   {
    "file": "261014-vt-4b7h-rcf_tds.pdf",
@@ -13595,7 +13647,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Ventec VT-4B7H RCF (thermal-bond 5.0F) thermally conductive resin coated film bondply data sheet."
+   "note": "Ventec VT-4B7H RCF (thermal-bond 5.0F) thermally conductive resin coated film bondply data sheet.",
+   "material_ids": [
+    "ventec/vt-4b7h-rcf"
+   ]
   },
   {
    "file": "261014-vt-4bc-ht1-rcf.pdf",
@@ -13611,7 +13666,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Ventec VT-4BC(HT1) RCF (thermal-bond 7.1F) thermally conductive resin coated film bondply data sheet."
+   "note": "Ventec VT-4BC(HT1) RCF (thermal-bond 7.1F) thermally conductive resin coated film bondply data sheet.",
+   "material_ids": [
+    "ventec/vt-4bc-ht1-rcf"
+   ]
   },
   {
    "file": "261014-vt-4bc-rcf-tds.pdf",
@@ -13627,7 +13685,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Ventec VT-4BC RCF (thermal-bond 7.0F) thermally conductive resin coated film bondply data sheet."
+   "note": "Ventec VT-4BC RCF (thermal-bond 7.0F) thermally conductive resin coated film bondply data sheet.",
+   "material_ids": [
+    "ventec/vt-4bc-rcf"
+   ]
   },
   {
    "file": "26edff0e73ca6281b37fd19b2f8be901.jpg",
@@ -13839,7 +13900,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Arlon 37N polyimide low-flow prepreg data sheet; the material is not in the base yet."
+   "note": "Arlon 37N polyimide low-flow prepreg data sheet; the material is not in the base yet.",
+   "material_ids": [
+    "arlon/37n"
+   ]
   },
   {
    "file": "38e38a304a3f1fe10ae849379fa8a839.pdf",
@@ -13874,7 +13938,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Arlon 38N polyimide low-flow prepreg data sheet; the material is not in the base yet."
+   "note": "Arlon 38N polyimide low-flow prepreg data sheet; the material is not in the base yet.",
+   "material_ids": [
+    "arlon/38n"
+   ]
   },
   {
    "file": "3a471e4414c8d4c5479c466d74a62cdd.jpg",
@@ -14049,7 +14116,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Arlon 47N epoxy low-flow prepreg data sheet; the material is not in the base yet."
+   "note": "Arlon 47N epoxy low-flow prepreg data sheet; the material is not in the base yet.",
+   "material_ids": [
+    "arlon/47n"
+   ]
   },
   {
    "file": "49N-v1.8.pdf",
@@ -14065,7 +14135,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Arlon 49N multifunctional epoxy low-flow prepreg data sheet; the material is not in the base yet."
+   "note": "Arlon 49N multifunctional epoxy low-flow prepreg data sheet; the material is not in the base yet.",
+   "material_ids": [
+    "arlon/49n"
+   ]
   },
   {
    "file": "50c9337c4f2ccfa056bbff5fbfd29e59.jpg",
@@ -14113,7 +14186,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Arlon 51N high Tg epoxy low-flow prepreg data sheet; the material is not in the base yet."
+   "note": "Arlon 51N high Tg epoxy low-flow prepreg data sheet; the material is not in the base yet.",
+   "material_ids": [
+    "arlon/51n"
+   ]
   },
   {
    "file": "5202df766d29907a83b1b31c456f88a7.jpg",
@@ -14267,7 +14343,10 @@
    },
    "status": "checked",
    "manufacturer": "Wazam",
-   "note": "Image of the Wazam HP28 line-up sheet (scanned page); the material is not in the base yet."
+   "note": "Image of the Wazam HP28 line-up sheet (scanned page); the material is not in the base yet.",
+   "material_ids": [
+    "wazam/hp28"
+   ]
   },
   {
    "file": "66760f93-s1000-s1000b.pdf",
@@ -14440,7 +14519,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Arlon 84HP polyimide prepreg for hole fill data sheet; the material is not in the base yet."
+   "note": "Arlon 84HP polyimide prepreg for hole fill data sheet; the material is not in the base yet.",
+   "material_ids": [
+    "arlon/84hp"
+   ]
   },
   {
    "file": "84N-1.pdf",
@@ -14639,7 +14721,10 @@
    },
    "status": "checked",
    "manufacturer": "Wazam",
-   "note": "Image of the Wazam HC348D line-up sheet (scanned page); the material is not in the base yet."
+   "note": "Image of the Wazam HC348D line-up sheet (scanned page); the material is not in the base yet.",
+   "material_ids": [
+    "wazam/hc348d"
+   ]
   },
   {
    "file": "880de094f08f143da39a3825fb60268a.jpg",
@@ -14652,7 +14737,10 @@
    },
    "status": "checked",
    "manufacturer": "Wazam",
-   "note": "Image of the Wazam H170GR line-up sheet (scanned page); the material is not in the base yet."
+   "note": "Image of the Wazam H170GR line-up sheet (scanned page); the material is not in the base yet.",
+   "material_ids": [
+    "wazam/h170gr"
+   ]
   },
   {
    "file": "881afc8d8ffb5c9f3181aa34ab5b12fa.jpg",
@@ -17601,7 +17689,10 @@
    },
    "status": "checked",
    "manufacturer": "Wazam",
-   "note": "Image of the Wazam HSD7LG / HSD7LG(K) line-up sheet (scanned page); the material is not in the base yet."
+   "note": "Image of the Wazam HSD7LG / HSD7LG(K) line-up sheet (scanned page); the material is not in the base yet.",
+   "material_ids": [
+    "wazam/hsd7lg-hsd7lg-k"
+   ]
   },
   {
    "file": "b21b9b22e011588e6d442fea95a0204f.jpg",
@@ -17856,7 +17947,10 @@
    },
    "status": "checked",
    "manufacturer": "Wazam",
-   "note": "Image of the Wazam HB348 line-up sheet (scanned page); the material is not in the base yet."
+   "note": "Image of the Wazam HB348 line-up sheet (scanned page); the material is not in the base yet.",
+   "material_ids": [
+    "wazam/hb348"
+   ]
   },
   {
    "file": "CCL_All_Properties_PDF_240930_v9.pdf",
@@ -19858,7 +19952,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux TFH all-polyimide double-sided copper clad laminate data sheet; flexible material, not in the base yet."
+   "note": "DuPont Pyralux TFH all-polyimide double-sided copper clad laminate data sheet; flexible material, not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-tfh"
+   ]
   },
   {
    "file": "EI-10112-Pyralux-FR-BP-Data-Sheet.pdf",
@@ -19874,7 +19971,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux FR bond ply data sheet (acrylic based flexible circuit material); not in the base yet."
+   "note": "DuPont Pyralux FR bond ply data sheet (acrylic based flexible circuit material); not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-fr-bond-ply"
+   ]
   },
   {
    "file": "EI-10113-Pyralux-FR-CCL-Data-Sheet.pdf",
@@ -19890,7 +19990,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux FR copper clad laminate data sheet (acrylic based flexible circuit material); not in the base yet."
+   "note": "DuPont Pyralux FR copper clad laminate data sheet (acrylic based flexible circuit material); not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-fr-ccl"
+   ]
   },
   {
    "file": "EI-10114-Pyralux-FR-CL-Data-Sheet.pdf",
@@ -19906,7 +20009,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux FR coverlay data sheet (acrylic based flexible circuit material); not in the base yet."
+   "note": "DuPont Pyralux FR coverlay data sheet (acrylic based flexible circuit material); not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-fr-coverlay"
+   ]
   },
   {
    "file": "EI-10115-Pyralux-FR-SA-Data-Sheet.pdf",
@@ -19922,7 +20028,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux FR sheet adhesive data sheet (acrylic based flexible circuit material); not in the base yet."
+   "note": "DuPont Pyralux FR sheet adhesive data sheet (acrylic based flexible circuit material); not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-fr-sheet-adhesive"
+   ]
   },
   {
    "file": "EI-10116-Pyralux-LF-BP-Data-Sheet.pdf",
@@ -19938,7 +20047,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux LF bond ply data sheet (acrylic based flexible circuit material); not in the base yet."
+   "note": "DuPont Pyralux LF bond ply data sheet (acrylic based flexible circuit material); not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-lf-bond-ply"
+   ]
   },
   {
    "file": "EI-10117-Pyralux-LF-CCL-Data-Sheet.pdf",
@@ -19954,7 +20066,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux LF copper clad laminate data sheet (acrylic based flexible circuit material); not in the base yet."
+   "note": "DuPont Pyralux LF copper clad laminate data sheet (acrylic based flexible circuit material); not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-lf-ccl"
+   ]
   },
   {
    "file": "EI-10118-Pyralux-LF-CL-Data-Sheet.pdf",
@@ -19970,7 +20085,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux LF coverlay data sheet (acrylic based flexible circuit material); not in the base yet."
+   "note": "DuPont Pyralux LF coverlay data sheet (acrylic based flexible circuit material); not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-lf-coverlay"
+   ]
   },
   {
    "file": "EI-10119-Pyralux-LF-SA-Data-Sheet.pdf",
@@ -19986,7 +20104,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux LF sheet adhesive data sheet (acrylic based flexible circuit material); not in the base yet."
+   "note": "DuPont Pyralux LF sheet adhesive data sheet (acrylic based flexible circuit material); not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-lf-sheet-adhesive"
+   ]
   },
   {
    "file": "EI-10120-Pyralux-LF-B-CL-Data-Sheet.pdf",
@@ -20002,7 +20123,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux LF-B black coverlay data sheet (acrylic based flexible circuit material); not in the base yet."
+   "note": "DuPont Pyralux LF-B black coverlay data sheet (acrylic based flexible circuit material); not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-lf-b-coverlay"
+   ]
   },
   {
    "file": "EI-10122-Pyralux-AC-Data-Sheet 20230328.pdf",
@@ -20056,7 +20180,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux AG all-polyimide double-sided copper clad laminate data sheet; not in the base yet."
+   "note": "DuPont Pyralux AG all-polyimide double-sided copper clad laminate data sheet; not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-ag"
+   ]
   },
   {
    "file": "EI-10124-Pyralux-AP-Data-Sheet.pdf",
@@ -20112,7 +20239,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux GPL low loss epoxy sheet adhesive data sheet; not in the base yet."
+   "note": "DuPont Pyralux GPL low loss epoxy sheet adhesive data sheet; not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-gpl"
+   ]
   },
   {
    "file": "EI-10127-Pyralux-HT-Data-Sheet.pdf",
@@ -20147,7 +20277,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux HXC black coverlay data sheet; not in the base yet."
+   "note": "DuPont Pyralux HXC black coverlay data sheet; not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-hxc"
+   ]
   },
   {
    "file": "EI-10129-Pyralux-HXI-CL-Data-Sheet.pdf",
@@ -20163,7 +20296,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux HXI black coverlay data sheet; not in the base yet."
+   "note": "DuPont Pyralux HXI black coverlay data sheet; not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-hxi"
+   ]
   },
   {
    "file": "EI-10130-Pyralux-HXJ-CL-Data-Sheet.pdf",
@@ -20179,7 +20315,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux HXJ black coverlay data sheet; not in the base yet."
+   "note": "DuPont Pyralux HXJ black coverlay data sheet; not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-hxj"
+   ]
   },
   {
    "file": "EI-10131-Pyralux-TK-BPL-Data-Sheet.pdf",
@@ -20556,7 +20695,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux HP high performance low loss epoxy adhesive data sheet; not in the base yet."
+   "note": "DuPont Pyralux HP high performance low loss epoxy adhesive data sheet; not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-hp-adhesive"
+   ]
   },
   {
    "file": "EI-10209-Pyralux-HP-Coverlay-Data-Sheet1.pdf",
@@ -20572,7 +20714,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux HP low loss epoxy coverlay data sheet; not in the base yet."
+   "note": "DuPont Pyralux HP low loss epoxy coverlay data sheet; not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-hp-coverlay"
+   ]
   },
   {
    "file": "EI-10214-Pyralux-AK-Data-Sheet.pdf",
@@ -21529,7 +21674,10 @@
    },
    "status": "checked",
    "manufacturer": "Wazam",
-   "note": "Image of the Wazam H1170Q line-up sheet (scanned page); the material is not in the base yet."
+   "note": "Image of the Wazam H1170Q line-up sheet (scanned page); the material is not in the base yet.",
+   "material_ids": [
+    "wazam/h1170q"
+   ]
   },
   {
    "file": "f678b28c03f794c9ce5598106efc0bb5.pdf",
@@ -26802,7 +26950,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "Bergquist Thermal Clad HPL-03015 insulated metal substrate data sheet (7.5 W/m K dielectric); the material is not in the base yet."
+   "note": "Bergquist Thermal Clad HPL-03015 insulated metal substrate data sheet (7.5 W/m K dielectric); the material is not in the base yet.",
+   "material_ids": [
+    "bergquist/thermal-clad-hpl-03015"
+   ]
   },
   {
    "file": "pegaclad 1_datasheet.pdf",
@@ -28139,7 +28290,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux GFL sheet adhesive; the file carries only a product-code table (no property values); not in the base yet."
+   "note": "DuPont Pyralux GFL sheet adhesive; the file carries only a product-code table (no property values); not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-gfl"
+   ]
   },
   {
    "file": "Pyralux_TK_FAQs.pdf",
@@ -28382,7 +28536,10 @@
     "pcb_design": "yes"
    },
    "status": "checked",
-   "note": "DuPont Pyralux ML series adhesiveless metal-clad polyimide laminate data sheet; not in the base yet."
+   "note": "DuPont Pyralux ML series adhesiveless metal-clad polyimide laminate data sheet; not in the base yet.",
+   "material_ids": [
+    "dupont/pyralux-ml"
+   ]
   },
   {
    "file": "quick-reference-processing-guidelines-clte-series-laminates-cn.pdf",
