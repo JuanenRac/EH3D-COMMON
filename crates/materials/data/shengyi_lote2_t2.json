@@ -2727,6 +2727,286 @@
     "pages": null,
     "revision": null
    }
+  },
+  {
+   "id": "shengyi/q360g",
+   "manufacturer": "Shengyi",
+   "name": "Q360G",
+   "kind": "laminate",
+   "family": "Q360",
+   "resin": "Halogen-free CEM-1 (UL ANSI CEM-1)",
+   "halogen_free": true,
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4101/15",
+   "cte_z_50_260_pct": 6.2,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.5,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.018,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 610000000000000.0,
+   "surface_resistivity_ohm": 52000000000000.0,
+   "arc_resistance_s": 115,
+   "peel_strength_n_mm": 1.5,
+   "peel_condition": "1 oz, 288 C 10 s (8.57 lb/in)",
+   "flexural_strength_mpa": {
+    "lengthwise": 400,
+    "crosswise": 320,
+    "value": null
+   },
+   "water_absorption_pct": 0.15,
+   "cti_v": 600,
+   "thickness_range": {
+    "min_mm": 0.63,
+    "max_mm": 3.2,
+    "steps_note": "Thickness range of the purchasing information"
+   },
+   "panel_sizes": [
+    {
+     "width_mm": 915,
+     "height_mm": 1220,
+     "label": "36\" x 48\""
+    },
+    {
+     "width_mm": 1020,
+     "height_mm": 1220,
+     "label": "40\" x 48\""
+    },
+    {
+     "width_mm": 1070,
+     "height_mm": 1220,
+     "label": "42\" x 48\""
+    }
+   ],
+   "notes": "Halogen-free CEM-1 for power supplies, game machines and household appliances; good mechanical processability and high CTI (PLC 0, 600 V). Thermal stress above 20 s at 288 C solder float. Volume and surface resistivity at C-96/35/90 (6.1e8 MOhm cm, 5.2e7 MOhm). Halogen content Br 900 ppm, Cl 900 ppm, Br+Cl 1500 ppm. Typical values are for the 1.6 mm specimen; dielectric breakdown is above 45 kV (kV, not per mm, so it is not stored); the sheet gives the IPC-4101 slash sheet for reference only. Thickness 0.63 to 3.2 mm and copper foil 18 to 105 um; other sizes and thicknesses on request.",
+   "source": {
+    "pdf": "20200212180226844.pdf",
+    "pages": "1",
+    "revision": "CN-TDS-1911-02-Q360G"
+   }
+  },
+  {
+   "id": "shengyi/q260",
+   "manufacturer": "Shengyi",
+   "name": "Q260",
+   "kind": "laminate",
+   "family": "Q260",
+   "resin": "Thermal conductive CEM-3 (UL ANSI CEM-3.0)",
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4101/12",
+   "tg_dsc_c": 122,
+   "cte_z_below_tg_ppm": 28,
+   "cte_z_above_tg_ppm": 265,
+   "cte_z_50_260_pct": 3.5,
+   "thermal_conductivity_w_mk": 1.0,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.8,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.014,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 570000000000000.0,
+   "surface_resistivity_ohm": 67000000000000.0,
+   "arc_resistance_s": 140,
+   "peel_strength_n_mm": 1.5,
+   "peel_condition": "1 oz, 288 C 10 s (8.57 lb/in)",
+   "flexural_strength_mpa": {
+    "lengthwise": 410,
+    "crosswise": 340,
+    "value": null
+   },
+   "water_absorption_pct": 0.13,
+   "cti_v": 600,
+   "thickness_range": {
+    "min_mm": 0.63,
+    "max_mm": 3.2,
+    "steps_note": "Thickness range of the purchasing information"
+   },
+   "panel_sizes": [
+    {
+     "width_mm": 915,
+     "height_mm": 1220,
+     "label": "36\" x 48\""
+    },
+    {
+     "width_mm": 1020,
+     "height_mm": 1220,
+     "label": "40\" x 48\""
+    },
+    {
+     "width_mm": 1070,
+     "height_mm": 1220,
+     "label": "42\" x 48\""
+    }
+   ],
+   "notes": "Thermal conductive CEM-3 (1.0 W/mK by ASTM D5470) for power base boards and LED display and lighting; high CTI (PLC 0, 600 V). Tg by DSC. Thermal stress at 288 C solder dip about 30 s (the sheet marks it as a limit in one layout; read here as 30 s). Volume and surface resistivity at C-96/35/90 (5.7e8 MOhm cm, 6.7e7 MOhm). Typical values are for the 1.6 mm specimen; dielectric breakdown is above 45 kV (kV, not per mm, so it is not stored); the sheet gives the IPC-4101 slash sheet for reference only. Thickness 0.63 to 3.2 mm and copper foil 18 to 105 um; other sizes and thicknesses on request.",
+   "source": {
+    "pdf": "20200213103425598.pdf",
+    "pages": "1",
+    "revision": "CN-TDS-1911-03-Q260"
+   }
+  },
+  {
+   "id": "shengyi/s3110",
+   "manufacturer": "Shengyi",
+   "name": "S3110",
+   "kind": "laminate",
+   "family": "S3110",
+   "resin": "CEM-1 (UL ANSI CEM-1)",
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4101/10",
+   "cte_z_50_260_pct": 6.2,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.4,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.022,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 780000000000000.0,
+   "surface_resistivity_ohm": 56000000000000.0,
+   "arc_resistance_s": 118,
+   "peel_strength_n_mm": 1.8,
+   "peel_condition": "1 oz, 288 C 10 s (10.28 lb/in)",
+   "flexural_strength_mpa": {
+    "lengthwise": 420,
+    "crosswise": 358,
+    "value": null
+   },
+   "water_absorption_pct": 0.13,
+   "thickness_range": {
+    "min_mm": 0.63,
+    "max_mm": 3.2,
+    "steps_note": "Thickness range of the purchasing information"
+   },
+   "panel_sizes": [
+    {
+     "width_mm": 915,
+     "height_mm": 1220,
+     "label": "36\" x 48\""
+    },
+    {
+     "width_mm": 1020,
+     "height_mm": 1220,
+     "label": "40\" x 48\""
+    },
+    {
+     "width_mm": 1070,
+     "height_mm": 1220,
+     "label": "42\" x 48\""
+    }
+   ],
+   "notes": "CEM-1 with low warpage, good thermal and moisture resistance, for displays, power supplies, game machines and keyboards. Thermal stress above 30 s at 288 C solder float. CTI class PLC 2 (not stored as a number). Volume and surface resistivity at C-96/35/90 (7.8e8 MOhm cm, 5.6e7 MOhm). Typical values are for the 1.6 mm specimen; dielectric breakdown is above 45 kV (kV, not per mm, so it is not stored); the sheet gives the IPC-4101 slash sheet for reference only. Thickness 0.63 to 3.2 mm and copper foil 18 to 105 um; other sizes and thicknesses on request.",
+   "source": {
+    "pdf": "20200213105842177.pdf",
+    "pages": "1",
+    "revision": "CN-TDS-1911-03-S3110"
+   }
+  },
+  {
+   "id": "shengyi/s3116",
+   "manufacturer": "Shengyi",
+   "name": "S3116",
+   "kind": "laminate",
+   "family": "S3116",
+   "resin": "CEM-1 (UL ANSI CEM-1)",
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4101/10",
+   "cte_z_50_260_pct": 6.5,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.5,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.021,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 530000000000000.0,
+   "surface_resistivity_ohm": 71000000000000.0,
+   "arc_resistance_s": 120,
+   "peel_strength_n_mm": 1.8,
+   "peel_condition": "1 oz, 288 C 10 s (10.28 lb/in)",
+   "flexural_strength_mpa": {
+    "lengthwise": 400,
+    "crosswise": 350,
+    "value": null
+   },
+   "water_absorption_pct": 0.13,
+   "cti_v": 600,
+   "thickness_range": {
+    "min_mm": 0.63,
+    "max_mm": 3.2,
+    "steps_note": "Thickness range of the purchasing information"
+   },
+   "panel_sizes": [
+    {
+     "width_mm": 915,
+     "height_mm": 1220,
+     "label": "36\" x 48\""
+    },
+    {
+     "width_mm": 1020,
+     "height_mm": 1220,
+     "label": "40\" x 48\""
+    },
+    {
+     "width_mm": 1070,
+     "height_mm": 1220,
+     "label": "42\" x 48\""
+    }
+   ],
+   "notes": "High CTI CEM-1 (PLC 0, 600 V) with good thermal and moisture resistance, for displays, power supplies, ultrasonic machines and household appliances. Thermal stress above 35 s at 288 C solder float. Volume and surface resistivity at C-96/35/90 (5.3e8 MOhm cm, 7.1e7 MOhm). Typical values are for the 1.6 mm specimen; dielectric breakdown is above 45 kV (kV, not per mm, so it is not stored); the sheet gives the IPC-4101 slash sheet for reference only. Thickness 0.63 to 3.2 mm and copper foil 18 to 105 um; other sizes and thicknesses on request.",
+   "source": {
+    "pdf": "20200213105856089.pdf",
+    "pages": "1",
+    "revision": "CN-TDS-1911-03-S3116"
+   }
   }
  ]
 }
