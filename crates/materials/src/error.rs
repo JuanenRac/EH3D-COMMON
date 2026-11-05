@@ -1,4 +1,4 @@
-//! What the database reports: typed errors with the stable codes `EH3D-MAT-001` to `EH3D-MAT-008`.
+//! What the database reports: typed errors with the stable codes `EH3D-MAT-001` to `EH3D-MAT-009`.
 //!
 //! A code never changes its meaning and is never reused. The titles are in English; the user
 //! interface translates them by the key `diag.<code>`, as for the codes of the container.
@@ -26,11 +26,13 @@ pub enum MatCode {
     FileList = 7,
     /// 008: a value cannot be interpolated.
     Interpolation = 8,
+    /// 009: a record of the document catalogue is not valid.
+    Document = 9,
 }
 
 impl MatCode {
     /// Every code, in order.
-    pub const ALL: [MatCode; 8] = [
+    pub const ALL: [MatCode; 9] = [
         MatCode::Parse,
         MatCode::SchemaVersion,
         MatCode::DuplicateId,
@@ -39,9 +41,10 @@ impl MatCode {
         MatCode::Source,
         MatCode::FileList,
         MatCode::Interpolation,
+        MatCode::Document,
     ];
 
-    /// The number part, 1 to 8.
+    /// The number part, 1 to 9.
     pub fn number(self) -> u8 {
         self as u8
     }
@@ -57,6 +60,7 @@ impl MatCode {
             MatCode::Source => "EH3D-MAT-006",
             MatCode::FileList => "EH3D-MAT-007",
             MatCode::Interpolation => "EH3D-MAT-008",
+            MatCode::Document => "EH3D-MAT-009",
         }
     }
 
@@ -76,6 +80,7 @@ impl MatCode {
             MatCode::Source => "Source missing or not a file name",
             MatCode::FileList => "Data file not in the embedded list",
             MatCode::Interpolation => "Value cannot be interpolated",
+            MatCode::Document => "Document record not valid",
         }
     }
 }
@@ -159,6 +164,14 @@ pub enum MatError {
         /// Why not.
         reason: String,
     },
+    /// A record of the document catalogue is not valid.
+    #[error("EH3D-MAT-009: document {file}: {reason}")]
+    Document {
+        /// The file of the record.
+        file: String,
+        /// What is wrong.
+        reason: String,
+    },
 }
 
 impl MatError {
@@ -173,6 +186,7 @@ impl MatError {
             MatError::Source { .. } => MatCode::Source,
             MatError::FileList { .. } => MatCode::FileList,
             MatError::Interpolation { .. } => MatCode::Interpolation,
+            MatError::Document { .. } => MatCode::Document,
         }
     }
 }
@@ -182,14 +196,14 @@ mod tests {
     use super::*;
 
     #[test]
-    fn the_eight_codes_are_numbered_without_gaps() {
+    fn the_nine_codes_are_numbered_without_gaps() {
         for (index, code) in MatCode::ALL.iter().enumerate() {
             assert_eq!(code.number() as usize, index + 1);
             assert_eq!(code.code(), format!("EH3D-MAT-{:03}", index + 1));
             assert_eq!(MatCode::from_code(code.code()), Some(*code));
             assert!(!code.title().is_empty());
         }
-        assert_eq!(MatCode::from_code("EH3D-MAT-009"), None);
+        assert_eq!(MatCode::from_code("EH3D-MAT-010"), None);
     }
 
     #[test]

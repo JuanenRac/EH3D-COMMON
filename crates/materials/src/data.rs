@@ -3,6 +3,9 @@
 //! The list is written out so that a file is never embedded by accident; a test fails when a
 //! file of the `data` folder is not in it.
 
+/// The document catalogue, embedded as `(file name, JSON text)`.
+pub const DOCUMENTS: (&str, &str) = ("documents.json", include_str!("../data/documents.json"));
+
 /// The embedded files as `(file name, JSON text)`.
 pub const FILES: &[(&str, &str)] = &[
     ("bungard.json", include_str!("../data/bungard.json")),
@@ -26,13 +29,13 @@ mod tests {
             if name.ends_with(".json") {
                 seen += 1;
                 assert!(
-                    listed.contains(&name.as_str()),
+                    listed.contains(&name.as_str()) || name == DOCUMENTS.0,
                     "{}",
                     MatError::FileList { file: name }
                 );
             }
         }
-        assert_eq!(seen, FILES.len());
+        assert_eq!(seen, FILES.len() + 1);
     }
 
     #[test]

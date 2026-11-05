@@ -1,6 +1,9 @@
 //! The database in memory, and what it can be asked.
 
+use std::collections::HashSet;
+
 use crate::data;
+use crate::documents::{check_documents, parse_documents, Category, Consumer, Document, Relevance};
 use crate::error::MatError;
 use crate::interp::interpolate_raw;
 use crate::model::{DkPoint, Kind, Material, MaterialFile};
@@ -74,6 +77,7 @@ impl Criteria {
 #[derive(Debug, Clone, PartialEq)]
 pub struct Database {
     materials: Vec<Material>,
+    documents: Vec<Document>,
 }
 
 /// Reads one data file.
@@ -87,12 +91,21 @@ pub fn parse_file(file_name: &str, json: &str) -> Result<MaterialFile, MatError>
 impl Database {
     /// The database of the data files embedded in the crate.
     pub fn embedded() -> Result<Database, MatError> {
-        Database::from_sources(data::FILES)
+        Database::load(data::FILES, Some(data::DOCUMENTS))
     }
 
     /// A database from `(file name, JSON text)` pairs. Every file is read and checked; the first
     /// error is returned.
     pub fn from_sources(files: &[(&str, &str)]) -> Result<Database, MatError> {
+        Database::load(files, None)
+    }
+
+    /// A database from material files and, when given, the catalogue of documents (also a
+    /// `(file name, JSON text)` pair). The materials a document names have to exist.
+    pub fn load(
+        files: &[(&str, &str)],
+        documents: Option<(&str, &str)>,
+    ) -> Result<Database, MatError> {
         let mut materials = Vec::new();
         for (name, json) in files {
             let file = parse_file(name, json)?;
@@ -104,7 +117,106 @@ impl Database {
         if let Some(e) = check_unique(&materials).into_iter().next() {
             return Err(e);
         }
-        Ok(Database { materials })
+        let mut docs = Vec::new();
+        if let Some((name, json)) = documents {
+            let file = parse_documents(name, json)?;
+            if let Some(e) = check_documents(name, &file).into_iter().next() {
+                return Err(e);
+            }
+            let known: HashSet<&str> = materials.iter().map(|m| m.id.as_str()).collect();
+            for d in &file.documents {
+                if let Some(id) = d
+                    .material_ids
+                    .iter()
+                    .find(|id| !known.contains(id.as_str()))
+                {
+                    return Err(MatError::Document {
+                        file: d.file.clone(),
+                        reason: format!("it names the material {id}, which is not in the database"),
+                    });
+                }
+            }
+            docs = file.documents;
+        }
+        Ok(Database {
+            materials,
+            documents: docs,
+        })
+    }
+
+    /// Every document of the catalogue.
+    pub fn documents(&self) -> &[Document] {
+        &self.documents
+    }
+
+    /// The documents of one category.
+    pub fn documents_by_category(&self, category: Category) -> impl Iterator<Item = &Document> {
+        self.documents
+            .iter()
+            .filter(move |d| d.category == category)
+    }
+
+    /// The documents of one manufacturer (upper and lower case are the same).
+    pub fn documents_by_manufacturer<'a>(
+        &'a self,
+        manufacturer: &'a str,
+    ) -> impl Iterator<Item = &'a Document> {
+        self.documents.iter().filter(move |d| {
+            d.manufacturer
+                .as_deref()
+                .is_some_and(|m| m.eq_ignore_ascii_case(manufacturer))
+        })
+    }
+
+    /// The documents with this relevance for a consumer.
+    pub fn documents_by_relevance(
+        &self,
+        consumer: Consumer,
+        relevance: Relevance,
+    ) -> impl Iterator<Item = &Document> {
+        self.documents
+            .iter()
+            .filter(move |d| d.relevance_for(consumer) == relevance)
+    }
+
+    /// The documents that serve a CNC that drills and mills boards.
+    pub fn documents_useful_for_cnc(&self) -> Vec<&Document> {
+        self.documents_by_relevance(Consumer::Cnc, Relevance::Yes)
+            .collect()
+    }
+
+    /// The documents that serve the design tool.
+    pub fn documents_useful_for_phoenix(&self) -> Vec<&Document> {
+        self.documents_by_relevance(Consumer::Phoenix, Relevance::Yes)
+            .collect()
+    }
+
+    /// The materials defined by a document that serves the consumer: those the document names
+    /// and those that cite the document as their source.
+    pub fn materials_useful_for(&self, consumer: Consumer) -> Vec<&Material> {
+        let mut files: HashSet<&str> = HashSet::new();
+        let mut ids: HashSet<&str> = HashSet::new();
+        for d in self.documents_by_relevance(consumer, Relevance::Yes) {
+            files.insert(d.file.as_str());
+            ids.extend(d.material_ids.iter().map(String::as_str));
+        }
+        self.materials
+            .iter()
+            .filter(|m| {
+                ids.contains(m.id.as_str())
+                    || m.all_sources().any(|s| files.contains(s.pdf.as_str()))
+            })
+            .collect()
+    }
+
+    /// The materials useful for a CNC that drills and mills boards.
+    pub fn materials_useful_for_cnc(&self) -> Vec<&Material> {
+        self.materials_useful_for(Consumer::Cnc)
+    }
+
+    /// The materials useful for the design tool.
+    pub fn materials_useful_for_phoenix(&self) -> Vec<&Material> {
+        self.materials_useful_for(Consumer::Phoenix)
     }
 
     /// Every material, in the order of the files.
@@ -286,9 +398,47 @@ mod tests {
     }
 
     #[test]
+    fn the_documents_are_queried_and_name_real_materials() {
+        let docs = r#"{"schema_version":1,"documents":[
+            {"file":"fr4.pdf","folder":"d","manufacturer":"Acme","category":"laminate","doc_type":"datasheet",
+             "relevance":{"cnc_machining":"yes","pcb_design":"yes"},"status":"auto"},
+            {"file":"foam.pdf","folder":"d","manufacturer":"Foamco","category":"foam_gasket","doc_type":"datasheet",
+             "relevance":{"cnc_machining":"no","pcb_design":"reference"},"status":"auto"},
+            {"file":"core.pdf","folder":"d","category":"metal_core","doc_type":"datasheet",
+             "relevance":{"cnc_machining":"reference","pcb_design":"yes"},"status":"checked","material_ids":["beta/core"]}]}"#;
+        let db = Database::load(
+            &[("acme.json", SAMPLE), ("beta.json", OTHER)],
+            Some(("documents.json", docs)),
+        )
+        .unwrap();
+        assert_eq!(db.documents().len(), 3);
+        assert_eq!(db.documents_by_category(Category::FoamGasket).count(), 1);
+        assert_eq!(db.documents_by_manufacturer("ACME").count(), 1);
+        assert_eq!(db.documents_useful_for_cnc().len(), 1);
+        assert_eq!(db.documents_useful_for_phoenix().len(), 2);
+        // fr4.pdf is the source of both Acme materials? only of the first
+        let cnc: Vec<&str> = db
+            .materials_useful_for_cnc()
+            .iter()
+            .map(|m| m.id.as_str())
+            .collect();
+        assert_eq!(cnc, ["acme/fr4-hi"]);
+        let phoenix = db.materials_useful_for_phoenix();
+        assert_eq!(phoenix.len(), 2);
+        let unknown = docs.replace("beta/core", "beta/none");
+        let e = Database::load(
+            &[("acme.json", SAMPLE), ("beta.json", OTHER)],
+            Some(("documents.json", unknown.as_str())),
+        )
+        .unwrap_err();
+        assert_eq!(e.code(), MatCode::Document);
+    }
+
+    #[test]
     fn the_embedded_database_is_sound() {
         let db = Database::embedded().unwrap();
         assert!(!db.is_empty());
+        assert!(!db.documents().is_empty());
         for m in db.materials() {
             assert!(crate::validate::check_material(m).is_empty(), "{}", m.id);
         }
