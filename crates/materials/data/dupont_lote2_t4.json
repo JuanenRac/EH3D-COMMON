@@ -408,6 +408,1089 @@
       "ul94": "V-0",
       "ipc_slash_sheet": "IPC-4821/1",
       "notes": "All-polyimide embedded capacitor laminate for power and ground planes in rigid-flex and boards; certified to IPC-4821/1. The capacitance density, Dk and Df rows of the property table are not unambiguous in the text layer and are not stored. UL file E124294."
+    },
+    {
+      "id": "dupont/pyralux-tfh",
+      "manufacturer": "DuPont",
+      "name": "Pyralux TFH",
+      "kind": "flex_laminate",
+      "family": "Pyralux",
+      "resin": "All-polyimide (adhesiveless), low loss",
+      "tg_dma_c": 220,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.2,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.003,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "cte_x_ppm": 19,
+      "cte_y_ppm": 19,
+      "water_absorption_pct": 0.5,
+      "volume_resistivity_ohm_cm": 1e+16,
+      "surface_resistivity_ohm": 1000000000000000.0,
+      "peel_strength_n_mm": 0.8,
+      "peel_condition": "As received and after solder, more than 0.8 N/mm (4.5 lb/in), TFH125012 (limit stored)",
+      "youngs_modulus_gpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 7
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 350
+      },
+      "thicknesses_mm": [
+        0.025,
+        0.05
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.33,
+          "thickness_um": 12,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": null
+        }
+      ],
+      "notes": "Adhesiveless all-polyimide double-sided copper-clad laminate with copper foil optimized for low insertion loss. Typical values are for TFH125012 (12 um copper, 50 um dielectric); the TFH122512C column differs in peel (more than 0.9 N/mm, 5.1 lb/in), moisture absorption 0.7 %, tensile modulus above 7.2 GPa, tensile strength above 320 MPa and elongation 37 %. Standard codes TFH122512, TFH122512C, TFH125012, TFH182518 and TFH185018 (copper 12 or 18 um on 25 or 50 um dielectric). Dimensional stability +/-0.1 % after etching and after aging; solder float 288 C for 10 s passes; elongation 45 %; flexural endurance above 200 cycles; chemical resistance retention above 80 % (peel above 90 %). Volume and surface resistivity and tensile values are limits (more than). Rolls of 100 m, 250 or 500 mm wide. UL file E161336. Stored in the original packaging at 4-29 C and below 70 % RH, not frozen.",
+      "source": {
+        "pdf": "EI-10110 Pyralux TFH Data Sheet 20231218.pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "dupont/pyralux-fr-bond-ply",
+      "manufacturer": "DuPont",
+      "name": "Pyralux FR Bond Ply",
+      "kind": "bonding_film",
+      "family": "Pyralux",
+      "resin": "Kapton polyimide film coated both sides with flame retardant B-staged modified acrylic adhesive",
+      "ul94": "VTM-0",
+      "ipc_slash_sheet": "IPC-4203/1",
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.0,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.02,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.017,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "As received and after solder, 1 oz RA copper (9.0 lb/in), FR0111",
+      "volume_resistivity_ohm_cm": 1000000000000000.0,
+      "surface_resistivity_ohm": 10000000000000.0,
+      "processing": {
+        "lamination": {
+          "max_temp_c": 199,
+          "notes": "Part temperature 182-199 C, pressure 14-28 kg/cm2 (200-400 psi), 1-2 hours at temperature."
+        }
+      },
+      "notes": "Bond ply for encapsulating etched details and for low layer count multilayers. Typical values are for FR0111 (25 um adhesive on 25 um Kapton); adhesive flow 0.10-0.15 mm (4-6 mil); dimensional stability +/-0.03 %; solder float 288 C for 10 s passes; volume and surface resistivity are limits (more than 1e15 ohm cm and 1e13 ohm). Peel test lamination 14 kg/cm2 (200 psi) at 182 C for 1 hour to the treated side of 1 oz RA copper. Standard codes FR7016, FR0111, FR0121, FR0131, FR0212, FR7021 and FR1515 (adhesive 13, 25 or 51 um; Kapton 13, 25, 51 or 76 um). Rolls 610 mm wide, 76 m long. UL file E124294. Stored in the original packaging at 4-29 C and below 70 % RH, not frozen.",
+      "source": {
+        "pdf": "EI-10112-Pyralux-FR-BP-Data-Sheet.pdf",
+        "pages": "1-2",
+        "revision": "EI-10112 (10/22)"
+      }
+    },
+    {
+      "id": "dupont/pyralux-fr-ccl",
+      "manufacturer": "DuPont",
+      "name": "Pyralux FR CCL",
+      "kind": "flex_laminate",
+      "family": "Pyralux",
+      "resin": "Kapton polyimide film bonded to copper with flame retardant C-staged modified acrylic adhesive",
+      "ul94": "VTM-0",
+      "ipc_slash_sheet": "IPC-4204/1",
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.0,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.03,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.02,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 2.1,
+      "peel_condition": "After lamination (12.0 lb/in); after solder 1.9 N/mm (11.0 lb/in), FR9110R",
+      "volume_resistivity_ohm_cm": 1000000000000000.0,
+      "surface_resistivity_ohm": 1000000000000000.0,
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "RA/ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "RA/ED"
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": 70,
+          "foil_type": "RA/ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 610,
+          "height_mm": 914,
+          "label": "24\" x 36\""
+        },
+        {
+          "width_mm": 610,
+          "height_mm": 457,
+          "label": "24\" x 18\""
+        },
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12\" x 18\""
+        }
+      ],
+      "processing": {
+        "lamination": {
+          "max_temp_c": 199,
+          "notes": "Part temperature 182-199 C, pressure 14-28 kg/cm2 (200-400 psi), 1-2 hours at temperature."
+        }
+      },
+      "notes": "Single and double-sided clad for flex, multilayer and rigid-flex circuits that need flame retardancy; copper RA (code ending R), ED (E) or double-treated RA (D). Typical values are for FR9110R (35 um copper, 25 um adhesive, 25 um Kapton); dimensional stability +/-0.10 %; solder float 288 C for 10 s passes; resistivities are limits (more than). Single-sided codes FR7012R, FR7062R, FR7004R, FR7002R, FR9110R, FR9120R, FR9150R, FR9210R, FR9220R and double-sided codes FR7022R, FR7014R, FR7010R, FR9111R, FR9121R, FR9151R, FR9212R, FR9222R, FR7090R (adhesive 13, 25 or 51 um; Kapton 13, 25, 51 or 127 um). Sheets of 4 to 25 per pack. UL file E124294. Stored in the original packaging at 4-29 C and below 70 % RH, not frozen.",
+      "source": {
+        "pdf": "EI-10113-Pyralux-FR-CCL-Data-Sheet.pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "dupont/pyralux-fr-coverlay",
+      "manufacturer": "DuPont",
+      "name": "Pyralux FR Coverlay",
+      "kind": "coverlay",
+      "family": "Pyralux",
+      "resin": "Kapton polyimide film coated one side with flame retardant B-staged modified acrylic adhesive",
+      "ul94": "VTM-0",
+      "ipc_slash_sheet": "IPC-4203/1",
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.1,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.02,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.015,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "As received and after solder, 1 oz RA copper (9.0 lb/in), FR0110",
+      "volume_resistivity_ohm_cm": 1000000000000000.0,
+      "surface_resistivity_ohm": 10000000000000.0,
+      "processing": {
+        "lamination": {
+          "max_temp_c": 199,
+          "notes": "Part temperature 182-199 C, pressure 14-28 kg/cm2 (200-400 psi), 1-2 hours at temperature."
+        }
+      },
+      "notes": "Coverlay for flexible and rigid-flex multilayers. Typical values are for FR0110 (25 um adhesive on 25 um Kapton); adhesive flow 0.10-0.15 mm (4-6 mil); dimensional stability +/-0.03 %; solder float 288 C for 10 s passes; resistivities are limits (more than). Standard codes FR7013, FR0110, FR0120, FR0130, FR0150, FR7082, FR0210, FR0220, FR0230, FR0250, FR0310, FR7001, FR1510 and FR7332 (adhesive 13 to 76 um; Kapton 13 to 127 um). Rolls 610 mm wide, 76 m long. UL file E124294. Stored in the original packaging at 4-29 C and below 70 % RH, not frozen.",
+      "source": {
+        "pdf": "EI-10114-Pyralux-FR-CL-Data-Sheet.pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "dupont/pyralux-fr-sheet-adhesive",
+      "manufacturer": "DuPont",
+      "name": "Pyralux FR Sheet Adhesive",
+      "kind": "bonding_film",
+      "family": "Pyralux",
+      "resin": "Flame retardant B-staged modified acrylic adhesive",
+      "ipc_slash_sheet": "IPC-4203/18",
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 2.9,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.03,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.02,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "As received and after solder, 1 oz RA copper (9.0 lb/in), FR0100",
+      "volume_resistivity_ohm_cm": 1000000000000000.0,
+      "surface_resistivity_ohm": 1000000000000000.0,
+      "thicknesses_mm": [
+        0.013,
+        0.018,
+        0.025,
+        0.051,
+        0.076,
+        0.102
+      ],
+      "processing": {
+        "lamination": {
+          "max_temp_c": 199,
+          "notes": "Part temperature 182-199 C, pressure 14-28 kg/cm2 (200-400 psi), 1-2 hours at temperature."
+        }
+      },
+      "notes": "Stand-alone adhesive for bonding flexible inner layers, stiffeners and heat sinks. Typical values are for FR0100 (25 um); adhesive flow 0.10-0.15 mm (4-6 mil); solder float 288 C for 10 s passes; resistivities are limits (more than). Codes FR0100, FR0200, FR0300, FR0400, FR1500 and FR1700 (25, 51, 76, 102, 13 and 18 um). Rolls 610 mm wide, 76 m long. UL file E124294. Stored in the original packaging at 4-29 C and below 70 % RH, not frozen.",
+      "source": {
+        "pdf": "EI-10115-Pyralux-FR-SA-Data-Sheet.pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "dupont/pyralux-lf-bond-ply",
+      "manufacturer": "DuPont",
+      "name": "Pyralux LF Bond Ply",
+      "kind": "bonding_film",
+      "family": "Pyralux",
+      "resin": "Kapton polyimide film coated both sides with B-staged modified acrylic adhesive",
+      "ipc_slash_sheet": "IPC-4203/1",
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.0,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.02,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.017,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 1.8,
+      "peel_condition": "As received, 1 oz RA copper (10.0 lb/in); after solder 1.6 N/mm (9.0 lb/in), LF0111",
+      "volume_resistivity_ohm_cm": 1000000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "processing": {
+        "lamination": {
+          "max_temp_c": 199,
+          "notes": "Part temperature 182-199 C, pressure 14-28 kg/cm2 (200-400 psi), 1-2 hours at temperature."
+        }
+      },
+      "notes": "High thermal resistance bond ply for multilayer constructions. Typical values are for LF0111 (25 um adhesive on 25 um Kapton); adhesive flow 0.05-0.10 mm (2-4 mil); dimensional stability +/-0.07 %; solder float 288 C for 10 s passes; resistivities are limits (more than). Codes LF7016, LF0111, LF0121, LF0131, LF0212, LF7021 and LF1515. Rolls 610 mm wide, 76 m long. Stored in the original packaging at 4-29 C and below 70 % RH, not frozen.",
+      "source": {
+        "pdf": "EI-10116-Pyralux-LF-BP-Data-Sheet.pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "dupont/pyralux-lf-ccl",
+      "manufacturer": "DuPont",
+      "name": "Pyralux LF CCL",
+      "kind": "flex_laminate",
+      "family": "Pyralux",
+      "resin": "Kapton polyimide film bonded to copper with C-staged modified acrylic adhesive",
+      "ipc_slash_sheet": "IPC-4204/1",
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.0,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.02,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.02,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 1.8,
+      "peel_condition": "After lamination (10.0 lb/in); after solder 1.6 N/mm (9.0 lb/in), LF9110R",
+      "volume_resistivity_ohm_cm": 1000000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "RA/ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "RA/ED"
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": 70,
+          "foil_type": "RA/ED"
+        }
+      ],
+      "processing": {
+        "lamination": {
+          "max_temp_c": 199,
+          "notes": "Part temperature 182-199 C, pressure 14-28 kg/cm2 (200-400 psi), 1-2 hours at temperature."
+        }
+      },
+      "notes": "Single and double-sided clad for high reliability, high density flexible and rigid-flex circuits; copper RA (code ending R), ED (E) or double-treated RA (D). Typical values are for LF9110R (35 um copper, 25 um adhesive, 25 um Kapton); dimensional stability +/-0.10 %; solder float 288 C for 10 s passes; resistivities are limits (more than). Single-sided codes LF7012R, LF7062R, LF7004R, LF7002R, LF9110R, LF9120R, LF9150R, LF9210R, LF9220R and double-sided codes LF7022R, LF7014R, LF7010R, LF9111R, LF9121R, LF9151R, LF9212R, LF9222R, LF7090R (adhesive 13, 25 or 51 um; Kapton 13, 25, 51 or 127 um). Stored in the original packaging at 4-29 C and below 70 % RH, not frozen.",
+      "source": {
+        "pdf": "EI-10117-Pyralux-LF-CCL-Data-Sheet.pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "dupont/pyralux-lf-coverlay",
+      "manufacturer": "DuPont",
+      "name": "Pyralux LF Coverlay",
+      "kind": "coverlay",
+      "family": "Pyralux",
+      "resin": "Kapton polyimide film coated one side with B-staged modified acrylic adhesive",
+      "ipc_slash_sheet": "IPC-4203/1",
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.1,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.02,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.015,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 1.8,
+      "peel_condition": "As received, 1 oz RA copper (10.0 lb/in); after solder 1.6 N/mm (9.0 lb/in), LF0110",
+      "volume_resistivity_ohm_cm": 1000000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "processing": {
+        "lamination": {
+          "max_temp_c": 199,
+          "notes": "Part temperature 182-199 C, pressure 14-28 kg/cm2 (200-400 psi), 1-2 hours at temperature."
+        }
+      },
+      "notes": "Coverlay for flexible and rigid-flex multilayers. Typical values are for LF0110 (25 um adhesive on 25 um Kapton); adhesive flow 0.05-0.10 mm (2-4 mil); dimensional stability +/-0.07 %; solder float 288 C for 10 s passes; resistivities are limits (more than). Codes LF7013, LF0110, LF0120, LF0130, LF0150, LF7034, LF7082, LF0210, LF0220, LF0230, LF0250, LF0310, LF7001 and LF1510. Rolls 610 mm wide, 76 m long. Stored in the original packaging at 4-29 C and below 70 % RH, not frozen.",
+      "source": {
+        "pdf": "EI-10118-Pyralux-LF-CL-Data-Sheet.pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "dupont/pyralux-lf-sheet-adhesive",
+      "manufacturer": "DuPont",
+      "name": "Pyralux LF Sheet Adhesive",
+      "kind": "bonding_film",
+      "family": "Pyralux",
+      "resin": "B-staged modified acrylic adhesive",
+      "ipc_slash_sheet": "IPC-4203/18",
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 2.8,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.03,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.02,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 1.8,
+      "peel_condition": "As received, 1 oz RA copper (10.0 lb/in); after solder 1.6 N/mm (9.0 lb/in), LF0100",
+      "volume_resistivity_ohm_cm": 1000000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "thicknesses_mm": [
+        0.013,
+        0.018,
+        0.02,
+        0.025,
+        0.038,
+        0.051,
+        0.076,
+        0.102
+      ],
+      "processing": {
+        "lamination": {
+          "max_temp_c": 199,
+          "notes": "Part temperature 182-199 C, pressure 14-28 kg/cm2 (200-400 psi), 1-2 hours at temperature."
+        }
+      },
+      "notes": "Stand-alone adhesive for bonding flexible inner layers, rigid cap layers, stiffeners and heat sinks. Typical values are for LF0100 (25 um); adhesive flow 0.05-0.10 mm (2-4 mil); solder float 288 C for 10 s passes; resistivities are limits (more than). Codes LF0100, LF0200, LF0300, LF0400, LF1500, LF1700, LF1800 and FL7049 (25, 51, 76, 102, 13, 18, 20 and 38 um). Stored in the original packaging at 4-29 C and below 70 % RH, not frozen.",
+      "source": {
+        "pdf": "EI-10119-Pyralux-LF-SA-Data-Sheet.pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "dupont/pyralux-lf-b-coverlay",
+      "manufacturer": "DuPont",
+      "name": "Pyralux LF-B Coverlay",
+      "kind": "coverlay",
+      "family": "Pyralux",
+      "resin": "Matte black Kapton polyimide film coated one side with B-staged modified acrylic adhesive",
+      "ipc_slash_sheet": "IPC-4203/1",
+      "peel_strength_n_mm": 1.8,
+      "peel_condition": "As received, 1 oz RA copper (10.0 lb/in); after solder 1.6 N/mm (9.0 lb/in), LF-B0110",
+      "volume_resistivity_ohm_cm": 1000000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "processing": {
+        "lamination": {
+          "max_temp_c": 199,
+          "notes": "Part temperature 182-199 C, pressure 14-28 kg/cm2 (200-400 psi), 1-2 hours at temperature."
+        }
+      },
+      "notes": "Black coverlay with a colour-stable matte surface, crease and scratch resistance, used where design aesthetics or LED light control matter. Typical values are for LF-B0110 (25 um adhesive on 25 um Kapton); adhesive flow 0.05-0.10 mm (2-4 mil); dimensional stability +/-0.04 %; solder float 288 C for 10 s passes; resistivities are limits (more than). Codes LF-B0110, LF-B0210 and LF-B7013. Rolls 610 mm wide, 76 m long. Stored in the original packaging at 4-29 C and below 70 % RH, not frozen.",
+      "source": {
+        "pdf": "EI-10120-Pyralux-LF-B-CL-Data-Sheet.pdf",
+        "pages": "1-2",
+        "revision": "EI-10120 (10/22)"
+      }
+    },
+    {
+      "id": "dupont/pyralux-ag",
+      "manufacturer": "DuPont",
+      "name": "Pyralux AG",
+      "kind": "flex_laminate",
+      "family": "Pyralux",
+      "resin": "All-polyimide (adhesiveless)",
+      "tg_dma_c": 220,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.17,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0067,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 1e+16,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "dielectric_strength_kv_mm": 290,
+      "water_absorption_pct": 1.0,
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "As received and after solder, more than 1.0 N/mm (5.7 lb/in), AG122512RY (limit stored)",
+      "youngs_modulus_gpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 4.8
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 265
+      },
+      "thicknesses_mm": [
+        0.012,
+        0.02,
+        0.025,
+        0.05
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.2,
+          "thickness_um": 7,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 0.26,
+          "thickness_um": 9,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 0.33,
+          "thickness_um": 12,
+          "foil_type": "ED/RA"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED/RA"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "RA"
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": 70,
+          "foil_type": "ED/RA"
+        }
+      ],
+      "notes": "Adhesiveless all-polyimide double-sided copper-clad laminate for low layer count flexible circuits. Typical values are for AG122512RY (12 um RA copper, 25 um dielectric) and the dielectric properties are for 25 um: Dk and Df at 1 MHz; CTE 17-20 ppm/C (TMA) and CHE 11-15 ppm/%RH; moisture absorption below 1 % (limit stored); dielectric strength 290 V/um; surface resistivity above 1e14 ohm and volume resistivity above 1e16 ohm cm (limits stored); propagation tear 5 gf; elongation 60 %; dimensional stability +/-0.05 % after etching and after aging; flexural endurance above 2500 cycles (R 0.8 mm); solder float 288 C for 10 s passes with a pre-bake at 135 C for 60 min. Standard codes from AG072507EL to AG705070RF (copper 7 to 70 um, ED or RA; dielectric 12, 20, 25 or 50 um; _N marks an alternative production line). Rolls of 100 m, 250 or 500 mm wide. UL file E161336. Stored in the original packaging at 4-29 C.",
+      "source": {
+        "pdf": "EI-10123 Pyralux AG Data Sheet 20230609.pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "dupont/pyralux-gpl",
+      "manufacturer": "DuPont",
+      "name": "Pyralux GPL",
+      "kind": "bonding_film",
+      "family": "Pyralux",
+      "resin": "B-staged modified epoxy, low loss",
+      "ul94": "VTM-0",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 2.8,
+          "method": "IPC-TM-650 2.5.5.3 / ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0035,
+          "method": "IPC-TM-650 2.5.5.3 / ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tg_tma_c": 102,
+      "cte_x_ppm": 105,
+      "cte_y_ppm": 105,
+      "water_absorption_pct": 0.4,
+      "volume_resistivity_ohm_cm": 1e+16,
+      "surface_resistivity_ohm": 1000000000000000.0,
+      "dielectric_strength_kv_mm": 123,
+      "peel_strength_n_mm": 1.8,
+      "peel_condition": "As received and after solder (10.3 lb/in), GPL0025",
+      "youngs_modulus_gpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 0.371
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 11
+      },
+      "thicknesses_mm": [
+        0.015,
+        0.025,
+        0.03
+      ],
+      "processing": {
+        "lamination": {
+          "max_temp_c": 190,
+          "time_at_temp_min": 60,
+          "notes": "Part temperature 175-190 C, pressure 28-40 kg/cm2 (400-565 psi), 60-120 minutes at temperature."
+        }
+      },
+      "notes": "Low loss sheet adhesive with low resin flow, for bonding flexible inner layers or rigid cap layers in flex and rigid-flex constructions. Typical values are for GPL0025 (25 um): XY CTE 105 ppm/C; moisture absorption below 0.4 % (limit stored); moisture and insulation resistance above 1e8 ohm; tensile modulus 371 MPa, tensile strength 11 MPa, elongation 222 %; volume and surface resistivity are limits (more than); solder float 288 C for 10 s passes; chemical resistance peel retention above 80 %. Codes GPL0015, GPL0025 and GPL0030 (15, 25 and 30 um). Rolls 250 mm wide, 100 m long; requires refrigeration below 5 C at 50 +/- 20 % humidity.",
+      "source": {
+        "pdf": "EI-10126-Pyralux-GPL-Data-Sheet.pdf",
+        "pages": "1-2",
+        "revision": "Form GPL-0025 Rev 1"
+      }
+    },
+    {
+      "id": "dupont/pyralux-gfl",
+      "manufacturer": "DuPont",
+      "name": "Pyralux GFL",
+      "kind": "bonding_film",
+      "family": "Pyralux",
+      "resin": "B-staged modified epoxy, low loss",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 2.5,
+          "method": "IPC-TM-650 2.5.5.3 / ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0017,
+          "method": "IPC-TM-650 2.5.5.3 / ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tg_tma_c": 87,
+      "cte_x_ppm": 183,
+      "cte_y_ppm": 183,
+      "water_absorption_pct": 0.3,
+      "volume_resistivity_ohm_cm": 1e+16,
+      "surface_resistivity_ohm": 1000000000000000.0,
+      "dielectric_strength_kv_mm": 187,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "As received (9.1 lb/in); after solder 1.5 N/mm (8.6 lb/in), GFL0025",
+      "thicknesses_mm": [
+        0.015,
+        0.025,
+        0.03
+      ],
+      "processing": {
+        "lamination": {
+          "max_temp_c": 190,
+          "notes": "Part temperature 175-190 C; the pressure and time are not legible in the sheet."
+        }
+      },
+      "notes": "Low loss sheet adhesive with low resin flow, for bonding flexible inner layers or rigid cap layers in flex and rigid-flex constructions. Typical values are for GFL0025 (25 um): XY CTE 183 ppm/C; moisture absorption below 0.3 % (limit stored); moisture and insulation resistance above 1e8 ohm; volume and surface resistivity are limits (more than); solder float 288 C for 10 s passes; chemical resistance peel retention above 80 %. Codes GFL0015, GFL0025 and GFL0030 (15, 25 and 30 um). Rolls 250 mm wide, 100 m long; requires refrigeration below 5 C at 50 +/- 20 % humidity. The pages are image based and were read from a rendering.",
+      "source": {
+        "pdf": "Pyralux(R) GFL Bonding Sheet 20210304.pdf",
+        "pages": "1-2",
+        "revision": "Form GFL-0025 Rev 1"
+      }
+    },
+    {
+      "id": "dupont/pyralux-hxc",
+      "manufacturer": "DuPont",
+      "name": "Pyralux HXC",
+      "kind": "coverlay",
+      "family": "Pyralux",
+      "resin": "Matte black Kapton MBC polyimide film coated one side with B-staged modified epoxy adhesive",
+      "halogen_free": true,
+      "ul94": "VTM-0",
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.7,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.012,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.054,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 0.85,
+      "peel_condition": "As received (4.8 lb/in); after MEK soak 10 min 0.65 N/mm (3.7 lb/in), HXC1225",
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "surface_resistivity_ohm": 1000000000000.0,
+      "processing": {
+        "lamination": {
+          "max_temp_c": 180,
+          "notes": "Part temperature 160-180 C, pressure 20-40 kg/cm2 (290-580 psi), 60-90 minutes at temperature."
+        }
+      },
+      "notes": "Halogen free black coverlay (Kapton MBC 12.5 or 25 um with 15, 20 or 25 um adhesive; codes HXC1215, HXC1220, HXC1225, HXC2525) with a uniform matte surface (gloss 25 GU at 60 degrees, L* 34.5). The Df at 10 GHz is printed as 0.054, above the 1 MHz value of 0.012, and is stored as printed. Typical values are for HXC1225: adhesive resin flow 0.11 mm (4.3 mil); dimensional stability +/-0.05 %; solder float 288 C for 10 s passes; resistivities are limits (more than). Rolls 249 or 500 mm wide, 200 m long; requires refrigeration below 5 C and keeps its properties for 4 months from production. UL file E161336.",
+      "source": {
+        "pdf": "EI-10128-Pyralux-HXC-CL-Data-Sheet.pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "dupont/pyralux-hxi",
+      "manufacturer": "DuPont",
+      "name": "Pyralux HXI",
+      "kind": "coverlay",
+      "family": "Pyralux",
+      "resin": "Matte black polyimide film (9 um) coated one side with B-staged modified epoxy adhesive (10 um)",
+      "halogen_free": true,
+      "ul94": "VTM-0",
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "As received, printed 1.0 N/mm (14.0 lb/in), HXI0910",
+      "processing": {
+        "lamination": {
+          "max_temp_c": 180,
+          "pressure_kpa": 9807,
+          "time_at_temp_min": 1,
+          "notes": "Part temperature 180 C, pressure 100 kg/cm2 (1400 psi), 60 seconds at temperature; post cure at 160 C for 60 minutes."
+        }
+      },
+      "notes": "Halogen free black coverlay with the best warpage performance, 9 um dielectric (0.35 mil) and 10 um adhesive (0.40 mil), code HXI0910 (gloss 25 GU at 60 degrees, L* 34.7). The sheet prints the peel strength as 1.0 N/mm (14.0 lb/in), which are not the same value, so the N/mm figure is stored as printed. Adhesive resin flow 0.065 mm (2.6 mil); dimensional stability +/-0.1 %; solder float 288 C for 10 s passes. Rolls 249 or 500 mm wide, 200 m long; requires refrigeration below 10 C and below 65 % humidity; keeps its properties for 4 months from production. UL file E161336.",
+      "source": {
+        "pdf": "EI-10129-Pyralux-HXI-CL-Data-Sheet.pdf",
+        "pages": "1-2",
+        "revision": "EI-10129 (4/20)"
+      }
+    },
+    {
+      "id": "dupont/pyralux-hxj",
+      "manufacturer": "DuPont",
+      "name": "Pyralux HXJ",
+      "kind": "coverlay",
+      "family": "Pyralux",
+      "resin": "Low-gloss black polyimide film coated one side with B-staged modified epoxy adhesive",
+      "halogen_free": true,
+      "ul94": "VTM-0",
+      "dk": [
+        {
+          "freq_ghz": 1,
+          "value": 3.4,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1,
+          "value": 0.03,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "As received, printed 1.0 N/mm (14.0 lb/in), HXJ1225",
+      "processing": {
+        "lamination": {
+          "max_temp_c": 180,
+          "pressure_kpa": 9807,
+          "time_at_temp_min": 1,
+          "notes": "Part temperature 180 C, pressure 100 kg/cm2 (1400 psi), 60 seconds at temperature; post cure at 160 C for 60 minutes."
+        }
+      },
+      "notes": "Halogen free low-gloss black coverlay (12.5 um film with 15, 20 or 25 um adhesive; codes HXJ1215, HXJ1220, HXJ1225), gloss 3.0 GU at 60 degrees, L* 26, pencil hardness 2B. The sheet prints the peel strength as 1.0 N/mm (14.0 lb/in), which are not the same value, so the N/mm figure is stored as printed. Adhesive resin flow 0.067 mm (2.6 mil); dimensional stability +/-0.06 % / +/-0.05 %; solder float 288 C for 10 s passes. Rolls 249 or 500 mm wide, 200 m long; requires refrigeration below 10 C and below 65 % humidity; keeps its properties for 4 months from production. UL file E161336.",
+      "source": {
+        "pdf": "EI-10130-Pyralux-HXJ-CL-Data-Sheet.pdf",
+        "pages": "1-2",
+        "revision": "EI-10130 (3/20)"
+      }
+    },
+    {
+      "id": "dupont/pyralux-hp-adhesive",
+      "manufacturer": "DuPont",
+      "name": "Pyralux HP Adhesive",
+      "kind": "bonding_film",
+      "family": "Pyralux",
+      "resin": "Epoxy-based, low loss",
+      "ipc_slash_sheet": "IPC-4203/19",
+      "tg_tma_c": 102,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 2.7,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 2.8,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.003,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.0035,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "water_absorption_pct": 0.4,
+      "volume_resistivity_ohm_cm": 1e+16,
+      "surface_resistivity_ohm": 1000000000000000.0,
+      "dielectric_strength_kv_mm": 118.1,
+      "peel_strength_n_mm": 1.76,
+      "peel_condition": "As received and after solder (10.0 lb/in), HP250000",
+      "youngs_modulus_gpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 0.371
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 11
+      },
+      "thicknesses_mm": [
+        0.012,
+        0.025,
+        0.05
+      ],
+      "processing": {
+        "lamination": {
+          "max_temp_c": 190,
+          "time_at_temp_min": 60,
+          "notes": "Part temperature 175-190 C, pressure 28-40 kg/cm2 (400-565 psi), 60-120 minutes at temperature."
+        }
+      },
+      "notes": "High performance low loss epoxy adhesive for multilayer flex and rigid-flex PCBs. Typical values are for HP250000 (25 um): adhesive flow 3.0 mils per mil; moisture absorption below 0.4 % (limit stored); moisture and insulation resistance above 1e8 ohm; dielectric strength 3000 V/mil; volume resistivity 1e10 MOhm cm and surface resistance 1e9 MOhm; tensile modulus 371 MPa (54 ksi), tensile strength 11 MPa (1.6 ksi), elongation 222 %; solder float 288 C for 10 s passes. Codes HP120000, HP250000 and HP500000 (12, 25 and 50 um). Rolls 610 mm wide, 30.5 or 76 m long; requires refrigeration below 5 C at 50 +/- 20 % humidity; warranty six months from the production date.",
+      "source": {
+        "pdf": "EI-10208-Pyralux-HP-Adhesive-Data-Sheet.pdf",
+        "pages": "1-2",
+        "revision": "EI-10208 (10/22)"
+      }
+    },
+    {
+      "id": "dupont/pyralux-hp-coverlay",
+      "manufacturer": "DuPont",
+      "name": "Pyralux HP Coverlay",
+      "kind": "coverlay",
+      "family": "Pyralux",
+      "resin": "Kapton polyimide film with a low loss epoxy-based adhesive",
+      "ipc_slash_sheet": "IPC-4203/2",
+      "tg_tma_c": 102,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.0,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0045,
+          "method": "ASTM D2520",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 1.76,
+      "peel_condition": "As received and after solder (10.0 lb/in), HP252500",
+      "processing": {
+        "lamination": {
+          "max_temp_c": 190,
+          "time_at_temp_min": 60,
+          "notes": "Part temperature 175-190 C, pressure 28-40 kg/cm2 (400-565 psi), 60-120 minutes at temperature."
+        }
+      },
+      "notes": "High performance low loss epoxy coverlay for multilayer flex and rigid-flex PCBs. Typical values are for HP252500 (25 um adhesive on 25 um Kapton): adhesive flow 3.0 mils per mil; solder float 288 C for 10 s passes. Codes HP121200, HP252500, HP502500, HP255000 and HP505000 (adhesive 12, 25 or 50 um; Kapton 12, 25 or 50 um). Rolls 610 mm wide, 30.5 or 76 m long; requires refrigeration below 5 C at 50 +/- 20 % humidity.",
+      "source": {
+        "pdf": "EI-10209-Pyralux-HP-Coverlay-Data-Sheet1.pdf",
+        "pages": "1-2",
+        "revision": "EI-10209 (1/22)"
+      }
+    },
+    {
+      "id": "dupont/pyralux-ml",
+      "manufacturer": "DuPont",
+      "name": "Pyralux ML",
+      "kind": "flex_laminate",
+      "family": "Pyralux ML Series",
+      "resin": "All-polyimide (adhesiveless), metal-clad",
+      "notes": "Double-sided metal-clad adhesiveless all-polyimide laminates for flexible circuits, sensors, heaters and thermocouples; balanced or unbalanced metal constructions in sheet form to custom sizes. Foil identifier 0 copper (12-140 um), 1 715 CuNi (16, 25, 58 and 152 um), 4 Constantan CuNi 44 (12, 16, 25, 50 and 75 um), 5 Inconel 600 (12, 25, 50, 75 and 100 um); more types and thicknesses on request. The sheet gives no property values. Stored in the original packaging at 4-29 C and below 70 % RH.",
+      "source": {
+        "pdf": "Qnity Pyralux ML Technical Data Sheet_April 2024.pdf",
+        "pages": "1-2",
+        "revision": "EI00957 (4/8)"
+      }
     }
   ]
 }
