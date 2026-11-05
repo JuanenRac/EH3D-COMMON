@@ -848,6 +848,450 @@
         "pages": "1-2",
         "revision": ""
       }
+    },
+    {
+      "id": "arlon/37n",
+      "manufacturer": "Arlon",
+      "name": "37N",
+      "kind": "prepreg",
+      "family": "37N",
+      "resin": "Polyimide",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/42",
+      "tg_tma_c": 200,
+      "td_c": 340,
+      "t260_min": 60,
+      "t288_min": 5,
+      "t300_min": 2,
+      "cte_x_ppm": 17,
+      "cte_y_ppm": 17,
+      "cte_z_below_tg_ppm": 76,
+      "cte_z_above_tg_ppm": 256,
+      "cte_z_50_260_pct": 2.3,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.25,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.018,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 8200000000000000.0,
+      "surface_resistivity_ohm": 4400000000000.0,
+      "dielectric_strength_kv_mm": 52.4,
+      "arc_resistance_s": 124,
+      "peel_strength_n_mm": 1.2,
+      "peel_condition": "1 oz copper, after thermal stress (6.8 lb/in)",
+      "youngs_modulus_gpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 14.5
+      },
+      "flexural_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 414
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 221
+      },
+      "density_g_cm3": 1.6,
+      "thermal_conductivity_w_mk": 0.3,
+      "moisture_absorption_note": "Below 1.0 % (0.062 in specimen, IPC-TM-650 2.6.2.1A)",
+      "processing": {
+        "lamination": {
+          "time_at_temp_min": 90,
+          "notes": "Vacuum draw down for 30 min at 29 in Hg or better before pressure and keep vacuum above 160 C; platen 188-193 C; heat rise 4.5-6.5 C/min between 100 and 150 C; pressure 180-350 psi by panel size (vacuum assist 200-300 psi, 12 x 18 in to 18 x 24 in; non-vacuum 275-400 psi); cure 90 min at temperature. Dry the prepreg at 29 in Hg for 12 to 24 h."
+        }
+      },
+      "notes": "Polyimide low-flow prepreg for bonding polyimide rigid-flex and attaching heat sinks, curable from 177 C. T260 is above 60 min (limit stored). Initial decomposition 322 C. Volume and surface resistivity at C-96/35/90 (8.2e9 MOhm cm, 4.4e6 MOhm); at E-24/125 4.7e9 MOhm cm and 1.2e9 MOhm. Peel strength after elevated temperatures 5.5 lb/in (0.9 N/mm) and after process solutions 9.2 lb/in (1.6 N/mm); peel to Kapton as received 4.2 lb/in (0.74 N/mm). Young's modulus 2.1 Mpsi, flexural 60 kpsi and tensile 32 kpsi (CD/MD). Poisson ratio 0.17. The availability table of the sheet lists the 85N part numbers (85N0672 106 glass 72 % resin, 85N8063 1080 63 %, 85N2355 2313 55 %, 85N2650 2116 50 %, 85N2840 7628 40 %; scaled flow 1.7 to 6.6 mil) and is not repeated per style here.",
+      "source": {
+        "pdf": "37N.pdf",
+        "pages": "1-4",
+        "revision": "Ver 1.5"
+      }
+    },
+    {
+      "id": "arlon/38n",
+      "manufacturer": "Arlon",
+      "name": "38N",
+      "kind": "prepreg",
+      "family": "38N",
+      "resin": "Polyimide",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/42",
+      "tg_tma_c": 200,
+      "td_c": 330,
+      "t260_min": 50,
+      "t288_min": 5,
+      "t300_min": 3,
+      "cte_x_ppm": 17,
+      "cte_y_ppm": 17,
+      "cte_z_below_tg_ppm": 54,
+      "cte_z_above_tg_ppm": 157,
+      "cte_z_50_260_pct": 1.5,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.25,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.01,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 82000000000000.0,
+      "surface_resistivity_ohm": 4400000000000.0,
+      "dielectric_strength_kv_mm": 63.0,
+      "arc_resistance_s": 125,
+      "peel_strength_n_mm": 1.5,
+      "peel_condition": "1 oz copper, after thermal stress (8.5 lb/in)",
+      "youngs_modulus_gpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 14.5
+      },
+      "flexural_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 414
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 221
+      },
+      "density_g_cm3": 1.6,
+      "thermal_conductivity_w_mk": 0.3,
+      "moisture_absorption_note": "Below 1.0 % (0.062 in specimen, IPC-TM-650 2.6.2.1A)",
+      "processing": {
+        "lamination": {
+          "time_at_temp_min": 90,
+          "notes": "Vacuum draw down for 30 min at 29 in Hg or better before pressure and keep vacuum above 160 C; platen 188-193 C; heat rise 4.5-6.5 C/min between 100 and 150 C; pressure 180-350 psi by panel size (vacuum assist 200-300 psi, 12 x 18 in to 18 x 24 in; non-vacuum 275-400 psi); cure 90 min at temperature. Dry the prepreg at 29 in Hg for 12 to 24 h."
+        }
+      },
+      "notes": "Polyimide low-flow prepreg with a chemistry for faster, more uniform cure and better bond to copper and metals (heat sink bonding); curable from 177 C. Initial decomposition 311 C. Volume and surface resistivity at C-96/35/90 (8.2e7 MOhm cm, 4.4e6 MOhm); at E-24/125 4.7e9 MOhm cm and 1.2e9 MOhm. Peel strength to Kapton 5.9 lb/in (1.0 N/mm) as received and 5.2 lb/in (0.9 N/mm) after solder. Young's modulus 2.1 Mpsi, flexural 60 kpsi and tensile 32 kpsi (CD/MD). Poisson ratio 0.18. The availability table of the sheet lists the 85N part numbers (85N0672 106 glass 72 % resin, 85N8063 1080 63 %, 85N2355 2313 55 %, 85N2650 2116 50 %, 85N2840 7628 40 %; scaled flow 1.7 to 6.6 mil) and is not repeated per style here.",
+      "source": {
+        "pdf": "38N-v1.4.pdf",
+        "pages": "1-3",
+        "revision": "Ver 1.4"
+      }
+    },
+    {
+      "id": "arlon/47n",
+      "manufacturer": "Arlon",
+      "name": "47N",
+      "kind": "prepreg",
+      "family": "47N",
+      "resin": "Tetrafunctional modified epoxy",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/21 (modified to low flow)",
+      "tg_dsc_c": 135,
+      "td_c": 315,
+      "t260_min": 18,
+      "cte_x_ppm": 16,
+      "cte_y_ppm": 16,
+      "cte_z_below_tg_ppm": 85,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.3,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.02,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 57000000000000.0,
+      "surface_resistivity_ohm": 8800000000000.0,
+      "dielectric_strength_kv_mm": 39.4,
+      "arc_resistance_s": 125,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "1 oz copper, after thermal stress (9.0 lb/in)",
+      "youngs_modulus_gpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 17.9
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 45
+      },
+      "water_absorption_pct": 0.1,
+      "density_g_cm3": 1.65,
+      "thermal_conductivity_w_mk": 0.25,
+      "processing": {
+        "lamination": {
+          "time_at_temp_min": 60,
+          "notes": "Bake inner layers 60 min at 107-121 C before lay-up and vacuum desiccate the prepreg 8-12 h; pre-vacuum 30-45 min; heat rise 4.5-6.5 C/min between 100 and 150 C; pressure 150-300 psi by complexity (vacuum assist 200-300 psi, non-vacuum 275-400 psi by panel size); product temperature 171 C at the start of cure; cure 60 min; cool down under pressure at 6 C/min or less."
+        },
+        "drilling": {
+          "retract_notes": "Drill at 350-400 SFM; undercut bits are recommended for vias of 0.023 in and smaller."
+        },
+        "desmear_note": "Alkaline permanganate or plasma with settings for epoxy; plasma is preferred for positive etchback.",
+        "bake_note": "Bake 1-2 h at 121 C before solder reflow or HASL."
+      },
+      "notes": "Low-flow epoxy prepreg for bonding epoxy rigid-flex and attaching heat sinks (typical lap shear 1000 psi on aluminium and copper); curable from 150 C; Tg 130 C in the features and 135 C by DSC in the table. Initial decomposition 305 C. Dk and Df are given at 1 MHz (the 1 GHz rows have no value). Volume and surface resistivity at C-96/35/90 (5.7e7 MOhm cm, 8.8e6 MOhm); at E-24/125 7.4e7 MOhm cm and 1.5e6 MOhm. Young's modulus 2.6 Mpsi, tensile 6.5 kpsi (CD/MD); Poisson ratio 0.17. Standard profiling can be used; chip breaker router bits are not recommended. The availability table of the sheet lists the 85N part numbers (85N0672 106 glass 72 % resin, 85N8063 1080 63 %, 85N2355 2313 55 %, 85N2650 2116 50 %, 85N2840 7628 40 %; scaled flow 1.7 to 6.6 mil) and is not repeated per style here.",
+      "source": {
+        "pdf": "47N.pdf",
+        "pages": "1-4",
+        "revision": "Ver 1.6"
+      }
+    },
+    {
+      "id": "arlon/49n",
+      "manufacturer": "Arlon",
+      "name": "49N",
+      "kind": "prepreg",
+      "family": "49N",
+      "resin": "Multifunctional epoxy",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/26 (modified to low flow)",
+      "tg_dsc_c": 170,
+      "td_c": 325,
+      "t260_min": 18,
+      "cte_x_ppm": 16,
+      "cte_y_ppm": 16,
+      "cte_z_below_tg_ppm": 85,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.3,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.022,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 51000000000000.0,
+      "surface_resistivity_ohm": 8800000000000.0,
+      "dielectric_strength_kv_mm": 39.4,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "1 oz copper, after thermal stress (9.0 lb/in)",
+      "youngs_modulus_gpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 17.9
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 45
+      },
+      "water_absorption_pct": 0.1,
+      "density_g_cm3": 1.65,
+      "thermal_conductivity_w_mk": 0.25,
+      "processing": {
+        "lamination": {
+          "time_at_temp_min": 90,
+          "notes": "Bake inner layers 60 min at 107-121 C before lay-up and vacuum desiccate the prepreg 8-12 h; pre-vacuum 30-45 min; heat rise 4.5-6.5 C/min between 100 and 150 C; pressure 150-300 psi by complexity (vacuum assist 200-300 psi, non-vacuum 275-400 psi by panel size); product temperature 182 C at the start of cure; cure 90 min; cool down under pressure at 6 C/min or less."
+        },
+        "drilling": {
+          "retract_notes": "Drill at 350-400 SFM; undercut bits are recommended for vias of 0.023 in and smaller."
+        },
+        "desmear_note": "Alkaline permanganate or plasma with settings for epoxy; plasma is preferred for positive etchback.",
+        "bake_note": "Bake 1-2 h at 121 C before solder reflow or HASL."
+      },
+      "notes": "Multifunctional epoxy low-flow prepreg (Tg 170 C) for bonding epoxy rigid-flex, adhesiveless rigid-flex and heat sinks. Initial decomposition 296 C. Volume and surface resistivity at C-96/35/90 (5.1e7 MOhm cm, 8.8e6 MOhm); at E-24/125 7.4e7 MOhm cm and 1.5e6 MOhm. Young's modulus 2.6 Mpsi, tensile 6.5 kpsi (CD/MD); Poisson ratio 0.17. The availability table of the sheet lists the 85N part numbers (85N0672 106 glass 72 % resin, 85N8063 1080 63 %, 85N2355 2313 55 %, 85N2650 2116 50 %, 85N2840 7628 40 %; scaled flow 1.7 to 6.6 mil) and is not repeated per style here.",
+      "source": {
+        "pdf": "49N-v1.8.pdf",
+        "pages": "1-4",
+        "revision": "Ver 1.8"
+      }
+    },
+    {
+      "id": "arlon/51n",
+      "manufacturer": "Arlon",
+      "name": "51N",
+      "kind": "prepreg",
+      "family": "51N",
+      "resin": "Non-DICY multifunctional epoxy",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/126 (modified to low flow)",
+      "tg_dsc_c": 170,
+      "td_c": 368,
+      "t260_min": 60,
+      "t288_min": 30,
+      "t300_min": 15,
+      "cte_x_ppm": 15,
+      "cte_y_ppm": 15,
+      "cte_z_below_tg_ppm": 44,
+      "cte_z_above_tg_ppm": 245,
+      "cte_z_50_260_pct": 2.6,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.2,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 1,
+          "value": 4.1,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.02,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 1,
+          "value": 0.02,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 26000000000000.0,
+      "surface_resistivity_ohm": 29000000000000.0,
+      "dielectric_strength_kv_mm": 39.4,
+      "arc_resistance_s": 120,
+      "peel_strength_n_mm": 1.2,
+      "peel_condition": "1 oz copper, after thermal stress (6.7 lb/in)",
+      "youngs_modulus_gpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 18
+      },
+      "water_absorption_pct": 0.15,
+      "density_g_cm3": 1.65,
+      "thermal_conductivity_w_mk": 0.25,
+      "processing": {
+        "lamination": {
+          "time_at_temp_min": 90,
+          "notes": "Bake inner layers 60 min at 107-121 C before lay-up and vacuum desiccate the prepreg 8-12 h; pre-vacuum 30-45 min; heat rise 4.5-6.5 C/min between 100 and 150 C; pressure 150-300 psi by complexity (vacuum assist 200-300 psi, non-vacuum 275-400 psi by panel size); product temperature 182 C at the start of cure; cure 90 min; cool down under pressure at 6 C/min or less."
+        },
+        "drilling": {
+          "retract_notes": "Drill at 350-400 SFM; undercut bits are recommended for vias of 0.023 in and smaller."
+        },
+        "desmear_note": "Alkaline permanganate or plasma with settings for epoxy; plasma is preferred for positive etchback.",
+        "bake_note": "Bake 1-2 h at 121 C before solder reflow or HASL."
+      },
+      "notes": "High Tg non-DICY epoxy low-flow prepreg for lead-free assembly and rigid-flex. T260 and T288 are published as above 60 and above 30 min (limits stored); T280 above 30 min. Initial decomposition 354 C. Dk and Df at 1 MHz and at 1 GHz. Volume and surface resistivity at C-96/35/90 (2.6e7 MOhm cm, 2.9e7 MOhm); at E-24/125 3.3e7 MOhm cm and 4.0e6 MOhm. Peel strength at elevated temperatures 6.7 lb/in (1.2 N/mm) and after process solutions 6.4 lb/in (1.1 N/mm). Young's modulus 2.6 Mpsi (18 GPa). The tensile and Poisson ratio rows of the sheet read 84 (578) and 6.5 (45), which look shifted, so they are not stored. The availability table of the sheet lists the 85N part numbers (85N0672 106 glass 72 % resin, 85N8063 1080 63 %, 85N2355 2313 55 %, 85N2650 2116 50 %, 85N2840 7628 40 %; scaled flow 1.7 to 6.6 mil) and is not repeated per style here.",
+      "source": {
+        "pdf": "51N-v1.6.pdf",
+        "pages": "1-3",
+        "revision": "Ver 1.6"
+      }
+    },
+    {
+      "id": "arlon/84hp",
+      "manufacturer": "Arlon",
+      "name": "84HP",
+      "kind": "prepreg",
+      "family": "84HP",
+      "resin": "Pure polyimide (no secondary resin)",
+      "filler": "Micro-fine proprietary fillers",
+      "lead_free_compatible": true,
+      "ul94": "HB",
+      "ipc_slash_sheet": "IPC-4101/40 and /41 (validated to /43)",
+      "tg_tma_c": 250,
+      "td_c": 430,
+      "t260_min": 60,
+      "t288_min": 60,
+      "t300_min": 60,
+      "cte_x_ppm": 17,
+      "cte_y_ppm": 17,
+      "cte_z_below_tg_ppm": 38.8,
+      "cte_z_above_tg_ppm": 154,
+      "cte_z_50_260_pct": 1.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.8,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": 80,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.009,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": 80,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 80000000000000.0,
+      "surface_resistivity_ohm": 1600000000000000.0,
+      "dielectric_strength_kv_mm": 48,
+      "arc_resistance_s": 182,
+      "peel_strength_n_mm": 1.11,
+      "peel_condition": "1 oz copper, after thermal stress (6.3 lb/in)",
+      "tensile_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 241
+      },
+      "water_absorption_pct": 0.19,
+      "density_g_cm3": 1.7,
+      "thermal_conductivity_w_mk": 0.5,
+      "processing": {
+        "lamination": {
+          "time_at_temp_min": 120,
+          "notes": "Vacuum desiccate the prepreg 8-12 h; use brown oxide or alternatives on inner layers and bake them 60 min at 107-121 C; pre-vacuum 30-45 min; heat rise 4.5-6.5 C/min between 100 and 150 C; vacuum lamination preferred (200-300 psi by panel size; 275-400 psi without vacuum); product temperature 218 C at the start of cure; cure 2.0 h; cool down under pressure at 5 C/min or less."
+        },
+        "drilling": {
+          "retract_notes": "Drill at 350-400 SFM; undercut bits are recommended for vias of 0.018 in (0.45 mm) and smaller."
+        },
+        "desmear_note": "Alkaline permanganate or plasma with settings for polyimide; plasma is preferred for positive etchback.",
+        "bake_note": "Bake 1-2 h at 121 C before solder reflow or HASL."
+      },
+      "notes": "High performance filled polyimide prepreg for filling etched areas of thick-copper polyimide multilayers and clearance holes in metal cores; X/Y CTE matched to copper at 17 ppm/C. T260, T288 and T300 are published as above 60 min (limit stored). Initial decomposition 380 C. Dk and Df at 1 MHz and 80 % resin content. Volume and surface resistivity at C-96/35/90 (8e7 MOhm cm, 1.6e9 MOhm); at E-24/125 5.9e7 MOhm cm and 6.9e7 MOhm. Peel strength at elevated temperatures 5.2 lb/in (0.92 N/mm) and after process solutions 5.3 lb/in (0.93 N/mm). Young's modulus 3.0 Mpsi, tensile 35 kpsi (241 MPa), Poisson ratio 0.15. The availability table of the sheet lists the 85N part numbers (85N0672 106 glass 72 % resin, 85N8063 1080 63 %, 85N2355 2313 55 %, 85N2650 2116 50 %, 85N2840 7628 40 %; scaled flow 1.7 to 6.6 mil) and is not repeated per style here.",
+      "source": {
+        "pdf": "84HP-v1.4...pdf",
+        "pages": "1-4",
+        "revision": "Ver 1.4"
+      }
     }
   ]
 }
