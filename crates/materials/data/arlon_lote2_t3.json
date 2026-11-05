@@ -1,0 +1,763 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Arlon",
+  "materials": [
+    {
+      "id": "arlon/33n",
+      "manufacturer": "Arlon",
+      "name": "33N",
+      "kind": "laminate",
+      "family": "33N",
+      "notes": "Flame retardant polyimide laminate and prepreg. Tg above 250 C by TMA (the sheet gives no DSC value); initial decomposition 353 C and 5 % loss at 389 C; T260 above 60 min. Multilayer Dk at 50 % resin content. Dielectric breakdown above 40 kV. Process: bake inner layers 60 min at 107-121 C; vacuum desiccate prepreg 8-12 h; pre-vacuum 30-45 min; heat rise 4.5-6.5 C/min between 100 and 150 C; cure at 213 C for 90 min (60 min for the first cycle of a sequential lamination); cool at 6 C/min or less; drill at 350 SFM, undercut bits for vias of 0.45 mm and below; bake 1-2 h at 121 C before HASL. Prepreg styles and flow are those of 85N (106, 1080, 2313, 2116, 7628). Lamination pressure 275-400 psi (non-vacuum) or 200-300 psi (vacuum) depending on panel size.",
+      "resin": "Polyimide",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/40 and /41",
+      "lead_free_compatible": true,
+      "tg_tma_c": 250,
+      "td_c": 389,
+      "t288_min": 23,
+      "t300_min": 8,
+      "cte_x_ppm": 16,
+      "cte_y_ppm": 16,
+      "cte_z_below_tg_ppm": 53,
+      "cte_z_above_tg_ppm": 164,
+      "cte_z_50_260_pct": 1.2,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.25,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 1,
+          "value": 4.1,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.01,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 72000000000000.0,
+      "surface_resistivity_ohm": 410000000000000.0,
+      "dielectric_strength_kv_mm": 50.8,
+      "arc_resistance_s": 170,
+      "peel_strength_n_mm": 1.2,
+      "peel_condition": "1 oz, after thermal stress (7.2 lb/in)",
+      "water_absorption_pct": 0.21,
+      "density_g_cm3": 1.6,
+      "thermal_conductivity_w_mk": 0.2,
+      "processing": {
+        "lamination": {
+          "max_temp_c": 213,
+          "pressure_kpa": null,
+          "time_at_temp_min": 90,
+          "heat_rate_c_min": 4.5,
+          "notes": "Pre-vacuum 30-45 min; heat rise 4.5-6.5 C/min between 100 and 150 C; cure at 213 C, timer started at 210 C; cool down under pressure at 6 C/min or less."
+        },
+        "drilling": {
+          "speed_surface_m_min": 106.7,
+          "chip_load_um": null,
+          "retract_notes": "Drill at 350 SFM; undercut bits are advised for vias of 0.45 mm and below."
+        },
+        "desmear_note": "Alkaline permanganate or plasma set for polyimide; plasma preferred for positive etchback.",
+        "bake_note": "Bake 1-2 h at 121 C before HASL reflow."
+      },
+      "source": {
+        "pdf": "33N.pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "arlon/35n",
+      "manufacturer": "Arlon",
+      "name": "35N",
+      "kind": "laminate",
+      "family": "35N",
+      "notes": "Pure polyimide laminate and prepreg with a shorter cure than traditional polyimide. Tg of 250 C or more by TMA; initial decomposition 363 C and 5 % loss at 407 C; T260 and T288 above 60 min. Young modulus CD/MD 3.5/4.2 Mpsi (24.1/28.9 GPa); tensile strength CD/MD 48/65 kpsi (330/445 MPa). Process as 33N: cure at 213 C for 90 min, drill at 350 SFM, prepreg stored at 60-70 F at or below 30 % RH. Prepreg styles and flow are those of 85N.",
+      "resin": "Polyimide",
+      "ul94": "V-1",
+      "ipc_slash_sheet": "IPC-4101/40 and /41",
+      "lead_free_compatible": true,
+      "tg_tma_c": 250,
+      "td_c": 407,
+      "t300_min": 11,
+      "cte_x_ppm": 16,
+      "cte_y_ppm": 16,
+      "cte_z_below_tg_ppm": 51,
+      "cte_z_above_tg_ppm": 158,
+      "cte_z_50_260_pct": 1.2,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.2,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 1,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.01,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 150000000000000.0,
+      "surface_resistivity_ohm": 500000000000000.0,
+      "dielectric_strength_kv_mm": 55.9,
+      "arc_resistance_s": 165,
+      "peel_strength_n_mm": 1.1,
+      "peel_condition": "1 oz, after thermal stress (6.3 lb/in)",
+      "water_absorption_pct": 0.26,
+      "density_g_cm3": 1.6,
+      "thermal_conductivity_w_mk": 0.2,
+      "source": {
+        "pdf": "35N-v1.9-1.pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "arlon/44n",
+      "manufacturer": "Arlon",
+      "name": "44N",
+      "kind": "prepreg",
+      "family": "44N",
+      "notes": "High resin content filled epoxy prepreg for filling clearance holes in thin metal cores (for example 0.006 in copper-invar-copper) and via holes of sequential laminations. Dk at 1 MHz is stated as 4.2 to 4.6 (not a single value). X-Y CTE 14-16 ppm/C. Dielectric strength 1500 V/mil. Vacuum or vacuum assist lamination advised; heat-up of 4-7 C/min.",
+      "resin": "Multifunctional epoxy",
+      "filler": "Micro-disperse ceramic",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/98",
+      "lead_free_compatible": true,
+      "tg_dsc_c": 175,
+      "cte_x_ppm": null,
+      "cte_y_ppm": null,
+      "cte_z_below_tg_ppm": 55,
+      "cte_z_above_tg_ppm": 200,
+      "cte_z_50_260_pct": 2.4,
+      "dk": [],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.025,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 26000000000000.0,
+      "surface_resistivity_ohm": 40000000000.0,
+      "dielectric_strength_kv_mm": 59.1,
+      "arc_resistance_s": 65,
+      "peel_strength_n_mm": 1.401,
+      "peel_condition": "1 oz, after thermal stress",
+      "water_absorption_pct": 0.1,
+      "density_g_cm3": 1.85,
+      "thermal_conductivity_w_mk": 0.3,
+      "source": {
+        "pdf": "44N.pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "arlon/45n",
+      "manufacturer": "Arlon",
+      "name": "45N",
+      "kind": "laminate",
+      "family": "45N",
+      "notes": "Tough high Tg multifunctional epoxy laminate and prepreg for higher layer count boards, processable with FR-4 conditions. Dk at 1 MHz stated as 4.2 to 4.6. X-Y CTE 14-16 ppm/C; Young modulus 2.8 Mpsi. Cure 90 min with product temperature at 180 C at the start of cure; heat rise 4.5-6.5 C/min between 100 and 150 C; pre-vacuum 30 min; cool at 6 C/min or less. Prepreg styles and flow are those of 85N.",
+      "resin": "Multifunctional epoxy",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/26",
+      "lead_free_compatible": true,
+      "tg_dsc_c": 175,
+      "cte_z_below_tg_ppm": 55,
+      "cte_z_above_tg_ppm": 200,
+      "cte_z_50_260_pct": 2.4,
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.025,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 26000000000000.0,
+      "surface_resistivity_ohm": 40000000000.0,
+      "dielectric_strength_kv_mm": 59.1,
+      "arc_resistance_s": 65,
+      "peel_strength_n_mm": 1.401,
+      "peel_condition": "1 oz, after thermal stress",
+      "water_absorption_pct": 0.1,
+      "density_g_cm3": 1.85,
+      "thermal_conductivity_w_mk": 0.25,
+      "source": {
+        "pdf": "45N.pdf",
+        "pages": "1-2",
+        "revision": null
+      },
+      "dk": []
+    },
+    {
+      "id": "arlon/45nk",
+      "manufacturer": "Arlon",
+      "name": "45NK",
+      "kind": "laminate",
+      "family": "45NK",
+      "notes": "Woven aramid reinforced epoxy laminate and prepreg with an in-plane CTE of 5-7 ppm/C for leadless ceramic chip carriers; laser drillable. Dielectric strength 750 V/mil minimum; Young modulus 4.0 Mpsi (27.5 GPa); the aramid fibre has a CTE of -4 ppm/C.",
+      "resin": "Multifunctional epoxy",
+      "reinforcement": "Woven p-aramid (Kevlar)",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/50 (type AFG)",
+      "lead_free_compatible": null,
+      "tg_dsc_c": 170,
+      "cte_z_below_tg_ppm": 75,
+      "cte_z_above_tg_ppm": 225,
+      "cte_z_50_260_pct": 2.8,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.9,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.016,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 13000000000000.0,
+      "surface_resistivity_ohm": 32000000000000.0,
+      "dielectric_strength_kv_mm": 29.5,
+      "peel_strength_n_mm": 1.05,
+      "peel_condition": "1 oz, after thermal stress (6.0 lb/in)",
+      "water_absorption_pct": 0.8,
+      "density_g_cm3": 1.37,
+      "thermal_conductivity_w_mk": 0.22,
+      "source": {
+        "pdf": "45NK.pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "arlon/55nt",
+      "manufacturer": "Arlon",
+      "name": "55NT",
+      "kind": "laminate",
+      "family": "55NT",
+      "notes": "Epoxy laminate and prepreg on non-woven aramid; X-Y CTE 6-9 ppm/C; boards about 25 % lighter than glass reinforced; laser and plasma ablatable. Initial decomposition 351 C; T260 and T288 above 60 min. Young modulus 2.0 Mpsi (13.8 GPa). The processing guide is a separate sheet.",
+      "resin": "High temperature epoxy",
+      "reinforcement": "Non-woven aramid",
+      "ipc_slash_sheet": "IPC-4101/55",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dsc_c": 170,
+      "td_c": 368,
+      "t300_min": 28,
+      "cte_z_below_tg_ppm": 99,
+      "cte_z_above_tg_ppm": 259,
+      "cte_z_50_260_pct": 3.5,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.8,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.015,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 23000000000000.0,
+      "surface_resistivity_ohm": 180000000000000.0,
+      "dielectric_strength_kv_mm": 48.8,
+      "arc_resistance_s": 165,
+      "peel_strength_n_mm": 0.6,
+      "peel_condition": "1 oz, after thermal stress (3.6 lb/in)",
+      "water_absorption_pct": 0.3,
+      "density_g_cm3": 1.38,
+      "thermal_conductivity_w_mk": 0.2,
+      "flexural_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 262
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 35
+      },
+      "source": {
+        "pdf": "55NT2.pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "arlon/84n",
+      "manufacturer": "Arlon",
+      "name": "84N",
+      "kind": "prepreg",
+      "family": "84N",
+      "notes": "Ceramic filled polyimide prepreg based on 85N, for filling etched areas of thick copper layers and clearance holes in metal cores. Tg of 250 C or more by TMA; initial decomposition 387 C and 5 % loss at 407 C; T260, T288 and T300 above 60 min. Dk is for prepreg at 75 % resin content.",
+      "resin": "Polyimide",
+      "filler": "Ceramic",
+      "halogen_free": true,
+      "ul94": "HB",
+      "ipc_slash_sheet": "IPC-4101/40 and /41",
+      "lead_free_compatible": true,
+      "tg_tma_c": 250,
+      "td_c": 407,
+      "t300_min": null,
+      "cte_x_ppm": 16,
+      "cte_y_ppm": 16,
+      "cte_z_below_tg_ppm": 48,
+      "cte_z_above_tg_ppm": 150,
+      "cte_z_50_260_pct": 1.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.2,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": 75,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 1,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 75,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.01,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 150000000000000.0,
+      "surface_resistivity_ohm": 1600000000000000.0,
+      "dielectric_strength_kv_mm": 57.1,
+      "arc_resistance_s": 143,
+      "peel_strength_n_mm": 1.2,
+      "peel_condition": "1 oz, after thermal stress (7.1 lb/in)",
+      "water_absorption_pct": 0.27,
+      "density_g_cm3": 1.65,
+      "thermal_conductivity_w_mk": 0.25,
+      "source": {
+        "pdf": "84N-1.pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "arlon/85hp",
+      "manufacturer": "Arlon",
+      "name": "85HP",
+      "kind": "laminate",
+      "family": "85HP",
+      "notes": "Polyimide with micro-fine fillers; Z expansion 1 % or less from 50 to 260 C; initial decomposition 380 C and 5 % loss at 430 C; T260, T288 and T300 above 60 min. Dk and Df are given at 54 % resin content under IPC-TM-650 2.5.5.9 with no frequency stated (the text of the sheet quotes 0.009 at 1 MHz). Young modulus 3.0 Mpsi. Peel strength 5.2 lb/in at elevated temperature and 5.3 lb/in after process solutions. The sheet gives a prepreg flow like standard polyimide.",
+      "resin": "Pure polyimide",
+      "filler": "Micro-fine proprietary fillers",
+      "ul94": "HB",
+      "ipc_slash_sheet": "IPC-4101/40, /41 and /43",
+      "lead_free_compatible": true,
+      "tg_tma_c": 250,
+      "td_c": 430,
+      "cte_x_ppm": 17,
+      "cte_y_ppm": 17,
+      "cte_z_below_tg_ppm": 38.8,
+      "cte_z_above_tg_ppm": 154,
+      "dk": [
+        {
+          "freq_ghz": null,
+          "value": 4.2,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 54,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": null,
+          "value": 0.009,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 54,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 80000000000000.0,
+      "surface_resistivity_ohm": 1600000000000000.0,
+      "dielectric_strength_kv_mm": 48,
+      "arc_resistance_s": 182,
+      "peel_strength_n_mm": 1.11,
+      "peel_condition": "1 oz, after thermal stress (6.3 lb/in)",
+      "water_absorption_pct": 0.19,
+      "density_g_cm3": 1.7,
+      "thermal_conductivity_w_mk": 0.5,
+      "tensile_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 241
+      },
+      "source": {
+        "pdf": "85HP-v1.3..pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "arlon/86hp",
+      "manufacturer": "Arlon",
+      "name": "86HP",
+      "kind": "laminate",
+      "family": "86HP",
+      "notes": "High performance polyimide for HDI and sequential lamination; Z expansion 1 % or less from 50 to 260 C; initial decomposition 380 C and 5 % loss at 430 C; T260, T288 and T300 above 60 min; anti-CAF above 1000 h at 100 VDC. Volume and surface resistivity are stated as more than 1E10 and 1E9 MOhm. Electrical strength 1800 V/mil. Young modulus CD/MD 25/27 GPa.",
+      "resin": "Polyimide",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/40 and /41",
+      "lead_free_compatible": true,
+      "tg_dma_c": 250,
+      "td_c": 430,
+      "cte_x_ppm": 10,
+      "cte_y_ppm": 11,
+      "cte_z_below_tg_ppm": 24,
+      "cte_z_above_tg_ppm": 174,
+      "dk": [
+        {
+          "freq_ghz": 1,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 5,
+          "value": 3.7,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 57,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.7,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 57,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1,
+          "value": 0.005,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 5,
+          "value": 0.007,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 57,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.007,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 57,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 1e+16,
+      "surface_resistivity_ohm": 1000000000000000.0,
+      "arc_resistance_s": 196,
+      "peel_strength_n_mm": 1.576,
+      "peel_condition": "1 oz standard copper; 5.5 lb/in on half ounce RTF and 4.4 lb/in on half ounce HVLP",
+      "water_absorption_pct": 0.12,
+      "density_g_cm3": 1.6,
+      "thermal_conductivity_w_mk": 0.6,
+      "tensile_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 241
+      },
+      "source": {
+        "pdf": "86HP-v-1.6.pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "arlon/85nt",
+      "manufacturer": "Arlon",
+      "name": "85NT",
+      "kind": "laminate",
+      "family": "85NT",
+      "notes": "Polyimide laminate and prepreg on non-woven aramid; X-Y CTE 7-9 ppm/C; initial decomposition 393 C and 5 % loss at 426 C; T260, T288 and T300 above 60 min. Young modulus 1.95 Mpsi (13.4 GPa). The processing guide is a separate sheet.",
+      "resin": "Pure polyimide",
+      "reinforcement": "Non-woven aramid",
+      "ipc_slash_sheet": "IPC-4101/53",
+      "lead_free_compatible": true,
+      "tg_tma_c": 250,
+      "td_c": 426,
+      "cte_z_below_tg_ppm": 93,
+      "cte_z_above_tg_ppm": 279,
+      "cte_z_50_260_pct": 2.3,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.014,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 200000000000000.0,
+      "surface_resistivity_ohm": 600000000000000.0,
+      "dielectric_strength_kv_mm": 39.4,
+      "arc_resistance_s": 160,
+      "peel_strength_n_mm": 0.8,
+      "peel_condition": "1 oz, after thermal stress (4.3 lb/in)",
+      "water_absorption_pct": 0.6,
+      "density_g_cm3": 1.37,
+      "thermal_conductivity_w_mk": 0.2,
+      "flexural_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 234
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 197
+      },
+      "source": {
+        "pdf": "85NT2.pdf",
+        "pages": "1-2",
+        "revision": null
+      }
+    },
+    {
+      "id": "arlon/ad300c",
+      "manufacturer": "Arlon",
+      "name": "AD300C",
+      "kind": "ptfe",
+      "family": "AD300",
+      "resin": "PTFE",
+      "reinforcement": "Woven glass",
+      "filler": "Ceramic",
+      "ul94": "V-0",
+      "td_c": 555,
+      "t260_min": null,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 2.97,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 2.97,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0014,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.002,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": -25,
+      "volume_resistivity_ohm_cm": 120000000000000.0,
+      "surface_resistivity_ohm": 250000000000000.0,
+      "dielectric_strength_kv_mm": 17,
+      "arc_resistance_s": 180,
+      "cte_x_ppm": 9,
+      "cte_y_ppm": 15,
+      "cte_z_below_tg_ppm": 54,
+      "thermal_conductivity_w_mk": 0.5,
+      "density_g_cm3": 2.07,
+      "water_absorption_pct": 0.06,
+      "peel_strength_n_mm": 1.8,
+      "peel_condition": "1 oz, after thermal stress (10 lb/in or more)",
+      "notes": "Third generation AD300 laminate for base station antennas and power amplifiers; Dk tolerance +/-0.05; TCEr -25 ppm/C at 10 GHz (-40 to 150 C). The sheet is laid out in columns that do not align in the text, so the values were assigned by reading the order of the rows: volume resistivity 1.2E8 (C96/35/90) and 1.9E8 (E24/125) MOhm cm, surface resistivity 2.5E8 and 7.7E8 MOhm, electrical strength 430 V/mil, dielectric breakdown 30 kV; Td 500 C initial and 555 C at 5 %; T260, T288 and T300 above 60 min; flexural strength 10/13 kpsi and tensile strength 5.9/7.6 kpsi (machine/cross).",
+      "source": {
+        "pdf": "ad300c-data-sheet.pdf",
+        "pages": "2",
+        "revision": ""
+      }
+    },
+    {
+      "id": "arlon/ad430",
+      "manufacturer": "Arlon",
+      "name": "AD430",
+      "kind": "ptfe",
+      "family": "AD",
+      "resin": "PTFE",
+      "reinforcement": "Woven glass",
+      "filler": "Micro-dispersed ceramic",
+      "ul94": "V-0",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 4.3,
+          "method": "IPC-TM-650 2.5.5.6, C23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.003,
+          "method": "IPC-TM-650 2.5.5.6, C23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": null,
+      "volume_resistivity_ohm_cm": 1200000000000000.0,
+      "surface_resistivity_ohm": 45000000000000.0,
+      "arc_resistance_s": 180,
+      "peel_strength_n_mm": 2.977,
+      "peel_condition": "1 oz, after thermal stress",
+      "cte_x_ppm": 9,
+      "cte_y_ppm": 9,
+      "cte_z_below_tg_ppm": 40,
+      "thermal_conductivity_w_mk": 0.46,
+      "density_g_cm3": 2.1,
+      "water_absorption_pct": 0.06,
+      "notes": "Glass reinforced PTFE with micro-dispersed ceramic for RF and microwave boards. The sheet gives the thermal coefficient of Dk as 55 (sign not legible in the text, range -10 to 140 C). Dielectric breakdown above 45 kV; tensile modulus above 700 kpsi; tensile strength above 20 kpsi; flexural modulus above 540 kpsi; compressive modulus above 350 kpsi; CTE 0 to 100 C.",
+      "source": {
+        "pdf": "ad430-data-sheet.pdf",
+        "pages": "1-2",
+        "revision": ""
+      }
+    },
+    {
+      "id": "arlon/ad600a",
+      "manufacturer": "Arlon",
+      "name": "AD600A",
+      "kind": "ptfe",
+      "family": "AD600",
+      "resin": "PTFE",
+      "reinforcement": "Woven glass",
+      "filler": "Ceramic",
+      "ul94": "V-0",
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 6.15,
+          "method": "IPC-TM-650 2.5.5.3 and 2.5.5.6 (1 MHz and 200 MHz)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.003,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "arc_resistance_s": 180,
+      "density_g_cm3": 2.45,
+      "water_absorption_pct": 0.04,
+      "cte_x_ppm": 11,
+      "cte_y_ppm": 10,
+      "cte_z_below_tg_ppm": 45,
+      "thermal_conductivity_w_mk": 0.46,
+      "peel_strength_n_mm": 2.102,
+      "peel_condition": "After thermal stress",
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": null,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": null,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": null,
+          "foil_type": "ED"
+        }
+      ],
+      "notes": "Legacy high Dk ceramic filled PTFE laminate (Dk 6.15); the sheet recommends TC600 for new designs. Outgassing TML 0.02 %, CVCM 0.01 %, WVR 0.00 %. Copper on both sides, 1/2, 1 or 2 oz electrodeposited; other copper on request.",
+      "source": {
+        "pdf": "ad600a-data-sheet.pdf",
+        "pages": "1-2",
+        "revision": ""
+      }
+    }
+  ]
+}

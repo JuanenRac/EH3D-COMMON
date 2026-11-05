@@ -1,0 +1,1219 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Rogers",
+  "materials": [
+    {
+      "id": "rogers/ad250c",
+      "manufacturer": "Rogers",
+      "name": "AD250C",
+      "kind": "ptfe",
+      "family": "AD Series",
+      "resin": "PTFE",
+      "reinforcement": "Woven glass",
+      "ul94": "V-0",
+      "td_c": 500,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 2.52,
+          "method": "IPC-TM-650 2.5.5.5 (process, 23 C 50 % RH)",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 2.5,
+          "method": "Microstrip differential phase length (design, C-24/23/50)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0013,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": -117,
+      "volume_resistivity_ohm_cm": 480000000000000.0,
+      "surface_resistivity_ohm": 41000000000000.0,
+      "dielectric_strength_kv_mm": 38.5,
+      "cte_x_ppm": 47,
+      "cte_y_ppm": 29,
+      "cte_z_below_tg_ppm": 196,
+      "thermal_conductivity_w_mk": 0.33,
+      "specific_heat_j_gk": 0.813,
+      "density_g_cm3": 2.28,
+      "water_absorption_pct": 0.04,
+      "peel_strength_n_mm": 2.6,
+      "peel_condition": "35 um foil, 10 s at 288 C",
+      "flexural_strength_mpa": {
+        "lengthwise": 60.7,
+        "crosswise": 44.1,
+        "value": null
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 41.4,
+        "crosswise": 38.6,
+        "value": null
+      },
+      "t288_min": null,
+      "thicknesses_mm": [
+        0.508,
+        0.762,
+        1.524
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "Reverse treated ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "Reverse treated ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 305,
+          "label": "18 x 12 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        }
+      ],
+      "notes": "Glass reinforced PTFE antenna laminate with low passive intermodulation (PIM -159/-163 dBc reflected, 43 dBm swept tones at 1900 MHz, S1 foil, 30 and 60 mil). Dk is the process value (IPC-TM-650 2.5.5.5) and the design value (microstrip differential phase length) at 10 GHz. Td above 500 C (5 % loss); time to delamination above 60 min at 288 C; CTE from -55 to 288 C; thermal conductivity in the z direction. Flexural and tensile strength are MD/CMD; flex modulus MD/CMD 6102/5364 MPa. Dielectric breakdown above 40 kV (AD250C, AD255C), 46 kV (AD300D) and 33 kV (AD350A). Thickness tolerance of 0.002 in on most sizes. Preliminary data sheet.",
+      "source": {
+        "pdf": "ad-series-data-sheet---ad250c-ad255c-ad300d-ad350a.pdf",
+        "pages": "1-3",
+        "revision": "Publication 92-197"
+      }
+    },
+    {
+      "id": "rogers/ad255c",
+      "manufacturer": "Rogers",
+      "name": "AD255C",
+      "kind": "ptfe",
+      "family": "AD Series",
+      "resin": "PTFE",
+      "reinforcement": "Woven glass",
+      "ul94": "V-0",
+      "td_c": 500,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 2.55,
+          "method": "IPC-TM-650 2.5.5.5 (process, 23 C 50 % RH)",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 2.6,
+          "method": "Microstrip differential phase length (design, C-24/23/50)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0013,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": -110,
+      "volume_resistivity_ohm_cm": 740000000000000.0,
+      "surface_resistivity_ohm": 36000000000000.0,
+      "dielectric_strength_kv_mm": 35.9,
+      "cte_x_ppm": 34,
+      "cte_y_ppm": 26,
+      "cte_z_below_tg_ppm": 196,
+      "thermal_conductivity_w_mk": 0.35,
+      "specific_heat_j_gk": 0.813,
+      "density_g_cm3": 2.28,
+      "water_absorption_pct": 0.03,
+      "peel_strength_n_mm": 2.4,
+      "peel_condition": "35 um foil, 10 s at 288 C",
+      "flexural_strength_mpa": {
+        "lengthwise": 60.7,
+        "crosswise": 44.1,
+        "value": null
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 55.8,
+        "crosswise": 45.5,
+        "value": null
+      },
+      "t288_min": null,
+      "thicknesses_mm": [
+        0.508,
+        0.762,
+        1.016,
+        1.524,
+        3.175
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "Reverse treated ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "Reverse treated ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        }
+      ],
+      "notes": "Glass reinforced PTFE antenna laminate with low passive intermodulation (PIM -159/-163 dBc reflected, 43 dBm swept tones at 1900 MHz, S1 foil, 30 and 60 mil). Dk is the process value (IPC-TM-650 2.5.5.5) and the design value (microstrip differential phase length) at 10 GHz. Td above 500 C (5 % loss); time to delamination above 60 min at 288 C; CTE from -55 to 288 C; thermal conductivity in the z direction. Flexural and tensile strength are MD/CMD; flex modulus MD/CMD 6412/5640 MPa. Dielectric breakdown above 40 kV (AD250C, AD255C), 46 kV (AD300D) and 33 kV (AD350A). Thickness tolerance of 0.002 in on most sizes. Preliminary data sheet.",
+      "source": {
+        "pdf": "ad-series-data-sheet---ad250c-ad255c-ad300d-ad350a.pdf",
+        "pages": "1-3",
+        "revision": "Publication 92-197"
+      }
+    },
+    {
+      "id": "rogers/ad300d",
+      "manufacturer": "Rogers",
+      "name": "AD300D",
+      "kind": "ptfe",
+      "family": "AD Series",
+      "resin": "PTFE",
+      "reinforcement": "Woven glass",
+      "ul94": "V-0",
+      "td_c": 500,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 2.97,
+          "method": "IPC-TM-650 2.5.5.5 (process, 23 C 50 % RH)",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 2.94,
+          "method": "Microstrip differential phase length (design, C-24/23/50)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0021,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": -73,
+      "volume_resistivity_ohm_cm": 170000000000000.0,
+      "surface_resistivity_ohm": 51000000000000.0,
+      "dielectric_strength_kv_mm": 29.5,
+      "cte_x_ppm": 24,
+      "cte_y_ppm": 23,
+      "cte_z_below_tg_ppm": 98,
+      "thermal_conductivity_w_mk": 0.37,
+      "specific_heat_j_gk": 0.8,
+      "density_g_cm3": 2.23,
+      "water_absorption_pct": 0.04,
+      "peel_strength_n_mm": 2.6,
+      "peel_condition": "35 um foil, 10 s at 288 C",
+      "flexural_strength_mpa": {
+        "lengthwise": 152.4,
+        "crosswise": 127.6,
+        "value": null
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 122.0,
+        "crosswise": 120.7,
+        "value": null
+      },
+      "t288_min": null,
+      "thicknesses_mm": [
+        0.762,
+        1.016,
+        1.524,
+        3.048
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "Reverse treated ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "Reverse treated ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        }
+      ],
+      "notes": "Glass reinforced PTFE antenna laminate with low passive intermodulation (PIM -159/-163 dBc reflected, 43 dBm swept tones at 1900 MHz, S1 foil, 30 and 60 mil). Dk is the process value (IPC-TM-650 2.5.5.5) and the design value (microstrip differential phase length) at 10 GHz. Td above 500 C (5 % loss); time to delamination above 60 min at 288 C; CTE from -55 to 288 C; thermal conductivity in the z direction. Flexural and tensile strength are MD/CMD; flex modulus MD/CMD 10400/9580 MPa. Dielectric breakdown above 40 kV (AD250C, AD255C), 46 kV (AD300D) and 33 kV (AD350A). Thickness tolerance of 0.002 in on most sizes. Preliminary data sheet.",
+      "source": {
+        "pdf": "ad-series-data-sheet---ad250c-ad255c-ad300d-ad350a.pdf",
+        "pages": "1-3",
+        "revision": "Publication 92-197"
+      }
+    },
+    {
+      "id": "rogers/ad350a",
+      "manufacturer": "Rogers",
+      "name": "AD350A",
+      "kind": "ptfe",
+      "family": "AD Series",
+      "resin": "PTFE",
+      "reinforcement": "Woven glass",
+      "ul94": "V-0",
+      "td_c": 500,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.54,
+          "method": "IPC-TM-650 2.5.5.5 (process, 23 C 50 % RH)",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.5,
+          "method": "Microstrip differential phase length (design, C-24/23/50)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0033,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": -57,
+      "volume_resistivity_ohm_cm": 1500000000000000.0,
+      "surface_resistivity_ohm": 95000000000000.0,
+      "dielectric_strength_kv_mm": 26.4,
+      "cte_x_ppm": 18,
+      "cte_y_ppm": 18,
+      "cte_z_below_tg_ppm": 63,
+      "thermal_conductivity_w_mk": 0.44,
+      "specific_heat_j_gk": 0.757,
+      "density_g_cm3": 2.43,
+      "water_absorption_pct": 0.1,
+      "peel_strength_n_mm": 2.4,
+      "peel_condition": "35 um foil, 10 s at 288 C",
+      "flexural_strength_mpa": {
+        "lengthwise": 97.9,
+        "crosswise": 62.1,
+        "value": null
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 97.9,
+        "crosswise": 46.2,
+        "value": null
+      },
+      "t288_min": null,
+      "thicknesses_mm": [
+        0.762,
+        1.524,
+        3.048
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "Reverse treated ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "Reverse treated ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        }
+      ],
+      "notes": "Glass reinforced PTFE antenna laminate with low passive intermodulation (PIM -159/-163 dBc reflected, 43 dBm swept tones at 1900 MHz, S1 foil, 30 and 60 mil). Dk is the process value (IPC-TM-650 2.5.5.5) and the design value (microstrip differential phase length) at 10 GHz. Td above 500 C (5 % loss); time to delamination above 60 min at 288 C; CTE from -55 to 288 C; thermal conductivity in the z direction. Flexural and tensile strength are MD/CMD; flex modulus MD/CMD 12652/10128 MPa. Dielectric breakdown above 40 kV (AD250C, AD255C), 46 kV (AD300D) and 33 kV (AD350A). Thickness tolerance of 0.002 in on most sizes. Preliminary data sheet.",
+      "source": {
+        "pdf": "ad-series-data-sheet---ad250c-ad255c-ad300d-ad350a.pdf",
+        "pages": "1-3",
+        "revision": "Publication 92-197"
+      }
+    },
+    {
+      "id": "rogers/clte",
+      "manufacturer": "Rogers",
+      "name": "CLTE",
+      "kind": "ptfe",
+      "family": "CLTE",
+      "resin": "PTFE",
+      "reinforcement": "Woven glass",
+      "filler": "Ceramic",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4103B/006",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 2.98,
+          "method": "IPC-TM-650 2.5.5.5 (process)",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 2.98,
+          "method": "Microstrip differential phase length (design)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0021,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": 6,
+      "volume_resistivity_ohm_cm": 1400000000000000.0,
+      "surface_resistivity_ohm": 1300000000000.0,
+      "dielectric_strength_kv_mm": 43.3,
+      "td_c": 538,
+      "cte_x_ppm": 9.9,
+      "cte_y_ppm": 9.4,
+      "cte_z_below_tg_ppm": 57.9,
+      "thermal_conductivity_w_mk": 0.5,
+      "peel_strength_n_mm": 1.2,
+      "peel_condition": "35 um foil, 10 s at 288 C",
+      "flexural_strength_mpa": {
+        "lengthwise": 92.4,
+        "crosswise": 86.9,
+        "value": null
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 73.8,
+        "crosswise": 71.0,
+        "value": null
+      },
+      "water_absorption_pct": 0.04,
+      "density_g_cm3": 2.31,
+      "specific_heat_j_gk": 0.6,
+      "thicknesses_mm": [
+        0.135,
+        0.254,
+        0.508,
+        0.762
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "Reverse treated ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "Reverse treated ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 457,
+          "height_mm": 305,
+          "label": "18 x 12 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        }
+      ],
+      "notes": "Ceramic filled woven glass PTFE laminate. CTE from -55 to 288 C; thermal conductivity in the z direction; time to delamination above 60 min at 288 C; dielectric breakdown 64 kV. TCDk is stated from -50 to 150 C at 10 GHz. Preliminary data sheet. Flexural and tensile strength are MD/CMD.",
+      "source": {
+        "pdf": "clte-and-clte-xt-laminates-data-sheet.pdf",
+        "pages": "1-4",
+        "revision": "Publication 92-201"
+      }
+    },
+    {
+      "id": "rogers/clte-xt",
+      "manufacturer": "Rogers",
+      "name": "CLTE-XT",
+      "kind": "ptfe",
+      "family": "CLTE",
+      "resin": "PTFE",
+      "reinforcement": "Woven glass",
+      "filler": "Ceramic",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4103B/006",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 2.93,
+          "method": "Microstrip differential phase length (design)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.001,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": -8,
+      "volume_resistivity_ohm_cm": 425000000000000.0,
+      "surface_resistivity_ohm": 249000000000000.0,
+      "dielectric_strength_kv_mm": 39.4,
+      "td_c": 539,
+      "cte_x_ppm": 12.7,
+      "cte_y_ppm": 13.7,
+      "cte_z_below_tg_ppm": 40.8,
+      "thermal_conductivity_w_mk": 0.56,
+      "peel_strength_n_mm": 1.7,
+      "peel_condition": "35 um foil, 10 s at 288 C",
+      "flexural_strength_mpa": {
+        "lengthwise": 40.7,
+        "crosswise": 40.0,
+        "value": null
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 29.0,
+        "crosswise": 25.5,
+        "value": null
+      },
+      "water_absorption_pct": 0.02,
+      "density_g_cm3": 2.17,
+      "specific_heat_j_gk": 0.61,
+      "thicknesses_mm": [
+        0.13,
+        0.239,
+        0.508,
+        0.762
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "Reverse treated ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "Reverse treated ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 457,
+          "height_mm": 305,
+          "label": "18 x 12 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        }
+      ],
+      "notes": "Ceramic filled woven glass PTFE laminate. CTE from -55 to 288 C; thermal conductivity in the z direction; time to delamination above 60 min at 288 C; dielectric breakdown 58 kV. TCDk is stated from -50 to 150 C at 10 GHz. Process Dk by thickness 2.79 (0.0051 in), 2.89 (0.0094 in), 2.92 (0.020 in) and 2.94 (0.030 in), tolerance +/-0.03. Preliminary data sheet. Flexural and tensile strength are MD/CMD.",
+      "source": {
+        "pdf": "clte-and-clte-xt-laminates-data-sheet.pdf",
+        "pages": "1-4",
+        "revision": "Publication 92-201"
+      }
+    },
+    {
+      "id": "rogers/clte-at",
+      "manufacturer": "Rogers",
+      "name": "CLTE-AT",
+      "kind": "ptfe",
+      "family": "CLTE",
+      "resin": "PTFE",
+      "reinforcement": "Woven glass",
+      "filler": "Ceramic",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4103B/006",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.0,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0013,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": -10,
+      "volume_resistivity_ohm_cm": 425000000000000.0,
+      "surface_resistivity_ohm": 202000000000000.0,
+      "arc_resistance_s": 250,
+      "td_c": 529,
+      "cte_x_ppm": 8,
+      "cte_y_ppm": 8,
+      "cte_z_below_tg_ppm": 20,
+      "thermal_conductivity_w_mk": 0.64,
+      "peel_strength_n_mm": 1.3,
+      "peel_condition": "35 um foil, 10 s at 288 C (7 lb/in)",
+      "flexural_strength_mpa": {
+        "lengthwise": 101,
+        "crosswise": 54,
+        "value": null
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 48,
+        "crosswise": 30,
+        "value": null
+      },
+      "youngs_modulus_gpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 1.79
+      },
+      "water_absorption_pct": 0.03,
+      "density_g_cm3": 2.06,
+      "thicknesses_mm": [
+        0.13,
+        0.254,
+        0.508,
+        0.762,
+        1.52
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "Reverse treated ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "Reverse treated ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 457,
+          "height_mm": 305,
+          "label": "18 x 12 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        }
+      ],
+      "notes": "Dk tolerance +/-0.04. CTE from 50 to 150 C; TCDk from 0 to 100 C; thermal conductivity in the z direction. Compressive modulus 244 ksi; Poisson ratio 0.17. Preliminary data sheet.",
+      "source": {
+        "pdf": "clte-at-laminates-data-sheet.pdf",
+        "pages": "1-4",
+        "revision": "Publication 92-208"
+      }
+    },
+    {
+      "id": "rogers/clte-mw",
+      "manufacturer": "Rogers",
+      "name": "CLTE-MW",
+      "kind": "ptfe",
+      "family": "CLTE",
+      "resin": "PTFE",
+      "reinforcement": "Spread woven glass",
+      "filler": "Ceramic",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4103B/006",
+      "dk": [],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0015,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": -35,
+      "volume_resistivity_ohm_cm": 13000000000000.0,
+      "surface_resistivity_ohm": 2500000000000.0,
+      "dielectric_strength_kv_mm": 24.8,
+      "cti_v": 600,
+      "td_c": 500,
+      "cte_x_ppm": 8,
+      "cte_y_ppm": 8,
+      "cte_z_below_tg_ppm": 30,
+      "thermal_conductivity_w_mk": 0.42,
+      "peel_strength_n_mm": 1.1,
+      "peel_condition": "35 um foil, 10 s at 288 C (6.0 lb/in)",
+      "flexural_strength_mpa": {
+        "lengthwise": 113,
+        "crosswise": 99,
+        "value": null
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 83,
+        "crosswise": 80,
+        "value": null
+      },
+      "water_absorption_pct": 0.03,
+      "density_g_cm3": 2.1,
+      "specific_heat_j_gk": 0.93,
+      "thicknesses_mm": [
+        0.076,
+        0.102,
+        0.127,
+        0.152,
+        0.178,
+        0.203,
+        0.254
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.25,
+          "thickness_um": 9,
+          "foil_type": "VLP ED"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "VLP ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "VLP ED"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "Reverse treated ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "Reverse treated ED"
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": 70,
+          "foil_type": "Reverse treated ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 610,
+          "height_mm": 457,
+          "label": "24 x 18 in"
+        }
+      ],
+      "notes": "Thin ceramic filled PTFE laminate for millimetre-wave designs. The process Dk at 10 GHz is 2.94 to 3.02 depending on thickness, tolerance +/-0.04 (no single value is recorded); the design Dk is 3.03 to 3.10 from 8 to 40 GHz. CTI 600 V (PLC 0). Dielectric breakdown 44 kV; time to delamination above 60 min at 288 C; CTE from -55 to 288 C; Td at 5 % loss after 2 h at 105 C.",
+      "source": {
+        "pdf": "clte-mw-laminates-data-sheet.pdf",
+        "pages": "1-4",
+        "revision": ""
+      }
+    },
+    {
+      "id": "rogers/anteo-l43",
+      "manufacturer": "Rogers",
+      "name": "ANTEO L43",
+      "kind": "laminate",
+      "family": "ANTEO",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4103B/250",
+      "lead_free_compatible": true,
+      "td_c": 414,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 4.382,
+          "method": "Microstrip differential phase length (design)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.005,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": -21,
+      "volume_resistivity_ohm_cm": 2900000000000000.0,
+      "surface_resistivity_ohm": 62000000000000.0,
+      "dielectric_strength_kv_mm": 26.6,
+      "cte_x_ppm": 13,
+      "cte_y_ppm": 16,
+      "cte_z_below_tg_ppm": 42,
+      "thermal_conductivity_w_mk": 0.64,
+      "peel_strength_n_mm": 5.3,
+      "peel_condition": "35 um foil",
+      "flexural_strength_mpa": {
+        "lengthwise": 172.0,
+        "crosswise": 131.0,
+        "value": null
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 110.0,
+        "crosswise": 83.0,
+        "value": null
+      },
+      "water_absorption_pct": 0.07,
+      "notes": "The sheet also gives a stripline Dk of 4.07 at 10 GHz from internal testing. The peel strength is printed as 5.3 N/mm, which is unusually high for the foil quoted; it is recorded as printed. Time to delamination above 60 min at 288 C. Tensile and flexural strength given in kpsi (16/12 and 25/19) and converted.",
+      "source": {
+        "pdf": "anteo-data-sheet.pdf",
+        "pages": "1-3",
+        "revision": ""
+      }
+    },
+    {
+      "id": "rogers/2929-bondply",
+      "manufacturer": "Rogers",
+      "name": "2929 Bondply",
+      "kind": "bonding_film",
+      "family": "2929",
+      "resin": "Hydrocarbon thermoset (unreinforced)",
+      "lead_free_compatible": true,
+      "tg_dma_c": 170,
+      "td_c": 400,
+      "t288_min": 30,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 2.94,
+          "method": "IPC-TM-650 2.5.5.5.1, process, z direction",
+          "resin_content_pct": null,
+          "tolerance": 0.05
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.003,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": -6,
+      "volume_resistivity_ohm_cm": 7400000000000000.0,
+      "surface_resistivity_ohm": 820000000000000.0,
+      "dielectric_strength_kv_mm": 98.4,
+      "cte_x_ppm": 50,
+      "cte_y_ppm": 50,
+      "cte_z_below_tg_ppm": 50,
+      "thermal_conductivity_w_mk": 0.4,
+      "water_absorption_pct": 0.1,
+      "density_g_cm3": 1.5,
+      "peel_strength_n_mm": 0.876,
+      "peel_condition": "Half ounce ED copper, post solder, X/Y",
+      "thicknesses_mm": [
+        0.038,
+        0.051,
+        0.076
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 457,
+          "height_mm": 305,
+          "label": "18 x 12 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        }
+      ],
+      "notes": "Unreinforced thin film adhesive for bonding PTFE composite multilayers (RT/duroid 6000, RO4000, RO3000); thickness tolerance +/-10 %. Volume resistivity 7.4E9 MOhm cm after 125 C for 24 h and 5.1E8 after 35 C 90 % RH for 96 h; surface resistivity 8.2E8 and 1.5E5 MOhm. CTE 0 to 150 C. TML 0.42 %, CVCM 0.02 %, WVR 0.03 %. Flammability not rated.",
+      "source": {
+        "pdf": "2929-bondply-data-sheet.pdf",
+        "pages": "1-2",
+        "revision": "Publication 92-159"
+      }
+    },
+    {
+      "id": "rogers/cu4000-ed",
+      "manufacturer": "Rogers",
+      "name": "CU4000 ED",
+      "kind": "copper_foil",
+      "family": "CU4000",
+      "thickness_range": null,
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 622,
+          "height_mm": 470,
+          "label": "24.5 x 18.5 in"
+        }
+      ],
+      "notes": "Treated electrodeposited foil for foil lamination of RO4000 multilayers, bonding to RO4400 series prepregs (RO4450B, RO4450F, RO4450T, RO4460G2); IPC-4562 grade 3. Tensile strength at room temperature 48 kpsi (18 and 35 um) and 26 kpsi at 180 C; elongation 10 % (18 um) and 14 % (35 um) at room temperature and 7 % at 180 C; roughness Rz 7-10 um (18 um) and 8-13 um (35 um), matte side. Sheets of 24.5 x 18.5 in in multiples of 100.",
+      "source": {
+        "pdf": "cu4000-and-cu4000-lopro-datasheet.pdf",
+        "pages": "1",
+        "revision": ""
+      }
+    },
+    {
+      "id": "rogers/cu4000-lopro",
+      "manufacturer": "Rogers",
+      "name": "CU4000 LoPro",
+      "kind": "copper_foil",
+      "family": "CU4000",
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "Reverse treated ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "Reverse treated ED"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 630,
+          "height_mm": 470,
+          "label": "24.8 x 18.5 in"
+        }
+      ],
+      "notes": "Reverse treated electrodeposited foil with a thin adhesive layer that adds about 0.00035 in; IPC-4562 grade 3. Tensile strength at room temperature 62 kpsi (18 um) and 58 kpsi (35 um), 33 and 34 kpsi at 180 C; elongation 10 % (18 um) and 16 % (35 um) at room temperature and 8 % at 180 C; roughness Rz 2-3 um. Sheets of 24.8 x 18.5 in in multiples of 25.",
+      "source": {
+        "pdf": "cu4000-and-cu4000-lopro-datasheet.pdf",
+        "pages": "1",
+        "revision": ""
+      }
+    },
+    {
+      "id": "rogers/cuclad-217",
+      "manufacturer": "Rogers",
+      "name": "CuClad 217",
+      "kind": "ptfe",
+      "family": "CuClad",
+      "resin": "PTFE",
+      "reinforcement": "Woven glass",
+      "ul94": "V-0",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 2.17,
+          "method": "C23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0009,
+          "method": "C23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": -160,
+      "volume_resistivity_ohm_cm": 230000000000000.0,
+      "surface_resistivity_ohm": 3400000000000.0,
+      "arc_resistance_s": 180,
+      "cte_x_ppm": 29,
+      "cte_y_ppm": 28,
+      "cte_z_below_tg_ppm": 246,
+      "thermal_conductivity_w_mk": 0.26,
+      "density_g_cm3": 2.23,
+      "water_absorption_pct": 0.02,
+      "peel_strength_n_mm": 2.452,
+      "peel_condition": "After thermal stress",
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": null,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": null,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": null,
+          "foil_type": "ED"
+        }
+      ],
+      "notes": "Woven glass PTFE laminate. The sheet prints Dk 2.17 and 2.20 at 10 GHz for this grade; the first is recorded. TCDk is the adapted value from -10 to 140 C. The CTE rows x/y/z are read in the order printed (0 to 100 C values for x and the Mettler thermomechanical values for y); dielectric breakdown above 45 kV. Copper 1/2, 1 or 2 oz electrodeposited on both sides; heavy metal backing (aluminium, brass, copper) available; master sheets up to 36 x 36 in crossplied. Outgassing TML 0.01 %.",
+      "source": {
+        "pdf": "cuclad-laminates-data-sheet.pdf",
+        "pages": "1-2",
+        "revision": ""
+      }
+    },
+    {
+      "id": "rogers/cuclad-233",
+      "manufacturer": "Rogers",
+      "name": "CuClad 233",
+      "kind": "ptfe",
+      "family": "CuClad",
+      "resin": "PTFE",
+      "reinforcement": "Woven glass",
+      "ul94": "V-0",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 2.33,
+          "method": "C23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0013,
+          "method": "C23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": -161,
+      "volume_resistivity_ohm_cm": 800000000000000.0,
+      "surface_resistivity_ohm": 2400000000000.0,
+      "arc_resistance_s": 180,
+      "cte_x_ppm": 23,
+      "cte_y_ppm": 24,
+      "cte_z_below_tg_ppm": 194,
+      "thermal_conductivity_w_mk": 0.26,
+      "density_g_cm3": 2.26,
+      "water_absorption_pct": 0.02,
+      "peel_strength_n_mm": 2.452,
+      "peel_condition": "After thermal stress",
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": null,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": null,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": null,
+          "foil_type": "ED"
+        }
+      ],
+      "notes": "Woven glass PTFE laminate. TCDk is the adapted value from -10 to 140 C. The CTE rows x/y/z are read in the order printed (0 to 100 C values for x and the Mettler thermomechanical values for y); dielectric breakdown above 45 kV. Copper 1/2, 1 or 2 oz electrodeposited on both sides; heavy metal backing (aluminium, brass, copper) available; master sheets up to 36 x 36 in crossplied. Outgassing TML 0.01 %.",
+      "source": {
+        "pdf": "cuclad-laminates-data-sheet.pdf",
+        "pages": "1-2",
+        "revision": ""
+      }
+    },
+    {
+      "id": "rogers/cuclad-250",
+      "manufacturer": "Rogers",
+      "name": "CuClad 250",
+      "kind": "ptfe",
+      "family": "CuClad",
+      "resin": "PTFE",
+      "reinforcement": "Woven glass",
+      "ul94": "V-0",
+      "dk": [],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0017,
+          "method": "C23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": -153,
+      "volume_resistivity_ohm_cm": 8000000000000000.0,
+      "surface_resistivity_ohm": 150000000000000.0,
+      "arc_resistance_s": 180,
+      "cte_x_ppm": 18,
+      "cte_y_ppm": 19,
+      "cte_z_below_tg_ppm": 177,
+      "thermal_conductivity_w_mk": 0.25,
+      "density_g_cm3": 2.31,
+      "water_absorption_pct": 0.03,
+      "peel_strength_n_mm": 2.452,
+      "peel_condition": "After thermal stress",
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": null,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": null,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": null,
+          "foil_type": "ED"
+        }
+      ],
+      "notes": "Woven glass PTFE laminate. The sheet gives Dk 2.40 to 2.55 at 10 GHz (2.40 to 2.60 at 1 MHz), a range that depends on the grade, so no single value is recorded. TCDk is the adapted value from -10 to 140 C. The CTE rows x/y/z are read in the order printed (0 to 100 C values for x and the Mettler thermomechanical values for y); dielectric breakdown above 45 kV. Copper 1/2, 1 or 2 oz electrodeposited on both sides; heavy metal backing (aluminium, brass, copper) available; master sheets up to 36 x 36 in crossplied. Outgassing TML 0.01 %.",
+      "source": {
+        "pdf": "cuclad-laminates-data-sheet.pdf",
+        "pages": "1-2",
+        "revision": ""
+      }
+    }
+  ]
+}

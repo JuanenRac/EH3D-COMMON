@@ -1458,6 +1458,91 @@
     "pdf": "240831-vt-441c.pdf",
     "pages": "1-2",
     "revision": "31/08/2024"
+   },
+   "sources": [
+    {
+     "pdf": "250805-vt-441c-pgl.pdf",
+     "pages": "2-4",
+     "revision": "Version 05/08/2025"
+    }
+   ],
+   "prepreg": [
+    {
+     "style": "7628",
+     "resin_content_pct": 50.0,
+     "pressed_thickness_um": 203.2,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 4.6,
+     "df": 0.011,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "7628",
+     "resin_content_pct": 46.0,
+     "pressed_thickness_um": 190.5,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 4.6,
+     "df": 0.011,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "1506",
+     "resin_content_pct": 54.0,
+     "pressed_thickness_um": 177.8,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 4.5,
+     "df": 0.012,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "2116",
+     "resin_content_pct": 58.0,
+     "pressed_thickness_um": 127.0,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 4.5,
+     "df": 0.012,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "1080",
+     "resin_content_pct": 68.0,
+     "pressed_thickness_um": 78.7,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 4.3,
+     "df": 0.012,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "106",
+     "resin_content_pct": 76.0,
+     "pressed_thickness_um": 58.4,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 4.1,
+     "df": 0.013,
+     "test_freq_ghz": 1.0
+    }
+   ],
+   "processing": {
+    "lamination": {
+     "max_temp_c": null,
+     "pressure_kpa": 2068.0,
+     "time_at_temp_min": 60,
+     "heat_rate_c_min": 2.0,
+     "notes": "Heating rate at least 2.0 C/min; cure more than 60 min above 180 C; full pressure of at least 300 psi applied at 80 C or less; vacuum kept until 140 C; cold press at 100 psi for 60 min."
+    },
+    "drilling": {
+     "speed_surface_m_min": null,
+     "chip_load_um": null,
+     "retract_notes": "Drill 0.25 and 0.30 mm: 130 krpm, infeed 38 mm/s, retract 300 mm/s; drill 0.60 mm: 80 krpm, infeed 43 mm/s, retract 300 mm/s; one panel per stack; hit count 800. Diamond coated bits preferred (heavy carbide wear); LE aluminium entry sheet and white phenolic entry board preferred."
+    },
+    "desmear_note": "Desmear rate is lower than regular VT-441; one vertical desmear pass preferred (typical 0.27 mg/cm2 with alkaline permanganate).",
+    "bake_note": "Bake boards before packaging at 125 C for 4-8 h."
    }
   },
   {
@@ -1516,6 +1601,91 @@
     "pdf": "240831-vt-447-c.pdf",
     "pages": "1-2",
     "revision": "31/08/2024"
+   },
+   "sources": [
+    {
+     "pdf": "260918-vt-447c-pgl.pdf",
+     "pages": "2-4",
+     "revision": "Version 18/09/2026"
+    }
+   ],
+   "prepreg": [
+    {
+     "style": "7628",
+     "resin_content_pct": 50.0,
+     "pressed_thickness_um": 203.2,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 4.6,
+     "df": 0.011,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "7628",
+     "resin_content_pct": 46.0,
+     "pressed_thickness_um": 190.5,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 4.6,
+     "df": 0.011,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "2116",
+     "resin_content_pct": 60.0,
+     "pressed_thickness_um": 137.2,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 4.5,
+     "df": 0.012,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "2116",
+     "resin_content_pct": 58.0,
+     "pressed_thickness_um": 127.0,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 4.5,
+     "df": 0.012,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "1080",
+     "resin_content_pct": 68.0,
+     "pressed_thickness_um": 78.7,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 4.3,
+     "df": 0.012,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "106",
+     "resin_content_pct": 76.0,
+     "pressed_thickness_um": 58.4,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 4.1,
+     "df": 0.013,
+     "test_freq_ghz": 1.0
+    }
+   ],
+   "processing": {
+    "lamination": {
+     "max_temp_c": 205,
+     "pressure_kpa": 2068.0,
+     "time_at_temp_min": 60,
+     "heat_rate_c_min": 2.0,
+     "notes": "Heating rate at least 2.0 C/min; cure more than 60 min above 190 C with a peak of 200-205 C; full pressure of at least 300 psi applied at 80 C or less; vacuum kept until 140 C. Maximum temperature is the upper end of the peak range."
+    },
+    "drilling": {
+     "speed_surface_m_min": null,
+     "chip_load_um": null,
+     "retract_notes": "Drill 0.25 and 0.30 mm: 130 krpm, infeed 38 mm/s, retract 300 mm/s; drill 0.60 mm: 80 krpm, infeed 43 mm/s, retract 300 mm/s; one panel per stack; hit count 800. Diamond coated bits preferred (heavy carbide wear); LE aluminium entry sheet and white phenolic entry board preferred."
+    },
+    "desmear_note": "Desmear rate is lower than regular VT-447; one vertical desmear pass preferred (typical 0.27 mg/cm2 with alkaline permanganate).",
+    "bake_note": "Bake boards before packaging at 125 C for 4-8 h."
    }
   },
   {
@@ -1805,6 +1975,171 @@
     "pdf": "250225-vt-47-lt.pdf",
     "pages": "1-2",
     "revision": "25/02/2025"
+   },
+   "sources": [
+    {
+     "pdf": "270325-vt-47-lt-pgl.pdf",
+     "pages": "2-4",
+     "revision": "Version 27/03/2025"
+    }
+   ],
+   "prepreg": [
+    {
+     "style": "1037",
+     "resin_content_pct": 70.0,
+     "pressed_thickness_um": 43.0,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 4.0,
+     "df": 0.013,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "1037",
+     "resin_content_pct": 72.0,
+     "pressed_thickness_um": 46.0,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 3.96,
+     "df": 0.014,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "1037",
+     "resin_content_pct": 74.0,
+     "pressed_thickness_um": 51.0,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 3.92,
+     "df": 0.014,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "1037",
+     "resin_content_pct": 76.0,
+     "pressed_thickness_um": 56.0,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 3.88,
+     "df": 0.014,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "1037",
+     "resin_content_pct": 78.0,
+     "pressed_thickness_um": 58.0,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 3.84,
+     "df": 0.014,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "1067",
+     "resin_content_pct": 70.0,
+     "pressed_thickness_um": 56.0,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 4.0,
+     "df": 0.013,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "1067",
+     "resin_content_pct": 72.0,
+     "pressed_thickness_um": 61.0,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 3.96,
+     "df": 0.014,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "1067",
+     "resin_content_pct": 74.0,
+     "pressed_thickness_um": 64.0,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 3.92,
+     "df": 0.014,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "1067",
+     "resin_content_pct": 76.0,
+     "pressed_thickness_um": 71.0,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 3.88,
+     "df": 0.014,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "1067",
+     "resin_content_pct": 78.0,
+     "pressed_thickness_um": 74.0,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 3.84,
+     "df": 0.014,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "1078",
+     "resin_content_pct": 66.0,
+     "pressed_thickness_um": 76.0,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 4.08,
+     "df": 0.013,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "1078",
+     "resin_content_pct": 68.0,
+     "pressed_thickness_um": 81.0,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 4.04,
+     "df": 0.013,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "1078",
+     "resin_content_pct": 70.0,
+     "pressed_thickness_um": 86.0,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 4.0,
+     "df": 0.013,
+     "test_freq_ghz": 1.0
+    },
+    {
+     "style": "1078",
+     "resin_content_pct": 72.0,
+     "pressed_thickness_um": 91.0,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 3.96,
+     "df": 0.014,
+     "test_freq_ghz": 1.0
+    }
+   ],
+   "processing": {
+    "lamination": {
+     "max_temp_c": null,
+     "pressure_kpa": 2068.0,
+     "time_at_temp_min": 60,
+     "heat_rate_c_min": 2.0,
+     "notes": "Programmable press 2-4 C/min (manual press 3-6 C/min); cure more than 60 min above 190 C; full pressure of at least 300 psi; vacuum kept until 140 C; cold press at 100 psi for 60 min."
+    },
+    "drilling": {
+     "speed_surface_m_min": null,
+     "chip_load_um": null,
+     "retract_notes": "Spindle speed (krpm), feed (in/min), retract (in/min), chip load (mil/rev) by diameter: 0.20-0.25 mm 135, 75, 791, 0.56; 0.30-0.35 mm 155, 120, 984, 0.77; 0.40-0.45 mm 120, 125, 900, 1.04; 0.50-0.55 mm 95, 90, 700, 0.95; 0.60-0.65 mm 80, 110, 765, 1.38; 0.80-0.95 mm 68, 120, 850, 1.76; 1.00-1.05 mm 60, 140, 984, 2.33; 1.50-1.55 mm 45, 130, 984, 2.89; 2.50-2.75 mm 25, 70, 500, 2.80; 4.81-6.50 mm 20, 20, 300, 1.00. Undercut bits give better quality on small holes."
+    },
+    "desmear_note": null,
+    "bake_note": null
    }
   },
   {

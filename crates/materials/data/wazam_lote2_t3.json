@@ -1,0 +1,469 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Wazam",
+  "materials": [
+    {
+      "id": "wazam/h185hf",
+      "manufacturer": "Wazam",
+      "name": "H185HF",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate and the prepreg; the sheet gives no Tg, Td, CTE or other properties. Over the 43 constructions parsed from the table, Dk at 10 GHz runs from 3.47 to 4.12 and Df at 10 GHz from 0.0066 to 0.0070 (resin content and glass construction change the value).",
+      "thickness_range": {
+        "min_mm": 0.051,
+        "max_mm": 0.864,
+        "steps_note": "Core thickness of the line-up table"
+      },
+      "source": {
+        "pdf": "298587e9769cb08a283b23fad0bec2bd.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h180hf",
+      "manufacturer": "Wazam",
+      "name": "H180HF",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate and the prepreg; the sheet gives no Tg, Td, CTE or other properties. Over the 20 constructions parsed from the table, Dk at 10 GHz runs from 3.48 to 4.12 and Df at 10 GHz from 0.0066 to 0.0070 (resin content and glass construction change the value).",
+      "thickness_range": {
+        "min_mm": 0.058,
+        "max_mm": 1.016,
+        "steps_note": "Core thickness of the line-up table"
+      },
+      "source": {
+        "pdf": "30c30baafcadca8f775b922adfe232fb.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h155hf",
+      "manufacturer": "Wazam",
+      "name": "H155HF",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate and the prepreg; the sheet gives no Tg, Td, CTE or other properties. Over the 8 constructions parsed from the table, Dk at 10 GHz runs from 3.52 to 4.27 and Df at 10 GHz from 0.0102 to 0.0128 (resin content and glass construction change the value).",
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.114,
+        "steps_note": "Core thickness of the line-up table"
+      },
+      "source": {
+        "pdf": "3391409f0f99dbc774ba7b5407fef168.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h2600",
+      "manufacturer": "Wazam",
+      "name": "H2600",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "38e38a304a3f1fe10ae849379fa8a839.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h5220",
+      "manufacturer": "Wazam",
+      "name": "H5220",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "3fabe44ee7829e1da49e88c44f5acb61.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h150-lf",
+      "manufacturer": "Wazam",
+      "name": "H150(LF)",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate and the prepreg; the sheet gives no Tg, Td, CTE or other properties. Over the 9 constructions parsed from the table, Dk at 10 GHz runs from 3.56 to 4.18 and Df at 10 GHz from 0.0179 to 0.0201 (resin content and glass construction change the value).",
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.11,
+        "steps_note": "Core thickness of the line-up table"
+      },
+      "source": {
+        "pdf": "40a431e16b15732f9dec30ef47dca3f4.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h150-lf-z",
+      "manufacturer": "Wazam",
+      "name": "H150(LF)Z",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate and the prepreg; the sheet gives no Tg, Td, CTE or other properties. Over the 7 constructions parsed from the table, Dk at 10 GHz runs from 3.56 to 4.12 and Df at 10 GHz from 0.0181 to 0.0201 (resin content and glass construction change the value).",
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.089,
+        "steps_note": "Core thickness of the line-up table"
+      },
+      "source": {
+        "pdf": "44ae914d01da9140b87b3ab47cd73403.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/hn30-hn30x",
+      "manufacturer": "Wazam",
+      "name": "HN30&HN30X",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "541ee3ea39473592c1d0c093531b0d6f.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h151hf",
+      "manufacturer": "Wazam",
+      "name": "H151HF",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate and the prepreg; the sheet gives no Tg, Td, CTE or other properties. Over the 5 constructions parsed from the table, Dk at 10 GHz runs from 3.85 to 4.33 and Df at 10 GHz from 0.0144 to 0.0166 (resin content and glass construction change the value).",
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.11,
+        "steps_note": "Core thickness of the line-up table"
+      },
+      "source": {
+        "pdf": "579b96a7c00d2413a5e0f4bc96ad3abc.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h175hf",
+      "manufacturer": "Wazam",
+      "name": "H175HF",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate and the prepreg; the sheet gives no Tg, Td, CTE or other properties. Over the 26 constructions parsed from the table, Dk at 10 GHz runs from 3.65 to 4.55 and Df at 10 GHz from 0.0108 to 0.0131 (resin content and glass construction change the value).",
+      "thickness_range": {
+        "min_mm": 0.076,
+        "max_mm": 0.406,
+        "steps_note": "Core thickness of the line-up table"
+      },
+      "source": {
+        "pdf": "8007dd9d354cade0c5d716b10761c72f.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/hc298",
+      "manufacturer": "Wazam",
+      "name": "HC298",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "8080eba9978da57e294aab95967a1ad7.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h350",
+      "manufacturer": "Wazam",
+      "name": "H350",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate and the prepreg; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "84e9165615d2c5b62af658b1221137b1.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h5265",
+      "manufacturer": "Wazam",
+      "name": "H5265",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "8a1be3fc596715c475b699b10c394678.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h5350p",
+      "manufacturer": "Wazam",
+      "name": "H5350P",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "8b2add23f2fa9d76fd92d341687b2302.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h5350t",
+      "manufacturer": "Wazam",
+      "name": "H5350T",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "8ca470447a2210ee3189c17c401c5efc.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h1170",
+      "manufacturer": "Wazam",
+      "name": "H1170",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate and the prepreg; the sheet gives no Tg, Td, CTE or other properties. Over the 23 constructions parsed from the table, Dk at 10 GHz runs from 3.59 to 4.45 and Df at 10 GHz from 0.0152 to 0.0167 (resin content and glass construction change the value).",
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.114,
+        "steps_note": "Core thickness of the line-up table"
+      },
+      "source": {
+        "pdf": "95de41debb19c5f7622b393fd3ad117c.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h170hf",
+      "manufacturer": "Wazam",
+      "name": "H170HF",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate and the prepreg; the sheet gives no Tg, Td, CTE or other properties. Over the 7 constructions parsed from the table, Dk at 10 GHz runs from 3.93 to 4.51 and Df at 10 GHz from 0.0111 to 0.0139 (resin content and glass construction change the value).",
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.089,
+        "steps_note": "Core thickness of the line-up table"
+      },
+      "source": {
+        "pdf": "9b889a4d6cbda192eda13d1b6a37a86c.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h5300",
+      "manufacturer": "Wazam",
+      "name": "H5300",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "9bf3c05fe7ed12c739b311e42d709979.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h160hf",
+      "manufacturer": "Wazam",
+      "name": "H160HF",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate and the prepreg; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "9cddfa435bf805e58c535ab508f30d57.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h360-z",
+      "manufacturer": "Wazam",
+      "name": "H360(Z)",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate and the prepreg; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "a9421ad0a649d8782983a31652d486b0.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h5255",
+      "manufacturer": "Wazam",
+      "name": "H5255",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "ab1a74711ca02466bd293cc9d2970c7f.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h350-k",
+      "manufacturer": "Wazam",
+      "name": "H350(K)",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "b79dec50863cc877cda3ca14ef52470f.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h1600hf",
+      "manufacturer": "Wazam",
+      "name": "H1600HF",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "ba6e8e94bf2a08d6bf6ad4c0bde7b613.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h2135",
+      "manufacturer": "Wazam",
+      "name": "H2135",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "bb7efa664016990343d663829595e73a.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h175hfz-15",
+      "manufacturer": "Wazam",
+      "name": "H175HFZ-15",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate and the prepreg; the sheet gives no Tg, Td, CTE or other properties. Over the 17 constructions parsed from the table, Dk at 10 GHz runs from 3.54 to 4.53 and Df at 10 GHz from 0.0095 to 0.0117 (resin content and glass construction change the value).",
+      "thickness_range": {
+        "min_mm": 0.051,
+        "max_mm": 0.14,
+        "steps_note": "Core thickness of the line-up table"
+      },
+      "source": {
+        "pdf": "c04a61e51dda365cfa0959dbeabfd75d.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h5300s",
+      "manufacturer": "Wazam",
+      "name": "H5300S",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "c64ddcc1ad625260755262a3c5187103.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/hsd8-k",
+      "manufacturer": "Wazam",
+      "name": "HSD8(K)",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "c6d8a711ad73e9626fca764047167f53.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h150-lf-q",
+      "manufacturer": "Wazam",
+      "name": "H150(LF)Q",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate and the prepreg; the sheet gives no Tg, Td, CTE or other properties. Over the 9 constructions parsed from the table, Dk at 10 GHz runs from 3.56 to 4.18 and Df at 10 GHz from 0.0179 to 0.0201 (resin content and glass construction change the value).",
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.11,
+        "steps_note": "Core thickness of the line-up table"
+      },
+      "source": {
+        "pdf": "cf8d9f68b84b32877b313fb5ea3f18a0.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h1170z",
+      "manufacturer": "Wazam",
+      "name": "H1170Z",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate and the prepreg; the sheet gives no Tg, Td, CTE or other properties. Over the 23 constructions parsed from the table, Dk at 10 GHz runs from 3.59 to 4.45 and Df at 10 GHz from 0.0152 to 0.0167 (resin content and glass construction change the value).",
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.114,
+        "steps_note": "Core thickness of the line-up table"
+      },
+      "source": {
+        "pdf": "d179769b4d7d610642097a02e539cd15.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/h140a-m",
+      "manufacturer": "Wazam",
+      "name": "H140A M",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate and the prepreg; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "d421e46caf1bd4997dc8938d4edb47b9.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    },
+    {
+      "id": "wazam/hsd8",
+      "manufacturer": "Wazam",
+      "name": "HSD8",
+      "kind": "laminate",
+      "family": "H series",
+      "notes": "Product line-up sheet: Dk and Df per core construction at 1, 5, 10 and 15 GHz for the laminate; the sheet gives no Tg, Td, CTE or other properties. The table could not be read reliably from the text, so no range is given.",
+      "source": {
+        "pdf": "d83a7f5203d3f54ec04c373da38fa4bc.pdf",
+        "pages": "1-4",
+        "revision": "Line-up V1.0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1150 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Ventec",
+  "materials": [
+    {
+      "id": "ventec/vt-447v-i",
+      "manufacturer": "Ventec",
+      "name": "VT-447V(I)",
+      "kind": "laminate",
+      "family": "VT-447",
+      "resin": "Phenolic cured epoxy system",
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E /127 /128 /130 /154",
+      "tg_dsc_c": 190,
+      "tg_tma_c": 180,
+      "td_c": 390,
+      "cte_z_below_tg_ppm": null,
+      "cte_z_above_tg_ppm": null,
+      "cte_z_50_260_pct": 1.8,
+      "dk": [
+        {
+          "freq_ghz": 1,
+          "value": 4.4,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1,
+          "value": 0.012,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 500000000000000.0,
+      "surface_resistivity_ohm": 50000000000000.0,
+      "dielectric_strength_kv_mm": 54,
+      "arc_resistance_s": 195,
+      "flexural_strength_mpa": {
+        "lengthwise": 600,
+        "crosswise": 530,
+        "value": null
+      },
+      "water_absorption_pct": 0.12,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 5,
+        "steps_note": "Core thickness 0.002 in to 0.200 in, sheet or panel form"
+      },
+      "copper": [
+        {
+          "weight_oz": 0.25,
+          "thickness_um": null,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 12,
+          "thickness_um": null,
+          "foil_type": null
+        }
+      ],
+      "prepreg": [
+        {
+          "style": "1027",
+          "resin_content_pct": 71.0,
+          "pressed_thickness_um": 38.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.85,
+          "df": 0.014,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1027",
+          "resin_content_pct": 73.0,
+          "pressed_thickness_um": 41.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.8,
+          "df": 0.014,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1027",
+          "resin_content_pct": 75.0,
+          "pressed_thickness_um": 46.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.75,
+          "df": 0.015,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1037",
+          "resin_content_pct": 73.0,
+          "pressed_thickness_um": 51.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.8,
+          "df": 0.014,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1037",
+          "resin_content_pct": 75.0,
+          "pressed_thickness_um": 56.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.75,
+          "df": 0.015,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1037",
+          "resin_content_pct": 77.0,
+          "pressed_thickness_um": 61.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.7,
+          "df": 0.015,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1037",
+          "resin_content_pct": 79.0,
+          "pressed_thickness_um": 66.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.67,
+          "df": 0.015,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "106",
+          "resin_content_pct": 71.0,
+          "pressed_thickness_um": 48.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.85,
+          "df": 0.014,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "106",
+          "resin_content_pct": 73.0,
+          "pressed_thickness_um": 53.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.8,
+          "df": 0.014,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "106",
+          "resin_content_pct": 75.0,
+          "pressed_thickness_um": 58.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.75,
+          "df": 0.014,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1067",
+          "resin_content_pct": 70.0,
+          "pressed_thickness_um": 56.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.88,
+          "df": 0.014,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1067",
+          "resin_content_pct": 72.0,
+          "pressed_thickness_um": 61.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.83,
+          "df": 0.014,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1067",
+          "resin_content_pct": 74.0,
+          "pressed_thickness_um": 66.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.78,
+          "df": 0.015,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1067",
+          "resin_content_pct": 76.0,
+          "pressed_thickness_um": 71.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.72,
+          "df": 0.015,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1067",
+          "resin_content_pct": 78.0,
+          "pressed_thickness_um": 76.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.69,
+          "df": 0.015,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 67.0,
+          "pressed_thickness_um": 76.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.95,
+          "df": 0.014,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 69.0,
+          "pressed_thickness_um": 81.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.9,
+          "df": 0.014,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1080",
+          "resin_content_pct": 64.0,
+          "pressed_thickness_um": 71.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 4.03,
+          "df": 0.014,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1080",
+          "resin_content_pct": 66.0,
+          "pressed_thickness_um": 76.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.98,
+          "df": 0.014,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1080",
+          "resin_content_pct": 68.0,
+          "pressed_thickness_um": 81.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.93,
+          "df": 0.014,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1080",
+          "resin_content_pct": 71.0,
+          "pressed_thickness_um": 89.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.85,
+          "df": 0.014,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1086",
+          "resin_content_pct": 67.0,
+          "pressed_thickness_um": 89.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.95,
+          "df": 0.014,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1086",
+          "resin_content_pct": 69.0,
+          "pressed_thickness_um": 94.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.9,
+          "df": 0.014,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "2113",
+          "resin_content_pct": 57.0,
+          "pressed_thickness_um": 99.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 4.21,
+          "df": 0.013,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "2113",
+          "resin_content_pct": 59.0,
+          "pressed_thickness_um": 108.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 4.17,
+          "df": 0.013,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "3313",
+          "resin_content_pct": 59.0,
+          "pressed_thickness_um": 108.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 4.17,
+          "df": 0.013,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "3313",
+          "resin_content_pct": 62.0,
+          "pressed_thickness_um": 118.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 4.08,
+          "df": 0.014,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "2116",
+          "resin_content_pct": 53.0,
+          "pressed_thickness_um": 114.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 4.3,
+          "df": 0.013,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "2116",
+          "resin_content_pct": 55.0,
+          "pressed_thickness_um": 119.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 4.25,
+          "df": 0.013,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "2116",
+          "resin_content_pct": 57.0,
+          "pressed_thickness_um": 127.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 4.21,
+          "df": 0.013,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "2116",
+          "resin_content_pct": 59.0,
+          "pressed_thickness_um": 132.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 4.17,
+          "df": 0.013,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "2116",
+          "resin_content_pct": 61.0,
+          "pressed_thickness_um": 137.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 4.1,
+          "df": 0.014,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "7628",
+          "resin_content_pct": 45.0,
+          "pressed_thickness_um": 193.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 4.52,
+          "df": 0.012,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "7628",
+          "resin_content_pct": 48.0,
+          "pressed_thickness_um": 198.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 4.46,
+          "df": 0.012,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "7628",
+          "resin_content_pct": 51.0,
+          "pressed_thickness_um": 211.0,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 4.35,
+          "df": 0.013,
+          "test_freq_ghz": 1.0
+        }
+      ],
+      "processing": {
+        "lamination": {
+          "max_temp_c": null,
+          "pressure_kpa": 2758.0,
+          "time_at_temp_min": 90,
+          "heat_rate_c_min": 3.0,
+          "notes": "Heating rate at least 3.0 C/min; cure more than 90 min above 200 C with a peak above 210 C; full pressure of at least 400 psi applied before 80 C; vacuum kept until 140 C; cushion needed for pressure evenness."
+        },
+        "drilling": null,
+        "desmear_note": null,
+        "bake_note": null
+      },
+      "notes": "Laminate and prepreg. Typical values: T260 and T288 above 60 min, thermal stress at 288 C more than 600 s (10 s passes), Z-axis CTE before Tg 30-40 ppm/C and after Tg 140-160 ppm/C, X-Y CTE 11-13 ppm/C, MOT 150 C, peel strength 6-8 lb/in (1.05-1.4 N/mm), CTI grade 3 (175-250 V). Dk and Df at 1 GHz are for resin content 50 %. Prepreg Dk/Df in the list are at 1 GHz; 2, 5 and 10 GHz are in the process guide. Prepreg shelf life 3 months at 23 C and below 55 % RH or 6 months below 5 C; laminate 24 months. Reverse treated copper is advised for cores of 0.005 in or less.",
+      "sources": [
+        {
+          "pdf": "251029-vt-447v-i-tds.pdf",
+          "pages": "2",
+          "revision": "Version 29/10/2025"
+        },
+        {
+          "pdf": "260920-vt-447v-i-pgl.pdf",
+          "pages": "2-4",
+          "revision": "Version 20/09/2026"
+        }
+      ]
+    },
+    {
+      "id": "ventec/vt-547c",
+      "manufacturer": "Ventec",
+      "name": "VT-547C",
+      "kind": "laminate",
+      "family": "VT-547",
+      "resin": "Phenolic cured epoxy system",
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E /127 /128 /130",
+      "tg_dsc_c": 190,
+      "td_c": 380,
+      "cte_z_below_tg_ppm": 35,
+      "cte_z_above_tg_ppm": 185,
+      "cte_z_50_260_pct": 2.1,
+      "dk": [
+        {
+          "freq_ghz": 1,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1,
+          "value": 0.011,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 500000000000000.0,
+      "surface_resistivity_ohm": 50000000000000.0,
+      "dielectric_strength_kv_mm": 54,
+      "arc_resistance_s": 187,
+      "peel_strength_n_mm": 1.051,
+      "peel_condition": "1 oz, as received and after thermal stress",
+      "flexural_strength_mpa": {
+        "lengthwise": 500,
+        "crosswise": 400,
+        "value": null
+      },
+      "water_absorption_pct": 0.15,
+      "thickness_range": {
+        "min_mm": 0.1,
+        "max_mm": 5,
+        "steps_note": "Core thickness 0.004 in to 0.200 in, sheet or panel form"
+      },
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": null,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 6,
+          "thickness_um": null,
+          "foil_type": null
+        }
+      ],
+      "notes": "Laminate and prepreg (E-glass styles 7628, 2116, 108). Typical values: T260 above 60 min, T288 above 20 min, thermal stress at 288 C more than 200 s (10 s passes), MOT 180 C, CTI grade 0 (above 600 V), dielectric breakdown 60 kV. Dk and Df at 1 GHz for resin content 50 %. Prepreg shelf life 3 months at 23 C or 6 months below 5 C.",
+      "source": {
+        "pdf": "251030-vt-547c.pdf",
+        "pages": "2",
+        "revision": "Version 30/10/2025"
+      }
+    },
+    {
+      "id": "ventec/vt-447-rcf",
+      "manufacturer": "Ventec",
+      "name": "VT-447 RCF",
+      "kind": "bonding_film",
+      "family": "VT-447",
+      "resin": "Phenolic cured epoxy system",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_dsc_c": 168,
+      "tg_dma_c": 180,
+      "td_c": 368,
+      "t288_min": 20,
+      "dk": [
+        {
+          "freq_ghz": 1,
+          "value": 3.4,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1,
+          "value": 0.016,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 500000000000000.0,
+      "surface_resistivity_ohm": 50000000000000.0,
+      "peel_strength_n_mm": 0.876,
+      "peel_condition": "Half ounce copper",
+      "flexural_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 500
+      },
+      "water_absorption_pct": 0.18,
+      "thickness_range": {
+        "min_mm": 0.1,
+        "max_mm": 0.15,
+        "steps_note": "Dielectric 0.004, 0.005 and 0.006 in on a 50 um PET film"
+      },
+      "panel_sizes": [
+        {
+          "width_mm": 460,
+          "height_mm": 610,
+          "label": "18.11 x 24.01 in"
+        },
+        {
+          "width_mm": 510,
+          "height_mm": 610,
+          "label": "20.08 x 24.01 in"
+        },
+        {
+          "width_mm": 533,
+          "height_mm": 610,
+          "label": "20.98 x 24.01 in"
+        }
+      ],
+      "processing": {
+        "lamination": {
+          "max_temp_c": 185,
+          "pressure_kpa": 2413.0,
+          "time_at_temp_min": 60,
+          "heat_rate_c_min": null,
+          "notes": "Heating rate 2.0-3.0 C/min between 80 and 130 C; cure more than 60 min above 185 C; full pressure of at least 350 psi applied at 70-80 C; vacuum kept until 180 C; cold press at 100 psi for 60 min."
+        },
+        "drilling": null,
+        "desmear_note": null,
+        "bake_note": null
+      },
+      "notes": "Resin coated film for filling heavy copper. Preliminary data. Tg DSC specification 160 C minimum; T288 specification 5 min minimum; thermal stress at 288 C more than 600 s.",
+      "source": {
+        "pdf": "260118-vt-447-rcf_prelim.pdf",
+        "pages": "2-3",
+        "revision": "Version 18/01/2026 (preliminary)"
+      }
+    },
+    {
+      "id": "ventec/vt-4bc-ht",
+      "manufacturer": "Ventec",
+      "name": "VT-4BC (HT)",
+      "kind": "metal_core",
+      "family": "VT-4BC",
+      "resin": "Ceramic filled dielectric on metal base",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_dma_c": 210,
+      "td_c": 400,
+      "thermal_conductivity_w_mk": 14,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 5.5,
+          "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.014,
+          "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 500000000000000.0,
+      "surface_resistivity_ohm": 20000000000000.0,
+      "peel_strength_n_mm": 0.613,
+      "peel_condition": "1 oz, as received",
+      "cti_v": 600,
+      "copper": [
+        {
+          "weight_oz": 2,
+          "thickness_um": null,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 3,
+          "thickness_um": null,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 4,
+          "thickness_um": null,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 5,
+          "thickness_um": null,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 6,
+          "thickness_um": null,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 9,
+          "thickness_um": null,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 14,
+          "thickness_um": null,
+          "foil_type": null
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 460,
+          "height_mm": 305,
+          "label": "18.11 x 12.01 in"
+        }
+      ],
+      "thicknesses_mm": [
+        0.15,
+        0.2
+      ],
+      "notes": "Metal base laminate. Dielectric 0.006 in (150 um) or 0.008 in (200 um). Thermal impedance 0.017 and 0.022 C in2/W for 150 and 200 um; hi-pot withstand 4000 and 6000 V DC; breakdown 6000 and 8000 V AC; thermal stress at 288 C solder dip 5 min or more. RTI 155 C electric and mechanical; MOT 150 C. Metal plates: aluminium 5052H32 (138 W/mK, 1.0, 1.5, 2.0 and 3.0 mm), aluminium 6061T6 (167 W/mK, 1.0, 1.5, 2.0 mm), aluminium CTE II (170 W/mK, 19.0 ppm/C, 1.0, 1.5, 2.0 mm) and copper C1100 (386 W/mK, 16.8 ppm/C, 1.0, 1.5, 2.0 mm); other thicknesses on request. Aluminium surface: brushed (default), anodised or high emissivity. Protective film on copper: PET (170 C) or polyimide (270 C).",
+      "source": {
+        "pdf": "251029-vt-4bc-ht-ims.pdf",
+        "pages": "2-3",
+        "revision": "Version 29/10/2025"
+      }
+    },
+    {
+      "id": "ventec/vt-468-rcf",
+      "manufacturer": "Ventec",
+      "name": "VT-468 RCF",
+      "kind": "bonding_film",
+      "family": "pro-bond 9F",
+      "resin": "Thermoset resin, no glass reinforcement",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_dma_c": 205,
+      "td_c": 440,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 2.8,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0005,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "cte_x_ppm": 35,
+      "cte_y_ppm": 35,
+      "cte_z_50_260_pct": 1.3,
+      "thermal_conductivity_w_mk": 0.6,
+      "water_absorption_pct": 0.08,
+      "peel_strength_n_mm": 0.876,
+      "peel_condition": "1 oz HTE copper; 4.5 lb/in for RTF and 4.0 lb/in for HVLP",
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.125,
+        "steps_note": "50, 100 and 125 um; other thicknesses on request"
+      },
+      "notes": "Non-reinforced resin coated film. T288 above 60 min. X/Y CTE and Z CTE 35 ppm/C (50-130 C); Z expansion 1.3 % from 50 to 260 C. Storage below 5 C. Laser drill friendly; suitable for sequential lamination.",
+      "source": {
+        "pdf": "251030-pro-bond-9f-vt-468-rcf.pdf",
+        "pages": "2",
+        "revision": "Version 30/10/2025"
+      }
+    },
+    {
+      "id": "ventec/vt-370x",
+      "manufacturer": "Ventec",
+      "name": "VT-370X",
+      "kind": "ptfe",
+      "family": "tec-speed 30.0",
+      "resin": "PTFE composite",
+      "filler": "Ceramic",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 525,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 2.9,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.00035,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": -60,
+      "volume_resistivity_ohm_cm": 80000000000000.0,
+      "surface_resistivity_ohm": 50000000000000.0,
+      "thermal_conductivity_w_mk": 0.45,
+      "cte_x_ppm": 30,
+      "cte_y_ppm": 32,
+      "cte_z_below_tg_ppm": 50,
+      "peel_strength_n_mm": 2.28,
+      "peel_condition": "1 oz HVLP3, after thermal stress",
+      "density_g_cm3": 2.1,
+      "water_absorption_pct": 0.03,
+      "thicknesses_mm": [
+        0.089,
+        0.102,
+        0.127,
+        0.203,
+        0.254
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": null,
+          "foil_type": "HVLP3"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": null,
+          "foil_type": "HVLP3"
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": null,
+          "foil_type": "HTE"
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": null,
+          "foil_type": "RTF"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": null,
+          "foil_type": "RA"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": null,
+          "foil_type": "RA"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 457,
+          "height_mm": 305,
+          "label": "18 x 12 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        },
+        {
+          "width_mm": 508,
+          "height_mm": 610,
+          "label": "20 x 24 in"
+        },
+        {
+          "width_mm": 533,
+          "height_mm": 610,
+          "label": "21 x 24 in"
+        },
+        {
+          "width_mm": 541,
+          "height_mm": 617,
+          "label": "21.3 x 24.3 in"
+        }
+      ],
+      "notes": "Ceramic filled PTFE laminate. Core thickness 0.0035, 0.004, 0.005, 0.008 and 0.010 in. Standard copper HVLP3 half and 1 oz; HTE and RTF half, 1 and 2 oz and RA half and 1 oz are optional. Thermal coefficient of Dk is stated from -50 to 150 C. Tensile modulus 850 MPa. Shelf life 24 months. Values are preliminary typical values.",
+      "source": {
+        "pdf": "251030-tec-speed-300-vt-370x-tds.pdf",
+        "pages": "2",
+        "revision": "Version 30/10/2025 (preliminary values)"
+      }
+    },
+    {
+      "id": "ventec/vt-370x-lcte",
+      "manufacturer": "Ventec",
+      "name": "VT-370X LCTE",
+      "kind": "ptfe",
+      "family": "tec-speed 30.0",
+      "resin": "PTFE composite",
+      "filler": "Ceramic",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 525,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 2.95,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.00055,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": -55,
+      "volume_resistivity_ohm_cm": 70000000000000.0,
+      "surface_resistivity_ohm": 40000000000000.0,
+      "thermal_conductivity_w_mk": 0.5,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 13,
+      "cte_z_below_tg_ppm": 28,
+      "peel_strength_n_mm": 2.8,
+      "peel_condition": "1 oz HVLP3, after thermal stress",
+      "density_g_cm3": 2.15,
+      "water_absorption_pct": 0.03,
+      "thicknesses_mm": [
+        0.089,
+        0.102,
+        0.127,
+        0.203
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": null,
+          "foil_type": "HVLP3"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": null,
+          "foil_type": "HVLP3"
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": null,
+          "foil_type": "HTE"
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": null,
+          "foil_type": "RTF"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": null,
+          "foil_type": "RA"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": null,
+          "foil_type": "RA"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 457,
+          "height_mm": 305,
+          "label": "18 x 12 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        },
+        {
+          "width_mm": 508,
+          "height_mm": 610,
+          "label": "20 x 24 in"
+        },
+        {
+          "width_mm": 533,
+          "height_mm": 610,
+          "label": "21 x 24 in"
+        },
+        {
+          "width_mm": 541,
+          "height_mm": 617,
+          "label": "21.3 x 24.3 in"
+        }
+      ],
+      "notes": "Ceramic filled PTFE laminate. Core thickness 0.0035, 0.004, 0.005 and 0.008 in. Standard copper HVLP3 half and 1 oz; HTE and RTF half, 1 and 2 oz and RA half and 1 oz are optional. Thermal coefficient of Dk is stated from -50 to 150 C. Tensile modulus 840 MPa. Shelf life 24 months. Values are preliminary typical values.",
+      "source": {
+        "pdf": "251030-tec-speed-300-vt-370x-lcte-tds.pdf",
+        "pages": "2",
+        "revision": "Version 30/10/2025 (preliminary values)"
+      }
+    },
+    {
+      "id": "ventec/vt-770b-rcf",
+      "manufacturer": "Ventec",
+      "name": "VT-770B RCF",
+      "kind": "bonding_film",
+      "family": "pro-bond 7FB",
+      "resin": "Ceramic filled thermoset",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_dma_c": 260,
+      "td_c": 440,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.2,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0033,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "cte_z_below_tg_ppm": 15,
+      "cte_x_ppm": 14,
+      "peel_strength_n_mm": 0.701,
+      "peel_condition": "1 oz, as received",
+      "water_absorption_pct": 0.1,
+      "notes": "Black halogen free system for interposers, probe cards and packaging. Thermal stress at 288 C more than 30 cycles of 10 s; T288 above 30 min. Laser drillable, suitable for sequential lamination. Shelf life 3 months at 23 C or 6 months below 5 C.",
+      "thickness_range": {
+        "min_mm": 0.11,
+        "max_mm": 0.11,
+        "steps_note": "Dielectric 0.0043 in with chopped fibre, on a 50 um PET film"
+      },
+      "panel_sizes": [
+        {
+          "width_mm": 610,
+          "height_mm": 460,
+          "label": "24 x 18 in"
+        },
+        {
+          "width_mm": 305,
+          "height_mm": 228,
+          "label": "12 x 9 in"
+        }
+      ],
+      "source": {
+        "pdf": "251003-pro-bond-7bf-vt-770b-black-prepreg-rcf-vt-770b-rcf-lcte.pdf",
+        "pages": "3",
+        "revision": "Version 04/03/2025"
+      }
+    },
+    {
+      "id": "ventec/vt-770b-rcf-lcte",
+      "manufacturer": "Ventec",
+      "name": "VT-770B RCF (LCTE)",
+      "kind": "bonding_film",
+      "family": "pro-bond 7FB",
+      "resin": "Ceramic filled thermoset",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_dma_c": 260,
+      "td_c": 445,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.3,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0035,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "cte_z_below_tg_ppm": 13,
+      "cte_x_ppm": 12,
+      "peel_strength_n_mm": 0.701,
+      "peel_condition": "1 oz, as received",
+      "water_absorption_pct": 0.1,
+      "notes": "Black halogen free system for interposers, probe cards and packaging. Thermal stress at 288 C more than 30 cycles of 10 s; T288 above 30 min. Laser drillable, suitable for sequential lamination. Shelf life 3 months at 23 C or 6 months below 5 C.",
+      "thickness_range": {
+        "min_mm": 0.11,
+        "max_mm": 0.11,
+        "steps_note": "Dielectric 0.0043 in with chopped fibre, on a 50 um PET film"
+      },
+      "panel_sizes": [
+        {
+          "width_mm": 610,
+          "height_mm": 460,
+          "label": "24 x 18 in"
+        },
+        {
+          "width_mm": 305,
+          "height_mm": 228,
+          "label": "12 x 9 in"
+        }
+      ],
+      "source": {
+        "pdf": "251003-pro-bond-7bf-vt-770b-black-prepreg-rcf-vt-770b-rcf-lcte.pdf",
+        "pages": "3",
+        "revision": "Version 04/03/2025"
+      }
+    },
+    {
+      "id": "ventec/vt-770b-pp",
+      "manufacturer": "Ventec",
+      "name": "VT-770B PP",
+      "kind": "prepreg",
+      "family": "pro-bond 7FB",
+      "resin": "Ceramic filled thermoset",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_dma_c": 260,
+      "td_c": 450,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.004,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "cte_z_below_tg_ppm": 25,
+      "cte_x_ppm": null,
+      "peel_strength_n_mm": 0.701,
+      "peel_condition": "1 oz, as received",
+      "water_absorption_pct": 0.1,
+      "notes": "Black halogen free system for interposers, probe cards and packaging. Thermal stress at 288 C more than 30 cycles of 10 s; T288 above 30 min. X/Y CTE before Tg 9-10 ppm/C. Laser drillable, suitable for sequential lamination. Shelf life 3 months at 23 C or 6 months below 5 C.",
+      "prepreg": [
+        {
+          "style": "2116",
+          "resin_content_pct": 55,
+          "pressed_thickness_um": 125,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": null,
+          "df": null,
+          "test_freq_ghz": null
+        },
+        {
+          "style": "1080",
+          "resin_content_pct": 64,
+          "pressed_thickness_um": 75,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": null,
+          "df": null,
+          "test_freq_ghz": null
+        },
+        {
+          "style": "106",
+          "resin_content_pct": 71,
+          "pressed_thickness_um": 50,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": null,
+          "df": null,
+          "test_freq_ghz": null
+        }
+      ],
+      "source": {
+        "pdf": "251003-pro-bond-7bf-vt-770b-black-prepreg-rcf-vt-770b-rcf-lcte.pdf",
+        "pages": "3",
+        "revision": "Version 04/03/2025"
+      }
+    }
+  ]
+}

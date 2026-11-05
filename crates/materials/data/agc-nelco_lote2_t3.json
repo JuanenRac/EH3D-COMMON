@@ -1,0 +1,2847 @@
+{
+  "schema_version": 1,
+  "manufacturer": "AGC Nelco",
+  "materials": [
+    {
+      "id": "agc-nelco/n4000-13",
+      "manufacturer": "AGC Nelco",
+      "name": "N4000-13",
+      "kind": "laminate",
+      "notes": "Laminate and prepreg; Tg above 210 C by the sheet text and 240 C by DMA; lead-free assembly compatible to 245 C (design dependent); press 90 min at 193 C and 275-350 psi; laminate from 0.05 mm. Peel after solder float 1.31 N/mm (7.5 lbf/in). Young modulus X/Y 28.5/22.4 GPa; Poisson 0.13/0.11. Resistivities are the C-96/35/90 values read from the sheet (exponent only). T260 and T288 are times to delamination stated as minimum times.",
+      "family": "N4000-13",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/29, /98, /99 and /101",
+      "dk": [
+        {
+          "freq_ghz": 2.5,
+          "value": 3.7,
+          "method": "Split post cavity",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.6,
+          "method": "Stripline",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.5,
+          "value": 0.009,
+          "method": "Split post cavity",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.009,
+          "method": "Stripline",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "surface_resistivity_ohm": 10000000000000.0,
+      "dielectric_strength_kv_mm": 47.2,
+      "tg_dma_c": 240,
+      "td_c": 350,
+      "t260_min": 30,
+      "t288_min": 10,
+      "thermal_conductivity_w_mk": 0.35,
+      "peel_strength_n_mm": 1.31,
+      "peel_condition": "1 oz, as received",
+      "cte_x_ppm": 10,
+      "cte_y_ppm": 14,
+      "cte_z_below_tg_ppm": 70,
+      "cte_z_above_tg_ppm": 280,
+      "cte_z_50_260_pct": 3.5,
+      "moisture_absorption_note": null,
+      "water_absorption_pct": 0.1,
+      "resin": "High-speed multifunctional epoxy",
+      "source": {
+        "pdf": "AGC_N4000-13_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025-07"
+      }
+    },
+    {
+      "id": "agc-nelco/n4000-13-ep",
+      "manufacturer": "AGC Nelco",
+      "name": "N4000-13 EP",
+      "kind": "laminate",
+      "notes": "Laminate and prepreg for lead-free requirements. Peel after solder float 1.31 N/mm (7.5 lbf/in). Young modulus X/Y 28.5/22.4 GPa. Resistivities are the C-96/35/90 values read from the sheet (exponent only). T260 and T288 are times to delamination stated as minimum times.",
+      "family": "N4000-13",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/29, /98, /99 and /101",
+      "dk": [
+        {
+          "freq_ghz": 2.5,
+          "value": 3.7,
+          "method": "Split post cavity",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.6,
+          "method": "Stripline",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.5,
+          "value": 0.009,
+          "method": "Split post cavity",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.009,
+          "method": "Stripline",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "surface_resistivity_ohm": 10000000000000.0,
+      "dielectric_strength_kv_mm": 47.2,
+      "tg_dma_c": 240,
+      "td_c": 350,
+      "t260_min": 30,
+      "t288_min": 10,
+      "thermal_conductivity_w_mk": 0.35,
+      "peel_strength_n_mm": 1.31,
+      "peel_condition": "1 oz, as received",
+      "cte_x_ppm": 10,
+      "cte_y_ppm": 14,
+      "cte_z_below_tg_ppm": 65,
+      "cte_z_above_tg_ppm": 275,
+      "cte_z_50_260_pct": 3.4,
+      "moisture_absorption_note": null,
+      "water_absorption_pct": 0.1,
+      "resin": "High-speed multifunctional epoxy",
+      "source": {
+        "pdf": "AGC_N4000-13EP_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025-07"
+      }
+    },
+    {
+      "id": "agc-nelco/n4000-13-ep-si",
+      "manufacturer": "AGC Nelco",
+      "name": "N4000-13 EP SI",
+      "kind": "laminate",
+      "notes": "N4000-13 EP with SI glass for optimum signal integrity. Peel after solder float 1.31 N/mm (7.5 lbf/in). Young modulus X/Y 17.2/16.5 GPa. Resistivities are the C-96/35/90 values read from the sheet (exponent only). T260 and T288 are times to delamination stated as minimum times.",
+      "family": "N4000-13",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/29, /98, /99 and /101",
+      "dk": [
+        {
+          "freq_ghz": 2.5,
+          "value": 3.2,
+          "method": "Split post cavity",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.2,
+          "method": "Stripline",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.5,
+          "value": 0.008,
+          "method": "Split post cavity",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.008,
+          "method": "Stripline",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "surface_resistivity_ohm": 10000000000000.0,
+      "dielectric_strength_kv_mm": 39.4,
+      "tg_dma_c": 240,
+      "td_c": 350,
+      "t260_min": 30,
+      "t288_min": 10,
+      "thermal_conductivity_w_mk": 0.294,
+      "peel_strength_n_mm": 1.31,
+      "peel_condition": "1 oz, as received",
+      "cte_x_ppm": 9,
+      "cte_y_ppm": 13,
+      "cte_z_below_tg_ppm": 65,
+      "cte_z_above_tg_ppm": 275,
+      "cte_z_50_260_pct": 3.4,
+      "moisture_absorption_note": null,
+      "water_absorption_pct": 0.1,
+      "resin": "High-speed multifunctional epoxy",
+      "reinforcement": "SI glass",
+      "source": {
+        "pdf": "AGC_N4000-13EPSI_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025-07"
+      }
+    },
+    {
+      "id": "agc-nelco/n4000-13-si",
+      "manufacturer": "AGC Nelco",
+      "name": "N4000-13 SI",
+      "kind": "laminate",
+      "notes": "N4000-13 with SI glass. Peel after solder float 1.31 N/mm (7.5 lbf/in). Young modulus X/Y 16.5/15.9 GPa. Resistivities are the C-96/35/90 values read from the sheet (exponent only). T260 and T288 are times to delamination stated as minimum times.",
+      "family": "N4000-13",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/29, /98, /99 and /101",
+      "dk": [
+        {
+          "freq_ghz": 2.5,
+          "value": 3.4,
+          "method": "Split post cavity",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.2,
+          "method": "Stripline",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.5,
+          "value": 0.008,
+          "method": "Split post cavity",
+          "resin_content_pct": 50,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.008,
+          "method": "Stripline",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "surface_resistivity_ohm": 10000000000000.0,
+      "dielectric_strength_kv_mm": 39.4,
+      "tg_dma_c": 240,
+      "td_c": 350,
+      "t260_min": 30,
+      "t288_min": 10,
+      "thermal_conductivity_w_mk": 0.294,
+      "peel_strength_n_mm": 1.31,
+      "peel_condition": "1 oz, as received",
+      "cte_x_ppm": 10,
+      "cte_y_ppm": 14,
+      "cte_z_below_tg_ppm": 70,
+      "cte_z_above_tg_ppm": 280,
+      "cte_z_50_260_pct": 3.5,
+      "moisture_absorption_note": null,
+      "water_absorption_pct": 0.1,
+      "resin": "High-speed multifunctional epoxy",
+      "reinforcement": "SI glass",
+      "source": {
+        "pdf": "AGC_N4000-13SI_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025-07"
+      }
+    },
+    {
+      "id": "agc-nelco/n4000-29",
+      "manufacturer": "AGC Nelco",
+      "name": "N4000-29",
+      "kind": "laminate",
+      "notes": "Tg 185 C by DSC. Z-CTE alpha 1/2 are for 55 % resin content and the Z expansion for 43 %. Peel after solder float 1.81 N/mm (10.1 lbf/in). Young modulus X/Y 22.6/18.2 GPa. Resistivities are the C-96/35/90 values read from the sheet (exponent only). T260 and T288 are times to delamination stated as minimum times.",
+      "family": "N4000-29",
+      "ul94": null,
+      "ipc_slash_sheet": null,
+      "dk": [
+        {
+          "freq_ghz": 2,
+          "value": 4.23,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 4.16,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.5,
+          "value": 0.015,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.017,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 81000000000000.0,
+      "surface_resistivity_ohm": 5600000000000.0,
+      "dielectric_strength_kv_mm": 43.3,
+      "tg_dma_c": 199,
+      "td_c": 350,
+      "t260_min": 60,
+      "t288_min": 20,
+      "thermal_conductivity_w_mk": 0.46,
+      "peel_strength_n_mm": 1.72,
+      "peel_condition": "1 oz, as received",
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 15,
+      "cte_z_below_tg_ppm": 55,
+      "cte_z_above_tg_ppm": 265,
+      "cte_z_50_260_pct": 3.0,
+      "moisture_absorption_note": null,
+      "water_absorption_pct": 0.15,
+      "resin": "Epoxy",
+      "source": {
+        "pdf": "AGC_N4000-29_TDS.pdf",
+        "pages": "1-3",
+        "revision": "AGC 2025-07"
+      }
+    },
+    {
+      "id": "agc-nelco/n4000-29nf",
+      "manufacturer": "AGC Nelco",
+      "name": "N4000-29NF",
+      "kind": "laminate",
+      "notes": "Variant of N4000-29. Peel after solder float 1.81 N/mm (10.1 lbf/in). Resistivities are the C-96/35/90 values read from the sheet (exponent only). T260 and T288 are times to delamination stated as minimum times.",
+      "family": "N4000-29",
+      "ul94": null,
+      "ipc_slash_sheet": null,
+      "dk": [
+        {
+          "freq_ghz": 2,
+          "value": 3.89,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.81,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2,
+          "value": 0.0192,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.0205,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 81000000000000.0,
+      "surface_resistivity_ohm": 5600000000000.0,
+      "dielectric_strength_kv_mm": 43.3,
+      "tg_dma_c": 199,
+      "td_c": 350,
+      "t260_min": 60,
+      "thermal_conductivity_w_mk": 0.46,
+      "peel_strength_n_mm": 1.72,
+      "peel_condition": "1 oz, as received",
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 15,
+      "cte_z_below_tg_ppm": 55,
+      "cte_z_above_tg_ppm": 265,
+      "cte_z_50_260_pct": 3.0,
+      "moisture_absorption_note": null,
+      "water_absorption_pct": 0.15,
+      "resin": "Epoxy",
+      "source": {
+        "pdf": "AGC_N4000-29NF_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025-07"
+      }
+    },
+    {
+      "id": "agc-nelco/n4350-13rf",
+      "manufacturer": "AGC Nelco",
+      "name": "N4350-13RF",
+      "kind": "laminate",
+      "notes": "RF laminate; peel after solder float 1.31 N/mm (7.5 lbf/in). The process guide is a separate sheet. Resistivities are the C-96/35/90 values read from the sheet (exponent only). T260 and T288 are times to delamination stated as minimum times.",
+      "family": "N4000-13 RF",
+      "ul94": null,
+      "ipc_slash_sheet": null,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.5,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.009,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "surface_resistivity_ohm": 10000000000000.0,
+      "dielectric_strength_kv_mm": 47.2,
+      "tg_dma_c": 240,
+      "td_c": 350,
+      "t260_min": 30,
+      "thermal_conductivity_w_mk": 0.35,
+      "peel_strength_n_mm": 1.31,
+      "peel_condition": "1 oz, as received",
+      "cte_x_ppm": 10,
+      "cte_y_ppm": 14,
+      "cte_z_50_260_pct": 3.5,
+      "moisture_absorption_note": null,
+      "water_absorption_pct": 0.1,
+      "resin": "Epoxy (RF)",
+      "source": {
+        "pdf": "AGC_N4350-13RF_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025-07"
+      }
+    },
+    {
+      "id": "agc-nelco/n4380-13rf",
+      "manufacturer": "AGC Nelco",
+      "name": "N4380-13RF",
+      "kind": "laminate",
+      "notes": "RF laminate; peel after solder float 1.31 N/mm (7.5 lbf/in). The process guide is a separate sheet. Resistivities are the C-96/35/90 values read from the sheet (exponent only). T260 and T288 are times to delamination stated as minimum times.",
+      "family": "N4000-13 RF",
+      "ul94": null,
+      "ipc_slash_sheet": null,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.8,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.009,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "surface_resistivity_ohm": 10000000000000.0,
+      "dielectric_strength_kv_mm": 47.2,
+      "tg_dma_c": 240,
+      "td_c": 350,
+      "t260_min": 30,
+      "thermal_conductivity_w_mk": 0.35,
+      "peel_strength_n_mm": 1.31,
+      "peel_condition": "1 oz, as received",
+      "cte_x_ppm": 10,
+      "cte_y_ppm": 14,
+      "cte_z_50_260_pct": 3.5,
+      "moisture_absorption_note": null,
+      "water_absorption_pct": 0.1,
+      "resin": "Epoxy (RF)",
+      "source": {
+        "pdf": "AGC_N4380-13RF_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025-07"
+      }
+    },
+    {
+      "id": "agc-nelco/n5000",
+      "manufacturer": "AGC Nelco",
+      "name": "N5000",
+      "kind": "laminate",
+      "notes": "Thermal conductivity is printed as 4 - 5 W/mK, which does not look consistent with the other sheets of the series, so it is not recorded. Z expansion for 43 % resin content; moisture absorption below 0.05 % (not recorded as a number). Young modulus X/Y 31.9/27.8 GPa. Resistivities are the C-96/35/90 values read from the sheet (exponent only). T260 and T288 are times to delamination stated as minimum times.",
+      "family": "N5000",
+      "ul94": null,
+      "ipc_slash_sheet": null,
+      "dk": [
+        {
+          "freq_ghz": 2.5,
+          "value": 3.6,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.6,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.5,
+          "value": 0.014,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.01,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 10000000000000.0,
+      "surface_resistivity_ohm": 1000000000000.0,
+      "dielectric_strength_kv_mm": 47.2,
+      "tg_dma_c": 220,
+      "td_c": 334,
+      "t260_min": 12,
+      "peel_strength_n_mm": 1.56,
+      "peel_condition": "1 oz, after solder float (8.9 lbf/in)",
+      "cte_x_ppm": 10,
+      "cte_y_ppm": 14,
+      "cte_z_50_260_pct": 3.8,
+      "source": {
+        "pdf": "AGC_N5000_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025-07"
+      }
+    },
+    {
+      "id": "agc-nelco/n7000-2ht",
+      "manufacturer": "AGC Nelco",
+      "name": "N7000-2HT",
+      "kind": "laminate",
+      "notes": "Z expansion below 2.5 % (43 % resin content). Young modulus X/Y 21.1/22.2 GPa. Resistivities are the C-96/35/90 values read from the sheet (exponent only). T260 and T288 are times to delamination stated as minimum times.",
+      "family": "N7000",
+      "ul94": null,
+      "ipc_slash_sheet": null,
+      "dk": [
+        {
+          "freq_ghz": 2.5,
+          "value": 3.5,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.5,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.5,
+          "value": 0.009,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.009,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 10000000000000.0,
+      "surface_resistivity_ohm": 1000000000000.0,
+      "dielectric_strength_kv_mm": 47.2,
+      "tg_dsc_c": 260,
+      "td_c": 376,
+      "t260_min": 120,
+      "thermal_conductivity_w_mk": 0.45,
+      "peel_strength_n_mm": 1.31,
+      "peel_condition": "1 oz, after solder float (7.5 lbf/in)",
+      "cte_x_ppm": 9,
+      "cte_y_ppm": 12,
+      "moisture_absorption_note": null,
+      "water_absorption_pct": 0.35,
+      "source": {
+        "pdf": "AGC_N7000-2HT_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025-07"
+      }
+    },
+    {
+      "id": "agc-nelco/n7000-3",
+      "manufacturer": "AGC Nelco",
+      "name": "N7000-3",
+      "kind": "laminate",
+      "notes": "Z expansion below 2.5 % (43 % resin content). Young modulus X/Y 21.1/22.2 GPa. Resistivities are the C-96/35/90 values read from the sheet (exponent only). T260 and T288 are times to delamination stated as minimum times.",
+      "family": "N7000",
+      "ul94": null,
+      "ipc_slash_sheet": null,
+      "dk": [
+        {
+          "freq_ghz": 1,
+          "value": 3.5,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.5,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.5,
+          "value": 0.009,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.009,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 10000000000000.0,
+      "surface_resistivity_ohm": 1000000000000.0,
+      "dielectric_strength_kv_mm": 47.2,
+      "tg_dsc_c": 260,
+      "td_c": 376,
+      "t260_min": 120,
+      "thermal_conductivity_w_mk": 0.45,
+      "peel_strength_n_mm": 1.31,
+      "peel_condition": "1 oz, after solder float (7.5 lbf/in)",
+      "cte_x_ppm": 9,
+      "cte_y_ppm": 12,
+      "moisture_absorption_note": null,
+      "water_absorption_pct": 0.35,
+      "source": {
+        "pdf": "AGC_N7000-3_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025-07"
+      }
+    },
+    {
+      "id": "agc-nelco/n7000-3f",
+      "manufacturer": "AGC Nelco",
+      "name": "N7000-3F",
+      "kind": "laminate",
+      "notes": "Z expansion below 1.2 % (63 % resin content). Young modulus X/Y 21.1/22.2 GPa. Resistivities are the C-96/35/90 values read from the sheet (exponent only). T260 and T288 are times to delamination stated as minimum times.",
+      "family": "N7000",
+      "ul94": null,
+      "ipc_slash_sheet": null,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 4.0,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.014,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 10000000000000.0,
+      "surface_resistivity_ohm": 1000000000000.0,
+      "dielectric_strength_kv_mm": 47.2,
+      "tg_dsc_c": 260,
+      "td_c": 376,
+      "t260_min": 120,
+      "thermal_conductivity_w_mk": 0.45,
+      "peel_strength_n_mm": 1.09,
+      "peel_condition": "1 oz, after solder float (6.2 lbf/in)",
+      "cte_x_ppm": 14,
+      "cte_y_ppm": 16,
+      "moisture_absorption_note": null,
+      "water_absorption_pct": 0.35,
+      "source": {
+        "pdf": "AGC_N7000-3F_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025-07"
+      }
+    },
+    {
+      "id": "agc-nelco/n8000",
+      "manufacturer": "AGC Nelco",
+      "name": "N8000",
+      "kind": "laminate",
+      "notes": "Z expansion for 43 % resin content; moisture absorption below 0.05 % (not recorded as a number). Young modulus X/Y 20.4/20.4 GPa. Resistivities are the C-96/35/90 values read from the sheet (exponent only). T260 and T288 are times to delamination stated as minimum times.",
+      "family": "N8000",
+      "ul94": null,
+      "ipc_slash_sheet": null,
+      "dk": [
+        {
+          "freq_ghz": 2.5,
+          "value": 3.6,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.5,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.5,
+          "value": 0.011,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.011,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 10000000000000.0,
+      "surface_resistivity_ohm": 1000000000000.0,
+      "dielectric_strength_kv_mm": 65.0,
+      "tg_dma_c": 300,
+      "td_c": 376,
+      "t260_min": 60,
+      "peel_strength_n_mm": 1.4,
+      "peel_condition": "1 oz, after solder float (8.0 lbf/in)",
+      "cte_x_ppm": 11,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 2.5,
+      "source": {
+        "pdf": "AGC_N8000_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025-07"
+      }
+    },
+    {
+      "id": "agc-nelco/n9300-13-rf",
+      "manufacturer": "AGC Nelco",
+      "name": "N9300-13 RF",
+      "kind": "laminate",
+      "notes": "One of four constructions of the N9000-13 RF series that share one sheet. Tg is stated as above 245 C (DMA). Z expansion is printed as TBD. Volume resistivity E-24/125 is 1E9 MOhm cm and C-96/35/90 1E8; surface resistivity C-96/35/90 1E6 MOhm. Resistivities are the C-96/35/90 values read from the sheet (exponent only). T260 and T288 are times to delamination stated as minimum times.",
+      "family": "N9000-13 RF",
+      "ul94": null,
+      "ipc_slash_sheet": null,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.0,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.004,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "dielectric_strength_kv_mm": 51.2,
+      "tg_dma_c": 245,
+      "td_c": 350,
+      "t260_min": 30,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "1 oz, after solder float (9.1 lbf/in)",
+      "cte_x_ppm": 13,
+      "cte_y_ppm": 20,
+      "moisture_absorption_note": null,
+      "water_absorption_pct": 0.07,
+      "source": {
+        "pdf": "AGC_N9000-13RF_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025-07"
+      }
+    },
+    {
+      "id": "agc-nelco/n9320-13-rf",
+      "manufacturer": "AGC Nelco",
+      "name": "N9320-13 RF",
+      "kind": "laminate",
+      "notes": "One of four constructions of the N9000-13 RF series that share one sheet. Tg is stated as above 245 C (DMA). Z expansion is printed as TBD. Volume resistivity E-24/125 is 1E9 MOhm cm and C-96/35/90 1E8; surface resistivity C-96/35/90 1E6 MOhm. Resistivities are the C-96/35/90 values read from the sheet (exponent only). T260 and T288 are times to delamination stated as minimum times.",
+      "family": "N9000-13 RF",
+      "ul94": null,
+      "ipc_slash_sheet": null,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.2,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0045,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "dielectric_strength_kv_mm": 51.2,
+      "tg_dma_c": 245,
+      "td_c": 350,
+      "t260_min": 30,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "1 oz, after solder float (9.1 lbf/in)",
+      "cte_x_ppm": 13,
+      "cte_y_ppm": 20,
+      "moisture_absorption_note": null,
+      "water_absorption_pct": 0.07,
+      "source": {
+        "pdf": "AGC_N9000-13RF_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025-07"
+      }
+    },
+    {
+      "id": "agc-nelco/n9338-13-rf",
+      "manufacturer": "AGC Nelco",
+      "name": "N9338-13 RF",
+      "kind": "laminate",
+      "notes": "One of four constructions of the N9000-13 RF series that share one sheet. Tg is stated as above 245 C (DMA). Z expansion is printed as TBD. Volume resistivity E-24/125 is 1E9 MOhm cm and C-96/35/90 1E8; surface resistivity C-96/35/90 1E6 MOhm. Resistivities are the C-96/35/90 values read from the sheet (exponent only). T260 and T288 are times to delamination stated as minimum times.",
+      "family": "N9000-13 RF",
+      "ul94": null,
+      "ipc_slash_sheet": null,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.38,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0046,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "dielectric_strength_kv_mm": 51.2,
+      "tg_dma_c": 245,
+      "td_c": 350,
+      "t260_min": 30,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "1 oz, after solder float (9.1 lbf/in)",
+      "cte_x_ppm": 13,
+      "cte_y_ppm": 20,
+      "moisture_absorption_note": null,
+      "water_absorption_pct": 0.07,
+      "source": {
+        "pdf": "AGC_N9000-13RF_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025-07"
+      }
+    },
+    {
+      "id": "agc-nelco/n9350-13-rf",
+      "manufacturer": "AGC Nelco",
+      "name": "N9350-13 RF",
+      "kind": "laminate",
+      "notes": "One of four constructions of the N9000-13 RF series that share one sheet. Tg is stated as above 245 C (DMA). Z expansion is printed as TBD. Volume resistivity E-24/125 is 1E9 MOhm cm and C-96/35/90 1E8; surface resistivity C-96/35/90 1E6 MOhm. Resistivities are the C-96/35/90 values read from the sheet (exponent only). T260 and T288 are times to delamination stated as minimum times.",
+      "family": "N9000-13 RF",
+      "ul94": null,
+      "ipc_slash_sheet": null,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.48,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0055,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "dielectric_strength_kv_mm": 51.2,
+      "tg_dma_c": 245,
+      "td_c": 350,
+      "t260_min": 30,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "1 oz, after solder float (9.1 lbf/in)",
+      "cte_x_ppm": 13,
+      "cte_y_ppm": 20,
+      "moisture_absorption_note": null,
+      "water_absorption_pct": 0.07,
+      "source": {
+        "pdf": "AGC_N9000-13RF_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025-07"
+      }
+    },
+    {
+      "id": "agc-nelco/meteorwave-1000",
+      "manufacturer": "AGC Nelco",
+      "name": "Meteorwave 1000",
+      "kind": "laminate",
+      "notes": "Laminate and prepreg. Dk and Df measured at 2 and 10 GHz; resin content 43 % for the Z expansion and 55 % for Z-CTE alpha 1/2 where stated. Resistivities are the C-96/35/90 values from the sheet. T300 is a time to delamination given as a minimum (above 120 min unless the sheet states another figure). Per-construction Dk and Df tables are in a separate sheet. Dk at 10 GHz 3.4.",
+      "family": "Meteorwave",
+      "resin": "Low-loss thermoset",
+      "dk": [
+        {
+          "freq_ghz": 2.0,
+          "value": 3.5,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.0,
+          "value": 0.0038,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0047,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 193000000000000.0,
+      "surface_resistivity_ohm": 61200000000000.0,
+      "dielectric_strength_kv_mm": 42.0,
+      "td_c": 390.0,
+      "thermal_conductivity_w_mk": 0.46,
+      "peel_strength_n_mm": 1.05,
+      "peel_condition": "1 oz, as received (6.0 lbf/in); after solder float 1.16 N/mm",
+      "cte_x_ppm": 10.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 55.0,
+      "cte_z_above_tg_ppm": 260.0,
+      "cte_z_50_260_pct": 1.5,
+      "water_absorption_pct": 0.12,
+      "tg_dma_c": 240.0,
+      "t300_min": 120.0,
+      "source": {
+        "pdf": "AGC_METEORWAVE_1000_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025"
+      }
+    },
+    {
+      "id": "agc-nelco/meteorwave-1000nf",
+      "manufacturer": "AGC Nelco",
+      "name": "Meteorwave 1000NF",
+      "kind": "laminate",
+      "notes": "Laminate and prepreg. Dk and Df measured at 2 and 10 GHz; resin content 43 % for the Z expansion and 55 % for Z-CTE alpha 1/2 where stated. Resistivities are the C-96/35/90 values from the sheet. T300 is a time to delamination given as a minimum (above 120 min unless the sheet states another figure). Per-construction Dk and Df tables are in a separate sheet. Dk at 10 GHz 3.50.",
+      "family": "Meteorwave",
+      "resin": "Low-loss thermoset",
+      "dk": [
+        {
+          "freq_ghz": 2.0,
+          "value": 3.45,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.0,
+          "value": 0.0038,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0048,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 193000000000000.0,
+      "surface_resistivity_ohm": 61200000000000.0,
+      "dielectric_strength_kv_mm": 42.0,
+      "td_c": 390.0,
+      "thermal_conductivity_w_mk": 0.46,
+      "peel_strength_n_mm": 1.05,
+      "peel_condition": "1 oz, as received (6.0 lbf/in); after solder float 1.16 N/mm",
+      "cte_x_ppm": 10.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 55.0,
+      "cte_z_above_tg_ppm": 260.0,
+      "cte_z_50_260_pct": 1.5,
+      "water_absorption_pct": 0.12,
+      "tg_dma_c": 240.0,
+      "t300_min": 120.0,
+      "source": {
+        "pdf": "AGC_METEORWAVE_1000NF_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025"
+      }
+    },
+    {
+      "id": "agc-nelco/meteorwave-2000",
+      "manufacturer": "AGC Nelco",
+      "name": "Meteorwave 2000",
+      "kind": "laminate",
+      "notes": "Laminate and prepreg. Dk and Df measured at 2 and 10 GHz; resin content 43 % for the Z expansion and 55 % for Z-CTE alpha 1/2 where stated. Resistivities are the C-96/35/90 values from the sheet. T300 is a time to delamination given as a minimum (above 120 min unless the sheet states another figure). Per-construction Dk and Df tables are in a separate sheet.",
+      "family": "Meteorwave",
+      "resin": "Low-loss thermoset",
+      "dk": [
+        {
+          "freq_ghz": 2.0,
+          "value": 3.3,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.2,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.0,
+          "value": 0.0027,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0034,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 36000000000000.0,
+      "surface_resistivity_ohm": 2100000000000.0,
+      "dielectric_strength_kv_mm": 46.0,
+      "td_c": 390.0,
+      "thermal_conductivity_w_mk": 0.43,
+      "peel_strength_n_mm": 1.05,
+      "peel_condition": "1 oz, as received (6.0 lbf/in); after solder float 1.16 N/mm",
+      "cte_x_ppm": 10.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 55.0,
+      "cte_z_above_tg_ppm": 260.0,
+      "cte_z_50_260_pct": 1.5,
+      "water_absorption_pct": 0.12,
+      "tg_dma_c": 240.0,
+      "t300_min": 120.0,
+      "source": {
+        "pdf": "AGC_METEORWAVE_2000_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025"
+      }
+    },
+    {
+      "id": "agc-nelco/meteorwave-3000",
+      "manufacturer": "AGC Nelco",
+      "name": "Meteorwave 3000",
+      "kind": "laminate",
+      "notes": "Laminate and prepreg. Dk and Df measured at 2 and 10 GHz; resin content 43 % for the Z expansion and 55 % for Z-CTE alpha 1/2 where stated. Resistivities are the C-96/35/90 values from the sheet. T300 is a time to delamination given as a minimum (above 120 min unless the sheet states another figure). Per-construction Dk and Df tables are in a separate sheet.",
+      "family": "Meteorwave",
+      "resin": "Low-loss thermoset",
+      "dk": [
+        {
+          "freq_ghz": 2.0,
+          "value": 3.6,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.0,
+          "value": 0.0031,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0039,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 30000000000000.0,
+      "surface_resistivity_ohm": 7600000000000.0,
+      "dielectric_strength_kv_mm": 33.0,
+      "td_c": 390.0,
+      "thermal_conductivity_w_mk": 0.47,
+      "peel_strength_n_mm": 1.02,
+      "peel_condition": "1 oz, as received (5.8 lbf/in); after solder float 1.00 N/mm",
+      "cte_x_ppm": 10.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 55.0,
+      "cte_z_above_tg_ppm": 260.0,
+      "cte_z_50_260_pct": 2.1,
+      "water_absorption_pct": 0.07,
+      "tg_dma_c": 200.0,
+      "t300_min": 120.0,
+      "source": {
+        "pdf": "AGC_METEORWAVE_3000_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025"
+      }
+    },
+    {
+      "id": "agc-nelco/meteorwave-3350",
+      "manufacturer": "AGC Nelco",
+      "name": "Meteorwave 3350",
+      "kind": "laminate",
+      "notes": "Laminate and prepreg. Dk and Df measured at 2 and 10 GHz; resin content 43 % for the Z expansion and 55 % for Z-CTE alpha 1/2 where stated. Resistivities are the C-96/35/90 values from the sheet. T300 is a time to delamination given as a minimum (above 120 min unless the sheet states another figure). Per-construction Dk and Df tables are in a separate sheet.",
+      "family": "Meteorwave",
+      "resin": "Low-loss thermoset",
+      "dk": [
+        {
+          "freq_ghz": 2.0,
+          "value": 3.5,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.0,
+          "value": 0.0032,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0038,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 30000000000000.0,
+      "surface_resistivity_ohm": 7600000000000.0,
+      "dielectric_strength_kv_mm": 51.2,
+      "td_c": 390.0,
+      "thermal_conductivity_w_mk": 0.47,
+      "peel_strength_n_mm": 1.02,
+      "peel_condition": "1 oz, as received (5.8 lbf/in); after solder float 1.00 N/mm",
+      "cte_x_ppm": 10.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 36.0,
+      "cte_z_above_tg_ppm": 200.0,
+      "cte_z_50_260_pct": 2.1,
+      "water_absorption_pct": 0.12,
+      "tg_dma_c": 200.0,
+      "t300_min": 120.0,
+      "source": {
+        "pdf": "AGC_METEORWAVE_3350_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025"
+      }
+    },
+    {
+      "id": "agc-nelco/meteorwave-4000",
+      "manufacturer": "AGC Nelco",
+      "name": "Meteorwave 4000",
+      "kind": "laminate",
+      "notes": "Laminate and prepreg. Dk and Df measured at 2 and 10 GHz; resin content 43 % for the Z expansion and 55 % for Z-CTE alpha 1/2 where stated. Resistivities are the C-96/35/90 values from the sheet. T300 is a time to delamination given as a minimum (above 120 min unless the sheet states another figure). Per-construction Dk and Df tables are in a separate sheet.",
+      "family": "Meteorwave",
+      "resin": "Low-loss thermoset",
+      "dk": [
+        {
+          "freq_ghz": 2.0,
+          "value": 3.4,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.3,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.0,
+          "value": 0.0019,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0024,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 4700000000000.0,
+      "surface_resistivity_ohm": 1300000000000.0,
+      "dielectric_strength_kv_mm": 46.0,
+      "td_c": 390.0,
+      "thermal_conductivity_w_mk": 0.45,
+      "peel_strength_n_mm": 1.02,
+      "peel_condition": "1 oz, as received (5.8 lbf/in); after solder float 1.00 N/mm",
+      "cte_x_ppm": 10.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 55.0,
+      "cte_z_above_tg_ppm": 260.0,
+      "cte_z_50_260_pct": 2.1,
+      "water_absorption_pct": 0.08,
+      "tg_dma_c": 200.0,
+      "t300_min": 120.0,
+      "source": {
+        "pdf": "AGC_METEORWAVE_4000_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025"
+      }
+    },
+    {
+      "id": "agc-nelco/meteorwave-8000",
+      "manufacturer": "AGC Nelco",
+      "name": "Meteorwave 8000",
+      "kind": "laminate",
+      "notes": "Laminate and prepreg. Dk and Df measured at 2 and 10 GHz; resin content 43 % for the Z expansion and 55 % for Z-CTE alpha 1/2 where stated. Resistivities are the C-96/35/90 values from the sheet. T300 is a time to delamination given as a minimum (above 120 min unless the sheet states another figure). Tg is 165 C by TMA and 185 C by DMA. Per-construction Dk and Df tables are in a separate sheet.",
+      "family": "Meteorwave",
+      "resin": "Low-loss thermoset",
+      "dk": [
+        {
+          "freq_ghz": 2.0,
+          "value": 3.29,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.28,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.0,
+          "value": 0.0012,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0016,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 4200000000000.0,
+      "surface_resistivity_ohm": 310000000000.0,
+      "dielectric_strength_kv_mm": 59.1,
+      "td_c": 376.0,
+      "thermal_conductivity_w_mk": 0.51,
+      "peel_strength_n_mm": 0.91,
+      "peel_condition": "1 oz, as received (5.2 lbf/in); after solder float 0.86 N/mm",
+      "cte_x_ppm": 14.0,
+      "cte_y_ppm": 16.0,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 185.0,
+      "cte_z_50_260_pct": 2.5,
+      "water_absorption_pct": 0.01,
+      "t300_min": 40.0,
+      "tg_tma_c": 165.0,
+      "tg_dma_c": 185.0,
+      "source": {
+        "pdf": "AGC_METEORWAVE_8000_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025"
+      }
+    },
+    {
+      "id": "agc-nelco/meteorwave-8300",
+      "manufacturer": "AGC Nelco",
+      "name": "Meteorwave 8300",
+      "kind": "laminate",
+      "notes": "Laminate and prepreg. Dk and Df measured at 2 and 10 GHz; resin content 43 % for the Z expansion and 55 % for Z-CTE alpha 1/2 where stated. Resistivities are the C-96/35/90 values from the sheet. T300 is a time to delamination given as a minimum (above 120 min unless the sheet states another figure). Per-construction Dk and Df tables are in a separate sheet.",
+      "family": "Meteorwave",
+      "resin": "Low-loss thermoset",
+      "dk": [
+        {
+          "freq_ghz": 2.0,
+          "value": 3.03,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.0,
+          "value": 0.0022,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0025,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 4200000000000.0,
+      "surface_resistivity_ohm": 310000000000.0,
+      "dielectric_strength_kv_mm": 59.1,
+      "td_c": 376.0,
+      "thermal_conductivity_w_mk": 0.51,
+      "peel_strength_n_mm": 0.91,
+      "peel_condition": "1 oz, as received (5.2 lbf/in); after solder float 0.86 N/mm",
+      "cte_x_ppm": 14.0,
+      "cte_y_ppm": 16.0,
+      "cte_z_below_tg_ppm": 33.0,
+      "cte_z_above_tg_ppm": 180.0,
+      "cte_z_50_260_pct": 2.5,
+      "water_absorption_pct": 0.01,
+      "tg_dma_c": 190.0,
+      "t300_min": 40.0,
+      "source": {
+        "pdf": "AGC_METEORWAVE_8300_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC 2025"
+      }
+    },
+    {
+      "id": "agc-nelco/meteorwave-m1",
+      "manufacturer": "AGC Nelco",
+      "name": "Meteorwave M1",
+      "kind": "laminate",
+      "family": "Meteorwave",
+      "resin": "Low-loss thermoset",
+      "ul94": "V-0",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.1,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 77,
+          "value": 3.1,
+          "method": "Ring resonator, RTF2 copper",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0018,
+          "method": null,
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": 12,
+      "volume_resistivity_ohm_cm": 280000000000000.0,
+      "surface_resistivity_ohm": 40000000000000.0,
+      "dielectric_strength_kv_mm": 69,
+      "arc_resistance_s": 180,
+      "tg_dma_c": 230,
+      "td_c": 391,
+      "t300_min": 120,
+      "thermal_conductivity_w_mk": 0.54,
+      "specific_heat_j_gk": 0.95,
+      "peel_strength_n_mm": 0.6,
+      "peel_condition": "Half ounce RTF2 copper (18 um), as received and after solder float",
+      "cte_x_ppm": 18,
+      "cte_y_ppm": 18,
+      "cte_z_below_tg_ppm": 47,
+      "cte_z_above_tg_ppm": 178,
+      "cte_z_50_260_pct": 2.4,
+      "water_absorption_pct": 0.088,
+      "flexural_strength_mpa": null,
+      "notes": "Millimetre-wave laminate. The CTE values are for a 5 mil 1x1078 construction. Dielectric breakdown above 50 kV; arc resistance above 180 s; flexural modulus at 125 C 12/11 GPa (warp/fill). TcDk is 12 ppm/C from -50 to 140 C at 10 GHz. T300 is stated as more than 120 min.",
+      "source": {
+        "pdf": "AGC_METEORWAVE_M1_TDS.pdf",
+        "pages": "1-2",
+        "revision": "AGC"
+      }
+    },
+    {
+      "id": "agc-nelco/nf-30",
+      "manufacturer": "AGC Nelco",
+      "name": "NF-30",
+      "kind": "ptfe",
+      "notes": "Td is 515 C at 2 % loss and 530 C at 5 %. Thermal coefficient of Dk -4.07 ppm/C (-55 to 150 C). X and Y CTE 11-15 ppm/C (50-150 C). T288 above 120 min. Flexural modulus MD/CD 1010/960 N/mm2; tensile strength MD/CD 6.5/6.2 N/mm2. Lead-free process compatible. Thickness increments of 0.127 mm; standard panel 18 x 24 in.",
+      "family": "NF",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.0,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": 0.04
+        },
+        {
+          "freq_ghz": 77,
+          "value": 2.98,
+          "method": "Microstrip resonator",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0013,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": -4.07,
+      "volume_resistivity_ohm_cm": 10000000000000.0,
+      "surface_resistivity_ohm": 10000000000000.0,
+      "td_c": 530,
+      "thermal_conductivity_w_mk": 0.5,
+      "cte_x_ppm": null,
+      "cte_y_ppm": null,
+      "cte_z_below_tg_ppm": 30,
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "Half ounce ULPH (HVLP2) copper, solder (4 lb/in)",
+      "flexural_strength_mpa": {
+        "lengthwise": 19,
+        "crosswise": 18,
+        "value": null
+      },
+      "water_absorption_pct": 0.05,
+      "ul94": "V-0",
+      "panel_sizes": [
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        }
+      ],
+      "source": {
+        "pdf": "AGC_NF-30_TDS.pdf",
+        "pages": "1-3",
+        "revision": "AGC 2024"
+      }
+    },
+    {
+      "id": "agc-nelco/rf-10",
+      "manufacturer": "AGC Nelco",
+      "name": "RF-10",
+      "kind": "ceramic_filled",
+      "notes": "Ceramic filled high Dk laminate. TcDk -370 ppm/C (-55 to 150 C). CTE from room temperature to 150 C. Tensile strength MD/CD 62.57/37.26 N/mm2. Thickness increments of 0.005 in.",
+      "family": "RF",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 10.2,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": 0.3
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0025,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "tcdk_ppm_per_c": -370,
+      "volume_resistivity_ohm_cm": 60000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "thermal_conductivity_w_mk": 0.85,
+      "cte_x_ppm": 16,
+      "cte_y_ppm": 20,
+      "cte_z_below_tg_ppm": 25,
+      "peel_strength_n_mm": 1.7,
+      "peel_condition": "1 oz RT copper, solder",
+      "flexural_strength_mpa": {
+        "lengthwise": 96.53,
+        "crosswise": 68.95,
+        "value": null
+      },
+      "water_absorption_pct": 0.08,
+      "density_g_cm3": 2.77,
+      "specific_heat_j_gk": 0.9,
+      "ul94": "V-0",
+      "thicknesses_mm": [
+        0.25,
+        0.51,
+        0.64,
+        1.52,
+        2.54,
+        3.17
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 457,
+          "label": "16 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        },
+        {
+          "width_mm": 914,
+          "height_mm": 1219,
+          "label": "36 x 48 in"
+        }
+      ],
+      "source": {
+        "pdf": "AGC_RF-10_TDS.pdf",
+        "pages": "1-3",
+        "revision": "AGC 2024"
+      }
+    },
+    {
+      "id": "agc-nelco/rf-30a",
+      "manufacturer": "AGC Nelco",
+      "name": "RF-30A",
+      "kind": "ptfe",
+      "notes": "CTE 50-150 C. Tensile strength MD/CD 133.6/105.5 N/mm2. Thickness increments of 0.010 in.",
+      "family": "RF",
+      "dk": [
+        {
+          "freq_ghz": 1.9,
+          "value": 2.97,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": 0.05
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.9,
+          "value": 0.0013,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.002,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 3000000000000000.0,
+      "surface_resistivity_ohm": 200000000000000.0,
+      "thermal_conductivity_w_mk": 0.42,
+      "cte_x_ppm": 8,
+      "cte_y_ppm": 11,
+      "cte_z_below_tg_ppm": 60,
+      "flexural_strength_mpa": {
+        "lengthwise": 126.5,
+        "crosswise": 119.5,
+        "value": null
+      },
+      "density_g_cm3": 2.16,
+      "specific_heat_j_gk": 0.95,
+      "ul94": "V-0",
+      "thicknesses_mm": [
+        0.51,
+        0.76,
+        1.02,
+        1.52
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 457,
+          "label": "16 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        },
+        {
+          "width_mm": 914,
+          "height_mm": 1219,
+          "label": "36 x 48 in"
+        }
+      ],
+      "source": {
+        "pdf": "AGC_RF-30A_TDS.pdf",
+        "pages": "1-3",
+        "revision": "AGC 2024"
+      }
+    },
+    {
+      "id": "agc-nelco/rf-35htc",
+      "manufacturer": "AGC Nelco",
+      "name": "RF-35HTC",
+      "kind": "ceramic_filled",
+      "notes": "High thermal conductivity laminate: 1.84 W/mK unclad and 2.89 W/mK clad (laser flash). Resistivities are the values after elevated temperature (volume) and after humidity (surface). CTE 23-125 C. Dielectric breakdown 42 kV; arc resistance above 400 s; Shore D hardness 60.2. Tensile strength lengthwise/crosswise 6.6/6.2 MPa. Typical thickness 10 to 90 mil.",
+      "family": "RF",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.36",
+          "resin_content_pct": null,
+          "tolerance": 0.05
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0007,
+          "method": "IPC-TM-650 2.5.36",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 1700000000000000.0,
+      "surface_resistivity_ohm": 2900000000000.0,
+      "thermal_conductivity_w_mk": 1.84,
+      "cte_x_ppm": 11,
+      "cte_y_ppm": 14,
+      "cte_z_below_tg_ppm": 77,
+      "peel_strength_n_mm": 1.08,
+      "peel_condition": "1 oz CL1 copper, after thermal stress (6.17 lb/in)",
+      "flexural_strength_mpa": {
+        "lengthwise": 18.4,
+        "crosswise": 17.7,
+        "value": null
+      },
+      "water_absorption_pct": 0.07,
+      "thicknesses_mm": [
+        0.25,
+        0.51,
+        0.76,
+        1.02,
+        1.52,
+        2.03,
+        2.29
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 457,
+          "label": "16 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 914,
+          "label": "16 x 36 in"
+        },
+        {
+          "width_mm": 610,
+          "height_mm": 914,
+          "label": "24 x 36 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 1219,
+          "label": "18 x 48 in"
+        }
+      ],
+      "source": {
+        "pdf": "AGC_RF-35HTC_TDS.pdf",
+        "pages": "1-3",
+        "revision": "AGC 2024"
+      }
+    },
+    {
+      "id": "agc-nelco/rf-35tc",
+      "manufacturer": "AGC Nelco",
+      "name": "RF-35TC",
+      "kind": "ceramic_filled",
+      "notes": "Thermal conductivity 0.60 W/mK unclad and 0.92 / 0.87 W/mK clad (C1/C1, CH/CH) at 125 C. Td 420 C at 2 % loss and 436 C at 5 %. CTE 23-125 C. Dielectric breakdown 56.7 kV; arc resistance 304 s; Shore D hardness 79.1. Tensile strength MD/CD 62.19/53.37 N/mm2. Thickness increments of 0.005 in.",
+      "family": "RF",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": 0.05
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.002,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 519000000000000.0,
+      "surface_resistivity_ohm": 83300000000000.0,
+      "td_c": 436,
+      "thermal_conductivity_w_mk": 0.6,
+      "cte_x_ppm": 11,
+      "cte_y_ppm": 13,
+      "cte_z_below_tg_ppm": 34,
+      "peel_strength_n_mm": 1.25,
+      "peel_condition": "Half ounce CVH copper, thermal stress (7.0 lb/in)",
+      "dielectric_strength_kv_mm": 22.4,
+      "flexural_strength_mpa": {
+        "lengthwise": 88.94,
+        "crosswise": 80.67,
+        "value": null
+      },
+      "water_absorption_pct": 0.05,
+      "density_g_cm3": 2.35,
+      "specific_heat_j_gk": 0.94,
+      "ul94": "V-0",
+      "thicknesses_mm": [
+        0.13,
+        0.25,
+        0.51,
+        0.76,
+        1.52
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 457,
+          "label": "16 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 914,
+          "label": "16 x 36 in"
+        },
+        {
+          "width_mm": 610,
+          "height_mm": 914,
+          "label": "24 x 36 in"
+        }
+      ],
+      "source": {
+        "pdf": "AGC_RF-35TC_TDS.pdf",
+        "pages": "1-3",
+        "revision": "AGC 2024"
+      }
+    },
+    {
+      "id": "agc-nelco/rf-60tc",
+      "manufacturer": "AGC Nelco",
+      "name": "RF-60TC",
+      "kind": "ceramic_filled",
+      "notes": "Thermal conductivity 0.90 W/mK unclad, 1.00 CH/CH and 1.05 C1/C1. Td 500 C at 2 % loss and 515 C at 5 %. The sheet prints a thermal coefficient of -3.581 ppm/C that is not clearly the TcDk, so it is not recorded. Arc resistance above 180 s. Tensile strength MD/CD 62/48 N/mm2. Thickness increments of 0.005 in.",
+      "family": "RF",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 6.15,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": 0.15
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.002,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "td_c": 515,
+      "thermal_conductivity_w_mk": 0.9,
+      "cte_x_ppm": 9.9,
+      "cte_y_ppm": 9.9,
+      "cte_z_below_tg_ppm": 40,
+      "flexural_strength_mpa": {
+        "lengthwise": 69,
+        "crosswise": 62,
+        "value": null
+      },
+      "water_absorption_pct": 0.03,
+      "density_g_cm3": 2.84,
+      "specific_heat_j_gk": 0.94,
+      "ul94": "V-0",
+      "thicknesses_mm": [
+        0.13,
+        0.25,
+        0.51,
+        0.64,
+        0.76,
+        1.52
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 457,
+          "label": "16 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 914,
+          "label": "16 x 36 in"
+        },
+        {
+          "width_mm": 610,
+          "height_mm": 914,
+          "label": "24 x 36 in"
+        }
+      ],
+      "source": {
+        "pdf": "AGC_RF-60TC_TDS.pdf",
+        "pages": "1-3",
+        "revision": "AGC 2024"
+      }
+    },
+    {
+      "id": "agc-nelco/tlc-32",
+      "manufacturer": "AGC Nelco",
+      "name": "TLC-32",
+      "kind": "ptfe",
+      "notes": "CTE 50-150 C. Same product family as the Taconic TLC-32 record.",
+      "family": "TLC",
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.2,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": 0.05
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.003,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "thermal_conductivity_w_mk": 0.24,
+      "cte_x_ppm": 9,
+      "cte_y_ppm": 12,
+      "cte_z_below_tg_ppm": 70,
+      "peel_strength_n_mm": 2.1,
+      "peel_condition": "1 oz copper (12 lb/in)",
+      "flexural_strength_mpa": {
+        "lengthwise": 165,
+        "crosswise": 131,
+        "value": null
+      },
+      "arc_resistance_s": 180,
+      "ul94": "V-0",
+      "thicknesses_mm": [
+        0.25,
+        0.51,
+        0.76,
+        1.52,
+        3.05
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 457,
+          "label": "16 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 914,
+          "label": "16 x 36 in"
+        },
+        {
+          "width_mm": 610,
+          "height_mm": 914,
+          "label": "24 x 36 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 1219,
+          "label": "18 x 48 in"
+        }
+      ],
+      "source": {
+        "pdf": "AGC_TLC-32_TDS.pdf",
+        "pages": "1-3",
+        "revision": "AGC 2024"
+      }
+    },
+    {
+      "id": "agc-nelco/tle-95",
+      "manufacturer": "AGC Nelco",
+      "name": "TLE-95",
+      "kind": "ptfe",
+      "notes": "CTE 50-150 C. Dielectric breakdown 60 kV. Minimum available thickness 0.001 in.",
+      "family": "TLE",
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 2.95,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": 0.05
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0026,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 10000000000000.0,
+      "surface_resistivity_ohm": 10000000000000.0,
+      "thermal_conductivity_w_mk": 0.2,
+      "cte_x_ppm": 9,
+      "cte_y_ppm": 12,
+      "cte_z_below_tg_ppm": 70,
+      "peel_strength_n_mm": 2.1,
+      "peel_condition": "1 oz copper (12 lb/in)",
+      "dielectric_strength_kv_mm": 16.8,
+      "flexural_strength_mpa": {
+        "lengthwise": 241,
+        "crosswise": 207,
+        "value": null
+      },
+      "water_absorption_pct": 0.02,
+      "arc_resistance_s": 180,
+      "ul94": "V-0",
+      "thicknesses_mm": [
+        0.13,
+        0.51,
+        0.76,
+        1.57
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 457,
+          "label": "16 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 914,
+          "label": "16 x 36 in"
+        },
+        {
+          "width_mm": 610,
+          "height_mm": 914,
+          "label": "24 x 36 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 1219,
+          "label": "18 x 48 in"
+        }
+      ],
+      "source": {
+        "pdf": "AGC_TLE-95_TDS.pdf",
+        "pages": "1-3",
+        "revision": "AGC 2024"
+      }
+    },
+    {
+      "id": "agc-nelco/tlf-35a",
+      "manufacturer": "AGC Nelco",
+      "name": "TLF-35A",
+      "kind": "ptfe",
+      "notes": "CTE 50-150 C. Copper claddings listed: CVH and CV1 very low profile ED, CLH and CL1 reverse treated ED, C2 2 oz ED.",
+      "family": "TLF",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": 0.05
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0026,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 200000000000000.0,
+      "surface_resistivity_ohm": 3000000000000000.0,
+      "thermal_conductivity_w_mk": 0.37,
+      "cte_x_ppm": 9,
+      "cte_y_ppm": 12,
+      "cte_z_below_tg_ppm": 80,
+      "peel_strength_n_mm": 1.8,
+      "peel_condition": "1 oz copper (10 lb/in)",
+      "flexural_strength_mpa": {
+        "lengthwise": 90,
+        "crosswise": 90,
+        "value": null
+      },
+      "water_absorption_pct": 0.03,
+      "ul94": "V-0",
+      "thicknesses_mm": [
+        0.76,
+        1.52
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 457,
+          "label": "16 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        },
+        {
+          "width_mm": 914,
+          "height_mm": 1219,
+          "label": "36 x 48 in"
+        }
+      ],
+      "source": {
+        "pdf": "AGC_TLF-35A_TDS.pdf",
+        "pages": "1-3",
+        "revision": "AGC 2024"
+      }
+    },
+    {
+      "id": "agc-nelco/tlx-8",
+      "manufacturer": "AGC Nelco",
+      "name": "TLX-8",
+      "kind": "ptfe",
+      "notes": "Td 535 C at 2 % loss and 553 C at 5 %. CTE 25-260 C. Resistivities after elevated temperature. NASA outgassing TML 0.03 %, CVCM 0.00 %, WVR 0.01 %. Dielectric breakdown 45 kV. 1 oz RTF peel 2.98 N/mm (17 lb/in).",
+      "family": "TLX",
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 2.55,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": 0.04
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0018,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 1.11e+16,
+      "surface_resistivity_ohm": 660500000000000.0,
+      "td_c": 553,
+      "thermal_conductivity_w_mk": 0.19,
+      "cte_x_ppm": 21,
+      "cte_y_ppm": 23,
+      "cte_z_below_tg_ppm": 215,
+      "peel_strength_n_mm": 2.63,
+      "peel_condition": "1 oz ED copper, thermal stress (15 lb/in)",
+      "water_absorption_pct": 0.02,
+      "ul94": "V-0",
+      "source": {
+        "pdf": "AGC_TLX-8_TDS.pdf",
+        "pages": "1-3",
+        "revision": "AGC 2024"
+      }
+    },
+    {
+      "id": "agc-nelco/tly-3",
+      "manufacturer": "AGC Nelco",
+      "name": "TLY-3",
+      "kind": "ptfe",
+      "notes": "CTE 25-260 C. Peel 2.86 N/mm (16 lb/in) for 1 oz CL1 and 3.04 N/mm (17 lb/in) for 1 oz C1 copper. NASA outgassing TML 0.01 %, CVCM 0.01 %, WVR 0.01 %.",
+      "family": "TLY",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 2.33,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": 0.02
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0012,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 1e+16,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "thermal_conductivity_w_mk": 0.22,
+      "cte_x_ppm": 26,
+      "cte_y_ppm": 15,
+      "cte_z_below_tg_ppm": 217,
+      "peel_strength_n_mm": 1.96,
+      "peel_condition": "Half ounce ED copper (11 lb/in)",
+      "flexural_strength_mpa": {
+        "lengthwise": 96.91,
+        "crosswise": 89.32,
+        "value": null
+      },
+      "water_absorption_pct": 0.02,
+      "density_g_cm3": 2.19,
+      "ul94": "V-0",
+      "thicknesses_mm": [
+        0.09,
+        0.13,
+        0.19,
+        0.25,
+        0.51,
+        0.76,
+        1.52
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 457,
+          "label": "16 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 914,
+          "label": "16 x 36 in"
+        },
+        {
+          "width_mm": 610,
+          "height_mm": 914,
+          "label": "24 x 36 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 1219,
+          "label": "18 x 48 in"
+        }
+      ],
+      "source": {
+        "pdf": "AGC_TLY-3_TDS.pdf",
+        "pages": "1-3",
+        "revision": "AGC 2024"
+      }
+    },
+    {
+      "id": "agc-nelco/tly-5",
+      "manufacturer": "AGC Nelco",
+      "name": "TLY-5",
+      "kind": "ptfe",
+      "notes": "CTE 25-260 C. Peel 2.86 N/mm (16 lb/in) for 1 oz CL1 and 3.04 N/mm (17 lb/in) for 1 oz C1 copper. Thickness increments of 0.005 in. NASA outgassing TML 0.01 %, CVCM 0.01 %, WVR 0.01 %.",
+      "family": "TLY",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 2.2,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": 0.02
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0009,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 1e+16,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "thermal_conductivity_w_mk": 0.22,
+      "cte_x_ppm": 26,
+      "cte_y_ppm": 15,
+      "cte_z_below_tg_ppm": 217,
+      "peel_strength_n_mm": 1.96,
+      "peel_condition": "Half ounce ED copper (11 lb/in)",
+      "flexural_strength_mpa": {
+        "lengthwise": 96.91,
+        "crosswise": 89.32,
+        "value": null
+      },
+      "water_absorption_pct": 0.02,
+      "density_g_cm3": 2.19,
+      "ul94": "V-0",
+      "thicknesses_mm": [
+        0.09,
+        0.13,
+        0.19,
+        0.25,
+        0.51,
+        0.76,
+        1.52
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 457,
+          "label": "16 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 914,
+          "label": "16 x 36 in"
+        },
+        {
+          "width_mm": 610,
+          "height_mm": 914,
+          "label": "24 x 36 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 1219,
+          "label": "18 x 48 in"
+        }
+      ],
+      "source": {
+        "pdf": "AGC_TLY-5_TDS.pdf",
+        "pages": "1-3",
+        "revision": "AGC 2024"
+      }
+    },
+    {
+      "id": "agc-nelco/tly-5a",
+      "manufacturer": "AGC Nelco",
+      "name": "TLY-5A",
+      "kind": "ptfe",
+      "notes": "CTE 25-260 C. The mechanical values printed on this sheet are the same as those of TLY-5. NASA outgassing TML 0.01 %, CVCM 0.01 %, WVR 0.01 %.",
+      "family": "TLY",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 2.17,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": 0.02
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0009,
+          "method": "IPC-TM-650 2.5.5.5",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 1e+16,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "thermal_conductivity_w_mk": 0.22,
+      "cte_x_ppm": 26,
+      "cte_y_ppm": 15,
+      "cte_z_below_tg_ppm": 217,
+      "peel_strength_n_mm": 1.96,
+      "peel_condition": "Half ounce ED copper (11 lb/in)",
+      "flexural_strength_mpa": {
+        "lengthwise": 96.91,
+        "crosswise": 89.32,
+        "value": null
+      },
+      "water_absorption_pct": 0.02,
+      "density_g_cm3": 2.19,
+      "thicknesses_mm": [
+        0.09,
+        0.13,
+        0.19,
+        0.25,
+        0.51,
+        0.76,
+        1.52
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 457,
+          "label": "16 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 914,
+          "label": "16 x 36 in"
+        },
+        {
+          "width_mm": 610,
+          "height_mm": 914,
+          "label": "24 x 36 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 1219,
+          "label": "18 x 48 in"
+        }
+      ],
+      "source": {
+        "pdf": "AGC_TLY-5A_TDS.pdf",
+        "pages": "1-3",
+        "revision": "AGC 2024"
+      }
+    },
+    {
+      "id": "agc-nelco/tly-5z",
+      "manufacturer": "AGC Nelco",
+      "name": "TLY-5Z",
+      "kind": "ptfe",
+      "notes": "CTE 25-260 C. Tensile strength MD/CD 63/66 N/mm2; flex modulus MD/CD 2600/2980 N/mm2; elongation 6.0/6.9 %; Shore hardness 68. Thickness increments of 0.010 in.",
+      "family": "TLY",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 2.2,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": 0.04
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0015,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 1000000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "thermal_conductivity_w_mk": 0.2,
+      "cte_x_ppm": 30,
+      "cte_y_ppm": 40,
+      "cte_z_below_tg_ppm": 130,
+      "peel_strength_n_mm": 1.3,
+      "peel_condition": "1 oz copper (7 lb/in)",
+      "flexural_strength_mpa": {
+        "lengthwise": 71,
+        "crosswise": 80,
+        "value": null
+      },
+      "water_absorption_pct": 0.03,
+      "density_g_cm3": 1.92,
+      "ul94": "V-0",
+      "thicknesses_mm": [
+        0.25,
+        0.51,
+        0.76,
+        1.52
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 457,
+          "label": "16 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        }
+      ],
+      "source": {
+        "pdf": "AGC_TLY-5Z_TDS.pdf",
+        "pages": "1-3",
+        "revision": "AGC 2024"
+      }
+    },
+    {
+      "id": "agc-nelco/tsm-ds3",
+      "manufacturer": "AGC Nelco",
+      "name": "TSM-DS3",
+      "kind": "ceramic_filled",
+      "notes": "Dk and Df frequency is not stated. Td 526 C at 2 % loss and 551 C at 5 %. CTE room temperature to 125 C. Resistivities after elevated temperature (humidity conditioning gives 2.1E7 MOhm cm and 1.8E8 MOhm). Dielectric breakdown 47.5 kV. Tensile strength MD/CD 48/26 N/mm2.",
+      "family": "TSM",
+      "dk": [
+        {
+          "freq_ghz": null,
+          "value": 3.0,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": 0.05
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": null,
+          "value": 0.0014,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2300000000000.0,
+      "surface_resistivity_ohm": 11000000000000.0,
+      "td_c": 551,
+      "thermal_conductivity_w_mk": 0.65,
+      "cte_x_ppm": 10,
+      "cte_y_ppm": 16,
+      "cte_z_below_tg_ppm": 23,
+      "dielectric_strength_kv_mm": 21.6,
+      "flexural_strength_mpa": {
+        "lengthwise": 81,
+        "crosswise": 51,
+        "value": null
+      },
+      "water_absorption_pct": 0.07,
+      "density_g_cm3": 2.11,
+      "arc_resistance_s": 226,
+      "thicknesses_mm": [
+        0.13,
+        0.25,
+        0.51,
+        0.76,
+        1.52,
+        2.29
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 457,
+          "label": "16 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 914,
+          "label": "16 x 36 in"
+        },
+        {
+          "width_mm": 610,
+          "height_mm": 914,
+          "label": "24 x 36 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 1219,
+          "label": "18 x 48 in"
+        }
+      ],
+      "source": {
+        "pdf": "AGC_TSM-DS3_TDS.pdf",
+        "pages": "1-3",
+        "revision": "AGC 2024"
+      }
+    },
+    {
+      "id": "agc-nelco/tsm-ds3b",
+      "manufacturer": "AGC Nelco",
+      "name": "TSM-DS3b",
+      "kind": "ceramic_filled",
+      "notes": "Td 526 C at 2 % loss and 551 C at 5 %. CTE room temperature to 125 C. Resistivities after elevated temperature (humidity conditioning gives 2.1E7 MOhm cm and 1.8E8 MOhm). Dielectric breakdown 47.5 kV. Tensile strength MD/CD 48/26 N/mm2.",
+      "family": "TSM",
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.0,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": 0.04
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0014,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2300000000000.0,
+      "surface_resistivity_ohm": 11000000000000.0,
+      "td_c": 551,
+      "thermal_conductivity_w_mk": 0.65,
+      "cte_x_ppm": 10,
+      "cte_y_ppm": 16,
+      "cte_z_below_tg_ppm": 23,
+      "dielectric_strength_kv_mm": 21.6,
+      "flexural_strength_mpa": {
+        "lengthwise": 81,
+        "crosswise": 51,
+        "value": null
+      },
+      "water_absorption_pct": 0.07,
+      "density_g_cm3": 2.11,
+      "arc_resistance_s": 226,
+      "thicknesses_mm": [
+        0.13,
+        0.25,
+        0.51,
+        0.76,
+        1.52,
+        2.29
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 457,
+          "label": "16 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 914,
+          "label": "16 x 36 in"
+        },
+        {
+          "width_mm": 610,
+          "height_mm": 914,
+          "label": "24 x 36 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 1219,
+          "label": "18 x 48 in"
+        }
+      ],
+      "source": {
+        "pdf": "AGC_TSM-DS3b_TDS.pdf",
+        "pages": "1-3",
+        "revision": "AGC 2024"
+      }
+    },
+    {
+      "id": "agc-nelco/tsm-ds3m",
+      "manufacturer": "AGC Nelco",
+      "name": "TSM-DS3M",
+      "kind": "ceramic_filled",
+      "notes": "Dk and Df frequency is not stated. Td 526 C at 2 % loss and 551 C at 5 %. CTE room temperature to 125 C. Resistivities after elevated temperature. Dielectric breakdown 47.5 kV. Tensile strength MD/CD 48/26 N/mm2.",
+      "family": "TSM",
+      "dk": [
+        {
+          "freq_ghz": null,
+          "value": 2.94,
+          "method": "IPC-TM-650 2.5.5.3",
+          "resin_content_pct": null,
+          "tolerance": 0.04
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": null,
+          "value": 0.0014,
+          "method": "IPC-TM-650 2.5.5.5.1 (modified)",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2300000000000.0,
+      "surface_resistivity_ohm": 11000000000000.0,
+      "td_c": 551,
+      "thermal_conductivity_w_mk": 0.65,
+      "cte_x_ppm": 10,
+      "cte_y_ppm": 16,
+      "cte_z_below_tg_ppm": 23,
+      "dielectric_strength_kv_mm": 21.6,
+      "flexural_strength_mpa": {
+        "lengthwise": 81,
+        "crosswise": 51,
+        "value": null
+      },
+      "water_absorption_pct": 0.07,
+      "density_g_cm3": 2.11,
+      "arc_resistance_s": 226,
+      "thicknesses_mm": [
+        0.13,
+        0.25,
+        0.51,
+        0.76,
+        1.52,
+        2.29
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 457,
+          "label": "16 x 18 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18 x 24 in"
+        },
+        {
+          "width_mm": 406,
+          "height_mm": 914,
+          "label": "16 x 36 in"
+        },
+        {
+          "width_mm": 610,
+          "height_mm": 914,
+          "label": "24 x 36 in"
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 1219,
+          "label": "18 x 48 in"
+        }
+      ],
+      "source": {
+        "pdf": "AGC_TSM-DS3M_TDS.pdf",
+        "pages": "1-3",
+        "revision": "AGC 2024"
+      }
+    }
+  ]
+}
