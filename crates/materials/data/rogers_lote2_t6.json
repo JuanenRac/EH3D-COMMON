@@ -284,7 +284,20 @@
           "label": "24\" x 18\""
         }
       ],
-      "notes": "Ceramic filled PTFE composite for commercial microwave and RF circuits with X and Y CTE matched to copper. CTE from -55 to 288 C (Z stored as below Tg); Td 500 C by TGA; thermal conductivity at 50 C; Young modulus given in MPa for the two directions (1025 and 1006); resistivities 10^7 M-ohm cm and 10^7 M-ohm as printed, converted. Dk 3.50 +/- 0.05 (process) and 3.60 (design)."
+      "notes": "Ceramic filled PTFE composite for commercial microwave and RF circuits with X and Y CTE matched to copper. CTE from -55 to 288 C (Z stored as below Tg); Td 500 C by TGA; thermal conductivity at 50 C; Young modulus given in MPa for the two directions (1025 and 1006); resistivities 10^7 M-ohm cm and 10^7 M-ohm as printed, converted. Dk 3.50 +/- 0.05 (process) and 3.60 (design).",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Rigid and supportive entry and exit materials such as pressed phenolic; use new drills; controlled infeeds, speeds and retract rates; use the 12 inch rule (of drilled depth) to set the initial hit counts. Mechanical deburring or scrubbing is not recommended (very light pressure if a deburr is required); pressurized water or air purge of holes is acceptable."
+        },
+        "desmear_note": "Sodium or plasma treatment is required before metal deposition, with a bake after sodium treatment; electroless copper (low or regular deposition rate) or direct deposit.",
+        "bake_note": "Bake inner layers at 125 to 150 C before bonding (required); compatible with most thermoplastic and thermoset films; use the bond parameters of the adhesive system."
+      },
+      "sources": [
+        {
+          "pdf": "quick-reference-processing-guidelines-ro3000-and-ro3200-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     },
     {
       "id": "rogers/ro3003g2",
@@ -437,7 +450,20 @@
         0.76,
         1.52
       ],
-      "notes": "Ceramic filled laminate reinforced with woven fiberglass, extension of the RO3000 series with better mechanical stability; processed with standard PTFE techniques. Water absorption below 0.1 %; thermal conductivity at 80 C; CTE is for X, Y and Z from -55 to 288 C (Z stored as below Tg); resistivity exponents and tensile modulus pairing cannot be read reliably and are not loaded."
+      "notes": "Ceramic filled laminate reinforced with woven fiberglass, extension of the RO3000 series with better mechanical stability; processed with standard PTFE techniques. Water absorption below 0.1 %; thermal conductivity at 80 C; CTE is for X, Y and Z from -55 to 288 C (Z stored as below Tg); resistivity exponents and tensile modulus pairing cannot be read reliably and are not loaded.",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Rigid and supportive entry and exit materials such as pressed phenolic; use new drills; controlled infeeds, speeds and retract rates; use the 12 inch rule (of drilled depth) to set the initial hit counts. Mechanical deburring or scrubbing is not recommended (very light pressure if a deburr is required); pressurized water or air purge of holes is acceptable."
+        },
+        "desmear_note": "Sodium or plasma treatment is required before metal deposition, with a bake after sodium treatment; electroless copper (low or regular deposition rate) or direct deposit.",
+        "bake_note": "Bake inner layers at 125 to 150 C before bonding (required); compatible with most thermoplastic and thermoset films; use the bond parameters of the adhesive system."
+      },
+      "sources": [
+        {
+          "pdf": "quick-reference-processing-guidelines-ro3000-and-ro3200-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     },
     {
       "id": "rogers/ro3206",
@@ -510,7 +536,20 @@
         0.64,
         1.28
       ],
-      "notes": "Ceramic filled laminate reinforced with woven fiberglass, extension of the RO3000 series with better mechanical stability; processed with standard PTFE techniques. Water absorption below 0.1 %; thermal conductivity at 80 C; CTE is for X, Y and Z from -55 to 288 C (Z stored as below Tg); resistivity exponents and tensile modulus pairing cannot be read reliably and are not loaded. Non-standard thicknesses are available from 0.010 to 0.250 in."
+      "notes": "Ceramic filled laminate reinforced with woven fiberglass, extension of the RO3000 series with better mechanical stability; processed with standard PTFE techniques. Water absorption below 0.1 %; thermal conductivity at 80 C; CTE is for X, Y and Z from -55 to 288 C (Z stored as below Tg); resistivity exponents and tensile modulus pairing cannot be read reliably and are not loaded. Non-standard thicknesses are available from 0.010 to 0.250 in.",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Rigid and supportive entry and exit materials such as pressed phenolic; use new drills; controlled infeeds, speeds and retract rates; use the 12 inch rule (of drilled depth) to set the initial hit counts. Mechanical deburring or scrubbing is not recommended (very light pressure if a deburr is required); pressurized water or air purge of holes is acceptable."
+        },
+        "desmear_note": "Sodium or plasma treatment is required before metal deposition, with a bake after sodium treatment; electroless copper (low or regular deposition rate) or direct deposit.",
+        "bake_note": "Bake inner layers at 125 to 150 C before bonding (required); compatible with most thermoplastic and thermoset films; use the bond parameters of the adhesive system."
+      },
+      "sources": [
+        {
+          "pdf": "quick-reference-processing-guidelines-ro3000-and-ro3200-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     },
     {
       "id": "rogers/ro3210",
@@ -583,7 +622,20 @@
         0.64,
         1.28
       ],
-      "notes": "Ceramic filled laminate reinforced with woven fiberglass, extension of the RO3000 series with better mechanical stability; processed with standard PTFE techniques. Water absorption below 0.1 %; thermal conductivity at 80 C; CTE is for X, Y and Z from -55 to 288 C (Z stored as below Tg); resistivity exponents and tensile modulus pairing cannot be read reliably and are not loaded. Non-standard thicknesses are available from 0.010 to 0.250 in."
+      "notes": "Ceramic filled laminate reinforced with woven fiberglass, extension of the RO3000 series with better mechanical stability; processed with standard PTFE techniques. Water absorption below 0.1 %; thermal conductivity at 80 C; CTE is for X, Y and Z from -55 to 288 C (Z stored as below Tg); resistivity exponents and tensile modulus pairing cannot be read reliably and are not loaded. Non-standard thicknesses are available from 0.010 to 0.250 in.",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Rigid and supportive entry and exit materials such as pressed phenolic; use new drills; controlled infeeds, speeds and retract rates; use the 12 inch rule (of drilled depth) to set the initial hit counts. Mechanical deburring or scrubbing is not recommended (very light pressure if a deburr is required); pressurized water or air purge of holes is acceptable."
+        },
+        "desmear_note": "Sodium or plasma treatment is required before metal deposition, with a bake after sodium treatment; electroless copper (low or regular deposition rate) or direct deposit.",
+        "bake_note": "Bake inner layers at 125 to 150 C before bonding (required); compatible with most thermoplastic and thermoset films; use the bond parameters of the adhesive system."
+      },
+      "sources": [
+        {
+          "pdf": "quick-reference-processing-guidelines-ro3000-and-ro3200-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     },
     {
       "id": "rogers/ro3003-bondply",
@@ -848,7 +900,20 @@
         0.831,
         1.542
       ],
-      "notes": "RO4000 LoPro laminate (RO4000 resin system modified to bond reverse treated foil). The values are those of the corresponding RO4000 laminate without the LoPro resin; with LoPro foil a double-sided core gains about 0.0007 in of thickness and the LoPro resin has a Dk of about 2.4, so the design Dk depends strongly on the core thickness. Tg above 280 C (TMA); dimensional stability <0.3 mm/m (X, Y) after etch plus E2/150 C; CTE X, Y and Z from -55 to 288 C (Z stored as below Tg); thermal conductivity at 80 C; moisture absorption after 48 h immersion of a 0.060 in sample at 50 C; peel strength after solder float with 1 oz TC foil; electric strength for 0.51 mm; tensile modulus and strength in the Y direction. Resistivities converted from M-ohm cm and M-ohm. UL 94 flammability is not applicable (N/A) for this grade."
+      "notes": "RO4000 LoPro laminate (RO4000 resin system modified to bond reverse treated foil). The values are those of the corresponding RO4000 laminate without the LoPro resin; with LoPro foil a double-sided core gains about 0.0007 in of thickness and the LoPro resin has a Dk of about 2.4, so the design Dk depends strongly on the core thickness. Tg above 280 C (TMA); dimensional stability <0.3 mm/m (X, Y) after etch plus E2/150 C; CTE X, Y and Z from -55 to 288 C (Z stored as below Tg); thermal conductivity at 80 C; moisture absorption after 48 h immersion of a 0.060 in sample at 50 C; peel strength after solder float with 1 oz TC foil; electric strength for 0.51 mm; tensile modulus and strength in the Y direction. Resistivities converted from M-ohm cm and M-ohm. UL 94 flammability is not applicable (N/A) for this grade.",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Standard entry and exit materials such as sheeted aluminium and pressed phenolic; use new drills; controlled infeeds, speeds and retract rates; inspect holes to determine tool life. Mechanical deburring or scrubbing is acceptable for thicker cores and builds. Routing, punching or V-scoring is possible; diamond cut or multi-fluted chipbreaker router bits are recommended and the V-score depth should be less than half of the material thickness (RO4003C, RO4350B, RO4835 guide)."
+        },
+        "desmear_note": "Chemical or plasma desmear may be required; etchback is not recommended; electroless copper or direct deposit.",
+        "bake_note": "Pre-bake inner layers at 125 to 150 C recommended; compatible with RO4400 series bondply and most thermoset prepregs; use the bond parameters of the adhesive system."
+      },
+      "sources": [
+        {
+          "pdf": "quick-reference-processing-guidelines-ro4000-lopro-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     },
     {
       "id": "rogers/ro4350b-lopro",
@@ -919,7 +984,20 @@
         0.78,
         1.542
       ],
-      "notes": "RO4000 LoPro laminate (RO4000 resin system modified to bond reverse treated foil). The values are those of the corresponding RO4000 laminate without the LoPro resin; with LoPro foil a double-sided core gains about 0.0007 in of thickness and the LoPro resin has a Dk of about 2.4, so the design Dk depends strongly on the core thickness. Tg above 280 C (TMA); dimensional stability <0.5 mm/m (X, Y) after etch plus E2/150 C; CTE X, Y and Z from -55 to 288 C (Z stored as below Tg); thermal conductivity at 80 C; moisture absorption after 48 h immersion of a 0.060 in sample at 50 C; peel strength after solder float with 1 oz TC foil; electric strength for 0.51 mm; tensile modulus and strength in the Y direction. Resistivities converted from M-ohm cm and M-ohm. RO4350B LoPro laminates do not share the UL designation of standard RO4350B; a separate UL qualification may be necessary."
+      "notes": "RO4000 LoPro laminate (RO4000 resin system modified to bond reverse treated foil). The values are those of the corresponding RO4000 laminate without the LoPro resin; with LoPro foil a double-sided core gains about 0.0007 in of thickness and the LoPro resin has a Dk of about 2.4, so the design Dk depends strongly on the core thickness. Tg above 280 C (TMA); dimensional stability <0.5 mm/m (X, Y) after etch plus E2/150 C; CTE X, Y and Z from -55 to 288 C (Z stored as below Tg); thermal conductivity at 80 C; moisture absorption after 48 h immersion of a 0.060 in sample at 50 C; peel strength after solder float with 1 oz TC foil; electric strength for 0.51 mm; tensile modulus and strength in the Y direction. Resistivities converted from M-ohm cm and M-ohm. RO4350B LoPro laminates do not share the UL designation of standard RO4350B; a separate UL qualification may be necessary.",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Standard entry and exit materials such as sheeted aluminium and pressed phenolic; use new drills; controlled infeeds, speeds and retract rates; inspect holes to determine tool life. Mechanical deburring or scrubbing is acceptable for thicker cores and builds. Routing, punching or V-scoring is possible; diamond cut or multi-fluted chipbreaker router bits are recommended and the V-score depth should be less than half of the material thickness (RO4003C, RO4350B, RO4835 guide)."
+        },
+        "desmear_note": "Chemical or plasma desmear may be required; etchback is not recommended; electroless copper or direct deposit.",
+        "bake_note": "Pre-bake inner layers at 125 to 150 C recommended; compatible with RO4400 series bondply and most thermoset prepregs; use the bond parameters of the adhesive system."
+      },
+      "sources": [
+        {
+          "pdf": "quick-reference-processing-guidelines-ro4000-lopro-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     },
     {
       "id": "rogers/ro4835-lopro",
@@ -989,7 +1067,20 @@
         0.526,
         0.78
       ],
-      "notes": "RO4000 LoPro laminate (RO4000 resin system modified to bond reverse treated foil). The values are those of the corresponding RO4000 laminate without the LoPro resin; with LoPro foil a double-sided core gains about 0.0007 in of thickness and the LoPro resin has a Dk of about 2.4, so the design Dk depends strongly on the core thickness. Tg above 280 C (TMA); dimensional stability <0.5 mm/m (X, Y) after etch plus E2/150 C; CTE X, Y and Z from -55 to 288 C (Z stored as below Tg); thermal conductivity at 80 C; moisture absorption after 48 h immersion of a 0.060 in sample at 50 C; peel strength after solder float with 1 oz TC foil; electric strength for 0.51 mm; tensile modulus and strength in the Y direction. Resistivities converted from M-ohm cm and M-ohm. The thickness list is the part of the standard thicknesses visible in the text layer of the sheet."
+      "notes": "RO4000 LoPro laminate (RO4000 resin system modified to bond reverse treated foil). The values are those of the corresponding RO4000 laminate without the LoPro resin; with LoPro foil a double-sided core gains about 0.0007 in of thickness and the LoPro resin has a Dk of about 2.4, so the design Dk depends strongly on the core thickness. Tg above 280 C (TMA); dimensional stability <0.5 mm/m (X, Y) after etch plus E2/150 C; CTE X, Y and Z from -55 to 288 C (Z stored as below Tg); thermal conductivity at 80 C; moisture absorption after 48 h immersion of a 0.060 in sample at 50 C; peel strength after solder float with 1 oz TC foil; electric strength for 0.51 mm; tensile modulus and strength in the Y direction. Resistivities converted from M-ohm cm and M-ohm. The thickness list is the part of the standard thicknesses visible in the text layer of the sheet.",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Standard entry and exit materials such as sheeted aluminium and pressed phenolic; use new drills; controlled infeeds, speeds and retract rates; inspect holes to determine tool life. Mechanical deburring or scrubbing is acceptable for thicker cores and builds. Routing, punching or V-scoring is possible; diamond cut or multi-fluted chipbreaker router bits are recommended and the V-score depth should be less than half of the material thickness (RO4003C, RO4350B, RO4835 guide)."
+        },
+        "desmear_note": "Chemical or plasma desmear may be required; etchback is not recommended; electroless copper or direct deposit.",
+        "bake_note": "Pre-bake inner layers at 125 to 150 C recommended; compatible with RO4400 series bondply and most thermoset prepregs; use the bond parameters of the adhesive system."
+      },
+      "sources": [
+        {
+          "pdf": "quick-reference-processing-guidelines-ro4000-lopro-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     },
     {
       "id": "rogers/ro4360g2",
@@ -1072,7 +1163,20 @@
           "label": "48\" x 36\""
         }
       ],
-      "notes": "Dk 6.15 (+/- 0.15 process, 10 GHz clamped stripline; the clamped stripline method can read lower than the Dk found in practice), low loss, glass reinforced hydrocarbon ceramic laminate that processes like FR-4 and pairs with RO4400 bondply and lower Dk RO4000 laminates. Tg above 280 C (TMA); T288 above 30 min after a 30 min / 125 C prebake; CTE X, Y and Z from -50 to 288 C after a replicated heat cycle; tensile strength 131 MPa (X) and 97 MPa (Y); flexural strength 213 MPa (X) and 145 MPa (Y); electrical strength 784 V/mil converted to kV/mm; moisture absorption 0.08 % after 48 h at 50 C; UL 94 file QMTS2.E102763. The volume and surface resistivity units cannot be read reliably and are not loaded."
+      "notes": "Dk 6.15 (+/- 0.15 process, 10 GHz clamped stripline; the clamped stripline method can read lower than the Dk found in practice), low loss, glass reinforced hydrocarbon ceramic laminate that processes like FR-4 and pairs with RO4400 bondply and lower Dk RO4000 laminates. Tg above 280 C (TMA); T288 above 30 min after a 30 min / 125 C prebake; CTE X, Y and Z from -50 to 288 C after a replicated heat cycle; tensile strength 131 MPa (X) and 97 MPa (Y); flexural strength 213 MPa (X) and 145 MPa (Y); electrical strength 784 V/mil converted to kV/mm; moisture absorption 0.08 % after 48 h at 50 C; UL 94 file QMTS2.E102763. The volume and surface resistivity units cannot be read reliably and are not loaded.",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Standard entry and exit materials such as sheeted aluminium and pressed phenolic; use new drills; controlled infeeds, speeds and retract rates; inspect holes to determine tool life. Mechanical deburring or scrubbing is acceptable for thicker cores and builds. Routing, punching or V-scoring is possible; diamond cut or multi-fluted chipbreaker router bits are recommended and the V-score depth should be less than half of the material thickness (RO4003C, RO4350B, RO4835 guide)."
+        },
+        "desmear_note": "Chemical or plasma desmear may be required; etchback is not recommended; electroless copper or direct deposit.",
+        "bake_note": "Pre-bake inner layers at 125 to 150 C recommended; compatible with RO4400 series bondply and most thermoset prepregs; use the bond parameters of the adhesive system."
+      },
+      "sources": [
+        {
+          "pdf": "quick-reference-processing-guidelines-ro4360g2-high-frequency-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     },
     {
       "id": "rogers/ro4450f",
@@ -1611,7 +1715,20 @@
         0.762,
         1.524
       ],
-      "notes": "RO4700 series antenna grade laminate, an alternative to PTFE based antenna materials. Design Dk 2.98 by differential phase length from 1.7 to 5 GHz; PIM -165 dBc (0.060 in, 43 dBm, 1900 MHz); volume and surface resistivity are for 0.030 in and are converted from M-ohm cm and M-ohm; electrical strength 0.030 in converted from V/mil; flexural strength by ASTM D790 in the machine and cross machine directions; dimensional stability below 0.4 mm/m (X, Y); CTE X, Y and Z from -55 to 288 C; thermal conductivity at 50 C; Tg above 280 C; peel strength with 1 oz LoPro EDC. Dissipation factor value taken with LoPro reverse treated ED foil. The LoPro version is offered in 0.145, 0.272, 0.526, 0.780 and 1.542 mm. The 2.5 GHz dissipation factor line of the sheet (0.0022) sits beside this column and is stored with the RO4730G3 values."
+      "notes": "RO4700 series antenna grade laminate, an alternative to PTFE based antenna materials. Design Dk 2.98 by differential phase length from 1.7 to 5 GHz; PIM -165 dBc (0.060 in, 43 dBm, 1900 MHz); volume and surface resistivity are for 0.030 in and are converted from M-ohm cm and M-ohm; electrical strength 0.030 in converted from V/mil; flexural strength by ASTM D790 in the machine and cross machine directions; dimensional stability below 0.4 mm/m (X, Y); CTE X, Y and Z from -55 to 288 C; thermal conductivity at 50 C; Tg above 280 C; peel strength with 1 oz LoPro EDC. Dissipation factor value taken with LoPro reverse treated ED foil. The LoPro version is offered in 0.145, 0.272, 0.526, 0.780 and 1.542 mm. The 2.5 GHz dissipation factor line of the sheet (0.0022) sits beside this column and is stored with the RO4730G3 values.",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Standard entry and exit materials such as sheeted aluminium and pressed phenolic; use new drills; controlled infeeds, speeds and retract rates; inspect holes to determine tool life. Mechanical deburring or scrubbing is acceptable for thicker cores and builds. Routing, punching or V-scoring is possible; diamond cut or multi-fluted chipbreaker router bits are recommended and the V-score depth should be less than half of the material thickness (RO4003C, RO4350B, RO4835 guide)."
+        },
+        "desmear_note": "Chemical or plasma desmear may be required; etchback is not recommended; electroless copper or direct deposit.",
+        "bake_note": "Pre-bake inner layers at 125 to 150 C recommended; compatible with RO4400 series bondply and most thermoset prepregs; use the bond parameters of the adhesive system."
+      },
+      "sources": [
+        {
+          "pdf": "quick-reference-processing-guidelines-ro4730g3-antenna-grade-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     },
     {
       "id": "rogers/ro4830",
@@ -1651,7 +1768,20 @@
       "dielectric_strength_kv_mm": 78.7,
       "cte_x_ppm": 23,
       "cte_y_ppm": 23,
-      "cte_z_below_tg_ppm": 110
+      "cte_z_below_tg_ppm": 110,
+      "processing": {
+        "drilling": {
+          "retract_notes": "Standard entry and exit materials such as sheeted aluminium and pressed phenolic; use new drills; enter through the RO4830 core side when drilling hybrid multilayers; vias can be made by UV-YAG, CO2 or combined UV-YAG/CO2 systems."
+        },
+        "desmear_note": "Plasma or permanganate may be required to clean the copper at the base of blind vias.",
+        "bake_note": "Pre-bake at 110 to 125 C recommended unless a similar bake was part of the oxide process; compatible with RO4400 bondply and most FR-4 type adhesives; flatness of pressed multilayers may improve by reducing the pressure to about 50 psi fifteen minutes after reaching the final cure temperature; keep balanced copper on both sides of inner layers."
+      },
+      "sources": [
+        {
+          "pdf": "quick-reference-processing-guidelines-ro4830-high-frequency-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     },
     {
       "id": "rogers/ro4830-plus",
@@ -1781,7 +1911,20 @@
       },
       "water_absorption_pct": 0.05,
       "density_g_cm3": 1.92,
-      "notes": "RO4835 laminate. Tg above 280 C (TMA). The 4 mil laminate has a process Dk of 3.33 +/- 0.05 and conforms to IPC-4103A/240; the other thicknesses are /11 and /240 compliant. Volume resistivity 5e8 M-ohm cm and surface resistivity 7e8 M-ohm converted; dimensional stability below 0.5 mm/m (X, Y) after etch plus E2/150 C; CTE from -55 to 288 C (Z stored as below Tg); thermal conductivity at 80 C; moisture absorption at 50 C for 48 h."
+      "notes": "RO4835 laminate. Tg above 280 C (TMA). The 4 mil laminate has a process Dk of 3.33 +/- 0.05 and conforms to IPC-4103A/240; the other thicknesses are /11 and /240 compliant. Volume resistivity 5e8 M-ohm cm and surface resistivity 7e8 M-ohm converted; dimensional stability below 0.5 mm/m (X, Y) after etch plus E2/150 C; CTE from -55 to 288 C (Z stored as below Tg); thermal conductivity at 80 C; moisture absorption at 50 C for 48 h.",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Standard entry and exit materials such as sheeted aluminium and pressed phenolic; use new drills; controlled infeeds, speeds and retract rates; inspect holes to determine tool life. Mechanical deburring or scrubbing is acceptable for thicker cores and builds. Routing, punching or V-scoring is possible; diamond cut or multi-fluted chipbreaker router bits are recommended and the V-score depth should be less than half of the material thickness (RO4003C, RO4350B, RO4835 guide)."
+        },
+        "desmear_note": "Chemical or plasma desmear may be required; etchback is not recommended; electroless copper or direct deposit.",
+        "bake_note": "Pre-bake inner layers at 125 to 150 C recommended; compatible with RO4400 series bondply and most thermoset prepregs; use the bond parameters of the adhesive system."
+      },
+      "sources": [
+        {
+          "pdf": "quick-reference-processing-guidelines-ro4003c-ro4350b-ro4835-high-frequency-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     },
     {
       "id": "rogers/ro4835ind-lopro",
@@ -2162,7 +2305,20 @@
           "label": "24\" x 18\""
         }
       ],
-      "notes": "Low density, low Dk PTFE composite. Df 0.0021 typical and 0.0027 maximum at 10 GHz; electrical strength 40 kV; dimensional stability -0.38 % (X, Y); moisture absorption 0.31 % after 24 h at 23 C; CTE 54 and 47 ppm/C (X, Y) and 40 ppm/C (Z) from 0 to 150 C; thermal conductivity at 80 C; outgassing TML, CVCM and WVR 0.01 % each; copper peel above 4.0 lb/in. Additional thicknesses 0.0075 in and 0.010 to 0.200 in in 0.005 in steps. Resistivities 1.74e7 M-ohm cm and 2.08e6 M-ohm converted."
+      "notes": "Low density, low Dk PTFE composite. Df 0.0021 typical and 0.0027 maximum at 10 GHz; electrical strength 40 kV; dimensional stability -0.38 % (X, Y); moisture absorption 0.31 % after 24 h at 23 C; CTE 54 and 47 ppm/C (X, Y) and 40 ppm/C (Z) from 0 to 150 C; thermal conductivity at 80 C; outgassing TML, CVCM and WVR 0.01 % each; copper peel above 4.0 lb/in. Additional thicknesses 0.0075 in and 0.010 to 0.200 in in 0.005 in steps. Resistivities 1.74e7 M-ohm cm and 2.08e6 M-ohm converted.",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Rigid and supportive entry and exit materials such as pressed phenolic; use new drills; controlled infeeds, speeds and retract rates; use the 12 inch rule (of drilled depth) to set the initial hit counts. Mechanical deburring or scrubbing is not recommended (very light pressure if a deburr is required); pressurized water or air purge of holes is acceptable."
+        },
+        "desmear_note": "Sodium or plasma treatment is required before metal deposition, with a bake after sodium treatment; electroless copper (low or regular deposition rate) or direct deposit. Flash plating is recommended before outer layer imaging.",
+        "bake_note": "Pre-bake at 125 to 150 C required; compatible with most thermoplastic and thermoset films."
+      },
+      "sources": [
+        {
+          "pdf": "quick-reference-processing-guidelines-rt-duroid-5880lz-high-frequency-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     },
     {
       "id": "rogers/rt-duroid-5280lz",
@@ -2400,7 +2556,20 @@
           "label": "24\" x 18\""
         }
       ],
-      "notes": "High thermal conductivity ceramic filled PTFE laminate for power amplifiers. Dielectric strength 835 V/mil and breakdown voltage 12.59 kV for a 15 mil thickness; tensile modulus 329 kpsi (MD) and 244 kpsi (CMD) converted; dimensional stability -0.11 and -0.08 mm/m (CMD, MD) for 0.030 in with 1 oz EDC foil; CTE from -55 to 288 C (Z stored as below Tg); thermal conductivity at 80 C. Volume and surface resistivity exponents cannot be read and are not loaded."
+      "notes": "High thermal conductivity ceramic filled PTFE laminate for power amplifiers. Dielectric strength 835 V/mil and breakdown voltage 12.59 kV for a 15 mil thickness; tensile modulus 329 kpsi (MD) and 244 kpsi (CMD) converted; dimensional stability -0.11 and -0.08 mm/m (CMD, MD) for 0.030 in with 1 oz EDC foil; CTE from -55 to 288 C (Z stored as below Tg); thermal conductivity at 80 C. Volume and surface resistivity exponents cannot be read and are not loaded.",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Rigid and supportive entry and exit materials such as pressed phenolic; use new drills; controlled infeeds, speeds and retract rates; use the 12 inch rule (of drilled depth) to set the initial hit counts. Mechanical deburring or scrubbing is not recommended (very light pressure if a deburr is required); pressurized water or air purge of holes is acceptable."
+        },
+        "desmear_note": "Sodium or plasma treatment is required before metal deposition, with a bake after sodium treatment; electroless copper (low or regular deposition rate) or direct deposit.",
+        "bake_note": "Pre-bake at 110 to 125 C required; compatible with most thermoplastic and thermoset films."
+      },
+      "sources": [
+        {
+          "pdf": "quick-reference-processing-guidelines-rt-duroid-6035htc-high-frequency-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     },
     {
       "id": "rogers/rt-duroid-6202",
@@ -2856,13 +3025,19 @@
           "label": "18\" x 24\""
         }
       ],
-      "notes": "TMM thermoset microwave material. Dk process value at 10 GHz by IPC-TM-650 2.5.5.5 and design Dk from 8 to 40 GHz by the differential phase length method; thermal coefficient of Dk from -55 to 125 C; insulation resistance above 2000 Gohm; Td 425 C (TGA); CTE from 0 to 140 C (ASTM E831); peel strength after solder float with 1 oz EDC; electrical strength in V/mil converted; moisture absorption 0.06 % for 1.27 mm (0.050 in) and 0.12 % for 3.18 mm (0.125 in) samples; specific gravity 1.78. Resistivity values in M-ohm cm and M-ohm are converted; the surface resistivity of TMM3 is printed as above 9e9 M-ohm and is not loaded. Flexural strength 16.53 kpsi and flexural modulus 1.72 Mpsi (MD/CMD) as printed; the strength is stored in MPa.",
+      "notes": "TMM thermoset microwave material. Dk process value at 10 GHz by IPC-TM-650 2.5.5.5 and design Dk from 8 to 40 GHz by the differential phase length method; thermal coefficient of Dk from -55 to 125 C; insulation resistance above 2000 Gohm; Td 425 C (TGA); CTE from 0 to 140 C (ASTM E831); peel strength after solder float with 1 oz EDC; electrical strength in V/mil converted; moisture absorption 0.06 % for 1.27 mm (0.050 in) and 0.12 % for 3.18 mm (0.125 in) samples; specific gravity 1.78. Resistivity values in M-ohm cm and M-ohm are converted; the surface resistivity of TMM3 is printed as above 9e9 M-ohm and is not loaded. Flexural strength 16.53 kpsi and flexural modulus 1.72 Mpsi (MD/CMD) as printed; the strength is stored in MPa. Handling: TMM panels, particularly 0.050 in and thinner, crack easily; do not tap the edges on a table to align stacks, tilt the stack on its edges, support thin material with cardboard or airboard, hold the panel with both hands in the middle of the long edge and never by the corners or with one hand, and keep nothing stacked on top of the panels. A separate quick reference processing guide for TMM laminates exists.",
       "thermal_conductivity_w_mk": 0.7,
       "specific_heat_j_gk": 0.87,
       "volume_resistivity_ohm_cm": 3000000000000000.0,
       "flexural_strength_mpa": {
         "value": 114.0
-      }
+      },
+      "sources": [
+        {
+          "pdf": "tmm-handling-guidance-for-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     },
     {
       "id": "rogers/tmm4",
@@ -2931,14 +3106,20 @@
           "label": "18\" x 24\""
         }
       ],
-      "notes": "TMM thermoset microwave material. Dk process value at 10 GHz by IPC-TM-650 2.5.5.5 and design Dk from 8 to 40 GHz by the differential phase length method; thermal coefficient of Dk from -55 to 125 C; insulation resistance above 2000 Gohm; Td 425 C (TGA); CTE from 0 to 140 C (ASTM E831); peel strength after solder float with 1 oz EDC; electrical strength in V/mil converted; moisture absorption 0.07 % for 1.27 mm (0.050 in) and 0.18 % for 3.18 mm (0.125 in) samples; specific gravity 2.07. Resistivity values in M-ohm cm and M-ohm are converted. Flexural strength 15.91 kpsi and flexural modulus 1.76 Mpsi (MD/CMD) as printed; the strength is stored in MPa.",
+      "notes": "TMM thermoset microwave material. Dk process value at 10 GHz by IPC-TM-650 2.5.5.5 and design Dk from 8 to 40 GHz by the differential phase length method; thermal coefficient of Dk from -55 to 125 C; insulation resistance above 2000 Gohm; Td 425 C (TGA); CTE from 0 to 140 C (ASTM E831); peel strength after solder float with 1 oz EDC; electrical strength in V/mil converted; moisture absorption 0.07 % for 1.27 mm (0.050 in) and 0.18 % for 3.18 mm (0.125 in) samples; specific gravity 2.07. Resistivity values in M-ohm cm and M-ohm are converted. Flexural strength 15.91 kpsi and flexural modulus 1.76 Mpsi (MD/CMD) as printed; the strength is stored in MPa. Handling: TMM panels, particularly 0.050 in and thinner, crack easily; do not tap the edges on a table to align stacks, tilt the stack on its edges, support thin material with cardboard or airboard, hold the panel with both hands in the middle of the long edge and never by the corners or with one hand, and keep nothing stacked on top of the panels. A separate quick reference processing guide for TMM laminates exists.",
       "thermal_conductivity_w_mk": 0.7,
       "specific_heat_j_gk": 0.83,
       "volume_resistivity_ohm_cm": 600000000000000.0,
       "surface_resistivity_ohm": 1000000000000000.0,
       "flexural_strength_mpa": {
         "value": 109.7
-      }
+      },
+      "sources": [
+        {
+          "pdf": "tmm-handling-guidance-for-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     },
     {
       "id": "rogers/tmm6",
@@ -3007,14 +3188,20 @@
           "label": "18\" x 24\""
         }
       ],
-      "notes": "TMM thermoset microwave material. Dk process value at 10 GHz by IPC-TM-650 2.5.5.5 and design Dk from 8 to 40 GHz by the differential phase length method; thermal coefficient of Dk from -55 to 125 C; insulation resistance above 2000 Gohm; Td 425 C (TGA); CTE from 0 to 140 C (ASTM E831); peel strength after solder float with 1 oz EDC; electrical strength in V/mil converted; moisture absorption 0.06 % for 1.27 mm (0.050 in) and 0.2 % for 3.18 mm (0.125 in) samples; specific gravity 2.37. Resistivity values in M-ohm cm and M-ohm are converted. Flexural strength 15.02 kpsi and flexural modulus 1.75 Mpsi (MD/CMD) as printed; the strength is stored in MPa.",
+      "notes": "TMM thermoset microwave material. Dk process value at 10 GHz by IPC-TM-650 2.5.5.5 and design Dk from 8 to 40 GHz by the differential phase length method; thermal coefficient of Dk from -55 to 125 C; insulation resistance above 2000 Gohm; Td 425 C (TGA); CTE from 0 to 140 C (ASTM E831); peel strength after solder float with 1 oz EDC; electrical strength in V/mil converted; moisture absorption 0.06 % for 1.27 mm (0.050 in) and 0.2 % for 3.18 mm (0.125 in) samples; specific gravity 2.37. Resistivity values in M-ohm cm and M-ohm are converted. Flexural strength 15.02 kpsi and flexural modulus 1.75 Mpsi (MD/CMD) as printed; the strength is stored in MPa. Handling: TMM panels, particularly 0.050 in and thinner, crack easily; do not tap the edges on a table to align stacks, tilt the stack on its edges, support thin material with cardboard or airboard, hold the panel with both hands in the middle of the long edge and never by the corners or with one hand, and keep nothing stacked on top of the panels. A separate quick reference processing guide for TMM laminates exists.",
       "thermal_conductivity_w_mk": 0.72,
       "specific_heat_j_gk": 0.78,
       "volume_resistivity_ohm_cm": 100000000000000.0,
       "surface_resistivity_ohm": 1000000000000000.0,
       "flexural_strength_mpa": {
         "value": 103.6
-      }
+      },
+      "sources": [
+        {
+          "pdf": "tmm-handling-guidance-for-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     },
     {
       "id": "rogers/tmm10",
@@ -3083,14 +3270,20 @@
           "label": "18\" x 24\""
         }
       ],
-      "notes": "TMM thermoset microwave material. Dk process value at 10 GHz by IPC-TM-650 2.5.5.5 and design Dk from 8 to 40 GHz by the differential phase length method; thermal coefficient of Dk from -55 to 125 C; insulation resistance above 2000 Gohm; Td 425 C (TGA); CTE from 0 to 140 C (ASTM E831); peel strength after solder float with 1 oz EDC; electrical strength in V/mil converted; moisture absorption 0.09 % for 1.27 mm (0.050 in) and 0.2 % for 3.18 mm (0.125 in) samples; specific gravity 2.77. Resistivity values in M-ohm cm and M-ohm are converted. Flexural strength 13.62 kpsi and flexural modulus 1.79 Mpsi (MD/CMD) as printed; the strength is stored in MPa.",
+      "notes": "TMM thermoset microwave material. Dk process value at 10 GHz by IPC-TM-650 2.5.5.5 and design Dk from 8 to 40 GHz by the differential phase length method; thermal coefficient of Dk from -55 to 125 C; insulation resistance above 2000 Gohm; Td 425 C (TGA); CTE from 0 to 140 C (ASTM E831); peel strength after solder float with 1 oz EDC; electrical strength in V/mil converted; moisture absorption 0.09 % for 1.27 mm (0.050 in) and 0.2 % for 3.18 mm (0.125 in) samples; specific gravity 2.77. Resistivity values in M-ohm cm and M-ohm are converted. Flexural strength 13.62 kpsi and flexural modulus 1.79 Mpsi (MD/CMD) as printed; the strength is stored in MPa. Handling: TMM panels, particularly 0.050 in and thinner, crack easily; do not tap the edges on a table to align stacks, tilt the stack on its edges, support thin material with cardboard or airboard, hold the panel with both hands in the middle of the long edge and never by the corners or with one hand, and keep nothing stacked on top of the panels. A separate quick reference processing guide for TMM laminates exists.",
       "thermal_conductivity_w_mk": 0.76,
       "specific_heat_j_gk": 0.74,
       "volume_resistivity_ohm_cm": 200000000000000.0,
       "surface_resistivity_ohm": 40000000000000.0,
       "flexural_strength_mpa": {
         "value": 93.9
-      }
+      },
+      "sources": [
+        {
+          "pdf": "tmm-handling-guidance-for-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     },
     {
       "id": "rogers/tmm10i",
@@ -3159,11 +3352,17 @@
           "label": "18\" x 24\""
         }
       ],
-      "notes": "TMM thermoset microwave material. Dk process value at 10 GHz by IPC-TM-650 2.5.5.5 and design Dk from 8 to 40 GHz by the differential phase length method; thermal coefficient of Dk from -55 to 125 C; insulation resistance above 2000 Gohm; Td 425 C (TGA); CTE from 0 to 140 C (ASTM E831); peel strength after solder float with 1 oz EDC; electrical strength in V/mil converted; moisture absorption 0.16 % for 1.27 mm (0.050 in) and 0.13 % for 3.18 mm (0.125 in) samples; specific gravity 2.77. Resistivity values in M-ohm cm and M-ohm are converted. The thermal coefficient of Dk, flexural modulus and specific heat carry an asterisk on the sheet.",
+      "notes": "TMM thermoset microwave material. Dk process value at 10 GHz by IPC-TM-650 2.5.5.5 and design Dk from 8 to 40 GHz by the differential phase length method; thermal coefficient of Dk from -55 to 125 C; insulation resistance above 2000 Gohm; Td 425 C (TGA); CTE from 0 to 140 C (ASTM E831); peel strength after solder float with 1 oz EDC; electrical strength in V/mil converted; moisture absorption 0.16 % for 1.27 mm (0.050 in) and 0.13 % for 3.18 mm (0.125 in) samples; specific gravity 2.77. Resistivity values in M-ohm cm and M-ohm are converted. The thermal coefficient of Dk, flexural modulus and specific heat carry an asterisk on the sheet. Handling: TMM panels, particularly 0.050 in and thinner, crack easily; do not tap the edges on a table to align stacks, tilt the stack on its edges, support thin material with cardboard or airboard, hold the panel with both hands in the middle of the long edge and never by the corners or with one hand, and keep nothing stacked on top of the panels. A separate quick reference processing guide for TMM laminates exists.",
       "thermal_conductivity_w_mk": 0.76,
       "specific_heat_j_gk": 0.72,
       "volume_resistivity_ohm_cm": 200000000000000.0,
-      "surface_resistivity_ohm": 40000000000000.0
+      "surface_resistivity_ohm": 40000000000000.0,
+      "sources": [
+        {
+          "pdf": "tmm-handling-guidance-for-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     },
     {
       "id": "rogers/tmm13i",
@@ -3232,7 +3431,13 @@
           "label": "18\" x 24\""
         }
       ],
-      "notes": "TMM thermoset microwave material. Dk process value at 10 GHz by IPC-TM-650 2.5.5.5 and design Dk from 8 to 40 GHz by the differential phase length method; thermal coefficient of Dk from -55 to 125 C; insulation resistance above 2000 Gohm; Td 425 C (TGA); CTE from 0 to 140 C (ASTM E831); peel strength after solder float with 1 oz EDC; electrical strength in V/mil converted; moisture absorption 0.16 % for 1.27 mm (0.050 in) and 0.13 % for 3.18 mm (0.125 in) samples; specific gravity 3.0. Resistivity values in M-ohm cm and M-ohm are converted."
+      "notes": "TMM thermoset microwave material. Dk process value at 10 GHz by IPC-TM-650 2.5.5.5 and design Dk from 8 to 40 GHz by the differential phase length method; thermal coefficient of Dk from -55 to 125 C; insulation resistance above 2000 Gohm; Td 425 C (TGA); CTE from 0 to 140 C (ASTM E831); peel strength after solder float with 1 oz EDC; electrical strength in V/mil converted; moisture absorption 0.16 % for 1.27 mm (0.050 in) and 0.13 % for 3.18 mm (0.125 in) samples; specific gravity 3.0. Resistivity values in M-ohm cm and M-ohm are converted. Handling: TMM panels, particularly 0.050 in and thinner, crack easily; do not tap the edges on a table to align stacks, tilt the stack on its edges, support thin material with cardboard or airboard, hold the panel with both hands in the middle of the long edge and never by the corners or with one hand, and keep nothing stacked on top of the panels. A separate quick reference processing guide for TMM laminates exists.",
+      "sources": [
+        {
+          "pdf": "tmm-handling-guidance-for-laminates.pdf",
+          "pages": "1"
+        }
+      ]
     }
   ]
 }
