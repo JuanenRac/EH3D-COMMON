@@ -36,6 +36,18 @@
       "volume_resistivity_ohm_cm": 1.5e+16,
       "surface_resistivity_ohm": 1000000000000000.0,
       "density_g_cm3": 2.23,
+      "processing": {
+        "drilling": {
+          "retract_notes": "Recommended chip load 0.001-0.003 in per revolution (0.025-0.075 mm) and surface speed 150-300 SFM (45-90 m/min) vary with the tool diameter, with slower infeed and speed for finer drills; retract rate 300-500 IPM (7.6-12.7 m/min) for multilayer boards and 700-1000 IPM (17.8-25.4 m/min) for double-sided constructions; new carbide drills, standard or undercut; judge tool life from cross-sectioned holes (start from the twelve inch rule, 12 in of substrate per tool)."
+        },
+        "bake_note": "Inner layers are baked at 110-125 C for at least 30 min before multilayer bonding to drive off volatile substances."
+      },
+      "sources": [
+        {
+          "pdf": "fabrication-guidelines-isoclad-laminates.pdf",
+          "pages": "1-8"
+        }
+      ],
       "water_absorption_pct": 0.04,
       "cte_x_ppm": 46,
       "cte_y_ppm": 47,
@@ -77,6 +89,18 @@
       "volume_resistivity_ohm_cm": 350000000000000.0,
       "surface_resistivity_ohm": 100000000000000.0,
       "density_g_cm3": 2.27,
+      "processing": {
+        "drilling": {
+          "retract_notes": "Recommended chip load 0.001-0.003 in per revolution (0.025-0.075 mm) and surface speed 150-300 SFM (45-90 m/min) vary with the tool diameter, with slower infeed and speed for finer drills; retract rate 300-500 IPM (7.6-12.7 m/min) for multilayer boards and 700-1000 IPM (17.8-25.4 m/min) for double-sided constructions; new carbide drills, standard or undercut; judge tool life from cross-sectioned holes (start from the twelve inch rule, 12 in of substrate per tool)."
+        },
+        "bake_note": "Inner layers are baked at 110-125 C for at least 30 min before multilayer bonding to drive off volatile substances."
+      },
+      "sources": [
+        {
+          "pdf": "fabrication-guidelines-isoclad-laminates.pdf",
+          "pages": "1-8"
+        }
+      ],
       "water_absorption_pct": 0.05,
       "cte_x_ppm": 31,
       "cte_y_ppm": 35,
@@ -95,6 +119,18 @@
         "revision": "PUB 92-183"
       },
       "family": "Kappa",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Surface speed 300-500 SFM (90-150 m/min), avoiding more than 500 SFM; chip load 0.002-0.004 in per revolution (0.05-0.10 mm), lower (below 0.002 in) for tools smaller than 0.0135 in; retract 500 IPM (12.7 m/min) for tools smaller than 0.0135 in (0.343 mm) and 1000 IPM for larger ones; tool life 2000-3000 hits, judged from the plated holes; standard geometry drills are preferred to undercut ones; standard entry (aluminium or thin pressed phenolic) and exit (pressed phenolic or fibre board) materials, one-up or multi-up stacks; the filler wears the drills faster."
+        },
+        "desmear_note": "Desmear is usually not needed on double-sided boards because the resin Tg is above 280 C; multilayers may need it depending on the bondply or prepreg, then one or two passes of alkaline permanganate or a CF4/O2 plasma can be used."
+      },
+      "sources": [
+        {
+          "pdf": "fabrication-guidelines-kappa-438-laminates.pdf",
+          "pages": "1-4"
+        }
+      ],
       "resin": "Hydrocarbon thermoset",
       "reinforcement": "Glass",
       "lead_free_compatible": true,

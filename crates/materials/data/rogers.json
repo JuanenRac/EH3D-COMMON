@@ -290,6 +290,18 @@
    "manufacturer": "Rogers",
    "name": "RO4003C",
    "kind": "ceramic_filled",
+   "processing": {
+    "drilling": {
+     "retract_notes": "Surface speed 300-500 SFM (90-150 m/min), avoiding more than 500 SFM; chip load 0.002-0.004 in per revolution (0.05-0.10 mm), lower (below 0.002 in) for tools smaller than 0.0135 in; retract 500 IPM (12.7 m/min) for tools smaller than 0.0135 in (0.343 mm) and 1000 IPM for larger ones; tool life 2000-3000 hits, judged from the plated holes; standard geometry drills are preferred to undercut ones; standard entry (aluminium or thin pressed phenolic) and exit (pressed phenolic or fibre board) materials, one-up or multi-up stacks; the filler wears the drills faster but the hole wall roughness (8 to 25 um) is set by the filler particle size and stays constant over thousands of hits."
+    },
+    "desmear_note": "Desmear is usually not needed on double-sided boards because the resin Tg is above 280 C; multilayers may need it depending on the bondply or prepreg, then one or two passes of alkaline permanganate or a CF4/O2 plasma can be used."
+   },
+   "sources": [
+    {
+     "pdf": "fabrication-guidelines-ro4000-series-ro4003cro4350bro4835-laminates.pdf",
+     "pages": "1-4"
+    }
+   ],
    "family": "RO4000",
    "resin": "Hydrocarbon",
    "filler": "Ceramic",
@@ -415,6 +427,18 @@
    "manufacturer": "Rogers",
    "name": "RO4350B",
    "kind": "ceramic_filled",
+   "processing": {
+    "drilling": {
+     "retract_notes": "Surface speed 300-500 SFM (90-150 m/min), avoiding more than 500 SFM; chip load 0.002-0.004 in per revolution (0.05-0.10 mm), lower (below 0.002 in) for tools smaller than 0.0135 in; retract 500 IPM (12.7 m/min) for tools smaller than 0.0135 in (0.343 mm) and 1000 IPM for larger ones; tool life 2000-3000 hits, judged from the plated holes; standard geometry drills are preferred to undercut ones; standard entry (aluminium or thin pressed phenolic) and exit (pressed phenolic or fibre board) materials, one-up or multi-up stacks; the filler wears the drills faster but the hole wall roughness (8 to 25 um) is set by the filler particle size and stays constant over thousands of hits."
+    },
+    "desmear_note": "Desmear is usually not needed on double-sided boards because the resin Tg is above 280 C; multilayers may need it depending on the bondply or prepreg, then one or two passes of alkaline permanganate or a CF4/O2 plasma can be used."
+   },
+   "sources": [
+    {
+     "pdf": "fabrication-guidelines-ro4000-series-ro4003cro4350bro4835-laminates.pdf",
+     "pages": "1-4"
+    }
+   ],
    "family": "RO4000",
    "resin": "Hydrocarbon",
    "filler": "Ceramic",

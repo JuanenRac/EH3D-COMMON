@@ -7,6 +7,18 @@
       "manufacturer": "Rogers",
       "name": "AD250C",
       "kind": "ptfe",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Recommended chip load 0.00075-0.003 in per revolution (0.019-0.076 mm) and surface speed 75-300 SFM (23-90 m/min) vary with the tool diameter, with slower infeed and speed for finer drills; retract rate 300-500 IPM (7.6-12.7 m/min); new carbide drills, standard or undercut; double-sided boards in one-up or stacked, multilayers in stacks of one; entry of phenolic composite (0.010-0.030 in) or aluminium and exit phenolic board; judge tool life from cross-sectioned holes (start from the twelve inch rule, 12 in of substrate per tool; 500-600 hits are possible for tools below 0.025 in diameter) and peck drill multilayers thicker than 0.030 in."
+        },
+        "bake_note": "Inner layers are baked at 110-125 C for at least 30 min before multilayer bonding to drive off volatile substances."
+      },
+      "sources": [
+        {
+          "pdf": "fabrication-guidelines-ad-series-laminates.pdf",
+          "pages": "1-8"
+        }
+      ],
       "family": "AD Series",
       "resin": "PTFE",
       "reinforcement": "Woven glass",
@@ -117,6 +129,18 @@
       "manufacturer": "Rogers",
       "name": "AD255C",
       "kind": "ptfe",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Recommended chip load 0.00075-0.003 in per revolution (0.019-0.076 mm) and surface speed 75-300 SFM (23-90 m/min) vary with the tool diameter, with slower infeed and speed for finer drills; retract rate 300-500 IPM (7.6-12.7 m/min); new carbide drills, standard or undercut; double-sided boards in one-up or stacked, multilayers in stacks of one; entry of phenolic composite (0.010-0.030 in) or aluminium and exit phenolic board; judge tool life from cross-sectioned holes (start from the twelve inch rule, 12 in of substrate per tool; 500-600 hits are possible for tools below 0.025 in diameter) and peck drill multilayers thicker than 0.030 in."
+        },
+        "bake_note": "Inner layers are baked at 110-125 C for at least 30 min before multilayer bonding to drive off volatile substances."
+      },
+      "sources": [
+        {
+          "pdf": "fabrication-guidelines-ad-series-laminates.pdf",
+          "pages": "1-8"
+        }
+      ],
       "family": "AD Series",
       "resin": "PTFE",
       "reinforcement": "Woven glass",
@@ -224,6 +248,18 @@
       "manufacturer": "Rogers",
       "name": "AD300D",
       "kind": "ptfe",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Recommended chip load 0.00075-0.003 in per revolution (0.019-0.076 mm) and surface speed 75-300 SFM (23-90 m/min) vary with the tool diameter, with slower infeed and speed for finer drills; retract rate 300-500 IPM (7.6-12.7 m/min); new carbide drills, standard or undercut; double-sided boards in one-up or stacked, multilayers in stacks of one; entry of phenolic composite (0.010-0.030 in) or aluminium and exit phenolic board; judge tool life from cross-sectioned holes (start from the twelve inch rule, 12 in of substrate per tool; 500-600 hits are possible for tools below 0.025 in diameter) and peck drill multilayers thicker than 0.030 in."
+        },
+        "bake_note": "Inner layers are baked at 110-125 C for at least 30 min before multilayer bonding to drive off volatile substances."
+      },
+      "sources": [
+        {
+          "pdf": "fabrication-guidelines-ad-series-laminates.pdf",
+          "pages": "1-8"
+        }
+      ],
       "family": "AD Series",
       "resin": "PTFE",
       "reinforcement": "Woven glass",
@@ -330,6 +366,18 @@
       "manufacturer": "Rogers",
       "name": "AD350A",
       "kind": "ptfe",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Recommended chip load 0.00075-0.003 in per revolution (0.019-0.076 mm) and surface speed 75-300 SFM (23-90 m/min) vary with the tool diameter, with slower infeed and speed for finer drills; retract rate 300-500 IPM (7.6-12.7 m/min); new carbide drills, standard or undercut; double-sided boards in one-up or stacked, multilayers in stacks of one; entry of phenolic composite (0.010-0.030 in) or aluminium and exit phenolic board; judge tool life from cross-sectioned holes (start from the twelve inch rule, 12 in of substrate per tool; 500-600 hits are possible for tools below 0.025 in diameter) and peck drill multilayers thicker than 0.030 in."
+        },
+        "bake_note": "Inner layers are baked at 110-125 C for at least 30 min before multilayer bonding to drive off volatile substances."
+      },
+      "sources": [
+        {
+          "pdf": "fabrication-guidelines-ad-series-laminates.pdf",
+          "pages": "1-8"
+        }
+      ],
       "family": "AD Series",
       "resin": "PTFE",
       "reinforcement": "Woven glass",
@@ -435,6 +483,18 @@
       "manufacturer": "Rogers",
       "name": "CLTE",
       "kind": "ptfe",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Recommended chip load 0.00075-0.003 in per revolution (0.019-0.076 mm) and surface speed 75-300 SFM (23-90 m/min) vary with the tool diameter, with slower infeed and speed for finer drills; retract rate 300-500 IPM (7.6-12.7 m/min); new carbide drills, standard or undercut; double-sided boards in one-up or stacked, multilayers in stacks of one; entry of phenolic composite (0.010-0.030 in) or aluminium and exit phenolic board; judge tool life from cross-sectioned holes (start from the twelve inch rule, 12 in of substrate per tool; 500-600 hits are possible for tools below 0.025 in diameter) and peck drill multilayers thicker than 0.030 in."
+        },
+        "bake_note": "Inner layers are baked at 110-125 C for at least 30 min before multilayer bonding to drive off volatile substances."
+      },
+      "sources": [
+        {
+          "pdf": "fabrication-guidelines-clte-series-laminates.pdf",
+          "pages": "1-8"
+        }
+      ],
       "family": "CLTE",
       "resin": "PTFE",
       "reinforcement": "Woven glass",
@@ -542,6 +602,18 @@
       "manufacturer": "Rogers",
       "name": "CLTE-XT",
       "kind": "ptfe",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Recommended chip load 0.00075-0.003 in per revolution (0.019-0.076 mm) and surface speed 75-300 SFM (23-90 m/min) vary with the tool diameter, with slower infeed and speed for finer drills; retract rate 300-500 IPM (7.6-12.7 m/min); new carbide drills, standard or undercut; double-sided boards in one-up or stacked, multilayers in stacks of one; entry of phenolic composite (0.010-0.030 in) or aluminium and exit phenolic board; judge tool life from cross-sectioned holes (start from the twelve inch rule, 12 in of substrate per tool; 500-600 hits are possible for tools below 0.025 in diameter) and peck drill multilayers thicker than 0.030 in."
+        },
+        "bake_note": "Inner layers are baked at 110-125 C for at least 30 min before multilayer bonding to drive off volatile substances."
+      },
+      "sources": [
+        {
+          "pdf": "fabrication-guidelines-clte-series-laminates.pdf",
+          "pages": "1-8"
+        }
+      ],
       "family": "CLTE",
       "resin": "PTFE",
       "reinforcement": "Woven glass",
@@ -642,6 +714,18 @@
       "manufacturer": "Rogers",
       "name": "CLTE-AT",
       "kind": "ptfe",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Recommended chip load 0.00075-0.003 in per revolution (0.019-0.076 mm) and surface speed 75-300 SFM (23-90 m/min) vary with the tool diameter, with slower infeed and speed for finer drills; retract rate 300-500 IPM (7.6-12.7 m/min); new carbide drills, standard or undercut; double-sided boards in one-up or stacked, multilayers in stacks of one; entry of phenolic composite (0.010-0.030 in) or aluminium and exit phenolic board; judge tool life from cross-sectioned holes (start from the twelve inch rule, 12 in of substrate per tool; 500-600 hits are possible for tools below 0.025 in diameter) and peck drill multilayers thicker than 0.030 in."
+        },
+        "bake_note": "Inner layers are baked at 110-125 C for at least 30 min before multilayer bonding to drive off volatile substances."
+      },
+      "sources": [
+        {
+          "pdf": "fabrication-guidelines-clte-series-laminates.pdf",
+          "pages": "1-8"
+        }
+      ],
       "family": "CLTE",
       "resin": "PTFE",
       "reinforcement": "Woven glass",
@@ -747,6 +831,18 @@
       "manufacturer": "Rogers",
       "name": "CLTE-MW",
       "kind": "ptfe",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Recommended chip load 0.00075-0.003 in per revolution (0.019-0.076 mm) and surface speed 75-300 SFM (23-90 m/min) vary with the tool diameter, with slower infeed and speed for finer drills; retract rate 300-500 IPM (7.6-12.7 m/min); new carbide drills, standard or undercut; double-sided boards in one-up or stacked, multilayers in stacks of one; entry of phenolic composite (0.010-0.030 in) or aluminium and exit phenolic board; judge tool life from cross-sectioned holes (start from the twelve inch rule, 12 in of substrate per tool; 500-600 hits are possible for tools below 0.025 in diameter) and peck drill multilayers thicker than 0.030 in."
+        },
+        "bake_note": "Inner layers are baked at 110-125 C for at least 30 min before multilayer bonding to drive off volatile substances."
+      },
+      "sources": [
+        {
+          "pdf": "fabrication-guidelines-clte-series-laminates.pdf",
+          "pages": "1-8"
+        }
+      ],
       "family": "CLTE",
       "resin": "PTFE",
       "reinforcement": "Spread woven glass",
