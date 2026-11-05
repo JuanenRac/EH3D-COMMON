@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "manufacturer": "TUC",
+  "materials": [
+    {
+      "id": "tuc/pegaclad-1",
+      "manufacturer": "TUC",
+      "name": "PegaClad 1",
+      "kind": "laminate",
+      "source": {
+        "pdf": "pegaclad 1_datasheet.pdf",
+        "pages": "1-2",
+        "revision": "DS2407021A"
+      },
+      "ipc_slash_sheet": "IPC-4103/17",
+      "resin": "Hydrocarbon-based low loss resin",
+      "tg_dma_c": 220,
+      "tg_tma_c": 180,
+      "td_c": 390,
+      "thermal_conductivity_w_mk": 0.48,
+      "cte_z_below_tg_ppm": 35,
+      "cte_z_above_tg_ppm": 250,
+      "cte_z_50_260_pct": 2.5,
+      "tcdk_ppm_per_c": 30,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.44,
+          "method": "IPC-TM-650 2.5.5.13 SCR, 4 mil core"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0034,
+          "method": "IPC-TM-650 2.5.5.13 SCR, 4 mil core"
+        }
+      ],
+      "volume_resistivity_ohm_cm": 1.3e+17,
+      "surface_resistivity_ohm": 4300000000000000.0,
+      "youngs_modulus_gpa": {
+        "lengthwise": 23,
+        "crosswise": 21
+      },
+      "density_g_cm3": 1.4,
+      "thickness_range": {
+        "min_mm": 0.1,
+        "max_mm": 0.762,
+        "steps_note": "0.004 to 0.030 in, in sheet or panel form"
+      },
+      "copper": [
+        {
+          "weight_oz": 0.5
+        },
+        {
+          "weight_oz": 2
+        }
+      ],
+      "notes": "Very low loss, high thermal reliability laminate and prepreg (core TU-1300E, prepreg TU-1300P E) for RF, mmWave, automotive radar and base station antennas, compatible with modified FR-4 processes. IPC-4103/17 validation (QPL); UL file E189572; maximum operating temperature 140 C. The thermal coefficient of Dk is +30 ppm/C (-40 to 140 C); electric strength above 40 kV/mm; X/Y CTE 15-17 ppm/C below Tg; z-axis CTE 35 ppm/C below Tg, 250 above and 2.5 % (-50 to 260 C); dimensional stability below 0.3 mm/m; T260, T288 and T300 above 60 min, solder float 288 C above 120 s; flexural strength above 60000 psi lengthwise and 50000 psi crosswise; peel strength 4-7 lb/in (1 oz foil); water absorption below 0.06 %; frequency drift below 40 MHz at 28 GHz (-40 to 140 C). Resistivity 1.3e11 M-ohm cm and 4.3e9 M-ohm converted. Copper cladding 1/2 to 2 oz.",
+      "family": "PegaClad",
+      "reinforcement": "Glass",
+      "ul94": "V-0"
+    },
+    {
+      "id": "tuc/pegaclad-2",
+      "manufacturer": "TUC",
+      "name": "PegaClad 2",
+      "kind": "laminate",
+      "source": {
+        "pdf": "pegaclad 2_datasheet.pdf",
+        "pages": "1-2"
+      },
+      "ipc_slash_sheet": "IPC-4103/17",
+      "resin": "Hydrocarbon-based super low loss resin",
+      "tg_dma_c": 220,
+      "tg_tma_c": 180,
+      "td_c": 390,
+      "thermal_conductivity_w_mk": 0.48,
+      "cte_z_below_tg_ppm": 35,
+      "cte_z_above_tg_ppm": 250,
+      "cte_z_50_260_pct": 2.5,
+      "tcdk_ppm_per_c": 30,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.29,
+          "method": "IPC-TM-650 2.5.5.13 SCR, 4 mil core"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0018,
+          "method": "IPC-TM-650 2.5.5.13 SCR, 4 mil core"
+        }
+      ],
+      "volume_resistivity_ohm_cm": 1.3e+17,
+      "surface_resistivity_ohm": 4300000000000000.0,
+      "youngs_modulus_gpa": {
+        "lengthwise": 21,
+        "crosswise": 20
+      },
+      "density_g_cm3": 1.4,
+      "thickness_range": {
+        "min_mm": 0.102,
+        "max_mm": 0.89,
+        "steps_note": "0.004 to 0.035 in, in sheet or panel form"
+      },
+      "copper": [
+        {
+          "weight_oz": 0.5
+        },
+        {
+          "weight_oz": 2
+        }
+      ],
+      "notes": "Super low loss, high thermal reliability laminate and prepreg (core TU-1300N, prepreg TU-1300P N) whose electrical performance is competitive with PTFE laminates, for RF, mmWave, automotive radar and base station antennas. IPC-4103/17 validation (QPL); UL file E189572; maximum operating temperature 140 C. The thermal coefficient of Dk is +30 ppm/C (-40 to 140 C); electric strength above 40 kV/mm; X/Y CTE 15-17 ppm/C below Tg; z-axis CTE 35 ppm/C below Tg, 250 above and 2.5 % (-50 to 260 C); T260, T288 and T300 above 60 min, solder float 288 C above 120 s; flexural strength above 60000 psi lengthwise and 50000 psi crosswise; peel strength 4-7 lb/in (1 oz foil); water absorption below 0.06 %; frequency drift below 40 MHz at 38 GHz. Resistivity converted from M-ohm cm and M-ohm. Copper cladding 1/2 to 2 oz.",
+      "family": "PegaClad",
+      "reinforcement": "Glass",
+      "ul94": "V-0"
+    },
+    {
+      "id": "tuc/pegaclad-2a",
+      "manufacturer": "TUC",
+      "name": "PegaClad 2A",
+      "kind": "laminate",
+      "source": {
+        "pdf": "pegaclad 2a_datasheet.pdf",
+        "pages": "1-2"
+      },
+      "resin": "Brominated hydrocarbon resin",
+      "tg_dma_c": 210,
+      "tg_tma_c": 170,
+      "td_c": 400,
+      "thermal_conductivity_w_mk": 0.4,
+      "cte_x_ppm": 13,
+      "cte_z_below_tg_ppm": 40,
+      "cte_z_above_tg_ppm": 220,
+      "cte_z_50_260_pct": 2.7,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.04,
+          "method": "IPC-TM-650 2.5.5.13 SCR",
+          "resin_content_pct": 77
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0016,
+          "method": "IPC-TM-650 2.5.5.13 SCR",
+          "resin_content_pct": 77
+        }
+      ],
+      "thicknesses_mm": [
+        0.125,
+        0.19,
+        0.25
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5
+        },
+        {
+          "weight_oz": 1
+        }
+      ],
+      "notes": "Super low loss laminate and prepreg (core TU-1400, prepreg TU-1400P), Dk 3.0, for mmWave and automotive radar and Wi-Fi antennas; compatible with hybrid multilayers with FR-4 and low loss prepregs. UL file E189572 (under registration on the sheet); maximum operating temperature 140 C. The expansion values (X/Y 13 ppm/C, z 40 and 220 ppm/C, 2.7 %) are for resin content 50 %; dimensional stability below 0.3 mils/inch; T288 and T300 above 60 min, solder float 288 C above 120 s; flexural strength above 51000 psi lengthwise and 46000 psi crosswise; peel strength above 4 lb/in (1 oz HVLP foil); water absorption below 0.1 %; electric strength above 40 kV/mm; volume resistivity above 1e10 M-ohm cm and surface resistivity above 1e8 M-ohm. Thicknesses 0.005, 0.0075 and 0.010 in.",
+      "family": "PegaClad",
+      "reinforcement": "Glass",
+      "ul94": "V-0"
+    },
+    {
+      "id": "tuc/pegaclad-300",
+      "manufacturer": "TUC",
+      "name": "PegaClad 300",
+      "kind": "laminate",
+      "source": {
+        "pdf": "pegaclad 300_datasheet.pdf",
+        "pages": "1-2"
+      },
+      "resin": "Hydrocarbon-based very low loss resin",
+      "reinforcement": "E-glass",
+      "family": "PegaClad",
+      "ul94": "V-0",
+      "tg_dma_c": 210,
+      "tg_tma_c": 170,
+      "td_c": 400,
+      "thermal_conductivity_w_mk": 0.4,
+      "cte_x_ppm": 13,
+      "cte_z_below_tg_ppm": 40,
+      "cte_z_above_tg_ppm": 220,
+      "cte_z_50_260_pct": 2.7,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.05,
+          "method": "IPC-TM-650 2.5.5.5C, E-2/105"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0018,
+          "method": "IPC-TM-650 2.5.5.5C, E-2/105"
+        }
+      ],
+      "thicknesses_mm": [
+        0.508,
+        0.762,
+        1.524
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5
+        },
+        {
+          "weight_oz": 1
+        }
+      ],
+      "notes": "Very low loss laminate and prepreg (core TU-1400, prepreg TU-1400P, E-glass), Dk 3.0, for antennas and low-orbit satellites. Prepreg glass styles 1027, 1037, 1067 and 1078. UL file E189572; maximum operating temperature 140 C. The expansion values (X/Y 13 ppm/C, z 40 and 220 ppm/C, 2.7 %) are for resin content 50 %; T260, T288 and T300 above 60 min, solder float 288 C above 120 s; flexural strength above 50000 psi lengthwise and 45000 psi crosswise; peel strength above 4 lb/in (1 oz VLP foil); water absorption below 0.1 %; electric strength above 40 kV/mm; resistivity above 1e10 M-ohm cm and 1e8 M-ohm. Thicknesses 0.020, 0.030 and 0.060 in."
+    },
+    {
+      "id": "tuc/pegaclad-338-345-365",
+      "manufacturer": "TUC",
+      "name": "PegaClad 338-345-365",
+      "kind": "laminate",
+      "source": {
+        "pdf": "pegaclad 338_ 345_ 365_datasheet.pdf",
+        "pages": "1-2"
+      },
+      "family": "PegaClad",
+      "ipc_slash_sheet": "IPC-4103/17",
+      "resin": "Hydrocarbon-based very low loss resin",
+      "reinforcement": "Glass",
+      "ul94": "V-0",
+      "tg_dma_c": 220,
+      "tg_tma_c": 180,
+      "td_c": 390,
+      "thermal_conductivity_w_mk": 0.48,
+      "tcdk_ppm_per_c": 30,
+      "cte_z_below_tg_ppm": 35,
+      "cte_z_above_tg_ppm": 200,
+      "cte_z_50_260_pct": 1.7,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.38,
+          "method": "IPC-TM-650 2.5.5.5C, Dk 3.38 grade"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.45,
+          "method": "IPC-TM-650 2.5.5.5C, Dk 3.45 grade"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.65,
+          "method": "IPC-TM-650 2.5.5.5C, Dk 3.65 grade"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0032,
+          "method": "IPC-TM-650 2.5.5.5C, Dk 3.38 grade"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0034,
+          "method": "IPC-TM-650 2.5.5.5C, Dk 3.45 grade"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0036,
+          "method": "IPC-TM-650 2.5.5.5C, Dk 3.65 grade"
+        }
+      ],
+      "volume_resistivity_ohm_cm": 1.3e+17,
+      "surface_resistivity_ohm": 4300000000000000.0,
+      "thicknesses_mm": [
+        0.508,
+        0.762,
+        1.524
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5
+        },
+        {
+          "weight_oz": 1
+        }
+      ],
+      "notes": "Series of three Dk grades (3.38, 3.45 and 3.65, tolerance +/- 0.05 at 10 GHz) of a hydrocarbon-based very low loss laminate and prepreg (core TU-1300, prepreg TU-1300P) for sub-6 GHz antennas with low PIM requirements; prepreg 1078, 1086 and 3313 in panel form. The Dk and Df points are the three grades, in the order 3.38, 3.45 and 3.65. IPC-4103/17; UL file E189572; maximum operating temperature 140 C. The thermal coefficient of Dk is 30 ppm/C; X/Y CTE 13-16 ppm/C below Tg; z-axis CTE 35 ppm/C below Tg, 200 above and 1.7 %; T260, T288 and T300 above 60 min, solder float 288 C above 120 s; flexural strength above 50000 psi lengthwise and 40000 psi crosswise; peel strength 4-5 lb/in (1 oz HVLP foil); water absorption 0.06 % (Dk 3.65, 60 mil); electric strength above 40 kV/mm. Resistivity (about 1.3e11 M-ohm cm and 4.3e9 M-ohm) converted. Copper 1/2 and 1 oz, RTF, VLP or HVLP."
+    }
+  ]
+}

@@ -1,0 +1,4467 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Nouya",
+  "materials": [
+    {
+      "id": "nouya/ny1600",
+      "manufacturer": "Nouya",
+      "name": "NY1600",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY1600DatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_dsc_c": 135.0,
+      "td_c": 315.0,
+      "cte_x_ppm": 13.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 65.0,
+      "cte_z_above_tg_ppm": 310.0,
+      "cte_z_50_260_pct": 4.5,
+      "t288_min": 2.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.25,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.9,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 3.9,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0175,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0191,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0194,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0209,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 490000000000000.06,
+      "surface_resistivity_ohm": 58000000000000.0,
+      "water_absorption_pct": 0.4,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 600.0,
+        "crosswise": 500.0
+      },
+      "ipc_slash_sheet": "IPC-4101/21",
+      "notes": "Sheet class: Normal Tg & High CTI Material & Conventional. Companion prepreg NY1600P. T288 clad 2 min, etched 2 min. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny2140",
+      "manufacturer": "Nouya",
+      "name": "NY2140",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY2140DatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_dsc_c": 140.0,
+      "td_c": 350.0,
+      "cte_x_ppm": 13.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 50.0,
+      "cte_z_above_tg_ppm": 260.0,
+      "cte_z_50_260_pct": 3.5,
+      "t288_min": 15.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.2,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.15,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 3.8,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.7,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0155,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0166,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0166,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0178,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 550000000000000.0,
+      "surface_resistivity_ohm": 30000000000000.0,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 1.42,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 515.0,
+        "crosswise": 405.0
+      },
+      "ipc_slash_sheet": "IPC-4101/101",
+      "notes": "Sheet class: Low CTE& Normal Tg & Lead Free Compatible. Companion prepreg NY2140P. T288 clad 15 min, etched 30 min. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny2140l",
+      "manufacturer": "Nouya",
+      "name": "NY2140L",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY2140LDatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_dsc_c": 140.0,
+      "td_c": 360.0,
+      "cte_x_ppm": 15.0,
+      "cte_y_ppm": 17.0,
+      "cte_z_below_tg_ppm": 50.0,
+      "cte_z_above_tg_ppm": 260.0,
+      "cte_z_50_260_pct": 3.0,
+      "t288_min": 30.0,
+      "dk": [
+        {
+          "freq_ghz": 5.0,
+          "value": 5.15,
+          "method": "SPDR",
+          "resin_content_pct": 45.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 5.0,
+          "value": 0.015,
+          "method": "SPDR",
+          "resin_content_pct": 45.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 590000000000000.0,
+      "surface_resistivity_ohm": 35000000000000.0,
+      "water_absorption_pct": 0.15,
+      "peel_strength_n_mm": 1.2,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 515.0,
+        "crosswise": 405.0
+      },
+      "ipc_slash_sheet": "IPC-4101/101",
+      "notes": "Sheet class: Low CTE& Normal Tg & Lead Free Compatible. T288 clad 30 min, etched 40 min. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny2150",
+      "manufacturer": "Nouya",
+      "name": "NY2150",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY2150DatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202208V0"
+      },
+      "family": "NY series",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_dsc_c": 155.0,
+      "tg_tma_c": 145.0,
+      "td_c": 350.0,
+      "cte_x_ppm": 13.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 40.0,
+      "cte_z_above_tg_ppm": 245.0,
+      "cte_z_50_260_pct": 3.0,
+      "t288_min": 30.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.3,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.25,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 3.9,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.85,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0147,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0158,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0158,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.017,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 600000000000000.0,
+      "surface_resistivity_ohm": 33000000000000.0,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 1.39,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 515.0,
+        "crosswise": 405.0
+      },
+      "ipc_slash_sheet": "IPC-4101/98, /99, /101",
+      "notes": "Sheet class: Low CTE& Mid Tg & Lead Free Compatible. Companion prepreg NY2150P. T288 clad 30 min, etched 30 min. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny2150h",
+      "manufacturer": "Nouya",
+      "name": "NY2150H",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY2150HDatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_dsc_c": 175.0,
+      "tg_tma_c": 165.0,
+      "td_c": 350.0,
+      "cte_x_ppm": 13.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 30.0,
+      "cte_z_above_tg_ppm": 240.0,
+      "cte_z_50_260_pct": 2.8,
+      "t288_min": 30.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.3,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.25,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 3.9,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.85,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0147,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0158,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0158,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.017,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 650000000000000.0,
+      "surface_resistivity_ohm": 36000000000000.0,
+      "water_absorption_pct": 0.09,
+      "peel_strength_n_mm": 1.4,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 515.0,
+        "crosswise": 405.0
+      },
+      "ipc_slash_sheet": "IPC-4101/98, /99, /101",
+      "notes": "Sheet class: Low CTE& Mid Tg & Lead Free Compatible. Companion prepreg NY2150HP. T288 clad 30 min, etched 30 min. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny2170",
+      "manufacturer": "Nouya",
+      "name": "NY2170",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY2170DatasheetREV202506V0.pdf",
+        "pages": "1",
+        "revision": "202506V0"
+      },
+      "family": "NY series",
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_dsc_c": 180.0,
+      "tg_tma_c": 165.0,
+      "td_c": 350.0,
+      "cte_x_ppm": 13.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 235.0,
+      "cte_z_50_260_pct": 2.8,
+      "t288_min": 45.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.42,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.39,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 4.01,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.95,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0151,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0162,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0162,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0174,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 290000000000000.0,
+      "surface_resistivity_ohm": 24000000000000.0,
+      "water_absorption_pct": 0.1,
+      "peel_strength_n_mm": 1.42,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 580.0,
+        "crosswise": 460.0
+      },
+      "ipc_slash_sheet": "IPC-4101/126",
+      "notes": "Sheet class: Low CTE& Excellent Thermal Resistance & High-Tg. Companion prepreg NY2170P. T288 clad 45 min, etched 45 min. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny2170h",
+      "manufacturer": "Nouya",
+      "name": "NY2170H",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY2170HDatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 170.0,
+      "tg_dma_c": 240.0,
+      "td_c": 350.0,
+      "cte_x_ppm": 13.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 170.0,
+      "cte_z_50_260_pct": 1.8,
+      "t288_min": 35.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.5,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.45,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 4.05,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0156,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0167,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0167,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0179,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 280000000000000.0,
+      "surface_resistivity_ohm": 25000000000000.0,
+      "water_absorption_pct": 0.08,
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 580.0,
+        "crosswise": 460.0
+      },
+      "ipc_slash_sheet": "IPC-4101/98, /99, /101, /126",
+      "notes": "Sheet class: Low CTE& High Thermal Reliability & High-Tg. Companion prepreg NY2170HP. T288 clad 35 min, etched 50 min. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny2600",
+      "manufacturer": "Nouya",
+      "name": "NY2600",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY2600DatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_dsc_c": 155.0,
+      "td_c": 350.0,
+      "cte_z_below_tg_ppm": 45.0,
+      "cte_z_above_tg_ppm": 240.0,
+      "cte_z_50_260_pct": 3.0,
+      "t288_min": 25.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.3,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.25,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.014,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0158,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 490000000000000.06,
+      "surface_resistivity_ohm": 58000000000000.0,
+      "water_absorption_pct": 0.14,
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 415.0,
+        "crosswise": 305.0
+      },
+      "ipc_slash_sheet": "IPC-4101/98, /99, /101",
+      "notes": "Sheet class: Mid Tg& High CTI & Lead Free Compatible. Companion prepreg NY2600P. T288 clad 25 min, etched 30 min. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny3150hc",
+      "manufacturer": "Nouya",
+      "name": "NY3150HC",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY3150HCDatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_dsc_c": 155.0,
+      "tg_tma_c": 145.0,
+      "td_c": 380.0,
+      "cte_x_ppm": 13.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 40.0,
+      "cte_z_above_tg_ppm": 245.0,
+      "cte_z_50_260_pct": 3.0,
+      "t288_min": 60.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.25,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.2,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 3.85,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.8,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0111,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0125,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0128,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0135,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 150000000000000.0,
+      "surface_resistivity_ohm": 20000000000000.0,
+      "water_absorption_pct": 0.15,
+      "peel_strength_n_mm": 1.3,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 480.0,
+        "crosswise": 440.0
+      },
+      "ipc_slash_sheet": "IPC-4101/127, /128",
+      "notes": "Sheet class: Halogen-free& High CTI & Low Z-axis CTE. Companion prepreg NY3150HCP. T288 clad 60 min, etched 60 min. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny3150hf",
+      "manufacturer": "Nouya",
+      "name": "NY3150HF",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY3150HFDatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_dsc_c": 155.0,
+      "tg_tma_c": 145.0,
+      "td_c": 380.0,
+      "cte_x_ppm": 13.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 40.0,
+      "cte_z_above_tg_ppm": 245.0,
+      "cte_z_50_260_pct": 3.0,
+      "t288_min": 60.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.25,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.2,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 3.85,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.8,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0111,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0113,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0128,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.013,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 190000000000000.0,
+      "surface_resistivity_ohm": 18000000000000.0,
+      "water_absorption_pct": 0.15,
+      "peel_strength_n_mm": 1.1,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 580.0,
+        "crosswise": 440.0
+      },
+      "ipc_slash_sheet": "IPC-4101/127, /128",
+      "notes": "Sheet class: Halogen-free & Mid-Tg,Low Z-axis CTE. Companion prepreg NY3150HFP. T288 clad 60 min, etched 60 min. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny3170hc",
+      "manufacturer": "Nouya",
+      "name": "NY3170HC",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY3170HCDatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_dsc_c": 180.0,
+      "tg_tma_c": 170.0,
+      "tg_dma_c": 205.0,
+      "td_c": 380.0,
+      "cte_x_ppm": 13.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 40.0,
+      "cte_z_above_tg_ppm": 210.0,
+      "cte_z_50_260_pct": 2.3,
+      "t288_min": 60.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.1,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.05,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 3.9,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.85,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0111,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0125,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0128,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0135,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 1.8e+16,
+      "surface_resistivity_ohm": 1100000000000000.0,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 0.8,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 550.0,
+        "crosswise": 450.0
+      },
+      "ipc_slash_sheet": "IPC-4101/127, /128, /130",
+      "notes": "Sheet class: Halogen-free& High CTI & Low Z-axis CTE. Companion prepreg NY3170HCP. T288 clad 60 min, etched 60 min. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny3170hf",
+      "manufacturer": "Nouya",
+      "name": "NY3170HF",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY3170HFDatasheetREV202506V0.pdf",
+        "pages": "1",
+        "revision": "202506V0"
+      },
+      "family": "NY series",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_dsc_c": 190.0,
+      "td_c": 385.0,
+      "cte_z_below_tg_ppm": 38.0,
+      "cte_z_above_tg_ppm": 185.0,
+      "cte_z_50_260_pct": 2.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.9,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.7,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0084,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0095,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0091,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0104,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 1e+16,
+      "surface_resistivity_ohm": 1e+16,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 0.9,
+      "peel_condition": "1 oz HTE foil, as received",
+      "ipc_slash_sheet": "IPC-4101/130",
+      "notes": "Sheet class: High Tg & Mid Loss & Low CTE & Halogen Free. Companion prepreg NY3170HFP. T288 clad >60 min, etched >60 min. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny3170lk",
+      "manufacturer": "Nouya",
+      "name": "NY3170LK",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY3170LKDatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 230.0,
+      "tg_dma_c": 260.0,
+      "td_c": 405.0,
+      "cte_x_ppm": 14.0,
+      "cte_y_ppm": 15.0,
+      "cte_z_below_tg_ppm": 30.0,
+      "cte_z_above_tg_ppm": 90.0,
+      "cte_z_50_260_pct": 1.1,
+      "t288_min": 60.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.91,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.2,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.53,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.8,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0051,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.007,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0054,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0067,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2300000000000000.0,
+      "surface_resistivity_ohm": 120000000000000.0,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 510.0,
+        "crosswise": 460.0
+      },
+      "ipc_slash_sheet": "IPC-4101/130",
+      "notes": "Sheet class: Low Loss & Halogen-free & Excellent Thermal Resistance. Companion prepreg NY3170LKP. T288 clad 60 min, etched 60 min. Peel strength of other foils (1 oz, N/mm): RTF 0.7. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny3170m2",
+      "manufacturer": "Nouya",
+      "name": "NY3170M2",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY3170M2DatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 170.0,
+      "tg_dma_c": 230.0,
+      "td_c": 385.0,
+      "cte_x_ppm": 16.0,
+      "cte_y_ppm": 17.0,
+      "cte_z_below_tg_ppm": 40.0,
+      "cte_z_above_tg_ppm": 210.0,
+      "cte_z_50_260_pct": 2.3,
+      "t288_min": 60.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.84,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.15,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.54,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.7,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0056,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0072,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0061,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0068,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2200000000000000.0,
+      "surface_resistivity_ohm": 110000000000000.02,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 0.9,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 490.0,
+        "crosswise": 420.0
+      },
+      "notes": "Sheet class: Low Loss & Halogen-free & Excellent Thermal Resistance. Companion prepreg NY3170M2P. T288 clad 60 min, etched 60 min. Peel strength of other foils (1 oz, N/mm): RTF 0.8. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny3170m",
+      "manufacturer": "Nouya",
+      "name": "NY3170M",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY3170MDatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 190.0,
+      "tg_dma_c": 250.0,
+      "td_c": 385.0,
+      "cte_x_ppm": 16.0,
+      "cte_y_ppm": 17.0,
+      "cte_z_below_tg_ppm": 40.0,
+      "cte_z_above_tg_ppm": 210.0,
+      "cte_z_50_260_pct": 2.3,
+      "t288_min": 60.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.9,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.87,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.1,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.57,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.65,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0076,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0078,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0085,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0082,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0084,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0089,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2400000000000000.0,
+      "surface_resistivity_ohm": 120000000000000.0,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 490.0,
+        "crosswise": 420.0
+      },
+      "ipc_slash_sheet": "IPC-4101/130",
+      "notes": "Sheet class: Mid-Loss & Halogen-free & Excellent Thermal Resistance. Companion prepreg NY3170MP. T288 clad 60 min, etched 60 min. Peel strength of other foils (1 oz, N/mm): RTF 0.8. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny3176hf",
+      "manufacturer": "Nouya",
+      "name": "NY3176HF",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY3176HFDatasheetREV202502V2.pdf",
+        "pages": "1",
+        "revision": "202502V2"
+      },
+      "family": "NY series",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 150.0,
+      "tg_dma_c": 190.0,
+      "td_c": 380.0,
+      "cte_x_ppm": 13.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 215.0,
+      "cte_z_50_260_pct": 2.8,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.8,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.3,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 4.4,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.009,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.011,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 0.011,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.013,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 150000000000000.0,
+      "surface_resistivity_ohm": 20000000000000.0,
+      "water_absorption_pct": 0.11,
+      "peel_strength_n_mm": 1.2,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 480.0,
+        "crosswise": 420.0
+      },
+      "notes": "Sheet class: Halogen-free & Mid-Tg & Low Z-axis CTE. Companion prepreg NY3176HFP. T288 clad >60 min, etched >60 min. Peel strength of other foils (1 oz, N/mm): RTF 0.95. Dk and Df are given for resin content 50 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny6180",
+      "manufacturer": "Nouya",
+      "name": "NY6180",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY6180DatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 220.0,
+      "td_c": 435.0,
+      "cte_x_ppm": 13.0,
+      "cte_y_ppm": 13.0,
+      "cte_z_below_tg_ppm": 20.0,
+      "cte_z_above_tg_ppm": 100.0,
+      "cte_z_50_260_pct": 1.0,
+      "t288_min": 30.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.42,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.36,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.97,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.91,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.00627,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.00632,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0063,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.00635,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2400000000000000.0,
+      "surface_resistivity_ohm": 190000000000000.0,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 600.0,
+        "crosswise": 500.0
+      },
+      "ipc_slash_sheet": "IPC-4101/130",
+      "notes": "Sheet class: Mid Loss & Excellent Thermal Resistance. Companion prepreg NY6180P. T288 clad 30 min, etched 60 min. Peel strength of other foils (1 oz, N/mm): RTF 0.7. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny6180hf",
+      "manufacturer": "Nouya",
+      "name": "NY6180HF",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY6180HFDatasheetREV202503V0.pdf",
+        "pages": "1",
+        "revision": "202503V0"
+      },
+      "family": "NY series",
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 220.0,
+      "td_c": 435.0,
+      "cte_x_ppm": 13.0,
+      "cte_y_ppm": 13.0,
+      "cte_z_below_tg_ppm": 20.0,
+      "cte_z_above_tg_ppm": 100.0,
+      "cte_z_50_260_pct": 1.0,
+      "t288_min": 30.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.42,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.36,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.97,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.91,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.00627,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.00632,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0063,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.00635,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2400000000000000.0,
+      "surface_resistivity_ohm": 190000000000000.0,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 600.0,
+        "crosswise": 500.0
+      },
+      "ipc_slash_sheet": "IPC-4101/130",
+      "notes": "Sheet class: Mid Loss & Excellent Thermal Resistance. Companion prepreg NY6180HFP. T288 clad 30 min, etched 60 min. Peel strength of other foils (1 oz, N/mm): RTF 0.7. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny6180l",
+      "manufacturer": "Nouya",
+      "name": "NY6180L",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY6180LDatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 190.0,
+      "tg_dma_c": 250.0,
+      "td_c": 385.0,
+      "cte_x_ppm": 16.0,
+      "cte_y_ppm": 17.0,
+      "cte_z_below_tg_ppm": 40.0,
+      "cte_z_above_tg_ppm": 210.0,
+      "cte_z_50_260_pct": 2.3,
+      "t288_min": 60.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.19,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.05,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.74,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.6,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0074,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0082,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0076,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0084,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2400000000000000.0,
+      "surface_resistivity_ohm": 120000000000000.0,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 490.0,
+        "crosswise": 420.0
+      },
+      "ipc_slash_sheet": "IPC-4101/130",
+      "notes": "Sheet class: Low Loss & Excellent Thermal Resistance. Companion prepreg NY6180LP. T288 clad 60 min, etched 60 min. Peel strength of other foils (1 oz, N/mm): RTF 0.7. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny6200",
+      "manufacturer": "Nouya",
+      "name": "NY6200",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY6200DatasheetREV202508V0-481.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 200.0,
+      "td_c": 405.0,
+      "cte_x_ppm": 15.0,
+      "cte_y_ppm": 16.0,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 120.0,
+      "cte_z_50_260_pct": 1.5,
+      "t288_min": 60.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.04,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.05,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.74,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.65,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0052,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.007,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0055,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0065,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2200000000000000.0,
+      "surface_resistivity_ohm": 110000000000000.02,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 510.0,
+        "crosswise": 460.0
+      },
+      "ipc_slash_sheet": "IPC-4101/126",
+      "notes": "Sheet class: Low Loss & Excellent Thermal Resistance. Companion prepreg NY6200P. T288 clad 60 min, etched 60 min. Peel strength of other foils (1 oz, N/mm): RTF 0.7. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny6300",
+      "manufacturer": "Nouya",
+      "name": "NY6300",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY6300DatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 190.0,
+      "tg_dma_c": 230.0,
+      "td_c": 400.0,
+      "cte_x_ppm": 20.0,
+      "cte_y_ppm": 21.0,
+      "cte_z_below_tg_ppm": 42.0,
+      "cte_z_above_tg_ppm": 250.0,
+      "cte_z_50_260_pct": 2.3,
+      "t288_min": 120.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.74,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.95,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.29,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0027,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0042,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0024,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0035,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2000000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 0.9,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 490.0,
+        "crosswise": 449.0
+      },
+      "ipc_slash_sheet": "IPC-4101/102",
+      "notes": "Sheet class: Very Low Loss & Excellent Thermal Resistance. Companion prepreg NY6300P. T288 clad 120 min, etched 120 min. Peel strength of other foils (1 oz, N/mm): RTF 0.5, HVLP 0.7. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny6300s",
+      "manufacturer": "Nouya",
+      "name": "NY6300S",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY6300SDatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 170.0,
+      "tg_dma_c": 210.0,
+      "td_c": 430.0,
+      "cte_x_ppm": 15.0,
+      "cte_y_ppm": 17.0,
+      "cte_z_below_tg_ppm": 40.0,
+      "cte_z_above_tg_ppm": 185.0,
+      "cte_z_50_260_pct": 2.2,
+      "t288_min": 60.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.9,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.3,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.6,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0032,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.004,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0029,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0035,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2000000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 0.8,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 490.0,
+        "crosswise": 449.0
+      },
+      "notes": "Sheet class: Very Low Loss & Excellent Thermal Resistance,Low Cost. Companion prepreg NY6300SP. T288 clad 60 min, etched 60 min. Peel strength of other foils (1 oz, N/mm): RTF 0.6, HVLP 0.7. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny6300sl",
+      "manufacturer": "Nouya",
+      "name": "NY6300SL",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY6300SLDatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 190.0,
+      "tg_dma_c": 250.0,
+      "td_c": 405.0,
+      "cte_x_ppm": 15.0,
+      "cte_y_ppm": 17.0,
+      "cte_z_below_tg_ppm": 40.0,
+      "cte_z_above_tg_ppm": 150.0,
+      "cte_z_50_260_pct": 1.8,
+      "t288_min": 60.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.9,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.2,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.8,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0046,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0051,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0043,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0048,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 1800000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 490.0,
+        "crosswise": 449.0
+      },
+      "notes": "Sheet class: Very Low Loss & Halogen-free & Excellent Thermal Resistance. Companion prepreg NY6300SLP. T288 clad 60 min, etched 60 min. Peel strength of other foils (1 oz, N/mm): RTF 0.6, HVLP 0.7. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny6300sn",
+      "manufacturer": "Nouya",
+      "name": "NY6300SN",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY6300SNDatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "family": "NY series",
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 170.0,
+      "tg_dma_c": 210.0,
+      "td_c": 430.0,
+      "cte_x_ppm": 15.0,
+      "cte_y_ppm": 17.0,
+      "cte_z_below_tg_ppm": 40.0,
+      "cte_z_above_tg_ppm": 185.0,
+      "cte_z_50_260_pct": 2.2,
+      "t288_min": 60.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.4,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.45,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.15,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.2,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0014,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0025,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0013,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.002,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2000000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 0.8,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 490.0,
+        "crosswise": 449.0
+      },
+      "notes": "Sheet class: Ultra Low Loss & Excellent Thermal Resistance. Companion prepreg NY6300SNP. T288 clad 60 min, etched 60 min. Peel strength of other foils (1 oz, N/mm): RTF 0.6, HVLP 0.7. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny6666",
+      "manufacturer": "Nouya",
+      "name": "NY6666",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY6666DatasheetREV202505V0.pdf",
+        "pages": "1",
+        "revision": "202505V0"
+      },
+      "family": "NY series",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 200.0,
+      "td_c": 420.0,
+      "cte_x_ppm": 9.0,
+      "cte_y_ppm": 10.0,
+      "cte_z_below_tg_ppm": 43.0,
+      "cte_z_above_tg_ppm": 165.0,
+      "cte_z_50_260_pct": 1.4,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.9,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.3,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0032,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0038,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0029,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0034,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2000000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 0.8,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 490.0,
+        "crosswise": 449.0
+      },
+      "notes": "Sheet class: High Tg & Ultra Low Loss & Low CTE & Halogen Free. Companion prepreg NY6666P. T288 clad >60 min, etched >60 min. Peel strength of other foils (1 oz, N/mm): RTF 0.6, HVLP 0.7. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny6666n",
+      "manufacturer": "Nouya",
+      "name": "NY6666N",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY6666NDatasheetREV202505V0.pdf",
+        "pages": "1",
+        "revision": "202505V0"
+      },
+      "family": "NY series",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 200.0,
+      "td_c": 420.0,
+      "cte_x_ppm": 9.0,
+      "cte_y_ppm": 10.0,
+      "cte_z_below_tg_ppm": 43.0,
+      "cte_z_above_tg_ppm": 165.0,
+      "cte_z_50_260_pct": 1.4,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.2,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.0,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.3,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0017,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.002,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0014,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0017,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2000000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 0.8,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 490.0,
+        "crosswise": 449.0
+      },
+      "notes": "Sheet class: High Tg & Ultra Low Loss & Low CTE & Halogen Free. Companion prepreg NY6666NP. T288 clad >60 min, etched >60 min. Peel strength of other foils (1 oz, N/mm): RTF 0.6, HVLP 0.7. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny8320-ns",
+      "manufacturer": "Nouya",
+      "name": "NY8320 NS",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY8320NSNY8320NSBDatasheetREV202505V3.pdf",
+        "pages": "1",
+        "revision": "202505V3"
+      },
+      "family": "NY series",
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "td_c": 420.0,
+      "cte_z_below_tg_ppm": 20.0,
+      "cte_z_above_tg_ppm": 80.0,
+      "cte_z_50_260_pct": 0.8,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.4,
+          "method": "IPC-TM-650 2.5.5.9"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.3,
+          "method": "SPDR"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.006,
+          "method": "IPC-TM-650 2.5.5.9"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.007,
+          "method": "SPDR"
+        }
+      ],
+      "water_absorption_pct": 0.12,
+      "notes": "Sheet class: High Performance Low CTE Material For IC Substrate. Companion prepreg NY8320 NSB. TG TMA given as >200 C. TG DMA given as >250 C. X/Y CTE is given as 10 ppm/C. T288 clad >60 min, etched >60 min. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny8888n2",
+      "manufacturer": "Nouya",
+      "name": "NY8888N2",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY8888N2DatasheetREV202507V0.pdf",
+        "pages": "1",
+        "revision": "202507V0"
+      },
+      "family": "NY series",
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 180.0,
+      "tg_dma_c": 220.0,
+      "td_c": 400.0,
+      "cte_x_ppm": 10.0,
+      "cte_y_ppm": 11.0,
+      "cte_z_below_tg_ppm": 50.0,
+      "cte_z_above_tg_ppm": 150.0,
+      "cte_z_50_260_pct": 1.8,
+      "t288_min": 120.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.17,
+          "method": "SPDR",
+          "resin_content_pct": 65.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0012,
+          "method": "SPDR",
+          "resin_content_pct": 65.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2400000000000000.0,
+      "surface_resistivity_ohm": 190000000000000.0,
+      "water_absorption_pct": 0.06,
+      "peel_strength_n_mm": 0.6,
+      "peel_condition": "1 oz HVLP foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 200.0,
+        "crosswise": 180.0
+      },
+      "notes": "T288 clad 120 min, etched 120 min. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny8888n",
+      "manufacturer": "Nouya",
+      "name": "NY8888N",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY8888NDatasheetREV202505V1.pdf",
+        "pages": "1",
+        "revision": "202505V1"
+      },
+      "family": "NY series",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 180.0,
+      "tg_dma_c": 220.0,
+      "td_c": 400.0,
+      "cte_x_ppm": 10.0,
+      "cte_y_ppm": 11.0,
+      "cte_z_below_tg_ppm": 50.0,
+      "cte_z_above_tg_ppm": 150.0,
+      "cte_z_50_260_pct": 1.8,
+      "t288_min": 120.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": "SPDR",
+          "resin_content_pct": 65.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0014,
+          "method": "SPDR",
+          "resin_content_pct": 65.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2400000000000000.0,
+      "surface_resistivity_ohm": 190000000000000.0,
+      "water_absorption_pct": 0.06,
+      "peel_strength_n_mm": 0.6,
+      "peel_condition": "1 oz HVLP foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 200.0,
+        "crosswise": 180.0
+      },
+      "notes": "Sheet class: Extreme Low Loss & High Tg & Ultra low CTE & Halogen Free. Companion prepreg NY8888NP. T288 clad 120 min, etched 120 min. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny9999q",
+      "manufacturer": "Nouya",
+      "name": "NY9999Q",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY9999QDatasheetREV202507V0.pdf",
+        "pages": "1"
+      },
+      "family": "NY series",
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 180.0,
+      "td_c": 380.0,
+      "cte_z_below_tg_ppm": 60.0,
+      "cte_z_above_tg_ppm": 200.0,
+      "cte_z_50_260_pct": 1.3,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.0,
+          "method": "SPDR",
+          "resin_content_pct": 65.0
+        }
+      ],
+      "water_absorption_pct": 0.05,
+      "flexural_strength_mpa": {
+        "lengthwise": 200.0,
+        "crosswise": 175.0
+      },
+      "notes": "X/Y CTE is given as 6~8 ppm/C. T288 clad >60 min, etched >60 min. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny-a1",
+      "manufacturer": "Nouya",
+      "name": "NY-A1",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYA1DatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_dsc_c": 155.0,
+      "tg_tma_c": 145.0,
+      "td_c": 350.0,
+      "cte_x_ppm": 13.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 235.0,
+      "cte_z_50_260_pct": 2.8,
+      "t288_min": 60.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.3,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.25,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 3.9,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.85,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0147,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0158,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0158,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.017,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 650000000000000.0,
+      "surface_resistivity_ohm": 36000000000000.0,
+      "water_absorption_pct": 0.08,
+      "peel_strength_n_mm": 1.4,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 515.0,
+        "crosswise": 405.0
+      },
+      "ipc_slash_sheet": "IPC-4101/98, /99, /101",
+      "notes": "Sheet class: High Performance & Mid-Tg & Lead Free Auto Used. Companion prepreg NY-A1P. T288 clad 60 min, etched 60 min. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny-a2",
+      "manufacturer": "Nouya",
+      "name": "NY-A2",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYA2DatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 170.0,
+      "tg_dma_c": 240.0,
+      "td_c": 350.0,
+      "cte_x_ppm": 13.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 170.0,
+      "cte_z_50_260_pct": 1.8,
+      "t288_min": 35.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.5,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.45,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 4.05,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0156,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0167,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0167,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0179,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 280000000000000.0,
+      "surface_resistivity_ohm": 25000000000000.0,
+      "water_absorption_pct": 0.08,
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 580.0,
+        "crosswise": 460.0
+      },
+      "ipc_slash_sheet": "IPC-4101/98, /99, /101, /126",
+      "notes": "Sheet class: High Performance & Hi-Tg & Lead Free Auto Used. Companion prepreg NY-A2P. T288 clad 35 min, etched 50 min. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny-a3hf",
+      "manufacturer": "Nouya",
+      "name": "NY-A3HF",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYA3HFDatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 185.0,
+      "tg_dma_c": 210.0,
+      "td_c": 395.0,
+      "cte_z_below_tg_ppm": 30.0,
+      "cte_z_above_tg_ppm": 175.0,
+      "cte_z_50_260_pct": 1.7,
+      "t288_min": 60.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.4,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.1,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.7,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.012,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.014,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.014,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.018,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 1.8e+16,
+      "surface_resistivity_ohm": 1100000000000000.0,
+      "water_absorption_pct": 0.13,
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 590.0,
+        "crosswise": 520.0
+      },
+      "ipc_slash_sheet": "IPC-4101/127, /128, /130",
+      "notes": "Sheet class: Halogen-free& High-Tg & Low Z-axis CTE. Companion prepreg NY-A3HFP. X/Y CTE is given as 11-12 ppm/C. T288 clad 60 min, etched 60 min. Peel strength of other foils (1 oz, N/mm): RTF 0.85. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny-a5hf",
+      "manufacturer": "Nouya",
+      "name": "NY-A5HF",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYA5HFDatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 230.0,
+      "tg_dma_c": 260.0,
+      "td_c": 405.0,
+      "cte_z_below_tg_ppm": 30.0,
+      "cte_z_above_tg_ppm": 90.0,
+      "cte_z_50_260_pct": 1.1,
+      "t288_min": 60.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.91,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.2,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.53,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.8,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0051,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.007,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0054,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0067,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2300000000000000.0,
+      "surface_resistivity_ohm": 120000000000000.0,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 0.85,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 510.0,
+        "crosswise": 460.0
+      },
+      "ipc_slash_sheet": "IPC-4101/130",
+      "notes": "Sheet class: Low Loss & Halogen-free & Excellent Thermal Resistance. Companion prepreg NY-A5HFP. X/Y CTE is given as 9-11 ppm/C. T288 clad 60 min, etched 60 min. Peel strength of other foils (1 oz, N/mm): RTF 0.7. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny-a6hf",
+      "manufacturer": "Nouya",
+      "name": "NY-A6HF",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYA6HFDatasheetREV202506V0.pdf",
+        "pages": "1",
+        "revision": "202506V0"
+      },
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 170.0,
+      "tg_dma_c": 220.0,
+      "td_c": 430.0,
+      "cte_x_ppm": 15.0,
+      "cte_y_ppm": 17.0,
+      "cte_z_below_tg_ppm": 40.0,
+      "cte_z_above_tg_ppm": 185.0,
+      "t288_min": 60.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.56,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.3,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.26,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0032,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0036,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0029,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0033,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2000000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "peel_strength_n_mm": 2.0,
+      "peel_condition": "1 oz HTE foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 490.0,
+        "crosswise": 449.0
+      },
+      "notes": "T288 clad 60 min, etched 60 min. Peel strength of other foils (1 oz, N/mm): RTF 0.6, HVLP 0.7. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny-p1",
+      "manufacturer": "Nouya",
+      "name": "NY-P1",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYP1DatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 190.0,
+      "tg_dma_c": 230.0,
+      "td_c": 400.0,
+      "cte_x_ppm": 20.0,
+      "cte_y_ppm": 21.0,
+      "cte_z_below_tg_ppm": 45.0,
+      "cte_z_above_tg_ppm": 270.0,
+      "cte_z_50_260_pct": 2.5,
+      "t288_min": 120.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.9,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.3,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0022,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.004,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0019,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0033,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2200000000000000.0,
+      "surface_resistivity_ohm": 180000000000000.0,
+      "water_absorption_pct": 0.1,
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "1 oz HVLP foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 475.0,
+        "crosswise": 439.0
+      },
+      "ipc_slash_sheet": "IPC-4101/102",
+      "notes": "Sheet class: Ultra Low Loss & Excellent Thermal Resistance. Companion prepreg NY-P1P. T288 clad 120 min, etched 120 min. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny-p2",
+      "manufacturer": "Nouya",
+      "name": "NY-P2",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYP2DatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 190.0,
+      "tg_dma_c": 230.0,
+      "td_c": 400.0,
+      "cte_x_ppm": 20.0,
+      "cte_y_ppm": 21.0,
+      "cte_z_below_tg_ppm": 45.0,
+      "cte_z_above_tg_ppm": 270.0,
+      "cte_z_50_260_pct": 2.5,
+      "t288_min": 120.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.44,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.19,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.2,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0013,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0025,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0012,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.002,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2400000000000000.0,
+      "surface_resistivity_ohm": 190000000000000.0,
+      "water_absorption_pct": 0.1,
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "1 oz HVLP foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 475.0,
+        "crosswise": 439.0
+      },
+      "notes": "Sheet class: Ultra Low Loss & Excellent Thermal Resistance. Companion prepreg NY-P2P. T288 clad 120 min, etched 120 min. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny-p3",
+      "manufacturer": "Nouya",
+      "name": "NY-P3",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYP3DatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 170.0,
+      "tg_dma_c": 220.0,
+      "td_c": 400.0,
+      "cte_x_ppm": 20.0,
+      "cte_y_ppm": 21.0,
+      "cte_z_below_tg_ppm": 50.0,
+      "cte_z_above_tg_ppm": 240.0,
+      "cte_z_50_260_pct": 2.5,
+      "t288_min": 120.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.3,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.07,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.25,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0014,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0022,
+          "method": "SPDR",
+          "resin_content_pct": 55.0
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0011,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0017,
+          "method": "SPDR",
+          "resin_content_pct": 70.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2400000000000000.0,
+      "surface_resistivity_ohm": 190000000000000.0,
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "1 oz HVLP foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 437.0,
+        "crosswise": 405.0
+      },
+      "notes": "Sheet class: Ultra Low Loss & Excellent Thermal Resistance. Companion prepreg NY-P3P. T288 clad 120 min, etched 120 min. Dk and Df are given for resin content 55 % and 70 % (SPDR method at 5 and 10 GHz, 1 MHz and 1 GHz by IPC-TM-650 2.5.5.9 where listed). Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny-p4",
+      "manufacturer": "Nouya",
+      "name": "NY-P4",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYP4DatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 170.0,
+      "tg_dma_c": 200.0,
+      "td_c": 400.0,
+      "cte_x_ppm": 18.0,
+      "cte_y_ppm": 18.0,
+      "cte_z_below_tg_ppm": 50.0,
+      "cte_z_above_tg_ppm": 270.0,
+      "cte_z_50_260_pct": 3.0,
+      "t288_min": 120.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.19,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 66.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.2,
+          "method": "SPDR",
+          "resin_content_pct": 66.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.001,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 66.0
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.00115,
+          "method": "SPDR",
+          "resin_content_pct": 66.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2400000000000000.0,
+      "surface_resistivity_ohm": 190000000000000.0,
+      "water_absorption_pct": 0.06,
+      "peel_strength_n_mm": 0.525,
+      "peel_condition": "1 oz HVLP foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 200.0,
+        "crosswise": 180.0
+      },
+      "notes": "Sheet class: Extreme Low Loss & Excellent Thermal Resistance. Companion prepreg NY-P4P. T288 clad 120 min, etched 120 min. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny-p4n",
+      "manufacturer": "Nouya",
+      "name": "NY-P4N",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYP4NDatasheetREV202508V0.pdf",
+        "pages": "1",
+        "revision": "202508V0"
+      },
+      "ul94": "V-0",
+      "reinforcement": "E-glass woven",
+      "tg_tma_c": 170.0,
+      "tg_dma_c": 200.0,
+      "td_c": 400.0,
+      "cte_x_ppm": 17.0,
+      "cte_y_ppm": 18.0,
+      "cte_z_below_tg_ppm": 50.0,
+      "cte_z_above_tg_ppm": 270.0,
+      "cte_z_50_260_pct": 3.0,
+      "t288_min": 120.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.22,
+          "method": "SPDR",
+          "resin_content_pct": 66.0
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0014,
+          "method": "SPDR",
+          "resin_content_pct": 66.0
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2400000000000000.0,
+      "surface_resistivity_ohm": 190000000000000.0,
+      "water_absorption_pct": 0.06,
+      "peel_strength_n_mm": 0.525,
+      "peel_condition": "1 oz HVLP foil, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 200.0,
+        "crosswise": 180.0
+      },
+      "notes": "Sheet class: Extreme Low Loss & Excellent Thermal Resistance. Companion prepreg NY-P4PN. T288 clad 120 min, etched 120 min. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; flexural strength is warp and fill. Values marked as not available on the sheet are left empty."
+    },
+    {
+      "id": "nouya/ny6200ant366",
+      "manufacturer": "Nouya",
+      "name": "NY6200ANT366",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY6200ANT366DatasheetREV202508V0.pdf",
+        "pages": "1-2",
+        "revision": "REV202508V0"
+      },
+      "family": "NY series",
+      "resin": "Modified epoxy",
+      "reinforcement": "Glass",
+      "ul94": "V-0",
+      "tg_dsc_c": 190,
+      "td_c": 385,
+      "cte_x_ppm": 10,
+      "cte_y_ppm": 11,
+      "cte_z_50_260_pct": 2.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.66,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.02,
+          "method": "SPDR, 23 C"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0065,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "water_absorption_pct": 0.09,
+      "peel_strength_n_mm": 0.95,
+      "peel_condition": "As received",
+      "volume_resistivity_ohm_cm": 35000000000000.0,
+      "surface_resistivity_ohm": 5000000000000.0,
+      "tensile_strength_mpa": {
+        "value": 265
+      },
+      "flexural_strength_mpa": {
+        "value": 425
+      },
+      "youngs_modulus_gpa": {
+        "value": 25.0
+      },
+      "thicknesses_mm": [
+        0.203,
+        0.305,
+        0.406,
+        0.508,
+        0.787,
+        1.016,
+        1.524
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 940,
+          "height_mm": 1245,
+          "label": "37 x 49 in"
+        },
+        {
+          "width_mm": 1041,
+          "height_mm": 1245,
+          "label": "41 x 49 in"
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 17,
+          "foil_type": "RTF2"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "RTF2"
+        }
+      ],
+      "notes": "Modified epoxy laminate for RF use; Dk 3.66 +/- 0.08 by IPC-TM-650 2.5.5.5 and 4.02 +/- 0.08 by SPDR (laminate and prepreg as laminated), tested on 0.508 mm laminate. Z-axis CTE is 2.0 % (50 to 260 C) and X/Y CTE 10/11 ppm/C (50 to 125 C). Passive intermodulation below -158 dBc (43 dBm, 800/1800/2600 MHz). Volume and surface resistivity (3.5e7 M-ohm cm, 5.0e6 M-ohm, minimum) converted to ohm. Tensile modulus 25000 MPa."
+    },
+    {
+      "id": "nouya/ny6200ant",
+      "manufacturer": "Nouya",
+      "name": "NY6200ANT",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY6200ANTDataSheetREV202508V0.pdf",
+        "pages": "1-2",
+        "revision": "REV202508V0"
+      },
+      "family": "NY series",
+      "resin": "Modified epoxy",
+      "reinforcement": "Glass",
+      "ul94": "V-0",
+      "tg_dsc_c": 190,
+      "td_c": 385,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 14,
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0065,
+          "method": "SPDR, 23 C"
+        }
+      ],
+      "water_absorption_pct": 0.09,
+      "peel_strength_n_mm": 0.95,
+      "peel_condition": "As received",
+      "volume_resistivity_ohm_cm": 35000000000000.0,
+      "surface_resistivity_ohm": 5000000000000.0,
+      "tensile_strength_mpa": {
+        "value": 265
+      },
+      "flexural_strength_mpa": {
+        "value": 425
+      },
+      "youngs_modulus_gpa": {
+        "value": 25.0
+      },
+      "thicknesses_mm": [
+        0.203,
+        0.305,
+        0.406,
+        0.508,
+        0.787,
+        1.016,
+        1.524
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 940,
+          "height_mm": 1245,
+          "label": "37 x 49 in"
+        },
+        {
+          "width_mm": 1041,
+          "height_mm": 1245,
+          "label": "41 x 49 in"
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 17,
+          "foil_type": "RTF2"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "RTF2"
+        }
+      ],
+      "notes": "Modified epoxy laminate for RF use. The permittivity row of the sheet has no readable value (the Dk grade is in the model NY6200ANT366). Z-axis CTE 100 ppm/C (TMA, 50 to 260 C, as printed) and X/Y CTE 12/14 ppm/C (50 to 125 C). Passive intermodulation below -158 dBc (43 dBm, 800/1800/2600 MHz). Resistivity converted from M-ohm cm and M-ohm (minimum values)."
+    },
+    {
+      "id": "nouya/ny6600",
+      "manufacturer": "Nouya",
+      "name": "NY6600",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANY6600DataSheetREV202508V0.pdf",
+        "pages": "1-2",
+        "revision": "REV202508V0"
+      },
+      "family": "NY series",
+      "ul94": "V-0",
+      "tg_dma_c": 240,
+      "tg_tma_c": 220,
+      "td_c": 410,
+      "cte_x_ppm": 10,
+      "cte_y_ppm": 10,
+      "cte_z_50_260_pct": 0.95,
+      "dk": [
+        {
+          "freq_ghz": 3.5,
+          "value": 3.9,
+          "method": "Ring resonator"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.004,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "water_absorption_pct": 0.13,
+      "peel_strength_n_mm": 0.6,
+      "peel_condition": "1/2 oz RTF foil, as received",
+      "volume_resistivity_ohm_cm": 1e+17,
+      "surface_resistivity_ohm": 1e+16,
+      "tensile_strength_mpa": {
+        "value": 210
+      },
+      "flexural_strength_mpa": {
+        "lengthwise": 400,
+        "crosswise": 425
+      },
+      "youngs_modulus_gpa": {
+        "value": 18.0
+      },
+      "thicknesses_mm": [
+        0.254
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 914,
+          "height_mm": 1219,
+          "label": "36 x 48 in"
+        },
+        {
+          "width_mm": 1016,
+          "height_mm": 1219,
+          "label": "40 x 48 in"
+        },
+        {
+          "width_mm": 1067,
+          "height_mm": 1219,
+          "label": "42 x 48 in"
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "foil_type": "RTF"
+        }
+      ],
+      "notes": "RF laminate. Dk 3.90 at 3.5 GHz (ring resonator); Df 0.0040 at 10 GHz is a maximum. T288 and T300 above 60 min. Resistivity printed as 10x10^10 M-ohm cm and 10x10^9 M-ohm and converted. Tensile strength 210/210 MPa and modulus 18/18 GPa (two directions); Poisson ratio 0.2/0.2. X/Y CTE 10/10 ppm/C (50 to 125 C); Z-axis CTE 0.95 % (50 to 260 C)."
+    },
+    {
+      "id": "nouya/nyhp-220d",
+      "manufacturer": "Nouya",
+      "name": "NYHP-220D",
+      "kind": "ptfe",
+      "source": {
+        "pdf": "NOUYANYHP220D255D265D300DdatasheetREV202508V0.pdf",
+        "pages": "1-2",
+        "revision": "REV202508V0"
+      },
+      "family": "NYHP series",
+      "resin": "PTFE",
+      "ul94": "V-0",
+      "td_c": 500,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.2,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0009,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "surface_resistivity_ohm": 30000000000000.0,
+      "volume_resistivity_ohm_cm": 1400000000000000.0,
+      "cte_x_ppm": 22,
+      "cte_y_ppm": 35,
+      "cte_z_below_tg_ppm": 245,
+      "peel_strength_n_mm": 1.8,
+      "peel_condition": "1 oz foil",
+      "water_absorption_pct": 0.02,
+      "thermal_conductivity_w_mk": 0.3,
+      "density_g_cm3": 2.2,
+      "thicknesses_mm": [
+        0.254,
+        0.508,
+        0.762,
+        1.016,
+        1.2,
+        1.524,
+        2.0
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 914,
+          "height_mm": 1219,
+          "label": "36 x 48 in"
+        },
+        {
+          "width_mm": 1016,
+          "height_mm": 1219,
+          "label": "40 x 48 in"
+        },
+        {
+          "width_mm": 1830,
+          "height_mm": 1220,
+          "label": "72 x 48 in sheet"
+        },
+        {
+          "width_mm": 2032,
+          "height_mm": 1220,
+          "label": "80 x 48 in sheet"
+        }
+      ],
+      "notes": "PTFE laminate of the NYHP-220D/255D/265D/300D sheet (one column per model). Thermal stress: no delamination after 300 s solder dip at 288 C. Z-axis CTE is given per model without a temperature range. Passive intermodulation below -158 dBc (43 dBm, 800/1800/2600 MHz). Resistivity converted from M-ohm cm and M-ohm."
+    },
+    {
+      "id": "nouya/nyhp-255d",
+      "manufacturer": "Nouya",
+      "name": "NYHP-255D",
+      "kind": "ptfe",
+      "source": {
+        "pdf": "NOUYANYHP220D255D265D300DdatasheetREV202508V0.pdf",
+        "pages": "1-2",
+        "revision": "REV202508V0"
+      },
+      "family": "NYHP series",
+      "resin": "PTFE",
+      "ul94": "V-0",
+      "td_c": 500,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.55,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0017,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "surface_resistivity_ohm": 38000000000000.0,
+      "volume_resistivity_ohm_cm": 1400000000000000.0,
+      "cte_x_ppm": 16,
+      "cte_y_ppm": 18,
+      "cte_z_below_tg_ppm": 100,
+      "peel_strength_n_mm": 1.8,
+      "peel_condition": "1 oz foil",
+      "water_absorption_pct": 0.2,
+      "thermal_conductivity_w_mk": 0.3,
+      "density_g_cm3": 2.2,
+      "thicknesses_mm": [
+        0.254,
+        0.508,
+        0.762,
+        1.016,
+        1.2,
+        1.524,
+        2.0
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 914,
+          "height_mm": 1219,
+          "label": "36 x 48 in"
+        },
+        {
+          "width_mm": 1016,
+          "height_mm": 1219,
+          "label": "40 x 48 in"
+        },
+        {
+          "width_mm": 1830,
+          "height_mm": 1220,
+          "label": "72 x 48 in sheet"
+        },
+        {
+          "width_mm": 2032,
+          "height_mm": 1220,
+          "label": "80 x 48 in sheet"
+        }
+      ],
+      "notes": "PTFE laminate of the NYHP-220D/255D/265D/300D sheet (one column per model). Thermal stress: no delamination after 300 s solder dip at 288 C. Z-axis CTE is given per model without a temperature range. Passive intermodulation below -158 dBc (43 dBm, 800/1800/2600 MHz). Resistivity converted from M-ohm cm and M-ohm."
+    },
+    {
+      "id": "nouya/nyhp-265d",
+      "manufacturer": "Nouya",
+      "name": "NYHP-265D",
+      "kind": "ptfe",
+      "source": {
+        "pdf": "NOUYANYHP220D255D265D300DdatasheetREV202508V0.pdf",
+        "pages": "1-2",
+        "revision": "REV202508V0"
+      },
+      "family": "NYHP series",
+      "resin": "PTFE",
+      "ul94": "V-0",
+      "td_c": 500,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.65,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0019,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "surface_resistivity_ohm": 38000000000000.0,
+      "volume_resistivity_ohm_cm": 1400000000000000.0,
+      "cte_x_ppm": 16,
+      "cte_y_ppm": 18,
+      "cte_z_below_tg_ppm": 100,
+      "peel_strength_n_mm": 1.8,
+      "peel_condition": "1 oz foil",
+      "water_absorption_pct": 0.2,
+      "thermal_conductivity_w_mk": 0.3,
+      "density_g_cm3": 2.2,
+      "thicknesses_mm": [
+        0.254,
+        0.508,
+        0.762,
+        1.016,
+        1.2,
+        1.524,
+        2.0
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 914,
+          "height_mm": 1219,
+          "label": "36 x 48 in"
+        },
+        {
+          "width_mm": 1016,
+          "height_mm": 1219,
+          "label": "40 x 48 in"
+        },
+        {
+          "width_mm": 1830,
+          "height_mm": 1220,
+          "label": "72 x 48 in sheet"
+        },
+        {
+          "width_mm": 2032,
+          "height_mm": 1220,
+          "label": "80 x 48 in sheet"
+        }
+      ],
+      "notes": "PTFE laminate of the NYHP-220D/255D/265D/300D sheet (one column per model). Thermal stress: no delamination after 300 s solder dip at 288 C. Z-axis CTE is given per model without a temperature range. Passive intermodulation below -158 dBc (43 dBm, 800/1800/2600 MHz). Resistivity converted from M-ohm cm and M-ohm."
+    },
+    {
+      "id": "nouya/nyhp-300d",
+      "manufacturer": "Nouya",
+      "name": "NYHP-300D",
+      "kind": "ptfe",
+      "source": {
+        "pdf": "NOUYANYHP220D255D265D300DdatasheetREV202508V0.pdf",
+        "pages": "1-2",
+        "revision": "REV202508V0"
+      },
+      "family": "NYHP series",
+      "resin": "PTFE",
+      "ul94": "V-0",
+      "td_c": 500,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.98,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.002,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "surface_resistivity_ohm": 48000000000000.0,
+      "volume_resistivity_ohm_cm": 1200000000000000.0,
+      "cte_x_ppm": 18,
+      "cte_y_ppm": 15,
+      "cte_z_below_tg_ppm": 130,
+      "peel_strength_n_mm": 1.8,
+      "peel_condition": "1 oz foil",
+      "water_absorption_pct": 0.2,
+      "thermal_conductivity_w_mk": 0.4,
+      "density_g_cm3": 2.2,
+      "thicknesses_mm": [
+        0.254,
+        0.508,
+        0.762,
+        1.016,
+        1.2,
+        1.524,
+        2.0
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 914,
+          "height_mm": 1219,
+          "label": "36 x 48 in"
+        },
+        {
+          "width_mm": 1016,
+          "height_mm": 1219,
+          "label": "40 x 48 in"
+        },
+        {
+          "width_mm": 1830,
+          "height_mm": 1220,
+          "label": "72 x 48 in sheet"
+        },
+        {
+          "width_mm": 2032,
+          "height_mm": 1220,
+          "label": "80 x 48 in sheet"
+        }
+      ],
+      "notes": "PTFE laminate of the NYHP-220D/255D/265D/300D sheet (one column per model). Thermal stress: no delamination after 300 s solder dip at 288 C. Z-axis CTE is given per model without a temperature range. Passive intermodulation below -158 dBc (43 dBm, 800/1800/2600 MHz). Resistivity converted from M-ohm cm and M-ohm."
+    },
+    {
+      "id": "nouya/nyhp-7300",
+      "manufacturer": "Nouya",
+      "name": "NYHP-7300",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYHP7300DatasheetREV202508V0.pdf",
+        "pages": "1-2",
+        "revision": "REV202508V0"
+      },
+      "family": "NYHP series",
+      "ul94": "V-0",
+      "notes": "Very low loss, low z-axis CTE laminate. Tg above 200 C by DMA; Z-axis CTE 1.6 % (50 to 280 C); X/Y CTE 17/18 ppm/C (50 to 125 C); T260 above 120 min, T288 and T300 above 60 min; CAF resistance pass; passive intermodulation below -158 dBc. Dk 2.98 +/- 0.05 and Df 0.0025 are maximum values at 10 GHz; the sheet adds a table of Dk and Df against frequency (SPDR, 30 mil) that is not loaded. UL file E213990. Resistivity converted (minimum values).",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.98,
+          "method": "IPC-TM-650 2.5.5.5C, 23 C"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0025,
+          "method": "IPC-TM-650 2.5.5.5C, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": 45,
+      "td_c": 400,
+      "cte_x_ppm": 17,
+      "cte_y_ppm": 18,
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "1 oz HVLP foil, as received",
+      "volume_resistivity_ohm_cm": 400000000000000.0,
+      "surface_resistivity_ohm": 210000000000000.0,
+      "water_absorption_pct": 0.14,
+      "thicknesses_mm": [
+        0.508,
+        0.762,
+        1.016
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 914,
+          "height_mm": 1219,
+          "label": "36 x 48 in"
+        },
+        {
+          "width_mm": 1016,
+          "height_mm": 1219,
+          "label": "40 x 48 in"
+        },
+        {
+          "width_mm": 1067,
+          "height_mm": 1219,
+          "label": "42 x 48 in"
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "foil_type": "HVLP"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "HVLP"
+        }
+      ]
+    },
+    {
+      "id": "nouya/nyhp-7300h",
+      "manufacturer": "Nouya",
+      "name": "NYHP-7300H",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYHP7300HDatasheetREV202508V0.pdf",
+        "pages": "1-2",
+        "revision": "REV202508V0"
+      },
+      "family": "NYHP series",
+      "ul94": "V-0",
+      "notes": "Very low loss, low z-axis CTE laminate. Tg above 180 C by DMA; Td above 380 C; alpha 1 (50 to 100 C) and alpha 2 (200 to 260 C) as listed; T260 above 120 min, T288 and T300 above 60 min; CAF resistance pass. Dk 2.98 +/- 0.05 at 2 and 10 GHz and Df 0.0015 at 10 GHz are maximum values. UL file E213990. Resistivity converted (minimum values).",
+      "dk": [
+        {
+          "freq_ghz": 2.0,
+          "value": 2.98,
+          "method": "Stated at 2 GHz, 23 C"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.98,
+          "method": "IPC-TM-650 2.5.5.5C, 23 C"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0015,
+          "method": "IPC-TM-650 2.5.5.5C, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": 40,
+      "cte_z_below_tg_ppm": 50,
+      "cte_z_above_tg_ppm": 280,
+      "cte_z_50_260_pct": 3.2,
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "1 oz HVLP foil, as received",
+      "volume_resistivity_ohm_cm": 400000000000000.0,
+      "surface_resistivity_ohm": 210000000000000.0,
+      "water_absorption_pct": 0.14,
+      "thicknesses_mm": [
+        0.254,
+        0.508,
+        0.762,
+        1.016,
+        1.524
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 914,
+          "height_mm": 1219,
+          "label": "36 x 48 in"
+        },
+        {
+          "width_mm": 1067,
+          "height_mm": 1219,
+          "label": "42 x 48 in"
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "foil_type": "HVLP"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "HVLP"
+        }
+      ]
+    },
+    {
+      "id": "nouya/nyhp-7300mw",
+      "manufacturer": "Nouya",
+      "name": "NYHP-7300MW",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYHP7300MWDatasheetREV202508V0.pdf",
+        "pages": "1-2",
+        "revision": "REV202508V0"
+      },
+      "family": "NYHP series",
+      "ul94": "V-0",
+      "notes": "Very low loss microwave laminate. Tg above 200 C by DMA; T260 above 120 min, T288 and T300 above 60 min; CAF resistance pass. Dk 3.0 +/- 0.05 and Df 0.0014 at 10 GHz are maximum values. UL file E213990. Resistivity converted (minimum values).",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0014,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": 25,
+      "td_c": 410,
+      "cte_z_below_tg_ppm": 50,
+      "cte_z_above_tg_ppm": 300,
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "1 oz HVLP foil, as received",
+      "volume_resistivity_ohm_cm": 400000000000000.0,
+      "surface_resistivity_ohm": 210000000000000.0,
+      "water_absorption_pct": 0.14,
+      "thicknesses_mm": [
+        0.127,
+        0.254,
+        0.508
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 914,
+          "height_mm": 1219,
+          "label": "36 x 48 in"
+        },
+        {
+          "width_mm": 1067,
+          "height_mm": 1219,
+          "label": "42 x 48 in"
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "foil_type": "HVLP"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "HVLP"
+        }
+      ]
+    },
+    {
+      "id": "nouya/nyhp-7350",
+      "manufacturer": "Nouya",
+      "name": "NYHP-7350",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYHP7350DatasheetREV202508V0.pdf",
+        "pages": "1-2",
+        "revision": "REV202508V0"
+      },
+      "family": "NYHP series",
+      "ul94": "V-0",
+      "notes": "High frequency very low loss laminate, lead-free compatible. Dk 3.50 and Df 0.0029 at 10 GHz are maximum values; thermal stress pass (10 s at 288 C, unetched and etched); T260 above 120 min, T288 and T300 above 60 min; X/Y CTE 22/25 ppm/C and Z-axis CTE 100 ppm/C (TMA, no range printed); passive intermodulation below -158 dBc; flexural strength 220/140 N/mm2 are minimum values. UL file E213990. Resistivity converted (minimum values).",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0029,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": 40,
+      "tg_dma_c": 190,
+      "td_c": 400,
+      "cte_x_ppm": 22,
+      "cte_y_ppm": 25,
+      "cte_z_below_tg_ppm": 100,
+      "peel_strength_n_mm": 0.8,
+      "peel_condition": "1 oz HTE foil, as received",
+      "volume_resistivity_ohm_cm": 1e+16,
+      "surface_resistivity_ohm": 5100000000000000.0,
+      "water_absorption_pct": 0.13,
+      "thermal_conductivity_w_mk": 0.6,
+      "flexural_strength_mpa": {
+        "lengthwise": 220,
+        "crosswise": 140
+      },
+      "thicknesses_mm": [
+        0.254,
+        0.508,
+        0.762,
+        1.524
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 914,
+          "height_mm": 1219,
+          "label": "36 x 48 in"
+        },
+        {
+          "width_mm": 1067,
+          "height_mm": 1219,
+          "label": "42 x 48 in"
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "foil_type": "HTE"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "HTE"
+        },
+        {
+          "weight_oz": 0.5,
+          "foil_type": "RTF"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "RTF"
+        }
+      ]
+    },
+    {
+      "id": "nouya/nyhp-7350-ant",
+      "manufacturer": "Nouya",
+      "name": "NYHP-7350 ANT",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYHP7350ANTDatasheetREV202508V0.pdf",
+        "pages": "1-2",
+        "revision": "REV202508V0"
+      },
+      "family": "NYHP series",
+      "ul94": "V-0",
+      "notes": "Antenna grade variant of NYHP-7350. Tg above 200 C by DMA; Z-axis CTE 1.2 %; T260 above 120 min, T288 and T300 above 60 min; CAF resistance pass. Dk and Df are maximum values at 10 GHz. Resistivity converted (minimum values).",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0029,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": 48,
+      "td_c": 400,
+      "cte_z_50_260_pct": 1.2,
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "1 oz HVLP foil, as received",
+      "volume_resistivity_ohm_cm": 1e+16,
+      "surface_resistivity_ohm": 5100000000000000.0,
+      "water_absorption_pct": 0.08,
+      "thicknesses_mm": [
+        0.508,
+        0.762,
+        1.016,
+        1.524
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 914,
+          "height_mm": 1219,
+          "label": "36 x 48 in"
+        },
+        {
+          "width_mm": 1067,
+          "height_mm": 1219,
+          "label": "42 x 48 in"
+        }
+      ]
+    },
+    {
+      "id": "nouya/nyhp-7350d",
+      "manufacturer": "Nouya",
+      "name": "NYHP-7350D",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYHP7350DDatasheetREV202508V0.pdf",
+        "pages": "1-2",
+        "revision": "REV202508V0"
+      },
+      "family": "NYHP series",
+      "ul94": "V-0",
+      "notes": "Variant D of NYHP-7350. Dk 3.50 and Df 0.0024 at 10 GHz are maximum values; X/Y CTE 16/17 ppm/C and Z-axis CTE 100 ppm/C (TMA, no range printed); CAF resistance pass. Resistivity converted (minimum values).",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0024,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": 40,
+      "tg_dma_c": 170,
+      "td_c": 400,
+      "cte_x_ppm": 16,
+      "cte_y_ppm": 17,
+      "cte_z_below_tg_ppm": 100,
+      "peel_strength_n_mm": 0.65,
+      "peel_condition": "1 oz HVLP foil, as received",
+      "volume_resistivity_ohm_cm": 130000000000000.0,
+      "surface_resistivity_ohm": 57000000000000.0,
+      "water_absorption_pct": 0.25,
+      "thermal_conductivity_w_mk": 0.8,
+      "thicknesses_mm": [
+        0.254,
+        0.508,
+        0.762,
+        1.524
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 914,
+          "height_mm": 1219,
+          "label": "36 x 48 in"
+        },
+        {
+          "width_mm": 1067,
+          "height_mm": 1219,
+          "label": "42 x 48 in"
+        }
+      ]
+    },
+    {
+      "id": "nouya/nyhp-7350-lnb",
+      "manufacturer": "Nouya",
+      "name": "NYHP-7350 LNB",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYHP7350LNBDatasheetREV202508V0.pdf",
+        "pages": "1-2",
+        "revision": "REV202508V0"
+      },
+      "family": "NYHP series",
+      "ul94": "V-0",
+      "notes": "Variant of NYHP-7350 for LNB (satellite receiver) use. Tg above 200 C by DMA; Z-axis CTE 1.2 %; T260 above 120 min, T288 and T300 above 60 min; CAF resistance pass. Dk and Df are maximum values at 10 GHz. Resistivity converted (minimum values).",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.3,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0031,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": 48,
+      "td_c": 400,
+      "cte_z_50_260_pct": 1.2,
+      "peel_strength_n_mm": 0.8,
+      "peel_condition": "1/2 oz HTE foil, as received",
+      "volume_resistivity_ohm_cm": 1e+16,
+      "surface_resistivity_ohm": 5100000000000000.0,
+      "water_absorption_pct": 0.08
+    },
+    {
+      "id": "nouya/nyhp-7350-pa-x",
+      "manufacturer": "Nouya",
+      "name": "NYHP-7350 PA(X)",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYHP7350PAXDatasheetREV202508V0.pdf",
+        "pages": "1-2",
+        "revision": "REV202508V0"
+      },
+      "family": "NYHP series",
+      "ul94": "V-0",
+      "notes": "Power amplifier variant of NYHP-7350. Tg above 190 C by DMA; X/Y CTE 19/20 ppm/C (50 to 125 C), Z-axis CTE 50 ppm/C (50 to 125 C) and 2.4 % (50 to 260 C); CAF resistance pass. Dk and Df are maximum values at 10 GHz. Resistivity converted (minimum values).",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0029,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": 48,
+      "td_c": 400,
+      "cte_x_ppm": 19,
+      "cte_y_ppm": 20,
+      "cte_z_50_260_pct": 2.4,
+      "peel_strength_n_mm": 0.8,
+      "peel_condition": "1 oz RTF foil, as received",
+      "volume_resistivity_ohm_cm": 1e+16,
+      "surface_resistivity_ohm": 5100000000000000.0,
+      "water_absorption_pct": 0.08
+    },
+    {
+      "id": "nouya/nyhp-7300mw-p",
+      "manufacturer": "Nouya",
+      "name": "NYHP-7300MW-P",
+      "kind": "ptfe",
+      "source": {
+        "pdf": "NOUYANYHP7300MWPDatasheetREV202508V0.pdf",
+        "pages": "1-2",
+        "revision": "REV202508V0"
+      },
+      "family": "NYHP series",
+      "resin": "PTFE",
+      "ul94": "V-0",
+      "td_c": 500,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.95,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0004,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": 25,
+      "cte_z_below_tg_ppm": 23,
+      "cte_z_above_tg_ppm": 35,
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "1/2 oz HVLP foil, as received",
+      "volume_resistivity_ohm_cm": 400000000000000.0,
+      "surface_resistivity_ohm": 210000000000000.0,
+      "water_absorption_pct": 0.04,
+      "notes": "PTFE high frequency copper clad laminate. Dk 2.95 +/- 0.05 and Df 0.0004 at 10 GHz are maximum values; alpha 1 23 and alpha 2 35 ppm/C (no range printed); T260 above 120 min, T288 and T300 above 60 min; CAF resistance pass. Resistivity converted (minimum values)."
+    },
+    {
+      "id": "nouya/ny-p5",
+      "manufacturer": "Nouya",
+      "name": "NY-P5",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NOUYANYP5DatasheetREV202507A0.pdf",
+        "pages": "1-2",
+        "revision": "REV202507A0"
+      },
+      "family": "NY series",
+      "ul94": "V-0",
+      "tg_tma_c": 190,
+      "tg_dma_c": 200,
+      "td_c": 380,
+      "cte_z_below_tg_ppm": 60,
+      "cte_z_above_tg_ppm": 210,
+      "cte_z_50_260_pct": 2.0,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.1,
+          "method": "SPDR, C-24/23/50",
+          "resin_content_pct": 65
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0007,
+          "method": "SPDR, C-24/23/50",
+          "resin_content_pct": 65
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2400000000000000.0,
+      "surface_resistivity_ohm": 190000000000000.0,
+      "water_absorption_pct": 0.03,
+      "peel_strength_n_mm": 0.65,
+      "peel_condition": "1 oz HTE foil, as received",
+      "notes": "Extreme low loss laminate with a prepreg NY-P5P. Dk and Df are for resin content 65 %; the feature list of the sheet quotes Df 0.0006 at 10 GHz while the table gives 0.0007. X/Y CTE 7/9 ppm/C below Tg; T288 above 60 min (clad and etched). Peel strength 0.6 N/mm on 1 oz HVLP foil. Resistivity converted from M-ohm cm and M-ohm."
+    },
+    {
+      "id": "nouya/ny8320-nsfp",
+      "manufacturer": "Nouya",
+      "name": "NY8320 NSFP",
+      "kind": "prepreg",
+      "source": {
+        "pdf": "NYWRD02465A0NY8320NSFLineup.pdf",
+        "pages": "1-2"
+      },
+      "family": "NY8320",
+      "prepreg": [
+        {
+          "style": "1017",
+          "resin_content_pct": 70.0,
+          "pressed_thickness_um": 20,
+          "dk": 3.4,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1017",
+          "resin_content_pct": 74.0,
+          "pressed_thickness_um": 25,
+          "dk": 3.3,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1017",
+          "resin_content_pct": 76.0,
+          "pressed_thickness_um": 25,
+          "dk": 3.3,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1017",
+          "resin_content_pct": 78.0,
+          "pressed_thickness_um": 30,
+          "dk": 3.3,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1017",
+          "resin_content_pct": 81.0,
+          "pressed_thickness_um": 30,
+          "dk": 3.2,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1017",
+          "resin_content_pct": 83.0,
+          "pressed_thickness_um": 30,
+          "dk": 3.2,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1024",
+          "resin_content_pct": 64.0,
+          "pressed_thickness_um": 30,
+          "dk": 3.5,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1024",
+          "resin_content_pct": 67.0,
+          "pressed_thickness_um": 35,
+          "dk": 3.5,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1024",
+          "resin_content_pct": 70.0,
+          "pressed_thickness_um": 35,
+          "dk": 3.4,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1024",
+          "resin_content_pct": 72.0,
+          "pressed_thickness_um": 35,
+          "dk": 3.4,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1024",
+          "resin_content_pct": 74.0,
+          "pressed_thickness_um": 35,
+          "dk": 3.3,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1030",
+          "resin_content_pct": 64.0,
+          "pressed_thickness_um": 40,
+          "dk": 3.5,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1030",
+          "resin_content_pct": 67.0,
+          "pressed_thickness_um": 45,
+          "dk": 3.5,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1030",
+          "resin_content_pct": 70.0,
+          "pressed_thickness_um": 50,
+          "dk": 3.4,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1030",
+          "resin_content_pct": 72.0,
+          "pressed_thickness_um": 50,
+          "dk": 3.4,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1030",
+          "resin_content_pct": 74.0,
+          "pressed_thickness_um": 55,
+          "dk": 3.3,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1030",
+          "resin_content_pct": 76.0,
+          "pressed_thickness_um": 60,
+          "dk": 3.3,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 63.0,
+          "pressed_thickness_um": 65,
+          "dk": 3.5,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 65.0,
+          "pressed_thickness_um": 70,
+          "dk": 3.5,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 67.0,
+          "pressed_thickness_um": 75,
+          "dk": 3.5,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 69.0,
+          "pressed_thickness_um": 80,
+          "dk": 3.4,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 71.0,
+          "pressed_thickness_um": 85,
+          "dk": 3.4,
+          "df": 0.009,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "2013",
+          "resin_content_pct": 59.0,
+          "pressed_thickness_um": 100,
+          "dk": 3.7,
+          "df": 0.008,
+          "test_freq_ghz": 10.0
+        }
+      ],
+      "notes": "Prepreg of the NY8320 NSF low CTE IC substrate material: typical thickness, resin content and Dk/Df by glass style (the sheet also gives Dk and Df at 1 MHz, 1 GHz and 5 GHz). All thicknesses are without copper foil. Reference values, not guaranteed. The line-up also lists a core table that is not loaded."
+    },
+    {
+      "id": "nouya/ny8320-ld",
+      "manufacturer": "Nouya",
+      "name": "NY8320 LD",
+      "kind": "laminate",
+      "source": {
+        "pdf": "NYWRD02481A0NY8320LDLineup.pdf",
+        "pages": "1-2"
+      },
+      "family": "NY8320",
+      "thicknesses_mm": [
+        0.06,
+        0.1,
+        0.13,
+        0.15,
+        0.215
+      ],
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.5,
+          "method": "Typical, by line-up"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": "Typical, by line-up"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.007,
+          "method": "Typical, by line-up"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.008,
+          "method": "Typical, by line-up"
+        }
+      ],
+      "notes": "Low Dk glass core of the NY8320 LD IC substrate material with the prepreg NY8320 LDP. Dk and Df are typical values by construction; the stored points are those of the thinner cores (Dk 3.5/3.4, Df 0.007/0.008 at 1/10 GHz) and the 0.150 mm 1078x3 construction has Dk 3.6/3.5 and Df 0.006/0.007. Core thicknesses do not include the copper foil. Reference values, not guaranteed. The prepreg table (NY8320 LDP) of the line-up is not loaded because its glass style labels are not readable against the rows."
+    }
+  ]
+}

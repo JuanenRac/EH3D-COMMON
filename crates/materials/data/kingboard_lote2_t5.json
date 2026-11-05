@@ -1,0 +1,2996 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Kingboard",
+  "materials": [
+    {
+      "id": "kingboard/kb-3200g",
+      "manufacturer": "Kingboard",
+      "name": "KB-3200G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-3200G,PP-KB3200G.pdf",
+        "pages": "1"
+      },
+      "family": "KB-3200G",
+      "resin": "Halogen-free epoxy",
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/130",
+      "tg_dsc_c": 178.0,
+      "tg_dma_c": 193.0,
+      "td_c": 387.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 15.0,
+      "cte_z_below_tg_ppm": 45.0,
+      "cte_z_above_tg_ppm": 200.0,
+      "cte_z_50_260_pct": 1.8,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.1,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.0,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.6,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0075,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0085,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.006,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.008,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        }
+      ],
+      "volume_resistivity_ohm_cm": 6400000000000000.0,
+      "surface_resistivity_ohm": 530000000000000.0,
+      "arc_resistance_s": 122.0,
+      "peel_strength_n_mm": 1.3,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 580.0,
+        "crosswise": 490.0
+      },
+      "water_absorption_pct": 0.11,
+      "thicknesses_mm": [
+        0.051,
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.152,
+        0.178,
+        0.203,
+        0.254,
+        0.305,
+        0.381,
+        0.457,
+        0.635,
+        0.762,
+        0.889,
+        1.016,
+        1.499
+      ],
+      "sources": [
+        {
+          "pdf": "KB-3200G-line-up.pdf",
+          "pages": "1-2"
+        }
+      ],
+      "notes": "Sheet class: Halogen-Free/High Tg/Low Loss. Companion prepreg PP-KB3200G. Time to delamination: T260 above 60 min, T288 above 60 min. Thermal stress (float 288 C, unetched) at least 240 s. CTI at least 175 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.0mm (2116*10) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C. Thicknesses are the core thicknesses of the line-up sheet (the sheet lists them with a tolerance of 10 %)."
+    },
+    {
+      "id": "kingboard/kb-5200g",
+      "manufacturer": "Kingboard",
+      "name": "KB-5200G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-5200G,PP-KB5200G.pdf",
+        "pages": "1"
+      },
+      "family": "KB-5200G",
+      "resin": "Halogen-free epoxy",
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/130",
+      "tg_dma_c": 200.0,
+      "td_c": 420.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 15.0,
+      "cte_z_below_tg_ppm": 40.0,
+      "cte_z_above_tg_ppm": 160.0,
+      "cte_z_50_260_pct": 1.5,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.9,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.8,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0035,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0055,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 6500000000000000.0,
+      "surface_resistivity_ohm": 540000000000000.0,
+      "arc_resistance_s": 120.0,
+      "peel_strength_n_mm": 1.2,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 570.0,
+        "crosswise": 480.0
+      },
+      "water_absorption_pct": 0.1,
+      "notes": "Sheet class: Halogen-Free/High Tg/Very low Loss. Companion prepreg PP-KB5200G. Time to delamination: T260 above 60 min, T288 above 60 min. Thermal stress (float 288 C, unetched) at least 240 s. CTI at least 175 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.0mm (10*2116) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C."
+    },
+    {
+      "id": "kingboard/kb-6150",
+      "manufacturer": "Kingboard",
+      "name": "KB-6150",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6150.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6150",
+      "reinforcement": "E-glass woven",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/21",
+      "tg_dsc_c": 132.0,
+      "td_c": 305.0,
+      "cte_z_below_tg_ppm": 58.0,
+      "cte_z_above_tg_ppm": 286.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.4,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.017,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.018,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "surface_resistivity_ohm": 1000000000000.0,
+      "arc_resistance_s": 125.0,
+      "peel_strength_n_mm": 1.75,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 560.0,
+        "crosswise": 440.0
+      },
+      "water_absorption_pct": 0.17,
+      "notes": "Sheet class: Conventional FR-4/Normal Tg. Thermal stress (float 288 C, unetched) at least 180 s. CTI at least 150 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (8*7628) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C."
+    },
+    {
+      "id": "kingboard/kb-6160",
+      "manufacturer": "Kingboard",
+      "name": "KB-6160",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6160,KB-6060.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6160",
+      "reinforcement": "E-glass woven",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/21",
+      "tg_dsc_c": 138.0,
+      "td_c": 310.0,
+      "t260_min": 10.0,
+      "cte_z_below_tg_ppm": 60.0,
+      "cte_z_above_tg_ppm": 300.0,
+      "cte_z_50_260_pct": 4.3,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.4,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.016,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.018,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 550000000000000.0,
+      "surface_resistivity_ohm": 60000000000000.0,
+      "arc_resistance_s": 125.0,
+      "peel_strength_n_mm": 1.75,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 600.0,
+        "crosswise": 500.0
+      },
+      "water_absorption_pct": 0.17,
+      "thicknesses_mm": [
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.14,
+        0.152,
+        0.191,
+        0.203,
+        0.254,
+        0.305,
+        0.381,
+        0.457,
+        0.533,
+        0.635,
+        0.762,
+        0.889,
+        1.016,
+        1.194,
+        1.499
+      ],
+      "sources": [
+        {
+          "pdf": "KB-6160-line-up.pdf",
+          "pages": "1-2"
+        },
+        {
+          "pdf": "KB-6160-Processing-Guide.pdf",
+          "pages": "1-4"
+        }
+      ],
+      "notes": "Sheet class: Conventional FR-4/Normal Tg. Companion prepreg KB-6060. Thermal stress (float 288 C, unetched) at least 180 s. CTI at least 175 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (7628*8) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C. Thicknesses are the core thicknesses of the line-up sheet (the sheet lists them with a tolerance of 10 %).",
+      "processing": {
+        "lamination": {
+          "notes": "Vacuum press at 300-400 psi full pressure; heat-up rate 1.5-2.5 C/min between 80 and 140 C; cure at 175 C material temperature or above for at least 45 min; cooling rate below 3 C/min. Inner layers are baked at 120 C for at least 60 min after the brown oxide treatment, and prepreg is tempered 12 h before use."
+        },
+        "drilling": {
+          "retract_notes": "The guide lists drilling parameters by drill diameter (speed in krpm, infeed in m/min, hit count) for a laminate thickness of 2 mm on a Hitachi machine; vacuum up the dust and blow out the holes after drilling."
+        },
+        "desmear_note": "Vertical or horizontal permanganate etching can be used normally; check the cross-sections under a scanning microscope."
+      }
+    },
+    {
+      "id": "kingboard/kb-6160a",
+      "manufacturer": "Kingboard",
+      "name": "KB-6160A",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6160A,KB-6060A.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6160A",
+      "reinforcement": "E-glass woven",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/21",
+      "tg_dsc_c": 138.0,
+      "td_c": 310.0,
+      "t260_min": 10.0,
+      "cte_z_below_tg_ppm": 60.0,
+      "cte_z_above_tg_ppm": 300.0,
+      "cte_z_50_260_pct": 4.3,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.4,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.016,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.018,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 550000000000000.0,
+      "surface_resistivity_ohm": 60000000000000.0,
+      "arc_resistance_s": 125.0,
+      "peel_strength_n_mm": 1.75,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 600.0,
+        "crosswise": 500.0
+      },
+      "water_absorption_pct": 0.17,
+      "thicknesses_mm": [
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.14,
+        0.152,
+        0.191,
+        0.203,
+        0.254,
+        0.305,
+        0.381,
+        0.457,
+        0.533,
+        0.635,
+        0.762,
+        0.889,
+        1.016,
+        1.194,
+        1.499
+      ],
+      "sources": [
+        {
+          "pdf": "KB-6160A-line-up.pdf",
+          "pages": "1-2"
+        },
+        {
+          "pdf": "KB-6160A-Processing-Guide.pdf",
+          "pages": "1-4"
+        }
+      ],
+      "notes": "Sheet class: Conventional FR-4/Normal Tg. Companion prepreg KB-6060A. Thermal stress (float 288 C, unetched) at least 180 s. CTI at least 175 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (7628*8) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C. Thicknesses are the core thicknesses of the line-up sheet (the sheet lists them with a tolerance of 10 %).",
+      "processing": {
+        "lamination": {
+          "notes": "Vacuum press at 300-400 psi full pressure; heat-up rate 1.5-2.5 C/min between 80 and 140 C; cure at 175 C material temperature or above for at least 45 min; cooling rate below 3 C/min. Inner layers are baked at 120 C for at least 60 min after the brown oxide treatment, and prepreg is tempered 12 h before use."
+        },
+        "drilling": {
+          "retract_notes": "The guide lists drilling parameters by drill diameter (speed in krpm, infeed in m/min, hit count) for a laminate thickness of 2 mm on a Hitachi machine; vacuum up the dust and blow out the holes after drilling."
+        },
+        "desmear_note": "Vertical or horizontal permanganate etching can be used normally; check the cross-sections under a scanning microscope."
+      }
+    },
+    {
+      "id": "kingboard/kb-6160c",
+      "manufacturer": "Kingboard",
+      "name": "KB-6160C",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6160C,KB-6060C.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6160C",
+      "reinforcement": "E-glass woven",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/97",
+      "tg_dsc_c": 135.0,
+      "td_c": 314.0,
+      "t260_min": 20.0,
+      "cte_z_below_tg_ppm": 45.0,
+      "cte_z_above_tg_ppm": 240.0,
+      "cte_z_50_260_pct": 3.6,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.7,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.014,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.015,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 5500000000000000.0,
+      "surface_resistivity_ohm": 60000000000000.0,
+      "arc_resistance_s": 125.0,
+      "peel_strength_n_mm": 1.7,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 590.0,
+        "crosswise": 495.0
+      },
+      "water_absorption_pct": 0.13,
+      "notes": "Sheet class: Conventional FR-4/Normal Tg/CTI≥600V. Companion prepreg KB-6060C. Thermal stress (float 288 C, unetched) at least 180 s. CTI at least 600 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (7628*8) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C.",
+      "processing": {
+        "drilling": {
+          "retract_notes": "The guide lists drilling parameters by drill diameter (speed in krpm, infeed in m/min, hit count) for a laminate thickness of 2 mm on a Hitachi machine; vacuum up the dust and blow out the holes after drilling."
+        },
+        "desmear_note": "Vertical or horizontal permanganate etching can be used normally; check the cross-sections under a scanning microscope."
+      },
+      "sources": [
+        {
+          "pdf": "KB-6160C Processing Guide (ENG).pdf",
+          "pages": "1-4"
+        }
+      ]
+    },
+    {
+      "id": "kingboard/kb-6160f",
+      "manufacturer": "Kingboard",
+      "name": "KB-6160F",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6160F,KB-6060F.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6160F",
+      "reinforcement": "E-glass woven",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/97",
+      "tg_dsc_c": 135.0,
+      "td_c": 313.0,
+      "t260_min": 10.0,
+      "cte_z_below_tg_ppm": 42.0,
+      "cte_z_above_tg_ppm": 278.0,
+      "cte_z_50_260_pct": 4.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.7,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.015,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.016,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 5000000000000000.0,
+      "surface_resistivity_ohm": 530000000000000.0,
+      "arc_resistance_s": 130.0,
+      "peel_strength_n_mm": 1.55,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 550.0,
+        "crosswise": 450.0
+      },
+      "water_absorption_pct": 0.13,
+      "notes": "Sheet class: Conventional FR-4/Normal Tg. Companion prepreg KB-6060F. Thermal stress (float 288 C, unetched) at least 180 s. CTI at least 175 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (7628*8) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C."
+    },
+    {
+      "id": "kingboard/kb-6160lc-c",
+      "manufacturer": "Kingboard",
+      "name": "KB-6160LC(C)",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6160LC(C).pdf",
+        "pages": "1"
+      },
+      "family": "KB-6160LC(C)",
+      "reinforcement": "E-glass woven",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/97",
+      "tg_dsc_c": 135.0,
+      "td_c": 350.0,
+      "t260_min": 20.0,
+      "cte_z_below_tg_ppm": 45.0,
+      "cte_z_above_tg_ppm": 240.0,
+      "cte_z_50_260_pct": 3.6,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.7,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.014,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.015,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 6500000000000000.0,
+      "surface_resistivity_ohm": 58000000000000.0,
+      "arc_resistance_s": 125.0,
+      "peel_strength_n_mm": 1.7,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 565.0,
+        "crosswise": 416.0
+      },
+      "water_absorption_pct": 0.1,
+      "notes": "Sheet class: Conventional FR-4/Normal Tg/CTI≥600V. Thermal stress (float 288 C, unetched) at least 180 s. CTI at least 600 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (7628*8) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C."
+    },
+    {
+      "id": "kingboard/kb-6160lc",
+      "manufacturer": "Kingboard",
+      "name": "KB-6160LC",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6160LC.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6160LC",
+      "reinforcement": "E-glass woven",
+      "ul94": "V-0",
+      "tg_dsc_c": 135.0,
+      "td_c": 350.0,
+      "t260_min": 10.0,
+      "cte_z_below_tg_ppm": 45.0,
+      "cte_z_above_tg_ppm": 240.0,
+      "cte_z_50_260_pct": 3.6,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.8,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.017,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.018,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 520000000000000.0,
+      "surface_resistivity_ohm": 53000000000000.0,
+      "arc_resistance_s": 125.0,
+      "peel_strength_n_mm": 1.45,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 560.0,
+        "crosswise": 450.0
+      },
+      "water_absorption_pct": 0.1,
+      "notes": "Sheet class: Conventional FR-4/Normal Tg. Thermal stress (float 288 C, unetched) at least 180 s. CTI at least 175 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (7628*8) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C."
+    },
+    {
+      "id": "kingboard/kb-6164",
+      "manufacturer": "Kingboard",
+      "name": "KB-6164",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6164,KB-6064.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6164",
+      "reinforcement": "E-glass woven",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/101",
+      "tg_dsc_c": 140.0,
+      "td_c": 330.0,
+      "t260_min": 60.0,
+      "t288_min": 15.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 15.0,
+      "cte_z_below_tg_ppm": 45.0,
+      "cte_z_above_tg_ppm": 240.0,
+      "cte_z_50_260_pct": 3.5,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.8,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.015,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.016,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 3100000000000000.0,
+      "surface_resistivity_ohm": 220000000000000.03,
+      "arc_resistance_s": 125.0,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 550.0,
+        "crosswise": 496.0
+      },
+      "water_absorption_pct": 0.1,
+      "thicknesses_mm": [
+        0.051,
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.14,
+        0.152,
+        0.191,
+        0.203,
+        0.254,
+        0.305,
+        0.381,
+        0.457,
+        0.533,
+        0.635,
+        0.762,
+        0.889,
+        1.016,
+        1.194,
+        1.499
+      ],
+      "sources": [
+        {
+          "pdf": "KB-6164-line-up.pdf",
+          "pages": "1-2"
+        },
+        {
+          "pdf": "KB-6164-Processing-Guide.pdf",
+          "pages": "1-4"
+        }
+      ],
+      "notes": "Sheet class: Lead-Free/Normal Tg/Low CTE. Companion prepreg KB-6064. Thermal stress (float 288 C, unetched) at least 240 s. CTI at least 175 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (7628*8) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C. Thicknesses are the core thicknesses of the line-up sheet (the sheet lists them with a tolerance of 10 %).",
+      "processing": {
+        "lamination": {
+          "notes": "Vacuum press at 300-400 psi full pressure; heat-up rate 1.5-2.5 C/min between 80 and 140 C; cure at 180 C material temperature or above for at least 50 min; cooling rate below 3 C/min. Inner layers are baked at 120 C for at least 60 min after the brown oxide treatment, and prepreg is tempered 12 h before use."
+        },
+        "drilling": {
+          "retract_notes": "The guide lists drilling parameters by drill diameter (speed in krpm, infeed in m/min, hit count) for a laminate thickness of 2 mm on a Hitachi machine; vacuum up the dust and blow out the holes after drilling."
+        },
+        "desmear_note": "Vertical or horizontal permanganate etching can be used normally; check the cross-sections under a scanning microscope."
+      }
+    },
+    {
+      "id": "kingboard/kb-6164f",
+      "manufacturer": "Kingboard",
+      "name": "KB-6164F",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6164F,KB-6064F.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6164F",
+      "reinforcement": "E-glass woven",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/101",
+      "tg_dsc_c": 145.0,
+      "td_c": 340.0,
+      "t260_min": 60.0,
+      "t288_min": 20.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 15.0,
+      "cte_z_below_tg_ppm": 43.0,
+      "cte_z_above_tg_ppm": 245.0,
+      "cte_z_50_260_pct": 3.4,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.8,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.015,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.016,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 4700000000000000.0,
+      "surface_resistivity_ohm": 530000000000000.0,
+      "arc_resistance_s": 125.0,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 560.0,
+        "crosswise": 495.0
+      },
+      "water_absorption_pct": 0.1,
+      "thicknesses_mm": [
+        0.051,
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.14,
+        0.152,
+        0.191,
+        0.203,
+        0.254,
+        0.305,
+        0.381,
+        0.457,
+        0.533,
+        0.635,
+        0.762,
+        0.889,
+        1.016,
+        1.194,
+        1.499
+      ],
+      "sources": [
+        {
+          "pdf": "KB-6164F-line-up.pdf",
+          "pages": "1-2"
+        },
+        {
+          "pdf": "KB-6164F-Processing-Guide.pdf",
+          "pages": "1-4"
+        }
+      ],
+      "notes": "Sheet class: Lead-Free/Tg 140/Low CTE. Companion prepreg KB-6064F. Thermal stress (float 288 C, unetched) at least 240 s. CTI at least 175 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (7628*8) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C. Thicknesses are the core thicknesses of the line-up sheet (the sheet lists them with a tolerance of 10 %).",
+      "processing": {
+        "lamination": {
+          "notes": "Vacuum press at 300-400 psi full pressure; heat-up rate 1.5-2.5 C/min between 80 and 140 C; cure at 180 C material temperature or above for at least 60 min; cooling rate below 3 C/min. Inner layers are baked at 120 C for at least 60 min after the brown oxide treatment, and prepreg is tempered 12 h before use."
+        },
+        "drilling": {
+          "retract_notes": "The guide lists drilling parameters by drill diameter (speed in krpm, infeed in m/min, hit count) for a laminate thickness of 2 mm on a Hitachi machine; vacuum up the dust and blow out the holes after drilling."
+        },
+        "desmear_note": "Vertical or horizontal permanganate etching can be used normally; check the cross-sections under a scanning microscope."
+      }
+    },
+    {
+      "id": "kingboard/kb-6165",
+      "manufacturer": "Kingboard",
+      "name": "KB-6165",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6165,KB-6065.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6165",
+      "reinforcement": "E-glass woven",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "tg_dsc_c": 153.0,
+      "td_c": 348.0,
+      "t260_min": 60.0,
+      "t288_min": 20.0,
+      "cte_z_below_tg_ppm": 42.0,
+      "cte_z_above_tg_ppm": 240.0,
+      "cte_z_50_260_pct": 3.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.8,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.015,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.016,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 3000000000000000.0,
+      "surface_resistivity_ohm": 240000000000000.0,
+      "arc_resistance_s": 120.0,
+      "peel_strength_n_mm": 1.45,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 550.0,
+        "crosswise": 470.0
+      },
+      "water_absorption_pct": 0.09,
+      "thicknesses_mm": [
+        0.051,
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.14,
+        0.152,
+        0.191,
+        0.203,
+        0.254,
+        0.305,
+        0.381,
+        0.457,
+        0.533,
+        0.635,
+        0.762,
+        0.889,
+        1.016,
+        1.194,
+        1.499,
+        1.6,
+        1.7,
+        1.803,
+        1.91,
+        2.006
+      ],
+      "sources": [
+        {
+          "pdf": "KB-6165-line-up.pdf",
+          "pages": "1-2"
+        },
+        {
+          "pdf": "KB-6165-Processing-Guide.pdf",
+          "pages": "1-4"
+        }
+      ],
+      "notes": "Sheet class: Lead-Free/Tg 150/Low CTE. Companion prepreg KB-6065. Thermal stress (float 288 C, unetched) at least 240 s. CTI at least 175 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (7628*8) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C. Thicknesses are the core thicknesses of the line-up sheet (the sheet lists them with a tolerance of 10 %).",
+      "processing": {
+        "lamination": {
+          "notes": "Vacuum press at 300-400 psi full pressure; heat-up rate 1.5-2.5 C/min between 80 and 140 C; cure at 180 C material temperature or above for at least 60 min; cooling rate below 3 C/min. Inner layers are baked at 120 C for at least 60 min after the brown oxide treatment, and prepreg is tempered 12 h before use."
+        },
+        "drilling": {
+          "retract_notes": "The guide lists drilling parameters by drill diameter (speed in krpm, infeed in m/min, hit count) for a laminate thickness of 2 mm on a Hitachi machine; vacuum up the dust and blow out the holes after drilling."
+        },
+        "desmear_note": "Vertical or horizontal permanganate etching can be used normally; check the cross-sections under a scanning microscope."
+      }
+    },
+    {
+      "id": "kingboard/kb-6165c",
+      "manufacturer": "Kingboard",
+      "name": "KB-6165C",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6165C,KB-6065C.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6165C",
+      "reinforcement": "E-glass woven",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "tg_dsc_c": 157.0,
+      "td_c": 352.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 14.0,
+      "cte_z_below_tg_ppm": 37.0,
+      "cte_z_above_tg_ppm": 232.0,
+      "cte_z_50_260_pct": 2.8,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.8,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.015,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.016,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 3900000000000000.0,
+      "surface_resistivity_ohm": 290000000000000.0,
+      "arc_resistance_s": 127.0,
+      "peel_strength_n_mm": 1.3,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 540.0,
+        "crosswise": 490.0
+      },
+      "water_absorption_pct": 0.09,
+      "notes": "Sheet class: Lead-Free/Tg 150/Low CTE/CTI≥600V. Companion prepreg KB-6065C. Time to delamination: T260 above 60 min, T288 above 30 min. Thermal stress (float 288 C, unetched) at least 240 s. CTI at least 600 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (7628*8) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C."
+    },
+    {
+      "id": "kingboard/kb-6165f",
+      "manufacturer": "Kingboard",
+      "name": "KB-6165F",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6165F,KB-6065F.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6165F",
+      "reinforcement": "E-glass woven",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "tg_dsc_c": 157.0,
+      "td_c": 352.0,
+      "t260_min": 60.0,
+      "t288_min": 30.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 15.0,
+      "cte_z_below_tg_ppm": 37.0,
+      "cte_z_above_tg_ppm": 230.0,
+      "cte_z_50_260_pct": 2.8,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.8,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.015,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.016,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 5400000000000000.0,
+      "surface_resistivity_ohm": 459999999999999.94,
+      "arc_resistance_s": 127.0,
+      "peel_strength_n_mm": 1.45,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 540.0,
+        "crosswise": 480.0
+      },
+      "water_absorption_pct": 0.09,
+      "thicknesses_mm": [
+        0.051,
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.14,
+        0.152,
+        0.191,
+        0.203,
+        0.254,
+        0.305,
+        0.381,
+        0.457,
+        0.533,
+        0.635,
+        0.762,
+        0.889,
+        1.016,
+        1.194,
+        1.499
+      ],
+      "sources": [
+        {
+          "pdf": "KB-6165F-line-up.pdf",
+          "pages": "1-2"
+        },
+        {
+          "pdf": "KB-6165F-Processing-Guide.pdf",
+          "pages": "1-4"
+        }
+      ],
+      "notes": "Sheet class: Lead-Free/Tg 150/Low CTE. Companion prepreg KB-6065F. Thermal stress (float 288 C, unetched) at least 240 s. CTI at least 175 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (8*7628) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C. Thicknesses are the core thicknesses of the line-up sheet (the sheet lists them with a tolerance of 10 %).",
+      "processing": {
+        "lamination": {
+          "notes": "Vacuum press at 300-400 psi full pressure; heat-up rate 1.5-2.5 C/min between 80 and 140 C; cure at 180 C material temperature or above for at least 60 min; cooling rate below 3 C/min. Inner layers are baked at 120 C for at least 60 min after the brown oxide treatment, and prepreg is tempered 12 h before use."
+        },
+        "drilling": {
+          "retract_notes": "The guide lists drilling parameters by drill diameter (speed in krpm, infeed in m/min, hit count) for a laminate thickness of 2 mm on a Hitachi machine; vacuum up the dust and blow out the holes after drilling."
+        },
+        "desmear_note": "Vertical or horizontal permanganate etching can be used normally; check the cross-sections under a scanning microscope."
+      }
+    },
+    {
+      "id": "kingboard/kb-6165g",
+      "manufacturer": "Kingboard",
+      "name": "KB-6165G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6165G,KB-6065G.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6165G",
+      "resin": "Halogen-free epoxy",
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/127",
+      "tg_dsc_c": 155.0,
+      "tg_dma_c": 165.0,
+      "td_c": 365.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 15.0,
+      "cte_z_below_tg_ppm": 45.0,
+      "cte_z_above_tg_ppm": 241.0,
+      "cte_z_50_260_pct": 2.8,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.4,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.011,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.013,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 5700000000000000.0,
+      "surface_resistivity_ohm": 459999999999999.94,
+      "arc_resistance_s": 121.0,
+      "peel_strength_n_mm": 1.4,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 580.0,
+        "crosswise": 500.0
+      },
+      "water_absorption_pct": 0.11,
+      "thicknesses_mm": [
+        0.051,
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.14,
+        0.152,
+        0.191,
+        0.203,
+        0.254,
+        0.305,
+        0.381,
+        0.457,
+        0.533,
+        0.635,
+        0.762,
+        0.889,
+        1.016,
+        1.194,
+        1.499
+      ],
+      "sources": [
+        {
+          "pdf": "KB-6165G-line-up.pdf",
+          "pages": "1-2"
+        },
+        {
+          "pdf": "KB-6165G-Processing-Guide.pdf",
+          "pages": "1-4"
+        }
+      ],
+      "notes": "Sheet class: Halogen-Free/Mid Tg/Low CTE. Companion prepreg KB-6065G. Time to delamination: T260 above 60 min, T288 above 60 min. Thermal stress (float 288 C, unetched) at least 240 s. CTI at least 200 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (7628*8) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C. Thicknesses are the core thicknesses of the line-up sheet (the sheet lists them with a tolerance of 10 %).",
+      "processing": {
+        "lamination": {
+          "notes": "Vacuum press at 300-400 psi full pressure; heat-up rate 1.5-2.5 C/min between 80 and 140 C; cure at 180 C material temperature or above for at least 60 min; cooling rate below 3 C/min. Inner layers are baked at 120 C for at least 60 min after the brown oxide treatment, and prepreg is tempered 12 h before use."
+        },
+        "drilling": {
+          "retract_notes": "The guide lists drilling parameters by drill diameter (speed in krpm, infeed in m/min, hit count) for a laminate thickness of 2 mm on a Hitachi machine; vacuum up the dust and blow out the holes after drilling."
+        },
+        "desmear_note": "Vertical or horizontal permanganate etching can be used normally; check the cross-sections under a scanning microscope."
+      }
+    },
+    {
+      "id": "kingboard/kb-6165gc",
+      "manufacturer": "Kingboard",
+      "name": "KB-6165GC",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6165GC,KB-6065GC.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6165GC",
+      "resin": "Halogen-free epoxy",
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/127",
+      "tg_dsc_c": 155.0,
+      "tg_dma_c": 166.0,
+      "td_c": 365.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 15.0,
+      "cte_z_below_tg_ppm": 45.0,
+      "cte_z_above_tg_ppm": 232.0,
+      "cte_z_50_260_pct": 2.7,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.5,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.011,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.013,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 2300000000000000.0,
+      "surface_resistivity_ohm": 270000000000000.0,
+      "arc_resistance_s": 121.0,
+      "peel_strength_n_mm": 1.4,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 602.0,
+        "crosswise": 534.0
+      },
+      "water_absorption_pct": 0.11,
+      "thicknesses_mm": [
+        0.051,
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.14,
+        0.152,
+        0.191,
+        0.203,
+        0.254,
+        0.305,
+        0.381,
+        0.457,
+        0.533,
+        0.635,
+        0.762,
+        0.889,
+        1.016,
+        1.194,
+        1.499
+      ],
+      "sources": [
+        {
+          "pdf": "KB-6165GC-line-up.pdf",
+          "pages": "1-2"
+        },
+        {
+          "pdf": "KB-6165GC-Processing-Guide.pdf",
+          "pages": "1-4"
+        }
+      ],
+      "notes": "Sheet class: Halogen-Free/Mid Tg/Low CTE/CTI≥600V. Companion prepreg KB-6065GC. Time to delamination: T260 above 60 min, T288 above 60 min. Thermal stress (float 288 C, unetched) at least 240 s. CTI at least 600 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (7628*8) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C. Thicknesses are the core thicknesses of the line-up sheet (the sheet lists them with a tolerance of 10 %).",
+      "processing": {
+        "lamination": {
+          "notes": "Vacuum press at 300-400 psi full pressure; heat-up rate 1.5-2.5 C/min between 80 and 140 C; cure at 180 C material temperature or above for at least 60 min; cooling rate below 3 C/min. Inner layers are baked at 120 C for at least 60 min after the brown oxide treatment, and prepreg is tempered 12 h before use."
+        },
+        "drilling": {
+          "retract_notes": "The guide lists drilling parameters by drill diameter (speed in krpm, infeed in m/min, hit count) for a laminate thickness of 2 mm on a Hitachi machine; vacuum up the dust and blow out the holes after drilling."
+        },
+        "desmear_note": "Vertical or horizontal permanganate etching can be used normally; check the cross-sections under a scanning microscope."
+      }
+    },
+    {
+      "id": "kingboard/kb-6165gmd",
+      "manufacturer": "Kingboard",
+      "name": "KB-6165GMD",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6165GMD,KB-6065GMD.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6165GMD",
+      "resin": "Halogen-free epoxy",
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/130",
+      "tg_dsc_c": 155.0,
+      "td_c": 370.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 15.0,
+      "cte_z_below_tg_ppm": 41.0,
+      "cte_z_above_tg_ppm": 235.0,
+      "cte_z_50_260_pct": 2.6,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.3,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.1,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.7,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.6,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.01,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.012,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.011,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.014,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        }
+      ],
+      "volume_resistivity_ohm_cm": 6100000000000000.0,
+      "surface_resistivity_ohm": 520000000000000.0,
+      "arc_resistance_s": 122.0,
+      "peel_strength_n_mm": 1.3,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 580.0,
+        "crosswise": 490.0
+      },
+      "water_absorption_pct": 0.11,
+      "notes": "Sheet class: Halogen-Free/Middle Tg/Middle Loss. Companion prepreg KB-6065GMD. Time to delamination: T260 above 60 min, T288 above 30 min. Thermal stress (float 288 C, unetched) at least 240 s. CTI at least 175 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.0mm (2116*10) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C."
+    },
+    {
+      "id": "kingboard/kb-6165le",
+      "manufacturer": "Kingboard",
+      "name": "KB-6165LE",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6165LE,KB-6065LE.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6165LE",
+      "reinforcement": "E-glass woven",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/99",
+      "tg_dsc_c": 162.0,
+      "td_c": 355.0,
+      "t260_min": 60.0,
+      "t288_min": 40.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 15.0,
+      "cte_z_below_tg_ppm": 37.0,
+      "cte_z_above_tg_ppm": 200.0,
+      "cte_z_50_260_pct": 2.6,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.8,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.015,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.016,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 6300000000000000.0,
+      "surface_resistivity_ohm": 509999999999999.94,
+      "arc_resistance_s": 132.0,
+      "peel_strength_n_mm": 1.4,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 580.0,
+        "crosswise": 473.0
+      },
+      "water_absorption_pct": 0.08,
+      "thicknesses_mm": [
+        0.051,
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.14,
+        0.152,
+        0.191,
+        0.203,
+        0.254,
+        0.305,
+        0.381,
+        0.457,
+        0.533,
+        0.635,
+        0.762,
+        0.889,
+        1.016,
+        1.194,
+        1.499
+      ],
+      "sources": [
+        {
+          "pdf": "KB-6165LE-line-up.pdf",
+          "pages": "1-2"
+        },
+        {
+          "pdf": "KB-6165LE-Processing-Guide.pdf",
+          "pages": "1-4"
+        }
+      ],
+      "notes": "Sheet class: Lead-Free/Mid Tg/Low CTE/High Reliability. Companion prepreg KB-6065LE. Thermal stress (float 288 C, unetched) at least 240 s. CTI at least 300 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (7628*8) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C. Thicknesses are the core thicknesses of the line-up sheet (the sheet lists them with a tolerance of 10 %).",
+      "processing": {
+        "lamination": {
+          "notes": "Vacuum press at 300-400 psi full pressure; heat-up rate 1.5-2.5 C/min between 80 and 140 C; cure at 180 C material temperature or above for at least 60 min; cooling rate below 3 C/min. Inner layers are baked at 120 C for at least 60 min after the brown oxide treatment, and prepreg is tempered 12 h before use."
+        },
+        "drilling": {
+          "retract_notes": "The guide lists drilling parameters by drill diameter (speed in krpm, infeed in m/min, hit count) for a laminate thickness of 2 mm on a Hitachi machine; vacuum up the dust and blow out the holes after drilling."
+        },
+        "desmear_note": "Vertical or horizontal permanganate etching can be used normally; check the cross-sections under a scanning microscope."
+      }
+    },
+    {
+      "id": "kingboard/kb-6167f",
+      "manufacturer": "Kingboard",
+      "name": "KB-6167F",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6167F,KB-6067F.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6167F",
+      "reinforcement": "E-glass woven",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/99",
+      "tg_dsc_c": 175.0,
+      "tg_dma_c": 185.0,
+      "td_c": 356.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 15.0,
+      "cte_z_below_tg_ppm": 40.0,
+      "cte_z_above_tg_ppm": 230.0,
+      "cte_z_50_260_pct": 2.6,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.8,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.015,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.016,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 5500000000000000.0,
+      "surface_resistivity_ohm": 620000000000000.0,
+      "arc_resistance_s": 129.0,
+      "peel_strength_n_mm": 1.45,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 550.0,
+        "crosswise": 485.0
+      },
+      "water_absorption_pct": 0.09,
+      "thicknesses_mm": [
+        0.051,
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.14,
+        0.152,
+        0.191,
+        0.203,
+        0.254,
+        0.305,
+        0.381,
+        0.457,
+        0.533,
+        0.635,
+        0.762,
+        0.889,
+        1.016,
+        1.194,
+        1.499
+      ],
+      "sources": [
+        {
+          "pdf": "KB-6167F-line-up.pdf",
+          "pages": "1-2"
+        },
+        {
+          "pdf": "KB-6167F-Processing-Guide.pdf",
+          "pages": "1-4"
+        }
+      ],
+      "notes": "Sheet class: Lead-Free/Tg 170/Low CTE. Companion prepreg KB-6067F. Time to delamination: T260 above 60 min, T288 above 35 min. Thermal stress (float 288 C, unetched) at least 240 s. CTI at least 175 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (7628*8) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C. Thicknesses are the core thicknesses of the line-up sheet (the sheet lists them with a tolerance of 10 %).",
+      "processing": {
+        "lamination": {
+          "notes": "Vacuum press at 300-400 psi full pressure; heat-up rate 1.5-2.5 C/min between 80 and 140 C; cure at 190 C material temperature or above for at least 60 min; cooling rate below 3 C/min. Inner layers are baked at 120 C for at least 60 min after the brown oxide treatment, and prepreg is tempered 12 h before use."
+        },
+        "drilling": {
+          "retract_notes": "The guide lists drilling parameters by drill diameter (speed in krpm, infeed in m/min, hit count) for a laminate thickness of 2 mm on a Hitachi machine; vacuum up the dust and blow out the holes after drilling."
+        },
+        "desmear_note": "Vertical or horizontal permanganate etching can be used normally; check the cross-sections under a scanning microscope."
+      }
+    },
+    {
+      "id": "kingboard/kb-6167gld",
+      "manufacturer": "Kingboard",
+      "name": "KB-6167GLD",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6167GLD,KB-6067GLD.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6167GLD",
+      "resin": "Halogen-free epoxy",
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/130",
+      "tg_dsc_c": 181.0,
+      "tg_dma_c": 220.0,
+      "td_c": 409.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 15.0,
+      "cte_z_below_tg_ppm": 30.0,
+      "cte_z_above_tg_ppm": 160.0,
+      "cte_z_50_260_pct": 1.8,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.9,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.8,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.5,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.006,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.007,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.004,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.006,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        }
+      ],
+      "volume_resistivity_ohm_cm": 7400000000000000.0,
+      "surface_resistivity_ohm": 630000000000000.0,
+      "arc_resistance_s": 126.0,
+      "peel_strength_n_mm": 1.3,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 560.0,
+        "crosswise": 470.0
+      },
+      "water_absorption_pct": 0.11,
+      "notes": "Sheet class: Halogen-Free/High Tg/Low Loss. Companion prepreg KB-6067GLD. Time to delamination: T260 above 60 min, T288 above 60 min. Thermal stress (float 288 C, unetched) at least 240 s. CTI at least 175 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.0mm (2116*10) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C."
+    },
+    {
+      "id": "kingboard/kb-6167gmd",
+      "manufacturer": "Kingboard",
+      "name": "KB-6167GMD",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6167GMD,KB-6067GMD.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6167GMD",
+      "resin": "Halogen-free epoxy",
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/130",
+      "tg_dsc_c": 178.0,
+      "tg_dma_c": 190.0,
+      "td_c": 387.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 15.0,
+      "cte_z_below_tg_ppm": 45.0,
+      "cte_z_above_tg_ppm": 235.0,
+      "cte_z_50_260_pct": 2.1,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.1,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.0,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.7,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.6,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.008,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.009,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.008,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.011,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        }
+      ],
+      "volume_resistivity_ohm_cm": 6400000000000000.0,
+      "surface_resistivity_ohm": 530000000000000.0,
+      "arc_resistance_s": 122.0,
+      "peel_strength_n_mm": 1.3,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 590.0,
+        "crosswise": 490.0
+      },
+      "water_absorption_pct": 0.11,
+      "notes": "Sheet class: Halogen-Free/High Tg/Middle Loss. Companion prepreg KB-6067GMD. Time to delamination: T260 above 60 min, T288 above 60 min. Thermal stress (float 288 C, unetched) at least 240 s. CTI at least 175 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.0mm (2116*10) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C."
+    },
+    {
+      "id": "kingboard/kb-6168le",
+      "manufacturer": "Kingboard",
+      "name": "KB-6168LE",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6168LE,KB-6068LE.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6168LE",
+      "reinforcement": "E-glass woven",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/99",
+      "tg_dsc_c": 190.0,
+      "tg_dma_c": 200.0,
+      "td_c": 370.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 15.0,
+      "cte_z_below_tg_ppm": 37.0,
+      "cte_z_above_tg_ppm": 200.0,
+      "cte_z_50_260_pct": 2.1,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.8,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.015,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.016,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 7200000000000000.0,
+      "surface_resistivity_ohm": 470000000000000.0,
+      "arc_resistance_s": 129.0,
+      "peel_strength_n_mm": 1.3,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 560.0,
+        "crosswise": 490.0
+      },
+      "water_absorption_pct": 0.08,
+      "thicknesses_mm": [
+        0.051,
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.14,
+        0.152,
+        0.191,
+        0.203,
+        0.254,
+        0.305,
+        0.381,
+        0.457,
+        0.533,
+        0.635,
+        0.762,
+        0.889,
+        1.016,
+        1.194,
+        1.499
+      ],
+      "sources": [
+        {
+          "pdf": "KB-6168LE-line-up.pdf",
+          "pages": "1-2"
+        },
+        {
+          "pdf": "KB-6168LE-Processing-Guide.pdf",
+          "pages": "1-4"
+        }
+      ],
+      "notes": "Sheet class: Lead-Free/Mid Tg/Low CTE/High Reliability. Companion prepreg KB-6068LE. Time to delamination: T288 above 50 min, T300 above 30 min. Thermal stress (float 288 C, unetched) at least 240 s. CTI at least 300 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (7628*8) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C. Thicknesses are the core thicknesses of the line-up sheet (the sheet lists them with a tolerance of 10 %).",
+      "processing": {
+        "lamination": {
+          "notes": "Vacuum press at 300-400 psi full pressure; heat-up rate 1.5-2.5 C/min between 80 and 140 C; cure at 190 C material temperature or above for at least 60 min; cooling rate below 3 C/min. Inner layers are baked at 120 C for at least 60 min after the brown oxide treatment, and prepreg is tempered 12 h before use."
+        },
+        "drilling": {
+          "retract_notes": "The guide lists drilling parameters by drill diameter (speed in krpm, infeed in m/min, hit count) for a laminate thickness of 2 mm on a Hitachi machine; vacuum up the dust and blow out the holes after drilling."
+        },
+        "desmear_note": "Vertical or horizontal permanganate etching can be used normally; check the cross-sections under a scanning microscope."
+      }
+    },
+    {
+      "id": "kingboard/kb-6169gt",
+      "manufacturer": "Kingboard",
+      "name": "KB-6169GT",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6169GT,KB-6069GT.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6169GT",
+      "resin": "Halogen-free epoxy",
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/130",
+      "tg_dsc_c": 193.0,
+      "tg_dma_c": 210.0,
+      "td_c": 395.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 15.0,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 190.0,
+      "cte_z_50_260_pct": 1.9,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.4,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.011,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.013,
+          "method": "IPC-TM-650 2.5.5.9, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 4300000000000000.0,
+      "surface_resistivity_ohm": 370000000000000.0,
+      "arc_resistance_s": 126.0,
+      "peel_strength_n_mm": 1.4,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 602.0,
+        "crosswise": 534.0
+      },
+      "water_absorption_pct": 0.11,
+      "thicknesses_mm": [
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.14,
+        0.152,
+        0.191,
+        0.203,
+        0.254,
+        0.305,
+        0.381,
+        0.457,
+        0.533,
+        0.61,
+        0.762,
+        0.889,
+        1.016,
+        1.194,
+        1.499
+      ],
+      "sources": [
+        {
+          "pdf": "KB-6169GT line up 1.3.pdf",
+          "pages": "1-2"
+        },
+        {
+          "pdf": "KB-6169GT-Processing-Guide.pdf",
+          "pages": "1-4"
+        }
+      ],
+      "notes": "Sheet class: Halogen-Free/High Tg/Low CTE/ CTI≥600V/ FR15.1. Companion prepreg KB-6069GT. Time to delamination: T260 above 60 min, T288 above 60 min. Thermal stress (float 288 C, unetched) at least 240 s. CTI at least 600 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (7628*8) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C. Thicknesses are the core thicknesses of the line-up sheet (the sheet lists them with a tolerance of 10 %).",
+      "processing": {
+        "lamination": {
+          "notes": "Vacuum press at 300-400 psi full pressure; heat-up rate 1.5-2.5 C/min between 80 and 140 C; cure at 200 C material temperature or above for at least 90 min; cooling rate below 3 C/min. Inner layers are baked at 120 C for at least 60 min after the brown oxide treatment, and prepreg is tempered 12 h before use."
+        },
+        "drilling": {
+          "retract_notes": "The guide lists drilling parameters by drill diameter (speed in krpm, infeed in m/min, hit count) for a laminate thickness of 2 mm on a Hitachi machine; vacuum up the dust and blow out the holes after drilling."
+        },
+        "desmear_note": "Vertical or horizontal permanganate etching can be used normally; check the cross-sections under a scanning microscope."
+      }
+    },
+    {
+      "id": "kingboard/kb-6200g",
+      "manufacturer": "Kingboard",
+      "name": "KB-6200G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-6200G,PP-KB6200G.pdf",
+        "pages": "1"
+      },
+      "family": "KB-6200G",
+      "resin": "Halogen-free epoxy",
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/130",
+      "tg_dma_c": 200.0,
+      "td_c": 420.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 15.0,
+      "cte_z_below_tg_ppm": 40.0,
+      "cte_z_above_tg_ppm": 160.0,
+      "cte_z_50_260_pct": 1.5,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.8,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.7,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.36,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.27,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.003,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0045,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0025,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.004,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 70
+        }
+      ],
+      "volume_resistivity_ohm_cm": 6500000000000000.0,
+      "surface_resistivity_ohm": 540000000000000.0,
+      "arc_resistance_s": 120.0,
+      "peel_strength_n_mm": 1.1,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 570.0,
+        "crosswise": 480.0
+      },
+      "water_absorption_pct": 0.1,
+      "notes": "Sheet class: Halogen-Free/High Tg/Very low Loss. Companion prepreg PP-KB6200G. Time to delamination: T260 above 60 min, T288 above 60 min. Thermal stress (float 288 C, unetched) at least 240 s. CTI at least 175 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.0mm (10*2116) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C."
+    },
+    {
+      "id": "kingboard/pi-515g",
+      "manufacturer": "Kingboard",
+      "name": "PI-515G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "PI-515G,PP-PI515G.pdf",
+        "pages": "1"
+      },
+      "family": "PI-515G",
+      "resin": "Halogen-free epoxy",
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/127",
+      "tg_dsc_c": 162.0,
+      "tg_dma_c": 172.0,
+      "td_c": 373.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 15.0,
+      "cte_z_below_tg_ppm": 41.0,
+      "cte_z_above_tg_ppm": 235.0,
+      "cte_z_50_260_pct": 2.6,
+      "volume_resistivity_ohm_cm": 4200000000000000.0,
+      "surface_resistivity_ohm": 500000000000000.0,
+      "arc_resistance_s": 124.0,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 620.0,
+        "crosswise": 550.0
+      },
+      "water_absorption_pct": 0.1,
+      "thicknesses_mm": [
+        0.051,
+        0.06,
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.14,
+        0.152,
+        0.191,
+        0.203,
+        0.254,
+        0.305,
+        0.381,
+        0.457,
+        0.533,
+        0.635,
+        0.762,
+        0.889,
+        1.016,
+        1.194,
+        1.499
+      ],
+      "sources": [
+        {
+          "pdf": "PI-515G-line-up.pdf",
+          "pages": "1-2"
+        },
+        {
+          "pdf": "PI-515G-Processing-Guide.pdf",
+          "pages": "1-4"
+        }
+      ],
+      "notes": "Sheet class: Halogen-Free/Mid Tg/Low CTE/High Reliability. Companion prepreg PP-PI515G. Time to delamination: T260 above 60 min. Thermal stress (float 288 C, unetched) at least 240 s. CTI at least 200 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.6mm (7628*8) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C. Thicknesses are the core thicknesses of the line-up sheet (the sheet lists them with a tolerance of 10 %).",
+      "processing": {
+        "lamination": {
+          "notes": "Vacuum press at 300-400 psi full pressure; heat-up rate 1.5-2.5 C/min between 80 and 140 C; cure at 180 C material temperature or above for at least 60 min; cooling rate below 3 C/min. Inner layers are baked at 120 C for at least 60 min after the brown oxide treatment, and prepreg is tempered 12 h before use."
+        },
+        "drilling": {
+          "retract_notes": "The guide lists drilling parameters by drill diameter (speed in krpm, infeed in m/min, hit count) for a laminate thickness of 2 mm on a Hitachi machine; vacuum up the dust and blow out the holes after drilling."
+        },
+        "desmear_note": "Vertical or horizontal permanganate etching can be used normally; check the cross-sections under a scanning microscope."
+      },
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.3,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.2,
+          "method": "Cavity resonator",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.8,
+          "method": "Cavity resonator",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.012,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.014,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.016,
+          "method": "Cavity resonator",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.018,
+          "method": "Cavity resonator",
+          "resin_content_pct": 70
+        }
+      ]
+    },
+    {
+      "id": "kingboard/pi-618g",
+      "manufacturer": "Kingboard",
+      "name": "PI-618G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "PI-618G,PP-PI618G.pdf",
+        "pages": "1"
+      },
+      "family": "PI-618G",
+      "resin": "Halogen-free epoxy",
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/127",
+      "tg_dsc_c": 175.0,
+      "tg_dma_c": 195.0,
+      "td_c": 390.0,
+      "cte_x_ppm": 12.0,
+      "cte_y_ppm": 13.0,
+      "cte_z_below_tg_ppm": 35.0,
+      "cte_z_above_tg_ppm": 180.0,
+      "cte_z_50_260_pct": 2.0,
+      "volume_resistivity_ohm_cm": 6200000000000000.0,
+      "surface_resistivity_ohm": 500000000000000.0,
+      "arc_resistance_s": 124.0,
+      "peel_strength_n_mm": 1.05,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 600.0,
+        "crosswise": 530.0
+      },
+      "water_absorption_pct": 0.09,
+      "thicknesses_mm": [
+        0.051,
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.152,
+        0.178,
+        0.203,
+        0.254,
+        0.305,
+        0.38
+      ],
+      "sources": [
+        {
+          "pdf": "PI-618G-line-up.pdf",
+          "pages": "1-2"
+        },
+        {
+          "pdf": "PI-618G Processing Guide (ENG).pdf",
+          "pages": "1-4"
+        }
+      ],
+      "notes": "Sheet class: Halogen-Free/High Tg/Low CTE/High Reliability. Companion prepreg PP-PI618G. Time to delamination: T260 above 60 min, T288 above 60 min. Thermal stress (float 288 C, unetched) at least 360 s. CTI at least 200 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.2mm (2116*10) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C. Thicknesses are the core thicknesses of the line-up sheet (the sheet lists them with a tolerance of 10 %).",
+      "processing": {
+        "lamination": {
+          "notes": "Vacuum press at 300-400 psi full pressure; cure at 200 C material temperature or above for at least 90 min; cooling rate below 3 C/min. Inner layers are baked at 120 C for at least 60 min after the brown oxide treatment, and prepreg is tempered 12 h before use."
+        },
+        "drilling": {
+          "retract_notes": "The guide lists drilling parameters by drill diameter (speed in krpm, infeed in m/min, hit count) for a laminate thickness of 2 mm on a Hitachi machine; vacuum up the dust and blow out the holes after drilling."
+        },
+        "desmear_note": "Vertical or horizontal permanganate etching can be used normally; check the cross-sections under a scanning microscope."
+      },
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.8,
+          "method": "Cavity resonator",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.3,
+          "method": "Cavity resonator",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.007,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0075,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.011,
+          "method": "Cavity resonator",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.012,
+          "method": "Cavity resonator",
+          "resin_content_pct": 70
+        }
+      ]
+    },
+    {
+      "id": "kingboard/pi-718g",
+      "manufacturer": "Kingboard",
+      "name": "PI-718G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "PI-718G,PP-PI718G.pdf",
+        "pages": "1"
+      },
+      "family": "PI-718G",
+      "resin": "Halogen-free epoxy",
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/127",
+      "tg_dma_c": 255.0,
+      "tg_tma_c": 220.0,
+      "td_c": 425.0,
+      "cte_x_ppm": 9.0,
+      "cte_y_ppm": 10.0,
+      "cte_z_below_tg_ppm": 30.0,
+      "cte_z_above_tg_ppm": 120.0,
+      "cte_z_50_260_pct": 1.2,
+      "volume_resistivity_ohm_cm": 6200000000000000.0,
+      "surface_resistivity_ohm": 500000000000000.0,
+      "arc_resistance_s": 124.0,
+      "peel_strength_n_mm": 0.8,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 600.0,
+        "crosswise": 530.0
+      },
+      "water_absorption_pct": 0.09,
+      "notes": "Sheet class: Halogen-Free/High Tg/Low CTE/Low loss. Companion prepreg PP-PI718G. Time to delamination: T288 above 60 min, T300 above 60 min. Thermal stress (float 288 C, unetched) at least 360 s. CTI at least 200 V. Dielectric breakdown at least 45 kV (specimen, not per mm). Typical values are for a 1.2mm (2116*11) specimen. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted. Alpha 1 and alpha 2 are the z-axis CTE below and above Tg; X/Y CTE is measured between 40 and 125 C.",
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.9,
+          "method": "Cavity resonator",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "Cavity resonator",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0045,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.006,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.007,
+          "method": "Cavity resonator",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0075,
+          "method": "Cavity resonator",
+          "resin_content_pct": 70
+        }
+      ]
+    },
+    {
+      "id": "kingboard/kb-1150",
+      "manufacturer": "Kingboard",
+      "name": "KB-1150",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-1150.pdf",
+        "pages": "1"
+      },
+      "family": "KB-1150",
+      "reinforcement": "Cellulose paper",
+      "ul94": "HB",
+      "notes": "Paper-core copper clad laminate (ANSI XPC, JIS PP7), low cost, for punching. Typical: solder float 260 C 15-30 s; volume resistivity 1e12-1e13 ohm cm (adhesive side surface 1e11-1e12 ohm); Dk 4.0-5.0 and Df 0.025-0.035 at 1 MHz (conditioned C-96/20/65); CTI 150-175 V; peel 1.4-1.7 kgf/cm (about 1.4-1.7 N/mm after float at 260 C 5 s); flexural 14-16 kgf/mm2 lengthwise and 13-14 crosswise; moisture absorption 1.0-1.5 %. Typical values are for a 1.6 mm specimen after the sheet; ranges are given in the note because the sheet publishes them as ranges. Resistivity, peel and flexural values were converted from M-ohm, kgf/cm and kgf/mm2 where the sheet gives those units. Punching temperature 40-70 C."
+    },
+    {
+      "id": "kingboard/kb-2150",
+      "manufacturer": "Kingboard",
+      "name": "KB-2150",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-2150.pdf",
+        "pages": "1"
+      },
+      "family": "KB-2150",
+      "resin": "Phenolic",
+      "reinforcement": "Cellulose paper",
+      "ul94": "V-0",
+      "cti_v": 175,
+      "notes": "Phenolic resin paper-base copper clad laminate (ANSI FR-2, JIS PP3F). Typical: solder float 260 C 20-30 s; volume resistivity 1e12-1e13 ohm cm; Dk 4.0-5.0 and Df 0.025-0.035 at 1 MHz; peel 1.8-2.0 kgf/cm (1.7-1.9 after float at 260 C 10 s); flexural 14-16 kgf/mm2 lengthwise and 13-14 crosswise; moisture absorption 0.5-0.7 %; CTI 175 V. Typical values are for a 1.6 mm specimen after the sheet; ranges are given in the note because the sheet publishes them as ranges. Resistivity, peel and flexural values were converted from M-ohm, kgf/cm and kgf/mm2 where the sheet gives those units. Punching temperature 40-70 C."
+    },
+    {
+      "id": "kingboard/kb-2150g",
+      "manufacturer": "Kingboard",
+      "name": "KB-2150G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-2150G.pdf",
+        "pages": "1"
+      },
+      "family": "KB-2150G",
+      "resin": "Phenolic",
+      "reinforcement": "Cellulose paper",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "cti_v": 200,
+      "notes": "Halogen-free phenolic resin paper-base copper clad laminate (ANSI FR-2, JIS PP3F), low odor. The sheet is an image and was read from the picture. Typical: solder float 260 C 20-30 s; volume resistivity 1e12-1e13 ohm cm; Dk 3.5-5.0 and Df 0.020-0.035 at 1 MHz; peel 1.8-2.0 kgf/cm; flexural 14-16 kgf/mm2 lengthwise and 13-14 crosswise; moisture absorption 0.5-0.75 %; CTI 200 V. Typical values are for a 1.6 mm specimen after the sheet; ranges are given in the note because the sheet publishes them as ranges. Resistivity, peel and flexural values were converted from M-ohm, kgf/cm and kgf/mm2 where the sheet gives those units. Punching temperature 40-70 C."
+    },
+    {
+      "id": "kingboard/kb-3151c",
+      "manufacturer": "Kingboard",
+      "name": "KB-3151C",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-3151C.pdf",
+        "pages": "1"
+      },
+      "family": "KB-3151C",
+      "reinforcement": "Cellulose paper",
+      "ul94": "V-0",
+      "notes": "Paper-core copper clad laminate (ANSI FR-1, JIS PP7F). CTI at least 175 or 600 V depending on the grade. Typical: solder float 260 C 20-30 s; moisture absorption 0.8-1.0 %; peel 1.5-1.8 kgf/cm; flexural 14-16 kgf/mm2 lengthwise and 13-14 crosswise; Dk 4.0-5.0 and Df 0.025-0.035 at 1 MHz; high temperature warpage and twist below 1.0 %. Typical values are for a 1.6 mm specimen after the sheet; ranges are given in the note because the sheet publishes them as ranges. Resistivity, peel and flexural values were converted from M-ohm, kgf/cm and kgf/mm2 where the sheet gives those units. Punching temperature 40-70 C."
+    },
+    {
+      "id": "kingboard/kb-3151hs",
+      "manufacturer": "Kingboard",
+      "name": "KB-3151HS",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-3151HS.pdf",
+        "pages": "1"
+      },
+      "family": "KB-3151HS",
+      "reinforcement": "Cellulose paper",
+      "ul94": "V-0",
+      "notes": "Paper-core copper clad laminate (ANSI FR-1, JIS PP7F). High performance grade with CTI at least 600 V. Typical: solder float 260 C at least 30 s; moisture absorption 0.7-0.9 %; peel 1.5-1.8 kgf/cm; flexural 14-16 kgf/mm2 lengthwise and 13-14 crosswise; Dk 4.0-5.0 and Df 0.025-0.035 at 1 MHz. Typical values are for a 1.6 mm specimen after the sheet; ranges are given in the note because the sheet publishes them as ranges. Resistivity, peel and flexural values were converted from M-ohm, kgf/cm and kgf/mm2 where the sheet gives those units. Punching temperature 40-70 C."
+    },
+    {
+      "id": "kingboard/kb-3152",
+      "manufacturer": "Kingboard",
+      "name": "KB-3152",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-3152.pdf",
+        "pages": "1"
+      },
+      "family": "KB-3152",
+      "reinforcement": "Cellulose paper",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "notes": "Paper-core copper clad laminate (ANSI FR-1, JIS PP7F). Halogen-free grade with CTI at least 175 or 600 V depending on the grade. Typical: solder float 260 C 20-30 s; moisture absorption 0.7-0.9 %; peel 1.5-1.8 kgf/cm; flexural 15-17 kgf/mm2 lengthwise and 14-15 crosswise; Dk 4.0-5.0 and Df 0.025-0.035 at 1 MHz. Typical values are for a 1.6 mm specimen after the sheet; ranges are given in the note because the sheet publishes them as ranges. Resistivity, peel and flexural values were converted from M-ohm, kgf/cm and kgf/mm2 where the sheet gives those units. Punching temperature 40-70 C."
+    },
+    {
+      "id": "kingboard/kb-5150-high-cti",
+      "manufacturer": "Kingboard",
+      "name": "KB-5150 High CTI",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-5150(1).pdf",
+        "pages": "1"
+      },
+      "family": "KB-5150 High CTI",
+      "reinforcement": "Cellulose paper core with glass fabric surfaces",
+      "ul94": "V-0",
+      "cte_z_below_tg_ppm": 100,
+      "cte_z_above_tg_ppm": 320,
+      "cte_z_50_260_pct": 6.0,
+      "ipc_slash_sheet": "IPC-4101E/10",
+      "cti_v": 600,
+      "surface_resistivity_ohm": 10000000000000.0,
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.023,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "arc_resistance_s": 125,
+      "flexural_strength_mpa": {
+        "lengthwise": 420,
+        "crosswise": 290
+      },
+      "water_absorption_pct": 0.15,
+      "notes": "CEM-1 composite copper clad laminate for punching (paper core, glass fabric surfaces). Plated through holes are not recommended because the cellulose core is attacked by the electrolyte. The title of the sheet carries one extra character after the name that could not be read; it is the high CTI grade (CTI at least 600 V, typical 600 V). Peel 1.4-1.6 N/mm; solder float 260 C 25 s. Z-axis expansion is printed as 100/320 ppm/C (E-2/105, TMA) and stored as the values below and above Tg; Bow/twist 0.3-0.35 / 0.4-0.5 %. Surface and volume resistivity converted from M-ohm and M-ohm cm (C-96/35/90)."
+    },
+    {
+      "id": "kingboard/kb-5150",
+      "manufacturer": "Kingboard",
+      "name": "KB-5150",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-5150.pdf",
+        "pages": "1"
+      },
+      "family": "KB-5150",
+      "reinforcement": "Cellulose paper core with glass fabric surfaces",
+      "ul94": "V-0",
+      "cte_z_below_tg_ppm": 100,
+      "cte_z_above_tg_ppm": 320,
+      "cte_z_50_260_pct": 6.0,
+      "ipc_slash_sheet": "IPC-4101E/10",
+      "cti_v": 175,
+      "surface_resistivity_ohm": 10000000000000.0,
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.023,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "arc_resistance_s": 125,
+      "flexural_strength_mpa": {
+        "lengthwise": 420,
+        "crosswise": 290
+      },
+      "water_absorption_pct": 0.15,
+      "notes": "CEM-1 composite copper clad laminate for punching (paper core, glass fabric surfaces). Plated through holes are not recommended because the cellulose core is attacked by the electrolyte. Peel 1.4-1.6 N/mm; solder float 260 C 25 s. Z-axis expansion is printed as 100/320 ppm/C (E-2/105, TMA) and stored as the values below and above Tg; Bow/twist 0.3-0.35 / 0.4-0.5 %. Surface and volume resistivity converted from M-ohm and M-ohm cm (C-96/35/90)."
+    },
+    {
+      "id": "kingboard/kb-5150a",
+      "manufacturer": "Kingboard",
+      "name": "KB-5150A",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-5150A.pdf",
+        "pages": "1"
+      },
+      "family": "KB-5150A",
+      "reinforcement": "Cellulose paper core with glass fabric surfaces",
+      "ul94": "V-0",
+      "cte_z_below_tg_ppm": 100,
+      "cte_z_above_tg_ppm": 320,
+      "cte_z_50_260_pct": 6.0,
+      "ipc_slash_sheet": "IPC-4101E/10",
+      "cti_v": 300,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "volume_resistivity_ohm_cm": 1000000000000000.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.5,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.022,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "arc_resistance_s": 126,
+      "flexural_strength_mpa": {
+        "lengthwise": 380,
+        "crosswise": 311
+      },
+      "water_absorption_pct": 0.1,
+      "t260_min": 1.5,
+      "notes": "CEM-1 composite copper clad laminate for punching (paper core, glass fabric surfaces). Plated through holes are not recommended because the cellulose core is attacked by the electrolyte. Peel 1.4-1.6 N/mm; solder float 260 C at least 100 s and 288 C 20-30 s; CTI at least 250 V, typical 300 V. Z-axis expansion is printed as 100/320 ppm/C (E-2/105, TMA) and stored as the values below and above Tg; Bow/twist 0.3-0.35 / 0.4-0.5 %. Surface and volume resistivity converted from M-ohm and M-ohm cm (C-96/35/90)."
+    },
+    {
+      "id": "kingboard/kb-5150g",
+      "manufacturer": "Kingboard",
+      "name": "KB-5150G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-5150G.pdf",
+        "pages": "1"
+      },
+      "family": "KB-5150G",
+      "reinforcement": "Cellulose paper core with glass fabric surfaces",
+      "ul94": "V-0",
+      "cte_z_below_tg_ppm": 100,
+      "cte_z_above_tg_ppm": 320,
+      "cte_z_50_260_pct": 6.0,
+      "ipc_slash_sheet": "IPC-4101E/15",
+      "cti_v": 600,
+      "surface_resistivity_ohm": 100000000000.0,
+      "volume_resistivity_ohm_cm": 10000000000000.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.023,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "arc_resistance_s": 125,
+      "flexural_strength_mpa": {
+        "lengthwise": 420,
+        "crosswise": 290
+      },
+      "water_absorption_pct": 0.15,
+      "halogen_free": true,
+      "notes": "CEM-1 composite copper clad laminate for punching (paper core, glass fabric surfaces). Plated through holes are not recommended because the cellulose core is attacked by the electrolyte. Halogen-free high CTI grade (CTI at least 175 V, typical 600 V); peel 1.2-1.4 N/mm; solder float 260 C 25 s; punching 35-60 C. Z-axis expansion is printed as 100/320 ppm/C (E-2/105, TMA) and stored as the values below and above Tg; Bow/twist 0.3-0.35 / 0.4-0.5 %. Surface and volume resistivity converted from M-ohm and M-ohm cm (C-96/35/90)."
+    },
+    {
+      "id": "kingboard/kb-5150h",
+      "manufacturer": "Kingboard",
+      "name": "KB-5150H",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-5150H.pdf",
+        "pages": "1"
+      },
+      "family": "KB-5150H",
+      "reinforcement": "Cellulose paper core with glass fabric surfaces",
+      "ul94": "V-0",
+      "cte_z_below_tg_ppm": 100,
+      "cte_z_above_tg_ppm": 320,
+      "cte_z_50_260_pct": 6.0,
+      "ipc_slash_sheet": "IPC-4101E/10",
+      "cti_v": 300,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "volume_resistivity_ohm_cm": 1000000000000000.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.5,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.022,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "arc_resistance_s": 126,
+      "flexural_strength_mpa": {
+        "lengthwise": 380,
+        "crosswise": 311
+      },
+      "water_absorption_pct": 0.1,
+      "t260_min": 1.5,
+      "notes": "CEM-1 composite copper clad laminate for punching (paper core, glass fabric surfaces). Plated through holes are not recommended because the cellulose core is attacked by the electrolyte. High performance grade; peel 1.4-1.6 N/mm; solder float 260 C at least 100 s and 288 C 20-30 s; CTI at least 250 V, typical 300 V. Z-axis expansion is printed as 100/320 ppm/C (E-2/105, TMA) and stored as the values below and above Tg; Bow/twist 0.3-0.35 / 0.4-0.5 %. Surface and volume resistivity converted from M-ohm and M-ohm cm (C-96/35/90)."
+    },
+    {
+      "id": "kingboard/kb-5152",
+      "manufacturer": "Kingboard",
+      "name": "KB-5152",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-5152.pdf",
+        "pages": "1"
+      },
+      "family": "KB-5152",
+      "reinforcement": "Cellulose paper core with glass fabric surfaces",
+      "ul94": "V-0/V-1",
+      "cte_z_below_tg_ppm": 100,
+      "cte_z_above_tg_ppm": 320,
+      "cte_z_50_260_pct": 6.0,
+      "ipc_slash_sheet": "GB 22F",
+      "cti_v": 175,
+      "surface_resistivity_ohm": 1000000000000.0,
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.023,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "arc_resistance_s": 125,
+      "flexural_strength_mpa": {
+        "lengthwise": 300,
+        "crosswise": 240
+      },
+      "water_absorption_pct": 0.25,
+      "notes": "CEM-1 composite copper clad laminate for punching (paper core, glass fabric surfaces). Plated through holes are not recommended because the cellulose core is attacked by the electrolyte. Chinese standard grade GB 22F (IPC-4101E/10 is stated as applicable); flammability V-0/V-1; peel 1.4-1.6 N/mm (as agreed between user and supplier); solder float 260 C 20 s. Z-axis expansion is printed as 100/320 ppm/C (E-2/105, TMA) and stored as the values below and above Tg; Bow/twist 0.3-0.35 / 0.4-0.5 %. Surface and volume resistivity converted from M-ohm and M-ohm cm (C-96/35/90)."
+    },
+    {
+      "id": "kingboard/kb-5252",
+      "manufacturer": "Kingboard",
+      "name": "KB-5252",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-5252.pdf",
+        "pages": "1"
+      },
+      "family": "KB-5252",
+      "reinforcement": "Cellulose paper core with glass fabric surfaces",
+      "ul94": "V-0",
+      "cte_z_below_tg_ppm": 100,
+      "cte_z_above_tg_ppm": 320,
+      "cte_z_50_260_pct": 6.0,
+      "ipc_slash_sheet": "IPC-4101E/15",
+      "cti_v": 175,
+      "surface_resistivity_ohm": 100000000000.0,
+      "volume_resistivity_ohm_cm": 10000000000000.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.023,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "arc_resistance_s": 125,
+      "flexural_strength_mpa": {
+        "lengthwise": 420,
+        "crosswise": 290
+      },
+      "water_absorption_pct": 0.15,
+      "halogen_free": true,
+      "notes": "CEM-1 composite copper clad laminate for punching (paper core, glass fabric surfaces). Plated through holes are not recommended because the cellulose core is attacked by the electrolyte. Halogen-free grade; peel 1.2-1.4 N/mm; solder float 260 C 25 s; punching 35-60 C. Z-axis expansion is printed as 100/320 ppm/C (E-2/105, TMA) and stored as the values below and above Tg; Bow/twist 0.3-0.35 / 0.4-0.5 %. Surface and volume resistivity converted from M-ohm and M-ohm cm (C-96/35/90)."
+    },
+    {
+      "id": "kingboard/kb-7150",
+      "manufacturer": "Kingboard",
+      "name": "KB-7150",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-7150.pdf",
+        "pages": "1"
+      },
+      "family": "KB-7150",
+      "reinforcement": "Glass nonwoven core with glass fabric surfaces",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/12",
+      "cti_v": 175,
+      "surface_resistivity_ohm": 1000000000000.0,
+      "volume_resistivity_ohm_cm": 10000000000000.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.5,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.02,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "arc_resistance_s": 128,
+      "peel_strength_n_mm": 1.79,
+      "peel_condition": "1 oz foil, float 260 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 355,
+        "crosswise": 293
+      },
+      "water_absorption_pct": 0.2,
+      "notes": "CEM-3 composite copper clad laminate (glass nonwoven core, glass fabric surfaces), electrical properties and board processing similar to FR-4 with much less drill wear. Solder float 260 C at least 60 s; bow/twist 0.5/0.8 %; peel at 105 C 1.75 N/mm. Surface and volume resistivity converted from M-ohm and M-ohm cm (C-96/35/90)."
+    },
+    {
+      "id": "kingboard/kb-7150c",
+      "manufacturer": "Kingboard",
+      "name": "KB-7150C",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-7150C.pdf",
+        "pages": "1"
+      },
+      "family": "KB-7150C",
+      "reinforcement": "Glass nonwoven core with glass fabric surfaces",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/12",
+      "cti_v": 600,
+      "surface_resistivity_ohm": 1000000000000.0,
+      "volume_resistivity_ohm_cm": 10000000000000.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.5,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.02,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "arc_resistance_s": 128,
+      "peel_strength_n_mm": 1.79,
+      "peel_condition": "1 oz foil, float 260 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 355,
+        "crosswise": 293
+      },
+      "water_absorption_pct": 0.2,
+      "notes": "CEM-3 composite copper clad laminate (glass nonwoven core, glass fabric surfaces), electrical properties and board processing similar to FR-4 with much less drill wear. High CTI grade (CTI at least 600 V, typical 600 V); solder float 260 C at least 60 s; bow/twist 0.5/0.8 %; peel at 105 C 1.75 N/mm. Surface and volume resistivity converted from M-ohm and M-ohm cm (C-96/35/90)."
+    },
+    {
+      "id": "kingboard/kb-7150t",
+      "manufacturer": "Kingboard",
+      "name": "KB-7150T",
+      "kind": "laminate",
+      "source": {
+        "pdf": "KB-7150T.pdf",
+        "pages": "1"
+      },
+      "family": "KB-7150T",
+      "reinforcement": "Glass nonwoven core with glass fabric surfaces",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/12",
+      "cti_v": 600,
+      "surface_resistivity_ohm": 10000000000000.0,
+      "volume_resistivity_ohm_cm": 1000000000000000.0,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.02,
+          "method": "IPC-TM-650 2.5.5.2, etched"
+        }
+      ],
+      "arc_resistance_s": 125,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "1 oz foil, float 260 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 450,
+        "crosswise": 390
+      },
+      "water_absorption_pct": 0.2,
+      "tg_dsc_c": 136,
+      "td_c": 323,
+      "cte_z_below_tg_ppm": 36,
+      "cte_z_above_tg_ppm": 270,
+      "cte_z_50_260_pct": 3.94,
+      "thermal_conductivity_w_mk": 0.8,
+      "notes": "CEM-3 composite copper clad laminate (glass nonwoven core, glass fabric surfaces), electrical properties and board processing similar to FR-4 with much less drill wear. Thermally improved grade: thermal conductivity 0.8 +/- 0.2 W/(m K) (laser flash), solder float 260 C at least 120 s, CTI at least 175 V with typical 600 V; bow/twist 0.17/0.35 %; peel at 125 C 1.62 N/mm. Surface and volume resistivity converted from M-ohm and M-ohm cm (C-96/35/90)."
+    }
+  ]
+}

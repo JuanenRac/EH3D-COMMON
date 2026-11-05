@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "manufacturer": "ITEQ",
+  "materials": [
+    {
+      "id": "iteq/it-988g-se",
+      "manufacturer": "ITEQ",
+      "name": "IT-988G SE",
+      "kind": "laminate",
+      "source": {
+        "pdf": "IT-988G-SE-Datasheet.pdf",
+        "pages": "1-2",
+        "revision": "REV 2017_12"
+      },
+      "family": "IT-988G",
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "lead_free_compatible": true,
+      "tg_tma_c": 190,
+      "tg_dsc_c": 190,
+      "tg_dma_c": 205,
+      "td_c": 405,
+      "cte_x_ppm": 15,
+      "cte_y_ppm": 16,
+      "cte_z_below_tg_ppm": 58,
+      "cte_z_above_tg_ppm": 325,
+      "cte_z_50_260_pct": 2.95,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.24,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 2.0,
+          "value": 3.24,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 5.0,
+          "value": 3.24,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.24,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 15.0,
+          "value": 3.24,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 20.0,
+          "value": 3.24,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0013,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 2.0,
+          "value": 0.0014,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 5.0,
+          "value": 0.0014,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0014,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 15.0,
+          "value": 0.0014,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 20.0,
+          "value": 0.0014,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        }
+      ],
+      "water_absorption_pct": 0.26,
+      "peel_strength_n_mm": 0.61,
+      "peel_condition": "0.5 oz very low roughness copper foil (3.50 lb/in)",
+      "notes": "High Tg, halogen-free, lead-free, ultra low loss laminate and prepreg for 56 Gbps per channel (NRZ and PAM4); Dk below 3.24 and Df below 0.0014 at 10 GHz, stable across frequency. Time to delamination at 288 C and at 300 C above 120 min; thermal stress 10 s at 288 C passes unetched and etched. Moisture absorption 0.26 % maximum. The volume and surface resistivity rows print their exponents in a way that cannot be read reliably and are not loaded; flexural strength, flammability, CTI, thermal conductivity and slash sheet are marked TBD or under testing on the sheet. Dk and Df are for 53 % resin content."
+    },
+    {
+      "id": "iteq/it-988g",
+      "manufacturer": "ITEQ",
+      "name": "IT-988G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "ITEQ-IT-988G-Datasheet.pdf",
+        "pages": "1-2",
+        "revision": "REV 2.0-17"
+      },
+      "family": "IT-988G",
+      "reinforcement": "E-glass woven",
+      "lead_free_compatible": true,
+      "tg_tma_c": 190,
+      "tg_dsc_c": 190,
+      "tg_dma_c": 205,
+      "td_c": 405,
+      "cte_x_ppm": 15,
+      "cte_y_ppm": 16,
+      "cte_z_below_tg_ppm": 58,
+      "cte_z_above_tg_ppm": 325,
+      "cte_z_50_260_pct": 2.95,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.63,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 2.0,
+          "value": 3.63,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 5.0,
+          "value": 3.63,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.63,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 15.0,
+          "value": 3.63,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 20.0,
+          "value": 3.63,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0029,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 2.0,
+          "value": 0.0029,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 5.0,
+          "value": 0.0029,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0029,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 15.0,
+          "value": 0.0029,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        },
+        {
+          "freq_ghz": 20.0,
+          "value": 0.0029,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 53
+        }
+      ],
+      "water_absorption_pct": 0.31,
+      "notes": "High Tg, lead-free, ultra low loss laminate and prepreg for 100G/400G systems; Dk below 3.63 and Df below 0.0029 at 10 GHz, very stable across frequency. Time to delamination at 260, 288 and 300 C above 120 min; thermal stress 10 s at 288 C passes unetched and etched. Peel strength 2.9 to 3.1 lb/in on 0.5 oz very low roughness copper; moisture absorption 0.31 % maximum. Resistivity, flexural strength and flammability are TBD on the sheet. Dk and Df are for 53 % resin content."
+    },
+    {
+      "id": "iteq/it-170gra1",
+      "manufacturer": "ITEQ",
+      "name": "IT-170GRA1",
+      "kind": "laminate",
+      "source": {
+        "pdf": "ITEQ-IT-170GRA1-Data-sheet-rev-1.0-17-Data-Sheet.pdf",
+        "pages": "1-2",
+        "revision": "DRAFT REV 1.0-17"
+      },
+      "family": "IT-170GRA1",
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "tg_dsc_c": 180,
+      "td_c": 380,
+      "cte_x_ppm": 11,
+      "cte_y_ppm": 13,
+      "cte_z_below_tg_ppm": 45,
+      "cte_z_above_tg_ppm": 210,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 2.0,
+          "value": 3.9,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 5.0,
+          "value": 3.9,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.9,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.009,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 2.0,
+          "value": 0.009,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 5.0,
+          "value": 0.009,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.01,
+          "method": "IPC-TM-650 2.5.5.13",
+          "resin_content_pct": 50
+        }
+      ],
+      "notes": "Draft sheet of a high Tg (180 C), halogen-free, mid-loss laminate and prepreg compatible with high Tg FR-4 processes; Dk below 3.9 and Df below 0.010 at 10 GHz. T260 and T288 above 60 min; thermal stress 10 s at 288 C passes unetched and etched; flammability not stated (N/A). Peel strength 5.0-6.0 lb/in (low profile foil) and 7.0-8.0 lb/in (standard foil); flexural strength 480-510 N/mm2 lengthwise and 400-430 crosswise; moisture absorption below 0.10 %; volume and surface resistivity above 1e10 M-ohm cm and M-ohm. The z-axis expansion between 50 and 260 C is not readable on the sheet."
+    }
+  ]
+}

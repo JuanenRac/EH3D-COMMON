@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Rogers",
+  "materials": [
+    {
+      "id": "rogers/isoclad-917",
+      "manufacturer": "Rogers",
+      "name": "IsoClad 917",
+      "kind": "ptfe",
+      "source": {
+        "pdf": "isoclad-laminates-data-sheet.pdf",
+        "pages": "1-2",
+        "revision": "PUB 92-211"
+      },
+      "family": "IsoClad",
+      "resin": "PTFE",
+      "reinforcement": "Nonwoven fiberglass",
+      "ul94": "V-0",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.17,
+          "method": "IPC-TM-650 2.5.5.5, C23/50"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0013,
+          "method": "IPC-TM-650 2.5.5.5, C23/50"
+        }
+      ],
+      "tcdk_ppm_per_c": -157,
+      "peel_strength_n_mm": 1.75,
+      "peel_condition": "After thermal stress, 10 lb/in",
+      "volume_resistivity_ohm_cm": 1.5e+16,
+      "surface_resistivity_ohm": 1000000000000000.0,
+      "density_g_cm3": 2.23,
+      "water_absorption_pct": 0.04,
+      "cte_x_ppm": 46,
+      "cte_y_ppm": 47,
+      "cte_z_below_tg_ppm": 236,
+      "thermal_conductivity_w_mk": 0.263,
+      "notes": "Nonwoven fiberglass/PTFE laminate with the lowest Dk and Df of the PTFE and glass family; the isotropic nonwoven reinforcement lets the circuit be bent to shape (conformal antennas). The sheet gives Dk 2.17 and 2.20 for the 917 grade (the first is stored). Arc resistance above 180 s; dielectric breakdown above 45 kV; tensile modulus 133 and 120 kpsi and tensile strength 4.3 and 3.8 kpsi (two values, direction not stated); compressive modulus 182 kpsi; flexural modulus 213 kpsi; thermal coefficient of Dk -157 ppm/C (-10 to 140 C). Outgassing: total mass loss 0.02 %, CVCM 0.00 %, water vapor regain 0.02 %, no visible condensate. CTE 0 to 100 C. Volume resistivity 1.5e10 M-ohm cm and surface resistivity 1.0e9 M-ohm converted to ohm. Meets UL 94 V-0 requirements. The sheet is a property table without thicknesses."
+    },
+    {
+      "id": "rogers/isoclad-933",
+      "manufacturer": "Rogers",
+      "name": "IsoClad 933",
+      "kind": "ptfe",
+      "source": {
+        "pdf": "isoclad-laminates-data-sheet.pdf",
+        "pages": "1-2",
+        "revision": "PUB 92-211"
+      },
+      "family": "IsoClad",
+      "resin": "PTFE",
+      "reinforcement": "Nonwoven fiberglass",
+      "ul94": "V-0",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.33,
+          "method": "IPC-TM-650 2.5.5.5, C23/50"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0016,
+          "method": "IPC-TM-650 2.5.5.5, C23/50"
+        }
+      ],
+      "tcdk_ppm_per_c": -132,
+      "peel_strength_n_mm": 1.75,
+      "peel_condition": "After thermal stress, 10 lb/in",
+      "volume_resistivity_ohm_cm": 350000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "density_g_cm3": 2.27,
+      "water_absorption_pct": 0.05,
+      "cte_x_ppm": 31,
+      "cte_y_ppm": 35,
+      "cte_z_below_tg_ppm": 203,
+      "thermal_conductivity_w_mk": 0.263,
+      "notes": "Nonwoven fiberglass/PTFE laminate with a higher glass to PTFE ratio than IsoClad 917 for better dimensional stability and mechanical strength. Arc resistance above 180 s; dielectric breakdown above 45 kV; tensile modulus 173 and 147 kpsi and tensile strength 6.8 and 5.3 kpsi (two values, direction not stated); compressive modulus 197 kpsi; flexural modulus 239 kpsi; thermal coefficient of Dk -132 ppm/C (-10 to 140 C). Outgassing: total mass loss 0.03 %, CVCM 0.00 %, water vapor regain 0.02 %, no visible condensate. CTE 0 to 100 C. Volume resistivity 3.5e8 M-ohm cm and surface resistivity 1.0e8 M-ohm converted to ohm. Meets UL 94 V-0 requirements. The sheet is a property table without thicknesses."
+    },
+    {
+      "id": "rogers/kappa-438",
+      "manufacturer": "Rogers",
+      "name": "Kappa 438",
+      "kind": "laminate",
+      "source": {
+        "pdf": "kappa-438-laminates-data-sheet.pdf",
+        "pages": "1-3",
+        "revision": "PUB 92-183"
+      },
+      "family": "Kappa",
+      "resin": "Hydrocarbon thermoset",
+      "reinforcement": "Glass",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4103A/250",
+      "td_c": 414,
+      "cte_x_ppm": 13,
+      "cte_y_ppm": 16,
+      "cte_z_below_tg_ppm": 42,
+      "dk": [
+        {
+          "freq_ghz": 2.5,
+          "value": 4.38,
+          "method": "Differential phase length (design Dk)"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.1,
+          "method": "IPC-TM-650 2.5.5.5 stripline, Rogers internal QA"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.005,
+          "method": "IPC-TM-650 2.5.5.5, 23 C"
+        }
+      ],
+      "tcdk_ppm_per_c": -21,
+      "thermal_conductivity_w_mk": 0.64,
+      "density_g_cm3": 1.99,
+      "peel_strength_n_mm": 1.02,
+      "peel_condition": "1 oz (35 um) foil after thermal stress (5.8 lb/in)",
+      "water_absorption_pct": 0.07,
+      "volume_resistivity_ohm_cm": 2900000000000000.0,
+      "surface_resistivity_ohm": 62000000000000.0,
+      "dielectric_strength_kv_mm": 26.58,
+      "tensile_strength_mpa": {
+        "lengthwise": 110.3,
+        "crosswise": 82.7
+      },
+      "flexural_strength_mpa": {
+        "lengthwise": 172.4,
+        "crosswise": 131.0
+      },
+      "youngs_modulus_gpa": {
+        "lengthwise": 15.61,
+        "crosswise": 14.47
+      },
+      "thicknesses_mm": [
+        0.254,
+        0.508,
+        0.762,
+        1.016,
+        1.524
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 610,
+          "height_mm": 457,
+          "label": "24 x 18 in"
+        },
+        {
+          "width_mm": 616,
+          "height_mm": 464,
+          "label": "24.25 x 18.25 in"
+        },
+        {
+          "width_mm": 1219,
+          "height_mm": 914,
+          "label": "48 x 36 in"
+        },
+        {
+          "width_mm": 1226,
+          "height_mm": 921,
+          "label": "48.25 x 36.25 in"
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        }
+      ],
+      "notes": "Glass reinforced hydrocarbon thermoset laminate with a Dk matched to FR-4 (design Dk 4.38 at 2.5 GHz; the process Dk by stripline at 10 GHz is 4.10 +/- 0.08), made with standard epoxy/glass processes and compatible with conventional bondplies. Tg above 280 C by TMA and T288 above 60 min (bounds, not stored). CTE -55 to 288 C. Electrical strength 675 V/mil, tensile and flexural strength and Young's modulus are machine/cross machine direction values converted from kpsi (flexural modulus 2337/2123 kpsi); dimensional stability -0.48/-0.59 mm/m; bow 0.03 %, twist 0.08 %. Thickness tolerances are 0.001 to 0.004 in; additional thicknesses of 0.090 and 0.120 in are available. Typical values are an average of the population; the Rogers internal QA value is the stripline one."
+    },
+    {
+      "id": "rogers/magtrex-555",
+      "manufacturer": "Rogers",
+      "name": "MAGTREX 555",
+      "kind": "ceramic_filled",
+      "source": {
+        "pdf": "magtrex-555-high-impedance-laminates-data-sheet.pdf",
+        "pages": "1-3"
+      },
+      "family": "MAGTREX",
+      "resin": "High temperature thermoplastic",
+      "filler": "Low loss, high resistivity ceramic",
+      "td_c": 500,
+      "cte_x_ppm": 22,
+      "cte_y_ppm": 25,
+      "cte_z_below_tg_ppm": 25,
+      "thermal_conductivity_w_mk": 0.47,
+      "density_g_cm3": 3.45,
+      "specific_heat_j_gk": 0.765,
+      "lead_free_compatible": true,
+      "dk": [
+        {
+          "freq_ghz": 0.4,
+          "value": 6.5,
+          "method": "Coaxial airline 1 in NRW extraction, X/Y"
+        },
+        {
+          "freq_ghz": 0.4,
+          "value": 5.3,
+          "method": "FSR, IPC-TM-650 2.5.5.6, Z"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.4,
+          "value": 0.01,
+          "method": "Coaxial airline 1 in NRW extraction, X/Y"
+        }
+      ],
+      "volume_resistivity_ohm_cm": 615000000.0,
+      "surface_resistivity_ohm": 174000000.0,
+      "dielectric_strength_kv_mm": 5.16,
+      "flexural_strength_mpa": {
+        "lengthwise": 10.8,
+        "crosswise": 10.6
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 6.7,
+        "crosswise": 8.6
+      },
+      "youngs_modulus_gpa": {
+        "lengthwise": 1.502,
+        "crosswise": 1.482
+      },
+      "thicknesses_mm": [
+        1.02,
+        1.52,
+        2.03,
+        2.54,
+        3.56,
+        5.08,
+        6.6
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED"
+        }
+      ],
+      "notes": "High impedance laminate with matched permeability and permittivity (permeability 6.0 and magnetic loss tangent below 0.05 at 400 MHz, X/Y) for antenna miniaturisation below 500 MHz; sold with copper (1 oz ED) or unclad. Dk 6.5 (X/Y, 400 MHz) and 5.3 (Z, 400 MHz); Df 0.01 (X/Y, 400 MHz). The directions are X = cross machine and Y = machine direction; lengthwise holds the Y value and crosswise the X value. Curie temperature 241 C; thermal coefficient of the product of the square roots of Dk and permeability about +1000 ppm/C. Peel strength above 3.1 lb/in (1 oz ED, after solder float); moisture absorption below 0.25 % (D48/50); T260 and T288 above 30 min; outgassing 0.02 %; fungus resistance pass; resistivity measured with a multimeter (615 M-ohm cm, 174 M-ohm, converted). Thicknesses have tolerances of 0.002 to 0.013 in."
+    }
+  ]
+}
