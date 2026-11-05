@@ -580,3 +580,14 @@ HudChanging	Замена алата
 HudKindDrill	сврдло
 HudKindCutter	глодало
 HudRackSlot	лежиште
+MatNoData	Нема података произвођача
+MatTypeAll	Све врсте
+MatTypeLaminate	Ламинат
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Са керамичким пуниоцем
+MatTypeMetal	Метално језгро
+MatTypeSheet	Глатке плоче
+MatSearch	Претрага
+MatNoMatch	Ниједан материјал не одговара филтерима
+MatAskValues	Произвођач не наводи дебљину ни бакар за овај материјал: унесите вредности своје плоче
+MatUsual	Уобичајене вредности (нису од произвођача)

@@ -580,3 +580,14 @@ HudChanging	Verktøyskifte
 HudKindDrill	bor
 HudKindCutter	fres
 HudRackSlot	plass
+MatNoData	Ingen produsentdata
+MatTypeAll	Alle typer
+MatTypeLaminate	Laminat
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Keramikkfylt
+MatTypeMetal	Metallkjerne
+MatTypeSheet	Glatte plater
+MatSearch	Søk
+MatNoMatch	Ingen materialer passer til filtrene
+MatAskValues	Produsenten oppgir verken tykkelse eller kobber for dette materialet: skriv inn verdiene for kortet ditt
+MatUsual	Vanlige verdier (ikke fra produsenten)

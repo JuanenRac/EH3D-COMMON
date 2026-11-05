@@ -580,3 +580,14 @@ HudChanging	Gereedschap wisselen
 HudKindDrill	boor
 HudKindCutter	frees
 HudRackSlot	positie
+MatNoData	Geen fabrikantgegevens
+MatTypeAll	Alle typen
+MatTypeLaminate	Laminaat
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Keramisch gevuld
+MatTypeMetal	Metaalkern
+MatTypeSheet	Kale platen
+MatSearch	Zoeken
+MatNoMatch	Geen materiaal voldoet aan de filters
+MatAskValues	De fabrikant geeft voor dit materiaal geen dikte of koper op: typ de waarden van uw print
+MatUsual	Gebruikelijke waarden (niet van de fabrikant)

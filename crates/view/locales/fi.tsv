@@ -580,3 +580,14 @@ HudChanging	Työkalun vaihto
 HudKindDrill	pora
 HudKindCutter	jyrsin
 HudRackSlot	paikka
+MatNoData	Ei valmistajan tietoja
+MatTypeAll	Kaikki tyypit
+MatTypeLaminate	Laminaatti
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Keraamitäytteinen
+MatTypeMetal	Metalliydin
+MatTypeSheet	Sileät levyt
+MatSearch	Hae
+MatNoMatch	Mikään materiaali ei vastaa suodattimia
+MatAskValues	Valmistaja ei ilmoita tämän materiaalin paksuutta eikä kuparia: kirjoita piirilevysi arvot
+MatUsual	Tavalliset arvot (eivät valmistajalta)

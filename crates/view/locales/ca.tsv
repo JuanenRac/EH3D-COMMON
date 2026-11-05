@@ -580,3 +580,14 @@ HudChanging	Canvi d'eina
 HudKindDrill	broca
 HudKindCutter	fresa
 HudRackSlot	posició
+MatNoData	Sense dades del fabricant
+MatTypeAll	Tots els tipus
+MatTypeLaminate	Laminat
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Amb càrrega ceràmica
+MatTypeMetal	Nucli metàl·lic
+MatTypeSheet	Planxes llises
+MatSearch	Cerca
+MatNoMatch	Cap material compleix els filtres
+MatAskValues	El fabricant no dona gruix ni coure per a aquest material: escriviu els valors de la vostra placa
+MatUsual	Valors habituals (no són del fabricant)

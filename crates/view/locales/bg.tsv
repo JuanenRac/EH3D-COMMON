@@ -580,3 +580,14 @@ HudChanging	Смяна на инструмент
 HudKindDrill	свредло
 HudKindCutter	фреза
 HudRackSlot	гнездо
+MatNoData	Няма данни от производителя
+MatTypeAll	Всички типове
+MatTypeLaminate	Ламинат
+MatTypeRf	PTFE / RF
+MatTypeCeramic	С керамичен пълнител
+MatTypeMetal	С метална основа
+MatTypeSheet	Гладки плочи
+MatSearch	Търсене
+MatNoMatch	Няма материал, отговарящ на филтрите
+MatAskValues	Производителят не дава дебелина и мед за този материал: въведете стойностите на вашата платка
+MatUsual	Обичайни стойности (не са от производителя)

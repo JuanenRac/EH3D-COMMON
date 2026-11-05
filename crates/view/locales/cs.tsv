@@ -580,3 +580,14 @@ HudChanging	Výměna nástroje
 HudKindDrill	vrták
 HudKindCutter	fréza
 HudRackSlot	pozice
+MatNoData	Bez údajů výrobce
+MatTypeAll	Všechny typy
+MatTypeLaminate	Laminát
+MatTypeRf	PTFE / RF
+MatTypeCeramic	S keramickým plnivem
+MatTypeMetal	Kovové jádro
+MatTypeSheet	Hladké desky
+MatSearch	Hledat
+MatNoMatch	Filtrům nevyhovuje žádný materiál
+MatAskValues	Výrobce neuvádí tloušťku ani měď tohoto materiálu: zadejte hodnoty své desky
+MatUsual	Obvyklé hodnoty (nejsou od výrobce)

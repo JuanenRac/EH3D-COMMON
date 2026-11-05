@@ -580,3 +580,14 @@ HudChanging	Výmena nástroja
 HudKindDrill	vrták
 HudKindCutter	fréza
 HudRackSlot	pozícia
+MatNoData	Bez údajov výrobcu
+MatTypeAll	Všetky typy
+MatTypeLaminate	Laminát
+MatTypeRf	PTFE / RF
+MatTypeCeramic	S keramickým plnivom
+MatTypeMetal	Kovové jadro
+MatTypeSheet	Hladké dosky
+MatSearch	Hľadať
+MatNoMatch	Filtrom nevyhovuje žiadny materiál
+MatAskValues	Výrobca neuvádza hrúbku ani meď tohto materiálu: zadajte hodnoty svojej dosky
+MatUsual	Obvyklé hodnoty (nie sú od výrobcu)

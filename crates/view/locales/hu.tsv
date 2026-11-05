@@ -580,3 +580,14 @@ HudChanging	Szerszámcsere
 HudKindDrill	fúró
 HudKindCutter	maró
 HudRackSlot	hely
+MatNoData	Nincs gyártói adat
+MatTypeAll	Minden típus
+MatTypeLaminate	Laminát
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Kerámiatöltésű
+MatTypeMetal	Fémmagos
+MatTypeSheet	Sima lemezek
+MatSearch	Keresés
+MatNoMatch	Egy anyag sem felel meg a szűrőknek
+MatAskValues	A gyártó nem ad meg vastagságot és rezet ehhez az anyaghoz: írja be a lapja értékeit
+MatUsual	Szokásos értékek (nem a gyártótól)

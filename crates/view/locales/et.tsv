@@ -580,3 +580,14 @@ HudChanging	Tööriista vahetus
 HudKindDrill	puur
 HudKindCutter	freesi
 HudRackSlot	koht
+MatNoData	Tootja andmed puuduvad
+MatTypeAll	Kõik tüübid
+MatTypeLaminate	Lamineerplaat
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Keraamilise täiteainega
+MatTypeMetal	Metalltuum
+MatTypeSheet	Siledad plaadid
+MatSearch	Otsi
+MatNoMatch	Ükski materjal ei vasta filtritele
+MatAskValues	Tootja ei anna selle materjali paksust ega vaske: sisesta oma plaadi väärtused
+MatUsual	Tavalised väärtused (mitte tootjalt)

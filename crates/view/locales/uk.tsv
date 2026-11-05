@@ -580,3 +580,14 @@ HudChanging	Заміна інструмента
 HudKindDrill	свердло
 HudKindCutter	фреза
 HudRackSlot	гніздо
+MatNoData	Немає даних виробника
+MatTypeAll	Усі типи
+MatTypeLaminate	Ламінат
+MatTypeRf	PTFE / RF
+MatTypeCeramic	З керамічним наповнювачем
+MatTypeMetal	Металева основа
+MatTypeSheet	Гладкі плити
+MatSearch	Пошук
+MatNoMatch	Жоден матеріал не відповідає фільтрам
+MatAskValues	Виробник не вказує товщину й мідь для цього матеріалу: введіть значення вашої плати
+MatUsual	Звичайні значення (не від виробника)

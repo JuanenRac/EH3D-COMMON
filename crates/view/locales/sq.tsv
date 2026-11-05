@@ -580,3 +580,14 @@ HudChanging	Ndërrimi i mjetit
 HudKindDrill	turjelë
 HudKindCutter	frezë
 HudRackSlot	vend
+MatNoData	Pa të dhëna të prodhuesit
+MatTypeAll	Të gjitha llojet
+MatTypeLaminate	Laminat
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Me mbushje qeramike
+MatTypeMetal	Bërthamë metalike
+MatTypeSheet	Pllaka të lëmuara
+MatSearch	Kërko
+MatNoMatch	Asnjë material nuk i përputhet filtrave
+MatAskValues	Prodhuesi nuk jep trashësi as bakër për këtë material: shkruani vlerat e pllakës suaj
+MatUsual	Vlera të zakonshme (jo nga prodhuesi)

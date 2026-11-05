@@ -580,3 +580,14 @@ HudChanging	Schimbarea sculei
 HudKindDrill	burghiu
 HudKindCutter	freză
 HudRackSlot	loc
+MatNoData	Fără date de la producător
+MatTypeAll	Toate tipurile
+MatTypeLaminate	Laminat
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Cu umplutură ceramică
+MatTypeMetal	Miez metalic
+MatTypeSheet	Plăci simple
+MatSearch	Caută
+MatNoMatch	Niciun material nu corespunde filtrelor
+MatAskValues	Producătorul nu indică grosimea și cuprul pentru acest material: introduceți valorile plăcii dvs.
+MatUsual	Valori uzuale (nu de la producător)

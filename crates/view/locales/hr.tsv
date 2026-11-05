@@ -580,3 +580,14 @@ HudChanging	Zamjena alata
 HudKindDrill	svrdlo
 HudKindCutter	glodalo
 HudRackSlot	utor
+MatNoData	Nema podataka proizvođača
+MatTypeAll	Sve vrste
+MatTypeLaminate	Laminat
+MatTypeRf	PTFE / RF
+MatTypeCeramic	S keramičkim punilom
+MatTypeMetal	Metalna jezgra
+MatTypeSheet	Glatke ploče
+MatSearch	Pretraži
+MatNoMatch	Nijedan materijal ne odgovara filtrima
+MatAskValues	Proizvođač ne navodi debljinu ni bakar za ovaj materijal: upišite vrijednosti svoje ploče
+MatUsual	Uobičajene vrijednosti (nisu od proizvođača)

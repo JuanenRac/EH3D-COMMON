@@ -580,3 +580,14 @@ HudChanging	Αλλαγή εργαλείου
 HudKindDrill	τρυπάνι
 HudKindCutter	φρέζα
 HudRackSlot	θέση
+MatNoData	Χωρίς στοιχεία κατασκευαστή
+MatTypeAll	Όλοι οι τύποι
+MatTypeLaminate	Λαμινάτ
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Με κεραμικό υλικό πλήρωσης
+MatTypeMetal	Μεταλλικός πυρήνας
+MatTypeSheet	Λείες πλάκες
+MatSearch	Αναζήτηση
+MatNoMatch	Κανένα υλικό δεν ταιριάζει με τα φίλτρα
+MatAskValues	Ο κατασκευαστής δεν δίνει πάχος ούτε χαλκό για αυτό το υλικό: πληκτρολογήστε τις τιμές της πλακέτας σας
+MatUsual	Συνήθεις τιμές (όχι του κατασκευαστή)

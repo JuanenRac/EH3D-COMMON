@@ -580,3 +580,14 @@ HudChanging	Menjava orodja
 HudKindDrill	sveder
 HudKindCutter	frezalo
 HudRackSlot	mesto
+MatNoData	Brez podatkov proizvajalca
+MatTypeAll	Vse vrste
+MatTypeLaminate	Laminat
+MatTypeRf	PTFE / RF
+MatTypeCeramic	S keramičnim polnilom
+MatTypeMetal	Kovinsko jedro
+MatTypeSheet	Gladke plošče
+MatSearch	Iskanje
+MatNoMatch	Nobenega materiala ni, ki bi ustrezal filtrom
+MatAskValues	Proizvajalec za ta material ne navaja debeline ali bakra: vnesite vrednosti svoje plošče
+MatUsual	Običajne vrednosti (niso od proizvajalca)

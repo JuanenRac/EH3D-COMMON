@@ -580,3 +580,14 @@ HudChanging	Įrankio keitimas
 HudKindDrill	grąžtas
 HudKindCutter	freza
 HudRackSlot	vieta
+MatNoData	Nėra gamintojo duomenų
+MatTypeAll	Visi tipai
+MatTypeLaminate	Laminatas
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Keramikos užpildu
+MatTypeMetal	Metalinė šerdis
+MatTypeSheet	Lygios plokštės
+MatSearch	Ieškoti
+MatNoMatch	Jokia medžiaga neatitinka filtrų
+MatAskValues	Gamintojas šiai medžiagai nenurodo nei storio, nei vario: įveskite savo plokštės reikšmes
+MatUsual	Įprastos reikšmės (ne iš gamintojo)

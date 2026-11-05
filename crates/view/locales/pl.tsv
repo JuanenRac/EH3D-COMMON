@@ -580,3 +580,14 @@ HudChanging	Wymiana narzędzia
 HudKindDrill	wiertło
 HudKindCutter	frez
 HudRackSlot	miejsce
+MatNoData	Brak danych producenta
+MatTypeAll	Wszystkie typy
+MatTypeLaminate	Laminat
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Z wypełnieniem ceramicznym
+MatTypeMetal	Rdzeń metalowy
+MatTypeSheet	Płyty gładkie
+MatSearch	Szukaj
+MatNoMatch	Żaden materiał nie spełnia filtrów
+MatAskValues	Producent nie podaje grubości ani miedzi dla tego materiału: wpisz wartości swojej płytki
+MatUsual	Typowe wartości (nie od producenta)

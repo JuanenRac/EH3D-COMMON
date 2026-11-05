@@ -580,3 +580,14 @@ HudChanging	Uirlis á hathrú
 HudKindDrill	druilire
 HudKindCutter	gearrthóir
 HudRackSlot	sliotán
+MatNoData	Gan sonraí an déantóra
+MatTypeAll	Gach cineál
+MatTypeLaminate	Laminéad
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Líonta le ceirmeach
+MatTypeMetal	Croí miotail
+MatTypeSheet	Pláta simplí
+MatSearch	Cuardaigh
+MatNoMatch	Níl ábhar ar bith a oireann do na scagairí
+MatAskValues	Ní thugann an déantóir tiús ná copar don ábhar seo: clóscríobh luachanna do phláta
+MatUsual	Gnáthluachanna (ní ón déantóir)

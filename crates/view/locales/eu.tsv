@@ -580,3 +580,14 @@ HudChanging	Erremintaren aldaketa
 HudKindDrill	zulagailua
 HudKindCutter	fresa
 HudRackSlot	posizioa
+MatNoData	Fabrikatzailearen daturik gabe
+MatTypeAll	Mota guztiak
+MatTypeLaminate	Laminatua
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Hutsune zeramikoz betea
+MatTypeMetal	Metalezko nukleoa
+MatTypeSheet	Plaka leunak
+MatSearch	Bilatu
+MatNoMatch	Ez dago iragazkiei egokitzen zaien materialik
+MatAskValues	Fabrikatzaileak ez du material honen lodierarik ez kobrerik ematen: idatzi zure plakaren balioak
+MatUsual	Ohiko balioak (ez fabrikatzailearenak)

@@ -580,3 +580,14 @@ HudChanging	Værktøjsskift
 HudKindDrill	bor
 HudKindCutter	fræser
 HudRackSlot	plads
+MatNoData	Ingen producentdata
+MatTypeAll	Alle typer
+MatTypeLaminate	Laminat
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Keramikfyldt
+MatTypeMetal	Metalkerne
+MatTypeSheet	Glatte plader
+MatSearch	Søg
+MatNoMatch	Intet materiale passer til filtrene
+MatAskValues	Producenten oplyser hverken tykkelse eller kobber for dette materiale: skriv værdierne for dit print
+MatUsual	Sædvanlige værdier (ikke fra producenten)

@@ -580,3 +580,14 @@ HudChanging	Instrumenta maiņa
 HudKindDrill	urbis
 HudKindCutter	freze
 HudRackSlot	vieta
+MatNoData	Nav ražotāja datu
+MatTypeAll	Visi veidi
+MatTypeLaminate	Lamināts
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Ar keramikas pildvielu
+MatTypeMetal	Metāla serde
+MatTypeSheet	Gludas plāksnes
+MatSearch	Meklēt
+MatNoMatch	Neviens materiāls neatbilst filtriem
+MatAskValues	Ražotājs šim materiālam nenorāda ne biezumu, ne varu: ievadiet savas plates vērtības
+MatUsual	Parastās vērtības (nav no ražotāja)

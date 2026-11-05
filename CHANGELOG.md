@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Words for the list of board materials in the 37 languages:** the types of material (laminate, PTFE and RF, ceramic filled, metal core, plain sheets), the search box, the mark of a material without data of the manufacturer and the request for its thickness and copper.
+
 ## [0.1.8] - The board materials database with 723 materials and a classified catalogue of 1873 documents
 
 - **The board materials database:** the new crate `eh3d-materials` holds laminates, prepregs, flex, metal cores and PTFE boards of Shengyi, Isola, Panasonic, Rogers, Taconic, Arlon, ITEQ, Ventec, DuPont, Doosan, Bungard and other makers, every value as the sheet publishes it with the PDF it comes from. It checks the data when it loads it (the codes `EH3D-MAT-001` to `EH3D-MAT-009`), answers by identifier, maker, kind and minimum Tg, Dk and Df, interpolates Dk and Df between the published frequencies without extrapolating, and gives the small view that the machine program needs. A catalogue of the reference documents classifies each by category and by whether it serves a CNC that drills and mills boards or the design tool.

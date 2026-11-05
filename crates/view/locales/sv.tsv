@@ -580,3 +580,14 @@ HudChanging	Verktygsbyte
 HudKindDrill	borr
 HudKindCutter	fräs
 HudRackSlot	plats
+MatNoData	Inga tillverkaruppgifter
+MatTypeAll	Alla typer
+MatTypeLaminate	Laminat
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Keramikfylld
+MatTypeMetal	Metallkärna
+MatTypeSheet	Släta skivor
+MatSearch	Sök
+MatNoMatch	Inget material matchar filtren
+MatAskValues	Tillverkaren anger varken tjocklek eller koppar för detta material: skriv värdena för ditt kort
+MatUsual	Vanliga värden (inte från tillverkaren)

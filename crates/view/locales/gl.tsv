@@ -580,3 +580,14 @@ HudChanging	Cambio de ferramenta
 HudKindDrill	broca
 HudKindCutter	fresa
 HudRackSlot	posición
+MatNoData	Sen datos do fabricante
+MatTypeAll	Todos os tipos
+MatTypeLaminate	Laminado
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Con carga cerámica
+MatTypeMetal	Núcleo metálico
+MatTypeSheet	Chapas lisas
+MatSearch	Buscar
+MatNoMatch	Ningún material cumpre os filtros
+MatAskValues	O fabricante non dá espesor nin cobre para este material: escribe os valores da túa placa
+MatUsual	Valores habituais (non son do fabricante)

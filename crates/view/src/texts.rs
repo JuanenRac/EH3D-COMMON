@@ -877,6 +877,17 @@ texts! {
     HudKindDrill => ["drill", "broca", "punta", "Bohrer", "foret", "broca", "钻头", "ドリル"],
     HudKindCutter => ["cutter", "fresa", "fresa", "Fräser", "fraise", "fresa", "铣刀", "カッター"],
     HudRackSlot => ["rack", "rack", "rack", "Magazin", "magasin", "rack", "刀库", "ラック"],
+    MatNoData => ["No manufacturer data", "Sin datos del fabricante", "Senza dati del produttore", "Keine Herstellerangaben", "Sans données du fabricant", "Sem dados do fabricante", "无厂商数据", "メーカーのデータなし"],
+    MatTypeAll => ["All types", "Todos los tipos", "Tutti i tipi", "Alle Typen", "Tous les types", "Todos os tipos", "所有类型", "すべての種類"],
+    MatTypeLaminate => ["Laminate", "Laminado", "Laminato", "Laminat", "Stratifié", "Laminado", "层压板", "ラミネート"],
+    MatTypeRf => ["PTFE / RF", "PTFE / RF", "PTFE / RF", "PTFE / HF", "PTFE / RF", "PTFE / RF", "PTFE / 射频", "PTFE / 高周波"],
+    MatTypeCeramic => ["Ceramic filled", "Con carga cerámica", "Caricato ceramica", "Keramikgefüllt", "Chargé céramique", "Com carga cerâmica", "陶瓷填充", "セラミック充填"],
+    MatTypeMetal => ["Metal core", "Núcleo metálico", "Anima metallica", "Metallkern", "Âme métallique", "Núcleo metálico", "金属基", "金属コア"],
+    MatTypeSheet => ["Plain sheets", "Planchas lisas", "Lastre lisce", "Platten ohne Kupfer", "Plaques nues", "Chapas lisas", "无铜板材", "無銅の板材"],
+    MatSearch => ["Search", "Buscar", "Cerca", "Suchen", "Rechercher", "Pesquisar", "搜索", "検索"],
+    MatNoMatch => ["No material matches the filters", "Ningún material cumple los filtros", "Nessun materiale corrisponde ai filtri", "Kein Material passt zu den Filtern", "Aucun matériau ne correspond aux filtres", "Nenhum material corresponde aos filtros", "没有符合筛选条件的材料", "条件に合う材料がありません"],
+    MatAskValues => ["The manufacturer gives no thickness or copper for this material: type the values of your board", "El fabricante no da espesor ni cobre para este material: escribe los valores de tu placa", "Il produttore non indica spessore né rame per questo materiale: digita i valori della tua scheda", "Der Hersteller nennt für dieses Material keine Dicke und kein Kupfer: Werte der eigenen Platine eingeben", "Le fabricant n'indique ni épaisseur ni cuivre pour ce matériau : saisissez les valeurs de votre carte", "O fabricante não indica espessura nem cobre para este material: escreva os valores da sua placa", "厂商未提供此材料的厚度和铜厚：请输入您板子的数值", "このメーカーはこの材料の厚みと銅厚を示していません。お使いの基板の値を入力してください"],
+    MatUsual => ["Usual values (not from the manufacturer)", "Valores habituales (no son del fabricante)", "Valori usuali (non del produttore)", "Übliche Werte (nicht vom Hersteller)", "Valeurs usuelles (pas du fabricant)", "Valores habituais (não são do fabricante)", "常用值（非厂商数据）", "一般的な値（メーカーの値ではありません）"],
 }
 
 impl crate::theme::ThemeId {

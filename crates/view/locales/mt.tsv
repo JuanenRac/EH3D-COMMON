@@ -580,3 +580,14 @@ HudChanging	Bidla tal-għodda
 HudKindDrill	trapann
 HudKindCutter	frża
 HudRackSlot	pożizzjoni
+MatNoData	Mingħajr dejta tal-manifattur
+MatTypeAll	It-tipi kollha
+MatTypeLaminate	Laminat
+MatTypeRf	PTFE / RF
+MatTypeCeramic	Mimli bis-ceramika
+MatTypeMetal	Qalba tal-metall
+MatTypeSheet	Pjanċi lixxi
+MatSearch	Fittex
+MatNoMatch	L-ebda materjal ma jaqbel mal-filtri
+MatAskValues	Il-manifattur ma jagħtix il-ħxuna jew ir-ram għal dan il-materjal: ittajpja l-valuri tal-bord tiegħek
+MatUsual	Valuri tas-soltu (mhux mill-manifattur)
