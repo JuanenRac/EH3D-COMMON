@@ -76,6 +76,34 @@ pub const FILES: &[(&str, &str)] = &[
         include_str!("../data/wazam_lote2_t3.json"),
     ),
     ("yuxinda.json", include_str!("../data/yuxinda.json")),
+    (
+        "doosan_lote2_t4.json",
+        include_str!("../data/doosan_lote2_t4.json"),
+    ),
+    (
+        "dupont_lote2_t4.json",
+        include_str!("../data/dupont_lote2_t4.json"),
+    ),
+    (
+        "elite-material_lote2_t4.json",
+        include_str!("../data/elite-material_lote2_t4.json"),
+    ),
+    (
+        "kingboard_lote2_t4.json",
+        include_str!("../data/kingboard_lote2_t4.json"),
+    ),
+    (
+        "polyflon_lote2_t4.json",
+        include_str!("../data/polyflon_lote2_t4.json"),
+    ),
+    (
+        "rogers_lote2_t4.json",
+        include_str!("../data/rogers_lote2_t4.json"),
+    ),
+    (
+        "wazam_lote2_t4.json",
+        include_str!("../data/wazam_lote2_t4.json"),
+    ),
 ];
 
 #[cfg(test)]

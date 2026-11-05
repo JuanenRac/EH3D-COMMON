@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Polyflon",
+  "materials": [
+    {
+      "id": "polyflon/cuflon",
+      "manufacturer": "Polyflon",
+      "name": "CuFlon",
+      "kind": "ptfe",
+      "source": {
+        "pdf": "DS_CuFlon_04122021.pdf",
+        "pages": "1"
+      },
+      "resin": "PTFE",
+      "reinforcement": "None (unreinforced PTFE)",
+      "dk": [
+        {
+          "freq_ghz": 18.0,
+          "value": 2.05,
+          "method": "IPC-TM-650",
+          "tolerance": 0.05
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 18.0,
+          "value": 0.00045,
+          "method": "IPC-TM-650"
+        }
+      ],
+      "thermal_conductivity_w_mk": 0.25,
+      "density_g_cm3": 2.15,
+      "dielectric_strength_kv_mm": 39.4,
+      "thicknesses_mm": [
+        0.00635,
+        0.0127,
+        0.0254,
+        0.0508,
+        0.0762,
+        0.127,
+        0.254,
+        0.381,
+        0.508,
+        0.787,
+        1.575,
+        3.175
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.125,
+          "thickness_um": 4
+        },
+        {
+          "weight_oz": 0.25,
+          "thickness_um": 9
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": 70
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 228.6,
+          "height_mm": 228.6,
+          "label": "9 x 9 in"
+        },
+        {
+          "width_mm": 304.8,
+          "height_mm": 457.2,
+          "label": "12 x 18 in"
+        }
+      ],
+      "notes": "Microwave substrate of PTFE with a proprietary plating process; isotropic, RoHS compliant. Maximum temperature 225 C, operating temperature -55 to 175 C; copper peel 6-8 lb/in (a range, not stored); water absorption below 0.01 %. The thickness list covers both panel sizes: 0.00025 to 0.005 in on the 9 x 9 in panel and 0.010 to 0.125 in on the 12 x 18 in panel. The thermal expansion, volume resistivity and Df rows of the table are not unambiguous in the text layer and are not stored; Df 0.00045 is the value printed for 18 GHz."
+    }
+  ]
+}

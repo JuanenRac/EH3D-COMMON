@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Kingboard",
+  "materials": [
+    {
+      "id": "kingboard/hf-140",
+      "manufacturer": "Kingboard",
+      "name": "HF-140",
+      "kind": "laminate",
+      "source": {
+        "pdf": "HF-140,PP-HF140.pdf",
+        "pages": "1"
+      },
+      "family": "HF-140",
+      "resin": "Halogen-free epoxy",
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/127",
+      "tg_dsc_c": 141,
+      "td_c": 350,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 15,
+      "cte_z_below_tg_ppm": 45,
+      "cte_z_above_tg_ppm": 254,
+      "cte_z_50_260_pct": 3.3,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.6,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.4,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.011,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.013,
+          "method": "IEC 61189-2-721, etched",
+          "resin_content_pct": 50
+        }
+      ],
+      "volume_resistivity_ohm_cm": 5300000000000000.0,
+      "surface_resistivity_ohm": 270000000000000.0,
+      "arc_resistance_s": 120,
+      "cti_v": 175,
+      "peel_strength_n_mm": 1.4,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 550,
+        "crosswise": 490
+      },
+      "water_absorption_pct": 0.11,
+      "notes": "Halogen-free, normal Tg, low CTE laminate with companion prepreg PP-HF140. Thermal stress (float 288 C, unetched) at least 240 s; T260 above 60 min and T288 above 5 min (TMA); CTI at least 175 V. The sheet carries the KB logo and does not print a company name. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; dielectric breakdown is given as at least 45 kV (specimen, not per mm). Typical values are for a 1.6 mm specimen (7628 x 8) after the sheet.",
+      "sources": [
+        {
+          "pdf": "HF-140-line-up.pdf",
+          "pages": "1-2"
+        },
+        {
+          "pdf": "HF-140-Processing-Guide.pdf",
+          "pages": "1-4"
+        }
+      ],
+      "processing": {
+        "lamination": {
+          "notes": "Vacuum press at 300-400 psi full pressure; heat-up rate 1.5-2.5 C/min between 80 and 140 C; cure at 180 C material temperature or above for at least 60 min; reduce the pressure when the cure temperature has been held for 30 min to release stress; cooling rate below 3 C/min. Inner layers are baked at 120 C for at least 60 min after the brown oxide treatment, and prepreg is tempered 12 h before use."
+        },
+        "drilling": {
+          "retract_notes": "The guide lists drilling parameters by drill diameter (speed in krpm, infeed in m/min, hit count) for a laminate thickness of 2 mm on a Hitachi machine; vacuum up the dust and blow out the holes after drilling."
+        },
+        "desmear_note": "Vertical or horizontal permanganate etching can be used normally; check the cross-sections under a scanning microscope."
+      }
+    },
+    {
+      "id": "kingboard/hf-170",
+      "manufacturer": "Kingboard",
+      "name": "HF-170",
+      "kind": "laminate",
+      "source": {
+        "pdf": "HF-170.pdf",
+        "pages": "1"
+      },
+      "family": "HF-170",
+      "resin": "Halogen-free epoxy",
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/127, /128, /130",
+      "tg_dsc_c": 190,
+      "tg_tma_c": 180,
+      "tg_dma_c": 210,
+      "td_c": 401,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 15,
+      "cte_z_below_tg_ppm": 35,
+      "cte_z_above_tg_ppm": 170,
+      "cte_z_50_260_pct": 1.8,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.4,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.2,
+          "method": "Cavity resonator",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.8,
+          "method": "Cavity resonator",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.011,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.014,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.015,
+          "method": "Cavity resonator",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.018,
+          "method": "Cavity resonator",
+          "resin_content_pct": 70
+        }
+      ],
+      "volume_resistivity_ohm_cm": 4700000000000000.0,
+      "surface_resistivity_ohm": 360000000000000.0,
+      "arc_resistance_s": 190,
+      "cti_v": 200,
+      "peel_strength_n_mm": 1.4,
+      "peel_condition": "1 oz foil, float 288 C for 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 590,
+        "crosswise": 510
+      },
+      "water_absorption_pct": 0.11,
+      "notes": "Halogen-free, high Tg, low CTE laminate with companion prepreg PP-HF170. Thermal stress (float 288 C, unetched) at least 240 s; T260 and T288 above 60 min (TMA); CTI at least 200 V. The sheet carries the KB logo and does not print a company name. Volume and surface resistivity are given in M-ohm cm and M-ohm and converted; dielectric breakdown is given as at least 45 kV (specimen, not per mm). Typical values are for a 1.6 mm specimen (7628 x 8) after the sheet.",
+      "sources": [
+        {
+          "pdf": "HF-170-line-up.pdf",
+          "pages": "1-3"
+        },
+        {
+          "pdf": "HF-170-Processing-Guide (ENG).pdf",
+          "pages": "1-4"
+        }
+      ],
+      "processing": {
+        "lamination": {
+          "notes": "Vacuum press at 300-400 psi full pressure; heat-up rate 1.5-2.5 C/min between 80 and 140 C; cure at 180 C material temperature or above for at least 60 min; reduce the pressure when the cure temperature has been held for 30 min to release stress; cooling rate below 3 C/min. Inner layers are baked at 120 C for at least 60 min after the brown oxide treatment, and prepreg is tempered 12 h before use."
+        },
+        "drilling": {
+          "retract_notes": "The guide lists drilling parameters by drill diameter (speed in krpm, infeed in m/min, hit count) for a laminate thickness of 2 mm on a Hitachi machine; vacuum up the dust and blow out the holes after drilling."
+        },
+        "desmear_note": "Vertical or horizontal permanganate etching can be used normally; check the cross-sections under a scanning microscope."
+      }
+    }
+  ]
+}

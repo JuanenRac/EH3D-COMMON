@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Wazam",
+  "materials": [
+    {
+      "id": "wazam/hsd7-k",
+      "manufacturer": "Wazam",
+      "name": "HSD7(K)",
+      "kind": "laminate",
+      "source": {
+        "pdf": "e16b17f26b43f647ffa979fd1df10f53.pdf",
+        "pages": "1-2"
+      },
+      "family": "HSD7",
+      "reinforcement": "E-glass woven",
+      "thicknesses_mm": [
+        0.051,
+        0.067,
+        0.076,
+        0.082,
+        0.088,
+        0.09,
+        0.099,
+        0.125,
+        0.127,
+        0.13,
+        0.143,
+        0.176,
+        0.2,
+        0.25,
+        0.3,
+        0.399,
+        0.501,
+        0.626,
+        0.751
+      ],
+      "notes": "Line-up of the HSD7(K) core and its prepreg (E-glass only). The sheet gives Dk and Df by construction and resin content at 1, 5, 10, 15 and 20 GHz (for example 3.21 and 0.0018 at 1 GHz for 1035 x 1, 69 % resin), which are not stored."
+    },
+    {
+      "id": "wazam/hsd7ja-k",
+      "manufacturer": "Wazam",
+      "name": "HSD7JA(K)",
+      "kind": "laminate",
+      "source": {
+        "pdf": "e1c3e0265031e1732c5fea32429a1232.pdf",
+        "pages": "1-2"
+      },
+      "family": "HSD7",
+      "reinforcement": "E-glass woven",
+      "thicknesses_mm": [
+        0.051,
+        0.067,
+        0.076,
+        0.082,
+        0.088,
+        0.09,
+        0.099,
+        0.125,
+        0.127,
+        0.13,
+        0.143,
+        0.176,
+        0.2,
+        0.25,
+        0.3,
+        0.399,
+        0.501,
+        0.626,
+        0.751
+      ],
+      "notes": "Line-up of the HSD7JA(K) core and its prepreg (E-glass only). The sheet gives Dk and Df by construction and resin content at 1, 5, 10, 15 and 20 GHz (for example 3.21 and 0.0018 at 1 GHz for 1035 x 1, 69 % resin), which are not stored."
+    },
+    {
+      "id": "wazam/h190hf",
+      "manufacturer": "Wazam",
+      "name": "H190HF",
+      "kind": "laminate",
+      "source": {
+        "pdf": "e27fb9ee9f4f55b43ab20ed83c3dc494.pdf",
+        "pages": "1-2"
+      },
+      "family": "H190HF",
+      "reinforcement": "E-glass woven",
+      "thicknesses_mm": [
+        0.051,
+        0.053,
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.152,
+        0.178,
+        0.203,
+        0.254,
+        0.305,
+        0.356,
+        0.508,
+        0.711,
+        0.762
+      ],
+      "notes": "Line-up of the H190HF core and its prepreg (E-glass only). The sheet gives Dk and Df by construction and resin content at 1, 2, 5, 10, 15 and 20 GHz (for example 3.77 and 0.0029 at 1 GHz for 1035 x 1, 66 % resin), which are not stored."
+    },
+    {
+      "id": "wazam/h360",
+      "manufacturer": "Wazam",
+      "name": "H360",
+      "kind": "laminate",
+      "source": {
+        "pdf": "e34a87973f16f4d1f748b7831f71ffe2.pdf",
+        "pages": "1-2"
+      },
+      "family": "H360",
+      "reinforcement": "E-glass woven",
+      "thicknesses_mm": [
+        0.051,
+        0.061,
+        0.066,
+        0.076,
+        0.102,
+        0.127,
+        0.152,
+        0.178,
+        0.203,
+        0.254,
+        0.305,
+        0.406,
+        0.508,
+        0.635,
+        0.762
+      ],
+      "notes": "Line-up of the H360 core and its prepreg (E-glass only). The sheet gives Dk and Df by construction and resin content at 1, 5 and 10 GHz, which are not stored."
+    },
+    {
+      "id": "wazam/h175hfz",
+      "manufacturer": "Wazam",
+      "name": "H175HFZ",
+      "kind": "laminate",
+      "source": {
+        "pdf": "ed578f7f320a42655e43258922e0acc9.pdf",
+        "pages": "1-2"
+      },
+      "family": "H175HFZ",
+      "reinforcement": "E-glass woven",
+      "thicknesses_mm": [
+        0.051,
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.14,
+        0.152,
+        0.165,
+        0.178,
+        0.203,
+        0.229,
+        0.254,
+        0.305,
+        0.33,
+        0.356,
+        0.381,
+        0.406,
+        0.457,
+        0.508,
+        0.533,
+        0.61,
+        0.66
+      ],
+      "notes": "Line-up of the H175HFZ core and its prepreg (E-glass only). The sheet gives Dk and Df by construction and resin content at 1, 5, 10 and 15 GHz, which are not stored."
+    },
+    {
+      "id": "wazam/hc348",
+      "manufacturer": "Wazam",
+      "name": "HC348",
+      "kind": "laminate",
+      "source": {
+        "pdf": "f678b28c03f794c9ce5598106efc0bb5.pdf",
+        "pages": "1-2"
+      },
+      "family": "HC348",
+      "reinforcement": "E-glass woven",
+      "thicknesses_mm": [
+        0.16,
+        0.25,
+        0.34,
+        0.42,
+        0.5,
+        0.59,
+        0.68,
+        0.76,
+        1.02
+      ],
+      "notes": "Line-up of the HC348 core and its prepreg (E-glass only). The sheet gives Dk and Df by construction at 5 GHz (about 3.4 and 0.0036 for the 70 % resin constructions), which are not stored."
+    },
+    {
+      "id": "wazam/h140a",
+      "manufacturer": "Wazam",
+      "name": "H140A",
+      "kind": "laminate",
+      "source": {
+        "pdf": "f8151d34454dcca93e9db2432c346279.pdf",
+        "pages": "1-2"
+      },
+      "family": "H140A",
+      "reinforcement": "E-glass woven",
+      "thicknesses_mm": [
+        0.1,
+        0.13,
+        0.15,
+        0.18,
+        0.2,
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.71,
+        0.8,
+        0.9,
+        1.02,
+        1.09,
+        1.19,
+        1.25,
+        1.3,
+        1.35,
+        1.4,
+        1.45,
+        1.5,
+        1.55,
+        1.6
+      ],
+      "notes": "Line-up of the H140A core and its prepreg (E-glass only). The sheet gives Dk and Df by construction and resin content at 1, 3 and 5 GHz (for example 4.55 and 0.0140 at 1 GHz for 2116 x 1, 48 % resin), which are not stored."
+    }
+  ]
+}

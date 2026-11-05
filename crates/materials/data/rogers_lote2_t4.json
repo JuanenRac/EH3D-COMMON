@@ -1,0 +1,424 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Rogers",
+  "materials": [
+    {
+      "id": "rogers/diclad-527",
+      "manufacturer": "Rogers",
+      "name": "DiClad 527",
+      "kind": "ptfe",
+      "source": {
+        "pdf": "diclad-series-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "family": "DiClad",
+      "resin": "PTFE",
+      "reinforcement": "Woven fiberglass",
+      "ul94": "V-0",
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0017,
+          "method": "IPC-TM-650 2.5.5.5, 23 C 50 % RH"
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 0.001,
+          "method": "IPC-TM-650 2.5.5.3, 23 C 50 % RH"
+        }
+      ],
+      "tcdk_ppm_per_c": -153,
+      "volume_resistivity_ohm_cm": 1200000000000000.0,
+      "surface_resistivity_ohm": 45000000000000.0,
+      "cte_x_ppm": 14,
+      "cte_y_ppm": 21,
+      "thermal_conductivity_w_mk": 0.26,
+      "peel_strength_n_mm": 2.45,
+      "peel_condition": "10 s at 288 C, 35 um foil (14 lb/in)",
+      "water_absorption_pct": 0.03,
+      "youngs_modulus_gpa": {
+        "lengthwise": 3.56,
+        "crosswise": 4.87
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 131.0,
+        "crosswise": 103.4
+      },
+      "notes": "Woven fiberglass PTFE laminate; plies aligned in one direction. Typical values after the data sheet. Dk is 2.40-2.60 at 10 GHz and 1 MHz (a range, not stored); the density is printed as 231 (probably 2.31). Arc resistance above 180 s; dielectric breakdown above 45 kV; flex modulus 537 kpsi; compressive modulus 359 kpsi; thermal coefficient of Dk -153 ppm/C (-10 to 140 C, 10 GHz); NASA outgassing within limits. DiClad 527 laminates are tested at 1 MHz and 10 GHz. Z-axis CTE 173 ppm/C (50 to 150 C)."
+    },
+    {
+      "id": "rogers/diclad-870",
+      "manufacturer": "Rogers",
+      "name": "DiClad 870",
+      "kind": "ptfe",
+      "source": {
+        "pdf": "diclad-series-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "family": "DiClad",
+      "resin": "PTFE",
+      "reinforcement": "Woven fiberglass",
+      "ul94": "V-0",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.33,
+          "method": "IPC-TM-650 2.5.5.5, 23 C 50 % RH"
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 2.33,
+          "method": "IPC-TM-650 2.5.5.3, 23 C 50 % RH"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0013,
+          "method": "IPC-TM-650 2.5.5.5, 23 C 50 % RH"
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0009,
+          "method": "IPC-TM-650 2.5.5.3, 23 C 50 % RH"
+        }
+      ],
+      "tcdk_ppm_per_c": -161,
+      "volume_resistivity_ohm_cm": 1500000000000000.0,
+      "surface_resistivity_ohm": 34000000000000.0,
+      "cte_x_ppm": 17,
+      "cte_y_ppm": 29,
+      "thermal_conductivity_w_mk": 0.26,
+      "peel_strength_n_mm": 2.45,
+      "peel_condition": "10 s at 288 C, 35 um foil (14 lb/in)",
+      "water_absorption_pct": 0.02,
+      "density_g_cm3": 2.26,
+      "youngs_modulus_gpa": {
+        "lengthwise": 3.34,
+        "crosswise": 2.39
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 102.7,
+        "crosswise": 77.2
+      },
+      "notes": "Woven fiberglass PTFE laminate; plies aligned in one direction. Typical values after the data sheet. Arc resistance above 180 s; dielectric breakdown above 45 kV; flex modulus 437 kpsi; compressive modulus 327 kpsi; thermal coefficient of Dk -161 ppm/C (-10 to 140 C, 10 GHz); NASA outgassing within limits. DiClad 527 laminates are tested at 1 MHz and 10 GHz. Z-axis CTE 217 ppm/C (50 to 150 C).",
+      "sources": [
+        {
+          "pdf": "fabrication-guidelines-diclad-870-880-laminates.pdf",
+          "pages": "1-8"
+        }
+      ],
+      "processing": {
+        "drilling": {
+          "retract_notes": "Surface speed 150-300 SFM (45-90 m/min) and chip load 0.001-0.003 in per revolution (0.025-0.075 mm) vary with tool diameter, with slower infeed and speed for finer drills; retract rate 300-500 IPM (7.6-12.7 m/min) for multilayer boards and 700-1000 IPM (17.8-25.4 m/min) for double-sided constructions; judge tool life from cross-sectioned holes; new carbide drills, standard or undercut."
+        }
+      }
+    },
+    {
+      "id": "rogers/diclad-880",
+      "manufacturer": "Rogers",
+      "name": "DiClad 880",
+      "kind": "ptfe",
+      "source": {
+        "pdf": "diclad-series-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "family": "DiClad",
+      "resin": "PTFE",
+      "reinforcement": "Woven fiberglass",
+      "ul94": "V-0",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.17,
+          "method": "IPC-TM-650 2.5.5.5, 23 C 50 % RH"
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 2.17,
+          "method": "IPC-TM-650 2.5.5.3, 23 C 50 % RH"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0009,
+          "method": "IPC-TM-650 2.5.5.5, 23 C 50 % RH"
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0008,
+          "method": "IPC-TM-650 2.5.5.3, 23 C 50 % RH"
+        }
+      ],
+      "tcdk_ppm_per_c": -160,
+      "volume_resistivity_ohm_cm": 1400000000000000.0,
+      "surface_resistivity_ohm": 2900000000000.0,
+      "cte_x_ppm": 25,
+      "cte_y_ppm": 34,
+      "thermal_conductivity_w_mk": 0.25,
+      "peel_strength_n_mm": 2.45,
+      "peel_condition": "10 s at 288 C, 35 um foil (14 lb/in)",
+      "water_absorption_pct": 0.02,
+      "density_g_cm3": 2.23,
+      "youngs_modulus_gpa": {
+        "lengthwise": 1.84,
+        "crosswise": 1.39
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 55.8,
+        "crosswise": 51.7
+      },
+      "notes": "Woven fiberglass PTFE laminate; plies aligned in one direction. Typical values after the data sheet. Dk is given as 2.17 and 2.20 at 10 GHz and 1 MHz (the first is stored for both). Arc resistance above 180 s; dielectric breakdown above 45 kV; flex modulus 357 kpsi; compressive modulus 237 kpsi; thermal coefficient of Dk -160 ppm/C (-10 to 140 C, 10 GHz); NASA outgassing within limits. DiClad 527 laminates are tested at 1 MHz and 10 GHz. Z-axis CTE 252 ppm/C (50 to 150 C).",
+      "sources": [
+        {
+          "pdf": "fabrication-guidelines-diclad-870-880-laminates.pdf",
+          "pages": "1-8"
+        }
+      ],
+      "processing": {
+        "drilling": {
+          "retract_notes": "Surface speed 150-300 SFM (45-90 m/min) and chip load 0.001-0.003 in per revolution (0.025-0.075 mm) vary with tool diameter, with slower infeed and speed for finer drills; retract rate 300-500 IPM (7.6-12.7 m/min) for multilayer boards and 700-1000 IPM (17.8-25.4 m/min) for double-sided constructions; judge tool life from cross-sectioned holes; new carbide drills, standard or undercut."
+        }
+      }
+    },
+    {
+      "id": "rogers/diclad-880-im",
+      "manufacturer": "Rogers",
+      "name": "DiClad 880-IM",
+      "kind": "ptfe",
+      "source": {
+        "pdf": "im-series-antenna-grade-laminates-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "family": "IM Series",
+      "resin": "PTFE",
+      "reinforcement": "Woven glass",
+      "ul94": "V-0",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.17,
+          "method": "IPC-TM-650 2.5.5.5, process Dk, 23 C 50 % RH"
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 2.2,
+          "method": "IPC-TM-650 2.5.5.3, process Dk, 23 C 50 % RH"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0009,
+          "method": "IPC-TM-650 2.5.5.5, process Df, 23 C 50 % RH"
+        }
+      ],
+      "tcdk_ppm_per_c": -160,
+      "volume_resistivity_ohm_cm": 1400000000000000.0,
+      "surface_resistivity_ohm": 2900000000000.0,
+      "dielectric_strength_kv_mm": 25.2,
+      "cte_x_ppm": 28,
+      "cte_y_ppm": 49,
+      "thermal_conductivity_w_mk": 0.23,
+      "peel_strength_n_mm": 2.5,
+      "peel_condition": "10 s at 288 C after thermal stress, 35 um foil (14.1 lb/in)",
+      "flexural_strength_mpa": {
+        "lengthwise": 80.7,
+        "crosswise": 62.7
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 42.7,
+        "crosswise": 39.5
+      },
+      "youngs_modulus_gpa": {
+        "lengthwise": 5.54,
+        "crosswise": 4.74
+      },
+      "water_absorption_pct": 0.02,
+      "density_g_cm3": 2.23,
+      "specific_heat_j_gk": 0.87,
+      "thicknesses_mm": [
+        0.762,
+        1.524
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 610,
+          "height_mm": 457,
+          "label": "24 x 18 in"
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "IM1 ultra smooth ED (Rq 0.5 um)"
+        }
+      ],
+      "notes": "Antenna grade low-PIM laminate (-166/-165 dBc at 30 mil / 60 mil with two 43 dBm tones at 1900 MHz, IM1/IM1 cladding). Design Dk (microstrip differential phase length) 2.20; CTI class I (600 V or more); Dk 2.20 is the value in parentheses at 1 MHz. Decomposition temperature above 550 C; time to delamination above 60 min at 288 C; Z-axis CTE 317 ppm/C (-55 to 288 C); electric strength 640 V/mil. Mechanical values are lengthwise/crosswise (MD/CMD) for a 0.060 in laminate."
+    },
+    {
+      "id": "rogers/ad255c-im",
+      "manufacturer": "Rogers",
+      "name": "AD255C-IM",
+      "kind": "ptfe",
+      "source": {
+        "pdf": "im-series-antenna-grade-laminates-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "family": "IM Series",
+      "resin": "PTFE",
+      "reinforcement": "Woven glass",
+      "ul94": "V-0",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.55,
+          "method": "IPC-TM-650 2.5.5.5, process Dk, 23 C 50 % RH"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0014,
+          "method": "IPC-TM-650 2.5.5.5, process Df, 23 C 50 % RH"
+        }
+      ],
+      "tcdk_ppm_per_c": -110,
+      "volume_resistivity_ohm_cm": 740000000000000.0,
+      "surface_resistivity_ohm": 36000000000000.0,
+      "dielectric_strength_kv_mm": 35.8,
+      "cte_x_ppm": 34,
+      "cte_y_ppm": 26,
+      "thermal_conductivity_w_mk": 0.35,
+      "peel_strength_n_mm": 2.1,
+      "peel_condition": "10 s at 288 C after thermal stress, 35 um foil (12.1 lb/in)",
+      "flexural_strength_mpa": {
+        "lengthwise": 60.7,
+        "crosswise": 44.1
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 55.8,
+        "crosswise": 45.5
+      },
+      "youngs_modulus_gpa": {
+        "lengthwise": 6.4,
+        "crosswise": 5.65
+      },
+      "water_absorption_pct": 0.03,
+      "density_g_cm3": 2.28,
+      "specific_heat_j_gk": 0.81,
+      "thicknesses_mm": [
+        0.762,
+        1.524
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 610,
+          "height_mm": 457,
+          "label": "24 x 18 in"
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "IM1 ultra smooth ED (Rq 0.5 um)"
+        }
+      ],
+      "notes": "Antenna grade low-PIM laminate (-166/-166 dBc at 30 mil / 60 mil with two 43 dBm tones at 1900 MHz, IM1/IM1 cladding). Design Dk 2.58; CTI class I (600 V or more). Decomposition temperature above 550 C; time to delamination above 60 min at 288 C; Z-axis CTE 196 ppm/C (-55 to 288 C); electric strength 910 V/mil. Mechanical values are lengthwise/crosswise (MD/CMD) for a 0.060 in laminate."
+    },
+    {
+      "id": "rogers/ad300d-im",
+      "manufacturer": "Rogers",
+      "name": "AD300D-IM",
+      "kind": "ptfe",
+      "source": {
+        "pdf": "im-series-antenna-grade-laminates-data-sheet.pdf",
+        "pages": "1-2"
+      },
+      "family": "IM Series",
+      "resin": "PTFE",
+      "reinforcement": "Woven glass",
+      "ul94": "V-0",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.97,
+          "method": "IPC-TM-650 2.5.5.5, process Dk, 23 C 50 % RH"
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 2.94,
+          "method": "IPC-TM-650 2.5.5.3, process Dk, 23 C 50 % RH"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0021,
+          "method": "IPC-TM-650 2.5.5.5, process Df, 23 C 50 % RH"
+        }
+      ],
+      "tcdk_ppm_per_c": -73,
+      "volume_resistivity_ohm_cm": 170000000000000.0,
+      "surface_resistivity_ohm": 51000000000000.0,
+      "dielectric_strength_kv_mm": 29.5,
+      "cte_x_ppm": 24,
+      "cte_y_ppm": 23,
+      "thermal_conductivity_w_mk": 0.37,
+      "peel_strength_n_mm": 2.1,
+      "peel_condition": "10 s at 288 C after thermal stress, 35 um foil (11.9 lb/in)",
+      "flexural_strength_mpa": {
+        "lengthwise": 152.4,
+        "crosswise": 127.6
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 122.0,
+        "crosswise": 120.7
+      },
+      "youngs_modulus_gpa": {
+        "lengthwise": 10.4,
+        "crosswise": 9.58
+      },
+      "water_absorption_pct": 0.04,
+      "density_g_cm3": 2.23,
+      "specific_heat_j_gk": 0.8,
+      "thicknesses_mm": [
+        0.762,
+        1.524
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12 x 18 in"
+        },
+        {
+          "width_mm": 610,
+          "height_mm": 457,
+          "label": "24 x 18 in"
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "IM1 ultra smooth ED (Rq 0.5 um)"
+        }
+      ],
+      "notes": "Antenna grade low-PIM laminate (-166/-165 dBc at 30 mil / 60 mil with two 43 dBm tones at 1900 MHz, IM1/IM1 cladding). Process Dk 2.97/3.03 at 10 GHz (2.94/3.00 at 1 MHz; the first value of each pair is stored); design Dk 2.95/3.01; CTI class II (400 V to under 600 V). Decomposition temperature above 550 C; time to delamination above 60 min at 288 C; Z-axis CTE 98 ppm/C (-55 to 288 C); electric strength 750 V/mil. Mechanical values are lengthwise/crosswise (MD/CMD) for a 0.060 in laminate."
+    }
+  ]
+}

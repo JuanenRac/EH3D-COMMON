@@ -1,0 +1,2507 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Elite Material",
+  "materials": [
+    {
+      "id": "elite-material/em-355-d",
+      "manufacturer": "Elite Material",
+      "name": "EM-355(D)",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-355(D) Datasheet 20240716_24081911924.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/127, /128; IPC-4103/240, /540",
+      "tg_dsc_c": 155,
+      "tg_tma_c": 150,
+      "tg_dma_c": 175,
+      "td_c": 385,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 15,
+      "cte_z_50_260_pct": 2.8,
+      "thermal_conductivity_w_mk": 0.43,
+      "dk": [
+        {
+          "freq_ghz": 2.0,
+          "value": 3.4,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.0,
+          "value": 0.013,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.1,
+      "peel_strength_n_mm": 1.14,
+      "peel_condition": "H oz HTE foil, as received (6.5 lb/in)",
+      "notes": "Middle Tg, low Dk, halogen free. Companion prepreg EM-355B(D). Z-axis CTE 35-40 ppm/C below Tg and 200-220 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): H oz HTE foil 6.5 lb/in. Flexural strength 510-570 MPa warp and 450-500 MPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given at 2 GHz only."
+    },
+    {
+      "id": "elite-material/em-370-5",
+      "manufacturer": "Elite Material",
+      "name": "EM-370(5)",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-370(5) Datasheet 20240716_24081911374.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/127, /128; IPC-4103/250, /550",
+      "tg_dsc_c": 155,
+      "tg_tma_c": 150,
+      "tg_dma_c": 175,
+      "td_c": 385,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 15,
+      "cte_z_50_260_pct": 2.6,
+      "thermal_conductivity_w_mk": 0.48,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.8,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.3,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.009,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.013,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        }
+      ],
+      "water_absorption_pct": 0.13,
+      "peel_strength_n_mm": 1.31,
+      "peel_condition": "H oz HTE foil, as received (7.5 lb/in; 1 oz 8.5 lb/in)",
+      "notes": "Middle Tg, CAF resistance, halogen free. Companion prepreg EM-37B(5). Z-axis CTE 35-40 ppm/C below Tg and 180-200 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): H oz HTE foil 7.5 lb/in. Flexural strength 510-570 MPa warp and 450-500 MPa fill; electric strength above 40 kV/mm; dielectric breakdown above 45 kV. Volume and surface resistivity are given only as lower bounds and are not stored."
+    },
+    {
+      "id": "elite-material/em-370-d",
+      "manufacturer": "Elite Material",
+      "name": "EM-370(D)",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-370(D) Datasheet 20240716_24081911319.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/127, /128, /130; IPC-4103/250, /550",
+      "tg_dsc_c": 175,
+      "tg_tma_c": 170,
+      "tg_dma_c": 195,
+      "td_c": 385,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 15,
+      "cte_z_50_260_pct": 2.2,
+      "thermal_conductivity_w_mk": 0.47,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.1,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.0,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.011,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.015,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        }
+      ],
+      "water_absorption_pct": 0.13,
+      "peel_strength_n_mm": 0.79,
+      "peel_condition": "H oz foil, as received (4.5 lb/in; 1 oz RTF 5.0 lb/in)",
+      "notes": "High Tg, upper mid loss, halogen free. Companion prepreg EM-37B(D). Z-axis CTE 35-40 ppm/C below Tg and 160-180 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): H oz 4.5 lb/in. Flexural strength 510-570 MPa warp and 450-500 MPa fill. Volume and surface resistivity are given only as lower bounds and are not stored."
+    },
+    {
+      "id": "elite-material/em-370-z",
+      "manufacturer": "Elite Material",
+      "name": "EM-370(Z)",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-370(Z) Datasheet-20240716_24081911875.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/127, /128, /130; IPC-4103/250, /550",
+      "tg_dsc_c": 190,
+      "tg_tma_c": 180,
+      "tg_dma_c": 210,
+      "td_c": 390,
+      "cte_x_ppm": 11,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 1.8,
+      "thermal_conductivity_w_mk": 0.58,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.4,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.2,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.8,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.012,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.014,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.015,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.019,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.14,
+      "peel_strength_n_mm": 1.05,
+      "peel_condition": "H oz HTE foil, as received (6.0 lb/in; 1 oz 8.0 lb/in)",
+      "notes": "High Tg, high reliability, halogen free; meets or exceeds IPC-4101/98, /99, /101 and /126. Companion prepreg EM-37B(Z). Z-axis CTE 35-40 ppm/C below Tg and 140-160 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): H oz HTE foil 6.0 lb/in. Flexural strength 570-630 MPa warp and 500-550 MPa fill; electric strength above 40 kV/mm. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (50/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-370-z-15",
+      "manufacturer": "Elite Material",
+      "name": "EM-370(Z)-15",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-370(Z)-15 Datasheet 20240716_24081911740.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/153, /154; IPC-4103/250, /550",
+      "tg_dsc_c": 190,
+      "tg_tma_c": 180,
+      "tg_dma_c": 210,
+      "td_c": 390,
+      "cte_x_ppm": 11,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 1.8,
+      "thermal_conductivity_w_mk": 0.58,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.4,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.2,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.8,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.012,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.014,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.015,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.019,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.14,
+      "peel_strength_n_mm": 1.05,
+      "peel_condition": "H oz HTE foil, as received (6.0 lb/in; 1 oz 8.0 lb/in)",
+      "notes": "High Tg, high reliability, halogen free, flammability class FR-15.1 with a maximum operating temperature of 150 C. Companion prepreg EM-37B(Z)-15. Z-axis CTE 35-40 ppm/C below Tg and 140-160 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): H oz HTE foil 6.0 lb/in. Flexural strength 570-630 MPa warp and 500-550 MPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (50/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-390",
+      "manufacturer": "Elite Material",
+      "name": "EM-390",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-390 Datasheet-20240716_24081911789.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/127, /128, /130; IPC-4103/240, /540",
+      "tg_tma_c": 165,
+      "tg_dma_c": 190,
+      "td_c": 385,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 2.2,
+      "thermal_conductivity_w_mk": 0.49,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.8,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.3,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.007,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.008,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.011,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.012,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.08,
+      "peel_strength_n_mm": 1.05,
+      "peel_condition": "0.5 oz HTE foil, as received (6.0 lb/in)",
+      "notes": "High Tg, low Dk, halogen free, suited to mSAP. Companion prepreg EM-39B. Z-axis CTE 35-40 ppm/C below Tg and 160-180 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): 0.5 oz HTE foil 6.0 lb/in. Flexural strength 510-570 MPa warp and 450-500 MPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (50/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-526",
+      "manufacturer": "Elite Material",
+      "name": "EM-526",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-526 Datasheet 20240716_24081910532.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4103/240, /540",
+      "tg_tma_c": 230,
+      "tg_dma_c": 260,
+      "td_c": 430,
+      "cte_x_ppm": 9,
+      "cte_y_ppm": 10,
+      "cte_z_50_260_pct": 1.3,
+      "thermal_conductivity_w_mk": 0.6,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.9,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.9,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.005,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.006,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.007,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.008,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.007,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.007,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 0.96,
+      "peel_condition": "RTF H oz foil, as received (5.5 lb/in; HVLP H oz 4.4 lb/in)",
+      "notes": "Low loss, low CTE, halogen free. Companion prepreg EM-526B. Z-axis CTE 25-30 ppm/C below Tg and 120-140 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): RTF H oz 5.5 lb/in. Flexural modulus 24-26 GPa warp and 23-25 GPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (50/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-528",
+      "manufacturer": "Elite Material",
+      "name": "EM-528",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-528 Datasheet 20240716_24081910773.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4103/240, /540",
+      "tg_tma_c": 220,
+      "tg_dma_c": 250,
+      "td_c": 420,
+      "cte_x_ppm": 9,
+      "cte_y_ppm": 10,
+      "cte_z_50_260_pct": 1.4,
+      "thermal_conductivity_w_mk": 0.6,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.9,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.9,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0047,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0044,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0061,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0058,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.005,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0046,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.11,
+      "peel_strength_n_mm": 0.88,
+      "peel_condition": "RTF H oz foil, as received (5.0 lb/in; HVLP H oz 4.0 lb/in)",
+      "notes": "High Tg, very low loss, halogen free. Companion prepreg EM-528B. Z-axis CTE 25-30 ppm/C below Tg and 130-150 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): RTF H oz 5.0 lb/in. Flexural modulus 24-26 GPa warp and 23-25 GPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (50/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-528k",
+      "manufacturer": "Elite Material",
+      "name": "EM-528K",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-528K Datasheet 20240716_24081910250.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4103/240, /540",
+      "tg_tma_c": 220,
+      "tg_dma_c": 250,
+      "td_c": 420,
+      "cte_x_ppm": 9,
+      "cte_y_ppm": 10,
+      "cte_z_50_260_pct": 1.4,
+      "thermal_conductivity_w_mk": 0.58,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.3,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.2,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.2,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0031,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0032,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0041,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0042,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0031,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0032,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.11,
+      "peel_strength_n_mm": 0.88,
+      "peel_condition": "RTF H oz foil, as received (5.0 lb/in; HVLP H oz 4.0 lb/in)",
+      "notes": "High Tg, ultra low loss, halogen free. Companion prepreg EM-528BK. Z-axis CTE 25-30 ppm/C below Tg and 130-150 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): RTF H oz 5.0 lb/in. Flexural modulus 24-26 GPa warp and 23-25 GPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (50/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-626",
+      "manufacturer": "Elite Material",
+      "name": "EM-626",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-626 Datasheet 20240716 (Preliminary)_24081910158.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/134; IPC-4103/240, /540",
+      "tg_tma_c": 170,
+      "tg_dma_c": 200,
+      "td_c": 430,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 1.8,
+      "thermal_conductivity_w_mk": 0.49,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.6,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.2,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.1,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.5,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.1,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0034,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0029,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0045,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0038,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0034,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0028,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.09,
+      "peel_strength_n_mm": 0.88,
+      "peel_condition": "RTF H oz foil, as received (5.0 lb/in; HVLP H oz 4.0 lb/in)",
+      "notes": "High Tg, ultra low loss, halogen free; the resin can be combined with mid-loss resins in hybrid designs. Companion prepreg EM-626B. Z-axis CTE 35-40 ppm/C below Tg and 140-160 ppm/C above Tg (TMA). T288 above 120 min (clad and etched). Peel strength (as received): RTF H oz 5.0 lb/in. Flexural strength 430-470 MPa warp and 410-450 MPa fill. Preliminary datasheet. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (55/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-626k",
+      "manufacturer": "Elite Material",
+      "name": "EM-626K",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-626K Datasheet 20240716 (Preliminary)_24081910784.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/134; IPC-4103/230, /530",
+      "tg_tma_c": 170,
+      "tg_dma_c": 200,
+      "td_c": 430,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 1.8,
+      "thermal_conductivity_w_mk": 0.47,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.2,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.0,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.1,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.9,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.1,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.9,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.002,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0019,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0026,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0025,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.002,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0019,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.09,
+      "peel_strength_n_mm": 0.88,
+      "peel_condition": "RTF H oz foil, as received (5.0 lb/in; HVLP H oz 4.0 lb/in)",
+      "notes": "High Tg, ultra low loss, halogen free; the resin can be combined with mid-loss resins in hybrid designs. Companion prepreg EM-626BK. Z-axis CTE 35-40 ppm/C below Tg and 140-160 ppm/C above Tg (TMA). T288 above 120 min (clad and etched). Peel strength (as received): RTF H oz 5.0 lb/in. Flexural strength 430-470 MPa warp and 410-450 MPa fill. Preliminary datasheet. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (55/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-827-i",
+      "manufacturer": "Elite Material",
+      "name": "EM-827(I)",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-827(I) Datasheet 20240716_24081911720.pdf",
+        "pages": "1"
+      },
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/98, /99, /101, /126; IPC-4103/250, /550",
+      "tg_dsc_c": 175,
+      "tg_tma_c": 160,
+      "tg_dma_c": 185,
+      "td_c": 350,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 15,
+      "cte_z_50_260_pct": 2.6,
+      "thermal_conductivity_w_mk": 0.44,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.8,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.3,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.018,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.019,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        }
+      ],
+      "water_absorption_pct": 0.15,
+      "peel_strength_n_mm": 1.14,
+      "peel_condition": "H oz HTE foil, as received (6.5 lb/in; 1 oz 8.5 lb/in)",
+      "notes": "High Tg, CAF resistance, lead free. Companion prepreg EM-827B(I). Z-axis CTE 40-45 ppm/C below Tg and 200-220 ppm/C above Tg (TMA). T288 above 25 min (clad) and above 30 min (etched). Peel strength (as received): H oz HTE foil 6.5 lb/in. Flexural strength 510-570 MPa warp and 450-500 MPa fill; electric strength above 40 kV/mm. Volume and surface resistivity are given only as lower bounds and are not stored."
+    },
+    {
+      "id": "elite-material/em-890",
+      "manufacturer": "Elite Material",
+      "name": "EM-890",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-890 Datasheet 20240716_24081910973.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/134; IPC-4103/240, /540",
+      "tg_tma_c": 170,
+      "tg_dma_c": 205,
+      "td_c": 430,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 2.2,
+      "thermal_conductivity_w_mk": 0.5,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.1,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0033,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0027,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0043,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0036,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0032,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0026,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.07,
+      "peel_strength_n_mm": 0.79,
+      "peel_condition": "HVLP H oz foil, as received (4.5 lb/in)",
+      "notes": "High Tg, ultra low loss, halogen free; the resin can be combined with mid-loss resins in hybrid designs. Companion prepreg EM-89B. Z-axis CTE 45-50 ppm/C below Tg and 185-205 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): HVLP H oz 4.5 lb/in. Flexural strength 430-470 MPa warp and 410-450 MPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (55/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-890k",
+      "manufacturer": "Elite Material",
+      "name": "EM-890K",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-890K Datasheet- 20240716_24081910711.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/134; IPC-4103/230, /530",
+      "tg_tma_c": 170,
+      "tg_dma_c": 205,
+      "td_c": 430,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 2.2,
+      "thermal_conductivity_w_mk": 0.47,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.1,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 2.9,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.8,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.8,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0019,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0018,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0025,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0024,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0019,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0018,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.07,
+      "peel_strength_n_mm": 0.79,
+      "peel_condition": "HVLP H oz foil, as received (4.5 lb/in)",
+      "notes": "High Tg, ultra low loss, halogen free. Companion prepreg EM-89BK. Z-axis CTE 45-50 ppm/C below Tg and 185-205 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): HVLP H oz 4.5 lb/in. Flexural strength 430-470 MPa warp and 410-450 MPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (55/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-890k-a",
+      "manufacturer": "Elite Material",
+      "name": "EM-890K(A)",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-890K(A) Datasheet 20240716_24081910828.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/134; IPC-4103/230, /530",
+      "tg_tma_c": 170,
+      "tg_dma_c": 205,
+      "td_c": 430,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 2.2,
+      "thermal_conductivity_w_mk": 0.47,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.1,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 2.9,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.8,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.8,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0019,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0018,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0025,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0024,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0019,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0018,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.07,
+      "peel_strength_n_mm": 0.79,
+      "peel_condition": "HVLP H oz foil, as received (4.5 lb/in)",
+      "notes": "High Tg, ultra low loss, halogen free. Companion prepreg EM-89BK(A). Z-axis CTE 45-50 ppm/C below Tg and 185-205 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): HVLP H oz 4.5 lb/in. Flexural strength 430-470 MPa warp and 410-450 MPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (55/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-891",
+      "manufacturer": "Elite Material",
+      "name": "EM-891",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-891 Datasheet 20240716_24081911308.pdf",
+        "pages": "1"
+      },
+      "halogen_free": false,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/102; IPC-4103/240, /540",
+      "tg_tma_c": 170,
+      "tg_dma_c": 205,
+      "td_c": 400,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 2.2,
+      "thermal_conductivity_w_mk": 0.5,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.8,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.3,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.6,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.2,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.6,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.2,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0041,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0035,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0054,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0045,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0043,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0037,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.1,
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "HVLP H oz foil, as received (4.0 lb/in)",
+      "notes": "High Tg, ultra low loss, halogenated. Companion prepreg EM-891B. Z-axis CTE 40-45 ppm/C below Tg and 180-200 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): HVLP H oz 4.0 lb/in. Flexural strength 450-510 MPa warp and 400-450 MPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (55/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-891k",
+      "manufacturer": "Elite Material",
+      "name": "EM-891K",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-891K Datasheet 20240716_24081910428.pdf",
+        "pages": "1"
+      },
+      "halogen_free": false,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/102; IPC-4103/230, /530",
+      "tg_tma_c": 170,
+      "tg_dma_c": 205,
+      "td_c": 400,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 2.2,
+      "thermal_conductivity_w_mk": 0.47,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.2,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.0,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.1,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.1,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0024,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0025,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0032,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0033,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0024,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0025,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.1,
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "HVLP H oz foil, as received (4.0 lb/in)",
+      "notes": "High Tg, ultra low loss, halogenated. Companion prepreg EM-891BK. Z-axis CTE 40-45 ppm/C below Tg and 180-200 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): HVLP H oz 4.0 lb/in. Flexural strength 450-510 MPa warp and 400-450 MPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (55/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-892k",
+      "manufacturer": "Elite Material",
+      "name": "EM-892K",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-892K Datasheet 20240716_24081910361.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/134; IPC-4103/230, /530",
+      "tg_tma_c": 180,
+      "tg_dma_c": 215,
+      "td_c": 420,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 1.8,
+      "thermal_conductivity_w_mk": 0.46,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.11,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 2.93,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.84,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.84,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0014,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0012,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0019,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0017,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0015,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0013,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.07,
+      "peel_strength_n_mm": 0.61,
+      "peel_condition": "HVLP3 H oz foil, as received (3.5 lb/in)",
+      "notes": "High Tg, extreme low loss, halogen free. Companion prepreg EM-892BK. Z-axis CTE 40-45 ppm/C below Tg and 185-205 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): HVLP3 H oz 3.5 lb/in. Flexural strength 450-510 MPa warp and 400-450 MPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (55/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-892k-a",
+      "manufacturer": "Elite Material",
+      "name": "EM-892K(A)",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-892K(A) Datasheet-20240716_24101109565.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/134; IPC-4103/230, /530",
+      "tg_tma_c": 180,
+      "tg_dma_c": 215,
+      "td_c": 420,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 1.8,
+      "thermal_conductivity_w_mk": 0.46,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.11,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 2.93,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.84,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.84,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0014,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0012,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0019,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0017,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0015,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0013,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.07,
+      "peel_strength_n_mm": 0.61,
+      "peel_condition": "HVLP3 H oz foil, as received (3.5 lb/in)",
+      "notes": "High Tg, extreme low loss, halogen free. Companion prepreg EM-892BK(A). Z-axis CTE 40-45 ppm/C below Tg and 185-205 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): HVLP3 H oz 3.5 lb/in. Flexural strength 450-510 MPa warp and 400-450 MPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (55/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-892k2",
+      "manufacturer": "Elite Material",
+      "name": "EM-892K2",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-892K2 Datasheet 20240716_24081910964.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/134; IPC-4103/230, /530",
+      "tg_tma_c": 180,
+      "tg_dma_c": 215,
+      "td_c": 420,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 1.8,
+      "thermal_conductivity_w_mk": 0.46,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.0,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 2.85,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.9,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.76,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.9,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.76,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.001,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.001,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0014,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0013,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0011,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.001,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.07,
+      "peel_strength_n_mm": 0.61,
+      "peel_condition": "HVLP3 H oz foil, as received (3.5 lb/in)",
+      "notes": "High Tg, extreme low loss, halogen free. Companion prepreg EM-892BK2. Z-axis CTE 40-45 ppm/C below Tg and 185-205 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): HVLP3 H oz 3.5 lb/in. Flexural strength 450-510 MPa warp and 400-450 MPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (55/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-892k2-a",
+      "manufacturer": "Elite Material",
+      "name": "EM-892K2(A)",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-892K2(A) Datasheet 20240716_24081910160.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/134; IPC-4103/230, /530",
+      "tg_tma_c": 180,
+      "tg_dma_c": 215,
+      "td_c": 420,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 1.8,
+      "thermal_conductivity_w_mk": 0.46,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.0,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 2.85,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.9,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.76,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.9,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.76,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.001,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.001,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0014,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0013,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0011,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.001,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.07,
+      "peel_strength_n_mm": 0.61,
+      "peel_condition": "HVLP3 H oz foil, as received (3.5 lb/in)",
+      "notes": "High Tg, extreme low loss, halogen free. Companion prepreg EM-892BK2(A). Z-axis CTE 40-45 ppm/C below Tg and 185-205 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): HVLP3 H oz 3.5 lb/in. Flexural strength 450-510 MPa warp and 400-450 MPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (55/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-a30",
+      "manufacturer": "Elite Material",
+      "name": "EM-A30",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-A30 Datasheet 20250416_25042814428.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/153, /154; IPC-4103/250, /550",
+      "tg_dsc_c": 190,
+      "tg_tma_c": 185,
+      "tg_dma_c": 220,
+      "td_c": 405,
+      "cte_x_ppm": 11,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 1.7,
+      "thermal_conductivity_w_mk": 0.58,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.3,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.8,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.1,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.7,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.01,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.011,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.013,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.015,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.16,
+      "peel_strength_n_mm": 0.79,
+      "peel_condition": "1.0 oz RTF foil, as received (4.5 lb/in)",
+      "notes": "High Tg, high voltage, halogen free, flammability class FR-15.1 with a maximum operating temperature of 150 C and CTI PLC 1; preliminary datasheet. Companion prepreg EM-A3B. Z-axis CTE 30-35 ppm/C below Tg and 140-160 ppm/C above Tg (TMA). T288 above 120 min (clad and etched). Peel strength (as received): 1.0 oz RTF foil 4.5 lb/in. Flexural strength 450-510 MPa warp and 450-500 MPa fill; electric strength above 40 kV/mm; dielectric breakdown above 45 kV. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (50/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-a50",
+      "manufacturer": "Elite Material",
+      "name": "EM-A50",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-A50 Datasheet 20240716_24081910273.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4103/240, /540",
+      "tg_tma_c": 230,
+      "tg_dma_c": 260,
+      "td_c": 430,
+      "cte_x_ppm": 9,
+      "cte_y_ppm": 10,
+      "cte_z_50_260_pct": 1.3,
+      "thermal_conductivity_w_mk": 0.6,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.9,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.007,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.008,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 0.96,
+      "peel_condition": "0.5 oz RTF foil, as received (5.5 lb/in; 1.0 oz 6.0 lb/in)",
+      "notes": "Low loss, very low CTE, halogen free. Companion prepreg EM-A5B. Z-axis CTE 25-30 ppm/C below Tg and 120-140 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): 0.5 oz RTF foil 5.5 lb/in. Flexural modulus 24-26 GPa warp and 23-25 GPa fill; electric strength above 40 kV/mm; dielectric breakdown above 40 kV. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (50/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-a56",
+      "manufacturer": "Elite Material",
+      "name": "EM-A56",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-A56 Datasheet 20250214_25022715405.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/134; IPC-4103/240, /540",
+      "tg_tma_c": 170,
+      "tg_dma_c": 200,
+      "td_c": 425,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 1.8,
+      "thermal_conductivity_w_mk": 0.5,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.7,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.2,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.005,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.004,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.1,
+      "peel_strength_n_mm": 0.79,
+      "peel_condition": "1 oz RTF foil, as received (4.5 lb/in)",
+      "notes": "High Tg, ultra low loss, halogen free. Companion prepreg EM-A56B. Z-axis CTE 35-40 ppm/C below Tg and 140-160 ppm/C above Tg (TMA). T288 above 120 min (clad and etched). Peel strength (as received): 1 oz RTF foil 4.5 lb/in. Flexural strength 430-470 MPa warp and 410-450 MPa fill; electric strength above 40 kV/mm; dielectric breakdown above 40 kV. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (50/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-a56k",
+      "manufacturer": "Elite Material",
+      "name": "EM-A56K",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-A56K Datasheet 20250214_25033113269.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/134; IPC-4103/230, /530",
+      "tg_tma_c": 170,
+      "tg_dma_c": 200,
+      "td_c": 425,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 1.8,
+      "thermal_conductivity_w_mk": 0.48,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.2,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0029,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0027,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.1,
+      "peel_strength_n_mm": 0.79,
+      "peel_condition": "1 oz RTF foil, as received (4.5 lb/in)",
+      "notes": "High Tg, ultra low loss, halogen free. Companion prepreg EM-A56BK. Z-axis CTE 35-40 ppm/C below Tg and 140-160 ppm/C above Tg (TMA). T288 above 120 min (clad and etched). Peel strength (as received): 1 oz RTF foil 4.5 lb/in. Flexural strength 430-470 MPa warp and 410-450 MPa fill; electric strength above 40 kV/mm; dielectric breakdown above 40 kV. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (50/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-s370-z",
+      "manufacturer": "Elite Material",
+      "name": "EM-S370(Z)",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-S370(Z) Datasheet 20240716_24081910748.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/127, /128, /130; IPC-4103/250, /550",
+      "tg_tma_c": 180,
+      "tg_dma_c": 210,
+      "td_c": 390,
+      "cte_x_ppm": 11,
+      "cte_y_ppm": 13,
+      "thermal_conductivity_w_mk": 0.58,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.4,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 4.2,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.8,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.012,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.014,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.015,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.019,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.14,
+      "peel_strength_n_mm": 0.88,
+      "peel_condition": "VLP 12 um foil, as received (0.9 kg/cm)",
+      "notes": "High reliability, halogen free, for IC packaging. Companion prepreg EM-S37B(Z). Z-axis CTE 35-40 ppm/C below Tg and 140-160 ppm/C above Tg (TMA). T288 above 60 min (etched). Peel strength (as received): VLP 12 um foil 0.9 kg/cm. Flexural modulus 22-24 GPa warp and 20-23 GPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (50/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-s526",
+      "manufacturer": "Elite Material",
+      "name": "EM-S526",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-S526 Datasheet 20240716_24081910195.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4103/240, /540",
+      "tg_tma_c": 230,
+      "tg_dma_c": 260,
+      "td_c": 430,
+      "cte_x_ppm": 9,
+      "cte_y_ppm": 10,
+      "thermal_conductivity_w_mk": 0.6,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.9,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.005,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.006,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.007,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.008,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.12,
+      "peel_strength_n_mm": 0.88,
+      "peel_condition": "VLP 12 um foil, as received (0.9 kg/cm)",
+      "notes": "Low loss, low CTE, halogen free, for IC packaging. Companion prepreg EM-S526B. Z-axis CTE 25-30 ppm/C below Tg and 120-140 ppm/C above Tg (TMA). T288 above 60 min (etched). Peel strength (as received): VLP 12 um foil 0.9 kg/cm. Flexural modulus 24-26 GPa warp and 23-25 GPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (50/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-s530",
+      "manufacturer": "Elite Material",
+      "name": "EM-S530",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-S530 Datasheet 20240716_24081910796.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/134; IPC-4103/230, /530",
+      "tg_tma_c": 235,
+      "tg_dma_c": 260,
+      "td_c": 445,
+      "cte_x_ppm": 9,
+      "cte_y_ppm": 10,
+      "thermal_conductivity_w_mk": 0.83,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.78,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.26,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.65,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.16,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0039,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0032,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0052,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0042,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.11,
+      "peel_strength_n_mm": 0.78,
+      "peel_condition": "RTF 18 um foil, as received (0.8 kg/cm; 3 um plated to 36 um 0.9 kg/cm)",
+      "notes": "High Tg, ultra low loss, halogen free, for mmWave and antenna-in-package. Companion prepreg EM-S53B. Z-axis CTE 25-30 ppm/C below Tg and 120-140 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): RTF 18 um foil 0.8 kg/cm. Flexural modulus 22-24 GPa warp and 21-23 GPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (50/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-s530k",
+      "manufacturer": "Elite Material",
+      "name": "EM-S530K",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-S530K Datasheet 20240716_24081910807.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/134; IPC-4103/230, /530",
+      "tg_tma_c": 235,
+      "tg_dma_c": 260,
+      "td_c": 445,
+      "cte_x_ppm": 9,
+      "cte_y_ppm": 10,
+      "thermal_conductivity_w_mk": 0.83,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.36,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 3.05,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.24,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.95,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0021,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0021,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0028,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 50
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0027,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.11,
+      "peel_strength_n_mm": 0.78,
+      "peel_condition": "RTF 18 um foil, as received (0.8 kg/cm; 3 um plated to 36 um 0.9 kg/cm)",
+      "notes": "High Tg, ultra low loss, halogen free, for mmWave and antenna-in-package. Companion prepreg EM-S53BK. Z-axis CTE 25-30 ppm/C below Tg and 120-140 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): RTF 18 um foil 0.8 kg/cm. Flexural modulus 22-24 GPa warp and 21-23 GPa fill. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (50/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-s532k",
+      "manufacturer": "Elite Material",
+      "name": "EM-S532K",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-S532K Datasheet (Preliminary) 20240716_24100810769.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/134; IPC-4103/230, /530",
+      "tg_tma_c": 180,
+      "tg_dma_c": 215,
+      "td_c": 420,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 13,
+      "cte_z_50_260_pct": 1.8,
+      "thermal_conductivity_w_mk": 0.46,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.11,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 2.93,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.84,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 2.84,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0014,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0012,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0019,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0017,
+          "method": "Cavity resonator, C-24/23/50",
+          "resin_content_pct": 70
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0015,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 55
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0013,
+          "method": "SPC method, C-24/23/50",
+          "resin_content_pct": 70
+        }
+      ],
+      "water_absorption_pct": 0.07,
+      "peel_strength_n_mm": 0.6,
+      "peel_condition": "LP H oz foil, as received (0.6 kN/m)",
+      "notes": "High Tg, extreme low loss, halogen free, for mmWave and package; preliminary datasheet. Companion prepreg EM-S532BK. Z-axis CTE 40-45 ppm/C below Tg and 185-205 ppm/C above Tg (TMA). T288 above 60 min (clad and etched). Peel strength (as received): LP H oz foil 0.6 kN/m. Volume and surface resistivity are given only as lower bounds and are not stored. Dk and Df are given for two resin contents (55/70 %) at the frequencies listed."
+    },
+    {
+      "id": "elite-material/em-s570",
+      "manufacturer": "Elite Material",
+      "name": "EM-S570",
+      "kind": "laminate",
+      "source": {
+        "pdf": "EM-S570 Datasheet (Preliminary) 20240716_24081910822.pdf",
+        "pages": "1"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4103/250, /550",
+      "tg_tma_c": 280,
+      "tg_dma_c": 320,
+      "td_c": 440,
+      "cte_x_ppm": 4,
+      "cte_y_ppm": 6,
+      "thermal_conductivity_w_mk": 0.59,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.5,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.006,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 50
+        }
+      ],
+      "peel_strength_n_mm": 0.88,
+      "peel_condition": "RTF 18 um foil, as received (0.9 kg/cm)",
+      "notes": "High modulus, ultra low CTE, halogen free, for flip-chip packages; preliminary datasheet. Companion prepreg EM-S57B. Z-axis CTE 8-13 ppm/C below Tg and 70-90 ppm/C above Tg (TMA). T288 above 120 min (clad and etched). Peel strength (as received): RTF 18 um foil 0.9 kg/cm. Flexural modulus 30-32 GPa warp. Volume and surface resistivity are given only as lower bounds and are not stored."
+    }
+  ]
+}

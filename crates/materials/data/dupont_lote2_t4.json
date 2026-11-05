@@ -1,0 +1,413 @@
+{
+  "schema_version": 1,
+  "manufacturer": "DuPont",
+  "materials": [
+    {
+      "id": "dupont/pyralux-ta",
+      "manufacturer": "DuPont",
+      "name": "Pyralux TA",
+      "kind": "flex_laminate",
+      "source": {
+        "pdf": "EI-10108-Pyralux-TA-and-TAH-Data-Sheet.pdf",
+        "pages": "1-2"
+      },
+      "family": "Pyralux",
+      "resin": "Polyimide (adhesiveless)",
+      "ul94": "V-0",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.2,
+          "method": "ASTM D2520"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.003,
+          "method": "ASTM D2520"
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.33,
+          "thickness_um": 12,
+          "foil_type": "ED"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED"
+        }
+      ],
+      "notes": "Adhesiveless all-polyimide double-sided clad with ED copper, low loss. Standard offerings (copper/dielectric/copper in um): 12/25/12, 12/38/12, 12/50/12, 18/25/18 and 18/50/18. Dk and Df are typical values for TA125012. Peel strength above 0.9 N/mm (as received and after solder). Supplied in rolls of 250, 260 or 500 mm width. UL file E161336."
+    },
+    {
+      "id": "dupont/pyralux-tah",
+      "manufacturer": "DuPont",
+      "name": "Pyralux TAH",
+      "kind": "flex_laminate",
+      "source": {
+        "pdf": "EI-10108-Pyralux-TA-and-TAH-Data-Sheet.pdf",
+        "pages": "1-2"
+      },
+      "family": "Pyralux",
+      "resin": "Polyimide (adhesiveless)",
+      "ul94": "V-0",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.2,
+          "method": "ASTM D2520"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.003,
+          "method": "ASTM D2520"
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.33,
+          "thickness_um": 12,
+          "foil_type": "RA"
+        }
+      ],
+      "notes": "Adhesiveless all-polyimide double-sided clad with RA copper, low loss. Standard offering TAH125012 (12/50/12 um). Dk and Df are typical values for TAH125012B. Peel strength above 0.8 N/mm (as received and after solder). UL file E161336."
+    },
+    {
+      "id": "dupont/pyralux-tas",
+      "manufacturer": "DuPont",
+      "name": "Pyralux TAS",
+      "kind": "flex_laminate",
+      "source": {
+        "pdf": "EI-10109-Pyralux-TAS-and-TAHS-Data-Sheet.pdf",
+        "pages": "1-2"
+      },
+      "family": "Pyralux",
+      "resin": "Polyimide (adhesiveless)",
+      "ul94": "V-0",
+      "tg_tma_c": 280,
+      "cte_x_ppm": 24,
+      "cte_y_ppm": 24,
+      "water_absorption_pct": 0.9,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.7,
+          "method": "IPC-TM-650 2.5.5.3"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": "ASTM D2520"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.003,
+          "method": "IPC-TM-650 2.5.5.3"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0045,
+          "method": "ASTM D2520"
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.33,
+          "thickness_um": 12,
+          "foil_type": "ED"
+        }
+      ],
+      "notes": "Adhesiveless all-polyimide single-sided clad with ED copper. Typical values for TAS121500. Peel strength above 0.6 N/mm (3.5 lb/in), dimensional stability within 0.05 % after etching and 0.1 % after thermal exposure, solder float 288 C for 10 s passes. Volume and surface resistivity are listed as to be determined. UL file E161336."
+    },
+    {
+      "id": "dupont/pyralux-tahs",
+      "manufacturer": "DuPont",
+      "name": "Pyralux TAHS",
+      "kind": "flex_laminate",
+      "source": {
+        "pdf": "EI-10109-Pyralux-TAS-and-TAHS-Data-Sheet.pdf",
+        "pages": "1-2"
+      },
+      "family": "Pyralux",
+      "resin": "Polyimide (adhesiveless)",
+      "ul94": "V-0",
+      "tg_tma_c": 280,
+      "cte_x_ppm": 24,
+      "cte_y_ppm": 24,
+      "water_absorption_pct": 0.9,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.7,
+          "method": "IPC-TM-650 2.5.5.3"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.4,
+          "method": "ASTM D2520"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.003,
+          "method": "IPC-TM-650 2.5.5.3"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0045,
+          "method": "ASTM D2520"
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.33,
+          "thickness_um": 12,
+          "foil_type": "RA"
+        }
+      ],
+      "notes": "Adhesiveless all-polyimide single-sided clad with RA copper. Typical values for TAHS124500B. Peel strength above 0.8 N/mm (4.6 lb/in); volume resistivity above 1e16 ohm cm and surface resistance above 1e15 ohm (not stored: exponents are lower bounds); tensile modulus above 6.5 GPa; tensile strength above 240 MPa; elongation 35 %. UL file E161336."
+    },
+    {
+      "id": "dupont/pyralux-ac",
+      "manufacturer": "DuPont",
+      "name": "Pyralux AC",
+      "kind": "flex_laminate",
+      "source": {
+        "pdf": "EI-10122-Pyralux-AC-Data-Sheet.pdf",
+        "pages": "1-2"
+      },
+      "family": "Pyralux",
+      "resin": "Polyimide (adhesiveless)",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4204/25",
+      "copper": [
+        {
+          "weight_oz": 0.25,
+          "thickness_um": 9,
+          "foil_type": "ED/RA"
+        },
+        {
+          "weight_oz": 0.33,
+          "thickness_um": 12,
+          "foil_type": "ED/RA"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED/RA"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED/RA"
+        }
+      ],
+      "notes": "Adhesiveless all-polyimide single-sided clad for high density circuits and chip-on-flex; ED (codes ending EN or EM) or RA (R or RY) copper of 9 to 35 um on 12 to 50 um dielectric. Certified to IPC-4204/25. Rolls of 250 or 500 mm width. Typical values for AC121200RY include peel strength 0.6 N/mm (3.4 lb/in) as received and after solder; the property table is not stored because its text layer is not unambiguous. UL file E161336."
+    },
+    {
+      "id": "dupont/pyralux-apr",
+      "manufacturer": "DuPont",
+      "name": "Pyralux APR",
+      "kind": "flex_laminate",
+      "source": {
+        "pdf": "EI-10125-Pyralux-APR-Data-Sheet.pdf",
+        "pages": "1-2"
+      },
+      "family": "Pyralux",
+      "resin": "Polyimide (adhesiveless)",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4204/11",
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35
+        }
+      ],
+      "notes": "Adhesiveless all-polyimide embedded resistor laminate with Ticer TCR thin-film resistor foil (NiCr; other resistor types on request) at sheet resistances of 10 to 200 ohm per square (standard 25 and 100). Standard offerings use 18 or 35 um copper on 25 or 50 um dielectric. Certified to IPC-4204/11. Supplied in sheets. UL file E124294."
+    },
+    {
+      "id": "dupont/pyralux-ht",
+      "manufacturer": "DuPont",
+      "name": "Pyralux HT",
+      "kind": "bonding_film",
+      "source": {
+        "pdf": "EI-10127-Pyralux-HT-Data-Sheet.pdf",
+        "pages": "1-2"
+      },
+      "family": "Pyralux",
+      "resin": "Thermoplastic polyimide",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4203/24",
+      "tg_tma_c": 233,
+      "td_c": 579,
+      "cte_x_ppm": 65,
+      "cte_y_ppm": 65,
+      "cte_z_below_tg_ppm": 54,
+      "cte_z_above_tg_ppm": 230,
+      "water_absorption_pct": 0.8,
+      "peel_strength_n_mm": 1.4,
+      "peel_condition": "As received, 1 oz RA copper foil treated side (8 lb/in)",
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.2,
+          "method": "IPC-TM-650 2.5.5.3"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.2,
+          "method": "ASTM D2520"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.0015,
+          "method": "IPC-TM-650 2.5.5.3"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0015,
+          "method": "ASTM D2520"
+        }
+      ],
+      "notes": "High temperature thermoplastic polyimide bonding film (HT0100); Dk and Df are the same at 1 MHz and 10 GHz. Peel strength 1.4 N/mm (8 lb/in) as received and after solder, 1.1 N/mm (6 lb/in) on an alternative oxide copper surface (1 oz RA foil, treated side); adhesive flow 0.01 mm; Z-axis CTE 54 ppm/C below Tg and 230 ppm/C above; Tg 233 C; dielectric strength 161-275 V/um; tensile modulus 2.8 GPa; tensile strength 165 MPa; elongation 170 %; decomposition 548 C at 2 % and 579 C at 5 % loss; solder float 320 C for 60 s passes. Certified to IPC-4203/24. UL file E124294."
+    },
+    {
+      "id": "dupont/pyralux-tk-bond-ply",
+      "manufacturer": "DuPont",
+      "name": "Pyralux TK Bond Ply",
+      "kind": "bonding_film",
+      "source": {
+        "pdf": "EI-10131-Pyralux-TK-BPL-Data-Sheet.pdf",
+        "pages": "1-2"
+      },
+      "family": "Pyralux",
+      "resin": "Kapton and fluoropolymer",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4203/5",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.3,
+          "method": "ASTM D2520, normal (through thickness); 2.6 in plane"
+        }
+      ],
+      "notes": "Kapton core ply coated on both sides with a low-loss fluoropolymer, for bonding flexible circuits where the dielectric constant must stay below 3.0. Dk 2.3 through the thickness and 2.6 in plane at 10 GHz. Certified to IPC-4203/5. Product codes such as TK252525 give the layer thicknesses in um. UL file E124294."
+    },
+    {
+      "id": "dupont/pyralux-tk",
+      "manufacturer": "DuPont",
+      "name": "Pyralux TK",
+      "kind": "flex_laminate",
+      "source": {
+        "pdf": "EI-10132-Pyralux-TK-CCL-Data-Sheet.pdf",
+        "pages": "1-2"
+      },
+      "family": "Pyralux",
+      "resin": "Kapton and fluoropolymer",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4204/13",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.5,
+          "method": "IPC-TM-650 2.5.5.5, normal (through thickness); 2.8 in plane"
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.33,
+          "thickness_um": 12,
+          "foil_type": "RA"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "RA"
+        }
+      ],
+      "notes": "Double-sided clad with a layered Kapton and fluoropolymer dielectric for dielectric constants below 3.0 (rolled copper codes ending R, for example TK1810018R: 12 um copper on 100 um dielectric; TK3610036R: 18 um copper on 100 um dielectric). Dk 2.5 through the thickness and 2.8 in plane at 10 GHz. Certified to IPC-4204/13. Supplied in sheets. UL file E124294."
+    },
+    {
+      "id": "dupont/pyralux-ak",
+      "manufacturer": "DuPont",
+      "name": "Pyralux AK",
+      "kind": "flex_laminate",
+      "source": {
+        "pdf": "EI-10214-Pyralux-AK-Data-Sheet.pdf",
+        "pages": "1-2"
+      },
+      "family": "Pyralux",
+      "resin": "Polyimide (adhesiveless)",
+      "ul94": "V-0",
+      "tg_dma_c": 220,
+      "cte_x_ppm": 19,
+      "cte_y_ppm": 19,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 3.4,
+          "method": "IPC-TM-650 2.5.5.3"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.004,
+          "method": "IPC-TM-650 2.5.5.3"
+        }
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.33,
+          "thickness_um": 12,
+          "foil_type": "ED/RA"
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "ED/RA"
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "ED/RA"
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": 70,
+          "foil_type": "ED/RA"
+        }
+      ],
+      "notes": "Adhesiveless all-polyimide double-sided clad (ED and RA copper of 12 to 70 um on 12 to 70 um dielectric, for example AK185018RF). Typical values for AK185018RF: Dk 3.4 and Df 0.004 at 1 MHz; Tg 220 C by DMA; XY CTE 19 ppm/C; peel strength above 1.0 N/mm (5.7 lb/in) as received and after solder; tensile modulus above 4.8 GPa; tensile strength above 410 MPa; elongation above 50 %; moisture absorption below 1.0 %; solder float 288 C for 10 s passes. UL file E161336."
+    },
+    {
+      "id": "dupont/interra-hk04j",
+      "manufacturer": "DuPont",
+      "name": "Interra HK04J",
+      "kind": "other",
+      "source": {
+        "pdf": "EI-10134-Interra-HK04J-Data-Sheet.pdf",
+        "pages": "1-2"
+      },
+      "family": "Interra",
+      "resin": "Polyimide",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4821/1",
+      "notes": "All-polyimide embedded capacitor laminate for power and ground planes in rigid-flex and boards; certified to IPC-4821/1. The capacitance density, Dk and Df rows of the property table are not unambiguous in the text layer and are not stored. UL file E124294."
+    }
+  ]
+}
