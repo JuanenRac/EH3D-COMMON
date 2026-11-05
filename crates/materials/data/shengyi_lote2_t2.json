@@ -3007,6 +3007,59 @@
     "pages": "1",
     "revision": "CN-TDS-1911-03-S3116"
    }
+  },
+  {
+   "id": "shengyi/sf335c",
+   "manufacturer": "Shengyi",
+   "name": "SF335C",
+   "kind": "coverlay",
+   "resin": "Polyimide film with epoxy adhesive",
+   "halogen_free": true,
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4203/2",
+   "peel_strength_n_mm": 1.0,
+   "peel_condition": "IPC-TM-650 2.4.9 Methods A and C, SF335C 0515 (SF335C 1025: 1.1 N/mm)",
+   "volume_resistivity_ohm_cm": 2000000000000.0,
+   "surface_resistivity_ohm": 150000000000.0,
+   "processing": {
+    "lamination": {
+     "notes": "Fast press, then cure at 160-170 C for 60-90 min; the hot press parameters need adjusting to the equipment and the product."
+    }
+   },
+   "notes": "Halogen and phosphorus free polyimide film based coverlay for FPC, low adhesive flow, suitable for fast and conventional lamination. Designations: 0515 (12.5 um film, 15 um adhesive), 0520, 0525, 1025 (25 um film, 25 um adhesive) and 1030 (25 um film, 30 um adhesive). Resin flow 0.15 mm; thermal stress passes; dimensional stability +/-0.1 % (standard +/-0.2 %); chemical resistance 90 % (standard 80 %). Typical resistivities (2.0e6 MOhm cm and 1.5e5 MOhm for 0515; 2.5e6 and 1.5e5 for 1025); the standard values are 1e6 MOhm cm and 1e4 MOhm. Peel strength standard 0.7 N/mm (method A) and 0.53 N/mm (method C). Rolls 250 or 500 mm wide, 100 or 200 m long; store at 4-10 C for three months.",
+   "source": {
+    "pdf": "20200218155306354.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-2001-01-SF335C"
+   }
+  },
+  {
+   "id": "shengyi/sf315b",
+   "manufacturer": "Shengyi",
+   "name": "SF315B",
+   "kind": "bonding_film",
+   "resin": "Halogen-free epoxy bonding film",
+   "halogen_free": true,
+   "ipc_slash_sheet": "IPC-4203/19",
+   "peel_strength_n_mm": 1.3,
+   "peel_condition": "IPC-TM-650 2.4.9 Method A, SF315B 25 (Method C: 1.2 N/mm)",
+   "thicknesses_mm": [
+    0.013,
+    0.025,
+    0.04,
+    0.05
+   ],
+   "processing": {
+    "lamination": {
+     "notes": "Fast press, then cure at 160-180 C for 60-90 min; the hot press parameters need adjusting to the equipment and the product."
+    }
+   },
+   "notes": "Halogen-free unsupported epoxy bonding film for multilayer FPC and rigid-flex PCBs, low adhesive flow. Adhesive thickness 13, 25, 40 and 50 um (SF315B 13, 25, 40, 50). Resin flow 0.2 mm; thermal stress passes; chemical resistance 90 % (standard 80 %). Peel strength standard 0.7 N/mm (method A) and 0.615 N/mm (method C). Rolls 250 or 500 mm wide, 100 m long; store at 4-10 C for one month.",
+   "source": {
+    "pdf": "20200218181242743.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-2001-02-SF315B"
+   }
   }
  ]
 }
