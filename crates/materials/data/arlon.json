@@ -1,0 +1,141 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Arlon",
+ "materials": [
+  {
+   "id": "arlon/85n",
+   "manufacturer": "Arlon",
+   "name": "85N",
+   "kind": "laminate",
+   "family": "85N",
+   "resin": "Polyimide",
+   "halogen_free": true,
+   "lead_free_compatible": true,
+   "ul94": "HB",
+   "ipc_slash_sheet": "IPC-4101/40 and /41",
+   "tg_tma_c": 250,
+   "td_c": 407,
+   "cte_x_ppm": 16,
+   "cte_y_ppm": 16,
+   "cte_z_below_tg_ppm": 55,
+   "cte_z_above_tg_ppm": 149,
+   "cte_z_50_260_pct": 1.2,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 4.2,
+     "method": "IPC TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.01,
+     "method": "IPC TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 150000000000000.0,
+   "surface_resistivity_ohm": 1600000000000000.0,
+   "dielectric_strength_kv_mm": 57.1,
+   "arc_resistance_s": 143,
+   "peel_strength_n_mm": 1.2,
+   "peel_condition": "1 oz, after thermal stress (7.1 lb/in); also at elevated temperature and after process solutions",
+   "water_absorption_pct": 0.27,
+   "density_g_cm3": 1.6,
+   "thermal_conductivity_w_mk": 0.2,
+   "processing": {
+    "lamination": {
+     "max_temp_c": 218,
+     "pressure_kpa": null,
+     "time_at_temp_min": 120,
+     "heat_rate_c_min": null,
+     "notes": "Pre-vacuum 30-45 min; heat rise 4-6 C/min (8-12 F/min) between 65 and 121 C; vacuum lamination preferred. Start-point pressures by panel size: 275 psi (12 x 18 in), 350 psi (16 x 18 in), 400 psi (18 x 24 in); with 29 in vacuum 200, 250 and 300 psi. Product temperature at start of cure 218 C (425 F), cure time 2.0 h, cool down under pressure at 5 C/min or less."
+    },
+    "drilling": {
+     "speed_surface_m_min": null,
+     "chip_load_um": null,
+     "retract_notes": "Drill at 400-500 SFM; undercut bits are recommended for vias of 0.018 in and smaller."
+    },
+    "desmear_note": "Alkaline permanganate or plasma with settings for polyimide; plasma is preferred for positive etchback.",
+    "bake_note": "Bake inner layers 60 min at 107-121 C before lay-up; bake 1-2 h at 121 C before HASL reflow."
+   },
+   "notes": "T260, T288 and T300 are each published as more than 60 min (bounds, not stored); Td 387 C initial and 407 C at 5 % loss; Tg above 250 C. Young's modulus 3.2 Mpsi (column unit ambiguous in the sheet, not stored); Poisson's ratio 0.15. The sheet covers the laminate and the prepreg; the glass styles are in the 85N Prepreg record.",
+   "source": {
+    "pdf": "e_arlon-med-85n_www.multi-circuit-boards.eu.pdf",
+    "pages": "1-4",
+    "revision": "Rev 1.2"
+   }
+  },
+  {
+   "id": "arlon/85n-prepreg",
+   "manufacturer": "Arlon",
+   "name": "85N Prepreg",
+   "kind": "prepreg",
+   "family": "85N",
+   "resin": "Polyimide",
+   "halogen_free": true,
+   "prepreg": [
+    {
+     "style": "106",
+     "resin_content_pct": 72,
+     "pressed_thickness_um": null,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": null,
+     "df": null,
+     "test_freq_ghz": null
+    },
+    {
+     "style": "1080",
+     "resin_content_pct": 63,
+     "pressed_thickness_um": null,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": null,
+     "df": null,
+     "test_freq_ghz": null
+    },
+    {
+     "style": "2313",
+     "resin_content_pct": 55,
+     "pressed_thickness_um": null,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": null,
+     "df": null,
+     "test_freq_ghz": null
+    },
+    {
+     "style": "2116",
+     "resin_content_pct": 50,
+     "pressed_thickness_um": null,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": null,
+     "df": null,
+     "test_freq_ghz": null
+    },
+    {
+     "style": "7628",
+     "resin_content_pct": 40,
+     "pressed_thickness_um": null,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": null,
+     "df": null,
+     "test_freq_ghz": null
+    }
+   ],
+   "notes": "Resin content 72, 63, 55, 50 and 40 % (+/- 3) for the styles 106, 1080, 2313, 2116 and 7628; Arlon part numbers 85N0672, 85N8063, 85N2355, 85N2650 and 85N2840. Scaled flow Hf 1.7, 2.4, 3.4, 4.1 and 6.6 mils (+/- 0.3) and DeltaH 0.75 mil (0.70 for 7628), both +/- 0.20. Store at 60-70 F at or below 30 % RH; vacuum desiccate 8-12 h before lamination.",
+   "source": {
+    "pdf": "e_arlon-med-85n_www.multi-circuit-boards.eu.pdf",
+    "pages": "3",
+    "revision": "Rev 1.2"
+   }
+  }
+ ]
+}

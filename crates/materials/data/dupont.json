@@ -1,0 +1,297 @@
+{
+ "schema_version": 1,
+ "manufacturer": "DuPont",
+ "materials": [
+  {
+   "id": "dupont/pyralux-ap-9111",
+   "manufacturer": "DuPont",
+   "name": "Pyralux AP 9111",
+   "kind": "flex_laminate",
+   "family": "Pyralux AP",
+   "resin": "All-polyimide (adhesiveless)",
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4204/11",
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 3.4,
+     "method": "Method 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.003,
+     "method": "Method 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "cte_x_ppm": 25,
+   "cte_y_ppm": 25,
+   "youngs_modulus_gpa": {
+    "lengthwise": null,
+    "crosswise": null,
+    "value": 4.83
+   },
+   "water_absorption_pct": 0.8,
+   "volume_resistivity_ohm_cm": 1e+17,
+   "peel_strength_n_mm": 1.6,
+   "peel_condition": "as fabricated and after solder (9 lb/in)",
+   "copper": [
+    {
+     "weight_oz": 0.25,
+     "thickness_um": 9,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 0.33,
+     "thickness_um": 12,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 18,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": 70,
+     "foil_type": null
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 609.6,
+     "height_mm": 914.4,
+     "label": "24\" x 36\""
+    },
+    {
+     "width_mm": 609.6,
+     "height_mm": 457.2,
+     "label": "24\" x 18\""
+    },
+    {
+     "width_mm": 609.6,
+     "height_mm": 304.8,
+     "label": "24\" x 12\""
+    },
+    {
+     "width_mm": 304.8,
+     "height_mm": 457.2,
+     "label": "12\" x 18\""
+    }
+   ],
+   "notes": "Dielectric (polyimide) thickness 1.0 mil. Tg 220 C is published without a method and is not stored; in-plane CTE 25 ppm/C below Tg (40 est. above Tg); modulus 700 kpsi (4.83 GPa); dielectric strength 6-7 kV/mil; surface resistance more than 10^16 ohm; moisture and insulation resistance 10^11 ohm; tensile strength more than 345 MPa; elongation more than 50 %; flexural endurance 6000 cycles at least; solder float at 288 C passes; dielectric thickness tolerance 10 %; maximum operating temperature 180 C. Initiation tear 700-1000 g, propagation tear more than 10 g. Add R (rolled-annealed), E (electro-deposited) or D (double-treat RA) to the product code to choose the copper foil.",
+   "source": {
+    "pdf": "e_dupont_pyralux-ap-polyimid_www.multi-circuit-boards.eu.pdf",
+    "pages": "1-2",
+    "revision": "H-73241-4"
+   },
+   "thicknesses_mm": [
+    0.0254
+   ]
+  },
+  {
+   "id": "dupont/pyralux-ap-9121",
+   "manufacturer": "DuPont",
+   "name": "Pyralux AP 9121",
+   "kind": "flex_laminate",
+   "family": "Pyralux AP",
+   "resin": "All-polyimide (adhesiveless)",
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4204/11",
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 3.4,
+     "method": "Method 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.002,
+     "method": "Method 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "cte_x_ppm": 25,
+   "cte_y_ppm": 25,
+   "youngs_modulus_gpa": {
+    "lengthwise": null,
+    "crosswise": null,
+    "value": 4.83
+   },
+   "water_absorption_pct": 0.8,
+   "volume_resistivity_ohm_cm": 1e+17,
+   "peel_condition": "as fabricated and after solder, published as more than 1.8 N/mm (10 lb/in)",
+   "copper": [
+    {
+     "weight_oz": 0.25,
+     "thickness_um": 9,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 0.33,
+     "thickness_um": 12,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 18,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": 70,
+     "foil_type": null
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 609.6,
+     "height_mm": 914.4,
+     "label": "24\" x 36\""
+    },
+    {
+     "width_mm": 609.6,
+     "height_mm": 457.2,
+     "label": "24\" x 18\""
+    },
+    {
+     "width_mm": 609.6,
+     "height_mm": 304.8,
+     "label": "24\" x 12\""
+    },
+    {
+     "width_mm": 304.8,
+     "height_mm": 457.2,
+     "label": "12\" x 18\""
+    }
+   ],
+   "notes": "Dielectric (polyimide) thickness 2.0 mil. Tg 220 C is published without a method and is not stored; in-plane CTE 25 ppm/C below Tg (40 est. above Tg); modulus 700 kpsi (4.83 GPa); dielectric strength 6-7 kV/mil; surface resistance more than 10^16 ohm; moisture and insulation resistance 10^11 ohm; tensile strength more than 345 MPa; elongation more than 50 %; flexural endurance 6000 cycles at least; solder float at 288 C passes; dielectric thickness tolerance 10 %; maximum operating temperature 180 C. Initiation tear 900-1200 g, propagation tear more than 20 g. Add R (rolled-annealed), E (electro-deposited) or D (double-treat RA) to the product code to choose the copper foil.",
+   "source": {
+    "pdf": "e_dupont_pyralux-ap-polyimid_www.multi-circuit-boards.eu.pdf",
+    "pages": "1-2",
+    "revision": "H-73241-4"
+   },
+   "thicknesses_mm": [
+    0.0508
+   ]
+  },
+  {
+   "id": "dupont/pyralux-ap-9131-9161",
+   "manufacturer": "DuPont",
+   "name": "Pyralux AP 9131-9161",
+   "kind": "flex_laminate",
+   "family": "Pyralux AP",
+   "resin": "All-polyimide (adhesiveless)",
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4204/11",
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 3.4,
+     "method": "Method 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.002,
+     "method": "Method 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "cte_x_ppm": 25,
+   "cte_y_ppm": 25,
+   "youngs_modulus_gpa": {
+    "lengthwise": null,
+    "crosswise": null,
+    "value": 4.83
+   },
+   "water_absorption_pct": 0.8,
+   "volume_resistivity_ohm_cm": 1e+17,
+   "peel_condition": "as fabricated and after solder, published as more than 1.8 N/mm (10 lb/in)",
+   "copper": [
+    {
+     "weight_oz": 0.25,
+     "thickness_um": 9,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 0.33,
+     "thickness_um": 12,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 18,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": 70,
+     "foil_type": null
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 609.6,
+     "height_mm": 914.4,
+     "label": "24\" x 36\""
+    },
+    {
+     "width_mm": 609.6,
+     "height_mm": 457.2,
+     "label": "24\" x 18\""
+    },
+    {
+     "width_mm": 609.6,
+     "height_mm": 304.8,
+     "label": "24\" x 12\""
+    },
+    {
+     "width_mm": 304.8,
+     "height_mm": 457.2,
+     "label": "12\" x 18\""
+    }
+   ],
+   "notes": "Dielectric (polyimide) thickness 3 to 6 mil. Tg 220 C is published without a method and is not stored; in-plane CTE 25 ppm/C below Tg (40 est. above Tg); modulus 700 kpsi (4.83 GPa); dielectric strength 6-7 kV/mil; surface resistance more than 10^16 ohm; moisture and insulation resistance 10^11 ohm; tensile strength more than 345 MPa; elongation more than 50 %; flexural endurance 6000 cycles at least; solder float at 288 C passes; dielectric thickness tolerance 10 %; maximum operating temperature 180 C. Initiation tear 900-1200 g, propagation tear more than 20 g. Add R (rolled-annealed), E (electro-deposited) or D (double-treat RA) to the product code to choose the copper foil.",
+   "source": {
+    "pdf": "e_dupont_pyralux-ap-polyimid_www.multi-circuit-boards.eu.pdf",
+    "pages": "1-2",
+    "revision": "H-73241-4"
+   },
+   "thickness_range": {
+    "min_mm": 0.0762,
+    "max_mm": 0.1524,
+    "steps_note": "3, 4, 5 and 6 mil dielectric (AP 9131 to 9161); more than 6 mil on request."
+   }
+  }
+ ]
+}

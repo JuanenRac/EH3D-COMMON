@@ -1,0 +1,483 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Taconic",
+ "materials": [
+  {
+   "id": "taconic/rf-35",
+   "manufacturer": "Taconic",
+   "name": "RF-35",
+   "kind": "ceramic_filled",
+   "family": "ORCER",
+   "resin": "PTFE (coated) with ceramic fill",
+   "reinforcement": "Woven glass",
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": 1.9,
+     "value": 3.5,
+     "method": "IPC-TM 650 2.5.5",
+     "resin_content_pct": null,
+     "tolerance": 0.1
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1.9,
+     "value": 0.0018,
+     "method": "IPC-TM 650 2.5.5",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "water_absorption_pct": 0.02,
+   "peel_strength_n_mm": 1.5,
+   "peel_condition": "1/2 oz copper, bound published as more than 1.5 N/mm (1 oz: more than 1.8 N/mm)",
+   "volume_resistivity_ohm_cm": 1260000000000000.0,
+   "surface_resistivity_ohm": 146000000000000.0,
+   "flexural_strength_mpa": {
+    "lengthwise": null,
+    "crosswise": null,
+    "value": null
+   },
+   "tensile_strength_mpa": {
+    "lengthwise": 187,
+    "crosswise": 145,
+    "value": null
+   },
+   "thermal_conductivity_w_mk": 0.24,
+   "cte_z_below_tg_ppm": 64,
+   "thicknesses_mm": [
+    0.25,
+    0.5,
+    0.76,
+    1.52
+   ],
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 18,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": 70,
+     "foil_type": "ED"
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 914,
+     "height_mm": 1220,
+     "label": "36\" x 48\" standard sheet"
+    },
+    {
+     "width_mm": 304,
+     "height_mm": 457,
+     "label": "12\" x 18\""
+    },
+    {
+     "width_mm": 406,
+     "height_mm": 457,
+     "label": "16\" x 18\""
+    },
+    {
+     "width_mm": 457,
+     "height_mm": 610,
+     "label": "18\" x 24\""
+    },
+    {
+     "width_mm": 406,
+     "height_mm": 914,
+     "label": "16\" x 36\""
+    },
+    {
+     "width_mm": 610,
+     "height_mm": 914,
+     "label": "24\" x 36\""
+    },
+    {
+     "width_mm": 457,
+     "height_mm": 1220,
+     "label": "18\" x 48\""
+    }
+   ],
+   "notes": "Tg is published as over 315 C (600 F), not stored as a number. Dk tolerance 0.1 (How to Order). Flexural strength is published as more than 152 N/mm2 lengthwise and more than 124 N/mm2 crosswise; arc resistance more than 180 s; dielectric breakdown 41 kV; x-y CTE 19-24 ppm/C (a range, not stored). Dimensional stability 0.00004 mm/mm lengthwise and -0.00010 crosswise; Rockwell M hardness 34.",
+   "source": {
+    "pdf": "e_taconic_rf35-hf_www.multi-circuit-boards.eu.pdf",
+    "pages": "2-4",
+    "revision": "2/02"
+   }
+  },
+  {
+   "id": "taconic/tlc-27",
+   "manufacturer": "Taconic",
+   "name": "TLC-27",
+   "kind": "ptfe",
+   "family": "TLC",
+   "resin": "PTFE",
+   "reinforcement": "Woven glass",
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": null,
+     "value": 2.75,
+     "method": null,
+     "resin_content_pct": null,
+     "tolerance": 0.05
+    }
+   ],
+   "thicknesses_mm": [
+    0.37
+   ],
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 18,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": 70,
+     "foil_type": "ED"
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 304,
+     "height_mm": 457,
+     "label": "12\" x 18\""
+    },
+    {
+     "width_mm": 406,
+     "height_mm": 457,
+     "label": "16\" x 18\""
+    },
+    {
+     "width_mm": 457,
+     "height_mm": 610,
+     "label": "18\" x 24\""
+    },
+    {
+     "width_mm": 406,
+     "height_mm": 914,
+     "label": "16\" x 36\""
+    },
+    {
+     "width_mm": 610,
+     "height_mm": 914,
+     "label": "24\" x 36\""
+    },
+    {
+     "width_mm": 457,
+     "height_mm": 1220,
+     "label": "18\" x 48\""
+    },
+    {
+     "width_mm": 914,
+     "height_mm": 1220,
+     "label": "36\" x 48\" standard sheet"
+    }
+   ],
+   "notes": "The sheet gives only the Dk (with its tolerance) and the dielectric thickness of this designation; the typical values on it are those of TLC-32. Heavy metal claddings are available on request.",
+   "source": {
+    "pdf": "e_taconic_tlc-hf_www.multi-circuit-boards.eu.pdf",
+    "pages": "2",
+    "revision": "rev. 1/09"
+   }
+  },
+  {
+   "id": "taconic/tlc-30",
+   "manufacturer": "Taconic",
+   "name": "TLC-30",
+   "kind": "ptfe",
+   "family": "TLC",
+   "resin": "PTFE",
+   "reinforcement": "Woven glass",
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": null,
+     "value": 3.0,
+     "method": null,
+     "resin_content_pct": null,
+     "tolerance": 0.05
+    }
+   ],
+   "thicknesses_mm": [
+    0.5,
+    0.78,
+    1.5
+   ],
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 18,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": 70,
+     "foil_type": "ED"
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 304,
+     "height_mm": 457,
+     "label": "12\" x 18\""
+    },
+    {
+     "width_mm": 406,
+     "height_mm": 457,
+     "label": "16\" x 18\""
+    },
+    {
+     "width_mm": 457,
+     "height_mm": 610,
+     "label": "18\" x 24\""
+    },
+    {
+     "width_mm": 406,
+     "height_mm": 914,
+     "label": "16\" x 36\""
+    },
+    {
+     "width_mm": 610,
+     "height_mm": 914,
+     "label": "24\" x 36\""
+    },
+    {
+     "width_mm": 457,
+     "height_mm": 1220,
+     "label": "18\" x 48\""
+    },
+    {
+     "width_mm": 914,
+     "height_mm": 1220,
+     "label": "36\" x 48\" standard sheet"
+    }
+   ],
+   "notes": "The sheet gives only the Dk (with its tolerance) and the dielectric thickness of this designation; the typical values on it are those of TLC-32. Heavy metal claddings are available on request. Thickness 0.0300 to 0.0620 in (0.78 to 1.5 mm) is published as a range; 0.78 and 1.5 are its ends.",
+   "source": {
+    "pdf": "e_taconic_tlc-hf_www.multi-circuit-boards.eu.pdf",
+    "pages": "2",
+    "revision": "rev. 1/09"
+   }
+  },
+  {
+   "id": "taconic/tlc-32",
+   "manufacturer": "Taconic",
+   "name": "TLC-32",
+   "kind": "ptfe",
+   "family": "TLC",
+   "resin": "PTFE",
+   "reinforcement": "Woven glass",
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": 10.0,
+     "value": 3.2,
+     "method": "IPC-650 2.5.5.5",
+     "resin_content_pct": null,
+     "tolerance": 0.05
+    }
+   ],
+   "thicknesses_mm": [
+    0.78
+   ],
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 18,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": 70,
+     "foil_type": "ED"
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 304,
+     "height_mm": 457,
+     "label": "12\" x 18\""
+    },
+    {
+     "width_mm": 406,
+     "height_mm": 457,
+     "label": "16\" x 18\""
+    },
+    {
+     "width_mm": 457,
+     "height_mm": 610,
+     "label": "18\" x 24\""
+    },
+    {
+     "width_mm": 406,
+     "height_mm": 914,
+     "label": "16\" x 36\""
+    },
+    {
+     "width_mm": 610,
+     "height_mm": 914,
+     "label": "24\" x 36\""
+    },
+    {
+     "width_mm": 457,
+     "height_mm": 1220,
+     "label": "18\" x 48\""
+    },
+    {
+     "width_mm": 914,
+     "height_mm": 1220,
+     "label": "36\" x 48\" standard sheet"
+    }
+   ],
+   "notes": "The typical values on the sheet are those of TLC-32. Moisture absorption below 0.02 %; dielectric breakdown above 60 kV; arc resistance above 180 s; flexural strength above 276 N/mm2 (MD) and 241 N/mm2 (CD); x-y CTE 9-12 ppm/C (a range, not stored). The z CTE is 70 ppm/C. Heavy metal claddings are available on request. Thickness 0.0300 in (0.78 mm) and above (published as a range from 0.78 mm).",
+   "df": [
+    {
+     "freq_ghz": 10.0,
+     "value": 0.003,
+     "method": "IPC-650 2.5.5.5",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "thermal_conductivity_w_mk": 0.24,
+   "cte_z_below_tg_ppm": 70,
+   "peel_strength_n_mm": 2.1,
+   "peel_condition": "1 oz copper (12.0 lb/in)",
+   "flexural_strength_mpa": {
+    "lengthwise": null,
+    "crosswise": null,
+    "value": null
+   },
+   "volume_resistivity_ohm_cm": 10000000000000.0,
+   "surface_resistivity_ohm": 10000000000000.0,
+   "source": {
+    "pdf": "e_taconic_tlc-hf_www.multi-circuit-boards.eu.pdf",
+    "pages": "2",
+    "revision": "rev. 1/09"
+   }
+  },
+  {
+   "id": "taconic/tlx-9",
+   "manufacturer": "Taconic",
+   "name": "TLX-9",
+   "kind": "ptfe",
+   "family": "TLX",
+   "resin": "PTFE",
+   "reinforcement": "E-glass woven",
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": 10.0,
+     "value": 2.5,
+     "method": "IPC-TM 650 2.5.5.5",
+     "resin_content_pct": null,
+     "tolerance": 0.04
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10.0,
+     "value": 0.0019,
+     "method": "IPC-TM 650 2.5.5.5",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 10000000000000.0,
+   "surface_resistivity_ohm": 10000000000000.0,
+   "peel_strength_n_mm": 2.1,
+   "peel_condition": "1 oz copper (12.0 lb/in)",
+   "thermal_conductivity_w_mk": 0.19,
+   "thickness_range": {
+    "min_mm": 0.13,
+    "max_mm": 0.78,
+    "steps_note": "0.0050-0.0190 in (0.13-0.48 mm), 0.0200-0.0300 in (0.50-0.76 mm) and 0.0310 in (0.78 mm), as published ranges."
+   },
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 18,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": 70,
+     "foil_type": "ED"
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 914,
+     "height_mm": 1220,
+     "label": "36\" x 48\" standard sheet"
+    },
+    {
+     "width_mm": 304,
+     "height_mm": 457,
+     "label": "12\" x 18\""
+    },
+    {
+     "width_mm": 406,
+     "height_mm": 457,
+     "label": "16\" x 18\""
+    },
+    {
+     "width_mm": 457,
+     "height_mm": 610,
+     "label": "18\" x 24\""
+    },
+    {
+     "width_mm": 406,
+     "height_mm": 914,
+     "label": "16\" x 36\""
+    },
+    {
+     "width_mm": 610,
+     "height_mm": 914,
+     "label": "24\" x 36\""
+    },
+    {
+     "width_mm": 457,
+     "height_mm": 1220,
+     "label": "18\" x 48\""
+    }
+   ],
+   "notes": "The TLX family covers Dk 2.45 (TLX-0) to 2.65 (TLX-6) with a tolerance of 0.04; Df is about 0.0019 at 10 GHz. Moisture absorption below 0.02 %; dielectric breakdown above 60 kV; arc resistance above 180 s; flexural strength above 159 N/mm2 lengthwise and above 131 N/mm2 crosswise; x-y CTE 9-12 ppm/C and z CTE 130-145 ppm/C (ranges, not stored).",
+   "source": {
+    "pdf": "e_taconic_tlx-hf_www.multi-circuit-boards.eu.pdf",
+    "pages": "3-4",
+    "revision": "2/01"
+   }
+  }
+ ]
+}

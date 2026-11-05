@@ -1,0 +1,541 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Ventec",
+ "materials": [
+  {
+   "id": "ventec/vt-4b1",
+   "manufacturer": "Ventec",
+   "name": "VT-4B1",
+   "kind": "metal_core",
+   "halogen_free": true,
+   "ul94": "V-0",
+   "family": "VT-4B",
+   "resin": "Ceramic filled dielectric on aluminium",
+   "tg_dsc_c": 100,
+   "td_c": 380,
+   "thermal_conductivity_w_mk": 1.0,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 4.8,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.016,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 20000000000000.0,
+   "peel_strength_n_mm": 1.926,
+   "peel_condition": "1 oz, as received (11 lb/in)",
+   "cti_v": 600,
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": null,
+     "foil_type": null
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 460,
+     "height_mm": 610,
+     "label": "18.11 x 24.02 in"
+    },
+    {
+     "width_mm": 510,
+     "height_mm": 610,
+     "label": "20.08 x 24.02 in"
+    },
+    {
+     "width_mm": 533,
+     "height_mm": 610,
+     "label": "20.98 x 24.02 in"
+    },
+    {
+     "width_mm": 460,
+     "height_mm": 1220,
+     "label": "18.11 x 48.03 in"
+    },
+    {
+     "width_mm": 510,
+     "height_mm": 1220,
+     "label": "20.08 x 48.03 in"
+    },
+    {
+     "width_mm": 533,
+     "height_mm": 1220,
+     "label": "20.98 x 48.03 in"
+    }
+   ],
+   "notes": "Aluminium base laminate and resin coated film. Dielectric 50, 75 or 100 um (.002, .003, .004 in); aluminium 0.6, 0.8, 1.0, 1.2 or 1.5 mm in alloy 1100 or 5052; copper Hoz, 1 oz or 2 oz. Thermal impedance 0.078, 0.116 and 0.166 C in2/W for 50, 75 and 100 um; hi-pot withstand 2000, 3000, 4000 V DC and breakdown 3500, 6000, 7500 V AC. Thermal stress 5 min or more at 288 C. Resistivities after moisture (E-24/125: 3.0E+7 Mohm cm and 5.0E+6 Mohm). RTI 130 C (electric and mechanical); maximum operating temperature 130 C. Shelf life of the laminate 24 months.",
+   "source": {
+    "pdf": "e_ventec_vt-4b1_www.multi-circuit-boards.eu.pdf",
+    "pages": "3",
+    "revision": "Version B6, published 07/05/2018"
+   }
+  },
+  {
+   "id": "ventec/vt-4b3",
+   "manufacturer": "Ventec",
+   "name": "VT-4B3",
+   "kind": "metal_core",
+   "halogen_free": true,
+   "ul94": "V-0",
+   "family": "VT-4B",
+   "resin": "Ceramic filled dielectric on aluminium",
+   "tg_dsc_c": 130,
+   "td_c": 380,
+   "thermal_conductivity_w_mk": 3.0,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 4.8,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.016,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 20000000000000.0,
+   "peel_strength_n_mm": 1.926,
+   "peel_condition": "1 oz, as received (11 lb/in)",
+   "cti_v": 600,
+   "copper": [
+    {
+     "weight_oz": 0.333,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 0.5,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 3,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 4,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 6,
+     "thickness_um": null,
+     "foil_type": null
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 457,
+     "height_mm": 610,
+     "label": "18 x 24 in"
+    },
+    {
+     "width_mm": 508,
+     "height_mm": 610,
+     "label": "20 x 24 in"
+    },
+    {
+     "width_mm": 533,
+     "height_mm": 610,
+     "label": "21 x 24 in"
+    },
+    {
+     "width_mm": 457,
+     "height_mm": 1220,
+     "label": "18 x 48 in"
+    },
+    {
+     "width_mm": 508,
+     "height_mm": 1220,
+     "label": "20 x 48 in"
+    },
+    {
+     "width_mm": 533,
+     "height_mm": 1220,
+     "label": "21 x 48 in"
+    }
+   ],
+   "notes": "Aluminium base laminate and resin coated film. Dielectric 50, 75, 100, 125, 150, 180 or 230 um; aluminium 0.6 to 3.0 mm in alloy 1100 or 5052; copper 1/3, H, 1, 2, 3, 4 or 6 oz (the sheet writes 1/3oz and Hoz). Thermal impedance 0.027 to 0.130 C in2/W from 50 to 230 um. Thermal stress 5 min or more at 288 C. The values of the property table were read from a table whose columns the text extraction mixes; the single-valued rows are as listed (E-24/125: 3.0E+7 Mohm cm and 5.0E+6 Mohm). RTI 130 C; maximum operating temperature 130 C.",
+   "source": {
+    "pdf": "e_ventec_vt-4b3_www.multi-circuit-boards.eu.pdf",
+    "pages": "3",
+    "revision": "Version B8"
+   }
+  },
+  {
+   "id": "ventec/vt-4a1",
+   "manufacturer": "Ventec",
+   "name": "VT-4A1",
+   "kind": "metal_core",
+   "halogen_free": true,
+   "ul94": "V-0",
+   "family": "VT-4A",
+   "resin": "Aluminium base laminate and prepreg",
+   "tg_dsc_c": 130,
+   "td_c": 380,
+   "thermal_conductivity_w_mk": 1.6,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 5.0,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.015,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 450000000000000.0,
+   "surface_resistivity_ohm": 22000000000000.0,
+   "peel_strength_n_mm": 2.102,
+   "peel_condition": "1 oz, as received (12 lb/in)",
+   "cti_v": 600,
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 3,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 4,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 6,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 10,
+     "thickness_um": null,
+     "foil_type": null
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 457,
+     "height_mm": 610,
+     "label": "18 x 24 in"
+    },
+    {
+     "width_mm": 508,
+     "height_mm": 610,
+     "label": "20 x 24 in"
+    },
+    {
+     "width_mm": 533,
+     "height_mm": 610,
+     "label": "21 x 24 in"
+    },
+    {
+     "width_mm": 457,
+     "height_mm": 1220,
+     "label": "18 x 48 in"
+    },
+    {
+     "width_mm": 508,
+     "height_mm": 1220,
+     "label": "20 x 48 in"
+    },
+    {
+     "width_mm": 533,
+     "height_mm": 1220,
+     "label": "21 x 48 in"
+    }
+   ],
+   "notes": "Dielectric 75, 100, 125, 150 or 200 um; aluminium 0.6 to 3.0 mm in alloy 1100 or 5052. Thermal impedance for 75, 100, 125 and 150 um: 0.074, 0.099, 0.123, 0.148 C in2/W; hi-pot withstand 4500, 5000, 6000, 8000 V DC and breakdown 6000, 7500, 9000, 10000 V AC. Thermal stress 5 min or more at 288 C. Resistivities after moisture; E-24/125 values 2.3E+7 Mohm cm and 5.1E+6 Mohm. Maximum operating temperature and RTI 90 C. The prepreg (VT-4A1 PP, glass 106, pressed 75-125 um) fills circuit clearance or holes.",
+   "source": {
+    "pdf": "e_ventek_vt-4a1_vt-4a2_www.multi-circuit-boards.eu.pdf",
+    "pages": "3",
+    "revision": "Version B6"
+   }
+  },
+  {
+   "id": "ventec/vt-4a2",
+   "manufacturer": "Ventec",
+   "name": "VT-4A2",
+   "kind": "metal_core",
+   "halogen_free": true,
+   "ul94": "V-0",
+   "family": "VT-4A",
+   "resin": "Aluminium base laminate and prepreg",
+   "tg_dsc_c": 130,
+   "td_c": 380,
+   "thermal_conductivity_w_mk": 2.2,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 5.1,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.014,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 510000000000000.0,
+   "surface_resistivity_ohm": 23000000000000.0,
+   "peel_strength_n_mm": 2.102,
+   "peel_condition": "1 oz, as received (12 lb/in)",
+   "cti_v": 600,
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 3,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 4,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 6,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 10,
+     "thickness_um": null,
+     "foil_type": null
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 457,
+     "height_mm": 610,
+     "label": "18 x 24 in"
+    },
+    {
+     "width_mm": 508,
+     "height_mm": 610,
+     "label": "20 x 24 in"
+    },
+    {
+     "width_mm": 533,
+     "height_mm": 610,
+     "label": "21 x 24 in"
+    },
+    {
+     "width_mm": 457,
+     "height_mm": 1220,
+     "label": "18 x 48 in"
+    },
+    {
+     "width_mm": 508,
+     "height_mm": 1220,
+     "label": "20 x 48 in"
+    },
+    {
+     "width_mm": 533,
+     "height_mm": 1220,
+     "label": "21 x 48 in"
+    }
+   ],
+   "notes": "Dielectric 75, 100, 125, 150 or 200 um; aluminium 0.6 to 3.0 mm in alloy 1100 or 5052. Thermal impedance for 75, 100, 125 and 150 um: 0.054, 0.072, 0.089, 0.107 C in2/W; hi-pot withstand 4500, 5000, 6000, 8000 V DC and breakdown 6000, 7500, 9000, 10000 V AC. Thermal stress 5 min or more at 288 C. Resistivities after moisture; E-24/125 values 3.1E+7 Mohm cm and 5.2E+6 Mohm. Maximum operating temperature and RTI 90 C. The prepreg (VT-4A2 PP, glass 106, pressed 75-125 um) fills circuit clearance or holes.",
+   "source": {
+    "pdf": "e_ventek_vt-4a1_vt-4a2_www.multi-circuit-boards.eu.pdf",
+    "pages": "3",
+    "revision": "Version B6"
+   }
+  },
+  {
+   "id": "ventec/vt-4a2h",
+   "manufacturer": "Ventec",
+   "name": "VT-4A2H",
+   "kind": "metal_core",
+   "halogen_free": true,
+   "ul94": "V-0",
+   "family": "VT-4A",
+   "resin": "Aluminium base laminate and prepreg",
+   "tg_dsc_c": 130,
+   "td_c": 380,
+   "thermal_conductivity_w_mk": 2.2,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 5.1,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.014,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 510000000000000.0,
+   "surface_resistivity_ohm": 23000000000000.0,
+   "peel_strength_n_mm": 2.102,
+   "peel_condition": "1 oz, as received (12 lb/in)",
+   "cti_v": 600,
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 3,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 4,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 6,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 10,
+     "thickness_um": null,
+     "foil_type": null
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 457,
+     "height_mm": 610,
+     "label": "18 x 24 in"
+    },
+    {
+     "width_mm": 508,
+     "height_mm": 610,
+     "label": "20 x 24 in"
+    },
+    {
+     "width_mm": 533,
+     "height_mm": 610,
+     "label": "21 x 24 in"
+    },
+    {
+     "width_mm": 457,
+     "height_mm": 1220,
+     "label": "18 x 48 in"
+    },
+    {
+     "width_mm": 508,
+     "height_mm": 1220,
+     "label": "20 x 48 in"
+    },
+    {
+     "width_mm": 533,
+     "height_mm": 1220,
+     "label": "21 x 48 in"
+    }
+   ],
+   "notes": "Dielectric 75, 100, 125, 150 or 200 um; aluminium 0.6 to 3.0 mm in alloy 1100 or 5052. Thermal impedance for 75, 100, 125 and 150 um: 0.054, 0.072, 0.089, 0.107 C in2/W; hi-pot withstand 4500, 5000, 6000, 8000 V DC and breakdown 6000, 7500, 9000, 10000 V AC. Thermal stress 5 min or more at 288 C. Resistivities after moisture; E-24/125 values 3.1E+7 Mohm cm and 5.2E+6 Mohm. Maximum operating temperature and RTI 105 C. The prepreg (VT-4A2H PP, glass 106, pressed 75-125 um) fills circuit clearance or holes.",
+   "source": {
+    "pdf": "e_ventek_vt-4a1_vt-4a2_www.multi-circuit-boards.eu.pdf",
+    "pages": "3",
+    "revision": "Version B6"
+   }
+  }
+ ]
+}

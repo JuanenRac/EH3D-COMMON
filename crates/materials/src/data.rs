@@ -8,10 +8,29 @@ pub const DOCUMENTS: (&str, &str) = ("documents.json", include_str!("../data/doc
 
 /// The embedded files as `(file name, JSON text)`.
 pub const FILES: &[(&str, &str)] = &[
+    ("aismalibar.json", include_str!("../data/aismalibar.json")),
+    ("arlon.json", include_str!("../data/arlon.json")),
     ("bungard.json", include_str!("../data/bungard.json")),
+    ("dupont.json", include_str!("../data/dupont.json")),
+    ("huazheng.json", include_str!("../data/huazheng.json")),
     ("isola.json", include_str!("../data/isola.json")),
+    ("iteq.json", include_str!("../data/iteq.json")),
+    (
+        "mg-chemicals.json",
+        include_str!("../data/mg-chemicals.json"),
+    ),
+    ("msc-polymer.json", include_str!("../data/msc-polymer.json")),
+    (
+        "multi-circuit-boards.json",
+        include_str!("../data/multi-circuit-boards.json"),
+    ),
     ("panasonic.json", include_str!("../data/panasonic.json")),
+    ("rogers.json", include_str!("../data/rogers.json")),
     ("shengyi.json", include_str!("../data/shengyi.json")),
+    ("taconic.json", include_str!("../data/taconic.json")),
+    ("thinflex.json", include_str!("../data/thinflex.json")),
+    ("ventec.json", include_str!("../data/ventec.json")),
+    ("yuxinda.json", include_str!("../data/yuxinda.json")),
 ];
 
 #[cfg(test)]

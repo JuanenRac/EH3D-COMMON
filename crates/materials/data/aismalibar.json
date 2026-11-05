@@ -1,0 +1,82 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Aismalibar",
+ "materials": [
+  {
+   "id": "aismalibar/fr4-tg-135",
+   "manufacturer": "Aismalibar",
+   "name": "FR4 Tg 135",
+   "kind": "laminate",
+   "resin": "Difunctional epoxy",
+   "reinforcement": "Woven E-glass",
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4101/21",
+   "tg_dsc_c": 135,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 4.8,
+     "method": "IPC TM-650 2.5.5",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.027,
+     "method": "IPC TM-650 2.5.5",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "water_absorption_pct": 0.19,
+   "volume_resistivity_ohm_cm": 10000000000000.0,
+   "surface_resistivity_ohm": 1000000000000.0,
+   "arc_resistance_s": 120,
+   "dielectric_strength_kv_mm": 36,
+   "flexural_strength_mpa": {
+    "lengthwise": 550,
+    "crosswise": 450,
+    "value": null
+   },
+   "peel_strength_n_mm": 1.8,
+   "peel_condition": "after thermal stress, standard copper foil (1.6 N/mm at 125 C)",
+   "copper": [
+    {
+     "weight_oz": null,
+     "thickness_um": 18,
+     "foil_type": null
+    },
+    {
+     "weight_oz": null,
+     "thickness_um": 35,
+     "foil_type": null
+    },
+    {
+     "weight_oz": null,
+     "thickness_um": 70,
+     "foil_type": null
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 927,
+     "height_mm": 1232,
+     "label": null
+    },
+    {
+     "width_mm": 1082,
+     "height_mm": 1232,
+     "label": null
+    }
+   ],
+   "notes": "Data sheet printed with the brand of a circuit board maker; the maker of the laminate named in its footer is Aismalibar. Values are the typical ones for laminate of 0.50 mm and above (Cu 35 um, 1.6 mm): flame retardant bromine, RoHS compliant; thermal stress 60 s at 288 C; CTI 230 V; dimensional stability +/- 100 ppm; sheet tolerance +13/-0 mm. Resistivities are after moisture. Loss tangent for thin laminate is printed as 2.027 (typing error) and is not stored.",
+   "source": {
+    "pdf": "150.044.pdf",
+    "pages": "1",
+    "revision": "200706"
+   }
+  }
+ ]
+}

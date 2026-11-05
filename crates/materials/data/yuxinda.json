@@ -1,0 +1,138 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Yuxinda",
+ "materials": [
+  {
+   "id": "yuxinda/al-200",
+   "manufacturer": "Yuxinda",
+   "name": "AL-200",
+   "kind": "metal_core",
+   "resin": "Aluminium base copper clad",
+   "ul94": "V-0",
+   "halogen_free": true,
+   "thermal_conductivity_w_mk": 2.05,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 4.1,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.018,
+     "method": "IPC-TM-650 2.5.5.3 (typical: at most 0.018)",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "peel_strength_n_mm": 1.5,
+   "peel_condition": "IPC-TM-650 2.4.8 (specification 1.4 N/mm)",
+   "cti_v": 600,
+   "thickness_range": {
+    "min_mm": 0.2,
+    "max_mm": 6.0,
+    "steps_note": "Thickness tolerance per IPC-4101."
+   },
+   "copper": [
+    {
+     "weight_oz": 0.333,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 6,
+     "thickness_um": null,
+     "foil_type": null
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 1000,
+     "height_mm": 1200,
+     "label": null
+    },
+    {
+     "width_mm": 1080,
+     "height_mm": 1240,
+     "label": null
+    }
+   ],
+   "notes": "Thermal conductivity specification 1.8-2.2 W/m K; thermal resistance 0.35 C/W typical (0.30 for AL-300), at most 0.78 C/W. Thermal stress: 288 C tin immersion for 10 min. Typical breakdown voltage above 3.5 kV AC; thermal resistance of the board without copper 60 min (more than 30 min); warp 0.5 % (below 0.75 %). The typical volume resistance (4.8 x 10^x Mohm cm) and surface resistance (5.2 x 10^x Mohm) have an exponent that cannot be read in the scan and are not stored; the specification is above 10^x. Copper foil 1/3 oz to 6 oz.",
+   "source": {
+    "pdf": "yuxinda_al-200_www.multi-circuit-boards.eu.pdf",
+    "pages": "1-2",
+    "revision": null
+   }
+  },
+  {
+   "id": "yuxinda/al-300",
+   "manufacturer": "Yuxinda",
+   "name": "AL-300",
+   "kind": "metal_core",
+   "resin": "Aluminium base copper clad",
+   "ul94": "V-0",
+   "halogen_free": true,
+   "thermal_conductivity_w_mk": 3.01,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 4.1,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.018,
+     "method": "IPC-TM-650 2.5.5.3 (typical: at most 0.018)",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "peel_strength_n_mm": 1.5,
+   "peel_condition": "IPC-TM-650 2.4.8 (specification 1.4 N/mm)",
+   "cti_v": 600,
+   "thickness_range": {
+    "min_mm": 0.2,
+    "max_mm": 6.0,
+    "steps_note": "Thickness tolerance per IPC-4101."
+   },
+   "copper": [
+    {
+     "weight_oz": 0.333,
+     "thickness_um": null,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 6,
+     "thickness_um": null,
+     "foil_type": null
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 1000,
+     "height_mm": 1200,
+     "label": null
+    },
+    {
+     "width_mm": 1080,
+     "height_mm": 1240,
+     "label": null
+    }
+   ],
+   "notes": "Thermal conductivity specification 2.8-3.2 W/m K; thermal resistance 0.30 C/W typical, at most 0.78 C/W. Thermal stress: 288 C tin immersion for 10 min. Typical breakdown voltage above 3.5 kV AC; thermal resistance of the board without copper 60 min (more than 30 min); warp 0.5 % (below 0.75 %). The typical volume resistance (4.8 x 10^x Mohm cm) and surface resistance (5.2 x 10^x Mohm) have an exponent that cannot be read in the scan and are not stored; the specification is above 10^x. Copper foil 1/3 oz to 6 oz.",
+   "source": {
+    "pdf": "yuxinda_al-300_www.multi-circuit-boards.eu.pdf",
+    "pages": "1-2",
+    "revision": null
+   }
+  }
+ ]
+}

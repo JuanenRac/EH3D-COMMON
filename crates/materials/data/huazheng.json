@@ -1,0 +1,176 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Huazheng",
+ "materials": [
+  {
+   "id": "huazheng/ha50-type-1",
+   "manufacturer": "Huazheng",
+   "name": "HA50 Type 1",
+   "kind": "metal_core",
+   "family": "HA50",
+   "resin": "Aluminium base laminate",
+   "ul94": "V-0",
+   "td_c": 400,
+   "tg_dsc_c": 121.2,
+   "thermal_conductivity_w_mk": 1.1,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 5.1,
+     "method": "IPC-TM-650 2.5.5.2, C 24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "water_absorption_pct": 0.51,
+   "arc_resistance_s": 120,
+   "cti_v": 600,
+   "volume_resistivity_ohm_cm": 10000000000000.0,
+   "surface_resistivity_ohm": 1000000000000.0,
+   "peel_strength_n_mm": 1.82,
+   "peel_condition": "1 oz before thermal stress (1.75 N/mm after)",
+   "notes": "Type 1 of the HA50 aluminium base laminate (1.0 W/m K class); sold as KL HA50. Thermal conductivity by ASTM E1461. Surface and volume resistivity are 10^6 Mohm and 10^7 Mohm cm (C96/35/90; the E-24/125 values are 10^5 and 10^5). Thermal stress: 180 s at 288 C without delamination, 6 cycles of 300 C for 10 s. AC breakdown 4.3 kV (100 um), 5.0 kV (125 um) and 6.0 kV (150 um) where listed. Thermal resistance by type: 0.77 K m2/W. The sheet gives no thicknesses, copper or panel sizes.",
+   "source": {
+    "pdf": "e_kllaminates_ha50_metalcore_www.multi-circuit-boards.eu.pdf",
+    "pages": "1",
+    "revision": null
+   }
+  },
+  {
+   "id": "huazheng/ha50-type-2",
+   "manufacturer": "Huazheng",
+   "name": "HA50 Type 2",
+   "kind": "metal_core",
+   "family": "HA50",
+   "resin": "Aluminium base laminate",
+   "ul94": "V-0",
+   "td_c": 400,
+   "tg_dsc_c": 122.6,
+   "thermal_conductivity_w_mk": 1.6,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 5.3,
+     "method": "IPC-TM-650 2.5.5.2, C 24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "water_absorption_pct": 0.43,
+   "arc_resistance_s": 120,
+   "cti_v": 600,
+   "volume_resistivity_ohm_cm": 10000000000000.0,
+   "surface_resistivity_ohm": 1000000000000.0,
+   "peel_strength_n_mm": 1.83,
+   "peel_condition": "1 oz before thermal stress (1.73 N/mm after)",
+   "notes": "Type 2 of the HA50 aluminium base laminate (1.5 W/m K class); sold as KL HA50. Thermal conductivity by ASTM E1461. Surface and volume resistivity are 10^6 Mohm and 10^7 Mohm cm (C96/35/90; the E-24/125 values are 10^5 and 10^5). Thermal stress: 180 s at 288 C without delamination, 6 cycles of 300 C for 10 s. AC breakdown 4.3 kV (100 um), 5.0 kV (125 um) and 6.0 kV (150 um) where listed. Thermal resistance by type: 0.61 K m2/W. The sheet gives no thicknesses, copper or panel sizes.",
+   "source": {
+    "pdf": "e_kllaminates_ha50_metalcore_www.multi-circuit-boards.eu.pdf",
+    "pages": "1",
+    "revision": null
+   }
+  },
+  {
+   "id": "huazheng/ha50-type-3",
+   "manufacturer": "Huazheng",
+   "name": "HA50 Type 3",
+   "kind": "metal_core",
+   "family": "HA50",
+   "resin": "Aluminium base laminate",
+   "ul94": "V-0",
+   "td_c": 400,
+   "tg_dsc_c": 121.8,
+   "thermal_conductivity_w_mk": 2.2,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 5.5,
+     "method": "IPC-TM-650 2.5.5.2, C 24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "water_absorption_pct": 0.56,
+   "arc_resistance_s": 120,
+   "cti_v": 600,
+   "volume_resistivity_ohm_cm": 10000000000000.0,
+   "surface_resistivity_ohm": 1000000000000.0,
+   "peel_strength_n_mm": 1.8,
+   "peel_condition": "1 oz before thermal stress (1.76 N/mm after)",
+   "notes": "Type 3 of the HA50 aluminium base laminate (2.0 W/m K class); sold as KL HA50. Thermal conductivity by ASTM E1461. Surface and volume resistivity are 10^6 Mohm and 10^7 Mohm cm (C96/35/90; the E-24/125 values are 10^5 and 10^5). Thermal stress: 180 s at 288 C without delamination, 6 cycles of 300 C for 10 s. AC breakdown 4.3 kV (100 um), 5.0 kV (125 um) and 6.0 kV (150 um) where listed. Thermal resistance by type: 0.41 K m2/W. The sheet gives no thicknesses, copper or panel sizes.",
+   "source": {
+    "pdf": "e_kllaminates_ha50_metalcore_www.multi-circuit-boards.eu.pdf",
+    "pages": "1",
+    "revision": null
+   }
+  },
+  {
+   "id": "huazheng/ha50-type-4",
+   "manufacturer": "Huazheng",
+   "name": "HA50 Type 4",
+   "kind": "metal_core",
+   "family": "HA50",
+   "resin": "Aluminium base laminate",
+   "ul94": "V-0",
+   "td_c": 400,
+   "tg_dsc_c": 122.3,
+   "thermal_conductivity_w_mk": 3.0,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 5.8,
+     "method": "IPC-TM-650 2.5.5.2, C 24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "water_absorption_pct": 0.49,
+   "arc_resistance_s": 120,
+   "cti_v": 600,
+   "volume_resistivity_ohm_cm": 10000000000000.0,
+   "surface_resistivity_ohm": 1000000000000.0,
+   "peel_strength_n_mm": 1.75,
+   "peel_condition": "1 oz before thermal stress (1.70 N/mm after)",
+   "notes": "Type 4 of the HA50 aluminium base laminate (3.0 W/m K class); sold as KL HA50. Thermal conductivity by ASTM E1461. Surface and volume resistivity are 10^6 Mohm and 10^7 Mohm cm (C96/35/90; the E-24/125 values are 10^5 and 10^5). Thermal stress: 180 s at 288 C without delamination, 6 cycles of 300 C for 10 s. AC breakdown 4.3 kV (100 um), 5.0 kV (125 um) and 6.0 kV (150 um) where listed. Thermal resistance by type: 0.33 K m2/W. The sheet gives no thicknesses, copper or panel sizes.",
+   "source": {
+    "pdf": "e_kllaminates_ha50_metalcore_www.multi-circuit-boards.eu.pdf",
+    "pages": "1",
+    "revision": null
+   }
+  },
+  {
+   "id": "huazheng/ha50-type-5",
+   "manufacturer": "Huazheng",
+   "name": "HA50 Type 5",
+   "kind": "metal_core",
+   "family": "HA50",
+   "resin": "Aluminium base laminate",
+   "ul94": "V-0",
+   "td_c": 400,
+   "tg_dsc_c": 121.8,
+   "thermal_conductivity_w_mk": 2.2,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 5.5,
+     "method": "IPC-TM-650 2.5.5.2, C 24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "water_absorption_pct": 0.56,
+   "arc_resistance_s": 120,
+   "cti_v": 600,
+   "volume_resistivity_ohm_cm": 10000000000000.0,
+   "surface_resistivity_ohm": 1000000000000.0,
+   "peel_strength_n_mm": 1.8,
+   "peel_condition": "1 oz before thermal stress (1.76 N/mm after)",
+   "notes": "Type 5 of the HA50 aluminium base laminate (2.0 W/m K class); sold as KL HA50. Thermal conductivity by ASTM E1461. Surface and volume resistivity are 10^6 Mohm and 10^7 Mohm cm (C96/35/90; the E-24/125 values are 10^5 and 10^5). Thermal stress: 180 s at 288 C without delamination, 6 cycles of 300 C for 10 s. AC breakdown 4.3 kV (100 um), 5.0 kV (125 um) and 6.0 kV (150 um) where listed. Thermal resistance by type: 0.41 K m2/W. The sheet gives no thicknesses, copper or panel sizes.",
+   "source": {
+    "pdf": "e_kllaminates_ha50_metalcore_www.multi-circuit-boards.eu.pdf",
+    "pages": "1",
+    "revision": null
+   }
+  }
+ ]
+}

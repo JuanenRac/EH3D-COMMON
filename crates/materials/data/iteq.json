@@ -1,0 +1,212 @@
+{
+ "schema_version": 1,
+ "manufacturer": "ITEQ",
+ "materials": [
+  {
+   "id": "iteq/it-158tc",
+   "manufacturer": "ITEQ",
+   "name": "IT-158TC",
+   "kind": "laminate",
+   "resin": "Multifunctional epoxy",
+   "reinforcement": "E-glass woven",
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4101C/99",
+   "tg_dsc_c": 155,
+   "td_c": 345,
+   "cte_z_below_tg_ppm": 40,
+   "cte_z_above_tg_ppm": 240,
+   "cte_z_50_260_pct": 3.3,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 4.4,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1.0,
+     "value": 4.3,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 2.0,
+     "value": 4.2,
+     "method": "IPC-TM-650 2.5.5.13",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 5.0,
+     "value": 4.1,
+     "method": "IPC-TM-650 2.5.5.13",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10.0,
+     "value": 4.0,
+     "method": "IPC-TM-650 2.5.5.13",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.016,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1.0,
+     "value": 0.016,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 2.0,
+     "value": 0.017,
+     "method": "IPC-TM-650 2.5.5.13",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 5.0,
+     "value": 0.018,
+     "method": "IPC-TM-650 2.5.5.13",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10.0,
+     "value": 0.018,
+     "method": "IPC-TM-650 2.5.5.13",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "peel_strength_n_mm": 1.66,
+   "peel_condition": "standard profile foil after thermal stress, thickness 0.50 mm and above (low and very low profile foil: 0.88 N/mm)",
+   "water_absorption_pct": 0.08,
+   "arc_resistance_s": 125,
+   "volume_resistivity_ohm_cm": 5e+16,
+   "surface_resistivity_ohm": 1e+16,
+   "dielectric_strength_kv_mm": 45,
+   "notes": "Typical values of the column for thickness 0.50 mm and above, except the electric strength (column below 0.50 mm, 45 kV/mm). Resistivities are those after moisture resistance (C-96/35/90). T260 is more than 60 min and T288 more than 30 min (bounds, not stored). Dielectric breakdown 60 kV. Flexural strength 450-480 N/mm2 lengthwise and 370-400 N/mm2 crosswise; x-y CTE 11-13 ppm/C (ranges, not stored). CAF resistance passes. Medium Tg multifunctional filled epoxy, phenolic cured; the sheet covers the laminate (IT-158TC) and the prepreg IT-158BS and the prepreg of the same family.",
+   "source": {
+    "pdf": "e_iteq_it-158_www.multi-circuit-boards.eu.pdf",
+    "pages": "2",
+    "revision": "REV 09-14"
+   }
+  },
+  {
+   "id": "iteq/it-180atc",
+   "manufacturer": "ITEQ",
+   "name": "IT-180ATC",
+   "kind": "laminate",
+   "resin": "Multifunctional epoxy",
+   "reinforcement": "E-glass woven",
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4101C/99, /101 and /126",
+   "tg_dsc_c": 175,
+   "td_c": 345,
+   "cte_z_below_tg_ppm": 45,
+   "cte_z_above_tg_ppm": 210,
+   "cte_z_50_260_pct": 2.7,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 4.4,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1.0,
+     "value": 4.4,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 2.0,
+     "value": 4.3,
+     "method": "IPC-TM-650 2.5.5.13",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 5.0,
+     "value": 4.1,
+     "method": "IPC-TM-650 2.5.5.13",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10.0,
+     "value": 4.1,
+     "method": "IPC-TM-650 2.5.5.13",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.014,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1.0,
+     "value": 0.015,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 2.0,
+     "value": 0.015,
+     "method": "IPC-TM-650 2.5.5.13",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 5.0,
+     "value": 0.016,
+     "method": "IPC-TM-650 2.5.5.13",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10.0,
+     "value": 0.016,
+     "method": "IPC-TM-650 2.5.5.13",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "peel_strength_n_mm": 1.4,
+   "peel_condition": "standard profile foil after thermal stress, thickness 0.50 mm and above (low and very low profile foil: 0.88 N/mm)",
+   "water_absorption_pct": 0.12,
+   "arc_resistance_s": 125,
+   "volume_resistivity_ohm_cm": 3e+16,
+   "surface_resistivity_ohm": 3e+16,
+   "dielectric_strength_kv_mm": 45,
+   "notes": "Typical values of the column for thickness 0.50 mm and above, except the electric strength (column below 0.50 mm, 45 kV/mm). Resistivities are those after moisture resistance (C-96/35/90). T260 is more than 60 min and T288 more than 30 min (bounds, not stored). Dielectric breakdown 60 kV. Flexural strength 500-530 N/mm2 lengthwise and 410-440 N/mm2 crosswise; x-y CTE 10-13 ppm/C (ranges, not stored). CAF resistance passes. High Tg, low CTE; the sheet covers the laminate (IT-180ATC) and the prepreg IT-180ABS and the prepreg of the same family.",
+   "source": {
+    "pdf": "iteq_it-180a__www.multi-circuit-boards.eu.pdf",
+    "pages": "2",
+    "revision": "REV 01-14"
+   }
+  }
+ ]
+}

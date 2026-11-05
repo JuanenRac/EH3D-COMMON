@@ -1,0 +1,135 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Multi Circuit Boards",
+ "materials": [
+  {
+   "id": "multi-circuit-boards/fr4-standard",
+   "manufacturer": "Multi Circuit Boards",
+   "name": "FR4 Standard",
+   "kind": "laminate",
+   "family": "Default values",
+   "ul94": "V-0",
+   "td_c": 301,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 4.6,
+     "method": "at 1 MHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "dielectric_strength_kv_mm": 45,
+   "surface_resistivity_ohm": 1000000000000.0,
+   "notes": "Default values the fabricator uses for this class of material (not a laminate maker's sheet); the real material depends on availability (for example Isola Duraver, Shengyi S1141, KingBoard 6160, Panasonic R-1766M). Tg at least 135 C; CTE-z 60 ppm/C (the sheet does not say below or above Tg); tracking resistance 175-249 (Isola recommends 200) V; CTI PLC 3; peel strength 1.1-1.6 N/mm; standard IPC-4101.",
+   "source": {
+    "pdf": "multi-cb_material-standard-values.pdf",
+    "pages": "1",
+    "revision": "Poole 15.10.2025"
+   }
+  },
+  {
+   "id": "multi-circuit-boards/fr4-high-tg",
+   "manufacturer": "Multi Circuit Boards",
+   "name": "FR4 High-Tg",
+   "kind": "laminate",
+   "family": "Default values",
+   "ul94": "V-0",
+   "td_c": 345,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 4.8,
+     "method": "at 1 MHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "dielectric_strength_kv_mm": 55,
+   "surface_resistivity_ohm": 10000000000000.0,
+   "notes": "Default values the fabricator uses for this class of material (not a laminate maker's sheet); the real material depends on availability (for example Isola IS410, Shengyi S1000-2, Iteq IT180-A, Panasonic R-1755V). Tg at least 170 C; CTE-z 45 ppm/C (the sheet does not say below or above Tg); tracking resistance 175-249 (Isola recommends 200) V; CTI PLC 3; peel strength 1.2 N/mm; standard IPC-4101.",
+   "source": {
+    "pdf": "multi-cb_material-standard-values.pdf",
+    "pages": "1",
+    "revision": "Poole 15.10.2025"
+   }
+  },
+  {
+   "id": "multi-circuit-boards/fr4-halogen-free",
+   "manufacturer": "Multi Circuit Boards",
+   "name": "FR4 Halogen-free",
+   "kind": "laminate",
+   "family": "Default values",
+   "ul94": "V-0",
+   "td_c": 360,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 4.7,
+     "method": "at 1 MHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "dielectric_strength_kv_mm": 50,
+   "surface_resistivity_ohm": 10000000000000.0,
+   "notes": "Default values the fabricator uses for this class of material (not a laminate maker's sheet); the real material depends on availability (for example Isola Duraver 156, Shengyi S1155, KingBoard 6162, Panasonic R-1566V). Tg at least 140 C; CTE-z 45 ppm/C (the sheet does not say below or above Tg); tracking resistance 175-249 (Isola recommends 200) V; CTI PLC 3; peel strength 1.4 N/mm; standard IPC-4101.",
+   "source": {
+    "pdf": "multi-cb_material-standard-values.pdf",
+    "pages": "1",
+    "revision": "Poole 15.10.2025"
+   }
+  },
+  {
+   "id": "multi-circuit-boards/fr4-track-resistant",
+   "manufacturer": "Multi Circuit Boards",
+   "name": "FR4 Track resistant",
+   "kind": "laminate",
+   "family": "Default values",
+   "ul94": "V-0",
+   "td_c": 310,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 4.7,
+     "method": "at 1 MHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "dielectric_strength_kv_mm": 45,
+   "surface_resistivity_ohm": 10000000000000.0,
+   "notes": "Default values the fabricator uses for this class of material (not a laminate maker's sheet); the real material depends on availability (for example Isola Duraver KF, Shengyi S1600). Tg at least 135 C; CTE-z 50 ppm/C (the sheet does not say below or above Tg); tracking resistance 400-599 (PLC 0 of 600 V or more on request) V; CTI PLC 1; peel strength 1.6 N/mm; standard IPC-4101.",
+   "source": {
+    "pdf": "multi-cb_material-standard-values.pdf",
+    "pages": "1",
+    "revision": "Poole 15.10.2025"
+   }
+  },
+  {
+   "id": "multi-circuit-boards/polyimide",
+   "manufacturer": "Multi Circuit Boards",
+   "name": "Polyimide",
+   "kind": "flex_laminate",
+   "family": "Default values",
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 3.4,
+     "method": "at 1 MHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "dielectric_strength_kv_mm": 125,
+   "surface_resistivity_ohm": 1000000000000.0,
+   "notes": "Default values the fabricator uses for this class of material (not a laminate maker's sheet); the real material depends on availability (for example DuPont Pyralux, Shengyi SF302, Panasonic R-F775; recommended operating temperature 105 C (210 C on request, Arlon)). Tg at least 230 C; CTE-z 20 ppm/C (the sheet does not say below or above Tg); tracking resistance none given V; CTI none given; peel strength 1.6 N/mm; standard IPC-4204.",
+   "source": {
+    "pdf": "multi-cb_material-standard-values.pdf",
+    "pages": "1",
+    "revision": "Poole 15.10.2025"
+   }
+  }
+ ]
+}

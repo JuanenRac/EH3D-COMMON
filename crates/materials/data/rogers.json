@@ -1,0 +1,541 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Rogers",
+ "materials": [
+  {
+   "id": "rogers/ro3003",
+   "manufacturer": "Rogers",
+   "name": "RO3003",
+   "kind": "ptfe",
+   "family": "RO3000",
+   "resin": "PTFE",
+   "filler": "Ceramic",
+   "ul94": "V-0",
+   "lead_free_compatible": true,
+   "td_c": 500,
+   "dk": [
+    {
+     "freq_ghz": 10.0,
+     "value": 3.0,
+     "method": "IPC-TM-650 2.5.5.5 clamped stripline (process), 23 C",
+     "resin_content_pct": null,
+     "tolerance": 0.04
+    },
+    {
+     "freq_ghz": null,
+     "value": 3.0,
+     "method": "Differential phase length method (design), 8-40 GHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10.0,
+     "value": 0.0013,
+     "method": "IPC-TM-650 2.5.5.5, 23 C",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "tcdk_ppm_per_c": 13,
+   "volume_resistivity_ohm_cm": 10000000000000.0,
+   "surface_resistivity_ohm": 10000000000000.0,
+   "youngs_modulus_gpa": {
+    "lengthwise": null,
+    "crosswise": null,
+    "value": 0.9
+   },
+   "specific_heat_j_gk": 0.9,
+   "thermal_conductivity_w_mk": 0.5,
+   "cte_x_ppm": 17,
+   "cte_y_ppm": 16,
+   "cte_z_below_tg_ppm": 25,
+   "density_g_cm3": 2.1,
+   "peel_strength_n_mm": 2.224,
+   "peel_condition": "1 oz EDC foil after solder float (published as 12.7 lb/in)",
+   "thicknesses_mm": [
+    0.13,
+    0.25,
+    0.5,
+    0.75,
+    1.52
+   ],
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 17,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": 70,
+     "foil_type": "ED"
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 304.8,
+     "height_mm": 457.2,
+     "label": "12\" x 18\""
+    },
+    {
+     "width_mm": 609.6,
+     "height_mm": 457.2,
+     "label": "24\" x 18\""
+    }
+   ],
+   "notes": "Water absorption is published as below 0.1 %. Dimensional stability 0.01 mm/m (X, Y). Tensile modulus 900 MPa (X, Y). CTE is for -55 to 288 C by ASTM D3386-94, directions X, Y, Z (Z stored as below Tg). Thermal conductivity at 80 C. Cover sheet: ceramic-filled PTFE composites for commercial microwave and RF use.",
+   "source": {
+    "pdf": "e_rogers-3000_www.multi-circuit-boards.eu.pdf",
+    "pages": "3-4",
+    "revision": "Revised 11/2011, Publication 92-130 REV2"
+   }
+  },
+  {
+   "id": "rogers/ro3006",
+   "manufacturer": "Rogers",
+   "name": "RO3006",
+   "kind": "ptfe",
+   "family": "RO3000",
+   "resin": "PTFE",
+   "filler": "Ceramic",
+   "ul94": "V-0",
+   "lead_free_compatible": true,
+   "td_c": 500,
+   "dk": [
+    {
+     "freq_ghz": 10.0,
+     "value": 6.15,
+     "method": "IPC-TM-650 2.5.5.5 clamped stripline (process), 23 C",
+     "resin_content_pct": null,
+     "tolerance": 0.15
+    },
+    {
+     "freq_ghz": null,
+     "value": 6.5,
+     "method": "Differential phase length method (design), 8-40 GHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10.0,
+     "value": 0.002,
+     "method": "IPC-TM-650 2.5.5.5, 23 C",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "tcdk_ppm_per_c": -160,
+   "volume_resistivity_ohm_cm": 10000000000000.0,
+   "surface_resistivity_ohm": 10000000000000.0,
+   "youngs_modulus_gpa": {
+    "lengthwise": null,
+    "crosswise": null,
+    "value": 2.068
+   },
+   "specific_heat_j_gk": 0.86,
+   "thermal_conductivity_w_mk": 0.79,
+   "cte_x_ppm": 17,
+   "cte_y_ppm": 17,
+   "cte_z_below_tg_ppm": 24,
+   "density_g_cm3": 2.6,
+   "peel_strength_n_mm": 1.243,
+   "peel_condition": "1 oz EDC foil after solder float (published as 7.1 lb/in)",
+   "thicknesses_mm": [
+    0.13,
+    0.25,
+    0.64,
+    1.28
+   ],
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 17,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": 70,
+     "foil_type": "ED"
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 304.8,
+     "height_mm": 457.2,
+     "label": "12\" x 18\""
+    },
+    {
+     "width_mm": 609.6,
+     "height_mm": 457.2,
+     "label": "24\" x 18\""
+    }
+   ],
+   "notes": "Water absorption is published as below 0.1 %. Dimensional stability 0.5 mm/m (X, Y). Tensile modulus 2068 MPa (X, Y). CTE is for -55 to 288 C by ASTM D3386-94, directions X, Y, Z (Z stored as below Tg). Thermal conductivity at 80 C. Cover sheet: ceramic-filled PTFE composites for commercial microwave and RF use.",
+   "source": {
+    "pdf": "e_rogers-3000_www.multi-circuit-boards.eu.pdf",
+    "pages": "3-4",
+    "revision": "Revised 11/2011, Publication 92-130 REV2"
+   }
+  },
+  {
+   "id": "rogers/ro3010",
+   "manufacturer": "Rogers",
+   "name": "RO3010",
+   "kind": "ptfe",
+   "family": "RO3000",
+   "resin": "PTFE",
+   "filler": "Ceramic",
+   "ul94": "V-0",
+   "lead_free_compatible": true,
+   "td_c": 500,
+   "dk": [
+    {
+     "freq_ghz": 10.0,
+     "value": 10.2,
+     "method": "IPC-TM-650 2.5.5.5 clamped stripline (process), 23 C",
+     "resin_content_pct": null,
+     "tolerance": 0.3
+    },
+    {
+     "freq_ghz": null,
+     "value": 11.2,
+     "method": "Differential phase length method (design), 8-40 GHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10.0,
+     "value": 0.0022,
+     "method": "IPC-TM-650 2.5.5.5, 23 C",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "tcdk_ppm_per_c": -280,
+   "volume_resistivity_ohm_cm": 10000000000000.0,
+   "surface_resistivity_ohm": 10000000000000.0,
+   "youngs_modulus_gpa": {
+    "lengthwise": null,
+    "crosswise": null,
+    "value": 1.5
+   },
+   "specific_heat_j_gk": 0.8,
+   "thermal_conductivity_w_mk": 0.95,
+   "cte_x_ppm": 13,
+   "cte_y_ppm": 11,
+   "cte_z_below_tg_ppm": 16,
+   "density_g_cm3": 2.8,
+   "peel_strength_n_mm": 1.646,
+   "peel_condition": "1 oz EDC foil after solder float (published as 9.4 lb/in)",
+   "thicknesses_mm": [
+    0.13,
+    0.25,
+    0.64,
+    1.28
+   ],
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 17,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": 70,
+     "foil_type": "ED"
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 304.8,
+     "height_mm": 457.2,
+     "label": "12\" x 18\""
+    },
+    {
+     "width_mm": 609.6,
+     "height_mm": 457.2,
+     "label": "24\" x 18\""
+    }
+   ],
+   "notes": "Water absorption is published as below 0.1 %. Dimensional stability 0.5 mm/m (X, Y). Tensile modulus 1500 MPa (X, Y). CTE is for -55 to 288 C by ASTM D3386-94, directions X, Y, Z (Z stored as below Tg). Thermal conductivity at 80 C. Cover sheet: ceramic-filled PTFE composites for commercial microwave and RF use.",
+   "source": {
+    "pdf": "e_rogers-3000_www.multi-circuit-boards.eu.pdf",
+    "pages": "3-4",
+    "revision": "Revised 11/2011, Publication 92-130 REV2"
+   }
+  },
+  {
+   "id": "rogers/ro4003c",
+   "manufacturer": "Rogers",
+   "name": "RO4003C",
+   "kind": "ceramic_filled",
+   "family": "RO4000",
+   "resin": "Hydrocarbon",
+   "filler": "Ceramic",
+   "reinforcement": "Woven glass",
+   "lead_free_compatible": true,
+   "ul94": "N/A",
+   "td_c": 425,
+   "dk": [
+    {
+     "freq_ghz": 10.0,
+     "value": 3.38,
+     "method": "IPC-TM-650 2.5.5.5 clamped stripline (process), 23 C",
+     "resin_content_pct": null,
+     "tolerance": 0.05
+    },
+    {
+     "freq_ghz": null,
+     "value": 3.55,
+     "method": "Differential phase length method (design), 8-40 GHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10.0,
+     "value": 0.0027,
+     "method": "IPC-TM-650 2.5.5.5, 23 C",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 2.5,
+     "value": 0.0021,
+     "method": "IPC-TM-650 2.5.5.5, 23 C",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "tcdk_ppm_per_c": 40,
+   "volume_resistivity_ohm_cm": 1.7e+16,
+   "surface_resistivity_ohm": 4200000000000000.0,
+   "dielectric_strength_kv_mm": 31.2,
+   "youngs_modulus_gpa": {
+    "lengthwise": 19.65,
+    "crosswise": 19.45,
+    "value": null
+   },
+   "tensile_strength_mpa": {
+    "lengthwise": 139,
+    "crosswise": 100,
+    "value": null
+   },
+   "flexural_strength_mpa": {
+    "lengthwise": null,
+    "crosswise": null,
+    "value": 276
+   },
+   "cte_x_ppm": 11,
+   "cte_y_ppm": 14,
+   "cte_z_below_tg_ppm": 46,
+   "thermal_conductivity_w_mk": 0.71,
+   "water_absorption_pct": 0.06,
+   "density_g_cm3": 1.79,
+   "peel_strength_n_mm": 1.05,
+   "peel_condition": "1 oz EDC foil after solder float",
+   "thicknesses_mm": [
+    0.203,
+    0.305,
+    0.406,
+    0.508,
+    0.813,
+    1.524
+   ],
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 17,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": 70,
+     "foil_type": "ED"
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 304.8,
+     "height_mm": 457.2,
+     "label": "12\" x 18\""
+    },
+    {
+     "width_mm": 609.6,
+     "height_mm": 457.2,
+     "label": "24\" x 18\""
+    },
+    {
+     "width_mm": 609.6,
+     "height_mm": 914.4,
+     "label": "24\" x 36\""
+    },
+    {
+     "width_mm": 1219.2,
+     "height_mm": 914.4,
+     "label": "48\" x 36\""
+    }
+   ],
+   "notes": "Tg above 280 C (DSC) is published as a bound and is not stored. Tensile and Young's modulus directions X and Y are stored as lengthwise and crosswise. Dimensional stability <0.3 mm/m after etch. CTE -55 to 288 C directions X, Y, Z (Z stored as below Tg). Thermal conductivity at 80 C. Moisture absorption 0.06 % (48 h immersion, 0.060 in sample, 50 C). Dielectric strength at 0.51 mm. LoPro foil adds 0.018 mm of dielectric thickness and gives a Dk of about 2.4 in double-sided boards. Flammability is not rated (N/A). The 0.004 in material is not available in panels larger than 24 x 18 in. Tensile modulus 19650 and 19450 MPa.",
+   "source": {
+    "pdf": "e_rogers_4350b-hf_www.multi-circuit-boards.eu.pdf",
+    "pages": "3-4",
+    "revision": "Revised 1174 041415, PUB 92-004"
+   }
+  },
+  {
+   "id": "rogers/ro4350b",
+   "manufacturer": "Rogers",
+   "name": "RO4350B",
+   "kind": "ceramic_filled",
+   "family": "RO4000",
+   "resin": "Hydrocarbon",
+   "filler": "Ceramic",
+   "reinforcement": "Woven glass",
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "td_c": 390,
+   "dk": [
+    {
+     "freq_ghz": 10.0,
+     "value": 3.48,
+     "method": "IPC-TM-650 2.5.5.5 clamped stripline (process), 23 C",
+     "resin_content_pct": null,
+     "tolerance": 0.05
+    },
+    {
+     "freq_ghz": null,
+     "value": 3.66,
+     "method": "Differential phase length method (design), 8-40 GHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10.0,
+     "value": 0.0037,
+     "method": "IPC-TM-650 2.5.5.5, 23 C",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 2.5,
+     "value": 0.0031,
+     "method": "IPC-TM-650 2.5.5.5, 23 C",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "tcdk_ppm_per_c": 50,
+   "volume_resistivity_ohm_cm": 1.2e+16,
+   "surface_resistivity_ohm": 5700000000000000.0,
+   "dielectric_strength_kv_mm": 31.2,
+   "youngs_modulus_gpa": {
+    "lengthwise": 16.767,
+    "crosswise": 14.153,
+    "value": null
+   },
+   "tensile_strength_mpa": {
+    "lengthwise": 203,
+    "crosswise": 130,
+    "value": null
+   },
+   "flexural_strength_mpa": {
+    "lengthwise": null,
+    "crosswise": null,
+    "value": 255
+   },
+   "cte_x_ppm": 10,
+   "cte_y_ppm": 12,
+   "cte_z_below_tg_ppm": 32,
+   "thermal_conductivity_w_mk": 0.69,
+   "water_absorption_pct": 0.06,
+   "density_g_cm3": 1.86,
+   "peel_strength_n_mm": 0.88,
+   "peel_condition": "1 oz EDC foil after solder float",
+   "thicknesses_mm": [
+    0.101,
+    0.168,
+    0.254,
+    0.338,
+    0.422,
+    0.508,
+    0.762,
+    1.524
+   ],
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 17,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": 70,
+     "foil_type": "ED"
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 304.8,
+     "height_mm": 457.2,
+     "label": "12\" x 18\""
+    },
+    {
+     "width_mm": 609.6,
+     "height_mm": 457.2,
+     "label": "24\" x 18\""
+    },
+    {
+     "width_mm": 609.6,
+     "height_mm": 914.4,
+     "label": "24\" x 36\""
+    },
+    {
+     "width_mm": 1219.2,
+     "height_mm": 914.4,
+     "label": "48\" x 36\""
+    }
+   ],
+   "notes": "Tg above 280 C (DSC) is published as a bound and is not stored. Tensile and Young's modulus directions X and Y are stored as lengthwise and crosswise. Dimensional stability <0.5 mm/m after etch. CTE -55 to 288 C directions X, Y, Z (Z stored as below Tg). Thermal conductivity at 80 C. Moisture absorption 0.06 % (48 h immersion, 0.060 in sample, 50 C). Dielectric strength at 0.51 mm. LoPro foil adds 0.018 mm of dielectric thickness and gives a Dk of about 2.4 in double-sided boards. The typical Dk does not apply to 0.004 in laminates (specification 3.33 +/- 0.05). RO4350B LoPro laminates do not share the UL designation of the standard laminate. Tensile modulus 16767 and 14153 MPa.",
+   "source": {
+    "pdf": "e_rogers_4350b-hf_www.multi-circuit-boards.eu.pdf",
+    "pages": "3-4",
+    "revision": "Revised 1174 041415, PUB 92-004"
+   }
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+{
+ "schema_version": 1,
+ "manufacturer": "MG Chemicals",
+ "materials": [
+  {
+   "id": "mg-chemicals/500-series",
+   "manufacturer": "MG Chemicals",
+   "name": "500 Series",
+   "kind": "laminate",
+   "family": "Copper clad boards",
+   "resin": "Epoxy (DICY cured)",
+   "reinforcement": "E-glass woven",
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4101C/21",
+   "tg_dsc_c": 140,
+   "td_c": 340,
+   "t260_min": 20,
+   "t288_min": 2,
+   "cte_z_below_tg_ppm": 50,
+   "cte_z_above_tg_ppm": 250,
+   "cte_z_50_260_pct": 3.75,
+   "dk": [
+    {
+     "freq_ghz": 1.0,
+     "value": 4.2,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1.0,
+     "value": 0.015,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "water_absorption_pct": 0.25,
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 50000000000000.0,
+   "arc_resistance_s": 240,
+   "flexural_strength_mpa": {
+    "lengthwise": 600,
+    "crosswise": 500,
+    "value": null
+   },
+   "thicknesses_mm": [
+    0.8,
+    1.6
+   ],
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 17,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": null
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 76,
+     "height_mm": 127,
+     "label": "3\" x 5\""
+    },
+    {
+     "width_mm": 101,
+     "height_mm": 152,
+     "label": "4\" x 6\""
+    },
+    {
+     "width_mm": 203,
+     "height_mm": 254,
+     "label": "8\" x 10\""
+    },
+    {
+     "width_mm": 304,
+     "height_mm": 304,
+     "label": "12\" x 12\""
+    },
+    {
+     "width_mm": 152,
+     "height_mm": 228,
+     "label": "6\" x 9\""
+    }
+   ],
+   "notes": "Single and double sided boards of 1/16 in (1.6 mm) and 1/32 in (0.8 mm) with 1 oz or 1/2 oz copper. Maximum operating temperature 130 C. Thermal stress 300 s at 288 C. Resistivities after moisture resistance. Dielectric strength 1200-1400 V/mil; dielectric breakdown 60 kV; CTI grade 3 (175-250 V); peel strength 10-12 lb/in as received and 9-12 lb/in after thermal stress (ranges, not stored). Flexural strength: warp 600 MPa (lengthwise), fill 500 MPa (crosswise). UL file E214381.",
+   "source": {
+    "pdf": "tds-500-series.pdf",
+    "pages": "1-2",
+    "revision": "Ver. 3.0"
+   }
+  },
+  {
+   "id": "mg-chemicals/600-series",
+   "manufacturer": "MG Chemicals",
+   "name": "600 Series",
+   "kind": "laminate",
+   "family": "Positive presensitized copper clad boards",
+   "resin": "Epoxy",
+   "reinforcement": "E-glass woven",
+   "ul94": "V-0",
+   "td_c": 310,
+   "thicknesses_mm": [
+    0.8,
+    1.6
+   ],
+   "copper": [
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": null
+    }
+   ],
+   "notes": "Positive presensitized FR4 boards, single and double sided, 1/16 in (1.60 mm) and 1/32 in (0.80 mm), 1 oz copper; UL file E98983. The typical values are ranges and are not stored: Tg 130-145 C (IPC-TM-650 2.4.25), CTE z 50-70 ppm/C below and 250-350 ppm/C above Tg, moisture absorption 0.05-0.3 %, peel strength 10-14 lb/in, Dk 4.2-4.7 at 1 MHz and 3.8-4.2 at 1 GHz, Df 0.015-0.020 at 1 MHz and 0.012-0.014 at 1 GHz, dielectric breakdown above 60 kV, arc resistance above 120 s. Values tested with 0.020-0.062 in samples. Decomposition 310 C at 5 % loss.",
+   "source": {
+    "pdf": "tds-600-series.pdf",
+    "pages": "1-3",
+    "revision": "Ver. 1.02"
+   }
+  }
+ ]
+}

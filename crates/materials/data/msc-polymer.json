@@ -1,0 +1,92 @@
+{
+ "schema_version": 1,
+ "manufacturer": "MSC Polymer",
+ "materials": [
+  {
+   "id": "msc-polymer/polytherm-tc-lam-2-0",
+   "manufacturer": "MSC Polymer",
+   "name": "POLYTHERM TC-Lam 2.0",
+   "kind": "metal_core",
+   "family": "POLYTHERM",
+   "resin": "Aluminium base plate with special dielectric",
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "tg_dsc_c": 100,
+   "thermal_conductivity_w_mk": 2.0,
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 6.5,
+     "method": "TM 650-2.5.5.1",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "water_absorption_pct": 0.03,
+   "volume_resistivity_ohm_cm": 10000000000000.0,
+   "surface_resistivity_ohm": 10000000000000.0,
+   "peel_strength_n_mm": 1.8,
+   "peel_condition": "1 oz copper, 288 C, 10 s (specification 1.05 N/mm)",
+   "copper": [
+    {
+     "weight_oz": null,
+     "thickness_um": 18,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": null,
+     "thickness_um": 35,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": null,
+     "thickness_um": 70,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": null,
+     "thickness_um": 105,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": null,
+     "thickness_um": 140,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": null,
+     "thickness_um": 210,
+     "foil_type": "ED"
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 480,
+     "height_mm": 580,
+     "label": null
+    },
+    {
+     "width_mm": 480,
+     "height_mm": 600,
+     "label": null
+    },
+    {
+     "width_mm": 460,
+     "height_mm": 610,
+     "label": null
+    },
+    {
+     "width_mm": 530,
+     "height_mm": 630,
+     "label": null
+    }
+   ],
+   "notes": "Typical values for 1500 um aluminium, 100 um dielectric and 35 um copper. Aluminium 500, 1000, 1500, 2000 or 3000 um (alloy 5052 H34), dielectric 75, 100, 125, 150 or 200 um; protective film HT up to 280 C. Thermal stress 120 s at 288 C without delamination; thermal resistance of the dielectric 0.50 K/W; dielectric strength 5 kV or more; CTI class PLC 0; dimension tolerance 5 mm, thickness tolerance IPC-4101B grade B/L, bow and twist at most 0.5 %.",
+   "source": {
+    "pdf": "msc_polytherm_tc-lam-2.0_www.multi-circuit-boards.eu.pdf",
+    "pages": "1",
+    "revision": "21.10.2015(2)"
+   }
+  }
+ ]
+}
