@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Isola",
+  "materials": [
+    {
+      "id": "isola/tachyon-100g",
+      "manufacturer": "Isola",
+      "name": "Tachyon 100G",
+      "kind": "laminate",
+      "family": "Tachyon",
+      "source": {
+        "pdf": "tachyon-100g-laminate-and-prepreg.pdf",
+        "pages": "1-2",
+        "revision": "Revision H"
+      },
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4103/17",
+      "tg_dsc_c": 215,
+      "tg_dma_c": 230,
+      "tg_tma_c": 210,
+      "td_c": 360,
+      "cte_z_below_tg_ppm": 45,
+      "cte_z_above_tg_ppm": 250,
+      "cte_z_50_260_pct": 2.5,
+      "cte_x_ppm": 15,
+      "cte_y_ppm": 15,
+      "thermal_conductivity_w_mk": 0.42,
+      "dk": [
+        {
+          "freq_ghz": 2.0,
+          "value": 3.04,
+          "method": "IPC-TM-650 2.5.5.5"
+        },
+        {
+          "freq_ghz": 5.0,
+          "value": 3.02,
+          "method": "IPC-TM-650 2.5.5.5"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.02,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0021,
+          "method": "Bereskin stripline"
+        }
+      ],
+      "volume_resistivity_ohm_cm": 13300000000000.0,
+      "surface_resistivity_ohm": 133000000000.0,
+      "dielectric_strength_kv_mm": 60,
+      "arc_resistance_s": 125,
+      "peel_strength_n_mm": 0.79,
+      "peel_condition": "Low profile and very low profile copper foil (4.5 lb/in)",
+      "flexural_strength_mpa": {
+        "lengthwise": 303,
+        "crosswise": 283
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 207,
+        "crosswise": 172
+      },
+      "youngs_modulus_gpa": {
+        "lengthwise": 17.59,
+        "crosswise": 16.66
+      },
+      "water_absorption_pct": 0.1,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.51,
+        "steps_note": "2 to 20 mil laminate"
+      },
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": 70
+        }
+      ],
+      "notes": "Ultra low loss laminate and prepreg for data rates of 100 Gb/s and beyond, with spread glass and ultra smooth HVLP copper (HVLP3 / VLP1 1.1 um Rz JIS, HVLP / VLP2 2.5 um Rz JIS, embedded resistor foil also offered). IPC-4101/102 and IPC-4103/17; UL file E41625. Time to delamination by TMA with the copper removed: T260 above 60 min, T288 above 60 min, T300 above 20 min; 6 cycles at 260 C reflow and 6 at 288 C solder float. The Dk at 2, 5 and 10 GHz is 3.04, 3.02 and 3.02; the Df table of the sheet keeps only 0.0021 (the headline value, taken as the 10 GHz figure). Peel strength 4.5 lb/in (0.79 N/mm) and 5.5 lb/in (0.96 N/mm) after thermal stress. Dielectric breakdown 60 kV; electric strength 60 kV/mm (1500 V/mil); comparative tracking index class 3 (175-249 V); relative thermal index 130 C; Taylor modulus 2264 and 2197 ksi; Poisson ratio 0.165 and 0.156; resistivities 1.33e7 M-ohm cm and 1.33e5 M-ohm converted. Tg by DSC, DMA and TMA 215, 230 and 210 C."
+    },
+    {
+      "id": "isola/terragreen-400ge",
+      "manufacturer": "Isola",
+      "name": "TerraGreen 400GE",
+      "kind": "laminate",
+      "family": "TerraGreen",
+      "source": {
+        "pdf": "terragreen-400ge.pdf",
+        "pages": "1-2",
+        "revision": "Revision A"
+      },
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/134",
+      "tg_dsc_c": 200,
+      "tg_dma_c": 215,
+      "tg_tma_c": 180,
+      "cte_z_below_tg_ppm": 37,
+      "cte_z_above_tg_ppm": 170,
+      "cte_z_50_260_pct": 1.8,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 13,
+      "thermal_conductivity_w_mk": 0.54,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.29,
+          "method": "IPC-TM-650 2.5.5.5"
+        },
+        {
+          "freq_ghz": 20.0,
+          "value": 3.25,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0026,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "volume_resistivity_ohm_cm": 200000000000000.0,
+      "surface_resistivity_ohm": 20000000000000.0,
+      "dielectric_strength_kv_mm": 67,
+      "arc_resistance_s": 180,
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "Low profile and very low profile copper foil (4.1 lb/in)",
+      "flexural_strength_mpa": {
+        "lengthwise": 393,
+        "crosswise": 338
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 220,
+        "crosswise": 193
+      },
+      "youngs_modulus_gpa": {
+        "lengthwise": 14.5,
+        "crosswise": 13.0
+      },
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.25,
+        "steps_note": "2 to 10 mil laminate"
+      },
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": 70
+        }
+      ],
+      "notes": "Halogen free, ultra low loss laminate and prepreg, the lowest cost member of the TerraGreen 400G family (E-glass, mechanically spread glass; HVLP3 / VLP1 1.1 um Rz, HVLP / VLP2 2.5 um Rz and advanced RTF 2.5 um Rz copper). IPC-4101/134; UL file E41625; FR-4 process compatible, sequential lamination capable, CAF resistant. Td by TGA above 380 C and moisture absorption below 0.1 % (bounds); time to delamination by TMA with the copper removed: T288 and T300 above 60 min; 6 cycles at 260 C reflow and 6 at 288 C solder float. Dk 3.29 at 10 GHz and 3.25 at 20 GHz; the Df table keeps only 0.0026 (10 GHz). Dielectric breakdown 70 kV; electric strength 67 kV/mm (1700 V/mil); comparative tracking index class 2 (250-499 V); relative thermal index 140 C; flexural modulus 12.1 and 11.7 GPa (lengthwise, crosswise); resistivities 2.0e8 M-ohm cm and 2.0e7 M-ohm converted."
+    }
+  ]
+}

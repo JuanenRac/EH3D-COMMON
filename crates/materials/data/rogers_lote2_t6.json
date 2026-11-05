@@ -3438,6 +3438,156 @@
           "pages": "1"
         }
       ]
+    },
+    {
+      "id": "rogers/speedwave-300p",
+      "manufacturer": "Rogers",
+      "name": "SpeedWave 300P",
+      "kind": "prepreg",
+      "family": "SpeedWave",
+      "source": {
+        "pdf": "speedwave-300p-data-sheet.pdf",
+        "pages": "1-3"
+      },
+      "ipc_slash_sheet": "IPC-4101E/102",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "td_c": 390,
+      "tg_dma_c": 220,
+      "tg_tma_c": 170,
+      "cte_z_below_tg_ppm": 35,
+      "cte_z_above_tg_ppm": 240,
+      "cte_z_50_260_pct": 2.5,
+      "cte_x_ppm": 15,
+      "cte_y_ppm": 15,
+      "thermal_conductivity_w_mk": 0.48,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.16,
+          "method": "IPC-TM-650 2.5.5.5, 23 C, 50 % RH (1078, resin content 64 %)",
+          "resin_content_pct": 64
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0021,
+          "method": "IPC-TM-650 2.5.5.5, 23 C, 50 % RH (1078, resin content 64 %)",
+          "resin_content_pct": 64
+        }
+      ],
+      "dielectric_strength_kv_mm": 40.0,
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "After thermal stress, 10 s at 288 C, 35 um foil (4.0 lb/in)",
+      "water_absorption_pct": 0.12,
+      "thicknesses_mm": [
+        0.051,
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.127,
+        0.14
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 609.6,
+          "height_mm": 457.2,
+          "label": "24\" x 18\""
+        }
+      ],
+      "prepreg": [
+        {
+          "style": "1035",
+          "resin_content_pct": 67,
+          "pressed_thickness_um": 51,
+          "dk": 3.12,
+          "df": 0.002,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1035",
+          "resin_content_pct": 72,
+          "pressed_thickness_um": 64,
+          "dk": 3.05,
+          "df": 0.002,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "106",
+          "resin_content_pct": 76,
+          "pressed_thickness_um": 64,
+          "dk": 3.0,
+          "df": 0.0019,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 64,
+          "pressed_thickness_um": 76,
+          "dk": 3.16,
+          "df": 0.0021,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1035",
+          "resin_content_pct": 76,
+          "pressed_thickness_um": 76,
+          "dk": 3.0,
+          "df": 0.0019,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 69,
+          "pressed_thickness_um": 89,
+          "dk": 3.09,
+          "df": 0.002,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1080",
+          "resin_content_pct": 69,
+          "pressed_thickness_um": 89,
+          "dk": 3.09,
+          "df": 0.002,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "2113",
+          "resin_content_pct": 57,
+          "pressed_thickness_um": 102,
+          "dk": 3.26,
+          "df": 0.0022,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1080",
+          "resin_content_pct": 72,
+          "pressed_thickness_um": 102,
+          "dk": 3.05,
+          "df": 0.002,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "2116",
+          "resin_content_pct": 56,
+          "pressed_thickness_um": 127,
+          "dk": 3.27,
+          "df": 0.0022,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "2116",
+          "resin_content_pct": 59,
+          "pressed_thickness_um": 140,
+          "dk": 3.23,
+          "df": 0.0021,
+          "test_freq_ghz": 10.0
+        }
+      ],
+      "notes": "Low Dk glass reinforced ultra low loss resin prepreg that bonds Rogers laminates such as RO1200, CLTE-MW and the RO4000 series; spread and open weave glass styles, excellent fill and flow around heavy copper, CAF resistant, compatible with FR-4 fabrication and sequential lamination. Dk 3.0 to 3.3 and Df 0.0019 to 0.0022 at 10 GHz depending on the construction; the table of the sheet also gives Dk and Df at 1, 3, 5, 15 and 20 GHz for each construction (the 10 GHz value of each is stored in its prepreg row). Properties measured on the 2116 construction with resin content 56 %, except the Dk and Df of the headline row. Volume resistivity 1.0e9 M-ohm cm and dielectric strength 1016 V/mil; UL file E102763. The surface resistivity exponent cannot be read and is not loaded."
     }
   ]
 }
