@@ -1,0 +1,1816 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Panasonic",
+  "materials": [
+    {
+      "id": "panasonic/megtron-6-r-5775",
+      "manufacturer": "Panasonic",
+      "name": "MEGTRON 6 R-5775",
+      "kind": "laminate",
+      "family": "MEGTRON 6",
+      "ul94": "V-0",
+      "tg_dsc_c": 185,
+      "tg_dma_c": 210,
+      "td_c": 410,
+      "t288_min": 120,
+      "cte_z_below_tg_ppm": 45,
+      "cte_z_above_tg_ppm": 260,
+      "dk": [
+        {
+          "freq_ghz": 1,
+          "value": 3.71,
+          "method": "IPC-TM-650 2.5.5.9"
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.61,
+          "method": "IPC-TM-650 2.5.5.5"
+        },
+        {
+          "freq_ghz": 12,
+          "value": 3.6,
+          "method": "balanced-type circular disk resonator"
+        },
+        {
+          "freq_ghz": 13,
+          "value": 3.62,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1,
+          "value": 0.002,
+          "method": "IPC-TM-650 2.5.5.9"
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.004,
+          "method": "IPC-TM-650 2.5.5.5"
+        },
+        {
+          "freq_ghz": 12,
+          "value": 0.004,
+          "method": "balanced-type circular disk resonator"
+        },
+        {
+          "freq_ghz": 13,
+          "value": 0.0046,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "water_absorption_pct": 0.14,
+      "volume_resistivity_ohm_cm": 1000000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "peel_strength_n_mm": 0.8,
+      "peel_condition": "1 oz (35 um) H-VLP copper, as received",
+      "thicknesses_mm": [
+        0.05,
+        0.065,
+        0.075,
+        0.09,
+        0.1,
+        0.125,
+        0.127,
+        0.13,
+        0.146,
+        0.15,
+        0.178,
+        0.2,
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.555,
+        0.625,
+        0.74,
+        0.75,
+        0.925
+      ],
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "HVLP"
+        }
+      ],
+      "processing": {
+        "lamination": {
+          "max_temp_c": 195,
+          "pressure_kpa": null,
+          "time_at_temp_min": 120,
+          "heat_rate_c_min": null,
+          "notes": "Keep the product above 185 C for more than 75 min; 195 C for 120 min is preferred. Press pressure goes up between 90 and 110 C of material temperature at the platen side: 3.0 MPa when the rate of rise is 4.0 C/min, 3.5 MPa at 3.0 C/min and 4.0 MPa at 2.0 C/min (guide values, optimised per circuit pattern). Vacuum stops 30 min after the start (at 90-130 C of material temperature). Cushion (kraft paper) needed. A DSC Tg above 180 C is recommended for the boards."
+        },
+        "drilling": {
+          "speed_surface_m_min": 150,
+          "chip_load_um": 45,
+          "retract_notes": "Maximum of the table of the guide (velocity 100-150 m/min; chip load up to 45 um per rev for 0.90 mm bits, spindle speed adjusted to reach the velocity; 700-1000 hits for bits up to 0.45 mm and 1,400-2,000 above). Lubricated entry sheet and high helix bits recommended; peck drilling for thin bits."
+        },
+        "bake_note": "Dry finished innerlayers with a racked bake of 20-30 min at 105 C."
+      },
+      "notes": "Laminate R-5775 in its normal glass cloth versions (K and G; the S and R types carry buried resistor foil); prepreg R-5670. Dk and Df at 1 and 10 GHz are those of the 0.75 mm sample (core type 30, 2116 glass, 54 % resin); the values at 12 GHz (0.004 Df) and 13 GHz (Dk 3.62, Df 0.0046) come from the short sheets of the same material. CTE x and y below Tg 14-16 ppm/C (a range, so the fields are empty); T288 above 120 min with and without copper; volume resistivity 1e9 MOhm cm and surface resistivity 1e8 MOhm (C-96/35/90) converted to ohm. Thickness list is the union of the core types of the K and G tables (the K table stops at 0.75 mm); each core type also lists its glass style, plies and resin content in the sheet. The thicknesses are the actual core thicknesses without copper.",
+      "source": {
+        "pdf": "ipcdatasheet_R-5775.pdf",
+        "pages": "1-4"
+      },
+      "sources": [
+        {
+          "pdf": "ast-ind-393576.pdf"
+        },
+        {
+          "pdf": "e_panasonic_megtron6_www.multi-circuit-boards.eu.pdf"
+        },
+        {
+          "pdf": "Panasonic-MEGTRON6-Laminate-R-5775-Prepreg-R-5670-Process-Guidelines.pdf"
+        }
+      ]
+    },
+    {
+      "id": "panasonic/megtron-6-r-5775-n",
+      "manufacturer": "Panasonic",
+      "name": "MEGTRON 6 R-5775(N)",
+      "kind": "laminate",
+      "family": "MEGTRON 6",
+      "ul94": "V-0",
+      "tg_dsc_c": 185,
+      "tg_dma_c": 210,
+      "td_c": 410,
+      "t288_min": 120,
+      "cte_z_below_tg_ppm": 45,
+      "cte_z_above_tg_ppm": 260,
+      "dk": [
+        {
+          "freq_ghz": 1,
+          "value": 3.4,
+          "method": "IPC-TM-650 2.5.5.9"
+        },
+        {
+          "freq_ghz": 12,
+          "value": 3.35,
+          "method": "balanced-type circular disk resonator"
+        },
+        {
+          "freq_ghz": 13,
+          "value": 3.34,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1,
+          "value": 0.002,
+          "method": "IPC-TM-650 2.5.5.9"
+        },
+        {
+          "freq_ghz": 12,
+          "value": 0.004,
+          "method": "balanced-type circular disk resonator"
+        },
+        {
+          "freq_ghz": 13,
+          "value": 0.0037,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "water_absorption_pct": 0.14,
+      "volume_resistivity_ohm_cm": 1000000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "peel_strength_n_mm": 0.8,
+      "peel_condition": "1 oz (35 um) H-VLP copper, as received",
+      "thicknesses_mm": [
+        0.05,
+        0.065,
+        0.075,
+        0.09,
+        0.1,
+        0.125,
+        0.127,
+        0.146,
+        0.178,
+        0.2,
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.625,
+        0.75
+      ],
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "HVLP"
+        }
+      ],
+      "processing": {
+        "lamination": {
+          "max_temp_c": 195,
+          "pressure_kpa": null,
+          "time_at_temp_min": 120,
+          "heat_rate_c_min": null,
+          "notes": "Keep the product above 185 C for more than 75 min; 195 C for 120 min is preferred. Press pressure goes up between 90 and 110 C of material temperature at the platen side: 3.0 MPa when the rate of rise is 4.0 C/min, 3.5 MPa at 3.0 C/min and 4.0 MPa at 2.0 C/min (guide values, optimised per circuit pattern). Vacuum stops 30 min after the start (at 90-130 C of material temperature). Cushion (kraft paper) needed. A DSC Tg above 180 C is recommended for the boards."
+        },
+        "drilling": {
+          "speed_surface_m_min": 150,
+          "chip_load_um": 45,
+          "retract_notes": "Maximum of the table of the guide (velocity 100-150 m/min; chip load up to 45 um per rev for 0.90 mm bits, spindle speed adjusted to reach the velocity; 700-1000 hits for bits up to 0.45 mm and 1,400-2,000 above). Lubricated entry sheet and high helix bits recommended; peck drilling for thin bits."
+        },
+        "bake_note": "Dry finished innerlayers with a racked bake of 20-30 min at 105 C."
+      },
+      "notes": "Low Dk glass cloth version of Megtron 6 (laminate R-5775(N), prepreg R-5670(N)); Dk at 12 GHz is 3.35 on the sheet of the material and 3.4 on the short sheet that lists the (N) and the normal types together; the 13 GHz values are from the short sheet. Same thermal and mechanical figures as the normal cloth; the process guide is the one of the normal type. The thicknesses are the actual core thicknesses without copper.",
+      "source": {
+        "pdf": "ipcdatasheet_R-5775(N).pdf",
+        "pages": "1-3"
+      },
+      "sources": [
+        {
+          "pdf": "ast-ind-393576.pdf"
+        },
+        {
+          "pdf": "e_panasonic_megtron6_www.multi-circuit-boards.eu.pdf"
+        },
+        {
+          "pdf": "Panasonic-MEGTRON6-Laminate-R-5775N-Prepreg-R-5670N.pdf"
+        }
+      ]
+    },
+    {
+      "id": "panasonic/megtron-6-r-5670",
+      "manufacturer": "Panasonic",
+      "name": "MEGTRON 6 R-5670",
+      "kind": "prepreg",
+      "family": "MEGTRON 6",
+      "prepreg": [
+        {
+          "style": "1027",
+          "resin_content_pct": 75,
+          "pressed_thickness_um": 49,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.19,
+          "df": 0.004,
+          "test_freq_ghz": 10
+        },
+        {
+          "style": "1035",
+          "resin_content_pct": 70,
+          "pressed_thickness_um": 60,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.23,
+          "df": 0.004,
+          "test_freq_ghz": 10
+        },
+        {
+          "style": "1035",
+          "resin_content_pct": 73,
+          "pressed_thickness_um": 68,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.2,
+          "df": 0.004,
+          "test_freq_ghz": 10
+        },
+        {
+          "style": "1035",
+          "resin_content_pct": 75,
+          "pressed_thickness_um": 74,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.19,
+          "df": 0.004,
+          "test_freq_ghz": 10
+        },
+        {
+          "style": "1080",
+          "resin_content_pct": 64,
+          "pressed_thickness_um": 76,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.38,
+          "df": 0.004,
+          "test_freq_ghz": 10
+        },
+        {
+          "style": "1080",
+          "resin_content_pct": 68,
+          "pressed_thickness_um": 87,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.32,
+          "df": 0.004,
+          "test_freq_ghz": 10
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 64,
+          "pressed_thickness_um": 77,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.38,
+          "df": 0.004,
+          "test_freq_ghz": 10
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 68,
+          "pressed_thickness_um": 89,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.32,
+          "df": 0.004,
+          "test_freq_ghz": 10
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 72,
+          "pressed_thickness_um": 104,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.22,
+          "df": 0.004,
+          "test_freq_ghz": 10
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 75,
+          "pressed_thickness_um": 118,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.19,
+          "df": 0.004,
+          "test_freq_ghz": 10
+        },
+        {
+          "style": "3313",
+          "resin_content_pct": 54,
+          "pressed_thickness_um": 98,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.61,
+          "df": 0.004,
+          "test_freq_ghz": 10
+        },
+        {
+          "style": "3313",
+          "resin_content_pct": 57,
+          "pressed_thickness_um": 106,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.55,
+          "df": 0.004,
+          "test_freq_ghz": 10
+        },
+        {
+          "style": "2116",
+          "resin_content_pct": 54,
+          "pressed_thickness_um": 125,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.61,
+          "df": 0.004,
+          "test_freq_ghz": 10
+        },
+        {
+          "style": "2116",
+          "resin_content_pct": 56,
+          "pressed_thickness_um": 132,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.57,
+          "df": 0.004,
+          "test_freq_ghz": 10
+        }
+      ],
+      "processing": {
+        "lamination": {
+          "max_temp_c": 195,
+          "pressure_kpa": null,
+          "time_at_temp_min": 120,
+          "heat_rate_c_min": null,
+          "notes": "Keep the product above 185 C for more than 75 min; 195 C for 120 min is preferred. Press pressure goes up between 90 and 110 C of material temperature at the platen side: 3.0 MPa when the rate of rise is 4.0 C/min, 3.5 MPa at 3.0 C/min and 4.0 MPa at 2.0 C/min (guide values, optimised per circuit pattern). Vacuum stops 30 min after the start (at 90-130 C of material temperature). Cushion (kraft paper) needed. A DSC Tg above 180 C is recommended for the boards."
+        },
+        "drilling": {
+          "speed_surface_m_min": 150,
+          "chip_load_um": 45,
+          "retract_notes": "Maximum of the table of the guide (velocity 100-150 m/min; chip load up to 45 um per rev for 0.90 mm bits, spindle speed adjusted to reach the velocity; 700-1000 hits for bits up to 0.45 mm and 1,400-2,000 above). Lubricated entry sheet and high helix bits recommended; peck drilling for thin bits."
+        },
+        "bake_note": "Dry finished innerlayers with a racked bake of 20-30 min at 105 C."
+      },
+      "notes": "Prepreg R-5670 in the K type (normal glass cloth); the G type has more styles in its own table of the same sheet (not transcribed). Each style row gives resin content and typical thickness; Dk and Df are those at 10 GHz (the sheet also lists 1, 2, 4, 6 and 8 GHz: Dk 3.28-3.71 at 1 GHz, Df 0.002 at 1 and 2 GHz, 0.003 at 4 and 6 GHz and 0.004 at 8 and 10 GHz). Prepreg storage in the guide: flat, at 23 C or less and 50 % RH or less, at 5 C for extended storage, not more than 8 h cumulatively in open air.",
+      "source": {
+        "pdf": "ipcdatasheet_R-5775.pdf",
+        "pages": "3,5"
+      },
+      "sources": [
+        {
+          "pdf": "Panasonic-MEGTRON6-Laminate-R-5775-Prepreg-R-5670-Process-Guidelines.pdf"
+        }
+      ]
+    },
+    {
+      "id": "panasonic/megtron-6-r-5670-n",
+      "manufacturer": "Panasonic",
+      "name": "MEGTRON 6 R-5670(N)",
+      "kind": "prepreg",
+      "family": "MEGTRON 6",
+      "prepreg": [
+        {
+          "style": "1035",
+          "resin_content_pct": 72,
+          "pressed_thickness_um": 60,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.17,
+          "df": null,
+          "test_freq_ghz": 12
+        },
+        {
+          "style": "1035",
+          "resin_content_pct": 75,
+          "pressed_thickness_um": 68,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.13,
+          "df": null,
+          "test_freq_ghz": 12
+        },
+        {
+          "style": "1035",
+          "resin_content_pct": 77,
+          "pressed_thickness_um": 74,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.1,
+          "df": null,
+          "test_freq_ghz": 12
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 66,
+          "pressed_thickness_um": 77,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.23,
+          "df": null,
+          "test_freq_ghz": 12
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 70,
+          "pressed_thickness_um": 89,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.19,
+          "df": null,
+          "test_freq_ghz": 12
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 74,
+          "pressed_thickness_um": 104,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.14,
+          "df": null,
+          "test_freq_ghz": 12
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 77,
+          "pressed_thickness_um": 118,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.1,
+          "df": null,
+          "test_freq_ghz": 12
+        },
+        {
+          "style": "2013",
+          "resin_content_pct": 56,
+          "pressed_thickness_um": 98,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.35,
+          "df": null,
+          "test_freq_ghz": 12
+        },
+        {
+          "style": "2013",
+          "resin_content_pct": 59,
+          "pressed_thickness_um": 106,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.31,
+          "df": null,
+          "test_freq_ghz": 12
+        },
+        {
+          "style": "2116",
+          "resin_content_pct": 56,
+          "pressed_thickness_um": 125,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.35,
+          "df": null,
+          "test_freq_ghz": 12
+        },
+        {
+          "style": "2116",
+          "resin_content_pct": 58,
+          "pressed_thickness_um": 132,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": 3.32,
+          "df": null,
+          "test_freq_ghz": 12
+        }
+      ],
+      "processing": {
+        "lamination": {
+          "max_temp_c": 195,
+          "pressure_kpa": null,
+          "time_at_temp_min": 120,
+          "heat_rate_c_min": null,
+          "notes": "Keep the product above 185 C for more than 75 min; 195 C for 120 min is preferred. Press pressure goes up between 90 and 110 C of material temperature at the platen side: 3.0 MPa when the rate of rise is 4.0 C/min, 3.5 MPa at 3.0 C/min and 4.0 MPa at 2.0 C/min (guide values, optimised per circuit pattern). Vacuum stops 30 min after the start (at 90-130 C of material temperature). Cushion (kraft paper) needed. A DSC Tg above 180 C is recommended for the boards."
+        },
+        "drilling": {
+          "speed_surface_m_min": 150,
+          "chip_load_um": 45,
+          "retract_notes": "Maximum of the table of the guide (velocity 100-150 m/min; chip load up to 45 um per rev for 0.90 mm bits, spindle speed adjusted to reach the velocity; 700-1000 hits for bits up to 0.45 mm and 1,400-2,000 above). Lubricated entry sheet and high helix bits recommended; peck drilling for thin bits."
+        },
+        "bake_note": "Dry finished innerlayers with a racked bake of 20-30 min at 105 C."
+      },
+      "notes": "Low Dk glass cloth prepreg; Dk of each style at 12 GHz (the sheet also gives 1 GHz and 6 to 50 GHz, e.g. 3.13-3.40 at 1 GHz); the Df table is in the sheet and is not transcribed.",
+      "source": {
+        "pdf": "ipcdatasheet_R-5775(N).pdf",
+        "pages": "4-5"
+      },
+      "sources": [
+        {
+          "pdf": "Panasonic-MEGTRON6-Laminate-R-5775N-Prepreg-R-5670N.pdf"
+        }
+      ]
+    },
+    {
+      "id": "panasonic/megtron-7-r-5785-n",
+      "manufacturer": "Panasonic",
+      "name": "MEGTRON 7 R-5785(N)",
+      "kind": "laminate",
+      "family": "MEGTRON 7",
+      "tg_dsc_c": 200,
+      "t288_min": 120,
+      "cte_z_below_tg_ppm": 42,
+      "cte_z_above_tg_ppm": 280,
+      "dk": [
+        {
+          "freq_ghz": 14,
+          "value": 3.31,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 14,
+          "value": 0.0023,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "peel_strength_n_mm": 0.8,
+      "peel_condition": "1 oz (35 um) H-VLP copper, as received",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "HVLP"
+        }
+      ],
+      "notes": "Ultra low loss material, laminate R-5785(N) (the same figures are printed for R-578Y(N) on the other sheet), prepreg R-5680(N). Low Dk glass cloth. Measured on a 0.75 mm sample; the sheets list no thicknesses, copper weights or sizes.",
+      "source": {
+        "pdf": "ast-ind-389569.pdf"
+      },
+      "sources": [
+        {
+          "pdf": "ast-ind-357561.pdf"
+        }
+      ]
+    },
+    {
+      "id": "panasonic/megtron-7-r-5785-gn",
+      "manufacturer": "Panasonic",
+      "name": "MEGTRON 7 R-5785(GN)",
+      "kind": "laminate",
+      "family": "MEGTRON 7",
+      "tg_dsc_c": 200,
+      "t288_min": 120,
+      "cte_z_below_tg_ppm": 42,
+      "cte_z_above_tg_ppm": 280,
+      "dk": [
+        {
+          "freq_ghz": 14,
+          "value": 3.31,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 14,
+          "value": 0.0023,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "peel_strength_n_mm": 0.8,
+      "peel_condition": "1 oz (35 um) H-VLP2 copper, as received",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "HVLP"
+        }
+      ],
+      "notes": "Ultra low loss material, laminate R-5785(GN) (the same figures are printed for R-578Y(GN) on the other sheet), prepreg R-5680(GN). Low Dk glass cloth. Measured on a 0.75 mm sample; the sheets list no thicknesses, copper weights or sizes.",
+      "source": {
+        "pdf": "ast-ind-389569.pdf"
+      },
+      "sources": [
+        {
+          "pdf": "ast-ind-357561.pdf"
+        }
+      ]
+    },
+    {
+      "id": "panasonic/megtron-7-r-5785-ge",
+      "manufacturer": "Panasonic",
+      "name": "MEGTRON 7 R-5785(GE)",
+      "kind": "laminate",
+      "family": "MEGTRON 7",
+      "tg_dsc_c": 200,
+      "t288_min": 120,
+      "cte_z_below_tg_ppm": 42,
+      "cte_z_above_tg_ppm": 280,
+      "dk": [
+        {
+          "freq_ghz": 13,
+          "value": 3.6,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 13,
+          "value": 0.0034,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "peel_strength_n_mm": 0.8,
+      "peel_condition": "1 oz (35 um) H-VLP2 copper, as received",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "HVLP"
+        }
+      ],
+      "notes": "Ultra low loss material, laminate R-5785(GE) (the same figures are printed for R-578Y(GE) on the other sheet), prepreg R-5680(GE). Normal glass cloth. Measured on a 0.75 mm sample; the sheets list no thicknesses, copper weights or sizes.",
+      "source": {
+        "pdf": "ast-ind-389569.pdf"
+      },
+      "sources": [
+        {
+          "pdf": "ast-ind-357561.pdf"
+        }
+      ]
+    },
+    {
+      "id": "panasonic/megtron-8-r-579y-u",
+      "manufacturer": "Panasonic",
+      "name": "MEGTRON 8 R-579Y(U)",
+      "kind": "laminate",
+      "family": "MEGTRON 8",
+      "tg_dma_c": 220,
+      "t288_min": 120,
+      "cte_z_below_tg_ppm": 50,
+      "cte_z_above_tg_ppm": 270,
+      "dk": [
+        {
+          "freq_ghz": 14,
+          "value": 3.08,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 14,
+          "value": 0.0012,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "1 oz (35 um) H-VLP3 copper",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "HVLP"
+        }
+      ],
+      "notes": "Ultra low loss, highly heat resistant material; laminate R-579Y(U) (printed as R-5795Y(U) on the other sheet), prepreg R-569Y(U). Ultra-low Df glass cloth. Measured on a 0.75 mm sample; the sheets list no thicknesses, copper weights or sizes.",
+      "source": {
+        "pdf": "ast-ind-356898.pdf"
+      },
+      "sources": [
+        {
+          "pdf": "ast-ind-388283.pdf"
+        }
+      ]
+    },
+    {
+      "id": "panasonic/megtron-8-r-579y-n",
+      "manufacturer": "Panasonic",
+      "name": "MEGTRON 8 R-579Y(N)",
+      "kind": "laminate",
+      "family": "MEGTRON 8",
+      "tg_dma_c": 220,
+      "t288_min": 120,
+      "cte_z_below_tg_ppm": 50,
+      "cte_z_above_tg_ppm": 270,
+      "dk": [
+        {
+          "freq_ghz": 14,
+          "value": 3.13,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 14,
+          "value": 0.0016,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "1 oz (35 um) H-VLP3 copper",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "HVLP"
+        }
+      ],
+      "notes": "Ultra low loss, highly heat resistant material; laminate R-579Y(N) (printed as R-5795Y(N) on the other sheet), prepreg R-569Y(N). Low Dk glass cloth. Measured on a 0.75 mm sample; the sheets list no thicknesses, copper weights or sizes.",
+      "source": {
+        "pdf": "ast-ind-356898.pdf"
+      },
+      "sources": [
+        {
+          "pdf": "ast-ind-388283.pdf"
+        }
+      ]
+    },
+    {
+      "id": "panasonic/megtron-8-r-579ys-u",
+      "manufacturer": "Panasonic",
+      "name": "MEGTRON 8 R-579YS(U)",
+      "kind": "laminate",
+      "family": "MEGTRON 8",
+      "tg_dma_c": 220,
+      "t288_min": 120,
+      "cte_z_below_tg_ppm": 35,
+      "cte_z_above_tg_ppm": 240,
+      "dk": [
+        {
+          "freq_ghz": 14,
+          "value": 3.19,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 14,
+          "value": 0.0012,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "1 oz (35 um) H-VLP3 copper",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "HVLP"
+        }
+      ],
+      "notes": "Ultra low loss, highly heat resistant material; laminate R-579YS(U) (printed as R-5795YS(U) on the other sheet), prepreg R-569YS(U). Ultra-low Df glass cloth. Measured on a 0.75 mm sample; the sheets list no thicknesses, copper weights or sizes.",
+      "source": {
+        "pdf": "ast-ind-356898.pdf"
+      },
+      "sources": [
+        {
+          "pdf": "ast-ind-388283.pdf"
+        }
+      ]
+    },
+    {
+      "id": "panasonic/megtron-8-r-579ys-n",
+      "manufacturer": "Panasonic",
+      "name": "MEGTRON 8 R-579YS(N)",
+      "kind": "laminate",
+      "family": "MEGTRON 8",
+      "tg_dma_c": 220,
+      "t288_min": 120,
+      "cte_z_below_tg_ppm": 35,
+      "cte_z_above_tg_ppm": 240,
+      "dk": [
+        {
+          "freq_ghz": 14,
+          "value": 3.22,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 14,
+          "value": 0.0015,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "peel_strength_n_mm": 0.7,
+      "peel_condition": "1 oz (35 um) H-VLP3 copper",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "HVLP"
+        }
+      ],
+      "notes": "Ultra low loss, highly heat resistant material; laminate R-579YS(N) (printed as R-5795YS(N) on the other sheet), prepreg R-569YS(N). Low Dk glass cloth. Measured on a 0.75 mm sample; the sheets list no thicknesses, copper weights or sizes.",
+      "source": {
+        "pdf": "ast-ind-356898.pdf"
+      },
+      "sources": [
+        {
+          "pdf": "ast-ind-388283.pdf"
+        }
+      ]
+    },
+    {
+      "id": "panasonic/megtron-4-r-5725",
+      "manufacturer": "Panasonic",
+      "name": "MEGTRON 4 R-5725",
+      "kind": "laminate",
+      "family": "MEGTRON 4",
+      "tg_dsc_c": 176,
+      "t288_min": 30,
+      "cte_z_below_tg_ppm": 35,
+      "cte_z_above_tg_ppm": 265,
+      "dk": [
+        {
+          "freq_ghz": 13,
+          "value": 3.68,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 13,
+          "value": 0.0074,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "peel_strength_n_mm": 1.2,
+      "peel_condition": "1 oz (35 um) standard copper, as received",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "notes": "Low transmission loss, highly heat resistant multi-layer material; laminate R-5725, prepreg R-5620. Measured on a 0.8 mm sample; the sheet lists no thicknesses, copper weights or sizes.",
+      "source": {
+        "pdf": "ast-ind-392726.pdf"
+      }
+    },
+    {
+      "id": "panasonic/megtron-4-r-5725s",
+      "manufacturer": "Panasonic",
+      "name": "MEGTRON 4 R-5725S",
+      "kind": "laminate",
+      "family": "MEGTRON 4",
+      "tg_dsc_c": 200,
+      "t288_min": 50,
+      "cte_z_below_tg_ppm": 32,
+      "cte_z_above_tg_ppm": 250,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.8,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.007,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "peel_strength_n_mm": 1.4,
+      "peel_condition": "1 oz (35 um) standard copper, as received",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "notes": "Low transmission loss, highly heat resistant multi-layer material; laminate R-5725S, prepreg R-5620S. Measured on a 0.8 mm sample; the sheet lists no thicknesses, copper weights or sizes.",
+      "source": {
+        "pdf": "ast-ind-392726.pdf"
+      }
+    },
+    {
+      "id": "panasonic/megtron-4-r-5735",
+      "manufacturer": "Panasonic",
+      "name": "MEGTRON 4 R-5735",
+      "kind": "laminate",
+      "family": "MEGTRON 4",
+      "tg_dsc_c": 195,
+      "t288_min": 35,
+      "cte_z_below_tg_ppm": 31,
+      "cte_z_above_tg_ppm": 240,
+      "dk": [
+        {
+          "freq_ghz": 13,
+          "value": 3.75,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 13,
+          "value": 0.0087,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "peel_strength_n_mm": 1.3,
+      "peel_condition": "1 oz (35 um) standard copper, as received",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "notes": "Low transmission loss, highly heat resistant multi-layer material; laminate R-5735, prepreg R-5630. Measured on a 0.8 mm sample; the sheet lists no thicknesses, copper weights or sizes.",
+      "source": {
+        "pdf": "ast-ind-392726.pdf"
+      }
+    },
+    {
+      "id": "panasonic/megtron-2-r-1577",
+      "manufacturer": "Panasonic",
+      "name": "MEGTRON 2 R-1577",
+      "kind": "laminate",
+      "family": "MEGTRON 2",
+      "halogen_free": true,
+      "lead_free_compatible": true,
+      "tg_dsc_c": 170,
+      "t288_min": 25,
+      "cte_z_below_tg_ppm": 34,
+      "cte_z_above_tg_ppm": 200,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.013,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "peel_strength_n_mm": 1.3,
+      "peel_condition": "1 oz (35 um) standard copper, as received",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "notes": "Halogen-free low transmission loss, highly heat resistant multi-layer material, for lead-free soldering; laminate R-1577, prepreg R-1570. Measured on a 0.8 mm sample; the sheet lists no thicknesses, copper weights or sizes.",
+      "source": {
+        "pdf": "ast-ind-392734.pdf"
+      }
+    },
+    {
+      "id": "panasonic/megtron-6-hf-r-5375-n",
+      "manufacturer": "Panasonic",
+      "name": "MEGTRON 6 HF R-5375(N)",
+      "kind": "laminate",
+      "family": "MEGTRON 6 HF",
+      "halogen_free": true,
+      "tg_dma_c": 250,
+      "t288_min": 120,
+      "cte_z_50_260_pct": 1.7,
+      "dk": [
+        {
+          "freq_ghz": 12,
+          "value": 3.4,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 12,
+          "value": 0.003,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "peel_strength_n_mm": 0.6,
+      "peel_condition": "1 oz (35 um) H-VLP2 copper, as received",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "HVLP"
+        }
+      ],
+      "notes": "Halogen-free ultra low loss multi-layer material (transmission loss between Megtron 6 and Megtron 7); laminate R-5375(N), prepreg R-5370(N); Low Dk glass cloth. T320 with copper above 120 min; Z expansion 50-260 C by TMA 1.7 %. Measured on a 0.75 mm sample; the sheet lists no thicknesses, copper weights or sizes.",
+      "source": {
+        "pdf": "emscatalog_hf-megtron6.pdf"
+      }
+    },
+    {
+      "id": "panasonic/megtron-6-hf-r-5375-e",
+      "manufacturer": "Panasonic",
+      "name": "MEGTRON 6 HF R-5375(E)",
+      "kind": "laminate",
+      "family": "MEGTRON 6 HF",
+      "halogen_free": true,
+      "tg_dma_c": 250,
+      "t288_min": 120,
+      "cte_z_50_260_pct": 1.7,
+      "dk": [
+        {
+          "freq_ghz": 12,
+          "value": 3.7,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 12,
+          "value": 0.004,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "peel_strength_n_mm": 0.6,
+      "peel_condition": "1 oz (35 um) H-VLP2 copper, as received",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "HVLP"
+        }
+      ],
+      "notes": "Halogen-free ultra low loss multi-layer material (transmission loss between Megtron 6 and Megtron 7); laminate R-5375(E), prepreg R-5370(E); E glass cloth. T320 with copper above 120 min; Z expansion 50-260 C by TMA 1.7 %. Measured on a 0.75 mm sample; the sheet lists no thicknesses, copper weights or sizes.",
+      "source": {
+        "pdf": "emscatalog_hf-megtron6.pdf"
+      }
+    },
+    {
+      "id": "panasonic/xpedion-1-r-5515",
+      "manufacturer": "Panasonic",
+      "name": "XPEDION 1 R-5515",
+      "kind": "laminate",
+      "family": "XPEDION 1",
+      "halogen_free": true,
+      "tg_dma_c": 200,
+      "t288_min": 120,
+      "cte_z_below_tg_ppm": 50,
+      "cte_z_above_tg_ppm": 300,
+      "dk": [
+        {
+          "freq_ghz": 14,
+          "value": 3.06,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 14,
+          "value": 0.0021,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "peel_strength_n_mm": 0.6,
+      "peel_condition": "1/2 oz (18 um) H-VLP2 copper",
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "HVLP"
+        }
+      ],
+      "notes": "Halogen-free ultra low transmission loss multi-layer material that reduces the cost of the PCB process; laminate R-5515, prepreg R-5410. Dk and Df on a 0.13 mm sample; CTE and T288 on a 0.5 mm sample; contact the maker for the thickness specification.",
+      "source": {
+        "pdf": "ast-ind-386954.pdf"
+      }
+    },
+    {
+      "id": "panasonic/xpedion-1-r-5515x",
+      "manufacturer": "Panasonic",
+      "name": "XPEDION 1 R-5515X",
+      "kind": "laminate",
+      "family": "XPEDION 1",
+      "halogen_free": true,
+      "tg_dma_c": 200,
+      "t288_min": 120,
+      "cte_z_below_tg_ppm": 50,
+      "cte_z_above_tg_ppm": 300,
+      "dk": [
+        {
+          "freq_ghz": 14,
+          "value": 3.06,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 14,
+          "value": 0.0021,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "peel_strength_n_mm": 0.6,
+      "peel_condition": "1/2 oz (18 um) H-VLP2 copper",
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": "HVLP"
+        }
+      ],
+      "notes": "Halogen-free ultra low transmission loss multi-layer material that reduces the cost of the PCB process; laminate R-5515X, prepreg R-5410X. Dk and Df on a 0.13 mm sample; CTE and T288 on a 0.5 mm sample; contact the maker for the thickness specification.",
+      "source": {
+        "pdf": "ast-ind-386956.pdf"
+      }
+    },
+    {
+      "id": "panasonic/xpedion-t1-r-5575",
+      "manufacturer": "Panasonic",
+      "name": "XPEDION T1 R-5575",
+      "kind": "laminate",
+      "family": "XPEDION T1",
+      "halogen_free": true,
+      "tg_dma_c": 245,
+      "t288_min": 120,
+      "cte_z_below_tg_ppm": 20,
+      "cte_z_above_tg_ppm": 155,
+      "thermal_conductivity_w_mk": 0.6,
+      "dk": [
+        {
+          "freq_ghz": 13,
+          "value": 3.6,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 13,
+          "value": 0.0045,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "peel_strength_n_mm": 0.8,
+      "peel_condition": "1 oz (35 um) RT (reverse treated) copper",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "RTF"
+        }
+      ],
+      "notes": "Halogen-free material with thermal conductivity 0.6 W/mK and low transmission loss; laminate R-5575, prepreg R-5470; measured on a 0.5 mm sample. The sheet compares it with another maker's material (not recorded here).",
+      "source": {
+        "pdf": "ast-ind-386958.pdf"
+      }
+    },
+    {
+      "id": "panasonic/xpedion-t1-r-5575x",
+      "manufacturer": "Panasonic",
+      "name": "XPEDION T1 R-5575X",
+      "kind": "laminate",
+      "family": "XPEDION T1",
+      "halogen_free": true,
+      "tg_dma_c": 245,
+      "t288_min": 120,
+      "cte_z_below_tg_ppm": 20,
+      "cte_z_above_tg_ppm": 155,
+      "thermal_conductivity_w_mk": 0.6,
+      "dk": [
+        {
+          "freq_ghz": 13,
+          "value": 3.6,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 13,
+          "value": 0.0045,
+          "method": "balanced-type circular disk resonator"
+        }
+      ],
+      "peel_strength_n_mm": 0.8,
+      "peel_condition": "1 oz (35 um) RT (reverse treated) copper",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": "RTF"
+        }
+      ],
+      "notes": "Halogen-free material with thermal conductivity 0.6 W/mK and low transmission loss; laminate R-5575X, prepreg R-5470X; measured on a 0.5 mm sample. The sheet compares it with another maker's material (not recorded here).",
+      "source": {
+        "pdf": "ast-ind-386960.pdf"
+      }
+    },
+    {
+      "id": "panasonic/hiper-r-1755v",
+      "manufacturer": "Panasonic",
+      "name": "HIPER R-1755V",
+      "kind": "laminate",
+      "family": "HIPER R-1755",
+      "tg_dsc_c": 173,
+      "t288_min": 20,
+      "cte_z_below_tg_ppm": 44,
+      "cte_z_above_tg_ppm": 255,
+      "dk": [
+        {
+          "freq_ghz": 1,
+          "value": 4.4,
+          "method": "IPC-TM-650 2.5.5.9"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1,
+          "value": 0.016,
+          "method": "IPC-TM-650 2.5.5.9"
+        }
+      ],
+      "peel_strength_n_mm": 1.5,
+      "peel_condition": "1 oz (35 um) copper, as received",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "notes": "Highly heat resistant low CTE multi-layer material (high Tg type), good for hybrid boards with Megtron; laminate R-1755V, prepreg R-1650V. Measured on a 0.8 mm sample; the sheet lists no thicknesses, copper weights or sizes.",
+      "source": {
+        "pdf": "ast-ind-379080.pdf"
+      }
+    },
+    {
+      "id": "panasonic/hiper-r-1755d",
+      "manufacturer": "Panasonic",
+      "name": "HIPER R-1755D",
+      "kind": "laminate",
+      "family": "HIPER R-1755",
+      "tg_dsc_c": 163,
+      "td_c": 345,
+      "t288_min": 15,
+      "peel_strength_n_mm": 1.3,
+      "peel_condition": "1 oz (35 um) copper, as received",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "notes": "Highly heat resistant low CTE multi-layer material; laminate R-1755D, prepreg R-1650D. CTE x 10-12 and y 12-14 ppm/C below Tg (ranges); Measured on a 0.8 mm sample; the sheet compares it with a conventional FR-4 (R-1766: Tg 140 C by DSC, Td 315 C, T288 1 min, peel 2.0 N/mm) and lists no Dk, Df, thicknesses, copper weights or sizes.",
+      "source": {
+        "pdf": "ast-ind-393316.pdf"
+      }
+    },
+    {
+      "id": "panasonic/hiper-r-1755m",
+      "manufacturer": "Panasonic",
+      "name": "HIPER R-1755M",
+      "kind": "laminate",
+      "family": "HIPER R-1755",
+      "tg_dsc_c": 153,
+      "td_c": 355,
+      "t288_min": 18,
+      "cte_z_below_tg_ppm": 40,
+      "cte_z_above_tg_ppm": 240,
+      "peel_strength_n_mm": 1.5,
+      "peel_condition": "1 oz (35 um) copper, as received",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "notes": "Highly heat resistant low CTE multi-layer material; laminate R-1755M, prepreg R-1650M. Measured on a 0.8 mm sample; the sheet compares it with a conventional FR-4 (R-1766: Tg 140 C by DSC, Td 315 C, T288 1 min, peel 2.0 N/mm) and lists no Dk, Df, thicknesses, copper weights or sizes.",
+      "source": {
+        "pdf": "ast-ind-393318.pdf"
+      }
+    },
+    {
+      "id": "panasonic/hiper-r-1755e",
+      "manufacturer": "Panasonic",
+      "name": "HIPER R-1755E",
+      "kind": "laminate",
+      "family": "HIPER R-1755",
+      "tg_dsc_c": 133,
+      "td_c": 370,
+      "t288_min": 25,
+      "cte_z_below_tg_ppm": 42,
+      "cte_z_above_tg_ppm": 250,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "1 oz (35 um) copper, as received",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "notes": "Highly heat resistant low CTE multi-layer material; laminate R-1755E, prepreg R-1650E. Measured on a 0.8 mm sample; the sheet compares it with a conventional FR-4 (R-1766: Tg 140 C by DSC, Td 315 C, T288 1 min, peel 2.0 N/mm) and lists no Dk, Df, thicknesses, copper weights or sizes.",
+      "source": {
+        "pdf": "ast-ind-393320.pdf"
+      }
+    },
+    {
+      "id": "panasonic/r-1566",
+      "manufacturer": "Panasonic",
+      "name": "R-1566",
+      "kind": "laminate",
+      "family": "R-1566",
+      "halogen_free": true,
+      "tg_dsc_c": 148,
+      "td_c": 350,
+      "t288_min": 3,
+      "cte_z_below_tg_ppm": 40,
+      "cte_z_above_tg_ppm": 180,
+      "peel_strength_n_mm": 1.8,
+      "peel_condition": "1 oz (35 um) copper, as received",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "notes": "Halogen-free multi-layer material (laminate R-1566, prepreg R-1551); tracking resistance 600 V > CTI >= 400 V (a class, not a value). The W type (UV shielding) has the same figures and the WN type (UV shielding, heat resistance) has Td 355 C and T288 10 min. Measured on a 0.8 mm sample.",
+      "source": {
+        "pdf": "ast-ind-394239.pdf"
+      }
+    },
+    {
+      "id": "panasonic/r-1566s",
+      "manufacturer": "Panasonic",
+      "name": "R-1566S",
+      "kind": "laminate",
+      "family": "R-1566",
+      "halogen_free": true,
+      "tg_dsc_c": 175,
+      "tg_tma_c": 170,
+      "td_c": 355,
+      "t288_min": 10,
+      "cte_z_below_tg_ppm": 40,
+      "cte_z_above_tg_ppm": 180,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "1 oz (35 um) copper, as received",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "notes": "Highly heat resistant halogen-free multi-layer material (laminate R-1566S, prepreg R-1551S; the Japanese sheet names them R-156AS and R-155AS, and the R-156YS/R-155YS pair); the English sheet says no UL certification for this grade. Measured on a 0.8 mm sample.",
+      "source": {
+        "pdf": "ast-ind-393926.pdf"
+      },
+      "sources": [
+        {
+          "pdf": "ast-ind-384474.pdf"
+        }
+      ]
+    },
+    {
+      "id": "panasonic/r-356ad",
+      "manufacturer": "Panasonic",
+      "name": "R-356AD",
+      "kind": "laminate",
+      "family": "R-356",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_dsc_c": 175,
+      "tg_tma_c": 170,
+      "td_c": 355,
+      "t288_min": 10,
+      "cte_z_below_tg_ppm": 40,
+      "cte_z_above_tg_ppm": 180,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "1 oz (35 um) copper, as received",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "notes": "Halogen-free multi-layer material with a CTI of 600 V (a class) and RTI 150 C at 0.8 mm; laminate R-356AD, prepreg R-355AD; PLC 0 (thickness 0.8 mm or less). Measured on a 0.8 mm sample.",
+      "source": {
+        "pdf": "ast-ind-394236.pdf"
+      }
+    },
+    {
+      "id": "panasonic/r-356yd",
+      "manufacturer": "Panasonic",
+      "name": "R-356YD",
+      "kind": "laminate",
+      "family": "R-356",
+      "halogen_free": true,
+      "ul94": "V-1",
+      "tg_dsc_c": 175,
+      "tg_tma_c": 170,
+      "td_c": 355,
+      "t288_min": 10,
+      "cte_z_below_tg_ppm": 40,
+      "cte_z_above_tg_ppm": 180,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "1 oz (35 um) copper, as received",
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "notes": "Halogen-free multi-layer material with a CTI of 600 V (a class) and RTI 150 C at 0.63 mm or more; laminate R-356YD, prepreg R-355YD; PLC 0. Measured on a 0.8 mm sample; the columns of the sheet are shared with R-356AD, so the Tg, Td and T288 values are the ones printed for the pair.",
+      "source": {
+        "pdf": "ast-ind-394236.pdf"
+      }
+    },
+    {
+      "id": "panasonic/r-1766",
+      "manufacturer": "Panasonic",
+      "name": "R-1766",
+      "kind": "laminate",
+      "family": "R-1766",
+      "ul94": "V-0",
+      "tg_dsc_c": 140,
+      "td_c": 315,
+      "t288_min": 1,
+      "cte_z_below_tg_ppm": 65,
+      "cte_z_above_tg_ppm": 270,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.7,
+          "method": "C-96/20/65"
+        },
+        {
+          "freq_ghz": 1,
+          "value": 4.3,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.015,
+          "method": "C-96/20/65"
+        },
+        {
+          "freq_ghz": 1,
+          "value": 0.016,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50"
+        }
+      ],
+      "water_absorption_pct": 0.06,
+      "volume_resistivity_ohm_cm": 5000000000000000.0,
+      "surface_resistivity_ohm": 5000000000000.0,
+      "flexural_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": 490,
+        "value": null
+      },
+      "peel_strength_n_mm": 1.96,
+      "peel_condition": "35 um copper, A; 12 um 1.35, 18 um 1.57, 35 um 1.96, 70 um 2.94 N/mm (the same after the S4 treatment)",
+      "thicknesses_mm": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.8,
+        1.0,
+        1.2,
+        1.6
+      ],
+      "copper": [
+        {
+          "weight_oz": null,
+          "thickness_um": 12,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": 70,
+          "foil_type": null
+        }
+      ],
+      "notes": "Double-sided FR-4.0 glass cloth epoxy core (laminate R-1766, prepreg R-1661) with good second lamination moldability, little resin smear and fast drilling. Thickness tolerance +-0.03 mm (0.1 mm) up to +-0.13 mm (1.6 mm). Dk 4.8 and Df 0.016 at 1 MHz after D-24/23 (4.7 and 0.015 as received); solder float at 260 C 120 s or more; flexural strength crosswise 490 N/mm2; Tg, Td, T288 and CTE are the figures of the 'conventional FR-4 R-1766' column of the HIPER sheets; Dk at 1 GHz and flammability by IPC-TM-650 2.5.5.9 and UL 94 on 1.6 mm samples. Volume resistivity 5e7 MOhm m and surface resistivity 5e6 MOhm (C-96/20/65) converted to ohm cm and ohm.",
+      "source": {
+        "pdf": "ast-ind-276517.pdf",
+        "pages": "1"
+      },
+      "sources": [
+        {
+          "pdf": "ast-ind-393316.pdf"
+        }
+      ]
+    },
+    {
+      "id": "panasonic/r-1661",
+      "manufacturer": "Panasonic",
+      "name": "R-1661",
+      "kind": "prepreg",
+      "family": "R-1766",
+      "prepreg": [
+        {
+          "style": "7628",
+          "resin_content_pct": 42,
+          "pressed_thickness_um": 200,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": null,
+          "df": null,
+          "test_freq_ghz": null
+        },
+        {
+          "style": "7628",
+          "resin_content_pct": 45,
+          "pressed_thickness_um": 200,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": null,
+          "df": null,
+          "test_freq_ghz": null
+        },
+        {
+          "style": "7628",
+          "resin_content_pct": 48,
+          "pressed_thickness_um": 200,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": null,
+          "df": null,
+          "test_freq_ghz": null
+        },
+        {
+          "style": "7628",
+          "resin_content_pct": 51,
+          "pressed_thickness_um": 200,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": null,
+          "df": null,
+          "test_freq_ghz": null
+        },
+        {
+          "style": "1501",
+          "resin_content_pct": 42,
+          "pressed_thickness_um": 150,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": null,
+          "df": null,
+          "test_freq_ghz": null
+        },
+        {
+          "style": "1501",
+          "resin_content_pct": 44,
+          "pressed_thickness_um": 150,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": null,
+          "df": null,
+          "test_freq_ghz": null
+        },
+        {
+          "style": "1501",
+          "resin_content_pct": 48,
+          "pressed_thickness_um": 150,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": null,
+          "df": null,
+          "test_freq_ghz": null
+        },
+        {
+          "style": "1501",
+          "resin_content_pct": 52,
+          "pressed_thickness_um": 150,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": null,
+          "df": null,
+          "test_freq_ghz": null
+        },
+        {
+          "style": "2116",
+          "resin_content_pct": 42,
+          "pressed_thickness_um": 100,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": null,
+          "df": null,
+          "test_freq_ghz": null
+        },
+        {
+          "style": "2116",
+          "resin_content_pct": 48,
+          "pressed_thickness_um": 100,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": null,
+          "df": null,
+          "test_freq_ghz": null
+        },
+        {
+          "style": "2116",
+          "resin_content_pct": 53,
+          "pressed_thickness_um": 100,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": null,
+          "df": null,
+          "test_freq_ghz": null
+        },
+        {
+          "style": "1080",
+          "resin_content_pct": 62,
+          "pressed_thickness_um": 60,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": null,
+          "df": null,
+          "test_freq_ghz": null
+        },
+        {
+          "style": "1080",
+          "resin_content_pct": 70,
+          "pressed_thickness_um": 60,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": null,
+          "df": null,
+          "test_freq_ghz": null
+        }
+      ],
+      "notes": "Prepreg line-up of R-1661(G) for the R-1766 laminate: nominal thickness 0.20 mm on 7628 glass (resin 42, 45, 48 and 51 +-3 %, types GB, GD, GE, GG), 0.15 mm on 1501 (42, 44, 48 and 52 +-3 %, GB, GC, GE, GG), 0.10 mm on 2116 (42, 48 and 53 +-3 %, GB, GE, GG) and 0.06 mm on 1080 (62 and 70 +-5 %, GD, GG). The thickness shown is the nominal one of the line-up, not a measured pressed thickness.",
+      "source": {
+        "pdf": "ast-ind-276517.pdf",
+        "pages": "2"
+      }
+    },
+    {
+      "id": "panasonic/r-1785",
+      "manufacturer": "Panasonic",
+      "name": "R-1785",
+      "kind": "laminate",
+      "family": "R-1785",
+      "tg_tma_c": 150,
+      "cte_x_ppm": 19,
+      "cte_y_ppm": 21,
+      "cte_z_below_tg_ppm": 50,
+      "thicknesses_mm": [
+        0.8,
+        1.6
+      ],
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "notes": "High reliability CEM-3 glass composite, double sided, CTI 600 V class; better solder joint life and CAF resistance than usual CEM-3. CTE x 19 (15 for 0.8 mm) and y 21 (17 for 0.8 mm) ppm/C by TMA (IPC-TM-650 2.4.41) and z 50 ppm/C (2.4.24); thickness accuracy 0.013 mm; test boards 1.6 mm (0.8 mm in brackets) with 35 um copper.",
+      "source": {
+        "pdf": "ast-ind-255433.pdf"
+      }
+    },
+    {
+      "id": "panasonic/r-1786",
+      "manufacturer": "Panasonic",
+      "name": "R-1786",
+      "kind": "laminate",
+      "family": "R-1786",
+      "ul94": "V-0",
+      "tg_tma_c": 140,
+      "dk": [
+        {
+          "freq_ghz": 1,
+          "value": 4.0,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1,
+          "value": 0.007,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50"
+        }
+      ],
+      "water_absorption_pct": 0.08,
+      "flexural_strength_mpa": {
+        "lengthwise": null,
+        "crosswise": 280,
+        "value": null
+      },
+      "peel_strength_n_mm": 1.76,
+      "peel_condition": "35 um copper, as received (18 um 1.37 N/mm)",
+      "thicknesses_mm": [
+        0.8,
+        1.6
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": 70,
+          "foil_type": null
+        }
+      ],
+      "notes": "Glass composite double sided (R-1786; the single sided type is R-1781), CTI 600 V class, excellent CAF resistance; the 70 um copper (2 oz) type is for high currents. Dk 4.2 and Df 0.011 at 1 MHz (C-96/20/65). Test boards 1.6 mm (0.8 mm in brackets).",
+      "source": {
+        "pdf": "ast-ind-255437.pdf"
+      },
+      "sources": [
+        {
+          "pdf": "ast-ind-260591.pdf"
+        }
+      ]
+    },
+    {
+      "id": "panasonic/r-1787",
+      "manufacturer": "Panasonic",
+      "name": "R-1787",
+      "kind": "laminate",
+      "family": "R-1787",
+      "tg_tma_c": 140,
+      "thermal_conductivity_w_mk": 1.1,
+      "thicknesses_mm": [
+        1.6
+      ],
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "notes": "High thermal conductivity CEM-3 glass composite for LED boards, double sided, CTI 600 V class, excellent processability; the sheet compares the thermal conductivity with R-1786 (0.45 W/mK) in an LED simulation. Solder float 260 C for 2 min without abnormality; test boards 1.6 mm with 1 oz copper.",
+      "source": {
+        "pdf": "ast-ind-238381.pdf"
+      }
+    }
+  ]
+}

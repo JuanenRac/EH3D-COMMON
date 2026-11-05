@@ -1,0 +1,701 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Bungard",
+  "materials": [
+    {
+      "id": "bungard/fr4-presensitized",
+      "manufacturer": "Bungard",
+      "name": "FR4 presensitized",
+      "kind": "laminate",
+      "family": "ORIGINAL BUNGARD",
+      "resin": "epoxy",
+      "ul94": "V-0",
+      "iec249": "DIN IEC 249 (FR4, UL 94 V-0, UV blocker)",
+      "tg_dsc_c": 150,
+      "td_c": 320,
+      "cte_z_below_tg_ppm": 15,
+      "cte_z_above_tg_ppm": 250,
+      "cte_x_ppm": 15,
+      "cte_y_ppm": 15,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.8,
+          "method": "IPC-TM-650 2.5.5.3"
+        },
+        {
+          "freq_ghz": 0.1,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9"
+        },
+        {
+          "freq_ghz": 1,
+          "value": 4.5,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.015,
+          "method": "IPC-TM-650 2.5.5.3"
+        },
+        {
+          "freq_ghz": 0.1,
+          "value": 0.015,
+          "method": "IPC-TM-650 2.5.5.9"
+        },
+        {
+          "freq_ghz": 1,
+          "value": 0.015,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "thermal_conductivity_w_mk": 0.36,
+      "peel_strength_n_mm": 1.8,
+      "peel_condition": "35 um copper, as received, more than 1.80 N/mm (the IEC 249 sheet; specification 1.4 N/mm)",
+      "water_absorption_pct": 0.2,
+      "volume_resistivity_ohm_cm": 400000000000000.0,
+      "surface_resistivity_ohm": 3000000000000.0,
+      "arc_resistance_s": 105,
+      "cti_v": 205,
+      "flexural_strength_mpa": {
+        "lengthwise": 442,
+        "crosswise": 435,
+        "value": null
+      },
+      "thicknesses_mm": [
+        0.5,
+        0.8,
+        1.0,
+        1.5,
+        1.6,
+        2.0,
+        2.5
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": 70,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 3,
+          "thickness_um": 105,
+          "foil_type": null
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 510,
+          "height_mm": 1150,
+          "label": "510 x 1150 mm"
+        },
+        {
+          "width_mm": 510,
+          "height_mm": 570,
+          "label": "510 x 570 mm"
+        }
+      ],
+      "notes": "Positive photoresist (5 um, sensitive at 350-400 nm, typical exposure 90 s, developing under 45 s at 20 C) on first-choice FR4 laminate with a UV blocker, with protective foil; boards of 0.5 to 2.5 mm (the 1.5 mm is sold as 1.5 or 1.6) with 18, 35 or 70 um copper (105 um at 1.5 mm); standard cuttings for 1.5 mm with 35 and 70 um copper: 210x300, 200x250, 150x250, 160x233.4, 150x200, 125x175, 100x160 and 75x100 mm; panels 510x1150 and 510x570 mm; pre-sensitizing service up to 530x1160 mm. Two sheets describe the base material and they differ: the IPC 4101A sheet gives Tg 150 C (specification 110-150), Td 320 C, Z CTE 15/250 and X-Y 15/17 ppm/C, thermal conductivity 0.36 W/mK, Dk 4.8/4.6/4.5 and Df 0.015, volume resistivity 4.0e8 MOhm cm and surface 3.0e6 MOhm after moisture resistance (converted to ohm), arc resistance 105 s, CTI 205 V (class 3), flexural strength 442 and 435 (printed GPa; the specification of 415 and 345 is in MPa, so MPa is taken), moisture absorption 0.20 %; the DIN IEC 249 sheet gives Tg 140 +-5 C, Z CTE 5e-5 below and 20e-5 above Tg per C, Dk 4.2-4.8 and Df 0.01-0.016 at 1 MHz, flexural 485-550 and 400-450 N/mm2, moisture absorption below 0.10 %, dielectric breakdown above 60 kV and arc resistance above 120 s. Peel strength printed as 145 N/mm on the IPC sheet is not used (a missing decimal point). Thickness tolerance 1.55 +-0.08 mm, copper 35 +-5 um.",
+      "source": {
+        "pdf": "katalog_en.pdf",
+        "pages": "6-7"
+      },
+      "sources": [
+        {
+          "pdf": "katalog_es.pdf"
+        },
+        {
+          "pdf": "ipc4101e.pdf"
+        },
+        {
+          "pdf": "ipc4101d.pdf"
+        },
+        {
+          "pdf": "iec249_e.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bungard/fr4-copper-clad",
+      "manufacturer": "Bungard",
+      "name": "FR4 copper clad",
+      "kind": "laminate",
+      "family": "Copper clad laminates",
+      "resin": "epoxy",
+      "ul94": "V-0",
+      "thicknesses_mm": [
+        0.5,
+        0.8,
+        1.5,
+        2.0,
+        2.5
+      ],
+      "copper": [
+        {
+          "weight_oz": null,
+          "thickness_um": 5,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 2,
+          "thickness_um": 70,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 3,
+          "thickness_um": 105,
+          "foil_type": null
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 510,
+          "height_mm": 1150,
+          "label": "510 x 1150 mm"
+        }
+      ],
+      "notes": "FR4 without photoresist, panel 510x1150 mm, copper surface not yet brushed: 0.5 mm with 18, 35 and 70 um; 0.8 mm with 18 and 35 um, single or double sided; 1.5 mm with 5 um (single sided) and 18, 35, 70 and 105 um (single or double sided); 2.0 mm with 35 and 70 um; 2.5 mm with 35 and 70 um, single or double sided. Approvals and standards as for the presensitized boards; the catalogue gives no Tg, Dk or Df for this grade.",
+      "source": {
+        "pdf": "katalog_en.pdf",
+        "pages": "8"
+      },
+      "sources": [
+        {
+          "pdf": "katalog_es.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bungard/cem-1-copper-clad",
+      "manufacturer": "Bungard",
+      "name": "CEM-1 copper clad",
+      "kind": "laminate",
+      "family": "Copper clad laminates",
+      "thicknesses_mm": [
+        1.5
+      ],
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 510,
+          "height_mm": 1150,
+          "label": "510 x 1150 mm"
+        }
+      ],
+      "notes": "CEM-1, panel 510x1150 mm, thickness 1.5 mm, 35 um copper single sided, without photoresist; also in the presensitized series (panels 510x1150 mm).",
+      "source": {
+        "pdf": "katalog_en.pdf",
+        "pages": "8"
+      },
+      "sources": [
+        {
+          "pdf": "katalog_es.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bungard/fr2-copper-clad",
+      "manufacturer": "Bungard",
+      "name": "FR2 copper clad",
+      "kind": "laminate",
+      "family": "Copper clad laminates",
+      "thicknesses_mm": [
+        1.5
+      ],
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 500,
+          "height_mm": 1000,
+          "label": "500 x 1000 mm"
+        }
+      ],
+      "notes": "FR2 (paper and phenolic), panel 500x1000 mm, thickness 1.5 mm, 35 um copper single or double sided, without photoresist; the best for isolation milling because the routers and drills last much longer. The presensitized FR2 panel is 480x1000 mm.",
+      "source": {
+        "pdf": "katalog_en.pdf",
+        "pages": "8"
+      },
+      "sources": [
+        {
+          "pdf": "katalog_es.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bungard/fr3-presensitized",
+      "manufacturer": "Bungard",
+      "name": "FR3 presensitized",
+      "kind": "laminate",
+      "family": "ORIGINAL BUNGARD",
+      "thicknesses_mm": [
+        1.5
+      ],
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 510,
+          "height_mm": 1150,
+          "label": "510 x 1150 mm"
+        }
+      ],
+      "notes": "FR3 (paper and epoxy), panel 510x1150 mm, 1.5 mm, 35 um copper double sided; also with the positive photoresist.",
+      "source": {
+        "pdf": "katalog_en.pdf",
+        "pages": "7"
+      },
+      "sources": [
+        {
+          "pdf": "katalog_es.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bungard/fr2-presensitized",
+      "manufacturer": "Bungard",
+      "name": "FR2 presensitized",
+      "kind": "laminate",
+      "family": "ORIGINAL BUNGARD",
+      "thicknesses_mm": [
+        1.5
+      ],
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 480,
+          "height_mm": 1000,
+          "label": "480 x 1000 mm"
+        }
+      ],
+      "notes": "FR2 panel 480x1000 mm, 1.5 mm, 35 um copper single or double sided, with the positive photoresist.",
+      "source": {
+        "pdf": "katalog_en.pdf",
+        "pages": "7"
+      },
+      "sources": [
+        {
+          "pdf": "katalog_es.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bungard/cem-1-presensitized",
+      "manufacturer": "Bungard",
+      "name": "CEM-1 presensitized",
+      "kind": "laminate",
+      "family": "ORIGINAL BUNGARD",
+      "thicknesses_mm": [
+        1.5
+      ],
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 510,
+          "height_mm": 1150,
+          "label": "510 x 1150 mm"
+        }
+      ],
+      "notes": "CEM-1 panel 510x1150 mm, 1.5 mm, 35 um copper single sided, with the positive photoresist.",
+      "source": {
+        "pdf": "katalog_en.pdf",
+        "pages": "7"
+      },
+      "sources": [
+        {
+          "pdf": "katalog_es.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bungard/fr4-thin-laminate",
+      "manufacturer": "Bungard",
+      "name": "FR4 thin laminate",
+      "kind": "laminate",
+      "family": "Semiflex",
+      "resin": "epoxy",
+      "thicknesses_mm": [
+        0.125,
+        0.2
+      ],
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 100,
+          "height_mm": 160,
+          "label": "100 x 160 mm"
+        },
+        {
+          "width_mm": 210,
+          "height_mm": 300,
+          "label": "210 x 300 mm"
+        },
+        {
+          "width_mm": 510,
+          "height_mm": 1150,
+          "label": "510 x 1150 mm"
+        }
+      ],
+      "notes": "Semiflex base material of the Bungard standard FR4 with flexibility for semiflex use and multilayers, 0.125 and 0.2 mm, 35 um copper; formats 100x160, 210x300 and 510x1150 mm (the 100x160 only in units of 35 boards and the 210x300 in units of 8).",
+      "source": {
+        "pdf": "katalog_en.pdf",
+        "pages": "8"
+      },
+      "sources": [
+        {
+          "pdf": "katalog_es.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bungard/fr4-inner-layer-250x350",
+      "manufacturer": "Bungard",
+      "name": "FR4 inner layer 250x350",
+      "kind": "laminate",
+      "family": "Multilayer production",
+      "resin": "epoxy",
+      "thicknesses_mm": [
+        0.3,
+        0.5
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 18,
+          "foil_type": null
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 250,
+          "height_mm": 350,
+          "label": "250 x 350 mm"
+        }
+      ],
+      "notes": "Laminate for multilayer production: outer layer FR4 250x350x0.3 mm with 18/00 um copper (copper on one side) and inner layer FR4 250x350x0.5 mm with 18/18 um; sold with prepregs 250x350x0.2 mm and separation foil (packs of 50).",
+      "source": {
+        "pdf": "katalog_en.pdf",
+        "pages": "8"
+      },
+      "sources": [
+        {
+          "pdf": "katalog_es.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bungard/prepreg-250x350",
+      "manufacturer": "Bungard",
+      "name": "Prepreg 250x350",
+      "kind": "prepreg",
+      "family": "Multilayer production",
+      "resin": "epoxy",
+      "panel_sizes": [
+        {
+          "width_mm": 250,
+          "height_mm": 350,
+          "label": "250 x 350 mm"
+        }
+      ],
+      "prepreg": [
+        {
+          "style": null,
+          "resin_content_pct": null,
+          "pressed_thickness_um": 200,
+          "flow_pct": null,
+          "gel_time_s": null,
+          "dk": null,
+          "df": null,
+          "test_freq_ghz": null
+        }
+      ],
+      "notes": "Prepreg sheets 250x350 mm, 0.2 mm nominal thickness (not a pressed thickness), packs of 50 with separation foil; the catalogue gives no glass style or resin content.",
+      "source": {
+        "pdf": "katalog_en.pdf",
+        "pages": "8"
+      },
+      "sources": [
+        {
+          "pdf": "katalog_es.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bungard/cotherm-1000",
+      "manufacturer": "Bungard",
+      "name": "Cotherm 1000",
+      "kind": "metal_core",
+      "family": "Cotherm",
+      "resin": "epoxy (FR4 isolation layer)",
+      "thicknesses_mm": [
+        1.0
+      ],
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 530,
+          "height_mm": 1150,
+          "label": "530 x 1150 mm"
+        }
+      ],
+      "notes": "Metal core board: 35 um copper, a 100 um FR4 isolation layer and a 1000 um aluminium layer (1.0 mm in total as listed); format 530x1150 mm, with or without photosensitive resist. The isolation layer is very thin, so unskilled mechanical processing can touch the aluminium; while etching the aluminium must be completely covered (protection foil on both sides).",
+      "source": {
+        "pdf": "katalog_en.pdf",
+        "pages": "9"
+      },
+      "sources": [
+        {
+          "pdf": "katalog_es.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bungard/cotherm-1500",
+      "manufacturer": "Bungard",
+      "name": "Cotherm 1500",
+      "kind": "metal_core",
+      "family": "Cotherm",
+      "resin": "epoxy (FR4 isolation layer)",
+      "thicknesses_mm": [
+        1.5
+      ],
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 530,
+          "height_mm": 1150,
+          "label": "530 x 1150 mm"
+        }
+      ],
+      "notes": "Metal core board: 35 um copper, a 100 um FR4 isolation layer and a 1500 um aluminium layer (1.5 mm in total as listed); format 530x1150 mm, with or without photosensitive resist.",
+      "source": {
+        "pdf": "katalog_en.pdf",
+        "pages": "9"
+      },
+      "sources": [
+        {
+          "pdf": "katalog_es.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bungard/cotherm-2000",
+      "manufacturer": "Bungard",
+      "name": "Cotherm 2000",
+      "kind": "metal_core",
+      "family": "Cotherm",
+      "resin": "epoxy (FR4 isolation layer)",
+      "thicknesses_mm": [
+        2.0
+      ],
+      "copper": [
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 530,
+          "height_mm": 1150,
+          "label": "530 x 1150 mm"
+        }
+      ],
+      "notes": "Metal core board: 35 um copper, a 100 um FR4 isolation layer and a 2,000 um aluminium layer (2.0 mm in total as listed); format 530x1150 mm, with or without photosensitive resist.",
+      "source": {
+        "pdf": "katalog_en.pdf",
+        "pages": "9"
+      },
+      "sources": [
+        {
+          "pdf": "katalog_es.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bungard/alucorex",
+      "manufacturer": "Bungard",
+      "name": "Alucorex",
+      "kind": "other",
+      "family": "Alucorex",
+      "thicknesses_mm": [
+        0.5,
+        1.0,
+        1.5,
+        2.0,
+        2.5,
+        3.0
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 480,
+          "height_mm": 980,
+          "label": "480 x 980 mm"
+        }
+      ],
+      "notes": "Presensitized anodized aluminium (positive photo-coat) for front panels, machine plates and clichés; not a circuit board. Panel 480x980 mm; black matt in 0.5, 1.0, 1.5, 2.0, 2.5 and 3.0 mm, black brilliant in 1.0, 1.5, 2.0 and 2.5 mm, red and blue brilliant (both sides usable) and green brilliant (one side usable), the latter in stock at 1 mm. Cut to size on request from 50x50 mm; shelf life guaranteed one year.",
+      "source": {
+        "pdf": "katalog_en.pdf",
+        "pages": "9"
+      },
+      "sources": [
+        {
+          "pdf": "katalog_es.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bungard/technical-glass-fibre-laminate",
+      "manufacturer": "Bungard",
+      "name": "Technical glass fibre laminate",
+      "kind": "other",
+      "thicknesses_mm": [
+        1.55
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 510,
+          "height_mm": 1150,
+          "label": "510 x 1150 mm"
+        }
+      ],
+      "notes": "Glass fibre laminate without copper and without photoresist, 510x1150x1.55 mm, for technical uses.",
+      "source": {
+        "pdf": "katalog_en.pdf",
+        "pages": "8"
+      },
+      "sources": [
+        {
+          "pdf": "katalog_es.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bungard/drill-backing-board",
+      "manufacturer": "Bungard",
+      "name": "Drill backing board",
+      "kind": "other",
+      "thicknesses_mm": [
+        2.5,
+        6.0
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 500,
+          "height_mm": 1000,
+          "label": "500 x 1000 mm"
+        },
+        {
+          "width_mm": 245,
+          "height_mm": 330,
+          "label": "245 x 330 mm"
+        }
+      ],
+      "notes": "Backing boards for drilling circuit boards (for example with the Bungard CCD): in stock 500x1000x2.5 mm, 500x1000x6 mm and 245x330x6 mm.",
+      "source": {
+        "pdf": "katalog_en.pdf",
+        "pages": "8"
+      },
+      "sources": [
+        {
+          "pdf": "katalog_es.pdf"
+        }
+      ]
+    },
+    {
+      "id": "bungard/engraving-plate",
+      "manufacturer": "Bungard",
+      "name": "Engraving plate",
+      "kind": "other",
+      "thicknesses_mm": [
+        1.5
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 500,
+          "height_mm": 1000,
+          "label": "500 x 1000 mm"
+        }
+      ],
+      "notes": "Plates for front panel engraving, about 500x1000x1.5 mm, black and natural.",
+      "source": {
+        "pdf": "katalog_en.pdf",
+        "pages": "8"
+      },
+      "sources": [
+        {
+          "pdf": "katalog_es.pdf"
+        }
+      ]
+    }
+  ]
+}
