@@ -233,6 +233,365 @@
         1.6
       ],
       "notes": "Line-up of the H140A core and its prepreg (E-glass only). The sheet gives Dk and Df by construction and resin content at 1, 3 and 5 GHz (for example 4.55 and 0.0140 at 1 GHz for 2116 x 1, 48 % resin), which are not stored."
+    },
+    {
+      "id": "wazam/hp28",
+      "manufacturer": "Wazam",
+      "name": "HP28",
+      "kind": "prepreg",
+      "family": "HP28",
+      "resin": "Thermosetting resin",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "td_c": 400,
+      "cte_x_ppm": 59,
+      "cte_y_ppm": 70,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 2.74,
+          "method": "IPC-TM-650 2.5.5.5, 23 C",
+          "resin_content_pct": null,
+          "tolerance": 0.04
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0017,
+          "method": "IPC-TM-650 2.5.5.5, 23 C",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "moisture_absorption_note": "Below 0.20 % (D-24/23)",
+      "thicknesses_mm": [
+        0.12
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18\" x 24\""
+        }
+      ],
+      "notes": "High frequency RF prepreg, thermosetting resin, stable Dk and low loss, suitable for lead-free processes. Thickness 0.047 in (0.12 mm) +/-0.0047 in (4.7 mil). Td is above 400 C (limit stored; 5 % weight loss). CTE Z 72 ppm/C over 30-260 C (not stored as below or above Tg); X and Y over 30-260 C. Resistivities are 10^8 MOhm cm and 10^8 MOhm (C-96/35/90). Source is an image sheet.",
+      "source": {
+        "pdf": "585d76a5284840187439ff711abc8af0.jpg",
+        "pages": "1",
+        "revision": null
+      }
+    },
+    {
+      "id": "wazam/hc348d",
+      "manufacturer": "Wazam",
+      "name": "HC348D",
+      "kind": "laminate",
+      "family": "HC348",
+      "resin": "Thermosetting resin",
+      "ul94": "V-0",
+      "td_c": 500,
+      "cte_x_ppm": 20,
+      "cte_y_ppm": 22,
+      "thermal_conductivity_w_mk": 0.8,
+      "tcdk_ppm_per_c": 50,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.57,
+          "method": "IPC-TM-650 2.5.5.5, 23 C",
+          "resin_content_pct": null,
+          "tolerance": 0.05
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0034,
+          "method": "IPC-TM-650 2.5.5.5, 23 C",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "peel_strength_n_mm": 0.55,
+      "peel_condition": "H oz copper, C-48/23/50 (0.55 N/mm or more)",
+      "moisture_absorption_note": "Below 0.10 % (D-24/23)",
+      "thicknesses_mm": [
+        0.254,
+        0.508,
+        0.762,
+        1.524
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "thickness_um": 17,
+          "foil_type": null
+        },
+        {
+          "weight_oz": 1,
+          "thickness_um": 35,
+          "foil_type": null
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 1219,
+          "height_mm": 1067,
+          "label": "48\" x 42\""
+        },
+        {
+          "width_mm": 914,
+          "height_mm": 1219,
+          "label": "36\" x 48\""
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18\" x 24\""
+        }
+      ],
+      "notes": "Thermally conductive high frequency RF copper clad laminate (0.8 W/mK by ASTM D5470 at 100 C) for base stations and power amplifiers; low moisture absorption. Thickness 0.010, 0.020, 0.030 and 0.060 in with tolerances 0.001, 0.005, 0.002 and 0.004 in as printed. Td is above 500 C (limit stored). TCDk 50 ppm/C over -40 to 150 C at 10 GHz. CTE Z 34 ppm/C over 30-260 C (not stored as below or above Tg). Resistivities are 10^8 MOhm cm and 10^8 MOhm (C-96/35/90). Source is an image sheet.",
+      "source": {
+        "pdf": "877a727a61ba464cac9e10480d74bd95.jpg",
+        "pages": "1",
+        "revision": null
+      }
+    },
+    {
+      "id": "wazam/h170gr",
+      "manufacturer": "Wazam",
+      "name": "H170GR",
+      "kind": "laminate",
+      "family": "H170",
+      "resin": "FR-4.1 high Tg, halogen free",
+      "halogen_free": true,
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/130",
+      "tg_tma_c": 175,
+      "td_c": 386,
+      "t288_min": 60,
+      "cte_x_ppm": 12,
+      "cte_y_ppm": 12,
+      "cte_z_below_tg_ppm": 37,
+      "cte_z_above_tg_ppm": 223,
+      "cte_z_50_260_pct": 2.2,
+      "dk": [
+        {
+          "freq_ghz": 2,
+          "value": 3.4,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2,
+          "value": 0.009,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 70,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 4.5e+16,
+      "surface_resistivity_ohm": 3100000000000000.0,
+      "arc_resistance_s": 130,
+      "peel_strength_n_mm": 1.05,
+      "peel_condition": "H oz RTF, 288 C 10 s",
+      "flexural_strength_mpa": {
+        "lengthwise": 550,
+        "crosswise": 480,
+        "value": null
+      },
+      "water_absorption_pct": 0.12,
+      "notes": "High Tg halogen free low Dk laminate with UV blocking and AOI compatibility, for phones, notebooks, tablets, SSD, automotive electronics. The sheet states the Tg test condition as TMA (method 2.4.25D). T288 (unclad) is above 60 min (limit stored); thermal stress at 288 C solder dip 180 s with no delamination. Dk and Df at 2 GHz with 70 % resin content. Resistivities after moisture: 4.50e10 MOhm cm and 3.10e9 MOhm; dielectric breakdown 60 kV (kV, not per mm). Source is an image sheet.",
+      "source": {
+        "pdf": "880de094f08f143da39a3825fb60268a.jpg",
+        "pages": "1",
+        "revision": null
+      }
+    },
+    {
+      "id": "wazam/hsd7lg-hsd7lg-k",
+      "manufacturer": "Wazam",
+      "name": "HSD7LG/HSD7LG(K)",
+      "kind": "laminate",
+      "family": "HSD7",
+      "resin": "Halogen free ultra-low loss",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "4101/NO ANSI (as printed)",
+      "tg_dma_c": 225,
+      "td_c": 410,
+      "t288_min": 60,
+      "t300_min": 60,
+      "cte_z_below_tg_ppm": 31,
+      "cte_z_above_tg_ppm": 200,
+      "cte_z_50_260_pct": 1.8,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.9,
+          "method": "IPC-TM-650 2.5.5.5, 10 GHz stripline, E-glass",
+          "resin_content_pct": 53,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 3.37,
+          "method": "IPC-TM-650 2.5.5.5, 10 GHz stripline, L1-glass",
+          "resin_content_pct": 55,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.0044,
+          "method": "IPC-TM-650 2.5.5.5, 10 GHz cavity resonator, E-glass",
+          "resin_content_pct": 53,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 10,
+          "value": 0.0025,
+          "method": "IPC-TM-650 2.5.5.5, 10 GHz cavity resonator, L1-glass",
+          "resin_content_pct": 55,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 1e+16,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "arc_resistance_s": 120,
+      "peel_strength_n_mm": 0.54,
+      "peel_condition": "1 oz HVLP2, as received",
+      "flexural_strength_mpa": {
+        "lengthwise": 420,
+        "crosswise": 380,
+        "value": null
+      },
+      "water_absorption_pct": 0.07,
+      "notes": "Halogen free ultra-low loss, heat resistant multilayer material (low Dk/Df, high Tg, anti-CAF, low Z CTE) for ultra-high speed network equipment, servers, switches and high frequency instruments. T288 (unclad) and T300 (with copper) are above 60 min (limit stored); thermal stress at 288 C solder dip 180 s with no delamination. Dk and Df for E-glass at 53 % resin content and L1-glass at 55 % resin content (specimen 0.760 mm). Resistivities 1x10^10 MOhm cm and 1x10^8 MOhm (C-96/35/90); dielectric breakdown above 50 kV (kV, not per mm). Source is an image sheet.",
+      "source": {
+        "pdf": "b15b7c20115ea17a46301f764d5d7a6b.jpg",
+        "pages": "1",
+        "revision": null
+      }
+    },
+    {
+      "id": "wazam/hb348",
+      "manufacturer": "Wazam",
+      "name": "HB348",
+      "kind": "prepreg",
+      "family": "HB348",
+      "resin": "Thermosetting resin",
+      "ul94": "V-0",
+      "td_c": 400,
+      "cte_x_ppm": 19,
+      "cte_y_ppm": 20,
+      "thermal_conductivity_w_mk": 0.6,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 3.5,
+          "method": "IPC-TM-650 2.5.5.5, 23 C",
+          "resin_content_pct": null,
+          "tolerance": 0.05
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.004,
+          "method": "IPC-TM-650 2.5.5.5, 23 C",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "moisture_absorption_note": "Below 0.10 % (D-24/23)",
+      "thicknesses_mm": [
+        0.101
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 533,
+          "height_mm": 610,
+          "label": "21\" x 24\""
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18\" x 24\""
+        }
+      ],
+      "notes": "High frequency RF prepreg, thermosetting resin, stable Dk and low loss, suitable for lead-free processes. Thickness 0.004 in (0.101 mm) +/-0.001 in (4 mil). Thermal conductivity 0.60 W/mK by ASTM D5470 at 100 C. Td is above 400 C (limit stored). CTE Z 55 ppm/C over 30-260 C (not stored as below or above Tg). Resistivities are 10^8 MOhm cm and 10^8 MOhm (C-96/35/90). Source is an image sheet.",
+      "source": {
+        "pdf": "c8e53df8840ea8b2a6e53bfd717e7b2b.jpg",
+        "pages": "1",
+        "revision": null
+      }
+    },
+    {
+      "id": "wazam/h1170q",
+      "manufacturer": "Wazam",
+      "name": "H1170Q",
+      "kind": "laminate",
+      "family": "H1170",
+      "resin": "FR-4.0 high performance, automotive",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/126",
+      "tg_dsc_c": 180,
+      "tg_tma_c": 184,
+      "tg_dma_c": 210,
+      "td_c": 385,
+      "t288_min": 60,
+      "cte_z_below_tg_ppm": 33,
+      "cte_z_above_tg_ppm": 194,
+      "cte_z_50_260_pct": 1.8,
+      "dk": [
+        {
+          "freq_ghz": 10,
+          "value": 4.2,
+          "method": "IPC-TM-650 2.5.5.5, 10 GHz C-24/23/50",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10,
+          "value": 0.01,
+          "method": "IPC-TM-650 2.5.5.5, 10 GHz C-24/23/50",
+          "resin_content_pct": 50,
+          "tolerance": null
+        }
+      ],
+      "volume_resistivity_ohm_cm": 4.7e+16,
+      "surface_resistivity_ohm": 354000000000000.0,
+      "arc_resistance_s": 130,
+      "peel_strength_n_mm": 1.25,
+      "peel_condition": "HTE 1 oz, as received and after thermal stress",
+      "flexural_strength_mpa": {
+        "lengthwise": 550,
+        "crosswise": 450,
+        "value": null
+      },
+      "water_absorption_pct": 0.1,
+      "notes": "High performance FR-4.0 for automotive electronics and high-multilayer PCBs with anti-CAF capability. T288 (unclad) is above 60 min (limit stored); thermal stress at 288 C solder dip 180 s with no delamination. Tested on CCL 1.0 mm 7628 x 6; Dk and Df values are for reference only. Resistivities after moisture: 4.70e10 MOhm cm and 3.54e8 MOhm; dielectric breakdown 60 kV (kV, not per mm). Source is an image sheet.",
+      "source": {
+        "pdf": "f5a0757bc193ff1f5927f60b2817cc68.jpg",
+        "pages": "1",
+        "revision": null
+      }
     }
   ]
 }
