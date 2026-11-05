@@ -4,7 +4,12 @@
 //! file of the `data` folder is not in it.
 
 /// The embedded files as `(file name, JSON text)`.
-pub const FILES: &[(&str, &str)] = &[("shengyi.json", include_str!("../data/shengyi.json"))];
+pub const FILES: &[(&str, &str)] = &[
+    ("bungard.json", include_str!("../data/bungard.json")),
+    ("isola.json", include_str!("../data/isola.json")),
+    ("panasonic.json", include_str!("../data/panasonic.json")),
+    ("shengyi.json", include_str!("../data/shengyi.json")),
+];
 
 #[cfg(test)]
 mod tests {
