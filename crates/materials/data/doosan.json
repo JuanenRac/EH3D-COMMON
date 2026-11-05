@@ -1,0 +1,143 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Doosan",
+ "materials": [
+  {
+   "id": "doosan/ds-7409djg",
+   "manufacturer": "Doosan",
+   "name": "DS-7409DJG",
+   "kind": "laminate",
+   "resin": "Cured resin blend",
+   "reinforcement": "Glass cloth",
+   "filler": "Inorganic filler",
+   "safety": {
+    "hazard_statements": [],
+    "flammability_note": "No flammability, ignition or flash point data in the sheet; the transport entry is UN 'METAL POWDER, FLAMMABLE, N.O.S.' because of the copper.",
+    "msds_revision": "V2"
+   },
+   "notes": "Created from the safety data sheets only (Doosan Electro-Materials); no electrical or thermal values are loaded. Composition: copper 30-60 %, cured resin blend 15-30 %, inorganic filler 5-20 %, glass cloth 20-40 % (laminate). No hazard classification or hazard phrases are given (physical, health: no data; environment: not classified). Recommended use: material for printed circuit boards. The sheets cover the laminate and the bonding sheet (BS), and the variants (N) and (S); the bonding sheet contains glass cloth 30-60 %, a resin blend 20-65 % and an inorganic filler 10-30 %.",
+   "sources": [
+    {
+     "pdf": "(Eng_GHS) MSDS DS-7409DJG Laminate_V2_250730.pdf",
+     "pages": null,
+     "revision": null
+    },
+    {
+     "pdf": "(Eng_GHS) MSDS DS-7409DJG BS_V2_250730.pdf",
+     "pages": null,
+     "revision": null
+    },
+    {
+     "pdf": "(Eng_GHS) MSDS DS-7409DJG(N) Laminate_V2_250731.pdf",
+     "pages": null,
+     "revision": null
+    },
+    {
+     "pdf": "(Eng_GHS) MSDS DS-7409DJG(N) BS_V2_250731.pdf",
+     "pages": null,
+     "revision": null
+    },
+    {
+     "pdf": "(Eng_GHS) MSDS DS-7409DJG (S) Laminate_V1_250731.pdf",
+     "pages": null,
+     "revision": null
+    },
+    {
+     "pdf": "(Eng_GHS) MSDS DS-7409DJG BS (S)_V1_250731.pdf",
+     "pages": null,
+     "revision": null
+    }
+   ]
+  },
+  {
+   "id": "doosan/ds-7409dxg",
+   "manufacturer": "Doosan",
+   "name": "DS-7409DXG",
+   "kind": "laminate",
+   "resin": "Cured resin blend",
+   "reinforcement": "Glass cloth",
+   "filler": "Inorganic filler",
+   "safety": {
+    "hazard_statements": [],
+    "flammability_note": "No flammability, ignition or flash point data in the sheet; the transport entry is UN 'METAL POWDER, FLAMMABLE, N.O.S.' because of the copper.",
+    "msds_revision": "V1"
+   },
+   "notes": "Created from the safety data sheets only (Doosan Electro-Materials); no electrical or thermal values are loaded. Composition: copper 30-60 %, cured resin blend 15-30 %, inorganic filler 5-20 %, glass cloth 20-40 % (laminate). No hazard classification or hazard phrases are given (physical, health: no data; environment: not classified). Recommended use: material for printed circuit boards. The sheets cover the laminate and the bonding sheet (BS).",
+   "sources": [
+    {
+     "pdf": "(Eng_GHS) MSDS DS-7409DXG Laminate_V1_250730.pdf",
+     "pages": null,
+     "revision": null
+    },
+    {
+     "pdf": "(Eng_GHS) MSDS DS-7409DXG BS_V1_250730.pdf",
+     "pages": null,
+     "revision": null
+    }
+   ]
+  },
+  {
+   "id": "doosan/ds-7409dqt2",
+   "manufacturer": "Doosan",
+   "name": "DS-7409DQT2",
+   "kind": "laminate",
+   "resin": "Cured resin blend",
+   "reinforcement": "Glass cloth",
+   "safety": {
+    "hazard_statements": [],
+    "flammability_note": "No flammability, ignition or flash point data in the sheet; the transport entry is UN 'METAL POWDER, FLAMMABLE, N.O.S.' because of the copper.",
+    "msds_revision": "V1"
+   },
+   "notes": "Created from the safety data sheets only (Doosan Electro-Materials); no electrical or thermal values are loaded. Composition: copper 25-60 %, cured resin blend 8-28 %, and a component of 30-65 % whose name falls out of line in the sheet; glass cloth is listed without a content. No hazard classification or hazard phrases are given (physical, health: no data; environment: not classified). Recommended use: material for printed circuit boards. The sheets cover the laminate and the bonding sheet (BS).",
+   "sources": [
+    {
+     "pdf": "(Eng_GHS) MSDS DS-7409DQT2_V1_260515.pdf",
+     "pages": null,
+     "revision": null
+    },
+    {
+     "pdf": "(Eng_GHS) MSDS DS-7409DQT2 BS_V1_260515.pdf",
+     "pages": null,
+     "revision": null
+    }
+   ]
+  },
+  {
+   "id": "doosan/rapidon-10w",
+   "manufacturer": "Doosan",
+   "name": "RAPIDON-10W",
+   "kind": "laminate",
+   "resin": "Cured resin blend",
+   "reinforcement": "Glass cloth",
+   "filler": "Inorganic filler",
+   "safety": {
+    "hazard_statements": [],
+    "flammability_note": "No flammability, ignition or flash point data in the sheet; the transport entry is UN 'METAL POWDER, FLAMMABLE, N.O.S.' because of the copper.",
+    "msds_revision": "V1"
+   },
+   "notes": "Created from the safety data sheets only (Doosan Electro-Materials); no electrical or thermal values are loaded. Composition: copper 20-50 %, cured resin blend 10-25 %, inorganic filler 15-30 %, glass cloth 10-30 % (laminate). No hazard classification or hazard phrases are given (physical, health: no data; environment: not classified). Recommended use: material for printed circuit boards. The sheets cover the laminate and the bonding sheet (BS), and the variant (N).",
+   "sources": [
+    {
+     "pdf": "(Eng_GHS) MSDS RAPIDON-10W Laminate_V1_250729.pdf",
+     "pages": null,
+     "revision": null
+    },
+    {
+     "pdf": "(Eng_GHS) MSDS RAPIDON-10W BS_V1_250729.pdf",
+     "pages": null,
+     "revision": null
+    },
+    {
+     "pdf": "(Eng_GHS) MSDS RAPIDON-10W(N) Laminate_V1_250729.pdf",
+     "pages": null,
+     "revision": null
+    },
+    {
+     "pdf": "(Eng_GHS) MSDS RAPIDON-10W(N) BS_V1_250729.pdf",
+     "pages": null,
+     "revision": null
+    }
+   ]
+  }
+ ]
+}

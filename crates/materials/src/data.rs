@@ -11,6 +11,7 @@ pub const FILES: &[(&str, &str)] = &[
     ("aismalibar.json", include_str!("../data/aismalibar.json")),
     ("arlon.json", include_str!("../data/arlon.json")),
     ("bungard.json", include_str!("../data/bungard.json")),
+    ("doosan.json", include_str!("../data/doosan.json")),
     ("dupont.json", include_str!("../data/dupont.json")),
     ("huazheng.json", include_str!("../data/huazheng.json")),
     ("isola.json", include_str!("../data/isola.json")),
