@@ -1,0 +1,107 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Wazam",
+ "materials": [
+  {
+   "id": "wazam/hmw30",
+   "manufacturer": "Wazam",
+   "name": "HMW30",
+   "kind": "laminate",
+   "reinforcement": "E-glass",
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 3.01,
+     "method": "As given by the line-up sheet",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 5,
+     "value": 3.01,
+     "method": "As given by the line-up sheet",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 3.0,
+     "method": "As given by the line-up sheet",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 15,
+     "value": 2.99,
+     "method": "As given by the line-up sheet",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.0018,
+     "method": "As given by the line-up sheet",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 5,
+     "value": 0.0019,
+     "method": "As given by the line-up sheet",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 0.002,
+     "method": "As given by the line-up sheet",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 15,
+     "value": 0.0021,
+     "method": "As given by the line-up sheet",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "thicknesses_mm": [
+    0.127,
+    0.254,
+    0.508,
+    0.762
+   ],
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": null,
+     "foil_type": "HVLP"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": null,
+     "foil_type": "HVLP"
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": null,
+     "foil_type": "RTF"
+    },
+    {
+     "weight_oz": 3,
+     "thickness_um": null,
+     "foil_type": "RTF"
+    }
+   ],
+   "notes": "Line-up sheet of an E-glass copper clad laminate; Dk and Df values are printed for the 5 mil and 10 mil cores only and are the same for both. Panel sizes of 48, 54, 36 and 18 inch widths are listed without a clear mapping and are not stored. This sheet gives no other properties.",
+   "source": {
+    "pdf": "23bb5d5ee15790e57a2c202a82d6fdee.pdf",
+    "pages": "1-2",
+    "revision": null
+   }
+  }
+ ]
+}

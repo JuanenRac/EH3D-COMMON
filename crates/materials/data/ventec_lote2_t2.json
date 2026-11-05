@@ -1,0 +1,1899 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Ventec",
+ "materials": [
+  {
+   "id": "ventec/vt-870-l330",
+   "manufacturer": "Ventec",
+   "name": "VT-870 L330",
+   "kind": "ceramic_filled",
+   "family": "tec-speed 20.0",
+   "resin": "Hydrocarbon ceramic",
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4103/10, /240",
+   "tg_tma_c": 280,
+   "peel_strength_n_mm": 1.05,
+   "peel_condition": "1 oz, 6.0 lb/in as published",
+   "td_c": 402,
+   "cte_z_below_tg_ppm": 35,
+   "thermal_conductivity_w_mk": 0.72,
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 3.3,
+     "method": "IPC-TM-650 2.5.5.5 clamped stripline",
+     "resin_content_pct": null,
+     "tolerance": 0.05
+    },
+    {
+     "freq_ghz": null,
+     "value": 3.45,
+     "method": "Differential phase length method, design Dk, 1.7-5 GHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 2.5,
+     "value": 0.002,
+     "method": "IPC-TM-650 2.5.5.13",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 0.0025,
+     "method": "Cavity resonator",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "notes": "Z-CTE is 50-250 C. PIM -160 dBc (43 dBm, 1900 MHz). The sheet lists the L330 and H348 types in two columns; the availability table is not transcribed. Peel strength is published as 6.0 lb/in.",
+   "source": {
+    "pdf": "211015tecspeed20-vt-870.pdf",
+    "pages": "1-3",
+    "revision": "B1.0"
+   }
+  },
+  {
+   "id": "ventec/vt-870-h348",
+   "manufacturer": "Ventec",
+   "name": "VT-870 H348",
+   "kind": "ceramic_filled",
+   "family": "tec-speed 20.0",
+   "resin": "Hydrocarbon ceramic",
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4103/10, /240",
+   "tg_tma_c": 280,
+   "peel_strength_n_mm": 1.05,
+   "peel_condition": "1 oz, 6.0 lb/in as published",
+   "td_c": 410,
+   "cte_z_below_tg_ppm": 31,
+   "thermal_conductivity_w_mk": 0.69,
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 3.48,
+     "method": "IPC-TM-650 2.5.5.5 clamped stripline",
+     "resin_content_pct": null,
+     "tolerance": 0.05
+    },
+    {
+     "freq_ghz": null,
+     "value": 3.66,
+     "method": "Differential phase length method, design Dk, 1.7-5 GHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 2.5,
+     "value": 0.0032,
+     "method": "IPC-TM-650 2.5.5.13",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 0.0037,
+     "method": "Cavity resonator",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "notes": "Z-CTE is 50-250 C. PIM -160 dBc (43 dBm, 1900 MHz). The 4 mil construction has Dk 3.33 and Df 0.0035 at 10 GHz. Peel strength is published as 6.0 lb/in.",
+   "source": {
+    "pdf": "211015tecspeed20-vt-870.pdf",
+    "pages": "1-3",
+    "revision": "B1.0"
+   }
+  },
+  {
+   "id": "ventec/vt-870-bondply",
+   "manufacturer": "Ventec",
+   "name": "VT-870 Bondply",
+   "kind": "prepreg",
+   "family": "tec-speed 20.0",
+   "resin": "Hydrocarbon ceramic",
+   "prepreg": [
+    {
+     "style": "VT-870 BH348",
+     "resin_content_pct": null,
+     "pressed_thickness_um": 100,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": 3.52,
+     "df": 0.0035,
+     "test_freq_ghz": 10
+    }
+   ],
+   "notes": "Bonding ply compatible with VT-870 laminates in multilayer constructions. Dk 3.52 +-0.05 (IPC-TM-650 2.5.5.5 clamped stripline) and Df by cavity resonator, both at 10 GHz.",
+   "source": {
+    "pdf": "211015tecspeed20-vt-870.pdf",
+    "pages": "1-3",
+    "revision": "B1.0"
+   }
+  },
+  {
+   "id": "ventec/vt-870-h1000",
+   "manufacturer": "Ventec",
+   "name": "VT-870 H1000",
+   "kind": "ceramic_filled",
+   "family": "tec-speed 20.0",
+   "resin": "Hydrocarbon ceramic",
+   "ul94": "V-0",
+   "tg_tma_c": 280,
+   "td_c": 410,
+   "t288_min": 120,
+   "cte_x_ppm": 8,
+   "cte_y_ppm": 9,
+   "cte_z_below_tg_ppm": 31,
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 10.2,
+     "method": "IPC-TM-650 2.5.5.5 clamped stripline",
+     "resin_content_pct": null,
+     "tolerance": 0.25
+    },
+    {
+     "freq_ghz": null,
+     "value": 10.7,
+     "method": "Differential phase length method, design Dk, 8-40 GHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.003,
+     "method": "IPC-TM-650 2.5.5.13 clamped stripline",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "tcdk_ppm_per_c": 50,
+   "thermal_conductivity_w_mk": 0.85,
+   "peel_strength_n_mm": 0.88,
+   "peel_condition": "1 oz, as received and after thermal stress (5.0 lb/in)",
+   "thicknesses_mm": [
+    0.508,
+    0.635,
+    1.27,
+    2.54
+   ],
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": null,
+     "foil_type": "HTE"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": null,
+     "foil_type": "HTE"
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": null,
+     "foil_type": "HTE"
+    },
+    {
+     "weight_oz": 0.5,
+     "thickness_um": null,
+     "foil_type": "HVLP"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": null,
+     "foil_type": "HVLP"
+    }
+   ],
+   "notes": "T288 is published as greater than 120 min (the value stored is the limit); X/Y and Z CTE are 50-140 C; thermal stress at 288 C is greater than 600 s; PIM -160 dBc. HVLP copper is for PIM sensitive and low insertion loss applications.",
+   "source": {
+    "pdf": "231122-tecspeed20-vt-870-h1000.pdf",
+    "pages": "1-2",
+    "revision": "22/11/2023"
+   }
+  },
+  {
+   "id": "ventec/vtm1000i",
+   "manufacturer": "Ventec",
+   "name": "VTM1000i",
+   "kind": "ceramic_filled",
+   "family": "tec-speed 20.0",
+   "resin": "Hydrocarbon ceramic",
+   "td_c": 426,
+   "cte_x_ppm": 24,
+   "cte_y_ppm": 24,
+   "cte_z_below_tg_ppm": 25,
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 9.8,
+     "method": "IPC-TM-650 2.5.5.5 clamped stripline",
+     "resin_content_pct": null,
+     "tolerance": 0.245
+    },
+    {
+     "freq_ghz": null,
+     "value": 9.9,
+     "method": "Differential phase length method, design Dk, 8-40 GHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0023,
+     "method": "IPC-TM-650 2.5.5.13 clamped stripline",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "tcdk_ppm_per_c": -40,
+   "thermal_conductivity_w_mk": 1.0,
+   "peel_strength_n_mm": 0.88,
+   "peel_condition": "1 oz, as received and after thermal stress (5.0 lb/in)",
+   "water_absorption_pct": 0.15,
+   "thicknesses_mm": [
+    0.381,
+    0.508,
+    0.635,
+    0.762,
+    1.27,
+    1.524,
+    1.905,
+    2.54,
+    3.175,
+    3.81
+   ],
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": null,
+     "foil_type": "HVLP"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": null,
+     "foil_type": "HVLP"
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": null,
+     "foil_type": "HTE"
+    }
+   ],
+   "notes": "Preliminary sheet. CTE is 50-140 C; thermal stress at 288 C is greater than 600 s; flexural modulus 2.05 Mpsi; water absorption by ASTM D547. Copper base or aluminium base laminate is available.",
+   "source": {
+    "pdf": "230320tecspeed20-vtm1000i.pdf",
+    "pages": "1-2",
+    "revision": "Prelim 1"
+   }
+  },
+  {
+   "id": "ventec/vt-6706",
+   "manufacturer": "Ventec",
+   "name": "VT-6706",
+   "kind": "ptfe",
+   "family": "tec-speed 30.0",
+   "resin": "Ceramic-filled PTFE",
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4103/07",
+   "lead_free_compatible": true,
+   "td_c": 520,
+   "cte_x_ppm": 45,
+   "cte_y_ppm": 32,
+   "cte_z_below_tg_ppm": 50,
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 6.15,
+     "method": "IPC-TM-650 2.5.5.5",
+     "resin_content_pct": null,
+     "tolerance": 0.15
+    },
+    {
+     "freq_ghz": null,
+     "value": 6.45,
+     "method": "Differential phase length method, design Dk, 8-40 GHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0025,
+     "method": "IPC-TM-650 2.5.5.5",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "tcdk_ppm_per_c": -400,
+   "volume_resistivity_ohm_cm": 70000000000000.0,
+   "surface_resistivity_ohm": 40000000000000.0,
+   "thermal_conductivity_w_mk": 0.7,
+   "peel_strength_n_mm": 2.54,
+   "peel_condition": "1 oz after thermal stress (14.5 lb/in)",
+   "water_absorption_pct": 0.05,
+   "density_g_cm3": 2.7,
+   "thicknesses_mm": [
+    0.635,
+    1.27,
+    1.905
+   ],
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": null,
+     "foil_type": "HTE"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": null,
+     "foil_type": "HTE"
+    },
+    {
+     "weight_oz": 0.5,
+     "thickness_um": null,
+     "foil_type": "RTF"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": null,
+     "foil_type": "RTF"
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 254.0,
+     "height_mm": 254.0,
+     "label": "10\" x 10\""
+    },
+    {
+     "width_mm": 508.0,
+     "height_mm": 254.0,
+     "label": "20\" x 10\""
+    },
+    {
+     "width_mm": 457.0,
+     "height_mm": 305.0,
+     "label": "18\" x 12\""
+    },
+    {
+     "width_mm": 457.0,
+     "height_mm": 610.0,
+     "label": "18\" x 24\""
+    }
+   ],
+   "notes": "Data are preliminary typical values. X/Y and Z CTE are 0-100 C. Tensile modulus 1350/1220 MPa (X/Y). Thermal stress at 288 C greater than 300 s. Resistivities are after moisture. Resistive foil and metal base (Al 5052 or 6061, 1-4 mm; Cu C1100, 1-3 mm) are available.",
+   "source": {
+    "pdf": "221011-tec-speed-300-vt-6706-tds.pdf",
+    "pages": "1-2",
+    "revision": "11/10/2022"
+   }
+  },
+  {
+   "id": "ventec/vt-6702",
+   "manufacturer": "Ventec",
+   "name": "VT-6702",
+   "kind": "laminate",
+   "family": "tec-speed 30.0",
+   "td_c": 520,
+   "cte_z_below_tg_ppm": 24,
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 2.94,
+     "method": "IPC-TM-650 2.5.5.5",
+     "resin_content_pct": null,
+     "tolerance": 0.04
+    },
+    {
+     "freq_ghz": null,
+     "value": 2.94,
+     "method": "Differential phase method, design Dk, 8-40 GHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0011,
+     "method": "IPC-TM-650 2.5.5.5",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "tcdk_ppm_per_c": 12,
+   "peel_strength_n_mm": 1.58,
+   "peel_condition": "1 oz after thermal stress (9 lb/in as published)",
+   "water_absorption_pct": 0.02,
+   "notes": "Thermal stress at 288 C greater than 300 s. The availability table (thickness, panel size, copper) of page 1 is not transcribed.",
+   "source": {
+    "pdf": "221011-tec-speed30-vt-6702.pdf",
+    "pages": "1-2",
+    "revision": "11/10/2022"
+   }
+  },
+  {
+   "id": "ventec/vt-6880",
+   "manufacturer": "Ventec",
+   "name": "VT-6880",
+   "kind": "ptfe",
+   "family": "tec-speed 30.0",
+   "resin": "Non-woven glass reinforced PTFE",
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4103/210",
+   "lead_free_compatible": true,
+   "td_c": 500,
+   "cte_x_ppm": 40,
+   "cte_y_ppm": 40,
+   "cte_z_below_tg_ppm": 75,
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 2.2,
+     "method": "IPC-TM-650 2.5.5.5",
+     "resin_content_pct": null,
+     "tolerance": 0.02
+    },
+    {
+     "freq_ghz": null,
+     "value": 2.2,
+     "method": "Differential phase method, design Dk, 8-40 GHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0009,
+     "method": "IPC-TM-650 2.5.5.5",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "tcdk_ppm_per_c": -140,
+   "volume_resistivity_ohm_cm": 20000000000000.0,
+   "surface_resistivity_ohm": 30000000000000.0,
+   "thermal_conductivity_w_mk": 0.2,
+   "peel_strength_n_mm": 3.51,
+   "peel_condition": "1 oz after thermal stress (20 lb/in)",
+   "water_absorption_pct": 0.02,
+   "density_g_cm3": 2.1,
+   "thicknesses_mm": [
+    0.254,
+    0.508,
+    0.762
+   ],
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": null,
+     "foil_type": "HTE"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": null,
+     "foil_type": "HTE"
+    },
+    {
+     "weight_oz": 0.5,
+     "thickness_um": null,
+     "foil_type": "RTF"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": null,
+     "foil_type": "RTF"
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 457.0,
+     "height_mm": 305.0,
+     "label": "18\" x 12\""
+    },
+    {
+     "width_mm": 457.0,
+     "height_mm": 610.0,
+     "label": "18\" x 24\""
+    }
+   ],
+   "notes": "X/Y and Z CTE are 0-100 C; TCDk is -50 to 150 C; tensile modulus 900/800 MPa (X/Y); thermal stress at 288 C greater than 300 s. The sheet writes the 0.030 inch thickness as 0.752 mm. Resistivities are after moisture. Metal base (Al 5052 or 6061, 1-4 mm; Cu C1100, 1-3 mm) is available.",
+   "source": {
+    "pdf": "230601-tec-speed30-vt-6880.pdf",
+    "pages": "1-2",
+    "revision": "A1"
+   }
+  },
+  {
+   "id": "ventec/vt-6735",
+   "manufacturer": "Ventec",
+   "name": "VT-6735",
+   "kind": "laminate",
+   "family": "tec-speed 30.0",
+   "ul94": "V-0",
+   "lead_free_compatible": true,
+   "td_c": 520,
+   "cte_x_ppm": 21,
+   "cte_y_ppm": 21,
+   "cte_z_below_tg_ppm": 40,
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 3.5,
+     "method": "IPC-TM-650 2.5.5.5 clamped stripline",
+     "resin_content_pct": null,
+     "tolerance": 0.05
+    },
+    {
+     "freq_ghz": null,
+     "value": 3.6,
+     "method": "Differential phase method, design Dk, 8-40 GHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0015,
+     "method": "IPC-TM-650 2.5.5.5",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "tcdk_ppm_per_c": -65,
+   "volume_resistivity_ohm_cm": 80000000000000.0,
+   "surface_resistivity_ohm": 90000000000000.0,
+   "thermal_conductivity_w_mk": 1.15,
+   "specific_heat_j_gk": 0.92,
+   "peel_strength_n_mm": 1.4,
+   "peel_condition": "1 oz after thermal stress (8.0 lb/in)",
+   "water_absorption_pct": 0.06,
+   "density_g_cm3": 2.2,
+   "thicknesses_mm": [
+    0.254,
+    0.508,
+    0.762,
+    1.524
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 305.0,
+     "height_mm": 457.0,
+     "label": "12\" x 18\""
+    },
+    {
+     "width_mm": 610.0,
+     "height_mm": 457.0,
+     "label": "24\" x 18\""
+    }
+   ],
+   "notes": "Preliminary sheet. TCDk is -50 to 150 C; tensile modulus 280/350 MPa; resistivities as published (8e7 MOhm cm, 9e7 MOhm).",
+   "source": {
+    "pdf": "230622-tec-speed30-vt-6735.pdf",
+    "pages": "1-2",
+    "revision": "Prelim 1"
+   }
+  },
+  {
+   "id": "ventec/vt-6710",
+   "manufacturer": "Ventec",
+   "name": "VT-6710",
+   "kind": "laminate",
+   "family": "tec-speed 30.0",
+   "ul94": "V-0",
+   "lead_free_compatible": true,
+   "ipc_slash_sheet": "IPC-4103/08",
+   "td_c": 520,
+   "cte_x_ppm": 24,
+   "cte_y_ppm": 24,
+   "cte_z_below_tg_ppm": 47,
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 10.2,
+     "method": "IPC-TM-650 2.5.5.5 clamped stripline",
+     "resin_content_pct": null,
+     "tolerance": 0.25
+    },
+    {
+     "freq_ghz": null,
+     "value": 10.7,
+     "method": "Differential phase method, design Dk, 8-40 GHz",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0022,
+     "method": "IPC-TM-650 2.5.5.5",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "tcdk_ppm_per_c": -420,
+   "volume_resistivity_ohm_cm": 5000000000000.0,
+   "surface_resistivity_ohm": 500000000000.0,
+   "thermal_conductivity_w_mk": 0.87,
+   "specific_heat_j_gk": 1.0,
+   "peel_strength_n_mm": 2.19,
+   "peel_condition": "1 oz after thermal stress (12.5 lb/in)",
+   "water_absorption_pct": 0.01,
+   "density_g_cm3": 3.1,
+   "panel_sizes": [
+    {
+     "width_mm": 508.0,
+     "height_mm": 508.0,
+     "label": "20\" x 20\" (non standard)"
+    },
+    {
+     "width_mm": 457.0,
+     "height_mm": 610.0,
+     "label": "18\" x 24\" (non standard)"
+    }
+   ],
+   "notes": "Tensile modulus 932/560 MPa; TCDk is -50 to 150 C; the two panel sizes are available above 0.025 inch only. Resistivities are as printed (5e6 MOhm cm, 5e5 MOhm). Shelf life 24 months airproof.",
+   "source": {
+    "pdf": "250424-tec-speed30-vt-6710.pdf",
+    "pages": "1-2",
+    "revision": "24/04/2025"
+   }
+  },
+  {
+   "id": "ventec/vt-5a2",
+   "manufacturer": "Ventec",
+   "name": "VT-5A2",
+   "kind": "laminate",
+   "family": "VT-5",
+   "resin": "Thermally conductive epoxy",
+   "ul94": "V-0",
+   "tg_dsc_c": 190,
+   "td_c": 375,
+   "t260_min": 60,
+   "t288_min": 30,
+   "t300_min": 15,
+   "cte_z_below_tg_ppm": 29,
+   "cte_z_above_tg_ppm": 220,
+   "cte_z_50_260_pct": 2.1,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.3,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 90,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.008,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 90,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 50000000000000.0,
+   "dielectric_strength_kv_mm": 40,
+   "cti_v": 600,
+   "arc_resistance_s": 150,
+   "peel_strength_n_mm": 1.2,
+   "peel_condition": "1 oz, as received and after thermal stress (6.8 lb/in)",
+   "youngs_modulus_gpa": {
+    "lengthwise": null,
+    "crosswise": null,
+    "value": 20
+   },
+   "water_absorption_pct": 0.12,
+   "thermal_conductivity_w_mk": 2.2,
+   "specific_heat_j_gk": 0.895,
+   "density_g_cm3": 2.2,
+   "notes": "Thermal conductivity 2.2 W/mK (Z) and 3.4 W/mK (X-Y) by ISO 22007-2. T260, T288 and T300 are published as greater than the values stored; thermal stress at 288 C is greater than 600 s. X-Y CTE 11-13 ppm/C; MOT 130 C (internal test 150 C); CTI grade 0 (600 V). Resistivities after moisture resistance. Poisson ratio 0.17. Dielectric breakdown 60 kV (kV, not per mm) is not stored.",
+   "source": {
+    "pdf": "230521-vt-5a2.pdf",
+    "pages": "1-4",
+    "revision": "A1"
+   }
+  },
+  {
+   "id": "ventec/vt-4b5-sp",
+   "manufacturer": "Ventec",
+   "name": "VT-4B5 SP",
+   "kind": "metal_core",
+   "family": "Metal base laminate",
+   "thermal_conductivity_w_mk": 4.2,
+   "tg_dsc_c": 120,
+   "tg_dma_c": 145,
+   "td_c": 380,
+   "peel_strength_n_mm": 1.23,
+   "peel_condition": "1 oz as received (7 lb/in)",
+   "notes": "Aluminium base laminate (alloy 1100 or 5052; thicknesses 0.6, 0.8, 1.0, 1.2, 1.5, 2.0 and 3.0 mm). Thermal impedance 0.015 C in2/W. AC breakdown 3000 V, hi-pot 1000 V DC. Thermal conductivity and thermal impedance are for the dielectric layer (ISO 22007-2). Thermal stress at 288 C solder dip is 5 min or more. Resistivities are after moisture (5.0e8 MOhm cm, 2.0e7 MOhm). Hi-pot proof test 600 VDC is run on every working panel. Dk and Df at 1 MHz. RTI 130 C (electric and mechanical).",
+   "resin": "Ceramic filled dielectric",
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 4.8,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.016,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "cti_v": 600,
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 20000000000000.0,
+   "panel_sizes": [
+    {
+     "width_mm": 460.0,
+     "height_mm": 610.0,
+     "label": "18.11\" x 24.02\""
+    },
+    {
+     "width_mm": 510.0,
+     "height_mm": 610.0,
+     "label": "20.08\" x 24.02\""
+    },
+    {
+     "width_mm": 533.0,
+     "height_mm": 610.0,
+     "label": "20.98\" x 24.02\""
+    },
+    {
+     "width_mm": 460.0,
+     "height_mm": 1220.0,
+     "label": "18.11\" x 48.03\""
+    },
+    {
+     "width_mm": 510.0,
+     "height_mm": 1220.0,
+     "label": "20.08\" x 48.03\""
+    },
+    {
+     "width_mm": 533.0,
+     "height_mm": 1220.0,
+     "label": "20.98\" x 48.03\""
+    }
+   ],
+   "source": {
+    "pdf": "230823-vt-4b5-sp.pdf",
+    "pages": "1-3",
+    "revision": "23/08/2023"
+   }
+  },
+  {
+   "id": "ventec/vt-4b5",
+   "manufacturer": "Ventec",
+   "name": "VT-4B5",
+   "kind": "metal_core",
+   "family": "Metal base laminate",
+   "thermal_conductivity_w_mk": 4.2,
+   "tg_dsc_c": 120,
+   "tg_dma_c": 145,
+   "td_c": 380,
+   "peel_strength_n_mm": 1.23,
+   "peel_condition": "1 oz as received (7 lb/in)",
+   "notes": "Dielectric 50 to 200 um; thermal impedance 0.020, 0.029, 0.038, 0.058, 0.076 C in2/W for 50, 75, 100, 150, 200 um; AC breakdown 4000, 7000, 8000, 10000, 12000 V; hi-pot above 600 V DC. Thermal conductivity and thermal impedance are for the dielectric layer (ISO 22007-2). Thermal stress at 288 C solder dip is 5 min or more. Resistivities are after moisture (5.0e8 MOhm cm, 2.0e7 MOhm). Hi-pot proof test 600 VDC is run on every working panel. Dk and Df at 1 MHz. RTI 130 C (electric and mechanical).",
+   "resin": "Ceramic filled dielectric",
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 4.8,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.016,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "cti_v": 600,
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 20000000000000.0,
+   "panel_sizes": [
+    {
+     "width_mm": 460.0,
+     "height_mm": 610.0,
+     "label": "18.11\" x 24.02\""
+    },
+    {
+     "width_mm": 510.0,
+     "height_mm": 610.0,
+     "label": "20.08\" x 24.02\""
+    },
+    {
+     "width_mm": 533.0,
+     "height_mm": 610.0,
+     "label": "20.98\" x 24.02\""
+    }
+   ],
+   "source": {
+    "pdf": "230823-vt-4b5.pdf",
+    "pages": "1-3",
+    "revision": "23/08/2023"
+   }
+  },
+  {
+   "id": "ventec/vt-4b7",
+   "manufacturer": "Ventec",
+   "name": "VT-4B7",
+   "kind": "metal_core",
+   "family": "Metal base laminate",
+   "thermal_conductivity_w_mk": 7.0,
+   "tg_dsc_c": 100,
+   "tg_dma_c": 145,
+   "td_c": 380,
+   "peel_strength_n_mm": 0.79,
+   "peel_condition": "1 oz as received (4.5 lb/in)",
+   "notes": "Dielectric 75, 100 and 150 um; thermal impedance 0.017, 0.022, 0.034 C in2/W; AC breakdown 7000, 8000, 10000 V; hi-pot above 600 V DC. Thermal conductivity and thermal impedance are for the dielectric layer (ISO 22007-2). Thermal stress at 288 C solder dip is 5 min or more. Resistivities are after moisture (5.0e8 MOhm cm, 2.0e7 MOhm). Hi-pot proof test 600 VDC is run on every working panel. Dk and Df at 1 MHz. RTI 130 C (electric and mechanical).",
+   "resin": "Ceramic filled dielectric",
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 4.8,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.016,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "cti_v": 600,
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 20000000000000.0,
+   "panel_sizes": [
+    {
+     "width_mm": 460.0,
+     "height_mm": 610.0,
+     "label": "18.11\" x 24.02\""
+    },
+    {
+     "width_mm": 510.0,
+     "height_mm": 610.0,
+     "label": "20.08\" x 24.02\""
+    },
+    {
+     "width_mm": 533.0,
+     "height_mm": 610.0,
+     "label": "20.98\" x 24.02\""
+    }
+   ],
+   "source": {
+    "pdf": "230823-vt-4b7.pdf",
+    "pages": "1-3",
+    "revision": "23/08/2023"
+   }
+  },
+  {
+   "id": "ventec/vt-4b5h",
+   "manufacturer": "Ventec",
+   "name": "VT-4B5H",
+   "kind": "metal_core",
+   "family": "Metal base laminate",
+   "thermal_conductivity_w_mk": 4.2,
+   "tg_dsc_c": 180,
+   "tg_dma_c": 210,
+   "td_c": 400,
+   "peel_strength_n_mm": 0.88,
+   "peel_condition": "1 oz as received (5 lb/in)",
+   "notes": "Dielectric 50 to 200 um; thermal impedance 0.019, 0.029, 0.038, 0.057, 0.076 C in2/W; AC breakdown 4000, 7000, 8000, 10000, 12000 V; hi-pot above 600 V DC. Thermal conductivity and thermal impedance are for the dielectric layer (ISO 22007-2). Thermal stress at 288 C solder dip is 5 min or more. Resistivities are after moisture (5.0e8 MOhm cm, 2.0e7 MOhm). Hi-pot proof test 600 VDC is run on every working panel. Dk and Df at 1 MHz. RTI 155 C (electric and mechanical).",
+   "resin": "Ceramic filled dielectric",
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 4.8,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.016,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "cti_v": 600,
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 20000000000000.0,
+   "panel_sizes": [
+    {
+     "width_mm": 460.0,
+     "height_mm": 610.0,
+     "label": "18.11\" x 24.02\""
+    },
+    {
+     "width_mm": 510.0,
+     "height_mm": 610.0,
+     "label": "20.08\" x 24.02\""
+    },
+    {
+     "width_mm": 533.0,
+     "height_mm": 610.0,
+     "label": "20.98\" x 24.02\""
+    }
+   ],
+   "source": {
+    "pdf": "230824-vt-4b5h.pdf",
+    "pages": "1-3",
+    "revision": "23/08/2023"
+   }
+  },
+  {
+   "id": "ventec/vt-4bc",
+   "manufacturer": "Ventec",
+   "name": "VT-4BC",
+   "kind": "metal_core",
+   "family": "Metal base laminate",
+   "thermal_conductivity_w_mk": 10,
+   "tg_dsc_c": 180,
+   "td_c": 400,
+   "peel_strength_n_mm": 1.05,
+   "peel_condition": "3 oz as received (6 lb/in)",
+   "notes": "Dielectric 100, 125 and 150 um; thermal impedance 0.016, 0.019, 0.023 C in2/W; hi-pot 3000, 4000, 5000 V DC; AC breakdown 8000, 9000, 10000 V. Dk 5.5 and Df 0.014 at 1 MHz. Thermal conductivity and thermal impedance are for the dielectric layer (ISO 22007-2). Thermal stress at 288 C solder dip is 5 min or more. Resistivities are after moisture (5.0e8 MOhm cm, 2.0e7 MOhm). Hi-pot proof test 600 VDC is run on every working panel. Dk and Df at 1 MHz. RTI 155 C (electric and mechanical).",
+   "resin": "Ceramic filled dielectric",
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 5.5,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.014,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "cti_v": 600,
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 20000000000000.0,
+   "source": {
+    "pdf": "230915-vt-4bc.pdf",
+    "pages": "1-3",
+    "revision": "15/09/2023"
+   }
+  },
+  {
+   "id": "ventec/vt-4b7h",
+   "manufacturer": "Ventec",
+   "name": "VT-4B7H",
+   "kind": "metal_core",
+   "family": "Metal base laminate",
+   "thermal_conductivity_w_mk": 7.0,
+   "tg_dma_c": 210,
+   "td_c": 420,
+   "peel_strength_n_mm": 0.91,
+   "peel_condition": "1 oz as received (5.2 lb/in)",
+   "notes": "Dielectric 100 and 150 um; thermal impedance 0.022 and 0.035 C in2/W; AC breakdown 8000 and 10000 V; hi-pot above 600 V DC. Thermal conductivity and thermal impedance are for the dielectric layer (ISO 22007-2). Thermal stress at 288 C solder dip is 5 min or more. Resistivities are after moisture (5.0e8 MOhm cm, 2.0e7 MOhm). Hi-pot proof test 600 VDC is run on every working panel. Dk and Df at 1 MHz. RTI 155 C (electric and mechanical).",
+   "resin": "Ceramic filled dielectric",
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 4.8,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.016,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "cti_v": 600,
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 20000000000000.0,
+   "panel_sizes": [
+    {
+     "width_mm": 460.0,
+     "height_mm": 610.0,
+     "label": "18.11\" x 24.02\""
+    },
+    {
+     "width_mm": 510.0,
+     "height_mm": 610.0,
+     "label": "20.08\" x 24.02\""
+    },
+    {
+     "width_mm": 533.0,
+     "height_mm": 610.0,
+     "label": "20.98\" x 24.02\""
+    }
+   ],
+   "source": {
+    "pdf": "231129-vt-4b7h.pdf",
+    "pages": "1-3",
+    "revision": "29/11/2023"
+   }
+  },
+  {
+   "id": "ventec/vt-4bd",
+   "manufacturer": "Ventec",
+   "name": "VT-4BD",
+   "kind": "metal_core",
+   "family": "Metal base laminate",
+   "thermal_conductivity_w_mk": 16,
+   "tg_dma_c": 210,
+   "td_c": 400,
+   "peel_strength_n_mm": 0.61,
+   "peel_condition": "1 oz as received (3.5 lb/in)",
+   "notes": "Dielectric 200 um; thermal impedance 0.019 C in2/W (ASTM D5470); hi-pot 7000 V DC; AC breakdown 12000 V. Dk 5.5 and Df 0.014 at 1 MHz. Thermal conductivity and thermal impedance are for the dielectric layer (ISO 22007-2). Thermal stress at 288 C solder dip is 5 min or more. Resistivities are after moisture (5.0e8 MOhm cm, 2.0e7 MOhm). Hi-pot proof test 600 VDC is run on every working panel. Dk and Df at 1 MHz. RTI 155 C (electric and mechanical).",
+   "resin": "Ceramic filled dielectric",
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 5.5,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.014,
+     "method": "IPC-TM-650 2.5.5.3, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "cti_v": 600,
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 20000000000000.0,
+   "source": {
+    "pdf": "250127-vt-4bd.pdf",
+    "pages": "1-3",
+    "revision": "27/01/2025"
+   }
+  },
+  {
+   "id": "ventec/vt-901n",
+   "manufacturer": "Ventec",
+   "name": "VT-901N",
+   "kind": "prepreg",
+   "resin": "Polyimide, no flow / low flow",
+   "ipc_slash_sheet": "IPC-4101/40, /41, /42",
+   "tg_tma_c": 200,
+   "td_c": 390,
+   "dielectric_strength_kv_mm": 54,
+   "cte_z_below_tg_ppm": 50,
+   "cte_z_above_tg_ppm": 230,
+   "cte_z_50_260_pct": 2.5,
+   "arc_resistance_s": 150,
+   "water_absorption_pct": 0.2,
+   "moisture_absorption_note": "0.22 % after PCT (121 C, 1 h)",
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 3.8,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 60,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.015,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 60,
+     "tolerance": null
+    }
+   ],
+   "notes": "Pressed no-flow / low-flow polyimide prepreg. Peel strength with 1 oz copper 8-9 lb/in (as received and after thermal stress), with coverlay 7 lb/in. X/Y CTE 12-15 ppm/C (30-125 C). Thermal stress at 288 C greater than 300 s. Breakdown voltage above 60 kV.",
+   "source": {
+    "pdf": "230929-vt-901n.pdf",
+    "pages": "1-3",
+    "revision": "29/09/2023"
+   }
+  },
+  {
+   "id": "ventec/vt-901pp-nf-lf-lcte",
+   "manufacturer": "Ventec",
+   "name": "VT-901PP NF/LF LCTE",
+   "kind": "prepreg",
+   "resin": "Polyimide, no flow / low flow",
+   "ipc_slash_sheet": "IPC-4101/40, /41, /42",
+   "tg_tma_c": 200,
+   "td_c": 390,
+   "dielectric_strength_kv_mm": 54,
+   "cte_z_below_tg_ppm": 50,
+   "cte_z_above_tg_ppm": 230,
+   "cte_z_50_260_pct": 2.5,
+   "arc_resistance_s": 150,
+   "water_absorption_pct": 0.2,
+   "moisture_absorption_note": "0.22 % after PCT (121 C, 1 h)",
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 3.8,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 60,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.015,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 60,
+     "tolerance": null
+    }
+   ],
+   "notes": "Pressed low-CTE no-flow / low-flow polyimide prepreg. Peel strength with 1 oz copper 8-9 lb/in (as received and after thermal stress), with coverlay 7 lb/in. X/Y CTE 12-15 ppm/C (30-125 C). Thermal stress at 288 C greater than 300 s. Breakdown voltage above 60 kV.",
+   "source": {
+    "pdf": "230929-vt-901pp-nflf-lcte.pdf",
+    "pages": "1-3",
+    "revision": "29/09/2023"
+   }
+  },
+  {
+   "id": "ventec/vt-8728g2-rcf",
+   "manufacturer": "Ventec",
+   "name": "VT-8728G2 RCF",
+   "kind": "bonding_film",
+   "family": "pro-bond 20FG2",
+   "resin": "Non-reinforced hydrocarbon",
+   "dk": [
+    {
+     "freq_ghz": null,
+     "value": 2.94,
+     "method": "As stated in the type description",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "prepreg": [
+    {
+     "style": "8728G2-FT L-050",
+     "resin_content_pct": null,
+     "pressed_thickness_um": 50,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": null,
+     "df": null,
+     "test_freq_ghz": null
+    },
+    {
+     "style": "8728G2-FT L-060",
+     "resin_content_pct": null,
+     "pressed_thickness_um": 60,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": null,
+     "df": null,
+     "test_freq_ghz": null
+    },
+    {
+     "style": "8728G2-FT L-075",
+     "resin_content_pct": null,
+     "pressed_thickness_um": 75,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": null,
+     "df": null,
+     "test_freq_ghz": null
+    },
+    {
+     "style": "8728G2-FT R-125",
+     "resin_content_pct": null,
+     "pressed_thickness_um": 125,
+     "flow_pct": null,
+     "gel_time_s": null,
+     "dk": null,
+     "df": null,
+     "test_freq_ghz": null
+    }
+   ],
+   "notes": "Resin coated film on PET (RCF), Dk 2.94, low flow or regular flow. The sheet gives a flow-in range per type (30-60 for L-050 and L-060, 40-80 for L-075, 150-200 for R-125) without a unit, so it is not stored; sizes 18 x 24, 18 x 12, 20 x 24 and 20 x 12 inch.",
+   "source": {
+    "pdf": "250304-pro-bond-vt-8728g2-rcf.pdf",
+    "pages": "1-3",
+    "revision": "04/03/2025"
+   }
+  },
+  {
+   "id": "ventec/vt-901",
+   "manufacturer": "Ventec",
+   "name": "VT-901",
+   "kind": "laminate",
+   "ipc_slash_sheet": "IPC-4101E/40, /41, /42",
+   "thickness_range": {
+    "min_mm": 0.05,
+    "max_mm": 3,
+    "steps_note": null
+   },
+   "t260_min": 60,
+   "t288_min": 60,
+   "td_c": 395,
+   "cte_z_below_tg_ppm": 50,
+   "cte_z_above_tg_ppm": 150,
+   "cte_z_50_260_pct": 1.4,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.05,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 40,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.012,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 40,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 50000000000000.0,
+   "dielectric_strength_kv_mm": 54,
+   "arc_resistance_s": 150,
+   "peel_condition": "RTF 5-8 lb/in (0.88-1.40 N/mm); HTE 6-9 lb/in (1.05-1.58 N/mm)",
+   "water_absorption_pct": 0.2,
+   "ul94": "V-0",
+   "notes": "Laminate and prepreg sheet; core thickness 0.05-3 mm, copper foil 1/4 oz to 6 oz. Resistivities are after moisture resistance (5.0e8 MOhm cm, 5.0e7 MOhm). Electric strength 1200-1400 V/mil (54 kV/mm); dielectric breakdown 60 kV (kV, not per mm) is not stored. Polyimide; MOT 140 C; CTI grade 4 (100-175 V); X/Y CTE 11-12 ppm/C; thermal stress at 288 C greater than 1200 s; flexural strength warp 87 kpsi and fill 72 kpsi; Dk and Df at 40 % resin content. T260 and T288 are published as greater than 60 min.",
+   "tg_tma_c": 250,
+   "flexural_strength_mpa": {
+    "lengthwise": 600,
+    "crosswise": 500,
+    "value": null
+   },
+   "resin": "Polyimide",
+   "processing": {
+    "drilling": {
+     "speed_surface_m_min": null,
+     "chip_load_um": null,
+     "retract_notes": "For 0.3-1.0 mm holes: spindle speed 120-180 krpm, feed 100-200 inch/min, retract 550-1000 inch/min, chip load 0.6-1.8 mil/rev, entry board 0.15 mm aluminium. The desmear process must be adjusted for polyimide."
+    }
+   },
+   "source": {
+    "pdf": "240223-vt-901_tds.pdf",
+    "pages": "1-2",
+    "revision": "23/02/2024"
+   }
+  },
+  {
+   "id": "ventec/vt-90h",
+   "manufacturer": "Ventec",
+   "name": "VT-90H",
+   "kind": "laminate",
+   "ipc_slash_sheet": "IPC-4101E/40, /41",
+   "thickness_range": {
+    "min_mm": 0.05,
+    "max_mm": 3,
+    "steps_note": null
+   },
+   "t260_min": 60,
+   "t288_min": 60,
+   "td_c": 408,
+   "cte_z_below_tg_ppm": 50,
+   "cte_z_above_tg_ppm": 145,
+   "cte_z_50_260_pct": 1.2,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.05,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 40,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.012,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 40,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 50000000000000.0,
+   "dielectric_strength_kv_mm": 54,
+   "arc_resistance_s": 150,
+   "peel_condition": "6-9 lb/in (1.05-1.58 N/mm)",
+   "water_absorption_pct": 0.28,
+   "ul94": "HB",
+   "notes": "Laminate and prepreg sheet; core thickness 0.05-3 mm, copper foil 1/4 oz to 6 oz. Resistivities are after moisture resistance (5.0e8 MOhm cm, 5.0e7 MOhm). Electric strength 1200-1400 V/mil (54 kV/mm); dielectric breakdown 60 kV (kV, not per mm) is not stored. Polyimide; MOT 140 C; CTI grade 4 (100-175 V); X/Y CTE 11-12 ppm/C; thermal stress at 288 C greater than 1200 s; flexural strength warp 87 kpsi and fill 72 kpsi; Dk and Df at 40 % resin content. T260 and T288 are published as greater than 60 min.",
+   "tg_tma_c": 250,
+   "flexural_strength_mpa": {
+    "lengthwise": 600,
+    "crosswise": 500,
+    "value": null
+   },
+   "resin": "Polyimide",
+   "processing": {
+    "drilling": {
+     "speed_surface_m_min": null,
+     "chip_load_um": null,
+     "retract_notes": "For 0.3-1.0 mm holes: spindle speed 120-180 krpm, feed 100-200 inch/min, retract 550-1000 inch/min, chip load 0.6-1.8 mil/rev, entry board 0.15 mm aluminium. The desmear process must be adjusted for polyimide."
+    }
+   },
+   "sources": [
+    {
+     "pdf": "250108-vt-90h.pdf",
+     "pages": "1-2",
+     "revision": "08/01/2025"
+    },
+    {
+     "pdf": "211104vt-90h-pgl-revb7-eng.pdf",
+     "pages": "1-5",
+     "revision": null
+    }
+   ]
+  },
+  {
+   "id": "ventec/vt-441c",
+   "manufacturer": "Ventec",
+   "name": "VT-441C",
+   "kind": "laminate",
+   "ipc_slash_sheet": "IPC-4101E/127, /128",
+   "thickness_range": {
+    "min_mm": 0.1,
+    "max_mm": 5,
+    "steps_note": null
+   },
+   "t260_min": 60,
+   "t288_min": 10,
+   "td_c": 385,
+   "cte_z_below_tg_ppm": 35,
+   "cte_z_above_tg_ppm": 190,
+   "cte_z_50_260_pct": 2.2,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.6,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.011,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 50000000000000.0,
+   "dielectric_strength_kv_mm": 54,
+   "cti_v": 600,
+   "arc_resistance_s": 187,
+   "peel_strength_n_mm": 1.4,
+   "peel_condition": "1 oz, as received and after thermal stress (8 lb/in)",
+   "water_absorption_pct": 0.18,
+   "ul94": "V-0",
+   "notes": "Laminate and prepreg sheet; core thickness 0.1-5 mm, copper foil 1/2 oz to 12 oz. Resistivities are after moisture resistance (5.0e8 MOhm cm, 5.0e7 MOhm). Electric strength 1200-1400 V/mil (54 kV/mm); dielectric breakdown 60 kV (kV, not per mm) is not stored. CTI grade 0 (above 600 V); MOT 150 C; thermal stress at 288 C greater than 200 s; flexural strength warp 72 kpsi (500 MPa) and fill 58 kpsi (400 MPa). T260 is published as greater than 60 min and T288 as greater than 10 min.",
+   "tg_dsc_c": 155,
+   "flexural_strength_mpa": {
+    "lengthwise": 500,
+    "crosswise": 400,
+    "value": null
+   },
+   "resin": "Phenolic cured epoxy",
+   "source": {
+    "pdf": "240831-vt-441c.pdf",
+    "pages": "1-2",
+    "revision": "31/08/2024"
+   }
+  },
+  {
+   "id": "ventec/vt-447c",
+   "manufacturer": "Ventec",
+   "name": "VT-447C",
+   "kind": "laminate",
+   "ipc_slash_sheet": "IPC-4101E/127, /128, /130",
+   "thickness_range": {
+    "min_mm": 0.1,
+    "max_mm": 5,
+    "steps_note": null
+   },
+   "t260_min": 60,
+   "t288_min": 20,
+   "td_c": 385,
+   "cte_z_below_tg_ppm": 35,
+   "cte_z_above_tg_ppm": 190,
+   "cte_z_50_260_pct": 2.2,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.6,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.011,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 50000000000000.0,
+   "dielectric_strength_kv_mm": 54,
+   "cti_v": 600,
+   "arc_resistance_s": 187,
+   "peel_strength_n_mm": 1.4,
+   "peel_condition": "1 oz, as received and after thermal stress (8 lb/in)",
+   "water_absorption_pct": 0.18,
+   "ul94": "V-0",
+   "notes": "Laminate and prepreg sheet; core thickness 0.1-5 mm, copper foil 1/2 oz to 6 oz. Resistivities are after moisture resistance (5.0e8 MOhm cm, 5.0e7 MOhm). Electric strength 1200-1400 V/mil (54 kV/mm); dielectric breakdown 60 kV (kV, not per mm) is not stored. CTI grade 0 (above 600 V); MOT 150 C; thermal stress at 288 C greater than 200 s; flexural strength warp 72 kpsi (500 MPa) and fill 58 kpsi (400 MPa); Dk and Df at 50 % resin content. T260 is published as greater than 60 min and T288 as greater than 20 min.",
+   "tg_dsc_c": 175,
+   "flexural_strength_mpa": {
+    "lengthwise": 500,
+    "crosswise": 400,
+    "value": null
+   },
+   "resin": "Phenolic cured epoxy",
+   "source": {
+    "pdf": "240831-vt-447-c.pdf",
+    "pages": "1-2",
+    "revision": "31/08/2024"
+   }
+  },
+  {
+   "id": "ventec/vt-464g",
+   "manufacturer": "Ventec",
+   "name": "VT-464G",
+   "kind": "laminate",
+   "ipc_slash_sheet": "IPC-4101E/130",
+   "thickness_range": {
+    "min_mm": 0.05,
+    "max_mm": 0.762,
+    "steps_note": null
+   },
+   "t260_min": 60,
+   "t288_min": 30,
+   "td_c": 400,
+   "cte_z_below_tg_ppm": 35,
+   "cte_z_above_tg_ppm": 200,
+   "cte_z_50_260_pct": 2.1,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 3.81,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.0031,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 600000000000000.0,
+   "surface_resistivity_ohm": 60000000000000.0,
+   "dielectric_strength_kv_mm": 54,
+   "arc_resistance_s": 124,
+   "peel_strength_n_mm": 0.88,
+   "peel_condition": "1 oz RTF2, as received (5.0 lb/in)",
+   "water_absorption_pct": 0.08,
+   "ul94": "V-0",
+   "notes": "Laminate and prepreg sheet; core thickness 0.05-0.762 mm, copper foil 1/3 oz to 2 oz. Resistivities are after moisture resistance (5.0e8 MOhm cm, 5.0e7 MOhm). Electric strength 1200-1400 V/mil (54 kV/mm); dielectric breakdown 60 kV (kV, not per mm) is not stored. tec-speed 5.0; CTI grade 3 (175-250 V); thermal stress at 288 C greater than 600 s; flexural strength warp 80 kpsi (560 MPa) and fill 65 kpsi (450 MPa). Also Dk 3.62 and Df 0.0050 at 10 GHz (cavity resonator). T260 and T288 are published as greater than 60 and 30 min.",
+   "tg_tma_c": 175,
+   "tg_dma_c": 200,
+   "flexural_strength_mpa": {
+    "lengthwise": 560,
+    "crosswise": 450,
+    "value": null
+   },
+   "source": {
+    "pdf": "241202-tec-speed-5-vt-464g.pdf",
+    "pages": "1-2",
+    "revision": "02/12/2024"
+   }
+  },
+  {
+   "id": "ventec/vt-481",
+   "manufacturer": "Ventec",
+   "name": "VT-481",
+   "kind": "laminate",
+   "ipc_slash_sheet": "IPC-4101E/97, /98, /99, /101",
+   "thickness_range": {
+    "min_mm": 0.05,
+    "max_mm": 5,
+    "steps_note": null
+   },
+   "t260_min": 60,
+   "t288_min": 25,
+   "td_c": 345,
+   "cte_z_below_tg_ppm": 45,
+   "cte_z_above_tg_ppm": 220,
+   "cte_z_50_260_pct": 2.6,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.3,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.015,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 50000000000000.0,
+   "dielectric_strength_kv_mm": 54,
+   "arc_resistance_s": 147,
+   "peel_condition": "1 oz, 7.5-10 lb/in (1.3-1.75 N/mm) as received and after thermal stress",
+   "water_absorption_pct": 0.12,
+   "ul94": "V-0",
+   "notes": "Laminate and prepreg sheet; core thickness 0.05-5 mm, copper foil 1/4 oz to 12 oz. Resistivities are after moisture resistance (5.0e8 MOhm cm, 5.0e7 MOhm). Electric strength 1200-1400 V/mil (54 kV/mm); dielectric breakdown 60 kV (kV, not per mm) is not stored. CTI grade 3 (175-250 V); MOT 130 C; X/Y CTE 11-13 ppm/C; thermal stress at 288 C greater than 600 s; flexural strength warp 80 kpsi (560 MPa) and fill 65 kpsi (450 MPa); Dk and Df at 50 % resin content. T260 is published as greater than 60 min.",
+   "tg_dsc_c": 155,
+   "flexural_strength_mpa": {
+    "lengthwise": 560,
+    "crosswise": 450,
+    "value": null
+   },
+   "processing": {
+    "drilling": {
+     "speed_surface_m_min": null,
+     "chip_load_um": null,
+     "retract_notes": "Undercut drill bits give better quality on small holes. Reference (hole mm: spindle krpm, feed ipm, retract ipm, chip load mil/rev): 0.20-0.25: 150, 130, 700, 0.73; 0.30-0.35: 120, 130, 900, 0.87; 0.40-0.55: 80, 80, 900, 1.08; 0.60-0.65: 70, 80, 900, 1.00; 0.70-1.00: 60, 80, 900, 1.14."
+    }
+   },
+   "sources": [
+    {
+     "pdf": "250113vt-481.pdf",
+     "pages": "1-2",
+     "revision": "B5"
+    },
+    {
+     "pdf": "250212-vt-481-pgl.pdf",
+     "pages": "1-5",
+     "revision": null
+    }
+   ]
+  },
+  {
+   "id": "ventec/vt-441",
+   "manufacturer": "Ventec",
+   "name": "VT-441",
+   "kind": "laminate",
+   "ipc_slash_sheet": "IPC-4101E/127, /128",
+   "thickness_range": {
+    "min_mm": 0.05,
+    "max_mm": 5,
+    "steps_note": null
+   },
+   "t260_min": 60,
+   "t288_min": 30,
+   "td_c": 385,
+   "cte_z_below_tg_ppm": 38,
+   "cte_z_above_tg_ppm": 190,
+   "cte_z_50_260_pct": 2.2,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.4,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.014,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 50000000000000.0,
+   "dielectric_strength_kv_mm": 54,
+   "arc_resistance_s": 187,
+   "peel_condition": "1 oz, 7.9-10 lb/in (1.2-1.6 N/mm) as received and after thermal stress",
+   "water_absorption_pct": 0.18,
+   "ul94": "V-0",
+   "notes": "Laminate and prepreg sheet; core thickness 0.05-5 mm, copper foil 1/4 oz to 12 oz. Resistivities are after moisture resistance (5.0e8 MOhm cm, 5.0e7 MOhm). Electric strength 1200-1400 V/mil (54 kV/mm); dielectric breakdown 60 kV (kV, not per mm) is not stored. CTI grade 3 (175-250 V); MOT 130 C; X/Y CTE 11-13 ppm/C; thermal stress at 288 C greater than 600 s; flexural strength warp 72 kpsi (500 MPa) and fill 58 kpsi (400 MPa); Dk and Df at 50 % resin content. T260 is published as greater than 60 min and T288 as greater than 30 min.",
+   "tg_dsc_c": 158,
+   "tg_dma_c": 195,
+   "tg_tma_c": 152,
+   "flexural_strength_mpa": {
+    "lengthwise": 500,
+    "crosswise": 400,
+    "value": null
+   },
+   "resin": "Phenolic cured epoxy",
+   "sources": [
+    {
+     "pdf": "250114-vt-441-tds.pdf",
+     "pages": "1-2",
+     "revision": "C1"
+    },
+    {
+     "pdf": "250213-vt-441-pgl.pdf",
+     "pages": "1-5",
+     "revision": null
+    }
+   ]
+  },
+  {
+   "id": "ventec/vt-464lt",
+   "manufacturer": "Ventec",
+   "name": "VT-464LT",
+   "kind": "laminate",
+   "ipc_slash_sheet": "IPC-4101E/130",
+   "thickness_range": {
+    "min_mm": 0.05,
+    "max_mm": 1.0,
+    "steps_note": null
+   },
+   "t288_min": 60,
+   "td_c": 430,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.0,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.005,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 50000000000000.0,
+   "dielectric_strength_kv_mm": 54,
+   "arc_resistance_s": 195,
+   "peel_strength_n_mm": 0.96,
+   "peel_condition": "1 oz RTF, as received (5.5 lb/in)",
+   "water_absorption_pct": 0.12,
+   "ul94": "V-0",
+   "notes": "Laminate and prepreg sheet; core thickness 0.05-1.0 mm, copper foil 1/7 oz to 6 oz. Resistivities are after moisture resistance (5.0e8 MOhm cm, 5.0e7 MOhm). Electric strength 1200-1400 V/mil (54 kV/mm); dielectric breakdown 60 kV (kV, not per mm) is not stored. tec-speed 4.0H-PK; CTI grade 3 (175-250 V). Z-CTE is 25-30 ppm/C before Tg, 120-140 ppm/C after Tg and 1.2-1.4 % over 50-260 C; XY CTE 9/10 ppm/C; flexural modulus 24-26 GPa warp and 23-25 GPa fill; thermal stress at 288 C greater than 600 s. Also Dk 3.9 and Df 0.0068 at 10 GHz (IPC-TM-650 2.5.5.13). T288 is published as greater than 60 min.",
+   "tg_dma_c": 260,
+   "cte_x_ppm": 9,
+   "cte_y_ppm": 10,
+   "source": {
+    "pdf": "250127-vt-464lt.pdf",
+    "pages": "1-2",
+    "revision": "27/01/2025"
+   }
+  },
+  {
+   "id": "ventec/vt-47-lt",
+   "manufacturer": "Ventec",
+   "name": "VT-47 LT",
+   "kind": "laminate",
+   "ipc_slash_sheet": "IPC-4101/126",
+   "t288_min": 60,
+   "td_c": 360,
+   "cte_z_below_tg_ppm": 25,
+   "cte_z_above_tg_ppm": 130,
+   "cte_z_50_260_pct": 1.5,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.4,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.011,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 700000000000000.0,
+   "surface_resistivity_ohm": 70000000000000.0,
+   "dielectric_strength_kv_mm": 54,
+   "arc_resistance_s": 195,
+   "peel_strength_n_mm": 1.4,
+   "peel_condition": "1 oz, as received and after thermal stress (8.0 lb/in)",
+   "water_absorption_pct": 0.1,
+   "ul94": "V-0",
+   "notes": "Laminate and prepreg sheet; Resistivities are after moisture resistance (5.0e8 MOhm cm, 5.0e7 MOhm). Electric strength 1200-1400 V/mil (54 kV/mm); dielectric breakdown 60 kV (kV, not per mm) is not stored. High Tg, low CTE, high thermal reliability prepreg and laminate; CTI grade 3 (175-250 V); XY CTE 10/12 ppm/C; thermal stress at 288 C greater than 600 s; flexural modulus 650/550 MPa. Also Dk 4.2 and Df 0.015 at 10 GHz (cavity resonator). T288 is published as greater than 60 min.",
+   "tg_dsc_c": 195,
+   "tg_dma_c": 215,
+   "tg_tma_c": 185,
+   "cte_x_ppm": 10,
+   "cte_y_ppm": 12,
+   "source": {
+    "pdf": "250225-vt-47-lt.pdf",
+    "pages": "1-2",
+    "revision": "25/02/2025"
+   }
+  },
+  {
+   "id": "ventec/vt-770",
+   "manufacturer": "Ventec",
+   "name": "VT-770",
+   "kind": "laminate",
+   "family": "tec-speed 7.0",
+   "ul94": "V-0",
+   "tg_tma_c": 230,
+   "tg_dma_c": 260,
+   "td_c": 450,
+   "t260_min": 60,
+   "t288_min": 60,
+   "cte_z_below_tg_ppm": 25,
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 50000000000000.0,
+   "dielectric_strength_kv_mm": 55,
+   "arc_resistance_s": 195,
+   "peel_strength_n_mm": 0.7,
+   "peel_condition": "12 um copper, as received and after thermal stress (4.0 lb/in)",
+   "water_absorption_pct": 0.1,
+   "thickness_range": {
+    "min_mm": 0.03,
+    "max_mm": 0.8,
+    "steps_note": "Core thickness 0.0012 to 0.031 inch; prepreg 0.02 to 0.1 mm."
+   },
+   "copper": [
+    {
+     "weight_oz": null,
+     "thickness_um": 5,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": 70,
+     "foil_type": null
+    }
+   ],
+   "notes": "tec-speed 7.0 / 7.1H-PK. Dk (RC 50 %) is published as a range: 3.5-3.6 at 1 GHz and 3.4-3.5 at 10 GHz; Df 0.0030 at 1 GHz and 0.0040 at 10 GHz, so no single value is stored. XY CTE 9-10 ppm/C; CTI grade 3 (175-250 V); flexural modulus 24-28 GPa; thermal stress at 288 C greater than 600 s; electric strength 1400 V/mil (55 kV/mm); dielectric breakdown 60 kV (kV, not per mm) is not stored. T260 and T288 are published as greater than 60 min.",
+   "source": {
+    "pdf": "250203-tec-speed-70_-71-h-pk-vt-770-vt-770lk.pdf",
+    "pages": "1-2",
+    "revision": "03/02/2025"
+   }
+  },
+  {
+   "id": "ventec/vt-770-lk",
+   "manufacturer": "Ventec",
+   "name": "VT-770(LK)",
+   "kind": "laminate",
+   "family": "tec-speed 7.0",
+   "ul94": "V-0",
+   "tg_tma_c": 230,
+   "tg_dma_c": 260,
+   "td_c": 450,
+   "t260_min": 60,
+   "t288_min": 60,
+   "cte_z_below_tg_ppm": 22,
+   "volume_resistivity_ohm_cm": 500000000000000.0,
+   "surface_resistivity_ohm": 50000000000000.0,
+   "dielectric_strength_kv_mm": 55,
+   "arc_resistance_s": 195,
+   "peel_strength_n_mm": 0.7,
+   "peel_condition": "12 um copper, as received and after thermal stress (4.0 lb/in)",
+   "water_absorption_pct": 0.1,
+   "thickness_range": {
+    "min_mm": 0.03,
+    "max_mm": 0.8,
+    "steps_note": "Core thickness 0.0012 to 0.031 inch; prepreg 0.02 to 0.1 mm."
+   },
+   "copper": [
+    {
+     "weight_oz": null,
+     "thickness_um": 5,
+     "foil_type": null
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": 70,
+     "foil_type": null
+    }
+   ],
+   "notes": "tec-speed 7.0 / 7.1H-PK. Dk (RC 50 %) is published as a range: 3.4-3.5 at 1 GHz and 3.3-3.4 at 10 GHz; Df 0.0020 at 1 GHz and 0.0024 at 10 GHz, so no single value is stored. XY CTE 9-10 ppm/C; CTI grade 3 (175-250 V); flexural modulus 24-28 GPa; thermal stress at 288 C greater than 600 s; electric strength 1400 V/mil (55 kV/mm); dielectric breakdown 60 kV (kV, not per mm) is not stored. T260 and T288 are published as greater than 60 min.",
+   "source": {
+    "pdf": "250203-tec-speed-70_-71-h-pk-vt-770-vt-770lk.pdf",
+    "pages": "1-2",
+    "revision": "03/02/2025"
+   }
+  }
+ ]
+}

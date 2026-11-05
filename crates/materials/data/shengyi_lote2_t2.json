@@ -1,0 +1,2710 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Shengyi",
+ "materials": [
+  {
+   "id": "shengyi/lnb33c",
+   "manufacturer": "Shengyi",
+   "name": "LNB33C",
+   "kind": "ceramic_filled",
+   "family": "LNB33C",
+   "resin": "Hydrocarbon with ceramic filler",
+   "reinforcement": "Glass",
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "tg_dsc_c": 280,
+   "td_c": 400,
+   "cte_x_ppm": 12,
+   "cte_y_ppm": 12,
+   "cte_z_below_tg_ppm": 30,
+   "tcdk_ppm_per_c": 50,
+   "water_absorption_pct": 0.05,
+   "peel_strength_n_mm": 1.05,
+   "peel_condition": "288 C 10 s, 1 oz HVLP copper",
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": null,
+     "foil_type": "HVLP"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": null,
+     "foil_type": "HVLP"
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 914.4,
+     "height_mm": 1219.2,
+     "label": "36\" x 48\""
+    },
+    {
+     "width_mm": 1016.0,
+     "height_mm": 1219.2,
+     "label": "40\" x 48\""
+    },
+    {
+     "width_mm": 1066.8,
+     "height_mm": 1219.2,
+     "label": "42\" x 48\""
+    }
+   ],
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 3.3,
+     "method": "IPC-TM-650 2.5.5.5 (Z), C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": 0.05
+    },
+    {
+     "freq_ghz": 10,
+     "value": 3.56,
+     "method": "IPC-TM-650 2.5.5.15 (X/Y), C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": 0.05
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.003,
+     "method": "IPC-TM-650 2.5.5.15 (X/Y), C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "thermal_conductivity_w_mk": 0.65,
+   "volume_resistivity_ohm_cm": 680000000000000.0,
+   "surface_resistivity_ohm": 53000000000000.0,
+   "flexural_strength_mpa": {
+    "lengthwise": 200,
+    "crosswise": 160,
+    "value": null
+   },
+   "thicknesses_mm": [
+    0.272,
+    0.526,
+    0.78,
+    1.034,
+    1.288,
+    1.542
+   ],
+   "processing": {
+    "drilling": {
+     "speed_surface_m_min": null,
+     "chip_load_um": null,
+     "retract_notes": "New drill bits, at most 4 panels per stack, melamine back-up board, clean holes with high pressure air; for dense holes or holes under 0.6 mm use LE aluminium cover sheets; no mechanical deburring by brushing. Reference table (diameter mm: max hits, speed krpm, feed ipm, return ipm): 0.25: 1200, 108, 21, 300; 0.50: 1000, 98, 40.6, 800; 0.75: 1000, 95, 50.4, 800; 0.95: 1000, 90, 47.6, 800; 1.20: 1000, 75, 50.4, 800; 1.60: 1000, 68, 52.5, 800; 3.00: 1000, 62, 52.5, 500. A second table for hybrid boards with FR-4 gives lower speeds for large drills."
+    },
+    "desmear_note": "1x plasma, or 1x plasma plus 1x fast chemical desmear, with a weight loss of about 0.3 g/cm3.",
+    "bake_note": "Thin core 150 C for 1-3 h if baked after cutting; brown oxide bake 120 C for 1 h with pressing within 4 h; baking after drilling is optional (150 C, 1-3 h)."
+   },
+   "notes": "Tg is published as greater than 280 C (the value stored is the limit). CTE Z and X/Y are 50-260 C. The sheet gives Dk Z by IPC-TM-650 2.5.5.5 and Dk X/Y by 2.5.5.15 at 10 GHz. Flexural strength is given as X/Y. PIM is -158 dBc (43 dBm, 1900 MHz). Volume and surface resistivity are given in MOhm cm and MOhm. Typical values are for the 0.780 mm specimen. Standard builds are 2 to 12 plies of 1080.",
+   "sources": [
+    {
+     "pdf": "20221118164630641.pdf",
+     "pages": "1-2",
+     "revision": "CN-TDS-2210-01-LNB33C"
+    },
+    {
+     "pdf": "20221118164740331.pdf",
+     "pages": "1-5",
+     "revision": "CN-PG-2006-01-LNB33C-EN"
+    }
+   ]
+  },
+  {
+   "id": "shengyi/lnb33c-340",
+   "manufacturer": "Shengyi",
+   "name": "LNB33C(340)",
+   "kind": "ceramic_filled",
+   "family": "LNB33C",
+   "resin": "Hydrocarbon with ceramic filler",
+   "reinforcement": "Glass",
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "tg_dsc_c": 280,
+   "td_c": 400,
+   "cte_x_ppm": 12,
+   "cte_y_ppm": 12,
+   "cte_z_below_tg_ppm": 30,
+   "tcdk_ppm_per_c": 50,
+   "water_absorption_pct": 0.05,
+   "peel_strength_n_mm": 1.05,
+   "peel_condition": "288 C 10 s, 1 oz HVLP copper",
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": null,
+     "foil_type": "HVLP"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": null,
+     "foil_type": "HVLP"
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 914.4,
+     "height_mm": 1219.2,
+     "label": "36\" x 48\""
+    },
+    {
+     "width_mm": 1016.0,
+     "height_mm": 1219.2,
+     "label": "40\" x 48\""
+    },
+    {
+     "width_mm": 1066.8,
+     "height_mm": 1219.2,
+     "label": "42\" x 48\""
+    }
+   ],
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 3.4,
+     "method": "IPC-TM-650 2.5.5.5 (Z), C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": 0.05
+    },
+    {
+     "freq_ghz": 10,
+     "value": 3.68,
+     "method": "IPC-TM-650 2.5.5.15 (X/Y), C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": 0.05
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0033,
+     "method": "IPC-TM-650 2.5.5.15 (X/Y), C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "thermal_conductivity_w_mk": 0.62,
+   "volume_resistivity_ohm_cm": 240000000000000.0,
+   "surface_resistivity_ohm": 38000000000000.0,
+   "flexural_strength_mpa": {
+    "lengthwise": 220,
+    "crosswise": 180,
+    "value": null
+   },
+   "thicknesses_mm": [
+    0.831,
+    1.034,
+    1.542
+   ],
+   "processing": {
+    "drilling": {
+     "speed_surface_m_min": null,
+     "chip_load_um": null,
+     "retract_notes": "New drill bits, at most 4 panels per stack, melamine back-up board, clean holes with high pressure air; for dense holes or holes under 0.6 mm use LE aluminium cover sheets; no mechanical deburring by brushing. Reference table (diameter mm: max hits, speed krpm, feed ipm, return ipm): 0.25: 1200, 108, 21, 300; 0.50: 1000, 98, 40.6, 800; 0.75: 1000, 95, 50.4, 800; 0.95: 1000, 90, 47.6, 800; 1.20: 1000, 75, 50.4, 800; 1.60: 1000, 68, 52.5, 800; 3.00: 1000, 62, 52.5, 500. A second table for hybrid boards with FR-4 gives lower speeds for large drills."
+    },
+    "desmear_note": "1x plasma, or 1x plasma plus 1x fast chemical desmear, with a weight loss of about 0.3 g/cm3.",
+    "bake_note": "Thin core 150 C for 1-3 h if baked after cutting; brown oxide bake 120 C for 1 h with pressing within 4 h; baking after drilling is optional (150 C, 1-3 h)."
+   },
+   "notes": "Tg is published as greater than 280 C (the value stored is the limit). CTE Z and X/Y are 50-260 C. The sheet gives Dk Z by IPC-TM-650 2.5.5.5 and Dk X/Y by 2.5.5.15 at 10 GHz. Flexural strength is given as X/Y. PIM is -158 dBc (43 dBm, 1900 MHz). Volume and surface resistivity are given in MOhm cm and MOhm. Typical values are for the 0.831 mm specimen (8 plies of 1080).",
+   "sources": [
+    {
+     "pdf": "20221118164648763.pdf",
+     "pages": "1-2",
+     "revision": "CN-TDS-2210-01-LNB33C(340)"
+    },
+    {
+     "pdf": "20221118164740331.pdf",
+     "pages": "1-5",
+     "revision": "CN-PG-2006-01-LNB33C-EN"
+    }
+   ]
+  },
+  {
+   "id": "shengyi/lnb33c-345",
+   "manufacturer": "Shengyi",
+   "name": "LNB33C(345)",
+   "kind": "ceramic_filled",
+   "family": "LNB33C",
+   "resin": "Hydrocarbon with ceramic filler",
+   "reinforcement": "Glass",
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "tg_dsc_c": 280,
+   "td_c": 400,
+   "cte_x_ppm": 12,
+   "cte_y_ppm": 12,
+   "cte_z_below_tg_ppm": 30,
+   "tcdk_ppm_per_c": 50,
+   "water_absorption_pct": 0.05,
+   "peel_strength_n_mm": 1.05,
+   "peel_condition": "288 C 10 s, 1 oz HVLP copper",
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": null,
+     "foil_type": "HVLP"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": null,
+     "foil_type": "HVLP"
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 914.4,
+     "height_mm": 1219.2,
+     "label": "36\" x 48\""
+    },
+    {
+     "width_mm": 1016.0,
+     "height_mm": 1219.2,
+     "label": "40\" x 48\""
+    },
+    {
+     "width_mm": 1066.8,
+     "height_mm": 1219.2,
+     "label": "42\" x 48\""
+    }
+   ],
+   "dk": [
+    {
+     "freq_ghz": 2,
+     "value": 3.45,
+     "method": "Differential phase length method (for CommScope), 0.030 inch",
+     "resin_content_pct": null,
+     "tolerance": 0.05
+    },
+    {
+     "freq_ghz": 2,
+     "value": 3.48,
+     "method": "Differential phase length method (for CommScope), 0.060 inch",
+     "resin_content_pct": null,
+     "tolerance": 0.05
+    },
+    {
+     "freq_ghz": 10,
+     "value": 3.7,
+     "method": "IPC-TM-650 2.5.5.15 (X/Y), C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": 0.05
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0035,
+     "method": "IPC-TM-650 2.5.5.15 (X/Y), C-24/23/50, 0.030 inch",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "thermal_conductivity_w_mk": 0.64,
+   "volume_resistivity_ohm_cm": 460000000000000.0,
+   "surface_resistivity_ohm": 37000000000000.0,
+   "flexural_strength_mpa": {
+    "lengthwise": 240,
+    "crosswise": 200,
+    "value": null
+   },
+   "thicknesses_mm": [
+    0.762,
+    1.5
+   ],
+   "processing": {
+    "drilling": {
+     "speed_surface_m_min": null,
+     "chip_load_um": null,
+     "retract_notes": "New drill bits, at most 4 panels per stack, melamine back-up board, clean holes with high pressure air; for dense holes or holes under 0.6 mm use LE aluminium cover sheets; no mechanical deburring by brushing. Reference table (diameter mm: max hits, speed krpm, feed ipm, return ipm): 0.25: 1200, 108, 21, 300; 0.50: 1000, 98, 40.6, 800; 0.75: 1000, 95, 50.4, 800; 0.95: 1000, 90, 47.6, 800; 1.20: 1000, 75, 50.4, 800; 1.60: 1000, 68, 52.5, 800; 3.00: 1000, 62, 52.5, 500. A second table for hybrid boards with FR-4 gives lower speeds for large drills."
+    },
+    "desmear_note": "1x plasma, or 1x plasma plus 1x fast chemical desmear, with a weight loss of about 0.3 g/cm3.",
+    "bake_note": "Thin core 150 C for 1-3 h if baked after cutting; brown oxide bake 120 C for 1 h with pressing within 4 h; baking after drilling is optional (150 C, 1-3 h)."
+   },
+   "notes": "Tg is published as greater than 280 C (the value stored is the limit). CTE Z and X/Y are 50-260 C. The sheet gives Dk Z by IPC-TM-650 2.5.5.5 and Dk X/Y by 2.5.5.15 at 10 GHz. Flexural strength is given as X/Y. PIM is -158 dBc (43 dBm, 1900 MHz). Volume and surface resistivity are given in MOhm cm and MOhm. Typical values are for the 0.762 mm specimen. Standard builds are 8 and 16 plies of 1080; thickness tolerance +-0.050 mm (0.762 mm) and +-0.070 mm (1.500 mm).",
+   "sources": [
+    {
+     "pdf": "20221118182254579.pdf",
+     "pages": "1",
+     "revision": "CN-TDS-2210-01-LNB33C(345)"
+    },
+    {
+     "pdf": "20221118164740331.pdf",
+     "pages": "1-5",
+     "revision": "CN-PG-2006-01-LNB33C-EN"
+    }
+   ]
+  },
+  {
+   "id": "shengyi/lnb33c-350",
+   "manufacturer": "Shengyi",
+   "name": "LNB33C(350)",
+   "kind": "ceramic_filled",
+   "family": "LNB33C",
+   "resin": "Hydrocarbon with ceramic filler",
+   "reinforcement": "Glass",
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "tg_dsc_c": 280,
+   "td_c": 400,
+   "cte_x_ppm": 12,
+   "cte_y_ppm": 12,
+   "cte_z_below_tg_ppm": 30,
+   "tcdk_ppm_per_c": 50,
+   "water_absorption_pct": 0.05,
+   "peel_strength_n_mm": 1.05,
+   "peel_condition": "288 C 10 s, 1 oz HVLP copper",
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": null,
+     "foil_type": "HVLP"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": null,
+     "foil_type": "HVLP"
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 914.4,
+     "height_mm": 1219.2,
+     "label": "36\" x 48\""
+    },
+    {
+     "width_mm": 1016.0,
+     "height_mm": 1219.2,
+     "label": "40\" x 48\""
+    },
+    {
+     "width_mm": 1066.8,
+     "height_mm": 1219.2,
+     "label": "42\" x 48\""
+    }
+   ],
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 3.5,
+     "method": "IPC-TM-650 2.5.5.5 (Z), C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": 0.05
+    },
+    {
+     "freq_ghz": 10,
+     "value": 3.75,
+     "method": "IPC-TM-650 2.5.5.15 (X/Y), C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": 0.05
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0035,
+     "method": "IPC-TM-650 2.5.5.15 (X/Y), C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "thermal_conductivity_w_mk": 0.63,
+   "volume_resistivity_ohm_cm": 490000000000000.0,
+   "surface_resistivity_ohm": 36000000000000.0,
+   "flexural_strength_mpa": {
+    "lengthwise": 260,
+    "crosswise": 220,
+    "value": null
+   },
+   "thicknesses_mm": [
+    0.272,
+    0.526,
+    0.78,
+    1.034,
+    1.288,
+    1.542
+   ],
+   "processing": {
+    "drilling": {
+     "speed_surface_m_min": null,
+     "chip_load_um": null,
+     "retract_notes": "New drill bits, at most 4 panels per stack, melamine back-up board, clean holes with high pressure air; for dense holes or holes under 0.6 mm use LE aluminium cover sheets; no mechanical deburring by brushing. Reference table (diameter mm: max hits, speed krpm, feed ipm, return ipm): 0.25: 1200, 108, 21, 300; 0.50: 1000, 98, 40.6, 800; 0.75: 1000, 95, 50.4, 800; 0.95: 1000, 90, 47.6, 800; 1.20: 1000, 75, 50.4, 800; 1.60: 1000, 68, 52.5, 800; 3.00: 1000, 62, 52.5, 500. A second table for hybrid boards with FR-4 gives lower speeds for large drills."
+    },
+    "desmear_note": "1x plasma, or 1x plasma plus 1x fast chemical desmear, with a weight loss of about 0.3 g/cm3.",
+    "bake_note": "Thin core 150 C for 1-3 h if baked after cutting; brown oxide bake 120 C for 1 h with pressing within 4 h; baking after drilling is optional (150 C, 1-3 h)."
+   },
+   "notes": "Tg is published as greater than 280 C (the value stored is the limit). CTE Z and X/Y are 50-260 C. The sheet gives Dk Z by IPC-TM-650 2.5.5.5 and Dk X/Y by 2.5.5.15 at 10 GHz. Flexural strength is given as X/Y. PIM is -158 dBc (43 dBm, 1900 MHz). Volume and surface resistivity are given in MOhm cm and MOhm. Standard builds are 3 to 18 plies of 1080.",
+   "sources": [
+    {
+     "pdf": "20221118164709073.pdf",
+     "pages": "1-2",
+     "revision": "CN-TDS-2210-01-LNB33C(350)"
+    },
+    {
+     "pdf": "20221118164740331.pdf",
+     "pages": "1-5",
+     "revision": "CN-PG-2006-01-LNB33C-EN"
+    }
+   ]
+  },
+  {
+   "id": "shengyi/sg7350d",
+   "manufacturer": "Shengyi",
+   "name": "SG7350D",
+   "kind": "ptfe",
+   "family": "SG7350D",
+   "resin": "PTFE with ceramic filler",
+   "reinforcement": "Glass",
+   "ul94": "V-0",
+   "water_absorption_pct": 0.05,
+   "dielectric_strength_kv_mm": 30,
+   "thicknesses_mm": [
+    0.254,
+    0.508,
+    0.762,
+    1.016,
+    1.524
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 457.2,
+     "height_mm": 609.6,
+     "label": "18\" x 24\""
+    },
+    {
+     "width_mm": 914.4,
+     "height_mm": 1219.2,
+     "label": "36\" x 48\""
+    },
+    {
+     "width_mm": 1016.0,
+     "height_mm": 1219.2,
+     "label": "40\" x 48\""
+    }
+   ],
+   "processing": {
+    "drilling": {
+     "speed_surface_m_min": null,
+     "chip_load_um": null,
+     "retract_notes": "Ceramic filler is hard: use coated (diamond coated) drill bits; aluminium cover sheet with a hard phenolic composite plate on top and a hard phenolic back-up plate; 2 panels per stack for 30 mil and 1 panel for 60 mil, with white paper between two panels; new drill bits for plated holes (500 hits), re-ground bits only for non-plated holes (at most 3 regrinds). Reference table (diameter mm: speed krpm, infeed ipm, retract ipm, max hits): 0.3: 100, 150, 400, 500; 0.5: 75, 120, 400, 500; 0.8: 60, 80, 500, 500; 1.0: 50, 80, 500, 500; 1.5: 25, 50, 600, 500; 3.0: 20, 50, 600, 500. After drilling avoid deburring (if needed 600 mesh sandpaper, circular motion). Contour with a milling machine (not punching) at a reduced travel speed."
+    },
+    "desmear_note": "PTFE needs plasma, not chemical, desmear: ultrasonic water wash and bake 110-120 C for 60-90 min, then plasma (O2/H2/N2/CF4 mixtures, 4000 W) in 2 steps for double sided hole activation or 3 steps for multilayer desmear.",
+    "bake_note": "Thin core and finished boards 110-120 C for 60-90 min; before HAL 150 C for 90-120 min (avoid HAL; tin furnace at most 255 C)."
+   },
+   "td_c": 565,
+   "cte_x_ppm": 9,
+   "cte_y_ppm": 8,
+   "cte_z_below_tg_ppm": 25,
+   "tcdk_ppm_per_c": -14,
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 3.55,
+     "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C (Z)",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0022,
+     "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C (Z)",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "thermal_conductivity_w_mk": 0.8,
+   "volume_resistivity_ohm_cm": 5800000000000.0,
+   "surface_resistivity_ohm": 29000000000000.0,
+   "flexural_strength_mpa": {
+    "lengthwise": 100,
+    "crosswise": 80,
+    "value": null
+   },
+   "peel_strength_n_mm": 0.9,
+   "peel_condition": "after solder float, 1 oz ED copper",
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 17,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": "ED"
+    }
+   ],
+   "notes": "Typical values are for the 0.508 mm specimen; CTE is 25-150 C; TCDk is -25 to 125 C. Flexural strength and CTE are given for X and Y (stored as lengthwise and crosswise). Dielectric breakdown 40 kV (kV, not per mm) is not stored.",
+   "sources": [
+    {
+     "pdf": "20230905144240714.pdf",
+     "pages": "1",
+     "revision": "CN-TDS-2207-02-SG7350D"
+    },
+    {
+     "pdf": "20221227151402783.pdf",
+     "pages": "1-6",
+     "revision": "CN-PG-2206-02-SG7350D-EN"
+    }
+   ]
+  },
+  {
+   "id": "shengyi/sg7350d2",
+   "manufacturer": "Shengyi",
+   "name": "SG7350D2",
+   "kind": "ptfe",
+   "family": "SG7350D",
+   "resin": "PTFE with ceramic filler",
+   "reinforcement": "Glass",
+   "ul94": "V-0",
+   "water_absorption_pct": 0.05,
+   "dielectric_strength_kv_mm": 30,
+   "thicknesses_mm": [
+    0.254,
+    0.508,
+    0.762,
+    1.016,
+    1.524
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 457.2,
+     "height_mm": 609.6,
+     "label": "18\" x 24\""
+    },
+    {
+     "width_mm": 914.4,
+     "height_mm": 1219.2,
+     "label": "36\" x 48\""
+    },
+    {
+     "width_mm": 1016.0,
+     "height_mm": 1219.2,
+     "label": "40\" x 48\""
+    }
+   ],
+   "processing": {
+    "drilling": {
+     "speed_surface_m_min": null,
+     "chip_load_um": null,
+     "retract_notes": "Ceramic filler is hard: use coated (diamond coated) drill bits; aluminium cover sheet with a hard phenolic composite plate on top and a hard phenolic back-up plate; 2 panels per stack for 30 mil and 1 panel for 60 mil, with white paper between two panels; new drill bits for plated holes (500 hits), re-ground bits only for non-plated holes (at most 3 regrinds). Reference table (diameter mm: speed krpm, infeed ipm, retract ipm, max hits): 0.3: 100, 150, 400, 500; 0.5: 75, 120, 400, 500; 0.8: 60, 80, 500, 500; 1.0: 50, 80, 500, 500; 1.5: 25, 50, 600, 500; 3.0: 20, 50, 600, 500. After drilling avoid deburring (if needed 600 mesh sandpaper, circular motion). Contour with a milling machine (not punching) at a reduced travel speed."
+    },
+    "desmear_note": "PTFE needs plasma, not chemical, desmear: ultrasonic water wash and bake 110-120 C for 60-90 min, then plasma (O2/H2/N2/CF4 mixtures, 4000 W) in 2 steps for double sided hole activation or 3 steps for multilayer desmear.",
+    "bake_note": "Thin core and finished boards 110-120 C for 60-90 min; before HAL 150 C for 90-120 min (avoid HAL; tin furnace at most 255 C)."
+   },
+   "td_c": 560,
+   "cte_x_ppm": 11,
+   "cte_y_ppm": 10,
+   "cte_z_below_tg_ppm": 26,
+   "tcdk_ppm_per_c": -15,
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 3.55,
+     "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C (Z)",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.002,
+     "method": "IPC-TM-650 2.5.5.5 clamped stripline, 23 C (Z)",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "thermal_conductivity_w_mk": 1.23,
+   "volume_resistivity_ohm_cm": 51000000000000.0,
+   "surface_resistivity_ohm": 25000000000000.0,
+   "flexural_strength_mpa": {
+    "lengthwise": 90,
+    "crosswise": 78,
+    "value": null
+   },
+   "peel_strength_n_mm": 0.95,
+   "peel_condition": "after solder float, 1 oz RTF copper",
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 18,
+     "foil_type": "RTF"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": "RTF"
+    }
+   ],
+   "notes": "Typical values are for the 0.508 mm specimen; CTE is 25-150 C; TCDk is -25 to 125 C. Higher thermal conductivity variant of SG7350D. Dielectric breakdown 40 kV (kV, not per mm) is not stored.",
+   "sources": [
+    {
+     "pdf": "20230905144303756.pdf",
+     "pages": "1",
+     "revision": "CN-TDS-2207-03-SG7350D2"
+    },
+    {
+     "pdf": "20221227151425747.pdf",
+     "pages": "1-6",
+     "revision": "CN-PG-2206-02-SG7350D2-EN"
+    }
+   ]
+  },
+  {
+   "id": "shengyi/autolad1g",
+   "manufacturer": "Shengyi",
+   "name": "Autolad1G",
+   "kind": "laminate",
+   "family": "Autolad",
+   "resin": "Halogen-free epoxy",
+   "halogen_free": true,
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "tg_dsc_c": 173,
+   "td_c": 400,
+   "t288_min": 60,
+   "cte_z_below_tg_ppm": 35,
+   "cte_z_above_tg_ppm": 189,
+   "cte_z_50_260_pct": 2.3,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.3,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 4.05,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.01,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 0.012,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 600000000000000.0,
+   "surface_resistivity_ohm": 80000000000000.0,
+   "peel_strength_n_mm": 1.35,
+   "peel_condition": "288 C 10 s, 1 oz",
+   "flexural_strength_mpa": {
+    "lengthwise": 550,
+    "crosswise": 430,
+    "value": null
+   },
+   "water_absorption_pct": 0.09,
+   "processing": {
+    "lamination": {
+     "max_temp_c": 180,
+     "pressure_kpa": null,
+     "time_at_temp_min": 60,
+     "heat_rate_c_min": null,
+     "notes": "Kissing pressure 70-100 PSI; full pressure 350-430 PSI applied at 80-100 C material temperature; ramp-up 1.5-2.5 C/min between 80 and 140 C; cure 180 C for 60 min; cooling below 2 C/min (1.5 C/min preferred)."
+    }
+   },
+   "notes": "Automotive HDI laminate with its prepreg Autolad1GB. Typical values are for the 1.6 mm (8 x 7628) specimen; Dk and Df are given at 50 % resin content. Flexural modulus 28/25 GPa (lengthwise/crosswise). Dielectric breakdown 45+ kV (kV, not per mm) is not stored. Ultra-thin specifications are available.",
+   "source": {
+    "pdf": "20240206143738534.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-2307-03-Autolad1G-Autolad1GB"
+   }
+  },
+  {
+   "id": "shengyi/autolad2gh",
+   "manufacturer": "Shengyi",
+   "name": "Autolad2GH",
+   "kind": "laminate",
+   "family": "Autolad",
+   "resin": "Halogen-free epoxy",
+   "halogen_free": true,
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4101/130",
+   "tg_dma_c": 190,
+   "tg_dsc_c": 175,
+   "td_c": 402,
+   "t288_min": 60,
+   "t260_min": 60,
+   "cte_z_below_tg_ppm": 35,
+   "cte_z_above_tg_ppm": 190,
+   "cte_z_50_260_pct": 2.1,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.3,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.015,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 48300000000000.0,
+   "surface_resistivity_ohm": 4980000000000.0,
+   "arc_resistance_s": 130,
+   "cti_v": 600,
+   "peel_strength_n_mm": 1.2,
+   "peel_condition": "288 C 10 s, 1 oz",
+   "flexural_strength_mpa": {
+    "lengthwise": 520,
+    "crosswise": 400,
+    "value": null
+   },
+   "water_absorption_pct": 0.09,
+   "notes": "High CTI (PLC 0, 600 V or more; the value stored is the limit) automotive laminate with prepreg Autolad2GHB. T288 and T260 are published as greater than 60 min (the value stored is the limit). Typical values are for the 1.6 mm (8 x 7628) specimen; Dk and Df are for the 1.0 mm (9 x 2116) specimen. Thermal stress at 288 C is greater than 100 s. Dielectric breakdown 45+ kV (kV, not per mm) is not stored. For CTI of 600 V the sheet advises 2116 (resin content 54 % or more) or 7628 (45 % or more) outer prepreg.",
+   "source": {
+    "pdf": "20240229165036884.pdf",
+    "pages": "1",
+    "revision": "CN-TDS-2304-05-Autolad2GH-Autolad2GHB"
+   }
+  },
+  {
+   "id": "shengyi/recyclad1g",
+   "manufacturer": "Shengyi",
+   "name": "Recyclad1G",
+   "kind": "laminate",
+   "family": "Recyclad",
+   "resin": "Degradable halogen-free epoxy",
+   "halogen_free": true,
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4101/128",
+   "tg_dsc_c": 153,
+   "td_c": 370,
+   "t288_min": 60,
+   "t260_min": 60,
+   "cte_z_below_tg_ppm": 35,
+   "cte_z_above_tg_ppm": 240,
+   "cte_z_50_260_pct": 2.8,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.5,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 56,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.01,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 56,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 8180000000000000.0,
+   "surface_resistivity_ohm": 2130000000000000.0,
+   "peel_strength_n_mm": 1.3,
+   "peel_condition": "288 C 10 s, 1 oz",
+   "water_absorption_pct": 0.1,
+   "notes": "Degradable and recyclable halogen-free laminate (CTI class PLC 1). Halogen content Br at most 900 ppm, Cl at most 900 ppm, Br+Cl at most 1500 ppm (EN 14582). T288 and T260 are published as greater than 60 min (the value stored is the limit); thermal stress at 288 C is greater than 10 times. Dk and Df are for the 1.0 mm (8 x 2116) specimen; other values for the 1.6 mm (8 x 7628) specimen.",
+   "sources": [
+    {
+     "pdf": "20250512105921222.pdf",
+     "pages": "1-2",
+     "revision": "CN-TDS-2408-04-Recyclad1G-Recyclad1GB"
+    },
+    {
+     "pdf": "20250512110033687.pdf",
+     "pages": "1-5",
+     "revision": "CN-PG-2503-01-Recyclad1G-Recyclad1GB"
+    }
+   ]
+  },
+  {
+   "id": "shengyi/s7439gs",
+   "manufacturer": "Shengyi",
+   "name": "S7439GS",
+   "kind": "laminate",
+   "family": "S7439",
+   "resin": "Halogen-free low-loss epoxy",
+   "halogen_free": true,
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "tg_dma_c": 205,
+   "tg_dsc_c": 190,
+   "td_c": 390,
+   "t300_min": 60,
+   "cte_x_ppm": 12.0,
+   "cte_y_ppm": 11.5,
+   "cte_z_below_tg_ppm": 26,
+   "cte_z_above_tg_ppm": 130,
+   "cte_z_50_260_pct": 1.4,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 3.98,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 3.77,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.004,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 0.0058,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 40000000000000.0,
+   "surface_resistivity_ohm": 20000000000000.0,
+   "arc_resistance_s": 180,
+   "peel_strength_n_mm": 0.8,
+   "peel_condition": "288 C 10 s, 1 oz RTF",
+   "water_absorption_pct": 0.1,
+   "notes": "FR-15.1 low-loss laminate, MOT 150 C, storage modulus 24 GPa (DMA). T300 is published as 60 min or more. CTE X/Y is 50-125 C. Resistivities are after moisture resistance. Typical values are for the 0.76 mm (6 x 2116) specimen. Dielectric breakdown 45+ kV (kV, not per mm) is not stored.",
+   "sources": [
+    {
+     "pdf": "20250701113849787.pdf",
+     "pages": "1",
+     "revision": "CN-TDS-2506-03-S7439GS-S7439GSB"
+    },
+    {
+     "pdf": "20250701114018826.pdf",
+     "pages": "1-5",
+     "revision": null
+    },
+    {
+     "pdf": "20260119163858827.pdf",
+     "pages": "1-3",
+     "revision": null
+    }
+   ]
+  },
+  {
+   "id": "shengyi/s7045ghu",
+   "manufacturer": "Shengyi",
+   "name": "S7045GHU",
+   "kind": "laminate",
+   "family": "S7045",
+   "resin": "Halogen-free epoxy (black)",
+   "halogen_free": true,
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "tg_dma_c": 190,
+   "tg_dsc_c": 180,
+   "td_c": 415,
+   "t288_min": 60,
+   "t300_min": 60,
+   "cte_z_below_tg_ppm": 35,
+   "cte_z_above_tg_ppm": 245,
+   "cte_z_50_260_pct": 2.3,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.15,
+     "method": "IPC-TM-650 2.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 4.43,
+     "method": "IEC 61189-2-721 SPDR, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.01,
+     "method": "IPC-TM-650 2.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 0.0135,
+     "method": "IEC 61189-2-721 SPDR, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 18000000000000.0,
+   "surface_resistivity_ohm": 38000000000000.0,
+   "peel_strength_n_mm": 0.95,
+   "peel_condition": "288 C 10 s, 1 oz",
+   "water_absorption_pct": 0.12,
+   "notes": "Black, high reliability mid-loss laminate (UL94 V-0 HF). T288 and T300 are published as greater than 60 min (the value stored is the limit). Typical values are for the 0.76 mm (6 x 2116) specimen. Dielectric breakdown above 45 kV (kV, not per mm) is not stored.",
+   "sources": [
+    {
+     "pdf": "20250826170308883.pdf",
+     "pages": "1",
+     "revision": "CN-TDS-2504-01-S7045GHU-S7045GHUB"
+    },
+    {
+     "pdf": "20250826170327068.pdf",
+     "pages": "1-2",
+     "revision": null
+    }
+   ]
+  },
+  {
+   "id": "shengyi/synamic8gn",
+   "manufacturer": "Shengyi",
+   "name": "Synamic8GN",
+   "kind": "laminate",
+   "family": "Synamic",
+   "resin": "Halogen-free ultra-low-loss resin",
+   "halogen_free": true,
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "tg_dma_c": 205,
+   "tg_tma_c": 190,
+   "td_c": 430,
+   "t300_min": 120,
+   "cte_x_ppm": 12,
+   "cte_y_ppm": 12,
+   "cte_z_below_tg_ppm": 35,
+   "cte_z_above_tg_ppm": 200,
+   "cte_z_50_260_pct": 1.8,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 3.35,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 3.28,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 3.49,
+     "method": "IEC 61189-2-721, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.0008,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 0.0019,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 0.0021,
+     "method": "IEC 61189-2-721, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "peel_strength_n_mm": 0.82,
+   "peel_condition": "288 C 10 s, 1 oz RTF2 (0.80 N/mm with HVLP2)",
+   "water_absorption_pct": 0.08,
+   "notes": "No ANSI grade. T300 is published as greater than 120 min (the value stored is the limit). CTE X/Y is 50-125 C. Typical values are for the 30 mil (6 x 2116) specimen. The TMA Tg is given under IPC-TM-650 2.4.25D.",
+   "sources": [
+    {
+     "pdf": "20240925105647303.pdf",
+     "pages": "1",
+     "revision": "CN-TDS-2403-03-Synamic8GN"
+    },
+    {
+     "pdf": "20240229155819143.pdf",
+     "pages": "1-3",
+     "revision": null
+    }
+   ]
+  },
+  {
+   "id": "shengyi/synamic9gn",
+   "manufacturer": "Shengyi",
+   "name": "Synamic9GN",
+   "kind": "laminate",
+   "family": "Synamic",
+   "resin": "Halogen-free extremely low loss resin",
+   "halogen_free": true,
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "tg_dma_c": 210,
+   "tg_tma_c": 180,
+   "td_c": 400,
+   "t288_min": 60,
+   "t300_min": 60,
+   "cte_x_ppm": 12,
+   "cte_y_ppm": 13,
+   "cte_z_below_tg_ppm": 40,
+   "cte_z_above_tg_ppm": 140,
+   "cte_z_50_260_pct": 1.5,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 3.25,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 3.34,
+     "method": "IEC 61189-2-721, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 14,
+     "value": 3.15,
+     "method": "BCDR, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.0005,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 0.0014,
+     "method": "IEC 61189-2-721, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 14,
+     "value": 0.0014,
+     "method": "BCDR, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "peel_strength_n_mm": 0.53,
+   "peel_condition": "288 C 10 s, 1 oz",
+   "water_absorption_pct": 0.06,
+   "notes": "Extremely low loss laminate for 112G class equipment. T288 and T300 are published as greater than 60 min (the value stored is the limit). CTE X/Y is 30-120 C. Typical values are for the 0.76 mm (10 x 1078, 66 % resin content) specimen.",
+   "sources": [
+    {
+     "pdf": "20250508142207834.pdf",
+     "pages": "1",
+     "revision": "CN-TDS-2412-02-Synamic9GN-Synamic9GNB"
+    },
+    {
+     "pdf": "20250508142045187.pdf",
+     "pages": "1-3",
+     "revision": null
+    },
+    {
+     "pdf": "20250508142137408.pdf",
+     "pages": "1-5",
+     "revision": "CN-PG-2412-02-Synamic9GN-Synamic9GNB"
+    }
+   ]
+  },
+  {
+   "id": "shengyi/s7045gh",
+   "manufacturer": "Shengyi",
+   "name": "S7045GH",
+   "kind": "laminate",
+   "family": "S7045",
+   "resin": "Halogen-free epoxy",
+   "halogen_free": true,
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4101/130",
+   "tg_dma_c": 190,
+   "tg_dsc_c": 180,
+   "td_c": 415,
+   "t288_min": 60,
+   "t300_min": 60,
+   "cte_z_below_tg_ppm": 35,
+   "cte_z_above_tg_ppm": 245,
+   "cte_z_50_260_pct": 2.3,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.15,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 3.95,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.008,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 0.0095,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 20000000000000.0,
+   "surface_resistivity_ohm": 40000000000000.0,
+   "peel_strength_n_mm": 1.0,
+   "peel_condition": "288 C 10 s, 1 oz",
+   "water_absorption_pct": 0.12,
+   "notes": "High reliability mid-loss laminate with prepreg S7045GHB (V-0 HF). T288 and T300 are published as 60 min or more. Typical values are for the 0.76 mm (6 x 2116) specimen. Dielectric breakdown above 45 kV (kV, not per mm) is not stored.",
+   "sources": [
+    {
+     "pdf": "20220105112730462.pdf",
+     "pages": "1",
+     "revision": "CN-TDS-2108-02-S7045GH-S7045GHB"
+    },
+    {
+     "pdf": "20220105112650832.pdf",
+     "pages": "1-4",
+     "revision": null
+    },
+    {
+     "pdf": "20220105112342216.pdf",
+     "pages": "1-5",
+     "revision": "CN-PG-2112-02-S7045GH-S7045GHB"
+    }
+   ]
+  },
+  {
+   "id": "shengyi/st110g",
+   "manufacturer": "Shengyi",
+   "name": "ST110G",
+   "kind": "laminate",
+   "family": "ST110",
+   "resin": "Halogen-free thermally conductive epoxy",
+   "halogen_free": true,
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "thermal_conductivity_w_mk": 1.0,
+   "tg_dma_c": 175,
+   "td_c": 400,
+   "t288_min": 60,
+   "cte_z_below_tg_ppm": 27,
+   "cte_z_above_tg_ppm": 176,
+   "cte_z_50_260_pct": 1.8,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.13,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.0099,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 1400000000000000.0,
+   "surface_resistivity_ohm": 15000000000000.0,
+   "arc_resistance_s": 175,
+   "peel_strength_n_mm": 1.15,
+   "peel_condition": "288 C 10 s, 1 oz HTE",
+   "water_absorption_pct": 0.1,
+   "notes": "No ANSI grade; RTI 160 C for 0.2 mm or more build-up thickness. Thermal stress at 288 C is 300 s. Typical values are for the 0.5 mm (5 x 106) specimen; water absorption and Z-CTE are for 2.0 mm (15 x 2116) coupons. Dielectric breakdown above 45 kV (kV, not per mm) is not stored.",
+   "sources": [
+    {
+     "pdf": "20221010163454513.pdf",
+     "pages": "1",
+     "revision": "CN-TDS-2209-01-ST110G-ST110GB"
+    },
+    {
+     "pdf": "20221010161127632.pdf",
+     "pages": "1-2",
+     "revision": null
+    }
+   ]
+  },
+  {
+   "id": "shengyi/synamic8gx",
+   "manufacturer": "Shengyi",
+   "name": "Synamic8GX",
+   "kind": "laminate",
+   "family": "Synamic",
+   "resin": "Halogen-free ultra-low-loss resin",
+   "halogen_free": true,
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "tg_dma_c": 210,
+   "tg_tma_c": 200,
+   "td_c": 430,
+   "t300_min": 120,
+   "cte_x_ppm": 11,
+   "cte_y_ppm": 11,
+   "cte_z_below_tg_ppm": 35,
+   "cte_z_above_tg_ppm": 180,
+   "cte_z_50_260_pct": 1.6,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 3.62,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 3.66,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 3.98,
+     "method": "IEC 61189-2-721, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.0016,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 0.0033,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 0.0041,
+     "method": "IEC 61189-2-721, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "peel_strength_n_mm": 0.85,
+   "peel_condition": "288 C 10 s, 1 oz RTF2",
+   "water_absorption_pct": 0.08,
+   "notes": "No ANSI grade. T300 is published as greater than 120 min (the value stored is the limit). CTE X/Y is 50-125 C. Typical values are for the 30 mil (6 x 2116) specimen.",
+   "sources": [
+    {
+     "pdf": "20260403160634841.pdf",
+     "pages": "1",
+     "revision": "CN-TDS-2403-03-Synamic8GX"
+    },
+    {
+     "pdf": "20260403160710666.pdf",
+     "pages": "1-4",
+     "revision": null
+    },
+    {
+     "pdf": "20260403160609033.pdf",
+     "pages": "1-5",
+     "revision": "CN-PG-2207-01-Synamic8GX-Synamic8GXB"
+    }
+   ]
+  },
+  {
+   "id": "shengyi/autolad3g",
+   "manufacturer": "Shengyi",
+   "name": "Autolad3G",
+   "kind": "laminate",
+   "family": "Autolad",
+   "resin": "Halogen-free epoxy",
+   "halogen_free": true,
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4101/130",
+   "tg_dma_c": 200,
+   "tg_tma_c": 180,
+   "tg_dsc_c": 190,
+   "td_c": 408,
+   "t300_min": 60,
+   "cte_z_below_tg_ppm": 35,
+   "cte_z_above_tg_ppm": 180,
+   "cte_z_50_260_pct": 1.8,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.3,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 4.1,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.011,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 0.012,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 5e+16,
+   "surface_resistivity_ohm": 2000000000000000.0,
+   "arc_resistance_s": 181,
+   "dielectric_strength_kv_mm": 69,
+   "peel_strength_n_mm": 1.3,
+   "peel_condition": "288 C 10 s, 1 oz HTE",
+   "water_absorption_pct": 0.11,
+   "thermal_conductivity_w_mk": 0.46,
+   "flexural_strength_mpa": {
+    "lengthwise": 560,
+    "crosswise": 450,
+    "value": null
+   },
+   "youngs_modulus_gpa": {
+    "lengthwise": 26.2,
+    "crosswise": 24.0,
+    "value": null
+   },
+   "notes": "FR-15.1 automotive-grade halogen-free laminate, CTI class PLC 3. T300 is published as greater than 60 min (the value stored is the limit). CTE X/Y is 11-13 ppm/C (30-120 C, a range). Volume resistivity is 5.0e10 MOhm cm (C-96/35/90) and 4.0e9 MOhm cm after moisture resistance; surface resistivity 2.0e9 MOhm (C-96/35/90) and 8.0e8 MOhm after moisture resistance. Poisson ratio 0.17 lengthwise and 0.14 crosswise. Typical values are for the 1.60 mm (8 x 7628) specimen; electric strength is for the 0.127 mm (1 x 2116) specimen. Dielectric breakdown above 45 kV (kV, not per mm) is not stored.",
+   "sources": [
+    {
+     "pdf": "20260621175144118.pdf",
+     "pages": "1",
+     "revision": "CN-TDS-2606-25-Autolad3G-Autolad3GB"
+    },
+    {
+     "pdf": "20260621175201930.pdf",
+     "pages": "1-3",
+     "revision": null
+    }
+   ]
+  },
+  {
+   "id": "shengyi/s1190g",
+   "manufacturer": "Shengyi",
+   "name": "S1190G",
+   "kind": "laminate",
+   "family": "S1190",
+   "resin": "Halogen-free epoxy",
+   "halogen_free": true,
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4101/130",
+   "tg_dma_c": 200,
+   "tg_tma_c": 180,
+   "tg_dsc_c": 190,
+   "td_c": 408,
+   "t300_min": 60,
+   "cte_z_below_tg_ppm": 35,
+   "cte_z_above_tg_ppm": 180,
+   "cte_z_50_260_pct": 1.8,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.3,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 4.1,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.011,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 0.012,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "surface_resistivity_ohm": 2000000000000000.0,
+   "arc_resistance_s": 181,
+   "dielectric_strength_kv_mm": 69,
+   "peel_strength_n_mm": 1.3,
+   "peel_condition": "288 C 10 s, 1 oz HTE",
+   "water_absorption_pct": 0.11,
+   "thermal_conductivity_w_mk": 0.55,
+   "flexural_strength_mpa": {
+    "lengthwise": 560,
+    "crosswise": 450,
+    "value": null
+   },
+   "youngs_modulus_gpa": {
+    "lengthwise": 28.8,
+    "crosswise": 26.0,
+    "value": null
+   },
+   "notes": "FR-15.1 high Tg low Z-CTE halogen-free laminate for heavy copper and high voltage, CTI class PLC 3. T300 is published as greater than 60 min (the value stored is the limit). CTE X/Y is 11-13 ppm/C (30-120 C, a range). Volume resistivity is printed with the unit MOhm (5.0e10, C-96/35/90) and 4.0e9 MOhm cm after moisture resistance, so it is not stored; surface resistivity 2.0e9 MOhm (C-96/35/90). Poisson ratio 0.17 lengthwise and 0.14 crosswise. Typical values are for the 1.60 mm (8 x 7628) specimen; electric strength is for the 0.127 mm (1 x 2116) specimen. Dielectric breakdown above 45 kV (kV, not per mm) is not stored.",
+   "sources": [
+    {
+     "pdf": "20260907102449241.pdf",
+     "pages": "1",
+     "revision": "CN-TDS-2605-05-S1190G-S1190GB"
+    },
+    {
+     "pdf": "20250825091648482.pdf",
+     "pages": "1-4",
+     "revision": null
+    },
+    {
+     "pdf": "20260901135107122.pdf",
+     "pages": "1-5",
+     "revision": null
+    }
+   ]
+  },
+  {
+   "id": "shengyi/mmwave-g",
+   "manufacturer": "Shengyi",
+   "name": "mmWave G",
+   "kind": "laminate",
+   "family": "mmWave",
+   "resin": "Non-PTFE low-loss resin",
+   "reinforcement": "Glass",
+   "ul94": "V-0",
+   "tg_dma_c": 200,
+   "td_c": 395,
+   "t288_min": 60,
+   "cte_x_ppm": 20,
+   "cte_y_ppm": 20,
+   "cte_z_below_tg_ppm": 80,
+   "cte_z_above_tg_ppm": 300,
+   "cte_z_50_260_pct": 3.5,
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 3.16,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": 78,
+     "tolerance": 0.05
+    },
+    {
+     "freq_ghz": 77,
+     "value": 3.18,
+     "method": "Resonator ring",
+     "resin_content_pct": 78,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.002,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": 78,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 1.56e+16,
+   "surface_resistivity_ohm": 9360000000000000.0,
+   "dielectric_strength_kv_mm": 75,
+   "peel_strength_n_mm": 0.6,
+   "peel_condition": "288 C 10 s, 1/2 oz HVLP",
+   "water_absorption_pct": 0.06,
+   "thermal_conductivity_w_mk": 0.4,
+   "flexural_strength_mpa": {
+    "lengthwise": 260,
+    "crosswise": 250,
+    "value": null
+   },
+   "youngs_modulus_gpa": {
+    "lengthwise": 7.6,
+    "crosswise": 7.3,
+    "value": null
+   },
+   "thicknesses_mm": [
+    0.102,
+    0.127,
+    0.254,
+    0.381,
+    0.508,
+    0.762,
+    1.524
+   ],
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 17,
+     "foil_type": "HVLP"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": "HVLP"
+    }
+   ],
+   "panel_sizes": [
+    {
+     "width_mm": 457.2,
+     "height_mm": 609.6,
+     "label": "18\" x 24\""
+    },
+    {
+     "width_mm": 533.4,
+     "height_mm": 609.6,
+     "label": "21\" x 24\""
+    }
+   ],
+   "notes": "Glass reinforced non-PTFE millimetre-wave radar material; low dielectric tolerance of +-0.05. Volume and surface resistivity are after moisture resistance (1.56e10 MOhm cm, 9.36e9 MOhm). Dielectric breakdown 40 kV (kV, not per mm) is not stored. Typical values are for the 0.127 mm (0.005 inch) and 0.508 mm (0.020 inch) specimens; Dk and Df at 78 % resin content.",
+   "sources": [
+    {
+     "pdf": "20260621175511251.pdf",
+     "pages": "1",
+     "revision": "CN-TDS-2605-19-mmWave G-mmWave GB"
+    },
+    {
+     "pdf": "20260701102221416.pdf",
+     "pages": "1",
+     "revision": null
+    },
+    {
+     "pdf": "20260228100951987.pdf",
+     "pages": "1-5",
+     "revision": "CN-PG-2507-02-mmWaveG-mmWaveGB"
+    }
+   ]
+  },
+  {
+   "id": "shengyi/sdi06k",
+   "manufacturer": "Shengyi",
+   "name": "SDI06K",
+   "kind": "laminate",
+   "family": "SDI",
+   "resin": "Halogen-free low-Dk resin",
+   "halogen_free": true,
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "tg_tma_c": 220,
+   "tg_dma_c": 260,
+   "td_c": 420,
+   "t288_min": 60,
+   "cte_z_50_260_pct": 1.2,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.0,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 3.92,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.004,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1,
+     "value": 0.005,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 70,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 0.007,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 0.0075,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": 70,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 4.76e+16,
+   "surface_resistivity_ohm": 1.84e+16,
+   "arc_resistance_s": 181,
+   "peel_strength_n_mm": 0.65,
+   "peel_condition": "Condition A, 1 oz RTF (0.60 N/mm at 125 C)",
+   "water_absorption_pct": 0.15,
+   "thermal_conductivity_w_mk": 0.59,
+   "notes": "FR-15.1 low CTE, low loss, low Dk halogen-free HDI laminate (TMA Tg 220 C, DMA Tg 260 C); Td and T288 are published as greater than 420 C and greater than 60 min (the values stored are the limits). CTE Z is 25-30 ppm/C before Tg and 90-120 ppm/C after Tg, X/Y 8-10 ppm/C (ranges). Dk at 70 % resin content is also given by the sheet but its two values are printed inconsistently, so they are not stored. Storage modulus 28 GPa lengthwise and 27 GPa crosswise; CTI class PLC 3. Resistivities are after moisture resistance (4.76e10 MOhm cm, 1.84e10 MOhm). Typical values are for the 0.8 mm specimen; thermal conductivity for 0.12 mm (2 x 1078). Dielectric breakdown 45+ kV (kV, not per mm) is not stored.",
+   "sources": [
+    {
+     "pdf": "20261008113550948.pdf",
+     "pages": "1",
+     "revision": "CN-TDS-2508-09-SDI06K-SDI06KB"
+    },
+    {
+     "pdf": "20260811134119069.pdf",
+     "pages": "1-4",
+     "revision": null
+    }
+   ]
+  },
+  {
+   "id": "shengyi/autolad6g",
+   "manufacturer": "Shengyi",
+   "name": "Autolad6G",
+   "kind": "laminate",
+   "family": "Autolad",
+   "resin": "Halogen-free low-Dk resin",
+   "halogen_free": true,
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "tg_tma_c": 220,
+   "tg_dma_c": 260,
+   "td_c": 420,
+   "t288_min": 60,
+   "cte_z_50_260_pct": 1.2,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 4.0,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1,
+     "value": 3.5,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 70,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 3.92,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 3.53,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": 70,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.004,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1,
+     "value": 0.005,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": 70,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 0.007,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10,
+     "value": 0.0075,
+     "method": "IPC-TM-650 2.5.5.5, C-24/23/50",
+     "resin_content_pct": 70,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 4.76e+16,
+   "surface_resistivity_ohm": 1.84e+16,
+   "arc_resistance_s": 181,
+   "peel_strength_n_mm": 0.65,
+   "peel_condition": "Condition A, 1 oz RTF (0.60 N/mm at 125 C)",
+   "water_absorption_pct": 0.15,
+   "thermal_conductivity_w_mk": 0.59,
+   "notes": "Automotive low CTE, low loss, low Dk halogen-free laminate (TMA Tg 220 C, DMA Tg 260 C); Td and T288 are published as greater than 420 C and greater than 60 min (the values stored are the limits). CTE Z is 25-30 ppm/C before Tg and 90-120 ppm/C after Tg, X/Y 8-10 ppm/C (ranges). Storage modulus 28 GPa lengthwise and 27 GPa crosswise; CTI class PLC 3. Resistivities are after moisture resistance (4.76e10 MOhm cm, 1.84e10 MOhm). Typical values are for the 0.8 mm specimen; thermal conductivity for 0.12 mm (2 x 1078). Dielectric breakdown 45+ kV (kV, not per mm) is not stored. One of the line-up sheets is marked preliminary.",
+   "sources": [
+    {
+     "pdf": "20261008120214284.pdf",
+     "pages": "1-2",
+     "revision": "CN-TDS-2508-02-Autolad6G-Autolad6GB"
+    },
+    {
+     "pdf": "20260901085139409.pdf",
+     "pages": "1-3",
+     "revision": "Preliminary"
+    },
+    {
+     "pdf": "20250925081701694.pdf",
+     "pages": "1-5",
+     "revision": "CN-PG-2411-01-Autolad6G-Autolad6GB"
+    }
+   ]
+  },
+  {
+   "id": "shengyi/sdi03k",
+   "manufacturer": "Shengyi",
+   "name": "SDI03K",
+   "kind": "laminate",
+   "family": "SDI",
+   "resin": "Halogen-free low-Dk resin",
+   "halogen_free": true,
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4101/130",
+   "tg_tma_c": 165,
+   "tg_dma_c": 190,
+   "td_c": 390,
+   "t288_min": 60,
+   "t260_min": 60,
+   "cte_x_ppm": 12,
+   "cte_y_ppm": 13,
+   "cte_z_below_tg_ppm": 30,
+   "cte_z_above_tg_ppm": 190,
+   "cte_z_50_260_pct": 2.1,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 3.38,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50, 1027 RC75 %",
+     "resin_content_pct": 75,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.0072,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50, 1027 RC75 %",
+     "resin_content_pct": 75,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 3870000000000000.0,
+   "surface_resistivity_ohm": 17200000000000.0,
+   "arc_resistance_s": 182,
+   "peel_strength_n_mm": 0.95,
+   "peel_condition": "288 C 10 s, H oz copper (0.90 N/mm at 125 C)",
+   "flexural_strength_mpa": {
+    "lengthwise": 510,
+    "crosswise": 490,
+    "value": null
+   },
+   "water_absorption_pct": 0.06,
+   "notes": "FR-4.1 high Tg halogen-free low-Dk laminate, UV blocking and AOI compatible. T288 and T260 are published as greater than 60 min (the value stored is the limit); thermal stress passes unetched and etched. Resistivities are after moisture resistance (3.87e9 MOhm cm, 1.72e7 MOhm). Dielectric breakdown above 45 kV (kV, not per mm) is not stored.",
+   "sources": [
+    {
+     "pdf": "20261008113610635.pdf",
+     "pages": "1",
+     "revision": "CN-TDS-2402-12-SDI03K-SDI03KB-P2"
+    },
+    {
+     "pdf": "20240319003743022.pdf",
+     "pages": "1-3",
+     "revision": null
+    },
+    {
+     "pdf": "20240319003805754.pdf",
+     "pages": "1-5",
+     "revision": null
+    }
+   ]
+  },
+  {
+   "id": "shengyi/s1600l",
+   "manufacturer": "Shengyi",
+   "name": "S1600L",
+   "kind": "laminate",
+   "family": "S1600",
+   "resin": "Epoxy",
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4101/101",
+   "tg_dsc_c": 150,
+   "tg_dma_c": 155,
+   "td_c": 355,
+   "t288_min": 27,
+   "t260_min": 60,
+   "cte_z_below_tg_ppm": 45,
+   "cte_z_above_tg_ppm": 240,
+   "cte_z_50_260_pct": 3.2,
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 5.0,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.014,
+     "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 210000000000000.0,
+   "surface_resistivity_ohm": 32000000000000.0,
+   "arc_resistance_s": 151,
+   "cti_v": 600,
+   "peel_strength_n_mm": 1.5,
+   "peel_condition": "288 C 10 s, 1 oz",
+   "flexural_strength_mpa": {
+    "lengthwise": 540,
+    "crosswise": 470,
+    "value": null
+   },
+   "water_absorption_pct": 0.15,
+   "notes": "FR-4.0 high CTI multilayer laminate (PLC 0, 600 V or more; the value stored is the limit). T260 is published as greater than 60 min (the value stored is the limit); thermal stress at 288 C is greater than 60 s. Thin cores under 0.80 mm may not reach CTI 600 V. Typical values are for the 1.6 mm (8 x 7628) specimen. Dielectric breakdown above 45 kV (kV, not per mm) is not stored.",
+   "sources": [
+    {
+     "pdf": "20261010173207500.pdf",
+     "pages": "1",
+     "revision": "CN-TDS-2602-07-S1600L-S1600LB"
+    },
+    {
+     "pdf": "20250507152319053.pdf",
+     "pages": "1-2",
+     "revision": null
+    }
+   ]
+  },
+  {
+   "id": "shengyi/sl",
+   "manufacturer": "Shengyi",
+   "name": "SL",
+   "kind": "flex_laminate",
+   "resin": "Cast polyimide, adhesiveless",
+   "halogen_free": true,
+   "ul94": "VTM-0",
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 3.45,
+     "method": "IEC 61189-2-721",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0057,
+     "method": "IEC 61189-2-721",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 2030000000000000.0,
+   "surface_resistivity_ohm": 597000000000.0,
+   "water_absorption_pct": 1.4,
+   "dielectric_strength_kv_mm": 120,
+   "peel_strength_n_mm": 0.93,
+   "peel_condition": "IPC-TM-650 2.4.9 Method A (Method C: 0.91 N/mm)",
+   "notes": "Typical values are for the SL 0512SR construction. Moisture absorption is given as the water absorption. Resistivities are published in MOhm cm and MOhm. Single side adhesiveless cast polyimide FCCL certified to IPC-4204/25; PI film 12.5, 20 or 25 um with 12 or 18 um ED or RA copper; supplied in rolls 250 mm or 500 mm wide, 50 m or 100 m long. Dimensional stability MD 0.0285 %, TD 0.0283 %; chemical resistance above 90 %; folding endurance (MIT) above 5000 times.",
+   "copper": [
+    {
+     "weight_oz": null,
+     "thickness_um": 12,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": null,
+     "thickness_um": 18,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": null,
+     "thickness_um": 18,
+     "foil_type": "RA"
+    }
+   ],
+   "source": {
+    "pdf": "20220718163158159.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-2101-02-SL"
+   }
+  },
+  {
+   "id": "shengyi/dl",
+   "manufacturer": "Shengyi",
+   "name": "DL",
+   "kind": "flex_laminate",
+   "resin": "Cast polyimide, adhesiveless",
+   "halogen_free": true,
+   "ul94": "VTM-0",
+   "dk": [
+    {
+     "freq_ghz": 1.1,
+     "value": 3.45,
+     "method": "IEC 61189-2-721",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1.1,
+     "value": 0.0044,
+     "method": "IEC 61189-2-721",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 10300000000000.0,
+   "surface_resistivity_ohm": 2650000000000.0,
+   "water_absorption_pct": 1.06,
+   "dielectric_strength_kv_mm": 178,
+   "peel_strength_n_mm": 1.52,
+   "peel_condition": "IPC-TM-650 2.4.9 Method A (Method C: 1.53 N/mm)",
+   "notes": "Typical values are for the DL 1012DS construction. Moisture absorption is given as the water absorption. Resistivities are published in MOhm cm and MOhm. Double side adhesiveless cast polyimide FCCL certified to IPC-4204/25; PI film 12.5, 20 or 25 um with 12 to 70 um ED or 12, 18 or 50 um RA copper; rolls 250 mm or 500 mm wide. Dimensional stability MD 0.0251 %, TD 0.011 %; chemical resistance above 95 %; folding endurance (MIT) above 200 times.",
+   "copper": [
+    {
+     "weight_oz": null,
+     "thickness_um": 12,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": null,
+     "thickness_um": 18,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": null,
+     "thickness_um": 25,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": null,
+     "thickness_um": 35,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": null,
+     "thickness_um": 70,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": null,
+     "thickness_um": 12,
+     "foil_type": "RA"
+    },
+    {
+     "weight_oz": null,
+     "thickness_um": 18,
+     "foil_type": "RA"
+    },
+    {
+     "weight_oz": null,
+     "thickness_um": 50,
+     "foil_type": "RA"
+    }
+   ],
+   "source": {
+    "pdf": "20221024135727540.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-2101-02-DL"
+   }
+  },
+  {
+   "id": "shengyi/slf-low-df",
+   "manufacturer": "Shengyi",
+   "name": "SLF Low Df",
+   "kind": "flex_laminate",
+   "resin": "Cast polyimide, adhesiveless",
+   "halogen_free": true,
+   "ul94": "VTM-0",
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 3.2,
+     "method": "IEC 61189-2-721",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0032,
+     "method": "IEC 61189-2-721",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 254000000000000.0,
+   "surface_resistivity_ohm": 3680000000000.0,
+   "water_absorption_pct": 0.46,
+   "dielectric_strength_kv_mm": 187,
+   "peel_strength_n_mm": 0.92,
+   "peel_condition": "IPC-TM-650 2.4.9 Method A",
+   "notes": "Typical values are for the SLF 1012SS construction. Moisture absorption is given as the water absorption. Resistivities are published in MOhm cm and MOhm. Single side low-Df adhesiveless FCCL certified to IPC-4204/25; PI film 20 or 25 um with 12 or 18 um copper (ED, RA for the 18 um type). Surface adhesion to pure adhesive 0.54 N/mm; dimensional stability MD -0.0682 %, TD -0.0585 %; folding endurance above 200 times.",
+   "copper": [
+    {
+     "weight_oz": null,
+     "thickness_um": 12,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": null,
+     "thickness_um": 18,
+     "foil_type": "RA"
+    }
+   ],
+   "source": {
+    "pdf": "20230630152635825.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-1812-01-SF202"
+   }
+  },
+  {
+   "id": "shengyi/sf305r",
+   "manufacturer": "Shengyi",
+   "name": "SF305R",
+   "kind": "other",
+   "resin": "Polyimide film with epoxy adhesive",
+   "halogen_free": true,
+   "ul94": "V-0",
+   "volume_resistivity_ohm_cm": 2000000000000.0,
+   "surface_resistivity_ohm": 150000000000.0,
+   "peel_strength_n_mm": 1.2,
+   "peel_condition": "IPC-TM-650 2.4.9 Method A (Method C: 1.0 N/mm)",
+   "notes": "Typical values are for the SF305R 5025 and 8025 construction. Moisture absorption is given as the water absorption. Resistivities are published in MOhm cm and MOhm. Halogen-free and phosphorus-free polyimide film based stiffener for FPC, certified to IPC-4203/2; resin flow below 0.15 mm; dimensional stability +-0.08 %. Values given for 5025; the 8025 type has peel 1.2 (Method A) and 1.1 N/mm (Method C), volume resistivity 2.5e6 MOhm cm and surface resistivity 1.5e5 MOhm.",
+   "source": {
+    "pdf": "20230630153259743.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-1901-01-SF315C"
+   }
+  },
+  {
+   "id": "shengyi/sf202",
+   "manufacturer": "Shengyi",
+   "name": "SF202",
+   "kind": "flex_laminate",
+   "resin": "Polyimide, adhesiveless",
+   "halogen_free": true,
+   "ul94": "VTM-0",
+   "dk": [
+    {
+     "freq_ghz": 0.001,
+     "value": 3.2,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.007,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 480000000000000.0,
+   "surface_resistivity_ohm": 1200000000000.0,
+   "water_absorption_pct": 1.3,
+   "dielectric_strength_kv_mm": 150,
+   "peel_strength_n_mm": 1.2,
+   "peel_condition": "IPC-TM-650 2.4.9 Method A (Method C: 1.2 N/mm)",
+   "notes": "Typical values are for the SF202 0512DT construction. Moisture absorption is given as the water absorption. Resistivities are published in MOhm cm and MOhm. Double side adhesiveless FCCL certified to IPC-4204/11; Dk and Df are published at 1 MHz; dimensional stability MD 0.0139 %, TD 0.0051 %; folding endurance above 2000 times.",
+   "source": {
+    "pdf": "20240322102703579.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-2101-03-SF202"
+   }
+  },
+  {
+   "id": "shengyi/sf325",
+   "manufacturer": "Shengyi",
+   "name": "SF325",
+   "kind": "flex_laminate",
+   "resin": "Polyimide film with epoxy adhesive (3-layer)",
+   "halogen_free": true,
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 3.25,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.012,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 450000000000000.0,
+   "surface_resistivity_ohm": 1500000000000.0,
+   "water_absorption_pct": 1.43,
+   "peel_strength_n_mm": 1.1,
+   "peel_condition": "IPC-TM-650 2.4.9 Method A (Method C: 1.0 N/mm)",
+   "notes": "Typical values are for the SF325 051813DR construction. Moisture absorption is given as the water absorption. Resistivities are published in MOhm cm and MOhm. Anti-ion-migration polyimide film based 3-layer FCCL (passes C-1000/85/85, 100 VDC). Dk and Df at 1 GHz by IPC-TM-650 2.5.5.3. The 103520SR construction has peel 1.4 (Method A) and 1.3 N/mm (Method C), Dk 3.23, Df 0.013, moisture absorption 1.38 %, volume resistivity 5.0e8 MOhm cm and surface resistivity 2.0e6 MOhm. Dimensional stability +-0.1 to +-0.2 %.",
+   "source": {
+    "pdf": "20251125183239232.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-2406-02-SF325"
+   }
+  },
+  {
+   "id": "shengyi/dlf",
+   "manufacturer": "Shengyi",
+   "name": "DLF",
+   "kind": "flex_laminate",
+   "resin": "Modified polyimide",
+   "halogen_free": true,
+   "ul94": "VTM-0",
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 3.4,
+     "method": "IEC 61189-2-721",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0033,
+     "method": "IEC 61189-2-721",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 2460000000000000.0,
+   "surface_resistivity_ohm": 3870000000000.0,
+   "water_absorption_pct": 0.72,
+   "dielectric_strength_kv_mm": 184,
+   "peel_strength_n_mm": 0.86,
+   "peel_condition": "IPC-TM-650 2.4.9 Method A (Method C: 0.85 N/mm)",
+   "notes": "Typical values are for the DLF 2012DR construction. Moisture absorption is given as the water absorption. Resistivities are published in MOhm cm and MOhm. Low loss modified polyimide (MPI) FCCL, loss close to LCP, certified to IPC-4204/11; for high frequency multilayer FPC and rigid-flex bonding layers. Dimensional stability MD -0.0584 %, TD -0.0639 %.",
+   "source": {
+    "pdf": "20251125183305122.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-2412-02-DLF"
+   }
+  },
+  {
+   "id": "shengyi/sf224",
+   "manufacturer": "Shengyi",
+   "name": "SF224",
+   "kind": "flex_laminate",
+   "resin": "Composite fluororesin",
+   "halogen_free": true,
+   "ul94": "VTM-0",
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 2.49,
+     "method": "SPDR",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0023,
+     "method": "SPDR",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 470000000000000.0,
+   "surface_resistivity_ohm": 120000000000.0,
+   "water_absorption_pct": 0.22,
+   "peel_strength_n_mm": 0.9,
+   "peel_condition": "IPC-TM-650 2.4.9 Method A (Method C: 0.9 N/mm)",
+   "notes": "Typical values are for the SF224 2018DT construction. Moisture absorption is given as the water absorption. Resistivities are published in MOhm cm and MOhm. Composite fluororesin flexible copper clad laminate for antennas, microwave communication and high frequency PCB. Dk and Df at 10 GHz by SPDR. The 4012DT construction has peel 0.7 N/mm, moisture absorption 0.18 %, Dk 2.48, Df 0.0023, volume resistivity 4.8e8 MOhm cm and surface resistivity 1.8e6 MOhm. Dimensional stability MD -0.149 %, TD -0.143 % (2018DT).",
+   "source": {
+    "pdf": "20251125183343409.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-2404-04-SF224"
+   }
+  },
+  {
+   "id": "shengyi/sf202c",
+   "manufacturer": "Shengyi",
+   "name": "SF202C",
+   "kind": "coverlay",
+   "resin": "Polyimide film with polyimide adhesive",
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 3.43,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0135,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 800000000000000.0,
+   "surface_resistivity_ohm": 200000000000.0,
+   "water_absorption_pct": 1.23,
+   "dielectric_strength_kv_mm": 115.9,
+   "peel_strength_n_mm": 1.1,
+   "peel_condition": "IPC-TM-650 2.4.9 Method A (Method C: 1.1 N/mm)",
+   "notes": "Typical values are for the SF202C 0515 construction. Moisture absorption is given as the water absorption. Resistivities are published in MOhm cm and MOhm. High solder resistance polyimide film based coverlay certified to IPC-4203/21; resin flow below 0.15 mm. Dk and Df at 10 GHz by IPC-TM-650 2.5.5.9. Dimensional stability MD 0.0270 %, TD 0.0030 %.",
+   "source": {
+    "pdf": "20251125183400779.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-2406-04-SF202C"
+   }
+  },
+  {
+   "id": "shengyi/sf490",
+   "manufacturer": "Shengyi",
+   "name": "SF490",
+   "kind": "flex_laminate",
+   "resin": "PET film with polyester adhesive",
+   "halogen_free": true,
+   "volume_resistivity_ohm_cm": 150000000000000.0,
+   "surface_resistivity_ohm": 410000000000.0,
+   "peel_strength_n_mm": 0.82,
+   "peel_condition": "IPC-TM-650 2.4.9 Method A",
+   "notes": "Typical values are for the SF490 503520SR construction. Moisture absorption is given as the water absorption. Resistivities are published in MOhm cm and MOhm. Halogen-free PET film based transparent FCCL for LED displays, certified to IPC-4204/5; visible light transmittance 90.2 %; dimensional stability +-1 %.",
+   "source": {
+    "pdf": "20251126152416280.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-0404-02-SF490"
+   }
+  },
+  {
+   "id": "shengyi/sf230",
+   "manufacturer": "Shengyi",
+   "name": "SF230",
+   "kind": "flex_laminate",
+   "resin": "Modified polyimide",
+   "halogen_free": true,
+   "ul94": "VTM-0",
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 3.4,
+     "method": "IEC 61189-2-721",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0031,
+     "method": "IEC 61189-2-721",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 1230000000000000.0,
+   "surface_resistivity_ohm": 4530000000000.0,
+   "water_absorption_pct": 0.75,
+   "dielectric_strength_kv_mm": 201,
+   "peel_strength_n_mm": 1.36,
+   "peel_condition": "IPC-TM-650 2.4.9 Method A (Method C: 1.47 N/mm)",
+   "notes": "Typical values are for the SF230 1012DT construction. Moisture absorption is given as the water absorption. Resistivities are published in MOhm cm and MOhm. Low loss modified polyimide (MPI) FCCL, loss close to LCP, certified to IPC-4204/11; for high frequency multilayer FPC and rigid-flex bonding layers. Dimensional stability MD 0.01 %, TD -0.03 %.",
+   "source": {
+    "pdf": "20251127090654419.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-2406-05-SF230"
+   }
+  },
+  {
+   "id": "shengyi/sf305c",
+   "manufacturer": "Shengyi",
+   "name": "SF305C",
+   "kind": "coverlay",
+   "resin": "Polyimide film with epoxy adhesive",
+   "halogen_free": true,
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 3.35,
+     "method": "IEC 61189-2-721",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.0196,
+     "method": "IEC 61189-2-721",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 480000000000000.0,
+   "surface_resistivity_ohm": 1200000000000.0,
+   "water_absorption_pct": 1.54,
+   "peel_strength_n_mm": 1.05,
+   "peel_condition": "IPC-TM-650 2.4.9 Method A (Method C: 1.07 N/mm)",
+   "notes": "Typical values are for the SF305C 1035 construction. Moisture absorption is given as the water absorption. Resistivities are published in MOhm cm and MOhm. Halogen-free flame-resistant polyimide film based coverlay certified to IPC-4203/2; resin flow below 0.15 mm; dimensional stability MD 0.01 %, TD 0.02 %.",
+   "source": {
+    "pdf": "20251127094658783.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-2406-04-SF305C"
+   }
+  },
+  {
+   "id": "shengyi/sf315c",
+   "manufacturer": "Shengyi",
+   "name": "SF315C",
+   "kind": "coverlay",
+   "resin": "Black polyimide film with epoxy adhesive",
+   "halogen_free": true,
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 3.78,
+     "method": "IEC 61189-2-721",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.0217,
+     "method": "IEC 61189-2-721",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 5310000000000.0,
+   "surface_resistivity_ohm": 4500000000000.0,
+   "water_absorption_pct": 1.05,
+   "peel_strength_n_mm": 1.25,
+   "peel_condition": "IPC-TM-650 2.4.9 Method A (Method C: 1.28 N/mm)",
+   "notes": "Typical values are for the SF315C 0515 construction. Moisture absorption is given as the water absorption. Resistivities are published in MOhm cm and MOhm. Black polyimide based halogen-free flame-resistant coverlay (light blocking) certified to IPC-4203/2; resin flow below 0.15 mm; dimensional stability MD 0.01 %, TD 0.02 %.",
+   "source": {
+    "pdf": "20251127095301800.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-2406-04-SF315C"
+   }
+  },
+  {
+   "id": "shengyi/sf325c",
+   "manufacturer": "Shengyi",
+   "name": "SF325C",
+   "kind": "coverlay",
+   "resin": "Polyimide film with epoxy adhesive",
+   "halogen_free": true,
+   "ul94": "VTM-0",
+   "dk": [
+    {
+     "freq_ghz": 1,
+     "value": 3.18,
+     "method": "IEC 61189-2-721",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 1,
+     "value": 0.0125,
+     "method": "IEC 61189-2-721",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 80000000000000.0,
+   "surface_resistivity_ohm": 8500000000000.0,
+   "water_absorption_pct": 1.18,
+   "peel_strength_n_mm": 1.2,
+   "peel_condition": "IPC-TM-650 2.4.9 Method A (Method C: 1.1 N/mm)",
+   "notes": "Typical values are for the SF325C 0515 construction. Moisture absorption is given as the water absorption. Resistivities are published in MOhm cm and MOhm. Anti-ion-migration polyimide film based coverlay certified to IPC-4203/2; resin flow below 0.15 mm; dimensional stability MD 0.01 %, TD 0.02 %.",
+   "source": {
+    "pdf": "20251127095722341.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-2406-04-SF325C"
+   }
+  },
+  {
+   "id": "shengyi/sf206c",
+   "manufacturer": "Shengyi",
+   "name": "SF206C",
+   "kind": "coverlay",
+   "resin": "Low-Dk polyimide film with polyimide adhesive",
+   "halogen_free": true,
+   "ul94": "V-0",
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 3.11,
+     "method": "IEC 61189-2-721",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0091,
+     "method": "IEC 61189-2-721",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "water_absorption_pct": 0.53,
+   "dielectric_strength_kv_mm": 110.4,
+   "peel_strength_n_mm": 0.92,
+   "peel_condition": "IPC-TM-650 2.4.9 Method A (Method C: 0.92 N/mm)",
+   "notes": "Typical values are for the SF206C 0515 construction. Moisture absorption is given as the water absorption. Resistivities are published in MOhm cm and MOhm. Low Dk/Df polyimide film based coverlay certified to IPC-4203/21; the adhesive layer has Dk 2.56 and Df 0.0025 at 10 GHz; resin flow below 0.15 mm; dimensional stability MD -0.0223 %, TD -0.0393 %. Volume and surface resistivity are not given.",
+   "source": {
+    "pdf": "20251127100034679.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-2406-04-SF206C"
+   }
+  },
+  {
+   "id": "shengyi/sf385",
+   "manufacturer": "Shengyi",
+   "name": "SF385",
+   "kind": "flex_laminate",
+   "resin": "Polyimide film with epoxy adhesive",
+   "halogen_free": true,
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 3.2,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0191,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "water_absorption_pct": 1.1,
+   "dielectric_strength_kv_mm": 91,
+   "peel_strength_n_mm": 1.3,
+   "peel_condition": "IPC-TM-650 2.4.9 Method A (Method C: 1.1 N/mm)",
+   "notes": "Halogen-free PI film based transparent FCCL for LED displays, certified to IPC-4204/2. Typical values are for the SF385 101213SR construction. Visible light transmittance after etching 81 %; dimensional stability +-0.1 %. No UL 94 class or resistivity is given.",
+   "source": {
+    "pdf": "20260416002934777.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-2603-01-SF385"
+   }
+  },
+  {
+   "id": "shengyi/sf385c",
+   "manufacturer": "Shengyi",
+   "name": "SF385C",
+   "kind": "coverlay",
+   "resin": "Polyimide film with epoxy adhesive",
+   "halogen_free": true,
+   "dk": [
+    {
+     "freq_ghz": 10,
+     "value": 3.3,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 10,
+     "value": 0.0187,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "water_absorption_pct": 1.8,
+   "dielectric_strength_kv_mm": 101,
+   "peel_strength_n_mm": 1.2,
+   "peel_condition": "IPC-TM-650 2.4.9 Method A (Method C: 1.0 N/mm)",
+   "notes": "Halogen-free PI film based transparent coverlay for LED displays, certified to IPC-4203/2. Typical values are for the SF385C 1025 construction. Resin flow below 0.2 mm; visible light transmittance 87 %; dimensional stability MD 0.01 %, TD 0.02 %. No UL 94 class or resistivity is given.",
+   "source": {
+    "pdf": "20260416002956142.pdf",
+    "pages": "1-2",
+    "revision": "CN-TDS-2603-01-SF385C"
+   }
+  },
+  {
+   "id": "shengyi/si13u",
+   "manufacturer": "Shengyi",
+   "name": "SI13U",
+   "kind": "laminate",
+   "notes": "Core material for packaging substrates; only the line-up sheet and the processing guide (Chinese text) are available, which give Dk and Df per construction in a layout that was not transcribed. Companion prepreg SI13NB.",
+   "source": {
+    "pdf": "20211203192828732.pdf",
+    "pages": null,
+    "revision": null
+   }
+  },
+  {
+   "id": "shengyi/s7045gx",
+   "manufacturer": "Shengyi",
+   "name": "S7045GX",
+   "kind": "laminate",
+   "notes": "Low CTE, lower mid-loss material with prepreg S7045GXB; only the line-up sheet and the processing guide are available (Dk/Df per construction, not transcribed). The guide recommends new drill bits, 1 panel per stack, a 10-20 % lower feed than FR-4, LE aluminium entry sheet for holes under 0.6 mm and baking after drilling at 180-190 C for 3 h.",
+   "source": {
+    "pdf": "20250630160346149.pdf",
+    "pages": null,
+    "revision": null
+   }
+  },
+  {
+   "id": "shengyi/s1150gh",
+   "manufacturer": "Shengyi",
+   "name": "S1150GH",
+   "kind": "laminate",
+   "notes": "Core and prepreg line-up (Dk and Df per construction, not transcribed) with the Chinese processing guide; companion prepreg S1150GHB.",
+   "source": {
+    "pdf": "20250721100432069.pdf",
+    "pages": null,
+    "revision": null
+   }
+  },
+  {
+   "id": "shengyi/s1130",
+   "manufacturer": "Shengyi",
+   "name": "S1130",
+   "kind": "laminate",
+   "notes": "Normal Tg, traditional FR-4 laminate; only the processing guide (English) and an RoHS test report are available. The guide advises no bake after drilling, punching is not recommended at 0.5 mm or more, and HAL is not advised for 2 oz or heavier copper.",
+   "source": {
+    "pdf": "20221227151056541.pdf",
+    "pages": null,
+    "revision": null
+   }
+  },
+  {
+   "id": "shengyi/s1600",
+   "manufacturer": "Shengyi",
+   "name": "S1600",
+   "kind": "laminate",
+   "notes": "High CTI multilayer laminate with prepreg S0101 600; only the processing guide is available. It advises thin core baking at 150 C for 4-8 h, no bake after drilling, and notes that inorganic filler may show white spots after etching.",
+   "source": {
+    "pdf": "20221227151135928.pdf",
+    "pages": null,
+    "revision": null
+   }
+  }
+ ]
+}

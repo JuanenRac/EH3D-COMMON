@@ -31,6 +31,10 @@ pub const FILES: &[(&str, &str)] = &[
     (
         "shengyi_lote2_t1.json",
         include_str!("../data/shengyi_lote2_t1.json"),
+    (
+        "shengyi_lote2_t2.json",
+        include_str!("../data/shengyi_lote2_t2.json"),
+    ),
     ),
     ("taconic.json", include_str!("../data/taconic.json")),
     ("thinflex.json", include_str!("../data/thinflex.json")),
@@ -38,10 +42,18 @@ pub const FILES: &[(&str, &str)] = &[
     (
         "ventec_lote2_t1.json",
         include_str!("../data/ventec_lote2_t1.json"),
+    (
+        "ventec_lote2_t2.json",
+        include_str!("../data/ventec_lote2_t2.json"),
+    ),
     ),
     (
         "wazam_lote2_t1.json",
         include_str!("../data/wazam_lote2_t1.json"),
+    (
+        "wazam_lote2_t2.json",
+        include_str!("../data/wazam_lote2_t2.json"),
+    ),
     ),
     ("yuxinda.json", include_str!("../data/yuxinda.json")),
 ];
