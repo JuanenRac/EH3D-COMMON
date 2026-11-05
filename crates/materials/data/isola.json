@@ -1,799 +1,1592 @@
 {
-  "schema_version": 1,
-  "manufacturer": "Isola",
-  "materials": [
-    {
-      "id": "isola/185hr",
-      "manufacturer": "Isola",
-      "family": "185HR",
-      "name": "185HR",
-      "kind": "laminate",
-      "resin": "epoxy",
-      "notes": "High reliability epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df).",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 205,
-          "pressure_kpa": null,
-          "time_at_temp_min": 75,
-          "heat_rate_c_min": null,
-          "notes": "Cure 190-200 C (maximum product temperature 205 C); 75 min above 190 C and 65 min above 200 C (15 min more above 3.0 mm); heat rise 3.0-4.5 C/min between 100 and 150 C; pressure 350-450 PSI (25-32 kg/cm2) without vacuum assist, 325-450 PSI with vacuum frames or bags, 275-400 PSI in a vacuum enclosure; dual stage starts at 50 PSI (3.5 kg/cm2) and goes to full pressure at 90 C; 65 min cure for sub-assemblies and 75 min for the final assembly; vacuum 10-20 min on risers; pressure reduced to 50 PSI after 30 min at cure temperature; cool at 2.8 C/min."
-        },
-        "drilling": {
-          "speed_surface_m_min": 126,
-          "chip_load_um": 59,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
-        }
-      },
-      "source": {
-        "pdf": "185hr-laminate-and-prepreg_Processing_Guide_new.pdf"
-      }
+ "schema_version": 1,
+ "manufacturer": "Isola",
+ "materials": [
+  {
+   "id": "isola/185hr",
+   "manufacturer": "Isola",
+   "family": "185HR",
+   "name": "185HR",
+   "kind": "laminate",
+   "resin": "epoxy",
+   "notes": "High reliability epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df).",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 205,
+     "pressure_kpa": null,
+     "time_at_temp_min": 75,
+     "heat_rate_c_min": null,
+     "notes": "Cure 190-200 C (maximum product temperature 205 C); 75 min above 190 C and 65 min above 200 C (15 min more above 3.0 mm); heat rise 3.0-4.5 C/min between 100 and 150 C; pressure 350-450 PSI (25-32 kg/cm2) without vacuum assist, 325-450 PSI with vacuum frames or bags, 275-400 PSI in a vacuum enclosure; dual stage starts at 50 PSI (3.5 kg/cm2) and goes to full pressure at 90 C; 65 min cure for sub-assemblies and 75 min for the final assembly; vacuum 10-20 min on risers; pressure reduced to 50 PSI after 30 min at cure temperature; cool at 2.8 C/min."
     },
-    {
-      "id": "isola/370hr-ultra",
-      "manufacturer": "Isola",
-      "family": "370HR",
-      "name": "370HR Ultra",
-      "kind": "laminate",
-      "resin": "epoxy",
-      "notes": "Epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df). Prepreg melts and flows at about 11 C lower temperature than standard FR406 prepreg, so vacuum assist is suggested.",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 185,
-          "pressure_kpa": null,
-          "time_at_temp_min": 70,
-          "heat_rate_c_min": null,
-          "notes": "Cure 182-185 C; 70-90 min above 182 C at the centre of the book (90 min above 3 mm); heat rise 2.0-6.0 C/min between 90 and 150 C (above 3.5 C/min for high layer count or 2 oz copper); pressure 300-400 PSI (21-28 kg/cm2) without vacuum assist and 250-400 PSI (18-28 kg/cm2) with vacuum; dual stage 50 PSI after vacuum dwell; pressure reduced to 50 PSI after 30 min at cure temperature; 70-75 min cure for sub-assemblies and 90 min for the final assembly; vacuum 20 min on risers."
-        },
-        "drilling": {
-          "speed_surface_m_min": 126,
-          "chip_load_um": 59,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
-        },
-        "bake_note": "Mild bake of oxided innerlayers 15-30 min at 80-100 C; dry layers at least 30 min at 100 C."
-      },
-      "source": {
-        "pdf": "370HR-Ultra-Laminate-Prepreg-Processing-Guide.pdf"
-      }
-    },
-    {
-      "id": "isola/tachyon-200jv",
-      "manufacturer": "Isola",
-      "family": "Tachyon",
-      "name": "Tachyon 200JV",
-      "kind": "laminate",
-      "halogen_free": true,
-      "notes": "Halogen-free, super low loss laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df). A high temperature post bake of 2 h at 210 C is listed; low heat rise rates give the best performance.",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 222,
-          "pressure_kpa": 2930,
-          "time_at_temp_min": 120,
-          "heat_rate_c_min": null,
-          "notes": "Cure 120 min above 200 C and never above 222 C product temperature; heat rise 2-3 C/min between 115 and 160 C; pressure 400-450 PSI (26.5-30 kg/cm2), 425 PSI shown as the middle of the range; dual stage 100 PSI after vacuum dwell, full pressure at 130 C product temperature; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum on risers for at least 10 min with the product below 100 C."
-        },
-        "drilling": {
-          "speed_surface_m_min": 150,
-          "chip_load_um": 35,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter. Two tables are given; the maximum of both is shown."
-        },
-        "bake_note": "Post bake 2 h at 210 C."
-      },
-      "source": {
-        "pdf": "Tachyon-200JV-Processing-Guide-V6.pdf"
-      }
-    },
-    {
-      "id": "isola/a11",
-      "manufacturer": "Isola",
-      "family": "A11",
-      "name": "A11",
-      "kind": "prepreg",
-      "resin": "difunctional epoxy",
-      "tg_dsc_c": 100,
-      "notes": "No-flow specialty prepreg, general purpose difunctional epoxy; the guide gives about 100 C Tg typical by DSC.",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 192,
-          "pressure_kpa": 2413,
-          "time_at_temp_min": 60,
-          "heat_rate_c_min": null,
-          "notes": "Cure at least 60 min at 182 C (80 min at 171 C may not develop full Tg; add 60 min for every 12.2 C below 182 C); the package must not exceed 192 C; heat rise 3.0-6.0 C/min between 79 and 135 C; full pressure 325-400 PSI (22.8-28.1 kg/cm2), 350 PSI suggested; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 20 min; kiss cycles are not suggested."
-        }
-      },
-      "source": {
-        "pdf": "a11-no-flow-prepregs_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/astra-mt77",
-      "manufacturer": "Isola",
-      "family": "Astra",
-      "name": "Astra MT77",
-      "kind": "laminate",
-      "notes": "Ultra low loss RF/MW laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df). It says to use lower chiploads and cutting speeds than standard FR-4 and that desmear can follow the 170 C Tg FR-4 parameters.",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 200,
-          "pressure_kpa": null,
-          "time_at_temp_min": 60,
-          "heat_rate_c_min": null,
-          "notes": "Cure 190-200 C: 70 min at 190 C or 60 min at 200 C; heat rise 3.0-5.0 C/min; pressure 325-375 PSI (23-27 kg/cm2) for 1 oz copper and up to 18 layers, 350-400 PSI (25-28 kg/cm2) above; dual stage 50 PSI after vacuum dwell; vacuum at least 15 min on risers with the product below 100 C; cool at 2.8 C/min to 135-140 C under 50 PSI; use the full press cycle for sub-assemblies and the final lamination."
-        },
-        "drilling": {
-          "speed_surface_m_min": 121,
-          "chip_load_um": 75,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
-        }
-      },
-      "source": {
-        "pdf": "astra-mt77-laminate-and-prepreg_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/ed130uv",
-      "manufacturer": "Isola",
-      "family": "ED130UV",
-      "name": "ED130UV",
-      "kind": "laminate",
-      "resin": "epoxy",
-      "notes": "UV-blocking epoxy laminate; the guide has drilling data only in text form (no lamination table, Tg, Td, Dk or Df).",
-      "processing": {
-        "drilling": {
-          "speed_surface_m_min": 151,
-          "chip_load_um": 91,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter. Two tables are given (standard and undercut bits with high-speed spindles); the maximum of both is shown."
-        }
-      },
-      "source": {
-        "pdf": "ed130uv-epoxy-laminate-and-prepreg_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/fr402",
-      "manufacturer": "Isola",
-      "family": "FR402",
-      "name": "FR402",
-      "kind": "laminate",
-      "resin": "tetrafunctional epoxy",
-      "notes": "Tetrafunctional epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df).",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 180,
-          "pressure_kpa": null,
-          "time_at_temp_min": 50,
-          "heat_rate_c_min": null,
-          "notes": "Cure 50 min above 180 C (70 min above 3 mm); heat rise 4.5-6.5 C/min between 80 and 135 C; pressure 200-250 PSI (14-18 kg/cm2); dual stage 50 PSI after vacuum dwell; pressure reduced to 50 PSI after 20 min at cure temperature; vacuum 20 min on risers; cool at 2.8 C/min."
-        },
-        "drilling": {
-          "speed_surface_m_min": 172,
-          "chip_load_um": 76,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter. The guide suggests a maximum cutting speed of 550-600 SFPM and a chip load not above 3.5 mil for bits of 0.040 in and above."
-        }
-      },
-      "source": {
-        "pdf": "fr402-laminate-and-prepreg-epoxy-resin_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/fr406",
-      "manufacturer": "Isola",
-      "family": "FR406",
-      "name": "FR406",
-      "kind": "laminate",
-      "resin": "epoxy",
-      "notes": "Standard loss, high Tg epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df).",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 185,
-          "pressure_kpa": 1896,
-          "time_at_temp_min": 50,
-          "heat_rate_c_min": null,
-          "notes": "Single stage: 50 min at 177 C (60-70 min from 3.2 mm); dual stage: 50 min at 185 C; heat rise 4.5-6.7 C/min between 79 and 135 C; pressure 200-350 PSI (14.1-24.6 kg/cm2), 275 PSI suggested (300-350 PSI without vacuum assist, 250-300 with vacuum frames or bags, 200-250 in a vacuum enclosure); dual stage 50 PSI after vacuum dwell, full pressure when the centre of the stack is at 93 C; pressure reduced to 50 PSI after 15 min at cure temperature; vacuum 20-30 min; cool at 2.8 C/min from 185 to 135 C; sequential lamination 50 min for sub-assemblies and 60-70 min for the final assembly."
-        },
-        "drilling": {
-          "speed_surface_m_min": 172,
-          "chip_load_um": 76,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter. Maximum cutting speed 550-600 SFPM; chip load not above 3.5 mil for bits of 0.040 in and above; stack height at most 200 mil of board thickness; at most 1000 hits for the smallest bits and 1500 for 13.5 mil and above."
-        },
-        "desmear_note": "Conventional permanganate or plasma; for 3-point etchback a double permanganate pass or plasma followed by a chemical pass.",
-        "bake_note": "Mild bake of oxided innerlayers 15-30 min at 80-100 C; dry layers at least 30 min at 100 C."
-      },
-      "source": {
-        "pdf": "fr406-laminate-and-prepreg_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/fr406n",
-      "manufacturer": "Isola",
-      "family": "FR406N",
-      "name": "FR406N",
-      "kind": "prepreg",
-      "resin": "multifunctional epoxy",
-      "tg_dsc_c": 170,
-      "notes": "No-flow and low-flow specialty prepreg, multifunctional epoxy; the guide gives about 170 C Tg typical by DSC.",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 185,
-          "pressure_kpa": 2413,
-          "time_at_temp_min": 80,
-          "heat_rate_c_min": null,
-          "notes": "Cure at least 80 min at 185 C (60 min may not develop full Tg; add 60 min for every 12.2 C below the cure temperature); full pressure 325-400 PSI (22.8-28.1 kg/cm2), 350 PSI suggested; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 20 min on lifters. Other pressure ranges in the guide: 350-400 PSI, 325-375 PSI hydraulic pressing and 175-200 PSI autoclave."
-        }
-      },
-      "source": {
-        "pdf": "fr406n-no-flow-and-low-flow-prepregs_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/fr408",
-      "manufacturer": "Isola",
-      "family": "FR408",
-      "name": "FR408",
-      "kind": "laminate",
-      "resin": "epoxy",
-      "notes": "Mid loss epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df).",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 200,
-          "pressure_kpa": null,
-          "time_at_temp_min": 110,
-          "heat_rate_c_min": null,
-          "notes": "Cure 185-200 C: 110 min above 185 C or 95 min above 191 C (thicker boards near the top of the range); heat rise 2.2-4.5 C/min between 100 and 150 C (above 3.5 C/min for high layer count or 2 oz copper); pressure 200-250 PSI (14-18 kg/cm2); dual stage 50 PSI after vacuum dwell; vacuum 30 min on risers; sequential lamination 80 min for sub-assemblies and 95-110 min for the final assembly."
-        },
-        "drilling": {
-          "speed_surface_m_min": 119,
-          "chip_load_um": 58,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter. The guide advises lower chip loads than standard FR-4 for this material."
-        }
-      },
-      "source": {
-        "pdf": "fr408-laminate-and-prepreg_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/fr408hr",
-      "manufacturer": "Isola",
-      "family": "FR408HR",
-      "name": "FR408HR",
-      "kind": "laminate",
-      "resin": "epoxy",
-      "lead_free_compatible": true,
-      "notes": "Lead-free, mid loss laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df).",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 202,
-          "pressure_kpa": null,
-          "time_at_temp_min": 130,
-          "heat_rate_c_min": null,
-          "notes": "Cure 188-202 C; 130-160 min at or above 190 C (product overshoot to 205 C acceptable for the heat rise); heat rise 3.5-5.0 C/min between 100 and 150 C (target above 4 C/min); pressure 200-350 PSI (14-25 kg/cm2); dual stage 50 PSI (3.5 kg/cm2) after vacuum dwell and full pressure at 100 C product temperature; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 30 min on risers; cool at 2.5 C/min to 135-140 C; sub-assemblies must be baked before the secondary lamination."
-        },
-        "drilling": {
-          "speed_surface_m_min": 119,
-          "chip_load_um": 58,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter. The guide advises lower chip loads than standard FR-4 for this material."
-        }
-      },
-      "source": {
-        "pdf": "fr408hr-laminate-and-prepreg_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/g200",
-      "manufacturer": "Isola",
-      "family": "G200",
-      "name": "G200",
-      "kind": "laminate",
-      "resin": "BT-epoxy",
-      "reinforcement": "E-glass woven",
-      "lead_free_compatible": true,
-      "ul94": "V-0",
-      "ipc_slash_sheet": "IPC-4101/30",
-      "tg_dsc_c": 180,
-      "td_c": 325,
-      "t260_min": 60,
-      "t288_min": 10,
-      "cte_x_ppm": 13,
-      "cte_y_ppm": 14,
-      "cte_z_below_tg_ppm": 55,
-      "cte_z_above_tg_ppm": 275,
-      "cte_z_50_260_pct": 3.3,
-      "dk": [
-        {
-          "freq_ghz": 0.1,
-          "value": 3.8,
-          "method": "IPC-TM-650 2.5.5.3"
-        },
-        {
-          "freq_ghz": 1.0,
-          "value": 3.7,
-          "method": "IPC-TM-650 2.5.5.9"
-        },
-        {
-          "freq_ghz": 2.0,
-          "value": 3.7,
-          "method": "Bereskin stripline"
-        },
-        {
-          "freq_ghz": 5.0,
-          "value": 3.65,
-          "method": "Bereskin stripline"
-        },
-        {
-          "freq_ghz": 10.0,
-          "value": 3.65,
-          "method": "Bereskin stripline"
-        }
-      ],
-      "df": [
-        {
-          "freq_ghz": 0.1,
-          "value": 0.015,
-          "method": "IPC-TM-650 2.5.5.3"
-        },
-        {
-          "freq_ghz": 1.0,
-          "value": 0.015,
-          "method": "IPC-TM-650 2.5.5.9"
-        },
-        {
-          "freq_ghz": 2.0,
-          "value": 0.013,
-          "method": "Bereskin stripline"
-        },
-        {
-          "freq_ghz": 5.0,
-          "value": 0.015,
-          "method": "Bereskin stripline"
-        },
-        {
-          "freq_ghz": 10.0,
-          "value": 0.015,
-          "method": "Bereskin stripline"
-        }
-      ],
-      "thermal_conductivity_w_mk": 0.35,
-      "peel_strength_n_mm": 1.14,
-      "peel_condition": "Low profile and very low profile foil (all foil above 17 um): 1.14 N/mm; standard profile copper: 0.96 N/mm after thermal stress and 0.90 N/mm after process solutions (IPC-TM-650 2.4.8)",
-      "water_absorption_pct": 0.2,
-      "volume_resistivity_ohm_cm": 890000000000000.0,
-      "surface_resistivity_ohm": 2210000000000.0,
-      "dielectric_strength_kv_mm": 45,
-      "arc_resistance_s": 130,
-      "flexural_strength_mpa": {
-        "lengthwise": 599,
-        "crosswise": 507
-      },
-      "tensile_strength_mpa": {
-        "lengthwise": 356,
-        "crosswise": 292
-      },
-      "youngs_modulus_gpa": {
-        "lengthwise": 24.05,
-        "crosswise": 22.06
-      },
-      "copper": [
-        {
-          "weight_oz": 0.5,
-          "thickness_um": 18,
-          "foil_type": "ED"
-        },
-        {
-          "weight_oz": 1,
-          "thickness_um": 35,
-          "foil_type": "ED"
-        },
-        {
-          "weight_oz": 2,
-          "thickness_um": 70,
-          "foil_type": "ED"
-        }
-      ],
-      "notes": "BT-epoxy laminate and prepreg for large panel, high layer count boards; laminate 0.05 to 3.2 mm (2 to 125 mil) as a range, copper 1/2, 1 and 2 oz, HTE grade 3 foil, thinner foil available; prepreg on E-glass, square weave or mechanically spread. Thermal conductivity 0.35 W/mK; volume resistivity 8.9e8 MOhm cm after moisture resistance (6.5e8 at elevated temperature) and surface resistivity 2.21e6 MOhm (4.4e8 at elevated temperature) converted to ohm; dielectric breakdown above 60 kV; CTI class 3 (175-249 V); Poisson's ratio 0.182 (lengthwise) and 0.160 (crosswise); thermal stress 10 s at 288 C passes (unetched and etched); Young's modulus 3489 and 3200 ksi converted to GPa; relative thermal index 130 C; UL file E41625; the t288 value is the minimum (above 10 min).",
-      "thickness_range": {
-        "min_mm": 0.05,
-        "max_mm": 3.2,
-        "steps_note": "The data sheet gives the range only (2 to 125 mil), no steps."
-      },
-      "processing": {
-        "lamination": {
-          "max_temp_c": 180,
-          "pressure_kpa": null,
-          "time_at_temp_min": null,
-          "heat_rate_c_min": null,
-          "notes": "Cure temperature 180 C (the guide says the standard FR-4 press cycles must be extended to cure it and gives no cure time); heat rise 3.5-5.5 C/min between 90 and 150 C; pressure 200-300 PSI (14-21 kg/cm2); dual stage 50 PSI after vacuum dwell and full pressure at 90 C product temperature; vacuum 20 min on risers; cool at 2.8 C/min to 135-140 C under 50 PSI."
-        },
-        "drilling": {
-          "speed_surface_m_min": 141,
-          "chip_load_um": 64,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
-        }
-      },
-      "sources": [
-        {
-          "pdf": "g200-laminate-and-prepreg_Processing_Guide_new.pdf"
-        }
-      ],
-      "source": {
-        "pdf": "g200-laminate-and-prepreg-data-sheet-01032024.pdf",
-        "pages": "1-2",
-        "revision": "C"
-      }
-    },
-    {
-      "id": "isola/i-tera-mt40",
-      "manufacturer": "Isola",
-      "family": "I-Tera",
-      "name": "I-Tera MT40",
-      "kind": "laminate",
-      "notes": "Very low loss laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df).",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 200,
-          "pressure_kpa": null,
-          "time_at_temp_min": 60,
-          "heat_rate_c_min": null,
-          "notes": "60 min at 200 C; heat rise 3.0-5.0 C/min; pressure 325-375 PSI (23-27 kg/cm2) for 1 oz copper and up to 18 layers, 350-400 PSI (25-28 kg/cm2) above; dual stage 50 PSI after vacuum dwell and full pressure at 90 C product temperature; vacuum at least 15 min on risers; use the full cycle for sub-assemblies and the final lamination."
-        },
-        "drilling": {
-          "speed_surface_m_min": 121,
-          "chip_load_um": 77,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
-        }
-      },
-      "source": {
-        "pdf": "i-tera-mt40_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/i-tera-mt40-rf-mw",
-      "manufacturer": "Isola",
-      "family": "I-Tera",
-      "name": "I-Tera MT40 (RF/MW)",
-      "kind": "laminate",
-      "notes": "Very low loss RF/MW laminate (laminate only); the guide has process data only (no Tg, Td, Dk or Df).",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 200,
-          "pressure_kpa": null,
-          "time_at_temp_min": 60,
-          "heat_rate_c_min": null,
-          "notes": "60 min at 200 C; heat rise 3.0-5.0 C/min; pressure 325-375 PSI (23-27 kg/cm2) for 1 oz copper and up to 18 layers, 350-400 PSI (25-28 kg/cm2) above; dual stage 50 PSI after vacuum dwell; vacuum at least 15 min on risers."
-        },
-        "drilling": {
-          "speed_surface_m_min": 126,
-          "chip_load_um": 77,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
-        }
-      },
-      "source": {
-        "pdf": "i-tera-mt40-rf-mw_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/is400",
-      "manufacturer": "Isola",
-      "family": "IS400",
-      "name": "IS400",
-      "kind": "laminate",
-      "resin": "epoxy",
-      "lead_free_compatible": true,
-      "notes": "Lead-free, mid Tg epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df).",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 180,
-          "pressure_kpa": null,
-          "time_at_temp_min": 60,
-          "heat_rate_c_min": null,
-          "notes": "60 min above 180 C (75 min above 3 mm); heat rise 2.5-3.5 C/min; pressure 225-300 PSI (16-21 kg/cm2); dual stage 50 PSI after vacuum dwell and full pressure at 80 C product temperature; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 20 min on risers; 60 min cure for sub-assemblies and 60-70 min for the final assembly; the temperature shown is the one the cure time counts above."
-        },
-        "drilling": {
-          "speed_surface_m_min": 163,
-          "chip_load_um": 71,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
-        }
-      },
-      "source": {
-        "pdf": "is400-laminate-and-prepreg-isola-group_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/is410",
-      "manufacturer": "Isola",
-      "family": "IS410",
-      "name": "IS410",
-      "kind": "laminate",
-      "resin": "epoxy",
-      "lead_free_compatible": true,
-      "notes": "Lead-free epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df).",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 185,
-          "pressure_kpa": null,
-          "time_at_temp_min": 75,
-          "heat_rate_c_min": null,
-          "notes": "75 min above 185 C (90 min for thicker boards); heat rise 2.2-4.5 C/min between 80 and 135 C (above 3.5 C/min for high layer count or 2 oz copper); pressure 200-250 PSI (14-17 kg/cm2); dual stage 50 PSI after vacuum dwell; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 20 min on risers; 60-75 min cure for sub-assemblies and 90 min for the final assembly; the temperature shown is the one the cure time counts above."
-        },
-        "drilling": {
-          "speed_surface_m_min": 166,
-          "chip_load_um": 76,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
-        }
-      },
-      "source": {
-        "pdf": "is410-fr-4-epoxy-laminate-and-prepreg_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/is415",
-      "manufacturer": "Isola",
-      "family": "IS415",
-      "name": "IS415",
-      "kind": "laminate",
-      "resin": "epoxy",
-      "notes": "High reliability epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df).",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 190,
-          "pressure_kpa": null,
-          "time_at_temp_min": 130,
-          "heat_rate_c_min": null,
-          "notes": "130-160 min at or above 190 C (product overshoot to 205 C acceptable for the heat rise); heat rise 3.5-5.0 C/min between 100 and 150 C; pressure 200-350 PSI (14-24 kg/cm2); dual stage 50 PSI after vacuum dwell and full pressure at 100 C product temperature; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 30 min on risers; sub-assemblies must be baked before the secondary lamination; dry innerlayers at least 120 min at 110 C."
-        },
-        "drilling": {
-          "speed_surface_m_min": 119,
-          "chip_load_um": 58,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter. The guide advises lower chip loads than standard FR-4 for this material."
-        }
-      },
-      "source": {
-        "pdf": "is415-laminate-prepreg_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/is420",
-      "manufacturer": "Isola",
-      "family": "IS420",
-      "name": "IS420",
-      "kind": "laminate",
-      "resin": "epoxy",
-      "lead_free_compatible": true,
-      "notes": "Lead-free epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df). Prepreg melts at about 11 C lower temperature than standard FR406 prepreg.",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 190,
-          "pressure_kpa": null,
-          "time_at_temp_min": 120,
-          "heat_rate_c_min": null,
-          "notes": "120 min above 190 C; heat rise 2.5-6.5 C/min between 80 and 135 C; pressure 300-350 PSI (21-25 kg/cm2) without vacuum assist, 250-300 PSI with vacuum frames or bags and 200-250 PSI in a vacuum enclosure; dual stage 50 PSI after vacuum dwell; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 20 min on risers; 90-120 min cure for sub-assemblies and 120-150 min for the final assembly; the temperature shown is the one the cure time counts above."
-        },
-        "drilling": {
-          "speed_surface_m_min": 152,
-          "chip_load_um": 56,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
-        }
-      },
-      "source": {
-        "pdf": "is420-high-performance-laminate-and-prepreg_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/is550h",
-      "manufacturer": "Isola",
-      "family": "IS550H",
-      "name": "IS550H",
-      "kind": "laminate",
-      "resin": "epoxy",
-      "halogen_free": true,
-      "notes": "Halogen-free, high reliability laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df). It is a higher viscosity material than halogenated FR-4, so higher pressure and heat rise are used; sub-assemblies need 3-24 h of baking at 110-180 C before the secondary lamination.",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 200,
-          "pressure_kpa": null,
-          "time_at_temp_min": 75,
-          "heat_rate_c_min": null,
-          "notes": "Cure 190-200 C: 75 min at 200 C or 100 min at 190 C (190 C recommended for sequential lamination); heat rise 2.5-5.0 C/min between 100 and 170 C; pressure 350-450 PSI; dual stage 100 PSI (7.0 kg/cm2) after vacuum dwell and full pressure at 85 C product temperature; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 20 min on risers."
-        },
-        "drilling": {
-          "speed_surface_m_min": 119,
-          "chip_load_um": 58,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
-        }
-      },
-      "source": {
-        "pdf": "is550h-laminate-prepreg_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/is680",
-      "manufacturer": "Isola",
-      "family": "IS680",
-      "name": "IS680",
-      "kind": "laminate",
-      "notes": "Very low loss laminate, fully cured; the guide has drilling data only (no lamination table, Tg, Td, Dk or Df).",
-      "processing": {
-        "drilling": {
-          "speed_surface_m_min": 124,
-          "chip_load_um": 76,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
-        }
-      },
-      "source": {
-        "pdf": "is680-laminate_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/is680-ag",
-      "manufacturer": "Isola",
-      "family": "IS680",
-      "name": "IS680 AG",
-      "kind": "laminate",
-      "notes": "Very low loss laminate, fully cured; the guide has drilling data only (no lamination table, Tg, Td, Dk or Df).",
-      "processing": {
-        "drilling": {
-          "speed_surface_m_min": 124,
-          "chip_load_um": 76,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
-        }
-      },
-      "source": {
-        "pdf": "is680-ag_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/p25n",
-      "manufacturer": "Isola",
-      "family": "P25N",
-      "name": "P25N",
-      "kind": "prepreg",
-      "resin": "polyimide",
-      "notes": "Polyimide UL HB no-flow specialty prepreg; the guide gives a Tg above 200 C typical by TMA (a bound, not a value, so the field is empty).",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 190,
-          "pressure_kpa": 2413,
-          "time_at_temp_min": 120,
-          "heat_rate_c_min": null,
-          "notes": "Cure 120 min above 190 C; full pressure 350 PSI (25 kg/cm2), very high pressure (400-500 PSI) may be needed to fill; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum more than 20 min on risers; cool at 2.8 C/min to 135-140 C."
-        },
-        "bake_note": "Dry innerlayers at least 30 min at 100 C; polyimide layers need a longer drying."
-      },
-      "source": {
-        "pdf": "p25n-polyimide-based-no-flow-prepreg_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/p95-p25",
-      "manufacturer": "Isola",
-      "family": "P95/P25",
-      "name": "P95/P25",
-      "kind": "laminate",
-      "resin": "polyimide",
-      "ul94": "HB",
-      "notes": "Polyimide UL HB laminate (P95) and prepreg (P25); the guide has process data only (no Tg, Td, Dk or Df).",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 220,
-          "pressure_kpa": null,
-          "time_at_temp_min": 150,
-          "heat_rate_c_min": null,
-          "notes": "150 min above 220 C (more for boards above 3 mm); heat rise 5.0-7.0 C/min between 80 and 140 C; pressure 200-250 PSI (14-18 kg/cm2); dual stage 3.5 kg/cm2 (50 PSI) after vacuum dwell; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 30 min on risers; oven cure option: after 60 min at 182 C in the press the boards are cooled and post cured in an oven; the temperature shown is the one the cure time counts above."
-        },
-        "drilling": {
-          "speed_surface_m_min": 90,
-          "chip_load_um": 25,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter. The table covers bits up to 0.5 mm; ask the maker for large holes."
-        },
-        "bake_note": "Dry innerlayers at least 30 min at 100 C."
-      },
-      "source": {
-        "pdf": "p95-p25-polyimide-ul-hb_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/p96-p26",
-      "manufacturer": "Isola",
-      "family": "P96/P26",
-      "name": "P96/P26",
-      "kind": "laminate",
-      "resin": "polyimide",
-      "ul94": "V-0",
-      "notes": "Polyimide UL V-0 laminate (P96) and prepreg (P26); the guide has process data only (no Tg, Td, Dk or Df).",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 220,
-          "pressure_kpa": null,
-          "time_at_temp_min": 150,
-          "heat_rate_c_min": null,
-          "notes": "150 min above 220 C (180 min above 3 mm); heat rise 80-140 C range; pressure 200-250 PSI (14-18 kg/cm2); dual stage 3.5 kg/cm2 (50 PSI) after vacuum dwell and full pressure at 90 C product temperature; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 30 min on risers; oven cure option as for P95/P25; the temperature shown is the one the cure time counts above."
-        },
-        "drilling": {
-          "speed_surface_m_min": 90,
-          "chip_load_um": 25,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter. The table covers bits up to 0.5 mm; ask the maker for large holes."
-        },
-        "bake_note": "Dry innerlayers at least 30 min at 100 C."
-      },
-      "source": {
-        "pdf": "p96-p26-laminate-and-prepreg_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/terragreen",
-      "manufacturer": "Isola",
-      "family": "TerraGreen",
-      "name": "TerraGreen",
-      "kind": "laminate",
-      "halogen_free": true,
-      "notes": "Halogen-free, very low loss laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df).",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 200,
-          "pressure_kpa": null,
-          "time_at_temp_min": null,
-          "heat_rate_c_min": null,
-          "notes": "Cure 190-200 C; heat rise between 110 and 150 C; pressure 375 PSI (26 kg/cm2) for 1 oz copper and up to 18 layers and 425 PSI (30 kg/cm2) above; dual stage 50 PSI after vacuum dwell and full pressure at 90 C product temperature; use the full cycle for sub-assemblies and the final assembly; the guide gives no cure time in text form."
-        },
-        "drilling": {
-          "speed_surface_m_min": 122,
-          "chip_load_um": 77,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
-        }
-      },
-      "source": {
-        "pdf": "terragreen-laminate-and-prepreg-materials_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/terragreen-rf-mw",
-      "manufacturer": "Isola",
-      "family": "TerraGreen",
-      "name": "TerraGreen (RF/MW)",
-      "kind": "laminate",
-      "halogen_free": true,
-      "notes": "Halogen-free, very low loss RF/MW laminate (laminate only); the guide has process data only (no Tg, Td, Dk or Df).",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 200,
-          "pressure_kpa": null,
-          "time_at_temp_min": 45,
-          "heat_rate_c_min": null,
-          "notes": "190 C for 60 min or 200 C for 45 min; heat rise 3.5-5.0 C/min between 110 and 150 C; pressure 375 PSI (26 kg/cm2) for 1 oz copper and up to 18 layers and 425 PSI (30 kg/cm2) above; dual stage 50 PSI after vacuum dwell and full pressure at 90 C product temperature."
-        },
-        "drilling": {
-          "speed_surface_m_min": 122,
-          "chip_load_um": 77,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
-        }
-      },
-      "source": {
-        "pdf": "terragreen-rf-mw_Processing_Guide_new.pdf"
-      }
-    },
-    {
-      "id": "isola/terragreen-400g2",
-      "manufacturer": "Isola",
-      "family": "TerraGreen",
-      "name": "TerraGreen 400G2",
-      "kind": "laminate",
-      "halogen_free": true,
-      "notes": "Halogen-free, extremely low loss material (subject to the availability of L2 glass); the guide has process data only (no Tg, Td, Dk or Df).",
-      "processing": {
-        "lamination": {
-          "max_temp_c": 222,
-          "pressure_kpa": 2758,
-          "time_at_temp_min": 120,
-          "heat_rate_c_min": null,
-          "notes": "Cure 120 min at or above 200 C and never above 222 C product temperature; pressure 375-425 PSI (26.5-30 kg/cm2), 400 PSI shown as the middle of the range; dual stage 100 PSI (7.0 kg/cm2) after vacuum dwell and full pressure at 90 C product temperature; pressure reduced to 50 PSI after 30 min at cure temperature; cool at 2.8 C/min to 135-140 C."
-        },
-        "drilling": {
-          "speed_surface_m_min": 123,
-          "chip_load_um": 77,
-          "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
-        }
-      },
-      "source": {
-        "pdf": "terragreensup-sup-400g2_Processing_Guide_new.pdf"
-      }
+    "drilling": {
+     "speed_surface_m_min": 126,
+     "chip_load_um": 59,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
     }
-  ]
+   },
+   "source": {
+    "pdf": "185hr-laminate-and-prepreg_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/370hr-ultra",
+   "manufacturer": "Isola",
+   "family": "370HR",
+   "name": "370HR Ultra",
+   "kind": "laminate",
+   "resin": "epoxy",
+   "notes": "Epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df). Prepreg melts and flows at about 11 C lower temperature than standard FR406 prepreg, so vacuum assist is suggested.",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 185,
+     "pressure_kpa": null,
+     "time_at_temp_min": 70,
+     "heat_rate_c_min": null,
+     "notes": "Cure 182-185 C; 70-90 min above 182 C at the centre of the book (90 min above 3 mm); heat rise 2.0-6.0 C/min between 90 and 150 C (above 3.5 C/min for high layer count or 2 oz copper); pressure 300-400 PSI (21-28 kg/cm2) without vacuum assist and 250-400 PSI (18-28 kg/cm2) with vacuum; dual stage 50 PSI after vacuum dwell; pressure reduced to 50 PSI after 30 min at cure temperature; 70-75 min cure for sub-assemblies and 90 min for the final assembly; vacuum 20 min on risers."
+    },
+    "drilling": {
+     "speed_surface_m_min": 126,
+     "chip_load_um": 59,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
+    },
+    "bake_note": "Mild bake of oxided innerlayers 15-30 min at 80-100 C; dry layers at least 30 min at 100 C."
+   },
+   "source": {
+    "pdf": "370HR-Ultra-Laminate-Prepreg-Processing-Guide.pdf"
+   }
+  },
+  {
+   "id": "isola/tachyon-200jv",
+   "manufacturer": "Isola",
+   "family": "Tachyon",
+   "name": "Tachyon 200JV",
+   "kind": "laminate",
+   "halogen_free": true,
+   "notes": "Halogen-free, super low loss laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df). A high temperature post bake of 2 h at 210 C is listed; low heat rise rates give the best performance.",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 222,
+     "pressure_kpa": 2930,
+     "time_at_temp_min": 120,
+     "heat_rate_c_min": null,
+     "notes": "Cure 120 min above 200 C and never above 222 C product temperature; heat rise 2-3 C/min between 115 and 160 C; pressure 400-450 PSI (26.5-30 kg/cm2), 425 PSI shown as the middle of the range; dual stage 100 PSI after vacuum dwell, full pressure at 130 C product temperature; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum on risers for at least 10 min with the product below 100 C."
+    },
+    "drilling": {
+     "speed_surface_m_min": 150,
+     "chip_load_um": 35,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter. Two tables are given; the maximum of both is shown."
+    },
+    "bake_note": "Post bake 2 h at 210 C."
+   },
+   "source": {
+    "pdf": "Tachyon-200JV-Processing-Guide-V6.pdf"
+   }
+  },
+  {
+   "id": "isola/a11",
+   "manufacturer": "Isola",
+   "family": "A11",
+   "name": "A11",
+   "kind": "prepreg",
+   "resin": "difunctional epoxy",
+   "tg_dsc_c": 100,
+   "notes": "No-flow specialty prepreg, general purpose difunctional epoxy; the guide gives about 100 C Tg typical by DSC.",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 192,
+     "pressure_kpa": 2413,
+     "time_at_temp_min": 60,
+     "heat_rate_c_min": null,
+     "notes": "Cure at least 60 min at 182 C (80 min at 171 C may not develop full Tg; add 60 min for every 12.2 C below 182 C); the package must not exceed 192 C; heat rise 3.0-6.0 C/min between 79 and 135 C; full pressure 325-400 PSI (22.8-28.1 kg/cm2), 350 PSI suggested; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 20 min; kiss cycles are not suggested."
+    }
+   },
+   "source": {
+    "pdf": "a11-no-flow-prepregs_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/astra-mt77",
+   "manufacturer": "Isola",
+   "family": "Astra",
+   "name": "Astra MT77",
+   "kind": "laminate",
+   "notes": "Ultra low loss RF/MW laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df). It says to use lower chiploads and cutting speeds than standard FR-4 and that desmear can follow the 170 C Tg FR-4 parameters.",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 200,
+     "pressure_kpa": null,
+     "time_at_temp_min": 60,
+     "heat_rate_c_min": null,
+     "notes": "Cure 190-200 C: 70 min at 190 C or 60 min at 200 C; heat rise 3.0-5.0 C/min; pressure 325-375 PSI (23-27 kg/cm2) for 1 oz copper and up to 18 layers, 350-400 PSI (25-28 kg/cm2) above; dual stage 50 PSI after vacuum dwell; vacuum at least 15 min on risers with the product below 100 C; cool at 2.8 C/min to 135-140 C under 50 PSI; use the full press cycle for sub-assemblies and the final lamination."
+    },
+    "drilling": {
+     "speed_surface_m_min": 121,
+     "chip_load_um": 75,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
+    }
+   },
+   "source": {
+    "pdf": "astra-mt77-laminate-and-prepreg_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/ed130uv",
+   "manufacturer": "Isola",
+   "family": "ED130UV",
+   "name": "ED130UV",
+   "kind": "laminate",
+   "resin": "epoxy",
+   "notes": "UV-blocking epoxy laminate; the guide has drilling data only in text form (no lamination table, Tg, Td, Dk or Df).",
+   "processing": {
+    "drilling": {
+     "speed_surface_m_min": 151,
+     "chip_load_um": 91,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter. Two tables are given (standard and undercut bits with high-speed spindles); the maximum of both is shown."
+    }
+   },
+   "source": {
+    "pdf": "ed130uv-epoxy-laminate-and-prepreg_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/fr402",
+   "manufacturer": "Isola",
+   "family": "FR402",
+   "name": "FR402",
+   "kind": "laminate",
+   "resin": "tetrafunctional epoxy",
+   "notes": "Tetrafunctional epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df).",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 180,
+     "pressure_kpa": null,
+     "time_at_temp_min": 50,
+     "heat_rate_c_min": null,
+     "notes": "Cure 50 min above 180 C (70 min above 3 mm); heat rise 4.5-6.5 C/min between 80 and 135 C; pressure 200-250 PSI (14-18 kg/cm2); dual stage 50 PSI after vacuum dwell; pressure reduced to 50 PSI after 20 min at cure temperature; vacuum 20 min on risers; cool at 2.8 C/min."
+    },
+    "drilling": {
+     "speed_surface_m_min": 172,
+     "chip_load_um": 76,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter. The guide suggests a maximum cutting speed of 550-600 SFPM and a chip load not above 3.5 mil for bits of 0.040 in and above."
+    }
+   },
+   "source": {
+    "pdf": "fr402-laminate-and-prepreg-epoxy-resin_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/fr406",
+   "manufacturer": "Isola",
+   "family": "FR406",
+   "name": "FR406",
+   "kind": "laminate",
+   "resin": "epoxy",
+   "notes": "Standard loss, high Tg epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df).",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 185,
+     "pressure_kpa": 1896,
+     "time_at_temp_min": 50,
+     "heat_rate_c_min": null,
+     "notes": "Single stage: 50 min at 177 C (60-70 min from 3.2 mm); dual stage: 50 min at 185 C; heat rise 4.5-6.7 C/min between 79 and 135 C; pressure 200-350 PSI (14.1-24.6 kg/cm2), 275 PSI suggested (300-350 PSI without vacuum assist, 250-300 with vacuum frames or bags, 200-250 in a vacuum enclosure); dual stage 50 PSI after vacuum dwell, full pressure when the centre of the stack is at 93 C; pressure reduced to 50 PSI after 15 min at cure temperature; vacuum 20-30 min; cool at 2.8 C/min from 185 to 135 C; sequential lamination 50 min for sub-assemblies and 60-70 min for the final assembly."
+    },
+    "drilling": {
+     "speed_surface_m_min": 172,
+     "chip_load_um": 76,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter. Maximum cutting speed 550-600 SFPM; chip load not above 3.5 mil for bits of 0.040 in and above; stack height at most 200 mil of board thickness; at most 1000 hits for the smallest bits and 1500 for 13.5 mil and above."
+    },
+    "desmear_note": "Conventional permanganate or plasma; for 3-point etchback a double permanganate pass or plasma followed by a chemical pass.",
+    "bake_note": "Mild bake of oxided innerlayers 15-30 min at 80-100 C; dry layers at least 30 min at 100 C."
+   },
+   "source": {
+    "pdf": "fr406-laminate-and-prepreg_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/fr406n",
+   "manufacturer": "Isola",
+   "family": "FR406N",
+   "name": "FR406N",
+   "kind": "prepreg",
+   "resin": "multifunctional epoxy",
+   "tg_dsc_c": 170,
+   "notes": "No-flow and low-flow specialty prepreg, multifunctional epoxy; the guide gives about 170 C Tg typical by DSC.",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 185,
+     "pressure_kpa": 2413,
+     "time_at_temp_min": 80,
+     "heat_rate_c_min": null,
+     "notes": "Cure at least 80 min at 185 C (60 min may not develop full Tg; add 60 min for every 12.2 C below the cure temperature); full pressure 325-400 PSI (22.8-28.1 kg/cm2), 350 PSI suggested; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 20 min on lifters. Other pressure ranges in the guide: 350-400 PSI, 325-375 PSI hydraulic pressing and 175-200 PSI autoclave."
+    }
+   },
+   "source": {
+    "pdf": "fr406n-no-flow-and-low-flow-prepregs_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/fr408",
+   "manufacturer": "Isola",
+   "family": "FR408",
+   "name": "FR408",
+   "kind": "laminate",
+   "resin": "epoxy",
+   "notes": "Mid loss epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df).",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 200,
+     "pressure_kpa": null,
+     "time_at_temp_min": 110,
+     "heat_rate_c_min": null,
+     "notes": "Cure 185-200 C: 110 min above 185 C or 95 min above 191 C (thicker boards near the top of the range); heat rise 2.2-4.5 C/min between 100 and 150 C (above 3.5 C/min for high layer count or 2 oz copper); pressure 200-250 PSI (14-18 kg/cm2); dual stage 50 PSI after vacuum dwell; vacuum 30 min on risers; sequential lamination 80 min for sub-assemblies and 95-110 min for the final assembly."
+    },
+    "drilling": {
+     "speed_surface_m_min": 119,
+     "chip_load_um": 58,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter. The guide advises lower chip loads than standard FR-4 for this material."
+    }
+   },
+   "source": {
+    "pdf": "fr408-laminate-and-prepreg_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/fr408hr",
+   "manufacturer": "Isola",
+   "family": "FR408HR",
+   "name": "FR408HR",
+   "kind": "laminate",
+   "resin": "epoxy",
+   "lead_free_compatible": true,
+   "notes": "Lead-free, mid loss laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df).",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 202,
+     "pressure_kpa": null,
+     "time_at_temp_min": 130,
+     "heat_rate_c_min": null,
+     "notes": "Cure 188-202 C; 130-160 min at or above 190 C (product overshoot to 205 C acceptable for the heat rise); heat rise 3.5-5.0 C/min between 100 and 150 C (target above 4 C/min); pressure 200-350 PSI (14-25 kg/cm2); dual stage 50 PSI (3.5 kg/cm2) after vacuum dwell and full pressure at 100 C product temperature; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 30 min on risers; cool at 2.5 C/min to 135-140 C; sub-assemblies must be baked before the secondary lamination."
+    },
+    "drilling": {
+     "speed_surface_m_min": 119,
+     "chip_load_um": 58,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter. The guide advises lower chip loads than standard FR-4 for this material."
+    }
+   },
+   "source": {
+    "pdf": "fr408hr-laminate-and-prepreg_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/g200",
+   "manufacturer": "Isola",
+   "family": "G200",
+   "name": "G200",
+   "kind": "laminate",
+   "resin": "BT-epoxy",
+   "reinforcement": "E-glass woven",
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4101/30",
+   "tg_dsc_c": 180,
+   "td_c": 325,
+   "t260_min": 60,
+   "t288_min": 10,
+   "cte_x_ppm": 13,
+   "cte_y_ppm": 14,
+   "cte_z_below_tg_ppm": 55,
+   "cte_z_above_tg_ppm": 275,
+   "cte_z_50_260_pct": 3.3,
+   "dk": [
+    {
+     "freq_ghz": 0.1,
+     "value": 3.8,
+     "method": "IPC-TM-650 2.5.5.3"
+    },
+    {
+     "freq_ghz": 1.0,
+     "value": 3.7,
+     "method": "IPC-TM-650 2.5.5.9"
+    },
+    {
+     "freq_ghz": 2.0,
+     "value": 3.7,
+     "method": "Bereskin stripline"
+    },
+    {
+     "freq_ghz": 5.0,
+     "value": 3.65,
+     "method": "Bereskin stripline"
+    },
+    {
+     "freq_ghz": 10.0,
+     "value": 3.65,
+     "method": "Bereskin stripline"
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.1,
+     "value": 0.015,
+     "method": "IPC-TM-650 2.5.5.3"
+    },
+    {
+     "freq_ghz": 1.0,
+     "value": 0.015,
+     "method": "IPC-TM-650 2.5.5.9"
+    },
+    {
+     "freq_ghz": 2.0,
+     "value": 0.013,
+     "method": "Bereskin stripline"
+    },
+    {
+     "freq_ghz": 5.0,
+     "value": 0.015,
+     "method": "Bereskin stripline"
+    },
+    {
+     "freq_ghz": 10.0,
+     "value": 0.015,
+     "method": "Bereskin stripline"
+    }
+   ],
+   "thermal_conductivity_w_mk": 0.35,
+   "peel_strength_n_mm": 1.14,
+   "peel_condition": "Low profile and very low profile foil (all foil above 17 um): 1.14 N/mm; standard profile copper: 0.96 N/mm after thermal stress and 0.90 N/mm after process solutions (IPC-TM-650 2.4.8)",
+   "water_absorption_pct": 0.2,
+   "volume_resistivity_ohm_cm": 890000000000000.0,
+   "surface_resistivity_ohm": 2210000000000.0,
+   "dielectric_strength_kv_mm": 45,
+   "arc_resistance_s": 130,
+   "flexural_strength_mpa": {
+    "lengthwise": 599,
+    "crosswise": 507
+   },
+   "tensile_strength_mpa": {
+    "lengthwise": 356,
+    "crosswise": 292
+   },
+   "youngs_modulus_gpa": {
+    "lengthwise": 24.05,
+    "crosswise": 22.06
+   },
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 18,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 1,
+     "thickness_um": 35,
+     "foil_type": "ED"
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": 70,
+     "foil_type": "ED"
+    }
+   ],
+   "notes": "BT-epoxy laminate and prepreg for large panel, high layer count boards; laminate 0.05 to 3.2 mm (2 to 125 mil) as a range, copper 1/2, 1 and 2 oz, HTE grade 3 foil, thinner foil available; prepreg on E-glass, square weave or mechanically spread. Thermal conductivity 0.35 W/mK; volume resistivity 8.9e8 MOhm cm after moisture resistance (6.5e8 at elevated temperature) and surface resistivity 2.21e6 MOhm (4.4e8 at elevated temperature) converted to ohm; dielectric breakdown above 60 kV; CTI class 3 (175-249 V); Poisson's ratio 0.182 (lengthwise) and 0.160 (crosswise); thermal stress 10 s at 288 C passes (unetched and etched); Young's modulus 3489 and 3200 ksi converted to GPa; relative thermal index 130 C; UL file E41625; the t288 value is the minimum (above 10 min).",
+   "thickness_range": {
+    "min_mm": 0.05,
+    "max_mm": 3.2,
+    "steps_note": "The data sheet gives the range only (2 to 125 mil), no steps."
+   },
+   "processing": {
+    "lamination": {
+     "max_temp_c": 180,
+     "pressure_kpa": null,
+     "time_at_temp_min": null,
+     "heat_rate_c_min": null,
+     "notes": "Cure temperature 180 C (the guide says the standard FR-4 press cycles must be extended to cure it and gives no cure time); heat rise 3.5-5.5 C/min between 90 and 150 C; pressure 200-300 PSI (14-21 kg/cm2); dual stage 50 PSI after vacuum dwell and full pressure at 90 C product temperature; vacuum 20 min on risers; cool at 2.8 C/min to 135-140 C under 50 PSI."
+    },
+    "drilling": {
+     "speed_surface_m_min": 141,
+     "chip_load_um": 64,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
+    }
+   },
+   "sources": [
+    {
+     "pdf": "g200-laminate-and-prepreg_Processing_Guide_new.pdf"
+    }
+   ],
+   "source": {
+    "pdf": "g200-laminate-and-prepreg-data-sheet-01032024.pdf",
+    "pages": "1-2",
+    "revision": "C"
+   }
+  },
+  {
+   "id": "isola/i-tera-mt40",
+   "manufacturer": "Isola",
+   "family": "I-Tera",
+   "name": "I-Tera MT40",
+   "kind": "laminate",
+   "notes": "Very low loss laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df).",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 200,
+     "pressure_kpa": null,
+     "time_at_temp_min": 60,
+     "heat_rate_c_min": null,
+     "notes": "60 min at 200 C; heat rise 3.0-5.0 C/min; pressure 325-375 PSI (23-27 kg/cm2) for 1 oz copper and up to 18 layers, 350-400 PSI (25-28 kg/cm2) above; dual stage 50 PSI after vacuum dwell and full pressure at 90 C product temperature; vacuum at least 15 min on risers; use the full cycle for sub-assemblies and the final lamination."
+    },
+    "drilling": {
+     "speed_surface_m_min": 121,
+     "chip_load_um": 77,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
+    }
+   },
+   "source": {
+    "pdf": "i-tera-mt40_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/i-tera-mt40-rf-mw",
+   "manufacturer": "Isola",
+   "family": "I-Tera",
+   "name": "I-Tera MT40 (RF/MW)",
+   "kind": "laminate",
+   "notes": "Very low loss RF/MW laminate (laminate only); the guide has process data only (no Tg, Td, Dk or Df).",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 200,
+     "pressure_kpa": null,
+     "time_at_temp_min": 60,
+     "heat_rate_c_min": null,
+     "notes": "60 min at 200 C; heat rise 3.0-5.0 C/min; pressure 325-375 PSI (23-27 kg/cm2) for 1 oz copper and up to 18 layers, 350-400 PSI (25-28 kg/cm2) above; dual stage 50 PSI after vacuum dwell; vacuum at least 15 min on risers."
+    },
+    "drilling": {
+     "speed_surface_m_min": 126,
+     "chip_load_um": 77,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
+    }
+   },
+   "source": {
+    "pdf": "i-tera-mt40-rf-mw_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/is400",
+   "manufacturer": "Isola",
+   "family": "IS400",
+   "name": "IS400",
+   "kind": "laminate",
+   "resin": "epoxy",
+   "lead_free_compatible": true,
+   "notes": "Lead-free, mid Tg epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df). T260 is more than 60 min and T288 more than 10 min (bounds, not stored). Dk and Df are given at 100 MHz and 500 MHz only. Resistivities: volume 4.0E+8 Mohm cm (C-96/90) and 7.0E+7 at elevated temperature; surface 3.0E+6 Mohm and 5.4E+6. Dielectric breakdown above 50 kV; CTI class 3 (175-249 V); Poisson's ratio 0.183 and 0.151; RTI 130 C. Classified for railway use (EN 45545-2 HL1-HL2 with the R22, R23 and R24 requirements).",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 180,
+     "pressure_kpa": null,
+     "time_at_temp_min": 60,
+     "heat_rate_c_min": null,
+     "notes": "60 min above 180 C (75 min above 3 mm); heat rise 2.5-3.5 C/min; pressure 225-300 PSI (16-21 kg/cm2); dual stage 50 PSI after vacuum dwell and full pressure at 80 C product temperature; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 20 min on risers; 60 min cure for sub-assemblies and 60-70 min for the final assembly; the temperature shown is the one the cure time counts above."
+    },
+    "drilling": {
+     "speed_surface_m_min": 163,
+     "chip_load_um": 71,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
+    }
+   },
+   "reinforcement": "E-glass woven",
+   "ul94": "V-0",
+   "tg_dsc_c": 150,
+   "td_c": 330,
+   "cte_z_below_tg_ppm": 50,
+   "cte_z_above_tg_ppm": 250,
+   "cte_z_50_260_pct": 3.3,
+   "cte_x_ppm": 13,
+   "thermal_conductivity_w_mk": 0.36,
+   "dk": [
+    {
+     "freq_ghz": 0.1,
+     "value": 4.0,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 0.5,
+     "value": 3.9,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.1,
+     "value": 0.02,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 0.5,
+     "value": 0.022,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 400000000000000.0,
+   "surface_resistivity_ohm": 3000000000000.0,
+   "arc_resistance_s": 120,
+   "dielectric_strength_kv_mm": 48,
+   "peel_strength_n_mm": 1.05,
+   "peel_condition": "low and very low profile foil above 17 um (standard profile: 1.45 N/mm after thermal stress, 1.25 N/mm at 125 C, 1.45 N/mm after process solutions)",
+   "flexural_strength_mpa": {
+    "lengthwise": 565.4,
+    "crosswise": 459.2,
+    "value": null
+   },
+   "tensile_strength_mpa": {
+    "lengthwise": 353.0,
+    "crosswise": 287.5,
+    "value": null
+   },
+   "youngs_modulus_gpa": {
+    "lengthwise": 25.26,
+    "crosswise": 22.95,
+    "value": null
+   },
+   "water_absorption_pct": 0.18,
+   "sources": [
+    {
+     "pdf": "is400-laminate-and-prepreg-isola-group_Processing_Guide_new.pdf"
+    },
+    {
+     "pdf": "e_isola_is400_www.multi-circuit-boards.eu.pdf",
+     "pages": "2",
+     "revision": "Last updated 2019"
+    }
+   ]
+  },
+  {
+   "id": "isola/is410",
+   "manufacturer": "Isola",
+   "family": "IS410",
+   "name": "IS410",
+   "kind": "laminate",
+   "resin": "epoxy",
+   "lead_free_compatible": true,
+   "notes": "Lead-free epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df). Resistivities after moisture resistance (volume 8.0E+8 Mohm cm at both conditions; surface 4.5E+8 Mohm at elevated temperature, printed 4.5 x 10(8)). Dielectric breakdown above 50 kV; CTI class 3 (175-249 V); Poisson's ratio 0.175 (length) and 0.143 (cross); RTI 130 C. The X/Y-axis CTE is the pre-Tg value (11 ppm/C).",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 185,
+     "pressure_kpa": null,
+     "time_at_temp_min": 75,
+     "heat_rate_c_min": null,
+     "notes": "75 min above 185 C (90 min for thicker boards); heat rise 2.2-4.5 C/min between 80 and 135 C (above 3.5 C/min for high layer count or 2 oz copper); pressure 200-250 PSI (14-17 kg/cm2); dual stage 50 PSI after vacuum dwell; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 20 min on risers; 60-75 min cure for sub-assemblies and 90 min for the final assembly; the temperature shown is the one the cure time counts above."
+    },
+    "drilling": {
+     "speed_surface_m_min": 166,
+     "chip_load_um": 76,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
+    }
+   },
+   "reinforcement": "E-glass woven",
+   "ul94": "V-0",
+   "tg_dsc_c": 180,
+   "td_c": 350,
+   "t260_min": 50,
+   "t288_min": 10,
+   "cte_z_below_tg_ppm": 55,
+   "cte_z_above_tg_ppm": 250,
+   "cte_z_50_260_pct": 3.5,
+   "cte_x_ppm": 11,
+   "thermal_conductivity_w_mk": 0.5,
+   "dk": [
+    {
+     "freq_ghz": 0.1,
+     "value": 3.96,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1.0,
+     "value": 3.9,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 2.0,
+     "value": 3.97,
+     "method": "Bereskin stripline",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 5.0,
+     "value": 3.87,
+     "method": "Bereskin stripline",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10.0,
+     "value": 3.87,
+     "method": "Bereskin stripline",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.1,
+     "value": 0.0149,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1.0,
+     "value": 0.0189,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 2.0,
+     "value": 0.02,
+     "method": "Bereskin stripline",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 5.0,
+     "value": 0.023,
+     "method": "Bereskin stripline",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10.0,
+     "value": 0.023,
+     "method": "Bereskin stripline",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 800000000000000.0,
+   "surface_resistivity_ohm": 8000000000000.0,
+   "arc_resistance_s": 129,
+   "dielectric_strength_kv_mm": 44,
+   "peel_strength_n_mm": 1.14,
+   "peel_condition": "low and very low profile foil above 17 um (standard profile: 1.225 N/mm after thermal stress, 1.14 N/mm at 125 C, 0.90 N/mm after process solutions)",
+   "flexural_strength_mpa": {
+    "lengthwise": 570,
+    "crosswise": 458,
+    "value": null
+   },
+   "tensile_strength_mpa": {
+    "lengthwise": 420,
+    "crosswise": 316,
+    "value": null
+   },
+   "water_absorption_pct": 0.2,
+   "sources": [
+    {
+     "pdf": "is410-fr-4-epoxy-laminate-and-prepreg_Processing_Guide_new.pdf"
+    },
+    {
+     "pdf": "is410-fr-4-epoxy-laminate-and-prepreg.pdf",
+     "pages": "2",
+     "revision": "Revision D"
+    }
+   ]
+  },
+  {
+   "id": "isola/is415",
+   "manufacturer": "Isola",
+   "family": "IS415",
+   "name": "IS415",
+   "kind": "laminate",
+   "resin": "epoxy",
+   "notes": "High reliability epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df).",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 190,
+     "pressure_kpa": null,
+     "time_at_temp_min": 130,
+     "heat_rate_c_min": null,
+     "notes": "130-160 min at or above 190 C (product overshoot to 205 C acceptable for the heat rise); heat rise 3.5-5.0 C/min between 100 and 150 C; pressure 200-350 PSI (14-24 kg/cm2); dual stage 50 PSI after vacuum dwell and full pressure at 100 C product temperature; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 30 min on risers; sub-assemblies must be baked before the secondary lamination; dry innerlayers at least 120 min at 110 C."
+    },
+    "drilling": {
+     "speed_surface_m_min": 119,
+     "chip_load_um": 58,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter. The guide advises lower chip loads than standard FR-4 for this material."
+    }
+   },
+   "source": {
+    "pdf": "is415-laminate-prepreg_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/is420",
+   "manufacturer": "Isola",
+   "family": "IS420",
+   "name": "IS420",
+   "kind": "laminate",
+   "resin": "epoxy",
+   "lead_free_compatible": true,
+   "notes": "Lead-free epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df). Prepreg melts at about 11 C lower temperature than standard FR406 prepreg. Specification column: Tg 170-200 C, Dk at most 5.4, Df at most 0.035. T288 is more than 15 min (bound, not stored). The Df at the last frequency is labelled 8 GHz in the sheet (10 GHz for Dk) and is stored at 10 GHz as the Dk row. Resistivities after moisture resistance (7.0E+8 Mohm cm and 2.0E+8 Mohm at elevated temperature). Dielectric breakdown above 50 kV; CTI class 3; flexural and tensile strength are printed as TBD; maximum operating temperature 130 C. Tested at 50 % resin.",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 190,
+     "pressure_kpa": null,
+     "time_at_temp_min": 120,
+     "heat_rate_c_min": null,
+     "notes": "120 min above 190 C; heat rise 2.5-6.5 C/min between 80 and 135 C; pressure 300-350 PSI (21-25 kg/cm2) without vacuum assist, 250-300 PSI with vacuum frames or bags and 200-250 PSI in a vacuum enclosure; dual stage 50 PSI after vacuum dwell; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 20 min on risers; 90-120 min cure for sub-assemblies and 120-150 min for the final assembly; the temperature shown is the one the cure time counts above."
+    },
+    "drilling": {
+     "speed_surface_m_min": 152,
+     "chip_load_um": 56,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
+    }
+   },
+   "reinforcement": "E-glass woven",
+   "ul94": "V-0",
+   "tg_dsc_c": 170,
+   "td_c": 350,
+   "t260_min": 60,
+   "cte_z_below_tg_ppm": 45,
+   "cte_z_above_tg_ppm": 230,
+   "cte_z_50_260_pct": 2.8,
+   "cte_x_ppm": 13,
+   "cte_y_ppm": 14,
+   "thermal_conductivity_w_mk": 0.4,
+   "dk": [
+    {
+     "freq_ghz": 0.1,
+     "value": 4.24,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1.0,
+     "value": 4.17,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 2.0,
+     "value": 4.04,
+     "method": "Bereskin stripline",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 5.0,
+     "value": 3.92,
+     "method": "Bereskin stripline",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10.0,
+     "value": 3.92,
+     "method": "Bereskin stripline",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.1,
+     "value": 0.015,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1.0,
+     "value": 0.0161,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 2.0,
+     "value": 0.021,
+     "method": "Bereskin stripline",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 5.0,
+     "value": 0.025,
+     "method": "Bereskin stripline",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10.0,
+     "value": 0.025,
+     "method": "Bereskin stripline",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 300000000000000.0,
+   "surface_resistivity_ohm": 3000000000000.0,
+   "arc_resistance_s": 115,
+   "dielectric_strength_kv_mm": 54,
+   "peel_strength_n_mm": 1.14,
+   "peel_condition": "low and very low profile foil above 17 um (standard profile: 1.25 N/mm after thermal stress and at 125 C, 1.14 N/mm after process solutions)",
+   "water_absorption_pct": 0.15,
+   "sources": [
+    {
+     "pdf": "is420-high-performance-laminate-and-prepreg_Processing_Guide_new.pdf"
+    },
+    {
+     "pdf": "isola_is420-high-tg_www.multi-circuit-boards.eu.pdf",
+     "pages": "2",
+     "revision": "DSIS420B"
+    }
+   ]
+  },
+  {
+   "id": "isola/is550h",
+   "manufacturer": "Isola",
+   "family": "IS550H",
+   "name": "IS550H",
+   "kind": "laminate",
+   "resin": "epoxy",
+   "halogen_free": true,
+   "notes": "Halogen-free, high reliability laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df). It is a higher viscosity material than halogenated FR-4, so higher pressure and heat rise are used; sub-assemblies need 3-24 h of baking at 110-180 C before the secondary lamination.",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 200,
+     "pressure_kpa": null,
+     "time_at_temp_min": 75,
+     "heat_rate_c_min": null,
+     "notes": "Cure 190-200 C: 75 min at 200 C or 100 min at 190 C (190 C recommended for sequential lamination); heat rise 2.5-5.0 C/min between 100 and 170 C; pressure 350-450 PSI; dual stage 100 PSI (7.0 kg/cm2) after vacuum dwell and full pressure at 85 C product temperature; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 20 min on risers."
+    },
+    "drilling": {
+     "speed_surface_m_min": 119,
+     "chip_load_um": 58,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
+    }
+   },
+   "source": {
+    "pdf": "is550h-laminate-prepreg_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/is680",
+   "manufacturer": "Isola",
+   "family": "IS680",
+   "name": "IS680",
+   "kind": "laminate",
+   "notes": "Very low loss laminate, fully cured; the guide has drilling data only (no lamination table, Tg, Td, Dk or Df).",
+   "processing": {
+    "drilling": {
+     "speed_surface_m_min": 124,
+     "chip_load_um": 76,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
+    }
+   },
+   "source": {
+    "pdf": "is680-laminate_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/is680-ag",
+   "manufacturer": "Isola",
+   "family": "IS680",
+   "name": "IS680 AG",
+   "kind": "laminate",
+   "notes": "Very low loss laminate, fully cured; the guide has drilling data only (no lamination table, Tg, Td, Dk or Df).",
+   "processing": {
+    "drilling": {
+     "speed_surface_m_min": 124,
+     "chip_load_um": 76,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
+    }
+   },
+   "source": {
+    "pdf": "is680-ag_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/p25n",
+   "manufacturer": "Isola",
+   "family": "P25N",
+   "name": "P25N",
+   "kind": "prepreg",
+   "resin": "polyimide",
+   "notes": "Polyimide UL HB no-flow specialty prepreg; the guide gives a Tg above 200 C typical by TMA (a bound, not a value, so the field is empty).",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 190,
+     "pressure_kpa": 2413,
+     "time_at_temp_min": 120,
+     "heat_rate_c_min": null,
+     "notes": "Cure 120 min above 190 C; full pressure 350 PSI (25 kg/cm2), very high pressure (400-500 PSI) may be needed to fill; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum more than 20 min on risers; cool at 2.8 C/min to 135-140 C."
+    },
+    "bake_note": "Dry innerlayers at least 30 min at 100 C; polyimide layers need a longer drying."
+   },
+   "source": {
+    "pdf": "p25n-polyimide-based-no-flow-prepreg_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/p95-p25",
+   "manufacturer": "Isola",
+   "family": "P95/P25",
+   "name": "P95/P25",
+   "kind": "laminate",
+   "resin": "polyimide",
+   "ul94": "HB",
+   "notes": "Polyimide UL HB laminate (P95) and prepreg (P25); the guide has process data only (no Tg, Td, Dk or Df).",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 220,
+     "pressure_kpa": null,
+     "time_at_temp_min": 150,
+     "heat_rate_c_min": null,
+     "notes": "150 min above 220 C (more for boards above 3 mm); heat rise 5.0-7.0 C/min between 80 and 140 C; pressure 200-250 PSI (14-18 kg/cm2); dual stage 3.5 kg/cm2 (50 PSI) after vacuum dwell; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 30 min on risers; oven cure option: after 60 min at 182 C in the press the boards are cooled and post cured in an oven; the temperature shown is the one the cure time counts above."
+    },
+    "drilling": {
+     "speed_surface_m_min": 90,
+     "chip_load_um": 25,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter. The table covers bits up to 0.5 mm; ask the maker for large holes."
+    },
+    "bake_note": "Dry innerlayers at least 30 min at 100 C."
+   },
+   "source": {
+    "pdf": "p95-p25-polyimide-ul-hb_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/p96-p26",
+   "manufacturer": "Isola",
+   "family": "P96/P26",
+   "name": "P96/P26",
+   "kind": "laminate",
+   "resin": "polyimide",
+   "ul94": "V-0",
+   "notes": "Polyimide UL V-0 laminate (P96) and prepreg (P26); the guide has process data only (no Tg, Td, Dk or Df).",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 220,
+     "pressure_kpa": null,
+     "time_at_temp_min": 150,
+     "heat_rate_c_min": null,
+     "notes": "150 min above 220 C (180 min above 3 mm); heat rise 80-140 C range; pressure 200-250 PSI (14-18 kg/cm2); dual stage 3.5 kg/cm2 (50 PSI) after vacuum dwell and full pressure at 90 C product temperature; pressure reduced to 50 PSI after 30 min at cure temperature; vacuum 30 min on risers; oven cure option as for P95/P25; the temperature shown is the one the cure time counts above."
+    },
+    "drilling": {
+     "speed_surface_m_min": 90,
+     "chip_load_um": 25,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter. The table covers bits up to 0.5 mm; ask the maker for large holes."
+    },
+    "bake_note": "Dry innerlayers at least 30 min at 100 C."
+   },
+   "source": {
+    "pdf": "p96-p26-laminate-and-prepreg_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/terragreen",
+   "manufacturer": "Isola",
+   "family": "TerraGreen",
+   "name": "TerraGreen",
+   "kind": "laminate",
+   "halogen_free": true,
+   "notes": "Halogen-free, very low loss laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df).",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 200,
+     "pressure_kpa": null,
+     "time_at_temp_min": null,
+     "heat_rate_c_min": null,
+     "notes": "Cure 190-200 C; heat rise between 110 and 150 C; pressure 375 PSI (26 kg/cm2) for 1 oz copper and up to 18 layers and 425 PSI (30 kg/cm2) above; dual stage 50 PSI after vacuum dwell and full pressure at 90 C product temperature; use the full cycle for sub-assemblies and the final assembly; the guide gives no cure time in text form."
+    },
+    "drilling": {
+     "speed_surface_m_min": 122,
+     "chip_load_um": 77,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
+    }
+   },
+   "source": {
+    "pdf": "terragreen-laminate-and-prepreg-materials_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/terragreen-rf-mw",
+   "manufacturer": "Isola",
+   "family": "TerraGreen",
+   "name": "TerraGreen (RF/MW)",
+   "kind": "laminate",
+   "halogen_free": true,
+   "notes": "Halogen-free, very low loss RF/MW laminate (laminate only); the guide has process data only (no Tg, Td, Dk or Df).",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 200,
+     "pressure_kpa": null,
+     "time_at_temp_min": 45,
+     "heat_rate_c_min": null,
+     "notes": "190 C for 60 min or 200 C for 45 min; heat rise 3.5-5.0 C/min between 110 and 150 C; pressure 375 PSI (26 kg/cm2) for 1 oz copper and up to 18 layers and 425 PSI (30 kg/cm2) above; dual stage 50 PSI after vacuum dwell and full pressure at 90 C product temperature."
+    },
+    "drilling": {
+     "speed_surface_m_min": 122,
+     "chip_load_um": 77,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
+    }
+   },
+   "source": {
+    "pdf": "terragreen-rf-mw_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/terragreen-400g2",
+   "manufacturer": "Isola",
+   "family": "TerraGreen",
+   "name": "TerraGreen 400G2",
+   "kind": "laminate",
+   "halogen_free": true,
+   "notes": "Halogen-free, extremely low loss material (subject to the availability of L2 glass); the guide has process data only (no Tg, Td, Dk or Df).",
+   "processing": {
+    "lamination": {
+     "max_temp_c": 222,
+     "pressure_kpa": 2758,
+     "time_at_temp_min": 120,
+     "heat_rate_c_min": null,
+     "notes": "Cure 120 min at or above 200 C and never above 222 C product temperature; pressure 375-425 PSI (26.5-30 kg/cm2), 400 PSI shown as the middle of the range; dual stage 100 PSI (7.0 kg/cm2) after vacuum dwell and full pressure at 90 C product temperature; pressure reduced to 50 PSI after 30 min at cure temperature; cool at 2.8 C/min to 135-140 C."
+    },
+    "drilling": {
+     "speed_surface_m_min": 123,
+     "chip_load_um": 77,
+     "retract_notes": "Maximum surface speed and chip load of the drilling table of the guide (they vary with the bit diameter); the table also lists spindle speed, infeed and retract per diameter."
+    }
+   },
+   "source": {
+    "pdf": "terragreensup-sup-400g2_Processing_Guide_new.pdf"
+   }
+  },
+  {
+   "id": "isola/370hr",
+   "manufacturer": "Isola",
+   "name": "370HR",
+   "kind": "laminate",
+   "resin": "Multifunctional epoxy (FR-4)",
+   "reinforcement": "E-glass woven",
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4101/98, /99, /101 and /126",
+   "tg_dsc_c": 180,
+   "td_c": 340,
+   "t260_min": 60,
+   "t288_min": 30,
+   "cte_z_below_tg_ppm": 45,
+   "cte_z_above_tg_ppm": 230,
+   "cte_z_50_260_pct": 2.8,
+   "cte_x_ppm": 13,
+   "cte_y_ppm": 14,
+   "thermal_conductivity_w_mk": 0.4,
+   "dk": [
+    {
+     "freq_ghz": 0.1,
+     "value": 4.24,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1.0,
+     "value": 4.17,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 2.0,
+     "value": 4.04,
+     "method": "Bereskin stripline",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 5.0,
+     "value": 3.92,
+     "method": "Bereskin stripline",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10.0,
+     "value": 3.92,
+     "method": "Bereskin stripline",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.1,
+     "value": 0.015,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1.0,
+     "value": 0.0161,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 2.0,
+     "value": 0.021,
+     "method": "Bereskin stripline",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 5.0,
+     "value": 0.025,
+     "method": "Bereskin stripline",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10.0,
+     "value": 0.025,
+     "method": "Bereskin stripline",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 300000000000000.0,
+   "surface_resistivity_ohm": 3000000000000.0,
+   "arc_resistance_s": 115,
+   "dielectric_strength_kv_mm": 54,
+   "peel_strength_n_mm": 1.14,
+   "peel_condition": "low and very low profile foil above 17 um (standard profile: 1.25 N/mm after thermal stress and at 125 C, 1.14 N/mm after process solutions)",
+   "flexural_strength_mpa": {
+    "lengthwise": 620.5,
+    "crosswise": 530.9,
+    "value": null
+   },
+   "tensile_strength_mpa": {
+    "lengthwise": 385.4,
+    "crosswise": 245.5,
+    "value": null
+   },
+   "youngs_modulus_gpa": {
+    "lengthwise": 25.81,
+    "crosswise": 21.91,
+    "value": null
+   },
+   "water_absorption_pct": 0.15,
+   "thickness_range": {
+    "min_mm": 0.05,
+    "max_mm": 3.2,
+    "steps_note": "2 to 125 mil, full sheet or panel form."
+   },
+   "copper": [
+    {
+     "weight_oz": 0.5,
+     "thickness_um": 18,
+     "foil_type": "HTE"
+    },
+    {
+     "weight_oz": 2,
+     "thickness_um": 70,
+     "foil_type": "HTE"
+    }
+   ],
+   "notes": "UL file E41625, grade PCL-FR-370HR. Resistivities: volume 3.0E+8 Mohm cm and surface 3.0E+6 Mohm after moisture resistance (7.0E+8 and 2.0E+8 at elevated temperature). Dielectric breakdown above 50 kV; CTI class 3 (175-249 V); Poisson's ratio 0.177 (length) and 0.171 (cross); RTI 130 C. Dk and Df are given at 100 MHz (2.5.5.3), 1 GHz (2.5.5.9) and 2, 5, 10 GHz (stripline); the cover quotes Dk 4.04 and Df 0.0210 (2 GHz). Copper HTE grade 3 and RTF, 1/2 to 2 oz (18 to 70 um); heavier and thinner on request. Flexural, tensile and modulus values converted from ksi. Z-axis CTE is pre-Tg 45 and post-Tg 230 ppm/C.",
+   "source": {
+    "pdf": "370hr.pdf",
+    "pages": "2",
+    "revision": "Revision C"
+   }
+  },
+  {
+   "id": "isola/is620i",
+   "manufacturer": "Isola",
+   "name": "IS620i",
+   "kind": "laminate",
+   "resin": "Polyimide-modified epoxy",
+   "reinforcement": "E-glass woven",
+   "ul94": "V-0",
+   "tg_dsc_c": 225,
+   "td_c": 364,
+   "t260_min": 60,
+   "cte_z_below_tg_ppm": 55,
+   "cte_z_above_tg_ppm": 230,
+   "cte_z_50_260_pct": 2.8,
+   "cte_x_ppm": 13,
+   "cte_y_ppm": 14,
+   "thermal_conductivity_w_mk": 0.35,
+   "dk": [
+    {
+     "freq_ghz": 0.1,
+     "value": 3.59,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1.0,
+     "value": 3.58,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 2.0,
+     "value": 3.58,
+     "method": "Bereskin stripline",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 5.0,
+     "value": 3.54,
+     "method": "Bereskin stripline",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10.0,
+     "value": 3.54,
+     "method": "Bereskin stripline",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.1,
+     "value": 0.0051,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1.0,
+     "value": 0.0059,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 2.0,
+     "value": 0.006,
+     "method": "Bereskin stripline",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 5.0,
+     "value": 0.0066,
+     "method": "Bereskin stripline",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 10.0,
+     "value": 0.0071,
+     "method": "Bereskin stripline",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 890000000000000.0,
+   "surface_resistivity_ohm": 2210000000000.0,
+   "arc_resistance_s": 110,
+   "dielectric_strength_kv_mm": 55,
+   "peel_strength_n_mm": 1.14,
+   "peel_condition": "low and very low profile foil above 17 um (standard profile: 0.96 N/mm after thermal stress, 0.90 N/mm after process solutions)",
+   "flexural_strength_mpa": {
+    "lengthwise": 477.1,
+    "crosswise": 430.2,
+    "value": null
+   },
+   "tensile_strength_mpa": {
+    "lengthwise": 290.0,
+    "crosswise": 273.4,
+    "value": null
+   },
+   "youngs_modulus_gpa": {
+    "lengthwise": 22.18,
+    "crosswise": 22.11,
+    "value": null
+   },
+   "water_absorption_pct": 0.24,
+   "notes": "The sheet is headed IS620i; its Dk and Df are for laminate and prepreg as laminated at 50 % resin, measured with HP4285A (100 MHz) and HP4291A (1 GHz). T288 is more than 20 min (bound, not stored). Resistivities after moisture resistance (volume 8.9E+8 Mohm cm, surface 2.21E+6 Mohm; at elevated temperature 6.5E+8 and 4.4E+8). Dielectric breakdown above 50 kV; CTI class 2 (250-399 V); Poisson's ratio 0.166 and 0.164; maximum operating temperature 130 C. Flexural and tensile values converted from lb/in2 (grain direction stored as lengthwise).",
+   "source": {
+    "pdf": "isola_is620_www.multi-circuit-boards.eu.pdf",
+    "pages": "2",
+    "revision": "DSIS620D"
+   }
+  },
+  {
+   "id": "isola/de156",
+   "manufacturer": "Isola",
+   "name": "DE156",
+   "kind": "laminate",
+   "resin": "Epoxy",
+   "reinforcement": "E-glass woven",
+   "halogen_free": true,
+   "ul94": "V-0",
+   "tg_dsc_c": 155,
+   "td_c": 390,
+   "t260_min": 60,
+   "cte_z_below_tg_ppm": 45,
+   "cte_z_above_tg_ppm": 220,
+   "cte_z_50_260_pct": 2.8,
+   "cte_x_ppm": 13,
+   "cte_y_ppm": 14,
+   "thermal_conductivity_w_mk": 0.4,
+   "dk": [
+    {
+     "freq_ghz": 0.1,
+     "value": 4.05,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1.0,
+     "value": 4.01,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 2.0,
+     "value": 4.0,
+     "method": "Bereskin stripline",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 5.0,
+     "value": 3.97,
+     "method": "Bereskin stripline",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.1,
+     "value": 0.013,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1.0,
+     "value": 0.0161,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 2.0,
+     "value": 0.0167,
+     "method": "Bereskin stripline",
+     "resin_content_pct": 50,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 5.0,
+     "value": 0.0172,
+     "method": "Bereskin stripline",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 30000000000000.0,
+   "surface_resistivity_ohm": 4000000000000.0,
+   "arc_resistance_s": 115,
+   "dielectric_strength_kv_mm": 36,
+   "peel_strength_n_mm": 1.226,
+   "peel_condition": "low and very low profile foil above 17 um, published as 7.0 lb/in (standard profile: 8.0 lb/in after thermal stress, 6.0 lb/in at 125 C, 7.0 lb/in after process solutions)",
+   "flexural_strength_mpa": {
+    "lengthwise": 617.1,
+    "crosswise": 432.3,
+    "value": null
+   },
+   "tensile_strength_mpa": {
+    "lengthwise": 380.9,
+    "crosswise": 271.2,
+    "value": null
+   },
+   "youngs_modulus_gpa": {
+    "lengthwise": 25.35,
+    "crosswise": 21.92,
+    "value": null
+   },
+   "water_absorption_pct": 0.1,
+   "notes": "Specification column: Tg 150-200 C, Dk at most 5.4, Df at most 0.035, flammability V-1. T288 is more than 10 min (bound, not stored). The electric strength is printed as 36 kV/mm (1500 V/mil); the two numbers disagree and the metric one is stored. Resistivities after moisture resistance (volume 3.0E+7 Mohm cm and surface 4.0E+6 Mohm; at elevated temperature 2.8E+6 and 1.0E+7). Dielectric breakdown 60 kV; Poisson's ratio 0.175 and 0.143; maximum operating temperature 130 C. Tested at 50 % resin. Flexural, tensile and modulus values converted from lb/in2 and ksi.",
+   "source": {
+    "pdf": "isola_de156-halogen-free_www.multi-circuit-boards.eu.pdf",
+    "pages": "2",
+    "revision": "DSDE156B"
+   }
+  },
+  {
+   "id": "isola/de104",
+   "manufacturer": "Isola",
+   "name": "DE104",
+   "kind": "laminate",
+   "resin": "Epoxy (FR-4)",
+   "reinforcement": "E-glass woven",
+   "ul94": "V-0",
+   "tg_dsc_c": 135,
+   "td_c": 315,
+   "t260_min": 12,
+   "cte_z_below_tg_ppm": 70,
+   "cte_z_above_tg_ppm": 250,
+   "cte_z_50_260_pct": 4.2,
+   "cte_x_ppm": 16,
+   "cte_y_ppm": 13,
+   "thermal_conductivity_w_mk": 0.36,
+   "dk": [
+    {
+     "freq_ghz": 0.1,
+     "value": 4.46,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 0.5,
+     "value": 4.4,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1.0,
+     "value": 4.37,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 2.0,
+     "value": 4.35,
+     "method": "Bereskin stripline",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 5.0,
+     "value": 4.32,
+     "method": "Bereskin stripline",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "df": [
+    {
+     "freq_ghz": 0.1,
+     "value": 0.02,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 0.5,
+     "value": 0.021,
+     "method": "IPC-TM-650 2.5.5.3",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 1.0,
+     "value": 0.022,
+     "method": "IPC-TM-650 2.5.5.9",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 2.0,
+     "value": 0.023,
+     "method": "Bereskin stripline",
+     "resin_content_pct": null,
+     "tolerance": null
+    },
+    {
+     "freq_ghz": 5.0,
+     "value": 0.024,
+     "method": "Bereskin stripline",
+     "resin_content_pct": null,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 1300000000000.0,
+   "surface_resistivity_ohm": 1000000000000.0,
+   "flexural_strength_mpa": {
+    "lengthwise": 579.2,
+    "crosswise": 449.5,
+    "value": null
+   },
+   "tensile_strength_mpa": {
+    "lengthwise": 393.0,
+    "crosswise": 292.3,
+    "value": null
+   },
+   "water_absorption_pct": 0.3,
+   "notes": "Marked DISCONTINUED on the sheet. Part of the table (arc resistance, electric strength, CTI and the peel strength) is covered by the watermark and is not stored. Resistivities after moisture resistance (volume 3.4E+7 Mohm cm and surface 7.2E+6 Mohm at elevated temperature). Dielectric breakdown above 50 kV; RTI 130 C. Z-axis CTE pre-Tg 70 and post-Tg 250 ppm/C; the T260 is 12 min (the sheet prints the unit column shifted).",
+   "source": {
+    "pdf": "isola_duraver-de104_www.multi-circuit-boards.eu.pdf",
+    "pages": "1-3",
+    "revision": "Revision D"
+   }
+  },
+  {
+   "id": "isola/de104-kf",
+   "manufacturer": "Isola",
+   "name": "DE104 KF",
+   "kind": "laminate",
+   "resin": "Epoxy (FR-4)",
+   "reinforcement": "E-glass woven",
+   "ul94": "V-0",
+   "tg_dsc_c": 135,
+   "td_c": 315,
+   "t260_min": 12,
+   "cte_z_below_tg_ppm": 45,
+   "cte_z_above_tg_ppm": 230,
+   "cte_x_ppm": 16,
+   "cte_y_ppm": 13,
+   "df": [
+    {
+     "freq_ghz": 0.001,
+     "value": 0.02,
+     "method": "IPC-TM-650 2.5.5.3 split post method, 50 % resin",
+     "resin_content_pct": 50,
+     "tolerance": null
+    }
+   ],
+   "volume_resistivity_ohm_cm": 100000000000000.0,
+   "surface_resistivity_ohm": 1000000000000.0,
+   "dielectric_strength_kv_mm": 39,
+   "peel_strength_n_mm": 1.8,
+   "peel_condition": "standard profile foil after thermal stress (1.60 N/mm at 125 C, 1.8 N/mm after process solutions)",
+   "water_absorption_pct": 0.13,
+   "notes": "Dk is published as a range of 4.6 to 4.9 at 1 MHz (specification at most 5.40) and is not stored. Specification column: Tg 110-150 C, Df at most 0.035, flammability V-1. Resistivities after moisture resistance. Dielectric breakdown 45 kV; CTI class 400 V. The flexural strength is printed as 580 and 460 lb/in2 (specification 415 and 345, which are MPa values) and is not stored. Z-axis CTE pre-Tg 45 and post-Tg 230 ppm/C; X/Y-axis 16/13 pre-Tg and 14/7 post-Tg.",
+   "source": {
+    "pdf": "isola_duraver-de104-kf_www.multi-circuit-boards.eu.pdf",
+    "pages": "2",
+    "revision": "DSDE104KFA"
+   }
+  }
+ ]
 }
