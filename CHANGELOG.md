@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Dependency:** the `zip` crate is raised to 9.0.5 (the old range had a security advisory); packages are still written with deflate, the fixed 1980 time and the same entry order.
 - **Words for the list of board materials in the 37 languages:** the types of material (laminate, PTFE and RF, ceramic filled, metal core, plain sheets), the search box, the mark of a material without data of the manufacturer and the request for its thickness and copper.
 
 ## [0.1.8] - The board materials database with 723 materials and a classified catalogue of 1873 documents

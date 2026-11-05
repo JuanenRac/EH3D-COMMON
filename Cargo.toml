@@ -36,7 +36,9 @@ serde_json = "1"
 # sha2: every entry of a package carries its SHA-256, the package refuses to open when one differs.
 sha2 = "0.10"
 # zip: the container is a standard ZIP archive (deflate only), so any archive tool can look inside.
-zip = { version = "2", default-features = false, features = ["deflate"] }
+zip = { version = "9.0.5", default-features = false, features = ["deflate-flate2"] }
+# flate2: the pure Rust deflate backend that the zip crate leaves open; it keeps the written bytes the same as before.
+flate2 = { version = "1", default-features = false, features = ["rust_backend"] }
 thiserror = "2"
 # eh3d-container: the integrity record, the name rule and canonical JSON that every container format shares.
 eh3d-container = { path = "crates/container" }

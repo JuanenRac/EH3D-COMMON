@@ -10,7 +10,9 @@ repository.workspace = true
 
 [dependencies]
 # the container of the suite is a standard ZIP archive (deflate only)
-zip = { version = "2", default-features = false, features = ["deflate"] }
+zip = { version = "9.0.5", default-features = false, features = ["deflate-flate2"] }
+# flate2: the pure Rust deflate backend that the zip crate leaves open; it keeps the written bytes the same as before.
+flate2 = { version = "1", default-features = false, features = ["rust_backend"] }
 
 [lints]
 workspace = true
