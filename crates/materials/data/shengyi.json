@@ -4,6 +4,10 @@
  "materials": [
   {
    "id": "shengyi/s1000-2",
+   "safety": {
+     "hazard_statements": [],
+     "flammability_note": "The sheet describes a nonflammable sheet material and gives flammable properties and flash point as not applicable; no hazard statements. Dust from machining or punching may cause skin or eye irritation."
+   },
    "manufacturer": "Shengyi",
    "name": "S1000-2",
    "kind": "laminate",
@@ -331,6 +335,10 @@
   },
   {
    "id": "shengyi/s1000-2m",
+   "safety": {
+     "hazard_statements": [],
+     "flammability_note": "The sheet describes a nonflammable sheet material and gives flammable properties and flash point as not applicable; no hazard statements. Dust from machining or punching may cause skin or eye irritation."
+   },
    "manufacturer": "Shengyi",
    "name": "S1000-2M",
    "kind": "laminate",
@@ -619,6 +627,10 @@
   },
   {
    "id": "shengyi/s1190",
+   "safety": {
+     "hazard_statements": [],
+     "flammability_note": "The sheet describes a nonflammable sheet material and gives flammable properties and flash point as not applicable; no hazard statements. Dust from machining or punching may cause skin or eye irritation."
+   },
    "manufacturer": "Shengyi",
    "name": "S1190",
    "kind": "laminate",
@@ -703,6 +715,15 @@
   },
   {
    "id": "shengyi/s1150g",
+   "safety": {
+     "hazard_statements": [],
+     "flammability_note": "The sheet describes a nonflammable sheet material and gives flammable properties and flash point as not applicable; no hazard statements. Dust from machining or punching may cause skin or eye irritation."
+   },
+   "sources": [
+     {
+       "pdf": "20180803164643882.pdf"
+     }
+   ],
    "manufacturer": "Shengyi",
    "name": "S1150G",
    "kind": "laminate",
@@ -886,6 +907,15 @@
   },
   {
    "id": "shengyi/s7045g",
+   "safety": {
+     "hazard_statements": [],
+     "flammability_note": "The sheet describes a nonflammable sheet material and gives flammable properties and flash point as not applicable; no hazard statements. Dust from machining or punching may cause skin or eye irritation."
+   },
+   "sources": [
+     {
+       "pdf": "20180803164944543.pdf"
+     }
+   ],
    "manufacturer": "Shengyi",
    "name": "S7045G",
    "kind": "laminate",
@@ -969,6 +999,15 @@
   },
   {
    "id": "shengyi/s1141",
+   "safety": {
+     "hazard_statements": [],
+     "flammability_note": "The sheet describes a nonflammable sheet material and gives flammable properties and flash point as not applicable; no hazard statements. Dust from machining or punching may cause skin or eye irritation."
+   },
+   "sources": [
+     {
+       "pdf": "20180803102733512.pdf"
+     }
+   ],
    "manufacturer": "Shengyi",
    "name": "S1141",
    "kind": "laminate",

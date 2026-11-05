@@ -1908,6 +1908,10 @@
   },
   {
    "id": "shengyi/s1600l",
+   "safety": {
+     "hazard_statements": [],
+     "flammability_note": "The sheet describes a nonflammable sheet material and gives flammable properties and flash point as not applicable; no hazard statements. Dust from machining or punching may cause skin or eye irritation."
+   },
    "manufacturer": "Shengyi",
    "name": "S1600L",
    "kind": "laminate",
@@ -2684,6 +2688,15 @@
   },
   {
    "id": "shengyi/s1130",
+   "safety": {
+     "hazard_statements": [],
+     "flammability_note": "The sheet describes a nonflammable sheet material and gives flammable properties and flash point as not applicable; no hazard statements. Dust from machining or punching may cause skin or eye irritation."
+   },
+   "sources": [
+     {
+       "pdf": "20180803163651046.pdf"
+     }
+   ],
    "manufacturer": "Shengyi",
    "name": "S1130",
    "kind": "laminate",
@@ -2696,6 +2709,15 @@
   },
   {
    "id": "shengyi/s1600",
+   "safety": {
+     "hazard_statements": [],
+     "flammability_note": "The sheet describes a nonflammable sheet material and gives flammable properties and flash point as not applicable; no hazard statements. Dust from machining or punching may cause skin or eye irritation."
+   },
+   "sources": [
+     {
+       "pdf": "20180803163825979.pdf"
+     }
+   ],
    "manufacturer": "Shengyi",
    "name": "S1600",
    "kind": "laminate",

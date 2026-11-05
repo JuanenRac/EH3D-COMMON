@@ -4,6 +4,15 @@
   "materials": [
     {
       "id": "arlon/33n",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS hazard statements: none; flash point and auto-ignition temperature not applicable. Machined dust may cause respiratory or mechanical eye irritation."
+      },
+      "sources": [
+        {
+          "pdf": "SDS-33N-Prepreg-US.pdf"
+        }
+      ],
       "manufacturer": "Arlon",
       "name": "33N",
       "kind": "laminate",
@@ -80,6 +89,15 @@
     },
     {
       "id": "arlon/35n",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS hazard statements: none; flash point and auto-ignition temperature not applicable. Machined dust may cause respiratory or mechanical eye irritation."
+      },
+      "sources": [
+        {
+          "pdf": "SDS-35N-Prepreg-US.pdf"
+        }
+      ],
       "manufacturer": "Arlon",
       "name": "35N",
       "kind": "laminate",
@@ -139,6 +157,15 @@
     },
     {
       "id": "arlon/44n",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS hazard statements: none; flash point and auto-ignition temperature not applicable. Machined dust may cause respiratory or mechanical eye irritation."
+      },
+      "sources": [
+        {
+          "pdf": "SDS-44N-Prepreg-US.pdf"
+        }
+      ],
       "manufacturer": "Arlon",
       "name": "44N",
       "kind": "prepreg",
@@ -182,6 +209,15 @@
     },
     {
       "id": "arlon/45n",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS hazard statements: none; flash point and auto-ignition temperature not applicable. Machined dust may cause respiratory or mechanical eye irritation."
+      },
+      "sources": [
+        {
+          "pdf": "SDS-45N-Prepreg-US.pdf"
+        }
+      ],
       "manufacturer": "Arlon",
       "name": "45N",
       "kind": "laminate",
@@ -222,6 +258,15 @@
     },
     {
       "id": "arlon/45nk",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS hazard statements: none; flash point and auto-ignition temperature not applicable. Machined dust may cause respiratory or mechanical eye irritation."
+      },
+      "sources": [
+        {
+          "pdf": "SDS-45NK-Prepreg-US.pdf"
+        }
+      ],
       "manufacturer": "Arlon",
       "name": "45NK",
       "kind": "laminate",
@@ -270,6 +315,15 @@
     },
     {
       "id": "arlon/55nt",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS hazard statements: none; flash point and auto-ignition temperature not applicable. Machined dust may cause respiratory or mechanical eye irritation."
+      },
+      "sources": [
+        {
+          "pdf": "SDS-55NT-Prepreg-US.pdf"
+        }
+      ],
       "manufacturer": "Arlon",
       "name": "55NT",
       "kind": "laminate",
@@ -331,6 +385,15 @@
     },
     {
       "id": "arlon/84n",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS hazard statements: none; flash point and auto-ignition temperature not applicable. Machined dust may cause respiratory or mechanical eye irritation."
+      },
+      "sources": [
+        {
+          "pdf": "SDS-84N-Prepreg-US.pdf"
+        }
+      ],
       "manufacturer": "Arlon",
       "name": "84N",
       "kind": "prepreg",
@@ -392,6 +455,15 @@
     },
     {
       "id": "arlon/85hp",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS hazard statements: none; flash point and auto-ignition temperature not applicable. Machined dust may cause respiratory or mechanical eye irritation."
+      },
+      "sources": [
+        {
+          "pdf": "SDS-85HP-Prepreg-US.pdf"
+        }
+      ],
       "manufacturer": "Arlon",
       "name": "85HP",
       "kind": "laminate",
@@ -448,6 +520,15 @@
     },
     {
       "id": "arlon/86hp",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS hazard statements: none; flash point and auto-ignition temperature not applicable. Machined dust may cause respiratory or mechanical eye irritation."
+      },
+      "sources": [
+        {
+          "pdf": "SDS-86HP-Prepreg-US.pdf"
+        }
+      ],
       "manufacturer": "Arlon",
       "name": "86HP",
       "kind": "laminate",
@@ -530,6 +611,15 @@
     },
     {
       "id": "arlon/85nt",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS hazard statements: none; flash point and auto-ignition temperature not applicable. Machined dust may cause respiratory or mechanical eye irritation."
+      },
+      "sources": [
+        {
+          "pdf": "SDS-85NT-Prepreg-US.pdf"
+        }
+      ],
       "manufacturer": "Arlon",
       "name": "85NT",
       "kind": "laminate",

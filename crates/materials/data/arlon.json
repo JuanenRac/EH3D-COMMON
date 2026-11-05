@@ -4,6 +4,15 @@
  "materials": [
   {
    "id": "arlon/85n",
+   "safety": {
+     "hazard_statements": [],
+     "flammability_note": "GHS hazard statements: none; flash point and auto-ignition temperature not applicable. Machined dust may cause respiratory or mechanical eye irritation."
+   },
+   "sources": [
+     {
+       "pdf": "SDS-85N-Prepreg-US.pdf"
+     }
+   ],
    "manufacturer": "Arlon",
    "name": "85N",
    "kind": "laminate",

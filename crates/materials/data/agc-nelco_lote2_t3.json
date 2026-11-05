@@ -4,6 +4,15 @@
   "materials": [
     {
       "id": "agc-nelco/n4000-13",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS (US) classification: not classified; no labelling applicable; no H statements."
+      },
+      "sources": [
+        {
+          "pdf": "AGC_N4000-13_Copper_Clad_Laminate_SDS.pdf"
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "N4000-13",
       "kind": "laminate",
@@ -266,6 +275,15 @@
     },
     {
       "id": "agc-nelco/n4000-29",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS (US) classification: not classified; no labelling applicable; no H statements."
+      },
+      "sources": [
+        {
+          "pdf": "AGC_N4000-29_Copper_Clad_Laminate_SDS.pdf"
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "N4000-29",
       "kind": "laminate",
@@ -491,6 +509,15 @@
     },
     {
       "id": "agc-nelco/n5000",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS (US) classification: not classified; no labelling applicable; no H statements."
+      },
+      "sources": [
+        {
+          "pdf": "AGC_N5000_Copper_Clad_Laminate_SDS.pdf"
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "N5000",
       "kind": "laminate",
@@ -549,6 +576,15 @@
     },
     {
       "id": "agc-nelco/n7000-2ht",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS (US) classification: not classified; no labelling applicable; no H statements."
+      },
+      "sources": [
+        {
+          "pdf": "AGC_N7000-2HT_Copper_Clad_Laminate_SDS.pdf"
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "N7000-2HT",
       "kind": "laminate",
@@ -609,6 +645,15 @@
     },
     {
       "id": "agc-nelco/n7000-3",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS (US) classification: not classified; no labelling applicable; no H statements."
+      },
+      "sources": [
+        {
+          "pdf": "AGC_N7000-3_Copper_Clad_Laminate_SDS.pdf"
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "N7000-3",
       "kind": "laminate",
@@ -669,6 +714,15 @@
     },
     {
       "id": "agc-nelco/n7000-3f",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS (US) classification: not classified; no labelling applicable; no H statements."
+      },
+      "sources": [
+        {
+          "pdf": "AGC_N7000-3F_Copper_Clad_Laminate_SDS.pdf"
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "N7000-3F",
       "kind": "laminate",
@@ -715,6 +769,15 @@
     },
     {
       "id": "agc-nelco/n8000",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS (US) classification: not classified; no labelling applicable; no H statements."
+      },
+      "sources": [
+        {
+          "pdf": "AGC_N8000_Copper_Clad_Laminate_SDS.pdf"
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "N8000",
       "kind": "laminate",
@@ -1493,6 +1556,15 @@
     },
     {
       "id": "agc-nelco/nf-30",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS (US) classification: not classified; no labelling applicable; no H statements."
+      },
+      "sources": [
+        {
+          "pdf": "AGC_NF-30_SDS.pdf"
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "NF-30",
       "kind": "ptfe",
@@ -1555,6 +1627,15 @@
     },
     {
       "id": "agc-nelco/rf-10",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS (US) classification: not classified; no labelling applicable; no H statements."
+      },
+      "sources": [
+        {
+          "pdf": "AGC_RF-10_SDS.pdf"
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "RF-10",
       "kind": "ceramic_filled",
@@ -1634,6 +1715,15 @@
     },
     {
       "id": "agc-nelco/rf-30a",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS (US) classification: not classified; no labelling applicable; no H statements."
+      },
+      "sources": [
+        {
+          "pdf": "AGC_RF-30A_SDS.pdf"
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "RF-30A",
       "kind": "ptfe",
@@ -1714,6 +1804,15 @@
     },
     {
       "id": "agc-nelco/rf-35htc",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS (US) classification: not classified; no labelling applicable; no H statements."
+      },
+      "sources": [
+        {
+          "pdf": "AGC_RF-35HTC_SDS.pdf"
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "RF-35HTC",
       "kind": "ceramic_filled",
@@ -1800,6 +1899,15 @@
     },
     {
       "id": "agc-nelco/rf-35tc",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS (US) classification: not classified; no labelling applicable; no H statements."
+      },
+      "sources": [
+        {
+          "pdf": "AGC_RF-35TC_SDS.pdf"
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "RF-35TC",
       "kind": "ceramic_filled",
@@ -1884,6 +1992,15 @@
     },
     {
       "id": "agc-nelco/rf-60tc",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS (US) classification: not classified; no labelling applicable; no H statements."
+      },
+      "sources": [
+        {
+          "pdf": "AGC_RF-60TC_SDS.pdf"
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "RF-60TC",
       "kind": "ceramic_filled",
@@ -2514,6 +2631,15 @@
     },
     {
       "id": "agc-nelco/tly-5z",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS (US) classification: not classified; no labelling applicable; no H statements."
+      },
+      "sources": [
+        {
+          "pdf": "AGC_TLY-5Z_SDS.pdf"
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "TLY-5Z",
       "kind": "ptfe",
@@ -2671,6 +2797,15 @@
     },
     {
       "id": "agc-nelco/tsm-ds3b",
+      "safety": {
+        "hazard_statements": [],
+        "flammability_note": "GHS (US) classification: not classified; no labelling applicable; no H statements."
+      },
+      "sources": [
+        {
+          "pdf": "AGC_TSM-DS3b_SDS.pdf"
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "TSM-DS3b",
       "kind": "ceramic_filled",
