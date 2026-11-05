@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Bergquist",
+  "materials": [
+    {
+      "id": "bergquist/thermal-clad-hpl-03015",
+      "manufacturer": "Bergquist",
+      "name": "Thermal Clad HPL-03015",
+      "kind": "metal_core",
+      "family": "Thermal Clad HPL",
+      "resin": "High thermal performance dielectric for high power lighting",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "tg_dsc_c": 185,
+      "thermal_conductivity_w_mk": 7.5,
+      "dk": [
+        {
+          "freq_ghz": null,
+          "value": 6.6,
+          "method": "ASTM D150",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1e-06,
+          "value": 0.003,
+          "method": "ASTM D150, 1 kHz",
+          "resin_content_pct": null,
+          "tolerance": null
+        },
+        {
+          "freq_ghz": 0.001,
+          "value": 0.005,
+          "method": "ASTM D150, 1 MHz",
+          "resin_content_pct": null,
+          "tolerance": null
+        }
+      ],
+      "peel_strength_n_mm": 0.9,
+      "peel_condition": "25 C (5 lb/in)",
+      "cti_v": 600,
+      "cte_x_ppm": 35,
+      "cte_y_ppm": 35,
+      "cte_z_below_tg_ppm": 35,
+      "cte_z_above_tg_ppm": 85,
+      "youngs_modulus_gpa": {
+        "lengthwise": null,
+        "crosswise": null,
+        "value": 18
+      },
+      "notes": "Insulated metal substrate for high power LED lighting, available on aluminium and copper substrates; the sheet does not list metal or copper thicknesses. Dielectric 0.0015 in (38 um), off-white. Product thermal conductivity 7.5 W/mK and dielectric thermal conductivity 3.0 W/mK; thermal resistance 0.02 C in2/W (0.13 C cm2/W); thermal impedance 0.30 C/W (TO-220 set-up); Tg 185 C (ASTM E1356, DSC). Maximum operating temperature 140 C (UL); maximum soldering 325 C for 60 s. Dk 6.6 (frequency not stated); Df 0.003 at 1 kHz and 0.005 at 1 MHz; capacitance 925 pF/in2; breakdown voltage 5.0 kV AC. CTI 0 PLC (600 V). The sheet gives one CTE for XY/Z: 35 um/m C below Tg and 85 above. Storage modulus 18 GPa at 25 C and 12 GPa at 150 C (stored value at 25 C). Volume and surface resistivity are printed as 1 with a superscript 14 (ohm m) and 13 (ohm/sq) and are not stored because the base of the exponent is not legible. Water vapor retention 0.11 %, total mass loss 0.15 %, collected volatile condensable material below 0.01 %.",
+      "source": {
+        "pdf": "PDS_HPL_0414-v6.pdf",
+        "pages": "1-2",
+        "revision": "PDS_HPL_0414"
+      }
+    }
+  ]
+}
