@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Wazam",
+  "materials": [
+    {
+      "id": "wazam/h150hf",
+      "manufacturer": "Wazam",
+      "name": "H150HF",
+      "kind": "laminate",
+      "source": {
+        "pdf": "04abd4d5ac259f6a09188fedd4fd3460.pdf"
+      },
+      "family": "H150HF",
+      "reinforcement": "E-glass woven",
+      "thicknesses_mm": [
+        0.05,
+        0.076,
+        0.089,
+        0.1,
+        0.11,
+        0.13,
+        0.15,
+        0.18,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.38,
+        0.4,
+        0.46,
+        0.51,
+        0.53,
+        0.61,
+        0.66,
+        0.71,
+        0.87,
+        1.02,
+        1.1,
+        1.2,
+        1.25,
+        1.3,
+        1.5
+      ],
+      "notes": "Line-up of the H150HF core and the H150HFPP prepreg (E-glass only). The sheet gives Dk and Df by construction and resin content at 1, 2, 5 and 10 GHz (for example 3.90 and 0.0156 at 1 GHz for 106 x 1, 72 % resin), which are not stored."
+    },
+    {
+      "id": "wazam/h1600a",
+      "manufacturer": "Wazam",
+      "name": "H1600A",
+      "kind": "laminate",
+      "source": {
+        "pdf": "12cc9c3b261286499f798be7cea7ba98.pdf"
+      },
+      "family": "H1600A",
+      "reinforcement": "E-glass woven",
+      "thicknesses_mm": [
+        0.41,
+        0.5,
+        0.53,
+        0.7,
+        0.75,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.55,
+        1.6,
+        1.9,
+        2.0
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "foil_type": "HTE"
+        },
+        {
+          "weight_oz": 1,
+          "foil_type": "HTE"
+        },
+        {
+          "weight_oz": 2,
+          "foil_type": "HTE"
+        },
+        {
+          "weight_oz": 3,
+          "foil_type": "HTE"
+        }
+      ],
+      "notes": "Line-up of the H1600A core (E-glass, HTE copper) by construction and copper foil; the sheet is a line-up only and the thicknesses are the core thicknesses it lists."
+    },
+    {
+      "id": "wazam/hsd7",
+      "manufacturer": "Wazam",
+      "name": "HSD7",
+      "kind": "laminate",
+      "source": {
+        "pdf": "16d483f85336a06e894b21294e51808a.pdf"
+      },
+      "family": "HSD7",
+      "reinforcement": "E-glass woven",
+      "thicknesses_mm": [
+        0.051,
+        0.066,
+        0.076,
+        0.089,
+        0.099,
+        0.124,
+        0.127,
+        0.145,
+        0.178,
+        0.201,
+        0.25,
+        0.3,
+        0.399,
+        0.5,
+        0.625,
+        0.749
+      ],
+      "notes": "Line-up of the HSD7 core and the HSD7B prepreg (E-glass only). The sheet gives Dk and Df by construction and resin content at 1, 5, 10, 15 and 20 GHz, which are not stored."
+    },
+    {
+      "id": "wazam/h2600a",
+      "manufacturer": "Wazam",
+      "name": "H2600A",
+      "kind": "laminate",
+      "source": {
+        "pdf": "17615039cd8d672f7fd5ff2c4ad6bb8b.pdf"
+      },
+      "family": "H2600A",
+      "reinforcement": "E-glass woven",
+      "thicknesses_mm": [
+        0.7,
+        0.75,
+        0.8,
+        0.86,
+        1.0,
+        1.1,
+        1.2,
+        1.5,
+        1.6,
+        1.7
+      ],
+      "notes": "Line-up of the H2600A core by construction and copper foil; line-up only."
+    }
+  ]
+}

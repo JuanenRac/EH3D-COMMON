@@ -28,9 +28,21 @@ pub const FILES: &[(&str, &str)] = &[
     ("panasonic.json", include_str!("../data/panasonic.json")),
     ("rogers.json", include_str!("../data/rogers.json")),
     ("shengyi.json", include_str!("../data/shengyi.json")),
+    (
+        "shengyi_lote2_t1.json",
+        include_str!("../data/shengyi_lote2_t1.json"),
+    ),
     ("taconic.json", include_str!("../data/taconic.json")),
     ("thinflex.json", include_str!("../data/thinflex.json")),
     ("ventec.json", include_str!("../data/ventec.json")),
+    (
+        "ventec_lote2_t1.json",
+        include_str!("../data/ventec_lote2_t1.json"),
+    ),
+    (
+        "wazam_lote2_t1.json",
+        include_str!("../data/wazam_lote2_t1.json"),
+    ),
     ("yuxinda.json", include_str!("../data/yuxinda.json")),
 ];
 

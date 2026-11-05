@@ -1,0 +1,545 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Ventec",
+  "materials": [
+    {
+      "id": "ventec/vt-4b7-sp",
+      "manufacturer": "Ventec",
+      "name": "VT-4B7 SP",
+      "kind": "metal_core",
+      "source": {
+        "pdf": "190822vt-4b7-sp-version_b2.pdf",
+        "pages": "2-3"
+      },
+      "family": "VT-4B",
+      "resin": "Ceramic filled",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "thermal_conductivity_w_mk": 7.0,
+      "tg_dsc_c": 100,
+      "td_c": 380,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.8,
+          "method": "IPC-TM-650 2.5.5.3, C-24/23/50"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.016,
+          "method": "IPC-TM-650 2.5.5.3, C-24/23/50"
+        }
+      ],
+      "peel_strength_n_mm": 0.79,
+      "peel_condition": "as received, 1 oz; the sheet gives 4.5 lb/in (converted)",
+      "cti_v": 600,
+      "notes": "Aluminium base laminate, thermal impedance 0.009 C in2/W, hi-pot withstand 1000 V DC and 3000 V AC breakdown, MOT and RTI 130 C, thermal stress 5 min at 288 C. Resistances after moisture are published but not stored. Storage 24 months at room temperature. The sheet carries version B2."
+    },
+    {
+      "id": "ventec/vt-464gs",
+      "manufacturer": "Ventec",
+      "name": "VT-464GS",
+      "kind": "laminate",
+      "source": {
+        "pdf": "200304-vt-464gs.pdf",
+        "pages": "1-2"
+      },
+      "family": "VT-46",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/130",
+      "td_c": 450,
+      "t260_min": 60,
+      "t288_min": 60,
+      "cte_z_below_tg_ppm": 20,
+      "cte_z_50_260_pct": 0.8,
+      "dk": [
+        {
+          "freq_ghz": 2.0,
+          "value": 3.5,
+          "method": "Cavity resonator",
+          "resin_content_pct": 70
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 2.0,
+          "value": 0.005,
+          "method": "Cavity resonator",
+          "resin_content_pct": 70
+        }
+      ],
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 0.8,
+        "steps_note": "Core 0.002 inch to 0.031 inch; copper foil 1/7 oz to 2 oz; prepreg 0.002 to 0.1 mm"
+      },
+      "notes": "Preliminary sheet: halogen free, high Tg, low Dk and very low loss laminate and prepreg for CSP, flip chip, SIP, BGA and PGA. The glass transition values of the preliminary sheet are not stored because the columns cannot be told apart. Thermal stress >600 s; X-Y CTE 6-8 ppm/C."
+    },
+    {
+      "id": "ventec/vt-42",
+      "manufacturer": "Ventec",
+      "name": "VT-42",
+      "kind": "laminate",
+      "source": {
+        "pdf": "200319vt-42.pdf",
+        "pages": "1-3"
+      },
+      "family": "VT-4",
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/21",
+      "tg_dsc_c": 140,
+      "td_c": 310,
+      "t260_min": 20,
+      "t288_min": 2,
+      "cte_z_below_tg_ppm": 50,
+      "cte_z_above_tg_ppm": 250,
+      "cte_z_50_260_pct": 3.75,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.2,
+          "method": "IPC-TM-650 2.5.5.9"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.015,
+          "method": "IPC-TM-650 2.5.5.9"
+        }
+      ],
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 5.0,
+        "steps_note": "Core 0.002 inch to 0.200 inch; copper foil 1/4 oz to 12 oz"
+      },
+      "notes": "Standard FR4.0 (Tg 140 C), dicy cured, UV blocking; laminate and prepreg. Thermal stress 300 s at 288 C. Reverse treated copper is recommended for cores of 0.005 inch or less."
+    },
+    {
+      "id": "ventec/vt-447",
+      "manufacturer": "Ventec",
+      "name": "VT-447",
+      "kind": "laminate",
+      "source": {
+        "pdf": "200319vt-447-tds.pdf",
+        "pages": "1-3"
+      },
+      "family": "VT-4",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/127, /128, /130",
+      "tg_tma_c": 175,
+      "td_c": 385,
+      "t260_min": 60,
+      "t288_min": 30,
+      "cte_z_below_tg_ppm": 38,
+      "cte_z_above_tg_ppm": 185,
+      "cte_z_50_260_pct": 2.1,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.35,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.013,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50
+        }
+      ],
+      "notes": "Halogen free, high Tg (175 C), FR4.1, CAF resistant, low Z-CTE laminate and prepreg for mobile phones and computers. Tg by DSC is not published (a dash), T260 and T288 are published as >60 and >30 min, thermal stress >600 s; the sheet carries version C1."
+    },
+    {
+      "id": "ventec/vt-447-b",
+      "manufacturer": "Ventec",
+      "name": "VT-447(B)",
+      "kind": "laminate",
+      "source": {
+        "pdf": "200319vt-447-b.pdf",
+        "pages": "1-3"
+      },
+      "family": "VT-4",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/127, /128, /130",
+      "tg_tma_c": 180,
+      "td_c": 380,
+      "t260_min": 60,
+      "cte_z_below_tg_ppm": 45,
+      "cte_z_above_tg_ppm": 190,
+      "cte_z_50_260_pct": 2.3,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.35,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.013,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50
+        }
+      ],
+      "thickness_range": {
+        "min_mm": 0.15,
+        "max_mm": 1.0,
+        "steps_note": "Core 0.006 inch to 0.040 inch; copper foil 1/4 oz to 12 oz"
+      },
+      "notes": "Black, light blocking version of VT-447, halogen free and UV blocking, for reinforcement of flexible circuits and mobile phones. Thermal stress 150 s at 288 C; Tg by DSC and T288 are not published; the sheet carries version B5."
+    },
+    {
+      "id": "ventec/vt-47",
+      "manufacturer": "Ventec",
+      "name": "VT-47",
+      "kind": "laminate",
+      "source": {
+        "pdf": "200319vt-47-v2.pdf",
+        "pages": "1-3"
+      },
+      "family": "VT-4",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101E/97, /98, /99, /101, /126",
+      "tg_dsc_c": 180,
+      "tg_tma_c": 180,
+      "td_c": 355,
+      "t260_min": 60,
+      "t288_min": 30,
+      "cte_z_below_tg_ppm": 45,
+      "cte_z_above_tg_ppm": 190,
+      "cte_z_50_260_pct": 2.3,
+      "thermal_conductivity_w_mk": 0.5,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.27,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.016,
+          "method": "IPC-TM-650 2.5.5.9",
+          "resin_content_pct": 50
+        }
+      ],
+      "water_absorption_pct": 0.12,
+      "notes": "High Tg FR4.0 with phenolic cure and lead-free compatibility, CAF resistant, UV blocking, low Z-CTE; laminate and prepreg. Thermal stress >600 s; the sheet carries version B4."
+    },
+    {
+      "id": "ventec/vt-441v",
+      "manufacturer": "Ventec",
+      "name": "VT-441V",
+      "kind": "laminate",
+      "source": {
+        "pdf": "200427vt-441v-tds.pdf",
+        "pages": "1-3"
+      },
+      "family": "VT-4",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101E/127, /128, /153",
+      "tg_dsc_c": 152,
+      "tg_tma_c": 158,
+      "td_c": 385,
+      "t260_min": 60,
+      "t288_min": 30,
+      "cte_z_below_tg_ppm": 38,
+      "cte_z_above_tg_ppm": 190,
+      "cte_z_50_260_pct": 2.2,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.4,
+          "method": "IPC-TM-650 2.5.5.9"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.014,
+          "method": "IPC-TM-650 2.5.5.9"
+        }
+      ],
+      "notes": "Phenolic cured, halogen free, high Td and mid Tg (FR15.1), MOT 150 C, UV blocking, CAF resistant; laminate and prepreg. Thermal stress >600 s; the sheet carries version A1."
+    },
+    {
+      "id": "ventec/vt-3703",
+      "manufacturer": "Ventec",
+      "name": "VT-3703",
+      "kind": "ptfe",
+      "source": {
+        "pdf": "200331tec-speed30-vt-3703-3706.pdf",
+        "pages": "1-2"
+      },
+      "family": "tec-speed 30.0",
+      "resin": "PTFE",
+      "filler": "Ceramic",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4103/06",
+      "td_c": 520,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.0,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline",
+          "tolerance": 0.04
+        },
+        {
+          "value": 3.0,
+          "method": "Differential phase length method 8-40 GHz (design Dk)"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0009,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "tcdk_ppm_per_c": -3,
+      "volume_resistivity_ohm_cm": 80000000000000.0,
+      "surface_resistivity_ohm": 50000000000000.0,
+      "thermal_conductivity_w_mk": 0.51,
+      "cte_x_ppm": 16,
+      "cte_y_ppm": 17,
+      "cte_z_below_tg_ppm": 25,
+      "specific_heat_j_gk": 0.9,
+      "peel_strength_n_mm": 2.28,
+      "peel_condition": "after thermal stress, 1 oz foil (13.0 lb/in)",
+      "youngs_modulus_gpa": {
+        "value": 0.908
+      },
+      "density_g_cm3": 2.1,
+      "water_absorption_pct": 0.04,
+      "thicknesses_mm": [
+        0.127,
+        0.254,
+        0.508,
+        0.762,
+        1.524
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "foil_type": "HTE"
+        },
+        {
+          "weight_oz": 1,
+          "foil_type": "HTE"
+        },
+        {
+          "weight_oz": 2,
+          "foil_type": "HTE"
+        },
+        {
+          "weight_oz": 0.5,
+          "foil_type": "RTF"
+        },
+        {
+          "weight_oz": 1,
+          "foil_type": "RTF"
+        },
+        {
+          "weight_oz": 2,
+          "foil_type": "RTF"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 457,
+          "height_mm": 305,
+          "label": "18\" x 12\""
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18\" x 24\""
+        }
+      ],
+      "notes": "Ceramic filled PTFE composite (tec-speed 30.0), low Dk 3.0 version for 77-79 GHz automotive radar. TcDk is for -50 to 150 C as published; tensile modulus 908 MPa is stored as the Young's modulus; preliminary values. The thicknesses are given in inches (0.005 to 0.060)."
+    },
+    {
+      "id": "ventec/vt-3706",
+      "manufacturer": "Ventec",
+      "name": "VT-3706",
+      "kind": "ptfe",
+      "source": {
+        "pdf": "200331tec-speed30-vt-3703-3706.pdf",
+        "pages": "1-2"
+      },
+      "family": "tec-speed 30.0",
+      "resin": "PTFE",
+      "filler": "Ceramic",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4103/07",
+      "td_c": 520,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 6.15,
+          "method": "IPC-TM-650 2.5.5.5 clamped stripline",
+          "tolerance": 0.15
+        },
+        {
+          "value": 6.5,
+          "method": "Differential phase length method 8-40 GHz (design Dk)"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0019,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "tcdk_ppm_per_c": -260,
+      "volume_resistivity_ohm_cm": 700000000000.0,
+      "surface_resistivity_ohm": 400000000000.0,
+      "thermal_conductivity_w_mk": 0.8,
+      "cte_x_ppm": 17,
+      "cte_y_ppm": 17,
+      "cte_z_below_tg_ppm": 24,
+      "specific_heat_j_gk": 0.86,
+      "peel_strength_n_mm": 1.4,
+      "peel_condition": "after thermal stress, 1 oz foil (8.0 lb/in)",
+      "youngs_modulus_gpa": {
+        "value": 1.5
+      },
+      "density_g_cm3": 2.6,
+      "water_absorption_pct": 0.02,
+      "thicknesses_mm": [
+        0.127,
+        0.254,
+        0.625,
+        1.27
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "foil_type": "HTE"
+        },
+        {
+          "weight_oz": 1,
+          "foil_type": "HTE"
+        },
+        {
+          "weight_oz": 2,
+          "foil_type": "HTE"
+        },
+        {
+          "weight_oz": 0.5,
+          "foil_type": "RTF"
+        },
+        {
+          "weight_oz": 1,
+          "foil_type": "RTF"
+        },
+        {
+          "weight_oz": 2,
+          "foil_type": "RTF"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 457,
+          "height_mm": 305,
+          "label": "18\" x 12\""
+        },
+        {
+          "width_mm": 457,
+          "height_mm": 610,
+          "label": "18\" x 24\""
+        }
+      ],
+      "notes": "Ceramic filled PTFE composite (tec-speed 30.0), high Dk 6.15 version. TcDk is for -50 to 150 C as published; tensile modulus 1500 MPa is stored as the Young's modulus; preliminary values. The thicknesses are given in inches (0.005 to 0.050)."
+    },
+    {
+      "id": "ventec/vt-870-h348-tcr",
+      "manufacturer": "Ventec",
+      "name": "VT-870 H348 TCR",
+      "kind": "ceramic_filled",
+      "source": {
+        "pdf": "200907tecspeed20-vt-870-h348-tcr.pdf",
+        "pages": "1-2"
+      },
+      "family": "tec-speed 20.0",
+      "resin": "Hydrocarbon",
+      "filler": "Ceramic",
+      "reinforcement": "Glass",
+      "tg_dsc_c": 280,
+      "td_c": 410,
+      "ul94": "V-0",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.48,
+          "method": "IPC-TM-650 2.5.5.5",
+          "tolerance": 0.05
+        },
+        {
+          "value": 3.66,
+          "method": "Differential phase length method 1.7-5 GHz (design Dk)"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0037,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "peel_strength_n_mm": 0.53,
+      "peel_condition": "after thermal stress, 1/2 oz; the sheet gives 3 lb/in (converted)",
+      "thicknesses_mm": [
+        0.168,
+        0.254,
+        0.338,
+        0.422,
+        0.508,
+        0.762,
+        1.524
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 305,
+          "height_mm": 457,
+          "label": "12\" x 18\""
+        },
+        {
+          "width_mm": 610,
+          "height_mm": 457,
+          "label": "24\" x 18\""
+        }
+      ],
+      "notes": "Glass-reinforced hydrocarbon and ceramic laminate clad with Ticer TCR NiCr thin-film resistor foil (25, 50 or 100 ohm per square; foil weight 1/2 oz or 1 oz). Tg is published as >280 C and thermal stress as >300 s at 288 C; preliminary sheet. The thicknesses are given in inches (0.0066 to 0.060)."
+    },
+    {
+      "id": "ventec/ultrathin",
+      "manufacturer": "Ventec",
+      "name": "Ultrathin",
+      "kind": "laminate",
+      "source": {
+        "pdf": "190717ultrathin.pdf",
+        "pages": "1-3"
+      },
+      "family": "Ultrathin",
+      "notes": "Ultrathin laminate and prepreg equivalent to resin coated copper (RCC) for build-up, micro-hole and any-layer via boards, with laser drilling glass. The sheet lists glass fabrics 1086, 1078, 1080, 1067, 106, 104, 1037, 101, 1027 and 1017 (cloth thickness 0.054 to 0.014 mm) and no electrical table."
+    }
+  ]
+}

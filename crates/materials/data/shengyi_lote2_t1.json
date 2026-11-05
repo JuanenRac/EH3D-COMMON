@@ -1,0 +1,1741 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Shengyi",
+  "materials": [
+    {
+      "id": "shengyi/s1000",
+      "manufacturer": "Shengyi",
+      "name": "S1000",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20210119185112437.pdf",
+        "pages": "1"
+      },
+      "family": "S1000",
+      "resin": "FR-4 epoxy (filled resin system)",
+      "reinforcement": "E-glass woven",
+      "lead_free_compatible": true,
+      "thicknesses_mm": [
+        0.05,
+        0.063,
+        0.076,
+        0.09,
+        0.1,
+        0.11,
+        0.125,
+        0.15,
+        0.2,
+        0.24,
+        0.3,
+        0.35,
+        0.4,
+        0.45,
+        0.5,
+        0.51,
+        0.6,
+        0.8,
+        1.0,
+        1.09,
+        1.2
+      ],
+      "notes": "Core thicknesses are those listed in the line-up sheet; the line-up also gives Dk and Df by construction (1 to 10 GHz) that are not stored. Companion prepreg is S1000B. Process sheet: filled resin system, harder than traditional FR-4, drill with a chip load reduced by 10-20 %.",
+      "sources": [
+        {
+          "pdf": "20181025144922796.pdf"
+        }
+      ],
+      "processing": {
+        "lamination": {
+          "notes": "For multilayer pressing, it's recommended to keep heat-up rate at 1.0-2.5 C/min when material temperature is from 80 to 140. Full pressure setting is recommended at the range of 300 - 420 PSI (oil heated), specified value should be determined by multilayer feature (lay-up construction and resin filled area). Apply full pressure when the temperature of top layer ranges 80-100 C. Curing condition: 180-190 C, >45min.",
+          "time_at_temp_min": 45.0
+        },
+        "drilling": {
+          "retract_notes": "As material is a little bit harder compared to traditional FR-4, drilling efficiency is advised to reduce for ensuring hole quality. Decrease hit count to some extent. Reduce chip load 10-20%, compared to that of traditional FR-4."
+        },
+        "desmear_note": "S1000 belongs to filled resin system and a little bit hard to desmear compared to traditional FR-4. Strengthen desmear and use ultrasonic rinse is recommended. Bake after drilling would help to improve desmear effect. Customer can adopt it depending on actual need. Baking condition: 150/4H.",
+        "bake_note": "Thin core baking depends on actual need. If bake after cutting, it's recommended to rinse cutting panels first, which is able to remove resin powder brought by cutting and avoid etching problem."
+      }
+    },
+    {
+      "id": "shengyi/s1000h",
+      "manufacturer": "Shengyi",
+      "name": "S1000H",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20200316144651449.pdf",
+        "pages": "1"
+      },
+      "family": "S1000",
+      "resin": "FR-4 epoxy (filled resin system)",
+      "reinforcement": "E-glass woven",
+      "lead_free_compatible": true,
+      "ul94": "V-0",
+      "tg_dma_c": 160,
+      "tg_dsc_c": 155,
+      "td_c": 348,
+      "t288_min": 20,
+      "t260_min": 60,
+      "cte_z_below_tg_ppm": 37,
+      "cte_z_above_tg_ppm": 230,
+      "cte_z_50_260_pct": 2.8,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.6,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.011,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50"
+        }
+      ],
+      "volume_resistivity_ohm_cm": 150000000000000.0,
+      "surface_resistivity_ohm": 35000000000000.0,
+      "arc_resistance_s": 150,
+      "peel_strength_n_mm": 1.3,
+      "peel_condition": "288 C solder float 10 s, 1 oz foil",
+      "flexural_strength_mpa": {
+        "lengthwise": 530,
+        "crosswise": 440
+      },
+      "water_absorption_pct": 0.09,
+      "notes": "UL ANSI FR-4.0, mid-Tg. Typical values on the 1.6 mm specimen. Thermal stress >100 s (288 C solder dip) and CTI PLC 3 are not stored. Companion prepreg is S1000HB.",
+      "sources": [
+        {
+          "pdf": "20181027164240156.pdf"
+        }
+      ],
+      "processing": {
+        "lamination": {
+          "notes": "For multilayer pressing, it's recommended to keep heat-up rate at 1.0-2.5 C/min when material temperature is from 80 to 140. Full pressure setting is recommended at the range of 300 - 420 PSI (oil heated), specified value should be determined by multilayer feature (lay-up construction and resin filled area). Apply full pressure when the temperature of top layer ranges 80-100 C. Curing condition: 180-190 C, >45min.",
+          "time_at_temp_min": 45.0
+        },
+        "drilling": {
+          "retract_notes": "As material is a little bit harder compared to traditional FR-4, drilling efficiency is advised to reduce for ensuring hole quality. Decrease hit count to some extent. Reduce chip load 10-20%, compared to that of traditional FR-4."
+        },
+        "desmear_note": "S1000H belongs to filled resin system and a little bit hard to desmear compared to traditional FR-4. Strengthen desmear and use ultrasonic rinse is recommended. Bake after drilling would help to improve desmear effect. Customer can adopt it depending on actual need. Baking condition: 150/4H.",
+        "bake_note": "Thin core baking depends on actual need. If bake after cutting, it's recommended to rinse cutting panels first, which is able to remove resin powder brought by cutting and avoid etching problem."
+      }
+    },
+    {
+      "id": "shengyi/st210g",
+      "manufacturer": "Shengyi",
+      "name": "ST210G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20200213105910654.pdf",
+        "pages": "1"
+      },
+      "family": "ST210",
+      "resin": "Epoxy (CEM-3 composite)",
+      "halogen_free": true,
+      "ipc_slash_sheet": "IPC-4101/35",
+      "ul94": "V-0",
+      "thermal_conductivity_w_mk": 1.05,
+      "tg_dsc_c": 122,
+      "td_c": 360,
+      "t288_min": 10,
+      "t260_min": 60,
+      "cte_z_below_tg_ppm": 28.9,
+      "cte_z_above_tg_ppm": 260,
+      "cte_z_50_260_pct": 3.5,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 5.1,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.013,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50"
+        }
+      ],
+      "volume_resistivity_ohm_cm": 890000000000000.0,
+      "surface_resistivity_ohm": 57000000000000.0,
+      "arc_resistance_s": 160,
+      "peel_strength_n_mm": 1.3,
+      "peel_condition": "288 C solder float 10 s, 1 oz foil",
+      "flexural_strength_mpa": {
+        "lengthwise": 380,
+        "crosswise": 240
+      },
+      "water_absorption_pct": 0.12,
+      "cti_v": 600,
+      "thickness_range": {
+        "min_mm": 0.63,
+        "max_mm": 3.2,
+        "steps_note": "0.63 mm to 3.2 mm"
+      },
+      "copper": [
+        {
+          "thickness_um": 18
+        },
+        {
+          "thickness_um": 105
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 915,
+          "height_mm": 1220,
+          "label": "36\" x 48\""
+        },
+        {
+          "width_mm": 1020,
+          "height_mm": 1220,
+          "label": "40\" x 48\""
+        },
+        {
+          "width_mm": 1070,
+          "height_mm": 1220,
+          "label": "42\" x 48\""
+        }
+      ],
+      "notes": "UL ANSI CEM-3.1, thermally conductive, halogen, antimony and red phosphorus free. Copper foil from 18 um to 105 um. Dk and Df are at 1 MHz. CTI is published as PLC 0 (600 V). Typical values on the 1.6 mm specimen.",
+      "sources": [
+        {
+          "pdf": "20181027164548515.pdf"
+        }
+      ],
+      "processing": {
+        "drilling": {
+          "retract_notes": "For 1.6mm thickness laminate, the suggested drilling parameters are: 3-4 panels per stack, drill speed 60000-70000r/min, feed speed 60-70m/r; we also suggest customers to find the suitable drilling parameters according to their trial run experience."
+        }
+      }
+    },
+    {
+      "id": "shengyi/s2131",
+      "manufacturer": "Shengyi",
+      "name": "S2131",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20181027164722984.pdf",
+        "pages": "1-5"
+      },
+      "reinforcement": "E-glass woven",
+      "notes": "Known only from its process guide: no property table in the sheet.",
+      "processing": {
+        "drilling": {
+          "retract_notes": "For 1.6mm thickness laminate, the suggested drilling parameters are: 3-4 panels per stack, drill speed 60000-70000r/min, feed speed 60-70m/r; we also suggest customers to find the suitable drilling parameters according to their trial run experience."
+        }
+      }
+    },
+    {
+      "id": "shengyi/s2126",
+      "manufacturer": "Shengyi",
+      "name": "S2126",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20181027165012593.pdf",
+        "pages": "1-5"
+      },
+      "reinforcement": "E-glass woven",
+      "notes": "Known only from its process guide: no property table in the sheet.",
+      "processing": {
+        "drilling": {
+          "retract_notes": "For 1.6mm thickness laminate, the suggested drilling parameters are: 3-4 panels per stack, drill speed 60000-70000r/min, feed speed 60-70m/r; we also suggest customers to find the suitable drilling parameters according to their trial run experience."
+        }
+      }
+    },
+    {
+      "id": "shengyi/s2130",
+      "manufacturer": "Shengyi",
+      "name": "S2130",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20181027165113968.pdf",
+        "pages": "1-5"
+      },
+      "reinforcement": "E-glass woven",
+      "notes": "Known only from its process guide: no property table in the sheet.",
+      "processing": {
+        "drilling": {
+          "retract_notes": "For 1.6mm thickness laminate, the suggested drilling parameters are: 3-4 panels per stack, drill speed 60000-70000r/min, feed speed 60-70m/r; we also suggest customers to find the suitable drilling parameters according to their trial run experience."
+        }
+      }
+    },
+    {
+      "id": "shengyi/s2600f",
+      "manufacturer": "Shengyi",
+      "name": "S2600F",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20181027164924000.pdf",
+        "pages": "1-5"
+      },
+      "reinforcement": "E-glass woven",
+      "notes": "Known only from its process guide: no property table in the sheet.",
+      "processing": {
+        "drilling": {
+          "retract_notes": "For 1.6mm thickness laminate, the suggested drilling parameters are: 3-4 panels per stack, drill speed 60000-70000r/min, feed speed 60-70m/r; we also suggest customers to find the suitable drilling parameters according to their trial run experience."
+        }
+      }
+    },
+    {
+      "id": "shengyi/s2155g",
+      "manufacturer": "Shengyi",
+      "name": "S2155G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20210119184108172.pdf",
+        "pages": "1"
+      },
+      "family": "S2155",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "resin": "Epoxy (CEM-3 composite)",
+      "tg_dsc_c": 130,
+      "td_c": 335,
+      "t288_min": 10,
+      "t260_min": 60,
+      "cte_z_below_tg_ppm": 60,
+      "cte_z_above_tg_ppm": 330,
+      "cte_z_50_260_pct": 4.8,
+      "dk": [
+        {
+          "freq_ghz": 0.001,
+          "value": 4.8,
+          "method": "IPC-TM-650 2.5.5.9"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 0.001,
+          "value": 0.011,
+          "method": "IPC-TM-650 2.5.5.9"
+        }
+      ],
+      "volume_resistivity_ohm_cm": 120000000000000.0,
+      "surface_resistivity_ohm": 52000000000000.0,
+      "arc_resistance_s": 160,
+      "peel_strength_n_mm": 1.6,
+      "peel_condition": "288 C solder float 10 s, 1 oz foil",
+      "flexural_strength_mpa": {
+        "lengthwise": 410,
+        "crosswise": 300
+      },
+      "water_absorption_pct": 0.15,
+      "cti_v": 600,
+      "thickness_range": {
+        "min_mm": 0.63,
+        "max_mm": 3.2,
+        "steps_note": "0.63 mm to 3.2 mm"
+      },
+      "copper": [
+        {
+          "thickness_um": 18
+        },
+        {
+          "thickness_um": 105
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 915,
+          "height_mm": 1220,
+          "label": "36\" x 48\""
+        },
+        {
+          "width_mm": 1020,
+          "height_mm": 1220,
+          "label": "40\" x 48\""
+        },
+        {
+          "width_mm": 1070,
+          "height_mm": 1220,
+          "label": "42\" x 48\""
+        }
+      ],
+      "notes": "UL ANSI CEM-3.1, halogen-free, high CTI (PLC 0, 600 V), non-UV blocking. Dk and Df are at 1 MHz. Thermal stress >50 s (288 C solder dip) is not stored.",
+      "sources": [
+        {
+          "pdf": "20181027164810515.pdf"
+        }
+      ],
+      "processing": {
+        "drilling": {
+          "retract_notes": "For 1.6mm thickness laminate, the suggested drilling parameters are: 3-4 panels per stack, drill speed 60000-70000r/min, feed speed 60-70m/r; we also suggest customers to find the suitable drilling parameters according to their trial run experience."
+        }
+      }
+    },
+    {
+      "id": "shengyi/s1170g",
+      "manufacturer": "Shengyi",
+      "name": "S1170G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20181027170758640.pdf",
+        "pages": "1-5"
+      },
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "notes": "Known only from its process guide (no property table in the sheet).",
+      "processing": {
+        "lamination": {
+          "notes": "For multilayer pressing, it's recommended to keep heat-up rate at 1.5-3.0 C/min when material temperature is from 80 to 140. Full pressure setting is recommended at the range of 300 - 400 PSI (oil heated), specified value should be determined by multilayer feature (lay-up construction and resin filled area). Apply full pressure when the temperature of top layer ranges 80-100 C. Curing condition: 190-200 C, 60-90min."
+        },
+        "drilling": {
+          "retract_notes": "New drill bit is recommended. Stack count should not be more than 2 panel/stack (calculated by 1.6mm thickness) Maximum hit count should range 1000-2500 hits. (1.0 mm hole size) Chip load is decreased 15-20% while compared to that of normal material."
+        },
+        "desmear_note": "Fix proper swelling and desmear parameters for processing, for excessive desmear might cause resin recession or rough edges.",
+        "bake_note": "Thin core baking depends on actual need. If bake after cutting, it's recommended to rinse cutting panels first, which is able to remove resin powder brought by cutting and avoid etching problem."
+      }
+    },
+    {
+      "id": "shengyi/autolad1",
+      "manufacturer": "Shengyi",
+      "name": "Autolad1",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20181027171914265.pdf",
+        "pages": "1-5"
+      },
+      "reinforcement": "E-glass woven",
+      "lead_free_compatible": true,
+      "notes": "Known only from its process guide (no property table in the sheet).",
+      "processing": {
+        "lamination": {
+          "notes": "For multilayer pressing, it's recommended to keep heat-up rate at 1.0-2.5 C/min when material temperature is from 80 to 140. Full pressure setting is recommended at the range of 300 - 420 PSI (oil heated), specified value should be determined by multilayer feature (lay-up construction and resin filled area). Apply full pressure when the temperature of top layer ranges 80-100 C. Curing condition: 180-190 C, >45min.",
+          "time_at_temp_min": 45.0
+        },
+        "drilling": {
+          "retract_notes": "As material is a little bit harder compared to traditional FR-4, drilling efficiency is advised to reduce for ensuring hole quality. Decrease hit count to some extent. Reduce chip load 10-20%, compared to that of traditional FR-4."
+        },
+        "desmear_note": "Autolad1 belongs to filled resin system and a little bit hard to desmear compared to traditional FR-4. Strengthen desmear and use ultrasonic rinse is recommended. Bake after drilling would help to improve desmear effect. Customer can adopt it depending on actual need. Baking condition: 150/4H.",
+        "bake_note": "Thin core baking depends on actual need. If bake after cutting, it's recommended to rinse cutting panels first, which is able to remove resin powder brought by cutting and avoid etching problem."
+      }
+    },
+    {
+      "id": "shengyi/autolad2g",
+      "manufacturer": "Shengyi",
+      "name": "Autolad2G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20211015092608127.pdf",
+        "pages": "1-5"
+      },
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "notes": "Known only from its process guide (no property table in the sheet).",
+      "processing": {
+        "lamination": {
+          "notes": "Autolad2GB-en Curing rate: 1.0-2.5/min when the temperature of top layer ranges 80-140 C. Full pressure setting is recommended at the range of 300 - 420 PSI (oil heated), specified value should be determined by multilayer feature (lay-up construction and resin filled area). Apply full pressure when the temperature of top layer ranges 90-110 C. Curing condition: 185~195, >60min.",
+          "time_at_temp_min": 60.0
+        },
+        "drilling": {
+          "retract_notes": "Autolad2G/Autolad2GB is high Tg & high fillers system, please adjust drill parameters according to other high Tg FR-4. New drill bit, single stack and less hit count (for example, 500-1000 hits for 0.30mm or 0.40mm hole diameter) is recommended for getting better hole wall quality. Besides, run FA to get optimal drill parameters are necessary."
+        },
+        "desmear_note": "Autolad2G belongs to PN curing system + inorganic filler type products, Ultrasonic rinse is recommended to be used for desmear. As the desmear weight loss is less than normal FR-4, it is suggested run FA to make the optimal parameters.",
+        "bake_note": "Thin core baking depends on actual need. If bake after cutting, it's recommended to rinse cutting panels first, which is able to remove resin powder brought by cutting and avoid etching problem."
+      }
+    },
+    {
+      "id": "shengyi/autolad3",
+      "manufacturer": "Shengyi",
+      "name": "Autolad3",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20181027172001578.pdf",
+        "pages": "1-5"
+      },
+      "reinforcement": "E-glass woven",
+      "lead_free_compatible": true,
+      "notes": "Known only from its process guide (no property table in the sheet).",
+      "processing": {
+        "lamination": {
+          "notes": "For multilayer pressing, it's recommended to keep heat-up rate at 1.0-2.5 C/min when material temperature is from 80 to 140. Full pressure setting is recommended at the range of 300 - 420 PSI (oil heated), specified value should be determined by multilayer feature (lay-up construction and resin filled area). Apply full pressure when the temperature of top layer ranges 80-100 C. Curing condition: 185-195 C, >60min.",
+          "time_at_temp_min": 60.0
+        },
+        "drilling": {
+          "retract_notes": "As material is a little bit harder compared to traditional FR-4, drilling efficiency is advised to reduce for ensuring hole quality. Decrease hit count to some extent. Reduce chip load 10-20%, compared to that of traditional FR-4."
+        },
+        "desmear_note": "Autolad3 belongs to filled resin system and a little bit hard to desmear compared to traditional FR-4. Strengthen desmear and use ultrasonic rinse are recommended. Bake after drilling would help to improve desmear effect, customer can adopt depends on actual need. Baking condition: 150/4H.",
+        "bake_note": "Thin core baking depends on actual need. If bake after cutting, it's recommended to rinse cutting panels first, which is able to remove resin powder brought by cutting and avoid etching problem."
+      }
+    },
+    {
+      "id": "shengyi/wlm1",
+      "manufacturer": "Shengyi",
+      "name": "WLM1",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20181027172334515.pdf",
+        "pages": "1-5"
+      },
+      "reinforcement": "E-glass woven",
+      "notes": "Known only from its process guide (no property table in the sheet).",
+      "processing": {
+        "lamination": {
+          "notes": "For multilayer pressing, it's recommended to keep heat-up rate at 2~3/min when material temperature is from 80 to 140. Full pressure setting is recommended at the range of 350 - 420 PSI (about 25-30kgf/cm2(oil heated), specified value should be determined by multilayer feature (lay-up construction and resin filled area). Apply full pressure when the temperature of top layer ranges 80-100 C."
+        },
+        "drilling": {
+          "retract_notes": "Mechanical drilling: New drilling bit is recommended when drilling, 1 panel/stack is recommended. To ensure a good quality of hole wall, the life of new drills and drilling head should be limited to reduced life of 300~1000 hits. On the basis of traditional FR-4 drilling parameters, decrease feed speed 10-20% is advised, please take a trial test to work out the suitable drilling parameter well."
+        },
+        "desmear_note": "Due to material composition and structure, its chemical resistance is good. Only taking chemical desmear is difficult to remove smear effectively, so both plasma and chemical desmear are advised. Detailed parameters follows the actual PCB structure (overall thickness, hole diameter) for setting.",
+        "bake_note": "Thin core baking depends on actual need. If bake after cutting, it's recommended to rinse cutting panels first, which is able to remove resin powder brought by cutting and avoid etching problem."
+      }
+    },
+    {
+      "id": "shengyi/sml02g",
+      "manufacturer": "Shengyi",
+      "name": "SML02G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20181027173700515.pdf",
+        "pages": "1-5"
+      },
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "notes": "Known only from its process guide (no property table in the sheet).",
+      "processing": {
+        "lamination": {
+          "notes": "For multilayer pressing, it's recommended to keep heat-up rate at 1.5-3.0 C/min when material temperature is from 80 to 140. For heavy copper structure, the heat-up rate of 2.5-4.0/min is recommended. Full pressure setting is recommended at the range of 300 - 400 PSI (oil heated), specified value should be determined by multilayer feature (lay-up construction and resin filled area)."
+        },
+        "drilling": {
+          "retract_notes": "New drill bit is recommended. Stack count should not be more than 2 panel/stack (calculated by 1.6mm thickness) Maximum hit count should range 1000-2000 hits. (1.0 mm hole size) Chip load is decreased 15-20% while compared to that of normal material."
+        },
+        "desmear_note": "Fix proper swelling and desmear parameters for processing, for excessive desmear might cause resin recession or rough edges.",
+        "bake_note": "Thin core baking depends on actual need. If bake after cutting, it's recommended to rinse cutting panels first, which is able to remove resin powder brought by cutting and avoid etching problem."
+      }
+    },
+    {
+      "id": "shengyi/synamic-8g",
+      "manufacturer": "Shengyi",
+      "name": "Synamic 8G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20210903174728816.pdf",
+        "pages": "1-5"
+      },
+      "reinforcement": "E-glass woven",
+      "halogen_free": true,
+      "notes": "Known only from its process guide (no property table in the sheet).",
+      "processing": {
+        "drilling": {
+          "retract_notes": "parameters (reference only) Diameter Infeed Speed RTR Max hits Chipload (mm) (inch) (ipm) (krpm) (ipm) Hit (mil/rev) 0.20 0.0078 67 95 500 500 0.71 0.25 0.0097 71 95 500 500 0.75 0.30 0.0117 76 95 500 500 0.80 0.35 0.0136 81 95 500 500 0.85 0.40 0.0156 105 63 500 500 1.67 0.45 0.0175 110 60 500 500 1.83 0.50 0.0195 125 62 1000 500 2.02 0.55 0.0214 127 60 1000 500 2.12 0.60 0.0233 130 58 1000 500 2.24 0.65 0.0253 125..."
+        },
+        "desmear_note": "Due to material composition and structure, its chemical resistance is good. Both plasma and chemical desmear are recommended. Control etch rate at 0.30.4mg/cm2 and adjust parameters based on hole quality as to avoid haloing, ICD. Scout lot is suggested prior to manufacturing.",
+        "bake_note": "Thin core baking depends on actual need. If bake after cutting, it's recommended to rinse cutting panels first, which can remove resin powder brought by cutting and avoid etching problem."
+      }
+    },
+    {
+      "id": "shengyi/s7439",
+      "manufacturer": "Shengyi",
+      "name": "S7439",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20200228161613508.pdf",
+        "pages": "1"
+      },
+      "family": "S7439",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 200,
+      "tg_dsc_c": 190,
+      "td_c": 383,
+      "t288_min": 120,
+      "t300_min": 60,
+      "cte_z_below_tg_ppm": 45,
+      "cte_z_above_tg_ppm": 210,
+      "cte_z_50_260_pct": 2.6,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.85,
+          "method": "IPC-TM-650 2.5.5.9"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.66,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0045,
+          "method": "IPC-TM-650 2.5.5.9"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.006,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "volume_resistivity_ohm_cm": 40300000000000.0,
+      "surface_resistivity_ohm": 20300000000000.0,
+      "arc_resistance_s": 180,
+      "peel_strength_n_mm": 0.95,
+      "peel_condition": "288 C solder float 10 s, 1 oz foil",
+      "water_absorption_pct": 0.09,
+      "notes": "Low loss, high Tg and Td multilayer material; Dk and Df at 10 GHz are 3.66 and 0.0060. Thermal stress is published as Pass. Companion prepreg is S7439B. Typical values on a 0.76 mm (6 x 2116) specimen.",
+      "sources": [
+        {
+          "pdf": "20180903112949218.pdf"
+        },
+        {
+          "pdf": "20181027173559031.pdf"
+        }
+      ],
+      "thicknesses_mm": [
+        0.051,
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.14,
+        0.152,
+        0.178,
+        0.203,
+        0.254,
+        0.305,
+        0.356,
+        0.381,
+        0.406,
+        0.457
+      ],
+      "processing": {
+        "lamination": {
+          "notes": "For multilayer pressing, it's recommended to keep heat-up rate at 1.5-3.0 C/min when material temperature is from 80 to 140. Full pressure setting is recommended at the range of 350 - 420 PSI (oil heated), specified value should be determined by multilayer feature (lay-up construction and resin filled area). Apply full pressure when the temperature of top layer ranges 80-100 C."
+        },
+        "drilling": {
+          "retract_notes": "New drill bit, single stack and hit count reduction (300-1000hits) is recommended for getting better hole quality. Besides, reduce chip load 10-20% when compared to standard FR-4. Run trials to get proper drill parameters are necessary. Below parameters are for reference."
+        },
+        "desmear_note": "Due to material composition and structure, its chemical resistance is good. Only taking chemical desmear is difficult to remove smear effectively, so both plasma and chemical desmear are advised. Detailed parameters follows the actual PCB structure (overall thickness, hole diameter) for setting.",
+        "bake_note": "Thin core baking depends on actual need. If bake after cutting, it's recommended to rinse cutting panels first, which is able to remove resin powder brought by cutting and avoid etching problem."
+      }
+    },
+    {
+      "id": "shengyi/s7439g",
+      "manufacturer": "Shengyi",
+      "name": "S7439G",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20200228161628828.pdf",
+        "pages": "1"
+      },
+      "family": "S7439",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 189,
+      "tg_dsc_c": 181,
+      "td_c": 405,
+      "t288_min": 60,
+      "t300_min": 60,
+      "cte_z_below_tg_ppm": 45,
+      "cte_z_above_tg_ppm": 225,
+      "cte_z_50_260_pct": 2.5,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.93,
+          "method": "IPC-TM-650 2.5.5.9"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.74,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0045,
+          "method": "IPC-TM-650 2.5.5.9"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.006,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "volume_resistivity_ohm_cm": 900000000000000.0,
+      "surface_resistivity_ohm": 20000000000000.0,
+      "arc_resistance_s": 180,
+      "peel_strength_n_mm": 1.2,
+      "peel_condition": "288 C solder float 10 s, 1 oz foil",
+      "water_absorption_pct": 0.12,
+      "notes": "UL ANSI FR15.1, halogen free, low loss. A second 10 GHz value (4.08 / 0.0070, IEC 61189-2-721) is not stored. Companion prepreg is S7439GB.",
+      "sources": [
+        {
+          "pdf": "20190723170237464.pdf"
+        },
+        {
+          "pdf": "20210330153622145.pdf"
+        }
+      ],
+      "thicknesses_mm": [
+        0.051,
+        0.064,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.152,
+        0.178,
+        0.203,
+        0.229,
+        0.254,
+        0.305,
+        0.381,
+        0.457,
+        0.508,
+        0.635,
+        0.711,
+        0.762,
+        0.889,
+        1.016,
+        1.219,
+        1.321,
+        1.46
+      ],
+      "processing": {
+        "lamination": {
+          "notes": "Press machine with good vacuum and sealing performance is recommended. Advised heat-up rate: 2.8-3.8/min (material temperature 80-140). Full pressure setting is recommended at the range of 380-450 PSI, specified value should be determined by multilayer feature (lay-up construction and resin filled area). Apply full pressure when the temperature of top layer ranges 105-125 C."
+        },
+        "drilling": {
+          "retract_notes": "New drill bit and 1 panel/stack (thick board) is recommended, to ensure good hole wall quality. The drilling parameters need to be evaluated in detail to determine suitable conditions for your production, to ensure good hole wall quality, to achieve good chip removal effect and avoid smear due to drilling. Below parameters are for reference."
+        },
+        "desmear_note": "Due to material composition and structure, its chemical resistance is good. Only taking chemical Desmear is difficult to remove smear effectively, so both Plasma and chemical Desmear are advised.",
+        "bake_note": "Thin core baking depends on actual need. If bake after cutting, it's recommended to rinse cutting panels first, which is able to remove resin powder brought by cutting and avoid etching problem."
+      }
+    },
+    {
+      "id": "shengyi/s7439c",
+      "manufacturer": "Shengyi",
+      "name": "S7439C",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20210712174931460.pdf",
+        "pages": "1"
+      },
+      "family": "S7439",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 200,
+      "tg_dsc_c": 190,
+      "td_c": 383,
+      "t288_min": 120,
+      "t300_min": 60,
+      "cte_z_below_tg_ppm": 45,
+      "cte_z_above_tg_ppm": 210,
+      "cte_z_50_260_pct": 2.6,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.85,
+          "method": "IPC-TM-650 2.5.5.9"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.66,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0045,
+          "method": "IPC-TM-650 2.5.5.9"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.006,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "volume_resistivity_ohm_cm": 40300000000000.0,
+      "surface_resistivity_ohm": 20300000000000.0,
+      "arc_resistance_s": 180,
+      "peel_strength_n_mm": 0.95,
+      "peel_condition": "288 C solder float 10 s, 1 oz foil",
+      "water_absorption_pct": 0.09,
+      "notes": "The sheet repeats the table of S7439 (it is headed S7439C and its code says S7439C / S7049CB). Companion prepreg is S7439CB. The line-up sheet for S7439C gives Dk 3.30 at 1 GHz for its thinnest core, which is not stored.",
+      "sources": [
+        {
+          "pdf": "20191113140949845.pdf"
+        },
+        {
+          "pdf": "20200212150125467.pdf"
+        }
+      ],
+      "thicknesses_mm": [
+        0.051,
+        0.076,
+        0.089,
+        0.102,
+        0.114,
+        0.127,
+        0.14,
+        0.152,
+        0.178,
+        0.203,
+        0.254,
+        0.381,
+        0.508,
+        0.635,
+        0.762,
+        0.813,
+        0.889,
+        1.016,
+        1.118,
+        1.219,
+        1.321,
+        1.422,
+        1.524
+      ],
+      "processing": {
+        "drilling": {
+          "retract_notes": "For good hole quality, it is recommended to use new drill bit and 1pc/stack for drilling (for thick board). The drilling parameters need to be carefully evaluated to determine the drilling parameters that match your production conditions."
+        },
+        "desmear_note": "S7439C is relative harder to desmear compared to traditional FR-4 material. Using Plasma plus potassium permanganate method for desmear is suitable but the specified parameter should accord to the PCB structure and design.",
+        "bake_note": "Thin core baking depends on actual need. If bake after cutting, it's recommended to rinse cutting panels first, which is able to remove resin powder brought by cutting and avoid etching problem."
+      }
+    },
+    {
+      "id": "shengyi/synamic-6",
+      "manufacturer": "Shengyi",
+      "name": "Synamic 6",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20200601160905684.pdf",
+        "pages": "1"
+      },
+      "family": "Synamic",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 205,
+      "tg_dsc_c": 185,
+      "td_c": 402,
+      "t288_min": 120,
+      "t300_min": 60,
+      "cte_z_below_tg_ppm": 50,
+      "cte_z_above_tg_ppm": 210,
+      "cte_z_50_260_pct": 2.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.7,
+          "method": "IPC-TM-650 2.5.5.9"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.68,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0021,
+          "method": "IPC-TM-650 2.5.5.9"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0036,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "peel_strength_n_mm": 0.85,
+      "peel_condition": "288 C solder float 10 s, 1 oz foil",
+      "water_absorption_pct": 0.1,
+      "notes": "Very low loss multilayer material. A second 10 GHz value (3.99 / 0.0046, IEC 61189-2-721) is not stored. Thermal stress is published as Pass. Companion prepreg is Synamic 6B.",
+      "sources": [
+        {
+          "pdf": "20211116171842863.pdf"
+        }
+      ],
+      "processing": {
+        "drilling": {
+          "retract_notes": "4.5.1 New drilling bit is recommended to use when drilling. To ensure a good quality of hole wall. The life of new drills and drilling head should be limited to reduced life of 300~1000 hits (suggested 500 hits). 4.5.2 After drilling, it's recommend to bake for 3-4 hours at 190. Avoid direct contact with heat."
+        },
+        "desmear_note": "Desmear rate of the material is smaller than most of the existing lead-free compatible FR-4 materials. To achieve a better desmearing, it is recommended to use the following conditions: Use plasma at first followed with ultrasonic rinse add chemical desmear after."
+      }
+    },
+    {
+      "id": "shengyi/synamic-6n",
+      "manufacturer": "Shengyi",
+      "name": "Synamic 6N",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20200601160943580.pdf",
+        "pages": "1"
+      },
+      "family": "Synamic",
+      "ul94": "V-0",
+      "lead_free_compatible": true,
+      "tg_dma_c": 205,
+      "tg_dsc_c": 185,
+      "td_c": 402,
+      "t288_min": 120,
+      "t300_min": 60,
+      "cte_z_below_tg_ppm": 50,
+      "cte_z_above_tg_ppm": 210,
+      "cte_z_50_260_pct": 2.0,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.41,
+          "method": "IPC-TM-650 2.5.5.9"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.35,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0013,
+          "method": "IPC-TM-650 2.5.5.9"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0021,
+          "method": "IPC-TM-650 2.5.5.5"
+        }
+      ],
+      "peel_strength_n_mm": 0.82,
+      "peel_condition": "288 C solder float 10 s, 1 oz foil",
+      "water_absorption_pct": 0.1,
+      "notes": "Ultra low loss multilayer material. A second 10 GHz value (3.52 / 0.0026, IEC 61189-2-721) is not stored. Thermal stress is published as Pass. Companion prepreg is Synamic 6NB.",
+      "sources": [
+        {
+          "pdf": "20211116171354415.pdf"
+        }
+      ],
+      "processing": {
+        "drilling": {
+          "retract_notes": "2.5.1 New drilling bit is recommended to use when drilling. 2.5.2 After drilling, it's recommend to bake for 3-4 hours at 190. Avoid direct contact with heat. 2.5.3 Laser drilling is acceptable, whose specific parameters should be adjusted according to different devices. 2.5.4 LE aluminum or bakelite cushion board is recommended to help."
+        },
+        "desmear_note": "Desmear rate of this material is smaller than most of the existing lead-free compatible FR-4 materials. To achieve a better desmearing, it's recommended to use the following conditions: Use plasma at first followed with ultrasonic rinse add chemical demear after."
+      }
+    },
+    {
+      "id": "shengyi/synamic-6gx",
+      "manufacturer": "Shengyi",
+      "name": "Synamic 6GX",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20210624112714393.pdf",
+        "pages": "1"
+      },
+      "family": "Synamic",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "ipc_slash_sheet": "IPC-4101/130",
+      "lead_free_compatible": true,
+      "tg_dsc_c": 172,
+      "td_c": 405,
+      "t288_min": 60,
+      "t300_min": 60,
+      "cte_z_below_tg_ppm": 31,
+      "cte_z_above_tg_ppm": 205,
+      "cte_z_50_260_pct": 2.2,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.87,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.73,
+          "method": "IPC-TM-650 2.5.5.5, C-24/23/50"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.0023,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.005,
+          "method": "IPC-TM-650 2.5.5.5, C-24/23/50"
+        }
+      ],
+      "peel_strength_n_mm": 0.9,
+      "peel_condition": "after thermal stress 288 C 10 s, RTF3 1 oz foil",
+      "water_absorption_pct": 0.08,
+      "notes": "FR15.1 halogen free, very low loss. Thermal stress 100 s (288 C solder dipping) is not stored. Typical values on the 0.76 mm (6 x 2116) specimen. Companion prepreg is Synamic 6GXB.",
+      "sources": [
+        {
+          "pdf": "20200817111445612.pdf"
+        }
+      ],
+      "processing": {
+        "drilling": {
+          "retract_notes": "parameters (reference only) Diameter Speed Infeed Chipload RTR Max hits (mm) (krpm) (ipm) (mil/rev) IPM H 0.20 108 70 0.65 300 500 0.25 108 70 0.65 300 500 0.30 105 75 0.71 500 500 0.35 98 58 0.59 500 500 0.40 98 62 0.63 600 800 0.50 95 75 0.79 800 800 0.60 90 68 0.76 800 800 0.70 80 70 0.88 800 800 0.80 68 72 1.06 800 800 0.90 62 75 1.21 800 800 1.00 60 75 1.25 800 800 For dense holes area or hole size <0.6mm, LE al..."
+        },
+        "desmear_note": "Due to material composition and structure, its chemical resistance is good. Only taking chemical desmear is difficult to remove smear effectively, so both plasma and chemical desmear are advised. Detailed parameters follow the actual PCB structure (overall thickness, hole diameter) for setting.",
+        "bake_note": "Thin core baking depends on actual need. If bake after cutting, it's recommended to rinse cutting panels first, which is able to remove resin powder brought by cutting and avoid etching problem."
+      }
+    },
+    {
+      "id": "shengyi/sh260",
+      "manufacturer": "Shengyi",
+      "name": "SH260",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20211203185256641.pdf",
+        "pages": "1"
+      },
+      "family": "SH260",
+      "resin": "Polyimide",
+      "halogen_free": true,
+      "ul94": "HB",
+      "lead_free_compatible": true,
+      "ipc_slash_sheet": "IPC-4101/40, IPC-4101/41",
+      "tg_tma_c": 250,
+      "td_c": 429,
+      "t300_min": 60,
+      "cte_z_below_tg_ppm": 45,
+      "cte_z_50_260_pct": 1.2,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 4.12,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.007,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50"
+        }
+      ],
+      "volume_resistivity_ohm_cm": 74500000000000.0,
+      "surface_resistivity_ohm": 47900000000000.0,
+      "dielectric_strength_kv_mm": 85,
+      "arc_resistance_s": 180,
+      "peel_strength_n_mm": 1.37,
+      "peel_condition": "288 C solder float 10 s, 1 oz foil",
+      "water_absorption_pct": 0.26,
+      "thickness_range": {
+        "min_mm": 0.05,
+        "max_mm": 3.2,
+        "steps_note": "Laminate 0.05 mm to about 3.2 mm"
+      },
+      "copper": [
+        {
+          "thickness_um": 18
+        },
+        {
+          "thickness_um": 35
+        },
+        {
+          "thickness_um": 70
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 914,
+          "height_mm": 1220,
+          "label": "36\" x 48\""
+        },
+        {
+          "width_mm": 1016,
+          "height_mm": 1220,
+          "label": "40\" x 48\""
+        },
+        {
+          "width_mm": 1067,
+          "height_mm": 1220,
+          "label": "42\" x 48\""
+        }
+      ],
+      "notes": "Polyimide system for burn-in boards and high-temperature use. Tg by TMA is published as >250 C and is stored as 250. CTE x/y 12-15 ppm/C (50-260 C), Young's modulus 10.3 GPa and flexural strength 530 MPa (50 C) / 439 MPa (200 C) are published but not stored. Ultra-high lamination temperature (240 C, 180 min) is needed: see SH260B.",
+      "sources": [
+        {
+          "pdf": "20190731104204873.pdf"
+        },
+        {
+          "pdf": "20181027173450203.pdf"
+        }
+      ],
+      "thicknesses_mm": [
+        0.076,
+        0.1,
+        0.127,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.38,
+        0.51,
+        0.71,
+        1.0,
+        1.2,
+        1.5,
+        1.6
+      ],
+      "processing": {
+        "lamination": {
+          "notes": "For multilayer pressing, it's recommended to keep heat-up rate at 1.5-2.5 C/min when material temperature is from 80 to 140. Full pressure setting is recommended at about 350 PSI (oil heated), specified value should be determined by multilayer feature (lay-up construction and resin filled area). Apply full pressure when the temperature of top layer ranges 80-100 C. Curing condition: 220, 180min."
+        },
+        "drilling": {
+          "retract_notes": "Suggested drilling parameter refers to high Tg FR-4 or halogen free material. Suggested hit count range is 1000-2000, use new drill for processing. The data below is for your reference. Hole size (mm) S (krpm) F (m/min) R (m/min) Hit count 0.35 110 1.7 12 1200 0.4 110 2.4 12 1200 0.5 100 3.5 15 1200 *For dense hole drilling or drill hole below 0.6mm, suggest to use aluminium sheet cover or LE aluminium cover."
+        },
+        "desmear_note": "Suggest to use plasma desmear method; if potassium permanganate is used, extend desmear time or increase operation temperature (can refer to high Tg material desmear patameter to choose the suitable swelling and desmear time and temperature).",
+        "bake_note": "Thin core baking depends on actual need. If bake after cutting, it's recommended to rinse cutting panels first, which is able to remove resin powder brought by cutting and avoid etching problem."
+      }
+    },
+    {
+      "id": "shengyi/sh260b",
+      "manufacturer": "Shengyi",
+      "name": "SH260B",
+      "kind": "prepreg",
+      "source": {
+        "pdf": "20211203185256641.pdf",
+        "pages": "2"
+      },
+      "family": "SH260",
+      "resin": "Polyimide",
+      "halogen_free": true,
+      "prepreg": [
+        {
+          "style": "106",
+          "resin_content_pct": 72,
+          "pressed_thickness_um": 60,
+          "dk": 3.5,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "1080",
+          "resin_content_pct": 63,
+          "pressed_thickness_um": 85,
+          "dk": 3.7,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "2313",
+          "resin_content_pct": 55,
+          "pressed_thickness_um": 110,
+          "dk": 3.85,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "2116",
+          "resin_content_pct": 50,
+          "pressed_thickness_um": 125,
+          "dk": 4.0,
+          "test_freq_ghz": 1.0
+        },
+        {
+          "style": "7628",
+          "resin_content_pct": 40,
+          "pressed_thickness_um": 195,
+          "dk": 4.27,
+          "test_freq_ghz": 1.0
+        }
+      ],
+      "processing": {
+        "lamination": {
+          "max_temp_c": 240,
+          "pressure_kpa": 2452,
+          "time_at_temp_min": 180,
+          "notes": "Cycle of the sheet: 25 kg/cm2 (converted to kPa) while the temperature stays at 240 C for 180 min, total 280 min; vacuum 10 torr or less throughout; heat ramp 1.5-2.5 C/min between 80 and 140 C; cure for more than 180 min at 220 C or above; optional cure above 185 C for 1.5 h with 3 h post-bake at 230 C; pin lamination is recommended."
+        },
+        "drilling": {
+          "retract_notes": "Drilling table of the sheet (hole mm: spindle krpm / feed m/min / retract m/min / hit count): 0.35: 110 / 1.7 / 12 / 1200; 0.40: 110 / 2.4 / 12 / 1200; 0.50: 100 / 3.5 / 15 / 1200."
+        },
+        "desmear_note": "Plasma or alkaline permanganate; plasma is preferred.",
+        "bake_note": "Bake the inner layers for 60 min at about 120 C before lamination."
+      },
+      "notes": "Prepreg of SH260. Dk of the table is at 1 GHz (parallel plate method). Prepreg thickness is the cured thickness of the sheet. Standard laminate thickness 0.05 mm to 3.2 mm."
+    },
+    {
+      "id": "shengyi/sar15",
+      "manufacturer": "Shengyi",
+      "name": "SAR15",
+      "kind": "metal_core",
+      "source": {
+        "pdf": "20190326103755453.pdf",
+        "pages": "1"
+      },
+      "family": "SAR",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "resin": "Epoxy filled with inorganic filler (dielectric layer)",
+      "thermal_conductivity_w_mk": 1.5,
+      "tg_dsc_c": 140,
+      "td_c": 380,
+      "cte_z_below_tg_ppm": 27,
+      "cte_z_above_tg_ppm": 30,
+      "cte_z_50_260_pct": 0.75,
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "peel_strength_n_mm": 1.3,
+      "peel_condition": "288 C 10 s, 1 oz foil",
+      "thickness_range": {
+        "min_mm": 0.3,
+        "max_mm": 3.0,
+        "steps_note": "Aluminium plate 5052, 0.3 mm to 3.0 mm; dielectric layer 50-150 um"
+      },
+      "copper": [
+        {
+          "weight_oz": 0.5
+        },
+        {
+          "weight_oz": 4
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 1040,
+          "height_mm": 1240,
+          "label": "1040 mm x 1240 mm"
+        },
+        {
+          "width_mm": 510,
+          "height_mm": 610,
+          "label": "510 mm x 610 mm"
+        }
+      ],
+      "notes": "Aluminium base laminate, E/D copper (0.5 oz to 4 oz). Thermal resistance of the dielectric layer 0.7 K cm2/W; breakdown 6 kV; hi-pot 4000 V DC / 3000 V AC; CTI PLC 0; MOT 130 C; thermal stress 30 min (288 C solder float). All are published but not stored.",
+      "sources": [
+        {
+          "pdf": "20181027171526656.pdf"
+        }
+      ],
+      "processing": {
+        "drilling": {
+          "retract_notes": "Aluminium base: single-edge or double-edge tools about 2.0 mm, spindle 50 krpm, feed 10-16 mm/s, return 150 mm/s, 200-500 hits."
+        }
+      }
+    },
+    {
+      "id": "shengyi/sar10s",
+      "manufacturer": "Shengyi",
+      "name": "SAR10S",
+      "kind": "metal_core",
+      "source": {
+        "pdf": "20210827100950030.pdf",
+        "pages": "1"
+      },
+      "family": "SAR",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "resin": "Epoxy filled with inorganic filler (dielectric layer)",
+      "thermal_conductivity_w_mk": 1.1,
+      "tg_dsc_c": 140,
+      "td_c": 410,
+      "cte_z_below_tg_ppm": 27,
+      "cte_z_above_tg_ppm": 30,
+      "cte_z_50_260_pct": 0.74,
+      "volume_resistivity_ohm_cm": 1000000000000.0,
+      "surface_resistivity_ohm": 10000000000000.0,
+      "peel_strength_n_mm": 1.4,
+      "peel_condition": "288 C 10 s, 1 oz foil",
+      "thickness_range": {
+        "min_mm": 0.3,
+        "max_mm": 3.0,
+        "steps_note": "Aluminium plate 1060 or 5052, 0.3 mm to 3.0 mm; dielectric layer 50-150 um"
+      },
+      "copper": [
+        {
+          "weight_oz": 0.5
+        },
+        {
+          "weight_oz": 6
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 1040,
+          "height_mm": 1240,
+          "label": "1040 mm x 1240 mm"
+        },
+        {
+          "width_mm": 510,
+          "height_mm": 610,
+          "label": "510 mm x 610 mm"
+        }
+      ],
+      "notes": "Aluminium base laminate. The feature list says 1.0 W/(m K) while the table gives 1.1; the table value is stored. Thermal resistance 0.91 K cm2/W; breakdown 6 kV; hi-pot 4000 V DC / 3000 V AC; CTI PLC 0; MOT 140 C; thermal stress 30 min. Values on 1.5 mm Al, 100 um dielectric, 1 oz Cu.",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Aluminium base: single-edge or double-edge tools about 2.0 mm, spindle 50 krpm, feed 10-16 mm/s, return 150 mm/s, 200-500 hits."
+        }
+      },
+      "sources": [
+        {
+          "pdf": "20181027171526656.pdf"
+        }
+      ]
+    },
+    {
+      "id": "shengyi/sar20",
+      "manufacturer": "Shengyi",
+      "name": "SAR20",
+      "kind": "metal_core",
+      "source": {
+        "pdf": "20181027171526656.pdf",
+        "pages": "1-3"
+      },
+      "family": "SAR",
+      "notes": "Known only from the aluminium base process guide of the SAR series (no property table in the sheet).",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Aluminium base: single-edge or double-edge tools about 2.0 mm, spindle 50 krpm, feed 10-16 mm/s, return 150 mm/s, 200-500 hits."
+        }
+      }
+    },
+    {
+      "id": "shengyi/sar20h",
+      "manufacturer": "Shengyi",
+      "name": "SAR20H",
+      "kind": "metal_core",
+      "source": {
+        "pdf": "20181027171526656.pdf",
+        "pages": "1-3"
+      },
+      "family": "SAR",
+      "notes": "Known only from the aluminium base process guide of the SAR series (no property table in the sheet).",
+      "processing": {
+        "drilling": {
+          "retract_notes": "Aluminium base: single-edge or double-edge tools about 2.0 mm, spindle 50 krpm, feed 10-16 mm/s, return 150 mm/s, 200-500 hits."
+        }
+      }
+    },
+    {
+      "id": "shengyi/scr20s",
+      "manufacturer": "Shengyi",
+      "name": "SCR20S",
+      "kind": "metal_core",
+      "source": {
+        "pdf": "20190326103830593.pdf",
+        "pages": "1"
+      },
+      "family": "SCR",
+      "ul94": "V-0",
+      "resin": "Epoxy filled with inorganic filler (dielectric layer)",
+      "thermal_conductivity_w_mk": 2.1,
+      "tg_dsc_c": 160,
+      "td_c": 395,
+      "cte_z_below_tg_ppm": 17,
+      "cte_z_above_tg_ppm": 39,
+      "cte_z_50_260_pct": 0.69,
+      "volume_resistivity_ohm_cm": 100000000000000.0,
+      "surface_resistivity_ohm": 100000000000000.0,
+      "peel_strength_n_mm": 1.3,
+      "peel_condition": "288 C 10 s, 1 oz foil",
+      "thicknesses_mm": [
+        0.8,
+        1.0,
+        1.2,
+        1.5,
+        1.8,
+        2.0,
+        3.0
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5
+        },
+        {
+          "weight_oz": 4
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 500,
+          "height_mm": 600,
+          "label": "500 mm x 600 mm"
+        }
+      ],
+      "notes": "Copper base laminate (C1100 copper plate; the listed thicknesses are those of the base plate), dielectric layer 50-150 um, E/D copper 0.5 oz to 4 oz. Thermal resistance 0.52 K cm2/W; breakdown 5.0 kV; hi-pot 4000 V DC / 3000 V AC; CTI PLC 0; MOT 130 C. The process guide of the series is titled SAR20S in its text and SCR20S in its code.",
+      "sources": [
+        {
+          "pdf": "20181027172415718.pdf"
+        }
+      ],
+      "processing": {
+        "drilling": {
+          "retract_notes": "Tool selection: use special cutting tools for copper base materials, choose single-edge, double-edge cutting tools to ensure smooth chip removal, and generally use diameter of 1.6mm or above. Drilling parameters (for reference): drill bit diameter 2.0mm, spindle speed 45 Krpm, feed speed 0.2m/min, return speed 10m/min, hit count 15 hits, 1 panel/stack."
+        }
+      }
+    },
+    {
+      "id": "shengyi/lnb33",
+      "manufacturer": "Shengyi",
+      "name": "LNB33",
+      "kind": "ceramic_filled",
+      "source": {
+        "pdf": "20190808094434864.pdf",
+        "pages": "1"
+      },
+      "family": "LNB",
+      "resin": "Hydrocarbon",
+      "filler": "Ceramic",
+      "reinforcement": "Glass",
+      "tg_dsc_c": 280,
+      "td_c": 400,
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 3.3,
+          "method": "IPC-TM-650 2.5.5.5 (process Dk), C-24/23/50",
+          "tolerance": 0.05
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 3.45,
+          "method": "IEC 61189-2-721 (design Dk), C-24/23/50",
+          "tolerance": 0.05
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0025,
+          "method": "IPC-TM-650 2.5.5.5, C-24/23/50"
+        },
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0032,
+          "method": "IEC 61189-2-721, C-24/23/50"
+        }
+      ],
+      "tcdk_ppm_per_c": 125,
+      "volume_resistivity_ohm_cm": 680000000000000.0,
+      "surface_resistivity_ohm": 53000000000000.0,
+      "cte_x_ppm": 13,
+      "cte_y_ppm": 15,
+      "cte_z_below_tg_ppm": 55,
+      "peel_strength_n_mm": 1.0,
+      "peel_condition": "288 C solder float 10 s",
+      "flexural_strength_mpa": {
+        "value": 235
+      },
+      "water_absorption_pct": 0.1,
+      "thermal_conductivity_w_mk": 0.69,
+      "youngs_modulus_gpa": {
+        "lengthwise": 15.6,
+        "crosswise": 19.7
+      },
+      "tensile_strength_mpa": {
+        "lengthwise": 112,
+        "crosswise": 143
+      },
+      "thicknesses_mm": [
+        0.25,
+        0.51,
+        0.76,
+        1.02,
+        1.27,
+        1.52
+      ],
+      "copper": [
+        {
+          "weight_oz": 0.5,
+          "foil_type": "HTE"
+        },
+        {
+          "weight_oz": 1,
+          "foil_type": "HTE"
+        },
+        {
+          "weight_oz": 2,
+          "foil_type": "HTE"
+        }
+      ],
+      "panel_sizes": [
+        {
+          "width_mm": 914.4,
+          "height_mm": 1219.2,
+          "label": "36\" x 48\""
+        },
+        {
+          "width_mm": 1016.0,
+          "height_mm": 1219.2,
+          "label": "40\" x 48\""
+        },
+        {
+          "width_mm": 1066.8,
+          "height_mm": 1219.2,
+          "label": "42\" x 48\""
+        }
+      ],
+      "notes": "Glass reinforced hydrocarbon ceramic laminate. Tg and Td are published as >280 C and >400 C and are stored as 280 and 400. Dk and Df are the 10 GHz values of the 0.51 mm specimen; TcDk +125 ppm/C is for -40 to 150 C at 10 GHz; CTE is 30-260 C. The LNB33(CH1) variant (low profile copper foil, 0.5 and 1 oz) is 0.0107 inch thicker per side pair (0.27, 0.53, 0.78, 1.04, 1.29, 1.54 mm) and its Dk is about 0.1 lower as the core gets thinner.",
+      "sources": [
+        {
+          "pdf": "20190821120054932.pdf"
+        }
+      ],
+      "processing": {
+        "lamination": {
+          "notes": "Press program depends on prepreg combined and select the one suitable for prepreg properties."
+        },
+        "drilling": {
+          "retract_notes": "New drill bit is recommended with max 3 panels/stack or total stack thickness2.17mm. Use new drill and reduce the max hit count to ensure better hole quality. Melamine cushion board is recommended for drilling and use sand paper for burnish after drilling and clean with high presser air. LNB33 Drilling parameters Drill dia."
+        },
+        "desmear_note": "For double side board, in order to remove drilling smear, chemical desmear (Permanganate method) or Plasma method can be selected according to the actual situation. If chemical desmear (Permanganate method) is used, it is suggested that the processing time of sweller and permanganate should be appropriately reduced.",
+        "bake_note": "Thin core baking depends on actual need. If bake after cutting, it's recommended to rinse cutting panels first, which is able to remove resin powder brought by cutting and avoid etching problem."
+      }
+    },
+    {
+      "id": "shengyi/sf280",
+      "manufacturer": "Shengyi",
+      "name": "SF280",
+      "kind": "flex_laminate",
+      "source": {
+        "pdf": "20201021155026204.pdf",
+        "pages": "1-2"
+      },
+      "family": "SF",
+      "halogen_free": true,
+      "ul94": "VTM-0",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.92,
+          "method": "SPDR"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.0031,
+          "method": "SPDR"
+        }
+      ],
+      "peel_strength_n_mm": 0.9,
+      "thicknesses_mm": [
+        0.05,
+        0.075,
+        0.1,
+        0.125
+      ],
+      "copper": [
+        {
+          "thickness_um": 12,
+          "foil_type": "RTF"
+        },
+        {
+          "thickness_um": 18,
+          "foil_type": "RTF"
+        }
+      ],
+      "notes": "Double-sided flexible copper clad laminate for sub-6 GHz use, certified to IPC-4204/11 (adhesiveless). The listed thicknesses are the insulation film (50, 75, 100 and 125 um). Df is 0.0031 for the 125 um / 12 um product and 0.0032 for the second product column of the sheet; Dk is 2.92 for both. Folding endurance (MIT) 1000 cycles; the sheet gives 90 degree peel 0.9 N/mm and a thermal stress of Pass."
+    },
+    {
+      "id": "shengyi/sf206b",
+      "manufacturer": "Shengyi",
+      "name": "SF206B",
+      "kind": "bonding_film",
+      "source": {
+        "pdf": "20200218181433028.pdf",
+        "pages": "1-2"
+      },
+      "family": "SF",
+      "halogen_free": true,
+      "resin": "Polyimide adhesive (low Dk/Df)",
+      "dk": [
+        {
+          "freq_ghz": 10.0,
+          "value": 2.52,
+          "method": "SPDR"
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 10.0,
+          "value": 0.003,
+          "method": "SPDR"
+        }
+      ],
+      "peel_strength_n_mm": 1.1,
+      "water_absorption_pct": 0.24,
+      "volume_resistivity_ohm_cm": 3030000000000000.0,
+      "surface_resistivity_ohm": 1920000000000.0,
+      "thicknesses_mm": [
+        0.013,
+        0.025,
+        0.04,
+        0.05
+      ],
+      "processing": {
+        "lamination": {
+          "time_at_temp_min": 60,
+          "notes": "Fast press, then cure at 160-180 C for 60-90 min; the hot pressure has to be adjusted to the equipment and the product."
+        }
+      },
+      "notes": "Low Dk/Df bonding film for multilayer flex and rigid-flex, certified to IPC-4203/24. The listed thicknesses are the adhesive thickness (13, 25, 40, 50 um); the resin flow of the 25 um film is 0.15 mm (not stored). Moisture absorption 0.24 %. Stored for one month at 4-10 C in the original packaging."
+    },
+    {
+      "id": "shengyi/sp168gn",
+      "manufacturer": "Shengyi",
+      "name": "SP168GN",
+      "kind": "prepreg",
+      "source": {
+        "pdf": "20210624160727998.pdf",
+        "pages": "1"
+      },
+      "family": "SP",
+      "halogen_free": true,
+      "ul94": "V-0",
+      "tg_dsc_c": 165,
+      "tg_dma_c": 180,
+      "td_c": 380,
+      "t288_min": 30,
+      "cte_z_below_tg_ppm": 70,
+      "cte_z_above_tg_ppm": 300,
+      "dk": [
+        {
+          "freq_ghz": 1.0,
+          "value": 3.95,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 63
+        }
+      ],
+      "df": [
+        {
+          "freq_ghz": 1.0,
+          "value": 0.017,
+          "method": "IPC-TM-650 2.5.5.9, C-24/23/50",
+          "resin_content_pct": 63
+        }
+      ],
+      "peel_strength_n_mm": 1.5,
+      "peel_condition": "1 oz copper foil (1.2 N/mm with 1/2 oz foil, 1.1 N/mm on CVL)",
+      "water_absorption_pct": 0.14,
+      "prepreg": [
+        {
+          "style": "1027",
+          "resin_content_pct": 53,
+          "pressed_thickness_um": 25,
+          "dk": 4.14,
+          "df": 0.012,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1027",
+          "resin_content_pct": 60,
+          "pressed_thickness_um": 30,
+          "dk": 3.98,
+          "df": 0.013,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1037",
+          "resin_content_pct": 63,
+          "pressed_thickness_um": 40,
+          "dk": 3.92,
+          "df": 0.014,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1037",
+          "resin_content_pct": 68,
+          "pressed_thickness_um": 45,
+          "dk": 3.82,
+          "df": 0.015,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1067",
+          "resin_content_pct": 63,
+          "pressed_thickness_um": 50,
+          "dk": 3.92,
+          "df": 0.014,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1067",
+          "resin_content_pct": 68,
+          "pressed_thickness_um": 60,
+          "dk": 3.82,
+          "df": 0.015,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 60,
+          "pressed_thickness_um": 70,
+          "dk": 3.98,
+          "df": 0.013,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 63,
+          "pressed_thickness_um": 80,
+          "dk": 3.92,
+          "df": 0.014,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 67,
+          "pressed_thickness_um": 90,
+          "dk": 3.84,
+          "df": 0.015,
+          "test_freq_ghz": 10.0
+        },
+        {
+          "style": "1078",
+          "resin_content_pct": 70,
+          "pressed_thickness_um": 100,
+          "dk": 3.79,
+          "df": 0.016,
+          "test_freq_ghz": 10.0
+        }
+      ],
+      "notes": "UL ANSI none; no-flow, dust free prepreg for heat sink boards, die cavity boards and rigid-flex bonding, with minimal resin flow. T288 is published as >30 min (unclad) and the dipping test (288 C solder dip) as >600 s. Typical values on the 0.8 mm specimen. The line-up sheet gives Dk and Df by glass style (1027 to 1078, 25-100 um) by SPDR at 1, 5 and 10 GHz.",
+      "sources": [
+        {
+          "pdf": "20210624160848348.pdf"
+        }
+      ]
+    },
+    {
+      "id": "shengyi/si10us",
+      "manufacturer": "Shengyi",
+      "name": "SI10US",
+      "kind": "laminate",
+      "source": {
+        "pdf": "20211026150732777.pdf",
+        "pages": "1-3"
+      },
+      "family": "SI",
+      "thicknesses_mm": [
+        0.033,
+        0.043,
+        0.052,
+        0.053,
+        0.06,
+        0.066,
+        0.086,
+        0.106,
+        0.136,
+        0.159,
+        0.186,
+        0.21,
+        0.212,
+        0.26,
+        0.315,
+        0.42,
+        0.51,
+        0.61,
+        0.71,
+        0.81
+      ],
+      "notes": "Known from its line-up sheet only (the sheet also gives Dk and Df by construction at 1, 5 and 10 GHz and a companion prepreg SI10NSB, not stored). The thickness list holds the nominal thicknesses of the sheet."
+    }
+  ]
+}
