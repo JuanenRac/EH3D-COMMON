@@ -3,6 +3,7 @@
 //! (`CIRCLE`). Strokes that meet end to end are joined into one path so that the router does not lift between them. The layers, the colours
 //! and the text mean nothing for a cut and are skipped.
 
+use crate::error::{Code, FormatError};
 use crate::hpgl::{arc_points, Plot, Polyline, SEGMENTS_PER_CIRCLE, UNIT_MM};
 
 /// The file extension of a drawing.
@@ -97,22 +98,34 @@ fn strokes(e: &Entity, chord: f64) -> Vec<Vec<(f64, f64)>> {
 }
 
 /// The outline drawn in the file as the paths of a plot, in plotter units. `segments_per_circle` is how many chords a whole circle is
-/// cut into. An error says what cannot be read.
+/// cut into. An error says what cannot be read, with its code (see [`outline_checked`]).
 pub fn outline(text: &str, segments_per_circle: u32) -> Result<Plot, String> {
+    outline_checked(text, segments_per_circle).map_err(|e| e.to_string())
+}
+
+/// Like [`outline`], with the error as a [`FormatError`]: its stable code, the line of the group code that is not a number and its column.
+pub fn outline_checked(text: &str, segments_per_circle: u32) -> Result<Plot, FormatError> {
     let chord = 360.0 / f64::from(segments_per_circle.clamp(4, 3600));
     let lines: Vec<&str> = text.lines().collect();
     let mut pairs: Vec<(i64, &str)> = Vec::with_capacity(lines.len() / 2);
-    for c in lines.chunks(2) {
+    for (k, c) in lines.chunks(2).enumerate() {
         if let [code, value] = c {
-            let code = code
-                .trim()
-                .parse::<i64>()
-                .map_err(|_| format!("not a DXF file (group code '{}')", code.trim()))?;
-            pairs.push((code, value.trim()));
+            let number = code.trim().parse::<i64>().map_err(|_| FormatError {
+                code: Code::DxfNotDxf,
+                line: Some(2 * k + 1),
+                column: Some(1 + code.chars().take_while(|c| c.is_whitespace()).count()),
+                detail: code.trim().to_string(),
+            })?;
+            pairs.push((number, value.trim()));
         }
     }
     if pairs.is_empty() {
-        return Err("empty file".to_string());
+        return Err(FormatError {
+            code: Code::DxfEmpty,
+            line: None,
+            column: None,
+            detail: String::new(),
+        });
     }
     let mut mm = 1.0;
     let mut in_entities = false;
@@ -211,7 +224,12 @@ pub fn outline(text: &str, segments_per_circle: u32) -> Result<Plot, String> {
         }
     }
     if paths.is_empty() {
-        return Err("no lines, arcs or circles in the drawing".to_string());
+        return Err(FormatError {
+            code: Code::DxfNoDrawing,
+            line: None,
+            column: None,
+            detail: String::new(),
+        });
     }
     let units = |v: f64| (v / UNIT_MM).round() as i32;
     Ok(Plot {
@@ -330,5 +348,26 @@ LWPOLYLINE
         assert!(outline_default("").is_err());
         assert!(outline_default("hello\nworld\n").is_err());
         assert!(outline_default(&dxf(None, "0\nTEXT\n1\nhi\n")).is_err());
+    }
+
+    #[test]
+    fn a_refused_drawing_is_told_with_its_code_line_and_column() {
+        // the group code on the third line is not a number; it has two blanks before it
+        let e = outline_checked("0\nSECTION\n  ab\nENTITIES\n", 72).unwrap_err();
+        assert_eq!(e.code, Code::DxfNotDxf);
+        assert_eq!((e.line, e.column), (Some(3), Some(3)));
+        assert_eq!(
+            e.to_string(),
+            "EH3D-FORMATS-003 line 3 column 3: not a DXF file: the group code is not a number \"ab\""
+        );
+        // the reader that gives a text gives the same words
+        assert_eq!(
+            outline_default("").unwrap_err(),
+            "EH3D-FORMATS-004: the drawing file is empty"
+        );
+        assert_eq!(
+            outline_default(&dxf(None, "0\nTEXT\n1\nhi\n")).unwrap_err(),
+            "EH3D-FORMATS-005: the drawing has no lines, arcs or circles"
+        );
     }
 }

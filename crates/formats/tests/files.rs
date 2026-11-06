@@ -93,3 +93,16 @@ fn the_sample_drill_files_and_plots_are_read() {
         assert!(plot.bounds_mm().is_some(), "{name}");
     }
 }
+
+#[test]
+fn the_sample_plots_have_nothing_the_reader_drops() {
+    for name in ["FRAME.PLT", "FDEMO1.PLT"] {
+        let text = read(name);
+        assert!(hpgl::diagnose(&text).is_empty(), "{name}");
+        assert_eq!(
+            hpgl::parse_strict(&text, hpgl::SEGMENTS_PER_CIRCLE).unwrap(),
+            hpgl::parse(&text),
+            "{name}"
+        );
+    }
+}

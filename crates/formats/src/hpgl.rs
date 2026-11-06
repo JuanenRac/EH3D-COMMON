@@ -2,6 +2,8 @@
 //! `CI`, cut into chords) and the scaling (`SC` with `IP`).
 //! One plotter unit is 0.025 mm and the origin is the lower left corner (HP 7475A convention).
 
+use crate::error::{Code, FormatError};
+
 pub const UNIT_MM: f64 = 0.025;
 
 /// The default number of chords of a whole circle (one every 5 degrees).
@@ -270,6 +272,118 @@ pub fn parse_with(text: &str, segments_per_circle: u32) -> Plot {
     plot
 }
 
+/// One command of a plot with the place where it starts (line and column, both counted from 1, the column in characters).
+struct Command<'a> {
+    text: &'a str,
+    line: usize,
+    column: usize,
+}
+
+/// The commands of a plot, split where [`parse_with`] splits them (a `;` or a line break), each with the place of its first character that is not a blank.
+fn commands(text: &str) -> Vec<Command<'_>> {
+    let mut out = Vec::new();
+    let (mut line, mut column) = (1usize, 1usize);
+    let (mut start, mut start_line, mut start_column) = (0usize, 1usize, 1usize);
+    let mut push = |from: usize, to: usize, line: usize, column: usize| {
+        let raw = &text[from..to];
+        let blanks = raw.chars().take_while(|c| c.is_whitespace()).count();
+        out.push(Command {
+            text: raw.trim(),
+            line,
+            column: column + blanks,
+        });
+    };
+    for (index, c) in text.char_indices() {
+        if c == ';' || c == '\n' || c == '\r' {
+            push(start, index, start_line, start_column);
+            start = index + c.len_utf8();
+            if c == '\n' {
+                line += 1;
+                column = 1;
+            } else {
+                column += 1;
+            }
+            (start_line, start_column) = (line, column);
+        } else {
+            column += 1;
+        }
+    }
+    push(start, text.len(), start_line, start_column);
+    out
+}
+
+/// The commands whose arguments are numbers.
+const NUMERIC: [&str; 10] = ["SP", "SC", "IP", "CI", "AA", "AR", "PU", "PD", "PA", "PR"];
+
+/// What the reader of a plot ([`parse_with`]) drops without a word: a number it cannot read (`EH3D-FORMATS-006`, with the column of the field) and the last
+/// coordinate of a position command (`PU`, `PD`, `PA`, `PR`) that has no pair (`EH3D-FORMATS-007`, with the column of the command). The reading of a file is
+/// the same whether or not this is asked; a clean file gives an empty list.
+pub fn diagnose(text: &str) -> Vec<FormatError> {
+    let mut found = Vec::new();
+    for cmd in commands(text) {
+        if cmd.text.len() < 2 || !cmd.text.is_char_boundary(2) {
+            continue;
+        }
+        let (op, args) = cmd.text.split_at(2);
+        let op = op.to_ascii_uppercase();
+        if !NUMERIC.contains(&op.as_str()) {
+            continue;
+        }
+        let first_bad = found.len();
+        let (mut numbers, mut at) = (0usize, 0usize);
+        let mut field = String::new();
+        // the fields are cut at a comma or a blank; `at` is the column (in characters from the start of the command) where the open field began
+        let mut close = |field: &mut String, at: usize, found: &mut Vec<FormatError>| {
+            if field.is_empty() {
+                return;
+            }
+            if field.parse::<f64>().is_ok() {
+                numbers += 1;
+            } else {
+                found.push(FormatError {
+                    code: Code::HpglBadNumber,
+                    line: Some(cmd.line),
+                    column: Some(cmd.column + at),
+                    detail: field.clone(),
+                });
+            }
+            field.clear();
+        };
+        for (k, c) in args.chars().enumerate() {
+            if c == ',' || c.is_whitespace() {
+                close(&mut field, at, &mut found);
+            } else {
+                if field.is_empty() {
+                    at = k + 2;
+                }
+                field.push(c);
+            }
+        }
+        close(&mut field, at, &mut found);
+        if found.len() == first_bad
+            && matches!(op.as_str(), "PU" | "PD" | "PA" | "PR")
+            && numbers % 2 == 1
+        {
+            found.push(FormatError {
+                code: Code::HpglOddCoordinates,
+                line: Some(cmd.line),
+                column: Some(cmd.column),
+                detail: cmd.text.to_string(),
+            });
+        }
+    }
+    found
+}
+
+/// [`parse_with`], refusing a file that [`diagnose`] finds something in: the first problem is the error. A file that is read without a problem gives
+/// exactly the plot of [`parse_with`].
+pub fn parse_strict(text: &str, segments_per_circle: u32) -> Result<Plot, FormatError> {
+    match diagnose(text).into_iter().next() {
+        Some(problem) => Err(problem),
+        None => Ok(parse_with(text, segments_per_circle)),
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -357,6 +471,39 @@ mod tests {
         assert_eq!(segments_for_chord(0), SEGMENTS_PER_CIRCLE);
         assert_eq!(segments_for_chord(60), 6);
         assert_eq!(segments_for_chord(1), 360);
+    }
+
+    #[test]
+    fn what_the_reader_drops_is_told_with_its_code_line_and_column() {
+        let found = diagnose("IN;\nSP1;PU0,0;PD1,2,3;PA10,x;\n");
+        let places: Vec<(Code, Option<usize>, Option<usize>)> =
+            found.iter().map(|e| (e.code, e.line, e.column)).collect();
+        assert_eq!(
+            places,
+            [
+                (Code::HpglOddCoordinates, Some(2), Some(11)),
+                (Code::HpglBadNumber, Some(2), Some(24)),
+            ]
+        );
+        assert_eq!(found[1].detail, "x");
+        assert_eq!(
+            found[1].to_string(),
+            "EH3D-FORMATS-006 line 2 column 24: a number of the plot command cannot be read \"x\""
+        );
+        // blanks before the command and a Windows line break
+        let blanks = diagnose("  PU 5");
+        assert_eq!((blanks[0].line, blanks[0].column), (Some(1), Some(3)));
+        let windows = diagnose("PU0,0\r\nPD1;");
+        assert_eq!((windows[0].line, windows[0].column), (Some(2), Some(1)));
+    }
+
+    #[test]
+    fn a_clean_plot_reads_the_same_with_or_without_the_check() {
+        let text = "IN;SP1;PU0,0;PD400,0,400,800;SP2;PU40,40;PD80,80;LT2;";
+        assert!(diagnose(text).is_empty());
+        assert_eq!(parse_strict(text, 72).unwrap(), parse_with(text, 72));
+        let e = parse_strict("PU0,0;PD5;", 72).unwrap_err();
+        assert_eq!(e.code.id(), "EH3D-FORMATS-007");
     }
 
     #[test]

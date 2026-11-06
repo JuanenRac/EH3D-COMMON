@@ -5,6 +5,8 @@
 
 use std::fmt;
 
+use crate::error::{Code, FormatError};
+
 /// One mil is 0.001 inch.
 pub const MIL_MM: f64 = 0.0254;
 
@@ -51,14 +53,44 @@ pub enum ParseError {
     HoleBeforeTool { line: usize },
 }
 
+impl ParseError {
+    /// The stable code of the problem.
+    pub fn code(&self) -> Code {
+        match self {
+            ParseError::BadLine { .. } => Code::NcdBadLine,
+            ParseError::HoleBeforeTool { .. } => Code::NcdHoleBeforeTool,
+        }
+    }
+
+    /// The line of the problem, counted from 1.
+    pub fn line(&self) -> usize {
+        match self {
+            ParseError::BadLine { line, .. } | ParseError::HoleBeforeTool { line } => *line,
+        }
+    }
+
+    /// The error with its code, its line and, for a line that cannot be read, the column where the statement starts (after the blanks).
+    pub fn to_error(&self) -> FormatError {
+        match self {
+            ParseError::BadLine { line, text } => FormatError {
+                code: Code::NcdBadLine,
+                line: Some(*line),
+                column: Some(1 + text.chars().take_while(|c| c.is_whitespace()).count()),
+                detail: text.trim().to_string(),
+            },
+            ParseError::HoleBeforeTool { line } => FormatError {
+                code: Code::NcdHoleBeforeTool,
+                line: Some(*line),
+                column: None,
+                detail: String::new(),
+            },
+        }
+    }
+}
+
 impl fmt::Display for ParseError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        match self {
-            ParseError::BadLine { line, text } => write!(f, "line {line}: cannot parse {text:?}"),
-            ParseError::HoleBeforeTool { line } => {
-                write!(f, "line {line}: coordinate before any tool")
-            }
-        }
+        write!(f, "{}", self.to_error())
     }
 }
 
@@ -461,6 +493,31 @@ M30
     fn a_plain_inch_header_keeps_whole_mils_as_the_machine_files_have_them() {
         let f = parse("M48\nINCH\nT1C0.0315\n%\nT1\nX1000Y2000\nM30\n").unwrap();
         assert_eq!((f.holes[0].x_mil, f.holes[0].y_mil), (1000, 2000));
+    }
+
+    #[test]
+    fn a_line_that_cannot_be_read_is_told_with_its_code_line_and_column() {
+        let e = parse("M48\n  T1Cx\n%\n").unwrap_err();
+        assert_eq!(e.code(), Code::NcdBadLine);
+        assert_eq!(e.line(), 2);
+        let error = e.to_error();
+        assert_eq!((error.line, error.column), (Some(2), Some(3)));
+        assert_eq!(
+            e.to_string(),
+            "EH3D-FORMATS-001 line 2 column 3: a line of the drill file cannot be read \"T1Cx\""
+        );
+    }
+
+    #[test]
+    fn a_coordinate_before_any_tool_is_told_with_its_code_and_line() {
+        let e = parse("%\nX1000Y1000\n").unwrap_err();
+        assert_eq!(e, ParseError::HoleBeforeTool { line: 2 });
+        assert_eq!(e.code().id(), "EH3D-FORMATS-002");
+        assert_eq!(
+            e.to_string(),
+            "EH3D-FORMATS-002 line 2: a coordinate comes before any tool"
+        );
+        assert_eq!(e.to_error().column, None);
     }
 
     #[test]

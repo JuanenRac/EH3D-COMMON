@@ -7,6 +7,7 @@
 pub mod config;
 pub mod drill_tools;
 pub mod dxf;
+pub mod error;
 pub mod gerber;
 pub mod hpgl;
 pub mod ncd;
