@@ -591,3 +591,23 @@ MatSearch	Bilatu
 MatNoMatch	Ez dago iragazkiei egokitzen zaien materialik
 MatAskValues	Fabrikatzaileak ez du material honen lodierarik ez kobrerik ematen: idatzi zure plakaren balioak
 MatUsual	Ohiko balioak (ez fabrikatzailearenak)
+JogTitle	Makina mugitu
+JogStep	Urratsa
+JogContinuous	Etengabea
+JogSpeed	Abiadura
+JogSlow	Poliki
+JogMedium	Ertaina
+JogFast	Azkar
+JogMachine	Makina
+JogWork	Pieza
+JogSetOrigin	Piezaren jatorria hemen
+JogHome	Hasiera
+JogSaved	Gordetako posizioak
+JogSave	Gorde
+JogGo	Joan
+JogBusyJob	Lan bat martxan dago: gelditu makina mugitu aurretik
+JogBusyStop	Larrialdi-geldialdia aktibo dago
+JogLimit	Ibilbidearen amaiera
+JogRaiseZ	Igo Z lehenik: burua baxuegi dago mugitzeko
+JogLive	Benetako makina
+JogDemo	Buru simulatua

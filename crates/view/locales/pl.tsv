@@ -591,3 +591,23 @@ MatSearch	Szukaj
 MatNoMatch	Żaden materiał nie spełnia filtrów
 MatAskValues	Producent nie podaje grubości ani miedzi dla tego materiału: wpisz wartości swojej płytki
 MatUsual	Typowe wartości (nie od producenta)
+JogTitle	Przesuwanie maszyny
+JogStep	Krok
+JogContinuous	Ciągły
+JogSpeed	Prędkość
+JogSlow	Wolno
+JogMedium	Średnio
+JogFast	Szybko
+JogMachine	Maszyna
+JogWork	Przedmiot
+JogSetOrigin	Zero przedmiotu tutaj
+JogHome	Pozycja bazowa
+JogSaved	Zapisane pozycje
+JogSave	Zapisz
+JogGo	Jedź
+JogBusyJob	Zadanie jest w toku: zatrzymaj je przed przesunięciem maszyny
+JogBusyStop	Zatrzymanie awaryjne jest włączone
+JogLimit	Koniec skoku
+JogRaiseZ	Najpierw podnieś Z: głowica jest zbyt nisko, by się przesuwać
+JogLive	Prawdziwa maszyna
+JogDemo	Symulowana głowica

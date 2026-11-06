@@ -591,3 +591,23 @@ MatSearch	Cuardaigh
 MatNoMatch	Níl ábhar ar bith a oireann do na scagairí
 MatAskValues	Ní thugann an déantóir tiús ná copar don ábhar seo: clóscríobh luachanna do phláta
 MatUsual	Gnáthluachanna (ní ón déantóir)
+JogTitle	Gluais an t-inneall
+JogStep	Céim
+JogContinuous	Leanúnach
+JogSpeed	Luas
+JogSlow	Mall
+JogMedium	Meánach
+JogFast	Tapa
+JogMachine	Inneall
+JogWork	Obair
+JogSetOrigin	Bunús na hoibre anseo
+JogHome	Baile
+JogSaved	Suíomhanna sábháilte
+JogSave	Sábháil
+JogGo	Téigh
+JogBusyJob	Tá jab ag rith: stop é sula ngluaiseann tú an t-inneall
+JogBusyStop	Tá an stad éigeandála ar siúl
+JogLimit	Deireadh an aistir
+JogRaiseZ	Ardaigh Z ar dtús: tá an ceann ró-íseal le gluaiseacht
+JogLive	Fíor-inneall
+JogDemo	Ceann insamhlaithe

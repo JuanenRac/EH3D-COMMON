@@ -591,3 +591,23 @@ MatSearch	Hae
 MatNoMatch	Mikään materiaali ei vastaa suodattimia
 MatAskValues	Valmistaja ei ilmoita tämän materiaalin paksuutta eikä kuparia: kirjoita piirilevysi arvot
 MatUsual	Tavalliset arvot (eivät valmistajalta)
+JogTitle	Siirrä konetta
+JogStep	Askel
+JogContinuous	Jatkuva
+JogSpeed	Nopeus
+JogSlow	Hidas
+JogMedium	Keskinopea
+JogFast	Nopea
+JogMachine	Kone
+JogWork	Työkappale
+JogSetOrigin	Työkappaleen nollapiste tähän
+JogHome	Koti
+JogSaved	Tallennetut paikat
+JogSave	Tallenna
+JogGo	Siirry
+JogBusyJob	Työ on käynnissä: pysäytä se ennen koneen siirtämistä
+JogBusyStop	Hätäpysäytys on päällä
+JogLimit	Liikealueen pää
+JogRaiseZ	Nosta ensin Z: pää on liian alhaalla siirtymiseen
+JogLive	Oikea kone
+JogDemo	Simuloitu pää

@@ -591,3 +591,23 @@ MatSearch	Sök
 MatNoMatch	Inget material matchar filtren
 MatAskValues	Tillverkaren anger varken tjocklek eller koppar för detta material: skriv värdena för ditt kort
 MatUsual	Vanliga värden (inte från tillverkaren)
+JogTitle	Flytta maskinen
+JogStep	Steg
+JogContinuous	Kontinuerlig
+JogSpeed	Hastighet
+JogSlow	Långsam
+JogMedium	Medel
+JogFast	Snabb
+JogMachine	Maskin
+JogWork	Arbetsstycke
+JogSetOrigin	Arbetsstyckets nollpunkt här
+JogHome	Hem
+JogSaved	Sparade positioner
+JogSave	Spara
+JogGo	Gå
+JogBusyJob	Ett jobb pågår: stoppa det innan maskinen flyttas
+JogBusyStop	Nödstoppet är på
+JogLimit	Slutet av rörelsen
+JogRaiseZ	Höj Z först: huvudet är för lågt för att flyttas
+JogLive	Riktig maskin
+JogDemo	Simulerat huvud

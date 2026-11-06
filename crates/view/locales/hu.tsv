@@ -591,3 +591,23 @@ MatSearch	Keresés
 MatNoMatch	Egy anyag sem felel meg a szűrőknek
 MatAskValues	A gyártó nem ad meg vastagságot és rezet ehhez az anyaghoz: írja be a lapja értékeit
 MatUsual	Szokásos értékek (nem a gyártótól)
+JogTitle	A gép mozgatása
+JogStep	Lépés
+JogContinuous	Folyamatos
+JogSpeed	Sebesség
+JogSlow	Lassú
+JogMedium	Közepes
+JogFast	Gyors
+JogMachine	Gép
+JogWork	Munkadarab
+JogSetOrigin	Munkadarab-nullpont itt
+JogHome	Alaphelyzet
+JogSaved	Mentett pozíciók
+JogSave	Mentés
+JogGo	Menj
+JogBusyJob	Munka fut: állítsa le a gép mozgatása előtt
+JogBusyStop	A vészleállítás be van kapcsolva
+JogLimit	A mozgás vége
+JogRaiseZ	Először emelje fel a Z-t: a fej túl alacsonyan van az elmozduláshoz
+JogLive	Valódi gép
+JogDemo	Szimulált fej

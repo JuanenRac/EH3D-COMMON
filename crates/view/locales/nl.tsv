@@ -591,3 +591,23 @@ MatSearch	Zoeken
 MatNoMatch	Geen materiaal voldoet aan de filters
 MatAskValues	De fabrikant geeft voor dit materiaal geen dikte of koper op: typ de waarden van uw print
 MatUsual	Gebruikelijke waarden (niet van de fabrikant)
+JogTitle	Machine verplaatsen
+JogStep	Stap
+JogContinuous	Continu
+JogSpeed	Snelheid
+JogSlow	Langzaam
+JogMedium	Gemiddeld
+JogFast	Snel
+JogMachine	Machine
+JogWork	Werkstuk
+JogSetOrigin	Werkstuknulpunt hier
+JogHome	Home
+JogSaved	Opgeslagen posities
+JogSave	Opslaan
+JogGo	Ga
+JogBusyJob	Er loopt een taak: stop die voordat u de machine verplaatst
+JogBusyStop	De noodstop is actief
+JogLimit	Einde van de slag
+JogRaiseZ	Til eerst Z op: de kop staat te laag om te verplaatsen
+JogLive	Echte machine
+JogDemo	Gesimuleerde kop

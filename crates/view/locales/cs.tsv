@@ -591,3 +591,23 @@ MatSearch	Hledat
 MatNoMatch	Filtrům nevyhovuje žádný materiál
 MatAskValues	Výrobce neuvádí tloušťku ani měď tohoto materiálu: zadejte hodnoty své desky
 MatUsual	Obvyklé hodnoty (nejsou od výrobce)
+JogTitle	Pohyb stroje
+JogStep	Krok
+JogContinuous	Plynule
+JogSpeed	Rychlost
+JogSlow	Pomalu
+JogMedium	Středně
+JogFast	Rychle
+JogMachine	Stroj
+JogWork	Obrobek
+JogSetOrigin	Nula obrobku zde
+JogHome	Výchozí poloha
+JogSaved	Uložené polohy
+JogSave	Uložit
+JogGo	Jet
+JogBusyJob	Právě běží úloha: před pohybem stroje ji zastavte
+JogBusyStop	Nouzové zastavení je zapnuto
+JogLimit	Konec dráhy
+JogRaiseZ	Nejprve zvedněte Z: hlava je příliš nízko
+JogLive	Skutečný stroj
+JogDemo	Simulovaná hlava

@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Words for the panel that moves the machine by hand in the 37 languages:** the title, the step and the continuous mode, the three speeds, the machine and the work positions, the zero of the work, home, the saved positions with their buttons, the four reasons a move is refused (a job runs, the emergency stop is on, end of travel, Z too low to move across) and whether the machine is real or simulated. The translations in the 29 languages of the files wait for a native review.
 - **Dependency:** the `zip` crate is raised to 9.0.5 (the old range had a security advisory); packages are still written with deflate, the fixed 1980 time and the same entry order.
 - **Words for the list of board materials in the 37 languages:** the types of material (laminate, PTFE and RF, ceramic filled, metal core, plain sheets), the search box, the mark of a material without data of the manufacturer and the request for its thickness and copper.
 

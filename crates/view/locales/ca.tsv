@@ -591,3 +591,23 @@ MatSearch	Cerca
 MatNoMatch	Cap material compleix els filtres
 MatAskValues	El fabricant no dona gruix ni coure per a aquest material: escriviu els valors de la vostra placa
 MatUsual	Valors habituals (no són del fabricant)
+JogTitle	Mou la màquina
+JogStep	Pas
+JogContinuous	Continu
+JogSpeed	Velocitat
+JogSlow	Lenta
+JogMedium	Mitjana
+JogFast	Ràpida
+JogMachine	Màquina
+JogWork	Peça
+JogSetOrigin	Origen de la peça aquí
+JogHome	Inici
+JogSaved	Posicions desades
+JogSave	Desa
+JogGo	Vés
+JogBusyJob	Hi ha un treball en marxa: aturi'l abans de moure la màquina
+JogBusyStop	L'aturada d'emergència està activada
+JogLimit	Final de recorregut
+JogRaiseZ	Pugeu primer Z: el capçal és massa baix per desplaçar-se
+JogLive	Màquina real
+JogDemo	Capçal simulat

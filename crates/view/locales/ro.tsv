@@ -591,3 +591,23 @@ MatSearch	Caută
 MatNoMatch	Niciun material nu corespunde filtrelor
 MatAskValues	Producătorul nu indică grosimea și cuprul pentru acest material: introduceți valorile plăcii dvs.
 MatUsual	Valori uzuale (nu de la producător)
+JogTitle	Mută mașina
+JogStep	Pas
+JogContinuous	Continuu
+JogSpeed	Viteză
+JogSlow	Lent
+JogMedium	Mediu
+JogFast	Rapid
+JogMachine	Mașină
+JogWork	Piesă
+JogSetOrigin	Originea piesei aici
+JogHome	Poziția inițială
+JogSaved	Poziții salvate
+JogSave	Salvează
+JogGo	Mergi
+JogBusyJob	O lucrare rulează: opriți-o înainte de a muta mașina
+JogBusyStop	Oprirea de urgență este activă
+JogLimit	Capăt de cursă
+JogRaiseZ	Ridicați mai întâi Z: capul este prea jos pentru deplasare
+JogLive	Mașină reală
+JogDemo	Cap simulat

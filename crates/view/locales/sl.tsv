@@ -591,3 +591,23 @@ MatSearch	Iskanje
 MatNoMatch	Nobenega materiala ni, ki bi ustrezal filtrom
 MatAskValues	Proizvajalec za ta material ne navaja debeline ali bakra: vnesite vrednosti svoje plošče
 MatUsual	Običajne vrednosti (niso od proizvajalca)
+JogTitle	Premikanje stroja
+JogStep	Korak
+JogContinuous	Zvezno
+JogSpeed	Hitrost
+JogSlow	Počasi
+JogMedium	Srednje
+JogFast	Hitro
+JogMachine	Stroj
+JogWork	Obdelovanec
+JogSetOrigin	Ničla obdelovanca tukaj
+JogHome	Izhodišče
+JogSaved	Shranjeni položaji
+JogSave	Shrani
+JogGo	Pojdi
+JogBusyJob	Opravilo teče: ustavite ga pred premikanjem stroja
+JogBusyStop	Zaustavitev v sili je vklopljena
+JogLimit	Konec poti
+JogRaiseZ	Najprej dvignite Z: glava je prenizko za premik
+JogLive	Pravi stroj
+JogDemo	Simulirana glava

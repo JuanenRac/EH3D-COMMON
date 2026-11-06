@@ -591,3 +591,23 @@ MatSearch	Претрага
 MatNoMatch	Ниједан материјал не одговара филтерима
 MatAskValues	Произвођач не наводи дебљину ни бакар за овај материјал: унесите вредности своје плоче
 MatUsual	Уобичајене вредности (нису од произвођача)
+JogTitle	Померање машине
+JogStep	Корак
+JogContinuous	Непрекидно
+JogSpeed	Брзина
+JogSlow	Споро
+JogMedium	Средње
+JogFast	Брзо
+JogMachine	Машина
+JogWork	Радни предмет
+JogSetOrigin	Нула предмета овде
+JogHome	Почетна позиција
+JogSaved	Сачуване позиције
+JogSave	Сачувај
+JogGo	Иди
+JogBusyJob	Посао је у току: зауставите га пре померања машине
+JogBusyStop	Заустављање у нужди је укључено
+JogLimit	Крај хода
+JogRaiseZ	Прво подигните Z: глава је прениско за померање
+JogLive	Права машина
+JogDemo	Симулирана глава

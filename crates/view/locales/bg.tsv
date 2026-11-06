@@ -591,3 +591,23 @@ MatSearch	Търсене
 MatNoMatch	Няма материал, отговарящ на филтрите
 MatAskValues	Производителят не дава дебелина и мед за този материал: въведете стойностите на вашата платка
 MatUsual	Обичайни стойности (не са от производителя)
+JogTitle	Преместване на машината
+JogStep	Стъпка
+JogContinuous	Непрекъснато
+JogSpeed	Скорост
+JogSlow	Бавно
+JogMedium	Средно
+JogFast	Бързо
+JogMachine	Машина
+JogWork	Детайл
+JogSetOrigin	Нулева точка на детайла тук
+JogHome	Начална позиция
+JogSaved	Запазени позиции
+JogSave	Запази
+JogGo	Отиди
+JogBusyJob	Върви задача: спрете я, преди да местите машината
+JogBusyStop	Аварийният стоп е включен
+JogLimit	Край на хода
+JogRaiseZ	Първо вдигнете Z: главата е твърде ниско за преместване
+JogLive	Реална машина
+JogDemo	Симулирана глава

@@ -591,3 +591,23 @@ MatSearch	Fittex
 MatNoMatch	L-ebda materjal ma jaqbel mal-filtri
 MatAskValues	Il-manifattur ma jagħtix il-ħxuna jew ir-ram għal dan il-materjal: ittajpja l-valuri tal-bord tiegħek
 MatUsual	Valuri tas-soltu (mhux mill-manifattur)
+JogTitle	Mexxi l-magna
+JogStep	Pass
+JogContinuous	Kontinwu
+JogSpeed	Veloċità
+JogSlow	Bil-mod
+JogMedium	Medju
+JogFast	Mgħaġġel
+JogMachine	Magna
+JogWork	Biċċa tax-xogħol
+JogSetOrigin	Oriġini tax-xogħol hawn
+JogHome	Bidu
+JogSaved	Pożizzjonijiet maħżuna
+JogSave	Aħżen
+JogGo	Mur
+JogBusyJob	Hemm xogħol għaddej: waqqfu qabel ma timxi l-magna
+JogBusyStop	It-twaqqif ta' emerġenza huwa attiv
+JogLimit	Tmiem tal-ġirja
+JogRaiseZ	Għolli Z l-ewwel: ir-ras hija baxxa wisq biex timxi
+JogLive	Magna vera
+JogDemo	Ras simulata

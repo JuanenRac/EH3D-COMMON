@@ -591,3 +591,23 @@ MatSearch	Ieškoti
 MatNoMatch	Jokia medžiaga neatitinka filtrų
 MatAskValues	Gamintojas šiai medžiagai nenurodo nei storio, nei vario: įveskite savo plokštės reikšmes
 MatUsual	Įprastos reikšmės (ne iš gamintojo)
+JogTitle	Staklių judinimas
+JogStep	Žingsnis
+JogContinuous	Nuolatinis
+JogSpeed	Greitis
+JogSlow	Lėtai
+JogMedium	Vidutiniškai
+JogFast	Greitai
+JogMachine	Staklės
+JogWork	Ruošinys
+JogSetOrigin	Ruošinio nulis čia
+JogHome	Pradžia
+JogSaved	Išsaugotos padėtys
+JogSave	Išsaugoti
+JogGo	Eiti
+JogBusyJob	Vykdoma užduotis: sustabdykite ją prieš judindami stakles
+JogBusyStop	Avarinis stabdymas įjungtas
+JogLimit	Eigos pabaiga
+JogRaiseZ	Pirmiausia pakelkite Z: galvutė per žemai judėti
+JogLive	Tikros staklės
+JogDemo	Imituojama galvutė

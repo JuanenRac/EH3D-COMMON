@@ -591,3 +591,23 @@ MatSearch	Meklēt
 MatNoMatch	Neviens materiāls neatbilst filtriem
 MatAskValues	Ražotājs šim materiālam nenorāda ne biezumu, ne varu: ievadiet savas plates vērtības
 MatUsual	Parastās vērtības (nav no ražotāja)
+JogTitle	Mašīnas pārvietošana
+JogStep	Solis
+JogContinuous	Nepārtraukti
+JogSpeed	Ātrums
+JogSlow	Lēni
+JogMedium	Vidēji
+JogFast	Ātri
+JogMachine	Mašīna
+JogWork	Detaļa
+JogSetOrigin	Detaļas nulle šeit
+JogHome	Sākums
+JogSaved	Saglabātās pozīcijas
+JogSave	Saglabāt
+JogGo	Doties
+JogBusyJob	Darbojas uzdevums: apturiet to pirms mašīnas pārvietošanas
+JogBusyStop	Avārijas apturēšana ir ieslēgta
+JogLimit	Gājiena beigas
+JogRaiseZ	Vispirms paceliet Z: galva ir pārāk zemu pārvietošanai
+JogLive	Īstā mašīna
+JogDemo	Simulēta galva

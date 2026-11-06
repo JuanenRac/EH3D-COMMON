@@ -591,3 +591,23 @@ MatSearch	Buscar
 MatNoMatch	Ningún material cumpre os filtros
 MatAskValues	O fabricante non dá espesor nin cobre para este material: escribe os valores da túa placa
 MatUsual	Valores habituais (non son do fabricante)
+JogTitle	Mover a máquina
+JogStep	Paso
+JogContinuous	Continuo
+JogSpeed	Velocidade
+JogSlow	Lenta
+JogMedium	Media
+JogFast	Rápida
+JogMachine	Máquina
+JogWork	Peza
+JogSetOrigin	Orixe da peza aquí
+JogHome	Inicio
+JogSaved	Posicións gardadas
+JogSave	Gardar
+JogGo	Ir
+JogBusyJob	Hai un traballo en marcha: párao antes de mover a máquina
+JogBusyStop	A parada de emerxencia está activada
+JogLimit	Fin de carreira
+JogRaiseZ	Sobe primeiro Z: o cabezal está demasiado baixo para desprazarse
+JogLive	Máquina real
+JogDemo	Cabezal simulado

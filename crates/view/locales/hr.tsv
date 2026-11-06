@@ -591,3 +591,23 @@ MatSearch	Pretraži
 MatNoMatch	Nijedan materijal ne odgovara filtrima
 MatAskValues	Proizvođač ne navodi debljinu ni bakar za ovaj materijal: upišite vrijednosti svoje ploče
 MatUsual	Uobičajene vrijednosti (nisu od proizvođača)
+JogTitle	Pomicanje stroja
+JogStep	Korak
+JogContinuous	Kontinuirano
+JogSpeed	Brzina
+JogSlow	Sporo
+JogMedium	Srednje
+JogFast	Brzo
+JogMachine	Stroj
+JogWork	Obradak
+JogSetOrigin	Nulta točka obratka ovdje
+JogHome	Početni položaj
+JogSaved	Spremljeni položaji
+JogSave	Spremi
+JogGo	Idi
+JogBusyJob	Posao je u tijeku: zaustavite ga prije pomicanja stroja
+JogBusyStop	Zaustavljanje u nuždi je uključeno
+JogLimit	Kraj hoda
+JogRaiseZ	Prvo podignite Z: glava je preniska za pomicanje
+JogLive	Stvarni stroj
+JogDemo	Simulirana glava

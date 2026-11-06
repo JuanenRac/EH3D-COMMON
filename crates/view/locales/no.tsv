@@ -591,3 +591,23 @@ MatSearch	Søk
 MatNoMatch	Ingen materialer passer til filtrene
 MatAskValues	Produsenten oppgir verken tykkelse eller kobber for dette materialet: skriv inn verdiene for kortet ditt
 MatUsual	Vanlige verdier (ikke fra produsenten)
+JogTitle	Flytt maskinen
+JogStep	Trinn
+JogContinuous	Kontinuerlig
+JogSpeed	Hastighet
+JogSlow	Langsom
+JogMedium	Middels
+JogFast	Rask
+JogMachine	Maskin
+JogWork	Emne
+JogSetOrigin	Emnets nullpunkt her
+JogHome	Hjem
+JogSaved	Lagrede posisjoner
+JogSave	Lagre
+JogGo	Gå
+JogBusyJob	En jobb kjører: stopp den før maskinen flyttes
+JogBusyStop	Nødstoppen er på
+JogLimit	Slutten av banen
+JogRaiseZ	Hev Z først: hodet er for lavt til å flyttes
+JogLive	Ekte maskin
+JogDemo	Simulert hode

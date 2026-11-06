@@ -591,3 +591,23 @@ MatSearch	Leita
 MatNoMatch	Ekkert efni passar við síurnar
 MatAskValues	Framleiðandi gefur hvorki upp þykkt né kopar fyrir þetta efni: sláðu inn gildi plötunnar þinnar
 MatUsual	Venjuleg gildi (ekki frá framleiðanda)
+JogTitle	Færa vélina
+JogStep	Skref
+JogContinuous	Samfellt
+JogSpeed	Hraði
+JogSlow	Hægt
+JogMedium	Miðlungs
+JogFast	Hratt
+JogMachine	Vél
+JogWork	Vinnustykki
+JogSetOrigin	Núllpunktur vinnustykkis hér
+JogHome	Heim
+JogSaved	Vistaðar stöður
+JogSave	Vista
+JogGo	Fara
+JogBusyJob	Verk er í gangi: stöðvaðu það áður en vélin er færð
+JogBusyStop	Neyðarstöðvun er virk
+JogLimit	Endi ferils
+JogRaiseZ	Lyftu Z fyrst: hausinn er of lágur til að færast
+JogLive	Raunveruleg vél
+JogDemo	Hermdur haus

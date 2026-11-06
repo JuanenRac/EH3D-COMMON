@@ -591,3 +591,23 @@ MatSearch	Otsi
 MatNoMatch	Ükski materjal ei vasta filtritele
 MatAskValues	Tootja ei anna selle materjali paksust ega vaske: sisesta oma plaadi väärtused
 MatUsual	Tavalised väärtused (mitte tootjalt)
+JogTitle	Masina liigutamine
+JogStep	Samm
+JogContinuous	Pidev
+JogSpeed	Kiirus
+JogSlow	Aeglane
+JogMedium	Keskmine
+JogFast	Kiire
+JogMachine	Masin
+JogWork	Töödeldav detail
+JogSetOrigin	Detaili nullpunkt siin
+JogHome	Kodu
+JogSaved	Salvestatud asukohad
+JogSave	Salvesta
+JogGo	Mine
+JogBusyJob	Töö käib: peata see enne masina liigutamist
+JogBusyStop	Hädaseiskamine on sisse lülitatud
+JogLimit	Käigu lõpp
+JogRaiseZ	Tõsta kõigepealt Z üles: pea on liigutamiseks liiga madalal
+JogLive	Päris masin
+JogDemo	Simuleeritud pea

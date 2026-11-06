@@ -591,3 +591,23 @@ MatSearch	Kërko
 MatNoMatch	Asnjë material nuk i përputhet filtrave
 MatAskValues	Prodhuesi nuk jep trashësi as bakër për këtë material: shkruani vlerat e pllakës suaj
 MatUsual	Vlera të zakonshme (jo nga prodhuesi)
+JogTitle	Lëvizja e makinës
+JogStep	Hapi
+JogContinuous	I vazhdueshëm
+JogSpeed	Shpejtësia
+JogSlow	Ngadalë
+JogMedium	Mesatare
+JogFast	Shpejt
+JogMachine	Makina
+JogWork	Pjesa e punës
+JogSetOrigin	Zeroja e pjesës këtu
+JogHome	Fillimi
+JogSaved	Pozicionet e ruajtura
+JogSave	Ruaj
+JogGo	Shko
+JogBusyJob	Një punë është duke u kryer: ndalojeni para se ta lëvizni makinën
+JogBusyStop	Ndalesa e emergjencës është aktive
+JogLimit	Fundi i lëvizjes
+JogRaiseZ	Ngrini fillimisht Z: koka është shumë poshtë për t'u lëvizur
+JogLive	Makina e vërtetë
+JogDemo	Koka e simuluar

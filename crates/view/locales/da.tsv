@@ -591,3 +591,23 @@ MatSearch	Søg
 MatNoMatch	Intet materiale passer til filtrene
 MatAskValues	Producenten oplyser hverken tykkelse eller kobber for dette materiale: skriv værdierne for dit print
 MatUsual	Sædvanlige værdier (ikke fra producenten)
+JogTitle	Flyt maskinen
+JogStep	Trin
+JogContinuous	Kontinuerlig
+JogSpeed	Hastighed
+JogSlow	Langsom
+JogMedium	Mellem
+JogFast	Hurtig
+JogMachine	Maskine
+JogWork	Emne
+JogSetOrigin	Emnenulpunkt her
+JogHome	Hjem
+JogSaved	Gemte positioner
+JogSave	Gem
+JogGo	Gå til
+JogBusyJob	Et job kører: stop det, før maskinen flyttes
+JogBusyStop	Nødstoppet er aktivt
+JogLimit	Slutning af kørselsvej
+JogRaiseZ	Hæv først Z: hovedet er for lavt til at flytte
+JogLive	Rigtig maskine
+JogDemo	Simuleret hoved
