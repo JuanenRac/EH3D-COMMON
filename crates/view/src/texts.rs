@@ -1000,7 +1000,8 @@ mod tests {
     }
 
     #[test]
-    fn the_words_of_the_log_of_the_settings_exist_in_the_thirty_seven_languages_and_the_sentence_is_translated() {
+    fn the_words_of_the_log_of_the_settings_exist_in_the_thirty_seven_languages_and_the_sentence_is_translated(
+    ) {
         let all = [
             Text::LogTitle,
             Text::LogWrite,
