@@ -636,3 +636,11 @@ SlotsNoSlot	Nie je priradená pozícia pre
 SlotsShared	Dva nástroje zdieľajú pozíciu
 SlotsUndefined	Súbor stroja pozíciu nedefinuje
 SlotsNote	Každý nástroj patrí na zvolenú pozíciu. Voľba sa uloží pre tento stroj a znova sa použije pre rovnaké nástroje. Pred spustením vložte nástroje do lišty, ako je zobrazené.
+LogTitle	Záznam
+LogWrite	Zapisovať záznam
+LogDetail	Úroveň podrobností
+LogMaxSize	Maximálna veľkosť súboru
+LogOpenFolder	Otvoriť priečinok záznamu
+LogCopyPath	Kopírovať cestu k záznamu
+LogCopied	Cesta skopírovaná
+LogNote	Zmeny sa prejavia pri nasledujúcom spustení programu.

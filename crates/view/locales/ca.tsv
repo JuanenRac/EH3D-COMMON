@@ -636,3 +636,11 @@ SlotsNoSlot	No hi ha lloc assignat a
 SlotsShared	Dues eines comparteixen el lloc
 SlotsUndefined	El fitxer de la màquina no defineix el lloc
 SlotsNote	Cada eina va al lloc que triïs. L'elecció es desa per a aquesta màquina i es reutilitza amb les mateixes eines. Posa les eines a la barra tal com s'indica abans de començar.
+LogTitle	Registre
+LogWrite	Escriu el registre
+LogDetail	Nivell de detall
+LogMaxSize	Mida màxima d'un fitxer
+LogOpenFolder	Obre la carpeta del registre
+LogCopyPath	Copia la ruta del registre
+LogCopied	Ruta copiada
+LogNote	Els canvis s'apliquen la propera vegada que s'iniciï el programa.

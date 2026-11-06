@@ -636,3 +636,11 @@ SlotsNoSlot	Ez dago lekurik esleituta honentzat
 SlotsShared	Bi erremintak leku bera partekatzen dute
 SlotsUndefined	Makinaren fitxategiak ez du lekua definitzen
 SlotsNote	Erreminta bakoitza aukeratzen duzun lekuan jartzen da. Aukera makina honetarako gordetzen da eta erreminta berdinetarako berrerabiltzen da. Hasi aurretik jarri erremintak barran erakusten den bezala.
+LogTitle	Erregistroa
+LogWrite	Idatzi erregistroa
+LogDetail	Xehetasun-maila
+LogMaxSize	Fitxategi baten gehieneko tamaina
+LogOpenFolder	Ireki erregistroaren karpeta
+LogCopyPath	Kopiatu erregistroaren bidea
+LogCopied	Bidea kopiatu da
+LogNote	Aldaketak programa hurrengoan abiaraztean aplikatuko dira.

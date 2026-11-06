@@ -636,3 +636,11 @@ SlotsNoSlot	Ingen plads er tildelt til
 SlotsShared	To værktøjer deler pladsen
 SlotsUndefined	Maskinfilen definerer ikke pladsen
 SlotsNote	Hvert værktøj placeres på den valgte plads. Valget gemmes for denne maskine og genbruges til de samme værktøjer. Sæt værktøjerne i skinnen som vist, før du starter.
+LogTitle	Log
+LogWrite	Skriv loggen
+LogDetail	Detaljeniveau
+LogMaxSize	Største størrelse på en fil
+LogOpenFolder	Åbn logmappen
+LogCopyPath	Kopiér logstien
+LogCopied	Sti kopieret
+LogNote	Ændringerne træder i kraft, næste gang programmet starter.

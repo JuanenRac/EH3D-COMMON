@@ -636,3 +636,11 @@ SlotsNoSlot	Geen plek toegewezen aan
 SlotsShared	Twee gereedschappen delen de plek
 SlotsUndefined	Het machinebestand definieert de plek niet
 SlotsNote	Elk gereedschap komt op de gekozen plek. De keuze wordt voor deze machine opgeslagen en hergebruikt voor dezelfde gereedschappen. Plaats de gereedschappen vóór het starten in de balk zoals getoond.
+LogTitle	Logboek
+LogWrite	Logboek schrijven
+LogDetail	Detailniveau
+LogMaxSize	Maximale grootte van een bestand
+LogOpenFolder	Map van het logboek openen
+LogCopyPath	Pad van het logboek kopiëren
+LogCopied	Pad gekopieerd
+LogNote	De wijzigingen gelden de volgende keer dat het programma start.

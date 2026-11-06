@@ -636,3 +636,11 @@ SlotsNoSlot	Enginn staður er úthlutaður fyrir
 SlotsShared	Tvö verkfæri deila stað
 SlotsUndefined	Vélarskráin skilgreinir ekki staðinn
 SlotsNote	Hvert verkfæri fer á þann stað sem þú velur. Valið er vistað fyrir þessa vél og notað aftur fyrir sömu verkfæri. Settu verkfærin í brautina eins og sýnt er áður en þú byrjar.
+LogTitle	Annáll
+LogWrite	Skrifa annálinn
+LogDetail	Nákvæmnistig
+LogMaxSize	Hámarksstærð skrár
+LogOpenFolder	Opna möppu annálsins
+LogCopyPath	Afrita slóð annálsins
+LogCopied	Slóð afrituð
+LogNote	Breytingarnar taka gildi næst þegar forritið er ræst.

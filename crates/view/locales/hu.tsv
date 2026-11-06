@@ -636,3 +636,11 @@ SlotsNoSlot	Nincs pozíció kiosztva ehhez
 SlotsShared	Két szerszám ugyanazt a helyet használja
 SlotsUndefined	A gépfájl nem határozza meg a helyet
 SlotsNote	Minden szerszám a kiválasztott helyre kerül. A választás ehhez a géphez mentődik, és ugyanazokhoz a szerszámokhoz újra felhasználódik. Indítás előtt tegye a szerszámokat a sínre a mutatott módon.
+LogTitle	Napló
+LogWrite	Napló írása
+LogDetail	Részletességi szint
+LogMaxSize	Egy fájl legnagyobb mérete
+LogOpenFolder	A napló mappájának megnyitása
+LogCopyPath	A napló útvonalának másolása
+LogCopied	Útvonal másolva
+LogNote	A módosítások a program következő indításakor lépnek életbe.

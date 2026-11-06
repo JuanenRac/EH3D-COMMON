@@ -636,3 +636,11 @@ SlotsNoSlot	M'hemm l-ebda post assenjat lil
 SlotsShared	Żewġ għodod jaqsmu l-istess post
 SlotsUndefined	Il-fajl tal-magna ma jiddefinixxix il-post
 SlotsNote	Kull għodda tmur fil-post li tagħżel. L-għażla tinħażen għal din il-magna u terġa' tintuża għall-istess għodod. Poġġi l-għodod fil-bar kif muri qabel tibda.
+LogTitle	Reġistru
+LogWrite	Ikteb ir-reġistru
+LogDetail	Livell ta' dettall
+LogMaxSize	L-akbar daqs ta' fajl
+LogOpenFolder	Iftaħ il-folder tar-reġistru
+LogCopyPath	Ikkopja t-triq tar-reġistru
+LogCopied	It-triq ġiet ikkupjata
+LogNote	Il-bidliet japplikaw id-darba li jmiss meta jibda l-programm.

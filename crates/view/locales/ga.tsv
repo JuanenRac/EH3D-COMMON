@@ -636,3 +636,11 @@ SlotsNoSlot	Níl suíomh leithroinnte do
 SlotsShared	Roinneann dhá uirlis an suíomh
 SlotsUndefined	Ní shainmhíníonn comhad an mheaisín an suíomh
 SlotsNote	Téann gach uirlis sa suíomh a roghnaíonn tú. Sábháiltear an rogha don mheaisín seo agus úsáidtear arís í do na huirlisí céanna. Cuir na huirlisí sa bharra mar atá léirithe sula dtosaíonn tú.
+LogTitle	Logchomhad
+LogWrite	Scríobh an logchomhad
+LogDetail	Leibhéal sonraí
+LogMaxSize	Uasmhéid comhaid
+LogOpenFolder	Oscail fillteán an logchomhaid
+LogCopyPath	Cóipeáil cosán an logchomhaid
+LogCopied	Cosán cóipeáilte
+LogNote	Cuirfear na hathruithe i bhfeidhm an chéad uair eile a thosóidh an clár.

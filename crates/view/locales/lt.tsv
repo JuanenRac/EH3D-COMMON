@@ -636,3 +636,11 @@ SlotsNoSlot	Vieta nepriskirta įrankiui
 SlotsShared	Du įrankiai dalijasi vieta
 SlotsUndefined	Staklių faile vieta neapibrėžta
 SlotsNote	Kiekvienas įrankis dedamas į pasirinktą vietą. Pasirinkimas išsaugomas šioms staklėms ir naudojamas iš naujo tiems patiems įrankiams. Prieš pradėdami sudėkite įrankius į juostą, kaip parodyta.
+LogTitle	Žurnalas
+LogWrite	Rašyti žurnalą
+LogDetail	Išsamumo lygis
+LogMaxSize	Didžiausias failo dydis
+LogOpenFolder	Atidaryti žurnalo aplanką
+LogCopyPath	Kopijuoti kelią į žurnalą
+LogCopied	Kelias nukopijuotas
+LogNote	Pakeitimai įsigalios kitą kartą paleidus programą.

@@ -933,6 +933,14 @@ texts! {
     SlotsShared => ["Two tools share the slot", "Dos herramientas comparten el hueco", "Due utensili condividono il posto", "Zwei Werkzeuge teilen sich den Platz", "Deux outils partagent la place", "Duas ferramentas partilham a posição", "两把刀具共用同一位置", "2本の工具が同じ位置を使っています"],
     SlotsUndefined => ["The machine file does not define the slot", "El fichero de la máquina no define el hueco", "Il file della macchina non definisce il posto", "Die Maschinendatei definiert den Platz nicht", "Le fichier de la machine ne définit pas la place", "O ficheiro da máquina não define a posição", "机器文件未定义该位置", "マシンファイルにこの位置の定義がありません"],
     SlotsNote => ["Each tool goes in the slot you choose. The choice is saved for this machine and used again for the same tools. Put the tools in the bar as shown before you start.", "Cada herramienta va en el hueco que elijas. La elección se guarda para esta máquina y se reutiliza con las mismas herramientas. Coloca las herramientas en la barra como se indica antes de empezar.", "Ogni utensile va nel posto che scegli. La scelta viene salvata per questa macchina e riutilizzata con gli stessi utensili. Metti gli utensili nella barra come indicato prima di iniziare.", "Jedes Werkzeug kommt auf den gewählten Platz. Die Wahl wird für diese Maschine gespeichert und für dieselben Werkzeuge wiederverwendet. Legen Sie die Werkzeuge vor dem Start wie angezeigt in die Leiste.", "Chaque outil va dans la place choisie. Le choix est enregistré pour cette machine et réutilisé pour les mêmes outils. Placez les outils dans la barre comme indiqué avant de commencer.", "Cada ferramenta vai na posição que escolher. A escolha é guardada para esta máquina e reutilizada com as mesmas ferramentas. Coloque as ferramentas na barra como indicado antes de começar.", "每把刀具放在您选择的位置。该选择会为本机保存，并在使用相同刀具时重复使用。开始前请按所示将刀具放入刀库。", "各工具は選んだ位置に入れます。選択はこのマシン用に保存され、同じ工具で再利用されます。開始前に表示のとおり工具をバーに入れてください。"],
+    LogTitle => ["Log", "Registro", "Registro", "Protokoll", "Journal", "Registo", "日志", "ログ"],
+    LogWrite => ["Write the log", "Escribir el registro", "Scrivi il registro", "Protokoll schreiben", "Écrire le journal", "Escrever o registo", "写入日志", "ログを書き込む"],
+    LogDetail => ["Level of detail", "Nivel de detalle", "Livello di dettaglio", "Detailgrad", "Niveau de détail", "Nível de detalhe", "详细程度", "詳細レベル"],
+    LogMaxSize => ["Largest size of a file", "Tamaño máximo de un fichero", "Dimensione massima di un file", "Maximale Größe einer Datei", "Taille maximale d'un fichier", "Tamanho máximo de um ficheiro", "单个文件的最大大小", "ファイルの最大サイズ"],
+    LogOpenFolder => ["Open the folder of the log", "Abrir la carpeta del registro", "Apri la cartella del registro", "Ordner des Protokolls öffnen", "Ouvrir le dossier du journal", "Abrir a pasta do registo", "打开日志文件夹", "ログのフォルダを開く"],
+    LogCopyPath => ["Copy the path of the log", "Copiar la ruta del registro", "Copia il percorso del registro", "Pfad des Protokolls kopieren", "Copier le chemin du journal", "Copiar o caminho do registo", "复制日志路径", "ログのパスをコピー"],
+    LogCopied => ["Path copied", "Ruta copiada", "Percorso copiato", "Pfad kopiert", "Chemin copié", "Caminho copiado", "路径已复制", "パスをコピーしました"],
+    LogNote => ["The changes apply the next time the program starts.", "Los cambios se aplican la próxima vez que se inicie el programa.", "Le modifiche si applicano al prossimo avvio del programma.", "Die Änderungen gelten beim nächsten Start des Programms.", "Les changements s'appliquent au prochain démarrage du programme.", "As alterações aplicam-se na próxima vez que o programa iniciar.", "更改将在下次启动程序时生效。", "変更は次回プログラムを起動したときに反映されます。"],
 }
 
 impl crate::theme::ThemeId {
@@ -989,6 +997,30 @@ mod tests {
             let same = core.iter().filter(|&&l| tr(l, t) == en).count();
             assert!(same <= 5, "{t:?} is the English text in {same} languages");
         }
+    }
+
+    #[test]
+    fn the_words_of_the_log_of_the_settings_exist_in_the_thirty_seven_languages_and_the_sentence_is_translated() {
+        let all = [
+            Text::LogTitle,
+            Text::LogWrite,
+            Text::LogDetail,
+            Text::LogMaxSize,
+            Text::LogOpenFolder,
+            Text::LogCopyPath,
+            Text::LogCopied,
+            Text::LogNote,
+        ];
+        for l in Lang::ALL {
+            for t in all {
+                assert!(!tr(l, t).trim().is_empty(), "{t:?} in {l:?}");
+            }
+            if l != Lang::En {
+                assert_ne!(tr(l, Text::LogNote), tr(Lang::En, Text::LogNote), "{l:?}");
+            }
+        }
+        // the Portuguese of Portugal says registo, not the Brazilian log
+        assert!(tr(Lang::Pt, Text::LogWrite).contains("registo"));
     }
 
     #[test]

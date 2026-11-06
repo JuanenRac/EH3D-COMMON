@@ -636,3 +636,11 @@ SlotsNoSlot	Nuk është caktuar vend për
 SlotsShared	Dy mjete ndajnë të njëjtin vend
 SlotsUndefined	Skedari i makinës nuk e përcakton vendin
 SlotsNote	Çdo mjet vendoset në vendin e zgjedhur. Zgjedhja ruhet për këtë makinë dhe ripërdoret për të njëjtat mjete. Vendosni mjetet në shirit siç tregohet para se të filloni.
+LogTitle	Regjistri
+LogWrite	Shkruaj regjistrin
+LogDetail	Niveli i detajeve
+LogMaxSize	Madhësia maksimale e një skedari
+LogOpenFolder	Hap dosjen e regjistrit
+LogCopyPath	Kopjo shtegun e regjistrit
+LogCopied	Shtegu u kopjua
+LogNote	Ndryshimet zbatohen herën tjetër kur nis programi.

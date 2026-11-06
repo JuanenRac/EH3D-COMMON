@@ -636,3 +636,11 @@ SlotsNoSlot	Vieta nav piešķirta rīkam
 SlotsShared	Divi rīki izmanto vienu vietu
 SlotsUndefined	Iekārtas fails nenosaka vietu
 SlotsNote	Katrs rīks tiek novietots izvēlētajā vietā. Izvēle tiek saglabāta šai iekārtai un izmantota atkārtoti tiem pašiem rīkiem. Pirms sākšanas ievietojiet rīkus joslā, kā parādīts.
+LogTitle	Žurnāls
+LogWrite	Rakstīt žurnālu
+LogDetail	Detalizācijas līmenis
+LogMaxSize	Faila maksimālais izmērs
+LogOpenFolder	Atvērt žurnāla mapi
+LogCopyPath	Kopēt ceļu uz žurnālu
+LogCopied	Ceļš nokopēts
+LogNote	Izmaiņas stāsies spēkā nākamreiz, kad programma tiks palaista.

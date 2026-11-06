@@ -636,3 +636,11 @@ SlotsNoSlot	Nie przypisano miejsca dla
 SlotsShared	Dwa narzędzia współdzielą miejsce
 SlotsUndefined	Plik maszyny nie definiuje miejsca
 SlotsNote	Każde narzędzie trafia na wybrane miejsce. Wybór jest zapisywany dla tej maszyny i używany ponownie dla tych samych narzędzi. Przed startem włóż narzędzia do listwy tak, jak pokazano.
+LogTitle	Dziennik
+LogWrite	Zapisuj dziennik
+LogDetail	Poziom szczegółowości
+LogMaxSize	Maksymalny rozmiar pliku
+LogOpenFolder	Otwórz folder dziennika
+LogCopyPath	Kopiuj ścieżkę dziennika
+LogCopied	Ścieżka skopiowana
+LogNote	Zmiany zaczną obowiązywać przy następnym uruchomieniu programu.

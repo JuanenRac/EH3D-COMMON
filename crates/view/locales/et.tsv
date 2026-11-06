@@ -636,3 +636,11 @@ SlotsNoSlot	Asukohta pole määratud tööriistale
 SlotsShared	Kaks tööriista jagavad asukohta
 SlotsUndefined	Masinafail ei määratle asukohta
 SlotsNote	Iga tööriist läheb valitud asukohta. Valik salvestatakse selle masina jaoks ja kasutatakse samade tööriistade puhul uuesti. Pane tööriistad enne alustamist latti, nagu näidatud.
+LogTitle	Logi
+LogWrite	Kirjuta logi
+LogDetail	Üksikasjalikkuse tase
+LogMaxSize	Faili suurim suurus
+LogOpenFolder	Ava logi kaust
+LogCopyPath	Kopeeri logi tee
+LogCopied	Tee kopeeritud
+LogNote	Muudatused rakenduvad programmi järgmisel käivitamisel.

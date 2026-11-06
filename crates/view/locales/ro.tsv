@@ -636,3 +636,11 @@ SlotsNoSlot	Nu este atribuit niciun loc pentru
 SlotsShared	Două scule folosesc același loc
 SlotsUndefined	Fișierul mașinii nu definește locul
 SlotsNote	Fiecare sculă merge în locul ales. Alegerea se salvează pentru această mașină și se reutilizează pentru aceleași scule. Pune sculele în bară așa cum se arată, înainte de a porni.
+LogTitle	Jurnal
+LogWrite	Scrie jurnalul
+LogDetail	Nivel de detaliu
+LogMaxSize	Dimensiunea maximă a unui fișier
+LogOpenFolder	Deschide folderul jurnalului
+LogCopyPath	Copiază calea jurnalului
+LogCopied	Calea a fost copiată
+LogNote	Modificările se aplică la următoarea pornire a programului.

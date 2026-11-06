@@ -636,3 +636,11 @@ SlotsNoSlot	Mesto ni dodeljeno za
 SlotsShared	Dve orodji si delita mesto
 SlotsUndefined	Datoteka stroja mesta ne določa
 SlotsNote	Vsako orodje gre na izbrano mesto. Izbira se shrani za ta stroj in znova uporabi za ista orodja. Pred začetkom vstavite orodja v letev, kot je prikazano.
+LogTitle	Dnevnik
+LogWrite	Zapisuj dnevnik
+LogDetail	Raven podrobnosti
+LogMaxSize	Največja velikost datoteke
+LogOpenFolder	Odpri mapo dnevnika
+LogCopyPath	Kopiraj pot do dnevnika
+LogCopied	Pot kopirana
+LogNote	Spremembe začnejo veljati ob naslednjem zagonu programa.

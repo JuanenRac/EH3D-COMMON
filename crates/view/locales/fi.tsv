@@ -636,3 +636,11 @@ SlotsNoSlot	Paikkaa ei ole määritetty työkalulle
 SlotsShared	Kaksi työkalua käyttää samaa paikkaa
 SlotsUndefined	Konetiedosto ei määritä paikkaa
 SlotsNote	Jokainen työkalu menee valitsemaasi paikkaan. Valinta tallennetaan tälle koneelle ja käytetään uudelleen samoille työkaluille. Aseta työkalut listaan näytetyllä tavalla ennen aloitusta.
+LogTitle	Loki
+LogWrite	Kirjoita loki
+LogDetail	Tarkkuustaso
+LogMaxSize	Tiedoston enimmäiskoko
+LogOpenFolder	Avaa lokin kansio
+LogCopyPath	Kopioi lokin polku
+LogCopied	Polku kopioitu
+LogNote	Muutokset tulevat voimaan, kun ohjelma käynnistetään seuraavan kerran.
