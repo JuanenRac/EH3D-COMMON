@@ -59,11 +59,13 @@ CANDIDATES = [
 
 # The files the two touch-screen projects (EH3D-NODE-BUNGARD-HMI and EH3D-NODE-HMI-GUI) share. The gate, the texts, the settings and the screens (app_main.cpp, ui.cpp)
 # differ by the kind of machine the screen serves and stay each project's own.
+# The keyboard, the notices, the link to the server, the sound files and the flow of a job are the own files of each touch screen again:
+# EH3D-NODE-BUNGARD-HMI grew its own (the chaining of the changer, the positions of the tools, the stage notices) and the other screen still has the earlier ones.
 HMI_CANDIDATES = [
-    "core/job_bar.hpp", "core/job_memory.hpp", "core/job_tools.hpp", "core/keyboard.hpp", "core/lang.hpp", "core/notices.hpp", "core/orientation.hpp", "core/quality.hpp",
-    "core/sdfiles.hpp", "core/server_link.hpp", "core/voice.hpp", "core/wav.hpp", "core/workflow.hpp",
+    "core/job_bar.hpp", "core/job_memory.hpp", "core/job_tools.hpp", "core/lang.hpp", "core/orientation.hpp", "core/quality.hpp",
+    "core/sdfiles.hpp", "core/voice.hpp",
     "main/board.hpp", "main/board_p4.cpp", "main/server_link.cpp", "main/server_link.hpp",
-    "tests/test_hmi.cpp", "tests/test_keyboard.cpp", "tests/test_notices.cpp", "tests/test_quality.cpp", "tests/test_workflow.cpp",
+    "tests/test_hmi.cpp", "tests/test_notices.cpp", "tests/test_quality.cpp", "tests/test_workflow.cpp",
 ]
 CANDIDATES_OF = {"EH3D-NODE-BUNGARD-HMI": HMI_CANDIDATES, "EH3D-NODE-HMI-GUI": HMI_CANDIDATES}
 

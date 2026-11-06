@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The files of the touch screens that each screen grows on its own leave the shared firmware base:** the keyboard, the notices, the link to the server, the sound files and the flow of a job are no longer copied between the two screens, so the check of the base passes again after one screen changed them.
 - **Words for the window of the positions of the tools in the bar in the 37 languages:** the title, the buttons to assign in order and to clear the assignment, the empty choice, the three states of a tool (pending, in use, done), the three warnings (a tool with no place, two tools in one place, a place the machine file does not define) and the note about how the choice is kept.
 
 ## [0.1.9] - Texts of the job stages, the progress blocks and the jog panel in every language, and the zip crate at 9

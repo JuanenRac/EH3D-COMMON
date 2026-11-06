@@ -66,12 +66,6 @@
         "EH3D-NODE-BUNGARD-AUX": "core/json.hpp"
       }
     },
-    "core/keyboard.hpp": {
-      "targets": {
-        "EH3D-NODE-BUNGARD-HMI": "core/keyboard.hpp",
-        "EH3D-NODE-HMI-GUI": "core/keyboard.hpp"
-      }
-    },
     "core/lang.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD-HMI": "core/lang.hpp",
@@ -114,12 +108,6 @@
         "EH3D-NODE-BUNGARD-AUX": "core/node_settings.hpp"
       }
     },
-    "core/notices.hpp": {
-      "targets": {
-        "EH3D-NODE-BUNGARD-HMI": "core/notices.hpp",
-        "EH3D-NODE-HMI-GUI": "core/notices.hpp"
-      }
-    },
     "core/orientation.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD-HMI": "core/orientation.hpp",
@@ -144,12 +132,6 @@
         "EH3D-NODE-BUNGARD-AUX": "core/semver.hpp"
       }
     },
-    "core/server_link.hpp": {
-      "targets": {
-        "EH3D-NODE-BUNGARD-HMI": "core/server_link.hpp",
-        "EH3D-NODE-HMI-GUI": "core/server_link.hpp"
-      }
-    },
     "core/stored_load.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD": "core/stored_load.hpp",
@@ -168,22 +150,10 @@
         "EH3D-NODE-HMI-GUI": "core/voice.hpp"
       }
     },
-    "core/wav.hpp": {
-      "targets": {
-        "EH3D-NODE-BUNGARD-HMI": "core/wav.hpp",
-        "EH3D-NODE-HMI-GUI": "core/wav.hpp"
-      }
-    },
     "core/web_policy.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD": "core/web_policy.hpp",
         "EH3D-NODE-BUNGARD-AUX": "core/web_policy.hpp"
-      }
-    },
-    "core/workflow.hpp": {
-      "targets": {
-        "EH3D-NODE-BUNGARD-HMI": "core/workflow.hpp",
-        "EH3D-NODE-HMI-GUI": "core/workflow.hpp"
       }
     },
     "main/api_shared.cpp": {
@@ -381,12 +351,6 @@
       "targets": {
         "EH3D-NODE-BUNGARD-HMI": "tests/test_hmi.cpp",
         "EH3D-NODE-HMI-GUI": "tests/test_hmi.cpp"
-      }
-    },
-    "tests/test_keyboard.cpp": {
-      "targets": {
-        "EH3D-NODE-BUNGARD-HMI": "tests/test_keyboard.cpp",
-        "EH3D-NODE-HMI-GUI": "tests/test_keyboard.cpp"
       }
     },
     "tests/test_notices.cpp": {
