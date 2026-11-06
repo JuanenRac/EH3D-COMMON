@@ -108,6 +108,12 @@
         "EH3D-NODE-BUNGARD-AUX": "core/node_settings.hpp"
       }
     },
+    "core/notices.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/notices.hpp",
+        "EH3D-NODE-HMI-GUI": "core/notices.hpp"
+      }
+    },
     "core/orientation.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD-HMI": "core/orientation.hpp",
@@ -120,6 +126,12 @@
         "EH3D-NODE-HMI-GUI": "core/quality.hpp"
       }
     },
+    "core/rack.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/rack.hpp",
+        "EH3D-NODE-HMI-GUI": "core/rack.hpp"
+      }
+    },
     "core/sdfiles.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD-HMI": "core/sdfiles.hpp",
@@ -130,6 +142,18 @@
       "targets": {
         "EH3D-NODE-BUNGARD": "core/semver.hpp",
         "EH3D-NODE-BUNGARD-AUX": "core/semver.hpp"
+      }
+    },
+    "core/server_link.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/server_link.hpp",
+        "EH3D-NODE-HMI-GUI": "core/server_link.hpp"
+      }
+    },
+    "core/stage_notice.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/stage_notice.hpp",
+        "EH3D-NODE-HMI-GUI": "core/stage_notice.hpp"
       }
     },
     "core/stored_load.hpp": {
@@ -150,10 +174,22 @@
         "EH3D-NODE-HMI-GUI": "core/voice.hpp"
       }
     },
+    "core/wav.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/wav.hpp",
+        "EH3D-NODE-HMI-GUI": "core/wav.hpp"
+      }
+    },
     "core/web_policy.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD": "core/web_policy.hpp",
         "EH3D-NODE-BUNGARD-AUX": "core/web_policy.hpp"
+      }
+    },
+    "core/workflow.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/workflow.hpp",
+        "EH3D-NODE-HMI-GUI": "core/workflow.hpp"
       }
     },
     "main/api_shared.cpp": {
