@@ -611,3 +611,17 @@ JogLimit	Крај хода
 JogRaiseZ	Прво подигните Z: глава је прениско за померање
 JogLive	Права машина
 JogDemo	Симулирана глава
+StageDoneTitle	Бушење је готово. Следи глодање
+StageFollow	Прати ток глодања
+JobFinishedRemove	Посао је завршен. Плочу можете извадити.
+HudBlkTool	Алат и корак
+HudBlkTime	Време
+HudBlkPos	Положај и дубина
+HudBlkCount	Бројачи
+HudElapsed	протекло
+HudEndsAt	завршетак у
+HudDepth	дубина
+HudFeed	помак
+HudChanges	промене алата
+HudHoleOne	рупа
+HudSegmentOne	деоница

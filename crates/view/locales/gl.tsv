@@ -611,3 +611,17 @@ JogLimit	Fin de carreira
 JogRaiseZ	Sobe primeiro Z: o cabezal está demasiado baixo para desprazarse
 JogLive	Máquina real
 JogDemo	Cabezal simulado
+StageDoneTitle	O furado rematou. Agora toca o fresado
+StageFollow	Seguir o proceso de fresado
+JobFinishedRemove	O traballo rematou. Pode retirar a placa.
+HudBlkTool	Ferramenta e paso
+HudBlkTime	Tempo
+HudBlkPos	Posición e profundidade
+HudBlkCount	Contadores
+HudElapsed	transcorrido
+HudEndsAt	remata ás
+HudDepth	profundidade
+HudFeed	avance
+HudChanges	cambios de ferramenta
+HudHoleOne	furado
+HudSegmentOne	tramo

@@ -611,3 +611,17 @@ JogLimit	Koniec skoku
 JogRaiseZ	Najpierw podnieś Z: głowica jest zbyt nisko, by się przesuwać
 JogLive	Prawdziwa maszyna
 JogDemo	Symulowana głowica
+StageDoneTitle	Wiercenie zakończone. Teraz frezowanie
+StageFollow	Śledź przebieg frezowania
+JobFinishedRemove	Zadanie zakończone. Możesz wyjąć płytkę.
+HudBlkTool	Narzędzie i krok
+HudBlkTime	Czas
+HudBlkPos	Pozycja i głębokość
+HudBlkCount	Liczniki
+HudElapsed	upłynęło
+HudEndsAt	koniec o
+HudDepth	głębokość
+HudFeed	posuw
+HudChanges	wymiany narzędzia
+HudHoleOne	otwór
+HudSegmentOne	odcinek

@@ -611,3 +611,17 @@ JogLimit	Endi ferils
 JogRaiseZ	Lyftu Z fyrst: hausinn er of lágur til að færast
 JogLive	Raunveruleg vél
 JogDemo	Hermdur haus
+StageDoneTitle	Borun er lokið. Nú kemur fræsing
+StageFollow	Fylgjast með fræsingu
+JobFinishedRemove	Verkinu er lokið. Þú getur tekið plötuna út.
+HudBlkTool	Verkfæri og skref
+HudBlkTime	Tími
+HudBlkPos	Staða og dýpt
+HudBlkCount	Teljarar
+HudElapsed	liðinn
+HudEndsAt	lýkur kl.
+HudDepth	dýpt
+HudFeed	hraði
+HudChanges	verkfæraskipti
+HudHoleOne	gat
+HudSegmentOne	kafli

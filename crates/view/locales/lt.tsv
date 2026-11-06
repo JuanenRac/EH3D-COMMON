@@ -611,3 +611,17 @@ JogLimit	Eigos pabaiga
 JogRaiseZ	Pirmiausia pakelkite Z: galvutė per žemai judėti
 JogLive	Tikros staklės
 JogDemo	Imituojama galvutė
+StageDoneTitle	Gręžimas baigtas. Dabar eis frezavimas
+StageFollow	Sekti frezavimą
+JobFinishedRemove	Darbas baigtas. Plokštę galite išimti.
+HudBlkTool	Įrankis ir žingsnis
+HudBlkTime	Laikas
+HudBlkPos	Padėtis ir gylis
+HudBlkCount	Skaitikliai
+HudElapsed	praėjo
+HudEndsAt	baigsis
+HudDepth	gylis
+HudFeed	pastūma
+HudChanges	įrankių keitimai
+HudHoleOne	skylė
+HudSegmentOne	atkarpa

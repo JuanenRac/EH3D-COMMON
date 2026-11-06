@@ -611,3 +611,17 @@ JogLimit	Deireadh an aistir
 JogRaiseZ	Ardaigh Z ar dtús: tá an ceann ró-íseal le gluaiseacht
 JogLive	Fíor-inneall
 JogDemo	Ceann insamhlaithe
+StageDoneTitle	Tá an druileáil déanta. Anois tá an ródú ann
+StageFollow	Lean an próiseas ródaithe
+JobFinishedRemove	Tá an obair críochnaithe. Is féidir leat an bord a bhaint.
+HudBlkTool	Uirlis agus céim
+HudBlkTime	Am
+HudBlkPos	Suíomh agus doimhneacht
+HudBlkCount	Áiritheoirí
+HudElapsed	caite
+HudEndsAt	críochnaíonn ag
+HudDepth	doimhneacht
+HudFeed	bia
+HudChanges	athruithe uirlise
+HudHoleOne	poll
+HudSegmentOne	deighleog

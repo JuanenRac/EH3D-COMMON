@@ -611,3 +611,17 @@ JogLimit	Gājiena beigas
 JogRaiseZ	Vispirms paceliet Z: galva ir pārāk zemu pārvietošanai
 JogLive	Īstā mašīna
 JogDemo	Simulēta galva
+StageDoneTitle	Urbšana ir pabeigta. Tagad frēzēšana
+StageFollow	Sekot frēzēšanai
+JobFinishedRemove	Darbs ir pabeigts. Varat izņemt plati.
+HudBlkTool	Instruments un solis
+HudBlkTime	Laiks
+HudBlkPos	Pozīcija un dziļums
+HudBlkCount	Skaitītāji
+HudElapsed	pagājis
+HudEndsAt	beigsies
+HudDepth	dziļums
+HudFeed	padeve
+HudChanges	instrumentu maiņas
+HudHoleOne	urbums
+HudSegmentOne	posms

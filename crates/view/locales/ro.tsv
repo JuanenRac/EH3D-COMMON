@@ -611,3 +611,17 @@ JogLimit	Capăt de cursă
 JogRaiseZ	Ridicați mai întâi Z: capul este prea jos pentru deplasare
 JogLive	Mașină reală
 JogDemo	Cap simulat
+StageDoneTitle	Burghierea s-a terminat. Urmează frezarea
+StageFollow	Urmărește procesul de frezare
+JobFinishedRemove	Lucrarea s-a terminat. Puteți scoate placa.
+HudBlkTool	Sculă și pas
+HudBlkTime	Timp
+HudBlkPos	Poziție și adâncime
+HudBlkCount	Contoare
+HudElapsed	scurs
+HudEndsAt	se termină la
+HudDepth	adâncime
+HudFeed	avans
+HudChanges	schimbări de sculă
+HudHoleOne	gaură
+HudSegmentOne	segment

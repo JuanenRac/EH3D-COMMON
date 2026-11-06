@@ -611,3 +611,17 @@ JogLimit	Konec poti
 JogRaiseZ	Najprej dvignite Z: glava je prenizko za premik
 JogLive	Pravi stroj
 JogDemo	Simulirana glava
+StageDoneTitle	Vrtanje je končano. Zdaj sledi frezanje
+StageFollow	Spremljaj potek frezanja
+JobFinishedRemove	Delo je končano. Ploščo lahko odstranite.
+HudBlkTool	Orodje in korak
+HudBlkTime	Čas
+HudBlkPos	Položaj in globina
+HudBlkCount	Števci
+HudElapsed	preteklo
+HudEndsAt	konec ob
+HudDepth	globina
+HudFeed	podajanje
+HudChanges	menjave orodja
+HudHoleOne	izvrtina
+HudSegmentOne	odsek

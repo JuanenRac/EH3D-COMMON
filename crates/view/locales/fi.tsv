@@ -611,3 +611,17 @@ JogLimit	Liikealueen pää
 JogRaiseZ	Nosta ensin Z: pää on liian alhaalla siirtymiseen
 JogLive	Oikea kone
 JogDemo	Simuloitu pää
+StageDoneTitle	Poraus on valmis. Nyt on jyrsinnän vuoro
+StageFollow	Seuraa jyrsintää
+JobFinishedRemove	Työ on valmis. Voit ottaa piirilevyn pois.
+HudBlkTool	Työkalu ja vaihe
+HudBlkTime	Aika
+HudBlkPos	Sijainti ja syvyys
+HudBlkCount	Laskurit
+HudElapsed	kulunut
+HudEndsAt	päättyy klo
+HudDepth	syvyys
+HudFeed	syöttö
+HudChanges	työkalunvaihdot
+HudHoleOne	reikä
+HudSegmentOne	osuus

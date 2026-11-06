@@ -611,3 +611,17 @@ JogLimit	Slutning af kørselsvej
 JogRaiseZ	Hæv først Z: hovedet er for lavt til at flytte
 JogLive	Rigtig maskine
 JogDemo	Simuleret hoved
+StageDoneTitle	Boringen er færdig. Nu følger fræsningen
+StageFollow	Følg fræsningen
+JobFinishedRemove	Opgaven er færdig. Du kan tage printet ud.
+HudBlkTool	Værktøj og trin
+HudBlkTime	Tid
+HudBlkPos	Position og dybde
+HudBlkCount	Tællere
+HudElapsed	forløbet
+HudEndsAt	slutter kl.
+HudDepth	dybde
+HudFeed	tilspænding
+HudChanges	værktøjsskift
+HudHoleOne	hul
+HudSegmentOne	segment

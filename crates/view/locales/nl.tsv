@@ -611,3 +611,17 @@ JogLimit	Einde van de slag
 JogRaiseZ	Til eerst Z op: de kop staat te laag om te verplaatsen
 JogLive	Echte machine
 JogDemo	Gesimuleerde kop
+StageDoneTitle	Het boren is klaar. Nu volgt het frezen
+StageFollow	Het freesproces volgen
+JobFinishedRemove	De taak is klaar. U kunt de print verwijderen.
+HudBlkTool	Gereedschap en stap
+HudBlkTime	Tijd
+HudBlkPos	Positie en diepte
+HudBlkCount	Tellers
+HudElapsed	verstreken
+HudEndsAt	klaar om
+HudDepth	diepte
+HudFeed	voeding
+HudChanges	gereedschapswissels
+HudHoleOne	gat
+HudSegmentOne	segment

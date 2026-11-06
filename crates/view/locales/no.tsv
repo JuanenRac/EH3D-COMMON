@@ -611,3 +611,17 @@ JogLimit	Slutten av banen
 JogRaiseZ	Hev Z først: hodet er for lavt til å flyttes
 JogLive	Ekte maskin
 JogDemo	Simulert hode
+StageDoneTitle	Boringen er ferdig. Nå kommer fresingen
+StageFollow	Følg fresingen
+JobFinishedRemove	Jobben er ferdig. Du kan ta ut kortet.
+HudBlkTool	Verktøy og trinn
+HudBlkTime	Tid
+HudBlkPos	Posisjon og dybde
+HudBlkCount	Tellere
+HudElapsed	forløpt
+HudEndsAt	ferdig kl.
+HudDepth	dybde
+HudFeed	mating
+HudChanges	verktøyskift
+HudHoleOne	hull
+HudSegmentOne	segment

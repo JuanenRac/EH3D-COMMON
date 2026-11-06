@@ -611,3 +611,17 @@ JogLimit	A mozgás vége
 JogRaiseZ	Először emelje fel a Z-t: a fej túl alacsonyan van az elmozduláshoz
 JogLive	Valódi gép
 JogDemo	Szimulált fej
+StageDoneTitle	A fúrás kész. Most a marás következik
+StageFollow	A marás követése
+JobFinishedRemove	A munka elkészült. Kiveheti a panelt.
+HudBlkTool	Szerszám és lépés
+HudBlkTime	Idő
+HudBlkPos	Pozíció és mélység
+HudBlkCount	Számlálók
+HudElapsed	eltelt
+HudEndsAt	befejezés:
+HudDepth	mélység
+HudFeed	előtolás
+HudChanges	szerszámcserék
+HudHoleOne	furat
+HudSegmentOne	szakasz

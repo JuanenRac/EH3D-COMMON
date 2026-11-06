@@ -611,3 +611,17 @@ JogLimit	Slutet av rörelsen
 JogRaiseZ	Höj Z först: huvudet är för lågt för att flyttas
 JogLive	Riktig maskin
 JogDemo	Simulerat huvud
+StageDoneTitle	Borrningen är klar. Nu kommer fräsningen
+StageFollow	Följ fräsningen
+JobFinishedRemove	Jobbet är klart. Du kan ta ut kortet.
+HudBlkTool	Verktyg och steg
+HudBlkTime	Tid
+HudBlkPos	Position och djup
+HudBlkCount	Räknare
+HudElapsed	förfluten
+HudEndsAt	klart kl.
+HudDepth	djup
+HudFeed	matning
+HudChanges	verktygsbyten
+HudHoleOne	hål
+HudSegmentOne	segment

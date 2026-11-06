@@ -611,3 +611,17 @@ JogLimit	Ibilbidearen amaiera
 JogRaiseZ	Igo Z lehenik: burua baxuegi dago mugitzeko
 JogLive	Benetako makina
 JogDemo	Buru simulatua
+StageDoneTitle	Zulatzea amaitu da. Orain fresatzea dator
+StageFollow	Jarraitu fresatzearen prozesua
+JobFinishedRemove	Lana amaitu da. Plaka kendu dezakezu.
+HudBlkTool	Erreminta eta urratsa
+HudBlkTime	Denbora
+HudBlkPos	Posizioa eta sakonera
+HudBlkCount	Kontagailuak
+HudElapsed	igarota
+HudEndsAt	amaiera:
+HudDepth	sakonera
+HudFeed	aurrerapena
+HudChanges	erreminta-aldaketak
+HudHoleOne	zuloa
+HudSegmentOne	zatia

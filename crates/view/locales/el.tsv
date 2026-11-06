@@ -611,3 +611,17 @@ JogLimit	Τέλος διαδρομής
 JogRaiseZ	Ανεβάστε πρώτα το Z: η κεφαλή είναι πολύ χαμηλά για μετακίνηση
 JogLive	Πραγματικό μηχάνημα
 JogDemo	Προσομοιωμένη κεφαλή
+StageDoneTitle	Η διάτρηση ολοκληρώθηκε. Ακολουθεί το φρεζάρισμα
+StageFollow	Παρακολούθηση του φρεζαρίσματος
+JobFinishedRemove	Η εργασία ολοκληρώθηκε. Μπορείτε να αφαιρέσετε την πλακέτα.
+HudBlkTool	Εργαλείο και βήμα
+HudBlkTime	Χρόνος
+HudBlkPos	Θέση και βάθος
+HudBlkCount	Μετρητές
+HudElapsed	παρήλθε
+HudEndsAt	λήξη στις
+HudDepth	βάθος
+HudFeed	πρόωση
+HudChanges	αλλαγές εργαλείου
+HudHoleOne	τρύπα
+HudSegmentOne	τμήμα

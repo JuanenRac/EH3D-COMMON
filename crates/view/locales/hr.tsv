@@ -611,3 +611,17 @@ JogLimit	Kraj hoda
 JogRaiseZ	Prvo podignite Z: glava je preniska za pomicanje
 JogLive	Stvarni stroj
 JogDemo	Simulirana glava
+StageDoneTitle	Bušenje je gotovo. Slijedi glodanje
+StageFollow	Prati tijek glodanja
+JobFinishedRemove	Posao je završen. Ploču možete izvaditi.
+HudBlkTool	Alat i korak
+HudBlkTime	Vrijeme
+HudBlkPos	Položaj i dubina
+HudBlkCount	Brojila
+HudElapsed	proteklo
+HudEndsAt	završava u
+HudDepth	dubina
+HudFeed	posmak
+HudChanges	izmjene alata
+HudHoleOne	rupa
+HudSegmentOne	dionica

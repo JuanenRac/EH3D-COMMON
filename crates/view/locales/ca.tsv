@@ -611,3 +611,17 @@ JogLimit	Final de recorregut
 JogRaiseZ	Pugeu primer Z: el capçal és massa baix per desplaçar-se
 JogLive	Màquina real
 JogDemo	Capçal simulat
+StageDoneTitle	El trepat ha acabat. Ara toca el fresat
+StageFollow	Segueix el procés de fresat
+JobFinishedRemove	La feina ha acabat. Podeu retirar la placa.
+HudBlkTool	Eina i pas
+HudBlkTime	Temps
+HudBlkPos	Posició i profunditat
+HudBlkCount	Comptadors
+HudElapsed	transcorregut
+HudEndsAt	acaba a les
+HudDepth	profunditat
+HudFeed	avanç
+HudChanges	canvis d'eina
+HudHoleOne	forat
+HudSegmentOne	tram

@@ -611,3 +611,17 @@ JogLimit	Käigu lõpp
 JogRaiseZ	Tõsta kõigepealt Z üles: pea on liigutamiseks liiga madalal
 JogLive	Päris masin
 JogDemo	Simuleeritud pea
+StageDoneTitle	Puurimine on valmis. Nüüd tuleb freesimine
+StageFollow	Jälgi freesimist
+JobFinishedRemove	Töö on valmis. Võite plaadi eemaldada.
+HudBlkTool	Tööriist ja samm
+HudBlkTime	Aeg
+HudBlkPos	Asend ja sügavus
+HudBlkCount	Loendurid
+HudElapsed	möödunud
+HudEndsAt	lõpeb kell
+HudDepth	sügavus
+HudFeed	ettenihe
+HudChanges	tööriistavahetused
+HudHoleOne	auk
+HudSegmentOne	lõik

@@ -611,3 +611,17 @@ JogLimit	Конец хода
 JogRaiseZ	Сначала поднимите Z: головка слишком низко для перемещения
 JogLive	Настоящий станок
 JogDemo	Имитируемая головка
+StageDoneTitle	Сверление завершено. Теперь фрезерование
+StageFollow	Следить за фрезерованием
+JobFinishedRemove	Задание завершено. Можно снять плату.
+HudBlkTool	Инструмент и шаг
+HudBlkTime	Время
+HudBlkPos	Позиция и глубина
+HudBlkCount	Счётчики
+HudElapsed	прошло
+HudEndsAt	окончание в
+HudDepth	глубина
+HudFeed	подача
+HudChanges	смены инструмента
+HudHoleOne	отверстие
+HudSegmentOne	участок

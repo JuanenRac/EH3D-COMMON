@@ -611,3 +611,17 @@ JogLimit	Tmiem tal-ġirja
 JogRaiseZ	Għolli Z l-ewwel: ir-ras hija baxxa wisq biex timxi
 JogLive	Magna vera
 JogDemo	Ras simulata
+StageDoneTitle	It-tqib tlesta. Issa jiġi l-qtugħ bil-frieża
+StageFollow	Segwi l-proċess tal-qtugħ bil-frieża
+JobFinishedRemove	Ix-xogħol spiċċa. Tista' tneħħi l-bord.
+HudBlkTool	Għodda u pass
+HudBlkTime	Ħin
+HudBlkPos	Pożizzjoni u fond
+HudBlkCount	Kontijiet
+HudElapsed	għadda
+HudEndsAt	jispiċċa fi
+HudDepth	fond
+HudFeed	avanz
+HudChanges	bidliet tal-għodda
+HudHoleOne	toqba
+HudSegmentOne	segment

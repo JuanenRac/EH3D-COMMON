@@ -611,3 +611,17 @@ JogLimit	Koniec dráhy
 JogRaiseZ	Najprv zdvihnite Z: hlava je príliš nízko na pohyb
 JogLive	Skutočný stroj
 JogDemo	Simulovaná hlava
+StageDoneTitle	Vŕtanie je hotové. Teraz nasleduje frézovanie
+StageFollow	Sledovať priebeh frézovania
+JobFinishedRemove	Úloha je dokončená. Dosku môžete vybrať.
+HudBlkTool	Nástroj a krok
+HudBlkTime	Čas
+HudBlkPos	Poloha a hĺbka
+HudBlkCount	Počítadlá
+HudElapsed	uplynulo
+HudEndsAt	koniec o
+HudDepth	hĺbka
+HudFeed	posuv
+HudChanges	výmeny nástroja
+HudHoleOne	otvor
+HudSegmentOne	úsek

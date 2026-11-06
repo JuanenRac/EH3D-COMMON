@@ -611,3 +611,17 @@ JogLimit	Fundi i lëvizjes
 JogRaiseZ	Ngrini fillimisht Z: koka është shumë poshtë për t'u lëvizur
 JogLive	Makina e vërtetë
 JogDemo	Koka e simuluar
+StageDoneTitle	Shpimi përfundoi. Tani vjen frezimi
+StageFollow	Ndiq procesin e frezimit
+JobFinishedRemove	Puna përfundoi. Mund ta heqësh pllakën.
+HudBlkTool	Vegla dhe hapi
+HudBlkTime	Koha
+HudBlkPos	Pozicioni dhe thellësia
+HudBlkCount	Numëruesit
+HudElapsed	kaluar
+HudEndsAt	përfundon në
+HudDepth	thellësia
+HudFeed	avancimi
+HudChanges	ndërrimet e veglës
+HudHoleOne	vrima
+HudSegmentOne	segmenti

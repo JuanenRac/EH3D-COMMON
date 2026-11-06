@@ -611,3 +611,17 @@ JogLimit	Край на хода
 JogRaiseZ	Първо вдигнете Z: главата е твърде ниско за преместване
 JogLive	Реална машина
 JogDemo	Симулирана глава
+StageDoneTitle	Пробиването приключи. Следва фрезоване
+StageFollow	Следене на фрезоването
+JobFinishedRemove	Задачата приключи. Можете да извадите платката.
+HudBlkTool	Инструмент и стъпка
+HudBlkTime	Време
+HudBlkPos	Позиция и дълбочина
+HudBlkCount	Броячи
+HudElapsed	изминало
+HudEndsAt	край в
+HudDepth	дълбочина
+HudFeed	подаване
+HudChanges	смени на инструмент
+HudHoleOne	отвор
+HudSegmentOne	участък
