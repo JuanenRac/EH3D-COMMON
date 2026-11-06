@@ -625,3 +625,14 @@ HudFeed	ettenihe
 HudChanges	tööriistavahetused
 HudHoleOne	auk
 HudSegmentOne	lõik
+SlotsTitle	Asukohad latis
+SlotsAuto	Määra järjekorras
+SlotsClear	Tühjenda määramine
+SlotsNone	asukohta pole
+SlotsPending	ootel
+SlotsUsing	kasutusel
+SlotsDone	valmis
+SlotsNoSlot	Asukohta pole määratud tööriistale
+SlotsShared	Kaks tööriista jagavad asukohta
+SlotsUndefined	Masinafail ei määratle asukohta
+SlotsNote	Iga tööriist läheb valitud asukohta. Valik salvestatakse selle masina jaoks ja kasutatakse samade tööriistade puhul uuesti. Pane tööriistad enne alustamist latti, nagu näidatud.

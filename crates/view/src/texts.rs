@@ -922,6 +922,17 @@ texts! {
     HudChanges => ["tool changes", "cambios de herramienta", "cambi utensile", "Werkzeugwechsel", "changements d'outil", "trocas de ferramenta", "换刀次数", "工具交換回数"],
     HudHoleOne => ["hole", "taladro", "foro", "Bohrung", "perçage", "furo", "孔", "穴"],
     HudSegmentOne => ["segment", "tramo", "tratto", "Abschnitt", "tronçon", "troço", "段", "区間"],
+    SlotsTitle => ["Positions in the bar", "Posiciones en la barra", "Posizioni nella barra", "Positionen in der Leiste", "Positions dans la barre", "Posições na barra", "刀库中的位置", "ラックの位置"],
+    SlotsAuto => ["Assign in order", "Asignar en orden", "Assegna in ordine", "In Reihenfolge zuweisen", "Attribuer dans l'ordre", "Atribuir por ordem", "按顺序分配", "順番に割り当て"],
+    SlotsClear => ["Clear assignment", "Borrar asignación", "Cancella assegnazione", "Zuweisung löschen", "Effacer l'attribution", "Apagar atribuição", "清除分配", "割り当てを消去"],
+    SlotsNone => ["no slot", "sin hueco", "nessun posto", "kein Platz", "aucune place", "sem posição", "未分配", "未割り当て"],
+    SlotsPending => ["pending", "pendiente", "in attesa", "ausstehend", "en attente", "pendente", "待处理", "未実行"],
+    SlotsUsing => ["in use", "en uso", "in uso", "in Benutzung", "en cours", "em uso", "使用中", "使用中"],
+    SlotsDone => ["done", "hecha", "fatto", "erledigt", "terminé", "feita", "已完成", "完了"],
+    SlotsNoSlot => ["No slot is assigned to", "No hay hueco asignado a", "Nessun posto assegnato a", "Kein Platz zugewiesen für", "Aucune place attribuée à", "Não há posição atribuída a", "未分配位置给", "位置が未割り当て"],
+    SlotsShared => ["Two tools share the slot", "Dos herramientas comparten el hueco", "Due utensili condividono il posto", "Zwei Werkzeuge teilen sich den Platz", "Deux outils partagent la place", "Duas ferramentas partilham a posição", "两把刀具共用同一位置", "2本の工具が同じ位置を使っています"],
+    SlotsUndefined => ["The machine file does not define the slot", "El fichero de la máquina no define el hueco", "Il file della macchina non definisce il posto", "Die Maschinendatei definiert den Platz nicht", "Le fichier de la machine ne définit pas la place", "O ficheiro da máquina não define a posição", "机器文件未定义该位置", "マシンファイルにこの位置の定義がありません"],
+    SlotsNote => ["Each tool goes in the slot you choose. The choice is saved for this machine and used again for the same tools. Put the tools in the bar as shown before you start.", "Cada herramienta va en el hueco que elijas. La elección se guarda para esta máquina y se reutiliza con las mismas herramientas. Coloca las herramientas en la barra como se indica antes de empezar.", "Ogni utensile va nel posto che scegli. La scelta viene salvata per questa macchina e riutilizzata con gli stessi utensili. Metti gli utensili nella barra come indicato prima di iniziare.", "Jedes Werkzeug kommt auf den gewählten Platz. Die Wahl wird für diese Maschine gespeichert und für dieselben Werkzeuge wiederverwendet. Legen Sie die Werkzeuge vor dem Start wie angezeigt in die Leiste.", "Chaque outil va dans la place choisie. Le choix est enregistré pour cette machine et réutilisé pour les mêmes outils. Placez les outils dans la barre comme indiqué avant de commencer.", "Cada ferramenta vai na posição que escolher. A escolha é guardada para esta máquina e reutilizada com as mesmas ferramentas. Coloque as ferramentas na barra como indicado antes de começar.", "每把刀具放在您选择的位置。该选择会为本机保存，并在使用相同刀具时重复使用。开始前请按所示将刀具放入刀库。", "各工具は選んだ位置に入れます。選択はこのマシン用に保存され、同じ工具で再利用されます。開始前に表示のとおり工具をバーに入れてください。"],
 }
 
 impl crate::theme::ThemeId {

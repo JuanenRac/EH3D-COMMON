@@ -625,3 +625,14 @@ HudFeed	padeve
 HudChanges	instrumentu maiņas
 HudHoleOne	urbums
 HudSegmentOne	posms
+SlotsTitle	Pozīcijas joslā
+SlotsAuto	Piešķirt pēc kārtas
+SlotsClear	Notīrīt piešķiršanu
+SlotsNone	nav vietas
+SlotsPending	gaida
+SlotsUsing	lietošanā
+SlotsDone	gatavs
+SlotsNoSlot	Vieta nav piešķirta rīkam
+SlotsShared	Divi rīki izmanto vienu vietu
+SlotsUndefined	Iekārtas fails nenosaka vietu
+SlotsNote	Katrs rīks tiek novietots izvēlētajā vietā. Izvēle tiek saglabāta šai iekārtai un izmantota atkārtoti tiem pašiem rīkiem. Pirms sākšanas ievietojiet rīkus joslā, kā parādīts.

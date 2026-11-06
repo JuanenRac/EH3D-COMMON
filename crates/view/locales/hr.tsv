@@ -625,3 +625,14 @@ HudFeed	posmak
 HudChanges	izmjene alata
 HudHoleOne	rupa
 HudSegmentOne	dionica
+SlotsTitle	Pozicije u letvi
+SlotsAuto	Dodijeli redom
+SlotsClear	Obriši dodjelu
+SlotsNone	bez mjesta
+SlotsPending	na čekanju
+SlotsUsing	u uporabi
+SlotsDone	gotovo
+SlotsNoSlot	Nije dodijeljeno mjesto za
+SlotsShared	Dva alata dijele mjesto
+SlotsUndefined	Datoteka stroja ne definira mjesto
+SlotsNote	Svaki alat ide na odabrano mjesto. Izbor se sprema za ovaj stroj i ponovno koristi za iste alate. Prije početka stavite alate u letvu kako je prikazano.

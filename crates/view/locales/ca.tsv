@@ -625,3 +625,14 @@ HudFeed	avanç
 HudChanges	canvis d'eina
 HudHoleOne	forat
 HudSegmentOne	tram
+SlotsTitle	Posicions a la barra
+SlotsAuto	Assigna per ordre
+SlotsClear	Esborra l'assignació
+SlotsNone	sense lloc
+SlotsPending	pendent
+SlotsUsing	en ús
+SlotsDone	fet
+SlotsNoSlot	No hi ha lloc assignat a
+SlotsShared	Dues eines comparteixen el lloc
+SlotsUndefined	El fitxer de la màquina no defineix el lloc
+SlotsNote	Cada eina va al lloc que triïs. L'elecció es desa per a aquesta màquina i es reutilitza amb les mateixes eines. Posa les eines a la barra tal com s'indica abans de començar.

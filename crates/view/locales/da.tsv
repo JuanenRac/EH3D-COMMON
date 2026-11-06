@@ -625,3 +625,14 @@ HudFeed	tilspænding
 HudChanges	værktøjsskift
 HudHoleOne	hul
 HudSegmentOne	segment
+SlotsTitle	Positioner i skinnen
+SlotsAuto	Tildel i rækkefølge
+SlotsClear	Ryd tildeling
+SlotsNone	ingen plads
+SlotsPending	afventer
+SlotsUsing	i brug
+SlotsDone	færdig
+SlotsNoSlot	Ingen plads er tildelt til
+SlotsShared	To værktøjer deler pladsen
+SlotsUndefined	Maskinfilen definerer ikke pladsen
+SlotsNote	Hvert værktøj placeres på den valgte plads. Valget gemmes for denne maskine og genbruges til de samme værktøjer. Sæt værktøjerne i skinnen som vist, før du starter.

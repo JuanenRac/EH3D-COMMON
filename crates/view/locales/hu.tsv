@@ -625,3 +625,14 @@ HudFeed	előtolás
 HudChanges	szerszámcserék
 HudHoleOne	furat
 HudSegmentOne	szakasz
+SlotsTitle	Pozíciók a sínen
+SlotsAuto	Kiosztás sorrendben
+SlotsClear	Kiosztás törlése
+SlotsNone	nincs hely
+SlotsPending	függőben
+SlotsUsing	használatban
+SlotsDone	kész
+SlotsNoSlot	Nincs pozíció kiosztva ehhez
+SlotsShared	Két szerszám ugyanazt a helyet használja
+SlotsUndefined	A gépfájl nem határozza meg a helyet
+SlotsNote	Minden szerszám a kiválasztott helyre kerül. A választás ehhez a géphez mentődik, és ugyanazokhoz a szerszámokhoz újra felhasználódik. Indítás előtt tegye a szerszámokat a sínre a mutatott módon.

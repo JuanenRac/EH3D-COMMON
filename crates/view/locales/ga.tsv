@@ -625,3 +625,14 @@ HudFeed	bia
 HudChanges	athruithe uirlise
 HudHoleOne	poll
 HudSegmentOne	deighleog
+SlotsTitle	Suíomhanna sa bharra
+SlotsAuto	Sann in ord
+SlotsClear	Glan an leithroinnt
+SlotsNone	gan suíomh
+SlotsPending	ar feitheamh
+SlotsUsing	in úsáid
+SlotsDone	críochnaithe
+SlotsNoSlot	Níl suíomh leithroinnte do
+SlotsShared	Roinneann dhá uirlis an suíomh
+SlotsUndefined	Ní shainmhíníonn comhad an mheaisín an suíomh
+SlotsNote	Téann gach uirlis sa suíomh a roghnaíonn tú. Sábháiltear an rogha don mheaisín seo agus úsáidtear arís í do na huirlisí céanna. Cuir na huirlisí sa bharra mar atá léirithe sula dtosaíonn tú.

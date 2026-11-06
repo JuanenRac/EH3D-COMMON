@@ -625,3 +625,14 @@ HudFeed	mating
 HudChanges	verktøyskift
 HudHoleOne	hull
 HudSegmentOne	segment
+SlotsTitle	Posisjoner i skinnen
+SlotsAuto	Tildel i rekkefølge
+SlotsClear	Fjern tildelingen
+SlotsNone	ingen plass
+SlotsPending	venter
+SlotsUsing	i bruk
+SlotsDone	ferdig
+SlotsNoSlot	Ingen plass er tildelt til
+SlotsShared	To verktøy deler plassen
+SlotsUndefined	Maskinfilen definerer ikke plassen
+SlotsNote	Hvert verktøy settes på den valgte plassen. Valget lagres for denne maskinen og brukes på nytt for de samme verktøyene. Sett verktøyene i skinnen som vist før du starter.

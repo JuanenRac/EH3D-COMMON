@@ -625,3 +625,14 @@ HudFeed	avanz
 HudChanges	bidliet tal-għodda
 HudHoleOne	toqba
 HudSegmentOne	segment
+SlotsTitle	Pożizzjonijiet fil-bar
+SlotsAuto	Assenja bl-ordni
+SlotsClear	Ħassar l-assenjazzjoni
+SlotsNone	l-ebda post
+SlotsPending	fl-istennija
+SlotsUsing	qed jintuża
+SlotsDone	lest
+SlotsNoSlot	M'hemm l-ebda post assenjat lil
+SlotsShared	Żewġ għodod jaqsmu l-istess post
+SlotsUndefined	Il-fajl tal-magna ma jiddefinixxix il-post
+SlotsNote	Kull għodda tmur fil-post li tagħżel. L-għażla tinħażen għal din il-magna u terġa' tintuża għall-istess għodod. Poġġi l-għodod fil-bar kif muri qabel tibda.

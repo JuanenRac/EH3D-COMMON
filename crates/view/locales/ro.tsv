@@ -625,3 +625,14 @@ HudFeed	avans
 HudChanges	schimbări de sculă
 HudHoleOne	gaură
 HudSegmentOne	segment
+SlotsTitle	Poziții în bară
+SlotsAuto	Atribuie în ordine
+SlotsClear	Șterge atribuirea
+SlotsNone	fără loc
+SlotsPending	în așteptare
+SlotsUsing	în uz
+SlotsDone	gata
+SlotsNoSlot	Nu este atribuit niciun loc pentru
+SlotsShared	Două scule folosesc același loc
+SlotsUndefined	Fișierul mașinii nu definește locul
+SlotsNote	Fiecare sculă merge în locul ales. Alegerea se salvează pentru această mașină și se reutilizează pentru aceleași scule. Pune sculele în bară așa cum se arată, înainte de a porni.

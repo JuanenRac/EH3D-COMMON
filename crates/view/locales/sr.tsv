@@ -625,3 +625,14 @@ HudFeed	помак
 HudChanges	промене алата
 HudHoleOne	рупа
 HudSegmentOne	деоница
+SlotsTitle	Позиције у лајсни
+SlotsAuto	Додели редом
+SlotsClear	Обриши доделу
+SlotsNone	без места
+SlotsPending	на чекању
+SlotsUsing	у употреби
+SlotsDone	готово
+SlotsNoSlot	Место није додељено за
+SlotsShared	Два алата деле место
+SlotsUndefined	Датотека машине не дефинише место
+SlotsNote	Сваки алат иде на изабрано место. Избор се чува за ову машину и поново користи за исте алате. Пре почетка ставите алате у лајсну као што је приказано.

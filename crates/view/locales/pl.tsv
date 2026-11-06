@@ -625,3 +625,14 @@ HudFeed	posuw
 HudChanges	wymiany narzędzia
 HudHoleOne	otwór
 HudSegmentOne	odcinek
+SlotsTitle	Pozycje w listwie
+SlotsAuto	Przypisz po kolei
+SlotsClear	Wyczyść przypisanie
+SlotsNone	brak miejsca
+SlotsPending	oczekuje
+SlotsUsing	w użyciu
+SlotsDone	gotowe
+SlotsNoSlot	Nie przypisano miejsca dla
+SlotsShared	Dwa narzędzia współdzielą miejsce
+SlotsUndefined	Plik maszyny nie definiuje miejsca
+SlotsNote	Każde narzędzie trafia na wybrane miejsce. Wybór jest zapisywany dla tej maszyny i używany ponownie dla tych samych narzędzi. Przed startem włóż narzędzia do listwy tak, jak pokazano.

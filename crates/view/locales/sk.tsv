@@ -625,3 +625,14 @@ HudFeed	posuv
 HudChanges	výmeny nástroja
 HudHoleOne	otvor
 HudSegmentOne	úsek
+SlotsTitle	Pozície v lište
+SlotsAuto	Priradiť postupne
+SlotsClear	Vymazať priradenie
+SlotsNone	bez pozície
+SlotsPending	čaká
+SlotsUsing	používa sa
+SlotsDone	hotovo
+SlotsNoSlot	Nie je priradená pozícia pre
+SlotsShared	Dva nástroje zdieľajú pozíciu
+SlotsUndefined	Súbor stroja pozíciu nedefinuje
+SlotsNote	Každý nástroj patrí na zvolenú pozíciu. Voľba sa uloží pre tento stroj a znova sa použije pre rovnaké nástroje. Pred spustením vložte nástroje do lišty, ako je zobrazené.

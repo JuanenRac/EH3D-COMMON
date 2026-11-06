@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Words for the window of the positions of the tools in the bar in the 37 languages:** the title, the buttons to assign in order and to clear the assignment, the empty choice, the three states of a tool (pending, in use, done), the three warnings (a tool with no place, two tools in one place, a place the machine file does not define) and the note about how the choice is kept.
+
 ## [0.1.9] - Texts of the job stages, the progress blocks and the jog panel in every language, and the zip crate at 9
 
 - **Words for the notices of the job in the 37 languages:** the notice between the drilling and the routing, the end of the job and the blocks under the progress bar (tool and step, time, position and depth, counters, elapsed, end time, depth, feed, tool changes, hole and segment) now exist in the 27 languages of the files too, so every language has every text. The translations wait for a native review.

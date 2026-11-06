@@ -625,3 +625,14 @@ HudFeed	avance
 HudChanges	cambios de ferramenta
 HudHoleOne	furado
 HudSegmentOne	tramo
+SlotsTitle	Posicións na barra
+SlotsAuto	Asignar por orde
+SlotsClear	Borrar a asignación
+SlotsNone	sen sitio
+SlotsPending	pendente
+SlotsUsing	en uso
+SlotsDone	feito
+SlotsNoSlot	Non hai sitio asignado a
+SlotsShared	Dúas ferramentas comparten o sitio
+SlotsUndefined	O ficheiro da máquina non define o sitio
+SlotsNote	Cada ferramenta vai no sitio que escollas. A escolla gárdase para esta máquina e reutilízase coas mesmas ferramentas. Pon as ferramentas na barra como se indica antes de comezar.

@@ -625,3 +625,14 @@ HudFeed	aurrerapena
 HudChanges	erreminta-aldaketak
 HudHoleOne	zuloa
 HudSegmentOne	zatia
+SlotsTitle	Posizioak barran
+SlotsAuto	Esleitu ordenan
+SlotsClear	Garbitu esleipena
+SlotsNone	lekurik gabe
+SlotsPending	zain
+SlotsUsing	erabiltzen
+SlotsDone	eginda
+SlotsNoSlot	Ez dago lekurik esleituta honentzat
+SlotsShared	Bi erremintak leku bera partekatzen dute
+SlotsUndefined	Makinaren fitxategiak ez du lekua definitzen
+SlotsNote	Erreminta bakoitza aukeratzen duzun lekuan jartzen da. Aukera makina honetarako gordetzen da eta erreminta berdinetarako berrerabiltzen da. Hasi aurretik jarri erremintak barran erakusten den bezala.

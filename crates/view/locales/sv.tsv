@@ -625,3 +625,14 @@ HudFeed	matning
 HudChanges	verktygsbyten
 HudHoleOne	hål
 HudSegmentOne	segment
+SlotsTitle	Positioner i skenan
+SlotsAuto	Tilldela i ordning
+SlotsClear	Rensa tilldelningen
+SlotsNone	ingen plats
+SlotsPending	väntar
+SlotsUsing	används
+SlotsDone	klar
+SlotsNoSlot	Ingen plats är tilldelad till
+SlotsShared	Två verktyg delar plats
+SlotsUndefined	Maskinfilen definierar inte platsen
+SlotsNote	Varje verktyg placeras på den valda platsen. Valet sparas för den här maskinen och återanvänds för samma verktyg. Sätt verktygen i skenan som visas innan du startar.

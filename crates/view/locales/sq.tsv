@@ -625,3 +625,14 @@ HudFeed	avancimi
 HudChanges	ndërrimet e veglës
 HudHoleOne	vrima
 HudSegmentOne	segmenti
+SlotsTitle	Pozicionet në shirit
+SlotsAuto	Cakto me radhë
+SlotsClear	Pastro caktimin
+SlotsNone	pa vend
+SlotsPending	në pritje
+SlotsUsing	në përdorim
+SlotsDone	gati
+SlotsNoSlot	Nuk është caktuar vend për
+SlotsShared	Dy mjete ndajnë të njëjtin vend
+SlotsUndefined	Skedari i makinës nuk e përcakton vendin
+SlotsNote	Çdo mjet vendoset në vendin e zgjedhur. Zgjedhja ruhet për këtë makinë dhe ripërdoret për të njëjtat mjete. Vendosni mjetet në shirit siç tregohet para se të filloni.

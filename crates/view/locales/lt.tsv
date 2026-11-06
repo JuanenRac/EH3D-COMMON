@@ -625,3 +625,14 @@ HudFeed	pastūma
 HudChanges	įrankių keitimai
 HudHoleOne	skylė
 HudSegmentOne	atkarpa
+SlotsTitle	Padėtys juostoje
+SlotsAuto	Priskirti iš eilės
+SlotsClear	Išvalyti priskyrimą
+SlotsNone	nėra vietos
+SlotsPending	laukia
+SlotsUsing	naudojamas
+SlotsDone	baigta
+SlotsNoSlot	Vieta nepriskirta įrankiui
+SlotsShared	Du įrankiai dalijasi vieta
+SlotsUndefined	Staklių faile vieta neapibrėžta
+SlotsNote	Kiekvienas įrankis dedamas į pasirinktą vietą. Pasirinkimas išsaugomas šioms staklėms ir naudojamas iš naujo tiems patiems įrankiams. Prieš pradėdami sudėkite įrankius į juostą, kaip parodyta.

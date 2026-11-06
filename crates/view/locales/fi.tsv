@@ -625,3 +625,14 @@ HudFeed	syöttö
 HudChanges	työkalunvaihdot
 HudHoleOne	reikä
 HudSegmentOne	osuus
+SlotsTitle	Paikat listassa
+SlotsAuto	Määritä järjestyksessä
+SlotsClear	Tyhjennä määritys
+SlotsNone	ei paikkaa
+SlotsPending	odottaa
+SlotsUsing	käytössä
+SlotsDone	valmis
+SlotsNoSlot	Paikkaa ei ole määritetty työkalulle
+SlotsShared	Kaksi työkalua käyttää samaa paikkaa
+SlotsUndefined	Konetiedosto ei määritä paikkaa
+SlotsNote	Jokainen työkalu menee valitsemaasi paikkaan. Valinta tallennetaan tälle koneelle ja käytetään uudelleen samoille työkaluille. Aseta työkalut listaan näytetyllä tavalla ennen aloitusta.
