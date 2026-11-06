@@ -644,3 +644,8 @@ LogOpenFolder	Otvoriť priečinok záznamu
 LogCopyPath	Kopírovať cestu k záznamu
 LogCopied	Cesta skopírovaná
 LogNote	Zmeny sa prejavia pri nasledujúcom spustení programu.
+WarnRackUnknownField	Server ignoroval pole výmenníka, ktoré nepozná:
+WarnRequestNewer	Server prečítal požiadavku ako najnovšiu verziu, ktorú pozná
+WarnRackNeedsV2	Server ignoroval výmenník: požiadavka bola prvej verzie
+WarnRackNoChanger	Tento stroj mení nástroje ručne: nie sú zreťazené
+WarnOutOfCourse	Práca presahuje dráhu stroja na osi:

@@ -644,3 +644,8 @@ LogOpenFolder	Iftaħ il-folder tar-reġistru
 LogCopyPath	Ikkopja t-triq tar-reġistru
 LogCopied	It-triq ġiet ikkupjata
 LogNote	Il-bidliet japplikaw id-darba li jmiss meta jibda l-programm.
+WarnRackUnknownField	Is-server injora qasam tal-bdil tal-għodod li ma jafux:
+WarnRequestNewer	Is-server qara t-talba bħala l-aktar verżjoni reċenti li jaf
+WarnRackNeedsV2	Is-server injora l-bdil tal-għodod: it-talba kienet tal-ewwel verżjoni
+WarnRackNoChanger	Din il-magna tibdel l-għodod bl-idejn: ma humiex marbutin f'katina
+WarnOutOfCourse	Ix-xogħol imur lil hinn mill-mixja tal-magna fuq l-assi:

@@ -644,3 +644,8 @@ LogOpenFolder	Map van het logboek openen
 LogCopyPath	Pad van het logboek kopiëren
 LogCopied	Pad gekopieerd
 LogNote	De wijzigingen gelden de volgende keer dat het programma start.
+WarnRackUnknownField	De server negeerde een veld van de wisselaar dat hij niet kent:
+WarnRequestNewer	De server las het verzoek als de nieuwste versie die hij kent
+WarnRackNeedsV2	De server negeerde de wisselaar: het verzoek was van de eerste versie
+WarnRackNoChanger	Deze machine wisselt het gereedschap met de hand: het wordt niet geketend
+WarnOutOfCourse	Het werk gaat voorbij de verplaatsing van de machine op de as:

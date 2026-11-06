@@ -644,3 +644,8 @@ LogOpenFolder	Ava logi kaust
 LogCopyPath	Kopeeri logi tee
 LogCopied	Tee kopeeritud
 LogNote	Muudatused rakenduvad programmi järgmisel käivitamisel.
+WarnRackUnknownField	Server eiras vahetaja välja, mida see ei tunne:
+WarnRequestNewer	Server luges päringu uusima versioonina, mida see tunneb
+WarnRackNeedsV2	Server eiras vahetajat: päring oli esimesest versioonist
+WarnRackNoChanger	See masin vahetab tööriistu käsitsi: neid ei aheldata
+WarnOutOfCourse	Töö ületab masina käigu teljel:

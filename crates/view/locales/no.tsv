@@ -644,3 +644,8 @@ LogOpenFolder	Åpne loggmappen
 LogCopyPath	Kopier loggstien
 LogCopied	Stien er kopiert
 LogNote	Endringene trer i kraft neste gang programmet starter.
+WarnRackUnknownField	Serveren ignorerte et felt i veksleren som den ikke kjenner:
+WarnRequestNewer	Serveren leste forespørselen som den nyeste versjonen den kjenner
+WarnRackNeedsV2	Serveren ignorerte veksleren: forespørselen var av første versjon
+WarnRackNoChanger	Denne maskinen bytter verktøy for hånd: de er ikke kjedet
+WarnOutOfCourse	Arbeidet går utenfor maskinens vei på aksen:

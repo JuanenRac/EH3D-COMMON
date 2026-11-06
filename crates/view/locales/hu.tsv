@@ -644,3 +644,8 @@ LogOpenFolder	A napló mappájának megnyitása
 LogCopyPath	A napló útvonalának másolása
 LogCopied	Útvonal másolva
 LogNote	A módosítások a program következő indításakor lépnek életbe.
+WarnRackUnknownField	A szerver figyelmen kívül hagyta a cserélő egy mezőjét, amelyet nem ismer:
+WarnRequestNewer	A szerver a kérést a legújabb általa ismert verzióként olvasta
+WarnRackNeedsV2	A szerver figyelmen kívül hagyta a cserélőt: a kérés az első verziójú volt
+WarnRackNoChanger	Ez a gép kézzel cseréli a szerszámokat: nincsenek láncolva
+WarnOutOfCourse	A munka túllépi a gép úthosszát a tengelyen:

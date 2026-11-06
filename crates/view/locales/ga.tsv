@@ -644,3 +644,8 @@ LogOpenFolder	Oscail fillteán an logchomhaid
 LogCopyPath	Cóipeáil cosán an logchomhaid
 LogCopied	Cosán cóipeáilte
 LogNote	Cuirfear na hathruithe i bhfeidhm an chéad uair eile a thosóidh an clár.
+WarnRackUnknownField	Rinne an freastalaí neamhaird ar réimse den athraitheoir nach n-aithníonn sé:
+WarnRequestNewer	Léigh an freastalaí an iarraidh mar an leagan is déanaí a bhfuil aithne aige air
+WarnRackNeedsV2	Rinne an freastalaí neamhaird ar an athraitheoir: bhí an iarraidh den chéad leagan
+WarnRackNoChanger	Athraíonn an t-inneal seo uirlisí de láimh: níl siad slabhraithe
+WarnOutOfCourse	Téann an obair thar thaisteal an innill ar an ais:

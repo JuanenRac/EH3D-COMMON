@@ -644,3 +644,8 @@ LogOpenFolder	Åbn logmappen
 LogCopyPath	Kopiér logstien
 LogCopied	Sti kopieret
 LogNote	Ændringerne træder i kraft, næste gang programmet starter.
+WarnRackUnknownField	Serveren ignorerede et felt i skifteren, som den ikke kender:
+WarnRequestNewer	Serveren læste forespørgslen som den nyeste version, den kender
+WarnRackNeedsV2	Serveren ignorerede skifteren: forespørgslen var af den første version
+WarnRackNoChanger	Denne maskine skifter værktøj i hånden: værktøjerne er ikke kædet
+WarnOutOfCourse	Arbejdet går ud over maskinens kørsel på aksen:

@@ -644,3 +644,8 @@ LogOpenFolder	Opna möppu annálsins
 LogCopyPath	Afrita slóð annálsins
 LogCopied	Slóð afrituð
 LogNote	Breytingarnar taka gildi næst þegar forritið er ræst.
+WarnRackUnknownField	Þjónninn hunsaði reit í skiptaranum sem hann þekkir ekki:
+WarnRequestNewer	Þjónninn las beiðnina sem nýjustu útgáfu sem hann þekkir
+WarnRackNeedsV2	Þjónninn hunsaði skiptarann: beiðnin var af fyrstu útgáfu
+WarnRackNoChanger	Þessi vél skiptir um verkfæri í höndunum: þau eru ekki keðjuð
+WarnOutOfCourse	Verkið fer út fyrir feril vélarinnar á ásnum:

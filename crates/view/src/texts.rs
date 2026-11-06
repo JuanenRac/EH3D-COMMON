@@ -941,6 +941,11 @@ texts! {
     LogCopyPath => ["Copy the path of the log", "Copiar la ruta del registro", "Copia il percorso del registro", "Pfad des Protokolls kopieren", "Copier le chemin du journal", "Copiar o caminho do registo", "复制日志路径", "ログのパスをコピー"],
     LogCopied => ["Path copied", "Ruta copiada", "Percorso copiato", "Pfad kopiert", "Chemin copié", "Caminho copiado", "路径已复制", "パスをコピーしました"],
     LogNote => ["The changes apply the next time the program starts.", "Los cambios se aplican la próxima vez que se inicie el programa.", "Le modifiche si applicano al prossimo avvio del programma.", "Die Änderungen gelten beim nächsten Start des Programms.", "Les changements s'appliquent au prochain démarrage du programme.", "As alterações aplicam-se na próxima vez que o programa iniciar.", "更改将在下次启动程序时生效。", "変更は次回プログラムを起動したときに反映されます。"],
+    WarnRackUnknownField => ["The server ignored a field of the tool changer that it does not know:", "El servidor ignoró un campo del cambiador que no conoce:", "Il server ha ignorato un campo del cambio utensile che non conosce:", "Der Server hat ein ihm unbekanntes Feld des Werkzeugwechslers ignoriert:", "Le serveur a ignoré un champ du changeur qu'il ne connaît pas :", "O servidor ignorou um campo do trocador que não conhece:", "服务器忽略了它不认识的换刀器字段：", "サーバーは未知のツールチェンジャーのフィールドを無視しました："],
+    WarnRequestNewer => ["The server read the request as the newest version it knows", "El servidor leyó la petición como la versión más reciente que conoce", "Il server ha letto la richiesta come l'ultima versione che conosce", "Der Server hat die Anfrage als neueste ihm bekannte Version gelesen", "Le serveur a lu la demande comme la dernière version qu'il connaît", "O servidor leu o pedido como a versão mais recente que conhece", "服务器将该请求按其所知的最新版本读取", "サーバーはこの要求を既知の最新バージョンとして読み取りました"],
+    WarnRackNeedsV2 => ["The server ignored the tool changer: the request was of the first version", "El servidor ignoró el cambiador: la petición era de la primera versión", "Il server ha ignorato il cambio utensile: la richiesta era della prima versione", "Der Server hat den Werkzeugwechsler ignoriert: die Anfrage war von der ersten Version", "Le serveur a ignoré le changeur : la demande était de la première version", "O servidor ignorou o trocador: o pedido era da primeira versão", "服务器忽略了换刀器：请求属于第一版", "サーバーはツールチェンジャーを無視しました：要求は第1版でした"],
+    WarnRackNoChanger => ["This machine changes its tools by hand: the tools are not chained", "Esta máquina cambia las herramientas a mano: no se encadenan", "Questa macchina cambia gli utensili a mano: non vengono concatenati", "Diese Maschine wechselt die Werkzeuge von Hand: sie werden nicht verkettet", "Cette machine change ses outils à la main : ils ne sont pas enchaînés", "Esta máquina troca as ferramentas à mão: não são encadeadas", "此机器手动换刀：刀具不会衔接", "このマシンは工具を手で交換します：工具は連結されません"],
+    WarnOutOfCourse => ["The work goes past the course of the machine on the axis:", "El trabajo se sale del recorrido de la máquina en el eje:", "Il lavoro supera la corsa della macchina sull'asse:", "Die Arbeit überschreitet den Verfahrweg der Maschine auf der Achse:", "Le travail dépasse la course de la machine sur l'axe :", "O trabalho ultrapassa o curso da máquina no eixo:", "作业超出了机器在该轴上的行程：", "作業が次の軸で機械の可動範囲を超えています："],
 }
 
 impl crate::theme::ThemeId {
@@ -1022,6 +1027,35 @@ mod tests {
         }
         // the Portuguese of Portugal says registo, not the Brazilian log
         assert!(tr(Lang::Pt, Text::LogWrite).contains("registo"));
+    }
+
+    #[test]
+    fn the_warnings_of_the_server_about_the_request_exist_in_the_thirty_seven_languages() {
+        let all = [
+            Text::WarnRackUnknownField,
+            Text::WarnRequestNewer,
+            Text::WarnRackNeedsV2,
+            Text::WarnRackNoChanger,
+            Text::WarnOutOfCourse,
+        ];
+        for l in Lang::ALL {
+            for t in all {
+                assert!(!tr(l, t).trim().is_empty(), "{t:?} in {l:?}");
+                if l != Lang::En {
+                    assert_ne!(tr(l, t), tr(Lang::En, t), "{t:?} in {l:?}");
+                }
+            }
+        }
+        // the variants speak the language they come from, and the Portuguese of Portugal says ferramentas, not the Brazilian word
+        assert_eq!(
+            tr(Lang::PtBr, Text::WarnRackNoChanger),
+            tr(Lang::Pt, Text::WarnRackNoChanger)
+        );
+        assert_eq!(
+            tr(Lang::FrCa, Text::WarnRackNeedsV2),
+            tr(Lang::Fr, Text::WarnRackNeedsV2)
+        );
+        assert!(tr(Lang::Pt, Text::WarnRackNoChanger).contains("ferramentas"));
     }
 
     #[test]

@@ -644,3 +644,8 @@ LogOpenFolder	Abrir o cartafol do rexistro
 LogCopyPath	Copiar a ruta do rexistro
 LogCopied	Ruta copiada
 LogNote	Os cambios aplícanse a próxima vez que se inicie o programa.
+WarnRackUnknownField	O servidor ignorou un campo do cambiador que non coñece:
+WarnRequestNewer	O servidor leu a petición como a versión máis recente que coñece
+WarnRackNeedsV2	O servidor ignorou o cambiador: a petición era da primeira versión
+WarnRackNoChanger	Esta máquina cambia as ferramentas á man: non se encadean
+WarnOutOfCourse	O traballo sae do percorrido da máquina no eixe:

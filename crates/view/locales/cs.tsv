@@ -644,3 +644,8 @@ LogOpenFolder	Otevřít složku protokolu
 LogCopyPath	Kopírovat cestu k protokolu
 LogCopied	Cesta zkopírována
 LogNote	Změny se projeví při příštím spuštění programu.
+WarnRackUnknownField	Server ignoroval pole měniče, které nezná:
+WarnRequestNewer	Server přečetl požadavek jako nejnovější verzi, kterou zná
+WarnRackNeedsV2	Server ignoroval měnič: požadavek byl první verze
+WarnRackNoChanger	Tento stroj mění nástroje ručně: nejsou zřetězeny
+WarnOutOfCourse	Práce přesahuje dráhu stroje na ose:

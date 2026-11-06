@@ -644,3 +644,8 @@ LogOpenFolder	Öppna loggmappen
 LogCopyPath	Kopiera loggens sökväg
 LogCopied	Sökvägen kopierad
 LogNote	Ändringarna gäller nästa gång programmet startas.
+WarnRackUnknownField	Servern ignorerade ett fält i växlaren som den inte känner till:
+WarnRequestNewer	Servern läste begäran som den senaste versionen den känner till
+WarnRackNeedsV2	Servern ignorerade växlaren: begäran var av den första versionen
+WarnRackNoChanger	Den här maskinen byter verktyg för hand: de är inte kedjade
+WarnOutOfCourse	Arbetet går utanför maskinens väg på axeln:

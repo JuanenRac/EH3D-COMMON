@@ -644,3 +644,8 @@ LogOpenFolder	Ireki erregistroaren karpeta
 LogCopyPath	Kopiatu erregistroaren bidea
 LogCopied	Bidea kopiatu da
 LogNote	Aldaketak programa hurrengoan abiaraztean aplikatuko dira.
+WarnRackUnknownField	Zerbitzariak ez ditu aldagailuaren ezagutzen ez dituen eremuak kontuan hartu:
+WarnRequestNewer	Zerbitzariak eskaera ezagutzen duen bertsio berriena balitz bezala irakurri du
+WarnRackNeedsV2	Zerbitzariak aldagailua alde batera utzi du: eskaera lehen bertsiokoa zen
+WarnRackNoChanger	Makina honek erremintak eskuz aldatzen ditu: ez dira kateatzen
+WarnOutOfCourse	Lana makinaren ibilbidetik kanpo doa ardatzean:

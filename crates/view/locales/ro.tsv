@@ -644,3 +644,8 @@ LogOpenFolder	Deschide folderul jurnalului
 LogCopyPath	Copiază calea jurnalului
 LogCopied	Calea a fost copiată
 LogNote	Modificările se aplică la următoarea pornire a programului.
+WarnRackUnknownField	Serverul a ignorat un câmp al schimbătorului pe care nu îl cunoaște:
+WarnRequestNewer	Serverul a citit cererea ca pe cea mai nouă versiune pe care o cunoaște
+WarnRackNeedsV2	Serverul a ignorat schimbătorul: cererea era din prima versiune
+WarnRackNoChanger	Această mașină schimbă sculele manual: nu sunt înlănțuite
+WarnOutOfCourse	Lucrarea depășește cursa mașinii pe axa:

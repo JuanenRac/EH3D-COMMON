@@ -644,3 +644,8 @@ LogOpenFolder	Odpri mapo dnevnika
 LogCopyPath	Kopiraj pot do dnevnika
 LogCopied	Pot kopirana
 LogNote	Spremembe začnejo veljati ob naslednjem zagonu programa.
+WarnRackUnknownField	Strežnik je prezrl polje menjalnika, ki ga ne pozna:
+WarnRequestNewer	Strežnik je zahtevo prebral kot najnovejšo različico, ki jo pozna
+WarnRackNeedsV2	Strežnik je prezrl menjalnik: zahteva je bila prve različice
+WarnRackNoChanger	Ta stroj orodja menja ročno: niso povezana v verigo
+WarnOutOfCourse	Delo presega pot stroja na osi:

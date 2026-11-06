@@ -644,3 +644,8 @@ LogOpenFolder	Otwórz folder dziennika
 LogCopyPath	Kopiuj ścieżkę dziennika
 LogCopied	Ścieżka skopiowana
 LogNote	Zmiany zaczną obowiązywać przy następnym uruchomieniu programu.
+WarnRackUnknownField	Serwer zignorował pole zmieniacza, którego nie zna:
+WarnRequestNewer	Serwer odczytał żądanie jako najnowszą znaną sobie wersję
+WarnRackNeedsV2	Serwer zignorował zmieniacz: żądanie było w pierwszej wersji
+WarnRackNoChanger	Ta maszyna zmienia narzędzia ręcznie: nie są łączone w łańcuch
+WarnOutOfCourse	Praca wykracza poza przejazd maszyny na osi:

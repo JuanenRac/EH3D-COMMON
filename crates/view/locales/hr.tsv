@@ -644,3 +644,8 @@ LogOpenFolder	Otvori mapu dnevnika
 LogCopyPath	Kopiraj putanju dnevnika
 LogCopied	Putanja kopirana
 LogNote	Promjene se primjenjuju pri sljedećem pokretanju programa.
+WarnRackUnknownField	Poslužitelj je zanemario polje mjenjača koje ne poznaje:
+WarnRequestNewer	Poslužitelj je zahtjev pročitao kao najnoviju verziju koju poznaje
+WarnRackNeedsV2	Poslužitelj je zanemario mjenjač: zahtjev je bio prve verzije
+WarnRackNoChanger	Ovaj stroj mijenja alate ručno: nisu povezani u lanac
+WarnOutOfCourse	Rad prelazi put stroja na osi:

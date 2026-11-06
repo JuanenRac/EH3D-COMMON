@@ -644,3 +644,8 @@ LogOpenFolder	Atidaryti žurnalo aplanką
 LogCopyPath	Kopijuoti kelią į žurnalą
 LogCopied	Kelias nukopijuotas
 LogNote	Pakeitimai įsigalios kitą kartą paleidus programą.
+WarnRackUnknownField	Serveris nepaisė keitiklio lauko, kurio nepažįsta:
+WarnRequestNewer	Serveris užklausą perskaitė kaip naujausią savo pažįstamą versiją
+WarnRackNeedsV2	Serveris nepaisė keitiklio: užklausa buvo pirmosios versijos
+WarnRackNoChanger	Šios staklės įrankius keičia rankiniu būdu: jie nesujungiami į grandinę
+WarnOutOfCourse	Darbas viršija staklių eigą ašyje:

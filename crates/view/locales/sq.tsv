@@ -644,3 +644,8 @@ LogOpenFolder	Hap dosjen e regjistrit
 LogCopyPath	Kopjo shtegun e regjistrit
 LogCopied	Shtegu u kopjua
 LogNote	Ndryshimet zbatohen herën tjetër kur nis programi.
+WarnRackUnknownField	Serveri injoroi një fushë të ndërruesit që nuk e njeh:
+WarnRequestNewer	Serveri e lexoi kërkesën si versionin më të ri që njeh
+WarnRackNeedsV2	Serveri injoroi ndërruesin: kërkesa ishte e versionit të parë
+WarnRackNoChanger	Kjo makinë i ndërron mjetet me dorë: nuk lidhen në zinxhir
+WarnOutOfCourse	Puna kalon lëvizjen e makinës në bosht:

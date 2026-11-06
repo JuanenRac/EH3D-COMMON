@@ -644,3 +644,8 @@ LogOpenFolder	Avaa lokin kansio
 LogCopyPath	Kopioi lokin polku
 LogCopied	Polku kopioitu
 LogNote	Muutokset tulevat voimaan, kun ohjelma käynnistetään seuraavan kerran.
+WarnRackUnknownField	Palvelin ohitti vaihtajan kentän, jota se ei tunne:
+WarnRequestNewer	Palvelin luki pyynnön uusimpana tuntemanaan versiona
+WarnRackNeedsV2	Palvelin ohitti vaihtajan: pyyntö oli ensimmäistä versiota
+WarnRackNoChanger	Tämä kone vaihtaa työkalut käsin: niitä ei ketjuteta
+WarnOutOfCourse	Työ ylittää koneen liikkeen akselilla:

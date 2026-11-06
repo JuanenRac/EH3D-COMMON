@@ -644,3 +644,8 @@ LogOpenFolder	Atvērt žurnāla mapi
 LogCopyPath	Kopēt ceļu uz žurnālu
 LogCopied	Ceļš nokopēts
 LogNote	Izmaiņas stāsies spēkā nākamreiz, kad programma tiks palaista.
+WarnRackUnknownField	Serveris ignorēja mainītāja lauku, ko tas nepazīst:
+WarnRequestNewer	Serveris pieprasījumu nolasīja kā jaunāko versiju, ko tas pazīst
+WarnRackNeedsV2	Serveris ignorēja mainītāju: pieprasījums bija pirmās versijas
+WarnRackNoChanger	Šī iekārta rīkus maina ar roku: tie netiek sasaistīti ķēdē
+WarnOutOfCourse	Darbs pārsniedz iekārtas gājienu asī:
