@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.1.9] - Texts of the job stages, the progress blocks and the jog panel in every language, and the zip crate at 9
+
 - **Words for the notices of the job in the 37 languages:** the notice between the drilling and the routing, the end of the job and the blocks under the progress bar (tool and step, time, position and depth, counters, elapsed, end time, depth, feed, tool changes, hole and segment) now exist in the 27 languages of the files too, so every language has every text. The translations wait for a native review.
 - **Words for the panel that moves the machine by hand in the 37 languages:** the title, the step and the continuous mode, the three speeds, the machine and the work positions, the zero of the work, home, the saved positions with their buttons, the four reasons a move is refused (a job runs, the emergency stop is on, end of travel, Z too low to move across) and whether the machine is real or simulated. The translations in the 29 languages of the files wait for a native review.
 - **Dependency:** the `zip` crate is raised to 9.0.5 (the old range had a security advisory); packages are still written with deflate, the fixed 1980 time and the same entry order.
