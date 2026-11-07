@@ -266,16 +266,16 @@ impl Theme {
             panel_raised: c("#ffffff"),
             line: c("#2a5db0"),
             text: c("#1d2330"),
-            dim: c("#5b6372"),
+            dim: c("#545c6b"),
             accent: c("#2a5db0"),
-            accent2: c("#c2410c"),
-            ok: c("#15803d"),
-            warn: c("#b45309"),
+            accent2: c("#9a3412"),
+            ok: c("#166534"),
+            warn: c("#92400e"),
             danger: c("#b91c1c"),
             table: c("#efece3"),
             grid: c("#d6d0c0"),
             board: c("#cfe3d0"),
-            sizes: [c("#2a5db0"), c("#15803d"), c("#b45309"), c("#c2410c")],
+            sizes: [c("#2a5db0"), c("#166534"), c("#92400e"), c("#9a3412")],
             corner: Corner::Square,
             glow: false,
         }
@@ -575,6 +575,36 @@ mod tests {
                     s.contrast(t.board) >= 1.5 || s.contrast(t.table) >= 3.0,
                     "{:?} size {i}",
                     t.id
+                );
+            }
+        }
+    }
+
+    #[test]
+    fn the_paper_theme_keeps_every_text_colour_readable_on_every_light_surface() {
+        // WCAG AA for normal text is 4.5; the end of the background gradient, the table and the board are the lightest-to-darkest surfaces of the theme
+        let t = Theme::paper();
+        let surfaces = [
+            ("panel", t.panel),
+            ("background start", t.background.0),
+            ("background end", t.background.1),
+            ("table", t.table),
+            ("board", t.board),
+        ];
+        let inks = [
+            ("dim", t.dim),
+            ("accent", t.accent),
+            ("accent2", t.accent2),
+            ("ok", t.ok),
+            ("warn", t.warn),
+            ("danger", t.danger),
+        ];
+        for (ink_name, ink) in inks {
+            for (surface_name, surface) in surfaces {
+                let ratio = ink.contrast(surface);
+                assert!(
+                    ratio >= 4.5,
+                    "{ink_name} on {surface_name} is {ratio:.2}, below 4.5"
                 );
             }
         }
