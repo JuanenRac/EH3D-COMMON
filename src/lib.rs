@@ -5,6 +5,7 @@
 //! * [`project`]: the metadata of a project and the rules of its format versions;
 //! * [`container`]: the `.eh3dproj` package, a ZIP archive with a SHA-256 record of every entry;
 //! * [`telemetry`]: axes, spindle, machine states and alarm codes as machines report them;
+//! * [`build`]: which build of a program runs (repository, version, commit and kind) as a small JSON text inside the binary;
 //! * [`theme`]: the colours of the suite.
 //!
 //! Nothing here opens a window, talks to a machine or reads the network.
@@ -12,6 +13,7 @@
 #![forbid(unsafe_code)]
 #![warn(missing_docs)]
 
+pub mod build;
 pub mod container;
 pub mod error;
 pub mod project;

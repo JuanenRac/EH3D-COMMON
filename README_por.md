@@ -18,7 +18,7 @@
 
 ---
 
-**Verificação de honestidade - o que funciona hoje:** uma biblioteca em Rust com o contentor de projeto (`.eh3dproj`), os metadados de um projeto, as verificações de integridade SHA-256, os tipos de telemetria de máquina e as cores da suite, mais a base de firmware que cada nó ESP32 da suite copia (71 ficheiros e a ferramenta que mantém as cópias idênticas). 361 testes correm num computador. Os programas de furação e de fresagem e a interface moderna leem os seus ficheiros e desenham os seus trabalhos com os crates partilhados; nada aqui foi executado numa máquina nem numa placa.
+**Verificação de honestidade - o que funciona hoje:** uma biblioteca em Rust com o contentor de projeto (`.eh3dproj`), os metadados de um projeto, as verificações de integridade SHA-256, os tipos de telemetria de máquina e as cores da suite, mais a base de firmware que cada nó ESP32 da suite copia (71 ficheiros e a ferramenta que mantém as cópias idênticas). 371 testes correm num computador. Os programas de furação e de fresagem e a interface moderna leem os seus ficheiros e desenham os seus trabalhos com os crates partilhados; nada aqui foi executado numa máquina nem numa placa.
 
 ---
 
@@ -30,7 +30,7 @@
 |---|---|
 | Versão | `0.1.9` |
 | Maturidade | Estrutura inicial |
-| Testes | 361 |
+| Testes | 371 |
 | Tecnologias | Rust (crate de biblioteca) e C++17 (base de firmware) |
 | Em hardware real | Não se aplica: uma biblioteca de dados, nada aqui fala com uma máquina; a base de firmware nunca correu numa placa |
 
@@ -47,7 +47,7 @@ Cada linha é uma parte deste repositório e a luz diz até onde chega hoje. É 
 | Contentor | 🟡 | `.eh3dproj` é um ZIP padrão com um registo SHA-256 de cada entrada; lê, escreve e recusa entradas danificadas, alteradas, não listadas ou inseguras. Até agora só os seus próprios testes o leem e escrevem. |
 | Metadados | 🟡 | Os metadados de um projeto (unidades, zero, camadas, ferramentas, trajetórias, fiduciais) são validados e levam uma versão de formato semântica; ainda não há migração porque 1.0.0 é o primeiro formato. |
 | Telemetria e tema | 🟡 | Eixos, fuso, estados da máquina, os códigos de alarme GRBL com a sua gravidade e as cores da suite com verificação de contraste, tudo testado. |
-| Testes | 🟡 | Passam 361 testes (`cargo test --workspace`): 16 nos módulos e 33 sobre o contentor do crate principal, e 281 nos treze crates partilhados. |
+| Testes | 🟡 | Passam 371 testes (`cargo test --workspace`): 26 nos módulos e 33 sobre o contentor do crate principal, e 281 nos treze crates partilhados. |
 | Segurança | 🟡 | Recusam-se nomes inseguros, entradas demasiado grandes ou numerosas e qualquer entrada alterada; o pacote não está assinado nem cifrado e não teve revisão independente. |
 | Base de firmware | 🟠 | 71 ficheiros mantidos idênticos por `tools/sync_firmware_base.py`: 49 partilhados pelos nós ESP32 EH3D-NODE-BUNGARD e EH3D-NODE-BUNGARD-AUX (47 deles pelos dois; testados só num computador, através dos testes de anfitrião desses dois nós) e 22 partilhados pelos dois ecrãs tácteis EH3D-NODE-BUNGARD-HMI e EH3D-NODE-HMI-GUI; nunca executada numa placa. |
 | Uso por outros programas | 🟡 | Os crates do workspace são usados por EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-PHOENIX-CNC e EH3D-SERVER (por caminho, com os repositórios lado a lado); o contentor de projeto em si ainda não é usado por nenhum programa. |
@@ -60,6 +60,7 @@ Cada linha é uma parte deste repositório e a luz diz até onde chega hoje. É 
 * O **registo de integridade**: o SHA-256 e o tamanho de cada entrada. Um pacote cuja entrada mudou, falta ou não está listada não abre.
 * Os **limites**: recusam-se os nomes de entrada que poderiam sair da pasta do pacote, e também as entradas demasiado grandes ou numerosas.
 * Os **tipos de telemetria**: eixos, fuso, estados da máquina lidos das palavras de estado e os nove códigos de alarme GRBL com a sua gravidade (aviso ou crítico; um código desconhecido conta como crítico).
+* O **texto da compilação**: que compilação de um programa está a correr (repositório, versão, commit e tipo) como um JSON pequeno que o binário leva, com um leitor estrito e os códigos `EH3D-BUILD-001` a `EH3D-BUILD-008` ([docs/BUILD.md](docs/BUILD.md)).
 * O **tema**: as cores da suite, com uma verificação de contraste WCAG que os testes aplicam a cada cor de texto e de estado.
 * A **base de firmware dos nós** (`firmware_base/`, com `tools/sync_firmware_base.py`): a parte do firmware dos nós ESP32 que todos os nós EH3D partilham - o documento de definições, a rede, o servidor do painel, utilizadores e sessões, a atualização com reversão, o registo, a autoproteção e os testes que os acompanham - escrita uma vez com o nome do projeto como marcadores. Cada nó guarda a sua cópia e compila por si; a ferramenta escreve a base em cada nó e avisa quando uma cópia se desviou.
 * Os **crates partilhados** do workspace: `eh3d-view` (o trabalho na mesa, onze temas, as palavras da interface em 37 línguas), `eh3d-archive` (trabalhos em arquivos ZIP), `eh3d-bungard-formats` (os ficheiros Excellon, HP-GL, tabelas de ferramentas e configuração, os contornos Gerber e DXF), `eh3d-controller` (a interface dos controladores de máquina, GRBL, cujo curso máximo se pode ler, e um simulado), `eh3d-filedialog` (as janelas Abrir e Guardar) e `eh3d-fleet` (as máquinas e estações do servidor).
@@ -112,7 +113,7 @@ O contentor lê ficheiros que outras pessoas podem enviar, por isso cada verific
 
 | Interface | O que é | Onde |
 |---|---|---|
-| API Rust | `Package` (`new`, `add_entry`, `entry`, `entry_names`, `integrity`, `write`, `write_to_path`, `to_bytes`, `read`, `read_from_path`), `ProjectMetadata` (`new`, `validate`, `to_json`, `read_metadata`), os tipos de telemetria e `theme` | `src/` |
+| API Rust | `Package` (`new`, `add_entry`, `entry`, `entry_names`, `integrity`, `write`, `write_to_path`, `to_bytes`, `read`, `read_from_path`), `ProjectMetadata` (`new`, `validate`, `to_json`, `read_metadata`), os tipos de telemetria e `theme`, `build` | `src/` |
 | Formato de ficheiro | `.eh3dproj`: um ZIP com `project.json`, `integrity.json` e as pastas de dados `layers/`, `toolpaths/` e `vision/` | [docs/FORMAT.md](docs/FORMAT.md) |
 | Erros | um só enum `Error`: `Io`, `Json`, `Zip`, `UnsupportedFormat`, `MissingEntry`, `Integrity`, `UnsafePath`, `DuplicateEntry`, `TooLarge`, `InvalidMetadata` | `src/error.rs` |
 | Ferramenta da base de firmware | `python tools/sync_firmware_base.py check`, `sync`, `import <nó>` e `status` | [docs/FIRMWARE_BASE.md](docs/FIRMWARE_BASE.md) |
@@ -163,7 +164,7 @@ python -I tools/sync_firmware_base.py check
 
 ## 🧪 Testes
 
-A suite tem 361 testes (`cargo test --workspace`, executados em Windows e Linux na CI): 16 dentro dos módulos (os metadados e a sua validação, os códigos de alarme e os estados da máquina, as cores e o seu contraste WCAG) e 33 sobre o contentor (14 deles registam o comportamento atual do formato: ordem das entradas, JSON exato, sinalizadores ZIP e o veredicto sobre 19 pacotes danificados; os restantes cobrem ida e volta em memória e em ficheiro, os mesmos bytes para o mesmo conteúdo, o registo de integridade, uma entrada alterada, um tamanho alterado, uma entrada não listada, uma entrada em falta, metadados editados, um ficheiro que não é um pacote, nomes de entrada inseguros e hostis, uma entrada substituída e um projeto inválido, e uma comparação da descrição do formato com o código). A CI executa também `cargo fmt --check` e `cargo clippy` com avisos como erros, `python -I tools/ci_validate.py` (manifesto, versões, registo de alterações e os oito README) e `tools/sync_firmware_base.py check` (as cópias da base de firmware). Os testes no computador da base de firmware (`firmware_base/tests/`) correm dentro do EH3D-NODE-BUNGARD, não aqui. Os treze crates partilhados acrescentam 281: os arquivos de trabalho (7), os ficheiros das máquinas Bungard, com os arcos, círculos e escala do HP-GL e os contornos Gerber e DXF (43), os controladores de máquina numa linha simulada (28) e a cena, as vistas, os temas e as palavras da interface em oito idiomas (30), as janelas Abrir e Guardar (7), as máquinas e estações do servidor (8) e o mapa de alturas da mesa (8) o cliente do nó da cabeça de furação, com o anel de LEDs e a foto (10), o leitor de imagens PGM e PNG (7), a simulação a seco e o resumo antes de um trabalho (21) e o analisador de qualidade (43): os furos, os canais fresados, a qualidade da foto, o perfil e o veredicto, e as peças partilhadas dos formatos de contentor: o registo de integridade, o hash do conteúdo, a regra dos nomes e o JSON canónico, e o leitor e escritor genéricos com a política estrita, os códigos `EH3D-PKG` e a substituição atómica (58).
+A suite tem 371 testes (`cargo test --workspace`, executados em Windows e Linux na CI): 26 dentro dos módulos (os metadados e a sua validação, os códigos de alarme e os estados da máquina, as cores e o seu contraste WCAG, o texto da compilação (o formato, as recusas e os códigos)) e 33 sobre o contentor (14 deles registam o comportamento atual do formato: ordem das entradas, JSON exato, sinalizadores ZIP e o veredicto sobre 19 pacotes danificados; os restantes cobrem ida e volta em memória e em ficheiro, os mesmos bytes para o mesmo conteúdo, o registo de integridade, uma entrada alterada, um tamanho alterado, uma entrada não listada, uma entrada em falta, metadados editados, um ficheiro que não é um pacote, nomes de entrada inseguros e hostis, uma entrada substituída e um projeto inválido, e uma comparação da descrição do formato com o código). A CI executa também `cargo fmt --check` e `cargo clippy` com avisos como erros, `python -I tools/ci_validate.py` (manifesto, versões, registo de alterações e os oito README) e `tools/sync_firmware_base.py check` (as cópias da base de firmware). Os testes no computador da base de firmware (`firmware_base/tests/`) correm dentro do EH3D-NODE-BUNGARD, não aqui. Os treze crates partilhados acrescentam 281: os arquivos de trabalho (7), os ficheiros das máquinas Bungard, com os arcos, círculos e escala do HP-GL e os contornos Gerber e DXF (43), os controladores de máquina numa linha simulada (28) e a cena, as vistas, os temas e as palavras da interface em oito idiomas (30), as janelas Abrir e Guardar (7), as máquinas e estações do servidor (8) e o mapa de alturas da mesa (8) o cliente do nó da cabeça de furação, com o anel de LEDs e a foto (10), o leitor de imagens PGM e PNG (7), a simulação a seco e o resumo antes de um trabalho (21) e o analisador de qualidade (43): os furos, os canais fresados, a qualidade da foto, o perfil e o veredicto, e as peças partilhadas dos formatos de contentor: o registo de integridade, o hash do conteúdo, a regra dos nomes e o JSON canónico, e o leitor e escritor genéricos com a política estrita, os códigos `EH3D-PKG` e a substituição atómica (58).
 
 ## 🏗️ Compilação e publicação
 
@@ -184,6 +185,7 @@ EH3D-COMMON/
 │   ├── container.rs                             o pacote: leitura, escrita, integridade e limites
 │   ├── project.rs                               os metadados e a sua validação
 │   ├── telemetry.rs                             eixos, fuso, estados e códigos de alarme
+│   ├── build.rs                                 qual compilação está a correr: repositório, versão, commit e tipo, como um JSON pequeno
 │   └── theme.rs error.rs lib.rs                 as cores com contraste, os erros e a raiz do crate
 ├── crates/                                      crates partilhados: vista, ZIP, ficheiros de máquina, controladores, cabeça, qualidade, imagens, resumo
 ├── firmware_base/
@@ -193,6 +195,7 @@ EH3D-COMMON/
 │   ├── tools/                                   empacota o painel; lista linhas sdkconfig ignoradas
 │   └── manifest.json                            que ficheiro vai para que nó
 ├── tests/                                       o pacote: ida e volta, entradas alteradas, em falta e não listadas, nomes inseguros
+├── examples/                                    como usar o texto da compilação partilhado
 ├── docs/                                        o formato, a base de firmware e os dados das duas imagens
 ├── tools/                                       verificação da CI e do README, sincronização da base de firmware e ferramentas de imagens
 ├── images/                                      banner e as imagens de Arquitetura e Estrutura do repositório
@@ -242,6 +245,7 @@ O README e os textos existem em inglês, espanhol, francês, italiano, alemão, 
 * [Registo de alterações](CHANGELOG.md)
 * [Usar os crates](docs/CONSUMING.md): as pastas irmãs, a linha de caminho e versão, as funcionalidades e as etiquetas com que a CI compila.
 * [Erros dos leitores de ficheiros](docs/FORMAT_ERRORS.md): os códigos estáveis, com a linha e a coluna, dos leitores do ficheiro de furação, do traçado e do desenho.
+* [O texto da compilação](docs/BUILD.md): o JSON pequeno que um programa leva para dizer que compilação é, como incorporá-lo e os seus códigos.
 
 ## 🤝 Contribuir e comunidade
 

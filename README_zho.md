@@ -18,7 +18,7 @@
 
 ---
 
-**诚实性核对 - 今天真正能运行的内容：** 一个 Rust 库，包含项目容器（`.eh3dproj`）、项目元数据、SHA-256 完整性检查、机床遥测类型和套件的配色，另有套件中每个 ESP32 节点都会复制的固件基础（71 个文件和保持副本一致的工具）。361 个测试在计算机上运行。钻孔和铣削程序以及现代界面用共享 crate 读取文件并绘制作业；这里的内容也从未在机床或电路板上运行过。
+**诚实性核对 - 今天真正能运行的内容：** 一个 Rust 库，包含项目容器（`.eh3dproj`）、项目元数据、SHA-256 完整性检查、机床遥测类型和套件的配色，另有套件中每个 ESP32 节点都会复制的固件基础（71 个文件和保持副本一致的工具）。371 个测试在计算机上运行。钻孔和铣削程序以及现代界面用共享 crate 读取文件并绘制作业；这里的内容也从未在机床或电路板上运行过。
 
 ---
 
@@ -30,7 +30,7 @@
 |---|---|
 | 版本 | `0.1.9` |
 | 成熟度 | 脚手架 |
-| 测试 | 361 |
+| 测试 | 371 |
 | 技术栈 | Rust（库 crate）和 C++17（固件基础） |
 | 真实硬件 | 不适用：这是数据库，不与机床通信；固件基础从未在电路板上运行 |
 
@@ -47,7 +47,7 @@
 | 容器 | 🟡 | `.eh3dproj` 是标准 ZIP，带有每个条目的 SHA-256 记录；能读写，并拒绝损坏、被改动、未登记和不安全的条目。目前只有它自己的测试在读写。 |
 | 元数据 | 🟡 | 项目元数据（单位、零点、图层、刀具、刀路、基准点）会被校验，并带有语义化的格式版本；因为 1.0.0 是第一个格式，所以暂时没有迁移。 |
 | 遥测与主题 | 🟡 | 轴、主轴、机床状态、带严重程度的 GRBL 报警码，以及带对比度检查的套件配色，均已测试。 |
-| 测试 | 🟡 | 361 个测试通过（`cargo test --workspace`）：主 crate 的模块内 16 个、容器 33 个，十三个共享 crate 中 281 个。 |
+| 测试 | 🟡 | 371 个测试通过（`cargo test --workspace`）：主 crate 的模块内 26 个、容器 33 个，十三个共享 crate 中 281 个。 |
 | 安全 | 🟡 | 不安全的名称、过大或过多的条目以及任何被改动的条目都会被拒绝；包没有签名也没有加密，也未经独立审查。 |
 | 固件基础 | 🟠 | 由 `tools/sync_firmware_base.py` 保持一致的 71 个文件：ESP32 节点 EH3D-NODE-BUNGARD 和 EH3D-NODE-BUNGARD-AUX 共享 49 个（其中 47 个两者都用；只在计算机上通过这两个节点的主机测试测过），两块触摸屏 EH3D-NODE-BUNGARD-HMI 和 EH3D-NODE-HMI-GUI 共享 22 个；从未在电路板上运行。 |
 | 被其他程序使用 | 🟡 | 工作区的 crate 已被 EH3D-DRILLPRO、EH3D-ROUTEPRO、EH3D-BUNGARD-GUI、EH3D-PHOENIX-CNC 和 EH3D-SERVER 使用（通过路径，仓库并排放置）；项目容器本身还没有任何程序使用。 |
@@ -60,6 +60,7 @@
 * **完整性记录**：每个条目的 SHA-256 和大小。条目被改动、缺失或未登记的包无法打开。
 * **限制**：可能跳出包文件夹的条目名称会被拒绝，过大或过多的条目也会被拒绝。
 * **遥测类型**：轴、主轴、从状态字读取的机床状态，以及带严重程度（警告或严重；未知代码按严重处理）的九个 GRBL 报警码。
+* **构建文本**：程序携带的小型 JSON，说明正在运行的是哪个构建（仓库、版本、提交和类型），带有严格的读取器和代码 `EH3D-BUILD-001` 至 `EH3D-BUILD-008`（[docs/BUILD.md](docs/BUILD.md)）。
 * **主题**：套件的配色，测试会对每种文字色和状态色做 WCAG 对比度检查。
 * **节点的固件基础**（`firmware_base/` 和 `tools/sync_firmware_base.py`）：每个 EH3D 节点共享的 ESP32 节点固件部分（设置文档、网络、面板的服务器、用户与会话、可回滚的更新、日志、自我保护以及配套测试），以项目名称为占位符只写一份。每个节点保留自己的副本并独立编译；工具会把基础写入每个节点，并在副本出现偏差时报告。
 * 工作区的**共享 crate**：`eh3d-view`（工作台上的作业、十一种主题、37 种语言的界面文字）、`eh3d-archive`（ZIP 压缩包中的作业）、`eh3d-bungard-formats`（Excellon、HP-GL、刀具表和配置文件，Gerber 和 DXF 轮廓）、`eh3d-controller`（机床控制器接口，GRBL（可读取其最大行程）和一个模拟控制器）、`eh3d-filedialog`（打开和保存窗口）和 `eh3d-fleet`（服务器的机床和工位）。
@@ -112,7 +113,7 @@ EH3D-COMMON 是套件的基础。其工作区的 crate（视图和主题、ZIP �
 
 | 接口 | 内容 | 位置 |
 |---|---|---|
-| Rust API | `Package`（`new`、`add_entry`、`entry`、`entry_names`、`integrity`、`write`、`write_to_path`、`to_bytes`、`read`、`read_from_path`）、`ProjectMetadata`（`new`、`validate`、`to_json`、`read_metadata`）、遥测类型和 `theme` | `src/` |
+| Rust API | `Package`（`new`、`add_entry`、`entry`、`entry_names`、`integrity`、`write`、`write_to_path`、`to_bytes`、`read`、`read_from_path`）、`ProjectMetadata`（`new`、`validate`、`to_json`、`read_metadata`）、遥测类型和 `theme`, `build` | `src/` |
 | 文件格式 | `.eh3dproj`：含 `project.json`、`integrity.json` 和数据文件夹 `layers/`、`toolpaths/`、`vision/` 的 ZIP | [docs/FORMAT.md](docs/FORMAT.md) |
 | 错误 | 一个 `Error` 枚举：`Io`、`Json`、`Zip`、`UnsupportedFormat`、`MissingEntry`、`Integrity`、`UnsafePath`、`DuplicateEntry`、`TooLarge`、`InvalidMetadata` | `src/error.rs` |
 | 固件基础工具 | `python tools/sync_firmware_base.py check`、`sync`、`import <节点>` 和 `status` | [docs/FIRMWARE_BASE.md](docs/FIRMWARE_BASE.md) |
@@ -163,7 +164,7 @@ python -I tools/sync_firmware_base.py check
 
 ## 🧪 测试
 
-测试共 361 个（`cargo test --workspace`，CI 中在 Windows 和 Linux 上运行）：模块内 16 个（元数据及其校验、报警码和机床状态、配色及其 WCAG 对比度），容器 33 个（其中 14 个记录该格式目前的行为：条目顺序、精确的 JSON、ZIP 标志位以及对 19 个损坏包的判定；其余涵盖内存和文件的往返、相同内容得到相同字节、完整性记录、被改动的条目、被改动的大小、未登记的条目、缺失的条目、被编辑的元数据、不是包的文件、不安全和恶意的条目名称、被替换的条目、无效的项目，以及格式描述与代码的比较）。CI 还运行 `cargo fmt --check`、将警告视为错误的 `cargo clippy`、`python -I tools/ci_validate.py`（清单、版本、变更日志和八个 README）以及 `tools/sync_firmware_base.py check`（固件基础的副本）。固件基础的主机测试（`firmware_base/tests/`）在 EH3D-NODE-BUNGARD 中运行，而不在这里。十三个共享 crate 另有 281 个：作业压缩包（7 个）、Bungard 机器的文件及 HP-GL 圆弧、圆和缩放以及 Gerber 和 DXF 轮廓（43 个）、在模拟线路上的机器控制器（28 个）、场景、视图、主题以及八种语言的界面文字（30 个）、打开和保存窗口（7 个）、服务器的机床和工位（8 个）以及工作台高度图（8 个）钻头节点的客户端（含 LED 环形灯和图像，10 个）、PGM 和 PNG 图像读取器（7 个）、作业前的空运行和摘要（21 个）以及质量分析器（43 个）：孔、铣削沟槽、图像质量、配置和结论，以及容器格式共享的部分：完整性记录、内容哈希、名称规则和规范 JSON，以及带严格策略的通用读取器和写入器、`EH3D-PKG` 代码和原子替换（58 个）。
+测试共 371 个（`cargo test --workspace`，CI 中在 Windows 和 Linux 上运行）：模块内 26 个（元数据及其校验、报警码和机床状态、配色及其 WCAG 对比度、构建文本（格式、拒绝和代码）），容器 33 个（其中 14 个记录该格式目前的行为：条目顺序、精确的 JSON、ZIP 标志位以及对 19 个损坏包的判定；其余涵盖内存和文件的往返、相同内容得到相同字节、完整性记录、被改动的条目、被改动的大小、未登记的条目、缺失的条目、被编辑的元数据、不是包的文件、不安全和恶意的条目名称、被替换的条目、无效的项目，以及格式描述与代码的比较）。CI 还运行 `cargo fmt --check`、将警告视为错误的 `cargo clippy`、`python -I tools/ci_validate.py`（清单、版本、变更日志和八个 README）以及 `tools/sync_firmware_base.py check`（固件基础的副本）。固件基础的主机测试（`firmware_base/tests/`）在 EH3D-NODE-BUNGARD 中运行，而不在这里。十三个共享 crate 另有 281 个：作业压缩包（7 个）、Bungard 机器的文件及 HP-GL 圆弧、圆和缩放以及 Gerber 和 DXF 轮廓（43 个）、在模拟线路上的机器控制器（28 个）、场景、视图、主题以及八种语言的界面文字（30 个）、打开和保存窗口（7 个）、服务器的机床和工位（8 个）以及工作台高度图（8 个）钻头节点的客户端（含 LED 环形灯和图像，10 个）、PGM 和 PNG 图像读取器（7 个）、作业前的空运行和摘要（21 个）以及质量分析器（43 个）：孔、铣削沟槽、图像质量、配置和结论，以及容器格式共享的部分：完整性记录、内容哈希、名称规则和规范 JSON，以及带严格策略的通用读取器和写入器、`EH3D-PKG` 代码和原子替换（58 个）。
 
 ## 🏗️ 构建与发布
 
@@ -184,6 +185,7 @@ EH3D-COMMON/
 │   ├── container.rs                             包：读写、完整性和限制
 │   ├── project.rs                               元数据及其校验
 │   ├── telemetry.rs                             轴、主轴、状态和报警码
+│   ├── build.rs                                 当前运行的构建：仓库、版本、提交和类型，以小型 JSON 表示
 │   └── theme.rs error.rs lib.rs                 带对比度的配色、错误和 crate 根
 ├── crates/                                      共享 crate：视图、ZIP、机器文件、控制器、钻头节点、质量分析、图像、摘要
 ├── firmware_base/
@@ -193,6 +195,7 @@ EH3D-COMMON/
 │   ├── tools/                                   打包面板；列出被忽略的 sdkconfig 行
 │   └── manifest.json                            哪个文件进入哪个节点
 ├── tests/                                       包：往返、被改动、缺失和未登记的条目、不安全的名称
+├── examples/                                    如何使用共享的构建文本
 ├── docs/                                        格式、固件基础和两张图的数据
 ├── tools/                                       CI 和 README 检查、固件基础同步及绘图工具
 ├── images/                                      横幅图以及架构和仓库结构图片
@@ -242,6 +245,7 @@ README 和文本提供英语、西班牙语、法语、意大利语、德语、�
 * [变更日志](CHANGELOG.md)
 * [使用这些 crate](docs/CONSUMING.md)：相邻文件夹、路径和版本行、特性，以及 CI 构建所用的标签。
 * [文件读取器的错误](docs/FORMAT_ERRORS.md)：钻孔文件、绘图文件和图纸读取器的稳定错误码，附行号和列号。
+* [构建文本](docs/BUILD.md)：程序携带的、说明自己是哪个构建的小型 JSON，如何嵌入及其代码。
 
 ## 🤝 参与贡献与社区
 

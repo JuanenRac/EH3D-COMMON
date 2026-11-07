@@ -59,6 +59,19 @@
         },
         {
           "desc": {
+            "en": "which build runs: repository, version, commit and kind, as a small JSON text",
+            "es": "qué compilación se ejecuta: repositorio, versión, commit y tipo, como un JSON pequeño",
+            "de": "welcher Build läuft: Repository, Version, Commit und Art als kleiner JSON-Text",
+            "fr": "quelle compilation tourne : dépôt, version, commit et type, en petit JSON",
+            "it": "quale build è in esecuzione: repository, versione, commit e tipo, come piccolo JSON",
+            "ja": "どのビルドが動くか：リポジトリ、バージョン、コミット、種類を小さな JSON で",
+            "zh": "当前运行的构建：仓库、版本、提交和类型，以小型 JSON 表示",
+            "pt": "qual compilação está a correr: repositório, versão, commit e tipo, como um JSON pequeno"
+          },
+          "name": "build.rs"
+        },
+        {
+          "desc": {
             "en": "the colours with contrast, the errors and the crate root",
             "es": "los colores con contraste, los errores y la raíz del crate",
             "de": "die Farben mit Kontrast, die Fehler und die Crate-Wurzel",
@@ -72,14 +85,14 @@
         }
       ],
       "sub": {
-        "en": "the library: container, metadata, telemetry and theme",
-        "es": "la biblioteca: contenedor, metadatos, telemetría y tema",
-        "de": "die Bibliothek: Container, Metadaten, Telemetrie und Theme",
-        "fr": "la bibliothèque : conteneur, métadonnées, télémétrie et thème",
-        "it": "la libreria: contenitore, metadati, telemetria e tema",
-        "ja": "ライブラリ：コンテナ、メタデータ、テレメトリ、テーマ",
-        "zh": "库：容器、元数据、遥测和主题",
-        "pt": "a biblioteca: contentor, metadados, telemetria e tema"
+        "en": "the library: container, metadata, telemetry, build text and theme",
+        "es": "la biblioteca: contenedor, metadatos, telemetría, texto de compilación y tema",
+        "de": "die Bibliothek: Container, Metadaten, Telemetrie, Build-Text und Theme",
+        "fr": "la bibliothèque : conteneur, métadonnées, télémétrie, texte de compilation et thème",
+        "it": "la libreria: contenitore, metadati, telemetria, testo di build e tema",
+        "ja": "ライブラリ：コンテナ、メタデータ、テレメトリ、ビルド テキスト、テーマ",
+        "zh": "库：容器、元数据、遥测、构建文本和主题",
+        "pt": "a biblioteca: contentor, metadados, telemetria, texto da compilação e tema"
       }
     },
     {
@@ -221,6 +234,36 @@
         "ja": "パッケージ：往復、変更・欠落・未記載のエントリ、危険な名前",
         "zh": "包：往返、被改动、缺失和未登记的条目、不安全的名称",
         "pt": "o pacote: ida e volta, entradas alteradas, em falta e não listadas, nomes inseguros"
+      }
+    },
+    {
+      "name": "examples/",
+      "span": 3,
+      "accent": "c",
+      "rows": [
+        {
+          "desc": {
+            "en": "write, read and refuse the build text a program carries",
+            "es": "escribe, lee y rechaza el texto de compilación que lleva un programa",
+            "de": "schreibt, liest und weist den Build-Text zurück, den ein Programm trägt",
+            "fr": "écrit, lit et refuse le texte de compilation qu'un programme porte",
+            "it": "scrive, legge e rifiuta il testo di build che un programma porta",
+            "ja": "プログラムが持つビルド テキストの書き込み、読み取り、拒否",
+            "zh": "写入、读取并拒绝程序携带的构建文本",
+            "pt": "escreve, lê e recusa o texto da compilação que um programa leva"
+          },
+          "name": "build_info.rs"
+        }
+      ],
+      "tree": {
+        "en": "how to use the shared build text",
+        "es": "cómo usar el texto de compilación compartido",
+        "de": "so benutzt man den gemeinsamen Build-Text",
+        "fr": "comment utiliser le texte de compilation partagé",
+        "it": "come usare il testo di build condiviso",
+        "ja": "共有ビルド テキストの使い方",
+        "zh": "如何使用共享的构建文本",
+        "pt": "como usar o texto da compilação partilhado"
       }
     },
     {

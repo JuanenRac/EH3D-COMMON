@@ -2,7 +2,7 @@
   "repo": "EH3D-COMMON",
   "ecosystem": "eh3d",
   "tagline": "The shared data model of the suite and the shared part of the node firmware.",
-  "description": "EH3D-COMMON holds the .eh3dproj project container with its metadata and SHA-256 integrity record, the machine telemetry types, the colours of the suite, and the firmware base that every ESP32 node copies. Programs that open or save a project are planned to depend on it; today the only user is the firmware base inside EH3D-NODE-BUNGARD. Everything is tested on a computer; nothing has run on a board.",
+  "description": "EH3D-COMMON holds the .eh3dproj project container with its metadata and SHA-256 integrity record, the machine telemetry types, the colours of the suite, the build text that a program carries, and the firmware base that every ESP32 node copies. Programs that open or save a project are planned to depend on it; today the only user is the firmware base inside EH3D-NODE-BUNGARD. Everything is tested on a computer; nothing has run on a board.",
   "columns": [
     "WHO USES IT",
     "THIS REPOSITORY",
@@ -73,15 +73,17 @@
       "id": "types",
       "column": 1,
       "level": "tested",
-      "title": "Telemetry and theme",
+      "title": "Telemetry, theme, build",
       "lines": [
         "axes, spindle, states, alarm",
         "codes; colours with a contrast",
-        "check"
+        "check; the build text of a",
+        "program (repo, version, commit)"
       ],
       "code": [
         "src/telemetry.rs::AlarmCode",
-        "src/theme.rs::contrast"
+        "src/theme.rs::contrast",
+        "src/build.rs::BuildInfo"
       ]
     },
     {
