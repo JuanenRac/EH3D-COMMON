@@ -1,10 +1,10 @@
 # The firmware base of the nodes
 
-The EH3D nodes are ESP32-S3 devices (today EH3D-NODE-BUNGARD; later ones for other machines) and they all need the same things around what they control: a settings document in flash that a web panel edits, the network (Ethernet or Wi-Fi, a set-up access point), users and sessions, an update from the panel with rollback, a log, and protection against running out of memory. That part is the **firmware base**. It lives here once, in `firmware_base/`, and each node project keeps its own copy in its own tree, so each node builds on its own and nothing is shared at build time.
+The EH3D nodes are ESP32-S3 devices (today EH3D-NODE-BUNGARD and EH3D-NODE-BUNGARD-AUX; later ones for other machines) and they all need the same things around what they control: a settings document in flash that a web panel edits, the network (Ethernet or Wi-Fi, a set-up access point), users and sessions, an update from the panel with rollback, a log, and protection against running out of memory. That part is the **firmware base**. It lives here once, in `firmware_base/`, and each node project keeps its own copy in its own tree, so each node builds on its own and nothing is shared at build time.
 
 ## What is shared
 
-About fifty files, listed in `firmware_base/manifest.json`:
+About seventy files, listed in `firmware_base/manifest.json`:
 
 - **`core/`** (no hardware, tested on a computer): the settings every node has (`node_settings.hpp`, `config_common.hpp`), users, roles, sessions and the throttle on wrong passwords (`auth.hpp`), the network plan (`netplan.hpp`, `net_text.hpp`, `node_id.hpp`), the pins of the ESP32-S3 boards (`board_s3.hpp`), the JSON reader and writer (`json.hpp`), Improv Wi-Fi over serial (`improv.hpp`), the schedule of retries, the guard of tasks and memory (`node_guard.hpp`, `task_health.hpp`, `memory_budget.hpp`), the panel's access policy (`web_policy.hpp`, `admin_sources.hpp`), the clock (`civil_time.hpp`), version numbers (`semver.hpp`) and the loading of what is stored (`stored_load.hpp`).
 - **`main/`** (ESP-IDF): the Ethernet board (`board_ethernet.*`), the network (`network.*`), the settings store, users and the setup code in flash (`node_store.*`), the shared part of the panel's API (`api_shared.*`), the certificate of the HTTPS panel (`tls_cert.*`), the clock (`clock_sync.*`), entropy, the log buffer, the external-RAM allocator, the task report, Improv over USB and the guard that restarts a node in trouble.
@@ -44,7 +44,7 @@ python -I tools/sync_firmware_base.py status    # which file goes where
 
 ## State
 
-Today there is one node, so the base is the copy of EH3D-NODE-BUNGARD with placeholders. It starts to pay for itself when the second node exists. Nothing in the base has run on a board yet.
+Two nodes use the base, EH3D-NODE-BUNGARD and EH3D-NODE-BUNGARD-AUX: 47 of its 49 files for the ESP32 nodes are in both and two belong to EH3D-NODE-BUNGARD only (`web_server.hpp` and `check_sdkconfig.py`). Nothing in the base has run on a board yet.
 
 ## The touch screens
 
