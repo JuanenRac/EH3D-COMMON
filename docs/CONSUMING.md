@@ -43,10 +43,20 @@ The workflow `rust.yml` of a consuming repository has a variable that names the 
 
 ```yaml
 env:
-  SIBLING_REFS: "EH3D-COMMON=v0.1.7 EH3D-CORE-LIBS=v0.0.7"
+  SIBLING_REFS: "EH3D-COMMON=v0.2.0 EH3D-CORE-LIBS=v0.0.8"
 ```
 
 When a new version of this repository is published, move the tag in the repositories that use something new from it. A sibling that is not listed is taken at `main`.
+
+A repository that uses something that is not yet in a tag of the sibling (an API of `main`) keeps the sibling at `main` until the next version is published; then it takes the tag.
+
+## The oldest version it works with: `min_common`
+
+The manifest of a repository that uses this one may say, with the optional field `min_common`, the oldest version of this repository it works with (`"min_common": "0.2.0"`). It is the tag that the CI of the repository builds against. The updater reads it and warns when the installed version of this repository is older; it never stops an update because of it. A repository whose CI does not pin a tag does not say it. The field only goes up: a repository that now needs a newer version raises it in the same change.
+
+## The limits of the readers and the spindles
+
+The readers of the drill file, the plot, the drawing and the Gerber outline refuse a file past the hard limits of `crates/formats/reader_limits.cfg` and say when a file is past a warning limit (`ncd::parse_limited`, `hpgl::parse_limited`; `eh3d_summary::summary::size_warning` gives the notice in the 37 languages). The limits of the spindles are in `crates/materials/spindles.cfg` (`eh3d_materials::spindle`). Both are files with one value per line: a program that needs other values keeps its own copy and reads it with `ReaderLimits::from_config`; nothing is written in the code.
 
 ## What not to do
 
