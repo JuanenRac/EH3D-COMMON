@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The archive reader tells its errors by kind:** `eh3d_archive::ArchiveError` (`Io`, `Zip`, `TooManyEntries`, `NotInArchive`, `TooBig`, `UnsafeName`) replaces the text errors of `Archive::open`, `read`, `read_limited` and `extract`; its words are the same as before, and `String::from(error)` keeps callers that carry their errors as text working. A test checks each kind and the conversion.
+
 ## [0.2.0] - The build text of a program, the file tree check in the validator, formats with error codes and a Paper theme that reads well on every surface
 
 - **The Paper theme reads well on every surface:** the colours of the OK, warning and second accent inks and the dim text of the light theme are a little darker (`#166534`, `#92400e`, `#9a3412`, `#545c6b`), so that every ink has a contrast of at least 4.5 on the panel, on both ends of the background, on the table and on the board; a new test checks every ink against every surface. Tests: 372.

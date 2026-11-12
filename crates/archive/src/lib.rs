@@ -2,6 +2,7 @@
 //! is opened with care: a name that would leave the folder it is extracted to is not listed, an archive with too many entries is
 //! refused, and no entry is read past a limit, whatever its header says.
 
+use std::fmt;
 use std::fs::File;
 use std::io::Read;
 use std::path::{Path, PathBuf};
@@ -60,6 +61,61 @@ pub struct Entry {
 pub const MAX_ENTRIES: usize = 2000;
 pub const MAX_ENTRY_BYTES: u64 = 64 * 1024 * 1024;
 
+/// Why an archive could not be opened, read or extracted. Each case keeps what went wrong apart from the words, so a caller can act on it.
+#[derive(Debug)]
+pub enum ArchiveError {
+    /// The file or folder could not be read or written.
+    Io {
+        path: String,
+        source: std::io::Error,
+    },
+    /// The file is not a ZIP archive (or an entry of it is damaged).
+    Zip { path: String, detail: String },
+    /// The archive has more entries than [`MAX_ENTRIES`].
+    TooManyEntries { path: String, count: usize },
+    /// The name is not one of the listed entries.
+    NotInArchive { name: String },
+    /// The entry is bigger than the limit asked for.
+    TooBig { name: String, limit: u64 },
+    /// The name could point out of the folder it is extracted to.
+    UnsafeName { name: String },
+}
+
+impl fmt::Display for ArchiveError {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            ArchiveError::Io { path, source } => write!(f, "{path}: {source}"),
+            ArchiveError::Zip { path, detail } => {
+                write!(f, "{path}: not a ZIP archive ({detail})")
+            }
+            ArchiveError::TooManyEntries { path, count } => {
+                write!(f, "{path}: too many entries ({count})")
+            }
+            ArchiveError::NotInArchive { name } => write!(f, "{name}: not in the archive"),
+            ArchiveError::TooBig { name, limit } => {
+                write!(f, "{name}: bigger than {limit} bytes")
+            }
+            ArchiveError::UnsafeName { name } => write!(f, "{name}: not a safe name"),
+        }
+    }
+}
+
+impl std::error::Error for ArchiveError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match self {
+            ArchiveError::Io { source, .. } => Some(source),
+            _ => None,
+        }
+    }
+}
+
+/// The words of the error, for callers that still carry their errors as text.
+impl From<ArchiveError> for String {
+    fn from(e: ArchiveError) -> String {
+        e.to_string()
+    }
+}
+
 pub struct Archive {
     zip: zip::ZipArchive<File>,
     /// The files that can be used: folders and names that are not safe are left out.
@@ -67,20 +123,28 @@ pub struct Archive {
 }
 
 impl Archive {
-    pub fn open(path: &Path) -> Result<Archive, String> {
-        let file = File::open(path).map_err(|e| format!("{}: {e}", path.display()))?;
-        let mut zip = zip::ZipArchive::new(file)
-            .map_err(|e| format!("{}: not a ZIP archive ({e})", path.display()))?;
+    pub fn open(path: &Path) -> Result<Archive, ArchiveError> {
+        let shown = path.display().to_string();
+        let file = File::open(path).map_err(|source| ArchiveError::Io {
+            path: shown.clone(),
+            source,
+        })?;
+        let mut zip = zip::ZipArchive::new(file).map_err(|e| ArchiveError::Zip {
+            path: shown.clone(),
+            detail: e.to_string(),
+        })?;
         if zip.len() > MAX_ENTRIES {
-            return Err(format!(
-                "{}: too many entries ({})",
-                path.display(),
-                zip.len()
-            ));
+            return Err(ArchiveError::TooManyEntries {
+                path: shown,
+                count: zip.len(),
+            });
         }
         let mut entries = Vec::new();
         for i in 0..zip.len() {
-            let f = zip.by_index(i).map_err(|e| e.to_string())?;
+            let f = zip.by_index(i).map_err(|e| ArchiveError::Zip {
+                path: path.display().to_string(),
+                detail: e.to_string(),
+            })?;
             let Ok(name) = f.name().map(|n| n.into_owned()) else {
                 continue;
             };
@@ -102,28 +166,41 @@ impl Archive {
     }
 
     /// The bytes of a file, at most `limit` of them (more is an error, whatever the header of the archive says).
-    pub fn read_limited(&mut self, name: &str, limit: u64) -> Result<Vec<u8>, String> {
+    pub fn read_limited(&mut self, name: &str, limit: u64) -> Result<Vec<u8>, ArchiveError> {
         if !self.entries.iter().any(|e| e.name == name) {
-            return Err(format!("{name}: not in the archive"));
+            return Err(ArchiveError::NotInArchive {
+                name: name.to_string(),
+            });
         }
-        let f = self.zip.by_name(name).map_err(|e| format!("{name}: {e}"))?;
+        let f = self.zip.by_name(name).map_err(|e| ArchiveError::Zip {
+            path: name.to_string(),
+            detail: e.to_string(),
+        })?;
         let mut out = Vec::new();
         f.take(limit + 1)
             .read_to_end(&mut out)
-            .map_err(|e| format!("{name}: {e}"))?;
+            .map_err(|source| ArchiveError::Io {
+                path: name.to_string(),
+                source,
+            })?;
         if out.len() as u64 > limit {
-            return Err(format!("{name}: bigger than {limit} bytes"));
+            return Err(ArchiveError::TooBig {
+                name: name.to_string(),
+                limit,
+            });
         }
         Ok(out)
     }
 
-    pub fn read(&mut self, name: &str) -> Result<Vec<u8>, String> {
+    pub fn read(&mut self, name: &str) -> Result<Vec<u8>, ArchiveError> {
         self.read_limited(name, MAX_ENTRY_BYTES)
     }
 
     /// Writes a file of the archive into `dir` (which is made when it does not exist) under its safe name; says where it went.
-    pub fn extract(&mut self, name: &str, dir: &Path) -> Result<PathBuf, String> {
-        let mut target = safe_name(name).ok_or(format!("{name}: not a safe name"))?;
+    pub fn extract(&mut self, name: &str, dir: &Path) -> Result<PathBuf, ArchiveError> {
+        let mut target = safe_name(name).ok_or_else(|| ArchiveError::UnsafeName {
+            name: name.to_string(),
+        })?;
         // two files of different folders with the same last part must not land on each other: the second one keeps its folders in its name
         let same_last_part = self
             .entries
@@ -137,9 +214,15 @@ impl Archive {
             }
         }
         let bytes = self.read(name)?;
-        std::fs::create_dir_all(dir).map_err(|e| format!("{}: {e}", dir.display()))?;
+        std::fs::create_dir_all(dir).map_err(|source| ArchiveError::Io {
+            path: dir.display().to_string(),
+            source,
+        })?;
         let path = dir.join(target);
-        std::fs::write(&path, bytes).map_err(|e| format!("{}: {e}", path.display()))?;
+        std::fs::write(&path, bytes).map_err(|source| ArchiveError::Io {
+            path: path.display().to_string(),
+            source,
+        })?;
         Ok(path)
     }
 }
@@ -240,6 +323,7 @@ mod tests {
         assert!(a
             .read("../evil.ncd")
             .unwrap_err()
+            .to_string()
             .contains("not in the archive"));
     }
 
@@ -265,6 +349,7 @@ mod tests {
         assert!(a
             .read_limited("big.ncd", 4999)
             .unwrap_err()
+            .to_string()
             .contains("bigger than"));
     }
 
@@ -276,7 +361,30 @@ mod tests {
         assert!(Archive::open(&f)
             .err()
             .unwrap()
+            .to_string()
             .contains("not a ZIP archive"));
         assert!(Archive::open(&d.join("missing.zip")).is_err());
+    }
+
+    #[test]
+    fn errors_keep_their_kind_and_still_turn_into_text() {
+        let d = scratch("kinds");
+        let z = d.join("job.zip");
+        make(&z, &[("a.ncd", b"x")]);
+        let mut a = Archive::open(&z).unwrap();
+        assert!(matches!(
+            a.read("b.ncd"),
+            Err(ArchiveError::NotInArchive { .. })
+        ));
+        assert!(matches!(
+            a.extract("../x.ncd", &d),
+            Err(ArchiveError::UnsafeName { .. })
+        ));
+        assert!(matches!(
+            Archive::open(&d.join("missing.zip")),
+            Err(ArchiveError::Io { .. })
+        ));
+        let text: String = a.read("b.ncd").unwrap_err().into();
+        assert!(text.contains("not in the archive"));
     }
 }
