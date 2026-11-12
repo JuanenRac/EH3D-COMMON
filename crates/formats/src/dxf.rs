@@ -105,6 +105,7 @@ pub fn outline(text: &str, segments_per_circle: u32) -> Result<Plot, String> {
 
 /// Like [`outline`], with the error as a [`FormatError`]: its stable code, the line of the group code that is not a number and its column.
 pub fn outline_checked(text: &str, segments_per_circle: u32) -> Result<Plot, FormatError> {
+    crate::limits::ReaderLimits::default().guard(text)?;
     let chord = 360.0 / f64::from(segments_per_circle.clamp(4, 3600));
     let lines: Vec<&str> = text.lines().collect();
     let mut pairs: Vec<(i64, &str)> = Vec::with_capacity(lines.len() / 2);

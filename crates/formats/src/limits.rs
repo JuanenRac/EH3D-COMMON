@@ -4,6 +4,8 @@
 
 use std::fmt;
 
+use crate::error::{Code, FormatError};
+
 /// The shipped file with the conservative values.
 pub const DEFAULT_CONFIG: &str = include_str!("../reader_limits.cfg");
 
@@ -139,6 +141,16 @@ impl ReaderLimits {
         Ok(limits)
     }
 
+    /// Checks the text of a file before it is read and gives a refusal as a [`FormatError`] (`EH3D-FORMATS-011`, with what went past the limit).
+    pub fn guard(&self, text: &str) -> Result<LimitVerdict, FormatError> {
+        self.check(text).map_err(|e| FormatError {
+            code: Code::FileTooLarge,
+            line: None,
+            column: None,
+            detail: e.to_string(),
+        })
+    }
+
     /// Checks the text of a file before it is read.
     pub fn check(&self, text: &str) -> Result<LimitVerdict, LimitError> {
         let bytes = text.len() as u64;
@@ -200,6 +212,21 @@ mod tests {
         assert_eq!(
             l.check("1\n2\n3\n4\n5\n6\n").unwrap_err().kind,
             LimitKind::Lines
+        );
+    }
+
+    #[test]
+    fn a_refusal_is_told_with_its_code() {
+        let l = ReaderLimits::from_config(SMALL).unwrap();
+        let e = l.guard(&"x".repeat(101)).unwrap_err();
+        assert_eq!(e.code, Code::FileTooLarge);
+        assert!(e.detail.contains("101"));
+        assert_eq!(
+            l.guard(
+                "a
+"
+            ),
+            Ok(LimitVerdict::Ok)
         );
     }
 

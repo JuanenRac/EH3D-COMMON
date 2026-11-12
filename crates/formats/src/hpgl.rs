@@ -378,15 +378,44 @@ pub fn diagnose(text: &str) -> Vec<FormatError> {
 /// [`parse_with`], refusing a file that [`diagnose`] finds something in: the first problem is the error. A file that is read without a problem gives
 /// exactly the plot of [`parse_with`].
 pub fn parse_strict(text: &str, segments_per_circle: u32) -> Result<Plot, FormatError> {
+    crate::limits::ReaderLimits::default().guard(text)?;
     match diagnose(text).into_iter().next() {
         Some(problem) => Err(problem),
         None => Ok(parse_with(text, segments_per_circle)),
     }
 }
 
+/// [`parse_with`] after the check of the size of the file: a file past a hard limit of `limits` is refused with `EH3D-FORMATS-011`, one past a warning
+/// limit is read and the verdict says so, so that a program can tell the user.
+pub fn parse_limited(
+    text: &str,
+    segments_per_circle: u32,
+    limits: &crate::limits::ReaderLimits,
+) -> Result<(Plot, crate::limits::LimitVerdict), FormatError> {
+    let verdict = limits.guard(text)?;
+    Ok((parse_with(text, segments_per_circle), verdict))
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn a_plot_past_the_limit_is_refused_and_a_big_one_is_warned() {
+        use crate::limits::{LimitVerdict, ReaderLimits};
+        let l = ReaderLimits::from_config(
+            "max_bytes = 40
+max_lines = 100
+warn_bytes = 10
+warn_lines = 50
+",
+        )
+        .unwrap();
+        let e = parse_limited(&"PU0,0;".repeat(10), 36, &l).unwrap_err();
+        assert_eq!(e.code, crate::error::Code::FileTooLarge);
+        let (_, v) = parse_limited("PU0,0;PD5,5;", 36, &l).unwrap();
+        assert!(matches!(v, LimitVerdict::Warn(_)));
+    }
 
     fn bounds(p: &Plot) -> (i32, i32, i32, i32) {
         let pts: Vec<_> = p

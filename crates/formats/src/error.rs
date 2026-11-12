@@ -89,11 +89,19 @@ pub enum Code {
     HpglBadNumber,
     /// 007: a position command of a plot whose last coordinate has no pair.
     HpglOddCoordinates,
+    /// 008: a Gerber outline without the format statement that says how its coordinates are written.
+    GerberNoFormat,
+    /// 009: a Gerber file with no outline (no line or arc drawn with the pen down).
+    GerberNoOutline,
+    /// 010: a coordinate of a Gerber outline that cannot be read.
+    GerberBadCoordinate,
+    /// 011: a file bigger than the limits of the readers (see `reader_limits.cfg`).
+    FileTooLarge,
 }
 
 impl Code {
     /// Every code, in the order of their numbers.
-    pub const ALL: [Code; 7] = [
+    pub const ALL: [Code; 11] = [
         Code::NcdBadLine,
         Code::NcdHoleBeforeTool,
         Code::DxfNotDxf,
@@ -101,9 +109,13 @@ impl Code {
         Code::DxfNoDrawing,
         Code::HpglBadNumber,
         Code::HpglOddCoordinates,
+        Code::GerberNoFormat,
+        Code::GerberNoOutline,
+        Code::GerberBadCoordinate,
+        Code::FileTooLarge,
     ];
 
-    /// The number of the code (1 to 7).
+    /// The number of the code (1 to 11).
     pub fn number(self) -> u16 {
         match self {
             Code::NcdBadLine => 1,
@@ -113,6 +125,10 @@ impl Code {
             Code::DxfNoDrawing => 5,
             Code::HpglBadNumber => 6,
             Code::HpglOddCoordinates => 7,
+            Code::GerberNoFormat => 8,
+            Code::GerberNoOutline => 9,
+            Code::GerberBadCoordinate => 10,
+            Code::FileTooLarge => 11,
         }
     }
 
@@ -194,6 +210,46 @@ impl Code {
                 "位置命令的最后一个坐标没有配对",
                 "位置コマンドの最後の座標に対となる値がありません",
             ],
+            Code::GerberNoFormat => [
+                "the Gerber file has no format statement (FS)",
+                "el fichero Gerber no tiene la orden de formato (FS)",
+                "il file Gerber non ha l'istruzione di formato (FS)",
+                "die Gerber-Datei hat keine Formatangabe (FS)",
+                "le fichier Gerber n'a pas d'instruction de format (FS)",
+                "o ficheiro Gerber não tem a instrução de formato (FS)",
+                "Gerber 文件没有格式语句 (FS)",
+                "Gerber ファイルにフォーマット指定 (FS) がありません",
+            ],
+            Code::GerberNoOutline => [
+                "the Gerber file has no outline",
+                "el fichero Gerber no tiene contorno",
+                "il file Gerber non ha il contorno",
+                "die Gerber-Datei enthält keinen Umriss",
+                "le fichier Gerber n'a pas de contour",
+                "o ficheiro Gerber não tem contorno",
+                "Gerber 文件中没有轮廓",
+                "Gerber ファイルに外形がありません",
+            ],
+            Code::GerberBadCoordinate => [
+                "a coordinate of the Gerber outline cannot be read",
+                "no se puede leer una coordenada del contorno Gerber",
+                "non si può leggere una coordinata del contorno Gerber",
+                "eine Koordinate des Gerber-Umrisses kann nicht gelesen werden",
+                "une coordonnée du contour Gerber ne peut pas être lue",
+                "não é possível ler uma coordenada do contorno Gerber",
+                "无法读取 Gerber 轮廓中的一个坐标",
+                "Gerber 外形の座標を読み取れません",
+            ],
+            Code::FileTooLarge => [
+                "the file is bigger than the limit of the readers",
+                "el fichero supera el límite de los lectores",
+                "il file supera il limite dei lettori",
+                "die Datei überschreitet die Grenze der Leser",
+                "le fichier dépasse la limite des lecteurs",
+                "o ficheiro excede o limite dos leitores",
+                "文件超过了读取器的限制",
+                "ファイルがリーダーの上限を超えています",
+            ],
         };
         row[lang.index()]
     }
@@ -255,7 +311,11 @@ mod tests {
                 "EH3D-FORMATS-004",
                 "EH3D-FORMATS-005",
                 "EH3D-FORMATS-006",
-                "EH3D-FORMATS-007"
+                "EH3D-FORMATS-007",
+                "EH3D-FORMATS-008",
+                "EH3D-FORMATS-009",
+                "EH3D-FORMATS-010",
+                "EH3D-FORMATS-011"
             ]
         );
     }

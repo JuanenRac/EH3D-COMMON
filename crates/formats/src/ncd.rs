@@ -234,6 +234,17 @@ fn looks_like_excellon(l: &str) -> bool {
     }
 }
 
+/// [`parse`] after the check of the size of the file: a file past a hard limit of `limits` is refused with `EH3D-FORMATS-011`, one past a warning limit
+/// is read and the verdict says so, so that a program can tell the user. Any other problem comes as its [`FormatError`] too.
+pub fn parse_limited(
+    text: &str,
+    limits: &crate::limits::ReaderLimits,
+) -> Result<(DrillFile, crate::limits::LimitVerdict), FormatError> {
+    let verdict = limits.guard(text)?;
+    let file = parse(text).map_err(|e| e.to_error())?;
+    Ok((file, verdict))
+}
+
 pub fn parse(text: &str) -> Result<DrillFile, ParseError> {
     let mut out = DrillFile::default();
     let (mut tool, mut x, mut y) = (None::<u8>, 0, 0);

@@ -2,7 +2,9 @@
 //! `G03`, with the centre given as `I` and `J`) drawn with the pen down (`D01`) between the moves (`D02`). The apertures, the polarity
 //! and the flashes (`D03`) mean nothing for a route and are skipped. One path is made of the strokes that follow each other.
 
+use crate::error::{Code, FormatError};
 use crate::hpgl::{arc_points, Plot, Polyline, SEGMENTS_PER_CIRCLE, UNIT_MM};
+use crate::limits::ReaderLimits;
 
 /// The file extensions a Gerber outline usually has (the profile or mechanical layer of the usual board programs).
 pub const OUTLINE_EXTENSIONS: [&str; 6] = ["gbr", "gko", "gm1", "gml", "gm2", "gm3"];
@@ -83,8 +85,14 @@ fn codes(block: &str, letter: char) -> Vec<u32> {
 }
 
 /// The outline of the board: every closed or open run of strokes as a path of the plot, in plotter units. `segments_per_circle` is how
-/// many chords a whole circle is cut into. An error says what in the file cannot be read.
+/// many chords a whole circle is cut into. An error says what in the file cannot be read, with its code (see [`outline_checked`]).
 pub fn outline(text: &str, segments_per_circle: u32) -> Result<Plot, String> {
+    outline_checked(text, segments_per_circle).map_err(|e| e.to_string())
+}
+
+/// Like [`outline`], with the error as a [`FormatError`]: its stable code and, for a coordinate that cannot be read, the word it is about.
+pub fn outline_checked(text: &str, segments_per_circle: u32) -> Result<Plot, FormatError> {
+    ReaderLimits::default().guard(text)?;
     let chord = 360.0 / f64::from(segments_per_circle.clamp(4, 3600));
     let mut format = Format {
         integer: 2,
@@ -175,11 +183,16 @@ pub fn outline(text: &str, segments_per_circle: u32) -> Result<Plot, String> {
         if !has_move && op.is_none() {
             continue;
         }
-        let read = |axis: char, now: f64| -> Result<f64, String> {
+        let read = |axis: char, now: f64| -> Result<f64, FormatError> {
             match word(&block, axis) {
                 Some(w) => coordinate(w, format)
                     .map(|v| v * mm_per_unit)
-                    .ok_or_else(|| format!("{axis}{w}")),
+                    .ok_or_else(|| FormatError {
+                        code: Code::GerberBadCoordinate,
+                        line: None,
+                        column: None,
+                        detail: format!("{axis}{w}"),
+                    }),
                 None => Ok(now),
             }
         };
@@ -228,10 +241,20 @@ pub fn outline(text: &str, segments_per_circle: u32) -> Result<Plot, String> {
         runs.push(run);
     }
     if !saw_format {
-        return Err("no format statement (FS)".to_string());
+        return Err(FormatError {
+            code: Code::GerberNoFormat,
+            line: None,
+            column: None,
+            detail: String::new(),
+        });
     }
     if runs.is_empty() {
-        return Err("no outline in the file".to_string());
+        return Err(FormatError {
+            code: Code::GerberNoOutline,
+            line: None,
+            column: None,
+            detail: String::new(),
+        });
     }
     let to_units = |v: f64| (v / UNIT_MM).round() as i32;
     Ok(Plot {
@@ -259,6 +282,30 @@ mod tests {
     use super::*;
 
     const SQUARE: &str = "%FSLAX24Y24*%\n%MOMM*%\n%ADD10C,0.1*%\nD10*\nG01*\nX0Y0D02*\nX500000Y0D01*\nX500000Y300000D01*\nX0Y300000D01*\nX0Y0D01*\nM02*\n";
+
+    #[test]
+    fn the_errors_of_an_outline_have_their_codes() {
+        let code = |t: &str| outline_checked(t, 72).unwrap_err().code;
+        assert_eq!(code("M02*"), Code::GerberNoFormat);
+        assert_eq!(
+            code(
+                "%FSLAX24Y24*%
+%MOMM*%
+M02*"
+            ),
+            Code::GerberNoOutline
+        );
+        assert_eq!(
+            code(
+                "%FSLAX24Y24*%
+X1.5Y0D01*"
+            ),
+            Code::GerberBadCoordinate
+        );
+        assert!(outline("M02*", 72)
+            .unwrap_err()
+            .starts_with("EH3D-FORMATS-008"));
+    }
 
     #[test]
     fn arcs_written_with_short_codes_and_a_modal_d_are_followed() {
