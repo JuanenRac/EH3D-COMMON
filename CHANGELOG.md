@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Two property tests of the firmware base with a fixed seed:** the scanner of the board mark is checked against a plain search over 400 images of random bytes with the mark planted at a random place (read in pieces of random sizes), and the heartbeats of the guard against a plain model over 2000 looks.
+
 - **The two touch screens share one `core/`:** `hmi_config.hpp` (with the panel that moves the machine by hand and the kind of machine), `gate.hpp`, `keyboard.hpp`, `status.hpp`, `ui_text.hpp`, `locales.hpp`, `machine.hpp`, the 30 files of `locales/` and the generated `locales_gen.hpp`, `font_ranges.hpp` and the two fonts (`main/fonts`) are base files now, in their union: what one screen does not use the other leaves alone. The fonts are built in GitHub Actions from the literals of both screens (`EH3D_EXTRA_LITERALS` in `tools/make_locales.py`), so both carry the same glyphs. The firmware base is now 117 files, 67 of them shared by the two screens.
 
 - **Seeded fuzz tests of the readers:** `crates/formats/tests/fuzz_seeded.rs` gives the readers of the drill file, the plot, the drawing and the Gerber outline ten thousand texts made from a fixed seed (pieces of real commands glued at random, cut at random, with random bytes) and checks that none panics, and gives the limited readers five thousand more to check that a text past a hard limit is always refused with `EH3D-FORMATS-011` and that both the warning and the refusal are reached. Two tests.
