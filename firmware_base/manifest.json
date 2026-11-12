@@ -653,6 +653,18 @@
         "EH3D-NODE-HMI-GUI": "tests/test_hmi.cpp"
       }
     },
+    "tests/test_keyboard.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "tests/test_keyboard.cpp",
+        "EH3D-NODE-HMI-GUI": "tests/test_keyboard.cpp"
+      }
+    },
+    "tests/test_locales.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "tests/test_locales.cpp",
+        "EH3D-NODE-HMI-GUI": "tests/test_locales.cpp"
+      }
+    },
     "tests/test_notices.cpp": {
       "targets": {
         "EH3D-NODE-BUNGARD-HMI": "tests/test_notices.cpp",

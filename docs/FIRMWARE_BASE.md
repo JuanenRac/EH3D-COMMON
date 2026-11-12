@@ -4,7 +4,7 @@ The EH3D nodes are ESP32-S3 devices (today EH3D-NODE-BUNGARD and EH3D-NODE-BUNGA
 
 ## What is shared
 
-About a hundred and fifteen files, listed in `firmware_base/manifest.json`:
+About a hundred and seventeen files, listed in `firmware_base/manifest.json`:
 
 - **`core/`** (no hardware, tested on a computer): the settings every node has (`node_settings.hpp`, `config_common.hpp`), users, roles, sessions and the throttle on wrong passwords (`auth.hpp`), the network plan (`netplan.hpp`, `net_text.hpp`, `node_id.hpp`), the pins of the ESP32-S3 boards (`board_s3.hpp`), the JSON reader and writer (`json.hpp`), Improv Wi-Fi over serial (`improv.hpp`), the schedule of retries, the guard of tasks and memory, with the heartbeats of the tasks and the subsystems a new image must have started (`node_guard.hpp`, `task_health.hpp`, `memory_budget.hpp`), the board mark an image carries and the check of an image made for the other board (`board_mark.hpp`), the panel's access policy (`web_policy.hpp`, `admin_sources.hpp`), the clock (`civil_time.hpp`), version numbers (`semver.hpp`) and the loading of what is stored (`stored_load.hpp`).
 - **`main/`** (ESP-IDF): the Ethernet board (`board_ethernet.*`), the network (`network.*`), the settings store, users and the setup code in flash (`node_store.*`), the shared part of the panel's API (`api_shared.*`), the certificate of the HTTPS panel (`tls_cert.*`), the clock (`clock_sync.*`), entropy, the log buffer, the external-RAM allocator, the task report, Improv over USB and the guard that restarts a node in trouble.
