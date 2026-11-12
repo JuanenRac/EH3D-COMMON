@@ -5,6 +5,9 @@ All notable changes to this project are documented here.
 ## [Unreleased]
 
 - **The CI keeps its actions up to date and does not pile up runs:** a `dependabot.yml` groups the updates of the GitHub Actions in one monthly request, a new push to a branch cancels the run of the older one that is still going, and the Rust jobs have a time limit, so a stuck job cannot hold a runner for hours.
+
+- **The settings file of the screens is tested damaged:** `firmware_base/tests/test_hmi.cpp` reads the settings file cut at every place and in 600 copies with bytes changed, inserted or cut (a fixed seed), and no value ever leaves its range.
+
 - **Two property tests of the firmware base with a fixed seed:** the scanner of the board mark is checked against a plain search over 400 images of random bytes with the mark planted at a random place (read in pieces of random sizes), and the heartbeats of the guard against a plain model over 2000 looks.
 
 - **The two touch screens share one `core/`:** `hmi_config.hpp` (with the panel that moves the machine by hand and the kind of machine), `gate.hpp`, `keyboard.hpp`, `status.hpp`, `ui_text.hpp`, `locales.hpp`, `machine.hpp`, the 30 files of `locales/` and the generated `locales_gen.hpp`, `font_ranges.hpp` and the two fonts (`main/fonts`) are base files now, in their union: what one screen does not use the other leaves alone. The fonts are built in GitHub Actions from the literals of both screens (`EH3D_EXTRA_LITERALS` in `tools/make_locales.py`), so both carry the same glyphs. The firmware base is now 117 files, 67 of them shared by the two screens.
