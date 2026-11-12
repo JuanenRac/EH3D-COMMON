@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Limits for the readers, kept in a configuration file:** `eh3d_bungard_formats::limits::ReaderLimits` refuses a text file with more bytes or lines than the hard limits and tells a program when a file is past the warning limits (`check`). The values are in `crates/formats/reader_limits.cfg` (a hard and a warning limit for the bytes and for the lines, conservative), which a program can replace with its own copy through `ReaderLimits::from_config`; a bad file is refused with its line. Three tests check the shipped values, the three verdicts and the refusals of a bad configuration.
 - **The archive reader tells its errors by kind:** `eh3d_archive::ArchiveError` (`Io`, `Zip`, `TooManyEntries`, `NotInArchive`, `TooBig`, `UnsafeName`) replaces the text errors of `Archive::open`, `read`, `read_limited` and `extract`; its words are the same as before, and `String::from(error)` keeps callers that carry their errors as text working. A test checks each kind and the conversion.
 
 ## [0.2.0] - The build text of a program, the file tree check in the validator, formats with error codes and a Paper theme that reads well on every surface

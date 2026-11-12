@@ -10,5 +10,6 @@ pub mod dxf;
 pub mod error;
 pub mod gerber;
 pub mod hpgl;
+pub mod limits;
 pub mod ncd;
 pub mod route_tools;
