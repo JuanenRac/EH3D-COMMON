@@ -50,7 +50,7 @@ CANDIDATES = [
     "main/network.cpp", "main/network.hpp", "main/node_guard.cpp", "main/node_guard.hpp", "main/node_store.cpp", "main/node_store.hpp",
     "main/psram_mem.cpp", "main/psram_mem.hpp", "main/task_health.cpp", "main/task_health.hpp", "main/tls_cert.cpp", "main/tls_cert.hpp",
     "main/web_server.hpp",
-    "core/admin_sources.hpp", "core/auth.hpp", "core/backoff.hpp", "core/board_s3.hpp", "core/civil_time.hpp", "core/config_common.hpp",
+    "core/admin_sources.hpp", "core/auth.hpp", "core/backoff.hpp", "core/board_mark.hpp", "core/board_s3.hpp", "core/civil_time.hpp", "core/config_common.hpp",
     "core/improv.hpp", "core/json.hpp", "core/memory_budget.hpp", "core/net_text.hpp", "core/netplan.hpp", "core/node_guard.hpp", "core/node_id.hpp",
     "core/node_settings.hpp", "core/semver.hpp", "core/stored_load.hpp", "core/task_health.hpp", "core/web_policy.hpp",
     "tools/pack_panel.py", "tools/check_sdkconfig.py",

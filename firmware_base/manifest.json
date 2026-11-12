@@ -18,6 +18,12 @@
         "EH3D-NODE-BUNGARD-AUX": "core/backoff.hpp"
       }
     },
+    "core/board_mark.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD": "core/board_mark.hpp",
+        "EH3D-NODE-BUNGARD-AUX": "core/board_mark.hpp"
+      }
+    },
     "core/board_s3.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD": "core/board_s3.hpp",
@@ -250,6 +256,12 @@
       "targets": {
         "EH3D-NODE-BUNGARD": "main/entropy.hpp",
         "EH3D-NODE-BUNGARD-AUX": "main/entropy.hpp"
+      }
+    },
+    "main/image_confirm.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "main/image_confirm.hpp",
+        "EH3D-NODE-HMI-GUI": "main/image_confirm.hpp"
       }
     },
     "main/improv_serial.cpp": {
