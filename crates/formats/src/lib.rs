@@ -13,3 +13,4 @@ pub mod hpgl;
 pub mod limits;
 pub mod ncd;
 pub mod route_tools;
+pub mod selection;
