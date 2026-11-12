@@ -51,7 +51,8 @@ jobs:
         with:
           persist-credentials: false
       - name: Rust toolchain
-        run: rustup toolchain install stable --profile minimal --component rustfmt,clippy
+        shell: bash
+        run: rustup toolchain install "$(sed -n 's/^channel = "\(.*\)"/\1/p' rust-toolchain.toml)" --profile minimal --component rustfmt,clippy
       - name: Format
         run: cargo fmt --all --check
       - name: Lints
@@ -175,7 +176,9 @@ jobs:
                   pending.append(dep)
           PY
       - name: Rust toolchain
-        run: rustup toolchain install stable --profile minimal
+        shell: bash
+        working-directory: EH3D-COMMON
+        run: rustup toolchain install "$(sed -n 's/^channel = "\(.*\)"/\1/p' rust-toolchain.toml)" --profile minimal
       - name: Build the consumer against this change
         run: cargo check --all-targets
         working-directory: ${{ matrix.repo }}
