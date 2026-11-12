@@ -42,6 +42,24 @@
         "EH3D-NODE-BUNGARD-AUX": "core/config_common.hpp"
       }
     },
+    "core/font_ranges.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/font_ranges.hpp",
+        "EH3D-NODE-HMI-GUI": "core/font_ranges.hpp"
+      }
+    },
+    "core/gate.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/gate.hpp",
+        "EH3D-NODE-HMI-GUI": "core/gate.hpp"
+      }
+    },
+    "core/hmi_config.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/hmi_config.hpp",
+        "EH3D-NODE-HMI-GUI": "core/hmi_config.hpp"
+      }
+    },
     "core/improv.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD": "core/improv.hpp",
@@ -72,10 +90,34 @@
         "EH3D-NODE-BUNGARD-AUX": "core/json.hpp"
       }
     },
+    "core/keyboard.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/keyboard.hpp",
+        "EH3D-NODE-HMI-GUI": "core/keyboard.hpp"
+      }
+    },
     "core/lang.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD-HMI": "core/lang.hpp",
         "EH3D-NODE-HMI-GUI": "core/lang.hpp"
+      }
+    },
+    "core/locales.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/locales.hpp",
+        "EH3D-NODE-HMI-GUI": "core/locales.hpp"
+      }
+    },
+    "core/locales_gen.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/locales_gen.hpp",
+        "EH3D-NODE-HMI-GUI": "core/locales_gen.hpp"
+      }
+    },
+    "core/machine.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/machine.hpp",
+        "EH3D-NODE-HMI-GUI": "core/machine.hpp"
       }
     },
     "core/memory_budget.hpp": {
@@ -168,6 +210,12 @@
         "EH3D-NODE-HMI-GUI": "core/stage_notice.hpp"
       }
     },
+    "core/status.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/status.hpp",
+        "EH3D-NODE-HMI-GUI": "core/status.hpp"
+      }
+    },
     "core/stored_load.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD": "core/stored_load.hpp",
@@ -178,6 +226,12 @@
       "targets": {
         "EH3D-NODE-BUNGARD": "core/task_health.hpp",
         "EH3D-NODE-BUNGARD-AUX": "core/task_health.hpp"
+      }
+    },
+    "core/ui_text.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/ui_text.hpp",
+        "EH3D-NODE-HMI-GUI": "core/ui_text.hpp"
       }
     },
     "core/voice.hpp": {
@@ -202,6 +256,186 @@
       "targets": {
         "EH3D-NODE-BUNGARD-HMI": "core/workflow.hpp",
         "EH3D-NODE-HMI-GUI": "core/workflow.hpp"
+      }
+    },
+    "locales/bg.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/bg.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/bg.tsv"
+      }
+    },
+    "locales/ca.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/ca.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/ca.tsv"
+      }
+    },
+    "locales/cs.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/cs.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/cs.tsv"
+      }
+    },
+    "locales/da.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/da.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/da.tsv"
+      }
+    },
+    "locales/el.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/el.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/el.tsv"
+      }
+    },
+    "locales/et.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/et.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/et.tsv"
+      }
+    },
+    "locales/eu.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/eu.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/eu.tsv"
+      }
+    },
+    "locales/fi.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/fi.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/fi.tsv"
+      }
+    },
+    "locales/fr-ca.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/fr-ca.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/fr-ca.tsv"
+      }
+    },
+    "locales/ga.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/ga.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/ga.tsv"
+      }
+    },
+    "locales/gl.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/gl.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/gl.tsv"
+      }
+    },
+    "locales/hr.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/hr.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/hr.tsv"
+      }
+    },
+    "locales/hu.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/hu.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/hu.tsv"
+      }
+    },
+    "locales/is.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/is.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/is.tsv"
+      }
+    },
+    "locales/lt.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/lt.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/lt.tsv"
+      }
+    },
+    "locales/lv.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/lv.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/lv.tsv"
+      }
+    },
+    "locales/mt.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/mt.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/mt.tsv"
+      }
+    },
+    "locales/names.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/names.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/names.tsv"
+      }
+    },
+    "locales/nl.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/nl.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/nl.tsv"
+      }
+    },
+    "locales/no.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/no.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/no.tsv"
+      }
+    },
+    "locales/pl.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/pl.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/pl.tsv"
+      }
+    },
+    "locales/pt-br.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/pt-br.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/pt-br.tsv"
+      }
+    },
+    "locales/ro.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/ro.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/ro.tsv"
+      }
+    },
+    "locales/ru.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/ru.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/ru.tsv"
+      }
+    },
+    "locales/sk.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/sk.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/sk.tsv"
+      }
+    },
+    "locales/sl.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/sl.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/sl.tsv"
+      }
+    },
+    "locales/sq.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/sq.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/sq.tsv"
+      }
+    },
+    "locales/sr.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/sr.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/sr.tsv"
+      }
+    },
+    "locales/sv.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/sv.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/sv.tsv"
+      }
+    },
+    "locales/uk.tsv": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "locales/uk.tsv",
+        "EH3D-NODE-HMI-GUI": "locales/uk.tsv"
       }
     },
     "main/api_shared.cpp": {
@@ -262,6 +496,18 @@
       "targets": {
         "EH3D-NODE-BUNGARD": "main/entropy.hpp",
         "EH3D-NODE-BUNGARD-AUX": "main/entropy.hpp"
+      }
+    },
+    "main/fonts/eh3d_font_16.c": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "main/fonts/eh3d_font_16.c",
+        "EH3D-NODE-HMI-GUI": "main/fonts/eh3d_font_16.c"
+      }
+    },
+    "main/fonts/eh3d_font_24.c": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "main/fonts/eh3d_font_24.c",
+        "EH3D-NODE-HMI-GUI": "main/fonts/eh3d_font_24.c"
       }
     },
     "main/image_confirm.hpp": {

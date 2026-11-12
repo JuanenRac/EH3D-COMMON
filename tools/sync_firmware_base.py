@@ -58,15 +58,19 @@ CANDIDATES = [
 ]
 
 # The files the two touch-screen projects (EH3D-NODE-BUNGARD-HMI and EH3D-NODE-HMI-GUI) share. The gate, the texts, the settings and the screens (app_main.cpp, ui.cpp)
-# differ by the kind of machine the screen serves and stay each project's own.
+# were each project's own; they are shared now, in their union.
 # The bar of the tool changer, the stage notices, the notices, the sound files, the link to the server and the flow of a job (the chaining of the changer) are the same in both screens again.
-# The keyboard stays the own file of each screen: the Bungard screen describes the settings of the panel that moves the machine by hand and the other screen does not have that panel.
 HMI_CANDIDATES = [
     "core/job_bar.hpp", "core/job_memory.hpp", "core/job_tools.hpp", "core/lang.hpp", "core/notices.hpp", "core/orientation.hpp", "core/quality.hpp",
     "core/rack.hpp", "core/sdfiles.hpp", "core/server_link.hpp", "core/stage_notice.hpp", "core/voice.hpp", "core/wav.hpp", "core/workflow.hpp",
     "main/board.hpp", "main/board_p4.cpp", "main/server_link.cpp", "main/server_link.hpp",
     "tests/test_hmi.cpp", "tests/test_notices.cpp", "tests/test_quality.cpp", "tests/test_workflow.cpp",
-]
+    # the settings, the gate, the keyboard, the texts and the kind of machine are one file for both screens: what only one screen has (the panel that moves the machine by hand, the kinds of machine) is in
+    # the file for both, and the screen that does not use it ignores it
+    "core/hmi_config.hpp", "core/gate.hpp", "core/keyboard.hpp", "core/status.hpp", "core/ui_text.hpp", "core/locales.hpp", "core/machine.hpp", "core/ops.hpp",
+    # generated from the files of locales by tools/make_locales.py and tools/make_fonts.py, with the literals of both screens: one set of fonts and ranges for the two
+    "core/locales_gen.hpp", "core/font_ranges.hpp", "main/fonts/eh3d_font_16.c", "main/fonts/eh3d_font_24.c",
+] + [f"locales/{n}.tsv" for n in "names bg ca cs da el et eu fi fr-ca ga gl hr hu is lt lv mt nl no pl pt-br ro ru sk sl sq sr sv uk".split()]
 CANDIDATES_OF = {"EH3D-NODE-BUNGARD-HMI": HMI_CANDIDATES, "EH3D-NODE-HMI-GUI": HMI_CANDIDATES}
 
 
