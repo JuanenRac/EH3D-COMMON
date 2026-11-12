@@ -120,6 +120,12 @@
         "EH3D-NODE-HMI-GUI": "core/notices.hpp"
       }
     },
+    "core/ops.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/ops.hpp",
+        "EH3D-NODE-HMI-GUI": "core/ops.hpp"
+      }
+    },
     "core/orientation.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD-HMI": "core/orientation.hpp",

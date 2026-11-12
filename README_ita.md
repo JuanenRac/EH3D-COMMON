@@ -49,7 +49,7 @@ Ogni riga è una parte di questo repository e il semaforo dice a che punto è og
 | Telemetria e tema | 🟡 | Assi, mandrino, stati della macchina, codici di allarme GRBL con la loro gravità e colori della suite con controllo del contrasto, tutto testato. |
 | Test | 🟡 | Passano 372 test (`cargo test --workspace`): 26 nei moduli e 33 sul contenitore del crate principale, e 282 nei tredici crate condivisi. |
 | Sicurezza | 🟡 | Nomi non sicuri, voci troppo grandi o troppo numerose e qualsiasi voce alterata vengono rifiutati; il pacchetto non è firmato né cifrato e non ha avuto una revisione indipendente. |
-| Base del firmware | 🟠 | 73 file mantenuti identici da `tools/sync_firmware_base.py`: 50 condivisi dai nodi ESP32 EH3D-NODE-BUNGARD ed EH3D-NODE-BUNGARD-AUX (48 di essi da entrambi; provati solo su un computer, con i test host di quei due nodi) e 23 condivisi dai due schermi tattili EH3D-NODE-BUNGARD-HMI e EH3D-NODE-HMI-GUI; mai eseguita su una scheda. |
+| Base del firmware | 🟠 | 74 file mantenuti identici da `tools/sync_firmware_base.py`: 50 condivisi dai nodi ESP32 EH3D-NODE-BUNGARD ed EH3D-NODE-BUNGARD-AUX (48 di essi da entrambi; provati solo su un computer, con i test host di quei due nodi) e 24 condivisi dai due schermi tattili EH3D-NODE-BUNGARD-HMI e EH3D-NODE-HMI-GUI; mai eseguita su una scheda. |
 | Uso da altri programmi | 🟡 | I crate del workspace sono usati da EH3D-DRILLPRO, EH3D-ROUTEPRO, EH3D-BUNGARD-GUI, EH3D-PHOENIX-CNC ed EH3D-SERVER (per percorso, con i repository affiancati); il contenitore di progetto in sé non è ancora usato da alcun programma. |
 | Documentazione | 🟡 | README in otto lingue, la descrizione del formato e la guida alla base del firmware; la CI le confronta con il manifesto e il registro delle modifiche. |
 
