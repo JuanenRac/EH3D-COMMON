@@ -16,6 +16,7 @@
 //!   extrapolated;
 //! * [`documents`]: the catalogue of the reference documents, classified by category and by
 //!   what they serve (the machine program or the design tool);
+//! * [`spindle`]: the spindles a machine can carry and the limits of each (turns, feeds, power and the thickest bit), read from `spindles.cfg`;
 //! * [`error`]: the typed errors with the stable codes `EH3D-MAT-001` to `EH3D-MAT-009`.
 //!
 //! Nothing here opens a window, a file or the network: the data is part of the library.
@@ -28,6 +29,7 @@ pub mod error;
 pub mod interp;
 pub mod model;
 pub mod query;
+pub mod spindle;
 pub mod summary;
 pub mod validate;
 
