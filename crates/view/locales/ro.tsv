@@ -649,3 +649,4 @@ WarnRequestNewer	Serverul a citit cererea ca pe cea mai nouă versiune pe care o
 WarnRackNeedsV2	Serverul a ignorat schimbătorul: cererea era din prima versiune
 WarnRackNoChanger	Această mașină schimbă sculele manual: nu sunt înlănțuite
 WarnOutOfCourse	Lucrarea depășește cursa mașinii pe axa:
+WarnBigFile	Fișierul este mare: citirea și desenarea lui pot dura un timp

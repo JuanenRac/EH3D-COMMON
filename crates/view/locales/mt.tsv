@@ -649,3 +649,4 @@ WarnRequestNewer	Is-server qara t-talba bħala l-aktar verżjoni reċenti li jaf
 WarnRackNeedsV2	Is-server injora l-bdil tal-għodod: it-talba kienet tal-ewwel verżjoni
 WarnRackNoChanger	Din il-magna tibdel l-għodod bl-idejn: ma humiex marbutin f'katina
 WarnOutOfCourse	Ix-xogħol imur lil hinn mill-mixja tal-magna fuq l-assi:
+WarnBigFile	Il-fajl huwa kbir: il-qari u r-rappreżentazzjoni tiegħu jistgħu jieħdu żmien

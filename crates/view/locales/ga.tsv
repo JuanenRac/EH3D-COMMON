@@ -649,3 +649,4 @@ WarnRequestNewer	Léigh an freastalaí an iarraidh mar an leagan is déanaí a b
 WarnRackNeedsV2	Rinne an freastalaí neamhaird ar an athraitheoir: bhí an iarraidh den chéad leagan
 WarnRackNoChanger	Athraíonn an t-inneal seo uirlisí de láimh: níl siad slabhraithe
 WarnOutOfCourse	Téann an obair thar thaisteal an innill ar an ais:
+WarnBigFile	Tá an comhad mór: d'fhéadfadh sé tamall a thógáil é a léamh agus a tharraingt

@@ -649,3 +649,4 @@ WarnRequestNewer	Serwer odczytał żądanie jako najnowszą znaną sobie wersję
 WarnRackNeedsV2	Serwer zignorował zmieniacz: żądanie było w pierwszej wersji
 WarnRackNoChanger	Ta maszyna zmienia narzędzia ręcznie: nie są łączone w łańcuch
 WarnOutOfCourse	Praca wykracza poza przejazd maszyny na osi:
+WarnBigFile	Plik jest duży: jego wczytanie i narysowanie może chwilę potrwać

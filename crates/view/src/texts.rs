@@ -946,6 +946,7 @@ texts! {
     WarnRackNeedsV2 => ["The server ignored the tool changer: the request was of the first version", "El servidor ignoró el cambiador: la petición era de la primera versión", "Il server ha ignorato il cambio utensile: la richiesta era della prima versione", "Der Server hat den Werkzeugwechsler ignoriert: die Anfrage war von der ersten Version", "Le serveur a ignoré le changeur : la demande était de la première version", "O servidor ignorou o trocador: o pedido era da primeira versão", "服务器忽略了换刀器：请求属于第一版", "サーバーはツールチェンジャーを無視しました：要求は第1版でした"],
     WarnRackNoChanger => ["This machine changes its tools by hand: the tools are not chained", "Esta máquina cambia las herramientas a mano: no se encadenan", "Questa macchina cambia gli utensili a mano: non vengono concatenati", "Diese Maschine wechselt die Werkzeuge von Hand: sie werden nicht verkettet", "Cette machine change ses outils à la main : ils ne sont pas enchaînés", "Esta máquina troca as ferramentas à mão: não são encadeadas", "此机器手动换刀：刀具不会衔接", "このマシンは工具を手で交換します：工具は連結されません"],
     WarnOutOfCourse => ["The work goes past the course of the machine on the axis:", "El trabajo se sale del recorrido de la máquina en el eje:", "Il lavoro supera la corsa della macchina sull'asse:", "Die Arbeit überschreitet den Verfahrweg der Maschine auf der Achse:", "Le travail dépasse la course de la machine sur l'axe :", "O trabalho ultrapassa o curso da máquina no eixo:", "作业超出了机器在该轴上的行程：", "作業が次の軸で機械の可動範囲を超えています："],
+    WarnBigFile => ["The file is big: reading and drawing it may take a while", "El archivo es grande: leerlo y dibujarlo puede tardar un rato", "Il file è grande: leggerlo e disegnarlo può richiedere un po' di tempo", "Die Datei ist groß: Lesen und Zeichnen kann einen Moment dauern", "Le fichier est volumineux : sa lecture et son dessin peuvent prendre un moment", "O ficheiro é grande: a leitura e o desenho podem demorar algum tempo", "文件较大：读取和绘制可能需要一些时间", "ファイルが大きいため、読み込みと描画に時間がかかることがあります"],
 }
 
 impl crate::theme::ThemeId {
@@ -1037,6 +1038,7 @@ mod tests {
             Text::WarnRackNeedsV2,
             Text::WarnRackNoChanger,
             Text::WarnOutOfCourse,
+            Text::WarnBigFile,
         ];
         for l in Lang::ALL {
             for t in all {

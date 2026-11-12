@@ -649,3 +649,4 @@ WarnRequestNewer	De server las het verzoek als de nieuwste versie die hij kent
 WarnRackNeedsV2	De server negeerde de wisselaar: het verzoek was van de eerste versie
 WarnRackNoChanger	Deze machine wisselt het gereedschap met de hand: het wordt niet geketend
 WarnOutOfCourse	Het werk gaat voorbij de verplaatsing van de machine op de as:
+WarnBigFile	Het bestand is groot: lezen en tekenen kan even duren

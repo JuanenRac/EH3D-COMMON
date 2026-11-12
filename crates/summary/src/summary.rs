@@ -5,6 +5,8 @@
 
 use crate::dryrun::{Axis, Course, DryRun};
 use eh3d_bungard_formats::config::MachineSettings;
+use eh3d_bungard_formats::error::{FormatError, Language};
+use eh3d_bungard_formats::limits::LimitVerdict;
 use eh3d_view::texts::{tr, Lang, Text};
 
 /// The thresholds of the checks, which come from the configuration of the machine (the tuning file), not from here.
@@ -279,6 +281,28 @@ pub fn load_warning(
             .collect::<Vec<_>>()
             .join("; ")
     })
+}
+
+/// The notice for a file that a reader accepted but that went past a warning limit (`reader_limits.cfg`), in the language of the screen; `None` for a file inside the limits.
+pub fn size_warning(verdict: LimitVerdict, lang: impl Into<Lang>) -> Option<String> {
+    match verdict {
+        LimitVerdict::Ok => None,
+        LimitVerdict::Warn(_) => Some(tr(lang.into(), Text::WarnBigFile).to_string()),
+    }
+}
+
+/// The two notices of a loaded file as one line (either may be missing).
+pub fn join_warnings(first: Option<String>, second: Option<String>) -> Option<String> {
+    match (first, second) {
+        (Some(a), Some(b)) => Some(format!("{a}; {b}")),
+        (a, b) => a.or(b),
+    }
+}
+
+/// A refusal of a reader (a file past a hard limit, a file that cannot be read) with its code and its words in the language of the screen.
+pub fn refusal_message(error: &FormatError, lang: impl Into<Lang>) -> String {
+    let lang: Lang = lang.into();
+    error.localized(Language::from_code(lang.code()).unwrap_or(Language::En))
 }
 
 /// The summary of a planned job for a machine: `dry_run` measures the exact plan against the course of the machine file (it gets the course and
@@ -614,5 +638,40 @@ pub(crate) mod tests {
             None
         );
         assert_eq!(bounds_of(std::iter::empty()), None);
+    }
+
+    #[test]
+    fn a_big_file_is_said_in_every_language_and_a_small_one_says_nothing() {
+        use eh3d_bungard_formats::limits::{LimitKind, ReaderLimits};
+        assert_eq!(size_warning(LimitVerdict::Ok, Lang::En), None);
+        for l in Lang::ALL {
+            let said = size_warning(LimitVerdict::Warn(LimitKind::Bytes), l).expect("a notice");
+            assert!(!said.trim().is_empty(), "{l:?}");
+            if l != Lang::En {
+                assert_ne!(said, tr(Lang::En, Text::WarnBigFile), "{l:?}");
+            }
+        }
+        // a file past a hard limit comes back with its code in the language asked for
+        let tiny = ReaderLimits::from_config(
+            "max_bytes = 16\nmax_lines = 100\nwarn_bytes = 8\nwarn_lines = 50\n",
+        );
+        let limits = tiny.expect("a valid copy of the file of limits");
+        let error = eh3d_bungard_formats::ncd::parse_limited(&"X1Y1\n".repeat(10), &limits)
+            .expect_err("past the limit");
+        assert!(refusal_message(&error, Lang::En).starts_with("EH3D-FORMATS-011"));
+        assert!(refusal_message(&error, Lang::Es).starts_with("EH3D-FORMATS-011"));
+        assert_ne!(
+            refusal_message(&error, Lang::En),
+            refusal_message(&error, Lang::De)
+        );
+    }
+
+    #[test]
+    fn the_notices_of_a_file_join_in_one_line() {
+        let (a, b) = (Some("a".to_string()), Some("b".to_string()));
+        assert_eq!(join_warnings(a.clone(), b.clone()), Some("a; b".into()));
+        assert_eq!(join_warnings(a.clone(), None), a);
+        assert_eq!(join_warnings(None, b.clone()), b);
+        assert_eq!(join_warnings(None, None), None);
     }
 }

@@ -649,3 +649,4 @@ WarnRequestNewer	Zerbitzariak eskaera ezagutzen duen bertsio berriena balitz bez
 WarnRackNeedsV2	Zerbitzariak aldagailua alde batera utzi du: eskaera lehen bertsiokoa zen
 WarnRackNoChanger	Makina honek erremintak eskuz aldatzen ditu: ez dira kateatzen
 WarnOutOfCourse	Lana makinaren ibilbidetik kanpo doa ardatzean:
+WarnBigFile	Fitxategia handia da: irakurtzeak eta marrazteak denbora pixka bat har dezake

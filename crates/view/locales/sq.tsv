@@ -649,3 +649,4 @@ WarnRequestNewer	Serveri e lexoi kërkesën si versionin më të ri që njeh
 WarnRackNeedsV2	Serveri injoroi ndërruesin: kërkesa ishte e versionit të parë
 WarnRackNoChanger	Kjo makinë i ndërron mjetet me dorë: nuk lidhen në zinxhir
 WarnOutOfCourse	Puna kalon lëvizjen e makinës në bosht:
+WarnBigFile	Skedari është i madh: leximi dhe vizatimi i tij mund të marrë pak kohë

@@ -649,3 +649,4 @@ WarnRequestNewer	Þjónninn las beiðnina sem nýjustu útgáfu sem hann þekkir
 WarnRackNeedsV2	Þjónninn hunsaði skiptarann: beiðnin var af fyrstu útgáfu
 WarnRackNoChanger	Þessi vél skiptir um verkfæri í höndunum: þau eru ekki keðjuð
 WarnOutOfCourse	Verkið fer út fyrir feril vélarinnar á ásnum:
+WarnBigFile	Skráin er stór: það getur tekið nokkra stund að lesa hana og teikna

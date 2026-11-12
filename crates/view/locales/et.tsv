@@ -649,3 +649,4 @@ WarnRequestNewer	Server luges päringu uusima versioonina, mida see tunneb
 WarnRackNeedsV2	Server eiras vahetajat: päring oli esimesest versioonist
 WarnRackNoChanger	See masin vahetab tööriistu käsitsi: neid ei aheldata
 WarnOutOfCourse	Töö ületab masina käigu teljel:
+WarnBigFile	Fail on suur: selle lugemine ja joonistamine võib veidi aega võtta

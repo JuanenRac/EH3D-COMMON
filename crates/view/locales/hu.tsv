@@ -649,3 +649,4 @@ WarnRequestNewer	A szerver a kérést a legújabb általa ismert verzióként ol
 WarnRackNeedsV2	A szerver figyelmen kívül hagyta a cserélőt: a kérés az első verziójú volt
 WarnRackNoChanger	Ez a gép kézzel cseréli a szerszámokat: nincsenek láncolva
 WarnOutOfCourse	A munka túllépi a gép úthosszát a tengelyen:
+WarnBigFile	A fájl nagy: beolvasása és megrajzolása eltarthat egy ideig

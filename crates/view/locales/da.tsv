@@ -649,3 +649,4 @@ WarnRequestNewer	Serveren læste forespørgslen som den nyeste version, den kend
 WarnRackNeedsV2	Serveren ignorerede skifteren: forespørgslen var af den første version
 WarnRackNoChanger	Denne maskine skifter værktøj i hånden: værktøjerne er ikke kædet
 WarnOutOfCourse	Arbejdet går ud over maskinens kørsel på aksen:
+WarnBigFile	Filen er stor: det kan tage et stykke tid at læse og tegne den

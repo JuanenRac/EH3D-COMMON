@@ -649,3 +649,4 @@ WarnRequestNewer	Server prečítal požiadavku ako najnovšiu verziu, ktorú poz
 WarnRackNeedsV2	Server ignoroval výmenník: požiadavka bola prvej verzie
 WarnRackNoChanger	Tento stroj mení nástroje ručne: nie sú zreťazené
 WarnOutOfCourse	Práca presahuje dráhu stroja na osi:
+WarnBigFile	Súbor je veľký: jeho načítanie a vykreslenie môže chvíľu trvať

@@ -649,3 +649,4 @@ WarnRequestNewer	Serveris pieprasījumu nolasīja kā jaunāko versiju, ko tas p
 WarnRackNeedsV2	Serveris ignorēja mainītāju: pieprasījums bija pirmās versijas
 WarnRackNoChanger	Šī iekārta rīkus maina ar roku: tie netiek sasaistīti ķēdē
 WarnOutOfCourse	Darbs pārsniedz iekārtas gājienu asī:
+WarnBigFile	Fails ir liels: tā nolasīšana un zīmēšana var aizņemt kādu laiku
