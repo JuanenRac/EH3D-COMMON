@@ -1,0 +1,23 @@
+name: Count the tests
+
+on:
+  push:
+    branches: [tmp-count]
+
+permissions:
+  contents: read
+
+jobs:
+  count:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - name: Rust toolchain
+        shell: bash
+        run: rustup toolchain install "$(sed -n 's/^channel = "\(.*\)"/\1/p' rust-toolchain.toml)" --profile minimal --component rustfmt,clippy
+      - name: Count the tests of cargo test --workspace
+        run: |
+          cargo test --workspace 2>&1 | tee /tmp/t.log || true
+          awk '/test result: ok/ {s += $4} END {print "TESTCOUNT=" s}' /tmp/t.log
