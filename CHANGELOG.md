@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Faults of the link with a GRBL board, tried against a twin of the board:** add `crates/controller/tests/link_faults.rs`, a board in memory that answers `ok`, `error:N`, `ALARM:N` and the status report and fails by plan (a reply that never comes, a line of noise, a refusal, an alarm, a cut link) or by a seeded generator. Seven tests cover the timeout and the feed hold, the refusal with its number and the text of the manual, the alarm that locks the board until `$X`, the cut link that works again once mended, the emergency stop that needs no answer and a seeded run of every fault that is the same every time. Nothing has run on a real board.
+
 - **The shared validation tools are updated:** the validator also runs the workflow and lessons checks of the suite with their latest rules, including a check to run before every push.
 - **The CI validation checks the workflows and the lessons of past CI failures against a baseline:** `tools/workflow_hygiene.py` and `tools/lessons_lint.py` (copies of the shared tools) run in the validation, and only findings that are not in `tools/workflow_hygiene_baseline.json` and `tools/lessons_lint_baseline.json` fail it, so what exists today stays as it is and a new one is caught. `python tools/workflow_hygiene.py --root . --detail` and `python tools/lessons_lint.py --repo .` list the findings.
 - **The validation of the CI is the reusable one of the documentation hub:** the job `validate` calls `validate.yml` of EH3D-DOCS (pinned by commit) and what the repository checks besides it is in jobs of their own, with the check of the CHANGELOG.
