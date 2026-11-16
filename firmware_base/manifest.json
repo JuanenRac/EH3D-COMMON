@@ -216,6 +216,12 @@
         "EH3D-NODE-HMI-GUI": "core/status.hpp"
       }
     },
+    "core/stop_latch.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/stop_latch.hpp",
+        "EH3D-NODE-HMI-GUI": "core/stop_latch.hpp"
+      }
+    },
     "core/stored_load.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD": "core/stored_load.hpp",

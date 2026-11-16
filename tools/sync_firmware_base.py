@@ -62,7 +62,7 @@ CANDIDATES = [
 # The bar of the tool changer, the stage notices, the notices, the sound files, the link to the server and the flow of a job (the chaining of the changer) are the same in both screens again.
 HMI_CANDIDATES = [
     "core/job_bar.hpp", "core/job_memory.hpp", "core/job_tools.hpp", "core/lang.hpp", "core/notices.hpp", "core/orientation.hpp", "core/quality.hpp",
-    "core/rack.hpp", "core/sdfiles.hpp", "core/server_link.hpp", "core/stage_notice.hpp", "core/voice.hpp", "core/wav.hpp", "core/workflow.hpp",
+    "core/rack.hpp", "core/sdfiles.hpp", "core/server_link.hpp", "core/stage_notice.hpp", "core/stop_latch.hpp", "core/voice.hpp", "core/wav.hpp", "core/workflow.hpp",
     "main/board.hpp", "main/board_p4.cpp", "main/server_link.cpp", "main/server_link.hpp",
     "tests/test_hmi.cpp", "tests/test_notices.cpp", "tests/test_quality.cpp", "tests/test_workflow.cpp", "tests/test_keyboard.cpp", "tests/test_locales.cpp",
     # the settings, the gate, the keyboard, the texts and the kind of machine are one file for both screens: what only one screen has (the panel that moves the machine by hand, the kinds of machine) is in
