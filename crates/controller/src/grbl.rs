@@ -168,6 +168,10 @@ impl<T: LineTransport> GrblController<T> {
     /// that went out ends the wait with an error, because the line will not be answered.
     fn read_next(&mut self, left: Duration) -> Result<Option<String>, Error> {
         if !self.watched() {
+            // nobody can add to the channel during a plain wait, but what was added before it goes out first
+            if self.flush_urgent()? {
+                return Err(Error::Refused(INTERRUPTED.to_string()));
+            }
             return self.transport.read_line(left).map_err(Self::link);
         }
         let end = Instant::now() + left;
@@ -866,15 +870,21 @@ mod tests {
             Ok(())
         }
         fn read_line(&mut self, timeout: Duration) -> io::Result<Option<String>> {
-            if let Some(r) = self.reports.pop_front() {
-                return Ok(Some(r));
+            // like a port: it gives a line as soon as there is one and nothing only when the whole time has passed
+            let end = Instant::now() + timeout;
+            loop {
+                if let Some(r) = self.reports.pop_front() {
+                    return Ok(Some(r));
+                }
+                if !self.ok_given && self.start.elapsed() >= self.ok_at {
+                    self.ok_given = true;
+                    return Ok(Some("ok".to_string()));
+                }
+                if Instant::now() >= end {
+                    return Ok(None);
+                }
+                std::thread::sleep(Duration::from_millis(1));
             }
-            if !self.ok_given && self.start.elapsed() >= self.ok_at {
-                self.ok_given = true;
-                return Ok(Some("ok".to_string()));
-            }
-            std::thread::sleep(timeout.min(Duration::from_millis(3)));
-            Ok(None)
         }
     }
 
