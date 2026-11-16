@@ -11,6 +11,7 @@
 use std::collections::BTreeMap;
 use std::time::Duration;
 
+use crate::urgent::{Urgent, UrgentChannel};
 use crate::{Capabilities, Command, Controller, Error, Family, State, Status, AXES};
 
 /// The simulated machine.
@@ -44,6 +45,8 @@ pub struct SimController {
     pub settings: BTreeMap<u32, f64>,
     /// Check mode (`$C`): the lines are read and judged but the machine does not move.
     check_mode: bool,
+    /// The bytes that are sent out of turn (the stop, the hold, the reset), taken at the start of the next thing the simulator does.
+    urgent: UrgentChannel,
 }
 
 impl Default for SimController {
@@ -75,6 +78,7 @@ impl Default for SimController {
             real_time: false,
             settings: BTreeMap::new(),
             check_mode: false,
+            urgent: UrgentChannel::new(),
         }
     }
 }
@@ -82,6 +86,37 @@ impl Default for SimController {
 impl SimController {
     pub fn new() -> Self {
         Self::default()
+    }
+
+    /// Does what was asked out of turn: as the real controller does with the bytes of the protocol, whatever it was doing.
+    fn apply_urgent(&mut self) {
+        for u in self.urgent.take() {
+            match u {
+                Urgent::Status => {}
+                Urgent::Hold => {
+                    if self.state != State::Alarm {
+                        self.state = State::Hold;
+                    }
+                }
+                Urgent::Resume => {
+                    if self.state == State::Hold {
+                        self.state = State::Idle;
+                    }
+                }
+                Urgent::StopJob => {
+                    if self.state != State::Alarm {
+                        self.state = State::Idle;
+                    }
+                    self.spindle_on = false;
+                }
+                Urgent::Reset => {
+                    self.spindle_on = false;
+                    self.coolant = false;
+                    self.alarm = Some("emergency stop".to_string());
+                    self.state = State::Alarm;
+                }
+            }
+        }
     }
 
     fn axis_of(c: char) -> Option<usize> {
@@ -276,6 +311,7 @@ impl Controller for SimController {
     }
 
     fn status(&mut self) -> Result<Status, Error> {
+        self.apply_urgent();
         let mut work = [0.0; AXES];
         for (w, (m, z)) in work.iter_mut().zip(self.machine.iter().zip(&self.zero)) {
             *w = m - z;
@@ -296,6 +332,7 @@ impl Controller for SimController {
     }
 
     fn command(&mut self, command: Command) -> Result<(), Error> {
+        self.apply_urgent();
         match command {
             Command::EmergencyStop => {
                 self.spindle_on = false;
@@ -389,7 +426,12 @@ impl Controller for SimController {
         true
     }
 
+    fn urgent_channel(&self) -> Option<UrgentChannel> {
+        Some(self.urgent.clone())
+    }
+
     fn send_line(&mut self, line: &str) -> Result<(), Error> {
+        self.apply_urgent();
         if line.trim_start().starts_with('$') {
             self.log.push(line.to_string());
             return self.dollar(line);
@@ -675,5 +717,44 @@ mod tests {
         s.send_line("$G").unwrap();
         s.send_line("$H").unwrap();
         assert_eq!(s.status().unwrap().state, State::Idle);
+    }
+
+    #[test]
+    fn the_urgent_bytes_act_on_the_simulated_machine_before_anything_else() {
+        use crate::urgent::Urgent;
+        let mut s = SimController::new();
+        let channel = s
+            .urgent_channel()
+            .expect("the simulator has an urgent channel");
+        channel.send(Urgent::Hold);
+        assert_eq!(s.status().unwrap().state, State::Hold);
+        channel.send(Urgent::Resume);
+        assert_eq!(s.status().unwrap().state, State::Idle);
+        channel.send(Urgent::Status);
+        assert_eq!(s.status().unwrap().state, State::Idle);
+        // a line sent after a reset finds the machine in alarm: the reset came first
+        s.send_line("M3 S1000").unwrap();
+        channel.send(Urgent::Reset);
+        assert!(matches!(s.send_line("G0 X5"), Err(Error::Alarm(_))));
+        let st = s.status().unwrap();
+        assert_eq!((st.state, st.spindle_rpm), (State::Alarm, 0.0));
+        assert_eq!(st.machine_mm[0], 0.0);
+        // the stop of the job ends the program and switches the spindle off without an alarm
+        s.command(Command::Unlock).unwrap();
+        s.send_line("M3 S1000").unwrap();
+        channel.send(Urgent::StopJob);
+        let st = s.status().unwrap();
+        assert_eq!((st.state, st.spindle_rpm), (State::Idle, 0.0));
+    }
+
+    #[test]
+    fn the_urgent_channel_works_from_another_thread() {
+        use crate::urgent::Urgent;
+        let mut s = SimController::new();
+        let channel = s.urgent_channel().unwrap();
+        std::thread::spawn(move || channel.send(Urgent::Reset))
+            .join()
+            .unwrap();
+        assert_eq!(s.status().unwrap().state, State::Alarm);
     }
 }
