@@ -6,6 +6,7 @@
 use std::io;
 use std::time::{Duration, Instant};
 
+use crate::urgent::{Urgent, UrgentChannel};
 use crate::{Capabilities, Command, Controller, Error, Family, State, Status, AXES};
 
 /// What the controller needs from the link: bytes out, and lines in with a time limit.
@@ -44,8 +45,14 @@ impl Default for Timeouts {
     }
 }
 
-/// The most a line may wait for its answer while the machine says it is working.
-const MAX_BUSY_WAIT: Duration = Duration::from_secs(4 * 3600);
+/// The most a line may wait for its answer while the machine says it is working (unless the program sets another limit).
+pub const MAX_BUSY_WAIT: Duration = Duration::from_secs(4 * 3600);
+
+/// How often a controller that is waiting looks at its [`UrgentChannel`], when somebody else holds a handle of it.
+const URGENT_POLL: Duration = Duration::from_millis(25);
+
+/// What a line that was cut short by an urgent stop says.
+const INTERRUPTED: &str = "interrupted by an urgent stop";
 
 enum Probe {
     Answered(Result<(), Error>),
@@ -80,6 +87,10 @@ pub struct GrblController<T: LineTransport> {
     timeouts: Timeouts,
     /// The offset of the work from the machine, which GRBL reports from time to time (`WCO:`).
     wco: [f64; AXES],
+    /// The bytes another thread asks to send out of turn.
+    urgent: UrgentChannel,
+    /// The most a line waits for its answer while the machine says it is working.
+    busy_max: Duration,
 }
 
 impl<T: LineTransport> GrblController<T> {
@@ -89,6 +100,8 @@ impl<T: LineTransport> GrblController<T> {
             family: Family::Grbl,
             timeouts: Timeouts::default(),
             wco: [0.0; AXES],
+            urgent: UrgentChannel::new(),
+            busy_max: MAX_BUSY_WAIT,
         }
     }
 
@@ -110,12 +123,70 @@ impl<T: LineTransport> GrblController<T> {
         self
     }
 
+    /// The most a line waits for its answer while the machine says it is working (a limit of zero waits for the ordinary time only).
+    pub fn with_busy_limit(mut self, limit: Duration) -> Self {
+        self.busy_max = limit;
+        self
+    }
+
     pub fn transport(&self) -> &T {
         &self.transport
     }
 
     fn link(e: io::Error) -> Error {
         Error::Link(e.to_string())
+    }
+
+    /// Whether somebody else holds a handle of the urgent channel, so that the waits must look at it.
+    fn watched(&self) -> bool {
+        self.urgent.handles() > 1
+    }
+
+    /// Writes the urgent bytes that are waiting. `Ok(true)` when one of them ended the job (the stop, the reset).
+    fn flush_urgent(&mut self) -> Result<bool, Error> {
+        let mut ended = false;
+        for u in self.urgent.take() {
+            match u {
+                Urgent::StopJob => {
+                    // as `Command::Stop`: hold, wait until the machine stands still, then reset
+                    self.byte(HOLD)?;
+                    self.wait_hold_done(Duration::from_secs(3));
+                    self.byte(RESET)?;
+                }
+                other => self
+                    .transport
+                    .write_all(other.bytes())
+                    .map_err(Self::link)?,
+            }
+            ended |= u.ends_job();
+        }
+        Ok(ended)
+    }
+
+    /// The next line, waiting at most `left`. When somebody can send urgent bytes the wait is cut in short slices and the channel is looked
+    /// at between them, so that an urgent byte goes out within a few milliseconds whatever the line is waiting for; a reset or a stop
+    /// that went out ends the wait with an error, because the line will not be answered.
+    fn read_next(&mut self, left: Duration) -> Result<Option<String>, Error> {
+        if !self.watched() {
+            return self.transport.read_line(left).map_err(Self::link);
+        }
+        let end = Instant::now() + left;
+        loop {
+            if self.flush_urgent()? {
+                return Err(Error::Refused(INTERRUPTED.to_string()));
+            }
+            let remaining = end.saturating_duration_since(Instant::now());
+            if remaining.is_zero() {
+                return Ok(None);
+            }
+            if let Some(l) = self
+                .transport
+                .read_line(remaining.min(URGENT_POLL))
+                .map_err(Self::link)?
+            {
+                return Ok(Some(l));
+            }
+        }
     }
 
     /// Asks for the state until the hold is complete (`Hold:0`, or idle or alarm), at most `limit`.
@@ -156,7 +227,7 @@ impl<T: LineTransport> GrblController<T> {
             if left.is_zero() {
                 return Err(Error::Timeout);
             }
-            match self.transport.read_line(left).map_err(Self::link)? {
+            match self.read_next(left)? {
                 None => return Err(Error::Timeout),
                 Some(l) => {
                     let l = l.trim();
@@ -181,6 +252,8 @@ impl<T: LineTransport> GrblController<T> {
             Kind::Homing => self.timeouts.homing,
             Kind::Jog => self.timeouts.jog,
         };
+        // what was asked to go out of turn goes first
+        self.flush_urgent()?;
         self.transport
             .write_all(format!("{text}\n").as_bytes())
             .map_err(Self::link)?;
@@ -188,7 +261,7 @@ impl<T: LineTransport> GrblController<T> {
         // GRBL answers `ok` when the line enters its buffer, which with the buffer full is when an older block ends: a slow move, a dwell or
         // a spindle change can keep it from answering far longer than the limit while the machine works. As long as it says it is busy, wait on.
         let mut waited = limit;
-        while kind == Kind::Plain && done == Err(Error::Timeout) && waited < MAX_BUSY_WAIT {
+        while kind == Kind::Plain && done == Err(Error::Timeout) && waited < self.busy_max {
             match self.probe_busy() {
                 Probe::Answered(r) => {
                     done = r;
@@ -223,7 +296,8 @@ impl<T: LineTransport> GrblController<T> {
             if left.is_zero() {
                 return Probe::Silent;
             }
-            match self.transport.read_line(left) {
+            match self.read_next(left) {
+                Err(e @ Error::Refused(_)) => return Probe::Answered(Err(e)),
                 Ok(Some(l)) => {
                     let l = l.trim();
                     if l == "ok" {
@@ -392,6 +466,7 @@ impl<T: LineTransport> Controller for GrblController<T> {
     }
 
     fn status(&mut self) -> Result<Status, Error> {
+        self.flush_urgent()?;
         self.byte(STATUS)?;
         loop {
             match self
@@ -410,6 +485,7 @@ impl<T: LineTransport> Controller for GrblController<T> {
     }
 
     fn command(&mut self, command: Command) -> Result<(), Error> {
+        self.flush_urgent()?;
         match command {
             Command::Jog {
                 axis,
@@ -456,6 +532,10 @@ impl<T: LineTransport> Controller for GrblController<T> {
             }
             Command::Coolant(on) => self.line(if on { "M8" } else { "M9" }),
         }
+    }
+
+    fn urgent_channel(&self) -> Option<UrgentChannel> {
+        Some(self.urgent.clone())
     }
 
     fn max_travel(&mut self) -> Result<Option<[f64; 3]>, Error> {
@@ -505,6 +585,7 @@ impl<T: LineTransport> Controller for GrblController<T> {
 mod tests {
     use super::*;
     use crate::mock::MockTransport;
+    use crate::urgent::Urgent;
 
     #[test]
     fn the_longest_travel_is_read_from_the_settings_of_the_controller() {
@@ -751,5 +832,137 @@ mod tests {
         );
         let caps = c.capabilities();
         assert!(caps.gcode && caps.emergency_stop && !caps.tool_changer);
+    }
+
+    /// A link in real time: it answers `ok` after `ok_at`, answers a status question with a report, and keeps what was written.
+    struct Timed {
+        start: Instant,
+        ok_at: Duration,
+        ok_given: bool,
+        written: Vec<u8>,
+        reports: std::collections::VecDeque<String>,
+        report: &'static str,
+    }
+
+    impl Timed {
+        fn new(ok_at: Duration, report: &'static str) -> Timed {
+            Timed {
+                start: Instant::now(),
+                ok_at,
+                ok_given: false,
+                written: Vec::new(),
+                reports: Default::default(),
+                report,
+            }
+        }
+    }
+
+    impl LineTransport for Timed {
+        fn write_all(&mut self, bytes: &[u8]) -> io::Result<()> {
+            if bytes == b"?" {
+                self.reports.push_back(self.report.to_string());
+            }
+            self.written.extend_from_slice(bytes);
+            Ok(())
+        }
+        fn read_line(&mut self, timeout: Duration) -> io::Result<Option<String>> {
+            if let Some(r) = self.reports.pop_front() {
+                return Ok(Some(r));
+            }
+            if !self.ok_given && self.start.elapsed() >= self.ok_at {
+                self.ok_given = true;
+                return Ok(Some("ok".to_string()));
+            }
+            std::thread::sleep(timeout.min(Duration::from_millis(3)));
+            Ok(None)
+        }
+    }
+
+    fn after(
+        ms: u64,
+        channel: crate::urgent::UrgentChannel,
+        what: Urgent,
+    ) -> std::thread::JoinHandle<()> {
+        std::thread::spawn(move || {
+            std::thread::sleep(Duration::from_millis(ms));
+            channel.send(what);
+        })
+    }
+
+    #[test]
+    fn a_reset_goes_out_while_the_line_waits_for_an_ok_that_never_comes() {
+        let link = Timed::new(Duration::from_secs(3600), "<Run|MPos:0.000,0.000,0.000>");
+        let mut c = GrblController::new(link).with_timeout(Duration::from_secs(30));
+        let channel = c.urgent_channel().expect("GRBL has an urgent channel");
+        let t0 = Instant::now();
+        let sender = after(40, channel, Urgent::Reset);
+        let r = c.send_line("G1 X5 F100");
+        sender.join().unwrap();
+        assert_eq!(r, Err(Error::Refused(INTERRUPTED.to_string())));
+        assert!(
+            t0.elapsed() < Duration::from_secs(5),
+            "the reset did not wait for the ok"
+        );
+        assert_eq!(c.transport().written, b"G1 X5 F100\n\x18".to_vec());
+    }
+
+    #[test]
+    fn a_hold_goes_out_without_ending_the_wait_and_the_line_still_gets_its_ok() {
+        let link = Timed::new(
+            Duration::from_millis(250),
+            "<Hold:0|MPos:0.000,0.000,0.000>",
+        );
+        let mut c = GrblController::new(link).with_timeout(Duration::from_secs(30));
+        let channel = c.urgent_channel().unwrap();
+        let hold = after(30, channel.clone(), Urgent::Hold);
+        let status = after(60, channel, Urgent::Status);
+        assert_eq!(c.send_line("G1 X5 F100"), Ok(()));
+        hold.join().unwrap();
+        status.join().unwrap();
+        assert_eq!(c.transport().written, b"G1 X5 F100\n!?".to_vec());
+    }
+
+    #[test]
+    fn a_stop_of_the_job_holds_waits_for_the_hold_and_then_resets() {
+        let link = Timed::new(Duration::from_secs(3600), "<Hold:0|MPos:0.000,0.000,0.000>");
+        let mut c = GrblController::new(link).with_timeout(Duration::from_secs(30));
+        let channel = c.urgent_channel().unwrap();
+        let sender = after(30, channel, Urgent::StopJob);
+        assert!(matches!(c.send_line("G1 X5 F100"), Err(Error::Refused(_))));
+        sender.join().unwrap();
+        assert_eq!(c.transport().written, b"G1 X5 F100\n!?\x18".to_vec());
+    }
+
+    #[test]
+    fn an_urgent_byte_left_in_the_channel_goes_before_the_next_order() {
+        let mut c = GrblController::new(MockTransport::with_replies(&["ok"]));
+        let channel = c.urgent_channel().unwrap();
+        channel.send(Urgent::Hold);
+        c.send_line("G0 X1").unwrap();
+        assert_eq!(c.transport().text(), "!G0 X1\n");
+        // without a handle outside nothing changes: no slices, one read for the whole wait
+        drop(channel);
+        let mut c = GrblController::new(MockTransport::with_replies(&["ok"]));
+        c.send_line("G0 X1").unwrap();
+        assert_eq!(c.transport().timeouts.len(), 1);
+    }
+
+    #[test]
+    fn the_time_a_busy_machine_is_waited_for_can_be_set() {
+        let quick = Timeouts {
+            line: Duration::from_millis(1),
+            homing: Duration::from_millis(1),
+            jog: Duration::from_millis(1),
+        };
+        let link = Timed::new(Duration::from_secs(3600), "<Run|MPos:0.000,0.000,0.000>");
+        let mut c = GrblController::new(link)
+            .with_timeouts(quick)
+            .with_busy_limit(Duration::from_millis(4));
+        let t0 = Instant::now();
+        assert_eq!(c.send_line("G1 X5 F100"), Err(Error::Timeout));
+        assert!(t0.elapsed() < Duration::from_secs(5));
+        // it asked how the machine was a few times and then held it
+        assert_eq!(c.transport().written.last(), Some(&b'!'));
+        assert!(c.transport().written.iter().filter(|&&b| b == b'?').count() >= 2);
     }
 }

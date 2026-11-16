@@ -12,6 +12,7 @@ pub mod grbl;
 pub mod mock;
 pub mod serial;
 pub mod sim;
+pub mod urgent;
 
 use std::fmt;
 
@@ -325,6 +326,12 @@ pub trait Controller {
     /// does not keep them or does not give all three; an error when it did not answer.
     fn max_travel(&mut self) -> Result<Option<[f64; 3]>, Error> {
         Ok(None)
+    }
+    /// The way in for the bytes that cannot wait (the stop, the hold, the reset, the status report): a handle another thread keeps and uses
+    /// while this controller is busy waiting for the `ok` of a line. What is put in is sent to the machine without waiting for that `ok`
+    /// and without queueing behind lines. `None` when the controller has no such way, and then a stop can only be given between lines.
+    fn urgent_channel(&self) -> Option<urgent::UrgentChannel> {
+        None
     }
 }
 
