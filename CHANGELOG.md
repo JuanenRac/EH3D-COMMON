@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **A `;FILE_FORMAT=` line with an absurd count of digits no longer exhausts the memory:** the Excellon reader takes only 1 to 6 digits on each side of the point (any other line is ignored) and caps the zero padding, so a four-line drill file cannot ask for a string of billions of characters; a test covers the huge, the zero and the overflowing counts.
 - **The shared firmware base follows the touch-screen projects again:** the copy of the stop of the machine, the health check without the token and the other changes made in the screen projects since the last import are in `firmware_base/`, so the check of the copies passes.
 - **Faults of the link with a GRBL board, tried against a twin of the board:** add `crates/controller/tests/link_faults.rs`, a board in memory that answers `ok`, `error:N`, `ALARM:N` and the status report and fails by plan (a reply that never comes, a line of noise, a refusal, an alarm, a cut link) or by a seeded generator. Seven tests cover the timeout and the feed hold, the refusal with its number and the text of the manual, the alarm that locks the board until `$X`, the cut link that works again once mended, the emergency stop that needs no answer and a seeded run of every fault that is the same every time. Nothing has run on a real board.
 

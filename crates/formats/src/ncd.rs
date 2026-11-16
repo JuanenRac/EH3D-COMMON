@@ -97,6 +97,9 @@ impl fmt::Display for ParseError {
 impl std::error::Error for ParseError {}
 
 /// How the coordinates of a file with a header are written: the unit, the digits and which zeros are left out.
+/// The most digits on either side of the point that a `;FILE_FORMAT=` line or a `000.000` option may ask for.
+const MAX_FORMAT_DIGITS: u32 = 6;
+
 #[derive(Debug, Clone, Copy, Default)]
 struct Format {
     /// `Some(true)` for metric, `Some(false)` for inch; `None` when the header does not say: the numbers are then mils, as in the files of the machine.
@@ -128,7 +131,7 @@ impl Format {
             let (i, d) = self.digits.unwrap_or(if metric { (3, 3) } else { (2, 4) });
             let mut digits = body.to_string();
             if self.trailing_suppressed {
-                while (digits.len() as u32) < i + d {
+                while (digits.len() as u32) < i.saturating_add(d).min(2 * MAX_FORMAT_DIGITS) {
                     digits.push('0');
                 }
             }
@@ -147,7 +150,13 @@ impl Format {
     fn header(&mut self, line: &str) {
         if let Some(f) = line.strip_prefix(";FILE_FORMAT=") {
             if let Some((i, d)) = f.trim().split_once(':') {
-                if let (Ok(i), Ok(d)) = (i.parse(), d.parse()) {
+                // a count of digits past 1..=6 is no real format and would ask for a string of that many zeros
+                if let (Ok(i), Ok(d)) = (i.trim().parse::<u32>(), d.trim().parse::<u32>()) {
+                    if !(1..=MAX_FORMAT_DIGITS).contains(&i)
+                        || !(1..=MAX_FORMAT_DIGITS).contains(&d)
+                    {
+                        return;
+                    }
                     self.digits = Some((i, d));
                     if self.plain_inch {
                         // a format given in numbers: the digits of the file, not mils
@@ -541,5 +550,35 @@ X1000Y2000
         )
         .unwrap();
         assert_eq!((f.holes[0].x_mil, f.holes[0].y_mil), (1000, 2000));
+    }
+
+    #[test]
+    fn a_format_line_with_a_huge_count_of_digits_is_ignored_and_does_not_eat_the_memory() {
+        for line in [
+            ";FILE_FORMAT=2000000000:0",
+            ";FILE_FORMAT=4294967295:4294967295",
+            ";FILE_FORMAT=0:3",
+            ";FILE_FORMAT=3:7",
+        ] {
+            let text = format!(
+                "METRIC,LZ
+{line}
+T1
+X1Y1
+"
+            );
+            let f = parse(&text).unwrap();
+            assert_eq!(f.holes.len(), 1, "{line}");
+        }
+        // a real format is still taken
+        let f = parse(
+            "METRIC,LZ
+;FILE_FORMAT=3:3
+T1
+X1Y1
+",
+        )
+        .unwrap();
+        assert_eq!(f.holes.len(), 1);
     }
 }
