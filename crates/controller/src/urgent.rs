@@ -3,6 +3,7 @@
 //! clone of it, puts an [`Urgent`] byte in, and the controller writes it to the machine at the next moment it looks (while it waits for an
 //! `ok` it looks every few milliseconds), without waiting for the answer to the line it is waiting for and without queueing behind lines.
 
+use crate::Status;
 use std::collections::VecDeque;
 use std::sync::{Arc, Mutex, MutexGuard};
 
@@ -43,6 +44,8 @@ impl Urgent {
 #[derive(Debug, Clone, Default)]
 pub struct UrgentChannel {
     queue: Arc<Mutex<VecDeque<Urgent>>>,
+    /// The last status report the controller read while it waited for an `ok` (the answer to an [`Urgent::Status`]), not yet taken.
+    report: Arc<Mutex<Option<Status>>>,
 }
 
 impl UrgentChannel {
@@ -65,6 +68,23 @@ impl UrgentChannel {
     /// Takes everything that is waiting, in the order it came.
     pub fn take(&self) -> Vec<Urgent> {
         self.lock().drain(..).collect()
+    }
+
+    /// Leaves the status report that arrived while a line waited for its `ok`; a newer one replaces an older one that nobody took.
+    pub fn publish_report(&self, status: Status) {
+        *self
+            .report
+            .lock()
+            .unwrap_or_else(std::sync::PoisonError::into_inner) = Some(status);
+    }
+
+    /// Takes the status report that arrived while a line waited for its `ok`, if one came since the last call: the live position of a
+    /// machine whose controller is busy with a line and cannot be asked in the usual way.
+    pub fn take_report(&self) -> Option<Status> {
+        self.report
+            .lock()
+            .unwrap_or_else(std::sync::PoisonError::into_inner)
+            .take()
     }
 
     pub fn is_empty(&self) -> bool {
