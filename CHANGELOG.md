@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The drill file reader has limits of its own and keeps the lines it leaves out in bounds:** `ncd::parse` refuses a file past the hard limits of the shipped `reader_limits.cfg` (64 MiB or 4 million lines, the values a program can replace with its own copy through `parse_limited`, which no longer applies the default limits on top) with a new `ParseError::TooLarge`, and keeps only the first 10000 lines it leaves out (slots and tool up/down moves) in `DrillFile::ignored`, counting the rest in the new `ignored_more`. A file larger than the limits that `parse` used to read is now refused. Tested with a file of too many lines, with a flood of slot lines and with wider limits of its own.
+
 - **A GRBL controller that restarts by itself in the middle of a program is noticed:** the greeting a GRBL prints when it starts (`Grbl 1.1h ['$' for help]`) used to be skipped like any other message, so a restart between two lines (a power dip, a noisy cable, its button) let the sender go on with cutting moves and the spindle off. The line, status and busy waits now read a greeting that the program did not ask for (no reset of its own is waiting for one) as a refusal, which stops a program. The greeting that follows a reset the program sent, from the sender or from another thread, is only consumed. Tests cover a restart between two lines, in the status, and the greeting after a reset of ours.
 
 - **The README counts the files of the firmware base as they are:** 118 files, 68 of them shared by the two touch screens, as the manifest of `firmware_base/` lists them.
