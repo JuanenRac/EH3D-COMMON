@@ -35,6 +35,9 @@ pub struct DrillFile {
     pub diameters: Vec<(u8, f64)>,
     /// True when the header declares metric units.
     pub metric: bool,
+    /// True when the file says its unit (`METRIC`, `INCH`, `M71` or `M72`). When it does not, the numbers are read as mils and a program should say that the unit was
+    /// supposed, not declared: a file in inches of 2.4 digits without a header comes out ten times larger.
+    pub units_declared: bool,
     /// The lines that move the head in ways a drill file of holes does not hold (a slot written as `G00`/`G01`, `M15`/`M16` up and down) and are not part of the holes:
     /// they are named, not dropped without a word.
     pub ignored: Vec<Ignored>,
@@ -341,6 +344,9 @@ fn parse_unchecked(text: &str) -> Result<DrillFile, ParseError> {
         {
             // the unit, the digits and the zeros of the coordinates that follow
             fmt.header(line);
+            if !line.starts_with(";FILE_FORMAT=") {
+                out.units_declared = true;
+            }
             if line.starts_with("METRIC") || line == "M71" {
                 out.metric = true;
             }
@@ -525,6 +531,25 @@ M30
         )
         .unwrap();
         assert!(parse_limited(&big, &wide).is_ok());
+    }
+
+    #[test]
+    fn a_file_says_whether_its_unit_was_declared_or_supposed() {
+        for text in [
+            "M48\nMETRIC\n%\nT1\nX1000Y1000\n",
+            "M48\nINCH\n%\nT1\nX1000Y1000\n",
+            "M48\nM71\n%\nT1\nX1000Y1000\n",
+            "M72\nT1\nX1000Y1000\n",
+        ] {
+            assert!(parse(text).unwrap().units_declared, "{text:?}");
+        }
+        // only the digits are given, or nothing: the numbers are read as mils
+        for text in [
+            "M48\n;FILE_FORMAT=2:4\n%\nT1\nX1000Y1000\n",
+            "T1\nX1000Y1000\n",
+        ] {
+            assert!(!parse(text).unwrap().units_declared, "{text:?}");
+        }
     }
 
     #[test]
