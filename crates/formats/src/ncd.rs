@@ -38,7 +38,12 @@ pub struct DrillFile {
     /// The lines that move the head in ways a drill file of holes does not hold (a slot written as `G00`/`G01`, `M15`/`M16` up and down) and are not part of the holes:
     /// they are named, not dropped without a word.
     pub ignored: Vec<Ignored>,
+    /// How many more such lines there were after the first [`MAX_IGNORED`]: they are counted, not kept, so that a file of millions of them cannot fill the memory.
+    pub ignored_more: usize,
 }
+
+/// The most lines that [`DrillFile::ignored`] keeps.
+pub const MAX_IGNORED: usize = 10_000;
 
 /// A line of the file that is not a hole and was left out: its number (from 1) and its text.
 #[derive(Debug, Clone, PartialEq)]
@@ -49,8 +54,17 @@ pub struct Ignored {
 
 #[derive(Debug, PartialEq)]
 pub enum ParseError {
-    BadLine { line: usize, text: String },
-    HoleBeforeTool { line: usize },
+    BadLine {
+        line: usize,
+        text: String,
+    },
+    HoleBeforeTool {
+        line: usize,
+    },
+    /// The file is past a hard limit of the readers (`reader_limits.cfg`): it is refused before it is read.
+    TooLarge {
+        detail: String,
+    },
 }
 
 impl ParseError {
@@ -59,6 +73,7 @@ impl ParseError {
         match self {
             ParseError::BadLine { .. } => Code::NcdBadLine,
             ParseError::HoleBeforeTool { .. } => Code::NcdHoleBeforeTool,
+            ParseError::TooLarge { .. } => Code::FileTooLarge,
         }
     }
 
@@ -66,6 +81,7 @@ impl ParseError {
     pub fn line(&self) -> usize {
         match self {
             ParseError::BadLine { line, .. } | ParseError::HoleBeforeTool { line } => *line,
+            ParseError::TooLarge { .. } => 0,
         }
     }
 
@@ -84,6 +100,12 @@ impl ParseError {
                 column: None,
                 detail: String::new(),
             },
+            ParseError::TooLarge { detail } => FormatError {
+                code: Code::FileTooLarge,
+                line: None,
+                column: None,
+                detail: detail.clone(),
+            },
         }
     }
 }
@@ -95,6 +117,18 @@ impl fmt::Display for ParseError {
 }
 
 impl std::error::Error for ParseError {}
+
+/// Keeps a line that is left out, up to [`MAX_IGNORED`]; the rest are only counted.
+fn note_ignored(out: &mut DrillFile, line: usize, raw: &str) {
+    if out.ignored.len() < MAX_IGNORED {
+        out.ignored.push(Ignored {
+            line,
+            text: raw.trim().into(),
+        });
+    } else {
+        out.ignored_more += 1;
+    }
+}
 
 /// How the coordinates of a file with a header are written: the unit, the digits and which zeros are left out.
 /// The most digits on either side of the point that a `;FILE_FORMAT=` line or a `000.000` option may ask for.
@@ -250,11 +284,22 @@ pub fn parse_limited(
     limits: &crate::limits::ReaderLimits,
 ) -> Result<(DrillFile, crate::limits::LimitVerdict), FormatError> {
     let verdict = limits.guard(text)?;
-    let file = parse(text).map_err(|e| e.to_error())?;
+    let file = parse_unchecked(text).map_err(|e| e.to_error())?;
     Ok((file, verdict))
 }
 
+/// Reads a drill file. A file past a hard limit of the shipped `reader_limits.cfg` (generous: 64 MiB and 4 million lines) is refused with [`ParseError::TooLarge`]; a program that
+/// wants other limits, or the warning of a big file, uses [`parse_limited`] with its own [`crate::limits::ReaderLimits`].
 pub fn parse(text: &str) -> Result<DrillFile, ParseError> {
+    crate::limits::ReaderLimits::default()
+        .check(text)
+        .map_err(|e| ParseError::TooLarge {
+            detail: e.to_string(),
+        })?;
+    parse_unchecked(text)
+}
+
+fn parse_unchecked(text: &str) -> Result<DrillFile, ParseError> {
     let mut out = DrillFile::default();
     let (mut tool, mut x, mut y) = (None::<u8>, 0, 0);
     let mut in_header = false;
@@ -304,10 +349,7 @@ pub fn parse(text: &str) -> Result<DrillFile, ParseError> {
         if line.starts_with('M') {
             // M30 end of program; M15/M16 put the tool down and up for a routed slot, which this format of holes does not hold: said, not lost
             if line == "M15" || line == "M16" {
-                out.ignored.push(Ignored {
-                    line: n + 1,
-                    text: raw.trim().into(),
-                });
+                note_ignored(&mut out, n + 1, raw);
             }
             continue;
         }
@@ -328,10 +370,7 @@ pub fn parse(text: &str) -> Result<DrillFile, ParseError> {
         if line.starts_with('G') || line.starts_with("INCH") || line.starts_with("METRIC") {
             // `G05` (drill mode) and `G90` (absolute) say nothing to do; a `G00`/`G01`/`G85` with a position is a slot, which is not read
             if line.len() > 3 && line[1..].chars().any(|c| c == 'X' || c == 'Y') {
-                out.ignored.push(Ignored {
-                    line: n + 1,
-                    text: raw.trim().into(),
-                });
+                note_ignored(&mut out, n + 1, raw);
             }
             continue;
         }
@@ -459,6 +498,33 @@ M30
         );
         assert!((f.holes[0].y_mm() - 20.0).abs() < 0.02);
         assert!(f.metric);
+    }
+
+    #[test]
+    fn a_file_past_the_default_limits_is_refused_and_the_ignored_lines_are_bounded() {
+        // more lines than the shipped limit
+        let big = "\n".repeat(4_000_001);
+        match parse(&big) {
+            Err(ParseError::TooLarge { detail }) => assert!(detail.contains("lines"), "{detail}"),
+            other => panic!("{other:?}"),
+        }
+        assert_eq!(
+            parse(&big).unwrap_err().to_error().code,
+            crate::error::Code::FileTooLarge
+        );
+        // millions of slot lines keep only the first ones and count the rest
+        let mut text = String::from("M48\nMETRIC\n%\nT1\n");
+        for _ in 0..(MAX_IGNORED + 50) {
+            text.push_str("G01X1Y1\n");
+        }
+        let f = parse(&text).unwrap();
+        assert_eq!((f.ignored.len(), f.ignored_more), (MAX_IGNORED, 50));
+        // a program with its own, wider limits is not held by the default ones
+        let wide = crate::limits::ReaderLimits::from_config(
+            "max_bytes = 1000000000\nmax_lines = 9000000\nwarn_bytes = 1000000000\nwarn_lines = 9000000\n",
+        )
+        .unwrap();
+        assert!(parse_limited(&big, &wide).is_ok());
     }
 
     #[test]
