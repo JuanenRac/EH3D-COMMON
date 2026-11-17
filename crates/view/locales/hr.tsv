@@ -650,3 +650,5 @@ WarnRackNeedsV2	Poslužitelj je zanemario mjenjač: zahtjev je bio prve verzije
 WarnRackNoChanger	Ovaj stroj mijenja alate ručno: nisu povezani u lanac
 WarnOutOfCourse	Rad prelazi put stroja na osi:
 WarnBigFile	Datoteka je velika: čitanje i crtanje može potrajati
+UpdSigned	potpisano ključem izdanja
+UpdNotSigned	nije potpisano: provjeren je samo kontrolni zbroj

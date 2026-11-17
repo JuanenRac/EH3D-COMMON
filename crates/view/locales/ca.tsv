@@ -650,3 +650,5 @@ WarnRackNeedsV2	El servidor ha ignorat el canviador: la petició era de la prime
 WarnRackNoChanger	Aquesta màquina canvia les eines a mà: no s'encadenen
 WarnOutOfCourse	El treball surt del recorregut de la màquina a l'eix:
 WarnBigFile	El fitxer és gran: llegir-lo i dibuixar-lo pot trigar una estona
+UpdSigned	signada amb la clau de la versió
+UpdNotSigned	sense signatura: només s'ha comprovat la suma

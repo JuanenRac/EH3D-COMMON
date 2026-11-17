@@ -650,3 +650,5 @@ WarnRackNeedsV2	Serveri injoroi ndërruesin: kërkesa ishte e versionit të par�
 WarnRackNoChanger	Kjo makinë i ndërron mjetet me dorë: nuk lidhen në zinxhir
 WarnOutOfCourse	Puna kalon lëvizjen e makinës në bosht:
 WarnBigFile	Skedari është i madh: leximi dhe vizatimi i tij mund të marrë pak kohë
+UpdSigned	e nënshkruar me çelësin e botimit
+UpdNotSigned	pa nënshkrim: u kontrollua vetëm shuma e kontrollit

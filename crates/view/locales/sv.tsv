@@ -650,3 +650,5 @@ WarnRackNeedsV2	Servern ignorerade växlaren: begäran var av den första versio
 WarnRackNoChanger	Den här maskinen byter verktyg för hand: de är inte kedjade
 WarnOutOfCourse	Arbetet går utanför maskinens väg på axeln:
 WarnBigFile	Filen är stor: det kan ta en stund att läsa och rita den
+UpdSigned	signerad med utgåvans nyckel
+UpdNotSigned	inte signerad: bara kontrollsumman kontrollerades

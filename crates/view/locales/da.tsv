@@ -650,3 +650,5 @@ WarnRackNeedsV2	Serveren ignorerede skifteren: forespørgslen var af den første
 WarnRackNoChanger	Denne maskine skifter værktøj i hånden: værktøjerne er ikke kædet
 WarnOutOfCourse	Arbejdet går ud over maskinens kørsel på aksen:
 WarnBigFile	Filen er stor: det kan tage et stykke tid at læse og tegne den
+UpdSigned	signeret med udgivelsens nøgle
+UpdNotSigned	ikke signeret: kun kontrolsummen blev kontrolleret

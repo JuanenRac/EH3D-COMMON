@@ -650,3 +650,5 @@ WarnRackNeedsV2	Serveris ignorēja mainītāju: pieprasījums bija pirmās versi
 WarnRackNoChanger	Šī iekārta rīkus maina ar roku: tie netiek sasaistīti ķēdē
 WarnOutOfCourse	Darbs pārsniedz iekārtas gājienu asī:
 WarnBigFile	Fails ir liels: tā nolasīšana un zīmēšana var aizņemt kādu laiku
+UpdSigned	parakstīts ar izlaiduma atslēgu
+UpdNotSigned	nav parakstīts: pārbaudīta tikai kontrolsumma

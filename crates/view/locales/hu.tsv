@@ -650,3 +650,5 @@ WarnRackNeedsV2	A szerver figyelmen kívül hagyta a cserélőt: a kérés az el
 WarnRackNoChanger	Ez a gép kézzel cseréli a szerszámokat: nincsenek láncolva
 WarnOutOfCourse	A munka túllépi a gép úthosszát a tengelyen:
 WarnBigFile	A fájl nagy: beolvasása és megrajzolása eltarthat egy ideig
+UpdSigned	a kiadás kulcsával aláírva
+UpdNotSigned	nincs aláírva: csak az ellenőrző összeget vizsgáltuk

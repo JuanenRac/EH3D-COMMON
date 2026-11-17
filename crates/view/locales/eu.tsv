@@ -650,3 +650,5 @@ WarnRackNeedsV2	Zerbitzariak aldagailua alde batera utzi du: eskaera lehen berts
 WarnRackNoChanger	Makina honek erremintak eskuz aldatzen ditu: ez dira kateatzen
 WarnOutOfCourse	Lana makinaren ibilbidetik kanpo doa ardatzean:
 WarnBigFile	Fitxategia handia da: irakurtzeak eta marrazteak denbora pixka bat har dezake
+UpdSigned	bertsioaren giltzarekin sinatua
+UpdNotSigned	sinadurarik gabe: batura bakarrik egiaztatu da

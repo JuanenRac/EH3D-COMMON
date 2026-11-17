@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Two texts for the update window, in the 37 languages:** `UpdSigned` and `UpdNotSigned` say whether the package that was just installed carried a signature of the release key, so the window of an application can tell it next to the result.
+
 - **A GRBL controller that restarts by itself in the middle of a program is noticed:** the greeting a GRBL prints when it starts (`Grbl 1.1h ['$' for help]`) used to be skipped like any other message, so a restart between two lines (a power dip, a noisy cable, its button) let the sender go on with cutting moves and the spindle off. The line, status and busy waits now read a greeting that the program did not ask for (no reset of its own is waiting for one) as a refusal, which stops a program. The greeting that follows a reset the program sent, from the sender or from another thread, is only consumed. Tests cover a restart between two lines, in the status, and the greeting after a reset of ours.
 
 - **The README counts the files of the firmware base as they are:** 118 files, 68 of them shared by the two touch screens, as the manifest of `firmware_base/` lists them.

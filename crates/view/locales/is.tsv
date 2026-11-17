@@ -650,3 +650,5 @@ WarnRackNeedsV2	Þjónninn hunsaði skiptarann: beiðnin var af fyrstu útgáfu
 WarnRackNoChanger	Þessi vél skiptir um verkfæri í höndunum: þau eru ekki keðjuð
 WarnOutOfCourse	Verkið fer út fyrir feril vélarinnar á ásnum:
 WarnBigFile	Skráin er stór: það getur tekið nokkra stund að lesa hana og teikna
+UpdSigned	undirritað með lykli útgáfunnar
+UpdNotSigned	óundirritað: aðeins var athugað hvort samtalan stæðist

@@ -650,3 +650,5 @@ WarnRackNeedsV2	De server negeerde de wisselaar: het verzoek was van de eerste v
 WarnRackNoChanger	Deze machine wisselt het gereedschap met de hand: het wordt niet geketend
 WarnOutOfCourse	Het werk gaat voorbij de verplaatsing van de machine op de as:
 WarnBigFile	Het bestand is groot: lezen en tekenen kan even duren
+UpdSigned	ondertekend met de sleutel van de release
+UpdNotSigned	niet ondertekend: alleen de controlesom is gecontroleerd

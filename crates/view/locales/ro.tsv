@@ -650,3 +650,5 @@ WarnRackNeedsV2	Serverul a ignorat schimbătorul: cererea era din prima versiune
 WarnRackNoChanger	Această mașină schimbă sculele manual: nu sunt înlănțuite
 WarnOutOfCourse	Lucrarea depășește cursa mașinii pe axa:
 WarnBigFile	Fișierul este mare: citirea și desenarea lui pot dura un timp
+UpdSigned	semnat cu cheia versiunii
+UpdNotSigned	nesemnat: s-a verificat doar suma de control

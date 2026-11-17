@@ -650,3 +650,5 @@ WarnRackNeedsV2	Strežnik je prezrl menjalnik: zahteva je bila prve različice
 WarnRackNoChanger	Ta stroj orodja menja ročno: niso povezana v verigo
 WarnOutOfCourse	Delo presega pot stroja na osi:
 WarnBigFile	Datoteka je velika: branje in risanje lahko traja nekaj časa
+UpdSigned	podpisano s ključem izdaje
+UpdNotSigned	ni podpisano: preverjena je bila samo nadzorna vsota

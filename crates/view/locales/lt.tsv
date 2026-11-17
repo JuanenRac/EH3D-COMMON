@@ -650,3 +650,5 @@ WarnRackNeedsV2	Serveris nepaisė keitiklio: užklausa buvo pirmosios versijos
 WarnRackNoChanger	Šios staklės įrankius keičia rankiniu būdu: jie nesujungiami į grandinę
 WarnOutOfCourse	Darbas viršija staklių eigą ašyje:
 WarnBigFile	Failas didelis: jį nuskaityti ir nubraižyti gali užtrukti
+UpdSigned	pasirašyta išleidimo raktu
+UpdNotSigned	nepasirašyta: patikrinta tik kontrolinė suma

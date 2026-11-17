@@ -650,3 +650,5 @@ WarnRackNeedsV2	O servidor ignorou o cambiador: a petición era da primeira vers
 WarnRackNoChanger	Esta máquina cambia as ferramentas á man: non se encadean
 WarnOutOfCourse	O traballo sae do percorrido da máquina no eixe:
 WarnBigFile	O ficheiro é grande: lelo e debuxalo pode levar un tempo
+UpdSigned	asinada coa chave da versión
+UpdNotSigned	sen sinatura: só se comprobou a suma
