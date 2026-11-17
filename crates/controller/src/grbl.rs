@@ -91,6 +91,17 @@ pub struct GrblController<T: LineTransport> {
     urgent: UrgentChannel,
     /// The most a line waits for its answer while the machine says it is working.
     busy_max: Duration,
+    /// A reset went out and its greeting has not been read yet: that greeting is expected, not a restart of the controller by itself.
+    reset_sent: bool,
+}
+
+/// What a controller that restarted by itself (a power dip, a noisy cable, its own button) is told as: it comes back idle, with the spindle off and its modal state lost.
+const RESTARTED: &str =
+    "the controller restarted by itself: the position and the modal state are lost";
+
+/// Whether a line is the greeting a GRBL prints when it starts (`Grbl 1.1h ['$' for help]`, `GrblHAL 1.1f ...`).
+fn is_greeting(line: &str) -> bool {
+    line.trim().starts_with("Grbl")
 }
 
 impl<T: LineTransport> GrblController<T> {
@@ -102,6 +113,7 @@ impl<T: LineTransport> GrblController<T> {
             wco: [0.0; AXES],
             urgent: UrgentChannel::new(),
             busy_max: MAX_BUSY_WAIT,
+            reset_sent: false,
         }
     }
 
@@ -153,10 +165,14 @@ impl<T: LineTransport> GrblController<T> {
                     self.wait_hold_done(Duration::from_secs(3));
                     self.byte(RESET)?;
                 }
-                other => self
-                    .transport
-                    .write_all(other.bytes())
-                    .map_err(Self::link)?,
+                other => {
+                    if matches!(other, Urgent::Reset) {
+                        self.reset_sent = true;
+                    }
+                    self.transport
+                        .write_all(other.bytes())
+                        .map_err(Self::link)?
+                }
             }
             ended |= u.ends_job();
         }
@@ -235,6 +251,10 @@ impl<T: LineTransport> GrblController<T> {
                 None => return Err(Error::Timeout),
                 Some(l) => {
                     let l = l.trim();
+                    if is_greeting(l) {
+                        self.greeting()?;
+                        continue;
+                    }
                     if l == "ok" {
                         return Ok(());
                     }
@@ -304,6 +324,12 @@ impl<T: LineTransport> GrblController<T> {
                 Err(e @ Error::Refused(_)) => return Probe::Answered(Err(e)),
                 Ok(Some(l)) => {
                     let l = l.trim();
+                    if is_greeting(l) {
+                        return match self.greeting() {
+                            Ok(()) => Probe::Silent,
+                            Err(e) => Probe::Answered(Err(e)),
+                        };
+                    }
                     if l == "ok" {
                         return Probe::Answered(Ok(()));
                     }
@@ -329,7 +355,21 @@ impl<T: LineTransport> GrblController<T> {
         }
     }
 
+    /// Reads the greeting of a start: expected after a reset this program sent (then it is only consumed), otherwise the controller restarted
+    /// by itself between two lines and the program must stop.
+    fn greeting(&mut self) -> Result<(), Error> {
+        if self.reset_sent {
+            self.reset_sent = false;
+            Ok(())
+        } else {
+            Err(Error::Refused(RESTARTED.to_string()))
+        }
+    }
+
     fn byte(&mut self, b: u8) -> Result<(), Error> {
+        if b == RESET {
+            self.reset_sent = true;
+        }
         self.transport.write_all(&[b]).map_err(Self::link)
     }
 }
@@ -480,6 +520,10 @@ impl<T: LineTransport> Controller for GrblController<T> {
             {
                 None => return Err(Error::Timeout),
                 Some(l) => {
+                    if is_greeting(&l) {
+                        self.greeting()?;
+                        continue;
+                    }
                     if let Some(st) = parse_status(&l, &mut self.wco) {
                         return Ok(st);
                     }
@@ -779,6 +823,42 @@ mod tests {
         assert_eq!(c.send_line("   "), Ok(()));
         assert_eq!(c.send_line("G0 X0"), Ok(()));
         assert_eq!(c.transport().text(), "G0 X1\nG99\nG1 X5\nG0 X0\n");
+    }
+
+    #[test]
+    fn a_greeting_that_nobody_asked_for_is_a_restart_and_stops_the_program() {
+        // the controller restarted between two lines: it greets and answers the next line with ok as if nothing had happened
+        let t = MockTransport::with_replies(&["Grbl 1.1h ['$' for help]", "ok"]);
+        let mut c = GrblController::new(t);
+        assert!(
+            matches!(c.send_line("G1 X5 F300"), Err(Error::Refused(m)) if m.contains("restarted by itself"))
+        );
+        let t = MockTransport::with_replies(&[
+            "Grbl 1.1h ['$' for help]",
+            "<Idle|MPos:0.000,0.000,0.000>",
+        ]);
+        let mut c = GrblController::new(t);
+        assert!(matches!(c.status(), Err(Error::Refused(m)) if m.contains("restarted")));
+    }
+
+    #[test]
+    fn the_greeting_after_a_reset_of_ours_is_only_read() {
+        let t = MockTransport::with_replies(&[
+            "Grbl 1.1h ['$' for help]",
+            "ok",
+            "Grbl 1.1h ['$' for help]",
+            "ok",
+        ]);
+        let mut c = GrblController::new(t);
+        c.command(Command::EmergencyStop).unwrap();
+        assert_eq!(c.send_line("G0 X1"), Ok(()));
+        // the flag is spent: a second greeting is a restart by itself
+        assert!(matches!(c.send_line("G0 X2"), Err(Error::Refused(_))));
+        // a reset asked from another thread is ours as well
+        let t = MockTransport::with_replies(&["Grbl 1.1h ['$' for help]", "ok"]);
+        let mut c = GrblController::new(t);
+        c.urgent_channel().unwrap().send(Urgent::Reset);
+        assert_eq!(c.send_line("G0 X1"), Ok(()));
     }
 
     #[test]
