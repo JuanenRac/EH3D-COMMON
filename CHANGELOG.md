@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The status report that arrives while a line waits for its `ok` is kept:** the `UrgentChannel` of the controller holds the last report that answered an `Urgent::Status`, and `take_report` hands it over once, so a program can show the live position of a machine that is busy with a line.
+
 - **A drill file says whether its unit was declared:** `DrillFile::units_declared` is true when the file has `METRIC`, `INCH`, `M71` or `M72` and false when the numbers were read as mils for lack of a header, so that a program can warn that the unit was supposed. Tested with files with each header, with only `;FILE_FORMAT=` and with none.
 
 - **The drill file reader has limits of its own and keeps the lines it leaves out in bounds:** `ncd::parse` refuses a file past the hard limits of the shipped `reader_limits.cfg` (64 MiB or 4 million lines, the values a program can replace with its own copy through `parse_limited`, which no longer applies the default limits on top) with a new `ParseError::TooLarge`, and keeps only the first 10000 lines it leaves out (slots and tool up/down moves) in `DrillFile::ignored`, counting the rest in the new `ignored_more`. A file larger than the limits that `parse` used to read is now refused. Tested with a file of too many lines, with a flood of slot lines and with wider limits of its own.

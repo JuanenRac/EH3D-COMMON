@@ -264,6 +264,10 @@ impl<T: LineTransport> GrblController<T> {
                     if let Some(code) = l.strip_prefix("ALARM:") {
                         return Err(Error::Alarm(format!("alarm {code}")));
                     }
+                    // a report that answers a status request sent out of turn: it is left for whoever watches the position
+                    if let Some(status) = parse_status(l, &mut self.wco) {
+                        self.urgent.publish_report(status);
+                    }
                 }
             }
         }
@@ -994,6 +998,24 @@ mod tests {
             "the reset did not wait for the ok"
         );
         assert_eq!(c.transport().written, b"G1 X5 F100\n\x18".to_vec());
+    }
+
+    #[test]
+    fn the_report_that_answers_a_status_request_during_the_wait_is_left_in_the_channel() {
+        let link = Timed::new(
+            Duration::from_millis(250),
+            "<Run|MPos:1.000,2.000,3.000|FS:500,0>",
+        );
+        let mut c = GrblController::new(link).with_timeout(Duration::from_secs(30));
+        let channel = c.urgent_channel().unwrap();
+        assert!(channel.take_report().is_none(), "nothing before a request");
+        let status = after(30, channel.clone(), Urgent::Status);
+        assert_eq!(c.send_line("G1 X5 F100"), Ok(()));
+        status.join().unwrap();
+        let report = channel.take_report().expect("the report was kept");
+        assert_eq!(report.state, State::Run);
+        assert_eq!(report.machine_mm[..3], [1.0, 2.0, 3.0]);
+        assert!(channel.take_report().is_none(), "a report is taken once");
     }
 
     #[test]
