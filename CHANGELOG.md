@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.2.2] - Drill units that say if they were declared, limits for the drill reader and the GRBL link, and a stop that reaches a busy controller
+
 - **The status report that arrives while a line waits for its `ok` is kept:** the `UrgentChannel` of the controller holds the last report that answered an `Urgent::Status`, and `take_report` hands it over once, so a program can show the live position of a machine that is busy with a line.
 
 - **A drill file says whether its unit was declared:** `DrillFile::units_declared` is true when the file has `METRIC`, `INCH`, `M71` or `M72` and false when the numbers were read as mils for lack of a header, so that a program can warn that the unit was supposed. Tested with files with each header, with only `;FILE_FORMAT=` and with none.
@@ -24,6 +26,7 @@ All notable changes to this project are documented here.
 - **The CI validation checks the workflows and the lessons of past CI failures against a baseline:** `tools/workflow_hygiene.py` and `tools/lessons_lint.py` (copies of the shared tools) run in the validation, and only findings that are not in `tools/workflow_hygiene_baseline.json` and `tools/lessons_lint_baseline.json` fail it, so what exists today stays as it is and a new one is caught. `python tools/workflow_hygiene.py --root . --detail` and `python tools/lessons_lint.py --repo .` list the findings.
 - **The validation of the CI is the reusable one of the documentation hub:** the job `validate` calls `validate.yml` of EH3D-DOCS (pinned by commit) and what the repository checks besides it is in jobs of their own, with the check of the CHANGELOG.
 - **The CI is split in two workflows:** the validation of the repository (manifest, documentation, pictures, tools) stays in `ci.yml` and the Rust jobs move to `rust.yml`, which does not run for a change that only touches the READMEs, the CHANGELOG or pictures, so a change of the documentation no longer builds the code on two systems, and they keep a cache of the build. The names of the jobs are the same.
+
 ## [0.2.1] - Typed archive errors, reader limits, shared spindle table and the firmware base guards
 
 - **A pull request must say what it changes:** the validation runs `tools/changelog_pr_check.py` on a pull request (it fails when the CHANGELOG has no new line under [Unreleased]; the label `no-changelog` skips it), the same check as the other repositories of the suite.
