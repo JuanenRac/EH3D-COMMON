@@ -37,6 +37,21 @@ Then list the sibling in `depends_on` of the manifest `eh3d.project.json` of the
 
 A feature of a sibling is passed on with the name of the crate: `serial = ["eh3d-controller/serial"]`.
 
+## The standard views of the machine (`eh3d_view::views`)
+
+`StandardView` is `Top`, `Front`, `Side` or `Iso`; `Ortho` projects a point `(x, y, z)` of the machine in millimetres to a pixel (`k` pixels per millimetre and the pixel of the origin). The axes are X to the right along the front edge of the table, Y away from the operator and Z up; the origin is the front left corner of the table, on it.
+
+| View | The eye | On the screen |
+|---|---|---|
+| `Top` | straight over the table, looking down | X to the right, Y up; Z does not move the point |
+| `Front` | in front of the table, looking along +Y | X to the right, Z up; Y does not move the point |
+| `Side` | at the right side of the table, looking along -X | Y to the right, Z up; X does not move the point |
+| `Iso` | the usual isometric view | the numbers of `Iso::project` with no turn and a tilt of 30 degrees |
+
+`Top`, `Front` and `Side` are true orthographic views with the same scale on both screen axes. The tilt formula of `Iso` is not used for the view from above (at 90 degrees it would turn the plan by 45 degrees), so there is no singularity to avoid. `Ortho::to_table` gives the point of the table under a pixel of the plan (the other views answer `None`).
+
+`Ortho::fit_box` and `Ortho::fit` put a box of the machine (or the table and the machine height) in an area of pixels, centred and with a margin, at the largest scale that holds it; a box with no extent keeps one pixel per millimetre. `StandardView::orbit_angles` gives the turn and tilt, in degrees, that a program with an orbit made of a turn and a tilt of `Iso` uses for each view (front 315 and 0, side 225 and 0, isometric 0 and 30), and `Iso::standard` builds the fitted `Iso` of the three views that have one. All of it is new: `Iso`, `Iso::fit` and `Iso::project` are unchanged.
+
 ## The CI of the repository that uses it
 
 The workflow `rust.yml` of a consuming repository has a variable that names the **tag** of each sibling it is built against, so that a change of `main` here does not break it by surprise:
