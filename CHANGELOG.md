@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.2.3] - True orthographic standard views
+
 - **The standard views of the machine, with a true view from above:** `eh3d_view::views` adds `StandardView` (`Top`, `Front`, `Side`, `Iso`) and `Ortho`, which projects a point of the machine to a pixel with the same scale on both axes (from above X to the right and Y up with the height ignored, from the front X to the right and Z up, from the side Y to the right and Z up, and the usual isometric one), `Ortho::to_table` for a click on the plan, `Ortho::fit_box` and `Ortho::fit` to centre a box of the machine in an area with a margin, `StandardView::orbit_angles` (front 315 and 0, side 225 and 0, isometric 0 and 30) and `Iso::standard`. Nothing existing changes: `Iso` keeps its fields and its projection, and a test holds the numbers of the default view. Ten tests cover known points, the axes, the height, the fit and the click.
 
 ## [0.2.2] - Drill units that say if they were declared, limits for the drill reader and the GRBL link, and a stop that reaches a busy controller
