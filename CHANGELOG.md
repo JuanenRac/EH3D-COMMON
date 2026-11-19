@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.2.4] - The one client of the EH3D server: login, refresh, sessions, retries and errors in eight languages
+
 - **One client for every program that talks to the EH3D server:** the new crate `eh3d-serverclient` (no dependency, no window) logs in with `POST /auth/login` for the application the program is, renews the login with `POST /auth/refresh` (by itself when it is in its last quarter), ends it, lists and closes sessions, checks `GET /health` without a token and sends any route with the bearer token. The state of the link is `Connected`, `Disconnected` or `LoggedOut`. `docs/SERVER_CLIENT.md` describes it and gives the steps for each program to move to it.
 - **The keys of the link have one reader, with ranges and conservative defaults:** `server_address`, `server_token`, `server_machine`, `server_timeout_s` (1 to 120, 15 by default), `server_retries` (0 to 5, 2), `server_mdns` (off) and `server_max_answer_mib` (1 to 256, 8). A value out of its range names its key and line and changes nothing.
 - **Retries with growing pauses, and a `POST` is never sent twice:** a failed connection is tried again for any method; a time-out or a broken connection only for the methods that can be repeated; the pauses are 200 ms, 400 ms, 800 ms up to 2 s. When the tries run out the error says how many were made and the login is kept.
