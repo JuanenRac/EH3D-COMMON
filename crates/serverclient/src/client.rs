@@ -7,7 +7,9 @@ use crate::metrics::LinkMetrics;
 use crate::queue::{is_queueable, OfflineQueue, Queued, Rejected};
 use crate::secret::{MemoryStore, Secret, TokenStore};
 use crate::settings::Settings;
-use crate::transport::{path_segment, Reply, Request, TcpTransport, Transport};
+use crate::transport::{
+    path_segment, FullReply, Reply, Request, RequestParts, TcpTransport, Transport,
+};
 use std::time::{Duration, Instant};
 
 /// Waits between two tries. A test gives one that only counts.
@@ -301,6 +303,9 @@ impl Client {
             method: method.to_string(),
             path: path.to_string(),
             body: body.map(str::to_string),
+            body_bytes: None,
+            headers: Vec::new(),
+            single_try: false,
             bearer: if bearer {
                 self.token.as_ref().map(|t| t.expose().to_string())
             } else {
@@ -315,7 +320,13 @@ impl Client {
     /// is tried again for any method (nothing was sent); a time-out or a broken connection only for a method that can be repeated; so a `POST` is never sent
     /// twice. A 502, 503 or 504 is tried again for a method that can be repeated too.
     fn send_retrying(&mut self, request: &Request) -> Result<Reply, ClientError> {
-        let repeatable = is_idempotent(&request.method);
+        self.send_retrying_full(request).map(FullReply::into_reply)
+    }
+
+    /// The same as `send_retrying` with the headers and the body as bytes. A request marked `single_try` is not sent again after a time-out or a broken
+    /// connection (nor after a 502, 503 or 504), whatever its method.
+    fn send_retrying_full(&mut self, request: &Request) -> Result<FullReply, ClientError> {
+        let repeatable = is_idempotent(&request.method) && !request.single_try;
         let tries = self.settings.server_retries + 1;
         let mut last = TransportError::Timeout;
         let link_before = self.link;
@@ -326,7 +337,7 @@ impl Client {
             }
             self.metrics.begin_attempt(attempt > 1);
             let started = Instant::now();
-            match self.transport.send(request) {
+            match self.transport.send_full(request) {
                 Ok(reply) => {
                     self.metrics.record_reply(started.elapsed(), reply.status);
                     self.link = Link::Connected;
@@ -433,6 +444,34 @@ impl Client {
         let request = self.build(method, path, body, true);
         let reply = self.send_retrying(&request)?;
         self.check(reply, true)
+    }
+
+    /// A request with header lines and/or a body of bytes (`If-Match`, a file), to a route that needs the login. The parts are checked first
+    /// ([`RequestParts::validate`]); a refusal of 400 or more is a `ClientError` as in `request`, and the answer comes with its headers.
+    pub fn request_full(
+        &mut self,
+        method: &str,
+        path: &str,
+        parts: &RequestParts,
+    ) -> Result<FullReply, ClientError> {
+        parts.validate().map_err(ClientError::Config)?;
+        self.need_address()?;
+        if self.token.is_none() {
+            self.link = Link::LoggedOut;
+            return Err(ClientError::Unauthorized { code: None });
+        }
+        self.maybe_renew();
+        let mut request = self.build(method, path, parts.text(), true);
+        request.body_bytes = parts.bytes().map(<[u8]>::to_vec);
+        request.headers = parts.headers().to_vec();
+        request.single_try = parts.is_single_try();
+        let reply = self.send_retrying_full(&request)?;
+        if reply.status < 400 {
+            return Ok(reply);
+        }
+        // `check` turns every status of 400 or more into the error it is (a 401 makes the client forget the token)
+        let plain = reply.clone().into_reply();
+        self.check(plain, true).map(|_| reply)
     }
 
     /// A request to a route that needs no login (health, set-up): no token is sent.

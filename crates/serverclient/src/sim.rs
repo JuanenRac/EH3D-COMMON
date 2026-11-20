@@ -4,7 +4,8 @@
 use crate::client::{Clock, Sleeper};
 use crate::errors::TransportError;
 use crate::json::{quote, Json};
-use crate::transport::{Reply, Request, Transport};
+use crate::store::parse_etag;
+use crate::transport::{FullReply, Reply, Request, Transport};
 use std::collections::HashMap;
 use std::sync::{Arc, Mutex};
 use std::time::Duration;
@@ -55,6 +56,161 @@ struct State {
     refresh_max_s: u64,
     slept: Vec<Duration>,
     contract: Option<String>,
+    files: HashMap<(String, String, String), Stored>,
+    require_if_match: bool,
+}
+
+/// A file of the project store: every version (the last is the current one) and whether it was removed from the list.
+struct Stored {
+    versions: Vec<Vec<u8>>,
+    removed: bool,
+}
+
+impl Stored {
+    fn current(&self) -> Option<&[u8]> {
+        if self.removed {
+            None
+        } else {
+            self.versions.last().map(Vec::as_slice)
+        }
+    }
+
+    /// The tag of the current version. The real server uses the SHA-256 of the bytes; this double uses the number of the version and a 64-bit hash,
+    /// which is all a test needs (it only compares tags).
+    fn tag(&self) -> String {
+        let bytes = self.versions.last().map_or(&[][..], Vec::as_slice);
+        format!("sim{}-{:016x}", self.versions.len(), fnv1a(bytes))
+    }
+}
+
+fn fnv1a(bytes: &[u8]) -> u64 {
+    let mut h: u64 = 0xcbf2_9ce4_8422_2325;
+    for b in bytes {
+        h ^= u64::from(*b);
+        h = h.wrapping_mul(0x0100_0000_01b3);
+    }
+    h
+}
+
+/// `%XX` escapes undone (a bad escape stays as it is).
+fn percent_decode(text: &str) -> String {
+    let b = text.as_bytes();
+    let mut out = Vec::with_capacity(b.len());
+    let mut i = 0;
+    while i < b.len() {
+        let hex = |c: u8| (c as char).to_digit(16);
+        if b[i] == b'%' && i + 2 < b.len() && hex(b[i + 1]).is_some() && hex(b[i + 2]).is_some() {
+            out.push((hex(b[i + 1]).unwrap_or(0) * 16 + hex(b[i + 2]).unwrap_or(0)) as u8);
+            i += 3;
+        } else {
+            out.push(b[i]);
+            i += 1;
+        }
+    }
+    String::from_utf8_lossy(&out).into_owned()
+}
+
+fn query_param(query: &str, key: &str) -> Option<String> {
+    query
+        .split('&')
+        .filter_map(|p| p.split_once('='))
+        .find(|(k, _)| *k == key)
+        .map(|(_, v)| percent_decode(v))
+}
+
+fn with_tag(mut reply: FullReply, tag: &str) -> FullReply {
+    reply
+        .headers
+        .push(("ETag".to_string(), format!("\"{tag}\"")));
+    reply
+}
+
+/// The routes of the project store that the client uses: read, write and remove a file, with the rule of the tag of the real server.
+fn store_route(st: &mut State, req: &Request, role: Option<&str>) -> FullReply {
+    let Some(role) = role else {
+        return error(401, "unauthorized");
+    };
+    let (path, query) = req.path.split_once('?').unwrap_or((req.path.as_str(), ""));
+    let seg: Vec<&str> = path.trim_start_matches('/').split('/').collect();
+    if seg.len() != 8
+        || seg[..3] != ["api", "v1", "apps"]
+        || seg[4] != "projects"
+        || seg[6..] != ["files", "content"]
+    {
+        return error(404, "not_found");
+    }
+    let Some(name) = query_param(query, "name").filter(|n| !n.is_empty()) else {
+        return error(422, "bad_filename");
+    };
+    let key = (seg[3].to_string(), percent_decode(seg[5]), name);
+    if req.method == "GET" {
+        let Some(file) = st.files.get(&key) else {
+            return error(404, "unknown_file");
+        };
+        let version = query_param(query, "version").and_then(|v| v.parse::<usize>().ok());
+        let bytes = match version {
+            Some(n) if n >= 1 && n <= file.versions.len() => file.versions[n - 1].clone(),
+            Some(_) => return error(404, "unknown_version"),
+            None => match file.current() {
+                Some(b) => b.to_vec(),
+                None => return error(404, "unknown_file"),
+            },
+        };
+        let mut reply = FullReply {
+            status: 200,
+            headers: vec![(
+                "Content-Type".to_string(),
+                "application/octet-stream".to_string(),
+            )],
+            body: bytes,
+        };
+        if version.is_none() {
+            reply = with_tag(reply, &file.tag());
+        }
+        return reply;
+    }
+    if req.method != "PUT" && req.method != "DELETE" {
+        return error(405, "method_not_allowed");
+    }
+    if role == "viewer" {
+        return error(403, "forbidden");
+    }
+    let exists = st.files.get(&key).is_some_and(|f| f.current().is_some());
+    if exists {
+        let current = st.files.get(&key).map(Stored::tag).unwrap_or_default();
+        if st.require_if_match {
+            match req.header("if-match") {
+                None => return error(428, "precondition_required"),
+                Some(h) if h.trim() == "*" || parse_etag(h) == current => {}
+                Some(_) => return error(412, "precondition_failed"),
+            }
+        }
+    } else if req.method == "DELETE" {
+        return error(404, "unknown_file");
+    }
+    if req.method == "DELETE" {
+        if let Some(f) = st.files.get_mut(&key) {
+            f.removed = true;
+        }
+        return ok("{}".to_string());
+    }
+    let bytes = req.payload();
+    let file = st.files.entry(key).or_insert(Stored {
+        versions: Vec::new(),
+        removed: false,
+    });
+    if file.current() == Some(bytes.as_slice()) {
+        let n = file.versions.len();
+        let tag = file.tag();
+        return with_tag(ok(format!("{{\"unchanged\":true,\"version\":{n}}}")), &tag);
+    }
+    file.versions.push(bytes);
+    file.removed = false;
+    let n = file.versions.len();
+    let tag = file.tag();
+    let mut reply = ok(format!("{{\"unchanged\":false,\"version\":{n}}}"));
+    reply.status = 201;
+    with_tag(reply, &tag)
 }
 
 /// The server in memory. Clones share the same state, so a test keeps one to look at and gives the other to the client.
@@ -67,15 +223,16 @@ impl Default for SimServer {
     }
 }
 
-fn error(status: u16, code: &str) -> Reply {
-    Reply {
+fn error(status: u16, code: &str) -> FullReply {
+    Reply::new(
         status,
-        body: format!("{{\"error\":{},\"detail\":\"\"}}", quote(code)),
-    }
+        format!("{{\"error\":{},\"detail\":\"\"}}", quote(code)),
+    )
+    .into()
 }
 
-fn ok(body: String) -> Reply {
-    Reply { status: 200, body }
+fn ok(body: String) -> FullReply {
+    Reply::new(200, body).into()
 }
 
 impl SimServer {
@@ -109,6 +266,8 @@ impl SimServer {
             refresh_max_s: 7200,
             slept: Vec::new(),
             contract: None,
+            files: HashMap::new(),
+            require_if_match: true,
         })))
     }
 
@@ -160,12 +319,60 @@ impl SimServer {
         self.state().contract = Some(document.to_string());
     }
 
+    /// Turns the rule of the tag on or off, like `project_require_if_match` of the real server (on at first: a write over a file that exists needs
+    /// `If-Match`, `428` when it is missing and `412` when it is not the current version).
+    pub fn set_require_if_match(&self, on: bool) {
+        self.state().require_if_match = on;
+    }
+
+    /// Writes a file as another editor would, without the rule of the tag. Gives the tag of the new current version.
+    pub fn write_file(&self, app: &str, project: &str, name: &str, bytes: &[u8]) -> String {
+        let mut st = self.state();
+        let file = st
+            .files
+            .entry((app.to_string(), project.to_string(), name.to_string()))
+            .or_insert(Stored {
+                versions: Vec::new(),
+                removed: false,
+            });
+        if file.current() != Some(bytes) {
+            file.versions.push(bytes.to_vec());
+            file.removed = false;
+        }
+        file.tag()
+    }
+
+    /// The bytes of the current version of a file of the store.
+    pub fn file(&self, app: &str, project: &str, name: &str) -> Option<Vec<u8>> {
+        let st = self.state();
+        st.files
+            .get(&(app.to_string(), project.to_string(), name.to_string()))
+            .and_then(|f| f.current().map(<[u8]>::to_vec))
+    }
+
+    /// The tag of the current version of a file of the store.
+    pub fn file_tag(&self, app: &str, project: &str, name: &str) -> Option<String> {
+        let st = self.state();
+        st.files
+            .get(&(app.to_string(), project.to_string(), name.to_string()))
+            .filter(|f| f.current().is_some())
+            .map(Stored::tag)
+    }
+
+    /// How many versions a file of the store has (a removed file keeps them).
+    pub fn file_versions(&self, app: &str, project: &str, name: &str) -> usize {
+        let st = self.state();
+        st.files
+            .get(&(app.to_string(), project.to_string(), name.to_string()))
+            .map_or(0, |f| f.versions.len())
+    }
+
     /// The pauses the client asked for, in order.
     pub fn pauses(&self) -> Vec<Duration> {
         self.state().slept.clone()
     }
 
-    fn handle(&self, req: &Request) -> Result<Reply, TransportError> {
+    fn handle(&self, req: &Request) -> Result<FullReply, TransportError> {
         let mut st = self.state();
         if !st.faults.is_empty() {
             let fault = st.faults.remove(0);
@@ -301,6 +508,11 @@ impl SimServer {
                 rows.sort();
                 Ok(ok(format!("{{\"sessions\":[{}]}}", rows.join(","))))
             }
+            _ if req.path.starts_with("/api/v1/apps/") => Ok(store_route(
+                &mut st,
+                req,
+                who.as_ref().map(|w| w.1.as_str()),
+            )),
             _ if req.method == "DELETE" && req.path.starts_with("/api/v1/auth/sessions/") => {
                 let Some((name, _, _)) = who else {
                     return Ok(error(401, "unauthorized"));
@@ -342,6 +554,10 @@ impl SimServer {
 
 impl Transport for SimServer {
     fn send(&self, request: &Request) -> Result<Reply, TransportError> {
+        self.handle(request).map(FullReply::into_reply)
+    }
+
+    fn send_full(&self, request: &Request) -> Result<FullReply, TransportError> {
         self.handle(request)
     }
 }

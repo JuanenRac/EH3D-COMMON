@@ -154,6 +154,18 @@ impl ClientError {
         }
     }
 
+    /// `428 precondition_required`: a write over a file that exists did not name the version it was made from.
+    pub fn is_precondition_required(&self) -> bool {
+        matches!(self, ClientError::Server { status: 428, .. })
+            || self.code() == Some("precondition_required")
+    }
+
+    /// `412 precondition_failed`: the file changed since it was read.
+    pub fn is_precondition_failed(&self) -> bool {
+        matches!(self, ClientError::Server { status: 412, .. })
+            || self.code() == Some("precondition_failed")
+    }
+
     /// Is it worth showing a new login to the person?
     pub fn needs_login(&self) -> bool {
         matches!(self, ClientError::Unauthorized { .. })

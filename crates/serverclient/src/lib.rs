@@ -16,6 +16,8 @@
 //! * [`LinkMetrics`]: requests, tries, retries, latencies (median and tail) and losses of the link.
 //! * [`OfflineQueue`]: the `PUT` and `DELETE` requests that could not be sent wait (bounded) and go out in order when the server is back.
 //! * [`ContractCache`]: the OpenAPI contract of the server, to notice a route that was withdrawn.
+//! * [`RequestParts`], [`FullReply`] and the [`store`] helpers: header lines (`If-Match`, `ETag`) and bodies of bytes, `Client::get_with_etag` and
+//!   `Client::put_if_match` for the project store of the server, and the `428` / `412` refusals as [`StoreError`] with their text in eight languages.
 
 pub mod client;
 pub mod contract;
@@ -29,6 +31,7 @@ pub mod queue;
 pub mod secret;
 pub mod settings;
 pub mod sim;
+pub mod store;
 pub mod transport;
 
 pub use client::{
@@ -42,4 +45,10 @@ pub use metrics::LinkMetrics;
 pub use queue::{OfflineQueue, QueueLimits, Queued, Rejected};
 pub use secret::{FileStore, MemoryStore, Secret, TokenStore};
 pub use settings::{KeySpec, SettingError, Settings, KEYS};
-pub use transport::{path_segment, plain_token_warning, Reply, Request, TcpTransport, Transport};
+pub use store::{
+    etag_header, parse_etag, project_file_path, StoreError, Versioned, Written, MAX_TAG_LEN,
+};
+pub use transport::{
+    check_headers, path_segment, plain_token_warning, FullReply, Reply, Request, RequestParts,
+    TcpTransport, Transport, ALLOWED_HEADERS,
+};
