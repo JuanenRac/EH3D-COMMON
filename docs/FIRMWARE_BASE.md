@@ -47,6 +47,10 @@ python -I tools/sync_firmware_base.py status    # which file goes where
 
 Two nodes use the base, EH3D-NODE-BUNGARD and EH3D-NODE-BUNGARD-AUX: 47 of its 49 files for the ESP32 nodes are in both and two belong to EH3D-NODE-BUNGARD only (`web_server.hpp` and `check_sdkconfig.py`). Nothing in the base has run on a board yet.
 
+## The pick-and-place nodes
+
+EH3D-NODE-PNP-FEEDER and EH3D-NODE-PNP-HEAD are registered in the same tool and take, for now, only the plain helpers that say nothing about what a node controls (`core/json.hpp`, `semver.hpp`, `backoff.hpp`, `task_health.hpp`, `stored_load.hpp`, `memory_budget.hpp`, `net_text.hpp`, `node_id.hpp`, `civil_time.hpp` and `auth.hpp`). The network, panel and update files of the base are not taken yet: they come in groups, with `--only`, when each node's firmware is written.
+
 ## The touch screens
 
 The two touch-screen projects (EH3D-NODE-BUNGARD-HMI and EH3D-NODE-HMI-GUI) are registered in the same tool with their own list of files (`HMI_CANDIDATES`): the flow of a job (with the chaining of the tool changer), the bar of the tool changer, the stage notice, the link to the server and its sockets, the job memory, the tool reader, the files of the card, the notices and the sound files, the orientation, the quality reading, the voice, the board and the host tests that go with them. Their settings, gate, keyboard, texts (with the 30 files of `locales/`) and kind of machine are the same files too, in their union (the Bungard screen has the panel that moves the machine by hand and the other does not: the one that does not use a part leaves it alone), and so are the generated `locales_gen.hpp`, `font_ranges.hpp` and the two fonts, which are built in GitHub Actions from the literals of both screens (`EH3D_EXTRA_LITERALS` in `tools/make_locales.py`). Only the screens themselves (`app_main.cpp`, `ui.cpp`) stay in each project. Use `import EH3D-NODE-HMI-GUI` (or the other) after editing a shared file in one of them, then `sync`.

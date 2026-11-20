@@ -54,7 +54,7 @@ jobs:
           python-version: "3.12"
       - name: Projects that keep a copy of the firmware base
         run: |
-          for project in EH3D-NODE-BUNGARD EH3D-NODE-BUNGARD-AUX EH3D-NODE-BUNGARD-HMI EH3D-NODE-HMI-GUI; do
+          for project in EH3D-NODE-BUNGARD EH3D-NODE-BUNGARD-AUX EH3D-NODE-BUNGARD-HMI EH3D-NODE-HMI-GUI EH3D-NODE-PNP-FEEDER EH3D-NODE-PNP-HEAD; do
             git clone --depth 1 "https://github.com/JuanenRac/${project}.git" "../${project}"
           done
       - name: Firmware base copies

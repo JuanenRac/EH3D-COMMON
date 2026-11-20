@@ -38,6 +38,8 @@ ROOT = HERE.parent.parent                 # the folder that holds the EH3D repos
 PROJECTS = {
     "EH3D-NODE-BUNGARD": ("EH3D-NODE-BUNGARD", "eh3d-node-bungard", "eh3d_node_bungard", "bungard"),
     "EH3D-NODE-BUNGARD-AUX": ("EH3D-NODE-BUNGARD-AUX", "eh3d-node-bungard-aux", "eh3d_node_bungard_aux", "bungard-aux"),
+    "EH3D-NODE-PNP-FEEDER": ("EH3D-NODE-PNP-FEEDER", "eh3d-node-pnp-feeder", "eh3d_node_pnp_feeder", "pnp-feeder"),
+    "EH3D-NODE-PNP-HEAD": ("EH3D-NODE-PNP-HEAD", "eh3d-node-pnp-head", "eh3d_node_pnp_head", "pnp-head"),
     # the two touch-screen projects share the flow of a job, the link to the server and the rest of the screen's logic
     "EH3D-NODE-BUNGARD-HMI": ("EH3D-NODE-BUNGARD-HMI", "eh3d-node-bungard-hmi", "eh3d_node_bungard_hmi", "bungard-hmi"),
     "EH3D-NODE-HMI-GUI": ("EH3D-NODE-HMI-GUI", "eh3d-node-hmi-gui", "eh3d_node_hmi_gui", "hmi-gui"),
