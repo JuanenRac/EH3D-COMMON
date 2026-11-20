@@ -54,6 +54,31 @@ jobs:
         run: cargo ci-lint
       - name: Tests
         run: cargo ci-test
+      - name: Lints of the optional mDNS resolver of the client
+        run: cargo clippy -p eh3d-serverclient --all-targets --features mdns -- -D warnings
+      - name: Tests of the optional mDNS resolver of the client
+        run: cargo test -p eh3d-serverclient --all-targets --features mdns
+
+  gui-check:
+    # the panel drawn with egui is compiled apart and does not decide the result of the run until it has been seen to build
+    name: Panel of the server settings (egui)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Rust toolchain
+        shell: bash
+        run: rustup toolchain install "$(sed -n 's/^channel = "\(.*\)"/\1/p' rust-toolchain.toml)" --profile minimal --component clippy
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
+        with:
+          workspaces: EH3D-COMMON
+      - name: Check
+        run: cargo check -p eh3d-view --all-targets --features gui
+      - name: Lints
+        run: cargo clippy -p eh3d-view --all-targets --features gui -- -D warnings
 
   consumers-list:
     name: Repositories that depend on this one
