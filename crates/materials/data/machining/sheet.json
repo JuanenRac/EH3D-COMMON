@@ -1,0 +1,807 @@
+{
+ "schema_version": 1,
+ "materials": [
+  {
+   "id": "fabric/cotton-fabric",
+   "family": "fabric",
+   "names": {
+    "en": "Cotton fabric",
+    "es": "Tela de algodón",
+    "de": "Baumwollstoff",
+    "fr": "Tissu de coton",
+    "it": "Tessuto di cotone",
+    "ja": "綿布",
+    "zh": "棉布",
+    "pt": "Tecido de algodão"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "flammable"
+    ]
+   },
+   "cnc": [],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 0.5,
+     "power_pct": 20,
+     "speed_mm_min": 3000,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "diode",
+     "mode": "cut",
+     "power_w": 10,
+     "thickness_mm": 0.5,
+     "power_pct": 70,
+     "speed_mm_min": 1500,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "Burns at the edge: air assist and a fast pass.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "fabric/polyester-felt",
+   "family": "fabric",
+   "names": {
+    "en": "Polyester felt",
+    "es": "Fieltro de poliéster",
+    "de": "Polyesterfilz",
+    "fr": "Feutre de polyester",
+    "it": "Feltro di poliestere",
+    "ja": "ポリエステルフェルト",
+    "zh": "涤纶毡",
+    "pt": "Feltro de poliéster"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [
+    1,
+    2,
+    3,
+    5
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "melts_or_chars",
+     "flammable"
+    ]
+   },
+   "cnc": [],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 35,
+     "speed_mm_min": 1500,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "The edge melts into a hard bead.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "fabric/wool-felt",
+   "family": "fabric",
+   "names": {
+    "en": "Wool felt",
+    "es": "Fieltro de lana",
+    "de": "Wollfilz",
+    "fr": "Feutre de laine",
+    "it": "Feltro di lana",
+    "ja": "ウールフェルト",
+    "zh": "羊毛毡",
+    "pt": "Feltro de lã"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [
+    1,
+    2,
+    3,
+    5
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "flammable"
+    ]
+   },
+   "cnc": [],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 40,
+     "speed_mm_min": 1500,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 3,
+     "power_pct": 30,
+     "speed_mm_min": 2400,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "diode",
+     "mode": "cut",
+     "power_w": 10,
+     "thickness_mm": 3,
+     "power_pct": 100,
+     "speed_mm_min": 800,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": null,
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "foam/eva-foam",
+   "family": "foam",
+   "names": {
+    "en": "EVA foam",
+    "es": "Goma EVA",
+    "de": "EVA-Schaum",
+    "fr": "Mousse EVA",
+    "it": "Schiuma EVA",
+    "ja": "EVAフォーム",
+    "zh": "EVA泡沫",
+    "pt": "Espuma EVA"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [
+    2,
+    3,
+    5,
+    10
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "melts_or_chars",
+     "flammable"
+    ]
+   },
+   "cnc": [],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 5,
+     "power_pct": 35,
+     "speed_mm_min": 1200,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "The edge melts a little.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "foam/extruded-polystyrene-xps",
+   "family": "foam",
+   "names": {
+    "en": "Extruded polystyrene (XPS)",
+    "es": "Poliestireno extruido (XPS)",
+    "de": "Extrudiertes Polystyrol (XPS)",
+    "fr": "Polystyrène extrudé (XPS)",
+    "it": "Polistirene estruso (XPS)",
+    "ja": "押出法ポリスチレンフォーム（XPS）",
+    "zh": "挤塑聚苯乙烯泡沫（XPS）",
+    "pt": "Poliestireno extrudido (XPS)"
+   },
+   "density_g_cm3": 0.035,
+   "thicknesses_mm": [
+    10,
+    20,
+    30
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": false,
+    "hazards": [
+     "flammable",
+     "melts_or_chars",
+     "toxic_fumes"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 1800,
+     "plunge_mm_min": 600,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 2500,
+     "plunge_mm_min": 800,
+     "depth_per_pass_mm": 6.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 1800,
+     "plunge_mm_min": 600,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 2500,
+     "plunge_mm_min": 800,
+     "depth_per_pass_mm": 6.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "It burns with a smoky flame under a laser. A router cuts it cleanly at speed.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "foam/polyethylene-foam",
+   "family": "foam",
+   "names": {
+    "en": "Polyethylene foam",
+    "es": "Espuma de polietileno",
+    "de": "Polyethylenschaum",
+    "fr": "Mousse de polyéthylène",
+    "it": "Schiuma di polietilene",
+    "ja": "ポリエチレンフォーム",
+    "zh": "聚乙烯泡沫",
+    "pt": "Espuma de polietileno"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [
+    3,
+    5,
+    10
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": false,
+    "hazards": [
+     "melts_or_chars",
+     "flammable"
+    ]
+   },
+   "cnc": [],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "It melts and keeps burning: not for a laser.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "foam/polyurethane-foam",
+   "family": "foam",
+   "names": {
+    "en": "Polyurethane foam",
+    "es": "Espuma de poliuretano",
+    "de": "Polyurethanschaum",
+    "fr": "Mousse de polyuréthane",
+    "it": "Schiuma di poliuretano",
+    "ja": "ポリウレタンフォーム",
+    "zh": "聚氨酯泡沫",
+    "pt": "Espuma de poliuretano"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [
+    10,
+    20
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": true,
+    "hazards": [
+     "cyanide",
+     "toxic_fumes",
+     "flammable"
+    ]
+   },
+   "cnc": [],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "Never put it under a laser.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "leather/chrome-tanned-leather",
+   "family": "leather",
+   "names": {
+    "en": "Chrome-tanned leather",
+    "es": "Cuero curtido al cromo",
+    "de": "Chromgegerbtes Leder",
+    "fr": "Cuir tanné au chrome",
+    "it": "Cuoio a concia al cromo",
+    "ja": "クロムなめし革",
+    "zh": "铬鞣革",
+    "pt": "Couro curtido ao crómio"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [
+    1,
+    2,
+    3
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": true,
+    "hazards": [
+     "chromium",
+     "toxic_fumes"
+    ]
+   },
+   "cnc": [],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "Kept out of the laser on purpose, to be safe.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "leather/faux-leather-pu-or-pvc",
+   "family": "leather",
+   "names": {
+    "en": "Faux leather (PU or PVC)",
+    "es": "Cuero sintético (PU o PVC)",
+    "de": "Kunstleder (PU oder PVC)",
+    "fr": "Similicuir (PU ou PVC)",
+    "it": "Finta pelle (PU o PVC)",
+    "ja": "合成皮革（PUまたはPVC）",
+    "zh": "人造革（PU或PVC）",
+    "pt": "Couro sintético (PU ou PVC)"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": true,
+    "hazards": [
+     "chlorine",
+     "toxic_fumes"
+    ]
+   },
+   "cnc": [],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "Most are PVC or polyurethane: never put it under a laser.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "leather/vegetable-tanned-leather",
+   "family": "leather",
+   "names": {
+    "en": "Vegetable-tanned leather",
+    "es": "Cuero curtido vegetal",
+    "de": "Pflanzlich gegerbtes Leder",
+    "fr": "Cuir tanné végétal",
+    "it": "Cuoio a concia vegetale",
+    "ja": "植物タンニンなめし革",
+    "zh": "植鞣革",
+    "pt": "Couro curtido vegetal"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "flammable"
+    ]
+   },
+   "cnc": [],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 2,
+     "power_pct": 50,
+     "speed_mm_min": 1200,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 2,
+     "power_pct": 35,
+     "speed_mm_min": 1800,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "diode",
+     "mode": "cut",
+     "power_w": 10,
+     "thickness_mm": 2,
+     "power_pct": 100,
+     "speed_mm_min": 300,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 40,
+     "thickness_mm": null,
+     "power_pct": 12,
+     "speed_mm_min": 6000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "The only leather to cut with a laser; it gives off a strong smell.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "paper/corrugated-cardboard",
+   "family": "paper",
+   "names": {
+    "en": "Corrugated cardboard",
+    "es": "Cartón ondulado",
+    "de": "Wellpappe",
+    "fr": "Carton ondulé",
+    "it": "Cartone ondulato",
+    "ja": "段ボール",
+    "zh": "瓦楞纸板",
+    "pt": "Cartão canelado"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [
+    2,
+    3,
+    5
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "flammable"
+    ]
+   },
+   "cnc": [],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 40,
+     "speed_mm_min": 1500,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 3,
+     "power_pct": 30,
+     "speed_mm_min": 2400,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "diode",
+     "mode": "cut",
+     "power_w": 10,
+     "thickness_mm": 3,
+     "power_pct": 100,
+     "speed_mm_min": 600,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "It burns easily: air assist and never leave the machine alone.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "paper/grey-chipboard",
+   "family": "paper",
+   "names": {
+    "en": "Grey chipboard",
+    "es": "Cartón gris",
+    "de": "Graupappe",
+    "fr": "Carton gris",
+    "it": "Cartone grigio",
+    "ja": "チップボール",
+    "zh": "灰纸板",
+    "pt": "Cartão cinzento"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [
+    1,
+    2,
+    3
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "flammable"
+    ]
+   },
+   "cnc": [],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 2,
+     "power_pct": 55,
+     "speed_mm_min": 900,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 2,
+     "power_pct": 40,
+     "speed_mm_min": 1500,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": null,
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "paper/paper",
+   "family": "paper",
+   "names": {
+    "en": "Paper",
+    "es": "Papel",
+    "de": "Papier",
+    "fr": "Papier",
+    "it": "Carta",
+    "ja": "紙",
+    "zh": "纸",
+    "pt": "Papel"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [
+    0.1,
+    0.2
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "flammable"
+    ]
+   },
+   "cnc": [],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 0.2,
+     "power_pct": 15,
+     "speed_mm_min": 6000,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "diode",
+     "mode": "cut",
+     "power_w": 10,
+     "thickness_mm": 0.2,
+     "power_pct": 60,
+     "speed_mm_min": 3000,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "It catches fire at once: fast speed, low power and air assist.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "rubber/laser-rubber-stamp-rubber",
+   "family": "rubber",
+   "names": {
+    "en": "Laser rubber (stamp rubber)",
+    "es": "Goma para láser (goma de sellos)",
+    "de": "Laser-Gummi (Stempelgummi)",
+    "fr": "Caoutchouc pour laser (caoutchouc à tampons)",
+    "it": "Gomma per laser (gomma per timbri)",
+    "ja": "レーザー用ゴム（スタンプゴム）",
+    "zh": "激光橡胶（印章橡胶）",
+    "pt": "Borracha para laser (borracha para carimbos)"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [
+    1,
+    2,
+    3
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "flammable"
+    ]
+   },
+   "cnc": [],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 90,
+     "speed_mm_min": 200,
+     "passes": 2,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 40,
+     "thickness_mm": null,
+     "power_pct": 30,
+     "speed_mm_min": 3000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "Only rubber sold for laser engraving. Ordinary rubber can release toxic fumes.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "rubber/neoprene",
+   "family": "rubber",
+   "names": {
+    "en": "Neoprene",
+    "es": "Neopreno",
+    "de": "Neopren",
+    "fr": "Néoprène",
+    "it": "Neoprene",
+    "ja": "ネオプレン",
+    "zh": "氯丁橡胶",
+    "pt": "Neopreno"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [
+    1,
+    2,
+    3,
+    5
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": true,
+    "hazards": [
+     "chlorine",
+     "toxic_fumes"
+    ]
+   },
+   "cnc": [],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "Neoprene is a chlorine rubber: never put it under a laser.",
+   "source": "general reference values and common commercial sizes"
+  }
+ ]
+}

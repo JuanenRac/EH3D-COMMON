@@ -1,0 +1,1710 @@
+{
+ "schema_version": 1,
+ "materials": [
+  {
+   "id": "wood/balsa",
+   "family": "wood",
+   "names": {
+    "en": "Balsa",
+    "es": "Balsa",
+    "de": "Balsa",
+    "fr": "Balsa",
+    "it": "Balsa",
+    "ja": "バルサ材",
+    "zh": "轻木",
+    "pt": "Balsa"
+   },
+   "density_g_cm3": 0.16,
+   "thicknesses_mm": [
+    1,
+    1.5,
+    2,
+    3,
+    4,
+    5,
+    6,
+    10
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "flammable"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 2000,
+     "plunge_mm_min": 600,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 2500,
+     "plunge_mm_min": 800,
+     "depth_per_pass_mm": 6.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 2000,
+     "plunge_mm_min": 600,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 2500,
+     "plunge_mm_min": 800,
+     "depth_per_pass_mm": 6.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 40,
+     "speed_mm_min": 1500,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 6,
+     "power_pct": 50,
+     "speed_mm_min": 900,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 3,
+     "power_pct": 30,
+     "speed_mm_min": 1800,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "diode",
+     "mode": "cut",
+     "power_w": 10,
+     "thickness_mm": 3,
+     "power_pct": 100,
+     "speed_mm_min": 500,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "Very light and soft: it cuts fast and burns easily.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "wood/bamboo-plywood",
+   "family": "wood",
+   "names": {
+    "en": "Bamboo plywood",
+    "es": "Contrachapado de bambú",
+    "de": "Bambussperrholz",
+    "fr": "Contreplaqué de bambou",
+    "it": "Compensato di bambù",
+    "ja": "竹合板",
+    "zh": "竹胶合板",
+    "pt": "Contraplacado de bambu"
+   },
+   "density_g_cm3": 0.7,
+   "thicknesses_mm": [
+    3,
+    4,
+    6
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "formaldehyde",
+     "fine_dust",
+     "flammable"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 800,
+     "plunge_mm_min": 250,
+     "depth_per_pass_mm": 1.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 2.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 800,
+     "plunge_mm_min": 250,
+     "depth_per_pass_mm": 1.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 2.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 85,
+     "speed_mm_min": 500,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 3,
+     "power_pct": 65,
+     "speed_mm_min": 800,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 40,
+     "thickness_mm": null,
+     "power_pct": 20,
+     "speed_mm_min": 6000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "The glue can release formaldehyde when it burns.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "wood/basswood",
+   "family": "wood",
+   "names": {
+    "en": "Basswood",
+    "es": "Tilo",
+    "de": "Linde",
+    "fr": "Tilleul",
+    "it": "Tiglio",
+    "ja": "シナ材",
+    "zh": "椴木",
+    "pt": "Tília"
+   },
+   "density_g_cm3": 0.45,
+   "thicknesses_mm": [
+    1.5,
+    2,
+    3,
+    4.5,
+    6
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "fine_dust",
+     "flammable"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1800,
+     "plunge_mm_min": 600,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1800,
+     "plunge_mm_min": 600,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 60,
+     "speed_mm_min": 600,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 3,
+     "power_pct": 45,
+     "speed_mm_min": 900,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "diode",
+     "mode": "cut",
+     "power_w": 10,
+     "thickness_mm": 3,
+     "power_pct": 100,
+     "speed_mm_min": 150,
+     "passes": 2,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 40,
+     "thickness_mm": null,
+     "power_pct": 18,
+     "speed_mm_min": 6000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "diode",
+     "mode": "engrave",
+     "power_w": 10,
+     "thickness_mm": null,
+     "power_pct": 60,
+     "speed_mm_min": 3000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "The wood most used for laser work: even grain and little resin.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "wood/beech",
+   "family": "wood",
+   "names": {
+    "en": "Beech",
+    "es": "Haya",
+    "de": "Buche",
+    "fr": "Hêtre",
+    "it": "Faggio",
+    "ja": "ブナ材",
+    "zh": "山毛榉",
+    "pt": "Faia"
+   },
+   "density_g_cm3": 0.72,
+   "thicknesses_mm": [],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "fine_dust",
+     "flammable"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 800,
+     "plunge_mm_min": 250,
+     "depth_per_pass_mm": 1.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 2.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 800,
+     "plunge_mm_min": 250,
+     "depth_per_pass_mm": 1.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 2.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 90,
+     "speed_mm_min": 360,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 3,
+     "power_pct": 70,
+     "speed_mm_min": 600,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 40,
+     "thickness_mm": null,
+     "power_pct": 25,
+     "speed_mm_min": 5000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": null,
+   "source": "general reference values"
+  },
+  {
+   "id": "wood/birch-plywood",
+   "family": "wood",
+   "names": {
+    "en": "Birch plywood",
+    "es": "Contrachapado de abedul",
+    "de": "Birkensperrholz",
+    "fr": "Contreplaqué de bouleau",
+    "it": "Compensato di betulla",
+    "ja": "カバ合板",
+    "zh": "桦木胶合板",
+    "pt": "Contraplacado de bétula"
+   },
+   "density_g_cm3": 0.68,
+   "thicknesses_mm": [
+    3,
+    4,
+    6,
+    9,
+    12,
+    15,
+    18
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "formaldehyde",
+     "fine_dust",
+     "flammable"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 1000,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.2,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 2.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 1000,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.2,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 2.5,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 80,
+     "speed_mm_min": 600,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 6,
+     "power_pct": 90,
+     "speed_mm_min": 240,
+     "passes": 2,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 3,
+     "power_pct": 60,
+     "speed_mm_min": 900,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 6,
+     "power_pct": 70,
+     "speed_mm_min": 500,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "diode",
+     "mode": "cut",
+     "power_w": 10,
+     "thickness_mm": 3,
+     "power_pct": 100,
+     "speed_mm_min": 120,
+     "passes": 3,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 40,
+     "thickness_mm": null,
+     "power_pct": 20,
+     "speed_mm_min": 6000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 60,
+     "thickness_mm": null,
+     "power_pct": 15,
+     "speed_mm_min": 6000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "diode",
+     "mode": "engrave",
+     "power_w": 10,
+     "thickness_mm": null,
+     "power_pct": 60,
+     "speed_mm_min": 3000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "The glue can release formaldehyde when it burns: extraction is needed. A sheet with a dark or a waterproof glue cuts slower.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "wood/cork-sheet",
+   "family": "wood",
+   "names": {
+    "en": "Cork sheet",
+    "es": "Lámina de corcho",
+    "de": "Korkplatte",
+    "fr": "Plaque de liège",
+    "it": "Foglio di sughero",
+    "ja": "コルクシート",
+    "zh": "软木板",
+    "pt": "Placa de cortiça"
+   },
+   "density_g_cm3": 0.24,
+   "thicknesses_mm": [
+    2,
+    3,
+    5
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "flammable"
+    ]
+   },
+   "cnc": [],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 50,
+     "speed_mm_min": 600,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 40,
+     "thickness_mm": null,
+     "power_pct": 15,
+     "speed_mm_min": 6000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "Cork smoulders: never leave the machine alone.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "wood/hdf",
+   "family": "wood",
+   "names": {
+    "en": "HDF",
+    "es": "HDF",
+    "de": "HDF",
+    "fr": "HDF",
+    "it": "HDF",
+    "ja": "HDF",
+    "zh": "HDF",
+    "pt": "HDF"
+   },
+   "density_g_cm3": 0.85,
+   "thicknesses_mm": [
+    2,
+    3,
+    4,
+    6
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "formaldehyde",
+     "fine_dust",
+     "flammable"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 1000,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 1000,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "High density fibreboard: harder on bits than MDF.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "wood/mdf",
+   "family": "wood",
+   "names": {
+    "en": "MDF",
+    "es": "MDF",
+    "de": "MDF",
+    "fr": "MDF",
+    "it": "MDF",
+    "ja": "MDF",
+    "zh": "MDF",
+    "pt": "MDF"
+   },
+   "density_g_cm3": 0.75,
+   "thicknesses_mm": [
+    2.5,
+    3,
+    4,
+    6,
+    9,
+    12,
+    16,
+    18
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "formaldehyde",
+     "fine_dust",
+     "flammable"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 1000,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 1000,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 85,
+     "speed_mm_min": 450,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 6,
+     "power_pct": 95,
+     "speed_mm_min": 200,
+     "passes": 2,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 3,
+     "power_pct": 65,
+     "speed_mm_min": 800,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 6,
+     "power_pct": 75,
+     "speed_mm_min": 400,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "diode",
+     "mode": "cut",
+     "power_w": 10,
+     "thickness_mm": 3,
+     "power_pct": 100,
+     "speed_mm_min": 100,
+     "passes": 3,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 40,
+     "thickness_mm": null,
+     "power_pct": 22,
+     "speed_mm_min": 6000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "Medium density fibreboard: very fine dust, resin that dulls bits and a laser cut that leaves a dark, sooty edge.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "wood/oak",
+   "family": "wood",
+   "names": {
+    "en": "Oak",
+    "es": "Roble",
+    "de": "Eiche",
+    "fr": "Chêne",
+    "it": "Rovere",
+    "ja": "オーク材",
+    "zh": "橡木",
+    "pt": "Carvalho"
+   },
+   "density_g_cm3": 0.72,
+   "thicknesses_mm": [],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "fine_dust",
+     "flammable"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 800,
+     "plunge_mm_min": 250,
+     "depth_per_pass_mm": 1.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 2.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 800,
+     "plunge_mm_min": 250,
+     "depth_per_pass_mm": 1.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 2.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 90,
+     "speed_mm_min": 360,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 3,
+     "power_pct": 70,
+     "speed_mm_min": 600,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 40,
+     "thickness_mm": null,
+     "power_pct": 25,
+     "speed_mm_min": 5000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "Oak dust is harmful: extraction and a mask are needed.",
+   "source": "general reference values"
+  },
+  {
+   "id": "wood/pine",
+   "family": "wood",
+   "names": {
+    "en": "Pine",
+    "es": "Pino",
+    "de": "Kiefer",
+    "fr": "Pin",
+    "it": "Pino",
+    "ja": "マツ材",
+    "zh": "松木",
+    "pt": "Pinho"
+   },
+   "density_g_cm3": 0.5,
+   "thicknesses_mm": [],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "fine_dust",
+     "flammable"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1800,
+     "plunge_mm_min": 600,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1800,
+     "plunge_mm_min": 600,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 70,
+     "speed_mm_min": 500,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 3,
+     "power_pct": 50,
+     "speed_mm_min": 800,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 40,
+     "thickness_mm": null,
+     "power_pct": 20,
+     "speed_mm_min": 6000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "Resin makes the laser edge sooty and can gum a bit.",
+   "source": "general reference values"
+  },
+  {
+   "id": "wood/poplar-plywood",
+   "family": "wood",
+   "names": {
+    "en": "Poplar plywood",
+    "es": "Contrachapado de álamo",
+    "de": "Pappelsperrholz",
+    "fr": "Contreplaqué de peuplier",
+    "it": "Compensato di pioppo",
+    "ja": "ポプラ合板",
+    "zh": "杨木胶合板",
+    "pt": "Contraplacado de choupo"
+   },
+   "density_g_cm3": 0.45,
+   "thicknesses_mm": [
+    3,
+    4,
+    6,
+    9,
+    12,
+    18
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "formaldehyde",
+     "fine_dust",
+     "flammable"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 1000,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.2,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 2.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 1000,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.2,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 2.5,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 80,
+     "speed_mm_min": 600,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 6,
+     "power_pct": 90,
+     "speed_mm_min": 240,
+     "passes": 2,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 3,
+     "power_pct": 60,
+     "speed_mm_min": 900,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 6,
+     "power_pct": 70,
+     "speed_mm_min": 500,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "diode",
+     "mode": "cut",
+     "power_w": 10,
+     "thickness_mm": 3,
+     "power_pct": 100,
+     "speed_mm_min": 120,
+     "passes": 3,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 40,
+     "thickness_mm": null,
+     "power_pct": 20,
+     "speed_mm_min": 6000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 60,
+     "thickness_mm": null,
+     "power_pct": 15,
+     "speed_mm_min": 6000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "diode",
+     "mode": "engrave",
+     "power_w": 10,
+     "thickness_mm": null,
+     "power_pct": 60,
+     "speed_mm_min": 3000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "Lighter than birch plywood and a little faster to cut; the glue can release formaldehyde when it burns.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "wood/solid-birch",
+   "family": "wood",
+   "names": {
+    "en": "Solid birch",
+    "es": "Abedul macizo",
+    "de": "Birke massiv",
+    "fr": "Bouleau massif",
+    "it": "Betulla massello",
+    "ja": "無垢のカバ材",
+    "zh": "实木桦木",
+    "pt": "Bétula maciça"
+   },
+   "density_g_cm3": 0.65,
+   "thicknesses_mm": [],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "fine_dust",
+     "flammable"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 800,
+     "plunge_mm_min": 250,
+     "depth_per_pass_mm": 1.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 2.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 800,
+     "plunge_mm_min": 250,
+     "depth_per_pass_mm": 1.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 2.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 90,
+     "speed_mm_min": 360,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 3,
+     "power_pct": 70,
+     "speed_mm_min": 600,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 40,
+     "thickness_mm": null,
+     "power_pct": 25,
+     "speed_mm_min": 5000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": null,
+   "source": "general reference values"
+  },
+  {
+   "id": "wood/walnut",
+   "family": "wood",
+   "names": {
+    "en": "Walnut",
+    "es": "Nogal",
+    "de": "Nussbaum",
+    "fr": "Noyer",
+    "it": "Noce",
+    "ja": "ウォールナット材",
+    "zh": "胡桃木",
+    "pt": "Nogueira"
+   },
+   "density_g_cm3": 0.65,
+   "thicknesses_mm": [],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "fine_dust",
+     "flammable"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 800,
+     "plunge_mm_min": 250,
+     "depth_per_pass_mm": 1.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 2.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 18000,
+     "feed_mm_min": 800,
+     "plunge_mm_min": 250,
+     "depth_per_pass_mm": 1.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 16000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 2.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 90,
+     "speed_mm_min": 360,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 3,
+     "power_pct": 70,
+     "speed_mm_min": 600,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 40,
+     "thickness_mm": null,
+     "power_pct": 25,
+     "speed_mm_min": 5000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": null,
+   "source": "general reference values"
+  }
+ ]
+}

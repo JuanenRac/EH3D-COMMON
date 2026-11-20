@@ -17,7 +17,11 @@
 //! * [`documents`]: the catalogue of the reference documents, classified by category and by
 //!   what they serve (the machine program or the design tool);
 //! * [`spindle`]: the spindles a machine can carry and the limits of each (turns, feeds, power and the thickest bit), read from `spindles.cfg`;
-//! * [`error`]: the typed errors with the stable codes `EH3D-MAT-001` to `EH3D-MAT-009`.
+//! * [`machining`]: the second family, of the materials that a CNC router or a laser cuts, engraves
+//!   or mills (woods, acrylic, paper, leather, metals, board stock...): their safety for a laser
+//!   and starting points for the machine, never extrapolated and never verified;
+//! * [`i18n`]: the titles of the codes in the eight languages of the suite;
+//! * [`error`]: the typed errors with the stable codes `EH3D-MAT-001` to `EH3D-MAT-015`.
 //!
 //! Nothing here opens a window, a file or the network: the data is part of the library.
 
@@ -26,7 +30,9 @@
 pub mod data;
 pub mod documents;
 pub mod error;
+pub mod i18n;
 pub mod interp;
+pub mod machining;
 pub mod model;
 pub mod query;
 pub mod spindle;

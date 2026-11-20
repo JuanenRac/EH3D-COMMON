@@ -1,0 +1,386 @@
+{
+ "schema_version": 1,
+ "materials": [
+  {
+   "id": "composite/carbon-fibre-sheet",
+   "family": "composite",
+   "names": {
+    "en": "Carbon fibre sheet",
+    "es": "Lámina de fibra de carbono",
+    "de": "Kohlefaserplatte",
+    "fr": "Plaque de fibre de carbone",
+    "it": "Lastra di fibra di carbonio",
+    "ja": "カーボンファイバー板",
+    "zh": "碳纤维板",
+    "pt": "Placa de fibra de carbono"
+   },
+   "density_g_cm3": 1.55,
+   "thicknesses_mm": [
+    1,
+    2,
+    3
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": true,
+    "hazards": [
+     "fibre_dust",
+     "toxic_fumes"
+    ]
+   },
+   "cnc": [],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "The dust conducts electricity and is harmful to breathe; a laser must never touch it.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "pcb_stock/cem-1-copper-clad-board",
+   "family": "pcb_stock",
+   "names": {
+    "en": "CEM-1 copper clad board",
+    "es": "Placa de CEM-1 con cobre",
+    "de": "CEM-1-Platine mit Kupfer",
+    "fr": "Plaque CEM-1 cuivrée",
+    "it": "Basetta CEM-1 ramata",
+    "ja": "銅張CEM-1基板",
+    "zh": "覆铜CEM-1板",
+    "pt": "Placa de CEM-1 com cobre"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [
+    1.5
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": true,
+    "hazards": [
+     "fibre_dust",
+     "toxic_fumes",
+     "reflective"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 1.0,
+     "flutes": 2,
+     "rpm": 24000,
+     "feed_mm_min": 300,
+     "plunge_mm_min": 100,
+     "depth_per_pass_mm": 0.4,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 2.0,
+     "flutes": 2,
+     "rpm": 24000,
+     "feed_mm_min": 500,
+     "plunge_mm_min": 150,
+     "depth_per_pass_mm": 0.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "engrave",
+     "tool": "v_bit",
+     "diameter_mm": 0.1,
+     "flutes": 1,
+     "rpm": 24000,
+     "feed_mm_min": 300,
+     "plunge_mm_min": 100,
+     "depth_per_pass_mm": 0.05,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "engrave",
+     "tool": "v_bit",
+     "diameter_mm": 0.2,
+     "flutes": 1,
+     "rpm": 24000,
+     "feed_mm_min": 400,
+     "plunge_mm_min": 120,
+     "depth_per_pass_mm": 0.08,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": "bungard/cem-1-copper-clad",
+   "notes": "Paper core with glass fibre and epoxy faces. A laser must never touch it.",
+   "source": "general reference values"
+  },
+  {
+   "id": "pcb_stock/fr-2-copper-clad-board",
+   "family": "pcb_stock",
+   "names": {
+    "en": "FR-2 copper clad board",
+    "es": "Placa de FR-2 con cobre",
+    "de": "FR-2-Platine mit Kupfer",
+    "fr": "Plaque FR-2 cuivrée",
+    "it": "Basetta FR-2 ramata",
+    "ja": "銅張FR-2基板",
+    "zh": "覆铜FR-2板",
+    "pt": "Placa de FR-2 com cobre"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [
+    1.5
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": true,
+    "hazards": [
+     "toxic_fumes",
+     "formaldehyde",
+     "reflective"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 1.0,
+     "flutes": 2,
+     "rpm": 24000,
+     "feed_mm_min": 300,
+     "plunge_mm_min": 100,
+     "depth_per_pass_mm": 0.4,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 2.0,
+     "flutes": 2,
+     "rpm": 24000,
+     "feed_mm_min": 500,
+     "plunge_mm_min": 150,
+     "depth_per_pass_mm": 0.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "engrave",
+     "tool": "v_bit",
+     "diameter_mm": 0.1,
+     "flutes": 1,
+     "rpm": 24000,
+     "feed_mm_min": 300,
+     "plunge_mm_min": 100,
+     "depth_per_pass_mm": 0.05,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "engrave",
+     "tool": "v_bit",
+     "diameter_mm": 0.2,
+     "flutes": 1,
+     "rpm": 24000,
+     "feed_mm_min": 400,
+     "plunge_mm_min": 120,
+     "depth_per_pass_mm": 0.08,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": "bungard/fr2-copper-clad",
+   "notes": "Paper and phenolic: the bits last much longer than in FR-4, which makes it the usual choice for isolation milling. A laser must never touch it.",
+   "source": "general reference values"
+  },
+  {
+   "id": "pcb_stock/fr-4-copper-clad-board",
+   "family": "pcb_stock",
+   "names": {
+    "en": "FR-4 copper clad board",
+    "es": "Placa de FR-4 con cobre",
+    "de": "FR-4-Platine mit Kupfer",
+    "fr": "Plaque FR-4 cuivrée",
+    "it": "Basetta FR-4 ramata",
+    "ja": "銅張FR-4基板",
+    "zh": "覆铜FR-4板",
+    "pt": "Placa de FR-4 com cobre"
+   },
+   "density_g_cm3": 1.85,
+   "thicknesses_mm": [
+    0.5,
+    0.8,
+    1.5,
+    2.0,
+    2.5
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": true,
+    "hazards": [
+     "fibre_dust",
+     "toxic_fumes",
+     "reflective"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 1.0,
+     "flutes": 2,
+     "rpm": 24000,
+     "feed_mm_min": 300,
+     "plunge_mm_min": 100,
+     "depth_per_pass_mm": 0.4,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 2.0,
+     "flutes": 2,
+     "rpm": 24000,
+     "feed_mm_min": 500,
+     "plunge_mm_min": 150,
+     "depth_per_pass_mm": 0.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "engrave",
+     "tool": "v_bit",
+     "diameter_mm": 0.1,
+     "flutes": 1,
+     "rpm": 24000,
+     "feed_mm_min": 300,
+     "plunge_mm_min": 100,
+     "depth_per_pass_mm": 0.05,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "engrave",
+     "tool": "v_bit",
+     "diameter_mm": 0.2,
+     "flutes": 1,
+     "rpm": 24000,
+     "feed_mm_min": 400,
+     "plunge_mm_min": 120,
+     "depth_per_pass_mm": 0.08,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": "bungard/fr4-copper-clad",
+   "notes": "Glass fibre and epoxy: the dust is harmful (extraction and a mask) and a laser must never touch it. The thicknesses are those of the board database record.",
+   "source": "general reference values"
+  },
+  {
+   "id": "pcb_stock/fr-4-unclad-sheet",
+   "family": "pcb_stock",
+   "names": {
+    "en": "FR-4 unclad sheet",
+    "es": "Lámina de FR-4 sin cobre",
+    "de": "FR-4-Platte ohne Kupfer",
+    "fr": "Plaque FR-4 sans cuivre",
+    "it": "Lastra di FR-4 senza rame",
+    "ja": "銅なしFR-4板",
+    "zh": "无铜FR-4板",
+    "pt": "Placa de FR-4 sem cobre"
+   },
+   "density_g_cm3": 1.85,
+   "thicknesses_mm": [
+    1.55
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": true,
+    "hazards": [
+     "fibre_dust",
+     "toxic_fumes"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 1.0,
+     "flutes": 2,
+     "rpm": 24000,
+     "feed_mm_min": 300,
+     "plunge_mm_min": 100,
+     "depth_per_pass_mm": 0.4,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 2.0,
+     "flutes": 2,
+     "rpm": 24000,
+     "feed_mm_min": 500,
+     "plunge_mm_min": 150,
+     "depth_per_pass_mm": 0.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "engrave",
+     "tool": "v_bit",
+     "diameter_mm": 0.1,
+     "flutes": 1,
+     "rpm": 24000,
+     "feed_mm_min": 300,
+     "plunge_mm_min": 100,
+     "depth_per_pass_mm": 0.05,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "engrave",
+     "tool": "v_bit",
+     "diameter_mm": 0.2,
+     "flutes": 1,
+     "rpm": 24000,
+     "feed_mm_min": 400,
+     "plunge_mm_min": 120,
+     "depth_per_pass_mm": 0.08,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": "bungard/technical-glass-fibre-laminate",
+   "notes": "Glass fibre laminate without copper, for technical parts. A laser must never touch it.",
+   "source": "general reference values"
+  }
+ ]
+}

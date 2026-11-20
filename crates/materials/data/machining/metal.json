@@ -1,0 +1,267 @@
+{
+ "schema_version": 1,
+ "materials": [
+  {
+   "id": "metal/aluminium-6061",
+   "family": "metal",
+   "names": {
+    "en": "Aluminium 6061",
+    "es": "Aluminio 6061",
+    "de": "Aluminium 6061",
+    "fr": "Aluminium 6061",
+    "it": "Alluminio 6061",
+    "ja": "アルミニウム6061",
+    "zh": "铝6061",
+    "pt": "Alumínio 6061"
+   },
+   "density_g_cm3": 2.7,
+   "thicknesses_mm": [
+    1,
+    1.5,
+    2,
+    3,
+    5,
+    6
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": false,
+    "hazards": [
+     "reflective"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 12000,
+     "feed_mm_min": 500,
+     "plunge_mm_min": 150,
+     "depth_per_pass_mm": 0.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 10000,
+     "feed_mm_min": 700,
+     "plunge_mm_min": 200,
+     "depth_per_pass_mm": 1.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 12000,
+     "feed_mm_min": 500,
+     "plunge_mm_min": 150,
+     "depth_per_pass_mm": 0.5,
+     "stepover_pct": 30,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 10000,
+     "feed_mm_min": 700,
+     "plunge_mm_min": 200,
+     "depth_per_pass_mm": 1.0,
+     "stepover_pct": 30,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "Mill with a single flute bit made for aluminium, a lubricant and a light cut; it welds to the bit if the chips are not cleared.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "metal/brass-cuzn37",
+   "family": "metal",
+   "names": {
+    "en": "Brass (CuZn37)",
+    "es": "Latón (CuZn37)",
+    "de": "Messing (CuZn37)",
+    "fr": "Laiton (CuZn37)",
+    "it": "Ottone (CuZn37)",
+    "ja": "真鍮（CuZn37）",
+    "zh": "黄铜（CuZn37）",
+    "pt": "Latão (CuZn37)"
+   },
+   "density_g_cm3": 8.4,
+   "thicknesses_mm": [
+    0.5,
+    1,
+    2,
+    3
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": false,
+    "hazards": [
+     "reflective"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 10000,
+     "feed_mm_min": 300,
+     "plunge_mm_min": 100,
+     "depth_per_pass_mm": 0.3,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 8000,
+     "feed_mm_min": 450,
+     "plunge_mm_min": 150,
+     "depth_per_pass_mm": 0.6,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 10000,
+     "feed_mm_min": 300,
+     "plunge_mm_min": 100,
+     "depth_per_pass_mm": 0.3,
+     "stepover_pct": 30,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 8000,
+     "feed_mm_min": 450,
+     "plunge_mm_min": 150,
+     "depth_per_pass_mm": 0.6,
+     "stepover_pct": 30,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "Mills cleanly with a sharp bit and a light cut.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "metal/copper-cu-etp",
+   "family": "metal",
+   "names": {
+    "en": "Copper (Cu-ETP)",
+    "es": "Cobre (Cu-ETP)",
+    "de": "Kupfer (Cu-ETP)",
+    "fr": "Cuivre (Cu-ETP)",
+    "it": "Rame (Cu-ETP)",
+    "ja": "銅（Cu-ETP）",
+    "zh": "铜（Cu-ETP）",
+    "pt": "Cobre (Cu-ETP)"
+   },
+   "density_g_cm3": 8.9,
+   "thicknesses_mm": [
+    0.5,
+    1,
+    2
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": false,
+    "hazards": [
+     "reflective"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 10000,
+     "feed_mm_min": 250,
+     "plunge_mm_min": 100,
+     "depth_per_pass_mm": 0.2,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 8000,
+     "feed_mm_min": 350,
+     "plunge_mm_min": 120,
+     "depth_per_pass_mm": 0.4,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 2,
+     "rpm": 10000,
+     "feed_mm_min": 250,
+     "plunge_mm_min": 100,
+     "depth_per_pass_mm": 0.2,
+     "stepover_pct": 30,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 2,
+     "rpm": 8000,
+     "feed_mm_min": 350,
+     "plunge_mm_min": 120,
+     "depth_per_pass_mm": 0.4,
+     "stepover_pct": 30,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "Soft and gummy: a sharp bit, a light cut and the chips cleared.",
+   "source": "general reference values and common commercial sizes"
+  }
+ ]
+}

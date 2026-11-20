@@ -1,0 +1,70 @@
+{
+ "schema_version": 1,
+ "materials": [
+  {
+   "id": "mineral/ceramic-tile",
+   "family": "mineral",
+   "names": {
+    "en": "Ceramic tile",
+    "es": "Baldosa cerámica",
+    "de": "Keramikfliese",
+    "fr": "Carrelage en céramique",
+    "it": "Piastrella in ceramica",
+    "ja": "セラミックタイル",
+    "zh": "陶瓷砖",
+    "pt": "Ladrilho cerâmico"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [
+    8
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "fine_dust"
+    ]
+   },
+   "cnc": [],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "A CO2 laser can mark a glazed tile; it does not cut it.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "mineral/glass",
+   "family": "mineral",
+   "names": {
+    "en": "Glass",
+    "es": "Vidrio",
+    "de": "Glas",
+    "fr": "Verre",
+    "it": "Vetro",
+    "ja": "ガラス",
+    "zh": "玻璃",
+    "pt": "Vidro"
+   },
+   "density_g_cm3": 2.5,
+   "thicknesses_mm": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "transparent"
+    ]
+   },
+   "cnc": [],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "A CO2 laser marks the surface of glass; it does not cut it and a diode laser does nothing.",
+   "source": "general reference values and common commercial sizes"
+  }
+ ]
+}

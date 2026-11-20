@@ -1,7 +1,8 @@
-//! What the database reports: typed errors with the stable codes `EH3D-MAT-001` to `EH3D-MAT-009`.
+//! What the database reports: typed errors with the stable codes `EH3D-MAT-001` to `EH3D-MAT-015`.
 //!
-//! A code never changes its meaning and is never reused. The titles are in English; the user
-//! interface translates them by the key `diag.<code>`, as for the codes of the container.
+//! A code never changes its meaning and is never reused. The titles are in English here and in
+//! the eight languages of the suite in [`crate::i18n`]; the user interface may also translate them by
+//! the key `diag.<code>`, as for the codes of the container.
 
 use std::fmt;
 
@@ -28,11 +29,23 @@ pub enum MatCode {
     Interpolation = 8,
     /// 009: a record of the document catalogue is not valid.
     Document = 9,
+    /// 010: a starting value of a machining record is outside the range it can have.
+    PointRange = 10,
+    /// 011: a laser is not allowed on the material (or the data lists laser points for it).
+    LaserRefused = 11,
+    /// 012: the material has no starting points for the process asked.
+    NoStartPoints = 12,
+    /// 013: the request is outside the range of the known starting points.
+    OutsideKnown = 13,
+    /// 014: a record of the machining family is not valid.
+    Workpiece = 14,
+    /// 015: a machining record names a board material that is not in the board database.
+    BrokenLink = 15,
 }
 
 impl MatCode {
     /// Every code, in order.
-    pub const ALL: [MatCode; 9] = [
+    pub const ALL: [MatCode; 15] = [
         MatCode::Parse,
         MatCode::SchemaVersion,
         MatCode::DuplicateId,
@@ -42,9 +55,15 @@ impl MatCode {
         MatCode::FileList,
         MatCode::Interpolation,
         MatCode::Document,
+        MatCode::PointRange,
+        MatCode::LaserRefused,
+        MatCode::NoStartPoints,
+        MatCode::OutsideKnown,
+        MatCode::Workpiece,
+        MatCode::BrokenLink,
     ];
 
-    /// The number part, 1 to 9.
+    /// The number part, 1 to 15.
     pub fn number(self) -> u8 {
         self as u8
     }
@@ -61,6 +80,12 @@ impl MatCode {
             MatCode::FileList => "EH3D-MAT-007",
             MatCode::Interpolation => "EH3D-MAT-008",
             MatCode::Document => "EH3D-MAT-009",
+            MatCode::PointRange => "EH3D-MAT-010",
+            MatCode::LaserRefused => "EH3D-MAT-011",
+            MatCode::NoStartPoints => "EH3D-MAT-012",
+            MatCode::OutsideKnown => "EH3D-MAT-013",
+            MatCode::Workpiece => "EH3D-MAT-014",
+            MatCode::BrokenLink => "EH3D-MAT-015",
         }
     }
 
@@ -81,7 +106,18 @@ impl MatCode {
             MatCode::FileList => "Data file not in the embedded list",
             MatCode::Interpolation => "Value cannot be interpolated",
             MatCode::Document => "Document record not valid",
+            MatCode::PointRange => "Starting value out of range",
+            MatCode::LaserRefused => "Laser not allowed on this material",
+            MatCode::NoStartPoints => "No starting points for this process",
+            MatCode::OutsideKnown => "Request outside the known range",
+            MatCode::Workpiece => "Workpiece record not valid",
+            MatCode::BrokenLink => "Link to the board database broken",
         }
+    }
+
+    /// The title in a language of the suite (see [`crate::i18n`]).
+    pub fn title_in(self, lang: crate::i18n::Lang) -> &'static str {
+        crate::i18n::code_title(self, lang)
     }
 }
 
@@ -172,6 +208,60 @@ pub enum MatError {
         /// What is wrong.
         reason: String,
     },
+    /// A starting value of a machining record is outside the range it can have.
+    #[error("EH3D-MAT-010: {id}: {field} = {value} is outside {min} to {max}")]
+    PointRange {
+        /// The material.
+        id: String,
+        /// The field, with its place in the record.
+        field: String,
+        /// The value.
+        value: f64,
+        /// The lowest value allowed.
+        min: f64,
+        /// The highest value allowed.
+        max: f64,
+    },
+    /// A laser is not allowed on the material, or the data lists laser points for it.
+    #[error("EH3D-MAT-011: {id}: {reason}")]
+    LaserRefused {
+        /// The material.
+        id: String,
+        /// Why.
+        reason: String,
+    },
+    /// The material has no starting points for the process asked.
+    #[error("EH3D-MAT-012: {id}: {reason}")]
+    NoStartPoints {
+        /// The material.
+        id: String,
+        /// Which process.
+        reason: String,
+    },
+    /// The request is outside the range of the known starting points.
+    #[error("EH3D-MAT-013: {id}: {reason}")]
+    OutsideKnown {
+        /// The material.
+        id: String,
+        /// What is outside and what is known.
+        reason: String,
+    },
+    /// A record of the machining family is not valid.
+    #[error("EH3D-MAT-014: {id}: {reason}")]
+    Workpiece {
+        /// The material.
+        id: String,
+        /// What is wrong.
+        reason: String,
+    },
+    /// A machining record names a board material that is not in the board database.
+    #[error("EH3D-MAT-015: {id}: the board material {link} is not in the database")]
+    BrokenLink {
+        /// The material.
+        id: String,
+        /// The identifier it names.
+        link: String,
+    },
 }
 
 impl MatError {
@@ -187,6 +277,12 @@ impl MatError {
             MatError::FileList { .. } => MatCode::FileList,
             MatError::Interpolation { .. } => MatCode::Interpolation,
             MatError::Document { .. } => MatCode::Document,
+            MatError::PointRange { .. } => MatCode::PointRange,
+            MatError::LaserRefused { .. } => MatCode::LaserRefused,
+            MatError::NoStartPoints { .. } => MatCode::NoStartPoints,
+            MatError::OutsideKnown { .. } => MatCode::OutsideKnown,
+            MatError::Workpiece { .. } => MatCode::Workpiece,
+            MatError::BrokenLink { .. } => MatCode::BrokenLink,
         }
     }
 }
@@ -196,14 +292,14 @@ mod tests {
     use super::*;
 
     #[test]
-    fn the_nine_codes_are_numbered_without_gaps() {
+    fn the_fifteen_codes_are_numbered_without_gaps() {
         for (index, code) in MatCode::ALL.iter().enumerate() {
             assert_eq!(code.number() as usize, index + 1);
             assert_eq!(code.code(), format!("EH3D-MAT-{:03}", index + 1));
             assert_eq!(MatCode::from_code(code.code()), Some(*code));
             assert!(!code.title().is_empty());
         }
-        assert_eq!(MatCode::from_code("EH3D-MAT-010"), None);
+        assert_eq!(MatCode::from_code("EH3D-MAT-016"), None);
     }
 
     #[test]

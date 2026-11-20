@@ -12,3 +12,6 @@ tests/golden/** -text
 # The data of the 3D printing materials keeps its line ends on every platform
 crates/printmaterials/data/**/*.json -text
 crates/printmaterials/THIRD_PARTY_NOTICES -text
+
+# The machining data of the materials keeps its line ends on every platform
+crates/materials/data/machining/*.json -text

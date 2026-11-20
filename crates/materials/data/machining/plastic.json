@@ -1,0 +1,1303 @@
+{
+ "schema_version": 1,
+ "materials": [
+  {
+   "id": "plastic/abs",
+   "family": "plastic",
+   "names": {
+    "en": "ABS",
+    "es": "ABS",
+    "de": "ABS",
+    "fr": "ABS",
+    "it": "ABS",
+    "ja": "ABS樹脂",
+    "zh": "ABS塑料",
+    "pt": "ABS"
+   },
+   "density_g_cm3": 1.05,
+   "thicknesses_mm": [
+    2,
+    3,
+    5
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": true,
+    "hazards": [
+     "cyanide",
+     "toxic_fumes"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "Never put it under a laser.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "plastic/acetal-pom",
+   "family": "plastic",
+   "names": {
+    "en": "Acetal (POM)",
+    "es": "Acetal (POM)",
+    "de": "Acetal (POM)",
+    "fr": "Acétal (POM)",
+    "it": "Acetale (POM)",
+    "ja": "アセタール（POM）",
+    "zh": "聚甲醛（POM）",
+    "pt": "Acetal (POM)"
+   },
+   "density_g_cm3": 1.41,
+   "thicknesses_mm": [
+    2,
+    3,
+    5,
+    10
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": true,
+    "hazards": [
+     "formaldehyde",
+     "toxic_fumes"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "Never put it under a laser. A good plastic to mill.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "plastic/adhesive-vinyl",
+   "family": "plastic",
+   "names": {
+    "en": "Adhesive vinyl",
+    "es": "Vinilo adhesivo",
+    "de": "Klebefolie (Vinyl)",
+    "fr": "Vinyle adhésif",
+    "it": "Vinile adesivo",
+    "ja": "粘着ビニール",
+    "zh": "不干胶乙烯基",
+    "pt": "Vinil autocolante"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": true,
+    "hazards": [
+     "chlorine",
+     "toxic_fumes"
+    ]
+   },
+   "cnc": [],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "Vinyl is PVC: never put it under a laser. A knife plotter cuts it.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "plastic/cast-acrylic-pmma",
+   "family": "plastic",
+   "names": {
+    "en": "Cast acrylic (PMMA)",
+    "es": "Acrílico colado (PMMA)",
+    "de": "Gussacryl (PMMA)",
+    "fr": "Acrylique coulé (PMMA)",
+    "it": "Acrilico colato (PMMA)",
+    "ja": "キャストアクリル（PMMA）",
+    "zh": "浇铸亚克力（PMMA）",
+    "pt": "Acrílico vazado (PMMA)"
+   },
+   "density_g_cm3": 1.18,
+   "thicknesses_mm": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "flammable"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 900,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 2.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 900,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 2.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 80,
+     "speed_mm_min": 360,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 6,
+     "power_pct": 90,
+     "speed_mm_min": 180,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 3,
+     "power_pct": 60,
+     "speed_mm_min": 700,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 6,
+     "power_pct": 70,
+     "speed_mm_min": 350,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 40,
+     "thickness_mm": null,
+     "power_pct": 15,
+     "speed_mm_min": 6000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "Cut by a CO2 laser with a clean, flame polished edge. Clear acrylic does not absorb the beam of a blue diode laser: use a CO2 laser. Engraving frosts the surface.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "plastic/extruded-acrylic-pmma",
+   "family": "plastic",
+   "names": {
+    "en": "Extruded acrylic (PMMA)",
+    "es": "Acrílico extruido (PMMA)",
+    "de": "Extrudiertes Acryl (PMMA)",
+    "fr": "Acrylique extrudé (PMMA)",
+    "it": "Acrilico estruso (PMMA)",
+    "ja": "押出アクリル（PMMA）",
+    "zh": "挤出亚克力（PMMA）",
+    "pt": "Acrílico extrudido (PMMA)"
+   },
+   "density_g_cm3": 1.18,
+   "thicknesses_mm": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "flammable"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 900,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 2.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 900,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 2.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 85,
+     "speed_mm_min": 360,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 6,
+     "power_pct": 95,
+     "speed_mm_min": 170,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 3,
+     "power_pct": 65,
+     "speed_mm_min": 680,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 6,
+     "power_pct": 75,
+     "speed_mm_min": 330,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 40,
+     "thickness_mm": null,
+     "power_pct": 15,
+     "speed_mm_min": 6000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "general laser practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "Cheaper than cast acrylic; it melts more under a router bit and the laser edge is less clear. Clear acrylic needs a CO2 laser.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "plastic/foam-pvc-board",
+   "family": "plastic",
+   "names": {
+    "en": "Foam PVC board",
+    "es": "PVC espumado",
+    "de": "PVC-Schaumplatte",
+    "fr": "PVC expansé",
+    "it": "PVC espanso",
+    "ja": "発泡PVC板",
+    "zh": "PVC发泡板",
+    "pt": "PVC espumado"
+   },
+   "density_g_cm3": 0.55,
+   "thicknesses_mm": [
+    3,
+    5,
+    10
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": true,
+    "hazards": [
+     "chlorine",
+     "toxic_fumes"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "Sold as foam board for signs. Never put it under a laser.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "plastic/hdpe",
+   "family": "plastic",
+   "names": {
+    "en": "HDPE",
+    "es": "HDPE (polietileno de alta densidad)",
+    "de": "HDPE (Polyethylen hoher Dichte)",
+    "fr": "PEHD (polyéthylène haute densité)",
+    "it": "HDPE (polietilene ad alta densità)",
+    "ja": "HDPE（高密度ポリエチレン）",
+    "zh": "HDPE（高密度聚乙烯）",
+    "pt": "HDPE (polietileno de alta densidade)"
+   },
+   "density_g_cm3": 0.95,
+   "thicknesses_mm": [
+    3,
+    5,
+    10
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": false,
+    "hazards": [
+     "melts_or_chars",
+     "flammable"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "It melts and burns instead of cutting: not for a laser. Mill it with a sharp single flute bit and a low feed.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "plastic/high-impact-polystyrene-hips",
+   "family": "plastic",
+   "names": {
+    "en": "High impact polystyrene (HIPS)",
+    "es": "Poliestireno de alto impacto (HIPS)",
+    "de": "Schlagzähes Polystyrol (HIPS)",
+    "fr": "Polystyrène choc (HIPS)",
+    "it": "Polistirene antiurto (HIPS)",
+    "ja": "耐衝撃性ポリスチレン（HIPS）",
+    "zh": "高抗冲聚苯乙烯（HIPS）",
+    "pt": "Poliestireno de alto impacto (HIPS)"
+   },
+   "density_g_cm3": 1.05,
+   "thicknesses_mm": [
+    1,
+    2,
+    3
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": false,
+    "hazards": [
+     "flammable",
+     "melts_or_chars",
+     "toxic_fumes"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "It burns with a smoky flame under a laser.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "plastic/nylon-pa6",
+   "family": "plastic",
+   "names": {
+    "en": "Nylon (PA6)",
+    "es": "Nailon (PA6)",
+    "de": "Nylon (PA6)",
+    "fr": "Nylon (PA6)",
+    "it": "Nylon (PA6)",
+    "ja": "ナイロン（PA6）",
+    "zh": "尼龙（PA6）",
+    "pt": "Nylon (PA6)"
+   },
+   "density_g_cm3": 1.14,
+   "thicknesses_mm": [
+    3,
+    5,
+    10
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": true,
+    "hazards": [
+     "melts_or_chars",
+     "cyanide"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "Never put it under a laser. It takes up water: dry it before milling to size.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "plastic/petg-sheet",
+   "family": "plastic",
+   "names": {
+    "en": "PETG sheet",
+    "es": "Lámina de PETG",
+    "de": "PETG-Platte",
+    "fr": "Plaque de PETG",
+    "it": "Lastra di PETG",
+    "ja": "PETG板",
+    "zh": "PETG板材",
+    "pt": "Placa de PETG"
+   },
+   "density_g_cm3": 1.27,
+   "thicknesses_mm": [
+    1,
+    2,
+    3,
+    5
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": false,
+    "hazards": [
+     "melts_or_chars",
+     "toxic_fumes"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "It chars and melts under a laser. Mill it with a sharp single flute bit.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "plastic/polycarbonate-pc",
+   "family": "plastic",
+   "names": {
+    "en": "Polycarbonate (PC)",
+    "es": "Policarbonato (PC)",
+    "de": "Polycarbonat (PC)",
+    "fr": "Polycarbonate (PC)",
+    "it": "Policarbonato (PC)",
+    "ja": "ポリカーボネート（PC）",
+    "zh": "聚碳酸酯（PC）",
+    "pt": "Policarbonato (PC)"
+   },
+   "density_g_cm3": 1.2,
+   "thicknesses_mm": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": true,
+    "hazards": [
+     "melts_or_chars",
+     "toxic_fumes"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "A laser does not cut it cleanly: it chars and gives off toxic fumes. Mill it with a sharp single flute bit.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "plastic/polypropylene-pp",
+   "family": "plastic",
+   "names": {
+    "en": "Polypropylene (PP)",
+    "es": "Polipropileno (PP)",
+    "de": "Polypropylen (PP)",
+    "fr": "Polypropylène (PP)",
+    "it": "Polipropilene (PP)",
+    "ja": "ポリプロピレン（PP）",
+    "zh": "聚丙烯（PP）",
+    "pt": "Polipropileno (PP)"
+   },
+   "density_g_cm3": 0.91,
+   "thicknesses_mm": [
+    2,
+    3,
+    5
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": false,
+    "hazards": [
+     "melts_or_chars",
+     "flammable"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "It melts and burns instead of cutting: not for a laser.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "plastic/ptfe",
+   "family": "plastic",
+   "names": {
+    "en": "PTFE",
+    "es": "PTFE (teflón)",
+    "de": "PTFE (Teflon)",
+    "fr": "PTFE (téflon)",
+    "it": "PTFE (teflon)",
+    "ja": "PTFE（テフロン）",
+    "zh": "PTFE（聚四氟乙烯）",
+    "pt": "PTFE (teflon)"
+   },
+   "density_g_cm3": 2.2,
+   "thicknesses_mm": [
+    1,
+    2,
+    3,
+    5
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": true,
+    "hazards": [
+     "fluorine",
+     "toxic_fumes"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "Never put it under a laser.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "plastic/rigid-pvc",
+   "family": "plastic",
+   "names": {
+    "en": "Rigid PVC",
+    "es": "PVC rígido",
+    "de": "Hart-PVC",
+    "fr": "PVC rigide",
+    "it": "PVC rigido",
+    "ja": "硬質塩化ビニル（PVC）",
+    "zh": "硬质PVC",
+    "pt": "PVC rígido"
+   },
+   "density_g_cm3": 1.4,
+   "thicknesses_mm": [
+    1,
+    2,
+    3,
+    5,
+    10
+   ],
+   "safety": {
+    "laser_cut_allowed": false,
+    "laser_engrave_allowed": false,
+    "laser_unsafe": true,
+    "hazards": [
+     "chlorine",
+     "toxic_fumes"
+    ]
+   },
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 1200,
+     "plunge_mm_min": 400,
+     "depth_per_pass_mm": 1.5,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    },
+    {
+     "op": "pocket",
+     "tool": "end_mill",
+     "diameter_mm": 6.0,
+     "flutes": 1,
+     "rpm": 16000,
+     "feed_mm_min": 1500,
+     "plunge_mm_min": 500,
+     "depth_per_pass_mm": 3.0,
+     "stepover_pct": 40,
+     "verified": false,
+     "source": "general machining practice, typical starting value; not a manufacturer table"
+    }
+   ],
+   "laser": [],
+   "pcb_material_id": null,
+   "notes": "Never put it under a laser. Milling is possible with extraction.",
+   "source": "general reference values and common commercial sizes"
+  }
+ ]
+}
