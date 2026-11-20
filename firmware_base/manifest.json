@@ -198,10 +198,28 @@
         "EH3D-NODE-BUNGARD-AUX": "core/semver.hpp"
       }
     },
+    "core/server_errors.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/server_errors.hpp",
+        "EH3D-NODE-HMI-GUI": "core/server_errors.hpp"
+      }
+    },
+    "core/server_errors_gen.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/server_errors_gen.hpp",
+        "EH3D-NODE-HMI-GUI": "core/server_errors_gen.hpp"
+      }
+    },
     "core/server_link.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD-HMI": "core/server_link.hpp",
         "EH3D-NODE-HMI-GUI": "core/server_link.hpp"
+      }
+    },
+    "core/session.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/session.hpp",
+        "EH3D-NODE-HMI-GUI": "core/session.hpp"
       }
     },
     "core/stage_notice.hpp": {
@@ -683,6 +701,12 @@
         "EH3D-NODE-HMI-GUI": "tests/test_quality.cpp"
       }
     },
+    "tests/test_session.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "tests/test_session.cpp",
+        "EH3D-NODE-HMI-GUI": "tests/test_session.cpp"
+      }
+    },
     "tests/test_shared.cpp": {
       "targets": {
         "EH3D-NODE-BUNGARD": "tests/test_shared.cpp",
@@ -700,10 +724,22 @@
         "EH3D-NODE-BUNGARD": "tools/check_sdkconfig.py"
       }
     },
+    "tools/gen_server_errors.py": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "tools/gen_server_errors.py",
+        "EH3D-NODE-HMI-GUI": "tools/gen_server_errors.py"
+      }
+    },
     "tools/pack_panel.py": {
       "targets": {
         "EH3D-NODE-BUNGARD": "tools/pack_panel.py",
         "EH3D-NODE-BUNGARD-AUX": "tools/pack_panel.py"
+      }
+    },
+    "tools/test_gen_server_errors.py": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "tools/test_gen_server_errors.py",
+        "EH3D-NODE-HMI-GUI": "tools/test_gen_server_errors.py"
       }
     }
   }

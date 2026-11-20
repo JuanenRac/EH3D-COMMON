@@ -23,6 +23,7 @@ Everything that says what the node controls: the `machine` section of its settin
 python -I tools/sync_firmware_base.py check     # exit 1 when a copy differs from the base; CI runs it
 python -I tools/sync_firmware_base.py sync      # write the base into every node that uses each file
 python -I tools/sync_firmware_base.py import EH3D-NODE-BUNGARD   # (re)make the base from the files of a node
+python -I tools/sync_firmware_base.py import EH3D-NODE-HMI-GUI --only core/session.hpp   # take only some files of the group of the project into the base
 python -I tools/sync_firmware_base.py status    # which file goes where
 ```
 
@@ -31,7 +32,7 @@ python -I tools/sync_firmware_base.py status    # which file goes where
 ## The normal way to change the base
 
 1. Fix or improve the file in the node where you found the need, and test it there.
-2. `python tools/sync_firmware_base.py import <that node>` makes it the base.
+2. `python tools/sync_firmware_base.py import <that node>` makes it the base. When only some files of a group are newer in that project, `--only FILE...` takes just those and leaves the rest of the base as it is; the projects of a group all receive what is imported from one of them.
 3. `python tools/sync_firmware_base.py sync` writes it into every other node.
 4. Build and run the host tests of each node.
 

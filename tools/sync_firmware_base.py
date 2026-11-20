@@ -15,6 +15,7 @@ nothing is shared at build time.
     python tools/sync_firmware_base.py check     # exit 1 when a copy differs from the base; --strict also fails when a project's folder is missing (CI)
     python tools/sync_firmware_base.py sync      # write the base into every project that uses each file
     python tools/sync_firmware_base.py import    # (re)make the base from the files of a project: python ... import EH3D-NODE-BUNGARD
+    python tools/sync_firmware_base.py import EH3D-NODE-HMI-GUI --only core/session.hpp ...   # take only these files (of the group of the project) into the base
     python tools/sync_firmware_base.py status    # which file goes where
 
 The project's name appears in a shared file in four forms, each with a placeholder: EH3D-NODE-BUNGARD (@PROJECT@), eh3d-node-bungard (@project-@),
@@ -62,9 +63,10 @@ CANDIDATES = [
 # The bar of the tool changer, the stage notices, the notices, the sound files, the link to the server and the flow of a job (the chaining of the changer) are the same in both screens again.
 HMI_CANDIDATES = [
     "core/job_bar.hpp", "core/job_memory.hpp", "core/job_tools.hpp", "core/lang.hpp", "core/notices.hpp", "core/orientation.hpp", "core/quality.hpp",
-    "core/rack.hpp", "core/sdfiles.hpp", "core/server_link.hpp", "core/stage_notice.hpp", "core/stop_latch.hpp", "core/voice.hpp", "core/wav.hpp", "core/workflow.hpp",
+    "core/rack.hpp", "core/sdfiles.hpp", "core/server_link.hpp", "core/session.hpp", "core/server_errors.hpp", "core/server_errors_gen.hpp", "core/stage_notice.hpp", "core/stop_latch.hpp", "core/voice.hpp", "core/wav.hpp", "core/workflow.hpp",
     "main/board.hpp", "main/board_p4.cpp", "main/server_link.cpp", "main/server_link.hpp",
     "tests/test_hmi.cpp", "tests/test_notices.cpp", "tests/test_quality.cpp", "tests/test_workflow.cpp", "tests/test_keyboard.cpp", "tests/test_locales.cpp",
+    "tests/test_session.cpp", "tools/gen_server_errors.py", "tools/test_gen_server_errors.py",
     # the settings, the gate, the keyboard, the texts and the kind of machine are one file for both screens: what only one screen has (the panel that moves the machine by hand, the kinds of machine) is in
     # the file for both, and the screen that does not use it ignores it
     "core/hmi_config.hpp", "core/gate.hpp", "core/keyboard.hpp", "core/status.hpp", "core/ui_text.hpp", "core/locales.hpp", "core/machine.hpp", "core/ops.hpp",
@@ -105,20 +107,31 @@ def write_text(path: Path, text: str) -> None:
     path.write_bytes(text.encode("utf-8"))
 
 
-def command_import(project: str) -> int:
+def command_import(project: str, only: list[str] | None = None) -> int:
     if project not in PROJECTS:
         print(f"unknown project {project}; known: {', '.join(PROJECTS)}")
         return 2
     names = PROJECTS[project]
     manifest = load_manifest()
     taken = 0
-    for rel in CANDIDATES_OF.get(project, CANDIDATES):
+    group = CANDIDATES_OF.get(project, CANDIDATES)
+    # the projects that share this list of files all receive what is imported from one of them
+    sharing = [p for p in PROJECTS if CANDIDATES_OF.get(p, CANDIDATES) is group]
+    if only:
+        unknown = [rel for rel in only if rel not in group]
+        if unknown:
+            print("not in the group of " + project + ": " + ", ".join(unknown))
+            return 2
+    for rel in group:
+        if only and rel not in only:
+            continue
         source = read(ROOT / project / rel)
         if source is None:
             continue
         write_text(BASE_DIR / rel, to_base(source, names))
         entry = manifest["files"].setdefault(rel, {"targets": {}})
-        entry["targets"][project] = rel
+        for target_project in sharing:
+            entry["targets"][target_project] = rel
         taken += 1
     BASE_DIR.mkdir(parents=True, exist_ok=True)
     MANIFEST.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -180,6 +193,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Keeps the shared part of the node firmware identical in every project")
     parser.add_argument("command", choices=["check", "sync", "import", "status"])
     parser.add_argument("project", nargs="?", default="EH3D-NODE-BUNGARD", help="for import: the project whose files become the base")
+    parser.add_argument("--only", nargs="+", metavar="FILE", help="for import: take only these files of the group of the project (a file that the base has and a project changed alone)")
     parser.add_argument("--strict", action="store_true", help="for check: a project whose folder is not next to this repository is a failure (CI), not a skip")
     args = parser.parse_args()
     if args.command == "check":
@@ -187,7 +201,7 @@ def main() -> int:
     if args.command == "sync":
         return command_sync(False)
     if args.command == "import":
-        return command_import(args.project)
+        return command_import(args.project, args.only)
     return command_status()
 
 
