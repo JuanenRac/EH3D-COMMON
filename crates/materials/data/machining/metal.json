@@ -37,57 +37,165 @@
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 1,
-     "rpm": 12000,
-     "feed_mm_min": 500,
-     "plunge_mm_min": 150,
-     "depth_per_pass_mm": 0.5,
+     "rpm": 14000,
+     "feed_mm_min": 550,
+     "plunge_mm_min": 115,
+     "depth_per_pass_mm": 0.4,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       12000,
+       16000
+      ],
+      "feed_mm_min": [
+       400,
+       700
+      ],
+      "plunge_mm_min": [
+       80,
+       150
+      ],
+      "depth_per_pass_mm": [
+       0.3,
+       0.5
+      ]
+     },
+     "coolant": "lubricant",
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 1,
-     "rpm": 10000,
-     "feed_mm_min": 700,
-     "plunge_mm_min": 200,
-     "depth_per_pass_mm": 1.0,
+     "rpm": 11500,
+     "feed_mm_min": 900,
+     "plunge_mm_min": 150,
+     "depth_per_pass_mm": 0.6,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       10000,
+       13000
+      ],
+      "feed_mm_min": [
+       600,
+       1200
+      ],
+      "plunge_mm_min": [
+       100,
+       200
+      ],
+      "depth_per_pass_mm": [
+       0.4,
+       0.8
+      ]
+     },
+     "coolant": "lubricant",
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 1,
-     "rpm": 12000,
-     "feed_mm_min": 500,
-     "plunge_mm_min": 150,
-     "depth_per_pass_mm": 0.5,
-     "stepover_pct": 30,
+     "rpm": 14000,
+     "feed_mm_min": 550,
+     "plunge_mm_min": 115,
+     "depth_per_pass_mm": 0.4,
+     "stepover_pct": 25,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       12000,
+       16000
+      ],
+      "feed_mm_min": [
+       400,
+       700
+      ],
+      "plunge_mm_min": [
+       80,
+       150
+      ],
+      "depth_per_pass_mm": [
+       0.3,
+       0.5
+      ],
+      "stepover_pct": [
+       20,
+       30
+      ]
+     },
+     "coolant": "lubricant",
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 1,
-     "rpm": 10000,
-     "feed_mm_min": 700,
-     "plunge_mm_min": 200,
-     "depth_per_pass_mm": 1.0,
-     "stepover_pct": 30,
+     "rpm": 11500,
+     "feed_mm_min": 900,
+     "plunge_mm_min": 150,
+     "depth_per_pass_mm": 0.6,
+     "stepover_pct": 25,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       10000,
+       13000
+      ],
+      "feed_mm_min": [
+       600,
+       1200
+      ],
+      "plunge_mm_min": [
+       100,
+       200
+      ],
+      "depth_per_pass_mm": [
+       0.4,
+       0.8
+      ],
+      "stepover_pct": [
+       20,
+       30
+      ]
+     },
+     "coolant": "lubricant",
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "laser": [],
    "pcb_material_id": null,
-   "notes": "Mill with a single flute bit made for aluminium, a lubricant and a light cut; it welds to the bit if the chips are not cleared.",
+   "notes": "Mill with a single flute bit made for aluminium, a lubricant and a light cut; it welds to the bit if the chips are not cleared. A lubricant (WD-40, isopropyl alcohol or cutting oil) is indispensable and the depth has to stay very conservative on hobby machines.",
    "source": "general reference values and common commercial sizes"
   },
   {
@@ -125,12 +233,37 @@
      "diameter_mm": 3.0,
      "flutes": 2,
      "rpm": 10000,
-     "feed_mm_min": 300,
+     "feed_mm_min": 350,
      "plunge_mm_min": 100,
      "depth_per_pass_mm": 0.3,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       8000,
+       12000
+      ],
+      "feed_mm_min": [
+       250,
+       450
+      ],
+      "plunge_mm_min": [
+       80,
+       120
+      ],
+      "depth_per_pass_mm": [
+       0.2,
+       0.4
+      ]
+     },
+     "coolant": "lubricant",
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
@@ -138,12 +271,37 @@
      "diameter_mm": 6.0,
      "flutes": 2,
      "rpm": 8000,
-     "feed_mm_min": 450,
-     "plunge_mm_min": 150,
-     "depth_per_pass_mm": 0.6,
+     "feed_mm_min": 475,
+     "plunge_mm_min": 125,
+     "depth_per_pass_mm": 0.5,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       6000,
+       10000
+      ],
+      "feed_mm_min": [
+       350,
+       600
+      ],
+      "plunge_mm_min": [
+       100,
+       150
+      ],
+      "depth_per_pass_mm": [
+       0.4,
+       0.6
+      ]
+     },
+     "coolant": "lubricant",
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
@@ -151,12 +309,41 @@
      "diameter_mm": 3.0,
      "flutes": 2,
      "rpm": 10000,
-     "feed_mm_min": 300,
+     "feed_mm_min": 350,
      "plunge_mm_min": 100,
      "depth_per_pass_mm": 0.3,
-     "stepover_pct": 30,
+     "stepover_pct": 25,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       8000,
+       12000
+      ],
+      "feed_mm_min": [
+       250,
+       450
+      ],
+      "plunge_mm_min": [
+       80,
+       120
+      ],
+      "depth_per_pass_mm": [
+       0.2,
+       0.4
+      ],
+      "stepover_pct": [
+       20,
+       30
+      ]
+     },
+     "coolant": "lubricant",
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
@@ -164,17 +351,46 @@
      "diameter_mm": 6.0,
      "flutes": 2,
      "rpm": 8000,
-     "feed_mm_min": 450,
-     "plunge_mm_min": 150,
-     "depth_per_pass_mm": 0.6,
-     "stepover_pct": 30,
+     "feed_mm_min": 475,
+     "plunge_mm_min": 125,
+     "depth_per_pass_mm": 0.5,
+     "stepover_pct": 25,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       6000,
+       10000
+      ],
+      "feed_mm_min": [
+       350,
+       600
+      ],
+      "plunge_mm_min": [
+       100,
+       150
+      ],
+      "depth_per_pass_mm": [
+       0.4,
+       0.6
+      ],
+      "stepover_pct": [
+       20,
+       30
+      ]
+     },
+     "coolant": "lubricant",
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "laser": [],
    "pcb_material_id": null,
-   "notes": "Mills cleanly with a sharp bit and a light cut.",
+   "notes": "Mills cleanly with a sharp bit and a light cut. A single flute or a two flute bit and a lubricant; softer than copper.",
    "source": "general reference values and common commercial sizes"
   },
   {
@@ -211,12 +427,37 @@
      "diameter_mm": 3.0,
      "flutes": 2,
      "rpm": 10000,
-     "feed_mm_min": 250,
-     "plunge_mm_min": 100,
-     "depth_per_pass_mm": 0.2,
+     "feed_mm_min": 300,
+     "plunge_mm_min": 80,
+     "depth_per_pass_mm": 0.225,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       8000,
+       12000
+      ],
+      "feed_mm_min": [
+       200,
+       400
+      ],
+      "plunge_mm_min": [
+       60,
+       100
+      ],
+      "depth_per_pass_mm": [
+       0.15,
+       0.3
+      ]
+     },
+     "coolant": "lubricant",
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
@@ -224,12 +465,37 @@
      "diameter_mm": 6.0,
      "flutes": 2,
      "rpm": 8000,
-     "feed_mm_min": 350,
-     "plunge_mm_min": 120,
+     "feed_mm_min": 400,
+     "plunge_mm_min": 100,
      "depth_per_pass_mm": 0.4,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       6000,
+       10000
+      ],
+      "feed_mm_min": [
+       300,
+       500
+      ],
+      "plunge_mm_min": [
+       80,
+       120
+      ],
+      "depth_per_pass_mm": [
+       0.3,
+       0.5
+      ]
+     },
+     "coolant": "lubricant",
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
@@ -237,12 +503,41 @@
      "diameter_mm": 3.0,
      "flutes": 2,
      "rpm": 10000,
-     "feed_mm_min": 250,
-     "plunge_mm_min": 100,
-     "depth_per_pass_mm": 0.2,
-     "stepover_pct": 30,
+     "feed_mm_min": 300,
+     "plunge_mm_min": 80,
+     "depth_per_pass_mm": 0.225,
+     "stepover_pct": 25,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       8000,
+       12000
+      ],
+      "feed_mm_min": [
+       200,
+       400
+      ],
+      "plunge_mm_min": [
+       60,
+       100
+      ],
+      "depth_per_pass_mm": [
+       0.15,
+       0.3
+      ],
+      "stepover_pct": [
+       20,
+       30
+      ]
+     },
+     "coolant": "lubricant",
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
@@ -250,17 +545,46 @@
      "diameter_mm": 6.0,
      "flutes": 2,
      "rpm": 8000,
-     "feed_mm_min": 350,
-     "plunge_mm_min": 120,
+     "feed_mm_min": 400,
+     "plunge_mm_min": 100,
      "depth_per_pass_mm": 0.4,
-     "stepover_pct": 30,
+     "stepover_pct": 25,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       6000,
+       10000
+      ],
+      "feed_mm_min": [
+       300,
+       500
+      ],
+      "plunge_mm_min": [
+       80,
+       120
+      ],
+      "depth_per_pass_mm": [
+       0.3,
+       0.5
+      ],
+      "stepover_pct": [
+       20,
+       30
+      ]
+     },
+     "coolant": "lubricant",
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "laser": [],
    "pcb_material_id": null,
-   "notes": "Soft and gummy: a sharp bit, a light cut and the chips cleared.",
+   "notes": "Soft and gummy: a sharp bit, a light cut and the chips cleared. Very ductile and gummy; a lubricant is a must and the depth per pass is low.",
    "source": "general reference values and common commercial sizes"
   }
  ]

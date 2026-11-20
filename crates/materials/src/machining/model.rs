@@ -247,6 +247,197 @@ impl Tool {
     }
 }
 
+/// How sure a starting point is. The seed of the crate never goes above `PublicReference`; a point
+/// can only be `verified` when its evidence is a test of the maker or a test on a machine.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum Evidence {
+    /// Common practice for small machines, written down by the maintainer of the data.
+    GeneralPractice,
+    /// A public table or calculator, with its licence in `source_info`.
+    PublicReference,
+    /// A test documented by the maker of the material, the cutter or the machine.
+    ManufacturerTest,
+    /// Tried on a machine, with the machine named in `machine`.
+    TestedOnMachine,
+}
+
+impl Evidence {
+    /// Whether the evidence is strong enough for `verified = true`.
+    pub fn allows_verified(self) -> bool {
+        matches!(self, Evidence::ManufacturerTest | Evidence::TestedOnMachine)
+    }
+}
+
+/// Where a figure comes from, with the date it was taken and the licence it can be used under.
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct SourceInfo {
+    /// The name of the table, site or person it comes from.
+    pub origin: String,
+    /// When it was taken (`YYYY-MM` or `YYYY-MM-DD`).
+    pub date: String,
+    /// The licence the figure can be used under.
+    pub license: String,
+    /// The address of the page, when there is one (`https://`).
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub url: Option<String>,
+}
+
+/// A lowest and a highest value: the range a table gives, around the single starting value.
+pub type Span = [f64; 2];
+
+/// The ranges that a table gives for a CNC starting point. The single value of the point is a
+/// value inside every range given here (the middle of it in the seed).
+#[derive(Debug, Clone, Default, PartialEq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct CncRanges {
+    /// The number of flutes.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub flutes: Option<Span>,
+    /// The spindle speed in revolutions per minute.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub rpm: Option<Span>,
+    /// The feed in mm per minute.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub feed_mm_min: Option<Span>,
+    /// The plunge feed in mm per minute.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub plunge_mm_min: Option<Span>,
+    /// The depth of a pass in mm.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub depth_per_pass_mm: Option<Span>,
+    /// The step over in percent of the diameter.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub stepover_pct: Option<Span>,
+}
+
+impl CncRanges {
+    /// Every span given, with the name of its field.
+    pub fn spans(&self) -> Vec<(&'static str, Span)> {
+        [
+            ("flutes", self.flutes),
+            ("rpm", self.rpm),
+            ("feed_mm_min", self.feed_mm_min),
+            ("plunge_mm_min", self.plunge_mm_min),
+            ("depth_per_pass_mm", self.depth_per_pass_mm),
+            ("stepover_pct", self.stepover_pct),
+        ]
+        .into_iter()
+        .filter_map(|(n, s)| s.map(|s| (n, s)))
+        .collect()
+    }
+}
+
+/// The ranges that a table gives for a laser starting point (the single values of the point are
+/// inside them).
+#[derive(Debug, Clone, Default, PartialEq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct LaserRanges {
+    /// The power setting in percent.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub power_pct: Option<Span>,
+    /// The speed in mm per minute.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub speed_mm_min: Option<Span>,
+    /// The number of passes.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub passes: Option<Span>,
+}
+
+impl LaserRanges {
+    /// Every span given, with the name of its field.
+    pub fn spans(&self) -> Vec<(&'static str, Span)> {
+        [
+            ("power_pct", self.power_pct),
+            ("speed_mm_min", self.speed_mm_min),
+            ("passes", self.passes),
+        ]
+        .into_iter()
+        .filter_map(|(n, s)| s.map(|s| (n, s)))
+        .collect()
+    }
+}
+
+/// The kind of flutes of a cutter, when the table says so.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum CutterStyle {
+    /// One flute, for plastics and soft metals.
+    SingleFlute,
+    /// One flute with a round bottom (O-flute).
+    OFlute,
+    /// A high helix flute.
+    HighHelix,
+    /// Flutes that lift the chips up.
+    Upcut,
+    /// Flutes that push the chips down.
+    Downcut,
+    /// A cutter that grinds the material away (corn cob, for boards).
+    CornCob,
+}
+
+/// How the cut is cooled or cleared.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum Coolant {
+    /// Nothing: dry cutting.
+    None,
+    /// A jet of air.
+    Air,
+    /// A lubricant (WD-40, isopropyl alcohol or cutting oil).
+    Lubricant,
+    /// Flood coolant.
+    Flood,
+}
+
+/// The unit that a source gave the speed of a laser in (the file always holds mm per minute).
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum SpeedUnit {
+    /// Millimetres per minute.
+    MmMin,
+    /// Millimetres per second (multiplied by 60 into `speed_mm_min`).
+    MmS,
+}
+
+impl SpeedUnit {
+    /// How many mm per minute one unit of the source is.
+    pub fn to_mm_min(self) -> f64 {
+        match self {
+            SpeedUnit::MmMin => 1.0,
+            SpeedUnit::MmS => 60.0,
+        }
+    }
+}
+
+/// How strong the air assist of a laser is, as the sources of hobby lasers write it.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum AirLevel {
+    /// No air.
+    Off,
+    /// A light flow.
+    Low,
+    /// A medium flow.
+    Medium,
+    /// A strong flow.
+    High,
+    /// The most the machine gives.
+    Max,
+}
+
+impl AirLevel {
+    /// Whether any air is used (the value that `air_assist` has to agree with).
+    pub fn is_on(self) -> bool {
+        self != AirLevel::Off
+    }
+}
+
+fn is_false(v: &bool) -> bool {
+    !*v
+}
+
 /// One starting point for a CNC router.
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -273,6 +464,33 @@ pub struct CncPoint {
     pub verified: bool,
     /// Where the point comes from, in a few words.
     pub source: String,
+    /// The ranges the table gives around the values above.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub ranges: Option<CncRanges>,
+    /// The tip angle of a V-bit in degrees (lowest and highest).
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub tip_angle_deg: Option<Span>,
+    /// The kind of flutes, when the table says so.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub cutter_style: Option<CutterStyle>,
+    /// The coating or the material of the cutter, when the table says so (`diamond or PCD`).
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub coating: Option<String>,
+    /// How the cut is cooled or cleared.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub coolant: Option<Coolant>,
+    /// The machine the point was given for (`router, 800 W spindle`).
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub machine: Option<String>,
+    /// The power of the spindle of that machine in watts.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub spindle_w: Option<f64>,
+    /// How sure the point is.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub evidence: Option<Evidence>,
+    /// The source with its date and licence.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub source_info: Option<SourceInfo>,
 }
 
 /// The kind of laser.
@@ -371,6 +589,31 @@ pub struct LaserPoint {
     pub verified: bool,
     /// Where the point comes from, in a few words.
     pub source: String,
+    /// The ranges the table gives around the values above.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub ranges: Option<LaserRanges>,
+    /// How strong the air assist is, when the source says so; it agrees with `air_assist`.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub air_assist_level: Option<AirLevel>,
+    /// The unit the source gave the speed in.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub source_unit: Option<SpeedUnit>,
+    /// The speed as the source wrote it, in `source_unit`.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub source_speed: Option<f64>,
+    /// The machine the point was given for.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub machine: Option<String>,
+    /// A second figure from another source for the same case: it is listed next to the main one
+    /// and never used for a starting point (`Workpiece::laser_alternatives`).
+    #[serde(default, skip_serializing_if = "is_false")]
+    pub alternative: bool,
+    /// How sure the point is.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub evidence: Option<Evidence>,
+    /// The source with its date and licence.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub source_info: Option<SourceInfo>,
 }
 
 /// One workpiece: a material that a CNC router or a laser works.
@@ -403,6 +646,9 @@ pub struct Workpiece {
     pub notes: Option<String>,
     /// Where the physical figures (density, thicknesses) come from, in a few words.
     pub source: String,
+    /// The source of the physical figures with its date and licence.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub source_info: Option<SourceInfo>,
 }
 
 #[cfg(test)]

@@ -27,9 +27,38 @@
     ]
    },
    "cnc": [],
-   "laser": [],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 40,
+     "thickness_mm": null,
+     "power_pct": 55,
+     "speed_mm_min": 1150,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       40,
+       70
+      ],
+      "speed_mm_min": [
+       800,
+       1500
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
+    }
+   ],
    "pcb_material_id": null,
-   "notes": "A CO2 laser can mark a glazed tile; it does not cut it.",
+   "notes": "A CO2 laser can mark a glazed tile; it does not cut it. Milling is not recommended on hobby machines (hard and abrasive); use diamond tools if it cannot be avoided.",
    "source": "general reference values and common commercial sizes"
   },
   {
@@ -61,9 +90,38 @@
     ]
    },
    "cnc": [],
-   "laser": [],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "engrave",
+     "power_w": 40,
+     "thickness_mm": null,
+     "power_pct": 40,
+     "speed_mm_min": 1500,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       30,
+       50
+      ],
+      "speed_mm_min": [
+       1000,
+       2000
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
+    }
+   ],
    "pcb_material_id": null,
-   "notes": "A CO2 laser marks the surface of glass; it does not cut it and a diode laser does nothing.",
+   "notes": "A CO2 laser marks the surface of glass; it does not cut it and a diode laser does nothing. Milling is not recommended: it breaks easily.",
    "source": "general reference values and common commercial sizes"
   }
  ]

@@ -250,6 +250,23 @@ impl Workpiece {
         self.safety.hazards.iter().map(|h| h.text(lang)).collect()
     }
 
+    /// The second figures that other sources give for a laser process (the points marked
+    /// `alternative`). They are listed next to the main ones, are never interpolated and never
+    /// returned by [`Workpiece::laser_start`]; a laser that must not touch the material has none.
+    pub fn laser_alternatives(&self, process: LaserProcess) -> Vec<&LaserPoint> {
+        let allowed = match process.mode {
+            LaserMode::Cut => self.laser_cut_allowed(),
+            LaserMode::Engrave => self.laser_engrave_allowed(),
+        };
+        if !allowed {
+            return Vec::new();
+        }
+        self.laser
+            .iter()
+            .filter(|p| p.alternative && p.kind == process.kind && p.mode == process.mode)
+            .collect()
+    }
+
     /// A starting point for a CNC router: the operation, the kind of cutter and its diameter in
     /// mm. The point itself when there is one, else a straight line between the two nearest known
     /// diameters of that operation and cutter; outside the known diameters a warning.
@@ -315,7 +332,7 @@ impl Workpiece {
         let points: Vec<&LaserPoint> = self
             .laser
             .iter()
-            .filter(|p| p.kind == process.kind && p.mode == process.mode)
+            .filter(|p| p.kind == process.kind && p.mode == process.mode && !p.alternative)
             .collect();
         if points.is_empty() {
             return Err(StartWarning::NoSuchProcess);
@@ -488,6 +505,15 @@ mod tests {
             stepover_pct: None,
             verified: false,
             source: "test".into(),
+            ranges: None,
+            tip_angle_deg: None,
+            cutter_style: None,
+            coating: None,
+            coolant: None,
+            machine: None,
+            spindle_w: None,
+            evidence: None,
+            source_info: None,
         }
     }
 
@@ -507,6 +533,14 @@ mod tests {
             air_assist: Some(true),
             verified: false,
             source: "test".into(),
+            ranges: None,
+            air_assist_level: None,
+            source_unit: None,
+            source_speed: None,
+            machine: None,
+            alternative: false,
+            evidence: None,
+            source_info: None,
         }
     }
 
@@ -538,6 +572,7 @@ mod tests {
             pcb_material_id: None,
             notes: None,
             source: "test".into(),
+            source_info: None,
         }
     }
 
@@ -730,5 +765,21 @@ mod tests {
                 assert!(!w.text(lang).is_empty());
             }
         }
+    }
+    #[test]
+    fn an_alternative_is_listed_but_never_used_for_a_start() {
+        let mut w = piece();
+        let mut alt = laser(40.0, Some(3.0), 99.0, 100.0, 3);
+        alt.alternative = true;
+        alt.source = "another table".into();
+        w.laser.push(alt);
+        let s = w.laser_start(40.0, 3.0, LaserProcess::CO2_CUT).unwrap();
+        assert_eq!((s.power_pct, s.speed_mm_min, s.passes), (80.0, 600.0, 1));
+        let listed = w.laser_alternatives(LaserProcess::CO2_CUT);
+        assert_eq!(listed.len(), 1);
+        assert_eq!(listed[0].power_pct, 99.0);
+        assert!(w.laser_alternatives(LaserProcess::CO2_ENGRAVE).is_empty());
+        w.safety.laser_unsafe = true;
+        assert!(w.laser_alternatives(LaserProcess::CO2_CUT).is_empty());
     }
 }

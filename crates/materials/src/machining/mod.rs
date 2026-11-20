@@ -27,13 +27,16 @@
 pub mod data;
 pub mod model;
 pub mod query;
+#[cfg(test)]
+mod seed_tests;
 pub mod start;
 pub mod texts;
 pub mod validate;
 
 pub use model::{
-    CncOp, CncPoint, Family, Hazard, LaserKind, LaserMode, LaserPoint, LaserProcess, MachiningFile,
-    Names, Safety, Tool, Workpiece,
+    AirLevel, CncOp, CncPoint, CncRanges, Coolant, CutterStyle, Evidence, Family, Hazard,
+    LaserKind, LaserMode, LaserPoint, LaserProcess, LaserRanges, MachiningFile, Names, Safety,
+    SourceInfo, Span, SpeedUnit, Tool, Workpiece,
 };
 pub use query::MachiningDatabase;
 pub use start::{CncStart, LaserStart, Quantity, StartNote, StartWarning};

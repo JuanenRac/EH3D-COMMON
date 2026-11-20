@@ -224,11 +224,11 @@ mod tests {
         let exact = db
             .cnc_start("wood/birch-plywood", CncOp::Contour, Tool::EndMill, 3.0)
             .unwrap();
-        assert_eq!(exact.rpm, 18000.0);
+        assert_eq!(exact.rpm, 19000.0);
         let between = db
             .cnc_start("wood/birch-plywood", CncOp::Contour, Tool::EndMill, 4.5)
             .unwrap();
-        assert!(between.interpolated && between.rpm < 18000.0 && between.rpm > 16000.0);
+        assert!(between.interpolated && between.rpm < 19000.0 && between.rpm > 17000.0);
         let e = db
             .cnc_start("wood/birch-plywood", CncOp::Contour, Tool::EndMill, 12.0)
             .unwrap_err();
@@ -281,7 +281,7 @@ mod tests {
                     w.id
                 );
             }
-            for p in &w.laser {
+            for p in w.laser.iter().filter(|p| !p.alternative) {
                 let process = LaserProcess {
                     kind: p.kind,
                     mode: p.mode,

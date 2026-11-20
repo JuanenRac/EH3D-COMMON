@@ -29,10 +29,95 @@
      "toxic_fumes"
     ]
    },
-   "cnc": [],
+   "cnc": [
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 1.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 450,
+     "plunge_mm_min": 115,
+     "depth_per_pass_mm": 0.45,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "flutes": [
+       1,
+       2
+      ],
+      "rpm": [
+       16000,
+       20000
+      ],
+      "feed_mm_min": [
+       300,
+       600
+      ],
+      "plunge_mm_min": [
+       80,
+       150
+      ],
+      "depth_per_pass_mm": [
+       0.3,
+       0.6
+      ]
+     },
+     "coating": "diamond coated or PCD",
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
+    },
+    {
+     "op": "contour",
+     "tool": "end_mill",
+     "diameter_mm": 3.0,
+     "flutes": 1,
+     "rpm": 18000,
+     "feed_mm_min": 450,
+     "plunge_mm_min": 115,
+     "depth_per_pass_mm": 0.45,
+     "stepover_pct": null,
+     "verified": false,
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "flutes": [
+       1,
+       2
+      ],
+      "rpm": [
+       16000,
+       20000
+      ],
+      "feed_mm_min": [
+       300,
+       600
+      ],
+      "plunge_mm_min": [
+       80,
+       150
+      ],
+      "depth_per_pass_mm": [
+       0.3,
+       0.6
+      ]
+     },
+     "coating": "diamond coated or PCD",
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
+    }
+   ],
    "laser": [],
    "pcb_material_id": null,
-   "notes": "The dust conducts electricity and is harmful to breathe; a laser must never touch it.",
+   "notes": "The dust conducts electricity and is harmful to breathe; a laser must never touch it. The dust is very toxic: industrial extraction is mandatory. Diamond coated or PCD tools are preferred.",
    "source": "general reference values and common commercial sizes"
   },
   {
@@ -68,52 +153,156 @@
      "tool": "end_mill",
      "diameter_mm": 1.0,
      "flutes": 2,
-     "rpm": 24000,
-     "feed_mm_min": 300,
+     "rpm": 22000,
+     "feed_mm_min": 325,
      "plunge_mm_min": 100,
      "depth_per_pass_mm": 0.4,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       20000,
+       24000
+      ],
+      "feed_mm_min": [
+       250,
+       400
+      ],
+      "plunge_mm_min": [
+       80,
+       120
+      ],
+      "depth_per_pass_mm": [
+       0.3,
+       0.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
      "tool": "end_mill",
      "diameter_mm": 2.0,
      "flutes": 2,
-     "rpm": 24000,
+     "rpm": 20000,
      "feed_mm_min": 500,
-     "plunge_mm_min": 150,
+     "plunge_mm_min": 125,
      "depth_per_pass_mm": 0.5,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       22000
+      ],
+      "feed_mm_min": [
+       400,
+       600
+      ],
+      "plunge_mm_min": [
+       100,
+       150
+      ],
+      "depth_per_pass_mm": [
+       0.4,
+       0.6
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "engrave",
      "tool": "v_bit",
      "diameter_mm": 0.1,
      "flutes": 1,
-     "rpm": 24000,
+     "rpm": 21000,
      "feed_mm_min": 300,
-     "plunge_mm_min": 100,
-     "depth_per_pass_mm": 0.05,
+     "plunge_mm_min": 75,
+     "depth_per_pass_mm": 0.085,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       24000
+      ],
+      "feed_mm_min": [
+       200,
+       400
+      ],
+      "plunge_mm_min": [
+       50,
+       100
+      ],
+      "depth_per_pass_mm": [
+       0.05,
+       0.12
+      ]
+     },
+     "tip_angle_deg": [
+      30,
+      60
+     ],
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "engrave",
      "tool": "v_bit",
      "diameter_mm": 0.2,
      "flutes": 1,
-     "rpm": 24000,
-     "feed_mm_min": 400,
-     "plunge_mm_min": 120,
-     "depth_per_pass_mm": 0.08,
+     "rpm": 21000,
+     "feed_mm_min": 300,
+     "plunge_mm_min": 75,
+     "depth_per_pass_mm": 0.085,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       24000
+      ],
+      "feed_mm_min": [
+       200,
+       400
+      ],
+      "plunge_mm_min": [
+       50,
+       100
+      ],
+      "depth_per_pass_mm": [
+       0.05,
+       0.12
+      ]
+     },
+     "tip_angle_deg": [
+      30,
+      60
+     ],
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "laser": [],
@@ -154,52 +343,156 @@
      "tool": "end_mill",
      "diameter_mm": 1.0,
      "flutes": 2,
-     "rpm": 24000,
-     "feed_mm_min": 300,
+     "rpm": 22000,
+     "feed_mm_min": 325,
      "plunge_mm_min": 100,
      "depth_per_pass_mm": 0.4,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       20000,
+       24000
+      ],
+      "feed_mm_min": [
+       250,
+       400
+      ],
+      "plunge_mm_min": [
+       80,
+       120
+      ],
+      "depth_per_pass_mm": [
+       0.3,
+       0.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
      "tool": "end_mill",
      "diameter_mm": 2.0,
      "flutes": 2,
-     "rpm": 24000,
+     "rpm": 20000,
      "feed_mm_min": 500,
-     "plunge_mm_min": 150,
+     "plunge_mm_min": 125,
      "depth_per_pass_mm": 0.5,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       22000
+      ],
+      "feed_mm_min": [
+       400,
+       600
+      ],
+      "plunge_mm_min": [
+       100,
+       150
+      ],
+      "depth_per_pass_mm": [
+       0.4,
+       0.6
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "engrave",
      "tool": "v_bit",
      "diameter_mm": 0.1,
      "flutes": 1,
-     "rpm": 24000,
+     "rpm": 21000,
      "feed_mm_min": 300,
-     "plunge_mm_min": 100,
-     "depth_per_pass_mm": 0.05,
+     "plunge_mm_min": 75,
+     "depth_per_pass_mm": 0.085,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       24000
+      ],
+      "feed_mm_min": [
+       200,
+       400
+      ],
+      "plunge_mm_min": [
+       50,
+       100
+      ],
+      "depth_per_pass_mm": [
+       0.05,
+       0.12
+      ]
+     },
+     "tip_angle_deg": [
+      30,
+      60
+     ],
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "engrave",
      "tool": "v_bit",
      "diameter_mm": 0.2,
      "flutes": 1,
-     "rpm": 24000,
-     "feed_mm_min": 400,
-     "plunge_mm_min": 120,
-     "depth_per_pass_mm": 0.08,
+     "rpm": 21000,
+     "feed_mm_min": 300,
+     "plunge_mm_min": 75,
+     "depth_per_pass_mm": 0.085,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       24000
+      ],
+      "feed_mm_min": [
+       200,
+       400
+      ],
+      "plunge_mm_min": [
+       50,
+       100
+      ],
+      "depth_per_pass_mm": [
+       0.05,
+       0.12
+      ]
+     },
+     "tip_angle_deg": [
+      30,
+      60
+     ],
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "laser": [],
@@ -244,57 +537,165 @@
      "tool": "end_mill",
      "diameter_mm": 1.0,
      "flutes": 2,
-     "rpm": 24000,
-     "feed_mm_min": 300,
+     "rpm": 21000,
+     "feed_mm_min": 325,
      "plunge_mm_min": 100,
      "depth_per_pass_mm": 0.4,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       24000
+      ],
+      "feed_mm_min": [
+       250,
+       400
+      ],
+      "plunge_mm_min": [
+       80,
+       120
+      ],
+      "depth_per_pass_mm": [
+       0.3,
+       0.5
+      ]
+     },
+     "coating": "PCB grade carbide or diamond coated",
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
      "tool": "end_mill",
      "diameter_mm": 2.0,
      "flutes": 2,
-     "rpm": 24000,
+     "rpm": 21000,
      "feed_mm_min": 500,
-     "plunge_mm_min": 150,
+     "plunge_mm_min": 125,
      "depth_per_pass_mm": 0.5,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       24000
+      ],
+      "feed_mm_min": [
+       400,
+       600
+      ],
+      "plunge_mm_min": [
+       100,
+       150
+      ],
+      "depth_per_pass_mm": [
+       0.4,
+       0.6
+      ]
+     },
+     "coating": "PCB grade carbide or diamond coated",
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "engrave",
      "tool": "v_bit",
      "diameter_mm": 0.1,
      "flutes": 1,
-     "rpm": 24000,
+     "rpm": 21000,
      "feed_mm_min": 300,
-     "plunge_mm_min": 100,
-     "depth_per_pass_mm": 0.05,
+     "plunge_mm_min": 75,
+     "depth_per_pass_mm": 0.085,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       24000
+      ],
+      "feed_mm_min": [
+       200,
+       400
+      ],
+      "plunge_mm_min": [
+       50,
+       100
+      ],
+      "depth_per_pass_mm": [
+       0.05,
+       0.12
+      ]
+     },
+     "tip_angle_deg": [
+      30,
+      60
+     ],
+     "coating": "PCB grade carbide or diamond coated",
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "engrave",
      "tool": "v_bit",
      "diameter_mm": 0.2,
      "flutes": 1,
-     "rpm": 24000,
-     "feed_mm_min": 400,
-     "plunge_mm_min": 120,
-     "depth_per_pass_mm": 0.08,
+     "rpm": 21000,
+     "feed_mm_min": 300,
+     "plunge_mm_min": 75,
+     "depth_per_pass_mm": 0.085,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       24000
+      ],
+      "feed_mm_min": [
+       200,
+       400
+      ],
+      "plunge_mm_min": [
+       50,
+       100
+      ],
+      "depth_per_pass_mm": [
+       0.05,
+       0.12
+      ]
+     },
+     "tip_angle_deg": [
+      30,
+      60
+     ],
+     "coating": "PCB grade carbide or diamond coated",
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "laser": [],
    "pcb_material_id": "bungard/fr4-copper-clad",
-   "notes": "Glass fibre and epoxy: the dust is harmful (extraction and a mask) and a laser must never touch it. The thicknesses are those of the board database record.",
+   "notes": "Glass fibre and epoxy: the dust is harmful (extraction and a mask) and a laser must never touch it. The thicknesses are those of the board database record. Strong extraction is mandatory; carbide bits of PCB quality or diamond coated bits are preferred.",
    "source": "general reference values"
   },
   {
@@ -329,52 +730,156 @@
      "tool": "end_mill",
      "diameter_mm": 1.0,
      "flutes": 2,
-     "rpm": 24000,
-     "feed_mm_min": 300,
+     "rpm": 21000,
+     "feed_mm_min": 325,
      "plunge_mm_min": 100,
      "depth_per_pass_mm": 0.4,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       24000
+      ],
+      "feed_mm_min": [
+       250,
+       400
+      ],
+      "plunge_mm_min": [
+       80,
+       120
+      ],
+      "depth_per_pass_mm": [
+       0.3,
+       0.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
      "tool": "end_mill",
      "diameter_mm": 2.0,
      "flutes": 2,
-     "rpm": 24000,
+     "rpm": 21000,
      "feed_mm_min": 500,
-     "plunge_mm_min": 150,
+     "plunge_mm_min": 125,
      "depth_per_pass_mm": 0.5,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       24000
+      ],
+      "feed_mm_min": [
+       400,
+       600
+      ],
+      "plunge_mm_min": [
+       100,
+       150
+      ],
+      "depth_per_pass_mm": [
+       0.4,
+       0.6
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "engrave",
      "tool": "v_bit",
      "diameter_mm": 0.1,
      "flutes": 1,
-     "rpm": 24000,
+     "rpm": 21000,
      "feed_mm_min": 300,
-     "plunge_mm_min": 100,
-     "depth_per_pass_mm": 0.05,
+     "plunge_mm_min": 75,
+     "depth_per_pass_mm": 0.085,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       24000
+      ],
+      "feed_mm_min": [
+       200,
+       400
+      ],
+      "plunge_mm_min": [
+       50,
+       100
+      ],
+      "depth_per_pass_mm": [
+       0.05,
+       0.12
+      ]
+     },
+     "tip_angle_deg": [
+      30,
+      60
+     ],
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "engrave",
      "tool": "v_bit",
      "diameter_mm": 0.2,
      "flutes": 1,
-     "rpm": 24000,
-     "feed_mm_min": 400,
-     "plunge_mm_min": 120,
-     "depth_per_pass_mm": 0.08,
+     "rpm": 21000,
+     "feed_mm_min": 300,
+     "plunge_mm_min": 75,
+     "depth_per_pass_mm": 0.085,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       24000
+      ],
+      "feed_mm_min": [
+       200,
+       400
+      ],
+      "plunge_mm_min": [
+       50,
+       100
+      ],
+      "depth_per_pass_mm": [
+       0.05,
+       0.12
+      ]
+     },
+     "tip_angle_deg": [
+      30,
+      60
+     ],
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "laser": [],

@@ -39,52 +39,156 @@
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 2000,
+     "rpm": 17000,
+     "feed_mm_min": 2150,
      "plunge_mm_min": 600,
-     "depth_per_pass_mm": 3.0,
+     "depth_per_pass_mm": 3.5,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       1800,
+       2500
+      ],
+      "plunge_mm_min": [
+       500,
+       700
+      ],
+      "depth_per_pass_mm": [
+       3,
+       4
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 2500,
-     "plunge_mm_min": 800,
-     "depth_per_pass_mm": 6.0,
+     "rpm": 15000,
+     "feed_mm_min": 3000,
+     "plunge_mm_min": 700,
+     "depth_per_pass_mm": 5.5,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       14000,
+       16000
+      ],
+      "feed_mm_min": [
+       2500,
+       3500
+      ],
+      "plunge_mm_min": [
+       600,
+       800
+      ],
+      "depth_per_pass_mm": [
+       5,
+       6
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 2000,
+     "rpm": 17000,
+     "feed_mm_min": 2150,
      "plunge_mm_min": 600,
-     "depth_per_pass_mm": 3.0,
-     "stepover_pct": 40,
+     "depth_per_pass_mm": 3.5,
+     "stepover_pct": 45,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       1800,
+       2500
+      ],
+      "plunge_mm_min": [
+       500,
+       700
+      ],
+      "depth_per_pass_mm": [
+       3,
+       4
+      ],
+      "stepover_pct": [
+       40,
+       50
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 2500,
-     "plunge_mm_min": 800,
-     "depth_per_pass_mm": 6.0,
-     "stepover_pct": 40,
+     "rpm": 15000,
+     "feed_mm_min": 3000,
+     "plunge_mm_min": 700,
+     "depth_per_pass_mm": 5.5,
+     "stepover_pct": 45,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       14000,
+       16000
+      ],
+      "feed_mm_min": [
+       2500,
+       3500
+      ],
+      "plunge_mm_min": [
+       600,
+       800
+      ],
+      "depth_per_pass_mm": [
+       5,
+       6
+      ],
+      "stepover_pct": [
+       40,
+       50
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "laser": [
@@ -93,24 +197,56 @@
      "mode": "cut",
      "power_w": 40,
      "thickness_mm": 3,
-     "power_pct": 40,
+     "power_pct": 37.5,
      "speed_mm_min": 1500,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       30,
+       45
+      ],
+      "speed_mm_min": [
+       1200,
+       1800
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "cut",
      "power_w": 40,
      "thickness_mm": 6,
-     "power_pct": 50,
+     "power_pct": 47.5,
      "speed_mm_min": 900,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       40,
+       55
+      ],
+      "speed_mm_min": [
+       700,
+       1100
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
@@ -118,23 +254,59 @@
      "power_w": 60,
      "thickness_mm": 3,
      "power_pct": 30,
-     "speed_mm_min": 1800,
+     "speed_mm_min": 1850,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       25,
+       35
+      ],
+      "speed_mm_min": [
+       1500,
+       2200
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "diode",
      "mode": "cut",
      "power_w": 10,
      "thickness_mm": 3,
-     "power_pct": 100,
-     "speed_mm_min": 500,
+     "power_pct": 80,
+     "speed_mm_min": 550,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       70,
+       90
+      ],
+      "speed_mm_min": [
+       400,
+       700
+      ],
+      "passes": [
+       1,
+       2
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "pcb_material_id": null,
@@ -176,52 +348,140 @@
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 800,
+     "rpm": 17000,
+     "feed_mm_min": 850,
      "plunge_mm_min": 250,
-     "depth_per_pass_mm": 1.0,
+     "depth_per_pass_mm": 1,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       700,
+       1000
+      ],
+      "plunge_mm_min": [
+       200,
+       300
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1200,
+     "rpm": 15000,
+     "feed_mm_min": 1250,
      "plunge_mm_min": 400,
-     "depth_per_pass_mm": 2.0,
+     "depth_per_pass_mm": 1.75,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       14000,
+       16000
+      ],
+      "feed_mm_min": [
+       1100,
+       1400
+      ],
+      "plunge_mm_min": [
+       350,
+       450
+      ],
+      "depth_per_pass_mm": [
+       1.5,
+       2
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 800,
+     "rpm": 17000,
+     "feed_mm_min": 850,
      "plunge_mm_min": 250,
-     "depth_per_pass_mm": 1.0,
+     "depth_per_pass_mm": 1,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       700,
+       1000
+      ],
+      "plunge_mm_min": [
+       200,
+       300
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1200,
+     "rpm": 15000,
+     "feed_mm_min": 1250,
      "plunge_mm_min": 400,
-     "depth_per_pass_mm": 2.0,
+     "depth_per_pass_mm": 1.75,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       14000,
+       16000
+      ],
+      "feed_mm_min": [
+       1100,
+       1400
+      ],
+      "plunge_mm_min": [
+       350,
+       450
+      ],
+      "depth_per_pass_mm": [
+       1.5,
+       2
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "laser": [
@@ -230,36 +490,84 @@
      "mode": "cut",
      "power_w": 40,
      "thickness_mm": 3,
-     "power_pct": 85,
-     "speed_mm_min": 500,
+     "power_pct": 80,
+     "speed_mm_min": 550,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       70,
+       90
+      ],
+      "speed_mm_min": [
+       400,
+       700
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "cut",
      "power_w": 60,
      "thickness_mm": 3,
-     "power_pct": 65,
-     "speed_mm_min": 800,
+     "power_pct": 62.5,
+     "speed_mm_min": 750,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       55,
+       70
+      ],
+      "speed_mm_min": [
+       600,
+       900
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "engrave",
      "power_w": 40,
      "thickness_mm": null,
-     "power_pct": 20,
-     "speed_mm_min": 6000,
+     "power_pct": 23,
+     "speed_mm_min": 5250,
      "passes": 1,
      "air_assist": null,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       18,
+       28
+      ],
+      "speed_mm_min": [
+       4500,
+       6000
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "pcb_material_id": null,
@@ -302,52 +610,148 @@
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 1200,
+     "rpm": 19000,
+     "feed_mm_min": 1350,
      "plunge_mm_min": 400,
-     "depth_per_pass_mm": 1.5,
+     "depth_per_pass_mm": 1.75,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       20000
+      ],
+      "feed_mm_min": [
+       1200,
+       1500
+      ],
+      "plunge_mm_min": [
+       350,
+       450
+      ],
+      "depth_per_pass_mm": [
+       1.5,
+       2
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1800,
-     "plunge_mm_min": 600,
-     "depth_per_pass_mm": 3.0,
+     "rpm": 17000,
+     "feed_mm_min": 2000,
+     "plunge_mm_min": 550,
+     "depth_per_pass_mm": 3.5,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       1800,
+       2200
+      ],
+      "plunge_mm_min": [
+       500,
+       600
+      ],
+      "depth_per_pass_mm": [
+       3,
+       4
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 1200,
+     "rpm": 19000,
+     "feed_mm_min": 1350,
      "plunge_mm_min": 400,
-     "depth_per_pass_mm": 1.5,
+     "depth_per_pass_mm": 1.75,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       20000
+      ],
+      "feed_mm_min": [
+       1200,
+       1500
+      ],
+      "plunge_mm_min": [
+       350,
+       450
+      ],
+      "depth_per_pass_mm": [
+       1.5,
+       2
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1800,
-     "plunge_mm_min": 600,
-     "depth_per_pass_mm": 3.0,
+     "rpm": 17000,
+     "feed_mm_min": 2000,
+     "plunge_mm_min": 550,
+     "depth_per_pass_mm": 3.5,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       1800,
+       2200
+      ],
+      "plunge_mm_min": [
+       500,
+       600
+      ],
+      "depth_per_pass_mm": [
+       3,
+       4
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "laser": [
@@ -357,47 +761,111 @@
      "power_w": 40,
      "thickness_mm": 3,
      "power_pct": 60,
-     "speed_mm_min": 600,
+     "speed_mm_min": 650,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       50,
+       70
+      ],
+      "speed_mm_min": [
+       500,
+       800
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "cut",
      "power_w": 60,
      "thickness_mm": 3,
-     "power_pct": 45,
+     "power_pct": 47.5,
      "speed_mm_min": 900,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       40,
+       55
+      ],
+      "speed_mm_min": [
+       700,
+       1100
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "diode",
      "mode": "cut",
      "power_w": 10,
      "thickness_mm": 3,
-     "power_pct": 100,
-     "speed_mm_min": 150,
+     "power_pct": 90,
+     "speed_mm_min": 225,
      "passes": 2,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       80,
+       100
+      ],
+      "speed_mm_min": [
+       150,
+       300
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "engrave",
      "power_w": 40,
      "thickness_mm": null,
-     "power_pct": 18,
-     "speed_mm_min": 6000,
+     "power_pct": 20,
+     "speed_mm_min": 5500,
      "passes": 1,
      "air_assist": null,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       15,
+       25
+      ],
+      "speed_mm_min": [
+       5000,
+       6000
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "diode",
@@ -409,7 +877,86 @@
      "passes": 1,
      "air_assist": null,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       50,
+       70
+      ],
+      "speed_mm_min": [
+       2500,
+       3500
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 60,
+     "speed_mm_min": 1200,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "HobbyistLaserCalc, main table; an estimate, not a manufacturer table",
+     "source_unit": "mm_s",
+     "source_speed": 20,
+     "machine": "CO2 tube laser, 40 W, as the source lists it",
+     "alternative": true,
+     "evidence": "public_reference",
+     "source_info": {
+      "origin": "HobbyistLaserCalc",
+      "date": "2026-11",
+      "license": "MIT",
+      "url": "https://hobbyistlasercalc.com/"
+     }
+    },
+    {
+     "kind": "diode",
+     "mode": "cut",
+     "power_w": 10,
+     "thickness_mm": 4,
+     "power_pct": 90,
+     "speed_mm_min": 200,
+     "passes": 3,
+     "air_assist": null,
+     "verified": false,
+     "source": "HobbyistLaserCalc, wood settings page; an estimate, not a manufacturer table",
+     "machine": "diode laser, 10 W, as the source lists it",
+     "evidence": "public_reference",
+     "source_info": {
+      "origin": "HobbyistLaserCalc",
+      "date": "2026-11",
+      "license": "MIT",
+      "url": "https://github.com/SMSNYDER81/hobbyistlasercalc.com/blob/main/laser-settings-wood.html"
+     }
+    },
+    {
+     "kind": "diode",
+     "mode": "cut",
+     "power_w": 10,
+     "thickness_mm": 2,
+     "power_pct": 75,
+     "speed_mm_min": 400,
+     "passes": 2,
+     "air_assist": null,
+     "verified": false,
+     "source": "HobbyistLaserCalc, wood settings page; an estimate, not a manufacturer table",
+     "machine": "diode laser, 10 W, as the source lists it",
+     "evidence": "public_reference",
+     "source_info": {
+      "origin": "HobbyistLaserCalc",
+      "date": "2026-11",
+      "license": "MIT",
+      "url": "https://github.com/SMSNYDER81/hobbyistlasercalc.com/blob/main/laser-settings-wood.html"
+     }
     }
    ],
    "pcb_material_id": null,
@@ -446,52 +993,140 @@
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 800,
-     "plunge_mm_min": 250,
-     "depth_per_pass_mm": 1.0,
+     "rpm": 17000,
+     "feed_mm_min": 950,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.25,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       800,
+       1100
+      ],
+      "plunge_mm_min": [
+       250,
+       350
+      ],
+      "depth_per_pass_mm": [
+       1,
+       1.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1200,
+     "rpm": 15000,
+     "feed_mm_min": 1350,
      "plunge_mm_min": 400,
-     "depth_per_pass_mm": 2.0,
+     "depth_per_pass_mm": 2,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       14000,
+       16000
+      ],
+      "feed_mm_min": [
+       1200,
+       1500
+      ],
+      "plunge_mm_min": [
+       350,
+       450
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 800,
-     "plunge_mm_min": 250,
-     "depth_per_pass_mm": 1.0,
+     "rpm": 17000,
+     "feed_mm_min": 950,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.25,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       800,
+       1100
+      ],
+      "plunge_mm_min": [
+       250,
+       350
+      ],
+      "depth_per_pass_mm": [
+       1,
+       1.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1200,
+     "rpm": 15000,
+     "feed_mm_min": 1350,
      "plunge_mm_min": 400,
-     "depth_per_pass_mm": 2.0,
+     "depth_per_pass_mm": 2,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       14000,
+       16000
+      ],
+      "feed_mm_min": [
+       1200,
+       1500
+      ],
+      "plunge_mm_min": [
+       350,
+       450
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "laser": [
@@ -500,24 +1135,56 @@
      "mode": "cut",
      "power_w": 40,
      "thickness_mm": 3,
-     "power_pct": 90,
-     "speed_mm_min": 360,
+     "power_pct": 87.5,
+     "speed_mm_min": 400,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       80,
+       95
+      ],
+      "speed_mm_min": [
+       300,
+       500
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "cut",
      "power_w": 60,
      "thickness_mm": 3,
-     "power_pct": 70,
+     "power_pct": 72.5,
      "speed_mm_min": 600,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       65,
+       80
+      ],
+      "speed_mm_min": [
+       500,
+       700
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
@@ -525,11 +1192,27 @@
      "power_w": 40,
      "thickness_mm": null,
      "power_pct": 25,
-     "speed_mm_min": 5000,
+     "speed_mm_min": 4750,
      "passes": 1,
      "air_assist": null,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       20,
+       30
+      ],
+      "speed_mm_min": [
+       4000,
+       5500
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "pcb_material_id": null,
@@ -575,52 +1258,140 @@
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
+     "rpm": 19000,
      "feed_mm_min": 1000,
-     "plunge_mm_min": 300,
+     "plunge_mm_min": 275,
      "depth_per_pass_mm": 1.2,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       20000
+      ],
+      "feed_mm_min": [
+       900,
+       1100
+      ],
+      "plunge_mm_min": [
+       250,
+       300
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1500,
-     "plunge_mm_min": 500,
-     "depth_per_pass_mm": 2.5,
+     "rpm": 17000,
+     "feed_mm_min": 1350,
+     "plunge_mm_min": 450,
+     "depth_per_pass_mm": 2.25,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       1200,
+       1500
+      ],
+      "plunge_mm_min": [
+       400,
+       500
+      ],
+      "depth_per_pass_mm": [
+       2,
+       2.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
+     "rpm": 19000,
      "feed_mm_min": 1000,
-     "plunge_mm_min": 300,
+     "plunge_mm_min": 275,
      "depth_per_pass_mm": 1.2,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       20000
+      ],
+      "feed_mm_min": [
+       900,
+       1100
+      ],
+      "plunge_mm_min": [
+       250,
+       300
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1500,
-     "plunge_mm_min": 500,
-     "depth_per_pass_mm": 2.5,
+     "rpm": 17000,
+     "feed_mm_min": 1350,
+     "plunge_mm_min": 450,
+     "depth_per_pass_mm": 2.25,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       1200,
+       1500
+      ],
+      "plunge_mm_min": [
+       400,
+       500
+      ],
+      "depth_per_pass_mm": [
+       2,
+       2.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "laser": [
@@ -629,60 +1400,148 @@
      "mode": "cut",
      "power_w": 40,
      "thickness_mm": 3,
-     "power_pct": 80,
-     "speed_mm_min": 600,
+     "power_pct": 62.5,
+     "speed_mm_min": 700,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       55,
+       70
+      ],
+      "speed_mm_min": [
+       500,
+       900
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "cut",
      "power_w": 40,
      "thickness_mm": 6,
-     "power_pct": 90,
-     "speed_mm_min": 240,
-     "passes": 2,
+     "power_pct": 82.5,
+     "speed_mm_min": 300,
+     "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       75,
+       90
+      ],
+      "speed_mm_min": [
+       200,
+       400
+      ],
+      "passes": [
+       1,
+       2
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "cut",
      "power_w": 60,
      "thickness_mm": 3,
-     "power_pct": 60,
-     "speed_mm_min": 900,
+     "power_pct": 57.5,
+     "speed_mm_min": 1000,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       50,
+       65
+      ],
+      "speed_mm_min": [
+       800,
+       1200
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "cut",
      "power_w": 60,
      "thickness_mm": 6,
-     "power_pct": 70,
+     "power_pct": 72.5,
      "speed_mm_min": 500,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       65,
+       80
+      ],
+      "speed_mm_min": [
+       400,
+       600
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "diode",
      "mode": "cut",
      "power_w": 10,
      "thickness_mm": 3,
-     "power_pct": 100,
-     "speed_mm_min": 120,
-     "passes": 3,
+     "power_pct": 95,
+     "speed_mm_min": 185,
+     "passes": 2,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       90,
+       100
+      ],
+      "speed_mm_min": [
+       120,
+       250
+      ],
+      "passes": [
+       2,
+       4
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
@@ -690,11 +1549,55 @@
      "power_w": 40,
      "thickness_mm": null,
      "power_pct": 20,
-     "speed_mm_min": 6000,
+     "speed_mm_min": 5500,
      "passes": 1,
      "air_assist": null,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       15,
+       25
+      ],
+      "speed_mm_min": [
+       5000,
+       6000
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
+    },
+    {
+     "kind": "diode",
+     "mode": "engrave",
+     "power_w": 10,
+     "thickness_mm": null,
+     "power_pct": 60,
+     "speed_mm_min": 3000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       50,
+       70
+      ],
+      "speed_mm_min": [
+       2500,
+       3500
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
@@ -710,19 +1613,86 @@
     },
     {
      "kind": "diode",
-     "mode": "engrave",
+     "mode": "cut",
      "power_w": 10,
-     "thickness_mm": null,
-     "power_pct": 60,
-     "speed_mm_min": 3000,
-     "passes": 1,
+     "thickness_mm": 6,
+     "power_pct": 95,
+     "speed_mm_min": 150,
+     "passes": 4,
      "air_assist": null,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "HobbyistLaserCalc, wood settings page; an estimate, not a manufacturer table",
+     "ranges": {
+      "passes": [
+       4,
+       5
+      ]
+     },
+     "machine": "diode laser, 10 W, as the source lists it",
+     "evidence": "public_reference",
+     "source_info": {
+      "origin": "HobbyistLaserCalc",
+      "date": "2026-11",
+      "license": "MIT",
+      "url": "https://github.com/SMSNYDER81/hobbyistlasercalc.com/blob/main/laser-settings-wood.html"
+     }
     }
    ],
    "pcb_material_id": null,
    "notes": "The glue can release formaldehyde when it burns: extraction is needed. A sheet with a dark or a waterproof glue cuts slower.",
+   "source": "general reference values and common commercial sizes"
+  },
+  {
+   "id": "wood/cherry",
+   "family": "wood",
+   "names": {
+    "en": "Cherry",
+    "es": "Cerezo",
+    "de": "Kirschholz",
+    "fr": "Cerisier",
+    "it": "Ciliegio",
+    "ja": "チェリー材",
+    "zh": "樱桃木",
+    "pt": "Cerejeira"
+   },
+   "density_g_cm3": null,
+   "thicknesses_mm": [
+    3
+   ],
+   "safety": {
+    "laser_cut_allowed": true,
+    "laser_engrave_allowed": true,
+    "laser_unsafe": false,
+    "hazards": [
+     "fine_dust",
+     "flammable"
+    ]
+   },
+   "cnc": [],
+   "laser": [
+    {
+     "kind": "diode",
+     "mode": "cut",
+     "power_w": 10,
+     "thickness_mm": 3,
+     "power_pct": 92,
+     "speed_mm_min": 220,
+     "passes": 3,
+     "air_assist": null,
+     "verified": false,
+     "source": "HobbyistLaserCalc, wood settings page; an estimate, not a manufacturer table",
+     "machine": "diode laser, 10 W, as the source lists it",
+     "evidence": "public_reference",
+     "source_info": {
+      "origin": "HobbyistLaserCalc",
+      "date": "2026-11",
+      "license": "MIT",
+      "url": "https://github.com/SMSNYDER81/hobbyistlasercalc.com/blob/main/laser-settings-wood.html"
+     }
+    }
+   ],
+   "pcb_material_id": null,
+   "notes": "A hardwood: a diode laser needs several passes to cut it.",
    "source": "general reference values and common commercial sizes"
   },
   {
@@ -759,24 +1729,56 @@
      "mode": "cut",
      "power_w": 40,
      "thickness_mm": 3,
-     "power_pct": 50,
-     "speed_mm_min": 600,
+     "power_pct": 47.5,
+     "speed_mm_min": 700,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       40,
+       55
+      ],
+      "speed_mm_min": [
+       500,
+       900
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "engrave",
      "power_w": 40,
      "thickness_mm": null,
-     "power_pct": 15,
-     "speed_mm_min": 6000,
+     "power_pct": 16,
+     "speed_mm_min": 5500,
      "passes": 1,
      "air_assist": null,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       12,
+       20
+      ],
+      "speed_mm_min": [
+       5000,
+       6000
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "pcb_material_id": null,
@@ -819,55 +1821,200 @@
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 1000,
-     "plunge_mm_min": 300,
+     "rpm": 19000,
+     "feed_mm_min": 1100,
+     "plunge_mm_min": 350,
      "depth_per_pass_mm": 1.5,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       20000
+      ],
+      "feed_mm_min": [
+       1000,
+       1200
+      ],
+      "plunge_mm_min": [
+       300,
+       400
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1500,
-     "plunge_mm_min": 500,
-     "depth_per_pass_mm": 3.0,
+     "rpm": 17000,
+     "feed_mm_min": 1650,
+     "plunge_mm_min": 450,
+     "depth_per_pass_mm": 2.75,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       1500,
+       1800
+      ],
+      "plunge_mm_min": [
+       400,
+       500
+      ],
+      "depth_per_pass_mm": [
+       2.5,
+       3
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 1000,
-     "plunge_mm_min": 300,
+     "rpm": 19000,
+     "feed_mm_min": 1100,
+     "plunge_mm_min": 350,
      "depth_per_pass_mm": 1.5,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       20000
+      ],
+      "feed_mm_min": [
+       1000,
+       1200
+      ],
+      "plunge_mm_min": [
+       300,
+       400
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1500,
-     "plunge_mm_min": 500,
-     "depth_per_pass_mm": 3.0,
+     "rpm": 17000,
+     "feed_mm_min": 1650,
+     "plunge_mm_min": 450,
+     "depth_per_pass_mm": 2.75,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       1500,
+       1800
+      ],
+      "plunge_mm_min": [
+       400,
+       500
+      ],
+      "depth_per_pass_mm": [
+       2.5,
+       3
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
-   "laser": [],
+   "laser": [
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 80,
+     "speed_mm_min": 550,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       70,
+       90
+      ],
+      "speed_mm_min": [
+       400,
+       700
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 60,
+     "thickness_mm": 3,
+     "power_pct": 62.5,
+     "speed_mm_min": 750,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       55,
+       70
+      ],
+      "speed_mm_min": [
+       600,
+       900
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
+    }
+   ],
    "pcb_material_id": null,
    "notes": "High density fibreboard: harder on bits than MDF.",
    "source": "general reference values and common commercial sizes"
@@ -912,52 +2059,132 @@
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 1000,
+     "rpm": 19000,
+     "feed_mm_min": 1100,
      "plunge_mm_min": 300,
      "depth_per_pass_mm": 1.5,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       20000
+      ],
+      "feed_mm_min": [
+       1000,
+       1200
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1500,
-     "plunge_mm_min": 500,
-     "depth_per_pass_mm": 3.0,
+     "rpm": 17000,
+     "feed_mm_min": 1650,
+     "plunge_mm_min": 450,
+     "depth_per_pass_mm": 2.75,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       1500,
+       1800
+      ],
+      "plunge_mm_min": [
+       400,
+       500
+      ],
+      "depth_per_pass_mm": [
+       2.5,
+       3
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 1000,
+     "rpm": 19000,
+     "feed_mm_min": 1100,
      "plunge_mm_min": 300,
      "depth_per_pass_mm": 1.5,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       20000
+      ],
+      "feed_mm_min": [
+       1000,
+       1200
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1500,
-     "plunge_mm_min": 500,
-     "depth_per_pass_mm": 3.0,
+     "rpm": 17000,
+     "feed_mm_min": 1650,
+     "plunge_mm_min": 450,
+     "depth_per_pass_mm": 2.75,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       1500,
+       1800
+      ],
+      "plunge_mm_min": [
+       400,
+       500
+      ],
+      "depth_per_pass_mm": [
+       2.5,
+       3
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "laser": [
@@ -966,36 +2193,88 @@
      "mode": "cut",
      "power_w": 40,
      "thickness_mm": 3,
-     "power_pct": 85,
-     "speed_mm_min": 450,
+     "power_pct": 65,
+     "speed_mm_min": 625,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       60,
+       70
+      ],
+      "speed_mm_min": [
+       450,
+       800
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "cut",
      "power_w": 40,
      "thickness_mm": 6,
-     "power_pct": 95,
-     "speed_mm_min": 200,
-     "passes": 2,
+     "power_pct": 87.5,
+     "speed_mm_min": 275,
+     "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       80,
+       95
+      ],
+      "speed_mm_min": [
+       200,
+       350
+      ],
+      "passes": [
+       1,
+       2
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "cut",
      "power_w": 60,
      "thickness_mm": 3,
-     "power_pct": 65,
+     "power_pct": 60,
      "speed_mm_min": 800,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       55,
+       65
+      ],
+      "speed_mm_min": [
+       700,
+       900
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
@@ -1007,31 +2286,147 @@
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       70,
+       80
+      ],
+      "speed_mm_min": [
+       350,
+       450
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "diode",
      "mode": "cut",
      "power_w": 10,
      "thickness_mm": 3,
-     "power_pct": 100,
-     "speed_mm_min": 100,
-     "passes": 3,
+     "power_pct": 95,
+     "speed_mm_min": 225,
+     "passes": 2,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       90,
+       100
+      ],
+      "speed_mm_min": [
+       150,
+       300
+      ],
+      "passes": [
+       2,
+       4
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "engrave",
      "power_w": 40,
      "thickness_mm": null,
-     "power_pct": 22,
-     "speed_mm_min": 6000,
+     "power_pct": 21.5,
+     "speed_mm_min": 5500,
      "passes": 1,
      "air_assist": null,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       18,
+       25
+      ],
+      "speed_mm_min": [
+       5000,
+       6000
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
+    },
+    {
+     "kind": "co2",
+     "mode": "cut",
+     "power_w": 40,
+     "thickness_mm": 3,
+     "power_pct": 65,
+     "speed_mm_min": 1080,
+     "passes": 1,
+     "air_assist": true,
+     "verified": false,
+     "source": "HobbyistLaserCalc, main table; an estimate, not a manufacturer table",
+     "air_assist_level": "max",
+     "source_unit": "mm_s",
+     "source_speed": 18,
+     "machine": "CO2 tube laser, 40 W, as the source lists it",
+     "alternative": true,
+     "evidence": "public_reference",
+     "source_info": {
+      "origin": "HobbyistLaserCalc",
+      "date": "2026-11",
+      "license": "MIT",
+      "url": "https://hobbyistlasercalc.com/"
+     }
+    },
+    {
+     "kind": "diode",
+     "mode": "cut",
+     "power_w": 10,
+     "thickness_mm": 6,
+     "power_pct": 95,
+     "speed_mm_min": 120,
+     "passes": 5,
+     "air_assist": null,
+     "verified": false,
+     "source": "HobbyistLaserCalc, wood settings page; an estimate, not a manufacturer table",
+     "machine": "diode laser, 10 W, as the source lists it",
+     "evidence": "public_reference",
+     "source_info": {
+      "origin": "HobbyistLaserCalc",
+      "date": "2026-11",
+      "license": "MIT",
+      "url": "https://github.com/SMSNYDER81/hobbyistlasercalc.com/blob/main/laser-settings-wood.html"
+     }
+    },
+    {
+     "kind": "diode",
+     "mode": "engrave",
+     "power_w": 10,
+     "thickness_mm": null,
+     "power_pct": 45,
+     "speed_mm_min": 2500,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "HobbyistLaserCalc, wood settings page; an estimate, not a manufacturer table",
+     "machine": "diode laser, 10 W, as the source lists it",
+     "evidence": "public_reference",
+     "source_info": {
+      "origin": "HobbyistLaserCalc",
+      "date": "2026-11",
+      "license": "MIT",
+      "url": "https://github.com/SMSNYDER81/hobbyistlasercalc.com/blob/main/laser-settings-wood.html"
+     }
     }
    ],
    "pcb_material_id": null,
@@ -1068,52 +2463,140 @@
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 800,
-     "plunge_mm_min": 250,
-     "depth_per_pass_mm": 1.0,
+     "rpm": 17000,
+     "feed_mm_min": 950,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.25,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       800,
+       1100
+      ],
+      "plunge_mm_min": [
+       250,
+       350
+      ],
+      "depth_per_pass_mm": [
+       1,
+       1.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1200,
+     "rpm": 15000,
+     "feed_mm_min": 1350,
      "plunge_mm_min": 400,
-     "depth_per_pass_mm": 2.0,
+     "depth_per_pass_mm": 2,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       14000,
+       16000
+      ],
+      "feed_mm_min": [
+       1200,
+       1500
+      ],
+      "plunge_mm_min": [
+       350,
+       450
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 800,
-     "plunge_mm_min": 250,
-     "depth_per_pass_mm": 1.0,
+     "rpm": 17000,
+     "feed_mm_min": 950,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.25,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       800,
+       1100
+      ],
+      "plunge_mm_min": [
+       250,
+       350
+      ],
+      "depth_per_pass_mm": [
+       1,
+       1.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1200,
+     "rpm": 15000,
+     "feed_mm_min": 1350,
      "plunge_mm_min": 400,
-     "depth_per_pass_mm": 2.0,
+     "depth_per_pass_mm": 2,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       14000,
+       16000
+      ],
+      "feed_mm_min": [
+       1200,
+       1500
+      ],
+      "plunge_mm_min": [
+       350,
+       450
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "laser": [
@@ -1122,24 +2605,56 @@
      "mode": "cut",
      "power_w": 40,
      "thickness_mm": 3,
-     "power_pct": 90,
-     "speed_mm_min": 360,
+     "power_pct": 87.5,
+     "speed_mm_min": 400,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       80,
+       95
+      ],
+      "speed_mm_min": [
+       300,
+       500
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "cut",
      "power_w": 60,
      "thickness_mm": 3,
-     "power_pct": 70,
+     "power_pct": 72.5,
      "speed_mm_min": 600,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       65,
+       80
+      ],
+      "speed_mm_min": [
+       500,
+       700
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
@@ -1147,11 +2662,73 @@
      "power_w": 40,
      "thickness_mm": null,
      "power_pct": 25,
-     "speed_mm_min": 5000,
+     "speed_mm_min": 4750,
      "passes": 1,
      "air_assist": null,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       20,
+       30
+      ],
+      "speed_mm_min": [
+       4000,
+       5500
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
+    },
+    {
+     "kind": "diode",
+     "mode": "cut",
+     "power_w": 10,
+     "thickness_mm": 3,
+     "power_pct": 95,
+     "speed_mm_min": 200,
+     "passes": 3,
+     "air_assist": null,
+     "verified": false,
+     "source": "HobbyistLaserCalc, wood settings page; an estimate, not a manufacturer table",
+     "ranges": {
+      "passes": [
+       3,
+       4
+      ]
+     },
+     "machine": "diode laser, 10 W, as the source lists it",
+     "evidence": "public_reference",
+     "source_info": {
+      "origin": "HobbyistLaserCalc",
+      "date": "2026-11",
+      "license": "MIT",
+      "url": "https://github.com/SMSNYDER81/hobbyistlasercalc.com/blob/main/laser-settings-wood.html"
+     }
+    },
+    {
+     "kind": "diode",
+     "mode": "engrave",
+     "power_w": 10,
+     "thickness_mm": null,
+     "power_pct": 60,
+     "speed_mm_min": 2000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "HobbyistLaserCalc, wood settings page; an estimate, not a manufacturer table",
+     "machine": "diode laser, 10 W, as the source lists it",
+     "evidence": "public_reference",
+     "source_info": {
+      "origin": "HobbyistLaserCalc",
+      "date": "2026-11",
+      "license": "MIT",
+      "url": "https://github.com/SMSNYDER81/hobbyistlasercalc.com/blob/main/laser-settings-wood.html"
+     }
     }
    ],
    "pcb_material_id": null,
@@ -1188,52 +2765,148 @@
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 1200,
+     "rpm": 19000,
+     "feed_mm_min": 1350,
      "plunge_mm_min": 400,
-     "depth_per_pass_mm": 1.5,
+     "depth_per_pass_mm": 2.25,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       20000
+      ],
+      "feed_mm_min": [
+       1200,
+       1500
+      ],
+      "plunge_mm_min": [
+       350,
+       450
+      ],
+      "depth_per_pass_mm": [
+       2,
+       2.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1800,
-     "plunge_mm_min": 600,
-     "depth_per_pass_mm": 3.0,
+     "rpm": 17000,
+     "feed_mm_min": 2000,
+     "plunge_mm_min": 550,
+     "depth_per_pass_mm": 3.5,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       1800,
+       2200
+      ],
+      "plunge_mm_min": [
+       500,
+       600
+      ],
+      "depth_per_pass_mm": [
+       3,
+       4
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 1200,
+     "rpm": 19000,
+     "feed_mm_min": 1350,
      "plunge_mm_min": 400,
-     "depth_per_pass_mm": 1.5,
+     "depth_per_pass_mm": 2.25,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       20000
+      ],
+      "feed_mm_min": [
+       1200,
+       1500
+      ],
+      "plunge_mm_min": [
+       350,
+       450
+      ],
+      "depth_per_pass_mm": [
+       2,
+       2.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1800,
-     "plunge_mm_min": 600,
-     "depth_per_pass_mm": 3.0,
+     "rpm": 17000,
+     "feed_mm_min": 2000,
+     "plunge_mm_min": 550,
+     "depth_per_pass_mm": 3.5,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       1800,
+       2200
+      ],
+      "plunge_mm_min": [
+       500,
+       600
+      ],
+      "depth_per_pass_mm": [
+       3,
+       4
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "laser": [
@@ -1242,24 +2915,88 @@
      "mode": "cut",
      "power_w": 40,
      "thickness_mm": 3,
-     "power_pct": 70,
-     "speed_mm_min": 500,
+     "power_pct": 67.5,
+     "speed_mm_min": 650,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       60,
+       75
+      ],
+      "speed_mm_min": [
+       500,
+       800
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "cut",
      "power_w": 60,
      "thickness_mm": 3,
-     "power_pct": 50,
-     "speed_mm_min": 800,
+     "power_pct": 52.5,
+     "speed_mm_min": 850,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       45,
+       60
+      ],
+      "speed_mm_min": [
+       700,
+       1000
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
+    },
+    {
+     "kind": "diode",
+     "mode": "cut",
+     "power_w": 10,
+     "thickness_mm": 3,
+     "power_pct": 95,
+     "speed_mm_min": 225,
+     "passes": 2,
+     "air_assist": true,
+     "verified": false,
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       90,
+       100
+      ],
+      "speed_mm_min": [
+       150,
+       300
+      ],
+      "passes": [
+       2,
+       3
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
@@ -1267,11 +3004,27 @@
      "power_w": 40,
      "thickness_mm": null,
      "power_pct": 20,
-     "speed_mm_min": 6000,
+     "speed_mm_min": 5500,
      "passes": 1,
      "air_assist": null,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       15,
+       25
+      ],
+      "speed_mm_min": [
+       5000,
+       6000
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "pcb_material_id": null,
@@ -1316,52 +3069,148 @@
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 1000,
-     "plunge_mm_min": 300,
-     "depth_per_pass_mm": 1.2,
+     "rpm": 19000,
+     "feed_mm_min": 1100,
+     "plunge_mm_min": 350,
+     "depth_per_pass_mm": 1.35,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       20000
+      ],
+      "feed_mm_min": [
+       1000,
+       1200
+      ],
+      "plunge_mm_min": [
+       300,
+       400
+      ],
+      "depth_per_pass_mm": [
+       1.2,
+       1.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1500,
-     "plunge_mm_min": 500,
-     "depth_per_pass_mm": 2.5,
+     "rpm": 17000,
+     "feed_mm_min": 1550,
+     "plunge_mm_min": 450,
+     "depth_per_pass_mm": 2.25,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       1400,
+       1700
+      ],
+      "plunge_mm_min": [
+       400,
+       500
+      ],
+      "depth_per_pass_mm": [
+       2,
+       2.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 1000,
-     "plunge_mm_min": 300,
-     "depth_per_pass_mm": 1.2,
+     "rpm": 19000,
+     "feed_mm_min": 1100,
+     "plunge_mm_min": 350,
+     "depth_per_pass_mm": 1.35,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       18000,
+       20000
+      ],
+      "feed_mm_min": [
+       1000,
+       1200
+      ],
+      "plunge_mm_min": [
+       300,
+       400
+      ],
+      "depth_per_pass_mm": [
+       1.2,
+       1.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1500,
-     "plunge_mm_min": 500,
-     "depth_per_pass_mm": 2.5,
+     "rpm": 17000,
+     "feed_mm_min": 1550,
+     "plunge_mm_min": 450,
+     "depth_per_pass_mm": 2.25,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       1400,
+       1700
+      ],
+      "plunge_mm_min": [
+       400,
+       500
+      ],
+      "depth_per_pass_mm": [
+       2,
+       2.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "laser": [
@@ -1370,60 +3219,148 @@
      "mode": "cut",
      "power_w": 40,
      "thickness_mm": 3,
-     "power_pct": 80,
-     "speed_mm_min": 600,
+     "power_pct": 62.5,
+     "speed_mm_min": 725,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       55,
+       70
+      ],
+      "speed_mm_min": [
+       550,
+       900
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "cut",
      "power_w": 40,
      "thickness_mm": 6,
-     "power_pct": 90,
-     "speed_mm_min": 240,
-     "passes": 2,
+     "power_pct": 82.5,
+     "speed_mm_min": 320,
+     "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       75,
+       90
+      ],
+      "speed_mm_min": [
+       220,
+       420
+      ],
+      "passes": [
+       1,
+       2
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "cut",
      "power_w": 60,
      "thickness_mm": 3,
-     "power_pct": 60,
-     "speed_mm_min": 900,
+     "power_pct": 57.5,
+     "speed_mm_min": 1000,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       50,
+       65
+      ],
+      "speed_mm_min": [
+       800,
+       1200
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "cut",
      "power_w": 60,
      "thickness_mm": 6,
-     "power_pct": 70,
+     "power_pct": 72.5,
      "speed_mm_min": 500,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       65,
+       80
+      ],
+      "speed_mm_min": [
+       400,
+       600
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "diode",
      "mode": "cut",
      "power_w": 10,
      "thickness_mm": 3,
-     "power_pct": 100,
-     "speed_mm_min": 120,
-     "passes": 3,
+     "power_pct": 95,
+     "speed_mm_min": 185,
+     "passes": 2,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       90,
+       100
+      ],
+      "speed_mm_min": [
+       120,
+       250
+      ],
+      "passes": [
+       2,
+       4
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
@@ -1431,11 +3368,27 @@
      "power_w": 40,
      "thickness_mm": null,
      "power_pct": 20,
-     "speed_mm_min": 6000,
+     "speed_mm_min": 5500,
      "passes": 1,
      "air_assist": null,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       15,
+       25
+      ],
+      "speed_mm_min": [
+       5000,
+       6000
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
@@ -1496,52 +3449,140 @@
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 800,
-     "plunge_mm_min": 250,
-     "depth_per_pass_mm": 1.0,
+     "rpm": 17000,
+     "feed_mm_min": 950,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.25,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       800,
+       1100
+      ],
+      "plunge_mm_min": [
+       250,
+       350
+      ],
+      "depth_per_pass_mm": [
+       1,
+       1.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1200,
+     "rpm": 15000,
+     "feed_mm_min": 1350,
      "plunge_mm_min": 400,
-     "depth_per_pass_mm": 2.0,
+     "depth_per_pass_mm": 2,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       14000,
+       16000
+      ],
+      "feed_mm_min": [
+       1200,
+       1500
+      ],
+      "plunge_mm_min": [
+       350,
+       450
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 800,
-     "plunge_mm_min": 250,
-     "depth_per_pass_mm": 1.0,
+     "rpm": 17000,
+     "feed_mm_min": 950,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.25,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       800,
+       1100
+      ],
+      "plunge_mm_min": [
+       250,
+       350
+      ],
+      "depth_per_pass_mm": [
+       1,
+       1.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1200,
+     "rpm": 15000,
+     "feed_mm_min": 1350,
      "plunge_mm_min": 400,
-     "depth_per_pass_mm": 2.0,
+     "depth_per_pass_mm": 2,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       14000,
+       16000
+      ],
+      "feed_mm_min": [
+       1200,
+       1500
+      ],
+      "plunge_mm_min": [
+       350,
+       450
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "laser": [
@@ -1550,24 +3591,56 @@
      "mode": "cut",
      "power_w": 40,
      "thickness_mm": 3,
-     "power_pct": 90,
-     "speed_mm_min": 360,
+     "power_pct": 82.5,
+     "speed_mm_min": 450,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       75,
+       90
+      ],
+      "speed_mm_min": [
+       350,
+       550
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "cut",
      "power_w": 60,
      "thickness_mm": 3,
-     "power_pct": 70,
-     "speed_mm_min": 600,
+     "power_pct": 67.5,
+     "speed_mm_min": 650,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       60,
+       75
+      ],
+      "speed_mm_min": [
+       500,
+       800
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
@@ -1575,11 +3648,27 @@
      "power_w": 40,
      "thickness_mm": null,
      "power_pct": 25,
-     "speed_mm_min": 5000,
+     "speed_mm_min": 4750,
      "passes": 1,
      "air_assist": null,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       20,
+       30
+      ],
+      "speed_mm_min": [
+       4000,
+       5500
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "pcb_material_id": null,
@@ -1616,52 +3705,140 @@
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 800,
-     "plunge_mm_min": 250,
-     "depth_per_pass_mm": 1.0,
+     "rpm": 17000,
+     "feed_mm_min": 950,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.25,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       800,
+       1100
+      ],
+      "plunge_mm_min": [
+       250,
+       350
+      ],
+      "depth_per_pass_mm": [
+       1,
+       1.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "contour",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1200,
+     "rpm": 15000,
+     "feed_mm_min": 1350,
      "plunge_mm_min": 400,
-     "depth_per_pass_mm": 2.0,
+     "depth_per_pass_mm": 2,
      "stepover_pct": null,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       14000,
+       16000
+      ],
+      "feed_mm_min": [
+       1200,
+       1500
+      ],
+      "plunge_mm_min": [
+       350,
+       450
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 3.0,
      "flutes": 2,
-     "rpm": 18000,
-     "feed_mm_min": 800,
-     "plunge_mm_min": 250,
-     "depth_per_pass_mm": 1.0,
+     "rpm": 17000,
+     "feed_mm_min": 950,
+     "plunge_mm_min": 300,
+     "depth_per_pass_mm": 1.25,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       16000,
+       18000
+      ],
+      "feed_mm_min": [
+       800,
+       1100
+      ],
+      "plunge_mm_min": [
+       250,
+       350
+      ],
+      "depth_per_pass_mm": [
+       1,
+       1.5
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "op": "pocket",
      "tool": "end_mill",
      "diameter_mm": 6.0,
      "flutes": 2,
-     "rpm": 16000,
-     "feed_mm_min": 1200,
+     "rpm": 15000,
+     "feed_mm_min": 1350,
      "plunge_mm_min": 400,
-     "depth_per_pass_mm": 2.0,
+     "depth_per_pass_mm": 2,
      "stepover_pct": 40,
      "verified": false,
-     "source": "general machining practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "rpm": [
+       14000,
+       16000
+      ],
+      "feed_mm_min": [
+       1200,
+       1500
+      ],
+      "plunge_mm_min": [
+       350,
+       450
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     }
    ],
    "laser": [
@@ -1670,24 +3847,56 @@
      "mode": "cut",
      "power_w": 40,
      "thickness_mm": 3,
-     "power_pct": 90,
-     "speed_mm_min": 360,
+     "power_pct": 87.5,
+     "speed_mm_min": 400,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       80,
+       95
+      ],
+      "speed_mm_min": [
+       300,
+       500
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
      "mode": "cut",
      "power_w": 60,
      "thickness_mm": 3,
-     "power_pct": 70,
+     "power_pct": 72.5,
      "speed_mm_min": 600,
      "passes": 1,
      "air_assist": true,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       65,
+       80
+      ],
+      "speed_mm_min": [
+       500,
+       700
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
     },
     {
      "kind": "co2",
@@ -1695,11 +3904,73 @@
      "power_w": 40,
      "thickness_mm": null,
      "power_pct": 25,
-     "speed_mm_min": 5000,
+     "speed_mm_min": 4750,
      "passes": 1,
      "air_assist": null,
      "verified": false,
-     "source": "general laser practice, typical starting value; not a manufacturer table"
+     "source": "maintainer table of practical starting values; not a manufacturer table",
+     "ranges": {
+      "power_pct": [
+       20,
+       30
+      ],
+      "speed_mm_min": [
+       4000,
+       5500
+      ]
+     },
+     "evidence": "general_practice",
+     "source_info": {
+      "origin": "Maintainer table of practical starting values",
+      "date": "2026-11",
+      "license": "GPL-3.0-or-later"
+     }
+    },
+    {
+     "kind": "diode",
+     "mode": "cut",
+     "power_w": 10,
+     "thickness_mm": 3,
+     "power_pct": 95,
+     "speed_mm_min": 180,
+     "passes": 3,
+     "air_assist": null,
+     "verified": false,
+     "source": "HobbyistLaserCalc, wood settings page; an estimate, not a manufacturer table",
+     "ranges": {
+      "passes": [
+       3,
+       4
+      ]
+     },
+     "machine": "diode laser, 10 W, as the source lists it",
+     "evidence": "public_reference",
+     "source_info": {
+      "origin": "HobbyistLaserCalc",
+      "date": "2026-11",
+      "license": "MIT",
+      "url": "https://github.com/SMSNYDER81/hobbyistlasercalc.com/blob/main/laser-settings-wood.html"
+     }
+    },
+    {
+     "kind": "diode",
+     "mode": "engrave",
+     "power_w": 10,
+     "thickness_mm": null,
+     "power_pct": 55,
+     "speed_mm_min": 2000,
+     "passes": 1,
+     "air_assist": null,
+     "verified": false,
+     "source": "HobbyistLaserCalc, wood settings page; an estimate, not a manufacturer table",
+     "machine": "diode laser, 10 W, as the source lists it",
+     "evidence": "public_reference",
+     "source_info": {
+      "origin": "HobbyistLaserCalc",
+      "date": "2026-11",
+      "license": "MIT",
+      "url": "https://github.com/SMSNYDER81/hobbyistlasercalc.com/blob/main/laser-settings-wood.html"
+     }
     }
    ],
    "pcb_material_id": null,
