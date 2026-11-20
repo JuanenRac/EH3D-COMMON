@@ -1,0 +1,23 @@
+[package]
+name = "eh3d-dock"
+version = "0.0.1"
+edition.workspace = true
+rust-version.workspace = true
+description = "The frame of a professional window for the EH3D programs: dockable, floating and auto-hiding panels, named workspaces, a declarative menu bar, shortcuts and the words in eight languages"
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+
+[features]
+default = []
+# the frame drawn with egui (the model it draws has no window and is always there)
+gui = ["dep:egui"]
+
+[dependencies]
+# the languages of the interface are the ones of eh3d-view
+eh3d-view = { version = ">=0.0.1", path = "../view" }
+# the window, only with the feature `gui`
+egui = { version = "0.37.0", default-features = false, optional = true }
+
+[lints]
+workspace = true
