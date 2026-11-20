@@ -1,17 +1,17 @@
 # The board materials database
 
-The crate `crates/materials` (`eh3d-materials`) holds the materials of printed circuit boards and the catalogue of the reference documents. Its README explains the fields, the checks, the queries and the categories of the catalogue; this page says how the data is kept.
+The crate `crates/materials` (`eh3d-materials`) holds the materials of printed circuit boards and the catalogue of the reference documents. Its README explains the fields, the checks, the queries and the categories of the catalogue; this page says how the data is kept. The same crate has a second family, for the materials that a router or a laser works (woods, plastics, metals, paper, leather and the like), described in [MACHINING.md](MACHINING.md).
 
 ## Adding a manufacturer or a material
 
 1. Write the material in `crates/materials/data/<manufacturer>.json`, with the identifier `<manufacturer>/<name>` in lower case with hyphens, every value as the sheet publishes it (units in the name of the field, frequencies in GHz) and the file name of the PDF in `source` (or in `sources`, with the pages and the revision when the sheet gives them).
-2. A value the sheet does not give is left out. A bound ("more than 60 min") or a range ("9-12 ppm/C") is written in `notes`, not as a number. A figure in a unit the schema does not use is converted, and the original goes in the note when it could be misread.
+2. A value the sheet does not give is left out. A bound ("more than 60 min") or a range ("9-12 ppm/C") is written in `notes`, not as a number. A figure in a unit the schema does not use is converted, and the original goes in the note when it could be misread. Three things have a field of their own because the sheets give them often: a glass transition published as a bound ("Tg above 280 C") goes in `tg_lower_bounds` as `{"method": "DSC", "value_c": 280}` (the method is the one the sheet names, or `null`; never in `tg_dsc_c`, `tg_dma_c` or `tg_tma_c`, which are measured values, and the words may stay in `notes`), a glass transition that the sheet gives without a method goes in `tg_unspecified_c`, and an in-plane expansion that the sheet gives without a direction goes in `cte_unspecified_ppm` (it is not copied into X and Y). The check refuses a measured value that is below the bound of the same method.
 3. A new file is added to the list in `crates/materials/src/data.rs`; the test of that module fails when a file of the folder is missing from it.
 4. `cargo test -p eh3d-materials` checks every file: schema version, unique and coherent identifiers, believable Dk, Df, Tg and Td, a plain file name as source, no field the schema does not know.
 
 ## The codes of the errors
 
-The database tells what is wrong with a stable code (`MatCode`, `EH3D-MAT-001` to `EH3D-MAT-009`) at the start of every message. A number outside this list is not a code of the database.
+The database tells what is wrong with a stable code (`MatCode`, `EH3D-MAT-001` to `EH3D-MAT-015`) at the start of every message. A number outside this list is not a code of the database. The title of every code is in the eight languages of the suite (`MatCode::title_in(lang)`). The codes 001 to 009 are listed here; 010 to 015 belong to the machining family and are in [MACHINING.md](MACHINING.md).
 
 | Code | Variant of `MatError` | What it is |
 |---|---|---|
