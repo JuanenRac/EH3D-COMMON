@@ -9,7 +9,7 @@ The crate has two layers.
 
 ```toml
 [dependencies]
-eh3d-dock = { git = "https://github.com/JuanenRac/EH3D-COMMON", tag = "v0.3.0", features = ["gui"] }
+eh3d-dock = { git = "https://github.com/JuanenRac/EH3D-COMMON", tag = "v0.2.7", features = ["gui"] }
 ```
 
 ## What a person can do
