@@ -8,6 +8,11 @@ license.workspace = true
 authors.workspace = true
 repository.workspace = true
 
+[features]
+default = []
+# a resolver of its own for `_eh3d._tcp` over UDP (no dependency); off by default, and the client still asks nothing of the network unless `server_mdns` is on
+mdns = []
+
 [dependencies]
 
 [lints]

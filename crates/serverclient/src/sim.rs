@@ -54,6 +54,7 @@ struct State {
     login_s: u64,
     refresh_max_s: u64,
     slept: Vec<Duration>,
+    contract: Option<String>,
 }
 
 /// The server in memory. Clones share the same state, so a test keeps one to look at and gives the other to the client.
@@ -107,6 +108,7 @@ impl SimServer {
             login_s: 3600,
             refresh_max_s: 7200,
             slept: Vec::new(),
+            contract: None,
         })))
     }
 
@@ -151,6 +153,11 @@ impl SimServer {
     /// A sleeper that does not wait: it only writes down the pauses the client asked for.
     pub fn sleeper(&self) -> SimSleeper {
         SimSleeper(self.clone())
+    }
+
+    /// The OpenAPI document that `GET /api/v1/openapi.json` gives (none at first: the route answers 404 like a server that does not serve it).
+    pub fn set_contract(&self, document: &str) {
+        self.state().contract = Some(document.to_string());
     }
 
     /// The pauses the client asked for, in order.
@@ -312,7 +319,11 @@ impl SimServer {
                     None => Ok(error(404, "unknown_session")),
                 }
             }
-            "GET /api/v1/echo" | "PUT /api/v1/echo" | "POST /api/v1/echo" => match who {
+            "GET /api/v1/openapi.json" => match st.contract.clone() {
+                Some(doc) => Ok(ok(doc)),
+                None => Ok(error(404, "not_found")),
+            },
+            "GET /api/v1/echo" | "PUT /api/v1/echo" | "DELETE /api/v1/echo" | "POST /api/v1/echo" => match who {
                 None => Ok(error(401, "unauthorized")),
                 Some(_) => Ok(ok(format!(
                     "{{\"ok\":true,\"body\":{}}}",

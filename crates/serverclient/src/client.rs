@@ -1,7 +1,10 @@
 //! The client: login, renewal, requests with retries and time limits, and the state of the link.
 
+use crate::contract::{Contract, ContractCache, ContractDiff};
 use crate::errors::{ClientError, TransportError};
 use crate::json::{quote, Json};
+use crate::metrics::LinkMetrics;
+use crate::queue::{is_queueable, OfflineQueue, Queued, Rejected};
 use crate::secret::{MemoryStore, Secret, TokenStore};
 use crate::settings::Settings;
 use crate::transport::{path_segment, Reply, Request, TcpTransport, Transport};
@@ -122,6 +125,33 @@ pub struct Client {
     link: Link,
     auto_refresh: bool,
     store_warning: Option<String>,
+    metrics: LinkMetrics,
+}
+
+/// What `send_or_queue` did with a request.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub enum Outcome {
+    /// The server answered.
+    Done(Reply),
+    /// The server could not be reached and the request waits in the queue.
+    Queued,
+    /// The server could not be reached and the queue refused the request, for this reason.
+    NotQueued(Rejected),
+}
+
+/// What `flush` did with the queue.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct FlushReport {
+    /// Requests the server accepted.
+    pub sent: usize,
+    /// Requests the server refused (4xx or 5xx other than a login problem): they are dropped, with what it said.
+    pub refused: Vec<(Queued, ClientError)>,
+    /// Requests dropped for being too old before the flush.
+    pub expired: usize,
+    /// What stopped the flush (the server is unreachable again, or a login is needed); the rest of the queue is kept.
+    pub stopped: Option<ClientError>,
+    /// Requests still waiting.
+    pub remaining: usize,
 }
 
 impl Client {
@@ -152,6 +182,7 @@ impl Client {
             link: Link::Unknown,
             auto_refresh: true,
             store_warning: None,
+            metrics: LinkMetrics::default(),
         }
     }
 
@@ -177,6 +208,22 @@ impl Client {
     pub fn with_discovery(mut self, discovery: Box<dyn Discover>) -> Client {
         self.discovery = Some(discovery);
         self
+    }
+
+    /// The resolver of this crate for `_eh3d._tcp` (feature `mdns`). It still asks nothing of the network unless `server_mdns` is on.
+    #[cfg(feature = "mdns")]
+    pub fn with_mdns(self) -> Client {
+        self.with_discovery(Box::new(crate::mdns::MdnsResolver::default()))
+    }
+
+    /// What the link has done so far: requests, tries, retries, latencies, losses.
+    pub fn metrics(&self) -> &LinkMetrics {
+        &self.metrics
+    }
+
+    /// Starts the metrics again from zero.
+    pub fn reset_metrics(&mut self) {
+        self.metrics.reset();
     }
 
     /// Whether a request renews the login by itself when it is about to run out (on by default).
@@ -271,12 +318,17 @@ impl Client {
         let repeatable = is_idempotent(&request.method);
         let tries = self.settings.server_retries + 1;
         let mut last = TransportError::Timeout;
+        let link_before = self.link;
+        self.metrics.begin_request();
         for attempt in 1..=tries {
             if attempt > 1 {
                 self.sleeper.sleep(backoff(attempt - 1));
             }
+            self.metrics.begin_attempt(attempt > 1);
+            let started = Instant::now();
             match self.transport.send(request) {
                 Ok(reply) => {
+                    self.metrics.record_reply(started.elapsed(), reply.status);
                     self.link = Link::Connected;
                     if repeatable && matches!(reply.status, 502..=504) && attempt < tries {
                         continue;
@@ -291,6 +343,8 @@ impl Client {
                     };
                     if !again {
                         self.link = Link::Disconnected;
+                        self.metrics
+                            .record_failure(link_before != Link::Disconnected);
                         return Err(ClientError::Unreachable {
                             error: e,
                             attempts: attempt,
@@ -301,6 +355,8 @@ impl Client {
             }
         }
         self.link = Link::Disconnected;
+        self.metrics
+            .record_failure(link_before != Link::Disconnected);
         Err(ClientError::Unreachable {
             error: last,
             attempts: tries,
@@ -559,5 +615,73 @@ impl Client {
     pub fn close_session(&mut self, id: &str) -> Result<(), ClientError> {
         self.delete(&format!("/api/v1/auth/sessions/{}", path_segment(id)))
             .map(|_| ())
+    }
+
+    /// Sends a request; if the server cannot be reached and the request can wait (`PUT` and `DELETE`, see [`crate::queue`]), it goes to the queue
+    /// instead of failing. Any other error (a refusal, a missing login, no address) is returned as it is, and a request that cannot wait is never queued.
+    pub fn send_or_queue(
+        &mut self,
+        queue: &mut OfflineQueue,
+        method: &str,
+        path: &str,
+        body: Option<&str>,
+    ) -> Result<Outcome, ClientError> {
+        match self.request(method, path, body) {
+            Ok(reply) => Ok(Outcome::Done(reply)),
+            Err(ClientError::Unreachable { .. }) if is_queueable(method) => {
+                match queue.push(method, path, body, self.clock.now_s()) {
+                    Ok(()) => Ok(Outcome::Queued),
+                    Err(why) => Ok(Outcome::NotQueued(why)),
+                }
+            }
+            Err(e) => Err(e),
+        }
+    }
+
+    /// Sends what waits in the queue, oldest first, once the server is back. It stops at the first request the server cannot be reached for or that
+    /// needs a login (that one and the rest stay in the queue); a request the server refuses is dropped and reported.
+    pub fn flush(&mut self, queue: &mut OfflineQueue) -> FlushReport {
+        let expired = queue.expire(self.clock.now_s());
+        let mut report = FlushReport {
+            sent: 0,
+            refused: Vec::new(),
+            expired,
+            stopped: None,
+            remaining: 0,
+        };
+        while let Some(item) = queue.pop_front() {
+            match self.request(&item.method, &item.path, item.body.as_deref()) {
+                Ok(_) => report.sent += 1,
+                Err(e @ (ClientError::Unreachable { .. } | ClientError::Unauthorized { .. })) => {
+                    queue.push_front(item);
+                    report.stopped = Some(e);
+                    break;
+                }
+                Err(e) => report.refused.push((item, e)),
+            }
+        }
+        report.remaining = queue.len();
+        report
+    }
+
+    /// Reads the contract of the server (`path` is [`crate::contract::DEFAULT_CONTRACT_PATH`] unless the server serves it elsewhere). It needs no login
+    /// when the client has none.
+    pub fn fetch_contract(&mut self, path: &str) -> Result<Contract, ClientError> {
+        let reply = if self.token.is_some() {
+            self.request("GET", path, None)?
+        } else {
+            self.request_open("GET", path, None)?
+        };
+        Contract::from_openapi(&reply.body).map_err(ClientError::BadReply)
+    }
+
+    /// Reads the contract and gives it to the cache: the routes the server has withdrawn since the last time become retired. Gives what changed.
+    pub fn refresh_contract(
+        &mut self,
+        cache: &mut ContractCache,
+        path: &str,
+    ) -> Result<ContractDiff, ClientError> {
+        let contract = self.fetch_contract(path)?;
+        Ok(cache.update(contract))
     }
 }
