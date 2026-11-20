@@ -259,6 +259,7 @@ name = "eh3d-view"
 version = "0.0.1"
 dependencies = [
  "eh3d-common",
+ "eh3d-serverclient",
 ]
 
 [[package]]

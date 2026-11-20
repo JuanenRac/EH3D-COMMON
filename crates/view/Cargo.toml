@@ -8,8 +8,17 @@ license.workspace = true
 authors.workspace = true
 repository.workspace = true
 
+[features]
+default = []
+# the panel of the settings of the server drawn with egui (the model it draws has no window and is always there)
+gui = ["dep:egui"]
+
 [dependencies]
 eh3d-common = { version = ">=0.1.1", path = "../.." }
+# the settings of the server, the link and the login: the panel shows what this client says
+eh3d-serverclient = { version = ">=0.0.1", path = "../serverclient" }
+# the window, only with the feature `gui`
+egui = { version = "0.37.0", default-features = false, optional = true }
 
 [lints]
 workspace = true
