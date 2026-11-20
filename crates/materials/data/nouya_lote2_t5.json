@@ -2192,6 +2192,16 @@
     },
     {
       "id": "nouya/ny8320-ns",
+      "tg_lower_bounds": [
+        {
+          "method": "TMA",
+          "value_c": 200
+        },
+        {
+          "method": "DMA",
+          "value_c": 250
+        }
+      ],
       "manufacturer": "Nouya",
       "name": "NY8320 NS",
       "kind": "laminate",
@@ -3670,6 +3680,12 @@
     },
     {
       "id": "nouya/nyhp-7300",
+      "tg_lower_bounds": [
+        {
+          "method": "DMA",
+          "value_c": 200
+        }
+      ],
       "manufacturer": "Nouya",
       "name": "NYHP-7300",
       "kind": "laminate",
@@ -3740,6 +3756,12 @@
     },
     {
       "id": "nouya/nyhp-7300h",
+      "tg_lower_bounds": [
+        {
+          "method": "DMA",
+          "value_c": 180
+        }
+      ],
       "manufacturer": "Nouya",
       "name": "NYHP-7300H",
       "kind": "laminate",
@@ -3812,6 +3834,12 @@
     },
     {
       "id": "nouya/nyhp-7300mw",
+      "tg_lower_bounds": [
+        {
+          "method": "DMA",
+          "value_c": 200
+        }
+      ],
       "manufacturer": "Nouya",
       "name": "NYHP-7300MW",
       "kind": "laminate",
@@ -3959,6 +3987,12 @@
     },
     {
       "id": "nouya/nyhp-7350-ant",
+      "tg_lower_bounds": [
+        {
+          "method": "DMA",
+          "value_c": 200
+        }
+      ],
       "manufacturer": "Nouya",
       "name": "NYHP-7350 ANT",
       "kind": "laminate",
@@ -4071,6 +4105,12 @@
     },
     {
       "id": "nouya/nyhp-7350-lnb",
+      "tg_lower_bounds": [
+        {
+          "method": "DMA",
+          "value_c": 200
+        }
+      ],
       "manufacturer": "Nouya",
       "name": "NYHP-7350 LNB",
       "kind": "laminate",

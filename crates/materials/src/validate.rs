@@ -125,6 +125,39 @@ pub fn check_material(m: &Material) -> Vec<MatError> {
     in_range(&mut errors, id, "tg_dma_c", m.tg_dma_c, TEMPERATURE_RANGE);
     in_range(&mut errors, id, "tg_tma_c", m.tg_tma_c, TEMPERATURE_RANGE);
     in_range(&mut errors, id, "td_c", m.td_c, TEMPERATURE_RANGE);
+    in_range(
+        &mut errors,
+        id,
+        "tg_unspecified_c",
+        m.tg_unspecified_c,
+        TEMPERATURE_RANGE,
+    );
+    for (i, b) in m.tg_lower_bounds.iter().enumerate() {
+        in_range(
+            &mut errors,
+            id,
+            &format!("tg_lower_bounds[{i}].value_c"),
+            Some(b.value_c),
+            TEMPERATURE_RANGE,
+        );
+        // a measured value below the bound the same sheet gives for the same method is a contradiction
+        let measured = match b.method.as_deref().map(str::to_ascii_uppercase).as_deref() {
+            Some("DSC") => m.tg_dsc_c,
+            Some("DMA") => m.tg_dma_c,
+            Some("TMA") => m.tg_tma_c,
+            _ => None,
+        };
+        if let Some(v) = measured {
+            if v < b.value_c {
+                errors.push(out_of_range(
+                    id,
+                    &format!("tg_lower_bounds[{i}].value_c"),
+                    b.value_c,
+                    (TEMPERATURE_RANGE.0, v),
+                ));
+            }
+        }
+    }
 
     // electrical
     points(&mut errors, id, "dk", &m.dk, DK_RANGE);
@@ -321,6 +354,24 @@ mod tests {
             })
             .collect();
         assert_eq!(fields, ["tg_dsc_c", "td_c", "dk[1].value", "df[1].value"]);
+    }
+
+    #[test]
+    fn a_lower_bound_has_to_be_believable_and_not_above_the_measured_value() {
+        use crate::model::TgBound;
+        let mut m = good();
+        m.tg_lower_bounds = vec![TgBound {
+            method: Some("dsc".into()),
+            value_c: 280.0,
+        }];
+        assert!(check_material(&m).is_empty());
+        m.tg_dsc_c = Some(250.0);
+        assert!(matches!(check_material(&m)[0], MatError::OutOfRange { .. }));
+        m.tg_dsc_c = Some(280.0);
+        assert!(check_material(&m).is_empty());
+        m.tg_lower_bounds[0].value_c = 5.0;
+        m.tg_unspecified_c = Some(900.0);
+        assert_eq!(check_material(&m).len(), 2);
     }
 
     #[test]

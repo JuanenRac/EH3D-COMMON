@@ -207,6 +207,25 @@
     "pages": "2",
     "revision": "REV 01-14"
    }
+  },
+  {
+   "id": "iteq/it-158",
+   "manufacturer": "ITEQ",
+   "name": "IT-158",
+   "kind": "laminate",
+   "family": "IT-158",
+   "resin": "Multifunctional filled epoxy, phenolic cured",
+   "reinforcement": "E-glass woven",
+   "lead_free_compatible": true,
+   "ul94": "V-0",
+   "ipc_slash_sheet": "IPC-4101C/99",
+   "tg_dsc_c": 150,
+   "notes": "The family of the laminate IT-158TC and the prepreg IT-158BS: a medium Tg multifunctional filled epoxy, phenolic cured, compatible with lead free assembly and resistant to CAF. The sheet writes the Tg of the family as 150 C by DSC (as a bound in one place and as a value in another) and gives the minimum of the laminate as 150 C and its typical value as 155 C, which is the record IT-158TC; the other typical values of the sheet are in that record.",
+   "source": {
+    "pdf": "e_iteq_it-158_www.multi-circuit-boards.eu.pdf",
+    "pages": "1-2",
+    "revision": "REV 09-14"
+   }
   }
  ]
 }

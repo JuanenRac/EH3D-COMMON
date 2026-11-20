@@ -4,6 +4,7 @@
  "materials": [
   {
    "id": "dupont/pyralux-ap-9111",
+   "tg_unspecified_c": 220,
    "manufacturer": "DuPont",
    "name": "Pyralux AP 9111",
    "kind": "flex_laminate",
@@ -89,7 +90,7 @@
      "label": "12\" x 18\""
     }
    ],
-   "notes": "Dielectric (polyimide) thickness 1.0 mil. Tg 220 C is published without a method and is not stored; in-plane CTE 25 ppm/C below Tg (40 est. above Tg); modulus 700 kpsi (4.83 GPa); dielectric strength 6-7 kV/mil; surface resistance more than 10^16 ohm; moisture and insulation resistance 10^11 ohm; tensile strength more than 345 MPa; elongation more than 50 %; flexural endurance 6000 cycles at least; solder float at 288 C passes; dielectric thickness tolerance 10 %; maximum operating temperature 180 C. Initiation tear 700-1000 g, propagation tear more than 10 g. Add R (rolled-annealed), E (electro-deposited) or D (double-treat RA) to the product code to choose the copper foil.",
+   "notes": "Dielectric (polyimide) thickness 1.0 mil. Tg 220 C is published without a method (kept in tg_unspecified_c); in-plane CTE 25 ppm/C below Tg (40 est. above Tg); modulus 700 kpsi (4.83 GPa); dielectric strength 6-7 kV/mil; surface resistance more than 10^16 ohm; moisture and insulation resistance 10^11 ohm; tensile strength more than 345 MPa; elongation more than 50 %; flexural endurance 6000 cycles at least; solder float at 288 C passes; dielectric thickness tolerance 10 %; maximum operating temperature 180 C. Initiation tear 700-1000 g, propagation tear more than 10 g. Add R (rolled-annealed), E (electro-deposited) or D (double-treat RA) to the product code to choose the copper foil.",
    "source": {
     "pdf": "e_dupont_pyralux-ap-polyimid_www.multi-circuit-boards.eu.pdf",
     "pages": "1-2",
@@ -101,6 +102,7 @@
   },
   {
    "id": "dupont/pyralux-ap-9121",
+   "tg_unspecified_c": 220,
    "manufacturer": "DuPont",
    "name": "Pyralux AP 9121",
    "kind": "flex_laminate",
@@ -185,7 +187,7 @@
      "label": "12\" x 18\""
     }
    ],
-   "notes": "Dielectric (polyimide) thickness 2.0 mil. Tg 220 C is published without a method and is not stored; in-plane CTE 25 ppm/C below Tg (40 est. above Tg); modulus 700 kpsi (4.83 GPa); dielectric strength 6-7 kV/mil; surface resistance more than 10^16 ohm; moisture and insulation resistance 10^11 ohm; tensile strength more than 345 MPa; elongation more than 50 %; flexural endurance 6000 cycles at least; solder float at 288 C passes; dielectric thickness tolerance 10 %; maximum operating temperature 180 C. Initiation tear 900-1200 g, propagation tear more than 20 g. Add R (rolled-annealed), E (electro-deposited) or D (double-treat RA) to the product code to choose the copper foil.",
+   "notes": "Dielectric (polyimide) thickness 2.0 mil. Tg 220 C is published without a method (kept in tg_unspecified_c); in-plane CTE 25 ppm/C below Tg (40 est. above Tg); modulus 700 kpsi (4.83 GPa); dielectric strength 6-7 kV/mil; surface resistance more than 10^16 ohm; moisture and insulation resistance 10^11 ohm; tensile strength more than 345 MPa; elongation more than 50 %; flexural endurance 6000 cycles at least; solder float at 288 C passes; dielectric thickness tolerance 10 %; maximum operating temperature 180 C. Initiation tear 900-1200 g, propagation tear more than 20 g. Add R (rolled-annealed), E (electro-deposited) or D (double-treat RA) to the product code to choose the copper foil.",
    "source": {
     "pdf": "e_dupont_pyralux-ap-polyimid_www.multi-circuit-boards.eu.pdf",
     "pages": "1-2",
@@ -197,6 +199,7 @@
   },
   {
    "id": "dupont/pyralux-ap-9131-9161",
+   "tg_unspecified_c": 220,
    "manufacturer": "DuPont",
    "name": "Pyralux AP 9131-9161",
    "kind": "flex_laminate",
@@ -281,7 +284,7 @@
      "label": "12\" x 18\""
     }
    ],
-   "notes": "Dielectric (polyimide) thickness 3 to 6 mil. Tg 220 C is published without a method and is not stored; in-plane CTE 25 ppm/C below Tg (40 est. above Tg); modulus 700 kpsi (4.83 GPa); dielectric strength 6-7 kV/mil; surface resistance more than 10^16 ohm; moisture and insulation resistance 10^11 ohm; tensile strength more than 345 MPa; elongation more than 50 %; flexural endurance 6000 cycles at least; solder float at 288 C passes; dielectric thickness tolerance 10 %; maximum operating temperature 180 C. Initiation tear 900-1200 g, propagation tear more than 20 g. Add R (rolled-annealed), E (electro-deposited) or D (double-treat RA) to the product code to choose the copper foil.",
+   "notes": "Dielectric (polyimide) thickness 3 to 6 mil. Tg 220 C is published without a method (kept in tg_unspecified_c); in-plane CTE 25 ppm/C below Tg (40 est. above Tg); modulus 700 kpsi (4.83 GPa); dielectric strength 6-7 kV/mil; surface resistance more than 10^16 ohm; moisture and insulation resistance 10^11 ohm; tensile strength more than 345 MPa; elongation more than 50 %; flexural endurance 6000 cycles at least; solder float at 288 C passes; dielectric thickness tolerance 10 %; maximum operating temperature 180 C. Initiation tear 900-1200 g, propagation tear more than 20 g. Add R (rolled-annealed), E (electro-deposited) or D (double-treat RA) to the product code to choose the copper foil.",
    "source": {
     "pdf": "e_dupont_pyralux-ap-polyimid_www.multi-circuit-boards.eu.pdf",
     "pages": "1-2",

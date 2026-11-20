@@ -4,6 +4,12 @@
   "materials": [
     {
       "id": "arlon/33n",
+      "tg_lower_bounds": [
+        {
+          "method": "TMA",
+          "value_c": 250
+        }
+      ],
       "safety": {
         "hazard_statements": [],
         "flammability_note": "GHS hazard statements: none; flash point and auto-ignition temperature not applicable. Machined dust may cause respiratory or mechanical eye irritation."

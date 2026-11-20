@@ -622,6 +622,12 @@
     },
     {
       "id": "ventec/vt-870-h348-tcr",
+      "tg_lower_bounds": [
+        {
+          "method": null,
+          "value_c": 280
+        }
+      ],
       "manufacturer": "Ventec",
       "name": "VT-870 H348 TCR",
       "kind": "ceramic_filled",

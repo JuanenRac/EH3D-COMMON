@@ -4,6 +4,12 @@
  "materials": [
   {
    "id": "taconic/rf-35",
+   "tg_lower_bounds": [
+    {
+     "method": null,
+     "value_c": 315
+    }
+   ],
    "manufacturer": "Taconic",
    "name": "RF-35",
    "kind": "ceramic_filled",

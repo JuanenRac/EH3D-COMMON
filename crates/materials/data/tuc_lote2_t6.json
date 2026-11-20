@@ -1780,6 +1780,12 @@
     },
     {
       "id": "tuc/tu-865s",
+      "tg_lower_bounds": [
+        {
+          "method": "DMA",
+          "value_c": 200
+        }
+      ],
       "manufacturer": "TUC",
       "name": "TU-865S",
       "kind": "laminate",

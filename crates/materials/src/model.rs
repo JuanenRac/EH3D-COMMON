@@ -107,6 +107,19 @@ pub struct Directional {
     pub value: Option<f64>,
 }
 
+/// A glass transition that a sheet publishes only as a lower bound ("Tg above 280 C").
+///
+/// The bound is not a measured value and is never stored in `tg_dsc_c`, `tg_dma_c` or
+/// `tg_tma_c`: a person comparing materials by Tg must know that the real figure can be higher.
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct TgBound {
+    /// The method the sheet names (`DSC`, `DMA` or `TMA`), when it names one.
+    pub method: Option<String>,
+    /// The bound in degrees Celsius: the sheet says the glass transition is above this value.
+    pub value_c: f64,
+}
+
 /// A range of thicknesses when the sheet gives a range instead of a list.
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -270,6 +283,13 @@ pub struct Material {
     pub tg_dma_c: Option<f64>,
     /// The glass transition by TMA in degrees Celsius.
     pub tg_tma_c: Option<f64>,
+    /// The glass transition that the sheet gives without naming a method, in degrees Celsius.
+    #[serde(default)]
+    pub tg_unspecified_c: Option<f64>,
+    /// The glass transitions the sheet gives only as a lower bound ("above 280 C"), one per
+    /// method it names. A bound is not a measurement: see [`Material::tg_lower_bound_c`].
+    #[serde(default)]
+    pub tg_lower_bounds: Vec<TgBound>,
     /// The decomposition temperature (5 % loss) in degrees Celsius.
     pub td_c: Option<f64>,
     /// The time to delamination at 260 C in minutes.
@@ -283,6 +303,10 @@ pub struct Material {
     pub cte_x_ppm: Option<f64>,
     /// The expansion along y in ppm per degree.
     pub cte_y_ppm: Option<f64>,
+    /// The in-plane expansion that the sheet gives without saying the direction, in ppm per
+    /// degree (it is not copied into `cte_x_ppm` or `cte_y_ppm`).
+    #[serde(default)]
+    pub cte_unspecified_ppm: Option<f64>,
     /// The expansion along z below Tg in ppm per degree.
     pub cte_z_below_tg_ppm: Option<f64>,
     /// The expansion along z above Tg in ppm per degree.
@@ -382,12 +406,15 @@ impl Material {
             tg_dsc_c: None,
             tg_dma_c: None,
             tg_tma_c: None,
+            tg_unspecified_c: None,
+            tg_lower_bounds: Vec::new(),
             td_c: None,
             t260_min: None,
             t288_min: None,
             t300_min: None,
             cte_x_ppm: None,
             cte_y_ppm: None,
+            cte_unspecified_ppm: None,
             cte_z_below_tg_ppm: None,
             cte_z_above_tg_ppm: None,
             cte_z_50_260_pct: None,
@@ -432,10 +459,25 @@ impl Material {
         self.source.iter().chain(self.sources.iter())
     }
 
-    /// The glass transition to compare materials by: DSC if published, else DMA, else TMA.
-    /// The methods give different numbers; this is a way to order materials, not a measurement.
+    /// The glass transition to compare materials by: DSC if published, else DMA, else TMA, else
+    /// the figure the sheet gives without a method. The methods give different numbers; this is
+    /// a way to order materials, not a measurement. A lower bound is never returned here.
     pub fn tg_c(&self) -> Option<f64> {
-        self.tg_dsc_c.or(self.tg_dma_c).or(self.tg_tma_c)
+        self.tg_dsc_c
+            .or(self.tg_dma_c)
+            .or(self.tg_tma_c)
+            .or(self.tg_unspecified_c)
+    }
+
+    /// The highest lower bound of the glass transition that the sheet gives ("above 280 C"):
+    /// the real Tg is at least this. It tells nothing about how much higher it is.
+    pub fn tg_lower_bound_c(&self) -> Option<f64> {
+        self.tg_lower_bounds
+            .iter()
+            .map(|b| b.value_c)
+            .fold(None, |best: Option<f64>, v| {
+                Some(best.map_or(v, |b| b.max(v)))
+            })
     }
 }
 
@@ -459,6 +501,39 @@ mod tests {
         assert_eq!(m, Material::new("a/b", "A", "B", Kind::Prepreg, "b.pdf"));
         let again: Material = serde_json::from_str(&serde_json::to_string(&m).unwrap()).unwrap();
         assert_eq!(again, m);
+    }
+
+    #[test]
+    fn a_lower_bound_is_kept_apart_from_the_measured_glass_transition() {
+        let mut m = Material::new("a/b", "A", "B", Kind::Laminate, "b.pdf");
+        assert_eq!(m.tg_lower_bound_c(), None);
+        m.tg_lower_bounds = vec![
+            TgBound {
+                method: Some("TMA".into()),
+                value_c: 200.0,
+            },
+            TgBound {
+                method: Some("DMA".into()),
+                value_c: 250.0,
+            },
+        ];
+        assert_eq!(m.tg_lower_bound_c(), Some(250.0));
+        assert_eq!(m.tg_c(), None);
+        m.tg_unspecified_c = Some(220.0);
+        assert_eq!(m.tg_c(), Some(220.0));
+        m.tg_tma_c = Some(210.0);
+        assert_eq!(m.tg_c(), Some(210.0));
+    }
+
+    #[test]
+    fn the_files_written_before_the_bounds_still_read() {
+        let json = r#"{"id":"a/b","manufacturer":"A","name":"B","kind":"laminate","tg_dsc_c":150,"source":{"pdf":"b.pdf"}}"#;
+        let m: Material = serde_json::from_str(json).unwrap();
+        assert!(m.tg_lower_bounds.is_empty());
+        assert_eq!(m.tg_unspecified_c, None);
+        assert_eq!(m.cte_unspecified_ppm, None);
+        let bad = r#"{"id":"a/b","manufacturer":"A","name":"B","kind":"laminate","tg_lower_bounds":[{"value_c":1,"extra":2}],"source":{"pdf":"b.pdf"}}"#;
+        assert!(serde_json::from_str::<Material>(bad).is_err());
     }
 
     #[test]

@@ -110,6 +110,12 @@
     },
     {
       "id": "rogers/kappa-438",
+      "tg_lower_bounds": [
+        {
+          "method": "TMA",
+          "value_c": 280
+        }
+      ],
       "manufacturer": "Rogers",
       "name": "Kappa 438",
       "kind": "laminate",

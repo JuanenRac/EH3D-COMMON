@@ -287,6 +287,12 @@
   },
   {
    "id": "rogers/ro4003c",
+   "tg_lower_bounds": [
+    {
+     "method": "DSC",
+     "value_c": 280
+    }
+   ],
    "manufacturer": "Rogers",
    "name": "RO4003C",
    "kind": "ceramic_filled",
@@ -424,6 +430,12 @@
   },
   {
    "id": "rogers/ro4350b",
+   "tg_lower_bounds": [
+    {
+     "method": "DSC",
+     "value_c": 280
+    }
+   ],
    "manufacturer": "Rogers",
    "name": "RO4350B",
    "kind": "ceramic_filled",

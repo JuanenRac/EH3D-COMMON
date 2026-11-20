@@ -17,7 +17,8 @@ pub struct Criteria {
     pub kind: Option<Kind>,
     /// The manufacturer (upper and lower case are the same).
     pub manufacturer: Option<String>,
-    /// The lowest glass transition in degrees Celsius (see [`Material::tg_c`]).
+    /// The lowest glass transition in degrees Celsius (see [`Material::tg_c`]); a material whose
+    /// sheet gives only a lower bound at or above it (see [`Material::tg_lower_bound_c`]) matches.
     pub min_tg_c: Option<f64>,
     /// The lowest Dk.
     pub min_dk: Option<f64>,
@@ -64,7 +65,8 @@ impl Criteria {
             }
         }
         if let Some(t) = self.min_tg_c {
-            if !m.tg_c().is_some_and(|x| x >= t) {
+            // a sheet that says "Tg above 280 C" guarantees at least that much
+            if !m.tg_c().is_some_and(|x| x >= t) && !m.tg_lower_bound_c().is_some_and(|x| x >= t) {
                 return false;
             }
         }
@@ -432,6 +434,90 @@ mod tests {
         )
         .unwrap_err();
         assert_eq!(e.code(), MatCode::Document);
+    }
+
+    #[test]
+    fn the_glass_transitions_published_as_bounds_are_kept_apart_from_the_measured_ones() {
+        let db = Database::embedded().unwrap();
+        let bound = |id: &str| {
+            let m = db.get(id).unwrap_or_else(|| panic!("{id}"));
+            (m.tg_lower_bound_c(), m.tg_dsc_c, m.tg_dma_c, m.tg_tma_c)
+        };
+        // RO4003C and RO4350B: more than 280 C by DSC, no measured value
+        assert_eq!(bound("rogers/ro4003c"), (Some(280.0), None, None, None));
+        assert_eq!(bound("rogers/ro4350b"), (Some(280.0), None, None, None));
+        // RF-35: more than 315 C, no method
+        assert_eq!(bound("taconic/rf-35"), (Some(315.0), None, None, None));
+        let nouya = db.get("nouya/ny8320-ns").unwrap();
+        assert_eq!(nouya.tg_lower_bounds.len(), 2);
+        assert_eq!(nouya.tg_lower_bound_c(), Some(250.0));
+        // every bound names the method the sheet names, or none
+        for m in db.materials() {
+            for b in &m.tg_lower_bounds {
+                assert!(
+                    matches!(
+                        b.method.as_deref(),
+                        None | Some("DSC") | Some("DMA") | Some("TMA")
+                    ),
+                    "{}",
+                    m.id
+                );
+            }
+        }
+        assert!(
+            db.materials()
+                .iter()
+                .filter(|m| !m.tg_lower_bounds.is_empty())
+                .count()
+                >= 30
+        );
+    }
+
+    #[test]
+    fn a_search_by_minimum_tg_includes_the_materials_whose_sheet_gives_a_lower_bound() {
+        let db = Database::embedded().unwrap();
+        let wanted = Criteria {
+            min_tg_c: Some(270.0),
+            manufacturer: Some("Rogers".into()),
+            ..Criteria::default()
+        };
+        let ids: Vec<&str> = db.search(&wanted).iter().map(|m| m.id.as_str()).collect();
+        assert!(ids.contains(&"rogers/ro4350b") && ids.contains(&"rogers/ro4003c"));
+        let too_high = Criteria {
+            min_tg_c: Some(300.0),
+            manufacturer: Some("Rogers".into()),
+            ..Criteria::default()
+        };
+        assert!(!db
+            .search(&too_high)
+            .iter()
+            .any(|m| m.id == "rogers/ro4350b"));
+    }
+
+    #[test]
+    fn the_figures_the_old_library_had_and_the_database_lacked_are_in_it() {
+        let db = Database::embedded().unwrap();
+        // the glass transition of the Pyralux AP family, without a method
+        for id in [
+            "dupont/pyralux-ap-9111",
+            "dupont/pyralux-ap-9121",
+            "dupont/pyralux-ap-9131-9161",
+        ] {
+            let m = db.get(id).unwrap();
+            assert_eq!(m.tg_unspecified_c, Some(220.0), "{id}");
+            assert_eq!(m.tg_c(), Some(220.0), "{id}");
+            assert_eq!(m.tg_dsc_c, None);
+        }
+        // IS400: one value for X and Y
+        let is400 = db.get("isola/is400").unwrap();
+        assert_eq!((is400.cte_x_ppm, is400.cte_y_ppm), (Some(13.0), Some(13.0)));
+        // the film states one expansion without a direction
+        let film = db.get("thinflex/w-0505ed-n4").unwrap();
+        assert_eq!(film.cte_unspecified_ppm, Some(24.0));
+        assert_eq!((film.cte_x_ppm, film.cte_y_ppm), (None, None));
+        // IT-158 and IT-158TC are two products with their own figure
+        assert_eq!(db.get("iteq/it-158").unwrap().tg_dsc_c, Some(150.0));
+        assert_eq!(db.get("iteq/it-158tc").unwrap().tg_dsc_c, Some(155.0));
     }
 
     #[test]

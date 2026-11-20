@@ -834,6 +834,12 @@
     },
     {
       "id": "rogers/ro4003c-lopro",
+      "tg_lower_bounds": [
+        {
+          "method": "TMA",
+          "value_c": 280
+        }
+      ],
       "manufacturer": "Rogers",
       "name": "RO4003C LoPro",
       "kind": "ceramic_filled",
@@ -917,6 +923,12 @@
     },
     {
       "id": "rogers/ro4350b-lopro",
+      "tg_lower_bounds": [
+        {
+          "method": "TMA",
+          "value_c": 280
+        }
+      ],
       "manufacturer": "Rogers",
       "name": "RO4350B LoPro",
       "kind": "ceramic_filled",
@@ -1001,6 +1013,12 @@
     },
     {
       "id": "rogers/ro4835-lopro",
+      "tg_lower_bounds": [
+        {
+          "method": "TMA",
+          "value_c": 280
+        }
+      ],
       "manufacturer": "Rogers",
       "name": "RO4835 LoPro",
       "kind": "ceramic_filled",
@@ -1084,6 +1102,12 @@
     },
     {
       "id": "rogers/ro4360g2",
+      "tg_lower_bounds": [
+        {
+          "method": "TMA",
+          "value_c": 280
+        }
+      ],
       "manufacturer": "Rogers",
       "name": "RO4360G2",
       "kind": "ceramic_filled",
@@ -1180,6 +1204,12 @@
     },
     {
       "id": "rogers/ro4450f",
+      "tg_lower_bounds": [
+        {
+          "method": "TMA",
+          "value_c": 280
+        }
+      ],
       "manufacturer": "Rogers",
       "name": "RO4450F",
       "kind": "prepreg",
@@ -1418,6 +1448,12 @@
     },
     {
       "id": "rogers/ro4533",
+      "tg_lower_bounds": [
+        {
+          "method": "TMA",
+          "value_c": 280
+        }
+      ],
       "manufacturer": "Rogers",
       "name": "RO4533",
       "kind": "ceramic_filled",
@@ -1499,6 +1535,12 @@
     },
     {
       "id": "rogers/ro4534",
+      "tg_lower_bounds": [
+        {
+          "method": "TMA",
+          "value_c": 280
+        }
+      ],
       "manufacturer": "Rogers",
       "name": "RO4534",
       "kind": "ceramic_filled",
@@ -1580,6 +1622,12 @@
     },
     {
       "id": "rogers/ro4725jxr",
+      "tg_lower_bounds": [
+        {
+          "method": null,
+          "value_c": 280
+        }
+      ],
       "manufacturer": "Rogers",
       "name": "RO4725JXR",
       "kind": "laminate",
@@ -1646,6 +1694,12 @@
     },
     {
       "id": "rogers/ro4730g3",
+      "tg_lower_bounds": [
+        {
+          "method": null,
+          "value_c": 280
+        }
+      ],
       "manufacturer": "Rogers",
       "name": "RO4730G3",
       "kind": "laminate",
@@ -1860,6 +1914,12 @@
     },
     {
       "id": "rogers/ro4835",
+      "tg_lower_bounds": [
+        {
+          "method": "TMA",
+          "value_c": 280
+        }
+      ],
       "manufacturer": "Rogers",
       "name": "RO4835",
       "kind": "ceramic_filled",
@@ -1928,6 +1988,12 @@
     },
     {
       "id": "rogers/ro4835ind-lopro",
+      "tg_lower_bounds": [
+        {
+          "method": "TMA",
+          "value_c": 280
+        }
+      ],
       "manufacturer": "Rogers",
       "name": "RO4835IND LoPro",
       "kind": "ceramic_filled",
@@ -2001,6 +2067,12 @@
     },
     {
       "id": "rogers/ro4835t",
+      "tg_lower_bounds": [
+        {
+          "method": "TMA",
+          "value_c": 280
+        }
+      ],
       "manufacturer": "Rogers",
       "name": "RO4835T",
       "kind": "ceramic_filled",

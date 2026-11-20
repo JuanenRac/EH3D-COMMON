@@ -836,6 +836,12 @@
     },
     {
       "id": "agc-nelco/n9300-13-rf",
+      "tg_lower_bounds": [
+        {
+          "method": "DMA",
+          "value_c": 245
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "N9300-13 RF",
       "kind": "laminate",
@@ -879,6 +885,12 @@
     },
     {
       "id": "agc-nelco/n9320-13-rf",
+      "tg_lower_bounds": [
+        {
+          "method": "DMA",
+          "value_c": 245
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "N9320-13 RF",
       "kind": "laminate",
@@ -922,6 +934,12 @@
     },
     {
       "id": "agc-nelco/n9338-13-rf",
+      "tg_lower_bounds": [
+        {
+          "method": "DMA",
+          "value_c": 245
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "N9338-13 RF",
       "kind": "laminate",
@@ -965,6 +983,12 @@
     },
     {
       "id": "agc-nelco/n9350-13-rf",
+      "tg_lower_bounds": [
+        {
+          "method": "DMA",
+          "value_c": 245
+        }
+      ],
       "manufacturer": "AGC Nelco",
       "name": "N9350-13 RF",
       "kind": "laminate",

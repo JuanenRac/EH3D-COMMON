@@ -471,13 +471,14 @@
   },
   {
    "id": "isola/is400",
+   "cte_y_ppm": 13,
    "manufacturer": "Isola",
    "family": "IS400",
    "name": "IS400",
    "kind": "laminate",
    "resin": "epoxy",
    "lead_free_compatible": true,
-   "notes": "Lead-free, mid Tg epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df). T260 is more than 60 min and T288 more than 10 min (bounds, not stored). Dk and Df are given at 100 MHz and 500 MHz only. Resistivities: volume 4.0E+8 Mohm cm (C-96/90) and 7.0E+7 at elevated temperature; surface 3.0E+6 Mohm and 5.4E+6. Dielectric breakdown above 50 kV; CTI class 3 (175-249 V); Poisson's ratio 0.183 and 0.151; RTI 130 C. Classified for railway use (EN 45545-2 HL1-HL2 with the R22, R23 and R24 requirements).",
+   "notes": "Lead-free, mid Tg epoxy laminate and prepreg; the guide has process data only (no Tg, Td, Dk or Df). T260 is more than 60 min and T288 more than 10 min (bounds, not stored). Dk and Df are given at 100 MHz and 500 MHz only. Resistivities: volume 4.0E+8 Mohm cm (C-96/90) and 7.0E+7 at elevated temperature; surface 3.0E+6 Mohm and 5.4E+6. Dielectric breakdown above 50 kV; CTI class 3 (175-249 V); Poisson's ratio 0.183 and 0.151; RTI 130 C. The sheet gives one expansion of 13 ppm/C below Tg for the X and Y axes. Classified for railway use (EN 45545-2 HL1-HL2 with the R22, R23 and R24 requirements).",
    "processing": {
     "lamination": {
      "max_temp_c": 180,
@@ -919,6 +920,12 @@
   },
   {
    "id": "isola/p25n",
+   "tg_lower_bounds": [
+    {
+     "method": "TMA",
+     "value_c": 200
+    }
+   ],
    "manufacturer": "Isola",
    "family": "P25N",
    "name": "P25N",

@@ -4,6 +4,7 @@
  "materials": [
   {
    "id": "thinflex/w-0505ed-n4",
+   "cte_unspecified_ppm": 24,
    "manufacturer": "ThinFlex",
    "name": "W-0505ED-N4",
    "kind": "flex_laminate",
@@ -38,7 +39,7 @@
      "foil_type": "ED"
     }
    ],
-   "notes": "Polyimide 0.5 mil, copper 1/2 oz ED on both sides (Nanya foil); thickness tolerance 49 +/- 10 um. The values on the sheet are published with a greater-or-equal sign (peel strength 0.6 kgf/cm, volume resistance 1.0E+12 ohm cm, surface resistance 1.0E+11 ohm, insulation resistance 1.0E+9 ohm, tensile strength 20 kg/mm2, elongation 25 %, tensile modulus 550 kg/mm2, MIT folding 800 cycles) and are not stored. CTE 24 ppm/C and Tg 350 C are by the maker's own method (not stored as a Tg). Dielectric strength 5.5 kV/mil (converted). Dimensional stability -0.1 to -0.1 % (MD and TD); solder float 30 s at 288 C passes. Sheet 250 or 500 mm wide, 400-700 mm long; roll 100 m.",
+   "notes": "Polyimide 0.5 mil, copper 1/2 oz ED on both sides (Nanya foil); thickness tolerance 49 +/- 10 um. The values on the sheet are published with a greater-or-equal sign (peel strength 0.6 kgf/cm, volume resistance 1.0E+12 ohm cm, surface resistance 1.0E+11 ohm, insulation resistance 1.0E+9 ohm, tensile strength 20 kg/mm2, elongation 25 %, tensile modulus 550 kg/mm2, MIT folding 800 cycles) and are not stored. CTE 24 ppm/C without a direction (kept in cte_unspecified_ppm); Tg 350 C by the maker's own method (not stored as a Tg). Dielectric strength 5.5 kV/mil (converted). Dimensional stability -0.1 to -0.1 % (MD and TD); solder float 30 s at 288 C passes. Sheet 250 or 500 mm wide, 400-700 mm long; roll 100 m.",
    "source": {
     "pdf": "e_thinflex_w-0505ED-polyimide_www.multi-circuit-boards.eu.pdf",
     "pages": "1-3",

@@ -1301,6 +1301,12 @@
   },
   {
    "id": "shengyi/s7136h",
+   "tg_lower_bounds": [
+    {
+     "method": "DSC",
+     "value_c": 280
+    }
+   ],
    "manufacturer": "Shengyi",
    "name": "S7136H",
    "kind": "ceramic_filled",
