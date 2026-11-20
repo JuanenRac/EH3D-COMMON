@@ -89,6 +89,20 @@ pub(crate) static TABLE: &[ErrorEntry] = &[
         ],
     },
     ErrorEntry {
+        code: "bad_bgcode",
+        status: 422,
+        texts: [
+            "A binary G-code file (.bgcode) cannot be read: it is cut, its checksum is wrong, a block is out of order or of a kind the format does not have, or it is too big.",
+            "No se puede leer un fichero de G-code binario (.bgcode): está cortado, su suma de control es incorrecta, un bloque está fuera de orden o es de un tipo que el formato no tiene, o es demasiado grande.",
+            "Non è possibile leggere un file G-code binario (.bgcode): è troncato, il checksum è errato, un blocco è fuori ordine o di un tipo che il formato non prevede, oppure è troppo grande.",
+            "Eine binäre G-Code-Datei (.bgcode) kann nicht gelesen werden: Sie ist abgeschnitten, die Prüfsumme stimmt nicht, ein Block steht an der falschen Stelle oder hat einen Typ, den das Format nicht kennt, oder sie ist zu groß.",
+            "Un fichier G-code binaire (.bgcode) ne peut pas être lu : il est tronqué, sa somme de contrôle est fausse, un bloc est hors d'ordre ou d'un type que le format ne prévoit pas, ou il est trop volumineux.",
+            "Não é possível ler um ficheiro de G-code binário (.bgcode): está cortado, a soma de controlo está errada, um bloco está fora de ordem ou é de um tipo que o formato não tem, ou é demasiado grande.",
+            "无法读取二进制 G-code 文件（.bgcode）：文件被截断、校验和错误、数据块顺序错乱或类型不属于该格式，或文件过大。",
+            "バイナリ G-code ファイル（.bgcode）を読み込めません。ファイルが途中で切れている、チェックサムが誤っている、ブロックの順序が不正またはこの形式にない種類である、あるいはサイズが大きすぎます。",
+        ],
+    },
+    ErrorEntry {
         code: "bad_board",
         status: 422,
         texts: [
@@ -646,6 +660,34 @@ pub(crate) static TABLE: &[ErrorEntry] = &[
             "A declaração do carregamento ou de uma das suas partes não é válida (hash, parte vazia ou parte acima do tamanho declarado).",
             "上传或其某一部分的声明无效（哈希、空分片或超出声明大小的分片）。",
             "アップロードまたはその部分の宣言が正しくありません（ハッシュ、空の部分、宣言サイズを超える部分）。",
+        ],
+    },
+    ErrorEntry {
+        code: "bambu_lan_off",
+        status: 409,
+        texts: [
+            "The LAN link to a real Bambu Lab printer is off on this server, so only the simulated printer is reachable.",
+            "El enlace LAN con una impresora Bambu Lab real está desactivado en este servidor, así que solo se alcanza la impresora simulada.",
+            "Il collegamento LAN con una stampante Bambu Lab reale è disattivato su questo server, quindi è raggiungibile solo la stampante simulata.",
+            "Die LAN-Verbindung zu einem echten Bambu-Lab-Drucker ist auf diesem Server ausgeschaltet, daher ist nur der simulierte Drucker erreichbar.",
+            "La liaison LAN avec une vraie imprimante Bambu Lab est désactivée sur ce serveur : seule l'imprimante simulée est accessible.",
+            "A ligação LAN a uma impressora Bambu Lab real está desativada neste servidor, por isso só a impressora simulada está acessível.",
+            "此服务器上已关闭与真实 Bambu Lab 打印机的局域网连接，因此只能访问模拟打印机。",
+            "このサーバーでは実機の Bambu Lab プリンターへの LAN 接続がオフになっているため、シミュレートされたプリンターにしか接続できません。",
+        ],
+    },
+    ErrorEntry {
+        code: "bgcode_unsupported",
+        status: 422,
+        texts: [
+            "A binary G-code file uses something the server does not read: another version of the format, or G-code packed with MeatPack.",
+            "Un fichero de G-code binario usa algo que el servidor no lee: otra versión del formato, o G-code empaquetado con MeatPack.",
+            "Un file G-code binario usa qualcosa che il server non legge: un'altra versione del formato oppure G-code compresso con MeatPack.",
+            "Eine binäre G-Code-Datei verwendet etwas, das der Server nicht lesen kann: eine andere Version des Formats oder mit MeatPack gepackten G-Code.",
+            "Un fichier G-code binaire utilise quelque chose que le serveur ne sait pas lire : une autre version du format ou du G-code compressé avec MeatPack.",
+            "Um ficheiro de G-code binário usa algo que o servidor não lê: outra versão do formato ou G-code empacotado com MeatPack.",
+            "二进制 G-code 文件使用了服务器无法读取的内容：该格式的其他版本，或使用 MeatPack 压缩的 G-code。",
+            "バイナリ G-code ファイルにサーバーが読み取れない内容が含まれています。形式の別バージョン、または MeatPack で圧縮された G-code です。",
         ],
     },
     ErrorEntry {

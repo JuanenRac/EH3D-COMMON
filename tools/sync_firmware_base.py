@@ -90,7 +90,8 @@ def from_base(text: str, names: tuple[str, ...]) -> str:
 
 def read(path: Path) -> str | None:
     try:
-        return path.read_bytes().decode("utf-8")
+        # a working tree checked out with Windows line ends (autocrlf) is the same file as the one Git stores with Unix line ends
+        return path.read_bytes().decode("utf-8").replace("\r\n", "\n")
     except FileNotFoundError:
         return None
 
