@@ -60,8 +60,8 @@ jobs:
         run: cargo test -p eh3d-serverclient --all-targets --features mdns
 
   gui-check:
-    # the panel drawn with egui is compiled apart and does not decide the result of the run until it has been seen to build
-    name: Panel of the server settings (egui)
+    # the panels drawn with egui are compiled apart and do not decide the result of the run until it has been seen to build
+    name: Egui drawings (server settings panel, docking frame)
     runs-on: ubuntu-latest
     continue-on-error: true
     timeout-minutes: 30
@@ -79,6 +79,12 @@ jobs:
         run: cargo check -p eh3d-view --all-targets --features gui
       - name: Lints
         run: cargo clippy -p eh3d-view --all-targets --features gui -- -D warnings
+      - name: Check the docking frame
+        run: cargo check -p eh3d-dock --all-targets --features gui
+      - name: Lints of the docking frame
+        run: cargo clippy -p eh3d-dock --all-targets --features gui -- -D warnings
+      - name: Tests of the docking frame, with the egui drawing
+        run: cargo test -p eh3d-dock --all-targets --features gui
 
   consumers-list:
     name: Repositories that depend on this one
