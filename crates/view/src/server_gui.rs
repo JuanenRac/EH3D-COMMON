@@ -64,7 +64,7 @@ fn show_sessions(
             ui.label(tr(lang, ServerText::SessionsNone));
         }
         if !panel.sessions.rows().is_empty() {
-            egui::Grid::new(ui.id().with("eh3d_server_sessions"))
+            egui::Grid::new(ui.scope_id().with("eh3d_server_sessions"))
                 .num_columns(5)
                 .striped(true)
                 .spacing([8.0, 4.0])
@@ -126,7 +126,7 @@ pub fn show(ui: &mut egui::Ui, panel: &mut ServerPanel, lang: Lang) -> Option<Ac
     ui.add_space(4.0);
 
     // the boxes
-    egui::Grid::new(ui.id().with("eh3d_server_form"))
+    egui::Grid::new(ui.scope_id().with("eh3d_server_form"))
         .num_columns(2)
         .spacing([8.0, 6.0])
         .show(ui, |ui| {

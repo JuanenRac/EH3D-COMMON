@@ -4,6 +4,7 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The server panel names its widgets with the current egui call:** the two grids of the panel take their identifier from the scope of the window and no longer from a method that egui 0.37 marks as deprecated, so the lints of the drawings pass.
 ## [0.2.7] - A docking frame for the windows of the programs: dockable and floating panels, named workspaces, a menu bar declared as data and shortcuts
 
 - **A frame for professional windows, in a crate of its own:** `eh3d-dock` (no dependency beyond `eh3d-view` for the languages; egui 0.37 only with the feature `gui`) gives every program of the suite panels that can be docked, tabbed, split, floated over the window, folded into an edge, hidden, maximised and locked, a menu bar declared as data, named workspaces and shortcuts that a person can change. The model has no window in it and is tested without one; the drawing only reads the model. `docs/DOCKING.md` is the guide, with the steps to move a program to the frame.
