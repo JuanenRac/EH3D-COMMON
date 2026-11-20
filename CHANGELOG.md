@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.2.6] - Headers and bytes in the server client, the tag rules of the project store, sessions list and link badge
+
 - **Requests can carry header lines and a body of bytes:** `RequestParts` (`with_header`, `with_bytes`, `with_text`, `content_type`, `accept`, `if_match`, `if_none_match`, `single_try`) goes to the new `Client::request_full`, and `Request` has the public fields `headers`, `body_bytes` and `single_try` beside the old ones. Nothing that existed changes: a transport written before this keeps working because `Transport::send_full` has a default that calls `send`, and `Reply` is the same.
 - **Headers cannot change how a request is framed:** only `Accept`, `Accept-Language`, `Content-Type`, `If-Match`, `If-None-Match`, `X-Api-Key` and `X-Request-Id` are accepted, each once; a name is letters, digits and `-`, a value is printable ASCII of 512 bytes at most (a line break, a control character or a letter that is not ASCII is refused), 16 headers and 256 MiB of body at most. `Host`, `Content-Length`, `Transfer-Encoding`, `Connection` and `Authorization` are written by the transport only. The client and `TcpTransport` both check, the error never repeats a value (it may be a key) and `Debug` writes names and sizes only.
 - **Answers come back with their headers and their bytes:** `FullReply` (`status`, `headers`, `body`) with `header`, `etag`, `text` and `into_reply`, read by `parse_response_full` (at most 100 header lines, chunked bodies put together); `TcpTransport` and `SimServer` answer it, and the default header lines (`Accept`, `Content-Type`) are not written twice when a program gives its own.
