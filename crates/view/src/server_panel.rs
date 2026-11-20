@@ -6,12 +6,14 @@
 //! * [`LinkTracker`] and [`LinkState`]: connected, disconnected, session expired, no session, not checked yet, no server set.
 //! * [`LoginDialog`]: the name and password (the password is wiped as soon as the call is made), the application the program is, the error of the last try.
 //! * [`error_text`]: any failure of the client in the language of the person, with the text of the code of the server when there is one.
-//! * [`ServerPanel`]: the three above and the [`Action`]s a window sends it; it keeps the last [`Notice`].
+//! * [`LinkBadge`]: the small indicator of the link (dot, word, hint) that any window can put in its corner.
+//! * [`SessionsView`]: the open logins of the person, to list and to close one by one (the one in use asks for a "yes" first).
+//! * [`ServerPanel`]: the parts above and the [`Action`]s a window sends it; it keeps the last [`Notice`].
 
 use crate::server_texts::{range_text, tr, ServerText};
 use crate::texts::Lang;
 use eh3d_serverclient as sc;
-use sc::{Client, ClientError, Health, Link, Session, Settings};
+use sc::{Client, ClientError, Health, Link, Session, SessionInfo, Settings};
 
 /// The limits of the numbers of the form (the same as the ones of `Settings`).
 pub const TIMEOUT_RANGE: (u64, u64) = (1, 120);
@@ -321,6 +323,16 @@ pub enum Tone {
 }
 
 impl LinkState {
+    /// Every state, in the order a legend would list them.
+    pub const ALL: [LinkState; 6] = [
+        LinkState::Connected,
+        LinkState::Unknown,
+        LinkState::NotConfigured,
+        LinkState::NoSession,
+        LinkState::SessionExpired,
+        LinkState::Disconnected,
+    ];
+
     pub fn text(self) -> ServerText {
         match self {
             LinkState::NotConfigured => ServerText::LinkNotSet,
@@ -345,6 +357,161 @@ impl LinkState {
     pub fn needs_login(self) -> bool {
         matches!(self, LinkState::SessionExpired | LinkState::NoSession)
     }
+}
+
+/// A small indicator of the link for the corner of any window: a coloured dot and a word, with a longer text for the hover. The same for every program,
+/// whatever draws it (`server_gui::link_badge` draws it with egui when the feature `gui` is on).
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub struct LinkBadge {
+    state: LinkState,
+}
+
+impl LinkBadge {
+    pub fn new(state: LinkState) -> LinkBadge {
+        LinkBadge { state }
+    }
+
+    /// The badge of what the client says now (the tracker keeps the memory of a login).
+    pub fn observe(tracker: &mut LinkTracker, client: &Client) -> LinkBadge {
+        LinkBadge::new(tracker.observe(client))
+    }
+
+    /// One badge for each state, to show a legend or to test a drawing.
+    pub fn all() -> [LinkBadge; 6] {
+        LinkState::ALL.map(LinkBadge::new)
+    }
+
+    pub fn state(self) -> LinkState {
+        self.state
+    }
+
+    pub fn tone(self) -> Tone {
+        self.state.tone()
+    }
+
+    /// The word beside the dot.
+    pub fn label(self, lang: Lang) -> &'static str {
+        tr(lang, self.state.text())
+    }
+
+    /// What the person can do about it, when there is something: log in, set the address, test the connection.
+    pub fn hint(self, lang: Lang) -> Option<&'static str> {
+        match self.state {
+            LinkState::SessionExpired | LinkState::NoSession => Some(tr(lang, ServerText::Login)),
+            LinkState::NotConfigured => Some(tr(lang, ServerText::FieldAddress)),
+            LinkState::Disconnected => Some(tr(lang, ServerText::TestConnection)),
+            LinkState::Connected | LinkState::Unknown => None,
+        }
+    }
+
+    /// `Link: Disconnected - Test the connection`, for the hover.
+    pub fn tooltip(self, lang: Lang) -> String {
+        let mut text = format!("{}: {}", tr(lang, ServerText::LinkLabel), self.label(lang));
+        if let Some(hint) = self.hint(lang) {
+            text.push_str(" - ");
+            text.push_str(hint);
+        }
+        text
+    }
+
+    /// Does the state ask for the attention of the person (a warning or a failure)?
+    pub fn is_alert(self) -> bool {
+        matches!(self.tone(), Tone::Warning | Tone::Bad)
+    }
+}
+
+/// The open logins of the person (`GET /auth/sessions`) as a list that can be refreshed and closed one by one. The model has no window in it; the
+/// window asks for [`Action`]s and the panel does them.
+#[derive(Debug, Clone, Default)]
+pub struct SessionsView {
+    /// Is the list shown?
+    pub open: bool,
+    rows: Vec<SessionInfo>,
+    error: Option<ClientError>,
+    loaded: bool,
+    pending: Option<String>,
+    confirming: bool,
+}
+
+impl SessionsView {
+    /// The open sessions, the one in use first.
+    pub fn rows(&self) -> &[SessionInfo] {
+        &self.rows
+    }
+
+    /// Has the list been read from the server (even when it is empty)?
+    pub fn is_loaded(&self) -> bool {
+        self.loaded
+    }
+
+    /// Why the last reading failed, if it did; the list shown is the last one that was read.
+    pub fn error(&self) -> Option<&ClientError> {
+        self.error.as_ref()
+    }
+
+    pub fn error_text(&self, lang: Lang) -> Option<String> {
+        self.error.as_ref().map(|e| error_text(lang, e))
+    }
+
+    /// The session the person asked to close, if one waits.
+    pub fn pending(&self) -> Option<&str> {
+        self.pending.as_deref()
+    }
+
+    /// Does the one asked for need a "yes, close it" first (it is the session in use)?
+    pub fn is_confirming(&self) -> bool {
+        self.confirming
+    }
+
+    /// Reads the list again. A failure keeps the last list and the reason.
+    pub fn load(&mut self, client: &mut Client) -> bool {
+        match client.sessions() {
+            Ok(mut rows) => {
+                rows.sort_by_key(|r| !r.current);
+                self.rows = rows;
+                self.error = None;
+                self.loaded = true;
+                true
+            }
+            Err(e) => {
+                self.error = Some(e);
+                false
+            }
+        }
+    }
+
+    /// Marks a session to close (the window then sends `Action::CloseSession`). An id the list does not have is ignored.
+    pub fn ask_close(&mut self, id: &str) {
+        if self.rows.iter().any(|r| r.id == id) {
+            self.pending = Some(id.to_string());
+            self.confirming = false;
+        }
+    }
+
+    pub fn cancel_close(&mut self) {
+        self.pending = None;
+        self.confirming = false;
+    }
+
+    /// Forgets the list (the person logged out).
+    pub fn clear(&mut self) {
+        *self = SessionsView::default();
+    }
+}
+
+/// What closing a session came to.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum CloseOutcome {
+    /// No session was waiting to be closed.
+    Nothing,
+    /// It is the session in use: the person has to say yes first.
+    NeedsConfirm,
+    /// Another session was closed.
+    Closed,
+    /// The session in use was closed: the person is logged out.
+    ClosedOwn,
+    /// The server did not do it; the notice says why.
+    Failed,
 }
 
 /// Turns what the client says into what the person sees; it remembers whether there was a login, to tell an expired session from no session.
@@ -512,6 +679,18 @@ pub enum Action {
     SubmitLogin,
     CancelLogin,
     Logout,
+    /// Show the list of open sessions and read it.
+    OpenSessions,
+    /// Hide the list.
+    HideSessions,
+    /// Read the list again.
+    RefreshSessions,
+    /// Close the session marked with `SessionsView::ask_close` (the one in use asks for a "yes" first).
+    CloseSession,
+    /// The person said yes to closing the session in use.
+    ConfirmCloseSession,
+    /// The person changed their mind.
+    CancelCloseSession,
 }
 
 /// The last thing worth telling the person.
@@ -522,6 +701,8 @@ pub enum Notice {
     Answered(Health),
     Failed(ClientError),
     Invalid(Vec<Issue>),
+    /// A session was closed.
+    SessionClosed,
 }
 
 /// The panel: the form, the login window, the state of the link and the last notice.
@@ -529,6 +710,8 @@ pub enum Notice {
 pub struct ServerPanel {
     pub form: ServerForm,
     pub login: LoginDialog,
+    /// The list of open sessions.
+    pub sessions: SessionsView,
     pub notice: Notice,
     tracker: LinkTracker,
     state: LinkState,
@@ -541,6 +724,7 @@ impl ServerPanel {
         ServerPanel {
             form: ServerForm::from_settings(settings),
             login: LoginDialog::new(app),
+            sessions: SessionsView::default(),
             notice: Notice::None,
             tracker: LinkTracker::default(),
             state: LinkState::Unknown,
@@ -565,7 +749,57 @@ impl ServerPanel {
         } else if !client.has_token() {
             self.who = None;
         }
+        if !client.has_token() {
+            // a list of logins is of a person who is logged in
+            self.sessions.clear();
+        }
         self.state
+    }
+
+    /// The badge of the link as it is now, for the corner of a window.
+    pub fn badge(&self) -> LinkBadge {
+        LinkBadge::new(self.state)
+    }
+
+    /// Closes the session marked with `sessions.ask_close`. The one in use asks for a "yes" first (`confirmed` false gives `NeedsConfirm` and the window
+    /// shows the question); closing it logs the person out. Another session is closed on the server and the list is read again.
+    pub fn close_pending_session(&mut self, client: &mut Client, confirmed: bool) -> CloseOutcome {
+        let Some(id) = self.sessions.pending.clone() else {
+            return CloseOutcome::Nothing;
+        };
+        let own = self.sessions.rows.iter().any(|r| r.id == id && r.current);
+        if own && !confirmed {
+            self.sessions.confirming = true;
+            return CloseOutcome::NeedsConfirm;
+        }
+        self.sessions.cancel_close();
+        if own {
+            let result = client.logout();
+            self.tracker.forget_login();
+            self.who = None;
+            self.sessions.clear();
+            return match result {
+                Ok(()) => {
+                    self.notice = Notice::SessionClosed;
+                    CloseOutcome::ClosedOwn
+                }
+                Err(e) => {
+                    self.notice = Notice::Failed(e);
+                    CloseOutcome::Failed
+                }
+            };
+        }
+        match client.close_session(&id) {
+            Ok(()) => {
+                self.notice = Notice::SessionClosed;
+                self.sessions.load(client);
+                CloseOutcome::Closed
+            }
+            Err(e) => {
+                self.notice = Notice::Failed(e);
+                CloseOutcome::Failed
+            }
+        }
     }
 
     /// Does what the window asked. Gives the new settings when the person applied them: the program saves them to its file and makes a new client.
@@ -614,7 +848,26 @@ impl ServerPanel {
                 };
                 self.tracker.forget_login();
                 self.who = None;
+                self.sessions.clear();
             }
+            Action::OpenSessions => {
+                self.sessions.open = true;
+                self.sessions.load(client);
+            }
+            Action::RefreshSessions => {
+                self.sessions.load(client);
+            }
+            Action::HideSessions => {
+                self.sessions.open = false;
+                self.sessions.cancel_close();
+            }
+            Action::CloseSession => {
+                self.close_pending_session(client, false);
+            }
+            Action::ConfirmCloseSession => {
+                self.close_pending_session(client, true);
+            }
+            Action::CancelCloseSession => self.sessions.cancel_close(),
         }
         self.refresh(client);
         applied
@@ -633,6 +886,7 @@ impl ServerPanel {
                 text
             }
             Notice::Failed(e) => error_text(lang, e),
+            Notice::SessionClosed => tr(lang, ServerText::SessionClosed).to_string(),
             Notice::Invalid(issues) => issues
                 .iter()
                 .map(|i| i.text(lang))
@@ -1033,5 +1287,282 @@ mod tests {
         assert!(d.can_submit());
         d.password.clear();
         assert!(!d.can_submit());
+    }
+
+    fn core_langs() -> impl Iterator<Item = Lang> {
+        Lang::ALL.into_iter().take(8)
+    }
+
+    #[test]
+    fn the_link_badge_has_a_word_a_tone_a_hint_and_a_tooltip_in_every_language() {
+        let badges = LinkBadge::all();
+        assert_eq!(badges.len(), LinkState::ALL.len());
+        let mut states: Vec<String> = badges.iter().map(|b| format!("{:?}", b.state())).collect();
+        states.sort();
+        states.dedup();
+        assert_eq!(states.len(), 6, "one badge for each state");
+        for b in badges {
+            assert_eq!(b.tone(), b.state().tone());
+            for l in core_langs() {
+                assert!(!b.label(l).is_empty());
+                let tip = b.tooltip(l);
+                assert!(tip.starts_with(tr(l, ServerText::LinkLabel)), "{tip}");
+                assert!(tip.contains(b.label(l)), "{tip}");
+                assert_eq!(tip.contains(" - "), b.hint(l).is_some(), "{tip}");
+            }
+        }
+        let hint_of = |s| LinkBadge::new(s).hint(Lang::En);
+        assert_eq!(hint_of(LinkState::Connected), None);
+        assert_eq!(hint_of(LinkState::Unknown), None);
+        assert_eq!(hint_of(LinkState::NoSession), Some("Log in"));
+        assert_eq!(hint_of(LinkState::SessionExpired), Some("Log in"));
+        assert_eq!(
+            hint_of(LinkState::Disconnected),
+            Some("Test the connection")
+        );
+        assert_eq!(hint_of(LinkState::NotConfigured), Some("Server address"));
+        let alerts: Vec<LinkState> = LinkState::ALL
+            .into_iter()
+            .filter(|s| LinkBadge::new(*s).is_alert())
+            .collect();
+        assert_eq!(
+            alerts,
+            vec![
+                LinkState::NoSession,
+                LinkState::SessionExpired,
+                LinkState::Disconnected
+            ]
+        );
+    }
+
+    #[test]
+    fn the_link_badge_follows_the_client_through_its_life() {
+        let sim = SimServer::new();
+        let mut tracker = LinkTracker::default();
+        let nothing = Client::new(Settings::default(), Box::new(sim.clone()));
+        assert_eq!(
+            LinkBadge::observe(&mut tracker, &nothing).state(),
+            LinkState::NotConfigured
+        );
+        let mut c = client(&sim);
+        assert_eq!(
+            LinkBadge::observe(&mut tracker, &c).state(),
+            LinkState::NoSession
+        );
+        c.login("admin", "secret-password", "phoenix-cnc").unwrap();
+        assert_eq!(
+            LinkBadge::observe(&mut tracker, &c).state(),
+            LinkState::Connected
+        );
+        sim.script(vec![Fault::NoConnection; 3]);
+        let _ = c.get("/api/v1/echo");
+        let b = LinkBadge::observe(&mut tracker, &c);
+        assert_eq!(b.state(), LinkState::Disconnected);
+        assert!(b.is_alert());
+        sim.end_all_logins();
+        let _ = c.get("/api/v1/echo");
+        assert_eq!(
+            LinkBadge::observe(&mut tracker, &c).state(),
+            LinkState::SessionExpired
+        );
+    }
+
+    #[test]
+    fn the_panel_gives_the_badge_of_its_state() {
+        let sim = SimServer::new();
+        let mut c = client(&sim);
+        let mut panel = ServerPanel::new(&settings(), "phoenix-cnc");
+        panel.refresh(&c);
+        assert_eq!(panel.badge().state(), LinkState::NoSession);
+        typed(&mut panel, "admin", "secret-password");
+        panel.handle(Action::SubmitLogin, &mut c);
+        assert_eq!(panel.badge().state(), LinkState::Connected);
+    }
+
+    fn logged_panel(sim: &SimServer) -> (ServerPanel, Client) {
+        let mut c = client(sim);
+        let mut panel = ServerPanel::new(&settings(), "phoenix-cnc");
+        typed(&mut panel, "admin", "secret-password");
+        panel.handle(Action::SubmitLogin, &mut c);
+        assert!(panel.who().is_some());
+        (panel, c)
+    }
+
+    fn other_device(sim: &SimServer, app: &str) -> Client {
+        let mut phone = client(sim);
+        phone.login("admin", "secret-password", app).unwrap();
+        phone
+    }
+
+    #[test]
+    fn the_list_of_sessions_shows_the_one_in_use_first_and_closes_another() {
+        let sim = SimServer::new();
+        let (mut panel, mut c) = logged_panel(&sim);
+        let mut phone = other_device(&sim, "android");
+        assert!(!panel.sessions.open && !panel.sessions.is_loaded());
+        panel.handle(Action::OpenSessions, &mut c);
+        assert!(panel.sessions.open && panel.sessions.is_loaded());
+        assert!(panel.sessions.error().is_none());
+        let rows = panel.sessions.rows();
+        assert_eq!(rows.len(), 2);
+        assert!(rows[0].current && !rows[1].current);
+        assert_eq!(rows[0].app, "phoenix-cnc");
+        assert_eq!(rows[1].app, "android");
+        // close the phone
+        let phone_id = rows[1].id.clone();
+        panel.sessions.ask_close(&phone_id);
+        assert_eq!(panel.sessions.pending(), Some(phone_id.as_str()));
+        panel.handle(Action::CloseSession, &mut c);
+        assert_eq!(panel.notice, Notice::SessionClosed);
+        assert_eq!(panel.sessions.rows().len(), 1);
+        assert!(panel.sessions.pending().is_none());
+        assert_eq!(sim.open_logins(), 1);
+        assert!(panel.who().is_some() && panel.state() == LinkState::Connected);
+        for l in core_langs() {
+            assert_eq!(panel.notice_text(l), tr(l, ServerText::SessionClosed));
+        }
+        // the phone found out: its next request is refused
+        assert!(phone.get("/api/v1/echo").unwrap_err().needs_login());
+    }
+
+    #[test]
+    fn closing_the_session_in_use_asks_first_and_then_logs_out() {
+        let sim = SimServer::new();
+        let (mut panel, mut c) = logged_panel(&sim);
+        panel.handle(Action::OpenSessions, &mut c);
+        let own = panel.sessions.rows()[0].id.clone();
+        panel.sessions.ask_close(&own);
+        panel.handle(Action::CloseSession, &mut c);
+        // nothing happened yet: the question is asked
+        assert!(panel.sessions.is_confirming());
+        assert_eq!(sim.open_logins(), 1);
+        assert!(c.has_token());
+        // changing the mind
+        panel.handle(Action::CancelCloseSession, &mut c);
+        assert!(!panel.sessions.is_confirming() && panel.sessions.pending().is_none());
+        assert!(c.has_token());
+        // saying yes
+        panel.sessions.ask_close(&own);
+        panel.handle(Action::CloseSession, &mut c);
+        panel.handle(Action::ConfirmCloseSession, &mut c);
+        assert_eq!(sim.open_logins(), 0);
+        assert!(!c.has_token());
+        assert!(panel.who().is_none());
+        assert_eq!(panel.state(), LinkState::NoSession);
+        assert!(!panel.sessions.open && panel.sessions.rows().is_empty());
+        assert_eq!(panel.notice, Notice::SessionClosed);
+    }
+
+    #[test]
+    fn a_session_the_list_does_not_have_is_ignored_and_nothing_pending_does_nothing() {
+        let sim = SimServer::new();
+        let (mut panel, mut c) = logged_panel(&sim);
+        panel.handle(Action::OpenSessions, &mut c);
+        panel.sessions.ask_close("sess-unknown");
+        assert!(panel.sessions.pending().is_none());
+        assert_eq!(
+            panel.close_pending_session(&mut c, true),
+            CloseOutcome::Nothing
+        );
+        assert_eq!(sim.open_logins(), 1);
+    }
+
+    #[test]
+    fn a_failed_reading_keeps_the_last_list_and_says_why_in_every_language() {
+        let sim = SimServer::new();
+        let (mut panel, mut c) = logged_panel(&sim);
+        let _phone = other_device(&sim, "ios");
+        panel.handle(Action::OpenSessions, &mut c);
+        assert_eq!(panel.sessions.rows().len(), 2);
+        sim.script(vec![Fault::NoConnection; 3]);
+        panel.handle(Action::RefreshSessions, &mut c);
+        assert_eq!(panel.sessions.rows().len(), 2, "the last list stays");
+        assert!(matches!(
+            panel.sessions.error(),
+            Some(ClientError::Unreachable { .. })
+        ));
+        for l in core_langs() {
+            assert!(!panel.sessions.error_text(l).unwrap().is_empty());
+        }
+        assert_eq!(panel.state(), LinkState::Disconnected);
+        // the server is back
+        panel.handle(Action::RefreshSessions, &mut c);
+        assert!(panel.sessions.error().is_none());
+        assert_eq!(panel.state(), LinkState::Connected);
+    }
+
+    #[test]
+    fn a_session_that_cannot_be_closed_leaves_the_list_and_says_why() {
+        let sim = SimServer::new();
+        let (mut panel, mut c) = logged_panel(&sim);
+        let phone = other_device(&sim, "ios");
+        panel.handle(Action::OpenSessions, &mut c);
+        let id = panel.sessions.rows()[1].id.clone();
+        panel.sessions.ask_close(&id);
+        // the phone logs out before the person clicks: the server does not know the session any more
+        let mut phone = phone;
+        phone.logout().unwrap();
+        panel.handle(Action::CloseSession, &mut c);
+        match &panel.notice {
+            Notice::Failed(e) => assert_eq!(e.code(), Some("unknown_session")),
+            other => panic!("{other:?}"),
+        }
+        assert!(!panel.notice_text(Lang::En).is_empty());
+        assert!(panel.who().is_some());
+    }
+
+    #[test]
+    fn without_a_login_the_list_cannot_be_read_and_logging_out_hides_it() {
+        let sim = SimServer::new();
+        let mut c = client(&sim);
+        let mut panel = ServerPanel::new(&settings(), "phoenix-cnc");
+        panel.handle(Action::OpenSessions, &mut c);
+        // there is nothing to list without a login: the list does not stay open
+        assert!(!panel.sessions.open && !panel.sessions.is_loaded());
+        assert!(panel.sessions.rows().is_empty());
+        let mut direct = SessionsView::default();
+        assert!(!direct.load(&mut c));
+        assert!(direct.error().unwrap().needs_login());
+        // logged in, open, then log out: the list goes
+        typed(&mut panel, "admin", "secret-password");
+        panel.handle(Action::SubmitLogin, &mut c);
+        panel.handle(Action::OpenSessions, &mut c);
+        assert!(panel.sessions.is_loaded() && panel.sessions.open);
+        panel.handle(Action::Logout, &mut c);
+        assert!(!panel.sessions.open && !panel.sessions.is_loaded());
+        assert!(panel.sessions.rows().is_empty());
+        // hiding keeps what was read but drops a pending question
+        let (mut p2, mut c2) = logged_panel(&sim);
+        p2.handle(Action::OpenSessions, &mut c2);
+        let id = p2.sessions.rows()[0].id.clone();
+        p2.sessions.ask_close(&id);
+        p2.handle(Action::HideSessions, &mut c2);
+        assert!(!p2.sessions.open && p2.sessions.pending().is_none());
+        assert!(p2.sessions.is_loaded());
+    }
+
+    #[test]
+    fn the_texts_of_the_sessions_say_the_same_things_in_every_language() {
+        // the warning about the session in use names closing and leaving; the question has a yes
+        for l in core_langs() {
+            for t in [
+                ServerText::Sessions,
+                ServerText::SessionsRefresh,
+                ServerText::SessionsHide,
+                ServerText::SessionsNone,
+                ServerText::SessionClose,
+                ServerText::SessionThis,
+                ServerText::SessionCloseOwnWarning,
+                ServerText::SessionConfirm,
+                ServerText::SessionApp,
+                ServerText::SessionAddress,
+                ServerText::SessionRole,
+                ServerText::LinkLabel,
+            ] {
+                assert!(!tr(l, t).trim().is_empty(), "{t:?} {l:?}");
+            }
+        }
+        assert!(tr(Lang::En, ServerText::SessionCloseOwnWarning).contains("logs you out"));
+        assert!(tr(Lang::Pt, ServerText::SessionThis).contains("sessão"));
     }
 }

@@ -66,6 +66,19 @@ server_texts! {
     Applied => ["Settings applied", "Ajustes aplicados", "Impostazioni applicate", "Einstellungen übernommen", "Réglages appliqués", "Definições aplicadas", "设置已应用", "設定を適用しました"],
     HealthOk => ["The server answered", "El servidor respondió", "Il server ha risposto", "Der Server hat geantwortet", "Le serveur a répondu", "O servidor respondeu", "服务器已响应", "サーバーが応答しました"],
     NotApplied => ["There are changes not applied yet", "Hay cambios sin aplicar", "Ci sono modifiche non ancora applicate", "Es gibt noch nicht übernommene Änderungen", "Des modifications ne sont pas encore appliquées", "Há alterações por aplicar", "有尚未应用的更改", "未適用の変更があります"],
+    Sessions => ["Sessions", "Sesiones", "Sessioni", "Sitzungen", "Sessions", "Sessões", "会话", "セッション"],
+    SessionsRefresh => ["Refresh the list", "Actualizar la lista", "Aggiorna l'elenco", "Liste aktualisieren", "Actualiser la liste", "Atualizar a lista", "刷新列表", "一覧を更新"],
+    SessionsHide => ["Hide the list", "Ocultar la lista", "Nascondi l'elenco", "Liste ausblenden", "Masquer la liste", "Ocultar a lista", "隐藏列表", "一覧を隠す"],
+    SessionsNone => ["No open sessions", "No hay sesiones abiertas", "Nessuna sessione aperta", "Keine offenen Sitzungen", "Aucune session ouverte", "Sem sessões abertas", "没有已打开的会话", "開いているセッションはありません"],
+    SessionClose => ["Close this session", "Cerrar esta sesión", "Chiudi questa sessione", "Diese Sitzung schließen", "Fermer cette session", "Terminar esta sessão", "关闭此会话", "このセッションを閉じる"],
+    SessionThis => ["This session", "Esta sesión", "Questa sessione", "Diese Sitzung", "Cette session", "Esta sessão", "当前会话", "このセッション"],
+    SessionClosed => ["Session closed", "Sesión cerrada", "Sessione chiusa", "Sitzung geschlossen", "Session fermée", "Sessão terminada", "会话已关闭", "セッションを閉じました"],
+    SessionCloseOwnWarning => ["This is the session you are using: closing it logs you out.", "Esta es la sesión que estás usando: al cerrarla saldrás.", "È la sessione che stai usando: chiudendola esci.", "Das ist die Sitzung, die Sie verwenden: Beim Schließen werden Sie abgemeldet.", "C'est la session que vous utilisez : la fermer vous déconnecte.", "Esta é a sessão que está a usar: ao terminá-la, sai.", "这是您正在使用的会话：关闭后将退出登录。", "これは使用中のセッションです。閉じるとログアウトされます。"],
+    SessionConfirm => ["Yes, close it", "Sí, cerrarla", "Sì, chiudila", "Ja, schließen", "Oui, la fermer", "Sim, terminar", "是，关闭", "はい、閉じます"],
+    SessionApp => ["Application", "Aplicación", "Applicazione", "Anwendung", "Application", "Aplicação", "应用", "アプリ"],
+    SessionAddress => ["Address", "Dirección", "Indirizzo", "Adresse", "Adresse", "Endereço", "地址", "アドレス"],
+    SessionRole => ["Role", "Rol", "Ruolo", "Rolle", "Rôle", "Perfil", "角色", "ロール"],
+    LinkLabel => ["Link", "Enlace", "Collegamento", "Verbindung", "Liaison", "Ligação", "链路", "リンク"],
 }
 
 /// The text in a language. A language that has no words of its own here speaks its main language (a variant) or English.
@@ -118,7 +131,7 @@ mod tests {
             }
         }
         assert_eq!(TABLE.len(), ALL_SERVER_TEXTS.len());
-        assert!(ALL_SERVER_TEXTS.len() >= 38);
+        assert!(ALL_SERVER_TEXTS.len() >= 51);
     }
 
     #[test]

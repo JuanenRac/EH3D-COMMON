@@ -10,7 +10,7 @@
 //! }
 //! ```
 
-use crate::server_panel::{Action, Field, ServerPanel, TokenState, Tone};
+use crate::server_panel::{Action, Field, LinkBadge, ServerPanel, TokenState, Tone};
 use crate::server_texts::{tr, ServerText};
 use crate::texts::Lang;
 
@@ -24,6 +24,91 @@ fn tone_color(tone: Tone) -> egui::Color32 {
 }
 
 const PROBLEM: egui::Color32 = egui::Color32::from_rgb(210, 70, 60);
+const WARNING: egui::Color32 = egui::Color32::from_rgb(220, 160, 40);
+
+/// The indicator of the link for the corner of any window: a dot of the colour of the state and its word, with the longer text (and what the person can
+/// do about it) on hover. It reads nothing and sends nothing; give it the badge of the panel (`panel.badge()`) or of a tracker.
+pub fn link_badge(ui: &mut egui::Ui, badge: LinkBadge, lang: Lang) -> egui::Response {
+    let inner = ui.horizontal(|ui| {
+        let (rect, _) = ui.allocate_exact_size(egui::vec2(10.0, 10.0), egui::Sense::hover());
+        ui.painter()
+            .circle_filled(rect.center(), 4.5, tone_color(badge.tone()));
+        ui.label(badge.label(lang));
+    });
+    inner.response.on_hover_text(badge.tooltip(lang))
+}
+
+/// The list of open sessions with a button to close each one; a click on the session in use asks "are you sure" first. Gives the action through
+/// `action`; the close button marks the session in the panel and sends `Action::CloseSession`.
+fn show_sessions(
+    ui: &mut egui::Ui,
+    panel: &mut ServerPanel,
+    lang: Lang,
+    action: &mut Option<Action>,
+) {
+    let mut ask: Option<String> = None;
+    ui.group(|ui| {
+        ui.horizontal(|ui| {
+            ui.strong(tr(lang, ServerText::Sessions));
+            if ui.button(tr(lang, ServerText::SessionsRefresh)).clicked() {
+                *action = Some(Action::RefreshSessions);
+            }
+            if ui.button(tr(lang, ServerText::SessionsHide)).clicked() {
+                *action = Some(Action::HideSessions);
+            }
+        });
+        if let Some(error) = panel.sessions.error_text(lang) {
+            ui.colored_label(PROBLEM, error);
+        }
+        if panel.sessions.is_loaded() && panel.sessions.rows().is_empty() {
+            ui.label(tr(lang, ServerText::SessionsNone));
+        }
+        if !panel.sessions.rows().is_empty() {
+            egui::Grid::new(ui.id().with("eh3d_server_sessions"))
+                .num_columns(5)
+                .striped(true)
+                .spacing([8.0, 4.0])
+                .show(ui, |ui| {
+                    ui.strong(tr(lang, ServerText::LoginUser));
+                    ui.strong(tr(lang, ServerText::SessionApp));
+                    ui.strong(tr(lang, ServerText::SessionRole));
+                    ui.strong(tr(lang, ServerText::SessionAddress));
+                    ui.label("");
+                    ui.end_row();
+                    for row in panel.sessions.rows() {
+                        ui.label(row.name.as_str());
+                        ui.label(row.app.as_str());
+                        ui.label(row.role.as_str());
+                        ui.label(row.ip.as_str());
+                        ui.horizontal(|ui| {
+                            if row.current {
+                                ui.strong(tr(lang, ServerText::SessionThis));
+                            }
+                            if ui.button(tr(lang, ServerText::SessionClose)).clicked() {
+                                ask = Some(row.id.clone());
+                            }
+                        });
+                        ui.end_row();
+                    }
+                });
+        }
+        if panel.sessions.is_confirming() {
+            ui.colored_label(WARNING, tr(lang, ServerText::SessionCloseOwnWarning));
+            ui.horizontal(|ui| {
+                if ui.button(tr(lang, ServerText::SessionConfirm)).clicked() {
+                    *action = Some(Action::ConfirmCloseSession);
+                }
+                if ui.button(tr(lang, ServerText::LoginCancel)).clicked() {
+                    *action = Some(Action::CancelCloseSession);
+                }
+            });
+        }
+    });
+    if let Some(id) = ask {
+        panel.sessions.ask_close(&id);
+        *action = Some(Action::CloseSession);
+    }
+}
 
 /// Draws the panel and gives the action the person chose this frame, if any.
 pub fn show(ui: &mut egui::Ui, panel: &mut ServerPanel, lang: Lang) -> Option<Action> {
@@ -33,7 +118,7 @@ pub fn show(ui: &mut egui::Ui, panel: &mut ServerPanel, lang: Lang) -> Option<Ac
     // the state of the link and who is logged in
     let state = panel.state();
     ui.horizontal(|ui| {
-        ui.colored_label(tone_color(state.tone()), tr(lang, state.text()));
+        link_badge(ui, LinkBadge::new(state), lang);
         if let Some(who) = panel.who() {
             ui.label(format!("{} {}", tr(lang, ServerText::LoggedInAs), who.name));
         }
@@ -120,6 +205,14 @@ pub fn show(ui: &mut egui::Ui, panel: &mut ServerPanel, lang: Lang) -> Option<Ac
             action = Some(Action::TestConnection);
         }
         if panel.who().is_some() {
+            let (key, next) = if panel.sessions.open {
+                (ServerText::SessionsHide, Action::HideSessions)
+            } else {
+                (ServerText::Sessions, Action::OpenSessions)
+            };
+            if ui.button(tr(lang, key)).clicked() {
+                action = Some(next);
+            }
             if ui.button(tr(lang, ServerText::Logout)).clicked() {
                 action = Some(Action::Logout);
             }
@@ -131,6 +224,12 @@ pub fn show(ui: &mut egui::Ui, panel: &mut ServerPanel, lang: Lang) -> Option<Ac
     let notice = panel.notice_text(lang);
     if !notice.is_empty() {
         ui.label(notice);
+    }
+
+    // the open sessions, for a person who is logged in
+    if panel.sessions.open && panel.who().is_some() {
+        ui.add_space(6.0);
+        show_sessions(ui, panel, lang, &mut action);
     }
 
     // the login window, in the same panel
