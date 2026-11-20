@@ -1,0 +1,17 @@
+[package]
+name = "eh3d-printmaterials"
+version = "0.0.1"
+edition.workspace = true
+rust-version.workspace = true
+description = "The database of 3D printing materials of the suite: FDM filaments and photopolymer resins (SLA, DLP, LCD, MSLA), every value as its maker publishes it, the checks of the data, the queries and the helpers a slicer needs"
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+
+[lints]
+workspace = true

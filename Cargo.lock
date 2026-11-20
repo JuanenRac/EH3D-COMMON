@@ -335,6 +335,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "eh3d-printmaterials"
+version = "0.0.1"
+dependencies = [
+ "serde",
+ "serde_json",
+ "thiserror",
+]
+
+[[package]]
 name = "eh3d-serverclient"
 version = "0.0.1"
 

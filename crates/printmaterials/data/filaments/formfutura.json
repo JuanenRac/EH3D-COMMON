@@ -1,0 +1,2171 @@
+{
+ "schema_version": 1,
+ "manufacturer": "FormFutura",
+ "filaments": [
+  {
+   "id": "formfutura/easyfil-epla",
+   "manufacturer": "FormFutura",
+   "name": "EasyFil ePLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Anthracite Grey",
+     "hex": "#373737",
+     "td": null
+    },
+    {
+     "name": "Beige Brown",
+     "hex": "#694D3F",
+     "td": null
+    },
+    {
+     "name": "Blue Lilac",
+     "hex": "#71577E",
+     "td": null
+    },
+    {
+     "name": "Grey Aluminium",
+     "hex": "#8C9099",
+     "td": null
+    },
+    {
+     "name": "Heather Violet",
+     "hex": "#E34A94",
+     "td": null
+    },
+    {
+     "name": "Iron Grey",
+     "hex": "#4C5051",
+     "td": null
+    },
+    {
+     "name": "Khaki Grey",
+     "hex": "#6F673A",
+     "td": null
+    },
+    {
+     "name": "Light Blue",
+     "hex": "#0099E6",
+     "td": null
+    },
+    {
+     "name": "Light Green",
+     "hex": "#9AE0DD",
+     "td": null
+    },
+    {
+     "name": "Light Grey",
+     "hex": "#C3CCD5",
+     "td": null
+    },
+    {
+     "name": "Light Ivory",
+     "hex": "#FFF5B5",
+     "td": null
+    },
+    {
+     "name": "Luminous Bright Orange",
+     "hex": "#FF9A14",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 275,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 4500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 8000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.formfutura.com/web/content/256521?download=true",
+    "https://www.formfutura.com/web/content/256520?download=true"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/PLA/easyfil_e_pla",
+   "verified": false
+  },
+  {
+   "id": "formfutura/petg-hdglass",
+   "manufacturer": "FormFutura",
+   "name": "PETG Hdglass",
+   "material": "petg",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Blinded Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blinded Bronze",
+     "hex": "#C2B56A",
+     "td": null
+    },
+    {
+     "name": "Blinded Dark Blue",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "Blinded Light Blue",
+     "hex": "#39B9DB",
+     "td": null
+    },
+    {
+     "name": "Blinded Light Green",
+     "hex": "#9AED51",
+     "td": null
+    },
+    {
+     "name": "Blinded Light Grey",
+     "hex": "#C3CCD5",
+     "td": null
+    },
+    {
+     "name": "Blinded Orange",
+     "hex": "#F67405",
+     "td": null
+    },
+    {
+     "name": "Blinded Pearl Blue",
+     "hex": "#599499",
+     "td": null
+    },
+    {
+     "name": "Blinded Pearl Green",
+     "hex": "#5F7967",
+     "td": null
+    },
+    {
+     "name": "Blinded Red",
+     "hex": "#DF3303",
+     "td": null
+    },
+    {
+     "name": "Blinded Sapphire Grey",
+     "hex": "#9DB6D4",
+     "td": null
+    },
+    {
+     "name": "Blinded Silver",
+     "hex": "#949597",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 235,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 4500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 8000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.formfutura.com/web/content/256561?download=true",
+    "https://www.formfutura.com/web/content/256562?download=true"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/PETG/hdglass_silk_petg",
+   "verified": false
+  },
+  {
+   "id": "formfutura/high-gloss-pla",
+   "manufacturer": "FormFutura",
+   "name": "High Gloss PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "Brass",
+     "hex": "#998D58",
+     "td": null
+    },
+    {
+     "name": "Bronze",
+     "hex": "#8C7547",
+     "td": null
+    },
+    {
+     "name": "Copper",
+     "hex": "#8D5D4F",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#CE8D00",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#11784F",
+     "td": null
+    },
+    {
+     "name": "Magenta",
+     "hex": "#C80181",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#FF67F5",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#492972",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#FF0000",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#ABACB0",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 40,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.formfutura.com/web/content/256566?download=true",
+    "https://www.formfutura.com/web/content/256565?download=true"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/PLA/high_gloss_silk_pla",
+   "verified": false
+  },
+  {
+   "id": "formfutura/easyfil-epetg",
+   "manufacturer": "FormFutura",
+   "name": "EasyFil ePETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.29,
+   "colors": [
+    {
+     "name": "Traffic Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue Lilac",
+     "hex": "#71577E",
+     "td": null
+    },
+    {
+     "name": "Bottle Green",
+     "hex": "#364429",
+     "td": null
+    },
+    {
+     "name": "Grey Aluminium",
+     "hex": "#949A9E",
+     "td": null
+    },
+    {
+     "name": "Iron Grey",
+     "hex": "#4C5051",
+     "td": null
+    },
+    {
+     "name": "Light Ivory",
+     "hex": "#FFF5B5",
+     "td": null
+    },
+    {
+     "name": "Pure Orange",
+     "hex": "#FF5F2E",
+     "td": null
+    },
+    {
+     "name": "Signal Yellow",
+     "hex": "#FBE200",
+     "td": null
+    },
+    {
+     "name": "Sky Blue",
+     "hex": "#0378D0",
+     "td": null
+    },
+    {
+     "name": "Squirrel Grey",
+     "hex": "#6F727E",
+     "td": null
+    },
+    {
+     "name": "Traffic Green",
+     "hex": "#358B49",
+     "td": null
+    },
+    {
+     "name": "Traffic Red",
+     "hex": "#E60000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 235,
+    "max": 275,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 4500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 8000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.formfutura.com/web/content/281456?download=true",
+    "https://www.formfutura.com/web/content/256516?download=true"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/PETG/easyfil_e_petg",
+   "verified": false
+  },
+  {
+   "id": "formfutura/python-flex-tpu",
+   "manufacturer": "FormFutura",
+   "name": "Python Flex TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "90A Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "90A Clear",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "90A ID6",
+     "hex": "#AC8963",
+     "td": null
+    },
+    {
+     "name": "90A Skin Tone ID10",
+     "hex": "#3E2617",
+     "td": null
+    },
+    {
+     "name": "90A Skin Tone ID2",
+     "hex": "#F0DDC2",
+     "td": null
+    },
+    {
+     "name": "90A Skin Tone ID4",
+     "hex": "#E6BA83",
+     "td": null
+    },
+    {
+     "name": "90A Skin Tone ID8",
+     "hex": "#613919",
+     "td": null
+    },
+    {
+     "name": "90A White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "98A Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "98A Clear",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "98A Skin Tone ID10",
+     "hex": "#3E2617",
+     "td": null
+    },
+    {
+     "name": "98A Skin Tone ID2",
+     "hex": "#F0DDC2",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/TPU/python_flex_tpu",
+   "verified": false
+  },
+  {
+   "id": "formfutura/matte-pla",
+   "manufacturer": "FormFutura",
+   "name": "Matte PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "EasyFil e",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "EasyFil e Lemon Cream",
+     "hex": "#D8CF8C",
+     "td": null
+    },
+    {
+     "name": "Matt Aircraft Grey Camouflage",
+     "hex": "#8C9099",
+     "td": null
+    },
+    {
+     "name": "Matt Blue Camouflage",
+     "hex": "#23668C",
+     "td": null
+    },
+    {
+     "name": "Matt Dark Green Camouflage",
+     "hex": "#757D65",
+     "td": null
+    },
+    {
+     "name": "Matt Desert Sand Camouflage",
+     "hex": "#AA6500",
+     "td": null
+    },
+    {
+     "name": "Matt Earth Red Camouflage",
+     "hex": "#98282F",
+     "td": null
+    },
+    {
+     "name": "Matt Gunmetal Grey Camouflage",
+     "hex": "#828E88",
+     "td": null
+    },
+    {
+     "name": "Matt Olive Camouflage",
+     "hex": "#737254",
+     "td": null
+    },
+    {
+     "name": "Matt Purple Camouflage",
+     "hex": "#9D7185",
+     "td": null
+    },
+    {
+     "name": "Matt Stealth Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Matt Stealth White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/PLA/matte_pla",
+   "verified": false
+  },
+  {
+   "id": "formfutura/easyfil-abs",
+   "manufacturer": "FormFutura",
+   "name": "EasyFil ABS",
+   "material": "abs",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.03,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Bronze",
+     "hex": "#A18D5A",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#694D3F",
+     "td": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "Dark Green",
+     "hex": "#008059",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#8C9099",
+     "td": null
+    },
+    {
+     "name": "Light Blue",
+     "hex": "#39B9DB",
+     "td": null
+    },
+    {
+     "name": "Light Green",
+     "hex": "#9AED51",
+     "td": null
+    },
+    {
+     "name": "Magenta",
+     "hex": "#C80181",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF9C66",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#E31A1F",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#ABACB0",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 255,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 100,
+    "max": 100,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.formfutura.com/web/content/256508?download=true",
+    "https://www.formfutura.com/web/content/256507?download=true"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/ABS/easyfil_abs",
+   "verified": false
+  },
+  {
+   "id": "formfutura/asa-apollox",
+   "manufacturer": "FormFutura",
+   "name": "ASA ApolloX",
+   "material": "asa",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.05,
+   "density_g_cm3": 1.11,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "#0266BB",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#727376",
+     "td": null
+    },
+    {
+     "name": "Light Grey",
+     "hex": "#C3CCD5",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#F2EFE9",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#D33D3D",
+     "td": null
+    },
+    {
+     "name": "Traffic Yellow",
+     "hex": "#FBE200",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 280,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 90,
+    "max": 110,
+    "recommended": null
+   },
+   "min_nozzle_mm": 0.15,
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 4500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 8000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.formfutura.com/web/content/256142?download=true",
+    "https://www.formfutura.com/web/content/256141?download=true"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/ASA/asa",
+   "verified": false
+  },
+  {
+   "id": "formfutura/galaxy-pla",
+   "manufacturer": "FormFutura",
+   "name": "Galaxy PLA",
+   "material": "pla",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Andromeda Purple",
+     "hex": "#9F6979",
+     "td": null
+    },
+    {
+     "name": "Callisto Yellow",
+     "hex": "#C4C67D",
+     "td": null
+    },
+    {
+     "name": "Champagne Gold",
+     "hex": "#ACA078",
+     "td": null
+    },
+    {
+     "name": "Emerald Green",
+     "hex": "#3D9441",
+     "td": null
+    },
+    {
+     "name": "Gemini Blue",
+     "hex": "#5A6A92",
+     "td": null
+    },
+    {
+     "name": "Jupiter Brown",
+     "hex": "#C38C7B",
+     "td": null
+    },
+    {
+     "name": "Mercury Brown",
+     "hex": "#8E5850",
+     "td": null
+    },
+    {
+     "name": "Opal Green",
+     "hex": "#488D94",
+     "td": null
+    },
+    {
+     "name": "Orion Blue",
+     "hex": "#626D9B",
+     "td": null
+    },
+    {
+     "name": "Ruby Red",
+     "hex": "#AD4E38",
+     "td": null
+    },
+    {
+     "name": "Space Grey",
+     "hex": "#76797D",
+     "td": null
+    },
+    {
+     "name": "Titanium Silver",
+     "hex": "#ABACB0",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 185,
+    "max": 215,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.formfutura.com/web/content/256560?download=true",
+    "https://www.formfutura.com/web/content/256559?download=true"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/PLA/galaxy_pla",
+   "verified": false
+  },
+  {
+   "id": "formfutura/high-precision-pla",
+   "manufacturer": "FormFutura",
+   "name": "High Precision PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Bright Red Orange",
+     "hex": "#FA8423",
+     "td": null
+    },
+    {
+     "name": "Iron Grey",
+     "hex": "#4C5051",
+     "td": null
+    },
+    {
+     "name": "Leaf Green",
+     "hex": "#4E7642",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#F2EFE9",
+     "td": null
+    },
+    {
+     "name": "Sky Blue",
+     "hex": "#0099E6",
+     "td": null
+    },
+    {
+     "name": "Traffic Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Traffic Red",
+     "hex": "#DF3303",
+     "td": null
+    },
+    {
+     "name": "Traffic White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Traffic Yellow",
+     "hex": "#FBE200",
+     "td": null
+    },
+    {
+     "name": "Ultramarine Blue",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "White Aluminium",
+     "hex": "#ACB1BA",
+     "td": null
+    },
+    {
+     "name": "Yellow Green",
+     "hex": "#67B357",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/PLA/high_precision_pla",
+   "verified": false
+  },
+  {
+   "id": "formfutura/refill-petg",
+   "manufacturer": "FormFutura",
+   "name": "ReFill PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.29,
+   "colors": [
+    {
+     "name": "Clear",
+     "hex": "#D5D3D3",
+     "td": null
+    },
+    {
+     "name": "Iron Grey",
+     "hex": "#616161",
+     "td": null
+    },
+    {
+     "name": "Light Blue",
+     "hex": "#009DFF",
+     "td": null
+    },
+    {
+     "name": "Light Grey",
+     "hex": "#A1A1A1",
+     "td": null
+    },
+    {
+     "name": "Signal Blue",
+     "hex": "#0049A8",
+     "td": null
+    },
+    {
+     "name": "Signal White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Traffic Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Traffic Green",
+     "hex": "#70E177",
+     "td": null
+    },
+    {
+     "name": "Traffic Red",
+     "hex": "#FF0000",
+     "td": null
+    },
+    {
+     "name": "Yellow Green",
+     "hex": "#A6FF00",
+     "td": null
+    },
+    {
+     "name": "Zinc Yellow",
+     "hex": "#FFF700",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 75,
+    "max": 80,
+    "recommended": null
+   },
+   "links": [
+    "https://www.formfutura.com/web/content/256624?download=true",
+    "https://www.formfutura.com/web/content/256623?download=true"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/PETG/refill_petg",
+   "verified": false
+  },
+  {
+   "id": "formfutura/bulk-pla",
+   "manufacturer": "FormFutura",
+   "name": "Bulk PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "#2500DB",
+     "td": null
+    },
+    {
+     "name": "Forest Green",
+     "hex": "#167E1D",
+     "td": null
+    },
+    {
+     "name": "Matt Autumn Red",
+     "hex": "#AD1A1A",
+     "td": null
+    },
+    {
+     "name": "Matt Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Matt Mustard Yellow",
+     "hex": "#A9AB3B",
+     "td": null
+    },
+    {
+     "name": "Matt White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Medium Grey",
+     "hex": "#7A7A7A",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#BFBFBF",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 225,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "min_nozzle_mm": 0.2,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 4500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 8000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.formfutura.com/web/content/273966?download=true",
+    "https://www.formfutura.com/web/content/328196?download=true"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/PLA/bulk_pla",
+   "verified": false
+  },
+  {
+   "id": "formfutura/premium-pla",
+   "manufacturer": "FormFutura",
+   "name": "Premium PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Atomic Green",
+     "hex": "#4DFF64",
+     "td": null
+    },
+    {
+     "name": "C.C.Transparent",
+     "hex": "#D9D8DE",
+     "td": null
+    },
+    {
+     "name": "Dutch Orange",
+     "hex": "#E0493E",
+     "td": null
+    },
+    {
+     "name": "Flaming Red",
+     "hex": "#D33D3D",
+     "td": null
+    },
+    {
+     "name": "Frosty White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Ocean Blue",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "Robotic Grey",
+     "hex": "#6A6C6E",
+     "td": null
+    },
+    {
+     "name": "Solar Yellow",
+     "hex": "#EBFF57",
+     "td": null
+    },
+    {
+     "name": "Strong Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Sweet Purple",
+     "hex": "#963877",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 185,
+    "max": 210,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 4500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 8000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/PLA/premium_pla",
+   "verified": false
+  },
+  {
+   "id": "formfutura/bulk-petg",
+   "manufacturer": "FormFutura",
+   "name": "Bulk PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.29,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#4400FF",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#C2C2C2",
+     "td": null
+    },
+    {
+     "name": "Cola",
+     "hex": "#453F3A",
+     "td": null
+    },
+    {
+     "name": "Dark Grey",
+     "hex": "#5F5F5F",
+     "td": null
+    },
+    {
+     "name": "Light Green",
+     "hex": "#35D037",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#FF0000",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#AAA7A7",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FFF700",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 235,
+    "max": 255,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 90,
+    "recommended": null
+   },
+   "min_nozzle_mm": 0.2,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 4500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 8000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.formfutura.com/web/content/273965?download=true"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/PETG/bulk_petg",
+   "verified": false
+  },
+  {
+   "id": "formfutura/reform-r-pla",
+   "manufacturer": "FormFutura",
+   "name": "ReForm r PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Caramel",
+     "hex": "#DC9C43",
+     "td": null
+    },
+    {
+     "name": "Elephant Grey",
+     "hex": "#9F9F9F",
+     "td": null
+    },
+    {
+     "name": "Moss Grey",
+     "hex": "#8E8D71",
+     "td": null
+    },
+    {
+     "name": "Sangria Red",
+     "hex": "#98282F",
+     "td": null
+    },
+    {
+     "name": "Turkish Blue",
+     "hex": "#40719A",
+     "td": null
+    },
+    {
+     "name": "Venom Green",
+     "hex": "#9CBF60",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 215,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 40,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/PLA/reform_r_pla",
+   "verified": false
+  },
+  {
+   "id": "formfutura/easywood",
+   "manufacturer": "FormFutura",
+   "name": "EasyWood",
+   "material": "pla",
+   "fill": [
+    "wood"
+   ],
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.2,
+   "colors": [
+    {
+     "name": "Birch",
+     "hex": "#C9C6A7",
+     "td": null
+    },
+    {
+     "name": "Cedar",
+     "hex": "#C37C4F",
+     "td": null
+    },
+    {
+     "name": "Coconut",
+     "hex": "#503529",
+     "td": null
+    },
+    {
+     "name": "Ebony",
+     "hex": "#50483D",
+     "td": null
+    },
+    {
+     "name": "Olive",
+     "hex": "#8C7547",
+     "td": null
+    },
+    {
+     "name": "Pine",
+     "hex": "#C6AD74",
+     "td": null
+    },
+    {
+     "name": "Willow",
+     "hex": "#AB9925",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "min_nozzle_mm": 0.4,
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 4500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 8000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.formfutura.com/web/content/256523?download=true",
+    "https://www.formfutura.com/web/content/256522?download=true"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/PLA/easywood_pla",
+   "verified": false
+  },
+  {
+   "id": "formfutura/volcano-matte-pla",
+   "manufacturer": "FormFutura",
+   "name": "Volcano Matte PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Dark Blue",
+     "hex": "#0378D0",
+     "td": null
+    },
+    {
+     "name": "Dark Grey",
+     "hex": "#6A6C6E",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#CE8D00",
+     "td": null
+    },
+    {
+     "name": "Light Grey",
+     "hex": "#C3CCD5",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#E72F1D",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#949597",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 255,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 4500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 8000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/PLA/volcano_matte_pla",
+   "verified": false
+  },
+  {
+   "id": "formfutura/titanx",
+   "manufacturer": "FormFutura",
+   "name": "TitanX",
+   "material": "abs",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.1,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#727376",
+     "td": null
+    },
+    {
+     "name": "Light Grey",
+     "hex": "#C3CCD5",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#DFDFD3",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#F00C00",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 245,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 100,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 4500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 8000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.formfutura.com/web/content/256648?download=true",
+    "https://www.formfutura.com/web/content/256647?download=true"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/ABS/titanx_abs",
+   "verified": false
+  },
+  {
+   "id": "formfutura/styx-pa6",
+   "manufacturer": "FormFutura",
+   "name": "STYX PA6",
+   "material": "pa",
+   "grade": "PA6",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.15,
+   "colors": [
+    {
+     "name": "Natural",
+     "hex": "#D9D8DE",
+     "td": null
+    },
+    {
+     "name": "Signal White",
+     "hex": "#E6EAEF",
+     "td": null
+    },
+    {
+     "name": "Traffic Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 255,
+    "max": 285,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 90,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 4500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.formfutura.com/web/content/281451?download=true",
+    "https://www.formfutura.com/web/content/281453?download=true"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/PA6/pa6",
+   "verified": false
+  },
+  {
+   "id": "formfutura/stonefil-pla",
+   "manufacturer": "FormFutura",
+   "name": "StoneFil PLA",
+   "material": "pla",
+   "fill": [
+    "mineral"
+   ],
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Concrete",
+     "hex": "#B6B9BD",
+     "td": null
+    },
+    {
+     "name": "Granite",
+     "hex": "#ACB1BA",
+     "td": null
+    },
+    {
+     "name": "Pottery Clay",
+     "hex": "#E6DDDB",
+     "td": null
+    },
+    {
+     "name": "Terracotta",
+     "hex": "#CD5A2E",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 185,
+    "max": 225,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/PLA/stonefil_pla",
+   "verified": false
+  },
+  {
+   "id": "formfutura/metalfil-pla",
+   "manufacturer": "FormFutura",
+   "name": "MetalFil PLA",
+   "material": "pla",
+   "fill": [
+    "metal"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Ancient Bronze",
+     "hex": "#8C7354",
+     "td": null
+    },
+    {
+     "name": "Brass",
+     "hex": "#998D58",
+     "td": null
+    },
+    {
+     "name": "Classic Copper Natural",
+     "hex": "#8D5D4F",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/PLA/metalfil_pla",
+   "verified": false
+  },
+  {
+   "id": "formfutura/petg-carbonfil",
+   "manufacturer": "FormFutura",
+   "name": "PETG CarbonFil",
+   "material": "petg",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.19,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#5E6345",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#727376",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 275,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 90,
+    "recommended": null
+   },
+   "abrasive": true,
+   "min_nozzle_mm": 0.4,
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 4500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 8000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.formfutura.com/web/content/256493?download=true",
+    "https://www.formfutura.com/web/content/256492?download=true"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "formfutura/PETG/carbonfil_cf_petg",
+   "verified": false
+  }
+ ]
+}

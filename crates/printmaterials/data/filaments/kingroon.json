@@ -1,0 +1,850 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Kingroon",
+ "filaments": [
+  {
+   "id": "kingroon/silk-pla",
+   "manufacturer": "Kingroon",
+   "name": "Silk PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Blue Green Orange tri-color",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Yellow Green tri-color",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#F4AC23",
+     "td": null
+    },
+    {
+     "name": "Gold Green Black tri-color",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold Green Blue tri-color",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold Green Rose Red tri-color",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold Purple Red Black tri-color",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold Purple Red Blue tri-color",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold Silver Copper tri-color",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Green Purple Copper tri-color",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Multicolor Blue Green Purple tri-color",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Purple Red Blue Green tri-color",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "kingroon/PLA/silk_pla",
+   "verified": false
+  },
+  {
+   "id": "kingroon/pla-basic",
+   "manufacturer": "Kingroon",
+   "name": "PLA Basic",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#E5B7A0",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#9C9D9D",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#5AEB90",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FFB031",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#F09BB5",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#BE2ED6",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#C01616",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#6F727E",
+     "td": null
+    },
+    {
+     "name": "Skin",
+     "hex": "#F3CEA6",
+     "td": null
+    },
+    {
+     "name": "Transparent",
+     "hex": "#F5F5F5",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 210,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "kingroon/PLA/basic",
+   "verified": false
+  },
+  {
+   "id": "kingroon/matte-pla",
+   "manufacturer": "Kingroon",
+   "name": "Matte PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.31,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#292824",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#2A4552",
+     "td": null
+    },
+    {
+     "name": "Default",
+     "hex": "#7E472A",
+     "td": null
+    },
+    {
+     "name": "Grass Green",
+     "hex": "#67D8BC",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#9C9D9D",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#ADEBB3",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FA8423",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#A368BB",
+     "td": null
+    },
+    {
+     "name": "Rainbow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#ED1536",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F5F5F5",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F5E457",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "kingroon/PLA/matte_pla",
+   "verified": false
+  },
+  {
+   "id": "kingroon/petg",
+   "manufacturer": "Kingroon",
+   "name": "PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.26,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#808080",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#62E480",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FFB031",
+     "td": null
+    },
+    {
+     "name": "Pure Green",
+     "hex": "#00AF66",
+     "td": null
+    },
+    {
+     "name": "Pure Orange",
+     "hex": "#CF4520",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#EC0000",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#949597",
+     "td": null
+    },
+    {
+     "name": "Transparent",
+     "hex": "#D9D8DE",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F5F5F5",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F8CC00",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "kingroon/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "kingroon/abs",
+   "manufacturer": "Kingroon",
+   "name": "ABS",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.04,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#292824",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#2941BD",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#808080",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#32A584",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#F55928",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#F09BB5",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#AC1A17",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#5A696C",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F5F5F5",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#E2FF4D",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 90,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "kingroon/ABS/abs",
+   "verified": false
+  },
+  {
+   "id": "kingroon/high-speed-petg",
+   "manufacturer": "Kingroon",
+   "name": "High Speed PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.26,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#9A491A",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#BDC8C8",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#00AF66",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FA8423",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#B7293E",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#808080",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FFE15B",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "kingroon/PETG/high_speed_petg",
+   "verified": false
+  },
+  {
+   "id": "kingroon/pla",
+   "manufacturer": "Kingroon",
+   "name": "PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.2,
+   "colors": [
+    {
+     "name": "Plus (+) Black",
+     "hex": "#292824",
+     "td": null
+    },
+    {
+     "name": "Plus (+) Grey",
+     "hex": "#808080",
+     "td": null
+    },
+    {
+     "name": "Plus (+) Red",
+     "hex": "#EC0000",
+     "td": null
+    },
+    {
+     "name": "Plus (+) Skin",
+     "hex": "#DBC9AD",
+     "td": null
+    },
+    {
+     "name": "Plus (+) White",
+     "hex": "#F5F5F5",
+     "td": null
+    },
+    {
+     "name": "Plus (+) Yellow",
+     "hex": "#FADB24",
+     "td": null
+    },
+    {
+     "name": "Wood",
+     "hex": "#DAC7A0",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "kingroon/PLA/pla",
+   "verified": false
+  },
+  {
+   "id": "kingroon/tpu",
+   "manufacturer": "Kingroon",
+   "name": "TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#00AF66",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#EC0000",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F5F5F5",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FBF942",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "kingroon/TPU/tpu",
+   "verified": false
+  },
+  {
+   "id": "kingroon/high-speed-pla",
+   "manufacturer": "Kingroon",
+   "name": "High Speed PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.22,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#292824",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#9F9F9F",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F5F5F5",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "kingroon/PLA/high_speed_pla",
+   "verified": false
+  },
+  {
+   "id": "kingroon/pla-cf",
+   "manufacturer": "Kingroon",
+   "name": "PLA CF",
+   "material": "pla",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Basic",
+     "hex": "#292824",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "kingroon/PLA/cf_pla",
+   "verified": false
+  },
+  {
+   "id": "kingroon/glow-pla",
+   "manufacturer": "Kingroon",
+   "name": "Glow PLA",
+   "material": "pla",
+   "fill": [
+    "glow"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "In Dark",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "kingroon/PLA/glow_pla",
+   "verified": false
+  },
+  {
+   "id": "kingroon/petg-cf",
+   "manufacturer": "Kingroon",
+   "name": "PETG CF",
+   "material": "petg",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#292824",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 90,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "kingroon/PETG/cf_petg",
+   "verified": false
+  }
+ ]
+}

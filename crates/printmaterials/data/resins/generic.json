@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Generic",
+  "resins": [
+    {
+      "id": "generic/generic-standard-resin",
+      "manufacturer": "Generic",
+      "name": "Generic standard resin",
+      "kind": "standard",
+      "wavelength_nm": 405,
+      "density_g_cm3": 1.1,
+      "wash": {
+        "solvent": "alcohol"
+      },
+      "layer_mm": {
+        "min": 0.025,
+        "max": 0.1,
+        "recommended": 0.05
+      },
+      "exposures": [
+        {
+          "printer": "generic-msla",
+          "layer_mm": 0.05,
+          "normal_s": 2.5,
+          "normal_s_min": 1.5,
+          "normal_s_max": 4,
+          "base_s": 25,
+          "base_s_min": 15,
+          "base_s_max": 40,
+          "base_layers": 5,
+          "lift_speed_mm_min": 150,
+          "lift_mm": 6,
+          "verified": false
+        }
+      ],
+      "notes": "Typical starting point for a monochrome screen printer: the exposure depends on the power of the light and on the colour, so the bottle in hand and a test print win.",
+      "source": "generic-profile",
+      "source_ref": "generic-standard",
+      "verified": false
+    },
+    {
+      "id": "generic/generic-water-washable-resin",
+      "manufacturer": "Generic",
+      "name": "Generic water-washable resin",
+      "kind": "water_washable",
+      "wavelength_nm": 405,
+      "density_g_cm3": 1.1,
+      "wash": {
+        "solvent": "water"
+      },
+      "layer_mm": {
+        "min": 0.025,
+        "max": 0.1,
+        "recommended": 0.05
+      },
+      "exposures": [
+        {
+          "printer": "generic-msla",
+          "layer_mm": 0.05,
+          "normal_s": 2.8,
+          "normal_s_min": 2,
+          "normal_s_max": 4.5,
+          "base_s": 25,
+          "base_s_min": 15,
+          "base_s_max": 40,
+          "base_layers": 5,
+          "lift_speed_mm_min": 150,
+          "lift_mm": 6,
+          "verified": false
+        }
+      ],
+      "notes": "Typical starting point for a monochrome screen printer: the exposure depends on the power of the light and on the colour, so the bottle in hand and a test print win.",
+      "source": "generic-profile",
+      "source_ref": "generic-water-washable",
+      "verified": false
+    },
+    {
+      "id": "generic/generic-tough-abs-like-resin",
+      "manufacturer": "Generic",
+      "name": "Generic tough (ABS-like) resin",
+      "kind": "abs_like",
+      "wavelength_nm": 405,
+      "density_g_cm3": 1.12,
+      "wash": {
+        "solvent": "alcohol"
+      },
+      "layer_mm": {
+        "min": 0.025,
+        "max": 0.1,
+        "recommended": 0.05
+      },
+      "exposures": [
+        {
+          "printer": "generic-msla",
+          "layer_mm": 0.05,
+          "normal_s": 3,
+          "normal_s_min": 2,
+          "normal_s_max": 5,
+          "base_s": 28,
+          "base_s_min": 18,
+          "base_s_max": 40,
+          "base_layers": 5,
+          "lift_speed_mm_min": 120,
+          "lift_mm": 6,
+          "verified": false
+        }
+      ],
+      "notes": "Typical starting point for a monochrome screen printer: the exposure depends on the power of the light and on the colour, so the bottle in hand and a test print win.",
+      "source": "generic-profile",
+      "source_ref": "generic-tough",
+      "verified": false
+    },
+    {
+      "id": "generic/generic-flexible-resin",
+      "manufacturer": "Generic",
+      "name": "Generic flexible resin",
+      "kind": "flexible",
+      "wavelength_nm": 405,
+      "density_g_cm3": 1.08,
+      "wash": {
+        "solvent": "alcohol"
+      },
+      "layer_mm": {
+        "min": 0.05,
+        "max": 0.1,
+        "recommended": 0.05
+      },
+      "exposures": [
+        {
+          "printer": "generic-msla",
+          "layer_mm": 0.05,
+          "normal_s": 4,
+          "normal_s_min": 3,
+          "normal_s_max": 6,
+          "base_s": 30,
+          "base_s_min": 20,
+          "base_s_max": 45,
+          "base_layers": 6,
+          "lift_speed_mm_min": 90,
+          "lift_mm": 5,
+          "verified": false
+        }
+      ],
+      "notes": "Typical starting point for a monochrome screen printer: the exposure depends on the power of the light and on the colour, so the bottle in hand and a test print win.",
+      "source": "generic-profile",
+      "source_ref": "generic-flexible",
+      "verified": false
+    },
+    {
+      "id": "generic/generic-castable-resin",
+      "manufacturer": "Generic",
+      "name": "Generic castable resin",
+      "kind": "castable",
+      "wavelength_nm": 405,
+      "density_g_cm3": 1.07,
+      "wash": {
+        "solvent": "alcohol"
+      },
+      "layer_mm": {
+        "min": 0.025,
+        "max": 0.1,
+        "recommended": 0.05
+      },
+      "exposures": [
+        {
+          "printer": "generic-msla",
+          "layer_mm": 0.05,
+          "normal_s": 3.2,
+          "normal_s_min": 2.5,
+          "normal_s_max": 5,
+          "base_s": 28,
+          "base_s_min": 18,
+          "base_s_max": 40,
+          "base_layers": 5,
+          "lift_speed_mm_min": 120,
+          "lift_mm": 6,
+          "verified": false
+        }
+      ],
+      "notes": "Typical starting point for a monochrome screen printer: the exposure depends on the power of the light and on the colour, so the bottle in hand and a test print win.",
+      "source": "generic-profile",
+      "source_ref": "generic-castable",
+      "verified": false
+    },
+    {
+      "id": "generic/generic-clear-resin",
+      "manufacturer": "Generic",
+      "name": "Generic clear resin",
+      "kind": "clear",
+      "wavelength_nm": 405,
+      "density_g_cm3": 1.1,
+      "wash": {
+        "solvent": "alcohol"
+      },
+      "layer_mm": {
+        "min": 0.025,
+        "max": 0.1,
+        "recommended": 0.05
+      },
+      "exposures": [
+        {
+          "printer": "generic-msla",
+          "layer_mm": 0.05,
+          "normal_s": 3.5,
+          "normal_s_min": 2.5,
+          "normal_s_max": 5,
+          "base_s": 30,
+          "base_s_min": 20,
+          "base_s_max": 45,
+          "base_layers": 5,
+          "lift_speed_mm_min": 120,
+          "lift_mm": 6,
+          "verified": false
+        }
+      ],
+      "notes": "Typical starting point for a monochrome screen printer: the exposure depends on the power of the light and on the colour, so the bottle in hand and a test print win.",
+      "source": "generic-profile",
+      "source_ref": "generic-clear",
+      "verified": false
+    },
+    {
+      "id": "generic/generic-high-detail-resin",
+      "manufacturer": "Generic",
+      "name": "Generic high-detail resin",
+      "kind": "high_detail",
+      "wavelength_nm": 405,
+      "density_g_cm3": 1.11,
+      "wash": {
+        "solvent": "alcohol"
+      },
+      "layer_mm": {
+        "min": 0.01,
+        "max": 0.05,
+        "recommended": 0.025
+      },
+      "exposures": [
+        {
+          "printer": "generic-msla",
+          "layer_mm": 0.025,
+          "normal_s": 2.2,
+          "normal_s_min": 1.5,
+          "normal_s_max": 3.5,
+          "base_s": 20,
+          "base_s_min": 12,
+          "base_s_max": 35,
+          "base_layers": 6,
+          "lift_speed_mm_min": 120,
+          "lift_mm": 5,
+          "verified": false
+        }
+      ],
+      "notes": "Typical starting point for a monochrome screen printer: the exposure depends on the power of the light and on the colour, so the bottle in hand and a test print win.",
+      "source": "generic-profile",
+      "source_ref": "generic-high-detail",
+      "verified": false
+    }
+  ]
+}

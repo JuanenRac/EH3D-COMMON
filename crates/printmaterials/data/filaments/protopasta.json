@@ -1,0 +1,1802 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Protopasta",
+ "filaments": [
+  {
+   "id": "protopasta/pla",
+   "manufacturer": "Protopasta",
+   "name": "PLA",
+   "material": "pla",
+   "fill": [
+    "glitter",
+    "metal",
+    "wood"
+   ],
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Amber Alchemy HT",
+     "hex": "#BE6730",
+     "td": null
+    },
+    {
+     "name": "Amethyst Aria Multicolor HT",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Amie's Blood of My Enemies HT",
+     "hex": "#AD0028",
+     "td": null
+    },
+    {
+     "name": "Aqua Ice Translucent HT",
+     "hex": "#00B4BC",
+     "td": null
+    },
+    {
+     "name": "Atikam Teal HT",
+     "hex": "#178B9F",
+     "td": null
+    },
+    {
+     "name": "Atomic Age Gray Glitter HT",
+     "hex": "#C5C5BF",
+     "td": null
+    },
+    {
+     "name": "Autumn Orange",
+     "hex": "#C25542",
+     "td": null
+    },
+    {
+     "name": "Autumn Orange Thermochromic HT",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Beach Bum Beige HT",
+     "hex": "#DAC7A0",
+     "td": null
+    },
+    {
+     "name": "Black Opaque HT",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Black Recycled",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue Ice Translucent HT",
+     "hex": "#39B9DB",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 55,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0717/9095/files/TDS__Translucent_Sparkly_HTPLA_1.0.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/pla",
+   "verified": false
+  },
+  {
+   "id": "protopasta/metallic-pla",
+   "manufacturer": "Protopasta",
+   "name": "Metallic PLA",
+   "material": "pla",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Candy Apple Red",
+     "hex": "#EF3731",
+     "td": null
+    },
+    {
+     "name": "Cloverleaf Green",
+     "hex": "#08523D",
+     "td": null
+    },
+    {
+     "name": "Cupid's Crush Pink",
+     "hex": "#F970A9",
+     "td": null
+    },
+    {
+     "name": "Double Espresso Brown",
+     "hex": "#533222",
+     "td": null
+    },
+    {
+     "name": "Electric Lemonade Yellow",
+     "hex": "#FEE25B",
+     "td": null
+    },
+    {
+     "name": "Empire Strikes Black",
+     "hex": "#262629",
+     "td": null
+    },
+    {
+     "name": "For The Lulz Green",
+     "hex": "#C5CD26",
+     "td": null
+    },
+    {
+     "name": "Galactic Empire Purple",
+     "hex": "#544B7B",
+     "td": null
+    },
+    {
+     "name": "Good as Gold",
+     "hex": "#A98451",
+     "td": null
+    },
+    {
+     "name": "Heartthrob Red",
+     "hex": "#87141D",
+     "td": null
+    },
+    {
+     "name": "Highfive Blue",
+     "hex": "#0458B5",
+     "td": null
+    },
+    {
+     "name": "Luke's Proton Purple",
+     "hex": "#874C68",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 55,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0717/9095/files/TDS__Translucent_Sparkly_HTPLA_1.0.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/metallic_pla",
+   "verified": false
+  },
+  {
+   "id": "protopasta/opaque-pla",
+   "manufacturer": "Protopasta",
+   "name": "Opaque PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Atikam Teal",
+     "hex": "#00686D",
+     "td": null
+    },
+    {
+     "name": "Beach Bum Beige",
+     "hex": "#E4CEB2",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#010204",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#003BA9",
+     "td": null
+    },
+    {
+     "name": "Bluish Purple",
+     "hex": "#3C448F",
+     "td": null
+    },
+    {
+     "name": "Caution Yellow",
+     "hex": "#FAC414",
+     "td": null
+    },
+    {
+     "name": "Derek's Olive Drab",
+     "hex": "#7E7957",
+     "td": null
+    },
+    {
+     "name": "Good Old Gray",
+     "hex": "#7F919D",
+     "td": null
+    },
+    {
+     "name": "Lab Coat White",
+     "hex": "#E0DEDF",
+     "td": null
+    },
+    {
+     "name": "Lootsef Green",
+     "hex": "#7FD14A",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Nice 'N Navy",
+     "hex": "#22212F",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 55,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0717/9095/files/TDS__Translucent_Sparkly_HTPLA_1.0.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/opaque_pla",
+   "verified": false
+  },
+  {
+   "id": "protopasta/silk-pla",
+   "manufacturer": "Protopasta",
+   "name": "Silk PLA",
+   "material": "pla",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Artobot Electric Lemonade HT",
+     "hex": "#FBE200",
+     "td": null
+    },
+    {
+     "name": "Candy Apple Metallic Red HT",
+     "hex": "#E72F1D",
+     "td": null
+    },
+    {
+     "name": "Cloverleaf Metallic Green HT",
+     "hex": "#1E5A4F",
+     "td": null
+    },
+    {
+     "name": "Cupid's Crush Metallic Pink HT",
+     "hex": "#FF72B6",
+     "td": null
+    },
+    {
+     "name": "Double Espresso Metallic Brown HT",
+     "hex": "#724E3D",
+     "td": null
+    },
+    {
+     "name": "For the Lulz Metallic Green HT",
+     "hex": "#FBE200",
+     "td": null
+    },
+    {
+     "name": "Galactic Empire Metallic Purple HT",
+     "hex": "#6C47B2",
+     "td": null
+    },
+    {
+     "name": "Good as Gold HT",
+     "hex": "#E3B145",
+     "td": null
+    },
+    {
+     "name": "Heartthrob Metallic Red HT",
+     "hex": "#8B3A3A",
+     "td": null
+    },
+    {
+     "name": "Joel's Highfive Blue HT Metallic Blue",
+     "hex": "#2E56F1",
+     "td": null
+    },
+    {
+     "name": "Luke's Proton Purple HT",
+     "hex": "#7B4D64",
+     "td": null
+    },
+    {
+     "name": "Mermaid's Tale Metallic Teal HT",
+     "hex": "#3292B2",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 55,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0717/9095/files/TDS__Translucent_Sparkly_HTPLA_1.0.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/silk_pla",
+   "verified": false
+  },
+  {
+   "id": "protopasta/translucent-pla",
+   "manufacturer": "Protopasta",
+   "name": "Translucent PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Blood of My Enemies",
+     "hex": "#A60217",
+     "td": null
+    },
+    {
+     "name": "Bobbi's Purple Iris",
+     "hex": "#6B3979",
+     "td": null
+    },
+    {
+     "name": "Bottle Brown",
+     "hex": "#84592F",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#D05E20",
+     "td": null
+    },
+    {
+     "name": "Cobalt Blue",
+     "hex": "#0661C0",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#B8DF84",
+     "td": null
+    },
+    {
+     "name": "Iridescent Ice",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Juliette's Raspberry Jam",
+     "hex": "#DD3963",
+     "td": null
+    },
+    {
+     "name": "Nerfed Orange",
+     "hex": "#F69E22",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#583F65",
+     "td": null
+    },
+    {
+     "name": "Silver Smoke",
+     "hex": "#B7B1A9",
+     "td": null
+    },
+    {
+     "name": "Soda Green",
+     "hex": "#069D56",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 55,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0717/9095/files/TDS__Translucent_Sparkly_HTPLA_1.0.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/translucent_pla",
+   "verified": false
+  },
+  {
+   "id": "protopasta/glitter-pla",
+   "manufacturer": "Protopasta",
+   "name": "Glitter PLA",
+   "material": "pla",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Atomic Age Gray",
+     "hex": "#A39E91",
+     "td": null
+    },
+    {
+     "name": "Candle Light White",
+     "hex": "#F5E9DA",
+     "td": null
+    },
+    {
+     "name": "Dusty Smoke",
+     "hex": "#595758",
+     "td": null
+    },
+    {
+     "name": "Fleck’n Fire Red",
+     "hex": "#C31B1A",
+     "td": null
+    },
+    {
+     "name": "Fleck 'n Forest Green",
+     "hex": "#016B4B",
+     "td": null
+    },
+    {
+     "name": "Gold Dust",
+     "hex": "#DDB264",
+     "td": null
+    },
+    {
+     "name": "Stardust Silver",
+     "hex": "#D4D4D2",
+     "td": null
+    },
+    {
+     "name": "Texas Tea Black with Gold",
+     "hex": "#181713",
+     "td": null
+    },
+    {
+     "name": "Unicorn Tears White",
+     "hex": "#EDEEF0",
+     "td": null
+    },
+    {
+     "name": "Winter Blue",
+     "hex": "#0396E6",
+     "td": null
+    },
+    {
+     "name": "Wonder Black",
+     "hex": "#231C1A",
+     "td": null
+    },
+    {
+     "name": "Wonder Blue",
+     "hex": "#054579",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 55,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0717/9095/files/TDS__Translucent_Sparkly_HTPLA_1.0.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/glitter_pla",
+   "verified": false
+  },
+  {
+   "id": "protopasta/fiber-ht-matte-pla",
+   "manufacturer": "Protopasta",
+   "name": "Fiber HT Matte PLA",
+   "material": "pla",
+   "fill": [
+    "wood"
+   ],
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.14,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Daffodil Wood",
+     "hex": "#CAAC78",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#949A9E",
+     "td": null
+    },
+    {
+     "name": "Matte Fiber Black",
+     "hex": "#29292B",
+     "td": null
+    },
+    {
+     "name": "Matte Fiber Daffodil",
+     "hex": "#D5A76F",
+     "td": null
+    },
+    {
+     "name": "Matte Fiber Gray",
+     "hex": "#77818A",
+     "td": null
+    },
+    {
+     "name": "Matte Fiber Mahogany",
+     "hex": "#905F51",
+     "td": null
+    },
+    {
+     "name": "Matte Fiber Walnut",
+     "hex": "#78635A",
+     "td": null
+    },
+    {
+     "name": "Matte Fiber White",
+     "hex": "#F6F5F1",
+     "td": null
+    },
+    {
+     "name": "Walnut Wood",
+     "hex": "#6A5346",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 55,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0717/9095/files/TDS__Matte_Fiber_HTPLA_1.0.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/fiber_ht_matte_pla",
+   "verified": false
+  },
+  {
+   "id": "protopasta/pla-cf",
+   "manufacturer": "Protopasta",
+   "name": "PLA CF",
+   "material": "pla",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.3,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#0F0F0F",
+     "td": null
+    },
+    {
+     "name": "Black Carbon Fiber Composite HT",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Dark",
+     "hex": "#4E555B",
+     "td": null
+    },
+    {
+     "name": "Dark Gray Carbon Fiber Composite HT",
+     "hex": "#394658",
+     "td": null
+    },
+    {
+     "name": "Light",
+     "hex": "#AFBDC6",
+     "td": null
+    },
+    {
+     "name": "Light Gray Carbon Fiber Composite HT",
+     "hex": "#BAC4C4",
+     "td": null
+    },
+    {
+     "name": "Recycled Carbon Fiber",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Static Dissipative Carbon Fiber",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "The Original Carbon Fiber Composite",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 55,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0717/9095/files/TDS__CarbonFiber_HTPLA_1.0.1.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/cf_pla",
+   "verified": false
+  },
+  {
+   "id": "protopasta/still-colorful-recycled-pla",
+   "manufacturer": "Protopasta",
+   "name": "Still Colorful Recycled PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "022",
+     "hex": "#B894E2",
+     "td": null
+    },
+    {
+     "name": "023",
+     "hex": "#15817B",
+     "td": null
+    },
+    {
+     "name": "024",
+     "hex": "#7659B5",
+     "td": null
+    },
+    {
+     "name": "028",
+     "hex": "#983B4E",
+     "td": null
+    },
+    {
+     "name": "029",
+     "hex": "#3292B2",
+     "td": null
+    },
+    {
+     "name": "030",
+     "hex": "#0378D0",
+     "td": null
+    },
+    {
+     "name": "031",
+     "hex": "#CCD6E2",
+     "td": null
+    },
+    {
+     "name": "032",
+     "hex": "#CB4726",
+     "td": null
+    },
+    {
+     "name": "033",
+     "hex": "#0353BA",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/still_colorful_recycled_pla",
+   "verified": false
+  },
+  {
+   "id": "protopasta/metallic-petg",
+   "manufacturer": "Protopasta",
+   "name": "Metallic PETG",
+   "material": "petg",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.2,
+   "colors": [
+    {
+     "name": "Candy Apple Red",
+     "hex": "#EF3731",
+     "td": null
+    },
+    {
+     "name": "Cloverleaf Green",
+     "hex": "#08523D",
+     "td": null
+    },
+    {
+     "name": "Empire Strikes Black",
+     "hex": "#262629",
+     "td": null
+    },
+    {
+     "name": "Galactic Empire Purple",
+     "hex": "#544B7B",
+     "td": null
+    },
+    {
+     "name": "Highfive Blue",
+     "hex": "#0458B5",
+     "td": null
+    },
+    {
+     "name": "Mermaid's Tale Teal",
+     "hex": "#026570",
+     "td": null
+    },
+    {
+     "name": "Tangerine Orange",
+     "hex": "#F77F41",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 60,
+    "max": 80,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PETG/metallic_petg",
+   "verified": false
+  },
+  {
+   "id": "protopasta/high-speed-pla",
+   "manufacturer": "Protopasta",
+   "name": "High Speed PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#0F0F0F",
+     "td": null
+    },
+    {
+     "name": "Black High Flow (HF)",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#F9EFE6",
+     "td": null
+    },
+    {
+     "name": "Natural High Flow (HF)",
+     "hex": "#DFDFD3",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F7F2EC",
+     "td": null
+    },
+    {
+     "name": "White High Flow (HF)",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 45,
+    "max": 45,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/high_speed_pla",
+   "verified": false
+  },
+  {
+   "id": "protopasta/matte-pla",
+   "manufacturer": "Protopasta",
+   "name": "Matte PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#0F0F0F",
+     "td": null
+    },
+    {
+     "name": "Black cMatte",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#64676C",
+     "td": null
+    },
+    {
+     "name": "Gray cMatte",
+     "hex": "#697272",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F4F4F4",
+     "td": null
+    },
+    {
+     "name": "White cMatte",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 45,
+    "max": 45,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/matte_pla",
+   "verified": false
+  },
+  {
+   "id": "protopasta/petg",
+   "manufacturer": "Protopasta",
+   "name": "PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Amie's Blood of My Enemies",
+     "hex": "#B7293E",
+     "td": null
+    },
+    {
+     "name": "Black Recycled",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Simply Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Simply Clear",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "Simply White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Static Dissipative",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 250,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 80,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "protopasta/pearl-pla",
+   "manufacturer": "Protopasta",
+   "name": "Pearl PLA",
+   "material": "pla",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Dragon Scale Purple",
+     "hex": "#9E99CE",
+     "td": null
+    },
+    {
+     "name": "Glitter's Mane Teal",
+     "hex": "#14CFE6",
+     "td": null
+    },
+    {
+     "name": "Pretty in Pink",
+     "hex": "#FBA2B8",
+     "td": null
+    },
+    {
+     "name": "Summertime Green",
+     "hex": "#9CD4B3",
+     "td": null
+    },
+    {
+     "name": "Watermelon Crush Red",
+     "hex": "#FC4D8C",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 55,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0717/9095/files/TDS__Translucent_Sparkly_HTPLA_1.0.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/pearl_pla",
+   "verified": false
+  },
+  {
+   "id": "protopasta/thermochromic-pla",
+   "manufacturer": "Protopasta",
+   "name": "Thermochromic PLA",
+   "material": "pla",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Chlorophylled",
+     "hex": "#375B4E",
+     "td": null
+    },
+    {
+     "name": "Galactic Duel",
+     "hex": "#262629",
+     "td": null
+    },
+    {
+     "name": "Just Peachy",
+     "hex": "#E56161",
+     "td": null
+    },
+    {
+     "name": "Sour Apple",
+     "hex": "#127E81",
+     "td": null
+    },
+    {
+     "name": "The Vine Fruit",
+     "hex": "#402F82",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 195,
+    "max": 225,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/thermochromic_pla",
+   "verified": false
+  },
+  {
+   "id": "protopasta/pla-green-glow-in-the-dark",
+   "manufacturer": "Protopasta",
+   "name": "PLA Green Glow-in-the-Dark",
+   "material": "pla",
+   "fill": [
+    "glow"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Fluorescent Yellow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#C5EC82",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 55,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0717/9095/files/TDS__Translucent_Sparkly_HTPLA_1.0.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/green_glow_in_the_dark",
+   "verified": false
+  },
+  {
+   "id": "protopasta/marble-pla",
+   "manufacturer": "Protopasta",
+   "name": "Marble PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Dragonfruit Smoothie",
+     "hex": "#C5354C",
+     "td": null
+    },
+    {
+     "name": "Orange Papaya Smoothie",
+     "hex": "#EC8C1E",
+     "td": null
+    },
+    {
+     "name": "Pineapple Banana Smoothie",
+     "hex": "#ECC72C",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F2EEEB",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 55,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0717/9095/files/TDS__Translucent_Sparkly_HTPLA_1.0.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/marble_pla",
+   "verified": false
+  },
+  {
+   "id": "protopasta/nebula-pla",
+   "manufacturer": "Protopasta",
+   "name": "Nebula PLA",
+   "material": "pla",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Cotton Candy Pastel Multicolor HT",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold Dust Multicolor HT",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Rainbow Multicolor HT",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Stardust Multicolor HT",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 55,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0717/9095/files/TDS__Translucent_Sparkly_HTPLA_1.0.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/nebula_pla",
+   "verified": false
+  },
+  {
+   "id": "protopasta/tpu",
+   "manufacturer": "Protopasta",
+   "name": "TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Clear Flexible",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "Clear Rigid",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F7F7F7",
+     "td": null
+    },
+    {
+     "name": "White Rigid",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/TPU/tpu",
+   "verified": false
+  },
+  {
+   "id": "protopasta/basic-pla",
+   "manufacturer": "Protopasta",
+   "name": "Basic PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#101010",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FCFCFC",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/basic_pla",
+   "verified": false
+  },
+  {
+   "id": "protopasta/metal-composite-pla",
+   "manufacturer": "Protopasta",
+   "name": "Metal Composite PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 2.3,
+   "colors": [
+    {
+     "name": "Brass",
+     "hex": "#8F7846",
+     "td": null
+    },
+    {
+     "name": "Bronze",
+     "hex": "#624C3E",
+     "td": null
+    },
+    {
+     "name": "Copper",
+     "hex": "#995A49",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 200,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 55,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 100,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0717/9095/files/TDS__BrassBronzeCopper_HTPLA_1.0.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/metal_composite_pla",
+   "verified": false
+  },
+  {
+   "id": "protopasta/stainless-steel-metal-composite-pla",
+   "manufacturer": "Protopasta",
+   "name": "Stainless Steel Metal Composite PLA",
+   "material": "pla",
+   "fill": [
+    "metal"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 2.3,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#23668C",
+     "td": null
+    },
+    {
+     "name": "Burgundy",
+     "hex": "#863938",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#ACA078",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 200,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 55,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0717/9095/files/TDS__Stainless_Steel_PLA_1.0.1.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "protopasta/PLA/stainless_steel_metal_composite_pla",
+   "verified": false
+  }
+ ]
+}

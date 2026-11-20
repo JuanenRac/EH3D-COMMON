@@ -1,0 +1,1843 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Eryone",
+ "filaments": [
+  {
+   "id": "eryone/pla-silk",
+   "manufacturer": "Eryone",
+   "name": "PLA Silk",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.32,
+   "colors": [
+    {
+     "name": "Black&Blue&Purple",
+     "hex": "#362E7C",
+     "td": null
+    },
+    {
+     "name": "Black & Dark Gold",
+     "hex": "#C5C1A5",
+     "td": null
+    },
+    {
+     "name": "Black & dark green",
+     "hex": "#063B46",
+     "td": null
+    },
+    {
+     "name": "Black&Gold&Purple",
+     "hex": "#80550F",
+     "td": null
+    },
+    {
+     "name": "Black&Purple",
+     "hex": "#4E2971",
+     "td": null
+    },
+    {
+     "name": "Black&Red",
+     "hex": "#522E38",
+     "td": null
+    },
+    {
+     "name": "Black & Red & Gold",
+     "hex": "#963801",
+     "td": null
+    },
+    {
+     "name": "Black & Rose",
+     "hex": "#50254D",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#52DCFF",
+     "td": null
+    },
+    {
+     "name": "Blue&Green",
+     "hex": "#2BA7A2",
+     "td": null
+    },
+    {
+     "name": "Blue green & Orange",
+     "hex": "#00848E",
+     "td": null
+    },
+    {
+     "name": "Blue & Purple",
+     "hex": "#1837BA",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-Silk_PLA_Dual-Color-TDS.pdf?v=1747277692"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla_silk",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla",
+   "manufacturer": "Eryone",
+   "name": "PLA",
+   "material": "pla",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Agate Gray",
+     "hex": "#878787",
+     "td": null
+    },
+    {
+     "name": "Apple Green",
+     "hex": "#8BCC60",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#141414",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#00A0EE",
+     "td": null
+    },
+    {
+     "name": "Burnt Titanium Constellation",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Burnt Titanium Galaxy",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Burnt Titanium Interstellar",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Burnt Titanium Nebula",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Burnt Titanium Wormhole",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Carbon Black",
+     "hex": "#2C2C2C",
+     "td": null
+    },
+    {
+     "name": "Carbon fibre - black",
+     "hex": "#1D1D1D",
+     "td": null
+    },
+    {
+     "name": "Chinese Red",
+     "hex": "#DA1628",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 75,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-Standard_PLA-TDS.pdf?v=1750747890"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla-high-speed",
+   "manufacturer": "Eryone",
+   "name": "PLA+ High-Speed",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Azure Blue",
+     "hex": "#0187F9",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#0F0F0F",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0A43EA",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#682909",
+     "td": null
+    },
+    {
+     "name": "Dark Brown",
+     "hex": "#685955",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#444346",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#007D2C",
+     "td": null
+    },
+    {
+     "name": "Ivory",
+     "hex": "#D7D3CE",
+     "td": null
+    },
+    {
+     "name": "Magenta",
+     "hex": "#F00198",
+     "td": null
+    },
+    {
+     "name": "Mint Green",
+     "hex": "#0FCBB7",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#EF4C01",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#6D0BD2",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-PLA-plus-_HP-TDS.pdf?v=1747623156"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla+_high_speed",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla-matte",
+   "manufacturer": "Eryone",
+   "name": "PLA Matte",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Aqua Blue",
+     "hex": "#4CC2DE",
+     "td": null
+    },
+    {
+     "name": "Army Green",
+     "hex": "#787D67",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#2A2A2A",
+     "td": null
+    },
+    {
+     "name": "Black forest green",
+     "hex": "#385146",
+     "td": null
+    },
+    {
+     "name": "Blue Lilac",
+     "hex": "#9075AC",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#9D9F9E",
+     "td": null
+    },
+    {
+     "name": "Mint green",
+     "hex": "#98F1EE",
+     "td": null
+    },
+    {
+     "name": "Navy Blue",
+     "hex": "#2F4C6B",
+     "td": null
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#485638",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#F5ACC9",
+     "td": null
+    },
+    {
+     "name": "Pottery Red",
+     "hex": "#C88484",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#E32E42",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-Matte_PLA-TDS.pdf?v=1747277166"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla_matte",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla-pla",
+   "manufacturer": "Eryone",
+   "name": "PLA+ PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Army green",
+     "hex": "#5D644D",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#161616",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0762D3",
+     "td": null
+    },
+    {
+     "name": "Cool white",
+     "hex": "#EFE2DF",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#505050",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#018F42",
+     "td": null
+    },
+    {
+     "name": "Ivory white",
+     "hex": "#E8DDD5",
+     "td": null
+    },
+    {
+     "name": "Olive green",
+     "hex": "#909779",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF7832",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#EC0C0D",
+     "td": null
+    },
+    {
+     "name": "Skin",
+     "hex": "#FFBF9A",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#E7E5E3",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-PLA-plus_TDS.pdf?v=1747276176"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla+",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla-matte-dual-color",
+   "manufacturer": "Eryone",
+   "name": "PLA Matte Dual-Color",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Black&White",
+     "hex": "#7E8A88",
+     "td": null
+    },
+    {
+     "name": "Blue Green & Burnt Orange",
+     "hex": "#304746",
+     "td": null
+    },
+    {
+     "name": "Blue&Purple",
+     "hex": "#8088E3",
+     "td": null
+    },
+    {
+     "name": "Blue & White",
+     "hex": "#44AEDC",
+     "td": null
+    },
+    {
+     "name": "Blue&Yellow",
+     "hex": "#68B29C",
+     "td": null
+    },
+    {
+     "name": "Dusty Blue & Mustard Yellow",
+     "hex": "#95772F",
+     "td": null
+    },
+    {
+     "name": "Navy Blue&Olive Green",
+     "hex": "#507782",
+     "td": null
+    },
+    {
+     "name": "Pink&Blue",
+     "hex": "#7271CC",
+     "td": null
+    },
+    {
+     "name": "Pink & Matte White",
+     "hex": "#DDD7D3",
+     "td": null
+    },
+    {
+     "name": "Purple&Green",
+     "hex": "#72707E",
+     "td": null
+    },
+    {
+     "name": "Red Violet & Green",
+     "hex": "#729B9D",
+     "td": null
+    },
+    {
+     "name": "Rose Pink & Sage Green",
+     "hex": "#655C5A",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-Matte_PLA-TDS.pdf?v=1747277166"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla_matte_dual_color",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla-silk-rainbow",
+   "manufacturer": "Eryone",
+   "name": "PLA Silk Rainbow",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Candy",
+     "hex": "#745596",
+     "td": null
+    },
+    {
+     "name": "Color palette rainbow",
+     "hex": "#F4E0FF",
+     "td": null
+    },
+    {
+     "name": "Forest",
+     "hex": "#2E6A63",
+     "td": null
+    },
+    {
+     "name": "Macaron",
+     "hex": "#537648",
+     "td": null
+    },
+    {
+     "name": "Minirainbow",
+     "hex": "#46876F",
+     "td": null
+    },
+    {
+     "name": "Rainbow",
+     "hex": "#8F4E66",
+     "td": null
+    },
+    {
+     "name": "Rainbow over mountains",
+     "hex": "#119CB8",
+     "td": null
+    },
+    {
+     "name": "Steampunk rainbow",
+     "hex": "#A78A76",
+     "td": null
+    },
+    {
+     "name": "Sunset rainbow",
+     "hex": "#651E32",
+     "td": null
+    },
+    {
+     "name": "Universe",
+     "hex": "#576E86",
+     "td": null
+    },
+    {
+     "name": "Vibrant rainbow",
+     "hex": "#C7A0D8",
+     "td": null
+    },
+    {
+     "name": "Waterfall rainbow",
+     "hex": "#FFB4FC",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-Silk_Raibow_PLA-TDS.pdf?v=1747277017"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla_silk_rainbow",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla-silk-high-speed-quadruple",
+   "manufacturer": "Eryone",
+   "name": "PLA Silk High-Speed Quadruple",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.32,
+   "colors": [
+    {
+     "name": "Aurora Dream",
+     "hex": "#344161",
+     "td": null
+    },
+    {
+     "name": "Cold Flame Night Attack",
+     "hex": "#9B5082",
+     "td": null
+    },
+    {
+     "name": "Dark Green & Midnight Blue & Black",
+     "hex": "#162252",
+     "td": null
+    },
+    {
+     "name": "Electric Night",
+     "hex": "#9A4942",
+     "td": null
+    },
+    {
+     "name": "Emerald Athens",
+     "hex": "#8C6081",
+     "td": null
+    },
+    {
+     "name": "Gorgeous Harmony (Black & Gold & Red & Green)",
+     "hex": "#96859B",
+     "td": null
+    },
+    {
+     "name": "Gorgeous Quartet (Red & Yellow & Blue & Green)",
+     "hex": "#563D2C",
+     "td": null
+    },
+    {
+     "name": "Metallic Frenzy",
+     "hex": "#8E899D",
+     "td": null
+    },
+    {
+     "name": "Pond of the Underworld",
+     "hex": "#B1E4DE",
+     "td": null
+    },
+    {
+     "name": "Royal Essence",
+     "hex": "#3A6663",
+     "td": null
+    },
+    {
+     "name": "Twilight Glow (Black & Red & Dark Purple & Gold)",
+     "hex": "#9E3E33",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-HP_Silk_PLA-TDS.pdf?v=1747277768"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla_silk_high_speed_quadruple",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla-silk-high-speed-dual-color",
+   "manufacturer": "Eryone",
+   "name": "PLA Silk High-Speed Dual-Color",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.32,
+   "colors": [
+    {
+     "name": "Black&Red",
+     "hex": "#712A48",
+     "td": null
+    },
+    {
+     "name": "Blue&Green",
+     "hex": "#55B5CB",
+     "td": null
+    },
+    {
+     "name": "Blue&Red",
+     "hex": "#8778DF",
+     "td": null
+    },
+    {
+     "name": "Dark Green&Black",
+     "hex": "#6C95B2",
+     "td": null
+    },
+    {
+     "name": "Gold&Purple",
+     "hex": "#C1949F",
+     "td": null
+    },
+    {
+     "name": "Green&Yellow",
+     "hex": "#85F267",
+     "td": null
+    },
+    {
+     "name": "Midnight Blue&Silver",
+     "hex": "#648EDF",
+     "td": null
+    },
+    {
+     "name": "Orange & Blue",
+     "hex": "#8A8EB8",
+     "td": null
+    },
+    {
+     "name": "Purple&Black",
+     "hex": "#651176",
+     "td": null
+    },
+    {
+     "name": "Red&Green",
+     "hex": "#9B8AA0",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-HP_Silk_PLA-TDS.pdf?v=1747277768"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla_silk_high_speed_dual_color",
+   "verified": false
+  },
+  {
+   "id": "eryone/petg",
+   "manufacturer": "Eryone",
+   "name": "PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#3A4045",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0690F5",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#5B605E",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FFA60E",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#D71B14",
+     "td": null
+    },
+    {
+     "name": "TRANS Blue",
+     "hex": "#024892",
+     "td": null
+    },
+    {
+     "name": "TRANS Red",
+     "hex": "#93343B",
+     "td": null
+    },
+    {
+     "name": "Transparent",
+     "hex": "#DBDADF",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F0EFF2",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F8E449",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 75,
+    "max": 80,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-PETG-TDS.pdf?v=1747274301"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla-galaxy",
+   "manufacturer": "Eryone",
+   "name": "PLA Galaxy",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Bipolar Nebula (dark green)",
+     "hex": "#293437",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#101012",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#1C3E96",
+     "td": null
+    },
+    {
+     "name": "Omega Nebula (Green Gold)",
+     "hex": "#212421",
+     "td": null
+    },
+    {
+     "name": "Owl Nebula (Dark Purple)",
+     "hex": "#120C17",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#3D336F",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#8E3333",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#50555F",
+     "td": null
+    },
+    {
+     "name": "Sirius Nebula (dark blue)",
+     "hex": "#132F38",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-PLA_Galaxy-TDS.pdf?v=1747276803"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla_galaxy",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla-burnt-titanium-dual-color",
+   "manufacturer": "Eryone",
+   "name": "PLA Burnt Titanium Dual-Color",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Black & Blue",
+     "hex": "#5F606B",
+     "td": null
+    },
+    {
+     "name": "Black & Purple Blue",
+     "hex": "#B5B2FC",
+     "td": null
+    },
+    {
+     "name": "Black & Rose Red",
+     "hex": "#918B9F",
+     "td": null
+    },
+    {
+     "name": "Blue & Rose Red",
+     "hex": "#95ACD4",
+     "td": null
+    },
+    {
+     "name": "Green & Blue",
+     "hex": "#AECCDB",
+     "td": null
+    },
+    {
+     "name": "Green & Gold",
+     "hex": "#A8C4CF",
+     "td": null
+    },
+    {
+     "name": "Green & Purple Blue",
+     "hex": "#818EAE",
+     "td": null
+    },
+    {
+     "name": "Green & Rose Red",
+     "hex": "#7E7E9B",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-Burnt_Titanium_PLA-TDS.pdf?v=1747276429"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla_burnt_titanium_dual_color",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla-matte-high-speed-rock-rainbow",
+   "manufacturer": "Eryone",
+   "name": "PLA Matte High Speed Rock Rainbow",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Arctic Blue",
+     "hex": "#5DCCF6",
+     "td": null
+    },
+    {
+     "name": "Frost Mint",
+     "hex": "#6CB6BB",
+     "td": null
+    },
+    {
+     "name": "Grand Canyon Red",
+     "hex": "#CFB4CB",
+     "td": null
+    },
+    {
+     "name": "Maple Syrup Amber",
+     "hex": "#E8C3B7",
+     "td": null
+    },
+    {
+     "name": "Navajo Pottery Red",
+     "hex": "#E9BEB1",
+     "td": null
+    },
+    {
+     "name": "Salt Flat Veins",
+     "hex": "#596682",
+     "td": null
+    },
+    {
+     "name": "Totem Engraving",
+     "hex": "#AD907C",
+     "td": null
+    },
+    {
+     "name": "Zebra Stone",
+     "hex": "#828697",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-HP_Matte_PLA-TDS.pdf?v=1747276290"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla_matte_high_speed_rock_rainbow",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla-burnt-titanium-triple-color",
+   "manufacturer": "Eryone",
+   "name": "PLA Burnt Titanium Triple Color",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Black & Green & Rose Red",
+     "hex": "#A69CBD",
+     "td": null
+    },
+    {
+     "name": "Black & Rose Red & Purple Blue",
+     "hex": "#80759D",
+     "td": null
+    },
+    {
+     "name": "Blue & Black & Rose Red",
+     "hex": "#9C8FB8",
+     "td": null
+    },
+    {
+     "name": "Blue & Gold & Green",
+     "hex": "#958884",
+     "td": null
+    },
+    {
+     "name": "Blue & Green & Rose Red",
+     "hex": "#687C83",
+     "td": null
+    },
+    {
+     "name": "Green & Rose Red & Purple Blue",
+     "hex": "#829EB5",
+     "td": null
+    },
+    {
+     "name": "Purple Blue & Gold & Green",
+     "hex": "#8FA0A8",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-Burnt_Titanium_PLA-TDS.pdf?v=1747276429"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla_burnt_titanium_triple_color",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla-luminous",
+   "manufacturer": "Eryone",
+   "name": "PLA Luminous",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#85EFF9",
+     "td": null
+    },
+    {
+     "name": "firefly green",
+     "hex": "#00C07D",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#89F4BE",
+     "td": null
+    },
+    {
+     "name": "Orange-red",
+     "hex": "#FEB1A0",
+     "td": null
+    },
+    {
+     "name": "Orange-yellow",
+     "hex": "#FFC796",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#C6ADFF",
+     "td": null
+    },
+    {
+     "name": "Rainbow",
+     "hex": "#ADE9FE",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 180,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-Glow_in_the_dark_PLA-TDS.pdf?v=1747276884"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla_luminous",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla-matte-high-speed-gradient-multi-color",
+   "manufacturer": "Eryone",
+   "name": "PLA Matte High Speed Gradient Multi-Color",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "(coffee & khaki & white)",
+     "hex": "#785C46",
+     "td": null
+    },
+    {
+     "name": "(dark brown & yellow & light brown)",
+     "hex": "#BAA183",
+     "td": null
+    },
+    {
+     "name": "Glacier (Blue & White & Light Blue)",
+     "hex": "#8DD3F2",
+     "td": null
+    },
+    {
+     "name": "(gold & red)",
+     "hex": "#F2D5B1",
+     "td": null
+    },
+    {
+     "name": "Marshmallow (Blue & Pink)",
+     "hex": "#F6E2E0",
+     "td": null
+    },
+    {
+     "name": "Red Velvet (Red & White)",
+     "hex": "#F0AFA5",
+     "td": null
+    },
+    {
+     "name": "Snowfield (Blue & White)",
+     "hex": "#ECFBF2",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-HP_Matte_PLA-TDS.pdf?v=1747276290"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla_matte_high_speed_gradient_multi_color",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla-silk-high-speed-triple-color",
+   "manufacturer": "Eryone",
+   "name": "PLA Silk High-Speed Triple-Color",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.32,
+   "colors": [
+    {
+     "name": "Black & Blue & Purple",
+     "hex": "#8378AE",
+     "td": null
+    },
+    {
+     "name": "Black & Red & Gold",
+     "hex": "#C06370",
+     "td": null
+    },
+    {
+     "name": "Dark Green & Midnight Blue & Black",
+     "hex": "#162252",
+     "td": null
+    },
+    {
+     "name": "Orange & Blue & Green",
+     "hex": "#CC9AA6",
+     "td": null
+    },
+    {
+     "name": "Red & Blue & Green",
+     "hex": "#73788D",
+     "td": null
+    },
+    {
+     "name": "Red & Purple & Gold",
+     "hex": "#F598B3",
+     "td": null
+    },
+    {
+     "name": "Red & Yellow & Blue",
+     "hex": "#B58595",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-HP_Silk_PLA-TDS.pdf?v=1747277768"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla_silk_high_speed_triple_color",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla-ultra-silk",
+   "manufacturer": "Eryone",
+   "name": "PLA Ultra Silk",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.32,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#555555",
+     "td": null
+    },
+    {
+     "name": "Bronze",
+     "hex": "#F2E767",
+     "td": null
+    },
+    {
+     "name": "Copper",
+     "hex": "#FA7D45",
+     "td": null
+    },
+    {
+     "name": "Dark Gold",
+     "hex": "#9D6D60",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#FFE880",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#FF2131",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#84AABD",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-Silk_PLA_Dual-Color-TDS.pdf?v=1747277692"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla_ultra_silk",
+   "verified": false
+  },
+  {
+   "id": "eryone/petg-cf",
+   "manufacturer": "Eryone",
+   "name": "PETG-CF",
+   "material": "petg",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "black",
+     "hex": "#1A1E21",
+     "td": null
+    },
+    {
+     "name": "blue",
+     "hex": "#042C4E",
+     "td": null
+    },
+    {
+     "name": "dark gray",
+     "hex": "#52555B",
+     "td": null
+    },
+    {
+     "name": "Grass green",
+     "hex": "#85934F",
+     "td": null
+    },
+    {
+     "name": "olive green",
+     "hex": "#0F231A",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#E67018",
+     "td": null
+    },
+    {
+     "name": "Purple red",
+     "hex": "#764953",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 75,
+    "max": 80,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-PETG-CF-TDS.pdf?v=1747274371"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PETG/petg_cf",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla-burnt-titanium",
+   "manufacturer": "Eryone",
+   "name": "PLA Burnt Titanium",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#2B548D",
+     "td": null
+    },
+    {
+     "name": "Blue Purple",
+     "hex": "#2F4A81",
+     "td": null
+    },
+    {
+     "name": "Dark Gold",
+     "hex": "#846F49",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#387E74",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#826D6D",
+     "td": null
+    },
+    {
+     "name": "Technology Blue",
+     "hex": "#153747",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-Burnt_Titanium_PLA-TDS.pdf?v=1747276429"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla_burnt_titanium",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla-burnt-titanium-rainbow",
+   "manufacturer": "Eryone",
+   "name": "PLA Burnt Titanium Rainbow",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Constellation (Rose Red & Flash Black)",
+     "hex": "#693537",
+     "td": null
+    },
+    {
+     "name": "Fantasy Glaze",
+     "hex": "#433F70",
+     "td": null
+    },
+    {
+     "name": "Galaxy (Green & Blue & Rose Red)",
+     "hex": "#68575D",
+     "td": null
+    },
+    {
+     "name": "Interstellar (Blue & Flash Black)",
+     "hex": "#3D403F",
+     "td": null
+    },
+    {
+     "name": "Nebula (Dark Gold & Green & Blue-Purple)",
+     "hex": "#352729",
+     "td": null
+    },
+    {
+     "name": "Wormhole (Green & Flashing Black)",
+     "hex": "#2B2C27",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0252/0412/9841/files/ERYONE-Burnt_Titanium_PLA-TDS.pdf?v=1747276429"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla_burnt_titanium_rainbow",
+   "verified": false
+  },
+  {
+   "id": "eryone/pla-high-speed-pla",
+   "manufacturer": "Eryone",
+   "name": "PLA High-Speed PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Agate Gray",
+     "hex": "#6C7371",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#292929",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#4A5352",
+     "td": null
+    },
+    {
+     "name": "Signal Gray",
+     "hex": "#AAAFB0",
+     "td": null
+    },
+    {
+     "name": "Skin Color",
+     "hex": "#E5B8A7",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#CDD2D0",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "eryone/PLA/pla_high_speed",
+   "verified": false
+  }
+ ]
+}

@@ -1,0 +1,508 @@
+{
+ "schema_version": 1,
+ "manufacturer": "JAYO",
+ "filaments": [
+  {
+   "id": "jayo/pla",
+   "manufacturer": "JAYO",
+   "name": "PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0000FF",
+     "td": null
+    },
+    {
+     "name": "Cherry Red",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Chocolate",
+     "hex": "#6E4325",
+     "td": null
+    },
+    {
+     "name": "Coffee",
+     "hex": "#AB713E",
+     "td": null
+    },
+    {
+     "name": "Cyan",
+     "hex": "#00FFFF",
+     "td": null
+    },
+    {
+     "name": "Fuchsia",
+     "hex": "#FF00FF",
+     "td": null
+    },
+    {
+     "name": "Grass Green",
+     "hex": "#008000",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#808080",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#80FF00",
+     "td": null
+    },
+    {
+     "name": "Lemon Yellow",
+     "hex": "#EEEA44",
+     "td": null
+    },
+    {
+     "name": "Mint Green",
+     "hex": "#67D8BC",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 210,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 60,
+    "max": 80,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1100,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "jayo/PLA/pla",
+   "verified": false
+  },
+  {
+   "id": "jayo/petg",
+   "manufacturer": "JAYO",
+   "name": "PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0000FF",
+     "td": null
+    },
+    {
+     "name": "Cherry Red",
+     "hex": "#CD001A",
+     "td": null
+    },
+    {
+     "name": "Cyan",
+     "hex": "#1ADAFB",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#1FD44C",
+     "td": null
+    },
+    {
+     "name": "Lemon Yellow",
+     "hex": "#F7EF4F",
+     "td": null
+    },
+    {
+     "name": "Mint Green",
+     "hex": "#22F4D3",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF8F41",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#FF0000",
+     "td": null
+    },
+    {
+     "name": "Sakura Pink",
+     "hex": "#FFB7C5",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#A8B0BD",
+     "td": null
+    },
+    {
+     "name": "Sky Blue",
+     "hex": "#87CEEB",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 75,
+    "max": 85,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1100,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 110,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "jayo/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "jayo/matte-pla",
+   "manufacturer": "JAYO",
+   "name": "Matte PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#3D9441",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#6F727E",
+     "td": null
+    },
+    {
+     "name": "Light Blue",
+     "hex": "#8ED9F9",
+     "td": null
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#6E8451",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF8E24",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#FF72B6",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#AE00FF",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#CF4042",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 60,
+    "max": 80,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "jayo/PLA/matte_pla",
+   "verified": false
+  },
+  {
+   "id": "jayo/silk-pla",
+   "manufacturer": "JAYO",
+   "name": "Silk PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black+Gold Multi-Color",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue+Green Multi-Color",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Pink+Gold Multi-Color",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red+Gold Multi-Color",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red+Yellow+Green Multi-Color",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 60,
+    "max": 80,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "jayo/PLA/silk_pla",
+   "verified": false
+  },
+  {
+   "id": "jayo/tpu",
+   "manufacturer": "JAYO",
+   "name": "TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0400FF",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#A3A3A3",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#FF0000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 231,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "jayo/TPU/red",
+   "verified": false
+  },
+  {
+   "id": "jayo/pla-pla",
+   "manufacturer": "JAYO",
+   "name": "PLA+ PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 205,
+    "max": 215,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1100,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "jayo/PLA/pla+",
+   "verified": false
+  },
+  {
+   "id": "jayo/high-speed-matte-pla",
+   "manufacturer": "JAYO",
+   "name": "High Speed Matte PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "spools": [
+    {
+     "weight_g": 1100,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "jayo/PLA/high_speed_matte_pla",
+   "verified": false
+  },
+  {
+   "id": "jayo/jayo-abs-red",
+   "manufacturer": "JAYO",
+   "name": "Jayo ABS Red",
+   "material": "abs",
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "nozzle_c": {
+    "min": 250,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 100,
+    "recommended": null
+   },
+   "source": "open-filament-database",
+   "source_ref": "jayo/ABS/jayo_abs_red",
+   "verified": false
+  }
+ ]
+}

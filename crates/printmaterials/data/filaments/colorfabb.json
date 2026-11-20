@@ -1,0 +1,1072 @@
+{
+ "schema_version": 1,
+ "manufacturer": "colorFabb",
+ "filaments": [
+  {
+   "id": "colorfabb/high-speed-pla",
+   "manufacturer": "colorFabb",
+   "name": "High Speed PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Agate Grey",
+     "hex": "#C5C5BF",
+     "td": null
+    },
+    {
+     "name": "Antique pink",
+     "hex": "#F06E92",
+     "td": null
+    },
+    {
+     "name": "Azure blue",
+     "hex": "#23668C",
+     "td": null
+    },
+    {
+     "name": "Deep orange",
+     "hex": "#FF5F2E",
+     "td": null
+    },
+    {
+     "name": "Grey blue",
+     "hex": "#4D6383",
+     "td": null
+    },
+    {
+     "name": "Iron Grey",
+     "hex": "#5A696C",
+     "td": null
+    },
+    {
+     "name": "Jet black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Light grey",
+     "hex": "#C3CCD5",
+     "td": null
+    },
+    {
+     "name": "Moss green",
+     "hex": "#2E5448",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#EADAC2",
+     "td": null
+    },
+    {
+     "name": "Pastel blue",
+     "hex": "#6299DF",
+     "td": null
+    },
+    {
+     "name": "Pearl dark grey",
+     "hex": "#6A6C6E",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 215,
+    "max": 225,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "colorfabb/PLA/high_speed_pla",
+   "verified": false
+  },
+  {
+   "id": "colorfabb/tpu",
+   "manufacturer": "colorFabb",
+   "name": "TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "85A Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "85A Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "85A Green",
+     "hex": "#00CC00",
+     "td": null
+    },
+    {
+     "name": "85A Orange",
+     "hex": "#E03F26",
+     "td": null
+    },
+    {
+     "name": "85A Red",
+     "hex": "#E20010",
+     "td": null
+    },
+    {
+     "name": "85A White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "95A Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "95A Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "95A Green",
+     "hex": "#00CC00",
+     "td": null
+    },
+    {
+     "name": "95A Orange",
+     "hex": "#F67405",
+     "td": null
+    },
+    {
+     "name": "95A Red",
+     "hex": "#E20010",
+     "td": null
+    },
+    {
+     "name": "95A White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "colorfabb/TPU/tpu",
+   "verified": false
+  },
+  {
+   "id": "colorfabb/matte-pla",
+   "manufacturer": "colorFabb",
+   "name": "Matte PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "LW- Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "LW- Gray Silver",
+     "hex": "#ABACB0",
+     "td": null
+    },
+    {
+     "name": "LW- Green",
+     "hex": "#91C500",
+     "td": null
+    },
+    {
+     "name": "LW- Natural",
+     "hex": "#F2EFE9",
+     "td": null
+    },
+    {
+     "name": "LW- Red",
+     "hex": "#E20010",
+     "td": null
+    },
+    {
+     "name": "LW- Yellow",
+     "hex": "#F3C102",
+     "td": null
+    },
+    {
+     "name": "VIBERS Pastel Green",
+     "hex": "#9EB59B",
+     "td": null
+    },
+    {
+     "name": "Vibers Pastel Orange",
+     "hex": "#FF9C66",
+     "td": null
+    },
+    {
+     "name": "Vibers Pastel Purple",
+     "hex": "#BBA0DA",
+     "td": null
+    },
+    {
+     "name": "Vibers White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "colorfabb/PLA/matte_pla",
+   "verified": false
+  },
+  {
+   "id": "colorfabb/pha-pla",
+   "manufacturer": "colorFabb",
+   "name": "PHA PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.2,
+   "colors": [
+    {
+     "name": "Blue grey",
+     "hex": "#4D6383",
+     "td": null
+    },
+    {
+     "name": "Blueish white",
+     "hex": "#CCD6E2",
+     "td": null
+    },
+    {
+     "name": "Dutch orange",
+     "hex": "#FF9A14",
+     "td": null
+    },
+    {
+     "name": "Fluorescent pink",
+     "hex": "#E23288",
+     "td": null
+    },
+    {
+     "name": "Intense green",
+     "hex": "#9FEC41",
+     "td": null
+    },
+    {
+     "name": "Mint turqoise",
+     "hex": "#00B4BC",
+     "td": null
+    },
+    {
+     "name": "Pale gold",
+     "hex": "#D0BD93",
+     "td": null
+    },
+    {
+     "name": "Shinning Silver",
+     "hex": "#ABACB0",
+     "td": null
+    },
+    {
+     "name": "Standard black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Standard white",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 195,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "colorfabb/PLA/pha_pla",
+   "verified": false
+  },
+  {
+   "id": "colorfabb/r-semi-pla",
+   "manufacturer": "colorFabb",
+   "name": "r-Semi PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blossom",
+     "hex": "#FFCCCD",
+     "td": null
+    },
+    {
+     "name": "Charcoal",
+     "hex": "#9FA4A8",
+     "td": null
+    },
+    {
+     "name": "Eggshell",
+     "hex": "#EADAC2",
+     "td": null
+    },
+    {
+     "name": "Monumental",
+     "hex": "#9F9F9F",
+     "td": null
+    },
+    {
+     "name": "Ochre",
+     "hex": "#EA9E3F",
+     "td": null
+    },
+    {
+     "name": "Wild Sage",
+     "hex": "#B4C8A2",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 195,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "colorfabb/PLA/r_semi_pla",
+   "verified": false
+  },
+  {
+   "id": "colorfabb/petg",
+   "manufacturer": "colorFabb",
+   "name": "PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.28,
+   "colors": [
+    {
+     "name": "Economy Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Economy Clear",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "Economy Dark Gray",
+     "hex": "#6A6C6E",
+     "td": null
+    },
+    {
+     "name": "Economy Light Gray",
+     "hex": "#C3CCD5",
+     "td": null
+    },
+    {
+     "name": "Economy Red",
+     "hex": "#E20010",
+     "td": null
+    },
+    {
+     "name": "Economy White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Semi Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 235,
+    "max": 255,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 80,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "colorfabb/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "colorfabb/economy-pla",
+   "manufacturer": "colorFabb",
+   "name": "Economy PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.2,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Light Gray",
+     "hex": "#C3CCD5",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#E20010",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#ABACB0",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 195,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "colorfabb/PLA/economy_pla",
+   "verified": false
+  },
+  {
+   "id": "colorfabb/lw-ht-pla",
+   "manufacturer": "colorFabb",
+   "name": "LW-HT PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.2,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Dark Gray",
+     "hex": "#6A6C6E",
+     "td": null
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#4D5D4C",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 195,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "colorfabb/PLA/lw_ht_pla",
+   "verified": false
+  },
+  {
+   "id": "colorfabb/asa",
+   "manufacturer": "colorFabb",
+   "name": "ASA",
+   "material": "asa",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.07,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "LW- Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "LW- Natural",
+     "hex": "#F2EFE9",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#F2EFE9",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 90,
+    "max": 100,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "colorfabb/ASA/asa",
+   "verified": false
+  },
+  {
+   "id": "colorfabb/pla",
+   "manufacturer": "colorFabb",
+   "name": "PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Regrind",
+     "hex": "#6A6C6E",
+     "td": null
+    },
+    {
+     "name": "steelFill",
+     "hex": "#6A6C6E",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "colorfabb/PLA/pla",
+   "verified": false
+  },
+  {
+   "id": "colorfabb/stonefill-pla",
+   "manufacturer": "colorFabb",
+   "name": "StoneFill PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Light Gray",
+     "hex": "#C3CCD5",
+     "td": null
+    },
+    {
+     "name": "Moss Green",
+     "hex": "#707126",
+     "td": null
+    },
+    {
+     "name": "Red Brick",
+     "hex": "#B47D6C",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 195,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "colorfabb/PLA/stonefill_pla",
+   "verified": false
+  },
+  {
+   "id": "colorfabb/semi-pla",
+   "manufacturer": "colorFabb",
+   "name": "Semi PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "colorfabb/PLA/semi_pla",
+   "verified": false
+  },
+  {
+   "id": "colorfabb/silk-pla",
+   "manufacturer": "colorFabb",
+   "name": "Silk PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Purple",
+     "hex": "#7D3C55",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 225,
+    "max": 235,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "colorfabb/PLA/silk_pla",
+   "verified": false
+  },
+  {
+   "id": "colorfabb/pha",
+   "manufacturer": "colorFabb",
+   "name": "PHA",
+   "material": "other",
+   "grade": "PHA",
+   "fill": [
+    "wood"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "all Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "all Natural",
+     "hex": "#F2EFE9",
+     "td": null
+    },
+    {
+     "name": "all White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "bronzeFill",
+     "hex": "#95846F",
+     "td": null
+    },
+    {
+     "name": "copperFill",
+     "hex": "#904029",
+     "td": null
+    },
+    {
+     "name": "corkFill",
+     "hex": "#774B3F",
+     "td": null
+    },
+    {
+     "name": "Green Transparent",
+     "hex": "#267F67",
+     "td": null
+    },
+    {
+     "name": "Leaf Green",
+     "hex": "#06924D",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#F1E6B2",
+     "td": null
+    },
+    {
+     "name": "Red Transparent",
+     "hex": "#C01616",
+     "td": null
+    },
+    {
+     "name": "Signal Yellow",
+     "hex": "#F3B400",
+     "td": null
+    },
+    {
+     "name": "Sky Blue",
+     "hex": "#0078BF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 195,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "colorfabb/PHA/pha",
+   "verified": false
+  },
+  {
+   "id": "colorfabb/cpe",
+   "manufacturer": "colorFabb",
+   "name": "CPE",
+   "material": "other",
+   "grade": "CPE",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "HT Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "HT Clear",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "HT Dark Gray",
+     "hex": "#5A696C",
+     "td": null
+    },
+    {
+     "name": "HT White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "XT Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "XT Dark Gray",
+     "hex": "#6A6C6E",
+     "td": null
+    },
+    {
+     "name": "XT Light Blue",
+     "hex": "#0099E6",
+     "td": null
+    },
+    {
+     "name": "XT White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "colorfabb/CPE/cpe",
+   "verified": false
+  },
+  {
+   "id": "colorfabb/glow-pha",
+   "manufacturer": "colorFabb",
+   "name": "Glow PHA",
+   "material": "other",
+   "grade": "PHA",
+   "fill": [
+    "glow"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.2,
+   "colors": [
+    {
+     "name": "glowFill",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 195,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "colorfabb/PHA/glow_pha",
+   "verified": false
+  }
+ ]
+}

@@ -1,0 +1,1261 @@
+{
+ "schema_version": 1,
+ "manufacturer": "3DXTech",
+ "filaments": [
+  {
+   "id": "3dxtech/economy-pla",
+   "manufacturer": "3DXTech",
+   "name": "Economy PLA",
+   "material": "pla",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Apple-green",
+     "hex": "#9AED51",
+     "td": null
+    },
+    {
+     "name": "Beige",
+     "hex": "#EADAC2",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Bronze Gold",
+     "hex": "#8C7354",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#5D3B32",
+     "td": null
+    },
+    {
+     "name": "Chocolate-wine",
+     "hex": "#5D342C",
+     "td": null
+    },
+    {
+     "name": "Dark-blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Dark-green",
+     "hex": "#267F67",
+     "td": null
+    },
+    {
+     "name": "Glitter cactus-green",
+     "hex": "#0B6A2F",
+     "td": null
+    },
+    {
+     "name": "Glitter gold",
+     "hex": "#BAB3A1",
+     "td": null
+    },
+    {
+     "name": "Glitter lemon-gold",
+     "hex": "#90903B",
+     "td": null
+    },
+    {
+     "name": "Glitter metallic-blue",
+     "hex": "#4921C1",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 23,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0625/4185/6821/files/UN_PLA_ECONOMY_TDS_v1.0.pdf?v=1736526205"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/PLA/economy_pla",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/pa6-gf",
+   "manufacturer": "3DXTech",
+   "name": "PA6 GF",
+   "material": "pa",
+   "grade": "PA6",
+   "fill": [
+    "glass_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.14,
+   "colors": [
+    {
+     "name": "FIBREX™ Nylon +GF30 Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "FIBREX™ Nylon +GF30 Dark Grey",
+     "hex": "#6A6C6E",
+     "td": null
+    },
+    {
+     "name": "FIBREX™ Nylon +GF30 Flat Dark Earth",
+     "hex": "#B38F6E",
+     "td": null
+    },
+    {
+     "name": "FIBREX™ Nylon +GF30 Metallic Silver",
+     "hex": "#ABACB0",
+     "td": null
+    },
+    {
+     "name": "FIBREX™ Nylon +GF30 Tactical Tan",
+     "hex": "#E6D1BD",
+     "td": null
+    },
+    {
+     "name": "FIBREX™ Nylon +GF30 White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "OBSIDIAN GF+ Blue",
+     "hex": "#2E56F1",
+     "td": null
+    },
+    {
+     "name": "OBSIDIAN GF+ Flat Dark Earth",
+     "hex": "#90785E",
+     "td": null
+    },
+    {
+     "name": "OBSIDIAN GF+ Metallic Silver",
+     "hex": "#ABACB0",
+     "td": null
+    },
+    {
+     "name": "OBSIDIAN GF+ OD GREEN",
+     "hex": "#5D6844",
+     "td": null
+    },
+    {
+     "name": "OBSIDIAN GF+ Orange",
+     "hex": "#E03F26",
+     "td": null
+    },
+    {
+     "name": "OBSIDIAN GF+ Red",
+     "hex": "#B7293E",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 250,
+    "max": 290,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 100,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/PA6/gf_pa6",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/abs-3dxtech",
+   "manufacturer": "3DXTech",
+   "name": "ABS 3DXTech",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.05,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Burgundy",
+     "hex": "#AA0101",
+     "td": null
+    },
+    {
+     "name": "Dark Grey",
+     "hex": "#6A6C6E",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#41A840",
+     "td": null
+    },
+    {
+     "name": "Lightglacier Grey",
+     "hex": "#C3CCD5",
+     "td": null
+    },
+    {
+     "name": "Metallic Copper",
+     "hex": "#C06341",
+     "td": null
+    },
+    {
+     "name": "Metallic Gold",
+     "hex": "#DDB95D",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#F2EFE9",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF5F2E",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#E20010",
+     "td": null
+    },
+    {
+     "name": "Reflex Blue",
+     "hex": "#2E56F1",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 100,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0625/4185/6821/files/ABS-TDS-v03.pdf?v=1728334784"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/ABS/3dxtech",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/petg",
+   "manufacturer": "3DXTech",
+   "name": "PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "ECOMAX® R- Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "ECOMAX® R- Blue Frost",
+     "hex": "#6299DF",
+     "td": null
+    },
+    {
+     "name": "ECOMAX® R- Dark Grey",
+     "hex": "#808080",
+     "td": null
+    },
+    {
+     "name": "Filament",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "MAX-G Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "MAX-G Dark Grey",
+     "hex": "#6A6C6E",
+     "td": null
+    },
+    {
+     "name": "MAX-G Natural",
+     "hex": "#F2EFE9",
+     "td": null
+    },
+    {
+     "name": "MAX-G Orange",
+     "hex": "#F67405",
+     "td": null
+    },
+    {
+     "name": "MAX-G Red",
+     "hex": "#AA0101",
+     "td": null
+    },
+    {
+     "name": "MAX-G Reflex Blue",
+     "hex": "#2E56F1",
+     "td": null
+    },
+    {
+     "name": "MAX-G White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "MAX-G Yellow",
+     "hex": "#FBE200",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 60,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/asa-3dxmax",
+   "manufacturer": "3DXTech",
+   "name": "ASA 3DXMax",
+   "material": "asa",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.07,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Dark Grey",
+     "hex": "#55555E",
+     "td": null
+    },
+    {
+     "name": "Flat Dark Earth",
+     "hex": "#7B6B57",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#4E7642",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#EADAC2",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#F67405",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#AA0101",
+     "td": null
+    },
+    {
+     "name": "Reflex Blue",
+     "hex": "#2E56F1",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FBE200",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 235,
+    "max": 255,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 90,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0625/4185/6821/files/3DXMAX_ASA_TDS_v3.pdf?v=1723942764"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/ASA/3dxmax",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/ecomax-pla",
+   "manufacturer": "3DXTech",
+   "name": "EcoMax PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Dark Grey",
+     "hex": "#808080",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#DFDFD3",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#F67405",
+     "td": null
+    },
+    {
+     "name": "Reflex Blue",
+     "hex": "#4921C1",
+     "td": null
+    },
+    {
+     "name": "True Red",
+     "hex": "#EC0000",
+     "td": null
+    },
+    {
+     "name": "Venom",
+     "hex": "#B3DF3A",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#EFEFEF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FFC946",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 23,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0625/4185/6821/files/ECOMAX_PLA_TDS_v3.pdf?v=1723942765"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/PLA/ecomax_pla",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/tpu-3dxflex",
+   "manufacturer": "3DXTech",
+   "name": "TPU 3DXFlex",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "85A Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "95A Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 225,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 50,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/TPU/3dxflex",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/pa6-cf",
+   "manufacturer": "3DXTech",
+   "name": "PA6 CF",
+   "material": "pa",
+   "grade": "PA6",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.14,
+   "colors": [
+    {
+     "name": "CarbonX Nylon 6+CF Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Obsidian +CF Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 250,
+    "max": 290,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 100,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/PA6/cf_pa6",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/pa6",
+   "manufacturer": "3DXTech",
+   "name": "PA6",
+   "material": "pa",
+   "grade": "PA6",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.14,
+   "colors": [
+    {
+     "name": "AmideX Nylon 6-66 Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "ION ALLOY Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 250,
+    "max": 290,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 100,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/PA6/pa6",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/pla-3dxstat-esd",
+   "manufacturer": "3DXTech",
+   "name": "PLA 3DXStat ESD",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.26,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 215,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 40,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0625/4185/6821/files/3DXTECH_TDS_-_ESD-PLA_v1.0.pdf?v=1761064896"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/PLA/3dxstat_esd",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/pla-cf",
+   "manufacturer": "3DXTech",
+   "name": "PLA CF",
+   "material": "pla",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.29,
+   "colors": [
+    {
+     "name": "CarbonX +CF",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 23,
+    "max": 60,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0625/4185/6821/files/CarbonX_CF_PLA_TDS_v3.pdf?v=1723942765"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/PLA/cf_pla",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/glow-pla",
+   "manufacturer": "3DXTech",
+   "name": "Glow PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Economy green-yellow-glow",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/PLA/glow_pla",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/petg-3dxstat-emi",
+   "manufacturer": "3DXTech",
+   "name": "PETG 3DXStat EMI",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/PETG/3dxstat_emi",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/petg-3dxstat-esd",
+   "manufacturer": "3DXTech",
+   "name": "PETG 3DXStat ESD",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.28,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 260,
+    "max": 280,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 60,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0625/4185/6821/files/3DXSTAT_ESD-PETG-TDS-v03.pdf?v=1723942764"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/PETG/3dxstat_esd",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/petg-cf",
+   "manufacturer": "3DXTech",
+   "name": "PETG CF",
+   "material": "petg",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.34,
+   "colors": [
+    {
+     "name": "CarbonX +CF Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 90,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0625/4185/6821/files/CarbonX_CF_PETG_TDS_v3.pdf?v=1723942765"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/PETG/cf_petg",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/abs-3dxmax",
+   "manufacturer": "3DXTech",
+   "name": "ABS 3DXMax",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.04,
+   "colors": [
+    {
+     "name": "PC Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 90,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/ABS/3dxmax",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/abs-3dxstat-esd",
+   "manufacturer": "3DXTech",
+   "name": "ABS 3DXStat ESD",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.09,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 100,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0625/4185/6821/files/3DXSTAT_ESD_ABS_TDS_v3.pdf?v=1723942764"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/ABS/3dxstat_esd",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/abs",
+   "manufacturer": "3DXTech",
+   "name": "ABS",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.18,
+   "colors": [
+    {
+     "name": "Firewire FR- Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 100,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0625/4185/6821/files/FIREWIRE_FR_ABS_TDS_v3.pdf?v=1723942765"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/ABS/abs",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/abs-cf",
+   "manufacturer": "3DXTech",
+   "name": "ABS CF",
+   "material": "abs",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.11,
+   "colors": [
+    {
+     "name": "CarbonX +CF",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 100,
+    "max": 110,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0625/4185/6821/files/CarbonX_CF_ABS_TDS_v3.pdf?v=1723942765"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/ABS/cf_abs",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/abs-gf",
+   "manufacturer": "3DXTech",
+   "name": "ABS GF",
+   "material": "abs",
+   "fill": [
+    "glass_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.15,
+   "colors": [
+    {
+     "name": "FibreX +GF Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 245,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 95,
+    "max": 110,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0625/4185/6821/files/FIBREX_GF_ABS__TDS_v1.pdf?v=1723942769"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/ABS/gf_abs",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/asa-cf",
+   "manufacturer": "3DXTech",
+   "name": "ASA CF",
+   "material": "asa",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.11,
+   "colors": [
+    {
+     "name": "CarbonX +CF",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 235,
+    "max": 255,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 90,
+    "max": 110,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0625/4185/6821/files/CarbonX_CF_ASA_TDS_v1.pdf?v=1723942767"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/ASA/cf_asa",
+   "verified": false
+  },
+  {
+   "id": "3dxtech/tpu-3dxflex-gf30",
+   "manufacturer": "3DXTech",
+   "name": "TPU 3DXFlex GF30",
+   "material": "tpu",
+   "fill": [
+    "glass_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 60,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "3dxtech/TPU/3dxflex_gf30",
+   "verified": false
+  }
+ ]
+}

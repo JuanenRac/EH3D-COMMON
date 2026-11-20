@@ -1,0 +1,1675 @@
+{
+ "schema_version": 1,
+ "manufacturer": "ELEGOO",
+ "filaments": [
+  {
+   "id": "elegoo/pla",
+   "manufacturer": "ELEGOO",
+   "name": "PLA",
+   "material": "pla",
+   "fill": [
+    "wood"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.26,
+   "colors": [
+    {
+     "name": "Apple Green",
+     "hex": "#C2DE31",
+     "td": null
+    },
+    {
+     "name": "Beige",
+     "hex": "#F4E0B8",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Bronze filled",
+     "hex": "#895837",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#9E6A4B",
+     "td": null
+    },
+    {
+     "name": "Burgundy Red",
+     "hex": "#98282F",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "Cobalt Blue",
+     "hex": "#1341D2",
+     "td": null
+    },
+    {
+     "name": "Cocoa Brown",
+     "hex": "#665345",
+     "td": null
+    },
+    {
+     "name": "Cyan",
+     "hex": "#3AA2FF",
+     "td": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "#2240AF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 65,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/PLA/pla",
+   "verified": false
+  },
+  {
+   "id": "elegoo/pla-basic",
+   "manufacturer": "ELEGOO",
+   "name": "PLA Basic",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Apple Green",
+     "hex": "#C2DE31",
+     "td": null
+    },
+    {
+     "name": "Beige",
+     "hex": "#F4E0B8",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Bronze filled",
+     "hex": "#895837",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#9E6A4B",
+     "td": null
+    },
+    {
+     "name": "Burgundy Red",
+     "hex": "#98282F",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "Cobalt Blue",
+     "hex": "#1341D2",
+     "td": null
+    },
+    {
+     "name": "Cocoa Brown",
+     "hex": "#665345",
+     "td": null
+    },
+    {
+     "name": "Copper Filled",
+     "hex": "#7E4A2E",
+     "td": null
+    },
+    {
+     "name": "Cyan",
+     "hex": "#3AA2FF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/PLA/pla_basic",
+   "verified": false
+  },
+  {
+   "id": "elegoo/silk-pla",
+   "manufacturer": "ELEGOO",
+   "name": "Silk PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Black Green",
+     "hex": "#668000",
+     "td": null
+    },
+    {
+     "name": "Black Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black Red",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Green Orange",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Magenta",
+     "hex": "#77398B",
+     "td": null
+    },
+    {
+     "name": "Blue Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Purple Black",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Bronze",
+     "hex": "#A45B27",
+     "td": null
+    },
+    {
+     "name": "Coral Pink",
+     "hex": "#FC8397",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#F6C500",
+     "td": null
+    },
+    {
+     "name": "Green Red",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/PLA/silk_pla",
+   "verified": false
+  },
+  {
+   "id": "elegoo/pla-matte",
+   "manufacturer": "ELEGOO",
+   "name": "PLA MATTE",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.31,
+   "colors": [
+    {
+     "name": "Beige",
+     "hex": "#F4E0B8",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#D1BDB0",
+     "td": null
+    },
+    {
+     "name": "Default",
+     "hex": "#D8EEA3",
+     "td": null
+    },
+    {
+     "name": "Ice Blue",
+     "hex": "#B3F3FD",
+     "td": null
+    },
+    {
+     "name": "Lavender Purple",
+     "hex": "#9D85D1",
+     "td": null
+    },
+    {
+     "name": "Matte Black",
+     "hex": "#090909",
+     "td": null
+    },
+    {
+     "name": "Matte White",
+     "hex": "#F6F6F6",
+     "td": null
+    },
+    {
+     "name": "Mint Green",
+     "hex": "#DBEBBA",
+     "td": null
+    },
+    {
+     "name": "Navy Blue",
+     "hex": "#2D3F6F",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#F8C49C",
+     "td": null
+    },
+    {
+     "name": "Ruby Red",
+     "hex": "#BB2C2E",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/PLA/pla_matte",
+   "verified": false
+  },
+  {
+   "id": "elegoo/pla-plus",
+   "manufacturer": "ELEGOO",
+   "name": "PLA Plus",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.3,
+   "colors": [
+    {
+     "name": "Beige",
+     "hex": "#F4E0B8",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#9E6A4B",
+     "td": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "#2240AF",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#8F949B",
+     "td": null
+    },
+    {
+     "name": "Neon Green",
+     "hex": "#08E327",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FD7C18",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#F9B0BD",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#603BA0",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#EA140E",
+     "td": null
+    },
+    {
+     "name": "Sea Green",
+     "hex": "#08B690",
+     "td": null
+    },
+    {
+     "name": "Sky Blue",
+     "hex": "#32D0EC",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/PLA/pla_plus",
+   "verified": false
+  },
+  {
+   "id": "elegoo/petg-pro",
+   "manufacturer": "ELEGOO",
+   "name": "PETG PRO",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#2240AF",
+     "td": null
+    },
+    {
+     "name": "Burgundy Red",
+     "hex": "#9C2129",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#08E327",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#8F949B",
+     "td": null
+    },
+    {
+     "name": "Light Blue",
+     "hex": "#339BF7",
+     "td": null
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#25460F",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#F9B0BD",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#603BA0",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#EA140E",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#9F9F9F",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 65,
+    "max": 75,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/PETG/petg_pro",
+   "verified": false
+  },
+  {
+   "id": "elegoo/rapid-petg",
+   "manufacturer": "ELEGOO",
+   "name": "RAPID PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.29,
+   "colors": [
+    {
+     "name": "Beige",
+     "hex": "#F4E0B8",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#0C0908",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#2240AF",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#9E6A4B",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#08E327",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#8F949B",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FD7C18",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#EA140E",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#9F9F9F",
+     "td": null
+    },
+    {
+     "name": "Space Grey",
+     "hex": "#7E7E7E",
+     "td": null
+    },
+    {
+     "name": "Transparent",
+     "hex": "#F9FAF9",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 75,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/PETG/rapid_petg",
+   "verified": false
+  },
+  {
+   "id": "elegoo/rapid-pla-plus",
+   "manufacturer": "ELEGOO",
+   "name": "RAPID PLA Plus",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Beige",
+     "hex": "#F4E0B8",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#2240AF",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#9E6A4B",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#08E327",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#8F949B",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FD7C18",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#EA140E",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#9F9F9F",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FBEC07",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 40,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/PLA/rapid_pla_plus",
+   "verified": false
+  },
+  {
+   "id": "elegoo/pla-pro",
+   "manufacturer": "ELEGOO",
+   "name": "PLA PRO",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#2240AF",
+     "td": null
+    },
+    {
+     "name": "Burgundy Red",
+     "hex": "#9C2129",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#08E327",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#8F949B",
+     "td": null
+    },
+    {
+     "name": "Light Blue",
+     "hex": "#339BF7",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#603BA0",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#9F9F9F",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FBEC07",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 180,
+    "max": 210,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/PLA/pla_pro",
+   "verified": false
+  },
+  {
+   "id": "elegoo/petg",
+   "manufacturer": "ELEGOO",
+   "name": "PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.29,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#2E56F1",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#9F9F9F",
+     "td": null
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#3C5415",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#F092B3",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#C01616",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#848484",
+     "td": null
+    },
+    {
+     "name": "Transparent",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "elegoo/pla-sparkle",
+   "manufacturer": "ELEGOO",
+   "name": "PLA Sparkle",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#161616",
+     "td": null
+    },
+    {
+     "name": "Dark Grey",
+     "hex": "#45474B",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#EFBC18",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#113A2C",
+     "td": null
+    },
+    {
+     "name": "Purplish Grey",
+     "hex": "#1A132A",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#601815",
+     "td": null
+    },
+    {
+     "name": "Turquoise",
+     "hex": "#097A7C",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/PLA/pla_sparkle",
+   "verified": false
+  },
+  {
+   "id": "elegoo/tpu-95a",
+   "manufacturer": "ELEGOO",
+   "name": "TPU 95A",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.16,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#2240AF",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#08E327",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#8F949B",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#EA140E",
+     "td": null
+    },
+    {
+     "name": "Translucent",
+     "hex": "#F5F5F5",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/TPU/tpu_95a",
+   "verified": false
+  },
+  {
+   "id": "elegoo/pla-wood",
+   "manufacturer": "ELEGOO",
+   "name": "PLA Wood",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Oak/Light Brown",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Rosewood",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Tan Birch",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Teak",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Walnut",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Wood Filled",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/PLA/pla_wood",
+   "verified": false
+  },
+  {
+   "id": "elegoo/abs",
+   "manufacturer": "ELEGOO",
+   "name": "ABS",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.05,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#2240AF",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#8F949B",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FD7C18",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#EA140E",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 280,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 90,
+    "max": 100,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/ABS/abs",
+   "verified": false
+  },
+  {
+   "id": "elegoo/asa",
+   "manufacturer": "ELEGOO",
+   "name": "ASA",
+   "material": "asa",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.09,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#2240AF",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#08E327",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#8F949B",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#EA140E",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 90,
+    "max": 100,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/ASA/asa",
+   "verified": false
+  },
+  {
+   "id": "elegoo/pla-cf",
+   "manufacturer": "ELEGOO",
+   "name": "PLA-CF",
+   "material": "pla",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#0C0908",
+     "td": null
+    },
+    {
+     "name": "carbon fiber blue",
+     "hex": "#0000FF",
+     "td": null
+    },
+    {
+     "name": "carbon fiber green",
+     "hex": "#008000",
+     "td": null
+    },
+    {
+     "name": "carbon fiber purple",
+     "hex": "#8000FF",
+     "td": null
+    },
+    {
+     "name": "carbon fiber red",
+     "hex": "#FF0000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/PLA/pla_cf",
+   "verified": false
+  },
+  {
+   "id": "elegoo/pla-metallic",
+   "manufacturer": "ELEGOO",
+   "name": "PLA Metallic",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Metallic Blue",
+     "hex": "#2E4560",
+     "td": null
+    },
+    {
+     "name": "Metallic Bronze",
+     "hex": "#4A2F26",
+     "td": null
+    },
+    {
+     "name": "Metallic Gold",
+     "hex": "#6B5A4A",
+     "td": null
+    },
+    {
+     "name": "Metallic Green",
+     "hex": "#34523F",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/PLA/pla_metallic",
+   "verified": false
+  },
+  {
+   "id": "elegoo/galaxy-pla",
+   "manufacturer": "ELEGOO",
+   "name": "Galaxy PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#0D162C",
+     "td": null
+    },
+    {
+     "name": "Peacock Blue",
+     "hex": "#1C506D",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#34276E",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/PLA/galaxy_pla",
+   "verified": false
+  },
+  {
+   "id": "elegoo/petg-cf",
+   "manufacturer": "ELEGOO",
+   "name": "PETG-CF",
+   "material": "petg",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.29,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#0C0908",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#45433B",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#560896",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 65,
+    "max": 75,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/PETG/petg_cf",
+   "verified": false
+  },
+  {
+   "id": "elegoo/petg-gf",
+   "manufacturer": "ELEGOO",
+   "name": "PETG-GF",
+   "material": "petg",
+   "fill": [
+    "glass_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.3,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#0C0908",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#858590",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 65,
+    "max": 75,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/PETG/petg_gf",
+   "verified": false
+  },
+  {
+   "id": "elegoo/petg-translucent",
+   "manufacturer": "ELEGOO",
+   "name": "PETG Translucent",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Translucent Blue",
+     "hex": "#1C94E3",
+     "td": null
+    },
+    {
+     "name": "Translucent Green",
+     "hex": "#00B5B8",
+     "td": null
+    },
+    {
+     "name": "Translucent Purple",
+     "hex": "#E142EA",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 65,
+    "max": 75,
+    "recommended": null
+   },
+   "min_nozzle_mm": 0.2,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/PETG/petg_translucent",
+   "verified": false
+  },
+  {
+   "id": "elegoo/rapid-tpu-95a",
+   "manufacturer": "ELEGOO",
+   "name": "Rapid TPU 95A",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#EA140E",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 45,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "elegoo/TPU/rapid_tpu_95a",
+   "verified": false
+  }
+ ]
+}

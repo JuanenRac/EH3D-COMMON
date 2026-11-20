@@ -1,0 +1,1510 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Add-North",
+ "filaments": [
+  {
+   "id": "add-north/e-pla",
+   "manufacturer": "Add-North",
+   "name": "E PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Army Green",
+     "hex": "#4B5320",
+     "td": null
+    },
+    {
+     "name": "Aurora Green",
+     "hex": "#6ADC99",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Cold White",
+     "hex": "#E3E4ED",
+     "td": null
+    },
+    {
+     "name": "Glitz Black",
+     "hex": "#161409",
+     "td": null
+    },
+    {
+     "name": "Glitz Grey",
+     "hex": "#C2C5CC",
+     "td": null
+    },
+    {
+     "name": "Glitz Purple",
+     "hex": "#8E3FE2",
+     "td": null
+    },
+    {
+     "name": "Glitz Sapphire",
+     "hex": "#0933C2",
+     "td": null
+    },
+    {
+     "name": "Glitz Silver",
+     "hex": "#CECFD2",
+     "td": null
+    },
+    {
+     "name": "Glow in the Dark Green",
+     "hex": "#51FF0D",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#D4AF37",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#008000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 205,
+    "max": 225,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 45,
+    "hours": 4
+   },
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://storage.googleapis.com/addnorth-com.appspot.com/imgix/assets/production/epla_tds_rev21_XTkw2P.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/PLA/e_pla",
+   "verified": false
+  },
+  {
+   "id": "add-north/petg",
+   "manufacturer": "Add-North",
+   "name": "PETG",
+   "material": "petg",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "ESD",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Glitz Grey",
+     "hex": "#C2C5CC",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#008000",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#808080",
+     "td": null
+    },
+    {
+     "name": "Light Grey",
+     "hex": "#D3D3D3",
+     "td": null
+    },
+    {
+     "name": "Lucent Orange",
+     "hex": "#FFA500",
+     "td": null
+    },
+    {
+     "name": "Medium Blue",
+     "hex": "#0000CD",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#FF0000",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FFFF00",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 225,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 80,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 65,
+    "hours": 4
+   },
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://storage.googleapis.com/addnorth-com.appspot.com/imgix/assets/production/petg_tds_rev11_ulRIZ3.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "add-north/matte-pla",
+   "manufacturer": "Add-North",
+   "name": "Matte PLA",
+   "material": "pla",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "HT- Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "HT- White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Textura™ Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Textura™ Cold White",
+     "hex": "#EAECF5",
+     "td": null
+    },
+    {
+     "name": "Textura™ Flare Galaxy Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Textura™ Flare Rocky Grey",
+     "hex": "#697272",
+     "td": null
+    },
+    {
+     "name": "Textura™ Flare Sparkling Green",
+     "hex": "#77A54B",
+     "td": null
+    },
+    {
+     "name": "Textura™ Flare Twilight Blue",
+     "hex": "#6C93B5",
+     "td": null
+    },
+    {
+     "name": "Textura™ Flare Velvet Red",
+     "hex": "#983B4E",
+     "td": null
+    },
+    {
+     "name": "Textura™ Natural",
+     "hex": "#F1E6B2",
+     "td": null
+    },
+    {
+     "name": "Textura™ White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/PLA/matte_pla",
+   "verified": false
+  },
+  {
+   "id": "add-north/x-pla",
+   "manufacturer": "Add-North",
+   "name": "X-PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Cold White",
+     "hex": "#E3E4ED",
+     "td": null
+    },
+    {
+     "name": "Light Grey",
+     "hex": "#D3D3D3",
+     "td": null
+    },
+    {
+     "name": "Medium Blue",
+     "hex": "#0000CD",
+     "td": null
+    },
+    {
+     "name": "Power Tool Blue",
+     "hex": "#008F9E",
+     "td": null
+    },
+    {
+     "name": "Power Tool Light Green",
+     "hex": "#88E788",
+     "td": null
+    },
+    {
+     "name": "Power Tool Lime Green",
+     "hex": "#89F336",
+     "td": null
+    },
+    {
+     "name": "Power Tool Red",
+     "hex": "#FF0000",
+     "td": null
+    },
+    {
+     "name": "Power Tool Yellow",
+     "hex": "#FFDE21",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#FF0000",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 180,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 70,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 45,
+    "hours": 6
+   },
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://storage.googleapis.com/addnorth-com.appspot.com/imgix/assets/production/XPLA_TDS_kdctbP.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/PLA/x_pla",
+   "verified": false
+  },
+  {
+   "id": "add-north/tpu-easyflex",
+   "manufacturer": "Add-North",
+   "name": "TPU EasyFlex",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#F4FAFC",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#008000",
+     "td": null
+    },
+    {
+     "name": "Light Grey",
+     "hex": "#D3D3D3",
+     "td": null
+    },
+    {
+     "name": "Medium Blue",
+     "hex": "#0000CD",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FFA500",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#FF0000",
+     "td": null
+    },
+    {
+     "name": "Tropical Turquoise",
+     "hex": "#009EAB",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FFFF00",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/TPU/easyflex",
+   "verified": false
+  },
+  {
+   "id": "add-north/matte-tpu",
+   "manufacturer": "Add-North",
+   "name": "Matte TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "85A Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "85A Brown Leather",
+     "hex": "#50311E",
+     "td": null
+    },
+    {
+     "name": "85A White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "85A Yellow",
+     "hex": "#FFC946",
+     "td": null
+    },
+    {
+     "name": "95A",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "95A White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/TPU/matte_tpu",
+   "verified": false
+  },
+  {
+   "id": "add-north/pla-premium-silk",
+   "manufacturer": "Add-North",
+   "name": "PLA Premium Silk",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#0000FF",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#D4AF37",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#008000",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#FF0000",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#C0C0C0",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 245,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 45,
+    "hours": 4
+   },
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/PLA/pla_premium_silk",
+   "verified": false
+  },
+  {
+   "id": "add-north/silk-pla",
+   "manufacturer": "Add-North",
+   "name": "Silk PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Premium",
+     "hex": "#FFCB47",
+     "td": null
+    },
+    {
+     "name": "Premium Blue",
+     "hex": "#2E56F1",
+     "td": null
+    },
+    {
+     "name": "Premium Green",
+     "hex": "#018E63",
+     "td": null
+    },
+    {
+     "name": "Premium Red",
+     "hex": "#ED1536",
+     "td": null
+    },
+    {
+     "name": "Premium Silver",
+     "hex": "#A8B0BD",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/PLA/silk_pla",
+   "verified": false
+  },
+  {
+   "id": "add-north/pla-textura-flare",
+   "manufacturer": "Add-North",
+   "name": "PLA Textura Flare",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Galaxy Black",
+     "hex": "#1A2830",
+     "td": null
+    },
+    {
+     "name": "Rocky Grey",
+     "hex": "#7F8386",
+     "td": null
+    },
+    {
+     "name": "Sparkling Green",
+     "hex": "#83EAB3",
+     "td": null
+    },
+    {
+     "name": "Twilight Blue",
+     "hex": "#0A437A",
+     "td": null
+    },
+    {
+     "name": "Velvet Red",
+     "hex": "#750851",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 60,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 45,
+    "hours": 6
+   },
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://storage.googleapis.com/addnorth-com.appspot.com/imgix/assets/production/Textura_Flare_SDS_QX0Mzh.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/PLA/textura_flare",
+   "verified": false
+  },
+  {
+   "id": "add-north/pla-matte-textura",
+   "manufacturer": "Add-North",
+   "name": "PLA Matte Textura",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Cold White",
+     "hex": "#F2F3F4",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#7C573F",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F2F3F4",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 205,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 65,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://storage.googleapis.com/addnorth-com.appspot.com/imgix/assets/production/Textura_TDS_aqYE3N.pdf",
+    "https://storage.googleapis.com/addnorth-com.appspot.com/imgix/assets/production/Textura_SDS_0I2BMg.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/PLA/matte_textura",
+   "verified": false
+  },
+  {
+   "id": "add-north/matte-petg",
+   "manufacturer": "Add-North",
+   "name": "Matte PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "r",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "r Grey",
+     "hex": "#6A6C6E",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/PETG/matte_petg",
+   "verified": false
+  },
+  {
+   "id": "add-north/tpu-pro-matte-85a",
+   "manufacturer": "Add-North",
+   "name": "TPU Pro Matte 85A",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.1,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Brown Leather",
+     "hex": "#624A2E",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FFEA00",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/TPU/tpu_pro_matte_85a",
+   "verified": false
+  },
+  {
+   "id": "add-north/pla-economy",
+   "manufacturer": "Add-North",
+   "name": "PLA Economy",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Light Grey",
+     "hex": "#D3D3D3",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/PLA/pla_economy",
+   "verified": false
+  },
+  {
+   "id": "add-north/petg-economy",
+   "manufacturer": "Add-North",
+   "name": "PETG Economy",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Light Grey",
+     "hex": "#D3D3D3",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://storage.googleapis.com/addnorth-com.appspot.com/imgix/assets/production/TDS_PETGv0_oY3Rem.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/PETG/petg_economy",
+   "verified": false
+  },
+  {
+   "id": "add-north/petg-flame-retardant-v0",
+   "manufacturer": "Add-North",
+   "name": "PETG Flame Retardant V0",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#E5D3BF",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 260,
+    "max": 275,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 80,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://storage.googleapis.com/addnorth-com.appspot.com/imgix/assets/production/TDS_PETGv0_oY3Rem.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/PETG/petg_flame_retardant_v0",
+   "verified": false
+  },
+  {
+   "id": "add-north/petg-rigid-x",
+   "manufacturer": "Add-North",
+   "name": "PETG Rigid X",
+   "material": "petg",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.32,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Charcoal Blue",
+     "hex": "#67778A",
+     "td": null
+    },
+    {
+     "name": "Green Camo",
+     "hex": "#78866B",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 245,
+    "max": 265,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 70,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 65,
+    "hours": 6
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://storage.googleapis.com/addnorth-com.appspot.com/imgix/assets/production/TDS_rigidX_10waLr.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/PETG/rigid_x",
+   "verified": false
+  },
+  {
+   "id": "add-north/rpetg-matte",
+   "manufacturer": "Add-North",
+   "name": "rPETG Matte",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#D3D3D3",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 265,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 80,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 65,
+    "hours": 6
+   },
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/PETG/rpetg_matte",
+   "verified": false
+  },
+  {
+   "id": "add-north/ht-pla-pro-matte",
+   "manufacturer": "Add-North",
+   "name": "HT-PLA Pro Matte",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.4,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 205,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 75,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 45,
+    "hours": 4
+   },
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://storage.googleapis.com/addnorth-com.appspot.com/imgix/assets/production/TDS_htplapromatte_-qP4pe.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/PLA/ht_pla_pro_matte",
+   "verified": false
+  },
+  {
+   "id": "add-north/pla-wood",
+   "manufacturer": "Add-North",
+   "name": "PLA Wood",
+   "material": "pla",
+   "fill": [
+    "wood"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.15,
+   "colors": [
+    {
+     "name": "Light Oak",
+     "hex": "#CDB083",
+     "td": null
+    },
+    {
+     "name": "Nordic Birch",
+     "hex": "#F8DFA1",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 45,
+    "hours": 4
+   },
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://storage.googleapis.com/addnorth-com.appspot.com/imgix/assets/production/TDS_plawood_X4tWT1.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/PLA/pla_wood",
+   "verified": false
+  },
+  {
+   "id": "add-north/x-pla-high-speed",
+   "manufacturer": "Add-North",
+   "name": "X-PLA High Speed",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.26,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/PLA/x_pla_high_speed",
+   "verified": false
+  },
+  {
+   "id": "add-north/petg-pro-matte",
+   "manufacturer": "Add-North",
+   "name": "PETG PRO Matte",
+   "material": "petg",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 255,
+    "max": 265,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 80,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 60,
+    "hours": 4
+   },
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2300,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/PETG/petg_pro_matte",
+   "verified": false
+  },
+  {
+   "id": "add-north/tpu-pro-matte-95a",
+   "manufacturer": "Add-North",
+   "name": "TPU Pro Matte 95A",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.1,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "add_north/TPU/tpu_pro_matte_95a",
+   "verified": false
+  }
+ ]
+}

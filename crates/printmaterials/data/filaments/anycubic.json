@@ -1,0 +1,1111 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Anycubic",
+ "filaments": [
+  {
+   "id": "anycubic/petg",
+   "manufacturer": "Anycubic",
+   "name": "PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Beige",
+     "hex": "#D4B996",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#212721",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#003594",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#927968",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Cream",
+     "hex": "#F9DFB9",
+     "td": null
+    },
+    {
+     "name": "Dark Grey",
+     "hex": "#7E868A",
+     "td": null
+    },
+    {
+     "name": "Forest Green",
+     "hex": "#43523B",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#009639",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#97999B",
+     "td": null
+    },
+    {
+     "name": "Lake Blue",
+     "hex": "#0084D4",
+     "td": null
+    },
+    {
+     "name": "Lime Green",
+     "hex": "#78D64B",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 60,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/ANYCUBIC_TDS_PETG_V3.0.pdf?v=1757584046",
+    "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/EN_SDS_PETG_Filament_CANEC25014244301_SZP25-029821_-Final.pdf?v=1757583970"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "anycubic/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "anycubic/pla-basic",
+   "manufacturer": "Anycubic",
+   "name": "PLA Basic",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Beige",
+     "hex": "#D4B996",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#212721",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#003594",
+     "td": null
+    },
+    {
+     "name": "Bright Red",
+     "hex": "#C8102E",
+     "td": null
+    },
+    {
+     "name": "Bronze",
+     "hex": "#7C4D3A",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#927968",
+     "td": null
+    },
+    {
+     "name": "Classic Green",
+     "hex": "#009639",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Cyan",
+     "hex": "#23A3C7",
+     "td": null
+    },
+    {
+     "name": "Dark Brown",
+     "hex": "#975E3E",
+     "td": null
+    },
+    {
+     "name": "Green Flash",
+     "hex": "#75CB5D",
+     "td": null
+    },
+    {
+     "name": "Magenta",
+     "hex": "#CF4F80",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/ANYCUBIC_TDS_PLA_V3.0.pdf?v=1757585748",
+    "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/EN_SDS_ANYCUBIC_PLA_Filament__SDS_SGS_GHS_ANNEXII_CLP_2024516_SGS-SHENZHEN-34_Shenzhen_Anycubic_Technology_Co._Ltd.pdf?v=1757585708"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "anycubic/PLA/pla_basic",
+   "verified": false
+  },
+  {
+   "id": "anycubic/pla-plus",
+   "manufacturer": "Anycubic",
+   "name": "PLA Plus",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Beige",
+     "hex": "#D4B996",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#212721",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#003594",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#927968",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#009639",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#B1B3B3",
+     "td": null
+    },
+    {
+     "name": "Interstellar Violet",
+     "hex": "#5B618F",
+     "td": null
+    },
+    {
+     "name": "Light Blue",
+     "hex": "#ADD8E6",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF7F32",
+     "td": null
+    },
+    {
+     "name": "Peach Pink",
+     "hex": "#FFC196",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#6A6DCD",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#E10600",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/ANYCUBIC_TDS_PLA__V3.0.pdf?v=1757589534",
+    "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/EN_SDS_PLA_Filament_CANEC25014242601_SZP25-029821_-Final.pdf?v=1757589493"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "anycubic/PLA/pla_plus",
+   "verified": false
+  },
+  {
+   "id": "anycubic/pla-silk",
+   "manufacturer": "Anycubic",
+   "name": "PLA Silk",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.22,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#0067B9",
+     "td": null
+    },
+    {
+     "name": "Christmas Green",
+     "hex": "#008755",
+     "td": null
+    },
+    {
+     "name": "Christmas Red",
+     "hex": "#D22630",
+     "td": null
+    },
+    {
+     "name": "Copper",
+     "hex": "#AF5C37",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#52D2BC",
+     "td": null
+    },
+    {
+     "name": "Light Gold",
+     "hex": "#D19000",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#FCAFC0",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#8B84D7",
+     "td": null
+    },
+    {
+     "name": "Rainbow",
+     "hex": "#FF41B8",
+     "td": null
+    },
+    {
+     "name": "Shiny Gold",
+     "hex": "#F2A900",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#8D9093",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#E9E9E7",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0245/5519/2380/files/ANYCUBIC_TDS_PLA_silk_V3.0.pdf?v=1758526566",
+    "https://cdn.shopify.com/s/files/1/0245/5519/2380/files/EN_SDS_PLA_Silk_Filament_CANEC25014243401_SZP25-029821_-Final_8be6b64f-95cd-4353-953e-daa864fa7c97.pdf?v=1758526608"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "anycubic/PLA/pla_silk",
+   "verified": false
+  },
+  {
+   "id": "anycubic/high-speed-pla",
+   "manufacturer": "Anycubic",
+   "name": "High-Speed PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.19,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#212721",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#3E55AB",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#3DB24E",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#75787B",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF7338",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#F88192",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#695FA2",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#E10600",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F1F0ED",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FDDB27",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 65,
+    "recommended": null
+   },
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0685/7578/9245/files/ANYCUBIC_TDS_PLA_HS_V3.0.pdf?v=1757558773",
+    "https://cdn.shopify.com/s/files/1/0685/7578/9245/files/EN_SDS_ANYCUBIC_High_Speed_PLA__SDS_SGS_GHS_ANNEXII_CLP_2024516_SGS-SHENZHEN-33_Shenzhen_Anycubic_Technology_Co._Ltd.pdf?v=1757558681"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "anycubic/PLA/high_speed_pla",
+   "verified": false
+  },
+  {
+   "id": "anycubic/pla-silk-dual-tricolor",
+   "manufacturer": "Anycubic",
+   "name": "PLA Silk Dual-Tricolor",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.22,
+   "colors": [
+    {
+     "name": "Black-Blue",
+     "hex": "#212721",
+     "td": null
+    },
+    {
+     "name": "Black-Gold",
+     "hex": "#212721",
+     "td": null
+    },
+    {
+     "name": "Black-Green",
+     "hex": "#212721",
+     "td": null
+    },
+    {
+     "name": "Black-Purple",
+     "hex": "#212721",
+     "td": null
+    },
+    {
+     "name": "Blue-Green-Purple",
+     "hex": "#003594",
+     "td": null
+    },
+    {
+     "name": "Pink-Gold",
+     "hex": "#F67599",
+     "td": null
+    },
+    {
+     "name": "Red-Blue",
+     "hex": "#E63888",
+     "td": null
+    },
+    {
+     "name": "Red-Gold",
+     "hex": "#E10600",
+     "td": null
+    },
+    {
+     "name": "Yellow-Green",
+     "hex": "#FDDB27",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0685/7578/9245/files/ANYCUBIC_TDS_PLA_silk_V3.0.pdf?v=1757561075",
+    "https://cdn.shopify.com/s/files/1/0685/7578/9245/files/EN_SDS_PLA_Silk_Filament_CANEC25014243401_SZP25-029821_-Final.pdf?v=1757561038"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "anycubic/PLA/pla_silk_dual_tricolor",
+   "verified": false
+  },
+  {
+   "id": "anycubic/translucent-petg",
+   "manufacturer": "Anycubic",
+   "name": "Translucent PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#69B3E7",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#CDA077",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#7CE0D3",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#6A6C6E",
+     "td": null
+    },
+    {
+     "name": "Olive",
+     "hex": "#78874D",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF8F1C",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#F8C1B8",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#D7A9E3",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 60,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/ANYCUBIC_TDS_PETG_V3.0.pdf?v=1757584046",
+    "https://cdn.shopify.com/s/files/1/0698/1235/5357/files/EN_SDS_PETG_Filament_CANEC25014244301_SZP25-029821_-Final.pdf?v=1757583970"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "anycubic/PETG/translucent_petg",
+   "verified": false
+  },
+  {
+   "id": "anycubic/tpu",
+   "manufacturer": "Anycubic",
+   "name": "TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.05,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#212721",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#005EB8",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#79C000",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#63666A",
+     "td": null
+    },
+    {
+     "name": "Milky White",
+     "hex": "#E9E9E7",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF6A13",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#A438A8",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#D22630",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 195,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0685/7578/9245/files/ANYCUBIC_TDS_TPU_V3.0.pdf?v=1757560611",
+    "https://cdn.shopify.com/s/files/1/0685/7578/9245/files/EN_SDS_TPU_Filament_CANEC25014246601_SZP25-029821_-Final.pdf?v=1757560593"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "anycubic/TPU/tpu",
+   "verified": false
+  },
+  {
+   "id": "anycubic/asa",
+   "manufacturer": "Anycubic",
+   "name": "ASA",
+   "material": "asa",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.07,
+   "colors": [
+    {
+     "name": "Army Green",
+     "hex": "#4E5E28",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#212721",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0047BB",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#75787B",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#BA0C2F",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F1F0ED",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 255,
+    "max": 275,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 100,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0245/5519/2380/files/ANYCUBIC_TDS_ASA_V3.0.pdf?v=1758535865",
+    "https://cdn.shopify.com/s/files/1/0245/5519/2380/files/EN_SDS_ASA_Filament_CANEC25014247401_SZP25-029821_-Final_d747c524-53c9-4132-9349-cbfc0771079c.pdf?v=1758535819"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "anycubic/ASA/asa",
+   "verified": false
+  },
+  {
+   "id": "anycubic/pla-galaxy",
+   "manufacturer": "Anycubic",
+   "name": "PLA Galaxy",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#1F2A44",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#5E4241",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#4E5B31",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#491D70",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 60,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0685/7578/9245/files/EN_PLA_Galaxy_Filament_SDS_CANEC25019618101.pdf?v=1758593748"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "anycubic/PLA/pla_galaxy",
+   "verified": false
+  },
+  {
+   "id": "anycubic/pla-matte",
+   "manufacturer": "Anycubic",
+   "name": "PLA Matte",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.31,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#484A49",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#FF0000",
+     "td": null
+    },
+    {
+     "name": "Red Blue",
+     "hex": "#633B45",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F1F0ED",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0685/7578/9245/files/ANYCUBIC_TDS_PLA_Matte_V3.0.pdf?v=1757562867",
+    "https://cdn.shopify.com/s/files/1/0685/7578/9245/files/EN_SDS_PLA_Matte_Filament_CANEC25014248601_SZP25-029821_-Final.pdf?v=1757562819"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "anycubic/PLA/pla_matte",
+   "verified": false
+  },
+  {
+   "id": "anycubic/pla-special",
+   "manufacturer": "Anycubic",
+   "name": "PLA Special",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Intersellar Violet",
+     "hex": "#5B618F",
+     "td": null
+    },
+    {
+     "name": "Peach Pink",
+     "hex": "#FFC196",
+     "td": null
+    },
+    {
+     "name": "Spring Leaf",
+     "hex": "#89A84F",
+     "td": null
+    },
+    {
+     "name": "Tropical Turquoise",
+     "hex": "#009CBD",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0685/7578/9245/files/ANYCUBIC_TDS_PLA_V3.0_d5a11606-9321-44e9-b3a0-270fcf13fc35.pdf?v=1757560320",
+    "https://cdn.shopify.com/s/files/1/0685/7578/9245/files/EN_SDS_ANYCUBIC_PLA_Filament__SDS_SGS_GHS_ANNEXII_CLP_2024516_SGS-SHENZHEN-34_Shenzhen_Anycubic_Technology_Co._Ltd_a5f516a4-bde7-4477-97f0-337c4b20e4ec.pdf?v=1757560265"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "anycubic/PLA/pla_special",
+   "verified": false
+  },
+  {
+   "id": "anycubic/abs",
+   "manufacturer": "Anycubic",
+   "name": "ABS",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.05,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#212721",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#A7A8AA",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F1F0ED",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 280,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 100,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0685/7578/9245/files/ANYCUBIC_TDS_ABS_V3.0.pdf?v=1757562279",
+    "https://cdn.shopify.com/s/files/1/0685/7578/9245/files/EN_SDS_ABS_Filament_CANEC25014249401_SZP25-029821_-Final.pdf?v=1757562195"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "anycubic/ABS/abs",
+   "verified": false
+  },
+  {
+   "id": "anycubic/pla-marble",
+   "manufacturer": "Anycubic",
+   "name": "PLA Marble",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.37,
+   "colors": [
+    {
+     "name": "Brick Red",
+     "hex": "#9D4815",
+     "td": null
+    },
+    {
+     "name": "Marble White",
+     "hex": "#EFF0F1",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0245/5519/2380/files/ANYCUBIC_TDS_PLA_Marble_V3.0.pdf?v=1758283111",
+    "https://cdn.shopify.com/s/files/1/0245/5519/2380/files/EN_SDS_PLA_Marble_Filament_CANEC25016011301_9c373c94-b849-468a-ad9d-280c151df86b.pdf?v=1758283006"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "anycubic/PLA/pla_marble",
+   "verified": false
+  },
+  {
+   "id": "anycubic/pla-metal",
+   "manufacturer": "Anycubic",
+   "name": "PLA Metal",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.2,
+   "colors": [
+    {
+     "name": "Metallic Blue",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0245/5519/2380/files/ANYCUBIC_TDS_PLA_Metal_V3.0.pdf?v=1758525990"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "anycubic/PLA/pla_metal",
+   "verified": false
+  }
+ ]
+}

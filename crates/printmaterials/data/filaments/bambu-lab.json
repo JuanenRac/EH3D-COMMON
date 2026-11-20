@@ -1,0 +1,2068 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Bambu Lab",
+ "filaments": [
+  {
+   "id": "bambu-lab/pla-basic",
+   "manufacturer": "Bambu Lab",
+   "name": "PLA Basic",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Bambu Green",
+     "hex": "#00AE42",
+     "td": null
+    },
+    {
+     "name": "Beige",
+     "hex": "#F7E6DE",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0A2989",
+     "td": null
+    },
+    {
+     "name": "Blue Gray",
+     "hex": "#5B6579",
+     "td": null
+    },
+    {
+     "name": "Bright Green",
+     "hex": "#BECF00",
+     "td": null
+    },
+    {
+     "name": "Bronze",
+     "hex": "#847D48",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#9D432C",
+     "td": null
+    },
+    {
+     "name": "Cobalt Blue",
+     "hex": "#0056B8",
+     "td": null
+    },
+    {
+     "name": "Cocoa Brown",
+     "hex": "#6F5034",
+     "td": null
+    },
+    {
+     "name": "Cyan",
+     "hex": "#0086D6",
+     "td": null
+    },
+    {
+     "name": "Dark Gray",
+     "hex": "#545454",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 45,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 21,
+   "fan_pct": {
+    "min": 100,
+    "max": 100,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 50,
+    "hours": 8
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_PLA_Basic_Technical_Data_Sheet_bf3411ce-be39-4db7-9669-1b4671d2196b.pdf?v=1734060943",
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_PLA_Basic_MSDS.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/PLA/basic",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/pla-matte",
+   "manufacturer": "Bambu Lab",
+   "name": "PLA Matte",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.31,
+   "colors": [
+    {
+     "name": "Apple Green",
+     "hex": "#C2E189",
+     "td": null
+    },
+    {
+     "name": "Ash Gray",
+     "hex": "#9B9EA0",
+     "td": null
+    },
+    {
+     "name": "Bone White",
+     "hex": "#CBC6B8",
+     "td": null
+    },
+    {
+     "name": "Caramel",
+     "hex": "#AE835B",
+     "td": null
+    },
+    {
+     "name": "Charcoal",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "#042F56",
+     "td": null
+    },
+    {
+     "name": "Dark Brown",
+     "hex": "#7D6556",
+     "td": null
+    },
+    {
+     "name": "Dark Chocolate",
+     "hex": "#4D3324",
+     "td": null
+    },
+    {
+     "name": "Dark Green",
+     "hex": "#68724D",
+     "td": null
+    },
+    {
+     "name": "Dark Red",
+     "hex": "#BB3D43",
+     "td": null
+    },
+    {
+     "name": "Desert Tan",
+     "hex": "#E8DBB7",
+     "td": null
+    },
+    {
+     "name": "Grass Green",
+     "hex": "#61C680",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 45,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 22,
+   "fan_pct": {
+    "min": 100,
+    "max": 100,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 50,
+    "hours": 8
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_PLA_Matte_Technical_Data_Sheet_60a941f9-8495-48ec-b1b0-52e07ff0f4c2.pdf?v=1734060943",
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_PLA_Matte_MSDS.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/PLA/matte",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/petg-basic",
+   "manufacturer": "Bambu Lab",
+   "name": "PETG Basic",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Dark Beige",
+     "hex": "#DBC8B6",
+     "td": null
+    },
+    {
+     "name": "Dark Brown",
+     "hex": "#502C1E",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#7F7E83",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#009639",
+     "td": null
+    },
+    {
+     "name": "Misty Blue",
+     "hex": "#688197",
+     "td": null
+    },
+    {
+     "name": "Navy Blue",
+     "hex": "#0086D6",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF671F",
+     "td": null
+    },
+    {
+     "name": "Pine Green",
+     "hex": "#034638",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#D6001C",
+     "td": null
+    },
+    {
+     "name": "Reflex Blue",
+     "hex": "#001489",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 65,
+    "max": 75,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 15,
+   "fan_pct": {
+    "min": 20,
+    "max": 40,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 65,
+    "hours": 8
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://store.bblcdn.com/s1/default/cb94589bf7994fdcbfa833badefae9cd/Bambu_PETG_Basic_Technical_Data_Sheet.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/PETG/petg_basic",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/petg-hf",
+   "manufacturer": "Bambu Lab",
+   "name": "PETG HF",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.28,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#002E96",
+     "td": null
+    },
+    {
+     "name": "Cream",
+     "hex": "#F9DFB9",
+     "td": null
+    },
+    {
+     "name": "Dark Gray",
+     "hex": "#515151",
+     "td": null
+    },
+    {
+     "name": "Forest Green",
+     "hex": "#39541A",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#ADB1B2",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#00AE42",
+     "td": null
+    },
+    {
+     "name": "Lake Blue",
+     "hex": "#1F79E5",
+     "td": null
+    },
+    {
+     "name": "Lime Green",
+     "hex": "#6EE53C",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#F75403",
+     "td": null
+    },
+    {
+     "name": "Peanut Brown",
+     "hex": "#875718",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#EB3A3A",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 65,
+    "max": 75,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 21,
+   "fan_pct": {
+    "min": 20,
+    "max": 40,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 65,
+    "hours": 8
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://store.bblcdn.com/ce12d65176a94f1086e6aefa238e62e2.pdf",
+    "https://store.bblcdn.com/84de0227cd6c44389be1dfccb5280dcb.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/PETG/hf",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/pla-silk",
+   "manufacturer": "Bambu Lab",
+   "name": "PLA Silk+",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Baby Blue",
+     "hex": "#A8C6EE",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#008BDA",
+     "td": null
+    },
+    {
+     "name": "Candy Green",
+     "hex": "#018814",
+     "td": null
+    },
+    {
+     "name": "Candy Red",
+     "hex": "#D02727",
+     "td": null
+    },
+    {
+     "name": "Champagne",
+     "hex": "#F3CFB2",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#F4A925",
+     "td": null
+    },
+    {
+     "name": "Mint",
+     "hex": "#96DCB9",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#F7ADA6",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#8671CB",
+     "td": null
+    },
+    {
+     "name": "Rose Gold",
+     "hex": "#BA9594",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#C8C8C8",
+     "td": null
+    },
+    {
+     "name": "Titan Gray",
+     "hex": "#5F6367",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 45,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 12,
+   "fan_pct": {
+    "min": 100,
+    "max": 100,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 55,
+    "hours": 8
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_PLA_Silk__Technical_Data_Sheet.pdf?v=1733472353",
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_PLA_Silk_MSDS.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/PLA/silk+",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/abs",
+   "manufacturer": "Bambu Lab",
+   "name": "ABS",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.05,
+   "colors": [
+    {
+     "name": "Azure",
+     "hex": "#489FDF",
+     "td": null
+    },
+    {
+     "name": "Bambu Green",
+     "hex": "#00AE42",
+     "td": null
+    },
+    {
+     "name": "Beige",
+     "hex": "#DACF9D",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0A2CA5",
+     "td": null
+    },
+    {
+     "name": "Lavender",
+     "hex": "#543C7A",
+     "td": null
+    },
+    {
+     "name": "Navy Blue",
+     "hex": "#0C2340",
+     "td": null
+    },
+    {
+     "name": "Olive",
+     "hex": "#789D4A",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF6A13",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#D32941",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#87909A",
+     "td": null
+    },
+    {
+     "name": "Tangerine Yellow",
+     "hex": "#FFC72C",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 100,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 16,
+   "fan_pct": {
+    "min": 10,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 80,
+    "hours": 8
+   },
+   "hdt_c": 84,
+   "tensile_mpa": 33,
+   "modulus_mpa": 2200,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0645/5876/0155/files/Bambu_ABS_Technical_Data_Sheet_V3.pdf",
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_ABS_MSDS.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/ABS/abs",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/pla-silk-dual-color",
+   "manufacturer": "Bambu Lab",
+   "name": "PLA Silk Dual Color",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0,
+   "density_g_cm3": 1.32,
+   "colors": [
+    {
+     "name": "Aurora Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Hawaii (Blue-Green)",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dawn Radiance",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gilded Rose (Pink-Gold)",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Midnight Blaze (Blue-Red)",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Mystic Magenta (Green-Purple)",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Neon City (Blue-Magenta)",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Phantom Blue (Blue-Black)",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "South Beach",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Velvet Eclipse (Black-Red)",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 45,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 12,
+   "fan_pct": {
+    "min": 100,
+    "max": 100,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 55,
+    "hours": 8
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_PLA_Silk_Dual_Color_Technical_Data_Sheet.pdf?v=1709276099",
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_PLA_Silk_MSDS.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/PLA/silk_dual_color",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/pla-translucent",
+   "manufacturer": "Bambu Lab",
+   "name": "PLA Translucent",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.22,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#0047BB",
+     "td": null
+    },
+    {
+     "name": "Cherry Pink",
+     "hex": "#F5B6CD",
+     "td": null
+    },
+    {
+     "name": "Ice Blue",
+     "hex": "#B8CDE9",
+     "td": null
+    },
+    {
+     "name": "Lavender",
+     "hex": "#B8ACD6",
+     "td": null
+    },
+    {
+     "name": "Light Jade",
+     "hex": "#96D8AF",
+     "td": null
+    },
+    {
+     "name": "Mellow Yellow",
+     "hex": "#F5DBAB",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#F74E02",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#8344B0",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#B50011",
+     "td": null
+    },
+    {
+     "name": "Teal",
+     "hex": "#009FA1",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 65,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 12,
+   "fan_pct": {
+    "min": 100,
+    "max": 100,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 50,
+    "hours": 8
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://store.bblcdn.com/s7/default/729a8bf233e9474db25c8d5be1e64a00/Bambu_PLA_Translucent_Technical_Data_Sheet.pdf",
+    "https://store.bblcdn.com/s7/default/09499afaaa25439cb4e00b729f5e9bf8/Bambu_PLA_Translucent_MSDS.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/PLA/translucent",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/petg-translucent",
+   "manufacturer": "Bambu Lab",
+   "name": "PETG Translucent",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Clear",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Translucent Brown",
+     "hex": "#C9A381",
+     "td": null
+    },
+    {
+     "name": "Translucent Gray",
+     "hex": "#8E8E8E",
+     "td": null
+    },
+    {
+     "name": "Translucent Light Blue",
+     "hex": "#61B0FF",
+     "td": null
+    },
+    {
+     "name": "Translucent Olive",
+     "hex": "#748C45",
+     "td": null
+    },
+    {
+     "name": "Translucent Orange",
+     "hex": "#FF911A",
+     "td": null
+    },
+    {
+     "name": "Translucent Pink",
+     "hex": "#F9C1BD",
+     "td": null
+    },
+    {
+     "name": "Translucent Purple",
+     "hex": "#D6ABFF",
+     "td": null
+    },
+    {
+     "name": "Translucent Teal",
+     "hex": "#77EDD7",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 65,
+    "max": 75,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 6,
+   "fan_pct": {
+    "min": 10,
+    "max": 30,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 65,
+    "hours": 8
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0574/3116/2995/files/Bambu_PETG_Translucent_Technical_Data_Sheet.pdf?v=1704680051",
+    "https://cdn.shopify.com/s/files/1/0611/4036/9460/files/MSDS_Bambu_PETG_Translucent.pdf?v=1704250140"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/PETG/translucent",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/pla-basic-gradient",
+   "manufacturer": "Bambu Lab",
+   "name": "PLA Basic Gradient",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Arctic Whisper",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blueberry Bubblegum",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Cotton Candy Cloud",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dusk Glare",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Mint Lime",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Ocean to Meadow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Pink Citrus",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Solar Breeze",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 45,
+    "recommended": null
+   },
+   "fan_pct": {
+    "min": 100,
+    "max": 100,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 55,
+    "hours": 8
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_PLA_Basic_Gradient_Technical_Data_Sheet.pdf",
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_PLA_Basic_MSDS.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/PLA/basic_gradient",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/petg-matte",
+   "manufacturer": "Bambu Lab",
+   "name": "PETG Matte",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.37,
+   "colors": [
+    {
+     "name": "Avocado Green",
+     "hex": "#BCE194",
+     "td": null
+    },
+    {
+     "name": "Baby Blue",
+     "hex": "#B9D9EB",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#7F7E83",
+     "td": null
+    },
+    {
+     "name": "Lime",
+     "hex": "#C0DF16",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#FABBCB",
+     "td": null
+    },
+    {
+     "name": "Violet",
+     "hex": "#A7A4E0",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 65,
+    "max": 75,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 15,
+   "fan_pct": {
+    "min": 20,
+    "max": 40,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 65,
+    "hours": 8
+   },
+   "min_nozzle_mm": 0.2,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://store.bblcdn.com/s5/default/f235921f9c0e4543a8f99704c577741b/PETG_Matte.pdf",
+    "https://store.bblcdn.com/s7/default/7cc6d511d4284684855d15c59c824cca/SDS20260701G03_Bambu_PETG_Matte.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/PETG/petg_matte",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/abs-gf",
+   "manufacturer": "Bambu Lab",
+   "name": "ABS-GF",
+   "material": "abs",
+   "fill": [
+    "glass_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.08,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0C3B95",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#C6C6C6",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#61BF36",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#F48438",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#E83100",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FFE133",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 280,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 100,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 12,
+   "fan_pct": {
+    "min": 10,
+    "max": 30,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 80,
+    "hours": 8
+   },
+   "abrasive": true,
+   "hdt_c": 88,
+   "tensile_mpa": 36,
+   "modulus_mpa": 3160,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0574/3116/2995/files/Bambu_ABS-GF_Technical_Data_Sheet.pdf?v=1713428682",
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/MSDS_Bambu_ABS-GF.pdf?v=1713341648"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/ABS/abs_gf",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/tpu-90a",
+   "manufacturer": "Bambu Lab",
+   "name": "TPU 90A",
+   "material": "tpu",
+   "shore": {
+    "value": 90,
+    "scale": "a"
+   },
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blaze",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Cocoa Brown",
+     "hex": "#5C4738",
+     "td": null
+    },
+    {
+     "name": "Crystal Blue",
+     "hex": "#7EB4E1",
+     "td": null
+    },
+    {
+     "name": "Frozen",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Grape Jelly",
+     "hex": "#D6ABFF",
+     "td": null
+    },
+    {
+     "name": "Quicksilver",
+     "hex": "#9EA2A2",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 35,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 2.8,
+   "fan_pct": {
+    "min": 100,
+    "max": 100,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 70,
+    "hours": 8
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0645/5876/0155/files/Bambu_TPU_90A_Technical_Data_Sheet_582bf8f6-1f0a-474c-aeda-9e72af3689dc.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/TPU/90a",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/pa6-gf",
+   "manufacturer": "Bambu Lab",
+   "name": "PA6-GF",
+   "material": "pa",
+   "grade": "PA6",
+   "fill": [
+    "glass_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.14,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#75AED8",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#5B492F",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#353533",
+     "td": null
+    },
+    {
+     "name": "Lime",
+     "hex": "#C5ED48",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF4800",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#EAEAE4",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FFCE00",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 260,
+    "max": 290,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 100,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 10.5,
+   "fan_pct": {
+    "min": 10,
+    "max": 30,
+    "recommended": null
+   },
+   "abrasive": true,
+   "hdt_c": 158,
+   "tensile_mpa": 75,
+   "modulus_mpa": 2850,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0574/3116/2995/files/Bambu_PA6-GF_Technical_Data_Sheet.pdf?v=1710923932",
+    "https://cdn.shopify.com/s/files/1/0574/3116/2995/files/MSDS_Bambu_PA6-GF.pdf?v=1710923934"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/PA6/pa6_gf",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/pla-cf",
+   "manufacturer": "Bambu Lab",
+   "name": "PLA-CF",
+   "material": "pla",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.22,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Burgundy Red",
+     "hex": "#951E23",
+     "td": null
+    },
+    {
+     "name": "Iris Purple",
+     "hex": "#69398E",
+     "td": null
+    },
+    {
+     "name": "Jeans Blue",
+     "hex": "#6E88BC",
+     "td": null
+    },
+    {
+     "name": "Lava Gray",
+     "hex": "#4D5054",
+     "td": null
+    },
+    {
+     "name": "Matcha Green",
+     "hex": "#5C9748",
+     "td": null
+    },
+    {
+     "name": "Royal Blue",
+     "hex": "#2842AD",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 45,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 15,
+   "fan_pct": {
+    "min": 100,
+    "max": 100,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 55,
+    "hours": 8
+   },
+   "abrasive": true,
+   "hdt_c": 54,
+   "tensile_mpa": 38,
+   "modulus_mpa": 2790,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_PLA-CF_Technical_Data_Sheet_V3.pdf",
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_PLA-CF_MSDS.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/PLA/pla_cf",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/pla-tough",
+   "manufacturer": "Bambu Lab",
+   "name": "PLA Tough+",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Cyan",
+     "hex": "#009BD8",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#AFB1AE",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#DC3A27",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#959698",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F4D53F",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 65,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 18,
+   "fan_pct": {
+    "min": 100,
+    "max": 100,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 55,
+    "hours": 8
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://store.bblcdn.eu/s8/default/f0d6e1c73b9e42c3abeb9540f3433225/new_Bambu_PLA_Tough_Technical_Data_Sheet.pdf",
+    "https://store.bblcdn.eu/s8/default/fa69ce6fe3a9411988e30bd8d44b29c0/Bambu_PLA_Tough_MSDS.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/PLA/tough+",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/asa",
+   "manufacturer": "Bambu Lab",
+   "name": "ASA",
+   "material": "asa",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.05,
+   "colors": [
+    {
+     "name": "Aero White",
+     "hex": "#F0EBE5",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#2140B4",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#8A949E",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#00A6A0",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#E02928",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFAF2",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 100,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 18,
+   "fan_pct": {
+    "min": 25,
+    "max": 35,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 80,
+    "hours": 8
+   },
+   "hdt_c": 92,
+   "tensile_mpa": 37,
+   "modulus_mpa": 2450,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0645/5876/0155/files/Bambu_ASA_Technical_Data_Sheet.pdf",
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_ASA_MSDS.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/ASA/asa",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/tpu-for-ams",
+   "manufacturer": "Bambu Lab",
+   "name": "TPU for AMS",
+   "material": "tpu",
+   "shore": {
+    "value": 68,
+    "scale": "d"
+   },
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.05,
+   "density_g_cm3": 1.26,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#5898DD",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#939393",
+     "td": null
+    },
+    {
+     "name": "Neon Green",
+     "hex": "#90FF1A",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#ED0000",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F9EF41",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 35,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 18,
+   "fan_pct": {
+    "min": 20,
+    "max": 40,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 70,
+    "hours": 8
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_TPU_for_AMS_Technical_Data_Sheet.pdf?v=1730944629",
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_TPU_for_AMS_MSDS.pdf?v=1730944633"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/TPU/for_ams",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/pla-sparkle",
+   "manufacturer": "Bambu Lab",
+   "name": "PLA Sparkle",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.26,
+   "colors": [
+    {
+     "name": "Alpine Green Sparkle",
+     "hex": "#3F5443",
+     "td": null
+    },
+    {
+     "name": "Classic Gold Sparkle",
+     "hex": "#CEA629",
+     "td": null
+    },
+    {
+     "name": "Crimson Red Sparkle",
+     "hex": "#792B36",
+     "td": null
+    },
+    {
+     "name": "Onyx Black Sparkle",
+     "hex": "#2D2B28",
+     "td": null
+    },
+    {
+     "name": "Royal Purple Sparkle",
+     "hex": "#483D8B",
+     "td": null
+    },
+    {
+     "name": "Slate Gray Sparkle",
+     "hex": "#8E9089",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 45,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 12,
+   "fan_pct": {
+    "min": 100,
+    "max": 100,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 55,
+    "hours": 8
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopifycdn.net/s/files/1/0584/7236/6216/files/Bambu_PLA_Sparkle-Technical_Data_Sheet.pdf",
+    "https://cdn.shopifycdn.net/s/files/1/0617/5798/0835/files/Bambu_PLA_Sparkle_MSDS.pdf?v=1696924498"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/PLA/sparkle",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/pla-wood",
+   "manufacturer": "Bambu Lab",
+   "name": "PLA Wood",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Black Walnut",
+     "hex": "#4F3F24",
+     "td": null
+    },
+    {
+     "name": "Classic Birch",
+     "hex": "#918669",
+     "td": null
+    },
+    {
+     "name": "Clay Brown",
+     "hex": "#995F11",
+     "td": null
+    },
+    {
+     "name": "Ochre Yellow",
+     "hex": "#C98935",
+     "td": null
+    },
+    {
+     "name": "Rosewood",
+     "hex": "#4C241C",
+     "td": null
+    },
+    {
+     "name": "White Oak",
+     "hex": "#D6CCA3",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 45,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 18,
+   "fan_pct": {
+    "min": 100,
+    "max": 100,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 55,
+    "hours": 8
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambus_PLA_Wood_Technical_Data_Sheet.pdf?v=1731406725",
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/PLA_Wood_MSDS.pdf?v=1731406729"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/PLA/wood",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/petg-cf",
+   "manufacturer": "Bambu Lab",
+   "name": "PETG-CF",
+   "material": "petg",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Brick Red",
+     "hex": "#9F332A",
+     "td": null
+    },
+    {
+     "name": "Indigo Blue",
+     "hex": "#324585",
+     "td": null
+    },
+    {
+     "name": "Malachite Green",
+     "hex": "#16B08E",
+     "td": null
+    },
+    {
+     "name": "Titan Gray",
+     "hex": "#565656",
+     "td": null
+    },
+    {
+     "name": "Violet Purple",
+     "hex": "#583061",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 65,
+    "max": 75,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 11.5,
+   "fan_pct": {
+    "min": 5,
+    "max": 40,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 65,
+    "hours": 8
+   },
+   "abrasive": true,
+   "hdt_c": 68,
+   "tensile_mpa": 35,
+   "modulus_mpa": 2460,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_PETG-CF_Technical_Data_Sheet_V2.pdf",
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_PETG-CF_MSDS.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/PETG/petg_cf",
+   "verified": false
+  },
+  {
+   "id": "bambu-lab/tpu-95a-hf",
+   "manufacturer": "Bambu Lab",
+   "name": "TPU 95A HF",
+   "material": "tpu",
+   "shore": {
+    "value": 95,
+    "scale": "a"
+   },
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.22,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#101820",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0072CE",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#898D8D",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#C8102E",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F3E600",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 35,
+    "recommended": null
+   },
+   "max_flow_mm3_s": 12,
+   "fan_pct": {
+    "min": 100,
+    "max": 100,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 70,
+    "hours": 8
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/Bambu_TPU_95A_HF_Technical_Data_Sheet.pdf?v=1700101819",
+    "https://cdn.shopify.com/s/files/1/0584/7236/6216/files/MSDS_Bambu_TPU_95A_HF.pdf?v=1705372919"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "bambu_lab/TPU/95a_hf",
+   "verified": false
+  }
+ ]
+}

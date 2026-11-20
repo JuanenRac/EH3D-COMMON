@@ -1,0 +1,1278 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Creality",
+ "filaments": [
+  {
+   "id": "creality/pla",
+   "manufacturer": "Creality",
+   "name": "PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Apple Green",
+     "hex": "#9AEE6C",
+     "td": null
+    },
+    {
+     "name": "Beige",
+     "hex": "#EFE8D8",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#40B6E4",
+     "td": null
+    },
+    {
+     "name": "Deep Pink",
+     "hex": "#FD64B3",
+     "td": null
+    },
+    {
+     "name": "Deep Red",
+     "hex": "#D33D3D",
+     "td": null
+    },
+    {
+     "name": "Fluorescent Green",
+     "hex": "#06B100",
+     "td": null
+    },
+    {
+     "name": "Fluorescent Orange",
+     "hex": "#FF5F2E",
+     "td": null
+    },
+    {
+     "name": "Fluorescent Pink",
+     "hex": "#F14147",
+     "td": null
+    },
+    {
+     "name": "Fluorescent Yellow",
+     "hex": "#E4FF33",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#959FA1",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#5AEB90",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/PLA/pla",
+   "verified": false
+  },
+  {
+   "id": "creality/soleyin-ultra-pla",
+   "manufacturer": "Creality",
+   "name": "Soleyin Ultra PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Almond Purple",
+     "hex": "#D1C9DC",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#343A3C",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#AFC2CA",
+     "td": null
+    },
+    {
+     "name": "Greenery",
+     "hex": "#B9B891",
+     "td": null
+    },
+    {
+     "name": "Light Green",
+     "hex": "#AFE1D7",
+     "td": null
+    },
+    {
+     "name": "Matte Black",
+     "hex": "#3B4143",
+     "td": null
+    },
+    {
+     "name": "Matte Fluonte",
+     "hex": "#98B2D9",
+     "td": null
+    },
+    {
+     "name": "Matte Gray",
+     "hex": "#B8CAD1",
+     "td": null
+    },
+    {
+     "name": "Matte Moonstone",
+     "hex": "#53DEE6",
+     "td": null
+    },
+    {
+     "name": "Matte Rose Stone",
+     "hex": "#D1BAE2",
+     "td": null
+    },
+    {
+     "name": "Matte White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Ocean Blue",
+     "hex": "#C6EBEB",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 45,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/PLA/soleyin_ultra_pla",
+   "verified": false
+  },
+  {
+   "id": "creality/hyper-pla",
+   "manufacturer": "Creality",
+   "name": "Hyper PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#282C2C",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0081BF",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#BC6C55",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#DAB255",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#40C04D",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#7A7C7D",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FD9639",
+     "td": null
+    },
+    {
+     "name": "Peach Fuzz",
+     "hex": "#FFCBB7",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#B0347F",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#C32D30",
+     "td": null
+    },
+    {
+     "name": "Skin",
+     "hex": "#E1C09D",
+     "td": null
+    },
+    {
+     "name": "Very Peri",
+     "hex": "#6768D2",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/PLA/hyper_pla",
+   "verified": false
+  },
+  {
+   "id": "creality/petg",
+   "manufacturer": "Creality",
+   "name": "PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "Digital Blue",
+     "hex": "#0099E6",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#BCBFC2",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#41A840",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#F4A0B1",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#AE96D4",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#C01616",
+     "td": null
+    },
+    {
+     "name": "Translucent Light Pink",
+     "hex": "#FFDDEE",
+     "td": null
+    },
+    {
+     "name": "Transparent",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "Transparent Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "creality/soleyin-basic-petg",
+   "manufacturer": "Creality",
+   "name": "Soleyin Basic PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Brick Red",
+     "hex": "#6D2222",
+     "td": null
+    },
+    {
+     "name": "Chamomile",
+     "hex": "#E3744F",
+     "td": null
+    },
+    {
+     "name": "Fern Green",
+     "hex": "#D5DD92",
+     "td": null
+    },
+    {
+     "name": "Ginkgo Yellow",
+     "hex": "#CFD06C",
+     "td": null
+    },
+    {
+     "name": "Glacier Grey",
+     "hex": "#838586",
+     "td": null
+    },
+    {
+     "name": "Lavender",
+     "hex": "#DACBDD",
+     "td": null
+    },
+    {
+     "name": "Mangosteen Purple",
+     "hex": "#713F56",
+     "td": null
+    },
+    {
+     "name": "Milk Tea Brown",
+     "hex": "#CCAE88",
+     "td": null
+    },
+    {
+     "name": "Snow Mountain Blue",
+     "hex": "#7CC6FF",
+     "td": null
+    },
+    {
+     "name": "Sunset Blue",
+     "hex": "#023D79",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F2F2F2",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 250,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/PETG/soleyin_basic_petg",
+   "verified": false
+  },
+  {
+   "id": "creality/silk-pla",
+   "manufacturer": "Creality",
+   "name": "Silk PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#0378D0",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#F6C500",
+     "td": null
+    },
+    {
+     "name": "Golden-Red",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Golden-Silver",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Pink-Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#8846AE",
+     "td": null
+    },
+    {
+     "name": "Rainbow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red Copper",
+     "hex": "#C06341",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#C9D0D4",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow-Blue",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/PLA/silk_pla",
+   "verified": false
+  },
+  {
+   "id": "creality/hyper-petg",
+   "manufacturer": "Creality",
+   "name": "Hyper PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.05,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#030304",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#09176E",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#52A66E",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#C9C6BE",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#E70A10",
+     "td": null
+    },
+    {
+     "name": "Transparent",
+     "hex": "#DCD6D3",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#EAE5E3",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FDEB64",
+     "td": null
+    }
+   ],
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/PETG/hyper_petg",
+   "verified": false
+  },
+  {
+   "id": "creality/hyper-pla-cf",
+   "manufacturer": "Creality",
+   "name": "Hyper PLA-CF",
+   "material": "pla",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#47494B",
+     "td": null
+    },
+    {
+     "name": "Dark Green",
+     "hex": "#3A4E53",
+     "td": null
+    },
+    {
+     "name": "Greyish Yellow",
+     "hex": "#4A4846",
+     "td": null
+    },
+    {
+     "name": "Ochre",
+     "hex": "#4D352A",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#645E83",
+     "td": null
+    }
+   ],
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/PLA/hyper_pla_cf",
+   "verified": false
+  },
+  {
+   "id": "creality/hyper-luminous-pla",
+   "manufacturer": "Creality",
+   "name": "Hyper Luminous PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#84BBDE",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#76B16D",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#E38090",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#EFEC8A",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/PLA/hyper_luminous_pla",
+   "verified": false
+  },
+  {
+   "id": "creality/abs",
+   "manufacturer": "Creality",
+   "name": "ABS",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.04,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#6299DF",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#4C5975",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FBE200",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 90,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/ABS/abs",
+   "verified": false
+  },
+  {
+   "id": "creality/ender-fast-pla",
+   "manufacturer": "Creality",
+   "name": "Ender Fast PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#060707",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#A70018",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FAFEFE",
+     "td": null
+    }
+   ],
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/PLA/ender_fast_pla",
+   "verified": false
+  },
+  {
+   "id": "creality/hyper-rainbow-pla",
+   "manufacturer": "Creality",
+   "name": "Hyper Rainbow PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Spring Lake",
+     "hex": "#92CCA8",
+     "td": null
+    },
+    {
+     "name": "Wild Blossom-Long",
+     "hex": "#D7A7A8",
+     "td": null
+    },
+    {
+     "name": "Wild Blossom-Short",
+     "hex": "#68B484",
+     "td": null
+    }
+   ],
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/PLA/hyper_rainbow_pla",
+   "verified": false
+  },
+  {
+   "id": "creality/hyper-abs",
+   "manufacturer": "Creality",
+   "name": "Hyper ABS",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.05,
+   "density_g_cm3": 1.05,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#080E11",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#AFB6BF",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FDFEFA",
+     "td": null
+    }
+   ],
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/ABS/hyper_abs",
+   "verified": false
+  },
+  {
+   "id": "creality/95a-tpu",
+   "manufacturer": "Creality",
+   "name": "95A TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#41A840",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#DF3303",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/TPU/95a_tpu",
+   "verified": false
+  },
+  {
+   "id": "creality/hp-tpu",
+   "manufacturer": "Creality",
+   "name": "HP-TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Transparent",
+     "hex": "#D9DAD1",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#DAE0E6",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/TPU/hp_tpu",
+   "verified": false
+  },
+  {
+   "id": "creality/pla-cf",
+   "manufacturer": "Creality",
+   "name": "PLA CF",
+   "material": "pla",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/PLA/cf_pla",
+   "verified": false
+  },
+  {
+   "id": "creality/cr-pla-carbon",
+   "manufacturer": "Creality",
+   "name": "CR-PLA Carbon",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "CR-PLA Carbon",
+     "hex": "#232323",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/PLA/cr_pla_carbon",
+   "verified": false
+  },
+  {
+   "id": "creality/pla-cr-wood",
+   "manufacturer": "Creality",
+   "name": "PLA CR-Wood",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.15,
+   "colors": [
+    {
+     "name": "CR-Wood",
+     "hex": "#C1A48E",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/PLA/cr_wood",
+   "verified": false
+  },
+  {
+   "id": "creality/ender-pla",
+   "manufacturer": "Creality",
+   "name": "Ender PLA+",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Orange",
+     "hex": "#D5552F",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 60,
+    "recommended": null
+   },
+   "min_nozzle_mm": 0.4,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": 199,
+     "width_mm": null,
+     "hub_mm": 55
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/PLA/ender_pla",
+   "verified": false
+  },
+  {
+   "id": "creality/cr-petg",
+   "manufacturer": "Creality",
+   "name": "CR-PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Brown",
+     "hex": "#6B3E26",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 60,
+    "max": 100,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/PETG/cr_petg",
+   "verified": false
+  },
+  {
+   "id": "creality/hp-asa",
+   "manufacturer": "Creality",
+   "name": "HP ASA",
+   "material": "asa",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.05,
+   "colors": [
+    {
+     "name": "HP ASA",
+     "hex": "#181818",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/ASA/hp_asa",
+   "verified": false
+  },
+  {
+   "id": "creality/hyper-pa6-cf",
+   "manufacturer": "Creality",
+   "name": "Hyper PA6-CF",
+   "material": "pa",
+   "grade": "PA6",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 280,
+    "max": 300,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 80,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "creality/PA6/hyper_pa6_cf",
+   "verified": false
+  }
+ ]
+}

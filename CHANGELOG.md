@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The database of 3D printing materials:** the new crate `eh3d-printmaterials` holds FDM filaments and photopolymer resins (SLA, DLP, LCD, MSLA) with the values their makers publish: material and grade, filler, diameters, density, temperatures of nozzle, bed and chamber, flow, fan, retraction, drying, spools and colours for a filament; kind, wavelength, mechanical values, wash, post-cure and the exposure settings by printer and layer height for a resin. Every record names its source and says it was not tried on a machine, a field the schema does not know is refused, and there is no price in the data. Errors carry the stable codes `EH3D-PMAT-001` to `EH3D-PMAT-009`, with titles, warnings and notes in the eight languages of the suite.
+- **A seed of about 475 filaments and the generic profiles of the slicer:** the main brands are loaded from an open database under the MIT licence (the notice is kept in `THIRD_PARTY_NOTICES`; each record names its place in it), together with the twelve generic filaments and seven generic resins that the slicer ships, so the slicer can read them from here without losing a value. `tools/import_open_filament_db.py` writes the files from a temporary clone and is not a dependency of the build.
 - **The server panel names its widgets with the current egui call:** the two grids of the panel take their identifier from the scope of the window and no longer from a method that egui 0.37 marks as deprecated, so the lints of the drawings pass.
 ## [0.2.7] - A docking frame for the windows of the programs: dockable and floating panels, named workspaces, a menu bar declared as data and shortcuts
 

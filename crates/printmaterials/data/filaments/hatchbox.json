@@ -1,0 +1,1129 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Hatchbox",
+ "filaments": [
+  {
+   "id": "hatchbox/pla",
+   "manufacturer": "Hatchbox",
+   "name": "PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Baby Blue",
+     "hex": "#99F1FF",
+     "td": null
+    },
+    {
+     "name": "Beige",
+     "hex": "#E9D1C1",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Black Filament",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue Filament",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "Bronze",
+     "hex": "#8C7547",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#332120",
+     "td": null
+    },
+    {
+     "name": "Brown Filament",
+     "hex": "#332120",
+     "td": null
+    },
+    {
+     "name": "Cool Gray",
+     "hex": "#A9A8A0",
+     "td": null
+    },
+    {
+     "name": "Copper",
+     "hex": "#926E4D",
+     "td": null
+    },
+    {
+     "name": "Dark Blue Max",
+     "hex": "#282D42",
+     "td": null
+    },
+    {
+     "name": "Dark Raspberry Max",
+     "hex": "#B13566",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 180,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "hatchbox/PLA/pla",
+   "verified": false
+  },
+  {
+   "id": "hatchbox/tpu",
+   "manufacturer": "Hatchbox",
+   "name": "TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Baby Blue",
+     "hex": "#6FEEDB",
+     "td": null
+    },
+    {
+     "name": "Beige",
+     "hex": "#F4E0DC",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Bronze",
+     "hex": "#6B5F37",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#A54830",
+     "td": null
+    },
+    {
+     "name": "Chocolate",
+     "hex": "#281612",
+     "td": null
+    },
+    {
+     "name": "Cool Gray",
+     "hex": "#A9A8A0",
+     "td": null
+    },
+    {
+     "name": "Copper",
+     "hex": "#845239",
+     "td": null
+    },
+    {
+     "name": "Dark Yellow",
+     "hex": "#FFB031",
+     "td": null
+    },
+    {
+     "name": "Forest Green",
+     "hex": "#519F61",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#CE8D00",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 235,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "hatchbox/TPU/tpu",
+   "verified": false
+  },
+  {
+   "id": "hatchbox/pla-basic",
+   "manufacturer": "Hatchbox",
+   "name": "PLA Basic",
+   "material": "pla",
+   "fill": [
+    "glow"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Baby Blue",
+     "hex": "#6ACFD2",
+     "td": null
+    },
+    {
+     "name": "Beige",
+     "hex": "#E0CEC1",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#442D2D",
+     "td": null
+    },
+    {
+     "name": "Cool Gray",
+     "hex": "#989A99",
+     "td": null
+    },
+    {
+     "name": "Copper",
+     "hex": "#845A41",
+     "td": null
+    },
+    {
+     "name": "Glow in the Dark",
+     "hex": "#97D3C4",
+     "td": null
+    },
+    {
+     "name": "Gray Blue",
+     "hex": "#637888",
+     "td": null
+    },
+    {
+     "name": "Light Blue",
+     "hex": "#007EBB",
+     "td": null
+    },
+    {
+     "name": "Light Orange",
+     "hex": "#E0741F",
+     "td": null
+    },
+    {
+     "name": "Light Purple",
+     "hex": "#5C60A9",
+     "td": null
+    },
+    {
+     "name": "Lime Green",
+     "hex": "#8ABF30",
+     "td": null
+    },
+    {
+     "name": "Midnight Purple",
+     "hex": "#53408E",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 180,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "hatchbox/PLA/basic",
+   "verified": false
+  },
+  {
+   "id": "hatchbox/abs",
+   "manufacturer": "Hatchbox",
+   "name": "ABS",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.04,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Black Paint Free",
+     "hex": "#373737",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Bronze",
+     "hex": "#A18D5A",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#5D4546",
+     "td": null
+    },
+    {
+     "name": "Brown Paint Free",
+     "hex": "#C06341",
+     "td": null
+    },
+    {
+     "name": "Copper",
+     "hex": "#926E4D",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#CE8D00",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#089A45",
+     "td": null
+    },
+    {
+     "name": "Light Blue",
+     "hex": "#0378D0",
+     "td": null
+    },
+    {
+     "name": "Mint Green",
+     "hex": "#ADEBB3",
+     "td": null
+    },
+    {
+     "name": "Neon Green",
+     "hex": "#9FEC41",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 100,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "hatchbox/ABS/abs",
+   "verified": false
+  },
+  {
+   "id": "hatchbox/petg",
+   "manufacturer": "Hatchbox",
+   "name": "PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Baby Blue",
+     "hex": "#9EF9FF",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#A54830",
+     "td": null
+    },
+    {
+     "name": "Copper",
+     "hex": "#AF784D",
+     "td": null
+    },
+    {
+     "name": "Dark Green",
+     "hex": "#224C5D",
+     "td": null
+    },
+    {
+     "name": "Dark Yellow",
+     "hex": "#F5E457",
+     "td": null
+    },
+    {
+     "name": "Electric Lime",
+     "hex": "#9AED51",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#CE8D00",
+     "td": null
+    },
+    {
+     "name": "Gray Blue",
+     "hex": "#4C5975",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#089A45",
+     "td": null
+    },
+    {
+     "name": "Light Brown",
+     "hex": "#F4AC23",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 85,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "hatchbox/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "hatchbox/silk-pla",
+   "manufacturer": "Hatchbox",
+   "name": "Silk PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Brown",
+     "hex": "#B78F86",
+     "td": null
+    },
+    {
+     "name": "Light Blue",
+     "hex": "#99F1FF",
+     "td": null
+    },
+    {
+     "name": "Metallic Finish Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Metallic Finish Bronze",
+     "hex": "#95846F",
+     "td": null
+    },
+    {
+     "name": "Metallic Finish Brown",
+     "hex": "#C06341",
+     "td": null
+    },
+    {
+     "name": "Metallic Finish Gray",
+     "hex": "#ACB1BA",
+     "td": null
+    },
+    {
+     "name": "Metallic Finish Green",
+     "hex": "#02A76B",
+     "td": null
+    },
+    {
+     "name": "Metallic Finish Light Blue",
+     "hex": "#ABD5F3",
+     "td": null
+    },
+    {
+     "name": "Metallic Finish Mint Green",
+     "hex": "#98FBCB",
+     "td": null
+    },
+    {
+     "name": "Metallic Finish Neon Green",
+     "hex": "#9FEC41",
+     "td": null
+    },
+    {
+     "name": "Metallic Finish Orange",
+     "hex": "#F6A25C",
+     "td": null
+    },
+    {
+     "name": "Metallic Finish Pink",
+     "hex": "#FFC8C9",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 180,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "hatchbox/PLA/silk_pla",
+   "verified": false
+  },
+  {
+   "id": "hatchbox/pla-matte",
+   "manufacturer": "Hatchbox",
+   "name": "PLA Matte",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Ash Gray",
+     "hex": "#404549",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#876E58",
+     "td": null
+    },
+    {
+     "name": "Cherry Red",
+     "hex": "#8F2637",
+     "td": null
+    },
+    {
+     "name": "Cool Mint",
+     "hex": "#BEC9B4",
+     "td": null
+    },
+    {
+     "name": "Kraft",
+     "hex": "#BCA07A",
+     "td": null
+    },
+    {
+     "name": "Seafoam Blue",
+     "hex": "#B9CFCB",
+     "td": null
+    },
+    {
+     "name": "Terracotta",
+     "hex": "#A46A62",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "hatchbox/PLA/matte",
+   "verified": false
+  },
+  {
+   "id": "hatchbox/transparent-pla",
+   "manufacturer": "Hatchbox",
+   "name": "Transparent PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#373737",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#06B100",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF7A33",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#EC0000",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FBE200",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 180,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "hatchbox/PLA/transparent_pla",
+   "verified": false
+  },
+  {
+   "id": "hatchbox/wood-pla",
+   "manufacturer": "Hatchbox",
+   "name": "Wood PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#321702",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#5D3B32",
+     "td": null
+    },
+    {
+     "name": "Cedar Brown",
+     "hex": "#705939",
+     "td": null
+    },
+    {
+     "name": "Filament",
+     "hex": "#C69581",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#AE9D7E",
+     "td": null
+    },
+    {
+     "name": "Ivory",
+     "hex": "#F2D483",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#D8D59F",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 180,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "hatchbox/PLA/wood_pla",
+   "verified": false
+  },
+  {
+   "id": "hatchbox/metallic-finish-pla",
+   "manufacturer": "Hatchbox",
+   "name": "Metallic Finish PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Beige",
+     "hex": "#F0DDC2",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Copper",
+     "hex": "#C88582",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#F6C500",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "hatchbox/PLA/metallic_finish_pla",
+   "verified": false
+  },
+  {
+   "id": "hatchbox/glow-pla",
+   "manufacturer": "Hatchbox",
+   "name": "Glow PLA",
+   "material": "pla",
+   "fill": [
+    "glow"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Filament",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#97D3C4",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 180,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "hatchbox/PLA/glow_pla",
+   "verified": false
+  },
+  {
+   "id": "hatchbox/pla-max",
+   "manufacturer": "Hatchbox",
+   "name": "PLA Max",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Dark Blue",
+     "hex": "#313B51",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#007B39",
+     "td": null
+    },
+    {
+     "name": "Mustard",
+     "hex": "#C9A460",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 210,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "hatchbox/PLA/max",
+   "verified": false
+  },
+  {
+   "id": "hatchbox/uv-color-changing-pla",
+   "manufacturer": "Hatchbox",
+   "name": "UV Color Changing PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 180,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "hatchbox/PLA/uv_color_changing_pla",
+   "verified": false
+  },
+  {
+   "id": "hatchbox/pla-cf",
+   "manufacturer": "Hatchbox",
+   "name": "PLA CF",
+   "material": "pla",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Carbon Fiber",
+     "hex": "#1D1D1D",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 180,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "hatchbox/PLA/cf_pla",
+   "verified": false
+  },
+  {
+   "id": "hatchbox/pla-metal",
+   "manufacturer": "Hatchbox",
+   "name": "PLA Metal",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Gold",
+     "hex": "#D8A14B",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "hatchbox/PLA/metal",
+   "verified": false
+  },
+  {
+   "id": "hatchbox/pla-pro",
+   "manufacturer": "Hatchbox",
+   "name": "PLA Pro",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Purple",
+     "hex": "#8F1C7C",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "hatchbox/PLA/pro",
+   "verified": false
+  },
+  {
+   "id": "hatchbox/glow-abs",
+   "manufacturer": "Hatchbox",
+   "name": "Glow ABS",
+   "material": "abs",
+   "fill": [
+    "glow"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.04,
+   "colors": [
+    {
+     "name": "In the Dark",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 100,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "hatchbox/ABS/glow_abs",
+   "verified": false
+  }
+ ]
+}

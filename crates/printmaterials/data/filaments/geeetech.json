@@ -1,0 +1,821 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Geeetech",
+ "filaments": [
+  {
+   "id": "geeetech/silk-pla",
+   "manufacturer": "Geeetech",
+   "name": "Silk PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black + Red",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Color Blue Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold + Black",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Color Gold Copper",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Color Gold Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold + Red",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Color Gold Silver",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Color Green Red",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Color Red Black",
+     "hex": "#971C1C",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#E3B145",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#9AED51",
+     "td": null
+    },
+    {
+     "name": "Metallic Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 40,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "geeetech/PLA/silk_pla",
+   "verified": false
+  },
+  {
+   "id": "geeetech/pla",
+   "manufacturer": "Geeetech",
+   "name": "PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Apple Green",
+     "hex": "#BBDB4B",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#2E56F1",
+     "td": null
+    },
+    {
+     "name": "Bone",
+     "hex": "#EADAC2",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "Dark Green Bronze",
+     "hex": "#4F7B57",
+     "td": null
+    },
+    {
+     "name": "Default",
+     "hex": "#EADAC2",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#06B100",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#C3CCD5",
+     "td": null
+    },
+    {
+     "name": "New Grey",
+     "hex": "#9CA7B0",
+     "td": null
+    },
+    {
+     "name": "New Silver",
+     "hex": "#ABACB0",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF9100",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 185,
+    "max": 215,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "geeetech/PLA/pla",
+   "verified": false
+  },
+  {
+   "id": "geeetech/abs",
+   "manufacturer": "Geeetech",
+   "name": "ABS+",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.04,
+   "colors": [
+    {
+     "name": "Apple Green",
+     "hex": "#7CFC00",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#2E56F1",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#8B4513",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#228B22",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#808080",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF8C00",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#FF69B4",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#800080",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#FF0000",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#C0C0C0",
+     "td": null
+    },
+    {
+     "name": "Skin",
+     "hex": "#FFDBAC",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 95,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "geeetech/ABS/abs_plus",
+   "verified": false
+  },
+  {
+   "id": "geeetech/petg",
+   "manufacturer": "Geeetech",
+   "name": "PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#A54830",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#B2B8B8",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#089A45",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#F55928",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#B645A9",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#6C47B2",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#A8B0BD",
+     "td": null
+    },
+    {
+     "name": "Transparent",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FFFB00",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "geeetech/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "geeetech/tpu",
+   "manufacturer": "Geeetech",
+   "name": "TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.05,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "95A Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "95A Blue",
+     "hex": "#2E56F1",
+     "td": null
+    },
+    {
+     "name": "95A Brown",
+     "hex": "#6E4325",
+     "td": null
+    },
+    {
+     "name": "95A Clear Gold",
+     "hex": "#CE8D00",
+     "td": null
+    },
+    {
+     "name": "95A Grey",
+     "hex": "#727376",
+     "td": null
+    },
+    {
+     "name": "95A Orange",
+     "hex": "#F67405",
+     "td": null
+    },
+    {
+     "name": "95A Pink",
+     "hex": "#FF0078",
+     "td": null
+    },
+    {
+     "name": "95A Purple",
+     "hex": "#771B6B",
+     "td": null
+    },
+    {
+     "name": "95A Red",
+     "hex": "#FC496D",
+     "td": null
+    },
+    {
+     "name": "95A Transparent",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "95A White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#E4E7E5",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "geeetech/TPU/tpu",
+   "verified": false
+  },
+  {
+   "id": "geeetech/matte-pla",
+   "manufacturer": "Geeetech",
+   "name": "Matte PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#4C5975",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#6E4325",
+     "td": null
+    },
+    {
+     "name": "Dark Grey",
+     "hex": "#A2AAAD",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#959FA1",
+     "td": null
+    },
+    {
+     "name": "Navy Blue",
+     "hex": "#003287",
+     "td": null
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#6C8C59",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#DD9879",
+     "td": null
+    },
+    {
+     "name": "Skin",
+     "hex": "#E6BA83",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "geeetech/PLA/matte_pla",
+   "verified": false
+  },
+  {
+   "id": "geeetech/pla-wood",
+   "manufacturer": "Geeetech",
+   "name": "PLA Wood",
+   "material": "pla",
+   "fill": [
+    "wood"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black Walnut",
+     "hex": "#5C4033",
+     "td": null
+    },
+    {
+     "name": "Ebony",
+     "hex": "#3B2F2F",
+     "td": null
+    },
+    {
+     "name": "Poplar",
+     "hex": "#E8D5B7",
+     "td": null
+    },
+    {
+     "name": "Wood",
+     "hex": "#C4A882",
+     "td": null
+    },
+    {
+     "name": "Wood Ebony",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Wood Por",
+     "hex": "#EFE8D8",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "geeetech/PLA/wood_pla",
+   "verified": false
+  },
+  {
+   "id": "geeetech/pla-marble",
+   "manufacturer": "Geeetech",
+   "name": "PLA Marble",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Grey",
+     "hex": "#B0B0B0",
+     "td": null
+    },
+    {
+     "name": "Marble White-Blue Stone",
+     "hex": "#C3CCD5",
+     "td": null
+    },
+    {
+     "name": "Marble White-Brown Stone",
+     "hex": "#EFE8D8",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 185,
+    "max": 215,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "geeetech/PLA/marble_pla",
+   "verified": false
+  },
+  {
+   "id": "geeetech/pla-cf",
+   "manufacturer": "Geeetech",
+   "name": "PLA CF",
+   "material": "pla",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#232834",
+     "td": null
+    },
+    {
+     "name": "Brick Red",
+     "hex": "#462B2E",
+     "td": null
+    },
+    {
+     "name": "Matcha Green",
+     "hex": "#363C32",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "geeetech/PLA/pla_cf",
+   "verified": false
+  },
+  {
+   "id": "geeetech/luminous-glow-pla",
+   "manufacturer": "Geeetech",
+   "name": "Luminous Glow PLA",
+   "material": "pla",
+   "fill": [
+    "glow"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#0078BF",
+     "td": null
+    },
+    {
+     "name": "Multicolor",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "geeetech/PLA/luminous_glow_pla",
+   "verified": false
+  },
+  {
+   "id": "geeetech/upgrade-abs",
+   "manufacturer": "Geeetech",
+   "name": "Upgrade ABS",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.04,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#2E56F1",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 90,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "geeetech/ABS/upgrade_abs",
+   "verified": false
+  }
+ ]
+}

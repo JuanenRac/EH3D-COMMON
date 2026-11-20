@@ -1,0 +1,1339 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Prusament",
+ "filaments": [
+  {
+   "id": "prusament/pla",
+   "manufacturer": "Prusament",
+   "name": "PLA",
+   "material": "pla",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Anthracite Grey",
+     "hex": "#3F4647",
+     "td": null
+    },
+    {
+     "name": "Army Green",
+     "hex": "#5E6345",
+     "td": null
+    },
+    {
+     "name": "Azure Blue",
+     "hex": "#0082AD",
+     "td": null
+    },
+    {
+     "name": "Blood Red",
+     "hex": "#990303",
+     "td": null
+    },
+    {
+     "name": "Chalky Blue",
+     "hex": "#6F9AAA",
+     "td": null
+    },
+    {
+     "name": "Galaxy Black",
+     "hex": "#3D3E3D",
+     "td": null
+    },
+    {
+     "name": "Galaxy Green",
+     "hex": "#42663A",
+     "td": null
+    },
+    {
+     "name": "Galaxy Grey",
+     "hex": "#B5B6B8",
+     "td": null
+    },
+    {
+     "name": "Galaxy Purple",
+     "hex": "#453A72",
+     "td": null
+    },
+    {
+     "name": "Galaxy Red",
+     "hex": "#B13941",
+     "td": null
+    },
+    {
+     "name": "Galaxy Silver",
+     "hex": "#999AA0",
+     "td": null
+    },
+    {
+     "name": "Gentleman's Grey",
+     "hex": "#354047",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 205,
+    "max": 225,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 40,
+    "max": 60,
+    "recommended": null
+   },
+   "chamber_c": 20,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 900,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 970,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PLA/pla",
+   "verified": false
+  },
+  {
+   "id": "prusament/petg",
+   "manufacturer": "Prusament",
+   "name": "PETG",
+   "material": "petg",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Anthracite Grey",
+     "hex": "#3F4647",
+     "td": null
+    },
+    {
+     "name": "Carmine Red",
+     "hex": "#B54230",
+     "td": null
+    },
+    {
+     "name": "Chalky Blue",
+     "hex": "#6F9AAA",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "Jet Black",
+     "hex": "#292B2B",
+     "td": null
+    },
+    {
+     "name": "Jungle Green",
+     "hex": "#007249",
+     "td": null
+    },
+    {
+     "name": "Lipstick Red",
+     "hex": "#BB2E33",
+     "td": null
+    },
+    {
+     "name": "Magnetite 40% Grey",
+     "hex": "#272E29",
+     "td": null
+    },
+    {
+     "name": "Mango Yellow",
+     "hex": "#F2B70A",
+     "td": null
+    },
+    {
+     "name": "Neon Green",
+     "hex": "#A6EC5F",
+     "td": null
+    },
+    {
+     "name": "Ocean Blue",
+     "hex": "#194C55",
+     "td": null
+    },
+    {
+     "name": "Orange for PPE",
+     "hex": "#FF6600",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 90,
+    "recommended": null
+   },
+   "chamber_c": 35,
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 900,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.prusa3d.com/file/3464616/prusament-petg-technical-data-sheet.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "prusament/asa",
+   "manufacturer": "Prusament",
+   "name": "ASA",
+   "material": "asa",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.04,
+   "density_g_cm3": 1.07,
+   "colors": [
+    {
+     "name": "Jet Black",
+     "hex": "#292824",
+     "td": null
+    },
+    {
+     "name": "Lipstick Red",
+     "hex": "#D02F37",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#D6D6CD",
+     "td": null
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#72794F",
+     "td": null
+    },
+    {
+     "name": "Prusa Galaxy Black",
+     "hex": "#2F2F2F",
+     "td": null
+    },
+    {
+     "name": "Prusa Green",
+     "hex": "#00FA9A",
+     "td": null
+    },
+    {
+     "name": "Prusa Orange",
+     "hex": "#F55928",
+     "td": null
+    },
+    {
+     "name": "Prusa Pro Green",
+     "hex": "#7BDDBD",
+     "td": null
+    },
+    {
+     "name": "Sapphire Blue",
+     "hex": "#3B4468",
+     "td": null
+    },
+    {
+     "name": "Signal White",
+     "hex": "#E3DFD9",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 255,
+    "max": 265,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 105,
+    "max": 115,
+    "recommended": null
+   },
+   "chamber_c": 90,
+   "spools": [
+    {
+     "weight_g": 800,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 850,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://storage.googleapis.com/prusa3d-content-prod-14e8-wordpress-prusament-prod/2024/05/bc8551ef-tds_prusament-asa_2024_en.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/ASA/asa",
+   "verified": false
+  },
+  {
+   "id": "prusament/blend-silk-pla",
+   "manufacturer": "Prusament",
+   "name": "Blend Silk PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Lime Green",
+     "hex": "#A7B853",
+     "td": null
+    },
+    {
+     "name": "Ms. Pink",
+     "hex": "#E34A94",
+     "td": null
+    },
+    {
+     "name": "My Silverness",
+     "hex": "#AEB8C1",
+     "td": null
+    },
+    {
+     "name": "Oh My Gold",
+     "hex": "#CE9F2E",
+     "td": null
+    },
+    {
+     "name": "Pearl White",
+     "hex": "#D0D7D8",
+     "td": null
+    },
+    {
+     "name": "Royal Blue",
+     "hex": "#00518F",
+     "td": null
+    },
+    {
+     "name": "Viva La Bronze",
+     "hex": "#B38E3F",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 205,
+    "max": 225,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 40,
+    "max": 60,
+    "recommended": null
+   },
+   "chamber_c": 20,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 970,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PLA/blend_silk_pla",
+   "verified": false
+  },
+  {
+   "id": "prusament/rpla",
+   "manufacturer": "Prusament",
+   "name": "rPLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Algae",
+     "hex": "#674B42",
+     "td": null
+    },
+    {
+     "name": "Corn",
+     "hex": "#CCC9C0",
+     "td": null
+    },
+    {
+     "name": "Wine",
+     "hex": "#5E4940",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 195,
+    "max": 215,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 40,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://storage.googleapis.com/prusa3d-content-prod-14e8-wordpress-prusament-prod/2023/11/0eaa8597-prusament-rpla-natural-pigments-technical-data-sheet.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PLA/rpla",
+   "verified": false
+  },
+  {
+   "id": "prusament/pla-woodfill",
+   "manufacturer": "Prusament",
+   "name": "PLA Woodfill",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.04,
+   "density_g_cm3": 1.16,
+   "colors": [
+    {
+     "name": "Chocolate Brown",
+     "hex": "#866C56",
+     "td": null
+    },
+    {
+     "name": "Linden Light",
+     "hex": "#F4D3AE",
+     "td": null
+    },
+    {
+     "name": "Pastel Brown",
+     "hex": "#826857",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 185,
+    "max": 205,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://storage.googleapis.com/prusa3d-content-prod-14e8-wordpress-prusament-prod/2024/07/286c3bc0-tds_prusament_woodfill-linden-light_en.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PLA/woodfill",
+   "verified": false
+  },
+  {
+   "id": "prusament/mystic-premium-pla",
+   "manufacturer": "Prusament",
+   "name": "Mystic Premium PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.05,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Brown",
+     "hex": "#482E31",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#555846",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 215,
+    "max": 215,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PLA/mystic_premium_pla",
+   "verified": false
+  },
+  {
+   "id": "prusament/petg-v0",
+   "manufacturer": "Prusament",
+   "name": "PETG V0",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Jet Black",
+     "hex": "#24292A",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#DFDFD3",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://prusament.com/wp-content/uploads/2023/07/PETG_V0_ENG.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PETG/petg_v0",
+   "verified": false
+  },
+  {
+   "id": "prusament/tpu-95a",
+   "manufacturer": "Prusament",
+   "name": "TPU 95A",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.06,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Jet Black",
+     "hex": "#232323",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#E8DCC6",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 55,
+    "max": 75,
+    "recommended": null
+   },
+   "chamber_c": 30,
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://storage.googleapis.com/prusa3d-content-prod-14e8-wordpress-prusament-prod/2025/05/80316f6d-tds-prusament_tpu_95a_en-1.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/TPU/tpu_95a",
+   "verified": false
+  },
+  {
+   "id": "prusament/pla-recycled",
+   "manufacturer": "Prusament",
+   "name": "PLA Recycled",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.05,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "PLA Recycled",
+     "hex": "#808577",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 40,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://prusament.com/wp-content/uploads/2021/12/7_PLA-Recycled_Prusament_TDS_2021_V4.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PLA/pla_recycled",
+   "verified": false
+  },
+  {
+   "id": "prusament/petg-cf",
+   "manufacturer": "Prusament",
+   "name": "PETG CF",
+   "material": "petg",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#3B353A",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 255,
+    "max": 275,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 100,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PETG/cf_petg",
+   "verified": false
+  },
+  {
+   "id": "prusament/matte-petg",
+   "manufacturer": "Prusament",
+   "name": "Matte PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.4,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#303635",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 90,
+    "recommended": null
+   },
+   "chamber_c": 35,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PETG/matte_petg",
+   "verified": false
+  },
+  {
+   "id": "prusament/petg-magnetite",
+   "manufacturer": "Prusament",
+   "name": "PETG Magnetite",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.82,
+   "colors": [
+    {
+     "name": "Grey",
+     "hex": "#2D2D2D",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 265,
+    "max": 275,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 90,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://storage.googleapis.com/prusa3d-content-prod-14e8-wordpress-prusament-prod/2025/01/7cdc9586-technical-data-sheet-2.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PETG/petg_magnetite",
+   "verified": false
+  },
+  {
+   "id": "prusament/petg-tungsten",
+   "manufacturer": "Prusament",
+   "name": "PETG Tungsten",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 4,
+   "colors": [
+    {
+     "name": "75%",
+     "hex": "#535353",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 250,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 100,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://prusament.com/wp-content/uploads/2023/03/TDS_Prusament-PETG-Tungsten-75_EN-1.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PETG/petg_tungsten",
+   "verified": false
+  },
+  {
+   "id": "prusament/pvb",
+   "manufacturer": "Prusament",
+   "name": "PVB",
+   "material": "other",
+   "grade": "PVB",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.1,
+   "colors": [
+    {
+     "name": "Bright Green",
+     "hex": "#51CC00",
+     "td": null
+    },
+    {
+     "name": "Bright Green Transparent",
+     "hex": "#D3DE5F",
+     "td": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "#2941BD",
+     "td": null
+    },
+    {
+     "name": "Dark Blue Transparent",
+     "hex": "#0061C0",
+     "td": null
+    },
+    {
+     "name": "Light Yellow",
+     "hex": "#F6FB38",
+     "td": null
+    },
+    {
+     "name": "Light Yellow Transparent",
+     "hex": "#F3DD3B",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Natural Transparent",
+     "hex": "#E3E4DF",
+     "td": null
+    },
+    {
+     "name": "Prusa Orange",
+     "hex": "#FF6600",
+     "td": null
+    },
+    {
+     "name": "Prusa Orange Transparent",
+     "hex": "#FD8C13",
+     "td": null
+    },
+    {
+     "name": "Smoky Black",
+     "hex": "#7B7B7B",
+     "td": null
+    },
+    {
+     "name": "Smoky Black Transparent",
+     "hex": "#BDBFBC",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 205,
+    "max": 225,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 80,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://prusament.com/wp-content/uploads/2022/10/PVB_Prusament_TDS_2021_10_EN.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PVB/pvb",
+   "verified": false
+  },
+  {
+   "id": "prusament/pc-blend",
+   "manufacturer": "Prusament",
+   "name": "PC Blend",
+   "material": "pc",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.22,
+   "colors": [
+    {
+     "name": "Jet Black",
+     "hex": "#24292A",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#DFDFD3",
+     "td": null
+    },
+    {
+     "name": "Prusa Orange",
+     "hex": "#EA5E1A",
+     "td": null
+    },
+    {
+     "name": "Prusa Pro Green",
+     "hex": "#26BFA3",
+     "td": null
+    },
+    {
+     "name": "Urban Grey",
+     "hex": "#999596",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 265,
+    "max": 285,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 100,
+    "max": 120,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 970,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://prusament.com/wp-content/uploads/2022/10/PCBlend_Prusament_TDS_2022_16_EN.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PC/pc_blend",
+   "verified": false
+  },
+  {
+   "id": "prusament/pc",
+   "manufacturer": "Prusament",
+   "name": "PC",
+   "material": "pc",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.22,
+   "colors": [
+    {
+     "name": "Blend Prusa Green",
+     "hex": "#00FA9A",
+     "td": null
+    },
+    {
+     "name": "Space Grade Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 265,
+    "max": 285,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 100,
+    "max": 120,
+    "recommended": null
+   },
+   "chamber_c": 90,
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 970,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 850,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PC/pc",
+   "verified": false
+  },
+  {
+   "id": "prusament/pc-cf",
+   "manufacturer": "Prusament",
+   "name": "PC-CF",
+   "material": "pc",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.04,
+   "density_g_cm3": 1.22,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#2B2B2B",
+     "td": null
+    },
+    {
+     "name": "Blend Carbon Fiber Black",
+     "hex": "#262727",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 275,
+    "max": 295,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 100,
+    "max": 120,
+    "recommended": null
+   },
+   "chamber_c": 90,
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 800,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 25,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://prusament.com/wp-content/uploads/2023/04/TDS_Prusament-PCCF_2023_EN.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PC/pc_cf",
+   "verified": false
+  },
+  {
+   "id": "prusament/pp-cf",
+   "manufacturer": "Prusament",
+   "name": "PP-CF",
+   "material": "pp",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.04,
+   "density_g_cm3": 0.91,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#333333",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 260,
+    "max": 280,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 75,
+    "max": 95,
+    "recommended": null
+   },
+   "chamber_c": 50,
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 650,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://storage.googleapis.com/prusa3d-content-prod-14e8-wordpress-prusament-prod/2025/01/b4ef2bf6-technical-data-sheet-1.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PP/pp_cf",
+   "verified": false
+  },
+  {
+   "id": "prusament/pp-gf",
+   "manufacturer": "Prusament",
+   "name": "PP-GF",
+   "material": "pp",
+   "fill": [
+    "glass_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.04,
+   "density_g_cm3": 1.12,
+   "colors": [
+    {
+     "name": "Natural",
+     "hex": "#CFD1C0",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 235,
+    "max": 255,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 85,
+    "max": 105,
+    "recommended": null
+   },
+   "chamber_c": 50,
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 850,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://storage.googleapis.com/prusa3d-content-prod-14e8-wordpress-prusament-prod/2025/07/512923fd-tds_pp_glass_fiber_en.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PP/pp_gf",
+   "verified": false
+  },
+  {
+   "id": "prusament/pa11-cf",
+   "manufacturer": "Prusament",
+   "name": "PA11-CF",
+   "material": "pa",
+   "grade": "PA11",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.04,
+   "density_g_cm3": 1.11,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#535456",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 275,
+    "max": 295,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 100,
+    "max": 120,
+    "recommended": null
+   },
+   "chamber_c": 75,
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 800,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 25,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://prusament.com/wp-content/uploads/2022/08/TDS_PA11CFB.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PA11/pa11_cf",
+   "verified": false
+  },
+  {
+   "id": "prusament/pei-1010",
+   "manufacturer": "Prusament",
+   "name": "PEI 1010",
+   "material": "pei",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.05,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Natural",
+     "hex": "#D69944",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 400,
+    "max": 420,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 140,
+    "max": 160,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 25,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://storage.googleapis.com/prusa3d-content-prod-14e8-wordpress-prusament-prod/2024/09/53ee8f5e-tds_prusament_pei-1010_en.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "prusament/PEI/pei_1010",
+   "verified": false
+  }
+ ]
+}

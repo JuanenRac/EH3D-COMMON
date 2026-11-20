@@ -1,0 +1,1866 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Overture",
+ "filaments": [
+  {
+   "id": "overture/pla",
+   "manufacturer": "Overture",
+   "name": "PLA",
+   "material": "pla",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Aurora Berry",
+     "hex": "#AD396A",
+     "td": null
+    },
+    {
+     "name": "Avocado",
+     "hex": "#959910",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#033877",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#D7A86A",
+     "td": null
+    },
+    {
+     "name": "Cement Gray",
+     "hex": "#697272",
+     "td": null
+    },
+    {
+     "name": "Champagne Frost",
+     "hex": "#ECCEA7",
+     "td": null
+    },
+    {
+     "name": "Chocolate",
+     "hex": "#57361C",
+     "td": null
+    },
+    {
+     "name": "Christmas Prism",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Cold White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Fresh Red",
+     "hex": "#E31A1F",
+     "td": null
+    },
+    {
+     "name": "Glow in Dark",
+     "hex": "#EBF1E0",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://overture3d.com/cdn/shop/files/OVERTURE_PLA_TDS_EN_V5.1_a4102671-a3b0-416f-9191-7e6feb681e3e.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/PLA/pla",
+   "verified": false
+  },
+  {
+   "id": "overture/matte-pla",
+   "manufacturer": "Overture",
+   "name": "Matte PLA",
+   "material": "pla",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.3,
+   "colors": [
+    {
+     "name": "6-Color",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Army Green",
+     "hex": "#6E8451",
+     "td": null
+    },
+    {
+     "name": "Baby Pink",
+     "hex": "#FFE0E0",
+     "td": null
+    },
+    {
+     "name": "Bamboo Green",
+     "hex": "#A1D66B",
+     "td": null
+    },
+    {
+     "name": "Beige",
+     "hex": "#E7EFD7",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#1D1E1E",
+     "td": null
+    },
+    {
+     "name": "Black & White",
+     "hex": "#A6A9A8",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#005DA4",
+     "td": null
+    },
+    {
+     "name": "Blue-Red",
+     "hex": "#5162A0",
+     "td": null
+    },
+    {
+     "name": "Brick Red",
+     "hex": "#D22D2F",
+     "td": null
+    },
+    {
+     "name": "Butter Yellow",
+     "hex": "#FCFAA6",
+     "td": null
+    },
+    {
+     "name": "Candy Rainbow",
+     "hex": "#8E8E6A",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://overture3d.com/cdn/shop/files/OVERTURE_MATTE_PLA_TDS_EN_V5.1_0ae7a33c-dd34-49b9-a202-c6ba0fddfdcb.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/PLA/matte_pla",
+   "verified": false
+  },
+  {
+   "id": "overture/silk-pla",
+   "manufacturer": "Overture",
+   "name": "Silk PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.19,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#0066D9",
+     "td": null
+    },
+    {
+     "name": "Caramel",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Christmas Red",
+     "hex": "#D33D3D",
+     "td": null
+    },
+    {
+     "name": "Chrome Gray",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Copper",
+     "hex": "#C06341",
+     "td": null
+    },
+    {
+     "name": "Copper Shore",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Colors Blue-Silver",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Colors Blue-Yellow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Colors Gold-Silver",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Colors Green-Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Colors Green-Magenta",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Colors Green-Silver",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://overture3d.com/cdn/shop/files/OVERTURE_SILK_PLA_TDS_EN_V5.1_09e26446-13ed-49b4-a85f-b8a460d8b16e.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/PLA/silk_pla",
+   "verified": false
+  },
+  {
+   "id": "overture/pla-professional",
+   "manufacturer": "Overture",
+   "name": "PLA Professional",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Army Green",
+     "hex": "#868958",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Bronze",
+     "hex": "#693721",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#AB713E",
+     "td": null
+    },
+    {
+     "name": "Champagne",
+     "hex": "#C0C4BB",
+     "td": null
+    },
+    {
+     "name": "Chocolate",
+     "hex": "#50311E",
+     "td": null
+    },
+    {
+     "name": "Copper",
+     "hex": "#C9774B",
+     "td": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "#2941BD",
+     "td": null
+    },
+    {
+     "name": "Digital Blue",
+     "hex": "#0099E6",
+     "td": null
+    },
+    {
+     "name": "Fresh Red",
+     "hex": "#F00C00",
+     "td": null
+    },
+    {
+     "name": "Gray Blue",
+     "hex": "#97B2D2",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#0CCF81",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://overture3d.com/cdn/shop/files/OVERTURE_PLA_PROFESSIONAL_TDS_EN_V5.1_b6097b34-61cd-4f4c-9f6e-260f44e22ebe.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/PLA/professional",
+   "verified": false
+  },
+  {
+   "id": "overture/pla-easy",
+   "manufacturer": "Overture",
+   "name": "PLA Easy",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.2,
+   "colors": [
+    {
+     "name": "Beige",
+     "hex": "#F7F6ED",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Caramel",
+     "hex": "#A88D5D",
+     "td": null
+    },
+    {
+     "name": "Cobalt Blue",
+     "hex": "#274DA0",
+     "td": null
+    },
+    {
+     "name": "Digital Blue",
+     "hex": "#0066D9",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#4DFF64",
+     "td": null
+    },
+    {
+     "name": "Magenta",
+     "hex": "#FD3DB5",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#D9D8DE",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF5F2E",
+     "td": null
+    },
+    {
+     "name": "Pine Green",
+     "hex": "#00A5A8",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#FFC0CB",
+     "td": null
+    },
+    {
+     "name": "Pumpkin Orange",
+     "hex": "#FF8D5C",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://overture3d.com/cdn/shop/files/OVERTURE__EASY_PLA_TDS_EN_V5.1_f2df1ff7-e3da-4ae4-8c69-7e90319c05c1.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/PLA/easy",
+   "verified": false
+  },
+  {
+   "id": "overture/petg-basic",
+   "manufacturer": "Overture",
+   "name": "PETG Basic",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Army Green",
+     "hex": "#404720",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#034E89",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#A47C48",
+     "td": null
+    },
+    {
+     "name": "Digital Blue",
+     "hex": "#0378D0",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#CE8D00",
+     "td": null
+    },
+    {
+     "name": "Grass Green",
+     "hex": "#C4D802",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#38AF69",
+     "td": null
+    },
+    {
+     "name": "Light Gray",
+     "hex": "#D5D8DD",
+     "td": null
+    },
+    {
+     "name": "Magenta",
+     "hex": "#C80181",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF854D",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#F79DBC",
+     "td": null
+    }
+   ],
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/PETG/basic",
+   "verified": false
+  },
+  {
+   "id": "overture/petg",
+   "manufacturer": "Overture",
+   "name": "PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.3,
+   "colors": [
+    {
+     "name": "Army Green",
+     "hex": "#404720",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#A47C48",
+     "td": null
+    },
+    {
+     "name": "Digital Blue",
+     "hex": "#0378D0",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#CE8D00",
+     "td": null
+    },
+    {
+     "name": "Grass Green",
+     "hex": "#61C680",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#089A45",
+     "td": null
+    },
+    {
+     "name": "Light Gray",
+     "hex": "#949A9E",
+     "td": null
+    },
+    {
+     "name": "Magenta",
+     "hex": "#C80181",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF854D",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#F79DBC",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 65,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://overture3d.com/cdn/shop/files/OVERTURE_PETG_TDS_EN_V5.2_2.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "overture/pla-rock",
+   "manufacturer": "Overture",
+   "name": "PLA Rock",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.37,
+   "colors": [
+    {
+     "name": "Alpine Forest",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Barrier Reef",
+     "hex": "#C2C0BA",
+     "td": null
+    },
+    {
+     "name": "Cheesewood",
+     "hex": "#DA995F",
+     "td": null
+    },
+    {
+     "name": "Fossil Rock",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Glacier Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Haze Gray",
+     "hex": "#7591A4",
+     "td": null
+    },
+    {
+     "name": "Jarrah",
+     "hex": "#B76E5D",
+     "td": null
+    },
+    {
+     "name": "Marigold Yellow",
+     "hex": "#FFDA47",
+     "td": null
+    },
+    {
+     "name": "Mars Red",
+     "hex": "#D76D3B",
+     "td": null
+    },
+    {
+     "name": "Mist Gray",
+     "hex": "#CACCCB",
+     "td": null
+    },
+    {
+     "name": "Moonlight Gray",
+     "hex": "#BEC3CB",
+     "td": null
+    },
+    {
+     "name": "Muted Gray",
+     "hex": "#929292",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://overture3d.com/cdn/shop/files/OVERTURE__ROCK_PLA_TDS_EN_V5.1.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/PLA/pla_rock",
+   "verified": false
+  },
+  {
+   "id": "overture/tpu",
+   "manufacturer": "Overture",
+   "name": "TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.18,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#274E96",
+     "td": null
+    },
+    {
+     "name": "Bright Pink",
+     "hex": "#FFBDD1",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#A47C48",
+     "td": null
+    },
+    {
+     "name": "Digital Blue",
+     "hex": "#0378D0",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#9F9F9F",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#00EB75",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#E2E7E9",
+     "td": null
+    },
+    {
+     "name": "Light Green",
+     "hex": "#A0FD62",
+     "td": null
+    },
+    {
+     "name": "Neon Green",
+     "hex": "#2EFF6D",
+     "td": null
+    },
+    {
+     "name": "Neon Orange",
+     "hex": "#FA8E36",
+     "td": null
+    },
+    {
+     "name": "Neon Red",
+     "hex": "#FF3F28",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 50,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://overture3d.com/cdn/shop/files/OVERTURE_TPU_95A_2.0_TDS_EN.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/TPU/tpu",
+   "verified": false
+  },
+  {
+   "id": "overture/high-speed-tpu",
+   "manufacturer": "Overture",
+   "name": "High Speed TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.19,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#F5F5F4",
+     "td": null
+    },
+    {
+     "name": "Grass Green",
+     "hex": "#61C680",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#959FA1",
+     "td": null
+    },
+    {
+     "name": "Luminous Pink",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Neon Magenta",
+     "hex": "#FD3DB5",
+     "td": null
+    },
+    {
+     "name": "Neon Yellow",
+     "hex": "#E2FF4D",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF8B47",
+     "td": null
+    },
+    {
+     "name": "Pastel Rose",
+     "hex": "#CD9F8B",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#F092B3",
+     "td": null
+    },
+    {
+     "name": "Translucent Blue",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "Translucent Green",
+     "hex": "#089A45",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://overture3d.com/cdn/shop/files/OVERTURE__HIGH_SPEED_TPU_TDS_EN_V5.1_112e83e3-da49-495b-bd52-96b491f2fc64.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/TPU/high_speed_tpu",
+   "verified": false
+  },
+  {
+   "id": "overture/pla-cream",
+   "manufacturer": "Overture",
+   "name": "PLA Cream",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.16,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0266BB",
+     "td": null
+    },
+    {
+     "name": "Grass Green",
+     "hex": "#D0FF61",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#BCBFC2",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#60AB61",
+     "td": null
+    },
+    {
+     "name": "Light Blue",
+     "hex": "#8ED9F9",
+     "td": null
+    },
+    {
+     "name": "Light Brown",
+     "hex": "#D8C094",
+     "td": null
+    },
+    {
+     "name": "Light Gray",
+     "hex": "#E0E0DC",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF9A14",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#E8BEDD",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#8D65C7",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#FC496D",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/PLA/cream",
+   "verified": false
+  },
+  {
+   "id": "overture/abs-basic",
+   "manufacturer": "Overture",
+   "name": "ABS Basic",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.05,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#00628F",
+     "td": null
+    },
+    {
+     "name": "Dark Red",
+     "hex": "#FF311F",
+     "td": null
+    },
+    {
+     "name": "Diamond Gray",
+     "hex": "#8C8C8C",
+     "td": null
+    },
+    {
+     "name": "Diamond Orange",
+     "hex": "#FF8133",
+     "td": null
+    },
+    {
+     "name": "Diamond Purple",
+     "hex": "#A04ED0",
+     "td": null
+    },
+    {
+     "name": "Glow Green",
+     "hex": "#EBEFEE",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#CACAC9",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#3D9441",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#F8F8EE",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#7142A3",
+     "td": null
+    },
+    {
+     "name": "Slate Gray",
+     "hex": "#91A0B6",
+     "td": null
+    }
+   ],
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/ABS/basic",
+   "verified": false
+  },
+  {
+   "id": "overture/asa",
+   "manufacturer": "Overture",
+   "name": "ASA",
+   "material": "asa",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.14,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#926043",
+     "td": null
+    },
+    {
+     "name": "Diamond Blue",
+     "hex": "#2C3294",
+     "td": null
+    },
+    {
+     "name": "Diamond Green",
+     "hex": "#26A648",
+     "td": null
+    },
+    {
+     "name": "Diamond Red",
+     "hex": "#D32E1A",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#BDC8C8",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#3D9441",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#D9D8DE",
+     "td": null
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#857C00",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF8E24",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#E60000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 95,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://overture3d.com/cdn/shop/files/OVERTURE_ASA_TDS_EN_V5.1_60023de4-0977-4f96-9c55-0d94bacc7d0f.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/ASA/asa",
+   "verified": false
+  },
+  {
+   "id": "overture/asa-basic",
+   "manufacturer": "Overture",
+   "name": "ASA Basic",
+   "material": "asa",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.05,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#002979",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#785F53",
+     "td": null
+    },
+    {
+     "name": "Diamond Blue",
+     "hex": "#324485",
+     "td": null
+    },
+    {
+     "name": "Diamond Green",
+     "hex": "#26A648",
+     "td": null
+    },
+    {
+     "name": "Diamond Red",
+     "hex": "#C01616",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#B5B9BA",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#01AA5E",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#F1E6B3",
+     "td": null
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#6B7550",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF9A40",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#AF251E",
+     "td": null
+    }
+   ],
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/ASA/basic",
+   "verified": false
+  },
+  {
+   "id": "overture/abs",
+   "manufacturer": "Overture",
+   "name": "ABS",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.15,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Dark Red",
+     "hex": "#DE1619",
+     "td": null
+    },
+    {
+     "name": "Diamond Gray",
+     "hex": "#697272",
+     "td": null
+    },
+    {
+     "name": "Diamond Orange",
+     "hex": "#FF8133",
+     "td": null
+    },
+    {
+     "name": "Diamond Purple",
+     "hex": "#8873C7",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#94A7B7",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#3D9441",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#D9D8DE",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#8D65C7",
+     "td": null
+    },
+    {
+     "name": "Slate Gray",
+     "hex": "#7D8EAA",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 245,
+    "max": 265,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 100,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://overture3d.com/cdn/shop/files/OVERTURE_ABS_TDS_EN_V5.1_9d827267-f215-4734-9c0b-c04232b8df92.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/ABS/abs",
+   "verified": false
+  },
+  {
+   "id": "overture/pla-super",
+   "manufacturer": "Overture",
+   "name": "PLA Super",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#0CCF81",
+     "td": null
+    },
+    {
+     "name": "Light Brown",
+     "hex": "#B8AF99",
+     "td": null
+    },
+    {
+     "name": "Light Gray",
+     "hex": "#BDC8C8",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF7A33",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#E71280",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#8D65C7",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#E60000",
+     "td": null
+    },
+    {
+     "name": "Sakura Pink",
+     "hex": "#FFCCCD",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FFD342",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://overture3d.com/cdn/shop/files/OVERTURE_SUPER_PLA__TDS_EN_V5.1_fff22cb0-35bb-4889-9e0a-f8bbb914a865.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/PLA/super",
+   "verified": false
+  },
+  {
+   "id": "overture/pla-turbo-rapid",
+   "manufacturer": "Overture",
+   "name": "PLA Turbo Rapid",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.16,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#A45B27",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#949A9E",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#00E0B4",
+     "td": null
+    },
+    {
+     "name": "Marble Gray",
+     "hex": "#ECEFED",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#F00C00",
+     "td": null
+    },
+    {
+     "name": "Ster White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/PLA/turbo_rapid",
+   "verified": false
+  },
+  {
+   "id": "overture/pla-air",
+   "manufacturer": "Overture",
+   "name": "PLA Air",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.16,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Light Gray",
+     "hex": "#BDC8C8",
+     "td": null
+    },
+    {
+     "name": "Neon Green",
+     "hex": "#9FEC41",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FD9106",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F0EBE5",
+     "td": null
+    },
+    {
+     "name": "Wood",
+     "hex": "#CAAC78",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F3C102",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/PLA/air",
+   "verified": false
+  },
+  {
+   "id": "overture/pla-easy-glow",
+   "manufacturer": "Overture",
+   "name": "PLA Easy Glow",
+   "material": "pla",
+   "fill": [
+    "glow"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#5FBCDD",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF9C66",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#EBFF57",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/PLA/easy_glow",
+   "verified": false
+  },
+  {
+   "id": "overture/luminous-high-speed-glow-tpu",
+   "manufacturer": "Overture",
+   "name": "Luminous High Speed Glow TPU",
+   "material": "tpu",
+   "fill": [
+    "glow"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Electric Indigo",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/TPU/luminous_high_speed_glow_tpu",
+   "verified": false
+  },
+  {
+   "id": "overture/pla-cf",
+   "manufacturer": "Overture",
+   "name": "PLA CF",
+   "material": "pla",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Midnight Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/PLA/cf_pla",
+   "verified": false
+  },
+  {
+   "id": "overture/glow-pla",
+   "manufacturer": "Overture",
+   "name": "Glow PLA",
+   "material": "pla",
+   "fill": [
+    "glow"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "White (Green in Dark)",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "overture/PLA/glow_pla",
+   "verified": false
+  }
+ ]
+}

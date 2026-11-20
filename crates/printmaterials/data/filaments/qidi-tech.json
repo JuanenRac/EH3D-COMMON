@@ -1,0 +1,1409 @@
+{
+ "schema_version": 1,
+ "manufacturer": "QIDI Tech",
+ "filaments": [
+  {
+   "id": "qidi-tech/pla-basic",
+   "manufacturer": "QIDI Tech",
+   "name": "PLA Basic",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.17,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0074BC",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#6D3F2B",
+     "td": null
+    },
+    {
+     "name": "Dark Green",
+     "hex": "#1F4E3A",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#888B8D",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#D3100C",
+     "td": null
+    },
+    {
+     "name": "Skin",
+     "hex": "#E3BC9A",
+     "td": null
+    },
+    {
+     "name": "Sky Blue",
+     "hex": "#9BCBEB",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F2F0EB",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F8C711",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/PLA/basic",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/pla-rapido",
+   "manufacturer": "QIDI Tech",
+   "name": "PLA Rapido",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.22,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#212322",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#00358E",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#A3A3A0",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#009F4D",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF6A13",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#FF5869",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#AD3DA0",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#C1101D",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FCE300",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 35,
+    "max": 55,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/PLA/rapido",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/petg-basic",
+   "manufacturer": "QIDI Tech",
+   "name": "PETG Basic",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.26,
+   "colors": [
+    {
+     "name": "Beige",
+     "hex": "#D0B891",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Cyan",
+     "hex": "#00AEEF",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#1F4E3A",
+     "td": null
+    },
+    {
+     "name": "Klein Blue",
+     "hex": "#0065BD",
+     "td": null
+    },
+    {
+     "name": "Light Gray",
+     "hex": "#D1D3D4",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#D3100C",
+     "td": null
+    },
+    {
+     "name": "Skin",
+     "hex": "#E3BC9A",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F2F0EB",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F6D155",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 280,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 80,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/PETG/basic",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/pla-matte-rapido",
+   "manufacturer": "QIDI Tech",
+   "name": "PLA Matte Rapido",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.32,
+   "colors": [
+    {
+     "name": "Ash Gray",
+     "hex": "#313335",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#212322",
+     "td": null
+    },
+    {
+     "name": "Kraft",
+     "hex": "#C6AA76",
+     "td": null
+    },
+    {
+     "name": "Malt Clay",
+     "hex": "#876E59",
+     "td": null
+    },
+    {
+     "name": "Navy Blue",
+     "hex": "#353E47",
+     "td": null
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#555B43",
+     "td": null
+    },
+    {
+     "name": "Tech Gray",
+     "hex": "#C1C1C1",
+     "td": null
+    },
+    {
+     "name": "Warm Gray",
+     "hex": "#B7ADA5",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/PLA/matte_rapido",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/petg-rapido",
+   "manufacturer": "QIDI Tech",
+   "name": "PETG Rapido",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.31,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#0E0E0F",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#00187F",
+     "td": null
+    },
+    {
+     "name": "Copper",
+     "hex": "#604629",
+     "td": null
+    },
+    {
+     "name": "Diffuse Clear White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Grass Green",
+     "hex": "#7CCE51",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#A0A0A0",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#AF0009",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FCE300",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 275,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 80,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/PETG/rapido",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/odorless-abs-rapido",
+   "manufacturer": "QIDI Tech",
+   "name": "Odorless ABS Rapido",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.05,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#3140B3",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#B6B6B6",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#6AC72F",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#663197",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#E92828",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#B9BCC1",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FFEC2D",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 100,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/ABS/odorless_rapido",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/pla-matte-basic",
+   "manufacturer": "QIDI Tech",
+   "name": "PLA Matte Basic",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.32,
+   "colors": [
+    {
+     "name": "Coconut White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Latte Brown",
+     "hex": "#8C6952",
+     "td": null
+    },
+    {
+     "name": "Malt Green",
+     "hex": "#9AD24B",
+     "td": null
+    },
+    {
+     "name": "Milky Green",
+     "hex": "#D8E9DB",
+     "td": null
+    },
+    {
+     "name": "Mint Blue",
+     "hex": "#9CD4EB",
+     "td": null
+    },
+    {
+     "name": "Peach Pink",
+     "hex": "#F5D3D6",
+     "td": null
+    },
+    {
+     "name": "Sesame Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Watermelon Red",
+     "hex": "#F45D6D",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/PLA/matte_basic",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/asa",
+   "manufacturer": "QIDI Tech",
+   "name": "ASA",
+   "material": "asa",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.07,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0F55C6",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#593729",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#BEBFC2",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#7FC61B",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#C51223",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F4DB67",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 100,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/ASA/asa",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/petg-tough",
+   "manufacturer": "QIDI Tech",
+   "name": "PETG-Tough",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0094EB",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#2A9D4A",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#EE8F00",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#DF0000",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F4D875",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 80,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/PETG/petg_tough",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/abs-rapido",
+   "manufacturer": "QIDI Tech",
+   "name": "ABS Rapido",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.04,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#00358E",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#A0A0A0",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#098C3E",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#8E0422",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FCE300",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 280,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 100,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/ABS/rapido",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/petg-translucent",
+   "manufacturer": "QIDI Tech",
+   "name": "PETG Translucent",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.26,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#333333",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#3399FF",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#E0E0E0",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#9933FF",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#FF4D4D",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FFFF33",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 280,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 80,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/PETG/translucent",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/pla-cf",
+   "manufacturer": "QIDI Tech",
+   "name": "PLA-CF",
+   "material": "pla",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Dark Red",
+     "hex": "#9A5C6B",
+     "td": null
+    },
+    {
+     "name": "Lavender Purple",
+     "hex": "#660066",
+     "td": null
+    },
+    {
+     "name": "Midnight Blue",
+     "hex": "#566B8F",
+     "td": null
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#67785A",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 40,
+    "max": 60,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/PLA/cf",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/pla-metal-rapido",
+   "manufacturer": "QIDI Tech",
+   "name": "PLA Metal Rapido",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.2,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#4A6992",
+     "td": null
+    },
+    {
+     "name": "Coffee Gold",
+     "hex": "#876249",
+     "td": null
+    },
+    {
+     "name": "Midnight Green",
+     "hex": "#46756A",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#DDDDDD",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 60,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/PLA/metal_rapido",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/pla-silk-rapido",
+   "manufacturer": "QIDI Tech",
+   "name": "PLA Silk Rapido",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Bronze",
+     "hex": "#BEB09E",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#BDF2E0",
+     "td": null
+    },
+    {
+     "name": "Rose Red",
+     "hex": "#D6A2A1",
+     "td": null
+    },
+    {
+     "name": "Skin",
+     "hex": "#F2DCC2",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 60,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/PLA/silk_rapido",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/petg-gf",
+   "manufacturer": "QIDI Tech",
+   "name": "PETG-GF",
+   "material": "petg",
+   "fill": [
+    "glass_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.26,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Macchiato Brown",
+     "hex": "#AC8266",
+     "td": null
+    },
+    {
+     "name": "Skylight Blue",
+     "hex": "#C8E0E0",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 80,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/PETG/gf",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/abs-gf25",
+   "manufacturer": "QIDI Tech",
+   "name": "ABS-GF25",
+   "material": "abs",
+   "fill": [
+    "glass_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.15,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#00A247",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#7F347C",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#C03023",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 250,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 100,
+    "max": 110,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/ABS/gf25",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/abs-metal-rapido",
+   "manufacturer": "QIDI Tech",
+   "name": "ABS Metal Rapido",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.06,
+   "colors": [
+    {
+     "name": "Champagne Gold",
+     "hex": "#C9C6A5",
+     "td": null
+    },
+    {
+     "name": "Midnight Green",
+     "hex": "#40746D",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#ADADAD",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 100,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/ABS/metal_rapido",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/pla-wood",
+   "manufacturer": "QIDI Tech",
+   "name": "PLA Wood",
+   "material": "pla",
+   "fill": [
+    "wood"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Cedar Brown",
+     "hex": "#A67F6B",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#B7916C",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/PLA/wood",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/asa-aero",
+   "manufacturer": "QIDI Tech",
+   "name": "ASA-Aero",
+   "material": "asa",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.07,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#E5E9E3",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 280,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/ASA/aero",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/tpu-95a-hf",
+   "manufacturer": "QIDI Tech",
+   "name": "TPU 95A HF",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.15,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 20,
+    "max": 50,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/TPU/95a_hf",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/tpu-aero",
+   "manufacturer": "QIDI Tech",
+   "name": "TPU-Aero",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 0.74,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 45,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/TPU/aero",
+   "verified": false
+  },
+  {
+   "id": "qidi-tech/petg-cf",
+   "manufacturer": "QIDI Tech",
+   "name": "PETG-CF",
+   "material": "petg",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.31,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 80,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "qidi_tech/PETG/cf",
+   "verified": false
+  }
+ ]
+}

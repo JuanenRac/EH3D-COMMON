@@ -1,0 +1,2545 @@
+{
+ "schema_version": 1,
+ "manufacturer": "SUNLU",
+ "filaments": [
+  {
+   "id": "sunlu/pla",
+   "manufacturer": "SUNLU",
+   "name": "PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Beige",
+     "hex": "#EAD8AB",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0022FF",
+     "td": null
+    },
+    {
+     "name": "Blue Grey",
+     "hex": "#4F7BBB",
+     "td": null
+    },
+    {
+     "name": "Bone White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#6E4325",
+     "td": null
+    },
+    {
+     "name": "Ceramic",
+     "hex": "#F4F9FF",
+     "td": null
+    },
+    {
+     "name": "Ceramic White",
+     "hex": "#F4F9FF",
+     "td": null
+    },
+    {
+     "name": "Cherry Red",
+     "hex": "#F37672",
+     "td": null
+    },
+    {
+     "name": "Coffee",
+     "hex": "#E7A662",
+     "td": null
+    },
+    {
+     "name": "Coffee Brown",
+     "hex": "#9A5630",
+     "td": null
+    },
+    {
+     "name": "Coffee-Brown(Coffee)",
+     "hex": "#9A5630",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260618/73632671781747576290.pdf?filename=TDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/PLA/pla",
+   "verified": false
+  },
+  {
+   "id": "sunlu/pla-pla",
+   "manufacturer": "SUNLU",
+   "name": "PLA+ PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Beige",
+     "hex": "#EAD8AB",
+     "td": null
+    },
+    {
+     "name": "Beige(Skin)",
+     "hex": "#EAD8AB",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#090909",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0066D9",
+     "td": null
+    },
+    {
+     "name": "Bluegrey",
+     "hex": "#6299DF",
+     "td": null
+    },
+    {
+     "name": "Blue(Klein Blue)",
+     "hex": "#282099",
+     "td": null
+    },
+    {
+     "name": "Bone White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Ceramic",
+     "hex": "#F4F9FF",
+     "td": null
+    },
+    {
+     "name": "Ceramic White",
+     "hex": "#F4F9FF",
+     "td": null
+    },
+    {
+     "name": "Cherry Red",
+     "hex": "#FE5953",
+     "td": null
+    },
+    {
+     "name": "Chocolate",
+     "hex": "#6C4336",
+     "td": null
+    },
+    {
+     "name": "Coffee",
+     "hex": "#E7A662",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 205,
+    "max": 245,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260618/65301701781747847057.pdf?filename=TDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/PLA/pla+",
+   "verified": false
+  },
+  {
+   "id": "sunlu/petg",
+   "manufacturer": "SUNLU",
+   "name": "PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Beige",
+     "hex": "#EAD8AB",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#363EE1",
+     "td": null
+    },
+    {
+     "name": "Bone White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Brown Coffee",
+     "hex": "#C37C4F",
+     "td": null
+    },
+    {
+     "name": "Ceramic",
+     "hex": "#F4F9FF",
+     "td": null
+    },
+    {
+     "name": "Cherry Red",
+     "hex": "#E2484B",
+     "td": null
+    },
+    {
+     "name": "Clear(Transparent)",
+     "hex": "#D6D5D0",
+     "td": null
+    },
+    {
+     "name": "Coffee Brown",
+     "hex": "#9A5630",
+     "td": null
+    },
+    {
+     "name": "Cyan",
+     "hex": "#65FDFD",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#05AA3D",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#808080",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 60,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260330/f27808f0-3a19-49e3-bd79-6e846d6f4c15.pdf?filename=TDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "sunlu/high-speed-pla",
+   "manufacturer": "SUNLU",
+   "name": "High Speed PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.28,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#005BD3",
+     "td": null
+    },
+    {
+     "name": "Blue(Klein Blue)",
+     "hex": "#005BD3",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#05AA3D",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#808080",
+     "td": null
+    },
+    {
+     "name": "Marble Bone Beige",
+     "hex": "#EFEFEF",
+     "td": null
+    },
+    {
+     "name": "Marble Cement Grey",
+     "hex": "#ACB1BA",
+     "td": null
+    },
+    {
+     "name": "Marble Cool White",
+     "hex": "#EFEFEF",
+     "td": null
+    },
+    {
+     "name": "Marble Light Cyan",
+     "hex": "#D7EDE6",
+     "td": null
+    },
+    {
+     "name": "Marble Light Grey",
+     "hex": "#E0E0DC",
+     "td": null
+    },
+    {
+     "name": "Meta Apple Green",
+     "hex": "#84D18B",
+     "td": null
+    },
+    {
+     "name": "Meta Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260330/b129fd4c-7d50-46be-874e-84e0bb6ff1ae.pdf?filename=TDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/PLA/high_speed_pla",
+   "verified": false
+  },
+  {
+   "id": "sunlu/pla-2-0",
+   "manufacturer": "SUNLU",
+   "name": "PLA+ 2.0",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Beige",
+     "hex": "#EAD8AB",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue(Klein Blue)",
+     "hex": "#282099",
+     "td": null
+    },
+    {
+     "name": "Bone White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Ceramic",
+     "hex": "#F4F9FF",
+     "td": null
+    },
+    {
+     "name": "Ceramic White",
+     "hex": "#F4F9FF",
+     "td": null
+    },
+    {
+     "name": "Coffee Brown",
+     "hex": "#9A5630",
+     "td": null
+    },
+    {
+     "name": "Cyan",
+     "hex": "#65FDFD",
+     "td": null
+    },
+    {
+     "name": "Grass Green",
+     "hex": "#159A87",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#05AA3D",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#808080",
+     "td": null
+    },
+    {
+     "name": "Klein Blue",
+     "hex": "#282099",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 205,
+    "max": 245,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260327/81b1d361-0bd9-4783-ba0f-283a311c6870.pdf?filename=TDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/PLA/pla+_20",
+   "verified": false
+  },
+  {
+   "id": "sunlu/pla-meta",
+   "manufacturer": "SUNLU",
+   "name": "PLA-Meta",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Apple Green",
+     "hex": "#79D97C",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#005BD3",
+     "td": null
+    },
+    {
+     "name": "Bright Yellow",
+     "hex": "#C4D600",
+     "td": null
+    },
+    {
+     "name": "Cherry Red",
+     "hex": "#F4364C",
+     "td": null
+    },
+    {
+     "name": "Chocolate",
+     "hex": "#7D4016",
+     "td": null
+    },
+    {
+     "name": "Clay",
+     "hex": "#8B8372",
+     "td": null
+    },
+    {
+     "name": "Coffee",
+     "hex": "#9B8058",
+     "td": null
+    },
+    {
+     "name": "Cream White",
+     "hex": "#E6E2C7",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#05AA3D",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#808080",
+     "td": null
+    },
+    {
+     "name": "Ice Blue",
+     "hex": "#67D2DF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 185,
+    "max": 225,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260330/2bb3a5ff-6427-4a96-9bad-636abcd2c883.pdf?filename=TDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/PLA/pla_meta",
+   "verified": false
+  },
+  {
+   "id": "sunlu/abs",
+   "manufacturer": "SUNLU",
+   "name": "ABS",
+   "material": "abs",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.02,
+   "colors": [
+    {
+     "name": "Beige",
+     "hex": "#EAD8AB",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#1825C8",
+     "td": null
+    },
+    {
+     "name": "Blue Grey",
+     "hex": "#6299DF",
+     "td": null
+    },
+    {
+     "name": "Bone White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Ceramic",
+     "hex": "#F4F9FF",
+     "td": null
+    },
+    {
+     "name": "Clear Transparent",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "Coffee Brown",
+     "hex": "#9A5630",
+     "td": null
+    },
+    {
+     "name": "Cyan",
+     "hex": "#65FDFD",
+     "td": null
+    },
+    {
+     "name": "Grass Green",
+     "hex": "#1D7C6A",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#05AA3D",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#808080",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 250,
+    "max": 290,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 100,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260327/499dacc6-a1e4-4f81-b1ae-8bf1b8e424ec.pdf?filename=TDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/ABS/abs",
+   "verified": false
+  },
+  {
+   "id": "sunlu/pla-matte",
+   "manufacturer": "SUNLU",
+   "name": "PLA Matte",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.31,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Bone White",
+     "hex": "#E3E0D3",
+     "td": null
+    },
+    {
+     "name": "Bright Yellow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Clay",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#6A6C6E",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Light Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Light Yellow",
+     "hex": "#EBFF57",
+     "td": null
+    },
+    {
+     "name": "Olive Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 205,
+    "max": 245,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260330/b42c1ff4-b3d1-42e4-82a3-b85523647407.pdf?filename=TDS",
+    "https://media.sunlu.com/prod/20260330/a8cbf5df-526f-4277-bf17-98a1c092ad9c.pdf?filename=SDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/PLA/pla_matte",
+   "verified": false
+  },
+  {
+   "id": "sunlu/petg-2-0",
+   "manufacturer": "SUNLU",
+   "name": "PETG 2.0",
+   "material": "petg",
+   "shore": {
+    "value": 80,
+    "scale": "d"
+   },
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.22,
+   "colors": [
+    {
+     "name": "Aqua Blue",
+     "hex": "#00C3C3",
+     "td": null
+    },
+    {
+     "name": "Beige (Skin)",
+     "hex": "#F4DBCD",
+     "td": null
+    },
+    {
+     "name": "BLACK",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blush Pink",
+     "hex": "#FFD3CD",
+     "td": null
+    },
+    {
+     "name": "Bone White",
+     "hex": "#EBDFC5",
+     "td": null
+    },
+    {
+     "name": "Coffee Brown",
+     "hex": "#5A331C",
+     "td": null
+    },
+    {
+     "name": "Cyan",
+     "hex": "#009ED7",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#1DAA27",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#6D7174",
+     "td": null
+    },
+    {
+     "name": "Lavender Purple(Purple)",
+     "hex": "#8875CD",
+     "td": null
+    },
+    {
+     "name": "Magenta",
+     "hex": "#C52E79",
+     "td": null
+    },
+    {
+     "name": "Oak (Wood)",
+     "hex": "#BCA888",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 80,
+    "recommended": null
+   },
+   "chamber_c": 0,
+   "min_nozzle_mm": 0.4,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260916/30522971789539747056.pdf?filename=TDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/PETG/petg_2_0",
+   "verified": false
+  },
+  {
+   "id": "sunlu/silk-pla",
+   "manufacturer": "SUNLU",
+   "name": "Silk PLA+",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#005BD3",
+     "td": null
+    },
+    {
+     "name": "Brass",
+     "hex": "#ED9B33",
+     "td": null
+    },
+    {
+     "name": "Bronze",
+     "hex": "#6DB576",
+     "td": null
+    },
+    {
+     "name": "Candy Dandy",
+     "hex": "#D25B73",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#05AA3D",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#808080",
+     "td": null
+    },
+    {
+     "name": "Light Gold",
+     "hex": "#F0B323",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#FFC0CB",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#A54DCF",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#F61F1F",
+     "td": null
+    },
+    {
+     "name": "Red Copper",
+     "hex": "#C26E60",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260330/91c03fbc-a5c0-4711-b3ae-10d0efd19f27.pdf?filename=TDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/PLA/silk_pla+",
+   "verified": false
+  },
+  {
+   "id": "sunlu/pla-classic",
+   "manufacturer": "SUNLU",
+   "name": "PLA Classic",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.36,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Cherry Red",
+     "hex": "#F4364C",
+     "td": null
+    },
+    {
+     "name": "Chocolate",
+     "hex": "#7D4016",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#808080",
+     "td": null
+    },
+    {
+     "name": "Lemon Yellow",
+     "hex": "#F0EC74",
+     "td": null
+    },
+    {
+     "name": "Mint Green",
+     "hex": "#A8D5BA",
+     "td": null
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#BAB86C",
+     "td": null
+    },
+    {
+     "name": "Pri-Cyan",
+     "hex": "#608AFF",
+     "td": null
+    },
+    {
+     "name": "Pri-Magenta",
+     "hex": "#E364CD",
+     "td": null
+    },
+    {
+     "name": "Pri-White",
+     "hex": "#EEEDF2",
+     "td": null
+    },
+    {
+     "name": "Pri-Yellow",
+     "hex": "#F0EA02",
+     "td": null
+    },
+    {
+     "name": "Sakura Pink",
+     "hex": "#F2D4D7",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260327/77e4c81e-dcaa-46ce-8eee-e8d892150c71.pdf?filename=TDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/PLA/pla_classic",
+   "verified": false
+  },
+  {
+   "id": "sunlu/upgrade-pla",
+   "manufacturer": "SUNLU",
+   "name": "Upgrade PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.26,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Coffee",
+     "hex": "#A47C48",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#E3B145",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#00CC00",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#8C9099",
+     "td": null
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#6C8C59",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF8400",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#F4A0B1",
+     "td": null
+    },
+    {
+     "name": "Pure Yellow",
+     "hex": "#FBE200",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#7142A3",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#ED1536",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/PLA/upgrade_pla",
+   "verified": false
+  },
+  {
+   "id": "sunlu/tpu95a",
+   "manufacturer": "SUNLU",
+   "name": "TPU95A",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Azure Blue",
+     "hex": "#008BE4",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#1825C8",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#05AA3D",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#808080",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF6A14",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#FFC0CB",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#F61F1F",
+     "td": null
+    },
+    {
+     "name": "Transparent",
+     "hex": "#F7FBFC",
+     "td": null
+    },
+    {
+     "name": "Transparent Purple",
+     "hex": "#772583",
+     "td": null
+    },
+    {
+     "name": "Transparent Red",
+     "hex": "#CD001A",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260330/e8b9c06a-4b93-46cb-9532-d9deb185a7c8.pdf?filename=TDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/TPU/tpu95a",
+   "verified": false
+  },
+  {
+   "id": "sunlu/high-speed-matte-pla",
+   "manufacturer": "SUNLU",
+   "name": "High Speed Matte PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.36,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#1F2123",
+     "td": 0.2
+    },
+    {
+     "name": "Cherry Red",
+     "hex": "#FD404B",
+     "td": 1.8
+    },
+    {
+     "name": "Chocolate",
+     "hex": "#906557",
+     "td": 1
+    },
+    {
+     "name": "Grey",
+     "hex": "#63666A",
+     "td": 2.2
+    },
+    {
+     "name": "Lemon Yellow",
+     "hex": "#F2F0A1",
+     "td": 4
+    },
+    {
+     "name": "Mint Green",
+     "hex": "#00C7B1",
+     "td": 2.5
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#5A6D3D",
+     "td": 2
+    },
+    {
+     "name": "Sakura Pink",
+     "hex": "#FFE0E8",
+     "td": 2.2
+    },
+    {
+     "name": "Sky Blue",
+     "hex": "#AEEAFF",
+     "td": 3.4
+    },
+    {
+     "name": "Sunny Orange",
+     "hex": "#FF8C54",
+     "td": 7
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFF9",
+     "td": 3.3
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260330/689d1925-acad-4de8-9079-c8eee9c3081e.pdf?filename=TDS",
+    "https://media.sunlu.com/prod/20260330/ec76aa33-0387-4216-ae88-bc3c5f28c92d.pdf?filename=SDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/PLA/high_speed_matte_pla",
+   "verified": false
+  },
+  {
+   "id": "sunlu/high-speed-petg",
+   "manufacturer": "SUNLU",
+   "name": "High Speed PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#00CC00",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#6A6C6E",
+     "td": null
+    },
+    {
+     "name": "Mint Green",
+     "hex": "#6FEEDB",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#DE6300",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#F297DA",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#D33D3D",
+     "td": null
+    },
+    {
+     "name": "Sky Blue",
+     "hex": "#40B6E4",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FFFB00",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/PETG/high_speed_petg",
+   "verified": false
+  },
+  {
+   "id": "sunlu/high-speed-pla-pla",
+   "manufacturer": "SUNLU",
+   "name": "High Speed PLA+ PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#005BD3",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#05AA3D",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#808080",
+     "td": null
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#BAB86C",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF8A00",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#FF8A00",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#F61F1F",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F7EA48",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260330/1cc08af0-45a6-41af-9b5a-07533ce567f3.pdf?filename=TDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/PLA/high_speed_pla+",
+   "verified": false
+  },
+  {
+   "id": "sunlu/pla-glow-in-the-dark",
+   "manufacturer": "SUNLU",
+   "name": "PLA Glow In The Dark",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#0092CB",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#00BB31",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#E4002B",
+     "td": null
+    },
+    {
+     "name": "Red Filament (Glow Orange)",
+     "hex": "#E4002B",
+     "td": null
+    },
+    {
+     "name": "White Filament (Glow Blue)",
+     "hex": "#0092CB",
+     "td": null
+    },
+    {
+     "name": "White Filament (Glow Green)",
+     "hex": "#00BB31",
+     "td": null
+    },
+    {
+     "name": "White (White to Blue)",
+     "hex": "#E8EBD6",
+     "td": null
+    },
+    {
+     "name": "White (White to Green)",
+     "hex": "#E8EBD6",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F9E001",
+     "td": null
+    },
+    {
+     "name": "Yellow Filament (Glow Yellow)",
+     "hex": "#F9E001",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260327/25674e7f-8c9e-4ff2-8bf6-74bae7d6a030.pdf?filename=TDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/PLA/pla_glow_in_the_dark",
+   "verified": false
+  },
+  {
+   "id": "sunlu/silk-pla-dual-color",
+   "manufacturer": "SUNLU",
+   "name": "Silk PLA+ Dual-Color",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Black Blue",
+     "hex": "#16085B",
+     "td": null
+    },
+    {
+     "name": "Black Gold",
+     "hex": "#6B6D34",
+     "td": null
+    },
+    {
+     "name": "Black Green",
+     "hex": "#184635",
+     "td": null
+    },
+    {
+     "name": "Black Purple",
+     "hex": "#390A57",
+     "td": null
+    },
+    {
+     "name": "Black White",
+     "hex": "#7F7F7F",
+     "td": null
+    },
+    {
+     "name": "Blue Green",
+     "hex": "#56C2C3",
+     "td": null
+    },
+    {
+     "name": "Green Purple",
+     "hex": "#725F7C",
+     "td": null
+    },
+    {
+     "name": "Pink Gold",
+     "hex": "#FEA781",
+     "td": null
+    },
+    {
+     "name": "Red Blue",
+     "hex": "#6A2E8A",
+     "td": null
+    },
+    {
+     "name": "Red Gold",
+     "hex": "#F97E49",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260330/63d55fe5-d33b-47f2-8930-520f193ade51.pdf?filename=TDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/PLA/silk_pla+_dual_color",
+   "verified": false
+  },
+  {
+   "id": "sunlu/high-speed-abs",
+   "manufacturer": "SUNLU",
+   "name": "High Speed ABS",
+   "material": "abs",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.046,
+   "colors": [
+    {
+     "name": "Beige",
+     "hex": "#F3DFD6",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#808080",
+     "td": null
+    },
+    {
+     "name": "Klein Blue",
+     "hex": "#282099",
+     "td": null
+    },
+    {
+     "name": "Midnight",
+     "hex": "#273248",
+     "td": null
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#66813B",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#CB0018",
+     "td": null
+    },
+    {
+     "name": "Roasted Chestnut",
+     "hex": "#3D2B2C",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F7E500",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 260,
+    "max": 290,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 90,
+    "max": 100,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260416/ef443c43-b15b-4242-8884-dcce385e8f02.pdf?filename=TDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/ABS/high_speed_abs",
+   "verified": false
+  },
+  {
+   "id": "sunlu/95a-high-speed-tpu",
+   "manufacturer": "SUNLU",
+   "name": "95A High Speed TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#2E56F1",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#00CC00",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#6A6C6E",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#F67405",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#F06E92",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#E20010",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FFFB00",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/TPU/95a_high_speed_tpu",
+   "verified": false
+  },
+  {
+   "id": "sunlu/pla-rainbow",
+   "manufacturer": "SUNLU",
+   "name": "PLA Rainbow",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "02",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "03",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "(Orange-Pink-Yellow-Green)",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Rainbow01",
+     "hex": "#9D563C",
+     "td": null
+    },
+    {
+     "name": "Rainbow02",
+     "hex": "#8C6C9B",
+     "td": null
+    },
+    {
+     "name": "Rainbow03",
+     "hex": "#A861AF",
+     "td": null
+    },
+    {
+     "name": "Rainbow04",
+     "hex": "#A861AF",
+     "td": null
+    },
+    {
+     "name": "(Red-Cyan-Blue-Purple)",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "(Red-Pink-Green-Yellow)",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 185,
+    "max": 225,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260330/bbd3e778-b424-49b7-b203-058327f2f6fc.pdf?filename=TDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/PLA/pla_rainbow",
+   "verified": false
+  },
+  {
+   "id": "sunlu/asa",
+   "manufacturer": "SUNLU",
+   "name": "ASA",
+   "material": "asa",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.04,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#1825C8",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#05AA3D",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#808080",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#F2EBDD",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#F67405",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#6C47B2",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#F61F1F",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 250,
+    "max": 280,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 100,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 250,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 2000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://media.sunlu.com/prod/20260330/7d61617c-7540-4ae2-88d3-a0d206e5d801.pdf?filename=TDS"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sunlu/ASA/asa",
+   "verified": false
+  }
+ ]
+}

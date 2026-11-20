@@ -1,0 +1,1210 @@
+{
+ "schema_version": 1,
+ "manufacturer": "SainSmart",
+ "filaments": [
+  {
+   "id": "sainsmart/gt-3-high-speed-tpu",
+   "manufacturer": "SainSmart",
+   "name": "Gt 3 High Speed TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.04,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0099E6",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#70FA00",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#D93382",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#C63DBA",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#F00C00",
+     "td": null
+    },
+    {
+     "name": "Translucent Blue",
+     "hex": "#0066D9",
+     "td": null
+    },
+    {
+     "name": "Translucent Green",
+     "hex": "#4DFF64",
+     "td": null
+    },
+    {
+     "name": "Translucent Red",
+     "hex": "#F00C00",
+     "td": null
+    },
+    {
+     "name": "Transparent",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "Violet",
+     "hex": "#6000B0",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 50,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/TPU/gt_3_high_speed_tpu",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/flexible-tpu",
+   "manufacturer": "SainSmart",
+   "name": "Flexible Tpu",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.05,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "Galaxy Blue",
+     "hex": "#4921C1",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#4DFF64",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#6F727E",
+     "td": null
+    },
+    {
+     "name": "Kaoss Purple",
+     "hex": "#AE00FF",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF5F2E",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#B7293E",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#E4FF33",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 195,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 40,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/TPU/flexible_tpu",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/petg",
+   "manufacturer": "SainSmart",
+   "name": "PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black -3",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue -3",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Brown -3",
+     "hex": "#BB6D48",
+     "td": null
+    },
+    {
+     "name": "Dark Brown -3",
+     "hex": "#7E4F4A",
+     "td": null
+    },
+    {
+     "name": "Silver -3",
+     "hex": "#ABACB0",
+     "td": null
+    },
+    {
+     "name": "Translucent Rainbow -3",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Transparent -3",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "Violet -3",
+     "hex": "#E2D9F7",
+     "td": null
+    },
+    {
+     "name": "White -3",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/pla",
+   "manufacturer": "SainSmart",
+   "name": "PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Creality Hyper RFID Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Creality Hyper RFID Green",
+     "hex": "#62E480",
+     "td": null
+    },
+    {
+     "name": "Creality Hyper RFID Grey",
+     "hex": "#C5C5BF",
+     "td": null
+    },
+    {
+     "name": "Creality Hyper RFID Orange",
+     "hex": "#FA8423",
+     "td": null
+    },
+    {
+     "name": "Creality Hyper RFID White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "LW- Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "LW- White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/PLA/pla",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/pastel-92a-flexible-tpu",
+   "manufacturer": "SainSmart",
+   "name": "Pastel 92A Flexible TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.04,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#6299DF",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#69EBB6",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#F09BB5",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#8D65C7",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#F14147",
+     "td": null
+    },
+    {
+     "name": "Skin",
+     "hex": "#FEC8A4",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F8DA8E",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 195,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 40,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/TPU/pastel_92a_flexible_tpu",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/gt-3-matte-pla",
+   "manufacturer": "SainSmart",
+   "name": "Gt 3 Matte PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#9F9F9F",
+     "td": null
+    },
+    {
+     "name": "Mint Green",
+     "hex": "#98FBCB",
+     "td": null
+    },
+    {
+     "name": "Rose Red",
+     "hex": "#FF2C29",
+     "td": null
+    },
+    {
+     "name": "Teal Blue",
+     "hex": "#C6F3FD",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 180,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 40,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/PLA/gt_3_matte_high_speed_pla",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/neon-cyberpunk-color-tpu",
+   "manufacturer": "SainSmart",
+   "name": "Neon Cyberpunk Color TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.05,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Cyan",
+     "hex": "#00E3E2",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#4DFF64",
+     "td": null
+    },
+    {
+     "name": "Magenta",
+     "hex": "#DB3FA9",
+     "td": null
+    },
+    {
+     "name": "Scarlet",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F2DE00",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 195,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 40,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/TPU/neon_cyberpunk_color_tpu",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/glossy-gt-3-silk-high-speed-pla",
+   "manufacturer": "SainSmart",
+   "name": "Glossy Gt 3 Silk High Speed PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.04,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Cyan",
+     "hex": "#08ABFB",
+     "td": null
+    },
+    {
+     "name": "Magenta",
+     "hex": "#F2306E",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#ABACB0",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#E8BD00",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/PLA/glossy_gt_3_silk_high_speed_pla",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/abs",
+   "manufacturer": "SainSmart",
+   "name": "ABS",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.04,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Gray",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#C9D0D4",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 80,
+    "max": 100,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/ABS/abs",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/glossy-gt-3-silk-high-speed-petg",
+   "manufacturer": "SainSmart",
+   "name": "Glossy Gt 3 Silk High Speed PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.04,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Transparent",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 280,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 80,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/PETG/glossy_gt_3_silk_high_speed_petg",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/glow-petg",
+   "manufacturer": "SainSmart",
+   "name": "Glow PETG",
+   "material": "petg",
+   "fill": [
+    "glow"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Blue -3",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Green -3",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red -3",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 60,
+    "max": 80,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/PETG/glow_petg",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/tpu-luminous-glow-in-the-dark",
+   "manufacturer": "SainSmart",
+   "name": "TPU Luminous Glow In The Dark",
+   "material": "tpu",
+   "fill": [
+    "glow"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Blue, Flexible TPU",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Green, Flexible TPU",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Pink, Flexible TPU",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 40,
+    "max": 60,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/TPU/luminous_glow_in_the_dark",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/high-flowability-flexible-gt-3-pla",
+   "manufacturer": "SainSmart",
+   "name": "High Flowability Flexible Gt 3 PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.04,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 40,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/PLA/high_flowability_flexible_gt_3_pla",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/lite-gt-3-high-speed-pla",
+   "manufacturer": "SainSmart",
+   "name": "Lite Gt 3 High Speed PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F2EFE9",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/PLA/lite_gt_3_high_speed_pla",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/petg-cf",
+   "manufacturer": "SainSmart",
+   "name": "PETG CF",
+   "material": "petg",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.04,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black Carbon Fiber",
+     "hex": "#1D1D1D",
+     "td": null
+    },
+    {
+     "name": "Bronze Carbon Fiber",
+     "hex": "#8C7354",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 100,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/PETG/cf_petg",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/flexible-95a-matte-tpu",
+   "manufacturer": "SainSmart",
+   "name": "Flexible 95A Matte TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 55,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/TPU/flexible_95a_matte_tpu",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/small-spool-flexible-tpu",
+   "manufacturer": "SainSmart",
+   "name": "Small Spool Flexible TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.05,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#4DFF64",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 195,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 40,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/TPU/small_spool_flexible_tpu",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/asa-cf",
+   "manufacturer": "SainSmart",
+   "name": "ASA CF",
+   "material": "asa",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.04,
+   "density_g_cm3": 1.07,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 100,
+    "max": 110,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/ASA/cf_asa",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/gt-3-asa",
+   "manufacturer": "SainSmart",
+   "name": "Gt 3 ASA",
+   "material": "asa",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.04,
+   "density_g_cm3": 1.07,
+   "colors": [
+    {
+     "name": "High Speed Black",
+     "hex": "#000000",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 235,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 90,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/ASA/gt_3_high_speed_asa",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/flexible-87a-tpu",
+   "manufacturer": "SainSmart",
+   "name": "Flexible 87A TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.12,
+   "colors": [
+    {
+     "name": "Transparent",
+     "hex": "#EFEFEF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 45,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/TPU/flexible_87a_tpu",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/flexible-95a-gt-3-tpu",
+   "manufacturer": "SainSmart",
+   "name": "Flexible 95A Gt 3 TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.04,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Transparent Anti Bacteria",
+     "hex": "#E4E7E5",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 50,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/TPU/flexible_95a_gt_3_tpu",
+   "verified": false
+  },
+  {
+   "id": "sainsmart/tpu-liquid-luster",
+   "manufacturer": "SainSmart",
+   "name": "TPU Liquid Luster",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.05,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Flexible TPU",
+     "hex": "#6A6C6E",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 195,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 40,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "sainsmart/TPU/liquid_luster",
+   "verified": false
+  }
+ ]
+}

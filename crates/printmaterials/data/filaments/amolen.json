@@ -1,0 +1,1844 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Amolen",
+ "filaments": [
+  {
+   "id": "amolen/high-speed-pla",
+   "manufacturer": "Amolen",
+   "name": "High Speed PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Apple Red",
+     "hex": "#FF305F",
+     "td": null
+    },
+    {
+     "name": "Basic- Apple Red",
+     "hex": "#FF0039",
+     "td": null
+    },
+    {
+     "name": "Basic- Army Dark Green",
+     "hex": "#4E7642",
+     "td": null
+    },
+    {
+     "name": "Basic- Butter Yellow",
+     "hex": "#F2DE00",
+     "td": null
+    },
+    {
+     "name": "Basic- Carrot Orange",
+     "hex": "#FF7A33",
+     "td": null
+    },
+    {
+     "name": "Basic- Charcoal Black",
+     "hex": "#545252",
+     "td": null
+    },
+    {
+     "name": "Basic- Cheese Yellow",
+     "hex": "#FFE15B",
+     "td": null
+    },
+    {
+     "name": "Basic- Chestnut Brown",
+     "hex": "#AD4E38",
+     "td": null
+    },
+    {
+     "name": "Basic- Cream Yellow",
+     "hex": "#F5F3D1",
+     "td": null
+    },
+    {
+     "name": "Basic- Eggnt Purple",
+     "hex": "#CD00D7",
+     "td": null
+    },
+    {
+     "name": "Basic- Forest Green",
+     "hex": "#02776F",
+     "td": null
+    },
+    {
+     "name": "Basic- Ice Blue",
+     "hex": "#C6F3FD",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/high_speed_pla",
+   "verified": false
+  },
+  {
+   "id": "amolen/tpu",
+   "manufacturer": "Amolen",
+   "name": "TPU",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.19,
+   "colors": [
+    {
+     "name": "Basic Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Basic Clear",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "Basic Grey",
+     "hex": "#5A696C",
+     "td": null
+    },
+    {
+     "name": "Basic Orange",
+     "hex": "#F07821",
+     "td": null
+    },
+    {
+     "name": "Basic Solid Blue",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "Basic Solid Purple",
+     "hex": "#6802BC",
+     "td": null
+    },
+    {
+     "name": "Basic Solid Red",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Basic White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Blue Green Orange Translucent Rainbow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Flexible Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Flexible Clear",
+     "hex": "#9A9BA0",
+     "td": null
+    },
+    {
+     "name": "Flexible Grey",
+     "hex": "#5A696C",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/TPU/tpu",
+   "verified": false
+  },
+  {
+   "id": "amolen/matte-pla",
+   "manufacturer": "Amolen",
+   "name": "Matte PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Candy Rainbow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Ice Blue",
+     "hex": "#5CADBF",
+     "td": null
+    },
+    {
+     "name": "Lemon Mint Rainbow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Lemon Yellow",
+     "hex": "#FADB24",
+     "td": null
+    },
+    {
+     "name": "Lilac Purple",
+     "hex": "#F0C7E7",
+     "td": null
+    },
+    {
+     "name": "Moon Gray",
+     "hex": "#9F9F9F",
+     "td": null
+    },
+    {
+     "name": "Multicolor Rainbow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Navy Blue",
+     "hex": "#003B80",
+     "td": null
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#857C00",
+     "td": null
+    },
+    {
+     "name": "Pale Peach",
+     "hex": "#E2D1C0",
+     "td": null
+    },
+    {
+     "name": "Pastel Berry Rainbow",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/matte_pla",
+   "verified": false
+  },
+  {
+   "id": "amolen/dual-color-silk-pla",
+   "manufacturer": "Amolen",
+   "name": "Dual Color Silk PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.28,
+   "colors": [
+    {
+     "name": "Black Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black & Gold",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black & Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black & Orange",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black & Pink",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black & Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black & Silver",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue & Fuchsia",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Green & Coral",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Green & Dark Violet",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold & Fuchsia",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/dual_color_silk_pla",
+   "verified": false
+  },
+  {
+   "id": "amolen/basic-matte-pla",
+   "manufacturer": "Amolen",
+   "name": "Basic Matte PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Amolen Blue",
+     "hex": "#4F03D7",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#3B353A",
+     "td": null
+    },
+    {
+     "name": "Chocolate Brown",
+     "hex": "#9C5949",
+     "td": null
+    },
+    {
+     "name": "Ice Blue",
+     "hex": "#5CADBF",
+     "td": null
+    },
+    {
+     "name": "Lemon Yellow",
+     "hex": "#FADB24",
+     "td": null
+    },
+    {
+     "name": "Lilac Purple",
+     "hex": "#F0C7E7",
+     "td": null
+    },
+    {
+     "name": "Navy Blue",
+     "hex": "#003B80",
+     "td": null
+    },
+    {
+     "name": "Olive Green",
+     "hex": "#748C45",
+     "td": null
+    },
+    {
+     "name": "Pale Peach",
+     "hex": "#E2D1C0",
+     "td": null
+    },
+    {
+     "name": "Porcelain White",
+     "hex": "#E3E0D3",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#7F068C",
+     "td": null
+    },
+    {
+     "name": "Quartz White",
+     "hex": "#FFFFFF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/basic_matte_pla",
+   "verified": false
+  },
+  {
+   "id": "amolen/basic-silk-pla",
+   "manufacturer": "Amolen",
+   "name": "Basic Silk PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Baby Blue",
+     "hex": "#82E3EC",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#2A3940",
+     "td": null
+    },
+    {
+     "name": "Black Blue",
+     "hex": "#686D93",
+     "td": null
+    },
+    {
+     "name": "Bronze Green",
+     "hex": "#99A45F",
+     "td": null
+    },
+    {
+     "name": "Coffee Gold",
+     "hex": "#B76E34",
+     "td": null
+    },
+    {
+     "name": "Cucumber Green",
+     "hex": "#6C8C59",
+     "td": null
+    },
+    {
+     "name": "Fluoro Yellow",
+     "hex": "#EEEA44",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#F4AC23",
+     "td": null
+    },
+    {
+     "name": "Gradient Aged Brass",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Ice Blue",
+     "hex": "#9FD9F0",
+     "td": null
+    },
+    {
+     "name": "Neon Green",
+     "hex": "#A6EC5F",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#FD64B3",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/basic_silk_pla",
+   "verified": false
+  },
+  {
+   "id": "amolen/glow-pla",
+   "manufacturer": "Amolen",
+   "name": "Glow PLA",
+   "material": "pla",
+   "fill": [
+    "glow",
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#0022FF",
+     "td": null
+    },
+    {
+     "name": "Blue Purple",
+     "hex": "#AE00FF",
+     "td": null
+    },
+    {
+     "name": "Firefly Blue",
+     "hex": "#0095FF",
+     "td": null
+    },
+    {
+     "name": "Firefly Green",
+     "hex": "#00CC00",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#00CC00",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FA8423",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#AE00FF",
+     "td": null
+    },
+    {
+     "name": "Rainbow 10M",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Rainbow 10m -Neon Nightfall",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Rainbow 5m",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Rainbow Flux",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#ED2602",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/glow_pla",
+   "verified": false
+  },
+  {
+   "id": "amolen/s-series-silk-pla",
+   "manufacturer": "Amolen",
+   "name": "S-Series Silk PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.29,
+   "colors": [
+    {
+     "name": "Amber Sea",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Berry Pop",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black Blue Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black Pink White",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black Red",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black Red Yellow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black Turquoise Fuchsia",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Pink Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Pink White",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Red Yellow Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold Purple Red",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/s_series_silk_pla",
+   "verified": false
+  },
+  {
+   "id": "amolen/crystal-transparent-pla",
+   "manufacturer": "Amolen",
+   "name": "Crystal Transparent PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.26,
+   "colors": [
+    {
+     "name": "Amber Yellow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Aurora Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#617FCC",
+     "td": null
+    },
+    {
+     "name": "Blue Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue White",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#00E0B4",
+     "td": null
+    },
+    {
+     "name": "Haze Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#F17231",
+     "td": null
+    },
+    {
+     "name": "Phantom Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#FE488B",
+     "td": null
+    },
+    {
+     "name": "Rainbow Nebula Glaze",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/crystal_transparent_pla",
+   "verified": false
+  },
+  {
+   "id": "amolen/triple-color-silk-pla",
+   "manufacturer": "Amolen",
+   "name": "Triple Color Silk PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black Blue Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Green Orange",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Green Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Purple Orange",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold Fuchsia Black",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold Fuchsia Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold Fuchsia Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold Silver Copper",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Purple Blue Green Orange",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red Gold Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red Green Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red Yellow Blue",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/triple_color_silk_pla",
+   "verified": false
+  },
+  {
+   "id": "amolen/shiny-gradient-silk-pla",
+   "manufacturer": "Amolen",
+   "name": "Shiny Gradient Silk PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.28,
+   "colors": [
+    {
+     "name": "Azure Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black & Shiny Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black & Shiny Fuchsia",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black & Shiny Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black & Shiny Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black & Shiny Red",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black & Shiny Red Gold",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Green Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Purple & Shiny Red",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold & Shiny Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold & Shiny Red",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Silver & Shiny Blue",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/shiny_gradient_silk_pla",
+   "verified": false
+  },
+  {
+   "id": "amolen/petg",
+   "manufacturer": "Amolen",
+   "name": "PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Basic Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Basic Blue",
+     "hex": "#0095FF",
+     "td": null
+    },
+    {
+     "name": "Basic Grey",
+     "hex": "#D6D7D8",
+     "td": null
+    },
+    {
+     "name": "Basic Multicolor Rainbow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Basic Red",
+     "hex": "#ED2602",
+     "td": null
+    },
+    {
+     "name": "Basic White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Transparent",
+     "hex": "#9A9BA0",
+     "td": null
+    },
+    {
+     "name": "Transparent Green",
+     "hex": "#11784F",
+     "td": null
+    },
+    {
+     "name": "Transparent Multicolor Rainbow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Transparent Orange",
+     "hex": "#FF8400",
+     "td": null
+    },
+    {
+     "name": "Transparent Pink",
+     "hex": "#F2A3B7",
+     "td": null
+    },
+    {
+     "name": "Transparent Sky Blue",
+     "hex": "#99B2DE",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "amolen/marble-pla",
+   "manufacturer": "Amolen",
+   "name": "Marble PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Brick Red",
+     "hex": "#ED2602",
+     "td": null
+    },
+    {
+     "name": "Cement Grey",
+     "hex": "#5C5B59",
+     "td": null
+    },
+    {
+     "name": "Fossil Gradient",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Green Schist",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Rainbow Rock",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red Limestone",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Sedimentary Rock",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Turquoise",
+     "hex": "#82E3EC",
+     "td": null
+    },
+    {
+     "name": "Yellow Feldspar Rock",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/marble_pla",
+   "verified": false
+  },
+  {
+   "id": "amolen/wood-pla",
+   "manufacturer": "Amolen",
+   "name": "Wood PLA",
+   "material": "pla",
+   "fill": [
+    "wood"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Bamboo Wood",
+     "hex": "#BAA679",
+     "td": null
+    },
+    {
+     "name": "Cherry Wood",
+     "hex": "#AD7032",
+     "td": null
+    },
+    {
+     "name": "Ebony Wood",
+     "hex": "#5E6345",
+     "td": null
+    },
+    {
+     "name": "Grain Wood",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red Cedar",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Rose Wood",
+     "hex": "#613B3A",
+     "td": null
+    },
+    {
+     "name": "Tigerwood",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Walnut Wood",
+     "hex": "#AD7032",
+     "td": null
+    },
+    {
+     "name": "Yellow Pearwood",
+     "hex": "#A6662E",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 180,
+    "max": 210,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/wood_pla",
+   "verified": false
+  },
+  {
+   "id": "amolen/pla-cf",
+   "manufacturer": "Amolen",
+   "name": "PLA CF",
+   "material": "pla",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Aquamarine Blue",
+     "hex": "#2A4552",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#AE9D7E",
+     "td": null
+    },
+    {
+     "name": "Burgundy",
+     "hex": "#833F4D",
+     "td": null
+    },
+    {
+     "name": "Dark Grey",
+     "hex": "#5A696C",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#656D60",
+     "td": null
+    },
+    {
+     "name": "Light Grey",
+     "hex": "#A2AAAD",
+     "td": null
+    },
+    {
+     "name": "Sapphire Blue",
+     "hex": "#375680",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/cf_pla",
+   "verified": false
+  },
+  {
+   "id": "amolen/dual-color-matte-pla",
+   "manufacturer": "Amolen",
+   "name": "Dual Color Matte PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Blue Pink",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Brown White",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Cyan Chartreuse",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Green Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Peach Gold",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Pink Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red Gold",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/dual_color_matte_pla",
+   "verified": false
+  },
+  {
+   "id": "amolen/galaxy-sparkle-shiny-galaxy-silk-pla",
+   "manufacturer": "Amolen",
+   "name": "Galaxy Sparkle Shiny Galaxy Silk PLA",
+   "material": "pla",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.2,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#0095FF",
+     "td": null
+    },
+    {
+     "name": "Blue Purple Fuchsia",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Fuchsia",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#11784F",
+     "td": null
+    },
+    {
+     "name": "Red Yellow Green Blue Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Shiny Polarized Multicolor",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Shiny Polarized Purple Blue",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/pla_silk_galaxy_sparkle_shiny",
+   "verified": false
+  },
+  {
+   "id": "amolen/rainbow-silk-pla",
+   "manufacturer": "Amolen",
+   "name": "Rainbow Silk PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.28,
+   "colors": [
+    {
+     "name": "Apple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Bloom",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Christmas",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Fusion",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Pink Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Shiny Cosmic Rainbow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Yellow Pink Blue",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/rainbow_silk_pla",
+   "verified": false
+  },
+  {
+   "id": "amolen/shiny-glitter-silk-pla",
+   "manufacturer": "Amolen",
+   "name": "Shiny Glitter Silk PLA",
+   "material": "pla",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Black Yellow Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Christmas Green",
+     "hex": "#00935C",
+     "td": null
+    },
+    {
+     "name": "Christmas Red",
+     "hex": "#D60212",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#F6C500",
+     "td": null
+    },
+    {
+     "name": "Gold Silver",
+     "hex": "#F6C500",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#C5C7C4",
+     "td": null
+    },
+    {
+     "name": "Sky Blue",
+     "hex": "#9AE0DD",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/shiny_glitter_silk_pla",
+   "verified": false
+  },
+  {
+   "id": "amolen/pla",
+   "manufacturer": "Amolen",
+   "name": "PLA",
+   "material": "pla",
+   "fill": [
+    "metal"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black Red Yellow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black to Red to Yellow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Conductive",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Marble",
+     "hex": "#C3CCD5",
+     "td": null
+    },
+    {
+     "name": "Metal Iron",
+     "hex": "#272E29",
+     "td": null
+    },
+    {
+     "name": "Purple Green to Pink Yellow",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/pla",
+   "verified": false
+  },
+  {
+   "id": "amolen/glow-tpu",
+   "manufacturer": "Amolen",
+   "name": "Glow TPU",
+   "material": "tpu",
+   "fill": [
+    "glow"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.2,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#0095FF",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#00CC00",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FF9100",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#ED2602",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FFFB00",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 65,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/TPU/glow_tpu",
+   "verified": false
+  },
+  {
+   "id": "amolen/temperature-color-change-pla",
+   "manufacturer": "Amolen",
+   "name": "Temperature Color Change PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Blue to White",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Green to Yellow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Orange to White",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red to White",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 220,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 0,
+    "max": 50,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "amolen/PLA/temperature_color_change_pla",
+   "verified": false
+  }
+ ]
+}

@@ -1,0 +1,1969 @@
+{
+ "schema_version": 1,
+ "manufacturer": "Polymaker",
+ "filaments": [
+  {
+   "id": "polymaker/polylite-pla",
+   "manufacturer": "Polymaker",
+   "name": "Polylite PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.17,
+   "colors": [
+    {
+     "name": "Aqua Blue",
+     "hex": "#39B9DB",
+     "td": null
+    },
+    {
+     "name": "Army Green",
+     "hex": "#857C00",
+     "td": null
+    },
+    {
+     "name": "Azure Blue",
+     "hex": "#0066D9",
+     "td": null
+    },
+    {
+     "name": "Beige",
+     "hex": "#D8CF8C",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0266BB",
+     "td": null
+    },
+    {
+     "name": "Blue Green",
+     "hex": "#00272F",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#7E472A",
+     "td": null
+    },
+    {
+     "name": "Cold White",
+     "hex": "#EAECF5",
+     "td": null
+    },
+    {
+     "name": "Cos Version A",
+     "hex": "#B2B8B8",
+     "td": null
+    },
+    {
+     "name": "Cos Version B",
+     "hex": "#B2B8B8",
+     "td": null
+    },
+    {
+     "name": "Cream",
+     "hex": "#E9CB9B",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 55,
+    "hours": 6
+   },
+   "enclosure_advised": false,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyLite_PLA_TDS_EN_V5.4.pdf",
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyLite_PLA_SDS_US_EN_V1.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PLA/polylite_pla",
+   "verified": false
+  },
+  {
+   "id": "polymaker/panchroma-silk-pla",
+   "manufacturer": "Polymaker",
+   "name": "Panchroma Silk PLA",
+   "material": "pla",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0378D0",
+     "td": null
+    },
+    {
+     "name": "Brass",
+     "hex": "#998D58",
+     "td": null
+    },
+    {
+     "name": "Bronze",
+     "hex": "#B5522B",
+     "td": null
+    },
+    {
+     "name": "Chrome",
+     "hex": "#91C2CC",
+     "td": null
+    },
+    {
+     "name": "Creatrix Red",
+     "hex": "#E20010",
+     "td": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Dual Aubergine Lime Magenta",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Banquet Gold Magenta",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Beluga Sliver Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Caribbean Blue Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Chameleon Yellow Blue",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 55,
+    "hours": 6
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_PANCHROMA_V2.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PLA/panchroma_silk_pla",
+   "verified": false
+  },
+  {
+   "id": "polymaker/polymaker-pla-pro",
+   "manufacturer": "Polymaker",
+   "name": "Polymaker™ PLA Pro",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.237,
+   "colors": [
+    {
+     "name": "Army Beige",
+     "hex": "#D0B082",
+     "td": null
+    },
+    {
+     "name": "Army Green",
+     "hex": "#757330",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#0A0A0A",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#3145AD",
+     "td": null
+    },
+    {
+     "name": "Blue-Green",
+     "hex": "#113B41",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#7E5B45",
+     "td": null
+    },
+    {
+     "name": "Cold White",
+     "hex": "#D9DAE0",
+     "td": null
+    },
+    {
+     "name": "Dark Grey",
+     "hex": "#707674",
+     "td": null
+    },
+    {
+     "name": "Dark Purple",
+     "hex": "#564C6D",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#5EC482",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#CCD3DE",
+     "td": null
+    },
+    {
+     "name": "Light Blue",
+     "hex": "#B2DEEF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 30,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 55,
+    "hours": 6
+   },
+   "enclosure_advised": false,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": 200,
+     "width_mm": null,
+     "hub_mm": 55
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_Polymaker_PLA_Pro_v6.0_2026-01-26_EN.pdf",
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/Polymaker_PLA_Pro-USA-SDS_20260122.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PLA/polymaker_pla_pro",
+   "verified": false
+  },
+  {
+   "id": "polymaker/polylite-abs",
+   "manufacturer": "Polymaker",
+   "name": "Polylite ABS",
+   "material": "abs",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.04,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#2941BD",
+     "td": null
+    },
+    {
+     "name": "Dark Grey",
+     "hex": "#5A696C",
+     "td": null
+    },
+    {
+     "name": "Dark Purple",
+     "hex": "#492972",
+     "td": null
+    },
+    {
+     "name": "Galaxy Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Galaxy Dark Grey",
+     "hex": "#6A6C6E",
+     "td": null
+    },
+    {
+     "name": "Galaxy Orange",
+     "hex": "#F97429",
+     "td": null
+    },
+    {
+     "name": "Galaxy Purple",
+     "hex": "#6C5BB1",
+     "td": null
+    },
+    {
+     "name": "Galaxy Teal",
+     "hex": "#00B4BC",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#AA6500",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#06924D",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#959FA1",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 245,
+    "max": 265,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 90,
+    "max": 100,
+    "recommended": null
+   },
+   "fan_pct": {
+    "min": 0,
+    "max": 0,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 70,
+    "hours": 6
+   },
+   "enclosure_advised": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyLite_ABS_TDS_EN_V5.4.pdf",
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyLite_ABS_SDS_US_EN_V1.pdf?v=1640833042"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/ABS/polylite_abs",
+   "verified": false
+  },
+  {
+   "id": "polymaker/polylite-asa",
+   "manufacturer": "Polymaker",
+   "name": "Polylite ASA",
+   "material": "asa",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.13,
+   "colors": [
+    {
+     "name": "Army Brown",
+     "hex": "#7E472A",
+     "td": null
+    },
+    {
+     "name": "Army Green",
+     "hex": "#665A28",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Dark Green Grey",
+     "hex": "#575B54",
+     "td": null
+    },
+    {
+     "name": "Dark Grey",
+     "hex": "#616469",
+     "td": null
+    },
+    {
+     "name": "Dark Purple",
+     "hex": "#492972",
+     "td": null
+    },
+    {
+     "name": "Galaxy Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Galaxy Blue",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "Galaxy Green",
+     "hex": "#06924D",
+     "td": null
+    },
+    {
+     "name": "Galaxy Red",
+     "hex": "#E20010",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#06924D",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 75,
+    "max": 95,
+    "recommended": null
+   },
+   "fan_pct": {
+    "min": 0,
+    "max": 0,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 70,
+    "hours": 7
+   },
+   "enclosure_advised": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyLite_ASA_TDS_EN_V5.4.pdf",
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyLite_ASA_SDS_US_EN_V1.pdf?v=1640833042"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/ASA/polylite_asa",
+   "verified": false
+  },
+  {
+   "id": "polymaker/polylite-petg",
+   "manufacturer": "Polymaker",
+   "name": "Polylite PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#0E21AE",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "#1E2F5A",
+     "td": null
+    },
+    {
+     "name": "Dark Green",
+     "hex": "#404720",
+     "td": null
+    },
+    {
+     "name": "Dark Grey",
+     "hex": "#6A6C6E",
+     "td": null
+    },
+    {
+     "name": "Dark Purple",
+     "hex": "#492972",
+     "td": null
+    },
+    {
+     "name": "Electric Blue",
+     "hex": "#0378D0",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#CE8D00",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#60AB61",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#B1B3C5",
+     "td": null
+    },
+    {
+     "name": "Lime",
+     "hex": "#DEDE00",
+     "td": null
+    },
+    {
+     "name": "Magenta",
+     "hex": "#EB0075",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 80,
+    "recommended": null
+   },
+   "fan_pct": {
+    "min": 0,
+    "max": 20,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 65,
+    "hours": 6
+   },
+   "enclosure_advised": false,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyLite_PETG_TDS_EN_V5.4.pdf",
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/Polymaker_PETG_SDS_US_EN_V1.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PETG/polylite_petg",
+   "verified": false
+  },
+  {
+   "id": "polymaker/petg",
+   "manufacturer": "Polymaker",
+   "name": "PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.3,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#070908",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#1B3B99",
+     "td": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "#081B36",
+     "td": null
+    },
+    {
+     "name": "Dark Green",
+     "hex": "#223622",
+     "td": null
+    },
+    {
+     "name": "Dark Grey",
+     "hex": "#363D40",
+     "td": null
+    },
+    {
+     "name": "Dark Purple",
+     "hex": "#352A3B",
+     "td": null
+    },
+    {
+     "name": "Electric Blue",
+     "hex": "#3E8CE4",
+     "td": null
+    },
+    {
+     "name": "Fiberon™ -ESD Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#38B837",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#A7AEB2",
+     "td": null
+    },
+    {
+     "name": "Lime",
+     "hex": "#F8FF6B",
+     "td": null
+    },
+    {
+     "name": "Magenta",
+     "hex": "#DC5D8C",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 60,
+    "max": 70,
+    "recommended": null
+   },
+   "fan_pct": {
+    "min": 20,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 60,
+    "hours": 6
+   },
+   "enclosure_advised": false,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PETG_TDS_Polymaker_297e875c-5d38-4d2b-ba68-eef8916de183.pdf",
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/Polymaker_PETG_SDS_US_EN_V1.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "polymaker/ht-pla",
+   "manufacturer": "Polymaker",
+   "name": "HT-PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.29,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#363738",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#19557B",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#65493C",
+     "td": null
+    },
+    {
+     "name": "Fire",
+     "hex": "#FE7927",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#279354",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#8B9094",
+     "td": null
+    },
+    {
+     "name": "Ice",
+     "hex": "#71D8ED",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#EF7A3E",
+     "td": null
+    },
+    {
+     "name": "Rainbow",
+     "hex": "#BA9633",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#CA3A3B",
+     "td": null
+    },
+    {
+     "name": "Teal",
+     "hex": "#55BCB6",
+     "td": null
+    },
+    {
+     "name": "Tropical",
+     "hex": "#C09810",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 60,
+    "hours": 6
+   },
+   "enclosure_advised": false,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/Polymaker_HT-PLA_TDS_EN_V1.1.pdf",
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/Polymaker_TM_HT-PLA_SDS_US_EN_V1.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PLA/ht_pla",
+   "verified": false
+  },
+  {
+   "id": "polymaker/polymax-pla",
+   "manufacturer": "Polymaker",
+   "name": "PolyMax™ PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75,
+    2.85
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#161619",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#013178",
+     "td": null
+    },
+    {
+     "name": "FDE Beige",
+     "hex": "#90755D",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#31A45F",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#8D8E93",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FE8E1B",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#F02F63",
+     "td": null
+    },
+    {
+     "name": "Polymaker Teal",
+     "hex": "#4ABAC2",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#6647A3",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#ED2F20",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#EBECED",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F0AB01",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 55,
+    "hours": 6
+   },
+   "enclosure_advised": false,
+   "spools": [
+    {
+     "weight_g": 750,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 5000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyMax_PLA_TDS_EN_V5.4.pdf",
+    "https://polymaker.com/wp-content/tech-docs/PolyMax_PLA_SDS_US_V1.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PLA/polymax_pla",
+   "verified": false
+  },
+  {
+   "id": "polymaker/dual-panchroma-matte-pla",
+   "manufacturer": "Polymaker",
+   "name": "Dual Panchroma Matte PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.31,
+   "colors": [
+    {
+     "name": "Camouflage Dark Green Brown",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Chameleon Teal Yellow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Flamingo Pink Red",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Foggy Orange Grey Orange",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Foggy Purple Grey Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Glacier Ice Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Mixed Berries Red Dark Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Shadow Black White Black",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Shadow Orange Orange Black",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Shadow Red Black Red",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Sunrise Red Yellow",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 55,
+    "hours": 6
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_PANCHROMA_V2.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PLA/dual_panchroma_matte_pla",
+   "verified": false
+  },
+  {
+   "id": "polymaker/polysonic-pla",
+   "manufacturer": "Polymaker",
+   "name": "Polysonic PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#2C3294",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#2D9E59",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#959FA1",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#F97429",
+     "td": null
+    },
+    {
+     "name": "Polymaker Teal",
+     "hex": "#32CABD",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#6C5BB1",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#E20010",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#E6DDDB",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FBE200",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PLA/polysonic_pla",
+   "verified": false
+  },
+  {
+   "id": "polymaker/ht-pla-gf",
+   "manufacturer": "Polymaker",
+   "name": "HT-PLA-GF",
+   "material": "pla",
+   "fill": [
+    "glass_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.33,
+   "colors": [
+    {
+     "name": "Army Green",
+     "hex": "#726747",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#363738",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#19557B",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#8B9094",
+     "td": null
+    },
+    {
+     "name": "Power Tool Green",
+     "hex": "#C9BD46",
+     "td": null
+    },
+    {
+     "name": "Power Tool Red",
+     "hex": "#B2484D",
+     "td": null
+    },
+    {
+     "name": "Power Tool Teal",
+     "hex": "#416D76",
+     "td": null
+    },
+    {
+     "name": "Power Tool Yellow",
+     "hex": "#FFA420",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#E1E4E4",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 60,
+    "hours": 6
+   },
+   "abrasive": true,
+   "enclosure_advised": false,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/Polymaker_HT-PLA-GF_TDS_EN_V1.1.pdf",
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/Polymaker_TM_HT-PLAGF_SDS_US_EN_V1.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PLA/ht_pla_gf",
+   "verified": false
+  },
+  {
+   "id": "polymaker/lw-polylite-pla",
+   "manufacturer": "Polymaker",
+   "name": "LW PolyLite PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 0.9,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#4C4E56",
+     "td": null
+    },
+    {
+     "name": "Bright Green",
+     "hex": "#D0ED03",
+     "td": null
+    },
+    {
+     "name": "Bright Orange",
+     "hex": "#FA8423",
+     "td": null
+    },
+    {
+     "name": "Bright Red",
+     "hex": "#D6001C",
+     "td": null
+    },
+    {
+     "name": "Bright Yellow",
+     "hex": "#FAD61B",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#A2AAAD",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#EAD7B8",
+     "td": null
+    },
+    {
+     "name": "Wood",
+     "hex": "#D2A273",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 210,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 55,
+    "hours": 6
+   },
+   "enclosure_advised": false,
+   "spools": [
+    {
+     "weight_g": 800,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/PolyLite_LW-PLA_TDS_US_V5.4.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PLA/lw_polylite_pla",
+   "verified": false
+  },
+  {
+   "id": "polymaker/panchroma-glow-pla",
+   "manufacturer": "Polymaker",
+   "name": "Panchroma Glow PLA",
+   "material": "pla",
+   "fill": [
+    "glow"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Luminous Blue",
+     "hex": "#40B6E4",
+     "td": null
+    },
+    {
+     "name": "Luminous Green",
+     "hex": "#9FEC41",
+     "td": null
+    },
+    {
+     "name": "Luminous Orange",
+     "hex": "#F67405",
+     "td": null
+    },
+    {
+     "name": "Luminous Pink",
+     "hex": "#FC8397",
+     "td": null
+    },
+    {
+     "name": "Luminous Rainbow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Luminous Yellow",
+     "hex": "#FFFB00",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 55,
+    "hours": 6
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_PANCHROMA_V2.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PLA/panchroma_glow_pla",
+   "verified": false
+  },
+  {
+   "id": "polymaker/satin-panchroma-pla",
+   "manufacturer": "Polymaker",
+   "name": "Satin Panchroma PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0078BF",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#60AB61",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#94A7B7",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FA8423",
+     "td": null
+    },
+    {
+     "name": "Polymaker Teal",
+     "hex": "#00B4BC",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#E20010",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#E6DDDB",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 55,
+    "hours": 6
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_PANCHROMA_V2.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PLA/satin_panchroma_pla",
+   "verified": false
+  },
+  {
+   "id": "polymaker/metallic-polylite-pla",
+   "manufacturer": "Polymaker",
+   "name": "Metallic PolyLite PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#033877",
+     "td": null
+    },
+    {
+     "name": "Bronze",
+     "hex": "#B5522B",
+     "td": null
+    },
+    {
+     "name": "Chrome",
+     "hex": "#545F67",
+     "td": null
+    },
+    {
+     "name": "Dark Red",
+     "hex": "#AA0101",
+     "td": null
+    },
+    {
+     "name": "Gold",
+     "hex": "#AA6500",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PLA/metallic_polylite_pla",
+   "verified": false
+  },
+  {
+   "id": "polymaker/neon-panchroma-pla",
+   "manufacturer": "Polymaker",
+   "name": "Neon Panchroma PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Green",
+     "hex": "#9AEE6C",
+     "td": null
+    },
+    {
+     "name": "Magenta",
+     "hex": "#F2306E",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#F67405",
+     "td": null
+    },
+    {
+     "name": "Pink",
+     "hex": "#EB0075",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#FF4F4D",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FFD342",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 55,
+    "hours": 6
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_PANCHROMA_V2.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PLA/neon_panchroma_pla",
+   "verified": false
+  },
+  {
+   "id": "polymaker/muted-panchroma-matte-pla",
+   "manufacturer": "Polymaker",
+   "name": "Muted Panchroma Matte PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.31,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#4E6A84",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#656D60",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#7C5577",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#DB3E14",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#D1D5C8",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 55,
+    "hours": 6
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_PANCHROMA_V2.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PLA/muted_panchroma_matte_pla",
+   "verified": false
+  },
+  {
+   "id": "polymaker/panchroma-pla",
+   "manufacturer": "Polymaker",
+   "name": "Panchroma PLA",
+   "material": "pla",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.32,
+   "colors": [
+    {
+     "name": "Army Light Green",
+     "hex": "#D0DF00",
+     "td": null
+    },
+    {
+     "name": "Dual Special Yin Yang",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Satin",
+     "hex": "#FFC946",
+     "td": null
+    },
+    {
+     "name": "Uv Shift Natural To Orange",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 25,
+    "max": 60,
+    "recommended": null
+   },
+   "drying": {
+    "temp_c": 55,
+    "hours": 6
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://cdn.shopify.com/s/files/1/0548/7299/7945/files/TDS_PANCHROMA_V2.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PLA/panchroma_pla",
+   "verified": false
+  },
+  {
+   "id": "polymaker/pla",
+   "manufacturer": "Polymaker",
+   "name": "PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "PolyLite™",
+     "hex": "#E20010",
+     "td": null
+    },
+    {
+     "name": "PolyMax™",
+     "hex": "#089A45",
+     "td": null
+    },
+    {
+     "name": "PolySonic™",
+     "hex": "#E72F1D",
+     "td": null
+    },
+    {
+     "name": "PolyWood™",
+     "hex": "#D2A273",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PLA/pla",
+   "verified": false
+  },
+  {
+   "id": "polymaker/creator-special-edition-pla",
+   "manufacturer": "Polymaker",
+   "name": "Creator Special Edition PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "3D Print General",
+     "hex": "#C3C199",
+     "td": null
+    },
+    {
+     "name": "Hedgehog Makes Galaxy Red",
+     "hex": "#EC0000",
+     "td": null
+    },
+    {
+     "name": "The Lm Show",
+     "hex": "#434D43",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PLA/creator_special_edition_pla",
+   "verified": false
+  },
+  {
+   "id": "polymaker/for-production-matte-pla",
+   "manufacturer": "Polymaker",
+   "name": "For Production Matte PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.31,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F5F5F4",
+     "td": 4.1
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 50,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 2500,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "polymaker/PLA/for_production_matte_pla",
+   "verified": false
+  }
+ ]
+}

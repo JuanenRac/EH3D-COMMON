@@ -1,0 +1,1930 @@
+{
+ "schema_version": 1,
+ "manufacturer": "eSUN 3D",
+ "filaments": [
+  {
+   "id": "esun-3d/pla",
+   "manufacturer": "eSUN 3D",
+   "name": "PLA+",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Almond Yellow",
+     "hex": "#F1EB9C",
+     "td": null
+    },
+    {
+     "name": "Apricot",
+     "hex": "#FEAD77",
+     "td": null
+    },
+    {
+     "name": "Baby Blue",
+     "hex": "#77C5D5",
+     "td": null
+    },
+    {
+     "name": "Baby Pink",
+     "hex": "#E9A2B2",
+     "td": null
+    },
+    {
+     "name": "Beige",
+     "hex": "#F1C6A6",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#25282A",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#00358E",
+     "td": null
+    },
+    {
+     "name": "Blue Purple",
+     "hex": "#A67DFF",
+     "td": null
+    },
+    {
+     "name": "Bone White",
+     "hex": "#D1C1A8",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#785135",
+     "td": null
+    },
+    {
+     "name": "Cold White",
+     "hex": "#F8F8FF",
+     "td": null
+    },
+    {
+     "name": "Cool White",
+     "hex": "#EFEFEF",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 45,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    },
+    {
+     "weight_g": 3000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.esun3d.com/media/esun/catalog/certification/product/PLA/PLA_-TDS-en.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/PLA/pla+",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/pla-hs",
+   "manufacturer": "eSUN 3D",
+   "name": "PLA-HS",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Almond Yellow",
+     "hex": "#E2D69A",
+     "td": null
+    },
+    {
+     "name": "Apricot",
+     "hex": "#E7923F",
+     "td": null
+    },
+    {
+     "name": "Baby Blue",
+     "hex": "#269EAC",
+     "td": null
+    },
+    {
+     "name": "Baby Pink",
+     "hex": "#CE8A87",
+     "td": null
+    },
+    {
+     "name": "Beige",
+     "hex": "#E8B99F",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#121212",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#133DA3",
+     "td": null
+    },
+    {
+     "name": "Bone White",
+     "hex": "#A88567",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#6A4A3D",
+     "td": null
+    },
+    {
+     "name": "Cold White",
+     "hex": "#EFEEF3",
+     "td": null
+    },
+    {
+     "name": "Coral Orange",
+     "hex": "#FD6C03",
+     "td": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "#1D2333",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 45,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.esun3d.com/media/esun/catalog/certification/product/PLA-HS/PLA-HS-TDS.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/PLA/pla_hs",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/pla-matte",
+   "manufacturer": "eSUN 3D",
+   "name": "PLA-Matte",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.329,
+   "colors": [
+    {
+     "name": "Almond Yellow",
+     "hex": "#F8F1D0",
+     "td": null
+    },
+    {
+     "name": "Black White",
+     "hex": "#403C3C",
+     "td": null
+    },
+    {
+     "name": "Dark Grey",
+     "hex": "#3F4964",
+     "td": null
+    },
+    {
+     "name": "Deep Black",
+     "hex": "#202022",
+     "td": null
+    },
+    {
+     "name": "Dual Color Black White",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Color Green Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Color Green Pink",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Color Green Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Color Purple Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Color Purple Yellow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Color Red Black",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Dual Color Red Blue",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 45,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.esun3d.com/media/esun/catalog/certification/product/PLA-Matte/PLA-Matte_TDS_2025.06.19_1.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/PLA/pla_matte",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/pla-silk-magic",
+   "manufacturer": "eSUN 3D",
+   "name": "PLA-Silk Magic",
+   "material": "pla",
+   "fill": [
+    "glitter"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.256,
+   "colors": [
+    {
+     "name": "Black+Gold",
+     "hex": "#B0A34E",
+     "td": null
+    },
+    {
+     "name": "Black+Green",
+     "hex": "#004E35",
+     "td": null
+    },
+    {
+     "name": "Black+Purple",
+     "hex": "#333137",
+     "td": null
+    },
+    {
+     "name": "Black+Red",
+     "hex": "#712821",
+     "td": null
+    },
+    {
+     "name": "Black Gold",
+     "hex": "#CE8D00",
+     "td": null
+    },
+    {
+     "name": "Black Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Black Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue+Red+Purple",
+     "hex": "#AB5A97",
+     "td": null
+    },
+    {
+     "name": "Blue+Silver",
+     "hex": "#042882",
+     "td": null
+    },
+    {
+     "name": "Brone+Purple+Green",
+     "hex": "#C58C88",
+     "td": null
+    },
+    {
+     "name": "Bule+Orange+Green",
+     "hex": "#7DD297",
+     "td": null
+    },
+    {
+     "name": "Dark Twinkling Blue",
+     "hex": "#3B3F6B",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 45,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.esun3d.com/media/esun/catalog/certification/product/PLA-Silk_Magic/eSUN_PLA-Silk_Magic_Filament_TDS_V4.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/PLA/pla_silk_magic",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/pla-basic",
+   "manufacturer": "eSUN 3D",
+   "name": "PLA-Basic",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Aqua",
+     "hex": "#45DBEA",
+     "td": null
+    },
+    {
+     "name": "Barbie Pink",
+     "hex": "#FD838E",
+     "td": null
+    },
+    {
+     "name": "Beige",
+     "hex": "#FFE2CB",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#393D47",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#1D57A5",
+     "td": null
+    },
+    {
+     "name": "Bone White",
+     "hex": "#EFE1C8",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#634432",
+     "td": null
+    },
+    {
+     "name": "Cold White",
+     "hex": "#F8F8FF",
+     "td": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "#3A4056",
+     "td": null
+    },
+    {
+     "name": "Fire Engine Red",
+     "hex": "#912F46",
+     "td": null
+    },
+    {
+     "name": "Grape Purple",
+     "hex": "#9949BE",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#2CC84D",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 45,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.esun3d.com/media/esun/catalog/certification/product/PLA-Basic/PLA-Basic-TDS-EN-_2026.6.5.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/PLA/pla_basic",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/petg",
+   "manufacturer": "eSUN 3D",
+   "name": "PETG",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0353BA",
+     "td": null
+    },
+    {
+     "name": "Default",
+     "hex": "#D9D8DE",
+     "td": null
+    },
+    {
+     "name": "Fire Engine Red",
+     "hex": "#683384",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#206233",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#A29EAD",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#F67405",
+     "td": null
+    },
+    {
+     "name": "Solid Black",
+     "hex": "#222325",
+     "td": null
+    },
+    {
+     "name": "Solid Blue",
+     "hex": "#021D72",
+     "td": null
+    },
+    {
+     "name": "Solid Gold",
+     "hex": "#F7C641",
+     "td": null
+    },
+    {
+     "name": "Solid Green",
+     "hex": "#0D9978",
+     "td": null
+    },
+    {
+     "name": "Solid Grey",
+     "hex": "#1F2531",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 75,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.esun3d.com/media/esun/catalog/certification/product/PETG/eSUN_PETG_Filament_TDS_1.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/PETG/petg",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/tpu-95a",
+   "manufacturer": "eSUN 3D",
+   "name": "TPU-95A",
+   "material": "tpu",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "95A Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "95A Glass Blue",
+     "hex": "#2E56F1",
+     "td": null
+    },
+    {
+     "name": "95A Glass Green",
+     "hex": "#00CC00",
+     "td": null
+    },
+    {
+     "name": "95A Glass Purple",
+     "hex": "#C63DBA",
+     "td": null
+    },
+    {
+     "name": "95A Glass Yellow",
+     "hex": "#EBFF57",
+     "td": null
+    },
+    {
+     "name": "95A Gray",
+     "hex": "#7A838E",
+     "td": null
+    },
+    {
+     "name": "95A Grey",
+     "hex": "#737282",
+     "td": null
+    },
+    {
+     "name": "95A Natural",
+     "hex": "#D9D8DE",
+     "td": null
+    },
+    {
+     "name": "95A Natural Clear",
+     "hex": "#E4E7E5",
+     "td": null
+    },
+    {
+     "name": "95A White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Black",
+     "hex": "#2A2A2A",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#727573",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 45,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.esun3d.com/media/esun/catalog/certification/product/TPU-95A/eSUN_TPU-95A_Filament_TDS_V4.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/TPU/tpu_95a",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/petg-hs",
+   "manufacturer": "eSUN 3D",
+   "name": "PETG+HS",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.26,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#151B1B",
+     "td": null
+    },
+    {
+     "name": "Fire Engine Red",
+     "hex": "#EA403E",
+     "td": null
+    },
+    {
+     "name": "Solid Blue",
+     "hex": "#1066D9",
+     "td": null
+    },
+    {
+     "name": "Solid Green",
+     "hex": "#02B795",
+     "td": null
+    },
+    {
+     "name": "Solid Grey",
+     "hex": "#67798E",
+     "td": null
+    },
+    {
+     "name": "Solid Orange",
+     "hex": "#FD9350",
+     "td": null
+    },
+    {
+     "name": "Solid Silver",
+     "hex": "#787E7D",
+     "td": null
+    },
+    {
+     "name": "Solid Yellow",
+     "hex": "#FBEB4E",
+     "td": null
+    },
+    {
+     "name": "Upgraded Solid Black",
+     "hex": "#000000",
+     "td": null
+    },
+    {
+     "name": "Upgraded Solid Blue",
+     "hex": "#2E56F1",
+     "td": null
+    },
+    {
+     "name": "Upgraded Solid Fire Engine Red",
+     "hex": "#E20010",
+     "td": null
+    },
+    {
+     "name": "Upgraded Solid Green",
+     "hex": "#018E63",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 220,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 75,
+    "max": 90,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.esun3d.com/media/esun/catalog/certification/product/PETG_HS/eSUN_PETG_HS_Filament_TDS_V1.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/PETG/petg+hs",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/petg-matte",
+   "manufacturer": "eSUN 3D",
+   "name": "PETG-Matte",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.35,
+   "colors": [
+    {
+     "name": "ALABASTER WHITE",
+     "hex": "#DDCFC2",
+     "td": null
+    },
+    {
+     "name": "ALMOND YELLOW",
+     "hex": "#E9E199",
+     "td": null
+    },
+    {
+     "name": "APRICOT",
+     "hex": "#E68A1D",
+     "td": null
+    },
+    {
+     "name": "BLUE BRICK",
+     "hex": "#4A6A8B",
+     "td": null
+    },
+    {
+     "name": "BRICK RED",
+     "hex": "#9B5347",
+     "td": null
+    },
+    {
+     "name": "CONCRETE GREY",
+     "hex": "#B7B7B5",
+     "td": null
+    },
+    {
+     "name": "DARK GREY",
+     "hex": "#5F6366",
+     "td": null
+    },
+    {
+     "name": "EARTH BROWN",
+     "hex": "#6B4423",
+     "td": null
+    },
+    {
+     "name": "LIGHT BLUE",
+     "hex": "#169BEA",
+     "td": null
+    },
+    {
+     "name": "LIGHT KHAKI",
+     "hex": "#C6C0A8",
+     "td": null
+    },
+    {
+     "name": "LILAC",
+     "hex": "#C78DBF",
+     "td": null
+    },
+    {
+     "name": "MATCHA GREEN",
+     "hex": "#989F4F",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.esun3d.com/media/esun/catalog/certification/product/PETG-Matte/PETG-Matte_TDS.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/PETG/petg_matte",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/abs",
+   "manufacturer": "eSUN 3D",
+   "name": "ABS+",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.06,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#151819",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#33649B",
+     "td": null
+    },
+    {
+     "name": "Cold White",
+     "hex": "#D1DAEB",
+     "td": null
+    },
+    {
+     "name": "Fire Engine Red",
+     "hex": "#B41621",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#044337",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#388CA3",
+     "td": null
+    },
+    {
+     "name": "Light Blue",
+     "hex": "#36DBE7",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#E6E0D4",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#E8903F",
+     "td": null
+    },
+    {
+     "name": "Peak Green",
+     "hex": "#00CC00",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#6C47B2",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#9F1415",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 95,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.esun3d.com/media/esun/catalog/certification/product/ABS/eSUN_ABS_Filament_TDS_V4.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/ABS/abs+",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/pla-silk",
+   "manufacturer": "eSUN 3D",
+   "name": "PLA-Silk",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#0544D3",
+     "td": null
+    },
+    {
+     "name": "Copper",
+     "hex": "#C9774B",
+     "td": null
+    },
+    {
+     "name": "Cyan",
+     "hex": "#1C74E0",
+     "td": null
+    },
+    {
+     "name": "Dark Yellow",
+     "hex": "#FEA83B",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#00F33B",
+     "td": null
+    },
+    {
+     "name": "Jacinth",
+     "hex": "#E03F26",
+     "td": null
+    },
+    {
+     "name": "Lime",
+     "hex": "#A3E60B",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#6120AC",
+     "td": null
+    },
+    {
+     "name": "Rainbow",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#FC2922",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#ABACB0",
+     "td": null
+    },
+    {
+     "name": "Violet",
+     "hex": "#E856A2",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 45,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.esun3d.com/media/esun/catalog/certification/product/PLA-Silk/PLA-Silk_TDS_2025.06.19.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/PLA/pla_silk",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/pla-silk-rainbow",
+   "manufacturer": "eSUN 3D",
+   "name": "PLA-Silk Rainbow",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "CORAL",
+     "hex": "#145559",
+     "td": null
+    },
+    {
+     "name": "DRAGON PALACE",
+     "hex": "#ED8770",
+     "td": null
+    },
+    {
+     "name": "FLAMING MOUNTAIN",
+     "hex": "#E89865",
+     "td": null
+    },
+    {
+     "name": "FOREST",
+     "hex": "#00AB84",
+     "td": null
+    },
+    {
+     "name": "HUAGUO MOUNTAIN",
+     "hex": "#AFB1C0",
+     "td": null
+    },
+    {
+     "name": "JADE POOL",
+     "hex": "#7C8BAC",
+     "td": null
+    },
+    {
+     "name": "Metal",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "MOON PALACE",
+     "hex": "#D4AFA7",
+     "td": null
+    },
+    {
+     "name": "MORNING GLORY",
+     "hex": "#978092",
+     "td": null
+    },
+    {
+     "name": "RAINBOW A",
+     "hex": "#042B16",
+     "td": null
+    },
+    {
+     "name": "SCORCHING SUN",
+     "hex": "#C61F19",
+     "td": null
+    },
+    {
+     "name": "UNIVERSE",
+     "hex": "#2A4A32",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 45,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.esun3d.com/media/esun/catalog/certification/product/PLA-Silk_Rainbow/eSUN_PLA-Silk_Rainbow_Filament_TDS_V4.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/PLA/pla_silk_rainbow",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/abs-hs",
+   "manufacturer": "eSUN 3D",
+   "name": "ABS+HS",
+   "material": "abs",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.04,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#0A0C0B",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#023173",
+     "td": null
+    },
+    {
+     "name": "Cold White",
+     "hex": "#F1F3F9",
+     "td": null
+    },
+    {
+     "name": "Fire Engine Red",
+     "hex": "#B81F1E",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#017873",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#172530",
+     "td": null
+    },
+    {
+     "name": "Natural",
+     "hex": "#E4E1D3",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FC7A31",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#F63028",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#838B8D",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#F7F8F6",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#FDDB00",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 230,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 95,
+    "max": 110,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/ABS/abs+hs",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/pla-silk-candy",
+   "manufacturer": "eSUN 3D",
+   "name": "PLA-Silk Candy",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Blue+Green",
+     "hex": "#042B16",
+     "td": null
+    },
+    {
+     "name": "Blue Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold Blue Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red+Gold",
+     "hex": "#FF4945",
+     "td": null
+    },
+    {
+     "name": "Red+Gold+Blue",
+     "hex": "#C5532E",
+     "td": null
+    },
+    {
+     "name": "Red+Gold+Green",
+     "hex": "#CCAA46",
+     "td": null
+    },
+    {
+     "name": "Red Gold",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red Gold Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Silver+Black",
+     "hex": "#6B747B",
+     "td": null
+    },
+    {
+     "name": "Silver+Blue",
+     "hex": "#19479C",
+     "td": null
+    },
+    {
+     "name": "Silver Black",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 210,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 45,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/PLA/pla_silk_candy",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/pla-lite",
+   "manufacturer": "eSUN 3D",
+   "name": "PLA-Lite",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#101211",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#0D2C7C",
+     "td": null
+    },
+    {
+     "name": "Cold White",
+     "hex": "#FFFFFF",
+     "td": null
+    },
+    {
+     "name": "Fire Engine Red",
+     "hex": "#8B282D",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#3E484A",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#1A3059",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#FC6401",
+     "td": null
+    },
+    {
+     "name": "Very Peri",
+     "hex": "#675DF1",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#C2C1BD",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F6DC01",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 45,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.esun3d.com/media/esun/catalog/certification/product/PLA-Lite/PLA-Lite_TDS_.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/PLA/pla_lite",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/petg-basic",
+   "manufacturer": "eSUN 3D",
+   "name": "PETG-Basic",
+   "material": "petg",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.27,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#1D1D1F",
+     "td": null
+    },
+    {
+     "name": "Blue",
+     "hex": "#1E1E6D",
+     "td": null
+    },
+    {
+     "name": "Clear",
+     "hex": "#E2E2E4",
+     "td": null
+    },
+    {
+     "name": "Grey",
+     "hex": "#35404E",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#EB1003",
+     "td": null
+    },
+    {
+     "name": "Silver",
+     "hex": "#84827E",
+     "td": null
+    },
+    {
+     "name": "Translucent Blue",
+     "hex": "#2C2088",
+     "td": null
+    },
+    {
+     "name": "Translucent Green",
+     "hex": "#124D2D",
+     "td": null
+    },
+    {
+     "name": "Translucent Orange",
+     "hex": "#FD5F00",
+     "td": null
+    },
+    {
+     "name": "White",
+     "hex": "#D7D6DA",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 250,
+    "max": 250,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 70,
+    "max": 70,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.esun3d.com/media/esun/catalog/certification/product/PETG-Basic/PETG_Basic_TDS.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/PETG/petg_basic",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/mystic-silk-pla",
+   "manufacturer": "eSUN 3D",
+   "name": "Mystic Silk PLA",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.02,
+   "density_g_cm3": 1.23,
+   "colors": [
+    {
+     "name": "Blue Orange Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Blue Red Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Bronze Purple Green",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Gold Silver Copper",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red Black Gold",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red Gold Purple",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red Green Blue",
+     "hex": null,
+     "td": null
+    },
+    {
+     "name": "Red Yellow Blue",
+     "hex": null,
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 45,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "links": [
+    "https://www.esun3d.com/media/esun/catalog/certification/product/PLA-Silk_Mystic/eSUN_PLA-Silk_Mystic_Filament_TDS_V4.0.pdf"
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/PLA/pla_silk_mystic",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/uv-change-pla-uv-color-change",
+   "manufacturer": "eSUN 3D",
+   "name": "UV Change PLA UV Color Change",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.25,
+   "colors": [
+    {
+     "name": "Blue",
+     "hex": "#7A82A4",
+     "td": null
+    },
+    {
+     "name": "Fuchsia",
+     "hex": "#BD2E6C",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#7E7855",
+     "td": null
+    },
+    {
+     "name": "Orange",
+     "hex": "#EBC04D",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#977495",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#E87A84",
+     "td": null
+    },
+    {
+     "name": "Yellow",
+     "hex": "#F0C85E",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 45,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/PLA/uv_change_pla_uv_color_change",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/pla-cf",
+   "manufacturer": "eSUN 3D",
+   "name": "PLA-CF",
+   "material": "pla",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.21,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#2D2F2C",
+     "td": null
+    },
+    {
+     "name": "Brown",
+     "hex": "#756E5B",
+     "td": null
+    },
+    {
+     "name": "Green",
+     "hex": "#2D3837",
+     "td": null
+    },
+    {
+     "name": "Purple",
+     "hex": "#353541",
+     "td": null
+    },
+    {
+     "name": "Red",
+     "hex": "#382618",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 190,
+    "max": 230,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 45,
+    "max": 60,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/PLA/pla_cf",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/pla-chameleon",
+   "manufacturer": "eSUN 3D",
+   "name": "PLA-Chameleon",
+   "material": "pla",
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.24,
+   "colors": [
+    {
+     "name": "Galaxy Blue",
+     "hex": "#3C5CAB",
+     "td": null
+    },
+    {
+     "name": "Nebula Purple",
+     "hex": "#785AC7",
+     "td": null
+    },
+    {
+     "name": "Polaris",
+     "hex": "#509483",
+     "td": null
+    },
+    {
+     "name": "Raspberry Red",
+     "hex": "#F7574F",
+     "td": null
+    },
+    {
+     "name": "Tech Black",
+     "hex": "#374248",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 200,
+    "max": 240,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 45,
+    "max": 60,
+    "recommended": null
+   },
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/PLA/pla_chameleon",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/petg-cf",
+   "manufacturer": "eSUN 3D",
+   "name": "PETG+CF",
+   "material": "petg",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.26,
+   "colors": [
+    {
+     "name": "Antique Brass",
+     "hex": "#A38273",
+     "td": null
+    },
+    {
+     "name": "Black Red",
+     "hex": "#2A1E20",
+     "td": null
+    },
+    {
+     "name": "Blackish Green",
+     "hex": "#424C4B",
+     "td": null
+    },
+    {
+     "name": "Dark Grey",
+     "hex": "#111419",
+     "td": null
+    },
+    {
+     "name": "Deep Blue",
+     "hex": "#3C4354",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 260,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 75,
+    "max": 90,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/PETG/petg+cf",
+   "verified": false
+  },
+  {
+   "id": "esun-3d/abs-cf",
+   "manufacturer": "eSUN 3D",
+   "name": "ABS+CF",
+   "material": "abs",
+   "fill": [
+    "carbon_fiber"
+   ],
+   "diameters_mm": [
+    1.75
+   ],
+   "diameter_tolerance_mm": 0.03,
+   "density_g_cm3": 1.06,
+   "colors": [
+    {
+     "name": "Black",
+     "hex": "#363638",
+     "td": null
+    },
+    {
+     "name": "Dark Blue",
+     "hex": "#2A3247",
+     "td": null
+    },
+    {
+     "name": "Dark Green",
+     "hex": "#182C31",
+     "td": null
+    },
+    {
+     "name": "Dark Purple",
+     "hex": "#302D38",
+     "td": null
+    },
+    {
+     "name": "Dark Red",
+     "hex": "#2F2121",
+     "td": null
+    }
+   ],
+   "nozzle_c": {
+    "min": 240,
+    "max": 270,
+    "recommended": null
+   },
+   "bed_c": {
+    "min": 100,
+    "max": 110,
+    "recommended": null
+   },
+   "abrasive": true,
+   "spools": [
+    {
+     "weight_g": 1000,
+     "diameter_mm": null,
+     "width_mm": null,
+     "hub_mm": null
+    }
+   ],
+   "source": "open-filament-database",
+   "source_ref": "esun_3d/ABS/abs+cf",
+   "verified": false
+  }
+ ]
+}
