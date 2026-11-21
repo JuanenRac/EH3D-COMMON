@@ -4,15 +4,25 @@
 //! what it is doing is its [`Status`]; what it is told to do is a [`Command`].
 //!
 //! The families that are known are in [`Family`], with the way each one is reached; the ones that have a controller written here are in
-//! [`grbl`]. A controller that has no implementation yet is still listed, so that the program can say that it is not driven yet rather
+//! [`grbl`] (GRBL, grblHAL and FluidNC), [`marlin`] and [`klipper`] (through Moonraker). Beside them are what every program that drives one
+//! of them needs to try it with nothing connected: the [`sim`] machine, the simulated GRBL ([`grblsim`]), Marlin ([`marlin::MarlinDevice`])
+//! and Klipper ([`klippersim`]), the [`wire`] that spoils the bytes by a fixed seed, the [`faulty`] wrapper that makes any controller fall
+//! silent, and the words of the errors in eight languages ([`dialtext`]). A controller that has no implementation yet is still listed, so that the program can say that it is not driven yet rather
 //! than pretend it is.
 
 pub mod codes;
+pub mod dialtext;
+pub mod faulty;
 pub mod grbl;
+pub mod grblsim;
+pub mod klipper;
+pub mod klippersim;
+pub mod marlin;
 pub mod mock;
 pub mod serial;
 pub mod sim;
 pub mod urgent;
+pub mod wire;
 
 use std::fmt;
 
@@ -156,9 +166,14 @@ impl Family {
         )
     }
 
-    /// Whether this crate has a controller for it.
+    /// Whether this crate has a controller for it that can reach a real machine: GRBL, grblHAL and FluidNC (the GRBL controller) and Marlin
+    /// (the Marlin controller), all over a line transport such as the serial port. Klipper has a controller ([`klipper`]) but no transport
+    /// that opens a socket yet, so it is not listed here until it has one.
     pub fn is_driven(self) -> bool {
-        matches!(self, Family::Grbl | Family::GrblHal | Family::FluidNc)
+        matches!(
+            self,
+            Family::Grbl | Family::GrblHal | Family::FluidNc | Family::Marlin
+        )
     }
 }
 
@@ -360,8 +375,9 @@ mod tests {
         assert!(Family::Grbl.is_free() && Family::HydraUmc.is_free() && Family::Bungard.is_free());
         assert!(!Family::PlanetCnc.is_free() && !Family::Mach.is_free());
         assert!(
-            Family::Grbl.is_driven() && !Family::Mach.is_driven() && !Family::Marlin.is_driven()
+            Family::Grbl.is_driven() && Family::Marlin.is_driven() && Family::FluidNc.is_driven()
         );
+        assert!(!Family::Mach.is_driven() && !Family::Klipper.is_driven());
         assert_eq!(Family::PlanetCnc.link(), Link::Usb);
     }
 }

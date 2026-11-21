@@ -3,7 +3,7 @@ name = "eh3d-controller"
 version = "0.0.1"
 edition.workspace = true
 rust-version.workspace = true
-description = "The interface every machine controller of the EH3D suite speaks (Bungard, HYDRA-UMC, GRBL and the rest), and the first controllers written against it"
+description = "The interface every machine controller of the EH3D suite speaks (Bungard, HYDRA-UMC, GRBL and the rest), the controllers written against it (GRBL, Marlin, Klipper) and the simulated devices they are tried on"
 license.workspace = true
 authors.workspace = true
 repository.workspace = true
@@ -13,6 +13,8 @@ repository.workspace = true
 serial = ["dep:serialport"]
 
 [dependencies]
+# the messages of Moonraker (Klipper) are JSON-RPC
+serde_json = "1"
 serialport = { version = "4", default-features = false, optional = true }
 
 [lints]
