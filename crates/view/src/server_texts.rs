@@ -3,7 +3,7 @@
 //!
 //! Each row has the eight texts in the order English, Spanish, Italian, German, French, Portuguese (of Portugal), Chinese, Japanese (the type of the
 //! table makes the compiler refuse a row with fewer or more). A language that has no words of its own for these texts (the other 29 of
-//! [`Lang::ALL`]) speaks its main language when it is a variant (`pt-br`, `fr-ca`) and English otherwise.
+//! [`Lang::ALL`]) speaks its main language when it is a variant (`pt-br`, `fr-ca`) and English otherwise; the project has the eight languages of the table only.
 
 use crate::texts::{Lang, CORE_LANGS};
 
@@ -214,11 +214,12 @@ mod tests {
     }
 
     #[test]
-    fn the_other_languages_speak_their_main_language_or_english() {
+    fn the_other_codes_speak_their_main_language_or_english() {
+        let code = |c: &str| Lang::from_code(c).unwrap_or(Lang::En);
         for &t in ALL_SERVER_TEXTS {
-            assert_eq!(tr(Lang::PtBr, t), tr(Lang::Pt, t));
-            assert_eq!(tr(Lang::FrCa, t), tr(Lang::Fr, t));
-            assert_eq!(tr(Lang::Bg, t), tr(Lang::En, t));
+            assert_eq!(tr(code("pt-br"), t), tr(Lang::Pt, t));
+            assert_eq!(tr(code("fr-ca"), t), tr(Lang::Fr, t));
+            assert_eq!(tr(code("bg"), t), tr(Lang::En, t));
         }
     }
 

@@ -11,7 +11,7 @@ repository.workspace = true
 [dependencies]
 # the machine file: the table and the scale of the machine the work is checked against
 eh3d-bungard-formats = { version = ">=0.0.1", path = "../formats" }
-# the words of the summary in the 37 languages of the suite
+# the words of the summary in the eight languages of the suite
 eh3d-view = { version = ">=0.0.1", path = "../view" }
 
 [lints]

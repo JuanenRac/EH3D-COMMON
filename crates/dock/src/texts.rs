@@ -3,7 +3,8 @@
 //!
 //! Each row has the eight texts in the order English, Spanish, Italian, German, French, Portuguese (of Portugal), Chinese, Japanese; the type of the
 //! table makes the compiler refuse a row with fewer or more. A language beyond the first eight speaks its main language when it is a variant
-//! (`pt-br`, `fr-ca`) and English otherwise.
+//! (`pt-br`, `fr-ca`) and English otherwise; the project has the eight languages of the table only, so
+//! the codes of the others are read as their main language by `Lang::from_code` or not at all.
 
 use eh3d_view::texts::{Lang, CORE_LANGS};
 
@@ -223,10 +224,11 @@ mod tests {
     }
 
     #[test]
-    fn languages_beyond_the_first_eight_read_a_main_language() {
-        assert_eq!(tr(Lang::PtBr, DockText::MenuFile), "Ficheiro");
-        assert_eq!(tr(Lang::FrCa, DockText::MenuFile), "Fichier");
-        assert_eq!(tr(Lang::Pl, DockText::MenuFile), "File");
+    fn a_code_of_a_language_the_project_does_not_have_reads_a_main_language_or_english() {
+        let code = |c: &str| Lang::from_code(c).unwrap_or(Lang::En);
+        assert_eq!(tr(code("pt-br"), DockText::MenuFile), "Ficheiro");
+        assert_eq!(tr(code("fr-ca"), DockText::MenuFile), "Fichier");
+        assert_eq!(tr(code("pl"), DockText::MenuFile), "File");
         assert_eq!(tr(Lang::Ja, DockText::MenuHelp), "ヘルプ");
     }
 
@@ -255,8 +257,11 @@ mod tests {
         ]);
         assert_eq!(t.get(Lang::En), "Layers");
         assert_eq!(t.get(Lang::Pt), "Camadas");
-        assert_eq!(t.get(Lang::PtBr), "Camadas");
-        assert_eq!(t.get(Lang::Ru), "Layers");
+        assert_eq!(
+            t.get(Lang::from_code("pt-br").unwrap_or(Lang::En)),
+            "Camadas"
+        );
+        assert_eq!(t.get(Lang::from_code("ru").unwrap_or(Lang::En)), "Layers");
         assert_eq!(Text8::same("3D").get(Lang::Ja), "3D");
     }
 }

@@ -1184,9 +1184,10 @@ mod tests {
             seen.insert(t);
         }
         assert!(seen.len() >= 7, "{seen:?}");
-        // a variant speaks its main language
-        assert_eq!(error_text(Lang::PtBr, &e), error_text(Lang::Pt, &e));
-        assert_eq!(error_text(Lang::Bg, &e), error_text(Lang::En, &e));
+        // a code of a language the project does not have is read as its main language, or not at all (then English is used)
+        let code = |c: &str| Lang::from_code(c).unwrap_or(Lang::En);
+        assert_eq!(error_text(code("pt-br"), &e), error_text(Lang::Pt, &e));
+        assert_eq!(error_text(code("bg"), &e), error_text(Lang::En, &e));
         // a code of a newer server is shown as itself
         let newer = ClientError::Server {
             status: 409,

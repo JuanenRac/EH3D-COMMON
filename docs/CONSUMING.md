@@ -71,7 +71,7 @@ The manifest of a repository that uses this one may say, with the optional field
 
 ## The limits of the readers and the spindles
 
-The readers of the drill file, the plot, the drawing and the Gerber outline refuse a file past the hard limits of `crates/formats/reader_limits.cfg` and say when a file is past a warning limit (`ncd::parse_limited`, `hpgl::parse_limited`; `eh3d_summary::summary::size_warning` gives the notice in the 37 languages). The limits of the spindles are in `crates/materials/spindles.cfg` (`eh3d_materials::spindle`). Both are files with one value per line: a program that needs other values keeps its own copy and reads it with `ReaderLimits::from_config`; nothing is written in the code.
+The readers of the drill file, the plot, the drawing and the Gerber outline refuse a file past the hard limits of `crates/formats/reader_limits.cfg` and say when a file is past a warning limit (`ncd::parse_limited`, `hpgl::parse_limited`; `eh3d_summary::summary::size_warning` gives the notice in the eight languages). The limits of the spindles are in `crates/materials/spindles.cfg` (`eh3d_materials::spindle`). Both are files with one value per line: a program that needs other values keeps its own copy and reads it with `ReaderLimits::from_config`; nothing is written in the code.
 
 ## What not to do
 

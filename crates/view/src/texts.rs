@@ -11,42 +11,13 @@ pub enum Lang {
     Pt,
     Zh,
     Ja,
-    Bg,
-    Hr,
-    Cs,
-    Da,
-    Nl,
-    Et,
-    Fi,
-    El,
-    Hu,
-    Ga,
-    Lv,
-    Lt,
-    Mt,
-    Pl,
-    Ro,
-    Sk,
-    Sl,
-    Sv,
-    No,
-    Is,
-    Uk,
-    Ru,
-    Sr,
-    Sq,
-    Ca,
-    Gl,
-    Eu,
-    PtBr,
-    FrCa,
 }
 
-/// How many languages have their words inside the program (the first of [`Lang::ALL`]); the rest are read from the files of `locales/`.
+/// How many languages have their words inside the program (all of [`Lang::ALL`]).
 pub const CORE_LANGS: usize = 8;
 
 impl Lang {
-    pub const ALL: [Lang; 37] = [
+    pub const ALL: [Lang; 8] = [
         Lang::En,
         Lang::Es,
         Lang::It,
@@ -55,38 +26,9 @@ impl Lang {
         Lang::Pt,
         Lang::Zh,
         Lang::Ja,
-        Lang::Bg,
-        Lang::Hr,
-        Lang::Cs,
-        Lang::Da,
-        Lang::Nl,
-        Lang::Et,
-        Lang::Fi,
-        Lang::El,
-        Lang::Hu,
-        Lang::Ga,
-        Lang::Lv,
-        Lang::Lt,
-        Lang::Mt,
-        Lang::Pl,
-        Lang::Ro,
-        Lang::Sk,
-        Lang::Sl,
-        Lang::Sv,
-        Lang::No,
-        Lang::Is,
-        Lang::Uk,
-        Lang::Ru,
-        Lang::Sr,
-        Lang::Sq,
-        Lang::Ca,
-        Lang::Gl,
-        Lang::Eu,
-        Lang::PtBr,
-        Lang::FrCa,
     ];
 
-    /// The code of the configuration file and of the command line (`pt-br`, `fr-ca` for the variants).
+    /// The code of the configuration file and of the command line (`pt` is the Portuguese of Portugal).
     pub fn code(self) -> &'static str {
         match self {
             Lang::En => "en",
@@ -97,35 +39,6 @@ impl Lang {
             Lang::Pt => "pt",
             Lang::Zh => "zh",
             Lang::Ja => "ja",
-            Lang::Bg => "bg",
-            Lang::Hr => "hr",
-            Lang::Cs => "cs",
-            Lang::Da => "da",
-            Lang::Nl => "nl",
-            Lang::Et => "et",
-            Lang::Fi => "fi",
-            Lang::El => "el",
-            Lang::Hu => "hu",
-            Lang::Ga => "ga",
-            Lang::Lv => "lv",
-            Lang::Lt => "lt",
-            Lang::Mt => "mt",
-            Lang::Pl => "pl",
-            Lang::Ro => "ro",
-            Lang::Sk => "sk",
-            Lang::Sl => "sl",
-            Lang::Sv => "sv",
-            Lang::No => "no",
-            Lang::Is => "is",
-            Lang::Uk => "uk",
-            Lang::Ru => "ru",
-            Lang::Sr => "sr",
-            Lang::Sq => "sq",
-            Lang::Ca => "ca",
-            Lang::Gl => "gl",
-            Lang::Eu => "eu",
-            Lang::PtBr => "pt-br",
-            Lang::FrCa => "fr-ca",
         }
     }
 
@@ -140,48 +53,17 @@ impl Lang {
             Lang::Pt => "Português",
             Lang::Zh => "中文",
             Lang::Ja => "日本語",
-            Lang::Bg => "Български",
-            Lang::Hr => "Hrvatski",
-            Lang::Cs => "Čeština",
-            Lang::Da => "Dansk",
-            Lang::Nl => "Nederlands",
-            Lang::Et => "Eesti",
-            Lang::Fi => "Suomi",
-            Lang::El => "Ελληνικά",
-            Lang::Hu => "Magyar",
-            Lang::Ga => "Gaeilge",
-            Lang::Lv => "Latviešu",
-            Lang::Lt => "Lietuvių",
-            Lang::Mt => "Malti",
-            Lang::Pl => "Polski",
-            Lang::Ro => "Română",
-            Lang::Sk => "Slovenčina",
-            Lang::Sl => "Slovenščina",
-            Lang::Sv => "Svenska",
-            Lang::No => "Norsk",
-            Lang::Is => "Íslenska",
-            Lang::Uk => "Українська",
-            Lang::Ru => "Русский",
-            Lang::Sr => "Српски",
-            Lang::Sq => "Shqip",
-            Lang::Ca => "Català",
-            Lang::Gl => "Galego",
-            Lang::Eu => "Euskara",
-            Lang::PtBr => "Português (Brasil)",
-            Lang::FrCa => "Français (Canada)",
         }
     }
 
-    /// A variant falls back to its main language for the words it does not change.
+    /// No language of the project is a variant of another one any more, so none falls back to a main language (a code such as `pt-br` or `fr-ca`
+    /// is read as its main language by [`Lang::from_code`]).
     pub fn fallback(self) -> Option<Lang> {
-        match self {
-            Lang::PtBr => Some(Lang::Pt),
-            Lang::FrCa => Some(Lang::Fr),
-            _ => None,
-        }
+        let _ = self;
+        None
     }
 
-    /// The language with that code (`es`, `ES`, `pt_BR`, `pt-br`); a region that is not a variant of the project gives its main language (`es-MX` is `es`).
+    /// The language with that code (`es`, `ES`, `pt_BR`, `pt-br`); a region gives its main language (`es-MX` is `es`, `pt-br` is `pt`, `fr-CA` is `fr`); a language the project does not have gives `None`.
     pub fn from_code(code: &str) -> Option<Lang> {
         let c = code.trim().to_ascii_lowercase().replace('_', "-");
         if let Some(l) = Lang::ALL.into_iter().find(|l| l.code() == c) {
@@ -190,94 +72,11 @@ impl Lang {
         let main = c.split('-').next().unwrap_or("");
         Lang::ALL.into_iter().find(|l| l.code() == main)
     }
-
-    fn is_core(self) -> bool {
-        Lang::ALL
-            .iter()
-            .position(|l| *l == self)
-            .is_some_and(|i| i < CORE_LANGS)
-    }
 }
 
-fn source(lang: Lang) -> &'static str {
-    match lang {
-        Lang::Bg => include_str!("../locales/bg.tsv"),
-        Lang::Hr => include_str!("../locales/hr.tsv"),
-        Lang::Cs => include_str!("../locales/cs.tsv"),
-        Lang::Da => include_str!("../locales/da.tsv"),
-        Lang::Nl => include_str!("../locales/nl.tsv"),
-        Lang::Et => include_str!("../locales/et.tsv"),
-        Lang::Fi => include_str!("../locales/fi.tsv"),
-        Lang::El => include_str!("../locales/el.tsv"),
-        Lang::Hu => include_str!("../locales/hu.tsv"),
-        Lang::Ga => include_str!("../locales/ga.tsv"),
-        Lang::Lv => include_str!("../locales/lv.tsv"),
-        Lang::Lt => include_str!("../locales/lt.tsv"),
-        Lang::Mt => include_str!("../locales/mt.tsv"),
-        Lang::Pl => include_str!("../locales/pl.tsv"),
-        Lang::Ro => include_str!("../locales/ro.tsv"),
-        Lang::Sk => include_str!("../locales/sk.tsv"),
-        Lang::Sl => include_str!("../locales/sl.tsv"),
-        Lang::Sv => include_str!("../locales/sv.tsv"),
-        Lang::No => include_str!("../locales/no.tsv"),
-        Lang::Is => include_str!("../locales/is.tsv"),
-        Lang::Uk => include_str!("../locales/uk.tsv"),
-        Lang::Ru => include_str!("../locales/ru.tsv"),
-        Lang::Sr => include_str!("../locales/sr.tsv"),
-        Lang::Sq => include_str!("../locales/sq.tsv"),
-        Lang::Ca => include_str!("../locales/ca.tsv"),
-        Lang::Gl => include_str!("../locales/gl.tsv"),
-        Lang::Eu => include_str!("../locales/eu.tsv"),
-        Lang::PtBr => include_str!("../locales/pt-br.tsv"),
-        Lang::FrCa => include_str!("../locales/fr-ca.tsv"),
-        _ => "",
-    }
-}
-
-/// The words of a language that is read from its file: `Name<TAB>text` per line, `#` for comments, `\n` for a line break.
-fn extra(lang: Lang) -> &'static std::collections::HashMap<&'static str, &'static str> {
-    use std::collections::HashMap;
-    use std::sync::OnceLock;
-    static MAPS: OnceLock<Vec<HashMap<&'static str, &'static str>>> = OnceLock::new();
-    let maps = MAPS.get_or_init(|| {
-        Lang::ALL
-            .iter()
-            .map(|l| {
-                let mut m = HashMap::new();
-                for line in source(*l).lines() {
-                    let line = line.trim_end_matches('\r');
-                    if line.starts_with('#') {
-                        continue;
-                    }
-                    if let Some((k, v)) = line.split_once('\t') {
-                        if !v.trim().is_empty() {
-                            let v: &'static str =
-                                Box::leak(v.replace("\\n", "\n").into_boxed_str());
-                            m.insert(k.trim(), v);
-                        }
-                    }
-                }
-                m
-            })
-            .collect()
-    });
-    let i = Lang::ALL.iter().position(|l| *l == lang).unwrap_or(0);
-    &maps[i]
-}
-
-/// How many of the texts a language has of its own (not taken from English or from its main language).
-pub fn coverage(lang: Lang) -> (usize, usize) {
-    if lang.is_core() {
-        return (ALL_TEXTS.len(), ALL_TEXTS.len());
-    }
-    let m = extra(lang);
-    (
-        ALL_TEXTS
-            .iter()
-            .filter(|t| m.contains_key(t.name()))
-            .count(),
-        ALL_TEXTS.len(),
-    )
+/// How many of the texts a language has of its own: all of them, because the eight languages have their words inside the program.
+pub fn coverage(_lang: Lang) -> (usize, usize) {
+    (ALL_TEXTS.len(), ALL_TEXTS.len())
 }
 
 macro_rules! texts {
@@ -971,20 +770,8 @@ impl crate::theme::ThemeId {
 
 pub fn tr(lang: Lang, text: Text) -> &'static str {
     let row = &TABLE[text.index()];
-    let mut l = lang;
-    loop {
-        let i = Lang::ALL.iter().position(|x| *x == l).unwrap_or(0);
-        if i < CORE_LANGS {
-            return row[i];
-        }
-        if let Some(s) = extra(l).get(text.name()) {
-            return s;
-        }
-        match l.fallback() {
-            Some(base) => l = base,
-            None => return row[0],
-        }
-    }
+    let i = Lang::ALL.iter().position(|x| *x == lang).unwrap_or(0);
+    row[i.min(CORE_LANGS - 1)]
 }
 
 #[cfg(test)]
@@ -1006,7 +793,7 @@ mod tests {
     }
 
     #[test]
-    fn the_words_of_the_log_of_the_settings_exist_in_the_thirty_seven_languages_and_the_sentence_is_translated(
+    fn the_words_of_the_log_of_the_settings_exist_in_the_eight_languages_and_the_sentence_is_translated(
     ) {
         let all = [
             Text::LogTitle,
@@ -1031,7 +818,7 @@ mod tests {
     }
 
     #[test]
-    fn the_warnings_of_the_server_about_the_request_exist_in_the_thirty_seven_languages() {
+    fn the_warnings_of_the_server_about_the_request_exist_in_the_eight_languages() {
         let all = [
             Text::WarnRackUnknownField,
             Text::WarnRequestNewer,
@@ -1048,15 +835,7 @@ mod tests {
                 }
             }
         }
-        // the variants speak the language they come from, and the Portuguese of Portugal says ferramentas, not the Brazilian word
-        assert_eq!(
-            tr(Lang::PtBr, Text::WarnRackNoChanger),
-            tr(Lang::Pt, Text::WarnRackNoChanger)
-        );
-        assert_eq!(
-            tr(Lang::FrCa, Text::WarnRackNeedsV2),
-            tr(Lang::Fr, Text::WarnRackNeedsV2)
-        );
+        // the Portuguese of Portugal says ferramentas, not the Brazilian word
         assert!(tr(Lang::Pt, Text::WarnRackNoChanger).contains("ferramentas"));
     }
 
@@ -1074,7 +853,7 @@ mod tests {
 
     #[test]
     fn the_names_of_the_themes_differ_in_each_language() {
-        for l in Lang::ALL.into_iter().filter(|l| l.is_core()) {
+        for l in Lang::ALL {
             let names = [
                 Text::ThemeForge,
                 Text::ThemeNeon,
@@ -1101,109 +880,65 @@ mod tests {
     }
 
     #[test]
-    fn the_files_of_the_languages_only_name_texts_that_exist() {
-        let names: std::collections::HashSet<&str> = ALL_TEXTS.iter().map(|t| t.name()).collect();
-        for l in Lang::ALL.into_iter().filter(|l| !l.is_core()) {
-            for line in source(l).lines() {
-                if line.starts_with('#') || line.trim().is_empty() {
-                    continue;
-                }
-                let (k, v) = line
-                    .split_once('\t')
-                    .unwrap_or_else(|| panic!("{l:?}: no tab in {line:?}"));
-                assert!(names.contains(k.trim()), "{l:?}: unknown text {k:?}");
-                assert!(!v.trim().is_empty(), "{l:?}: {k} is empty");
-            }
-        }
-    }
-
-    #[test]
-    fn a_text_a_language_does_not_have_comes_from_english_or_from_its_main_language() {
-        let any_missing = Lang::ALL
-            .into_iter()
-            .filter(|l| !l.is_core())
-            .any(|l| coverage(l).0 < coverage(l).1);
-        if any_missing {
-            let t = ALL_TEXTS[0];
-            assert!(!tr(Lang::Bg, t).is_empty());
-        }
-        // a variant takes the main language where it does not change a word
-        for &t in ALL_TEXTS {
-            if !extra(Lang::PtBr).contains_key(t.name()) {
-                assert_eq!(tr(Lang::PtBr, t), tr(Lang::Pt, t));
-            }
-            if !extra(Lang::FrCa).contains_key(t.name()) {
-                assert_eq!(tr(Lang::FrCa, t), tr(Lang::Fr, t));
-            }
-        }
-    }
-
-    #[test]
-    fn the_regions_that_are_not_variants_give_their_main_language() {
-        assert_eq!(Lang::from_code("pt_BR"), Some(Lang::PtBr));
-        assert_eq!(Lang::from_code("fr-CA"), Some(Lang::FrCa));
+    fn the_regions_give_their_main_language_and_the_languages_that_were_removed_are_unknown() {
+        assert_eq!(Lang::from_code("pt_BR"), Some(Lang::Pt));
+        assert_eq!(Lang::from_code("fr-CA"), Some(Lang::Fr));
         assert_eq!(Lang::from_code("es-MX"), Some(Lang::Es));
         assert_eq!(Lang::from_code("pt-PT"), Some(Lang::Pt));
-        assert_eq!(Lang::ALL.len(), 37);
+        // the languages the project had beyond its eight are not read any more: the caller keeps its default
+        for code in ["pl", "ru", "bg", "uk", "nl", "sv", "ca", "el", "hu", "cs"] {
+            assert_eq!(Lang::from_code(code), None, "{code}");
+        }
+        assert_eq!(
+            tr(Lang::from_code("pl").unwrap_or(Lang::En), Text::Start),
+            "Start"
+        );
     }
 
     #[test]
-    fn every_new_language_has_all_its_texts_and_the_variants_their_own_words() {
-        for l in Lang::ALL.into_iter().filter(|l| !l.is_core()) {
-            let (have, total) = coverage(l);
-            if l.fallback().is_some() {
-                assert!(have >= 20 && have < total, "{l:?}: {have}/{total}");
-            } else {
-                assert_eq!(have, total, "{l:?} is missing {} texts", total - have);
-            }
+    fn the_project_has_eight_languages_with_different_codes_and_they_all_have_their_words_inside() {
+        assert_eq!(Lang::ALL.len(), 8);
+        assert_eq!(CORE_LANGS, Lang::ALL.len());
+        let mut codes: Vec<&str> = Lang::ALL.iter().map(|l| l.code()).collect();
+        let expected = ["en", "es", "it", "de", "fr", "pt", "zh", "ja"];
+        assert_eq!(codes, expected);
+        codes.sort_unstable();
+        codes.dedup();
+        assert_eq!(codes.len(), 8);
+        for l in Lang::ALL {
+            assert_eq!(coverage(l), (ALL_TEXTS.len(), ALL_TEXTS.len()), "{l:?}");
+            assert_eq!(l.fallback(), None, "{l:?}");
         }
-        // the alphabets are the language's own
+    }
+
+    #[test]
+    fn the_alphabets_are_the_languages_own() {
         let in_range = |l: Lang, lo: char, hi: char| {
             ALL_TEXTS
                 .iter()
                 .filter(|t| tr(l, **t).chars().any(|c| (lo..=hi).contains(&c)))
                 .count()
         };
-        for l in [Lang::Bg, Lang::Uk, Lang::Ru, Lang::Sr] {
-            assert!(in_range(l, '\u{400}', '\u{4ff}') > 300, "{l:?}");
-        }
-        assert!(in_range(Lang::El, '\u{370}', '\u{3ff}') > 300);
-    }
-
-    /// The languages that have a file of their own with every text (the variants are the two with a main language to fall back on).
-    fn full_languages() -> Vec<Lang> {
-        Lang::ALL
-            .into_iter()
-            .filter(|l| !l.is_core() && l.fallback().is_none())
-            .collect()
+        assert!(in_range(Lang::Zh, '\u{4e00}', '\u{9fff}') > 300);
+        assert!(in_range(Lang::Ja, '\u{3040}', '\u{30ff}') > 200);
+        assert_eq!(in_range(Lang::En, '\u{400}', '\u{4ff}'), 0);
     }
 
     #[test]
-    fn the_project_has_thirty_seven_languages_with_different_codes_and_the_core_ones_come_first() {
-        assert_eq!(Lang::ALL.len(), 37);
-        let mut codes: Vec<&str> = Lang::ALL.iter().map(|l| l.code()).collect();
-        codes.sort_unstable();
-        codes.dedup();
-        assert_eq!(codes.len(), 37);
-        assert_eq!(full_languages().len(), 27);
-        for (i, l) in Lang::ALL.iter().enumerate() {
-            assert_eq!(l.is_core(), i < CORE_LANGS, "{l:?}");
-        }
-    }
-
-    #[test]
-    fn every_language_that_has_a_file_has_every_text_in_it_and_no_text_that_does_not_exist() {
-        let names: std::collections::HashSet<&str> = ALL_TEXTS.iter().map(|t| t.name()).collect();
-        for l in full_languages() {
-            let (own, all) = coverage(l);
-            assert_eq!(own, all, "{l:?} has {own} of {all} texts of its own");
-            for key in extra(l).keys() {
-                assert!(
-                    names.contains(key),
-                    "{l:?}: the file has '{key}', which is not a text"
-                );
-            }
-        }
+    fn the_locale_files_of_the_languages_that_were_removed_are_gone() {
+        let dir = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("locales");
+        assert!(!dir.join("pt-br.tsv").exists() && !dir.join("fr-ca.tsv").exists());
+        let tsv = std::fs::read_dir(&dir)
+            .map(|d| {
+                d.flatten()
+                    .filter(|e| e.path().extension().is_some_and(|x| x == "tsv"))
+                    .count()
+            })
+            .unwrap_or(0);
+        assert_eq!(
+            tsv, 0,
+            "the eight languages keep their words in the table of the program"
+        );
     }
 
     #[test]
@@ -1259,19 +994,6 @@ mod tests {
     }
 
     #[test]
-    fn the_variants_have_only_what_they_change_and_the_rest_is_their_main_language() {
-        for (variant, main) in [(Lang::PtBr, Lang::Pt), (Lang::FrCa, Lang::Fr)] {
-            let (own, all) = coverage(variant);
-            assert!(own < all, "{variant:?} would be a full copy of {main:?}");
-            for &t in ALL_TEXTS {
-                if !extra(variant).contains_key(t.name()) {
-                    assert_eq!(tr(variant, t), tr(main, t), "{t:?} in {variant:?}");
-                }
-            }
-        }
-    }
-
-    #[test]
     fn the_names_of_the_texts_are_unique_and_each_text_is_found_by_its_name() {
         let mut names: Vec<&str> = ALL_TEXTS.iter().map(|t| t.name()).collect();
         let n = names.len();
@@ -1283,28 +1005,6 @@ mod tests {
                 !t.name().is_empty() && t.name().chars().all(|c| c.is_ascii_alphanumeric()),
                 "{t:?}"
             );
-        }
-    }
-
-    #[test]
-    fn every_file_of_a_language_has_one_tab_in_each_line_and_no_key_twice() {
-        for l in full_languages() {
-            let mut seen = std::collections::HashSet::new();
-            for line in source(l).lines() {
-                let line = line.trim_end_matches('\r');
-                if line.starts_with('#') || line.trim().is_empty() {
-                    continue;
-                }
-                let (k, v) = line
-                    .split_once('\t')
-                    .unwrap_or_else(|| panic!("{l:?}: a line without a tab: {line}"));
-                assert!(
-                    !v.contains('\t'),
-                    "{l:?}: more than one tab in the line of {k}"
-                );
-                assert_eq!(k, k.trim(), "{l:?}: blanks around the key {k}");
-                assert!(seen.insert(k.to_string()), "{l:?}: the key {k} is twice");
-            }
         }
     }
 }

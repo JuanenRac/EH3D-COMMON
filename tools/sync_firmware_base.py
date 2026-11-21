@@ -72,9 +72,9 @@ HMI_CANDIDATES = [
     # the settings, the gate, the keyboard, the texts and the kind of machine are one file for both screens: what only one screen has (the panel that moves the machine by hand, the kinds of machine) is in
     # the file for both, and the screen that does not use it ignores it
     "core/hmi_config.hpp", "core/gate.hpp", "core/keyboard.hpp", "core/status.hpp", "core/ui_text.hpp", "core/locales.hpp", "core/machine.hpp", "core/ops.hpp",
-    # generated from the files of locales by tools/make_locales.py and tools/make_fonts.py, with the literals of both screens: one set of fonts and ranges for the two
+    # generated from the names of the eight languages (locales/names.tsv) by tools/make_locales.py and tools/make_fonts.py, with the literals of both screens: one set of fonts and ranges for the two
     "core/locales_gen.hpp", "core/font_ranges.hpp", "main/fonts/eh3d_font_16.c", "main/fonts/eh3d_font_24.c",
-] + [f"locales/{n}.tsv" for n in "names bg ca cs da el et eu fi fr-ca ga gl hr hu is lt lv mt nl no pl pt-br ro ru sk sl sq sr sv uk".split()]
+] + [f"locales/{n}.tsv" for n in "names".split()]
 CANDIDATES_OF = {"EH3D-NODE-BUNGARD-HMI": HMI_CANDIDATES, "EH3D-NODE-HMI-GUI": HMI_CANDIDATES}
 
 

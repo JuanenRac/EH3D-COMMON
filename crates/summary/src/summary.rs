@@ -564,7 +564,7 @@ pub(crate) mod tests {
             );
         }
         let en = s.lines(Lang::En);
-        for l in [Lang::Es, Lang::De, Lang::Ja, Lang::Ru, Lang::PtBr] {
+        for l in [Lang::Es, Lang::De, Lang::Ja, Lang::Zh, Lang::Pt] {
             assert_ne!(en, s.lines(l), "{l:?} says it in English");
         }
     }
