@@ -19,6 +19,8 @@ pub enum Fault {
     Timeout,
     /// The server answers this status with `{"error": code}`.
     Status(u16, &'static str),
+    /// The server answers this status with exactly this body (a `409` with a `why`, a body that is not JSON, a giant body, one that holds a secret).
+    Body(u16, String),
 }
 
 /// One request the server saw. The token is never kept: only whether one was sent and whether it was a valid one.
@@ -389,6 +391,15 @@ impl SimServer {
                         token_valid: false,
                     });
                     return Ok(error(status, code));
+                }
+                Fault::Body(status, body) => {
+                    st.seen.push(Seen {
+                        method: req.method.clone(),
+                        path: req.path.clone(),
+                        had_token: req.bearer().is_some(),
+                        token_valid: false,
+                    });
+                    return Ok(Reply::new(status, body).into());
                 }
             }
         }

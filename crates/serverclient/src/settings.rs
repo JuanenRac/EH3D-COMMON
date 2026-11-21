@@ -8,6 +8,8 @@
 //! server_retries = 2                      # 0 to 5: how many more times a request that failed on the network is tried
 //! server_mdns = off                       # on | off: look for the server on the local network (off by default)
 //! server_max_answer_mib = 8               # 1 to 256: the most MiB read from one answer
+//! server_token_fixed = off                # on | off: a 401 does not make the client forget the token (the token of a node, written in the settings)
+//! server_error_body_bytes = 0             # 0 to 4096: how many bytes of the body of a refusal are kept, with the secrets masked; 0 = none
 //! ```
 
 use crate::secret::Secret;
@@ -16,6 +18,8 @@ use std::fmt;
 pub const DEFAULT_TIMEOUT_S: u64 = 15;
 pub const DEFAULT_RETRIES: u32 = 2;
 pub const DEFAULT_MAX_ANSWER_MIB: u64 = 8;
+/// The most bytes of the body of a refusal that can be asked for.
+pub const MAX_ERROR_BODY_BYTES: u64 = 4096;
 
 /// One key: its name, its range or values and its default, as the docs and the screens of settings list them.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -27,7 +31,7 @@ pub struct KeySpec {
 }
 
 /// Every key of the link, in the order the docs list them.
-pub const KEYS: [KeySpec; 7] = [
+pub const KEYS: [KeySpec; 9] = [
     KeySpec {
         key: "server_address",
         range: "host:port, or empty",
@@ -63,6 +67,16 @@ pub const KEYS: [KeySpec; 7] = [
         range: "1..256",
         default: "8",
     },
+    KeySpec {
+        key: "server_token_fixed",
+        range: "on|off",
+        default: "off",
+    },
+    KeySpec {
+        key: "server_error_body_bytes",
+        range: "0..4096",
+        default: "0",
+    },
 ];
 
 /// Why a value was refused.
@@ -91,6 +105,12 @@ pub struct Settings {
     /// Look for the server with mDNS. Off by default: the program asks nothing of the network unless the owner turns it on.
     pub server_mdns: bool,
     pub server_max_answer_mib: u64,
+    /// The token is fixed: it is written in the settings and does not run out, so a `401` does not make the client forget it (a node that has just
+    /// started or a token being rotated may refuse it once). Off by default: a `401` ends the login, as it does for a person.
+    pub server_token_fixed: bool,
+    /// How many bytes of the body of an answer of 400 or more are kept in [`crate::Refusal::body_excerpt`], with the secrets masked. 0 (the default)
+    /// keeps none.
+    pub server_error_body_bytes: u64,
 }
 
 impl Default for Settings {
@@ -103,6 +123,8 @@ impl Default for Settings {
             server_retries: DEFAULT_RETRIES,
             server_mdns: false,
             server_max_answer_mib: DEFAULT_MAX_ANSWER_MIB,
+            server_token_fixed: false,
+            server_error_body_bytes: 0,
         }
     }
 }
@@ -167,6 +189,10 @@ impl Settings {
             "server_retries" => self.server_retries = number(&key_l, value, 0, 5)? as u32,
             "server_mdns" => self.server_mdns = switch(&key_l, value)?,
             "server_max_answer_mib" => self.server_max_answer_mib = number(&key_l, value, 1, 256)?,
+            "server_token_fixed" => self.server_token_fixed = switch(&key_l, value)?,
+            "server_error_body_bytes" => {
+                self.server_error_body_bytes = number(&key_l, value, 0, MAX_ERROR_BODY_BYTES)?
+            }
             _ => return Ok(false),
         }
         Ok(true)
@@ -207,14 +233,16 @@ impl Settings {
             "***".to_string()
         };
         format!(
-            "server_address = {}\nserver_token = {}\nserver_machine = {}\nserver_timeout_s = {}\nserver_retries = {}\nserver_mdns = {}\nserver_max_answer_mib = {}\n",
+            "server_address = {}\nserver_token = {}\nserver_machine = {}\nserver_timeout_s = {}\nserver_retries = {}\nserver_mdns = {}\nserver_max_answer_mib = {}\nserver_token_fixed = {}\nserver_error_body_bytes = {}\n",
             self.server_address,
             token,
             self.server_machine,
             self.server_timeout_s,
             self.server_retries,
             if self.server_mdns { "on" } else { "off" },
-            self.server_max_answer_mib
+            self.server_max_answer_mib,
+            if self.server_token_fixed { "on" } else { "off" },
+            self.server_error_body_bytes
         )
     }
 }

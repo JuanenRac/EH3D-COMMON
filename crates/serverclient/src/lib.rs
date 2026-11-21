@@ -3,10 +3,12 @@
 //! One crate, no dependency, no window: the studio, the machine programs (PHOENIX-CNC, DRILLPRO, ROUTEPRO...) and the screens of the nodes share it, so a
 //! login, a renewal, a refusal or a lost connection means the same everywhere.
 //!
-//! * [`Settings`]: the keys `server_address`, `server_token`, `server_machine`, `server_timeout_s`, `server_retries`, `server_mdns` and
-//!   `server_max_answer_mib`, with their ranges and conservative defaults.
+//! * [`Settings`]: the keys `server_address`, `server_token`, `server_machine`, `server_timeout_s`, `server_retries`, `server_mdns`,
+//!   `server_max_answer_mib`, `server_token_fixed` and `server_error_body_bytes`, with their ranges and conservative defaults.
 //! * [`Client`]: `login` (`POST /auth/login` with the application), `refresh`, `logout`, `sessions`, `health` and the generic `request`, with retries
 //!   (growing pauses, a `POST` is never sent twice), time limits and the [`Link`] state (connected, disconnected, logged out).
+//! * [`Refusal`] and `Client::last_refusal`: the `why` of a refusal and, if asked for, a masked piece of the body; `Client::with_fixed_token`: a token
+//!   written in the settings is not forgotten after a `401`.
 //! * [`Secret`] and [`TokenStore`]: the token cannot be printed by mistake and is kept only where the program says.
 //! * [`ClientError`]: the refusal of the server by its code, with the text in eight languages ([`Lang`]) taken from a table generated from the error
 //!   catalog of the server (`tools/gen_server_errors.py`).
@@ -39,7 +41,10 @@ pub use client::{
     Sleeper, SystemClock, ThreadSleeper,
 };
 pub use contract::{Contract, ContractCache, ContractDiff, RouteStatus};
-pub use errors::{all_codes, lookup, text_for, ClientError, ErrorEntry, Lang, TransportError};
+pub use errors::{
+    all_codes, body_excerpt, lookup, text_for, ClientError, ErrorEntry, Lang, Refusal,
+    TransportError, MAX_WHY_CHARS,
+};
 pub use json::Json;
 pub use metrics::LinkMetrics;
 pub use queue::{OfflineQueue, QueueLimits, Queued, Rejected};

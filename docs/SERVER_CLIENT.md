@@ -10,7 +10,7 @@ eh3d-serverclient = { version = ">=0.0.1", path = "../EH3D-COMMON/crates/serverc
 
 | Part | What it gives |
 |---|---|
-| `Settings` | the seven keys below, read from the text of the machine file or set one by one, with ranges and conservative defaults |
+| `Settings` | the nine keys below, read from the text of the machine file or set one by one, with ranges and conservative defaults |
 | `Client::login(name, password, app)` | `POST /api/v1/auth/login` with the application the program is (`phoenix-cnc`, `bungard-gui`, `studio`, `hmi`...); gives a `Session` (name, role, app, session id, seconds left) and keeps the token inside |
 | `Client::refresh()` | `POST /api/v1/auth/refresh`; a request renews a login that is in the last quarter of its life by itself (`with_auto_refresh(false)` turns it off) |
 | `Client::logout()`, `sessions()`, `close_session(id)` | end this login, list the open logins of the caller, close one (the phone that was lost) |
@@ -19,6 +19,8 @@ eh3d-serverclient = { version = ">=0.0.1", path = "../EH3D-COMMON/crates/serverc
 | `Client::machine_path("/jobs")` | `/api/v1/machines/<server_machine>/jobs`, with the name made safe for a path |
 | `Client::link()` | `Unknown`, `Connected`, `Disconnected` (the last request did not reach the server) or `LoggedOut` (the server answered, but there is no login): the corner of a window |
 | `ClientError` | `Config`, `Unreachable { error, attempts }`, `Unauthorized`, `Forbidden`, `Server { status, code, detail }`, `BadReply`; `code()`, `status()`, `needs_login()` and `text(Lang)` |
+| `Client::last_refusal()`, `Client::why_of(&err)`, `Refusal`, `body_excerpt` | what the last refusal said beyond the three fields of `ClientError::Server`: the `why` of a `409` on a command of a node and, if asked for, a piece of the body with the secrets masked |
+| `Client::with_fixed_token(bool)` | a token written in the settings (a node's) is not forgotten after a `401` |
 | `Lang`, `lookup`, `text_for` | the text of every code of the server's catalog in en, es, it, de, fr, pt (Portugal), zh and ja |
 | `Secret`, `TokenStore`, `MemoryStore`, `FileStore` | the token that cannot be printed, and where it is kept |
 | `Transport`, `TcpTransport`, `sim::SimServer` | how a request travels: plain HTTP/1.1, or a server in memory for tests |
@@ -41,6 +43,8 @@ eh3d-serverclient = { version = ">=0.0.1", path = "../EH3D-COMMON/crates/serverc
 | `server_retries` | 0 to 5 | 2 | how many more tries after a failure on the network |
 | `server_mdns` | `on` or `off` | `off` | look for the server on the local network |
 | `server_max_answer_mib` | 1 to 256 | 8 | the most MiB read from one answer |
+| `server_token_fixed` | `on` or `off` | `off` | the token is written in the settings and does not run out (the token of a node): a `401` does not make the client forget it |
+| `server_error_body_bytes` | 0 to 4096 | 0 | how many bytes of the body of a refusal are kept in `Refusal::body_excerpt`, with the secrets masked; 0 keeps none |
 
 A value out of its range is an error that names the key (and the line, when it comes from a file) and changes nothing. A key that is not one of these is left to the program that reads the file. `Settings::to_text(false)` writes the token as `***`, for a screen of settings; only the program that writes its own file asks for it with `to_text(true)`.
 
@@ -50,11 +54,25 @@ Each try has `server_timeout_s` seconds. After a failure the client waits 200 ms
 
 ### The token
 
-The token is a `Secret`: its `Debug` and `Display` write `***`, the bytes are overwritten when it is dropped, and the only way to read it is `expose()`, which only the transport calls. A `Request` and a `Settings` have no `Debug` output of the token, and a `ClientError` never holds the token or the password. A 401 makes the client forget the token (in memory and in the store) and answer `Unauthorized` without sending anything until there is a new login. Where the token is kept between runs is the program's decision: `MemoryStore` (the default, nothing written), `FileStore` (a file only its owner can read, mode 0600 on Unix; on Windows the user's own settings folder), or its own `TokenStore` over the keychain or the Keystore. A store that fails does not fail the login: `store_warning()` says so.
+The token is a `Secret`: its `Debug` and `Display` write `***`, the bytes are overwritten when it is dropped, and the only way to read it is `expose()`, which only the transport calls. A `Request` and a `Settings` have no `Debug` output of the token, and a `ClientError` never holds the token or the password. A 401 makes the client forget the token (in memory and in the store) and answer `Unauthorized` without sending anything until there is a new login. That is right for a login that ran out and wrong for the token of a node, which is written in the settings and does not run out: a node that has just started, or a token that is being rotated, may refuse it once. For that case `server_token_fixed = on` (or `Client::with_fixed_token(true)`) keeps the token after a `401`: the answer is still `Unauthorized` and the link still goes to `LoggedOut`, so the panel shows the refusal, but the next request asks the server again and brings the link back when the token is accepted. Off by default. Where the token is kept between runs is the program's decision: `MemoryStore` (the default, nothing written), `FileStore` (a file only its owner can read, mode 0600 on Unix; on Windows the user's own settings folder), or its own `TokenStore` over the keychain or the Keystore. A store that fails does not fail the login: `store_warning()` says so.
 
 ### Errors by code in eight languages
 
 The server answers `{"error": "<code>", "detail": "..."}`. `ClientError::text(lang)` gives the text of the code in the language of the person; a code a newer server has and this table does not is shown as the code itself, so nothing is hidden. The table is `src/errors_table.rs`, generated by `tools/gen_server_errors.py` from `EH3D-SERVER/docs/error-codes.json` (the codes and statuses) and the rows `err_<code>` of `EH3D-STUDIO/src/texts.ts` (the eight texts, so Studio and the programs say the same words). The generator fails when a code has no eight texts. After the server adds a code: add its row to Studio, run `py -3 tools/gen_server_errors.py`, commit the table. A code that Studio has no row for yet takes its eight texts from `tools/server_error_texts_extra.json` (a row of Studio always wins; move the row to Studio and delete it from the file when Studio gets its own; the generator fails on a row of the file for a code the catalog no longer has). The codes of the laser (`laser_*`, `air_assist_off`, `enclosure_open`, `focus_not_checked`, `test_fire_refused`), the pick-and-place (`pnp_feeder_short`), the printers and the farm (`printer_*`, `farm_no_free_printer`, `thermal_runaway`, `heater_timeout`, `sensor_fault`, `temperature_over_limit`, `program_over_limit`), the slicer (`slice_*`, `bad_mesh`), the compatibility routes (`compat_off`, `compat_write_off`), the Gerber reader (`bad_gerber`, `unit_unknown`, `missing_layer`) and the machine state (`machine_alarm`, `jog_while_running`, `out_of_travel`) are in the table. `py -3 tools/gen_server_errors.py --check` says whether the table on disk is current, and the test `the_table_is_the_catalog_of_the_server` compares the codes and the statuses with the sibling server (it is skipped when `EH3D-SERVER` is not next to this repository).
+
+### The reason of a refusal (`why`) and a piece of the body
+
+`ClientError::Server { status, code, detail }` keeps the fields it always had, so no program that builds it or takes it apart has to change. What it has no field for is kept by the client in the last refusal, read with `Client::last_refusal()` right after the error (a request that went well, or that got no answer, clears it):
+
+* `why`: a node that refuses a command with `409` says why in the field `why` of its answer (`busy`, `not_holding`, `vacuum_not_reached`). It is cut to 256 characters. `Client::why_of(&error)` gives it only when `error` is that refusal (the same status and code), so an old refusal is never attributed to a new error. An answer with a `detail` and no `why` has no `why`; the detail is in the error as before.
+* `body_excerpt`: the start of the body of the answer, at most `server_error_body_bytes` bytes (0, the default, keeps none; the most is 4096), cut at a character. Before the cut the client replaces by `***` the token it holds (wherever it appears) and the value of every name that holds `token`, `password`, `secret`, `key`, `authorization`, `cookie` or `credential`, in JSON, in `name = value` lines, in a query and after `Bearer`. It looks through the first 64 KiB of the body, so a giant body costs no more. Masking by name over-masks on purpose: a value it is unsure about is hidden.
+
+```rust
+let err = client.post(&path, Some(&body)).unwrap_err();
+if let Some(why) = client.why_of(&err) {
+    show(why); // "busy", "not_holding"...
+}
+```
 
 ### Discovery by mDNS: optional and off
 
@@ -188,7 +206,7 @@ The apps are not changed by this crate; each takes these steps in its own round.
 1. The crate is Rust and does not apply. Studio already logs in with `app = "studio"`, renews, keeps the token in `sessionStorage` and reads the same table (`src/texts.ts` is the source of the generated one). What the migration owes is the contract: the test that compares the codes of the server with the texts already exists; keep it and the generator in step.
 
 **EH3D-ANDROID-CONTROL and EH3D-IOS-CONTROL** (Kotlin, Swift)
-1. They cannot use the crate. They follow its behaviour: login with `app = "android"` / `"ios"`, renewal at the last quarter of the login, a 401 forgets the token, retries with the same pauses and the same rule for `POST`, the same seven keys with the same ranges where a setting makes sense, and the eight texts from the same table (generate the string files from `error-codes.json` and `texts.ts` as the crate does). Android first, iOS as the port.
+1. They cannot use the crate. They follow its behaviour: login with `app = "android"` / `"ios"`, renewal at the last quarter of the login, a 401 forgets the token, retries with the same pauses and the same rule for `POST`, the same keys of the table above with the same ranges where a setting makes sense, and the eight texts from the same table (generate the string files from `error-codes.json` and `texts.ts` as the crate does). Android first, iOS as the port.
 
 **HMI screens** (EH3D-NODE-HMI-GUI, EH3D-NODE-BUNGARD-HMI, C++ on the ESP32-P4)
 1. Not Rust: they keep `server_link.hpp` and follow the same contract. Map their keys to these (`server_host` + `server_port` are `server_address`, `token` is `server_token`, `poll_s` stays theirs) and add `server_timeout_s` and `server_retries` with the same ranges. The HMI has no login screen: its token is the token of a program with the scopes it needs. The error texts come from the same table, as `.tsv` locales.

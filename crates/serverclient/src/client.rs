@@ -1,7 +1,7 @@
 //! The client: login, renewal, requests with retries and time limits, and the state of the link.
 
 use crate::contract::{Contract, ContractCache, ContractDiff};
-use crate::errors::{ClientError, TransportError};
+use crate::errors::{body_excerpt, ClientError, Refusal, TransportError, MAX_WHY_CHARS};
 use crate::json::{quote, Json};
 use crate::metrics::LinkMetrics;
 use crate::queue::{is_queueable, OfflineQueue, Queued, Rejected};
@@ -128,6 +128,8 @@ pub struct Client {
     auto_refresh: bool,
     store_warning: Option<String>,
     metrics: LinkMetrics,
+    token_fixed: bool,
+    last_refusal: Option<Refusal>,
 }
 
 /// What `send_or_queue` did with a request.
@@ -166,6 +168,7 @@ impl Client {
     /// A client over the transport given (a server in memory for the tests, a tunnel...). The token starts as `server_token` when the settings have
     /// one (the token of a program), else as nothing.
     pub fn new(settings: Settings, transport: Box<dyn Transport>) -> Client {
+        let token_fixed = settings.server_token_fixed;
         let token = if settings.server_token.is_empty() {
             None
         } else {
@@ -185,7 +188,38 @@ impl Client {
             auto_refresh: true,
             store_warning: None,
             metrics: LinkMetrics::default(),
+            token_fixed,
+            last_refusal: None,
         }
+    }
+
+    /// Whether the token is fixed: written in the settings (the token of a node), not a login that runs out. A `401` then does not make the client
+    /// forget the token, so the next request asks the server again; the link still goes to `LoggedOut` so that the panel shows the refusal. The
+    /// answer is still `Unauthorized`. It starts as `server_token_fixed` of the settings (off by default: a `401` forgets the token, as for a login).
+    pub fn with_fixed_token(mut self, fixed: bool) -> Client {
+        self.token_fixed = fixed;
+        self
+    }
+
+    /// Is the token fixed (see [`Client::with_fixed_token`])?
+    pub fn is_token_fixed(&self) -> bool {
+        self.token_fixed
+    }
+
+    /// What the last request said when the server refused it (status 400 or more), with the `why` and, if `server_error_body_bytes` is not 0, a masked
+    /// piece of the body. `None` after a request that went well or that never got an answer, so read it right after the error. A refusal is a
+    /// [`ClientError`] as ever; this holds the words that the error has no field for.
+    pub fn last_refusal(&self) -> Option<&Refusal> {
+        self.last_refusal.as_ref()
+    }
+
+    /// The `why` of the last refusal when `error` is that refusal (the same status and code), else `None`. `why` is what a node gives as the reason of a
+    /// `409` on a command (`busy`, `not_holding`, `vacuum_not_reached`).
+    pub fn why_of(&self, error: &ClientError) -> Option<&str> {
+        self.last_refusal
+            .as_ref()
+            .filter(|r| r.belongs_to(error))
+            .and_then(|r| r.why.as_deref())
     }
 
     pub fn with_sleeper(mut self, sleeper: Box<dyn Sleeper>) -> Client {
@@ -326,6 +360,7 @@ impl Client {
     /// The same as `send_retrying` with the headers and the body as bytes. A request marked `single_try` is not sent again after a time-out or a broken
     /// connection (nor after a 502, 503 or 504), whatever its method.
     fn send_retrying_full(&mut self, request: &Request) -> Result<FullReply, ClientError> {
+        self.last_refusal = None;
         let repeatable = is_idempotent(&request.method) && !request.single_try;
         let tries = self.settings.server_retries + 1;
         let mut last = TransportError::Timeout;
@@ -387,16 +422,39 @@ impl Client {
         }
     }
 
-    /// An answer of 400 or more as the error it is; a 401 makes the client forget the token.
+    /// The `why` of an answer (cut to `MAX_WHY_CHARS`), if it has one.
+    fn why_of_reply(reply: &Reply) -> Option<String> {
+        reply
+            .json()
+            .and_then(|j| j.get("why").and_then(Json::as_str).map(str::to_string))
+            .map(|w| w.chars().take(MAX_WHY_CHARS).collect())
+    }
+
+    /// An answer of 400 or more as the error it is; a 401 makes the client forget the token, unless the token is fixed.
     fn check(&mut self, reply: Reply, forget_on_401: bool) -> Result<Reply, ClientError> {
         if reply.status < 400 {
             return Ok(reply);
         }
         let (code, detail) = Client::code_and_detail(&reply);
+        self.last_refusal = Some(Refusal {
+            status: reply.status,
+            code: code.clone(),
+            why: Client::why_of_reply(&reply),
+            body_excerpt: body_excerpt(
+                &reply.body,
+                self.settings.server_error_body_bytes as usize,
+                self.token.as_ref().map(Secret::expose),
+            ),
+        });
         match reply.status {
             401 => {
                 if forget_on_401 {
-                    self.forget();
+                    if self.token_fixed {
+                        // the token does not run out: keep it, ask again next time, and say on the link that it was refused
+                        self.link = Link::LoggedOut;
+                    } else {
+                        self.forget();
+                    }
                 }
                 Err(ClientError::Unauthorized { code })
             }
@@ -587,7 +645,11 @@ impl Client {
         if reply.status == 404 {
             let (code, _) = Client::code_and_detail(&reply);
             if code.as_deref() == Some("unknown_session") {
-                self.forget();
+                if self.token_fixed {
+                    self.link = Link::LoggedOut;
+                } else {
+                    self.forget();
+                }
                 return Err(ClientError::Unauthorized { code });
             }
         }

@@ -19,12 +19,17 @@ fn the_defaults_are_conservative() {
         "discovery is off unless the owner turns it on"
     );
     assert_eq!(s.server_max_answer_mib, 8);
+    assert!(
+        !s.server_token_fixed,
+        "a 401 forgets the token unless the owner says it is fixed"
+    );
+    assert_eq!(s.server_error_body_bytes, 0, "no body of a refusal is kept");
     assert!(!s.is_configured());
 }
 
 #[test]
 fn every_key_has_a_default_that_the_settings_start_with() {
-    assert_eq!(KEYS.len(), 7);
+    assert_eq!(KEYS.len(), 9);
     let text = Settings::default().to_text(true);
     for k in KEYS {
         let line = text
@@ -43,6 +48,7 @@ fn ranges_are_enforced_at_both_ends() {
         ("server_timeout_s", ["1", "120"], ["0", "121"]),
         ("server_retries", ["0", "5"], ["-1", "6"]),
         ("server_max_answer_mib", ["1", "256"], ["0", "257"]),
+        ("server_error_body_bytes", ["0", "4096"], ["-1", "4097"]),
     ] {
         for v in ok {
             assert_eq!(s.set(key, v), Ok(true), "{key}={v}");
@@ -233,4 +239,37 @@ fn quote_round_trips_through_the_reader() {
         let q = quote(text);
         assert_eq!(Json::parse(&q).unwrap().as_str(), Some(text), "{text:?}");
     }
+}
+
+#[test]
+fn the_fixed_token_switch_reads_and_writes_like_the_others() {
+    let mut s = Settings::default();
+    for on in ["on", "ON", "true", "yes", "1"] {
+        s.set("server_token_fixed", on).unwrap();
+        assert!(s.server_token_fixed, "{on}");
+    }
+    assert!(s.set("server_token_fixed", "sometimes").is_err());
+    assert!(s.server_token_fixed, "a refused value changes nothing");
+    let text = s.to_text(false);
+    assert!(text.contains(
+        "server_token_fixed = on
+"
+    ));
+    let back = Settings::from_text(&s.to_text(true)).unwrap();
+    assert_eq!(back, s);
+    s.set("server_token_fixed", "off").unwrap();
+    assert!(!s.server_token_fixed);
+}
+
+#[test]
+fn a_file_without_the_new_keys_still_reads_with_their_defaults() {
+    let s = Settings::from_text(
+        "server_address = 10.0.0.5:18200
+server_retries = 1
+",
+    )
+    .unwrap();
+    assert!(!s.server_token_fixed);
+    assert_eq!(s.server_error_body_bytes, 0);
+    assert_eq!(s.server_retries, 1);
 }

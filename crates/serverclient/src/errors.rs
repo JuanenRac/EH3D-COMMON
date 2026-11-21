@@ -208,6 +208,33 @@ impl fmt::Display for ClientError {
 
 impl std::error::Error for ClientError {}
 
+/// The longest `why` that is kept, in characters (as long as the `detail` of the server is read).
+pub const MAX_WHY_CHARS: usize = 256;
+
+/// What the last answer of 400 or more said, in more words than a [`ClientError`] holds. `ClientError::Server` keeps its three fields so that no
+/// program that builds or takes it apart has to change; the rest is here, read with [`crate::Client::last_refusal`] right after the error.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct Refusal {
+    /// The HTTP status of the answer.
+    pub status: u16,
+    /// The `error` code of the answer, when it had one.
+    pub code: Option<String>,
+    /// The reason a node or the server gives for a refusal in the field `why` (`busy`, `not_holding`, `vacuum_not_reached`), cut to
+    /// [`MAX_WHY_CHARS`] characters. A `409` on a command of a node says it there.
+    pub why: Option<String>,
+    /// The start of the body of the answer, cut to `server_error_body_bytes` bytes, with the token and every value under a key such as `token`,
+    /// `password`, `secret`, `key` or `authorization` replaced by `***`. `None` when `server_error_body_bytes` is 0 (the default) or the body is empty.
+    pub body_excerpt: Option<String>,
+}
+
+impl Refusal {
+    /// Does this refusal belong to the error given (the same status and the same code)? Use it before trusting `why` when other calls may have run
+    /// in between.
+    pub fn belongs_to(&self, error: &ClientError) -> bool {
+        error.status() == Some(self.status) && error.code() == self.code.as_deref()
+    }
+}
+
 enum Plain {
     Unreachable,
     Unauthorized,
@@ -249,4 +276,140 @@ fn plain(lang: Lang, which: Plain) -> &'static str {
         ],
     };
     row[lang.index()]
+}
+
+/// How much of a body is looked through for secrets before it is cut: far more than the most `server_error_body_bytes` allows, so a cut never
+/// falls inside a value that has not been looked at.
+const MASK_WINDOW_BYTES: usize = 65_536;
+
+/// Names (in lower case, as a part of a longer name too) whose value is never shown.
+const SECRET_NAMES: [&str; 10] = [
+    "token",
+    "password",
+    "passwd",
+    "passphrase",
+    "secret",
+    "key",
+    "authorization",
+    "bearer",
+    "cookie",
+    "credential",
+];
+
+fn is_name_char(c: char) -> bool {
+    c.is_ascii_alphanumeric() || c == '_' || c == '-' || c == '.'
+}
+
+fn is_secret_name(name: &str) -> bool {
+    let lower = name.to_ascii_lowercase();
+    SECRET_NAMES.iter().any(|s| lower.contains(s))
+}
+
+/// The start of `body`, at most `max_bytes` bytes (cut at a character), with the secrets replaced by `***`: the `token` given (wherever it appears) and
+/// the value of every name such as `token`, `password`, `secret`, `key`, `authorization`, `cookie` or `credential`, in JSON (`"password":"x"`), in
+/// lines (`key = x`, `Authorization: Bearer x`) and in a query (`token=x&...`). `None` when `max_bytes` is 0 or the body is empty. It looks through at
+/// most 64 KiB of the body, so a giant body costs nothing more.
+pub fn body_excerpt(body: &str, max_bytes: usize, token: Option<&str>) -> Option<String> {
+    if max_bytes == 0 || body.is_empty() {
+        return None;
+    }
+    let mut end = body.len().min(MASK_WINDOW_BYTES);
+    while !body.is_char_boundary(end) {
+        end -= 1;
+    }
+    let mut text = body[..end].to_string();
+    if let Some(t) = token.filter(|t| !t.is_empty()) {
+        text = text.replace(t, "***");
+    }
+    let masked = mask_named_values(&text);
+    let mut cut = masked.len().min(max_bytes);
+    while !masked.is_char_boundary(cut) {
+        cut -= 1;
+    }
+    Some(masked[..cut].to_string())
+}
+
+fn mask_named_values(text: &str) -> String {
+    let chars: Vec<char> = text.chars().collect();
+    let mut out = String::with_capacity(text.len());
+    let mut i = 0;
+    while i < chars.len() {
+        if !is_name_char(chars[i]) {
+            out.push(chars[i]);
+            i += 1;
+            continue;
+        }
+        let start = i;
+        while i < chars.len() && is_name_char(chars[i]) {
+            i += 1;
+        }
+        let name: String = chars[start..i].iter().collect();
+        out.extend(&chars[start..i]);
+        if !is_secret_name(&name) {
+            continue;
+        }
+        // after the name: an optional closing quote, spaces, `:` or `=`, spaces, then the value
+        let mut j = i;
+        if j < chars.len() && (chars[j] == '"' || chars[j] == '\'') {
+            j += 1;
+        }
+        while j < chars.len() && chars[j] == ' ' {
+            j += 1;
+        }
+        if j >= chars.len() || (chars[j] != ':' && chars[j] != '=') {
+            continue;
+        }
+        j += 1;
+        while j < chars.len() && chars[j] == ' ' {
+            j += 1;
+        }
+        // what was skipped (the quote, the separator, the spaces) is kept as it was
+        out.extend(&chars[i..j]);
+        if j >= chars.len() {
+            i = j;
+            continue;
+        }
+        let quote = chars[j];
+        if quote == '"' || quote == '\'' {
+            let mut k = j + 1;
+            while k < chars.len() && chars[k] != quote {
+                if chars[k] == '\\' {
+                    k += 1;
+                }
+                k += 1;
+            }
+            out.push(quote);
+            out.push_str("***");
+            if k < chars.len() {
+                out.push(quote);
+            }
+            i = (k + 1).min(chars.len());
+        } else {
+            let mut k = j;
+            let stop = |c: char| c.is_whitespace() || matches!(c, ',' | '}' | ']' | '&' | ';');
+            while k < chars.len() && !stop(chars[k]) {
+                k += 1;
+            }
+            let word: String = chars[j..k].iter().collect();
+            // `Authorization: Bearer abc`: the scheme is a word of its own and the secret is the next one
+            if matches!(word.to_ascii_lowercase().as_str(), "bearer" | "basic") {
+                out.push_str(&word);
+                out.push(' ');
+                let mut m = k;
+                while m < chars.len() && chars[m] == ' ' {
+                    m += 1;
+                }
+                let mut n = m;
+                while n < chars.len() && !stop(chars[n]) {
+                    n += 1;
+                }
+                out.push_str("***");
+                i = n;
+            } else {
+                out.push_str("***");
+                i = k;
+            }
+        }
+    }
+    out
 }
