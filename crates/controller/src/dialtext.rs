@@ -292,6 +292,9 @@ pub const MARLIN_KINDS: [u32; 8] = [101, 102, 103, 104, 105, 106, 107, 108];
 /// The kinds of error of Klipper, with the number the program gives each.
 pub const KLIPPER_KINDS: [u32; 8] = [201, 202, 203, 204, 205, 206, 207, 208];
 
+/// The failures of the HTTP transport of Klipper, with the number the program gives each (they follow the kinds above).
+pub const KLIPPER_LINK_KINDS: [u32; 11] = crate::httprpc::HTTP_KINDS;
+
 /// The text of `error:N` of grblHAL in the language; `None` for a number that is not one of the ones it adds.
 pub fn hal_error(code: u32, lang: &str) -> Option<&'static str> {
     let row: [&str; 8] = match code {
@@ -556,8 +559,8 @@ pub fn marlin(code: u32, lang: &str) -> Option<&'static str> {
     Some(row[column(lang)])
 }
 
-/// The text of a kind of error of Klipper (`201` to `208`, the numbers `klipper::classify` gives) in the language; `None` for a number that
-/// is not one of them.
+/// The text of a kind of error of Klipper in the language: `201` to `208`, the numbers `klipper::classify` gives, and `209` to `219`, the
+/// failures of the HTTP transport ([`crate::httprpc`]); `None` for a number that is not one of them.
 pub fn klipper(code: u32, lang: &str) -> Option<&'static str> {
     let row: [&str; 8] = match code {
         201 => [
@@ -640,6 +643,116 @@ pub fn klipper(code: u32, lang: &str) -> Option<&'static str> {
             "Klipper 拒绝了该行。",
             "O Klipper recusou a linha.",
         ],
+        209 => [
+            "Moonraker answered with an HTTP error status.",
+            "Moonraker respondió con un estado de error HTTP.",
+            "Moonraker hat mit einem HTTP-Fehlerstatus geantwortet.",
+            "Moonraker a répondu par un statut d'erreur HTTP.",
+            "Moonraker ha risposto con uno stato di errore HTTP.",
+            "Moonraker が HTTP エラーステータスで応答しました。",
+            "Moonraker 返回了 HTTP 错误状态。",
+            "O Moonraker respondeu com um estado de erro HTTP.",
+        ],
+        210 => [
+            "Moonraker refused the credential or asked for one: check the API key.",
+            "Moonraker rechazó la credencial o pidió una: compruebe la clave de API.",
+            "Moonraker hat den Zugangsschlüssel abgelehnt oder verlangt einen: Prüfen Sie den API-Schlüssel.",
+            "Moonraker a refusé l'identifiant ou en demande un : vérifiez la clé d'API.",
+            "Moonraker ha rifiutato la credenziale o ne richiede una: controlli la chiave API.",
+            "Moonraker が認証情報を拒否したか、認証情報を要求しています。API キーを確認してください。",
+            "Moonraker 拒绝了凭据或要求提供凭据：请检查 API 密钥。",
+            "O Moonraker recusou a credencial ou pediu uma: verifique a chave de API.",
+        ],
+        211 => [
+            "Moonraker answered with a redirection, which is not followed: check the address and the port.",
+            "Moonraker respondió con una redirección, que no se sigue: compruebe la dirección y el puerto.",
+            "Moonraker hat mit einer Weiterleitung geantwortet, der nicht gefolgt wird: Prüfen Sie Adresse und Port.",
+            "Moonraker a répondu par une redirection, qui n'est pas suivie : vérifiez l'adresse et le port.",
+            "Moonraker ha risposto con un reindirizzamento, che non viene seguito: controlli l'indirizzo e la porta.",
+            "Moonraker がリダイレクトで応答しましたが、追従しません。アドレスとポートを確認してください。",
+            "Moonraker 返回了重定向，但不会跟随：请检查地址和端口。",
+            "O Moonraker respondeu com um redirecionamento, que não é seguido: verifique o endereço e a porta.",
+        ],
+        212 => [
+            "The answer of Moonraker is larger than the limit set.",
+            "La respuesta de Moonraker supera el límite establecido.",
+            "Die Antwort von Moonraker ist größer als die festgelegte Grenze.",
+            "La réponse de Moonraker dépasse la limite fixée.",
+            "La risposta di Moonraker supera il limite impostato.",
+            "Moonraker の応答が設定された上限を超えています。",
+            "Moonraker 的响应超过了设定的上限。",
+            "A resposta do Moonraker excede o limite definido.",
+        ],
+        213 => [
+            "The answer of Moonraker is not JSON.",
+            "La respuesta de Moonraker no es JSON.",
+            "Die Antwort von Moonraker ist kein JSON.",
+            "La réponse de Moonraker n'est pas du JSON.",
+            "La risposta di Moonraker non è JSON.",
+            "Moonraker の応答は JSON ではありません。",
+            "Moonraker 的响应不是 JSON。",
+            "A resposta do Moonraker não é JSON.",
+        ],
+        214 => [
+            "The answer of Moonraker is not well-formed HTTP.",
+            "La respuesta de Moonraker no es HTTP bien formado.",
+            "Die Antwort von Moonraker ist kein wohlgeformtes HTTP.",
+            "La réponse de Moonraker n'est pas du HTTP bien formé.",
+            "La risposta di Moonraker non è HTTP ben formato.",
+            "Moonraker の応答は正しい形式の HTTP ではありません。",
+            "Moonraker 的响应不是格式正确的 HTTP。",
+            "A resposta do Moonraker não é HTTP bem formado.",
+        ],
+        215 => [
+            "The address of Moonraker is refused: only the local network is allowed unless the switch for other networks is on.",
+            "Se rechaza la dirección de Moonraker: solo se admite la red local mientras no se active el interruptor de otras redes.",
+            "Die Adresse von Moonraker wird abgelehnt: Erlaubt ist nur das lokale Netz, solange der Schalter für andere Netze aus ist.",
+            "L'adresse de Moonraker est refusée : seul le réseau local est autorisé tant que l'interrupteur des autres réseaux est désactivé.",
+            "L'indirizzo di Moonraker è rifiutato: è ammessa solo la rete locale finché l'interruttore per le altre reti è spento.",
+            "Moonraker のアドレスは拒否されました。他のネットワークを許可するスイッチがオフの間は、ローカルネットワークのみ使用できます。",
+            "Moonraker 的地址被拒绝：在“允许其他网络”开关关闭时，仅允许本地网络。",
+            "O endereço do Moonraker é recusado: só a rede local é permitida enquanto o interruptor das outras redes estiver desligado.",
+        ],
+        216 => [
+            "Too many requests are waiting for Moonraker.",
+            "Hay demasiadas peticiones esperando a Moonraker.",
+            "Zu viele Anfragen warten auf Moonraker.",
+            "Trop de requêtes attendent Moonraker.",
+            "Troppe richieste sono in attesa di Moonraker.",
+            "Moonraker への要求が多すぎて待機しています。",
+            "等待 Moonraker 的请求过多。",
+            "Há demasiados pedidos à espera do Moonraker.",
+        ],
+        217 => [
+            "Moonraker cannot be reached at the address and port given.",
+            "No se puede alcanzar a Moonraker en la dirección y el puerto indicados.",
+            "Moonraker ist unter der angegebenen Adresse und dem angegebenen Port nicht erreichbar.",
+            "Moonraker est injoignable à l'adresse et au port indiqués.",
+            "Moonraker non è raggiungibile all'indirizzo e alla porta indicati.",
+            "指定されたアドレスとポートで Moonraker に接続できません。",
+            "无法通过指定的地址和端口连接到 Moonraker。",
+            "Não é possível ligar ao Moonraker no endereço e na porta indicados.",
+        ],
+        218 => [
+            "The connection to Moonraker closed before the answer was complete.",
+            "La conexión con Moonraker se cerró antes de completar la respuesta.",
+            "Die Verbindung zu Moonraker wurde geschlossen, bevor die Antwort vollständig war.",
+            "La connexion à Moonraker s'est fermée avant la fin de la réponse.",
+            "La connessione a Moonraker si è chiusa prima che la risposta fosse completa.",
+            "応答が完了する前に Moonraker との接続が閉じられました。",
+            "在响应完成之前，与 Moonraker 的连接已关闭。",
+            "A ligação ao Moonraker fechou antes de a resposta estar completa.",
+        ],
+        219 => [
+            "Moonraker took too long to answer.",
+            "Moonraker tardó demasiado en responder.",
+            "Moonraker hat zu lange für die Antwort gebraucht.",
+            "Moonraker a mis trop de temps à répondre.",
+            "Moonraker ha impiegato troppo tempo a rispondere.",
+            "Moonraker の応答に時間がかかりすぎました。",
+            "Moonraker 响应超时。",
+            "O Moonraker demorou demasiado a responder.",
+        ],
         _ => return None,
     };
     Some(row[column(lang)])
@@ -704,6 +817,13 @@ mod tests {
                 &format!("klipper {c}"),
             );
         }
+        for c in KLIPPER_LINK_KINDS {
+            all_eight(
+                LANGS.iter().map(|l| klipper(c, l).unwrap()).collect(),
+                &format!("klipper link {c}"),
+            );
+        }
+        assert!(klipper(220, "en").is_none() && klipper(200, "en").is_none());
     }
 
     #[test]
@@ -720,9 +840,15 @@ mod tests {
         for c in MARLIN_KINDS {
             assert!(c > 100 && error(c, "en").is_none());
         }
-        for c in KLIPPER_KINDS {
+        for c in KLIPPER_KINDS.into_iter().chain(KLIPPER_LINK_KINDS) {
             assert!(c > 200 && error(c, "en").is_none() && marlin(c, "en").is_none());
         }
+        // the numbers of the two groups are one run, with no number in two groups
+        let all: Vec<u32> = KLIPPER_KINDS
+            .into_iter()
+            .chain(KLIPPER_LINK_KINDS)
+            .collect();
+        assert_eq!(all, (201..=219).collect::<Vec<u32>>());
         assert!(
             hal_error(20, "en").is_none()
                 && hal_alarm(1, "en").is_none()
@@ -770,7 +896,7 @@ mod tests {
         for c in MARLIN_KINDS {
             text.push_str(marlin(c, "pt").unwrap());
         }
-        for c in KLIPPER_KINDS {
+        for c in KLIPPER_KINDS.into_iter().chain(KLIPPER_LINK_KINDS) {
             text.push_str(klipper(c, "pt").unwrap());
         }
         assert!(text.contains("definição") || text.contains("ficheiro") || text.contains("fuso"));

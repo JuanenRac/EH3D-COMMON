@@ -4,7 +4,7 @@
 //! what it is doing is its [`Status`]; what it is told to do is a [`Command`].
 //!
 //! The families that are known are in [`Family`], with the way each one is reached; the ones that have a controller written here are in
-//! [`grbl`] (GRBL, grblHAL and FluidNC), [`marlin`] and [`klipper`] (through Moonraker). Beside them are what every program that drives one
+//! [`grbl`] (GRBL, grblHAL and FluidNC), [`marlin`] and [`klipper`] (through Moonraker, over the HTTP transport of [`httprpc`]). Beside them are what every program that drives one
 //! of them needs to try it with nothing connected: the [`sim`] machine, the simulated GRBL ([`grblsim`]), Marlin ([`marlin::MarlinDevice`])
 //! and Klipper ([`klippersim`]), the [`wire`] that spoils the bytes by a fixed seed, the [`faulty`] wrapper that makes any controller fall
 //! silent, and the words of the errors in eight languages ([`dialtext`]). A controller that has no implementation yet is still listed, so that the program can say that it is not driven yet rather
@@ -15,6 +15,7 @@ pub mod dialtext;
 pub mod faulty;
 pub mod grbl;
 pub mod grblsim;
+pub mod httprpc;
 pub mod klipper;
 pub mod klippersim;
 pub mod marlin;
@@ -167,12 +168,13 @@ impl Family {
     }
 
     /// Whether this crate has a controller for it that can reach a real machine: GRBL, grblHAL and FluidNC (the GRBL controller) and Marlin
-    /// (the Marlin controller), all over a line transport such as the serial port. Klipper has a controller ([`klipper`]) but no transport
-    /// that opens a socket yet, so it is not listed here until it has one.
+    /// (the Marlin controller), all over a line transport such as the serial port, and Klipper (the Klipper controller) over the HTTP
+    /// transport of [`httprpc`], which opens a socket with nothing but `std::net`. Klipper over a WebSocket, with the notifications that
+    /// Moonraker pushes, is not written.
     pub fn is_driven(self) -> bool {
         matches!(
             self,
-            Family::Grbl | Family::GrblHal | Family::FluidNc | Family::Marlin
+            Family::Grbl | Family::GrblHal | Family::FluidNc | Family::Marlin | Family::Klipper
         )
     }
 }
@@ -298,9 +300,15 @@ impl fmt::Display for Error {
 }
 
 impl Error {
-    /// The number the controller gave in a refusal (`error:20`) or an alarm (`ALARM:3`); `None` for the other errors and for a text with no number.
+    /// The number the controller gave in a refusal (`error:20`) or an alarm (`ALARM:3`), or the number of the HTTP transport of Klipper in a
+    /// failure of the link (`error 218: ...`, see [`httprpc`]); `None` for the other errors and for a text with no number.
     pub fn code(&self) -> Option<u32> {
         match self {
+            Error::Link(text) => text
+                .strip_prefix("error ")
+                .and_then(|rest| rest.split(':').next())
+                .and_then(|n| n.parse::<u32>().ok())
+                .filter(|n| httprpc::is_http_code(*n)),
             Error::Refused(text) | Error::Alarm(text) => text
                 .split(|c: char| !c.is_ascii_digit())
                 .find(|part| !part.is_empty())
@@ -377,7 +385,9 @@ mod tests {
         assert!(
             Family::Grbl.is_driven() && Family::Marlin.is_driven() && Family::FluidNc.is_driven()
         );
-        assert!(!Family::Mach.is_driven() && !Family::Klipper.is_driven());
+        // Klipper is driven since the HTTP transport exists (tests/httprpc_link.rs opens a socket and drives it)
+        assert!(Family::Klipper.is_driven());
+        assert!(!Family::Mach.is_driven() && !Family::Smoothie.is_driven());
         assert_eq!(Family::PlanetCnc.link(), Link::Usb);
     }
 }

@@ -1,7 +1,8 @@
 //! Klipper through Moonraker: a [`Controller`] of the suite that speaks the JSON-RPC of Moonraker (the same messages go over a WebSocket or
-//! over HTTP), written against a [`JsonRpcTransport`] that carries one JSON text out and one JSON text in. This crate has no network
-//! transport yet (see `docs/adr/0001-klipper-transport.md`): the controller is tried against the simulated Klipper of [`crate::klippersim`]
-//! behind a cable that misbehaves on purpose, and a transport that opens a real socket only has to implement the two calls of the trait.
+//! over HTTP), written against a [`JsonRpcTransport`] that carries one JSON text out and one JSON text in. The transport that opens a real
+//! socket is [`crate::httprpc::HttpJsonRpc`] (plain HTTP, see `docs/adr/0001-klipper-transport.md`); the controller is also tried against
+//! the simulated Klipper of [`crate::klippersim`] behind a cable that misbehaves on purpose, and any other transport (a WebSocket) only
+//! has to implement the two calls of the trait.
 //!
 //! What Klipper is not: it has no state report on the line (the state is asked for with `printer.objects.query`), no hold that can be
 //! resumed from outside the queue of G-code, and no quick stop that keeps the machine ready: the only order that reaches the machine ahead of
@@ -378,9 +379,11 @@ impl<T: JsonRpcTransport> KlipperController<T> {
         }
     }
 
-    /// Whatever the end of an order was, a move that got no answer (and no answer to the probes) is not left running.
+    /// Whatever the end of an order was, a move that got no answer (and no answer to the probes) is not left running; nor is one whose
+    /// link broke: nobody knows whether the machine is still moving, so it is stopped the same way (the stop may not get through either,
+    /// and then the controller is `halted()` all the same).
     fn after(&mut self, moves: bool, done: Result<(), Error>) -> Result<(), Error> {
-        if done == Err(Error::Timeout) && moves {
+        if moves && matches!(done, Err(Error::Timeout | Error::Link(_))) {
             let _ = self.emergency();
         }
         done
