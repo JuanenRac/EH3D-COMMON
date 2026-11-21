@@ -10,7 +10,7 @@ Nothing in this crate has run on a real machine. Every controller below was trie
 |---|---|---|---|
 | GRBL, grblHAL, FluidNC | `grbl::GrblController` | lines over a `LineTransport` (the serial port with the feature `serial`, a socket in the program) | yes |
 | Marlin 2 | `marlin::MarlinController` | the same `LineTransport` | yes |
-| Klipper (through Moonraker) | `klipper::KlipperController` | `JsonRpcTransport`: one JSON-RPC text out, texts in | no, until a transport opens a socket (see [the decision](adr/0001-klipper-transport.md)) |
+| Klipper (through Moonraker) | `klipper::KlipperController` | `JsonRpcTransport`: one JSON-RPC text out, texts in; `httprpc::HttpJsonRpc` carries it over plain HTTP (see [the decision](adr/0001-klipper-transport.md)) | yes, over HTTP; a WebSocket with the notifications Moonraker pushes is not written |
 | The other families of `Family` | none yet | | no |
 
 ## What is there to try them with nothing connected
@@ -21,6 +21,7 @@ Nothing in this crate has run on a real machine. Every controller below was trie
 | `grblsim` | a GRBL 1.1 or grblHAL answering the way the firmware does (`GrblDevice`) |
 | `marlin` | `MarlinDevice`, a Marlin 2 with its greeting, `M114`, `M211`, line numbers and checksums, and errors in words |
 | `klippersim` | `KlipperDevice`, the JSON-RPC of Moonraker answered the way Klipper does, and `RpcLink`, its cable |
+| `httprpc` | the real transport of Klipper; its tests run it against a fake Moonraker in the test itself, on `127.0.0.1` |
 | `wire` | `WireLink`: a cable of bytes that cuts the answers in pieces, puts noise between the lines, flips a bit of what the program sends and falls silent for a while, all by a schedule that a fixed seed (`Impair::seed`) makes the same on every computer |
 | `faulty` | `FaultyController`: wraps any controller and, by a schedule, makes it silent, busy, refuse a line or lie about the position |
 | `mock` | a scripted transport for unit tests |
@@ -29,15 +30,50 @@ A cable with `Impair::clean()` is a good cable; a test names the seed and the fa
 
 ## The numbers of the errors
 
-GRBL gives numbers (`error:20`, `ALARM:3`) and `Error::code()` reads them. Marlin and Klipper say their errors in words, so the controllers of this crate give each kind a number of its own, in a range that cannot be mistaken for another family:
+GRBL gives numbers (`error:20`, `ALARM:3`) and `Error::code()` reads them; so does a failure of the HTTP link of Klipper (`Error::Link("error 218: ...")`). Marlin and Klipper say their errors in words, so the controllers of this crate give each kind a number of its own, in a range that cannot be mistaken for another family:
 
 | Range | Family | Kinds |
 |---|---|---|
 | 1 to 53 | GRBL and grblHAL | the numbers of the firmware |
 | 101 to 108 | Marlin | unknown command, line number, checksum, homing, probe, halted, thermal, other |
 | 201 to 208 | Klipper | unknown command, home first, out of range, shutdown, thermal, not ready, malformed, other |
+| 209 to 219 | Klipper over HTTP | an HTTP error status, the credential refused, a redirection, an answer over the limit, an answer that is not JSON, HTTP that is not well formed, an address refused, too many requests waiting, nothing listening, the connection closed before the answer was complete, a time that ran out |
 
 `dialtext::explain(family, kind, code, given, lang)` gives the text of any of them in the eight languages of the suite (English, Spanish, German, French, Italian, Japanese, Chinese and Portuguese of Portugal) and the text the controller gave when the number is in no table.
+
+## Klipper over HTTP
+
+`httprpc::HttpJsonRpc` is the transport that opens a socket: plain HTTP/1.1 on `std::net::TcpStream`, no crate beyond `serde_json` and no TLS. Every message the controller sends is one `POST /server/jsonrpc` (the JSON-RPC route of Moonraker; the body is the JSON-RPC request and the answer is the JSON-RPC response) on a connection of its own with `Connection: close`, made by a short-lived thread. That gives the controller what it needs: the liveness probe goes out on a second connection while the line that moves still waits on the first, and `printer.emergency_stop` goes out on a third one without waiting for anything (it also has two places more than the others and it abandons the requests that were waiting). Reconnecting after `printer.firmware_restart` costs nothing, because there is no connection to keep.
+
+```text
+let cfg = HttpConfig::from_cfg(&std::fs::read_to_string("machine.cfg")?)?;   // or HttpConfig::new("192.168.0.50", 7125)
+let mut klipper = httprpc::klipper_controller(cfg)?;
+klipper.command(Command::Home(vec![]))?;
+```
+
+What it checks, because the other end is a machine on a network: the address (loopback and the local network only, unless `klipper.allow_non_local` is on; an unspecified, multicast or broadcast address never; a name only with the switch on; no port in the host, no user, no path), the size of the head and of the body, the framing (`Content-Length` or a chunked body, never both, never repeated, every line ending in CRLF, no folded header), the status (a redirection is refused and never followed; 401 and 403 are the credential; any other 4xx or 5xx is an error), that the body is a JSON object, and the time of each phase. The credential, when there is one, goes only in the `X-Api-Key` header; it is never shown by `Debug`, by an error text or by an error of the configuration file. An answer cut off in the middle, a connection that closes at once and a server that is not there are `Error::Link` with their number from 209 to 219 (`Error::code()`), and a move whose link broke is stopped.
+
+The settings are keys of a configuration file (`key = value`, `#` comments), each number with its range; a key outside its range, an unknown key, a key written twice or a value that is not a number is refused with its line, and the value of a text key is never repeated. `HttpConfig::check()` also refuses a file whose `klipper.response_wait_ms` is shorter than `klipper.busy_limit_s`, which would cut off a move the controller is still willing to wait for.
+
+| Key | Range | Default | What it is |
+|---|---|---|---|
+| `klipper.host` | an IP address or `localhost` | `127.0.0.1` | where Moonraker is |
+| `klipper.port` | 1 to 65535 | 7125 | its port |
+| `klipper.allow_non_local` | `true` or `false` | `false` | accepts an address outside the local network (and a name) |
+| `klipper.api_key` | 1 to 256 printable characters | none | the credential for the `X-Api-Key` header |
+| `klipper.connect_timeout_ms` | 100 to 60000 | 3000 | the time to connect |
+| `klipper.read_timeout_ms` | 100 to 120000 | 5000 | the longest gap between two bytes of an answer that has begun |
+| `klipper.answer_timeout_ms` | 100 to 600000 | 30000 | the longest an answer may take to arrive entire once it has begun |
+| `klipper.response_wait_ms` | 1000 to 86400000 | 14460000 | the longest a script of G-code waits for the first byte (a move answers when it ends) |
+| `klipper.max_response_bytes` | 1024 to 16777216 | 1048576 | the limit of the body |
+| `klipper.max_header_bytes` | 512 to 65536 | 16384 | the limit of the head (status line, headers, trailers) |
+| `klipper.max_in_flight` | 1 to 16 | 4 | the requests that may wait at once |
+| `klipper.line_timeout_ms` | 100 to 600000 | 5000 | the time the controller waits for an ordinary line |
+| `klipper.homing_timeout_ms` | 1000 to 3600000 | 120000 | the homing (and the longest wait of any order that is not a script) |
+| `klipper.jog_timeout_ms` | 1000 to 3600000 | 60000 | a jog |
+| `klipper.busy_limit_s` | 0 to 14400 | 14400 | the most a line that moves waits while the machine answers the probes |
+
+What it does not have: TLS (Moonraker listens on plain HTTP on a trusted network), the notifications that Moonraker pushes over a WebSocket (a shutdown is noticed from the state in the status, which the controller reads). Those need the WebSocket option of [the decision](adr/0001-klipper-transport.md). The evidence is `simulator`: a fake Moonraker on `127.0.0.1` in `tests/httprpc_link.rs`; a real Klipper has not answered it yet.
 
 ## Safe when a controller goes silent
 
@@ -45,7 +81,7 @@ The controllers of this crate stop what moves when the answers stop coming, and 
 
 * GRBL holds the machine by the kind of line (a homing is reset, a jog cancelled, anything else held).
 * Marlin sends the quick stop `M410` after a move that got no answer.
-* Klipper has no quick stop that keeps the machine ready: the only order that goes ahead of its queue is `printer.emergency_stop`. A move that gets no answer asks the machine whether it is alive (`printer.info`, answered out of the queue of G-code): while the probes are answered the machine is busy and the wait goes on up to the busy limit; a probe that is not answered is silence, the emergency stop is given, the controller is `halted()` and refuses everything that is not a stop, an unlock or a question until `Command::Unlock` restarts the firmware and Klipper says it is ready again. A hold and a stop of the job asked from another thread through the `UrgentChannel` are that same stop.
+* Klipper has no quick stop that keeps the machine ready: the only order that goes ahead of its queue is `printer.emergency_stop`. A move that gets no answer asks the machine whether it is alive (`printer.info`, answered out of the queue of G-code): while the probes are answered the machine is busy and the wait goes on up to the busy limit; a probe that is not answered is silence, the emergency stop is given, the controller is `halted()` and refuses everything that is not a stop, an unlock or a question until `Command::Unlock` restarts the firmware and Klipper says it is ready again. A hold and a stop of the job asked from another thread through the `UrgentChannel` are that same stop. A move whose link broke (the connection closed, nothing listening any more) gets the same emergency stop: nobody knows whether the machine still moves.
 
 A program that wants more (a guard that trips on an implausible position, on two orders that move at once, on a jog that was not renewed) wraps the controller in its own guard; that guard is not in this crate because its settings belong to the program.
 
