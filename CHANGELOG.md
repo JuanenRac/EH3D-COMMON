@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.3.0] - The reason of a refusal and a fixed token for the client of the server, and the controllers of Klipper and Marlin shared with every program
+
 - **A node that refuses a command can say why, and the client keeps it (`Client::last_refusal`, `Client::why_of`, `Refusal`):** the field `why` of an answer of 400 or more (`busy`, `not_holding`, `vacuum_not_reached`) is cut to 256 characters and kept beside the code, the status and, if asked for, a piece of the body. `ClientError::Server` keeps its three fields, so no program that builds or matches it has to change; `why_of(&error)` gives the `why` only for the refusal that the error is, and a good request or one with no answer clears it.
 - **A token written in the settings is not forgotten after a `401` (`server_token_fixed`, `Client::with_fixed_token`):** the token of a node does not run out, and a node that has just started or a token that is being rotated may refuse it once. With the switch on the answer is still `Unauthorized` and the link still goes to `LoggedOut`, but the next request asks the server again and brings the link back. Off by default, where a `401` forgets the token as before.
 - **A masked piece of the body of a refusal (`server_error_body_bytes`, `body_excerpt`):** 0 to 4096 bytes of the body, 0 by default, cut at a character after the token and the values under names such as `token`, `password`, `secret`, `key`, `authorization` and `cookie` have been replaced by `***`; only the first 64 KiB of a body is looked through.
