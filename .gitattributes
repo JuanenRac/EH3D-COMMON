@@ -15,3 +15,6 @@ crates/printmaterials/THIRD_PARTY_NOTICES -text
 
 # The machining data of the materials keeps its line ends on every platform
 crates/materials/data/machining/*.json -text
+
+# The sample of the .eh3d project is binary too
+crates/project/tests/data/** -text

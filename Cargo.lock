@@ -345,6 +345,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "eh3d-project"
+version = "0.0.1"
+dependencies = [
+ "eh3d-container",
+ "eh3d-diagnostic",
+ "flate2",
+ "serde",
+ "serde_json",
+ "tempfile",
+ "zip",
+]
+
+[[package]]
 name = "eh3d-serverclient"
 version = "0.0.1"
 

@@ -1,8 +1,13 @@
-//! The stable codes of the container: `EH3D-PKG-001` to `EH3D-PKG-014`.
+//! The stable codes of the container: `EH3D-PKG-001` to `EH3D-PKG-024`.
 //!
 //! A code never changes its meaning and is never reused. The registry that the user reads lives
 //! in the documentation repository of the suite; a test here keeps the two lists in step when the
 //! documentation checkout is next to this one.
+//!
+//! Codes 001 to 014 belong to the container itself (names, ZIP structure, integrity, limits,
+//! version, atomic replacement). Codes 015 to 024 belong to the project container with branches
+//! (`.eh3d`, crate `eh3d-project`): branch records, branch hashes, ownership, references between
+//! branches, seals, signatures and encryption.
 
 use std::fmt;
 
@@ -39,11 +44,34 @@ pub enum PkgCode {
     NewerVersion = 13,
     /// 014: the atomic replacement of the target failed; the target is untouched.
     AtomicReplace = 14,
+    /// 015: a branch record (`branch.json`), the project record or an optional record
+    /// (metadata, document index, conversion report) is missing, malformed or inconsistent.
+    BranchRecord = 15,
+    /// 016: the content hash of a branch differs from the one its record states.
+    BranchHash = 16,
+    /// 017: a write to a branch that the writing application does not own.
+    BranchOwner = 17,
+    /// 018: a reference to another branch is malformed, points outside the file or to a branch
+    /// that is not there.
+    BranchRef = 18,
+    /// 019: a branch was derived from a state of another branch that has changed since (a
+    /// warning: the file is valid and the derived data can be updated).
+    StaleDerived = 19,
+    /// 020: the branch or the project is sealed read-only.
+    Sealed = 20,
+    /// 021: a signature does not verify.
+    SignatureInvalid = 21,
+    /// 022: a signature is required and missing, or the key that made it is not known.
+    SignatureMissing = 22,
+    /// 023: a branch is encrypted and cannot be read without its key.
+    EncryptedBranch = 23,
+    /// 024: the format version of a branch is newer than the application supports.
+    BranchVersion = 24,
 }
 
 impl PkgCode {
     /// Every code, in order.
-    pub const ALL: [PkgCode; 14] = [
+    pub const ALL: [PkgCode; 24] = [
         PkgCode::InvalidName,
         PkgCode::DuplicateName,
         PkgCode::SpecialEntry,
@@ -58,16 +86,26 @@ impl PkgCode {
         PkgCode::Budget,
         PkgCode::NewerVersion,
         PkgCode::AtomicReplace,
+        PkgCode::BranchRecord,
+        PkgCode::BranchHash,
+        PkgCode::BranchOwner,
+        PkgCode::BranchRef,
+        PkgCode::StaleDerived,
+        PkgCode::Sealed,
+        PkgCode::SignatureInvalid,
+        PkgCode::SignatureMissing,
+        PkgCode::EncryptedBranch,
+        PkgCode::BranchVersion,
     ];
 
-    /// The number part, 1 to 14.
+    /// The number part, 1 to 24.
     pub fn number(self) -> u8 {
         self as u8
     }
 
     /// The code as text, for example `EH3D-PKG-010`.
     pub fn code(self) -> &'static str {
-        const CODES: [&str; 14] = [
+        const CODES: [&str; 24] = [
             "EH3D-PKG-001",
             "EH3D-PKG-002",
             "EH3D-PKG-003",
@@ -82,6 +120,16 @@ impl PkgCode {
             "EH3D-PKG-012",
             "EH3D-PKG-013",
             "EH3D-PKG-014",
+            "EH3D-PKG-015",
+            "EH3D-PKG-016",
+            "EH3D-PKG-017",
+            "EH3D-PKG-018",
+            "EH3D-PKG-019",
+            "EH3D-PKG-020",
+            "EH3D-PKG-021",
+            "EH3D-PKG-022",
+            "EH3D-PKG-023",
+            "EH3D-PKG-024",
         ];
         CODES[self as usize - 1]
     }
@@ -89,6 +137,12 @@ impl PkgCode {
     /// The code that has this text, if any.
     pub fn from_code(text: &str) -> Option<PkgCode> {
         PkgCode::ALL.into_iter().find(|c| c.code() == text)
+    }
+
+    /// True for a code that reports something worth knowing in a file that is valid (today only
+    /// 019, derived data out of date); every other code means the operation was refused.
+    pub fn is_warning(self) -> bool {
+        self == PkgCode::StaleDerived
     }
 
     /// The English title of the code (the user interface translates by the key `diag.<code>`).
@@ -108,22 +162,38 @@ impl PkgCode {
             PkgCode::Budget => "Time or memory budget exceeded",
             PkgCode::NewerVersion => "Format version newer than supported",
             PkgCode::AtomicReplace => "Atomic replacement failed",
+            PkgCode::BranchRecord => "Branch or project record missing or invalid",
+            PkgCode::BranchHash => "Branch content hash differs from its record",
+            PkgCode::BranchOwner => "Write to a branch of another application refused",
+            PkgCode::BranchRef => "Reference between branches invalid or dangling",
+            PkgCode::StaleDerived => "Derived data out of date",
+            PkgCode::Sealed => "Branch or project sealed read-only",
+            PkgCode::SignatureInvalid => "Signature does not verify",
+            PkgCode::SignatureMissing => "Signature required but missing or its key unknown",
+            PkgCode::EncryptedBranch => "Branch encrypted and its key not available",
+            PkgCode::BranchVersion => "Branch format version newer than supported",
         }
     }
 
     /// A diagnostic for this code with a detail, and the entry it concerns when there is one.
     /// The detail may contain names taken from the package; the redacted form of the diagnostic
-    /// drops it.
+    /// drops it. A warning code (see [`PkgCode::is_warning`]) gives a warning that the reader
+    /// went past; every other code gives an error that stopped it.
     pub fn diagnostic(self, detail: &str, entry: Option<&str>) -> Diagnostic {
         let message = if detail.is_empty() {
             self.title().to_owned()
         } else {
             format!("{}: {detail}", self.title())
         };
-        let mut diagnostic = Diagnostic::new(0, Severity::Error, message)
+        let (severity, recoverability) = if self.is_warning() {
+            (Severity::Warning, Recoverability::Recoverable)
+        } else {
+            (Severity::Error, Recoverability::Unrecoverable)
+        };
+        let mut diagnostic = Diagnostic::new(0, severity, message)
             .with_code(self.code())
             .with_category(Category::Format)
-            .with_recoverability(Recoverability::Unrecoverable);
+            .with_recoverability(recoverability);
         if let Some(entry) = entry {
             diagnostic = diagnostic
                 .with_location(Location::Entry(entry.to_owned()))
@@ -144,15 +214,42 @@ mod tests {
     use super::*;
 
     #[test]
-    fn the_fourteen_codes_are_numbered_without_gaps() {
+    fn the_twenty_four_codes_are_numbered_without_gaps() {
         for (index, code) in PkgCode::ALL.iter().enumerate() {
             assert_eq!(code.number() as usize, index + 1);
             assert_eq!(code.code(), format!("EH3D-PKG-{:03}", index + 1));
             assert_eq!(PkgCode::from_code(code.code()), Some(*code));
             assert!(!code.title().is_empty());
         }
-        assert_eq!(PkgCode::from_code("EH3D-PKG-015"), None);
+        assert_eq!(PkgCode::from_code("EH3D-PKG-025"), None);
         assert_eq!(PkgCode::from_code("EH3D-PKG-000"), None);
+    }
+
+    #[test]
+    fn the_first_fourteen_codes_keep_their_numbers_and_titles() {
+        // 001 to 014 are in use by the readers of `.eh3dproj`: their meaning never changes.
+        assert_eq!(PkgCode::InvalidName.number(), 1);
+        assert_eq!(PkgCode::AtomicReplace.number(), 14);
+        assert_eq!(
+            PkgCode::Integrity.title(),
+            "Integrity record missing, incomplete or different"
+        );
+        assert_eq!(PkgCode::BranchRecord.number(), 15);
+    }
+
+    #[test]
+    fn only_the_stale_code_is_a_warning() {
+        for code in PkgCode::ALL {
+            let d = code.diagnostic("x", None);
+            if code == PkgCode::StaleDerived {
+                assert!(code.is_warning());
+                assert_eq!(d.severity, Severity::Warning);
+                assert_eq!(d.recoverability, Some(Recoverability::Recoverable));
+            } else {
+                assert!(!code.is_warning());
+                assert_eq!(d.severity, Severity::Error, "{code}");
+            }
+        }
     }
 
     #[test]
