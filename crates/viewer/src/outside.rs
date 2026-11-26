@@ -14,9 +14,6 @@ use crate::kind::{classify, inspect};
 use crate::limits::ViewerLimits;
 use crate::source::{read_head, FileSource, Source};
 
-/// The longest name kept, in bytes.
-const MAX_NAME_BYTES: usize = 150;
-
 /// What a person said to a warning.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Consent {
@@ -24,61 +21,9 @@ pub enum Consent {
     Given,
 }
 
-fn hidden_or_reordering(c: char) -> bool {
-    // marks that change the order the letters are shown in, or are not shown at all
-    matches!(c, '\u{200b}'..='\u{200f}' | '\u{2028}'..='\u{202e}' | '\u{2060}'..='\u{2069}' | '\u{feff}')
-}
-
-fn reserved_on_windows(stem: &str) -> bool {
-    let stem = stem.trim_end().to_ascii_uppercase();
-    matches!(
-        stem.as_str(),
-        "CON" | "PRN" | "AUX" | "NUL" | "CONIN$" | "CONOUT$"
-    ) || ["COM", "LPT"].iter().any(|p| {
-        stem.strip_prefix(p).is_some_and(|n| {
-            matches!(
-                n,
-                "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "¹" | "²" | "³"
-            )
-        })
-    })
-}
-
-/// A file name that is safe on every system: only the last part of a path, no separators, controls,
-/// invisible or reordering marks, no leading or trailing dots and spaces, no reserved device name and
-/// not too long. The extension is kept.
+/// A file name that is safe on every system (the rule of the whole suite, `eh3d_filekind::sanitize_file_name`).
 pub fn sanitize_name(name: &str) -> String {
-    let last = name.rsplit(['/', '\\']).next().unwrap_or("");
-    let cleaned: String = last
-        .chars()
-        .filter(|c| !c.is_control() && !hidden_or_reordering(*c))
-        .map(|c| if "<>:\"|?*,;".contains(c) { '_' } else { c })
-        .collect();
-    let mut cleaned = cleaned
-        .trim_matches(|c: char| c == '.' || c.is_whitespace())
-        .to_string();
-    // a name that starts with a dash could be read as an option by the program that opens it
-    if cleaned.starts_with('-') {
-        cleaned.replace_range(..1, "_");
-    }
-    if cleaned.is_empty() {
-        return "attachment".to_string();
-    }
-    if reserved_on_windows(cleaned.split('.').next().unwrap_or("")) {
-        cleaned.insert(0, '_');
-    }
-    if cleaned.len() > MAX_NAME_BYTES {
-        let (stem, extension) = match cleaned.rsplit_once('.') {
-            Some((s, e)) if e.len() <= 24 => (s, format!(".{e}")),
-            _ => (cleaned.as_str(), String::new()),
-        };
-        let mut end = (MAX_NAME_BYTES - extension.len()).min(stem.len());
-        while !stem.is_char_boundary(end) {
-            end -= 1;
-        }
-        cleaned = format!("{}{extension}", stem[..end].trim_end());
-    }
-    cleaned
+    eh3d_filekind::sanitize_file_name(name)
 }
 
 fn copy_within(source: &dyn Source, to: &mut File, limit: u64) -> Result<(), ViewerError> {

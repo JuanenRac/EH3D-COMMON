@@ -1,0 +1,19 @@
+[package]
+name = "eh3d-filekind"
+version = "0.0.1"
+edition.workspace = true
+rust-version.workspace = true
+description = "The one classification of the files of the suite: what a file is, whether it is dangerous or unknown, and the name it may safely have on a disk"
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+
+[dependencies]
+
+[dev-dependencies]
+# the tests make their own archives
+zip = { version = "9.0.5", default-features = false, features = ["deflate-flate2"] }
+flate2 = { version = "1", default-features = false, features = ["rust_backend"] }
+
+[lints]
+workspace = true

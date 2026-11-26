@@ -1,8 +1,14 @@
-//! What a file that is attached to a project is: its kind, whether it is dangerous and the name it may safely have on a disk.
+//! What a file attached to a project is: the one classification of the suite, used by the project container (`eh3d-project`), the
+//! viewer (`eh3d-viewer`) and the attachment panel.
 //!
-//! Every kind of file may be attached; what is not recognised is [`AttachmentKind::Other`]. Programs, scripts, office documents
-//! with macros, compressed archives and pages that can run code are **dangerous**: they are kept like any other file, marked, and
-//! a person has to agree before one is taken out or opened. Nothing here runs or opens anything.
+//! The name is cleaned first, then the extension, the first bytes and, for office documents, what is inside are looked at. The
+//! dangerous answer wins over every other. The rule is careful on purpose: programs, scripts, documents with macros, compressed
+//! archives, pages that can run code (HTML, SVG) **and kinds the suite does not know** need the agreement of a person before they
+//! are taken out or opened ([`Classification::needs_consent`]). Programs and scripts are never launched. Nothing here runs or
+//! opens anything.
+
+#![forbid(unsafe_code)]
+#![warn(missing_docs)]
 
 use std::io::{self, Read, Seek, SeekFrom};
 
@@ -11,7 +17,7 @@ pub const MAX_FILE_NAME_BYTES: usize = 150;
 /// The bytes of the start of a file that say what it is.
 pub const HEAD_BYTES: usize = 4096;
 
-/// What a file is, by its name.
+/// What a file is for the record of an attachment, by its name.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum AttachmentKind {
     /// A PDF document.
@@ -91,8 +97,8 @@ impl AttachmentKind {
             "pdf" => AttachmentKind::Pdf,
             "md" | "markdown" => AttachmentKind::Markdown,
             "json" => AttachmentKind::Report,
-            _ if has(PICTURES) => AttachmentKind::Image,
-            _ if has(TEXTS) => AttachmentKind::Text,
+            _ if has(PICTURES) || has(OTHER_PICTURES) || extension == "svg" => AttachmentKind::Image,
+            _ if has(TEXTS) || extension == "htm" || extension == "html" => AttachmentKind::Text,
             _ if has(OFFICE) || has(MACRO_OFFICE) => AttachmentKind::Office,
             _ if has(DESIGN) => AttachmentKind::Project,
             _ if has(MODELS) => AttachmentKind::Cad,
@@ -102,6 +108,50 @@ impl AttachmentKind {
             _ => AttachmentKind::Other,
         }
     }
+}
+
+/// The office formats that have a preview of their text and tables, and those that have none.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum OfficeKind {
+    /// Word, Office Open XML.
+    Docx,
+    /// Excel, Office Open XML.
+    Xlsx,
+    /// PowerPoint, Office Open XML.
+    Pptx,
+    /// OpenDocument text.
+    Odt,
+    /// OpenDocument spreadsheet.
+    Ods,
+    /// OpenDocument presentation.
+    Odp,
+    /// Rich text.
+    Rtf,
+    /// The binary formats before 2007 (`doc`, `xls`, `ppt`): no preview.
+    Legacy,
+}
+
+/// How a file is shown.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Kind {
+    /// PDF pages.
+    Pdf,
+    /// A picture drawn inside.
+    Picture,
+    /// Plain text.
+    Text,
+    /// Markdown.
+    Markdown,
+    /// Comma or tab separated values, shown as a table.
+    Table,
+    /// An office document.
+    Office(OfficeKind),
+    /// Video and audio: opened outside.
+    Media,
+    /// Design files: opened outside.
+    Cad,
+    /// Anything else: opened outside.
+    Other,
 }
 
 /// Why a file is dangerous.
@@ -151,6 +201,43 @@ impl Danger {
     /// A program or a script is never launched by a program of the suite, whatever a person confirms.
     pub fn never_launched(self) -> bool {
         matches!(self, Danger::Executable | Danger::Script)
+    }
+}
+
+/// The answer for one file.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct Classification {
+    /// The name after cleaning; a copy gets this one.
+    pub name: String,
+    /// The extension in lowercase, empty when there is none.
+    pub extension: String,
+    /// How it is shown.
+    pub kind: Kind,
+    /// Why it is dangerous, when it is.
+    pub danger: Option<Danger>,
+    /// False for a kind the suite does not know: taking it out or opening it asks first.
+    pub known: bool,
+}
+
+impl Classification {
+    /// True when taking it out or opening it needs a person to agree.
+    pub fn needs_consent(&self) -> bool {
+        self.danger.is_some() || !self.known
+    }
+
+    /// False for a program or a script.
+    pub fn may_launch(&self) -> bool {
+        !self.danger.is_some_and(Danger::never_launched)
+    }
+
+    /// Adds a danger that something else says (the record of a project): it only ever makes the answer more careful.
+    pub fn warn(&mut self, danger: Danger) {
+        if !self.danger.is_some_and(Danger::never_launched) {
+            self.danger = Some(danger);
+            if danger.never_launched() {
+                self.kind = Kind::Other;
+            }
+        }
     }
 }
 
@@ -258,6 +345,13 @@ const OFFICE: &[&str] = &[
     "csv", "doc", "dot", "docx", "dotx", "odp", "ods", "odt", "otp", "ots", "ott", "pot", "potx",
     "pps", "ppsx", "ppt", "pptx", "rtf", "tsv", "xls", "xlt", "xlsx", "xltx",
 ];
+/// The office formats that are a ZIP archive, and the old ones, which are looked into when they turn out to be one.
+const ZIPPED_OFFICE: &[&str] = &[
+    "doc", "dot", "docx", "dotx", "odp", "ods", "odt", "otp", "ots", "ott", "pot", "potx", "pps",
+    "ppsx", "ppt", "pptx", "xls", "xlt", "xlsx", "xltx",
+];
+/// The design files whose normal form is a ZIP archive.
+const ZIPPED_DESIGN: &[&str] = &["3mf", "eh3d", "eh3dproj", "f3d", "fcstd"];
 const ARCHIVES: &[&str] = &[
     "7z", "ace", "arj", "bz2", "gz", "lz", "lzh", "lzma", "rar", "tar", "tbz", "tgz", "txz", "xz",
     "z", "zip", "zst",
@@ -265,13 +359,14 @@ const ARCHIVES: &[&str] = &[
 const ACTIVE: &[&str] = &[
     "htm", "html", "mht", "mhtml", "shtml", "svg", "svgz", "xht", "xhtml",
 ];
-const PICTURES: &[&str] = &[
-    "bmp", "gif", "heic", "ico", "jpeg", "jpg", "png", "psd", "svg", "tif", "tiff", "webp",
-];
+/// The pictures drawn inside.
+const PICTURES: &[&str] = &["bmp", "gif", "jpeg", "jpg", "png", "webp"];
+/// The pictures that are known and opened outside.
+const OTHER_PICTURES: &[&str] = &["heic", "ico", "psd", "tif", "tiff"];
 const TEXTS: &[&str] = &[
     "asm", "c", "cc", "cfg", "cmake", "cnc", "conf", "cpp", "drl", "gbl", "gbr", "gbs", "gcode",
-    "gko", "gtl", "gto", "gts", "h", "hex", "hpp", "htm", "html", "ini", "ino", "log", "nc", "ngc",
-    "plt", "rs", "tap", "toml", "txt", "xml", "yaml", "yml",
+    "gko", "gtl", "gto", "gts", "h", "hex", "hpp", "ini", "ino", "log", "nc", "ngc", "plt", "rs",
+    "tap", "toml", "txt", "xml", "yaml", "yml",
 ];
 const DESIGN: &[&str] = &[
     "brd",
@@ -286,6 +381,8 @@ const DESIGN: &[&str] = &[
     "kicad_sch",
     "kicad_sym",
     "lbr",
+    "lbrn",
+    "lbrn2",
     "phoenixproj",
     "phoenixsketch",
     "sch",
@@ -303,7 +400,7 @@ const AUDIO: &[&str] = &[
 ];
 
 /// The extension of a name in lower case, or nothing.
-fn extension_of(name: &str) -> String {
+pub fn extension_of(name: &str) -> String {
     match name.rsplit_once('.') {
         Some((stem, extension)) if !stem.is_empty() => extension.to_ascii_lowercase(),
         _ => String::new(),
@@ -367,7 +464,7 @@ pub fn sanitize_file_name(name: &str) -> String {
     cleaned
 }
 
-fn danger_of_name(extension: &str) -> Option<Danger> {
+fn danger_of_extension(extension: &str) -> Option<Danger> {
     let has = |list: &[&str]| list.contains(&extension);
     if has(EXECUTABLES) {
         Some(Danger::Executable)
@@ -382,6 +479,46 @@ fn danger_of_name(extension: &str) -> Option<Danger> {
     } else {
         None
     }
+}
+
+fn office_kind(extension: &str) -> Option<OfficeKind> {
+    Some(match extension {
+        "docx" | "dotx" | "docm" | "dotm" => OfficeKind::Docx,
+        "xlsx" | "xltx" | "xlsm" | "xltm" => OfficeKind::Xlsx,
+        "pptx" | "potx" | "ppsx" | "pptm" | "potm" | "ppsm" => OfficeKind::Pptx,
+        "odt" | "ott" => OfficeKind::Odt,
+        "ods" | "ots" => OfficeKind::Ods,
+        "odp" | "otp" => OfficeKind::Odp,
+        "rtf" => OfficeKind::Rtf,
+        "doc" | "dot" | "xls" | "xlt" | "ppt" | "pps" | "pot" => OfficeKind::Legacy,
+        _ => return None,
+    })
+}
+
+/// How a file of this extension is shown, and whether the suite knows the extension.
+fn view_of_extension(extension: &str) -> (Kind, bool) {
+    let has = |list: &[&str]| list.contains(&extension);
+    let kind = match extension {
+        "pdf" => Kind::Pdf,
+        "md" | "markdown" => Kind::Markdown,
+        "csv" | "tsv" => Kind::Table,
+        "json" => Kind::Text,
+        _ if has(PICTURES) => Kind::Picture,
+        _ if has(OTHER_PICTURES) => Kind::Other,
+        _ if has(TEXTS) || has(ACTIVE) => Kind::Text,
+        _ if has(VIDEO) || has(AUDIO) => Kind::Media,
+        _ if has(DESIGN) || has(MODELS) => Kind::Cad,
+        _ => match office_kind(extension) {
+            Some(office) => Kind::Office(office),
+            None => return (Kind::Other, danger_of_extension(extension).is_some()),
+        },
+    };
+    (kind, true)
+}
+
+/// Whether the suite knows the kind of a file with this name. An unknown kind is asked about like a dangerous one.
+pub fn is_known_name(name: &str) -> bool {
+    view_of_extension(&extension_of(&sanitize_file_name(name))).1
 }
 
 /// The danger that the first bytes alone show, whatever the name says.
@@ -421,29 +558,43 @@ fn is_ole(head: &[u8]) -> bool {
     head.starts_with(b"\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1")
 }
 
-/// Whether a name and the first bytes of a file ([`HEAD_BYTES`] are enough) say it is dangerous. What the bytes say wins when the
-/// name says something harmless. [`danger_of_file`] also looks inside office documents.
-pub fn danger_of(name: &str, head: &[u8]) -> Option<Danger> {
-    let extension = extension_of(&sanitize_file_name(name));
-    let mut danger = danger_of_name(&extension);
+/// What the name and the first bytes of a file ([`HEAD_BYTES`] are enough) say. What the bytes say wins when the name says
+/// something harmless. [`classify_file`] also looks inside office documents.
+pub fn classify(name: &str, head: &[u8]) -> Classification {
+    let name = sanitize_file_name(name);
+    let extension = extension_of(&name);
+    let (mut kind, mut known) = view_of_extension(&extension);
+    let mut danger = danger_of_extension(&extension);
     if let Some(found) = danger_of_program(head) {
         if !danger.is_some_and(Danger::never_launched) {
             danger = Some(found);
+            kind = Kind::Other;
         }
     } else if danger.is_none() && is_other_archive(head) {
         danger = Some(Danger::Archive);
+        kind = Kind::Other;
     } else if danger.is_none() && is_zip(head) {
         // a zip behind the name of an office document or of some design files is the normal form of that format
-        let expected = (OFFICE.contains(&extension.as_str()) && extension != "rtf")
-            || matches!(
-                extension.as_str(),
-                "3mf" | "f3d" | "fcstd" | "eh3d" | "eh3dproj"
-            );
+        let expected = ZIPPED_OFFICE.contains(&extension.as_str())
+            || ZIPPED_DESIGN.contains(&extension.as_str());
         if !expected {
             danger = Some(Danger::Archive);
+            kind = Kind::Other;
         }
     }
-    danger
+    known |= danger.is_some();
+    Classification {
+        name,
+        extension,
+        kind,
+        danger,
+        known,
+    }
+}
+
+/// Why a name and the first bytes of a file say it is dangerous, when they do.
+pub fn danger_of(name: &str, head: &[u8]) -> Option<Danger> {
+    classify(name, head).danger
 }
 
 /// The most bytes of the list of entries of an office archive that are read.
@@ -534,194 +685,34 @@ fn ole_names_macros(file: &mut (impl Read + Seek)) -> io::Result<bool> {
     }
 }
 
-/// [`danger_of`] for a whole file: office documents are also looked into for macros, whatever their extension says. A document
-/// that cannot be looked into counts as dangerous. The file is read in blocks; nothing is decompressed or run.
-pub fn danger_of_file(name: &str, file: &mut (impl Read + Seek)) -> io::Result<Option<Danger>> {
+/// [`classify`] for a whole file: office documents are also looked into for macros, whatever their extension says. A document
+/// that cannot be looked into counts as one with macros. The file is read in blocks; nothing is decompressed or run.
+pub fn classify_file(name: &str, file: &mut (impl Read + Seek)) -> io::Result<Classification> {
     file.seek(SeekFrom::Start(0))?;
     let mut head = Vec::new();
     (&mut *file)
         .take(HEAD_BYTES as u64)
         .read_to_end(&mut head)?;
-    if let Some(danger) = danger_of(name, &head) {
-        return Ok(Some(danger));
+    let mut found = classify(name, &head);
+    if found.danger.is_some() || AttachmentKind::of_name(&found.name) != AttachmentKind::Office {
+        return Ok(found);
     }
-    if AttachmentKind::of_name(name) != AttachmentKind::Office {
-        return Ok(None);
+    let macros = if is_zip(&head) {
+        zip_names_macros(file)? != Some(false)
+    } else {
+        is_ole(&head) && ole_names_macros(file)?
+    };
+    if macros {
+        found.danger = Some(Danger::Macros);
+        found.known = true;
     }
-    if is_zip(&head) {
-        return Ok(match zip_names_macros(file)? {
-            Some(false) => None,
-            Some(true) | None => Some(Danger::Macros),
-        });
-    }
-    if is_ole(&head) && ole_names_macros(file)? {
-        return Ok(Some(Danger::Macros));
-    }
-    Ok(None)
+    Ok(found)
+}
+
+/// Why a whole file is dangerous, when it is ([`classify_file`]).
+pub fn danger_of_file(name: &str, file: &mut (impl Read + Seek)) -> io::Result<Option<Danger>> {
+    Ok(classify_file(name, file)?.danger)
 }
 
 #[cfg(test)]
-mod tests {
-    use super::*;
-    use std::io::{Cursor, Write};
-
-    fn zip_of(names: &[&str]) -> Vec<u8> {
-        let mut writer = zip::ZipWriter::new(Cursor::new(Vec::new()));
-        for name in names {
-            writer
-                .start_file(*name, zip::write::SimpleFileOptions::default())
-                .unwrap();
-            writer.write_all(b"x").unwrap();
-        }
-        writer.finish().unwrap().into_inner()
-    }
-
-    fn of_bytes(name: &str, bytes: &[u8]) -> Option<Danger> {
-        danger_of_file(name, &mut Cursor::new(bytes)).unwrap()
-    }
-
-    #[test]
-    fn each_family_of_files_has_its_kind_and_the_rest_is_other() {
-        use AttachmentKind as K;
-        for (name, kind) in [
-            ("Data.PDF", K::Pdf),
-            ("read.md", K::Markdown),
-            ("job.gcode", K::Text),
-            ("photo.JPG", K::Image),
-            ("drc.json", K::Report),
-            ("a.doc", K::Office),
-            ("a.docx", K::Office),
-            ("a.odt", K::Office),
-            ("a.rtf", K::Office),
-            ("a.xls", K::Office),
-            ("a.xlsx", K::Office),
-            ("a.ods", K::Office),
-            ("a.csv", K::Office),
-            ("a.ppt", K::Office),
-            ("a.pptx", K::Office),
-            ("a.odp", K::Office),
-            ("a.xlsm", K::Office),
-            ("board.brd", K::Project),
-            ("board.kicad_pcb", K::Project),
-            ("case.eh3d", K::Project),
-            ("case.step", K::Cad),
-            ("case.stl", K::Cad),
-            ("case.dxf", K::Cad),
-            ("clip.mp4", K::Video),
-            ("clip.webm", K::Video),
-            ("talk.mp3", K::Audio),
-            ("files.zip", K::Archive),
-            ("files.7z", K::Archive),
-            ("thing.abc123", K::Other),
-            ("noextension", K::Other),
-            ("setup.exe", K::Other),
-        ] {
-            assert_eq!(AttachmentKind::of_name(name), kind, "{name}");
-        }
-        for kind in AttachmentKind::ALL {
-            assert_eq!(AttachmentKind::parse(kind.name()), kind);
-        }
-        assert_eq!(AttachmentKind::parse("hologram"), AttachmentKind::Other);
-    }
-
-    #[test]
-    fn programs_scripts_macros_archives_and_pages_are_dangerous() {
-        for (name, danger) in [
-            ("setup.exe", Danger::Executable),
-            ("a.LNK", Danger::Executable),
-            ("eagle.scr", Danger::Executable),
-            ("run.ps1", Danger::Script),
-            ("tool.py", Danger::Script),
-            ("library.ulp", Danger::Script),
-            ("report.docm", Danger::Macros),
-            ("report.xlsm", Danger::Macros),
-            ("talk.pptm", Danger::Macros),
-            ("files.zip", Danger::Archive),
-            ("files.7z", Danger::Archive),
-            ("page.html", Danger::ActiveContent),
-            ("logo.svg", Danger::ActiveContent),
-            ("manual.pdf.exe", Danger::Executable),
-            ("run.exe. . ", Danger::Executable),
-            ("a\u{202e}fdp.exe", Danger::Executable),
-        ] {
-            assert_eq!(danger_of(name, b""), Some(danger), "{name}");
-        }
-        for name in ["a.pdf", "a.step", "a.mp4", "a.docx", "thing.abc123"] {
-            assert_eq!(danger_of(name, b""), None, "{name}");
-        }
-        for danger in Danger::ALL {
-            assert_eq!(Danger::parse(danger.name()), danger);
-        }
-        assert_eq!(Danger::parse("new-danger"), Danger::Executable);
-    }
-
-    #[test]
-    fn the_bytes_win_over_a_harmless_name() {
-        assert_eq!(
-            danger_of("datasheet.pdf", b"MZ\x90\x00\x03"),
-            Some(Danger::Executable)
-        );
-        assert_eq!(danger_of("notes.txt", b"#!/bin/sh\n"), Some(Danger::Script));
-        assert_eq!(
-            danger_of("photo.png", b"\x7fELF\x02"),
-            Some(Danger::Executable)
-        );
-        assert_eq!(
-            danger_of("manual.pdf", b"PK\x03\x04"),
-            Some(Danger::Archive)
-        );
-        assert_eq!(danger_of("part.3mf", b"PK\x03\x04"), None);
-        assert_eq!(danger_of("notes.txt", b"MZ is a code"), None);
-    }
-
-    #[test]
-    fn macros_inside_a_document_with_a_harmless_extension_are_found() {
-        assert_eq!(of_bytes("a.docx", &zip_of(&["word/document.xml"])), None);
-        assert_eq!(
-            of_bytes("a.docx", &zip_of(&["word/vbaProject.bin"])),
-            Some(Danger::Macros)
-        );
-        assert_eq!(
-            of_bytes("a.odt", &zip_of(&["content.xml", "Basic/script.xml"])),
-            Some(Danger::Macros)
-        );
-        let mut old = b"\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1".to_vec();
-        old.resize(200_000, 0);
-        assert_eq!(of_bytes("a.xls", &old), None);
-        // across the edge of a block of the reader
-        let needle: Vec<u8> = "_VBA_PROJECT"
-            .encode_utf16()
-            .flat_map(u16::to_le_bytes)
-            .collect();
-        old[65_530..65_530 + needle.len()].copy_from_slice(&needle);
-        assert_eq!(of_bytes("a.xls", &old), Some(Danger::Macros));
-        assert_eq!(
-            of_bytes("a.docx", b"PK\x03\x04broken"),
-            Some(Danger::Macros),
-            "what cannot be looked into is asked about"
-        );
-    }
-
-    #[test]
-    fn a_name_never_leaves_its_folder() {
-        for (given, safe) in [
-            ("../../etc/passwd", "passwd"),
-            ("..\\..\\windows\\evil.exe", "evil.exe"),
-            ("C:\\a\\b.pdf", "b.pdf"),
-            ("..", "attachment"),
-            ("", "attachment"),
-            ("  .hidden  ", "hidden"),
-            ("-rf", "_rf"),
-            ("CON", "_CON"),
-            ("com1.txt", "_com1.txt"),
-            ("a<b>c:d|e?.pdf", "a_b_c_d_e_.pdf"),
-            ("line\nbreak\u{0}.txt", "linebreak.txt"),
-            ("Manual NE555.pdf", "Manual NE555.pdf"),
-        ] {
-            assert_eq!(sanitize_file_name(given), safe, "{given:?}");
-        }
-        let long = format!("{}.pdf", "é".repeat(400));
-        let safe = sanitize_file_name(&long);
-        assert!(safe.len() <= MAX_FILE_NAME_BYTES && safe.ends_with(".pdf"));
-    }
-}
+mod tests;

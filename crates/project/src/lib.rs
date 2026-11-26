@@ -19,9 +19,9 @@
 //!   take from another branch, out-of-date notices), so that each program does not write it
 //!   again;
 //! * [`manufacturing`]: how the programs that make something from the job of the project read it and keep their result;
-//! * [`attachments`] and [`attachfile`]: any file attached to the project (data sheets, manuals, other projects), linked to the
-//!   pieces of the design, inside it or only as an address with its hash, with the dangerous ones marked and taken out only when a
-//!   person agrees;
+//! * [`attachments`]: any file attached to the project (data sheets, manuals, other projects), linked to the
+//!   pieces of the design, inside it or only as an address with its hash, with the dangerous ones marked, and dangerous or unknown ones
+//!   taken out only when a person agrees;
 //! * [`suiteview`] and [`suitetext`]: what a window shows and asks before it writes a project, and its words in the eight
 //!   languages;
 //! * [`project`]: open, read the branches of other programs, check, save one branch without
@@ -38,7 +38,6 @@
 #![warn(missing_docs)]
 
 pub mod appbranch;
-pub mod attachfile;
 pub mod attachments;
 pub mod ed25519;
 pub mod manufacturing;
@@ -50,11 +49,11 @@ pub mod spec;
 pub mod suitetext;
 pub mod suiteview;
 
-pub use attachfile::{AttachmentKind, Danger};
 pub use attachments::{
     AttachError, AttachRequest, Attacher, Attachment, AttachmentIndex, AttachmentLimits,
     AttachmentSource, ComponentLink, ComponentQuery, Consent,
 };
+pub use eh3d_filekind::{AttachmentKind, Danger};
 pub use ed25519::{Ed25519Keyring, Ed25519Signer, KeyError, KeyPair};
 pub use project::{
     manufacturing_update, Branch, BranchUpdate, Checks, FileInfo, Finding, NewProject, OpenOptions,
