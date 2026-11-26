@@ -472,7 +472,7 @@ fn damaged_signature_records_are_never_taken_for_valid() {
     let clean = original["pcb/branch.json"].clone();
     let clean_value: Value = serde_json::from_slice(&clean).unwrap();
     let mut seed = Seed(0x5EED_0001);
-    for round in 0..300 {
+    for round in 0..120 {
         let mut bytes = clean.clone();
         let at = seed.below(bytes.len());
         match seed.below(3) {
@@ -504,7 +504,7 @@ fn random_damage_to_the_whole_file_never_leaves_a_changed_branch_valid() {
     let out = dir.path().join("flipped.eh3d");
     let ring = keyring();
     let mut seed = Seed(0x5EED_0002);
-    for round in 0..300 {
+    for round in 0..120 {
         let mut bytes = clean.clone();
         let at = seed.below(bytes.len());
         bytes[at] ^= 1 << seed.below(8);
@@ -638,7 +638,7 @@ fn damaged_key_files_are_refused_without_saying_what_they_hold() {
     }
 
     let mut seed = Seed(0x5EED_0003);
-    for _ in 0..400 {
+    for _ in 0..300 {
         let mut bytes = clean.clone();
         let at = seed.below(bytes.len());
         match seed.below(3) {

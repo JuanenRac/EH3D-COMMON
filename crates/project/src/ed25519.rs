@@ -10,7 +10,7 @@
 //!
 //! The secret file holds the 32 byte seed; the public file (the same path plus `.pub`) holds
 //! the public key and is what is handed to those who check. A new secret file never replaces one
-//! and is readable only by its owner (mode 600 on Unix; on Windows the inherited permissions are
+//! and is readable only by its owner (mode 600 on Unix; on Windows every other permission is
 //! removed and only the owner is granted, with the system tool `icacls`). No message of this
 //! module carries what a key file holds, the secret key is wiped from memory when it is dropped
 //! and `Debug` shows only the identifier of the key.
@@ -379,18 +379,23 @@ fn limit_to_owner(path: &Path) -> Result<(), KeyError> {
     let tool = PathBuf::from(root).join("System32").join("icacls.exe");
     // an absolute path cannot be taken for an option of the tool
     let full = std::path::absolute(path).map_err(|_| refused())?;
-    // S-1-3-4 is "owner rights": what the owner of the file may do, whoever that is
-    let output = std::process::Command::new(tool)
-        .arg(full)
-        .args(["/inheritance:r", "/grant:r", "*S-1-3-4:F"])
-        .creation_flags(CREATE_NO_WINDOW)
-        .output()
-        .map_err(|_| refused())?;
-    if output.status.success() {
-        Ok(())
-    } else {
-        Err(refused())
+    // First every entry written on the file itself goes ("reset" leaves only inherited ones: an
+    // elevated process gets explicit ones for the system and the administrators), then the
+    // inherited ones are removed and only S-1-3-4, "owner rights", is granted: what the owner of
+    // the file may do, whoever that is.
+    let steps: [&[&str]; 2] = [&["/reset"], &["/inheritance:r", "/grant:r", "*S-1-3-4:F"]];
+    for step in steps {
+        let output = std::process::Command::new(&tool)
+            .arg(&full)
+            .args(step)
+            .creation_flags(CREATE_NO_WINDOW)
+            .output()
+            .map_err(|_| refused())?;
+        if !output.status.success() {
+            return Err(refused());
+        }
     }
+    Ok(())
 }
 
 #[cfg(not(any(unix, windows)))]
