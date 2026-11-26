@@ -809,7 +809,8 @@ mod tests {
 
     #[test]
     fn a_file_dropped_on_the_panel_is_attached_and_one_dropped_nowhere_known_is_asked_about() {
-        let dir = std::env::temp_dir().join(format!("eh3d-attachpanel-drop-{}", std::process::id()));
+        let dir =
+            std::env::temp_dir().join(format!("eh3d-attachpanel-drop-{}", std::process::id()));
         let _ = std::fs::remove_dir_all(&dir);
         std::fs::create_dir_all(&dir).unwrap();
         let file = dir.join("a.eh3d");
@@ -844,7 +845,13 @@ mod tests {
         panel.model.cancel();
         // over the panel the file is attached at once, whatever it is
         let over = Some(Pos2::new(40.0, 40.0));
-        let left = drop_frame(&ctx, &mut panel, &file, over, std::slice::from_ref(&program));
+        let left = drop_frame(
+            &ctx,
+            &mut panel,
+            &file,
+            over,
+            std::slice::from_ref(&program),
+        );
         assert!(left.is_empty());
         assert!(panel.model.pending().is_none());
         wait(&mut panel);

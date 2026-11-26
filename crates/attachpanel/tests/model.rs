@@ -341,7 +341,10 @@ fn dropped_files_go_in_one_after_another_and_ask_first_when_the_place_is_not_kno
     assert!(!panel.busy() && !panel.waiting());
     panel.set_project(Some(&project));
     // a folder is left out
-    panel.drop_files(&[dir.path().to_path_buf(), first.clone(), second.clone()], true);
+    panel.drop_files(
+        &[dir.path().to_path_buf(), first.clone(), second.clone()],
+        true,
+    );
     assert!(panel.busy() && panel.waiting());
     let until = Instant::now() + Duration::from_secs(60);
     while panel.busy() || panel.waiting() {
@@ -357,7 +360,10 @@ fn dropped_files_go_in_one_after_another_and_ask_first_when_the_place_is_not_kno
     let question = panel.pending().expect("a question");
     assert_eq!(question.lines, [Ask::Dropped("third.txt".to_owned())]);
     for lang in Lang::ALL {
-        assert!(question.lines[0].text(lang).contains("third.txt"), "{lang:?}");
+        assert!(
+            question.lines[0].text(lang).contains("third.txt"),
+            "{lang:?}"
+        );
     }
     panel.cancel();
     panel.poll();
