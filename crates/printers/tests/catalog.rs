@@ -36,7 +36,7 @@ fn load(text: &str) -> Vec<PrnCode> {
 #[test]
 fn the_embedded_catalog_is_sound_and_nothing_is_verified() {
     let c = catalog();
-    assert_eq!(c.printers().len(), 6);
+    assert_eq!(c.printers().len(), 8);
     for p in c.printers() {
         assert!(!p.verified, "{}", p.id);
         assert!(
@@ -131,7 +131,8 @@ fn a_printer_is_found_in_both_forms_of_its_identifier() {
     assert_eq!(c.search("artillery").len(), 2);
     assert_eq!(c.search("").len(), c.printers().len());
     assert!(c.search("no such thing").is_empty());
-    assert_eq!(c.by_adapter(Adapter::BambuLan).len(), 2);
+    assert_eq!(c.by_adapter(Adapter::BambuLan).len(), 3);
+    assert_eq!(c.by_adapter(Adapter::MarlinSerial).len(), 1);
     assert_eq!(c.by_adapter(Adapter::KlipperMoonraker).len(), 4);
 }
 
@@ -470,4 +471,51 @@ fn every_word_is_there_in_the_eight_languages() {
             Label::NotTried.title_in(Lang::En)
         );
     }
+}
+
+#[test]
+fn what_was_read_on_a_page_is_told_apart_from_what_is_still_to_be_checked() {
+    let c = catalog();
+    let a1 = c.find("bambu-lab/a1").unwrap();
+    assert_eq!(a1.unconfirmed(), Vec::<&str>::new());
+    assert!(!a1.verified, "read on a page is not tried on a machine");
+    assert_eq!(a1.max_speed_mm_s, Some(500.0));
+    assert_eq!(a1.max_acceleration_mm_s2, Some(10_000.0));
+    assert_eq!(a1.max_flow_mm3_s, Some(28.0));
+    assert_eq!(a1.default_height_mm, None);
+    let p1s = c.find("bambu-lab/p1s").unwrap();
+    assert_eq!(p1s.default_height_mm, Some(250.0));
+    assert_eq!(p1s.unconfirmed(), vec!["filament_diameter_mm"]);
+    // a page that no longer answers confirms nothing
+    let plus = c.find("artillery/sidewinder-x4-plus-s1").unwrap();
+    assert!(plus.unconfirmed().contains(&"volume_mm"));
+    assert!(plus.confirmed("nozzles_mm"));
+    for p in c.printers() {
+        for s in &p.sources {
+            assert!(s.confirmed.iter().all(|f| s.covers.contains(f)), "{}", p.id);
+        }
+    }
+}
+
+#[test]
+fn a_confirmation_of_what_is_not_covered_and_motion_figures_out_of_range_are_refused() {
+    let mut p = a1();
+    p.sources[0].confirmed.push("chamber_max_c".to_string());
+    assert_eq!(codes(&p), vec![PrnCode::Source]);
+    for bad in [f64::NAN, -1.0, 0.0, 1.0e9] {
+        let mut p = a1();
+        p.max_speed_mm_s = Some(bad);
+        assert!(codes(&p).contains(&PrnCode::OutOfRange), "{bad}");
+        let mut p = a1();
+        p.max_flow_mm3_s = Some(bad);
+        assert!(codes(&p).contains(&PrnCode::OutOfRange), "{bad}");
+    }
+    let mut p = a1();
+    p.default_height_mm = Some(300.0);
+    assert!(codes(&p).contains(&PrnCode::Inconsistent));
+    // a figure with no page is a claim with no source
+    let mut p = a1();
+    p.sources
+        .retain(|s| !s.covers.iter().any(|f| f == "max_flow_mm3_s"));
+    assert!(codes(&p).contains(&PrnCode::Source));
 }

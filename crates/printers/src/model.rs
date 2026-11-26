@@ -180,6 +180,11 @@ pub struct Source {
     pub url: String,
     /// The names of the fields of the record that the page says.
     pub covers: Vec<String>,
+    /// The fields of `covers` that were read on the page itself and agree with it. A field that is
+    /// not here was taken from a summary, from a page that could not be read or that no longer
+    /// exists, and is to be checked. It says nothing about a machine.
+    #[serde(default)]
+    pub confirmed: Vec<String>,
 }
 
 /// A printer.
@@ -212,6 +217,19 @@ pub struct Printer {
     pub bed_max_c: f64,
     /// The highest temperature of the chamber in degrees Celsius.
     pub chamber_max_c: Option<f64>,
+    /// The highest speed of the head the maker states, in mm/s.
+    #[serde(default)]
+    pub max_speed_mm_s: Option<f64>,
+    /// The highest acceleration of the head the maker states, in mm/s2.
+    #[serde(default)]
+    pub max_acceleration_mm_s2: Option<f64>,
+    /// The highest flow of the hot end the maker states, in mm3/s; the maker measures it with one
+    /// material and one temperature, so it is a ceiling and not a figure for every filament.
+    #[serde(default)]
+    pub max_flow_mm3_s: Option<f64>,
+    /// The height the maker says is used by default, in mm, where it is less than the volume.
+    #[serde(default)]
+    pub default_height_mm: Option<f64>,
     /// The multi-colour system.
     #[serde(default)]
     pub multicolor: Multicolor,
@@ -249,5 +267,20 @@ impl Printer {
         self.sources
             .iter()
             .any(|s| s.covers.iter().any(|c| c == field))
+    }
+
+    /// Whether a field was read on a page of the maker itself.
+    pub fn confirmed(&self, field: &str) -> bool {
+        self.sources
+            .iter()
+            .any(|s| s.confirmed.iter().any(|c| c == field))
+    }
+
+    /// The fields that claim something and were not read on any page of the maker: to be checked.
+    pub fn unconfirmed(&self) -> Vec<&'static str> {
+        crate::validate::claimed_fields(self)
+            .into_iter()
+            .filter(|f| !self.confirmed(f))
+            .collect()
     }
 }

@@ -21,6 +21,12 @@ pub const NOZZLE_C_RANGE: (f64, f64) = (150.0, 500.0);
 pub const BED_C_RANGE: (f64, f64) = (30.0, 200.0);
 /// The believable highest temperature of a chamber.
 pub const CHAMBER_C_RANGE: (f64, f64) = (20.0, 150.0);
+/// The believable highest speed of a head, in mm/s.
+pub const SPEED_RANGE: (f64, f64) = (10.0, 2000.0);
+/// The believable highest acceleration of a head, in mm/s2.
+pub const ACCELERATION_RANGE: (f64, f64) = (50.0, 100_000.0);
+/// The believable highest flow of a hot end, in mm3/s.
+pub const FLOW_RANGE: (f64, f64) = (1.0, 200.0);
 /// The longest name.
 pub const MAX_TEXT: usize = 80;
 /// The longest address.
@@ -29,7 +35,7 @@ pub const MAX_URL: usize = 300;
 pub const MAX_SOURCES: usize = 16;
 
 /// The names of the fields a page may cover.
-pub const FIELDS: [&str; 12] = [
+pub const FIELDS: [&str; 16] = [
     "volume_mm",
     "filament_diameter_mm",
     "nozzles_mm",
@@ -42,6 +48,10 @@ pub const FIELDS: [&str; 12] = [
     "firmware",
     "adapter",
     "send_formats",
+    "max_speed_mm_s",
+    "max_acceleration_mm_s2",
+    "max_flow_mm3_s",
+    "default_height_mm",
 ];
 
 struct Check<'a> {
@@ -114,6 +124,10 @@ pub fn claimed_fields(p: &Printer) -> Vec<&'static str> {
         // an adapter that is not documented is an inference and claims nothing of the maker
         ("adapter", p.adapter_documented),
         ("send_formats", !p.send_formats.is_empty()),
+        ("max_speed_mm_s", p.max_speed_mm_s.is_some()),
+        ("max_acceleration_mm_s2", p.max_acceleration_mm_s2.is_some()),
+        ("max_flow_mm3_s", p.max_flow_mm3_s.is_some()),
+        ("default_height_mm", p.default_height_mm.is_some()),
     ];
     out.extend(claims.iter().filter(|c| c.1).map(|c| c.0));
     out
@@ -179,6 +193,27 @@ pub fn check_printer(p: &Printer, file_manufacturer: Option<&str>) -> Vec<PrnErr
     if p.heated_chamber == Some(true) && p.enclosure == Enclosure::Open {
         c.add(PrnCode::Inconsistent, "an open frame has no heated chamber");
     }
+    let motion = [
+        ("max_speed_mm_s", p.max_speed_mm_s, SPEED_RANGE),
+        (
+            "max_acceleration_mm_s2",
+            p.max_acceleration_mm_s2,
+            ACCELERATION_RANGE,
+        ),
+        ("max_flow_mm3_s", p.max_flow_mm3_s, FLOW_RANGE),
+        ("default_height_mm", p.default_height_mm, AXIS_RANGE),
+    ];
+    for (field, value, range) in motion {
+        if let Some(v) = value {
+            c.within(field, v, range);
+        }
+    }
+    if p.default_height_mm.is_some_and(|h| h > p.volume_mm[2]) {
+        c.add(
+            PrnCode::Inconsistent,
+            "default_height_mm is above the build volume",
+        );
+    }
     let m = &p.multicolor;
     if let Some(system) = &m.system {
         c.text("multicolor.system", system);
@@ -226,6 +261,12 @@ pub fn check_printer(p: &Printer, file_manufacturer: Option<&str>) -> Vec<PrnErr
             if !FIELDS.contains(&f.as_str()) {
                 c.add(PrnCode::Source, "a source covers a field that is not one");
             }
+        }
+        if s.confirmed.iter().any(|f| !s.covers.contains(f)) {
+            c.add(
+                PrnCode::Source,
+                "a source confirms a field that it does not cover",
+            );
         }
     }
     for field in claimed_fields(p) {
