@@ -95,7 +95,10 @@ fn a_file_is_attached_listed_shown_extracted_and_removed() {
     let mut bytes = Vec::new();
     source.reader().unwrap().read_to_end(&mut bytes).unwrap();
     assert_eq!(bytes, b"%PDF-1.4 made up");
-    assert_eq!((source.name(), source.declared_danger()), ("NE555.pdf", None));
+    assert_eq!(
+        (source.name(), source.declared_danger()),
+        ("NE555.pdf", None)
+    );
 
     // a harmless file comes out at once, and never over a file that is there
     let out = dir.path().join("out");
@@ -119,7 +122,10 @@ fn a_file_is_attached_listed_shown_extracted_and_removed() {
         }]
     );
     for lang in Lang::ALL {
-        assert!(question.lines[0].text(lang).contains("NE555.pdf"), "{lang:?}");
+        assert!(
+            question.lines[0].text(lang).contains("NE555.pdf"),
+            "{lang:?}"
+        );
     }
     panel.cancel();
     panel.confirm();
@@ -204,7 +210,10 @@ fn components_are_linked_and_the_list_is_filtered_by_the_part() {
     assert_eq!(component_link(LinkForm::Designator, "  ", ""), None);
     let r5 = component_link(LinkForm::Designator, " R5 ", "ignored").unwrap();
     let part = component_link(LinkForm::PartNumber, "NE555", "TI").unwrap();
-    assert_eq!((link_label(&r5), link_label(&part)), ("R5".into(), "TI NE555".into()));
+    assert_eq!(
+        (link_label(&r5), link_label(&part)),
+        ("R5".into(), "TI NE555".into())
+    );
     run(&mut panel, Request::AddComponent(a.clone(), r5.clone()));
     assert_eq!(panel.message(), Some(&Message::Changed));
     run(&mut panel, Request::AddComponent(a.clone(), part));

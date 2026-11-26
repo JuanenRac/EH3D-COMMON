@@ -63,7 +63,11 @@ mod tests {
         let def = panel_def();
         assert_eq!(def.id, PANEL_ID);
         for lang in Lang::ALL {
-            assert_eq!(def.title.get(lang), texts::tr(lang, Text::Title), "{lang:?}");
+            assert_eq!(
+                def.title.get(lang),
+                texts::tr(lang, Text::Title),
+                "{lang:?}"
+            );
         }
     }
 }

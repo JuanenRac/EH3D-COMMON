@@ -166,12 +166,29 @@ fn a_kind_the_suite_does_not_know_asks_like_a_dangerous_one() {
     for name in ["thing.abc123", "noextension", "data.s19x"] {
         let found = classify(name, b"");
         assert_eq!(found.danger, None, "{name}");
-        assert!(!found.known && found.needs_consent() && found.may_launch(), "{name}");
+        assert!(
+            !found.known && found.needs_consent() && found.may_launch(),
+            "{name}"
+        );
         assert!(!is_known_name(name), "{name}");
     }
     for name in [
-        "a.pdf", "a.md", "a.txt", "a.json", "a.csv", "a.png", "a.tiff", "a.docx", "a.xls",
-        "a.mp4", "a.mp3", "a.step", "a.brd", "a.eh3d", "a.phoenixproj", "a.lbrn2",
+        "a.pdf",
+        "a.md",
+        "a.txt",
+        "a.json",
+        "a.csv",
+        "a.png",
+        "a.tiff",
+        "a.docx",
+        "a.xls",
+        "a.mp4",
+        "a.mp3",
+        "a.step",
+        "a.brd",
+        "a.eh3d",
+        "a.phoenixproj",
+        "a.lbrn2",
     ] {
         let found = classify(name, b"");
         assert!(found.known && !found.needs_consent(), "{name}");
@@ -181,7 +198,15 @@ fn a_kind_the_suite_does_not_know_asks_like_a_dangerous_one() {
 
 #[test]
 fn a_zip_is_expected_only_behind_the_formats_that_are_one() {
-    for name in ["a.docx", "a.ods", "a.xls", "a.3mf", "a.eh3d", "a.eh3dproj", "a.fcstd"] {
+    for name in [
+        "a.docx",
+        "a.ods",
+        "a.xls",
+        "a.3mf",
+        "a.eh3d",
+        "a.eh3dproj",
+        "a.fcstd",
+    ] {
         assert_eq!(danger_of(name, b"PK"), None, "{name}");
     }
     for name in ["a.pdf", "a.csv", "a.rtf", "a.txt", "a.brd"] {
@@ -216,7 +241,10 @@ fn each_name_has_one_view() {
 fn a_warning_from_a_record_only_adds_care() {
     let mut found = classify("manual.pdf", b"");
     found.warn(Danger::Executable);
-    assert_eq!((found.danger, found.kind), (Some(Danger::Executable), Kind::Other));
+    assert_eq!(
+        (found.danger, found.kind),
+        (Some(Danger::Executable), Kind::Other)
+    );
     found.warn(Danger::Archive);
     assert_eq!(found.danger, Some(Danger::Executable), "never less careful");
     assert!(!found.may_launch() && found.needs_consent());

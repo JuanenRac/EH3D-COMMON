@@ -6,11 +6,11 @@ use std::path::{Path, PathBuf};
 use std::sync::Arc;
 use std::time::{Duration, Instant};
 
+use egui::{RichText, ScrollArea, Ui};
 use eh3d_filedialog::{size_text, Action, Browser, Chosen, Filter, Mode, PlaceKind};
 use eh3d_project::attachments;
 use eh3d_viewer::gui::ViewerPanel;
 use eh3d_viewer::{Viewer, ViewerEvent, ViewerLimits};
-use egui::{RichText, ScrollArea, Ui};
 
 use crate::model::{component_link, link_label, Item, LinkForm, Message, Model, Program, Request};
 use crate::source::ProjectSource;
@@ -173,7 +173,11 @@ impl AttachPanel {
         let project = project.or(own.as_deref());
         if self.model.project() != project {
             // the window that chooses the next project stays
-            if self.chooser.as_ref().is_some_and(|c| c.purpose != Purpose::OpenProject) {
+            if self
+                .chooser
+                .as_ref()
+                .is_some_and(|c| c.purpose != Purpose::OpenProject)
+            {
                 self.chooser = None;
             }
             self.link = None;
@@ -323,8 +327,9 @@ impl AttachPanel {
                 ui.label(tr(lang, Text::Address));
                 ui.add(egui::TextEdit::singleline(&mut draft.url).desired_width(f32::INFINITY));
                 ui.label(tr(lang, Text::Hash));
-                let hash = ui
-                    .add(egui::TextEdit::singleline(&mut draft.sha256).desired_width(f32::INFINITY));
+                let hash = ui.add(
+                    egui::TextEdit::singleline(&mut draft.sha256).desired_width(f32::INFINITY),
+                );
                 if hash.changed() {
                     // the size was the one of the file the hash was taken from
                     draft.size = None;
@@ -368,7 +373,10 @@ impl AttachPanel {
         }
         for item in items {
             let selected = chosen.as_ref().is_some_and(|c| c.id == item.id);
-            if ui.selectable_label(selected, row_text(item, lang)).clicked() {
+            if ui
+                .selectable_label(selected, row_text(item, lang))
+                .clicked()
+            {
                 asked.push(Asked::Select(item.id.clone()));
             }
         }
@@ -567,11 +575,7 @@ impl AttachPanel {
                             let text = if entry.is_dir {
                                 RichText::new(format!("▸ {}", entry.name)).strong()
                             } else {
-                                RichText::new(format!(
-                                    "{}   {}",
-                                    entry.name,
-                                    size_text(entry.size)
-                                ))
+                                RichText::new(format!("{}   {}", entry.name, size_text(entry.size)))
                             };
                             let line = ui.selectable_label(browser.sel == Some(i), text);
                             if line.double_clicked() {
@@ -636,11 +640,17 @@ fn say(ui: &mut Ui, message: &Message, lang: Lang) {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use egui::{Pos2, Rect, Vec2};
     use eh3d_container::AtomicOptions;
     use eh3d_project::{NewProject, OpenOptions, Project};
-    use egui::{Pos2, Rect, Vec2};
 
-    fn frame(ctx: &egui::Context, panel: &mut AttachPanel, file: Option<&Path>, code: &str, w: f32) {
+    fn frame(
+        ctx: &egui::Context,
+        panel: &mut AttachPanel,
+        file: Option<&Path>,
+        code: &str,
+        w: f32,
+    ) {
         let input = egui::RawInput {
             screen_rect: Some(Rect::from_min_size(Pos2::ZERO, Vec2::new(w, 700.0))),
             ..Default::default()
@@ -716,8 +726,7 @@ mod tests {
         assert!(panel.shown.is_some(), "the viewer follows the list");
 
         // a panel of a program with no project menu opens one itself
-        let mut alone = AttachPanel::new(Program::new("pnp", "0.1.0"))
-            .opens_projects();
+        let mut alone = AttachPanel::new(Program::new("pnp", "0.1.0")).opens_projects();
         frame(&ctx, &mut alone, None, "fr", 500.0);
         alone.choose_project();
         frame(&ctx, &mut alone, None, "fr", 500.0);

@@ -153,9 +153,7 @@ pub fn component_link(form: LinkForm, text: &str, maker: &str) -> Option<Compone
     Some(match form {
         LinkForm::Designator => ComponentLink::designator(text),
         LinkForm::Value => ComponentLink::of_value(text),
-        LinkForm::PartNumber => {
-            ComponentLink::part(Some(maker).filter(|m| !m.is_empty()), text)
-        }
+        LinkForm::PartNumber => ComponentLink::part(Some(maker).filter(|m| !m.is_empty()), text),
     })
 }
 
@@ -227,9 +225,7 @@ impl Ask {
         let code = lang.code();
         match self {
             Ask::SignedProject => S::SignedProject.tr(code).to_owned(),
-            Ask::SignedAttachments => {
-                fill(S::SignedBranch.tr(code), &[ATTACHMENTS_BRANCH])
-            }
+            Ask::SignedAttachments => fill(S::SignedBranch.tr(code), &[ATTACHMENTS_BRANCH]),
             Ask::Remove { name, components } => {
                 let mut said = fill(tr(lang, Text::AskRemove), &[name]);
                 if *components > 0 {
@@ -324,7 +320,10 @@ enum Outcome {
         wrote: bool,
     },
     /// The content itself says the file needs care: ask first.
-    NeedsCare { name: String, danger: Option<Danger> },
+    NeedsCare {
+        name: String,
+        danger: Option<Danger>,
+    },
 }
 
 fn failed(why: impl ToString) -> Outcome {
@@ -357,8 +356,7 @@ fn open_to_read(path: &Path) -> Result<Project, String> {
 fn holds_credential(path: &Path, keys: &[String]) -> bool {
     let small = fs::metadata(path).is_ok_and(|m| m.is_file() && m.len() <= MAX_SETTINGS_BYTES);
     small
-        && fs::read(path)
-            .is_ok_and(|bytes| keys.iter().any(|key| suiteview::sets_key(&bytes, key)))
+        && fs::read(path).is_ok_and(|bytes| keys.iter().any(|key| suiteview::sets_key(&bytes, key)))
 }
 
 fn written(done: Result<attachments::Attached, AttachError>, what: Written) -> Outcome {
@@ -711,8 +709,8 @@ impl Model {
     }
 
     fn start(&mut self, file: PathBuf, request: Request, agreed: bool) {
-        let attacher = Attacher::new(&self.program.branch, &self.program.version)
-            .with_limits(self.limits);
+        let attacher =
+            Attacher::new(&self.program.branch, &self.program.version).with_limits(self.limits);
         let keys = self.credential_keys.clone();
         let (send, receive) = mpsc::channel();
         let spawned = thread::Builder::new()

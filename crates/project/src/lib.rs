@@ -53,8 +53,8 @@ pub use attachments::{
     AttachError, AttachRequest, Attacher, Attachment, AttachmentIndex, AttachmentLimits,
     AttachmentSource, ComponentLink, ComponentQuery, Consent,
 };
-pub use eh3d_filekind::{AttachmentKind, Danger};
 pub use ed25519::{Ed25519Keyring, Ed25519Signer, KeyError, KeyPair};
+pub use eh3d_filekind::{AttachmentKind, Danger};
 pub use project::{
     manufacturing_update, Branch, BranchUpdate, Checks, FileInfo, Finding, NewProject, OpenOptions,
     Project, SaveOptions, StaleRef, Writer, AUDIT_LOG,

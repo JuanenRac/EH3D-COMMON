@@ -97,7 +97,9 @@ impl AttachmentKind {
             "pdf" => AttachmentKind::Pdf,
             "md" | "markdown" => AttachmentKind::Markdown,
             "json" => AttachmentKind::Report,
-            _ if has(PICTURES) || has(OTHER_PICTURES) || extension == "svg" => AttachmentKind::Image,
+            _ if has(PICTURES) || has(OTHER_PICTURES) || extension == "svg" => {
+                AttachmentKind::Image
+            }
             _ if has(TEXTS) || extension == "htm" || extension == "html" => AttachmentKind::Text,
             _ if has(OFFICE) || has(MACRO_OFFICE) => AttachmentKind::Office,
             _ if has(DESIGN) => AttachmentKind::Project,

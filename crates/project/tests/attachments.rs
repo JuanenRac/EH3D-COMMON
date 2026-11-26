@@ -697,12 +697,16 @@ fn a_kind_the_suite_does_not_know_is_taken_out_only_with_an_agreement() {
     let mut project = done.project;
     let index = read_index(&mut project).unwrap();
     let record = index.find(&done.id).unwrap();
-    assert_eq!(record.danger(), None, "unknown is not a danger of the record");
+    assert_eq!(
+        record.danger(),
+        None,
+        "unknown is not a danger of the record"
+    );
     assert!(record.needs_confirmation());
     let out = dir.path().join("out");
     let limits = AttachmentLimits::default();
-    let error = attachments::extract(&mut project, &done.id, &out, Consent::NotAsked, &limits)
-        .unwrap_err();
+    let error =
+        attachments::extract(&mut project, &done.id, &out, Consent::NotAsked, &limits).unwrap_err();
     assert!(
         matches!(error, AttachError::NeedsConfirmation { danger: None, .. }),
         "{error}"
