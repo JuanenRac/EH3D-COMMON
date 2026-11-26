@@ -157,6 +157,8 @@ fn pdf(ui: &mut Ui, pane: &mut PdfPane, drawing: &mut Drawing, generation: u64, 
     if let Some(error) = &pane.page_error {
         ui.label(tr(lang, error_text(error)));
     }
+    // measured outside the scroll area: a page wider than the panel must not widen the next one
+    let room = ui.available_width() - ui.spacing().scroll.bar_width;
     ScrollArea::both()
         .id_salt("eh3d_viewer_pdf")
         .auto_shrink([false, false])
@@ -164,7 +166,7 @@ fn pdf(ui: &mut Ui, pane: &mut PdfPane, drawing: &mut Drawing, generation: u64, 
             let scale = ui.ctx().pixels_per_point();
             let side = ui.input(|i| i.max_texture_side);
             // whole steps of 32 pixels, so dragging the edge of the panel does not redraw at every pixel
-            let width = (ui.available_width() * scale).max(64.0) as u32 / 32 * 32;
+            let width = (room * scale).max(64.0) as u32 / 32 * 32;
             pane.want(RenderSpec {
                 zoom: Zoom::FitWidth,
                 area_width: width,
@@ -394,12 +396,13 @@ impl ViewerPanel {
             Content::Picture(raster) => {
                 let texture = drawing.texture(ui, (generation, 0), raster).clone();
                 let size = Vec2::new(raster.width as f32, raster.height as f32);
+                let room = ui.available_width();
                 ScrollArea::both()
                     .id_salt("eh3d_viewer_picture")
                     .auto_shrink([false, false])
                     .show(ui, |ui| {
                         // never larger than it is, and no wider than the panel
-                        let scale = (ui.available_width() / size.x).clamp(0.01, 1.0);
+                        let scale = (room / size.x).clamp(0.01, 1.0);
                         image(ui, &texture, size * scale);
                     });
             }
