@@ -119,6 +119,10 @@ dock_texts! {
     CheckUpdates => ["Check for updates…", "Buscar actualizaciones…", "Verifica aggiornamenti…", "Nach Updates suchen…", "Rechercher des mises à jour…", "Procurar atualizações…", "检查更新…", "アップデートを確認…"],
     Version => ["Version", "Versión", "Versione", "Version", "Version", "Versão", "版本", "バージョン"],
     License => ["License", "Licencia", "Licenza", "Lizenz", "Licence", "Licença", "许可证", "ライセンス"],
+    Author => ["Author", "Autor", "Autore", "Autor", "Auteur", "Autor", "作者", "作者"],
+    Email => ["E-mail", "Correo", "E-mail", "E-Mail", "Courriel", "Correio eletrónico", "电子邮件", "メール"],
+    Repository => ["Repository", "Repositorio", "Repository", "Repository", "Dépôt", "Repositório", "代码仓库", "リポジトリ"],
+    ThirdParty => ["Third-party notices", "Avisos de terceros", "Note di terze parti", "Hinweise zu Drittanbietern", "Mentions de tiers", "Avisos de terceiros", "第三方声明", "サードパーティに関する表示"],
     Action => ["Action", "Acción", "Azione", "Aktion", "Action", "Ação", "操作", "操作"],
     Shortcut => ["Shortcut", "Atajo", "Scorciatoia", "Kürzel", "Raccourci", "Atalho", "快捷键", "ショートカット"],
     Trademarks => [

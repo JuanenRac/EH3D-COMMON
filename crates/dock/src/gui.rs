@@ -4,6 +4,7 @@
 //! The drawing only reads the state of [`DockCore`] and collects what the person did as a list of events; the events are applied to the model
 //! after the frame is drawn, so every rule stays in the model, where it is tested without a window.
 
+use crate::about::{self, AboutBrand};
 use crate::arrange::{arrange, min_size, pick_drop, ratio_from_pointer, DropSlot};
 use crate::core::{AboutInfo, DockCore, Outcome, PanelDef};
 use crate::geom::{Axis, Rect, Side};
@@ -678,6 +679,7 @@ pub struct Dock {
     ask_name: Option<String>,
     name_error: bool,
     show_about: bool,
+    brand: Option<AboutBrand>,
     show_shortcuts: bool,
     banner: Vec<String>,
     shortcut_rows: Vec<(String, String, String)>,
@@ -699,6 +701,7 @@ impl Dock {
             ask_name: None,
             name_error: false,
             show_about: false,
+            brand: None,
             show_shortcuts: false,
             banner: Vec::new(),
             shortcut_rows: Vec::new(),
@@ -739,6 +742,12 @@ impl Dock {
     /// Sets what the window about the program shows.
     pub fn set_about(&mut self, about: AboutInfo) {
         self.core.about = about;
+    }
+
+    /// Gives the window about the program the look of its program of the PHOENIX family (see [`about_contents`]): the picture in a ring of the
+    /// accent colour, the name in large letters, one sentence, the author and the links. Without it the window is the plain list of lines.
+    pub fn set_brand(&mut self, brand: AboutBrand) {
+        self.brand = Some(brand);
     }
 
     /// The program turns entries of the menus off and sets their check marks, by id; it can call this every frame.
@@ -1286,12 +1295,17 @@ impl Dock {
         if self.show_about {
             let mut open = true;
             let about = self.core.about.clone();
+            let brand = self.brand;
             egui::Window::new(tr(lang, DockText::About))
                 .open(&mut open)
                 .collapsible(false)
                 .resizable(false)
                 .anchor(Align2::CENTER_CENTER, [0.0, 0.0])
                 .show(ctx, |ui| {
+                    if let Some(brand) = &brand {
+                        about_contents(ui, lang, &about, brand);
+                        return;
+                    }
                     ui.heading(about.app_name.as_str());
                     ui.label(format!(
                         "{}: {}",
@@ -1430,9 +1444,138 @@ pub fn egui_shortcut(s: &Shortcut) -> Option<(egui::Modifiers, egui::Key)> {
     Some((m, key))
 }
 
+/// The width of the contents of the window about a program of the family.
+const ABOUT_WIDTH: f32 = 440.0;
+/// The side of the square that holds the ring and the picture.
+const ABOUT_RING: f32 = 160.0;
+/// The largest side of a picture that is read, in pixels.
+const ABOUT_LOGO_MAX: u32 = 1024;
+
+/// The pixels of a PNG, or nothing when it cannot be read or is larger than [`ABOUT_LOGO_MAX`].
+fn decode_logo(bytes: &[u8]) -> Option<egui::ColorImage> {
+    let mut decoder = png::Decoder::new(bytes);
+    decoder.set_transformations(png::Transformations::EXPAND | png::Transformations::STRIP_16);
+    let mut reader = decoder.read_info().ok()?;
+    let (width, height) = (reader.info().width, reader.info().height);
+    if width == 0 || height == 0 || width > ABOUT_LOGO_MAX || height > ABOUT_LOGO_MAX {
+        return None;
+    }
+    let mut buffer = vec![0; reader.output_buffer_size()];
+    let frame = reader.next_frame(&mut buffer).ok()?;
+    let data = buffer.get(..frame.buffer_size())?;
+    let rgba: Vec<u8> = match frame.color_type {
+        png::ColorType::Rgba => data.to_vec(),
+        png::ColorType::Rgb => data
+            .chunks_exact(3)
+            .flat_map(|p| [p[0], p[1], p[2], 255])
+            .collect(),
+        png::ColorType::Grayscale => data.iter().flat_map(|g| [*g, *g, *g, 255]).collect(),
+        png::ColorType::GrayscaleAlpha => data
+            .chunks_exact(2)
+            .flat_map(|p| [p[0], p[0], p[0], p[1]])
+            .collect(),
+        png::ColorType::Indexed => return None,
+    };
+    let size = [width as usize, height as usize];
+    (rgba.len() == size[0] * size[1] * 4)
+        .then(|| egui::ColorImage::from_rgba_unmultiplied(size, &rgba))
+}
+
+/// The texture of the picture of a program, made once and kept with the window.
+fn logo_texture(ctx: &egui::Context, brand: &AboutBrand) -> Option<egui::TextureHandle> {
+    let id = Id::unique(("eh3d_dock_about_logo", brand.program));
+    if let Some(texture) = ctx.data(|d| d.get_temp::<egui::TextureHandle>(id)) {
+        return Some(texture);
+    }
+    let image = decode_logo(brand.logo_png)?;
+    let texture = ctx.load_texture(brand.program.name(), image, egui::TextureOptions::LINEAR);
+    ctx.data_mut(|d| d.insert_temp(id, texture.clone()));
+    Some(texture)
+}
+
+/// Draws what the window about a program of the PHOENIX family holds, into `ui`: the picture inside a ring of the accent colour, the name of
+/// the program in large letters, one sentence about it, the version, the author, the e-mail, the page of the author, the repository and the
+/// licence (the addresses can be clicked), the notices of data of others when the program has them and the notice about trademarks. A program
+/// that has its own window calls this inside it; [`Dock::set_brand`] does it for the window of the frame.
+pub fn about_contents(ui: &mut Ui, lang: Lang, info: &AboutInfo, brand: &AboutBrand) {
+    let [r, g, b] = brand.program.accent();
+    let accent = Color32::from_rgb(r, g, b);
+    ui.set_width(ABOUT_WIDTH);
+    ui.vertical_centered(|ui| {
+        let (square, _) = ui.allocate_exact_size(Vec2::splat(ABOUT_RING), Sense::hover());
+        let centre = square.center();
+        let painter = ui.painter();
+        painter.circle_filled(centre, 78.0, Color32::from_rgba_unmultiplied(r, g, b, 30));
+        painter.circle_stroke(centre, 76.0, Stroke::new(4.0, accent));
+        painter.circle_stroke(
+            centre,
+            70.0,
+            Stroke::new(1.0, Color32::from_rgba_unmultiplied(r, g, b, 130)),
+        );
+        if let Some(texture) = logo_texture(ui.ctx(), brand) {
+            let side = if brand.program.round_logo() {
+                134.0
+            } else {
+                96.0
+            };
+            egui::Image::new(&texture)
+                .paint_at(ui, egui::Rect::from_center_size(centre, Vec2::splat(side)));
+        }
+        ui.add_space(6.0);
+        ui.label(
+            egui::RichText::new(info.app_name.as_str())
+                .size(28.0)
+                .strong()
+                .color(accent),
+        );
+        ui.add_space(4.0);
+        ui.add(egui::Label::new(brand.program.summary().get(lang)).wrap());
+        for line in &info.extra {
+            ui.add(egui::Label::new(egui::RichText::new(line.as_str()).weak()).wrap());
+        }
+    });
+    ui.add_space(6.0);
+    ui.separator();
+    egui::Grid::new("eh3d_dock_about_rows")
+        .num_columns(2)
+        .spacing([14.0, 4.0])
+        .show(ui, |ui| {
+            for row in about::rows(lang, brand.program, info) {
+                ui.label(egui::RichText::new(row.label).strong());
+                match &row.url {
+                    Some(url) => {
+                        ui.hyperlink_to(row.value.as_str(), url);
+                    }
+                    None => {
+                        ui.label(row.value.as_str());
+                    }
+                }
+                ui.end_row();
+            }
+        });
+    let notices = brand.program.notices();
+    if !notices.is_empty() {
+        ui.separator();
+        ui.label(egui::RichText::new(tr(lang, DockText::ThirdParty)).strong());
+        for notice in notices {
+            ui.add(egui::Label::new(egui::RichText::new(*notice).small()).wrap());
+        }
+    }
+    ui.separator();
+    ui.add(
+        egui::Label::new(
+            egui::RichText::new(tr(lang, DockText::Trademarks))
+                .small()
+                .weak(),
+        )
+        .wrap(),
+    );
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::about::Phoenix;
     use crate::menu::StdAction;
     use crate::sectors::Sector;
     use crate::stdmenus::{standard_bar, HelpOptions};
@@ -1629,6 +1772,61 @@ mod tests {
         assert!(h.dock.show_about && h.dock.show_shortcuts && h.dock.ask_name.is_some());
         assert!(!h.dock.shortcut_rows.is_empty());
         assert!(h.dock.banner.is_empty() || !h.dock.banner[0].is_empty());
+    }
+
+    fn small_png(color: png::ColorType, pixels: &[u8]) -> Vec<u8> {
+        let mut out = Vec::new();
+        let mut encoder = png::Encoder::new(&mut out, 2, 1);
+        encoder.set_color(color);
+        encoder.set_depth(png::BitDepth::Eight);
+        let mut writer = encoder.write_header().unwrap();
+        writer.write_image_data(pixels).unwrap();
+        writer.finish().unwrap();
+        out
+    }
+
+    #[test]
+    fn the_picture_of_a_program_is_read_and_a_broken_one_is_left_out() {
+        let rgba = small_png(png::ColorType::Rgba, &[1, 2, 3, 255, 4, 5, 6, 255]);
+        let image = decode_logo(&rgba).expect("a picture");
+        assert_eq!(image.size, [2, 1]);
+        assert_eq!(image.pixels[1], Color32::from_rgb(4, 5, 6));
+        let rgb = small_png(png::ColorType::Rgb, &[1, 2, 3, 4, 5, 6]);
+        assert_eq!(decode_logo(&rgb).expect("a picture").size, [2, 1]);
+        let grey = small_png(png::ColorType::Grayscale, &[7, 9]);
+        assert_eq!(
+            decode_logo(&grey).expect("a picture").pixels[1],
+            Color32::from_rgb(9, 9, 9)
+        );
+        assert!(decode_logo(b"not a picture").is_none());
+        assert!(decode_logo(&rgba[..rgba.len() / 2]).is_none());
+        assert!(decode_logo(&[]).is_none());
+    }
+
+    #[test]
+    fn the_window_about_each_program_draws_in_every_language_with_and_without_its_picture() {
+        let picture: &'static [u8] = Box::leak(
+            small_png(png::ColorType::Rgba, &[1, 2, 3, 255, 4, 5, 6, 255]).into_boxed_slice(),
+        );
+        for program in Phoenix::ALL {
+            for logo_png in [picture, &b"broken"[..]] {
+                let mut h = Harness::new(Sector::Laser);
+                h.dock.set_about(program.info("1.2.3"));
+                h.dock.set_brand(AboutBrand { program, logo_png });
+                h.dock.apply(DockAction::ShowAbout).unwrap();
+                for lang in Lang::ALL {
+                    h.dock.set_language(lang);
+                    h.frames(2);
+                }
+                assert!(h.dock.show_about);
+                let id = Id::unique(("eh3d_dock_about_logo", program));
+                let kept = h
+                    .ctx
+                    .data(|d| d.get_temp::<egui::TextureHandle>(id))
+                    .is_some();
+                assert_eq!(kept, logo_png == picture, "{program:?}");
+            }
+        }
     }
 
     #[test]

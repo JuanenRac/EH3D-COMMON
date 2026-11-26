@@ -294,6 +294,7 @@ version = "0.0.1"
 dependencies = [
  "egui",
  "eh3d-view",
+ "png",
 ]
 
 [[package]]
