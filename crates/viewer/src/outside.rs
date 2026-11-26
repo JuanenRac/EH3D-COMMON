@@ -216,7 +216,8 @@ impl Outbox {
     pub fn under(base: impl Into<PathBuf>) -> Self {
         Outbox {
             base: Some(base.into()),
-            ..Outbox::default()
+            root: None,
+            next: 0,
         }
     }
 
