@@ -416,7 +416,6 @@ fn tab_bar(
         ev.push(Ev::Action(DockAction::HidePanel(act.clone())));
     }
     let mid = egui::Rect::from_min_size(Pos2::new(right - b, bar.top() + 3.0), Vec2::splat(b));
-    right -= b + 2.0;
     if floating {
         if glyph_button(
             ui,
