@@ -146,14 +146,16 @@ dock.set_brand(AboutBrand {
 
 The window then shows the picture inside a ring of the accent colour of the program, its name in large letters, one sentence about it in the eight languages, the version, the author, the e-mail, the page of the author, the repository (the addresses can be clicked), the licence, the notices of data of others when the program carries them and the notice about trademarks. The accent colour, the sentence, the repository and the notices belong to `about::Phoenix`, so they are written once. A program with a window of its own calls `gui::about_contents(ui, lang, &info, &brand)` inside it. Without a brand the window is the plain list of lines, as before. The picture is a PNG of at most 1024 by 1024 pixels; one that cannot be read leaves the ring empty.
 
-| Program | Accent |
-|---|---|
-| PCB | fire orange |
-| PNP | green |
-| CAD | blue |
-| CNC | steel cyan |
-| Laser | red |
-| 3DP | violet |
+| Program | Palette | Principal | Middle | Deep | Light | Glow |
+|---|---|---|---|---|---|---|
+| PCB | fire | `#FF5A1F` | `#E2361B` | `#B01010` | `#FFB347` | `#FFD27A` |
+| PNP | emerald | `#2FFF94` | `#17C47A` | `#0B8C64` | `#8FFFA4` | `#D8FFDE` |
+| CAD | ice blue | `#2F8CFF` | `#1F5FD0` | `#0B2A8C` | `#8FE3FF` | `#D8F6FF` |
+| CNC | amethyst | `#A52FFF` | `#8A1FD0` | `#6F0B8C` | `#AD8FFF` | `#E2D8FF` |
+| LASER | crimson | `#FF2F43` | `#D01A20` | `#971100` | `#FF8FBC` | `#FFD8E8` |
+| 3DP | gold | `#FFD53E` | `#E8A317` | `#A86E00` | `#FFDC5E` | `#FFE999` |
+
+The tones live in `eh3d_dock::palette` (`Phoenix::tones`), and the accent is the principal one. It is meant for fills and rings: gold or emerald are not legible as text on a white window, nor amethyst on a dark one. For text, `palette::readable(colour, ground)` gives the nearest lightness of the same hue with a contrast of at least 4.5 to 1, and `palette::ink_on(fill)` gives black or white for what is written on a fill (a button). The window «About» writes the name of the program with the readable tone of the ground of the window.
 
 ## Moving a program to the frame
 
