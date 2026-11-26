@@ -1,6 +1,6 @@
 # The docking frame (`eh3d-dock`)
 
-The programs of the suite are professional desktop applications: panels that can be taken away and put back, moved, tabbed, split, floated over the window, folded into an edge, maximised and locked, and a menu bar with the usual menus. `eh3d-dock` is the frame that does it, written once for all of them. It has no dependency beyond `eh3d-view` (for the languages) and, with the feature `gui`, `egui` 0.37.
+The programs of the suite are professional desktop applications: panels that can be taken away and put back, moved, tabbed, split, floated over the window, folded into an edge, maximised and locked, and a menu bar with the usual menus. `eh3d-dock` is the frame that does it, written once for all of them. It has no dependency beyond `eh3d-view` (for the languages) and, with the feature `gui`, `egui` 0.37 and `png` (for the picture of the window about a program).
 
 The crate has two layers.
 
@@ -131,6 +131,29 @@ let tools = Menu::new("tools", Label::Std(DockText::MenuTools))
 * **Turning entries off and ticking them:** `Dock::set_menu_state(disabled_ids, checks)` can be called every frame. An entry that is off is built as inert and no shortcut, click or search will give back its action (checked by tests).
 * **Shortcuts:** `Dock::handle_shortcuts` (called by `menu_bar`) looks for a pressed key, most specific first (`Ctrl+Shift+S` before `Ctrl+S`); a key without a modifier is ignored while a text box has the keyboard. `MenuBar::conflicts(&ctx)` lists the shortcuts two entries share, counting the frame's own; `MenuBar::validate()` finds repeated and empty ids.
 * **Recent files:** `dock.core_mut().recent_mut().push(path)` when a file is opened or saved; the list is kept in the settings file.
+
+## The window about a program
+
+`Dock::set_about` gives the name, version, licence and extra lines. A program of the PHOENIX family also calls `Dock::set_brand` with an `about::AboutBrand`: which program it is (`about::Phoenix`) and the bytes of its own picture, put inside the program with `include_bytes!`.
+
+```rust
+dock.set_about(Phoenix::Cad.info(env!("CARGO_PKG_VERSION")));
+dock.set_brand(AboutBrand {
+    program: Phoenix::Cad,
+    logo_png: include_bytes!("../images/brand/icon-256.png"),
+});
+```
+
+The window then shows the picture inside a ring of the accent colour of the program, its name in large letters, one sentence about it in the eight languages, the version, the author, the e-mail, the page of the author, the repository (the addresses can be clicked), the licence, the notices of data of others when the program carries them and the notice about trademarks. The accent colour, the sentence, the repository and the notices belong to `about::Phoenix`, so they are written once. A program with a window of its own calls `gui::about_contents(ui, lang, &info, &brand)` inside it. Without a brand the window is the plain list of lines, as before. The picture is a PNG of at most 1024 by 1024 pixels; one that cannot be read leaves the ring empty.
+
+| Program | Accent |
+|---|---|
+| PCB | fire orange |
+| PNP | green |
+| CAD | blue |
+| CNC | steel cyan |
+| Laser | red |
+| 3DP | violet |
 
 ## Moving a program to the frame
 

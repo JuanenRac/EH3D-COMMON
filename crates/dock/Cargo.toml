@@ -11,13 +11,15 @@ repository.workspace = true
 [features]
 default = []
 # the frame drawn with egui (the model it draws has no window and is always there)
-gui = ["dep:egui"]
+gui = ["dep:egui", "dep:png"]
 
 [dependencies]
 # the languages of the interface are the ones of eh3d-view
 eh3d-view = { version = ">=0.0.1", path = "../view" }
 # the window, only with the feature `gui`
 egui = { version = "0.37.0", default-features = false, optional = true }
+# the picture of the program in its window «About», only with the feature `gui`
+png = { version = "0.17", optional = true }
 
 [lints]
 workspace = true
