@@ -179,9 +179,10 @@ No name given by a person is ever a path inside the project: the paths are made 
 
 ### Dangerous files
 
-Programs, scripts, office documents with macros, compressed archives (they are not looked into) and pages that can run code (HTML, SVG) are accepted, kept like any other file and marked `danger`: `executable`, `script`, `macros`, `archive` or `active-content`. The mark comes from the extension, from the first bytes (a program behind a harmless name) and, for office documents, from the macros named inside them; a document that cannot be looked into counts as one with macros.
+One classification (`eh3d-filekind`) is used by the container, the viewer and the panel. Programs, scripts, office documents with macros, compressed archives (they are not looked into) and pages that can run code (HTML, SVG) are accepted, kept like any other file and marked `danger`: `executable`, `script`, `macros`, `archive` or `active-content`. The mark comes from the extension, from the first bytes (a program behind a harmless name) and, for office documents, from the macros named inside them; a document that cannot be looked into counts as one with macros.
 
-* Taking a dangerous file out needs the agreement of a person (`Consent::Given`, `--confirm-dangerous`). The mark of the record is not trusted alone: the name and the content of the file are looked at again, and a refused or partial file is removed.
+* A file of a **kind the suite does not know** has no `danger` word in the record, and still asks like a dangerous one (`Attachment::needs_confirmation`, `AttachError::NeedsConfirmation` with no danger).
+* Taking a dangerous or unknown file out needs the agreement of a person (`Consent::Given`, `--confirm-dangerous`). The mark of the record is not trusted alone: the name and the content of the file are looked at again, and a refused or partial file is removed.
 * A file taken out gets its safe name inside the folder chosen, never replaces a file that is there, is not executable and is marked on Windows as coming from outside.
 * Nothing of an attachment is ever run or opened by this crate. A program that opens one asks first, and never launches a program or a script (`Danger::never_launched`).
 * The `attachments` branch is not offered to the programs as files to take (`suiteview`); `extract-branch` of it gives the parts under their hash, which have no extension.
@@ -211,23 +212,13 @@ let found = index.for_component(&ComponentQuery::new().reference("U3").value("NE
 let source = attachments::AttachmentSource::open(project.path(), found[0].id())?;
 let bytes = source.reader()?;            // std::io::Read
 
-// take it out (NeedsConfirmation for a dangerous file until the person agrees)
+// take it out (NeedsConfirmation for a dangerous or unknown file until the person agrees)
 attachments::extract(&mut project, found[0].id(), folder, Consent::NotAsked, &limits)?;
 ```
 
-The viewer of the suite (`eh3d-viewer`, `docs/VIEWER.md`) reads any `Source`; a program hands it an attachment with a wrapper of its own, without writing a file first:
+The windows of the programs use the panel `eh3d-attachpanel` (`docs/ATTACHMENTS_PANEL.md`), which holds all of this and the viewer (`eh3d-viewer`, `docs/VIEWER.md`); its `ProjectSource` hands an attachment to the viewer without writing a file first.
 
-```rust
-struct FromProject(attachments::AttachmentSource);
-
-impl eh3d_viewer::Source for FromProject {
-    fn name(&self) -> &str { self.0.name() }
-    fn len(&self) -> u64 { self.0.len() }
-    fn reader(&self) -> std::io::Result<Box<dyn std::io::Read + '_>> { Ok(Box::new(self.0.reader()?)) }
-}
-```
-
-`attach_link`, `set_components` and `detach` complete it. The words of the warnings in the eight languages are in `suitetext` (`attachments::danger_word`, `AttachmentDangerous`, `AttachmentLinkOnly`, `AttachmentTooLarge`). The windows of the programs do not show attachments yet.
+`attach_link`, `set_components` and `detach` complete it. The words of the warnings in the eight languages are in `suitetext` (`attachments::danger_word`, `AttachmentDangerous`, `AttachmentLinkOnly`, `AttachmentTooLarge`).
 
 ## Security (all optional)
 
