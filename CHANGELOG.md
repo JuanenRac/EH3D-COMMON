@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.3.5] - Printer catalog with what was read on the maker page, and more machine limits
+
 - **The catalog of printers says what was read and what is still to be checked (`eh3d_printers`, `docs/PRINTERS.md`):** a page of a record now has `confirmed`, the fields read on the page itself, and `Printer::confirmed` and `Printer::unconfirmed` answer for them; `verified` stays `false` because nothing was tried on a machine. The records were read again on the pages of the makers: the Bambu Lab A1 and P1S, the Creality K1C, Ender-3 V3 KE and the Artillery Sidewinder X4 Pro S1 were corrected or completed, the Bambu Lab P1P and the Creality Ender-3 V3 SE are new, the filament diameter of the P1P and P1S is still to be checked and so is nearly everything of the Sidewinder X4 Plus S1, whose page no longer answers. New figures where the maker states them: the highest speed, acceleration and flow of the head and the height used by default (250 mm on the P1P and P1S), with their five words in eight languages. 2 more tests.
 
 ## [0.3.4] - Attachments panel and viewer, one file classification and short tab titles written in full
