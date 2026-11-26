@@ -72,7 +72,7 @@ let new_text = dock.config_text(&old_settings_text);
 
 ## Declaring the panels
 
-A panel is a `PanelDef`: a stable name (letters, digits, `_`, `-`, `.`, at most 48 characters; it is what the settings file stores), a title in eight languages (`Text8`, in the order English, Spanish, Italian, German, French, Portuguese of Portugal, Chinese, Japanese), an optional icon of one or two characters that stands for the title when the tab is narrow, the smallest size it needs and an optional shortcut that shows or hides it.
+A panel is a `PanelDef`: a stable name (letters, digits, `_`, `-`, `.`, at most 48 characters; it is what the settings file stores), a title in eight languages (`Text8`, in the order English, Spanish, Italian, German, French, Portuguese of Portugal, Chinese, Japanese), an optional icon of one or two characters that stands for the title when the tab is narrow and would cut it (a title that fits whole is always written), the smallest size it needs and an optional shortcut that shows or hides it.
 
 ```rust
 PanelDef::new("layers", Text8(["Layers", "Capas", "Livelli", "Ebenen", "Calques", "Camadas", "图层", "レイヤー"]))
