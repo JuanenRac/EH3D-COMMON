@@ -1619,10 +1619,14 @@ fn decode_logo(bytes: &[u8]) -> Option<egui::ColorImage> {
         .then(|| egui::ColorImage::from_rgba_unmultiplied(size, &rgba))
 }
 
+/// Where the texture of a picture is kept: a program may have a small one for its header and a large one for its window «About».
+fn logo_id(brand: &AboutBrand) -> Id {
+    Id::unique(("eh3d_dock_about_logo", brand.program, brand.logo_png.len()))
+}
+
 /// The texture of the picture of a program, made once and kept with the window.
 fn logo_texture(ctx: &egui::Context, brand: &AboutBrand) -> Option<egui::TextureHandle> {
-    // a program may have a small picture for its header and a large one for its window «About»
-    let id = Id::unique(("eh3d_dock_about_logo", brand.program, brand.logo_png.len()));
+    let id = logo_id(brand);
     if let Some(texture) = ctx.data(|d| d.get_temp::<egui::TextureHandle>(id)) {
         return Some(texture);
     }
@@ -1977,7 +1981,7 @@ mod tests {
                     h.frames(2);
                 }
                 assert!(h.dock.show_about);
-                let id = Id::unique(("eh3d_dock_about_logo", program));
+                let id = logo_id(&AboutBrand { program, logo_png });
                 let kept = h
                     .ctx
                     .data(|d| d.get_temp::<egui::TextureHandle>(id))
