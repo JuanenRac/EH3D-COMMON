@@ -12,6 +12,7 @@ use eh3d_project::attachments;
 use eh3d_viewer::gui::ViewerPanel;
 use eh3d_viewer::{Viewer, ViewerEvent, ViewerLimits};
 
+use crate::limits::{drop_for_panel, PanelLimits};
 use crate::model::{component_link, link_label, Item, LinkForm, Message, Model, Program, Request};
 use crate::source::ProjectSource;
 use crate::texts::{fill, lang_of, tr, Lang, Text};
@@ -81,6 +82,8 @@ pub struct AttachPanel {
     opens: bool,
     /// The project the panel opened itself.
     own: Option<PathBuf>,
+    /// Where the panel was drawn last, and on which frame.
+    drawn: Option<(egui::Rect, u64)>,
 }
 
 fn kind_of_form(form: LinkForm) -> Text {
@@ -121,6 +124,7 @@ impl AttachPanel {
             folder: None,
             opens: false,
             own: None,
+            drawn: None,
         }
     }
 
@@ -157,12 +161,85 @@ impl AttachPanel {
         if self.model.apply_setting(key, value) {
             return true;
         }
-        if !self.viewer_limits.apply(key, value) {
+        let mut viewer = self.viewer_limits.clone();
+        if !viewer.apply(key, value) {
             return false;
         }
+        self.take_viewer_limits(viewer);
+        true
+    }
+
+    /// Takes the limits of the settings of the program, in place of the ones there were; nothing happens when they are the
+    /// same, so a program may call it whenever its settings are read.
+    pub fn set_limits(&mut self, limits: PanelLimits) {
+        self.model.set_limits(limits.attachments);
+        self.take_viewer_limits(limits.viewer);
+    }
+
+    /// The limits in force.
+    pub fn limits(&self) -> PanelLimits {
+        PanelLimits {
+            attachments: self.model.limits(),
+            viewer: self.viewer_limits.clone(),
+        }
+    }
+
+    fn take_viewer_limits(&mut self, limits: ViewerLimits) {
+        if limits == self.viewer_limits {
+            return;
+        }
+        self.viewer_limits = limits;
         self.viewer = ViewerPanel::new(self.viewer_limits.clone());
         self.shown = None;
-        true
+    }
+
+    /// The files dropped on the window on this frame that are left for the program; the others are taken by the panel and
+    /// attached. A program calls it at the start of a frame instead of reading the dropped files itself, with
+    /// `program_opens` saying whether it opens such a file.
+    ///
+    /// The panel takes a file when it was drawn on the last frame with a project and the pointer is over it. Where the
+    /// system does not say where the pointer is while a file is dragged, it takes the files the program does not open, and
+    /// asks before it attaches them.
+    pub fn take_drop(
+        &mut self,
+        ctx: &egui::Context,
+        program_opens: impl Fn(&Path) -> bool,
+    ) -> Vec<PathBuf> {
+        let (dropped, pointer) = ctx.input(|i| {
+            let dropped: Vec<PathBuf> = i
+                .raw
+                .dropped_files
+                .iter()
+                .map(|f| f.path().to_path_buf())
+                .filter(|p| !p.as_os_str().is_empty())
+                .collect();
+            (dropped, i.pointer.latest_pos())
+        });
+        if dropped.is_empty() {
+            return dropped;
+        }
+        let frame = ctx.cumulative_frame_nr();
+        let place = self
+            .drawn
+            .filter(|(_, at)| frame.saturating_sub(*at) <= 1 && self.model.project().is_some())
+            .map(|(rect, _)| rect);
+        let over = place.and_then(|rect| pointer.map(|p| rect.contains(p)));
+        let mut mine = Vec::new();
+        let mut left = Vec::new();
+        let mut sure = false;
+        for path in dropped {
+            match drop_for_panel(place.is_some(), over, program_opens(&path)) {
+                Some(known) if path.is_file() => {
+                    sure = known;
+                    mine.push(path);
+                }
+                _ => left.push(path),
+            }
+        }
+        if !mine.is_empty() {
+            self.model.drop_files(&mine, sure);
+        }
+        left
     }
 
     /// Draws the panel for the project of the program (nothing when it has none) in the language of a code such as `es`. True
@@ -184,6 +261,14 @@ impl AttachPanel {
         }
         self.model.set_project(project);
         self.model.poll();
+        let place = ui.max_rect().intersect(ui.clip_rect());
+        self.drawn = Some((place, ui.ctx().cumulative_frame_nr()));
+        if let Some(Ok((sha256, size))) = self.model.take_hash() {
+            if let Some(draft) = &mut self.link {
+                draft.sha256 = sha256;
+                draft.size = Some(size);
+            }
+        }
         if self.checked.is_none_or(|at| at.elapsed() >= CHECK_EVERY) {
             self.checked = Some(Instant::now());
             self.model.check_file();
@@ -200,6 +285,9 @@ impl AttachPanel {
             }
             self.chooser_window(ui, lang);
             return self.model.take_wrote();
+        }
+        if ui.input(|i| !i.raw.hovered_files.is_empty()) {
+            ui.strong(tr(lang, Text::DropHint));
         }
         self.head(ui, lang, &mut asked);
         let mut event = None;
@@ -231,7 +319,7 @@ impl AttachPanel {
             self.act(what);
         }
         self.chooser_window(ui, lang);
-        if self.model.busy() {
+        if self.model.busy() || self.model.hashing() || self.model.waiting() {
             ui.ctx().request_repaint_after(Duration::from_millis(100));
         }
         self.model.take_wrote()
@@ -335,10 +423,19 @@ impl AttachPanel {
                     draft.size = None;
                 }
                 ui.horizontal_wrapped(|ui| {
-                    if ui.button(tr(lang, Text::HashFromFile)).clicked() {
+                    let reading = self.model.hashing();
+                    let take = egui::Button::new(tr(lang, Text::HashFromFile));
+                    if ui.add_enabled(!reading, take).clicked() {
                         asked.push(Asked::Choose(Purpose::HashOf));
                     }
-                    let ready = free && !draft.url.trim().is_empty() && !draft.sha256.is_empty();
+                    if reading {
+                        ui.spinner();
+                        ui.label(tr(lang, Text::Hashing));
+                    }
+                    let ready = free
+                        && !reading
+                        && !draft.url.trim().is_empty()
+                        && !draft.sha256.is_empty();
                     let add = egui::Button::new(tr(lang, Text::Add));
                     if ui.add_enabled(ready, add).clicked() {
                         asked.push(Asked::Do(Request::AttachLink {
@@ -453,7 +550,10 @@ impl AttachPanel {
             Asked::Do(request) => self.model.request(request),
             Asked::Select(id) => self.model.select(Some(&id)),
             Asked::Choose(purpose) => self.open_chooser(purpose),
-            Asked::Link(open) => self.link = open.then(LinkDraft::default),
+            Asked::Link(open) => {
+                self.model.drop_hash();
+                self.link = open.then(LinkDraft::default);
+            }
             Asked::ShowAll => self.model.set_filter(None),
             Asked::ReadAgain => self.model.reload(),
             Asked::Close => self.own = None,
@@ -497,14 +597,8 @@ impl AttachPanel {
         match purpose {
             Purpose::Attach => self.model.request(Request::AttachFile(path)),
             Purpose::OpenProject => self.open_project(path),
-            Purpose::HashOf => {
-                if let (Some(draft), Ok((sha256, size))) =
-                    (&mut self.link, attachments::hash_file(&path))
-                {
-                    draft.sha256 = sha256;
-                    draft.size = Some(size);
-                }
-            }
+            // a file may be a gigabyte: it is read on a thread of its own
+            Purpose::HashOf => self.model.start_hash(path),
             Purpose::ExtractTo(id) => self.model.request(Request::Extract(id.clone(), path)),
             Purpose::SaveCopy => {
                 // the viewer says in its own panel how it ended
@@ -668,6 +762,101 @@ mod tests {
             std::thread::sleep(Duration::from_millis(5));
             panel.model.poll();
         }
+    }
+
+    #[derive(Debug)]
+    struct Dropped(PathBuf);
+
+    impl egui::DroppedFile for Dropped {
+        fn path(&self) -> &Path {
+            &self.0
+        }
+
+        fn bytes(&self) -> Result<Vec<u8>, String> {
+            std::fs::read(&self.0).map_err(|e| e.to_string())
+        }
+    }
+
+    /// A frame on which files are dropped: what is left for the program.
+    fn drop_frame(
+        ctx: &egui::Context,
+        panel: &mut AttachPanel,
+        file: &Path,
+        pointer: Option<Pos2>,
+        paths: &[PathBuf],
+    ) -> Vec<PathBuf> {
+        let mut input = egui::RawInput {
+            screen_rect: Some(Rect::from_min_size(Pos2::ZERO, Vec2::new(900.0, 700.0))),
+            ..Default::default()
+        };
+        input.events.push(match pointer {
+            Some(at) => egui::Event::PointerMoved(at),
+            None => egui::Event::PointerGone,
+        });
+        for path in paths {
+            input
+                .dropped_files
+                .push(std::sync::Arc::new(Dropped(path.clone())));
+        }
+        let mut left = Vec::new();
+        let out = ctx.run_ui(input, |ui| {
+            left = panel.take_drop(ui.ctx(), |p| p.extension().is_some_and(|e| e == "nc"));
+            panel.show(ui, Some(file), "en");
+        });
+        out.drop_without_applying_deltas();
+        left
+    }
+
+    #[test]
+    fn a_file_dropped_on_the_panel_is_attached_and_one_dropped_nowhere_known_is_asked_about() {
+        let dir = std::env::temp_dir().join(format!("eh3d-attachpanel-drop-{}", std::process::id()));
+        let _ = std::fs::remove_dir_all(&dir);
+        std::fs::create_dir_all(&dir).unwrap();
+        let file = dir.join("a.eh3d");
+        Project::create(
+            &file,
+            NewProject {
+                id: "0f6d3c1a-9b1e-4c53-9b60-3a8f1d2c7e11".to_owned(),
+                name: "made up".to_owned(),
+                units: "mm".to_owned(),
+                created: None,
+            },
+            &OpenOptions::default(),
+            &AtomicOptions::default(),
+        )
+        .unwrap();
+        let sheet = dir.join("sheet.txt");
+        std::fs::write(&sheet, "made up").unwrap();
+        let program = dir.join("part.nc");
+        std::fs::write(&program, "G0 X0").unwrap();
+
+        let ctx = egui::Context::default();
+        let mut panel = AttachPanel::new(Program::new("cnc", "0.1.0"));
+        // before the panel is drawn, the program gets everything
+        let left = drop_frame(&ctx, &mut panel, &file, None, std::slice::from_ref(&sheet));
+        assert_eq!(left, std::slice::from_ref(&sheet));
+        // where nobody says where the pointer is: the program keeps its own file, the other one is asked about
+        let both = [program.clone(), sheet.clone()];
+        let left = drop_frame(&ctx, &mut panel, &file, None, &both);
+        assert_eq!(left, std::slice::from_ref(&program));
+        assert!(panel.model.pending().is_some() && !panel.model.busy());
+        assert!(panel.model.items().is_empty());
+        panel.model.cancel();
+        // over the panel the file is attached at once, whatever it is
+        let over = Some(Pos2::new(40.0, 40.0));
+        let left = drop_frame(&ctx, &mut panel, &file, over, std::slice::from_ref(&program));
+        assert!(left.is_empty());
+        assert!(panel.model.pending().is_none());
+        wait(&mut panel);
+        assert_eq!(panel.model.items().len(), 1);
+        // away from the panel it is not touched
+        let away = Some(Pos2::new(-10.0, -10.0));
+        let left = drop_frame(&ctx, &mut panel, &file, away, std::slice::from_ref(&sheet));
+        assert_eq!(left, std::slice::from_ref(&sheet));
+        let limits = PanelLimits::from_text("attachments.max_mb = 2\nviewer.max_pdf_mb = 3\n");
+        panel.set_limits(limits.clone());
+        assert_eq!(panel.limits(), limits);
+        let _ = std::fs::remove_dir_all(&dir);
     }
 
     #[test]

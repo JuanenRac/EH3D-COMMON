@@ -328,3 +328,98 @@ fn a_file_that_is_not_a_project_and_a_project_not_written_yet() {
     assert!(panel.items().is_empty());
     assert!(!Text::ALL.is_empty());
 }
+
+#[test]
+fn dropped_files_go_in_one_after_another_and_ask_first_when_the_place_is_not_known() {
+    let dir = tempdir().unwrap();
+    let project = new_project(dir.path());
+    let first = file(dir.path(), "first.txt", b"one");
+    let second = file(dir.path(), "second.txt", b"two");
+    let mut panel = model();
+    // with no project nothing is kept
+    panel.drop_files(std::slice::from_ref(&first), true);
+    assert!(!panel.busy() && !panel.waiting());
+    panel.set_project(Some(&project));
+    // a folder is left out
+    panel.drop_files(&[dir.path().to_path_buf(), first.clone(), second.clone()], true);
+    assert!(panel.busy() && panel.waiting());
+    let until = Instant::now() + Duration::from_secs(60);
+    while panel.busy() || panel.waiting() {
+        assert!(Instant::now() < until, "the work did not end");
+        std::thread::sleep(Duration::from_millis(5));
+        panel.poll();
+    }
+    assert_eq!(panel.items().len(), 2);
+
+    let third = file(dir.path(), "third.txt", b"three");
+    panel.drop_files(std::slice::from_ref(&third), false);
+    assert!(!panel.busy());
+    let question = panel.pending().expect("a question");
+    assert_eq!(question.lines, [Ask::Dropped("third.txt".to_owned())]);
+    for lang in Lang::ALL {
+        assert!(question.lines[0].text(lang).contains("third.txt"), "{lang:?}");
+    }
+    panel.cancel();
+    panel.poll();
+    assert_eq!(panel.items().len(), 2);
+    panel.drop_files(std::slice::from_ref(&third), false);
+    panel.confirm();
+    wait(&mut panel);
+    assert_eq!(panel.items().len(), 3);
+
+    // a refused file gives up the ones that wait, so what was refused stays said
+    let secret = file(dir.path(), "own.cfg", b"server_token = made-up-value\n");
+    let last = file(dir.path(), "last.txt", b"four");
+    panel.drop_files(&[secret, last], true);
+    wait(&mut panel);
+    panel.poll();
+    assert!(matches!(panel.message(), Some(Message::HoldsCredential(_))));
+    assert!(!panel.waiting() && panel.items().len() == 3);
+}
+
+#[test]
+fn the_hash_of_a_file_is_taken_apart_and_given_once() {
+    let dir = tempdir().unwrap();
+    let path = file(dir.path(), "abc.bin", b"abc");
+    let mut panel = model();
+    let wait_hash = |panel: &mut Model| {
+        let until = Instant::now() + Duration::from_secs(60);
+        while panel.hashing() {
+            assert!(Instant::now() < until, "the hash did not end");
+            std::thread::sleep(Duration::from_millis(5));
+            panel.poll();
+        }
+    };
+    panel.start_hash(path);
+    wait_hash(&mut panel);
+    let (hash, size) = panel.take_hash().expect("an answer").expect("a hash");
+    assert_eq!(
+        hash,
+        "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+    );
+    assert_eq!(size, 3);
+    assert!(panel.take_hash().is_none() && panel.message().is_none());
+    panel.start_hash(dir.path().join("not-there"));
+    wait_hash(&mut panel);
+    assert!(panel.take_hash().expect("an answer").is_err());
+    assert!(matches!(panel.message(), Some(Message::Failed(_))));
+    panel.start_hash(dir.path().join("not-there"));
+    panel.drop_hash();
+    assert!(!panel.hashing() && panel.take_hash().is_none());
+}
+
+#[test]
+fn the_limit_of_the_settings_is_the_one_that_refuses_a_large_file() {
+    let dir = tempdir().unwrap();
+    let project = new_project(dir.path());
+    let large = file(dir.path(), "large.bin", &vec![7u8; (1 << 20) + 1]);
+    let mut panel = model();
+    assert!(panel.apply_setting("attachments.max_mb", "1"));
+    assert_eq!(panel.limits().max_attachment_bytes, 1 << 20);
+    panel.set_project(Some(&project));
+    run(&mut panel, Request::AttachFile(large.clone()));
+    panel.confirm();
+    wait(&mut panel);
+    assert!(panel.items().is_empty(), "{:?}", panel.message());
+    assert!(matches!(panel.message(), Some(Message::Failed(_))));
+}

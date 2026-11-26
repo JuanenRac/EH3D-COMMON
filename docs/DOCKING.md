@@ -9,8 +9,10 @@ The crate has two layers.
 
 ```toml
 [dependencies]
-eh3d-dock = { git = "https://github.com/JuanenRac/EH3D-COMMON", tag = "v0.2.7", features = ["gui"] }
+eh3d-dock = { git = "https://github.com/JuanenRac/EH3D-COMMON", tag = "<release tag>", features = ["gui"] }
 ```
+
+`<release tag>` is the tag of the release of this repository that the program is built against (see [CONSUMING.md](CONSUMING.md)).
 
 ## What a person can do
 
