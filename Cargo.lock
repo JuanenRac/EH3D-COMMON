@@ -337,6 +337,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "eh3d-printers"
+version = "0.0.1"
+dependencies = [
+ "eh3d-printmaterials",
+ "serde",
+ "serde_json",
+ "thiserror",
+]
+
+[[package]]
 name = "eh3d-printmaterials"
 version = "0.0.1"
 dependencies = [

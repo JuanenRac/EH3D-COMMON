@@ -1,0 +1,18 @@
+[package]
+name = "eh3d-printers"
+version = "0.0.1"
+edition.workspace = true
+rust-version.workspace = true
+description = "The catalog of 3D printers of the suite: what each model is, with the public page of its maker that says so, the family of the program that would talk to it, the files it takes, and starting filaments and processes"
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+
+[dependencies]
+eh3d-printmaterials = { path = "../printmaterials" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+
+[lints]
+workspace = true
