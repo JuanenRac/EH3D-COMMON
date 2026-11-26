@@ -304,7 +304,7 @@ version = "0.0.1"
 
 [[package]]
 name = "eh3d-common"
-version = "0.3.2"
+version = "0.3.3"
 dependencies = [
  "chrono",
  "eh3d-container",
