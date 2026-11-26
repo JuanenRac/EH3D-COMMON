@@ -2,6 +2,7 @@
 //! link, link to a component, extract and remove with a question first, and the viewer beside the list.
 //!
 //! * [`model`] holds and does everything, with no window, so it is tested without a screen.
+//! * [`limits`] takes the limits from the settings of the program and says what a dropped file is for.
 //! * [`gui`] (feature `gui`) draws it with egui, with its own window to choose files and folders.
 //! * [`panel_def`] is the entry of the panel for the frame of the program (`eh3d-dock`).
 //!
@@ -11,7 +12,10 @@
 //! // among the panels of the frame
 //! defs.push(eh3d_attachpanel::panel_def());
 //! // kept for as long as the program runs
-//! let attachments = AttachPanel::new(Program::new("cnc", env!("CARGO_PKG_VERSION")));
+//! let mut attachments = AttachPanel::new(Program::new("cnc", env!("CARGO_PKG_VERSION")));
+//! attachments.set_limits(PanelLimits::from_text(&settings_file_text));
+//! // at the start of every frame, instead of reading the dropped files directly
+//! let dropped = attachments.take_drop(ctx, |path| the_program_opens(path));
 //! // in the body of the panel, on every frame
 //! if attachments.show(ui, project_path, lang_code) {
 //!     // the project was written: read your own state of it again
@@ -23,12 +27,14 @@
 
 #[cfg(feature = "gui")]
 pub mod gui;
+pub mod limits;
 pub mod model;
 pub mod source;
 pub mod texts;
 
 #[cfg(feature = "gui")]
 pub use gui::AttachPanel;
+pub use limits::{drop_for_panel, PanelLimits};
 pub use model::{Item, LinkForm, Message, Model, Piece, Program, Request};
 pub use source::ProjectSource;
 

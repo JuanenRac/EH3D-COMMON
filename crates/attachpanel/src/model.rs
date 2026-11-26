@@ -2,9 +2,10 @@
 //!
 //! The panel lists the attachments of the project of the program. Everything that writes the project, or takes a file out of it,
 //! is a [`Request`]; what a person has to agree to first becomes a [`Question`], and only [`Model::confirm`] goes on. The work runs
-//! on a thread of its own, because a file may be a gigabyte: [`Model::poll`] collects the answer. Nothing here runs, opens or
-//! downloads anything of an attachment.
+//! on a thread of its own, because a file may be a gigabyte: [`Model::poll`] collects the answer. The SHA-256 of a file is
+//! taken on another thread for the same reason. Nothing here runs, opens or downloads anything of an attachment.
 
+use std::collections::VecDeque;
 use std::fs;
 use std::path::{Path, PathBuf};
 use std::sync::mpsc::{self, Receiver, TryRecvError};
@@ -199,6 +200,8 @@ pub enum Request {
 /// A line of a question.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum Ask {
+    /// A file was dropped and the system did not say where: it is attached only after a yes.
+    Dropped(String),
     /// The write removes the signature of the whole project.
     SignedProject,
     /// The write removes the signature of the branch of the attachments.
@@ -224,6 +227,7 @@ impl Ask {
     pub fn text(&self, lang: Lang) -> String {
         let code = lang.code();
         match self {
+            Ask::Dropped(name) => fill(tr(lang, Text::AskDropped), &[name]),
             Ask::SignedProject => S::SignedProject.tr(code).to_owned(),
             Ask::SignedAttachments => fill(S::SignedBranch.tr(code), &[ATTACHMENTS_BRANCH]),
             Ask::Remove { name, components } => {
@@ -303,6 +307,9 @@ impl Message {
         )
     }
 }
+
+/// The SHA-256 and the size of a file, or why it could not be read.
+pub type Hashed = Result<(String, u64), String>;
 
 /// What the thread that did a request answers.
 struct Done {
@@ -475,6 +482,10 @@ pub struct Model {
     job: Option<Receiver<Done>>,
     message: Option<Message>,
     wrote: bool,
+    /// Dropped files that wait for their turn; true when the pointer said they are for the panel.
+    dropped: VecDeque<(PathBuf, bool)>,
+    hash_job: Option<Receiver<Hashed>>,
+    hashed: Option<Hashed>,
 }
 
 impl Model {
@@ -495,12 +506,93 @@ impl Model {
             job: None,
             message: None,
             wrote: false,
+            dropped: VecDeque::new(),
+            hash_job: None,
+            hashed: None,
         }
     }
 
     /// Takes one line of a settings file (`attachments.max_mb`); false for another key.
     pub fn apply_setting(&mut self, key: &str, value: &str) -> bool {
         self.limits.apply(key, value)
+    }
+
+    /// Takes the limits of attaching and of taking out, in place of the ones there were.
+    pub fn set_limits(&mut self, limits: AttachmentLimits) {
+        self.limits = limits;
+    }
+
+    /// The limits of attaching and of taking out.
+    pub fn limits(&self) -> AttachmentLimits {
+        self.limits
+    }
+
+    /// Takes the SHA-256 and the size of a file on a thread of its own; [`Model::take_hash`] gives them once, after a
+    /// [`Model::poll`] that found them. A file asked for before and not taken yet is forgotten.
+    pub fn start_hash(&mut self, path: PathBuf) {
+        self.drop_hash();
+        let (send, receive) = mpsc::channel();
+        let spawned = thread::Builder::new()
+            .name("eh3d-attachment-hash".to_owned())
+            .spawn(move || {
+                let hashed = attachments::hash_file(&path).map_err(|e| e.to_string());
+                // the panel may not want it any more
+                let _ = send.send(hashed);
+            });
+        match spawned {
+            Ok(_) => self.hash_job = Some(receive),
+            Err(e) => self.hashed = Some(Err(e.to_string())),
+        }
+    }
+
+    /// True while the SHA-256 of a file is being taken.
+    pub fn hashing(&self) -> bool {
+        self.hash_job.is_some()
+    }
+
+    /// The SHA-256 that was asked for, once. A failure is also said in [`Model::message`].
+    pub fn take_hash(&mut self) -> Option<Hashed> {
+        let hashed = self.hashed.take();
+        if let Some(Err(why)) = &hashed {
+            self.message = Some(Message::Failed(why.clone()));
+        }
+        hashed
+    }
+
+    /// Forgets the SHA-256 that was asked for.
+    pub fn drop_hash(&mut self) {
+        self.hash_job = None;
+        self.hashed = None;
+    }
+
+    /// Takes files dropped on the window, one after another. `over` is true when the pointer was over the panel; otherwise
+    /// each file is asked about before it is attached. Folders are left out, and nothing happens with no project.
+    pub fn drop_files(&mut self, paths: &[PathBuf], over: bool) {
+        if self.file.is_none() {
+            return;
+        }
+        for path in paths.iter().filter(|p| p.is_file()) {
+            self.dropped.push_back((path.clone(), over));
+        }
+        self.next_dropped();
+    }
+
+    /// The next dropped file, when nothing else is being done or asked.
+    fn next_dropped(&mut self) -> bool {
+        if self.job.is_some() || self.pending.is_some() {
+            return false;
+        }
+        let Some((path, over)) = self.dropped.pop_front() else {
+            return false;
+        };
+        let first = (!over).then(|| Ask::Dropped(suiteview::name_of(&path)));
+        self.request_after(Request::AttachFile(path), first);
+        true
+    }
+
+    /// True while dropped files wait for their turn.
+    pub fn waiting(&self) -> bool {
+        !self.dropped.is_empty()
     }
 
     /// The project the program works on. Another one than before is read at once; a question that was waiting is dropped.
@@ -512,6 +604,8 @@ impl Model {
         self.selected = None;
         self.pending = None;
         self.message = None;
+        self.dropped.clear();
+        self.drop_hash();
         self.reload();
     }
 
@@ -678,6 +772,11 @@ impl Model {
     /// Asks for something. It is done at once on a thread of its own, or waits as [`Model::pending`] for the person to agree.
     /// Nothing happens with no project or while another request is being done.
     pub fn request(&mut self, request: Request) {
+        self.request_after(request, None);
+    }
+
+    /// A request with a line that is asked before the ones of the request itself.
+    fn request_after(&mut self, request: Request, first: Option<Ask>) {
         let Some(file) = self.file.clone() else {
             return;
         };
@@ -686,7 +785,13 @@ impl Model {
         }
         self.pending = None;
         self.message = None;
-        match self.questions(&file, &request) {
+        let questions = self.questions(&file, &request).map(|mut lines| {
+            if let Some(first) = first {
+                lines.insert(0, first);
+            }
+            lines
+        });
+        match questions {
             Ok(lines) if lines.is_empty() => self.start(file, request, false),
             Ok(lines) => self.pending = Some(Question { request, lines }),
             Err(e) => self.message = Some(Message::Failed(e)),
@@ -730,8 +835,29 @@ impl Model {
         }
     }
 
-    /// Collects the answer of the thread. Call it on every frame; true when something changed.
+    /// Collects the answers of the threads and goes on with the next dropped file. Call it on every frame; true when
+    /// something changed.
     pub fn poll(&mut self) -> bool {
+        let hashed = self.poll_hash();
+        let done = self.poll_job();
+        let next = self.next_dropped();
+        hashed || done || next
+    }
+
+    fn poll_hash(&mut self) -> bool {
+        let Some(job) = &self.hash_job else {
+            return false;
+        };
+        self.hashed = match job.try_recv() {
+            Ok(hashed) => Some(hashed),
+            Err(TryRecvError::Empty) => return false,
+            Err(TryRecvError::Disconnected) => Some(Err("the work stopped".to_owned())),
+        };
+        self.hash_job = None;
+        true
+    }
+
+    fn poll_job(&mut self) -> bool {
         let Some(job) = &self.job else {
             return false;
         };
@@ -755,6 +881,10 @@ impl Model {
                 wrote,
             } => {
                 self.wrote |= wrote;
+                // a refusal is not covered by the next file: the dropped files that wait are given up
+                if matches!(message, Message::Failed(_) | Message::HoldsCredential(_)) {
+                    self.dropped.clear();
+                }
                 if same {
                     self.message = Some(message);
                     self.reload();

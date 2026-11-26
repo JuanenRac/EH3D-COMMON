@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The panel «Attachments» takes its limits from the settings and takes dropped files (`eh3d-attachpanel`, `docs/ATTACHMENTS_PANEL.md`):** `PanelLimits` reads `attachments.max_mb` and `viewer.max_*_mb` from the lines of a settings file and `AttachPanel::set_limits` puts them in force. `AttachPanel::take_drop` attaches a file dropped on the panel and leaves the program its own files; where the system does not say where the pointer is, the panel asks first. The SHA-256 of a file chosen for a link is taken on a thread of its own, so a large file no longer stops the window.
+
 ## [0.3.4] - Attachments panel and viewer, one file classification and short tab titles written in full
 
 - **A tab with a short title writes it (`eh3d_dock::gui`):** a title of a few characters, as most are in Chinese and Japanese, was replaced by the sign of its panel («L» for Layers) although it fitted whole. The sign is now shown only when the tab is narrow and would cut the title; long titles are clipped as before. 3 tests, 2 of them of the drawing.

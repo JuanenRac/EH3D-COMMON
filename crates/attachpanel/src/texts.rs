@@ -56,6 +56,9 @@ texts! {
     Address: ["Address (https://…)", "Dirección (https://…)", "Adresse (https://…)", "Adresse (https://…)", "Indirizzo (https://…)", "アドレス (https://…)", "地址 (https://…)", "Endereço (https://…)"];
     Hash: ["SHA-256 of the file", "SHA-256 del archivo", "SHA-256 der Datei", "SHA-256 du fichier", "SHA-256 del file", "ファイルの SHA-256", "文件的 SHA-256", "SHA-256 do ficheiro"];
     HashFromFile: ["Take it from a file I have…", "Tomarlo de un archivo que tengo…", "Aus einer vorhandenen Datei übernehmen…", "Le prendre d’un fichier que j’ai…", "Prendilo da un file che ho…", "手元のファイルから取得…", "从我已有的文件获取…", "Obter de um ficheiro que tenho…"];
+    AskDropped: ["Attach {0} to the project?", "¿Adjuntar {0} al proyecto?", "{0} an das Projekt anhängen?", "Joindre {0} au projet ?", "Allegare {0} al progetto?", "{0} をプロジェクトに添付しますか？", "要将 {0} 添加到项目吗？", "Anexar {0} ao projeto?"];
+    DropHint: ["Drop files here to attach them.", "Suelta archivos aquí para adjuntarlos.", "Dateien hier ablegen, um sie anzuhängen.", "Déposez des fichiers ici pour les joindre.", "Rilascia qui i file per allegarli.", "ここにファイルをドロップすると添付します。", "将文件拖放到此处即可添加。", "Largue ficheiros aqui para os anexar."];
+    Hashing: ["Reading the file for its SHA-256…", "Leyendo el archivo para su SHA-256…", "Datei wird für den SHA-256 gelesen…", "Lecture du fichier pour son SHA-256…", "Lettura del file per il suo SHA-256…", "SHA-256 を計算するためにファイルを読み込み中…", "正在读取文件以计算 SHA-256…", "A ler o ficheiro para o SHA-256…"];
     Add: ["Add", "Añadir", "Hinzufügen", "Ajouter", "Aggiungi", "追加", "添加", "Adicionar"];
     Cancel: ["Cancel", "Cancelar", "Abbrechen", "Annuler", "Annulla", "キャンセル", "取消", "Cancelar"];
     Continue: ["Continue", "Continuar", "Fortfahren", "Continuer", "Continua", "続行", "继续", "Continuar"];
