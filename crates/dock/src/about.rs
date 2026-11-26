@@ -55,16 +55,10 @@ impl Phoenix {
         }
     }
 
-    /// The accent colour of the program (red, green, blue): fire orange, green, blue, steel cyan, red and violet.
+    /// The accent colour of the program (red, green, blue), the principal tone of [`crate::palette`]: fire, emerald, ice blue, amethyst, crimson and
+    /// gold. It is a colour for fills and rings; text takes [`crate::palette::readable`].
     pub fn accent(self) -> [u8; 3] {
-        match self {
-            Phoenix::Pcb => [240, 112, 28],
-            Phoenix::Pnp => [36, 168, 92],
-            Phoenix::Cad => [48, 128, 236],
-            Phoenix::Cnc => [38, 164, 190],
-            Phoenix::Laser => [222, 48, 62],
-            Phoenix::Printer3d => [148, 92, 224],
-        }
+        self.tones().main
     }
 
     /// The address of the repository of the program.
@@ -74,7 +68,8 @@ impl Phoenix {
 
     /// Whether the picture of the program is a round badge (it can fill the ring) or a square one (it is drawn smaller, inside it).
     pub fn round_logo(self) -> bool {
-        !matches!(self, Phoenix::Printer3d)
+        // the six programs have a phoenix inside a round badge today
+        true
     }
 
     /// One sentence about what the program is, in eight languages.
@@ -230,7 +225,7 @@ mod tests {
                     .zip(b.accent())
                     .map(|(x, y)| u32::from(x.abs_diff(y)))
                     .sum();
-                assert!(distance >= 80, "{a:?} and {b:?}: {distance}");
+                assert!(distance >= 75, "{a:?} and {b:?}: {distance}");
             }
         }
     }

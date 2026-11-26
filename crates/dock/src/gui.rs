@@ -1497,6 +1497,14 @@ fn logo_texture(ctx: &egui::Context, brand: &AboutBrand) -> Option<egui::Texture
     Some(texture)
 }
 
+/// The colour of the name of a program in its window «About»: its accent, moved towards a darker or a lighter tone of the same hue as far as the
+/// ground of the window asks for it to be read.
+fn about_name_colour(program: about::Phoenix, ground: Color32) -> Color32 {
+    let [r, g, b] =
+        crate::palette::readable(program.accent(), [ground.r(), ground.g(), ground.b()]);
+    Color32::from_rgb(r, g, b)
+}
+
 /// Draws what the window about a program of the PHOENIX family holds, into `ui`: the picture inside a ring of the accent colour, the name of
 /// the program in large letters, one sentence about it, the version, the author, the e-mail, the page of the author, the repository and the
 /// licence (the addresses can be clicked), the notices of data of others when the program has them and the notice about trademarks. A program
@@ -1504,6 +1512,7 @@ fn logo_texture(ctx: &egui::Context, brand: &AboutBrand) -> Option<egui::Texture
 pub fn about_contents(ui: &mut Ui, lang: Lang, info: &AboutInfo, brand: &AboutBrand) {
     let [r, g, b] = brand.program.accent();
     let accent = Color32::from_rgb(r, g, b);
+    let name_colour = about_name_colour(brand.program, ui.visuals().window_fill);
     ui.set_width(ABOUT_WIDTH);
     ui.vertical_centered(|ui| {
         let (square, _) = ui.allocate_exact_size(Vec2::splat(ABOUT_RING), Sense::hover());
@@ -1530,7 +1539,7 @@ pub fn about_contents(ui: &mut Ui, lang: Lang, info: &AboutInfo, brand: &AboutBr
             egui::RichText::new(info.app_name.as_str())
                 .size(28.0)
                 .strong()
-                .color(accent),
+                .color(name_colour),
         );
         ui.add_space(4.0);
         ui.add(egui::Label::new(brand.program.summary().get(lang)).wrap());
@@ -1829,6 +1838,24 @@ mod tests {
                     .data(|d| d.get_temp::<egui::TextureHandle>(id))
                     .is_some();
                 assert_eq!(kept, logo_png == picture, "{program:?}");
+            }
+        }
+    }
+
+    #[test]
+    fn the_name_of_each_program_reads_on_the_light_and_the_dark_window() {
+        for visuals in [egui::Visuals::light(), egui::Visuals::dark()] {
+            let ground = visuals.window_fill;
+            for program in Phoenix::ALL {
+                let colour = about_name_colour(program, ground);
+                let found = crate::palette::contrast(
+                    [colour.r(), colour.g(), colour.b()],
+                    [ground.r(), ground.g(), ground.b()],
+                );
+                assert!(
+                    found >= crate::palette::TEXT_CONTRAST,
+                    "{program:?} {found}"
+                );
             }
         }
     }
