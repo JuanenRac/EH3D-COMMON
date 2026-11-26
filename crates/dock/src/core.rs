@@ -19,7 +19,7 @@ pub struct PanelDef {
     pub id: String,
     /// The title in eight languages.
     pub title: Text8,
-    /// A short sign for the tab (one or two characters), or empty.
+    /// A short sign of the panel (one or two characters), or empty. The tabs of the frame write the title and never this.
     pub icon: &'static str,
     /// The smallest width the panel needs, in points.
     pub min_w: f32,

@@ -1480,6 +1480,7 @@ impl Dock {
                         about_contents(ui, lang, &about, brand);
                         return;
                     }
+                    readable_words(ui.visuals_mut());
                     ui.heading(about.app_name.as_str());
                     ui.label(format!(
                         "{}: {}",
@@ -1704,11 +1705,43 @@ fn about_name_colour(program: about::Phoenix, ground: Color32) -> Color32 {
     Color32::from_rgb(r, g, b)
 }
 
+/// Makes every word of a window about a program readable on the ground of the window, whatever the program changed of its visuals.
+/// A program that starts from the dark visuals of egui and paints a light theme over them keeps white for the words egui calls strong
+/// (they take the colour of an active widget, not the text colour of the program).
+fn readable_words(v: &mut egui::Visuals) {
+    let ground = v.window_fill;
+    let on_ground = |c: Color32| {
+        // the colour the eye gets: a weak colour of egui lets the ground through
+        let rest = 255 - u16::from(c.a());
+        let over = |c: u8, g: u8| (u16::from(c) + u16::from(g) * rest / 255).min(255) as u8;
+        let seen = [
+            over(c.r(), ground.r()),
+            over(c.g(), ground.g()),
+            over(c.b(), ground.b()),
+        ];
+        let [r, g, b] = crate::palette::readable(seen, [ground.r(), ground.g(), ground.b()]);
+        Color32::from_rgb(r, g, b)
+    };
+    let text = on_ground(v.text_color());
+    let weak = on_ground(v.weak_text_color());
+    v.hyperlink_color = on_ground(v.hyperlink_color);
+    v.override_text_color = Some(text);
+    v.weak_text_color = Some(weak);
+    v.widgets.active.fg_stroke.color = text;
+}
+
 /// Draws what the window about a program of the PHOENIX family holds, into `ui`: the picture inside a ring of the accent colour, the name of
 /// the program in large letters, one sentence about it, the version, the author, the e-mail, the page of the author, the repository and the
 /// licence (the addresses can be clicked), the notices of data of others when the program has them and the notice about trademarks. A program
 /// that has its own window calls this inside it; [`Dock::set_brand`] does it for the window of the frame.
 pub fn about_contents(ui: &mut Ui, lang: Lang, info: &AboutInfo, brand: &AboutBrand) {
+    ui.scope(|ui| {
+        readable_words(ui.visuals_mut());
+        about_words(ui, lang, info, brand);
+    });
+}
+
+fn about_words(ui: &mut Ui, lang: Lang, info: &AboutInfo, brand: &AboutBrand) {
     let [r, g, b] = brand.program.accent();
     let accent = Color32::from_rgb(r, g, b);
     let name_colour = about_name_colour(brand.program, ui.visuals().window_fill);
@@ -2320,6 +2353,136 @@ mod tests {
                     .data(|d| d.get_temp::<egui::TextureHandle>(id))
                     .is_some();
                 assert_eq!(kept, logo_png == picture, "{program:?}");
+            }
+        }
+    }
+
+    /// The visuals of the themes of the six programs, as each of them makes them: the base of egui it starts from, the ground of its
+    /// windows and the text colour it sets over it.
+    fn themes_of_the_programs() -> Vec<(String, egui::Visuals)> {
+        use eh3d_view::theme::{Theme, ThemeId};
+        let rgb = |[r, g, b]: [u8; 3]| Color32::from_rgb(r, g, b);
+        let painted = |dark: bool, ground: [u8; 3], text: [u8; 3]| {
+            let mut v = if dark {
+                egui::Visuals::dark()
+            } else {
+                egui::Visuals::light()
+            };
+            v.window_fill = rgb(ground);
+            v.panel_fill = rgb(ground);
+            v.override_text_color = Some(rgb(text));
+            v
+        };
+        let mut all = Vec::new();
+        // CNC: its eleven themes (and both looks of the system one), always over the dark visuals
+        let mut cnc: Vec<(String, Theme)> = ThemeId::ALL
+            .into_iter()
+            .map(|id| (id.key().to_owned(), Theme::for_id(id)))
+            .collect();
+        for light in [true, false] {
+            let theme = Theme::from_system_values(light, None);
+            cnc.push((format!("system light={light}"), theme));
+        }
+        for (name, t) in cnc {
+            let (panel, text) = (t.panel, t.text);
+            all.push((
+                format!("CNC {name}"),
+                painted(true, [panel.0, panel.1, panel.2], [text.0, text.1, text.2]),
+            ));
+        }
+        for (name, dark, ground, text) in [
+            ("PCB dark", true, [0x22, 0x1c, 0x17], [0xf4, 0xec, 0xe0]),
+            ("PCB light", false, [0xfb, 0xf9, 0xf4], [0x1c, 0x1a, 0x17]),
+            ("PCB contrast", true, [0x14, 0x14, 0x14], [0xff, 0xff, 0xff]),
+            ("PNP phoenix", true, [0x0d, 0x1f, 0x18], [0xd8, 0xff, 0xde]),
+            ("PNP light", false, [0xff, 0xff, 0xff], [0x14, 0x2b, 0x20]),
+            ("PNP contrast", true, [0x00, 0x00, 0x00], [0xff, 0xff, 0xff]),
+            ("3DP dark", true, [0x20, 0x1d, 0x1a], [0xee, 0xe6, 0xdc]),
+            ("3DP light", false, [0xfb, 0xf8, 0xf4], [0x22, 0x1e, 0x1a]),
+            ("CAD forge", true, [0x22, 0x1c, 0x17], [0xf4, 0xec, 0xe0]),
+            ("LASER forge", true, [0x22, 0x1c, 0x17], [0xf4, 0xec, 0xe0]),
+        ] {
+            all.push((name.to_owned(), painted(dark, ground, text)));
+        }
+        // CAD and LASER also have the two looks of egui as they are
+        all.push(("egui dark".to_owned(), egui::Visuals::dark()));
+        all.push(("egui light".to_owned(), egui::Visuals::light()));
+        all
+    }
+
+    /// Every word written by `shape`, with the colour it is written in.
+    fn inks_of(shape: &egui::Shape, out: &mut Vec<(String, Color32)>) {
+        match shape {
+            egui::Shape::Text(t) => {
+                for section in &t.galley.job.sections {
+                    let own = section.format.color;
+                    let ink = t
+                        .override_text_color
+                        .unwrap_or(if own == Color32::PLACEHOLDER {
+                            t.fallback_color
+                        } else {
+                            own
+                        });
+                    out.push((t.galley.text().to_owned(), ink));
+                }
+            }
+            egui::Shape::Vec(all) => all.iter().for_each(|s| inks_of(s, out)),
+            _ => {}
+        }
+    }
+
+    #[test]
+    fn every_word_of_the_window_about_reads_in_every_theme_of_the_six_programs() {
+        for (theme, visuals) in themes_of_the_programs() {
+            for program in Phoenix::ALL {
+                // with and without the accents of the program, which change the colour of the links
+                for accented in [false, true] {
+                    let mut visuals = visuals.clone();
+                    if accented {
+                        accent_visuals(program, &mut visuals);
+                    }
+                    let ground = visuals.window_fill;
+                    let ctx = egui::Context::default();
+                    ctx.set_visuals(visuals);
+                    let info = program.info("1.2.3");
+                    let brand = AboutBrand {
+                        program,
+                        logo_png: &b"broken"[..],
+                    };
+                    let mut words = Vec::new();
+                    // the first frame only measures the grid
+                    for _ in 0..3 {
+                        let input = egui::RawInput {
+                            screen_rect: Some(egui::Rect::from_min_size(
+                                Pos2::ZERO,
+                                Vec2::new(1400.0, 900.0),
+                            )),
+                            ..Default::default()
+                        };
+                        let out = ctx.run_ui(input, |ui| {
+                            about_contents(ui, Lang::En, &info, &brand);
+                        });
+                        words.clear();
+                        for clipped in &out.shapes {
+                            inks_of(&clipped.shape, &mut words);
+                        }
+                        out.drop_without_applying_deltas();
+                    }
+                    for label in [DockText::Version, DockText::License] {
+                        let label = tr(Lang::En, label);
+                        assert!(words.iter().any(|(w, _)| w == label), "{theme}: {words:?}");
+                    }
+                    for (word, ink) in &words {
+                        let found = crate::palette::contrast(
+                            [ink.r(), ink.g(), ink.b()],
+                            [ground.r(), ground.g(), ground.b()],
+                        );
+                        assert!(
+                            ink.a() == 255 && found >= crate::palette::TEXT_CONTRAST,
+                            "{theme} {program:?} accented={accented}: '{word}' {ink:?} on {ground:?} is {found:.2}"
+                        );
+                    }
+                }
             }
         }
     }

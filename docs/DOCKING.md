@@ -18,7 +18,7 @@ eh3d-dock = { git = "https://github.com/JuanenRac/EH3D-COMMON", tag = "<release 
 
 | Action | How |
 |---|---|
-| Move a panel | Drag its tab. Over the middle of a group it becomes a tab (at the place between the tabs where it is dropped); near a side of a group it splits the group; along the edge of the window it takes a quarter of the window. A preview shows the result before the button is released. |
+| Move a panel | Drag its tab. Over the middle of a group it becomes a tab (at the place between the tabs where it is dropped); near a side of a group it splits the group; along the edge of the window it takes a quarter of the window. A preview shows the result before the button is released. Tabs that do not fit in one row go to further rows with their whole name, and they are dragged, dropped between and reordered in any row. |
 | Float a panel | Drag the tab out of the window, or the tab's context menu, `Float`. A floating window can hold several tabs, can be moved and resized, has a button that brings it back (`Dock`) and a close button. |
 | Fold a panel into an edge | The context menu, `Auto-hide`, then the side. Only a tab remains on the edge; clicking it shows the panel over the work area until the pointer clicks elsewhere or `Escape` is pressed. |
 | Hide and show a panel | `x` on the tab bar, the context menu, or the View menu, which lists every panel with a check mark. A panel comes back to the place it left, when that place still exists. |
@@ -70,9 +70,13 @@ let new_text = dock.config_text(&old_settings_text);
 
 `cargo run -p eh3d-dock --example dock_demo --features gui -- --sector cnc --workspace Run --lang es --shot cnc.svg` writes a picture of a factory layout of any sector and draws a few frames of the real egui code with no window.
 
+## Tabs in rows
+
+When the tabs of a group do not fit in the width of its bar, the bar grows by rows of `gui::BAR_H` points and the content of the panel starts under the last one; the first row is shorter, because the buttons of the group are at its right. A title wider than a whole row (a very narrow panel) has a row of its own, is cut at its end and is shown whole under the pointer. A bar takes at most half the height of its group, and never fewer than two rows; if the tabs need more, the rows shown are those that keep the tab on show in sight, and `Ctrl+PageDown` and `Ctrl+PageUp` reach the others. The rows are worked out by `arrange::tab_rows`, with no window.
+
 ## Declaring the panels
 
-A panel is a `PanelDef`: a stable name (letters, digits, `_`, `-`, `.`, at most 48 characters; it is what the settings file stores), a title in eight languages (`Text8`, in the order English, Spanish, Italian, German, French, Portuguese of Portugal, Chinese, Japanese), an optional icon of one or two characters that stands for the title when the tab is narrow and would cut it (a title that fits whole is always written), the smallest size it needs and an optional shortcut that shows or hides it.
+A panel is a `PanelDef`: a stable name (letters, digits, `_`, `-`, `.`, at most 48 characters; it is what the settings file stores), a title in eight languages (`Text8`, in the order English, Spanish, Italian, German, French, Portuguese of Portugal, Chinese, Japanese), an optional icon of one or two characters (a short sign a program may show elsewhere; the tabs always write the title), the smallest size it needs and an optional shortcut that shows or hides it.
 
 ```rust
 PanelDef::new("layers", Text8(["Layers", "Capas", "Livelli", "Ebenen", "Calques", "Camadas", "图层", "レイヤー"]))
@@ -161,7 +165,7 @@ dock.set_brand(AboutBrand {
 });
 ```
 
-The window then shows the picture inside a ring of the accent colour of the program, its name in large letters, one sentence about it in the eight languages, the version, the author, the e-mail, the page of the author, the repository (the addresses can be clicked), the licence, the notices of data of others when the program carries them and the notice about trademarks. The accent colour, the sentence, the repository and the notices belong to `about::Phoenix`, so they are written once. A program with a window of its own calls `gui::about_contents(ui, lang, &info, &brand)` inside it. Without a brand the window is the plain list of lines, as before. The picture is a PNG of at most 1024 by 1024 pixels; one that cannot be read leaves the ring empty.
+The window then shows the picture inside a ring of the accent colour of the program, its name in large letters, one sentence about it in the eight languages, the version, the author, the e-mail, the page of the author, the repository (the addresses can be clicked), the licence, the notices of data of others when the program carries them and the notice about trademarks. The accent colour, the sentence, the repository and the notices belong to `about::Phoenix`, so they are written once. A program with a window of its own calls `gui::about_contents(ui, lang, &info, &brand)` inside it. Its words (the labels, the weak lines and the links too) are written at 4.5:1 or more on the ground of the window (`window_fill`), whatever the program changed of its visuals. Without a brand the window is the plain list of lines, as before. The picture is a PNG of at most 1024 by 1024 pixels; one that cannot be read leaves the ring empty.
 
 | Program | Palette | Principal | Middle | Deep | Light | Glow |
 |---|---|---|---|---|---|---|
