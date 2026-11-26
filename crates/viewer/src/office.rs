@@ -9,7 +9,7 @@
 use std::collections::{BTreeMap, HashMap};
 use std::io::{Cursor, Read};
 
-use crate::doc::{Block, Builder, Preview, MAX_COLUMNS};
+use crate::doc::{Block, Builder, Preview, MAX_COLUMNS, MAX_PIECE_CHARS};
 use crate::error::ViewerError;
 use crate::kind::OfficeKind;
 use crate::limits::ViewerLimits;
@@ -77,9 +77,17 @@ impl<'a> Package<'a> {
 }
 
 fn gather(into: &mut String, text: &str) {
-    if into.len() < MAX_GATHERED {
-        into.push_str(text);
+    let mut end = MAX_GATHERED.saturating_sub(into.len()).min(text.len());
+    while !text.is_char_boundary(end) {
+        end -= 1;
     }
+    into.push_str(&text[..end]);
+}
+
+/// A copy of a value that is shown several times, no longer than a preview keeps (one character more, so that the preview says
+/// it was cut).
+fn shown_copy(value: &str) -> String {
+    value.chars().take(MAX_PIECE_CHARS + 1).collect()
 }
 
 fn local(name: &str) -> &str {
@@ -362,7 +370,7 @@ fn worksheet(xml: &str, strings: &[String], builder: &mut Builder) -> Result<(),
                             .parse::<usize>()
                             .ok()
                             .and_then(|i| strings.get(i))
-                            .cloned()
+                            .map(|s| shown_copy(s))
                             .unwrap_or_default(),
                         "b" => (if value.trim() == "1" { "TRUE" } else { "FALSE" }).to_string(),
                         _ => std::mem::take(&mut value),
@@ -507,7 +515,10 @@ fn open_document(xml: &str, builder: &mut Builder) -> Result<(), ViewerError> {
                     heading = 0;
                 }
                 "table:table-cell" | "table:covered-table-cell" if depth == 1 => {
-                    let value = std::mem::take(&mut cell);
+                    let mut value = std::mem::take(&mut cell);
+                    if columns > 1 {
+                        value = shown_copy(&value);
+                    }
                     // an empty cell repeated to the end of the sheet only needs to be kept short
                     let room = MAX_COLUMNS.saturating_sub(row.len());
                     if columns > room && !value.is_empty() {
@@ -531,6 +542,10 @@ fn open_document(xml: &str, builder: &mut Builder) -> Result<(), ViewerError> {
                         rows.min(MAX_REPEATED_ROWS)
                     };
                     for _ in 0..times {
+                        if builder.full() {
+                            builder.truncate();
+                            break;
+                        }
                         builder.row(&mut table, done.clone());
                     }
                     rows = 1;

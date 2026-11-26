@@ -352,7 +352,14 @@ impl ContainerWriter {
                     .into(),
             );
         }
-        self.integrity_bytes()
+        let record = self.integrity_bytes()?;
+        // the reader counts integrity.json with the entries: a package it would refuse is not written
+        self.check_size(
+            INTEGRITY_ENTRY,
+            record.len() as u64,
+            self.spec.limits.max_entry_bytes_for(INTEGRITY_ENTRY),
+        )?;
+        Ok(record)
     }
 
     /// Writes the archive into `file`.

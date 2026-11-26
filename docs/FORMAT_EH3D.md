@@ -124,7 +124,7 @@ The documentation of a program is a branch of its own, so it takes part in the i
 
 ### Origin of an imported file: `<branch>/origin/`
 
-A program that imports a format of another program (EAGLE, KiCad, Gerber, STEP, 3MF, SVG, G-code...) keeps in its branch, under `origin/`, the **original file as it was read** and `origin/report.json`: the format, the name, the SHA-256 and the size of the file; the converter and its version; what was read, what was not read and what an export to the same format cannot say (each as a count with the reason). With that, the way back (export to the other format) tells what was lost instead of losing it unseen. The report is checked against the files that are there (hash, size, name under `origin/`). Export to another format is done by the same program from the same branch; the container stores no export.
+A program that imports a format of another program (EAGLE, KiCad, Gerber, STEP, 3MF, SVG, G-code...) keeps in its branch, under `origin/`, the **original file as it was read** and `origin/report.json`: the format, the name, the SHA-256 and the size of the file; the converter and its version; what was read, what was not read and what an export to the same format cannot say (each as a count with the reason). With that, the way back (export to the other format) tells what was lost instead of losing it unseen. The report is checked against the files that are there (hash, size, name under `origin/`). Export to another format is done by the same program from the same branch; the container stores no export. An imported file that is itself called `report.json` is kept as `origin/original-report.json`, so that the report does not write over it.
 
 ## Attachments: `attachments/`
 
@@ -179,7 +179,7 @@ No name given by a person is ever a path inside the project: the paths are made 
 
 ### Dangerous files
 
-One classification (`eh3d-filekind`) is used by the container, the viewer and the panel. Programs, scripts, office documents with macros, compressed archives (they are not looked into) and pages that can run code (HTML, SVG) are accepted, kept like any other file and marked `danger`: `executable`, `script`, `macros`, `archive` or `active-content`. The mark comes from the extension, from the first bytes (a program behind a harmless name) and, for office documents, from the macros named inside them; a document that cannot be looked into counts as one with macros.
+One classification (`eh3d-filekind`) is used by the container, the viewer and the panel. Programs, scripts, office documents with macros, compressed archives (they are not looked into) and pages that can run code (HTML, SVG) are accepted, kept like any other file and marked `danger`: `executable`, `script`, `macros`, `archive` or `active-content`. The mark comes from the extension, from the first bytes (a program behind a harmless name) and, for office documents, from the macros named inside them; a document that cannot be looked into counts as one with macros, and so does one whose archive does not end where its list of entries says, or lists no entry.
 
 * A file of a **kind the suite does not know** has no `danger` word in the record, and still asks like a dangerous one (`Attachment::needs_confirmation`, `AttachError::NeedsConfirmation` with no danger).
 * Taking a dangerous or unknown file out needs the agreement of a person (`Consent::Given`, `--confirm-dangerous`). The mark of the record is not trusted alone: the name and the content of the file are looked at again, and a refused or partial file is removed.

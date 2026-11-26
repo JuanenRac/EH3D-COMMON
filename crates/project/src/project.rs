@@ -383,6 +383,10 @@ impl Project {
             ));
         }
 
+        let sizes: BTreeMap<String, u64> = container
+            .entries()
+            .map(|e| (e.name.clone(), e.size))
+            .collect();
         let names: Vec<String> = container.entries().map(|e| e.name.clone()).collect();
         for name in &names {
             if classify(name).is_none() {
@@ -423,6 +427,14 @@ impl Project {
                             name,
                         ));
                     };
+                    // also without the check: the archive is held to the limits, the record is not
+                    if sizes.get(name) != Some(&claimed.size) {
+                        return Err(refuse_at(
+                            PkgCode::Integrity,
+                            "the size differs from the record",
+                            name,
+                        ));
+                    }
                     grouped.entry(id.to_owned()).or_default().insert(
                         rel.to_owned(),
                         FileInfo {
@@ -1553,12 +1565,17 @@ impl Project {
             if let Some(parent) = target.parent() {
                 std::fs::create_dir_all(parent)?;
             }
+            let mut stream = self.container.read_stream(&entry_name(id, &rel))?;
             let mut file = std::fs::OpenOptions::new()
                 .write(true)
                 .create_new(true)
                 .open(&target)?;
-            let mut stream = self.container.read_stream(&entry_name(id, &rel))?;
-            io::copy(&mut stream, &mut file)?;
+            if let Err(e) = io::copy(&mut stream, &mut file) {
+                // half a file is not left: it looks whole and it stops the next try
+                drop(file);
+                let _ = std::fs::remove_file(&target);
+                return Err(e.into());
+            }
             count += 1;
         }
         Ok(count)

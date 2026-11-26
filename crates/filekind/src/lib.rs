@@ -353,7 +353,7 @@ const ZIPPED_OFFICE: &[&str] = &[
     "ppsx", "ppt", "pptx", "xls", "xlt", "xlsx", "xltx",
 ];
 /// The design files whose normal form is a ZIP archive.
-const ZIPPED_DESIGN: &[&str] = &["3mf", "eh3d", "eh3dproj", "f3d", "fcstd"];
+const ZIPPED_DESIGN: &[&str] = &["3mf", "eh3d", "eh3dproj", "f3d", "fcstd", "phoenixproj"];
 const ARCHIVES: &[&str] = &[
     "7z", "ace", "arj", "bz2", "gz", "lz", "lzh", "lzma", "rar", "tar", "tbz", "tgz", "txz", "xz",
     "z", "zip", "zst",
@@ -462,6 +462,15 @@ pub fn sanitize_file_name(name: &str) -> String {
             end -= 1;
         }
         cleaned = format!("{}{extension}", stem[..end].trim_end());
+        // the cut may have left a dot at the end, which Windows drops and a second cleaning would take away
+        let kept = cleaned
+            .trim_end_matches(|c: char| c == '.' || c.is_whitespace())
+            .len();
+        cleaned.truncate(kept);
+        // or have left nothing but a device name (`CON` and a long run of spaces)
+        if reserved_on_windows(cleaned.split('.').next().unwrap_or("")) {
+            cleaned.insert(0, '_');
+        }
     }
     cleaned
 }
@@ -625,19 +634,24 @@ fn zip_names_macros(file: &mut (impl Read + Seek)) -> io::Result<Option<bool>> {
     let Some(end) = tail
         .windows(4)
         .rposition(|w| w == b"PK\x05\x06")
-        .filter(|at| at + 22 <= tail.len())
+        // the end record is the one whose comment ends the file
+        .filter(|&at| at + 22 <= tail.len() && at + 22 + le16(&tail, at + 20) == tail.len())
     else {
         return Ok(None);
     };
+    let entries = le16(&tail, end + 10);
+    let end_at = len - tail_len + end as u64;
     let size = le32(&tail, end + 12);
     let offset = le32(&tail, end + 16);
-    if size > MAX_DIRECTORY_BYTES || offset.checked_add(size).is_none_or(|e| e > len) {
+    // the list of entries lies just before the end record; otherwise the real one is another than it says
+    if size > MAX_DIRECTORY_BYTES || offset.checked_add(size) != Some(end_at) {
         return Ok(None);
     }
     let mut directory = vec![0u8; size as usize];
     file.seek(SeekFrom::Start(offset))?;
     file.read_exact(&mut directory)?;
     let mut at = 0;
+    let mut seen = 0;
     while at < directory.len() {
         if at + 46 > directory.len() || directory[at..at + 4] != *b"PK\x01\x02" {
             return Ok(None);
@@ -654,12 +668,15 @@ fn zip_names_macros(file: &mut (impl Read + Seek)) -> io::Result<Option<bool>> {
             || name.ends_with("vbadata.xml")
             || name.starts_with("basic/")
             || name.starts_with("scripts/")
+            || name.starts_with("xl/macrosheets/")
         {
             return Ok(Some(true));
         }
         at = next;
+        seen += 1;
     }
-    Ok(Some(false))
+    // an office document with no entry, or with another number than it says, cannot be looked into
+    Ok((seen > 0 && seen == entries).then_some(false))
 }
 
 /// Whether the bytes of an old binary office document name macros, reading it in blocks.

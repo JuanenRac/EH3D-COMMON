@@ -153,7 +153,7 @@ fn find_directory<R: Read + Seek>(
         }
         let record_pos = le64(&tail, at - 20 + 8);
         let mut record = [0u8; 56];
-        if record_pos + 56 > len {
+        if record_pos.checked_add(56).is_none_or(|end| end > len) {
             return Err(damaged("the ZIP64 end record is outside the file"));
         }
         reader.seek(SeekFrom::Start(record_pos))?;

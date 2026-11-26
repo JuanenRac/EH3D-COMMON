@@ -206,6 +206,7 @@ fn a_zip_is_expected_only_behind_the_formats_that_are_one() {
         "a.eh3d",
         "a.eh3dproj",
         "a.fcstd",
+        "a.phoenixproj",
     ] {
         assert_eq!(danger_of(name, b"PK"), None, "{name}");
     }
@@ -248,4 +249,92 @@ fn a_warning_from_a_record_only_adds_care() {
     found.warn(Danger::Archive);
     assert_eq!(found.danger, Some(Danger::Executable), "never less careful");
     assert!(!found.may_launch() && found.needs_consent());
+}
+
+/// An end record of a list of entries that has nothing in it.
+const EMPTY_END: &[u8; 22] = b"PK\x05\x06\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0";
+
+#[test]
+fn a_second_end_record_in_the_comment_does_not_hide_macros() {
+    let plain = zip_of(&["word/document.xml"]);
+    assert_eq!(of_bytes("a.docx", &plain), None);
+    let mut macros = zip_of(&["word/document.xml", "word/vbaProject.bin"]);
+    // the comment of the real end record is a second one that lists no entry
+    let comment_at = macros.len() - 2;
+    macros[comment_at..].copy_from_slice(&22u16.to_le_bytes());
+    macros.extend_from_slice(EMPTY_END);
+    assert_eq!(of_bytes("a.docx", &macros), Some(Danger::Macros));
+    // and neither an empty archive nor one with bytes after its end can be looked into
+    let mut empty = b"PK\x03\x04".to_vec();
+    empty.extend_from_slice(EMPTY_END);
+    assert_eq!(of_bytes("a.docx", &empty), Some(Danger::Macros));
+    let mut trailing = plain.clone();
+    trailing.extend_from_slice(b"more");
+    assert_eq!(of_bytes("a.docx", &trailing), Some(Danger::Macros));
+    assert_eq!(
+        of_bytes("a.xlsx", &zip_of(&["xl/macrosheets/sheet1.xml"])),
+        Some(Danger::Macros)
+    );
+}
+
+#[test]
+fn an_office_archive_cut_or_changed_is_judged_without_a_panic() {
+    let whole = zip_of(&["word/document.xml", "word/vbaProject.bin"]);
+    for cut in 4..whole.len() {
+        assert_eq!(
+            of_bytes("a.docx", &whole[..cut]),
+            Some(Danger::Macros),
+            "cut at {cut}"
+        );
+    }
+    for at in 0..whole.len() {
+        for bit in [0x01, 0x80, 0xff] {
+            let mut bytes = whole.clone();
+            bytes[at] ^= bit;
+            let _ = of_bytes("a.docx", &bytes);
+        }
+    }
+}
+
+#[test]
+fn a_cleaned_name_cleans_to_itself() {
+    let pieces = [
+        "a", "Z", " ", ".", "..", "-", "_", "/", "\\", ":", "*", "é", "日", "\u{202e}", "\u{0}",
+        "CON", "nul", "COM1", "exe", "pdf",
+    ];
+    let mut state = 0x5EED_0002u64;
+    let mut below = |n: usize| {
+        state ^= state << 13;
+        state ^= state >> 7;
+        state ^= state << 17;
+        (state % n as u64) as usize
+    };
+    let mut names: Vec<String> = vec![
+        format!("{}.{}", "a".repeat(149), "b".repeat(30)),
+        format!("CON{}x", " ".repeat(200)),
+        format!("com1{}x.pdf", " ".repeat(200)),
+    ];
+    for _ in 0..5_000 {
+        let mut name = String::new();
+        for _ in 0..1 + below(8) {
+            let piece = pieces[below(pieces.len())];
+            let times = if below(6) == 0 { 1 + below(80) } else { 1 };
+            name.push_str(&piece.repeat(times));
+        }
+        names.push(name);
+    }
+    for name in names {
+        let once = sanitize_file_name(&name);
+        assert_eq!(sanitize_file_name(&once), once, "{name:?}");
+        assert!(
+            !once.is_empty() && once.len() <= MAX_FILE_NAME_BYTES,
+            "{name:?}"
+        );
+        assert!(
+            !once.ends_with('.')
+                && !once.starts_with(['.', '-'])
+                && !once.contains(['/', '\\', ':']),
+            "{name:?} {once:?}"
+        );
+    }
 }
