@@ -1,0 +1,65 @@
+{
+  "project": "https://github.com/bblanchon/pdfium-binaries",
+  "release": "chromium/8165",
+  "version": "160.0.8165.0",
+  "javascript": false,
+  "xfa": false,
+  "platforms": {
+    "windows-x86_64": {
+      "asset": "pdfium-win-x64.tgz",
+      "archive_sha256": "ca7338ae7779b8b1b82f4580305c4d762d214f8df1d54b47647fe3cc75989ded",
+      "member": "bin/pdfium.dll",
+      "library": "pdfium.dll",
+      "size": 7846912,
+      "library_sha256": "31d249b8535dd5f351ae7f4b714dc4bb1d76b6069b321a309bc99271dd65f566"
+    },
+    "windows-x86": {
+      "asset": "pdfium-win-x86.tgz",
+      "archive_sha256": "fc697d735516b2dd408072ecdd808a67e12c6402f3e762299015da1d81142986",
+      "member": "bin/pdfium.dll",
+      "library": "pdfium.dll",
+      "size": 7226368,
+      "library_sha256": "b30585c8c17c466306d7c26945c232e427bd2f04d90ee5de6d6c8155449fa05c"
+    },
+    "windows-aarch64": {
+      "asset": "pdfium-win-arm64.tgz",
+      "archive_sha256": "d65e405c59cffe6fe36c0935b90d40ddf3ce75ef284f3168a28dcf00d0388131",
+      "member": "bin/pdfium.dll",
+      "library": "pdfium.dll",
+      "size": 7074816,
+      "library_sha256": "9b1eb281e6f8b2da9f54fc71619198c90142adab2f57f5251a4824a08da621b3"
+    },
+    "linux-x86_64": {
+      "asset": "pdfium-linux-x64.tgz",
+      "archive_sha256": "ba7865e16c0271daab75256790be06c26272190afe6e2a70eae0bb39bb99089c",
+      "member": "lib/libpdfium.so",
+      "library": "libpdfium.so",
+      "size": 8287344,
+      "library_sha256": "63b70290e3e88eff6b236a4c87cb58461b4fe9fae56217314eeda31aff741479"
+    },
+    "linux-aarch64": {
+      "asset": "pdfium-linux-arm64.tgz",
+      "archive_sha256": "338f5dcc907a20331812ae8ab01b16ff18966f4a247d790c8ad8fb49029d768b",
+      "member": "lib/libpdfium.so",
+      "library": "libpdfium.so",
+      "size": 8325416,
+      "library_sha256": "963309fe119e4614afb750bc6a4e35272bd5b8bad61fb84df282c9c821f7de8b"
+    },
+    "macos-x86_64": {
+      "asset": "pdfium-mac-x64.tgz",
+      "archive_sha256": "07285915b564e46a432a9909dbc1f15892885ca6489e3faeefc70dee77ed371a",
+      "member": "lib/libpdfium.dylib",
+      "library": "libpdfium.dylib",
+      "size": 8046528,
+      "library_sha256": "fcbfee9dc7f895289fbfb8f7d1f0d5d643f60fcb790708425daaa0cfa64f330d"
+    },
+    "macos-aarch64": {
+      "asset": "pdfium-mac-arm64.tgz",
+      "archive_sha256": "112e74d717f3e0310273b70f3c8780e8a61ff11b34834124465c8305c841d350",
+      "member": "lib/libpdfium.dylib",
+      "library": "libpdfium.dylib",
+      "size": 7602048,
+      "library_sha256": "d421e426bd487de02fa3bd1f2aeaf56947261f790e6116951e26f729ced1b018"
+    }
+  }
+}

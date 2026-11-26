@@ -86,6 +86,46 @@ jobs:
       - name: Tests of the docking frame, with the egui drawing
         run: cargo test -p eh3d-dock --all-targets --features gui
 
+  viewer:
+    # the attachment viewer with its drawing and the real pinned PDFium beside the test programs
+    name: Attachment viewer with PDFium (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - name: Rust toolchain
+        shell: bash
+        run: rustup toolchain install "$(sed -n 's/^channel = "\(.*\)"/\1/p' rust-toolchain.toml)" --profile minimal --component clippy
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
+        with:
+          workspaces: EH3D-COMMON
+      - name: The pinned PDFium beside the test programs
+        run: python -I tools/fetch_pdfium.py --out target/debug/deps
+      - name: Lints with the drawing
+        run: cargo clippy -p eh3d-viewer --all-targets --features gui -- -D warnings
+      - name: Tests with the drawing and the real library
+        env:
+          EH3D_PDFIUM_REQUIRED: "1"
+        run: cargo test -p eh3d-viewer --all-targets --features gui
+      - name: Tests with the 32-bit library of Windows
+        if: runner.os == 'Windows'
+        shell: bash
+        env:
+          EH3D_PDFIUM_REQUIRED: "1"
+        run: |
+          rustup target add i686-pc-windows-msvc
+          python -I tools/fetch_pdfium.py --platform windows-x86 --out target/i686-pc-windows-msvc/debug/deps
+          cargo test -p eh3d-viewer --all-targets --features gui --target i686-pc-windows-msvc
+
   consumers-list:
     name: Repositories that depend on this one
     runs-on: ubuntu-latest

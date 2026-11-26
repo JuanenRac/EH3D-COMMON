@@ -1,0 +1,35 @@
+Third-party notices
+===================
+
+PDFium
+------
+
+The viewer shows PDF files with PDFium, the PDF library of the Chromium project
+(Copyright The PDFium Authors; BSD 3-Clause and Apache 2.0, https://pdfium.googlesource.com/pdfium/).
+It is not part of this source tree: a program that ships the viewer puts the library beside its
+executable, with the licence texts, using tools/fetch_pdfium.py.
+
+The build used is the one published at https://github.com/bblanchon/pdfium-binaries
+(the packaging is Copyright Benoit Blanchon, MIT licence), release chromium/8165,
+PDFium 160.0.8165.0, in its variant without V8 and without XFA. The release is immutable and carries
+the attestation of GitHub; the SHA-256 of each archive and of each library is written in
+pdfium.json and checked when the library is fetched and again before it is loaded.
+
+The library includes other software, each under its own licence, whose texts come in the folder
+"licenses" of the archive (fetch_pdfium.py writes them to pdfium-licenses): Abseil, AGG 2.3,
+Dragonbox, fast_float, FreeType, HarfBuzz, Highway, ICU, Little CMS, libjpeg-turbo, OpenJPEG,
+libpng, LLVM libc, simdutf and zlib. A program that ships the library ships that folder too.
+
+Two of them ask to be named in the documentation of a program that ships them:
+
+  Portions of this software are copyright The FreeType Project (https://freetype.org).
+  All rights reserved.
+
+  This software is based in part on the work of the Independent JPEG Group.
+
+Rust crates
+-----------
+
+libloading (ISC licence) loads the library. image (MIT or Apache 2.0), with the decoders it brings
+(png, zune-jpeg, gif, image-webp), reads the pictures. zip (MIT) reads the office archives, sha2
+(MIT or Apache 2.0) checks the library, egui (MIT or Apache 2.0) draws the panel.
