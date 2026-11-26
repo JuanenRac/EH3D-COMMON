@@ -3,6 +3,7 @@
 All notable changes to this project are documented here.
 
 ## [Unreleased]
+- **The `.eh3d` project, as the programs use it, written once (`eh3d_project::manufacturing`, `suiteview`, `suitetext`, `docs/FORMAT_EH3D.md`):** `manufacturing` reads the layers of the job of a project, keeps the result of a program in its own branch with a copy of each input and a reference that says when the job changed, and was the code of the viewer until now; `suiteview` and `suitetext` are the two modules that the windows of the laser and of the milling programs held each: the branches and their state, what is out of date or signed, what a person has to agree to before a write, a copy under another name, and the words in the eight languages, with three new ones for the programs that open a drilling or routing job; `suiteview::sets_key` says whether a settings file gives a value to a key, so a program keeps a credential out of a project. 7 new tests.
 
 ## [0.3.2] - Signed project branches, shared branch handling, a printer catalog, the About window and one color per program
 

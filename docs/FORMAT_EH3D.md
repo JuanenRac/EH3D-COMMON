@@ -207,6 +207,14 @@ appbranch::extract(path, "pcb", dir)?;
 
 To adopt it, a program keeps its formats (what a drawing or a program of a machine is, what the report counts, its own messages) and drops its copies of the working branch, the open or create step, the bounded read, the identifier, the take, the warnings and the list. The keys of the record of the branch stay the ones the program already writes, so the files made before still open. Errors are `appbranch::BranchError`, whose text is the message for the person, and the notes after a write are `appbranch::Notice`.
 
+## The job and the window
+
+Two more modules hold what was repeated between programs.
+
+`eh3d_project::manufacturing` is for a program that makes something from the job of a project (a picture, stencils, isolation programs, a drilling or routing plan). `read_job` gives the layer files that `manufacturing/project.json` names (at most 256 files and 256 MiB), `layers_of`, `choose` and `result_name` pick one and name what is made from it, `keep_result` writes it under `result/` of the branch of the program with a copy of the layer under `taken/manufacturing/` and a reference to the content of the job, `state` and `describe` say what is kept and whether it is out of date. A layer that changed between the read and the write is refused. When the job changed, the results made from the older one are dropped on the next write.
+
+`eh3d_project::suiteview` is for a window: `view` lists the branches with their state, `banner` is what is always in sight, `warnings` is what a person has to agree to before a write, `copy_project` copies a project under another name and never over a file. Its words are in `suitetext`, in the eight languages. `suiteview::sets_key` says whether a `key = value` settings file gives a value to a key; a program asks it before it puts one of its settings files in a project, because a project is passed on and a credential must not travel in it.
+
 ## Limits and the strict container
 
 The project container is `eh3d-container` with the strict policy: names in Unicode normal form C, no part ending in a dot or a space, no Windows device names, no duplicate once case and form are ignored, no links, devices or directory entries, no ZIP64, no encryption of ZIP entries, deflate only, flags limited, and no data after the archive. Limits of the preset: at most 50,000 entries, 4 GiB minus one byte in all, 256 MiB for one entry (1 GiB under `cad/`, `3dp/`, `cnc/`, `pnp/`, `laser/` and `manufacturing/`); a record (`project.json`, `branch.json`, an index) is read up to 16 MiB. The reader reads the central directory first, refuses before it decompresses, and stops at a time and memory budget. The limits are plain data that a program may read from its configuration file.
