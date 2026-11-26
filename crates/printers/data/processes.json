@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "levels": [
+    { "level": "draft", "layer_ratio": 0.6, "first_layer_ratio": 0.6, "line_width_ratio": 1.15, "walls": 2, "top_layers": 4, "bottom_layers": 3, "infill_pct": 10 },
+    { "level": "standard", "layer_ratio": 0.5, "first_layer_ratio": 0.5, "line_width_ratio": 1.125, "walls": 2, "top_layers": 4, "bottom_layers": 4, "infill_pct": 20 },
+    { "level": "fine", "layer_ratio": 0.25, "first_layer_ratio": 0.5, "line_width_ratio": 1.05, "walls": 3, "top_layers": 7, "bottom_layers": 5, "infill_pct": 20 },
+    { "level": "strong", "layer_ratio": 0.5, "first_layer_ratio": 0.5, "line_width_ratio": 1.125, "walls": 4, "top_layers": 6, "bottom_layers": 5, "infill_pct": 40 }
+  ]
+}

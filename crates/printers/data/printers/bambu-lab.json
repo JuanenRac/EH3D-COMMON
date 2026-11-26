@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Bambu Lab",
+  "printers": [
+    {
+      "id": "bambu-lab/a1",
+      "manufacturer": "Bambu Lab",
+      "model": "A1",
+      "volume_mm": [256, 256, 256],
+      "filament_diameter_mm": 1.75,
+      "nozzle_default_mm": 0.4,
+      "nozzles_mm": [0.2, 0.4, 0.6, 0.8],
+      "enclosure": "open",
+      "nozzle_max_c": 300,
+      "bed_max_c": 100,
+      "multicolor": { "status": "optional", "system": "AMS lite", "max_colors": 4 },
+      "firmware": "bambu",
+      "adapter": "bambu_lan",
+      "adapter_documented": true,
+      "send_formats": ["gcode_3mf", "gcode"],
+      "sources": [
+        { "url": "https://bambulab.com/en/a1/tech-specs", "covers": ["volume_mm", "filament_diameter_mm", "nozzles_mm", "nozzle_max_c", "bed_max_c", "firmware"] },
+        { "url": "https://wiki.bambulab.com/en/a1/manual/faq", "covers": ["enclosure"] },
+        { "url": "https://bambulab.com/en/support/buying-guide/a1", "covers": ["multicolor"] },
+        { "url": "https://wiki.bambulab.com/en/software/third-party-integration", "covers": ["adapter"] },
+        { "url": "https://wiki.bambulab.com/en/software/bambu-connect", "covers": ["send_formats"] }
+      ],
+      "verified": false
+    },
+    {
+      "id": "bambu-lab/p1s",
+      "manufacturer": "Bambu Lab",
+      "model": "P1S",
+      "volume_mm": [256, 256, 256],
+      "filament_diameter_mm": 1.75,
+      "nozzle_default_mm": 0.4,
+      "nozzles_mm": [0.2, 0.4, 0.6, 0.8],
+      "enclosure": "enclosed",
+      "heated_chamber": false,
+      "nozzle_max_c": 300,
+      "bed_max_c": 100,
+      "multicolor": { "status": "optional", "system": "AMS", "max_colors": 16 },
+      "firmware": "bambu",
+      "adapter": "bambu_lan",
+      "adapter_documented": true,
+      "send_formats": ["gcode_3mf", "gcode"],
+      "sources": [
+        { "url": "https://us.store.bambulab.com/products/p1s", "covers": ["volume_mm", "filament_diameter_mm", "nozzles_mm", "enclosure", "nozzle_max_c", "bed_max_c", "multicolor", "firmware"] },
+        { "url": "https://wiki.bambulab.com/en/p1/manual/faq", "covers": ["enclosure", "heated_chamber"] },
+        { "url": "https://wiki.bambulab.com/en/software/third-party-integration", "covers": ["adapter"] },
+        { "url": "https://wiki.bambulab.com/en/software/bambu-connect", "covers": ["send_formats"] }
+      ],
+      "verified": false
+    }
+  ]
+}

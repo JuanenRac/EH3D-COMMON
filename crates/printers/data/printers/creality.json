@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "manufacturer": "Creality",
+  "printers": [
+    {
+      "id": "creality/k1c",
+      "manufacturer": "Creality",
+      "model": "K1C",
+      "volume_mm": [220, 220, 250],
+      "filament_diameter_mm": 1.75,
+      "nozzle_default_mm": 0.4,
+      "nozzles_mm": [0.4],
+      "enclosure": "enclosed",
+      "nozzle_max_c": 300,
+      "bed_max_c": 100,
+      "multicolor": { "status": "optional", "system": "CFS" },
+      "firmware": "klipper",
+      "adapter": "klipper_moonraker",
+      "adapter_documented": false,
+      "send_formats": ["gcode"],
+      "sources": [
+        { "url": "https://www.creality.com/support/k1c-carbon-3d-printer", "covers": ["volume_mm", "enclosure"] },
+        { "url": "https://www.creality.com/products/k1c-carbon-3d-printer", "covers": ["multicolor", "firmware"] },
+        { "url": "https://www.creality.com/compare/compare-k1-flagship-series", "covers": ["filament_diameter_mm", "nozzles_mm", "nozzle_max_c", "bed_max_c", "send_formats"] }
+      ],
+      "verified": false
+    },
+    {
+      "id": "creality/ender-3-v3-ke",
+      "manufacturer": "Creality",
+      "model": "Ender-3 V3 KE",
+      "volume_mm": [220, 220, 240],
+      "filament_diameter_mm": 1.75,
+      "nozzle_default_mm": 0.4,
+      "nozzles_mm": [0.4],
+      "enclosure": "open",
+      "heated_chamber": false,
+      "nozzle_max_c": 300,
+      "bed_max_c": 100,
+      "multicolor": { "status": "unknown" },
+      "firmware": "klipper",
+      "adapter": "klipper_moonraker",
+      "adapter_documented": false,
+      "sources": [
+        { "url": "https://www.creality.com/support/creality-ender-3-v3-ke", "covers": ["volume_mm", "enclosure", "heated_chamber"] },
+        { "url": "https://store.creality.com/as/products/ender-3-v3-ke-3d-printer", "covers": ["nozzle_max_c", "bed_max_c"] },
+        { "url": "https://store.creality.com/blogs/all/ender-3-v3-se-vs-ke", "covers": ["filament_diameter_mm", "nozzles_mm"] },
+        { "url": "https://www.creality.com/compare/compare-ender-3-v3-series", "covers": ["firmware"] }
+      ],
+      "verified": false
+    }
+  ]
+}
