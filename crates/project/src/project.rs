@@ -24,10 +24,11 @@ use serde_json::Value;
 
 use crate::meta::{ConversionReport, DocIndex, Metadata, DOC_INDEX_FILE, META_FILE, REPORT_FILE};
 use crate::records::{
-    branch_content_hash, signing_message, BranchIndexEntry, BranchRecord, Dependency,
-    EncryptionRecord, ProjectRecord, Seal, BRANCH_SIGNATURE_LABEL, PROJECT_SIGNATURE_LABEL,
+    branch_content_hash, try_signing_message, BranchIndexEntry, BranchRecord, Dependency,
+    EncryptionRecord, ProjectRecord, Seal, SignatureRecord, BRANCH_SIGNATURE_LABEL,
+    PROJECT_SIGNATURE_LABEL,
 };
-use crate::security::{sign_with, status_of, SignatureStatus, Signer, Verifier};
+use crate::security::{sign_with, status_of, SignatureReport, SignatureStatus, Signer, Verifier};
 use crate::spec::{
     branch_dir, classify, eh3d, entry_name, is_sha256_hex, is_shared_branch, manufacturing,
     parse_major_minor, parse_version, root_of, valid_branch_id, EntryClass, BRANCH_FILE,
@@ -807,8 +808,7 @@ impl Project {
                 self.check_optional(&branch, &mut add);
             }
 
-            let message = signing_message(BRANCH_SIGNATURE_LABEL, record);
-            let status = status_of(record.signature.as_ref(), &message, checks.verifier);
+            let status = self.status_of_branch(&branch, checks.verifier);
             judge_signature(
                 &status,
                 checks.require_signed.contains(id),
@@ -818,8 +818,7 @@ impl Project {
             );
         }
 
-        let message = signing_message(PROJECT_SIGNATURE_LABEL, &self.record);
-        let status = status_of(self.record.signature.as_ref(), &message, checks.verifier);
+        let status = self.project_signature(checks.verifier);
         judge_signature(
             &status,
             checks.require_project_signature,
@@ -893,6 +892,233 @@ impl Project {
         Ok((project, findings))
     }
 
+    /// Opens the project (integrity always checked) and judges every signature it carries with
+    /// the keys of `verifier`. A wrong signature does not stop the opening: the report says so
+    /// and the program decides.
+    pub fn open_verified(
+        path: &Path,
+        options: &OpenOptions,
+        verifier: Option<&dyn Verifier>,
+    ) -> Result<(Project, SignatureReport)> {
+        let options = OpenOptions {
+            spec: options.spec.clone(),
+            verify_integrity: true,
+        };
+        let project = Project::open(path, &options)?;
+        let report = project.signatures(verifier);
+        Ok((project, report))
+    }
+
+    /// The state of every signature of the file.
+    pub fn signatures(&self, verifier: Option<&dyn Verifier>) -> SignatureReport {
+        SignatureReport {
+            project: self.project_signature(verifier),
+            branches: self
+                .branches
+                .values()
+                .filter(|b| !b.is_extension())
+                .map(|b| (b.id.clone(), self.status_of_branch(b, verifier)))
+                .collect(),
+        }
+    }
+
+    /// The state of the signature of the branch `id`; `None` when there is no such branch or it
+    /// is an extension folder.
+    pub fn branch_signature(
+        &self,
+        id: &str,
+        verifier: Option<&dyn Verifier>,
+    ) -> Option<SignatureStatus> {
+        self.branches
+            .get(id)
+            .filter(|b| !b.is_extension())
+            .map(|b| self.status_of_branch(b, verifier))
+    }
+
+    /// The state of the signature of the project record. A signature whose index no longer
+    /// states what the branches hold is wrong, whatever its bytes say.
+    pub fn project_signature(&self, verifier: Option<&dyn Verifier>) -> SignatureStatus {
+        let signature = self.record.signature.as_ref();
+        if signature.is_none() {
+            return SignatureStatus::Unsigned;
+        }
+        if !self.verified {
+            return SignatureStatus::Unchecked;
+        }
+        if !self.index_matches() {
+            return SignatureStatus::Invalid;
+        }
+        match try_signing_message(PROJECT_SIGNATURE_LABEL, &self.record) {
+            Some(message) => status_of(signature, &message, verifier),
+            None => SignatureStatus::Invalid,
+        }
+    }
+
+    fn status_of_branch(
+        &self,
+        branch: &Branch,
+        verifier: Option<&dyn Verifier>,
+    ) -> SignatureStatus {
+        let Some(record) = &branch.record else {
+            // a record that cannot be read may hide a damaged signature
+            return if branch.files.contains_key(BRANCH_FILE) {
+                SignatureStatus::Invalid
+            } else {
+                SignatureStatus::Unsigned
+            };
+        };
+        if record.signature.is_none() {
+            return SignatureStatus::Unsigned;
+        }
+        if !self.verified {
+            return SignatureStatus::Unchecked;
+        }
+        // the signature covers the record, and the record covers the files only through these
+        if record.branch != branch.id || record.content_hash != branch.hash {
+            return SignatureStatus::Invalid;
+        }
+        match try_signing_message(BRANCH_SIGNATURE_LABEL, record) {
+            Some(message) => status_of(record.signature.as_ref(), &message, verifier),
+            None => SignatureStatus::Invalid,
+        }
+    }
+
+    /// True when the index of `project.json` states every branch with the hash it has now.
+    fn index_matches(&self) -> bool {
+        let index: BTreeMap<&str, &str> = self
+            .record
+            .branches
+            .iter()
+            .map(|b| (b.id.as_str(), b.content_hash.as_str()))
+            .collect();
+        index.len() == self.record.branches.len()
+            && index
+                .iter()
+                .all(|(id, hash)| self.branches.get(*id).is_some_and(|b| b.hash == *hash))
+            && self
+                .branches
+                .values()
+                .filter(|b| !b.is_extension())
+                .all(|b| index.contains_key(b.id.as_str()))
+    }
+
+    /// The record of a branch that may be signed: present, sound, and not sealed.
+    fn signable_record(&self, id: &str) -> Result<BranchRecord> {
+        if self.record.seal.is_some() {
+            return Err(refuse(PkgCode::Sealed, "the project is sealed read-only"));
+        }
+        if !self.verified {
+            return Err(refuse(
+                PkgCode::Integrity,
+                "the entries were not checked, so nothing is signed",
+            ));
+        }
+        let branch = self
+            .branches
+            .get(id)
+            .ok_or_else(|| refuse_at(PkgCode::BranchRef, "there is no such branch", id))?;
+        let record = branch
+            .record
+            .as_ref()
+            .filter(|r| !branch.is_extension() && r.branch == id)
+            .ok_or_else(|| {
+                refuse_at(
+                    PkgCode::BranchRecord,
+                    "the branch has no valid record to sign",
+                    id,
+                )
+            })?;
+        if record.seal.is_some() {
+            return Err(refuse_at(
+                PkgCode::Sealed,
+                "the branch is sealed read-only",
+                id,
+            ));
+        }
+        if record.content_hash != branch.hash {
+            return Err(refuse_at(
+                PkgCode::BranchHash,
+                "the files of the branch are not the ones its record hashes",
+                id,
+            ));
+        }
+        Ok(record.clone())
+    }
+
+    /// Says why [`Project::sign_branch`] would refuse, without writing anything.
+    pub fn check_signable(&self, id: &str) -> Result<()> {
+        self.signable_record(id).map(|_| ())
+    }
+
+    /// Signs the branch `id` as it is. Only its `branch.json` changes (and the audit log when a
+    /// time is given); the project record is not touched, so a signature of the project keeps
+    /// holding. Signing is not writing the branch: any program may do it for the person who
+    /// holds the key. A sealed branch or project is refused (020). `options.modified` and
+    /// `options.signer` are not used.
+    pub fn sign_branch(
+        mut self,
+        id: &str,
+        signer: &dyn Signer,
+        options: &SaveOptions<'_>,
+    ) -> Result<Project> {
+        let mut record = self.signable_record(id)?;
+        record.signature = None;
+        record.signature = Some(signature_of(signer, BRANCH_SIGNATURE_LABEL, &record, id)?);
+        let bytes = to_canonical_file_bytes(&record)
+            .map_err(|e| ContainerError::Io(io::Error::other(e.to_string())))?;
+        let mut plan = Plan::default();
+        let name = entry_name(id, BRANCH_FILE);
+        plan.skip.insert(name.clone());
+        plan.extra.push((name, bytes));
+        if let Some(at) = &options.audit_at {
+            let line = serde_json::json!({
+                "action": "sign", "at": at, "branch": id, "key": signer.key_id(),
+            });
+            self.append_audit(&mut plan, &line)?;
+        }
+        let record = self.record.clone();
+        self.rewrite(plan, &record, &options.atomic)
+    }
+
+    /// Adds one line to the audit log in what is about to be written.
+    fn append_audit(&mut self, plan: &mut Plan, line: &Value) -> Result<()> {
+        let mut log = if self.container.entry(AUDIT_LOG).is_some() {
+            self.container.read_limited(AUDIT_LOG, MAX_AUDIT)?
+        } else {
+            Vec::new()
+        };
+        let text = eh3d_container::canonical_string(line)
+            .map_err(|e| ContainerError::Io(io::Error::other(e.to_string())))?;
+        log.extend_from_slice(text.as_bytes());
+        log.push(b'\n');
+        plan.skip.insert(AUDIT_LOG.to_owned());
+        plan.extra.push((AUDIT_LOG.to_owned(), log));
+        Ok(())
+    }
+
+    /// Writes the file again as `plan` and `record` say and opens it.
+    fn rewrite(
+        self,
+        plan: Plan,
+        record: &ProjectRecord,
+        atomic: &AtomicOptions,
+    ) -> Result<Project> {
+        let Project {
+            path,
+            container,
+            spec,
+            ..
+        } = self;
+        assemble(Some(container), &path, &spec, plan, record, atomic)?;
+        Project::open(
+            &path,
+            &OpenOptions {
+                spec,
+                verify_integrity: true,
+            },
+        )
+    }
+
     /// Saves one branch. Only this branch and the record of the project change; every other
     /// entry, known or not, is copied through and keeps its bytes. Refused: a branch the writer
     /// does not own (017), a branch or project that is sealed (020), a malformed update (015),
@@ -953,6 +1179,13 @@ impl Project {
         }
         let mut new_files = Vec::new();
         for (rel, bytes) in &update.entries {
+            if crate::ed25519::looks_like_secret_key(bytes) {
+                return Err(refuse_at(
+                    PkgCode::BranchRecord,
+                    "a secret key is never put into a project",
+                    &entry_name(&id, rel),
+                ));
+            }
             if rel == BRANCH_FILE || rel.is_empty() {
                 return Err(refuse_at(
                     PkgCode::BranchRecord,
@@ -1010,8 +1243,7 @@ impl Project {
             extra: update.extra.clone(),
         };
         if let Some(signer) = options.signer {
-            let message = signing_message(BRANCH_SIGNATURE_LABEL, &record);
-            record.signature = Some(sign_with(signer, &message));
+            record.signature = Some(signature_of(signer, BRANCH_SIGNATURE_LABEL, &record, &id)?);
         }
         let record_bytes = to_canonical_file_bytes(&record)
             .map_err(|e| ContainerError::Io(io::Error::other(e.to_string())))?;
@@ -1030,20 +1262,10 @@ impl Project {
         plan.extra
             .push((entry_name(&id, BRANCH_FILE), record_bytes));
         if let Some(at) = &options.audit_at {
-            let mut log = if self.container.entry(AUDIT_LOG).is_some() {
-                self.container.read_limited(AUDIT_LOG, MAX_AUDIT)?
-            } else {
-                Vec::new()
-            };
             let line = serde_json::json!({
                 "action": "save", "app": writer.app, "app_version": update.app_version, "at": at, "branch": id,
             });
-            let text = eh3d_container::canonical_string(&line)
-                .map_err(|e| ContainerError::Io(io::Error::other(e.to_string())))?;
-            log.extend_from_slice(text.as_bytes());
-            log.push(b'\n');
-            plan.skip.insert(AUDIT_LOG.to_owned());
-            plan.extra.push((AUDIT_LOG.to_owned(), log));
+            self.append_audit(&mut plan, &line)?;
         }
 
         // The index of project.json: the other branches keep the line they had.
@@ -1085,27 +1307,7 @@ impl Project {
         }
         project_record.signature = None;
 
-        let Project {
-            path,
-            container,
-            spec,
-            ..
-        } = self;
-        assemble(
-            Some(container),
-            &path,
-            &spec,
-            plan,
-            &project_record,
-            &options.atomic,
-        )?;
-        Project::open(
-            &path,
-            &OpenOptions {
-                spec,
-                verify_integrity: true,
-            },
-        )
+        self.rewrite(plan, &project_record, &options.atomic)
     }
 
     /// Seals the whole project read-only. Any program may do it; nothing can be saved after.
@@ -1119,27 +1321,7 @@ impl Project {
         if options.modified.is_some() {
             record.modified = options.modified.clone();
         }
-        let Project {
-            path,
-            container,
-            spec,
-            ..
-        } = self;
-        assemble(
-            Some(container),
-            &path,
-            &spec,
-            Plan::default(),
-            &record,
-            &options.atomic,
-        )?;
-        Project::open(
-            &path,
-            &OpenOptions {
-                spec,
-                verify_integrity: true,
-            },
-        )
+        self.rewrite(Plan::default(), &record, &options.atomic)
     }
 
     /// Signs the project record (which holds the hash of every branch) with `signer`.
@@ -1147,31 +1329,22 @@ impl Project {
         if self.record.seal.is_some() {
             return Err(refuse(PkgCode::Sealed, "the project is sealed read-only"));
         }
+        if !self.verified || !self.index_matches() {
+            return Err(refuse_at(
+                PkgCode::BranchHash,
+                "the index does not state what the branches hold, so nothing is signed",
+                "project.json",
+            ));
+        }
         let mut record = self.record.clone();
         record.signature = None;
-        let message = signing_message(PROJECT_SIGNATURE_LABEL, &record);
-        record.signature = Some(sign_with(signer, &message));
-        let Project {
-            path,
-            container,
-            spec,
-            ..
-        } = self;
-        assemble(
-            Some(container),
-            &path,
-            &spec,
-            Plan::default(),
+        record.signature = Some(signature_of(
+            signer,
+            PROJECT_SIGNATURE_LABEL,
             &record,
-            &options.atomic,
-        )?;
-        Project::open(
-            &path,
-            &OpenOptions {
-                spec,
-                verify_integrity: true,
-            },
-        )
+            "project.json",
+        )?);
+        self.rewrite(Plan::default(), &record, &options.atomic)
     }
 
     /// Writes the `manufacturing` branch out as a `.eh3dproj` 1.0.0 package, byte for byte the
@@ -1262,6 +1435,23 @@ fn index_line(id: &str, record: &BranchRecord) -> BranchIndexEntry {
     }
 }
 
+/// The signature record of `record`, refused when it has no canonical form.
+fn signature_of(
+    signer: &dyn Signer,
+    label: &str,
+    record: &impl serde::Serialize,
+    entry: &str,
+) -> Result<SignatureRecord> {
+    let message = try_signing_message(label, record).ok_or_else(|| {
+        refuse_at(
+            PkgCode::BranchRecord,
+            "the record has a number with no canonical form and cannot be signed",
+            entry,
+        )
+    })?;
+    Ok(sign_with(signer, &message))
+}
+
 fn judge_signature(
     status: &SignatureStatus,
     required: bool,
@@ -1292,7 +1482,7 @@ fn judge_signature(
         ),
         SignatureStatus::Unchecked if required => add(
             PkgCode::SignatureMissing,
-            "a signature is required and no verifier was given".into(),
+            "a signature is required and it could not be checked".into(),
             branch,
             entry,
         ),

@@ -13,6 +13,13 @@ name = "eh3d-project"
 path = "src/main.rs"
 
 [dependencies]
+# ed25519-dalek: the signature of branches and projects, pure Rust (no C compiler). The version is
+# fixed; "zeroize" wipes the secret key from memory, nothing else is switched on.
+ed25519-dalek = { version = "=2.2.0", default-features = false, features = ["zeroize"] }
+# getrandom: the random source of the system, for new keys and project identifiers.
+getrandom = "0.4"
+thiserror = "2"
+zeroize = "1"
 eh3d-container = { version = ">=0.0.1", path = "../container" }
 eh3d-diagnostic = { version = ">=0.0.1", path = "../diagnostic" }
 serde = { version = "1", features = ["derive"] }

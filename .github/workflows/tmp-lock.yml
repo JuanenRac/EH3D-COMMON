@@ -1,0 +1,35 @@
+name: tmp lock
+on:
+  push:
+    branches: [eh3d-signing]
+permissions:
+  contents: read
+jobs:
+  lock:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Update the lock only for what is new
+        run: |
+          rustup toolchain install "$(sed -n 's/^channel = "\(.*\)"/\1/p' rust-toolchain.toml)" --profile minimal
+          cp Cargo.lock /tmp/before.lock
+          cargo metadata --format-version 1 > /tmp/metadata.json
+          python3 - <<'PY'
+          import json, re
+          names = lambda p: set(re.findall(r'name = "([^"]+)"\nversion = "([^"]+)"', open(p).read()))
+          new = names("Cargo.lock") - names("/tmp/before.lock")
+          gone = names("/tmp/before.lock") - names("Cargo.lock")
+          meta = json.load(open("/tmp/metadata.json"))
+          for p in meta["packages"]:
+              if (p["name"], p["version"]) in new:
+                  print("NEW", p["name"], p["version"], p["license"])
+          print("GONE", sorted(gone))
+          PY
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: lock
+          path: Cargo.lock
+          retention-days: 1

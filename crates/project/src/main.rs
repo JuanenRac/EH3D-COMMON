@@ -3,22 +3,30 @@
 //! ```text
 //! eh3d-project info FILE [--json]
 //! eh3d-project verify FILE [--strict] [--require-signed BRANCH[,BRANCH...]]
+//!                          [--require-project-signature] [--pubkey KEY.pub]...
+//! eh3d-project keygen KEYFILE
+//! eh3d-project sign FILE --key KEYFILE [--branch BRANCH[,BRANCH...]] [--project]
 //! eh3d-project extract-branch FILE BRANCH OUT_DIR
 //! eh3d-project extract-branch FILE manufacturing --eh3dproj OUT.eh3dproj
 //! ```
 //!
 //! Exit codes: 0 sound, 2 verification not passed (an error finding, or a warning with
 //! `--strict`), 1 anything else that failed, 64 wrong use. Nothing is written except by
-//! `extract-branch`, which never replaces a file.
+//! `extract-branch` and `keygen`, which never replace a file, and by `sign`, which rewrites the
+//! project given to it. The secret key is read from the path given and is never printed.
 
 use std::collections::BTreeSet;
 use std::path::Path;
 use std::process::ExitCode;
 
 use eh3d_container::AtomicOptions;
-use eh3d_project::{Checks, OpenOptions, Project};
+use eh3d_project::ed25519::generate_key_files;
+use eh3d_project::{
+    Checks, Ed25519Keyring, Ed25519Signer, KeyError, OpenOptions, Project, SaveOptions, Signer,
+    Verifier,
+};
 
-const USAGE: &str = "usage:\n  eh3d-project info FILE [--json]\n  eh3d-project verify FILE [--strict] [--require-signed BRANCH[,BRANCH...]]\n  eh3d-project extract-branch FILE BRANCH OUT_DIR\n  eh3d-project extract-branch FILE manufacturing --eh3dproj OUT.eh3dproj";
+const USAGE: &str = "usage:\n  eh3d-project info FILE [--json]\n  eh3d-project verify FILE [--strict] [--require-signed BRANCH[,BRANCH...]] [--require-project-signature] [--pubkey KEY.pub]...\n  eh3d-project extract-branch FILE BRANCH OUT_DIR\n  eh3d-project extract-branch FILE manufacturing --eh3dproj OUT.eh3dproj\n  eh3d-project keygen KEYFILE\n  eh3d-project sign FILE --key KEYFILE [--branch BRANCH[,BRANCH...]] [--project]";
 
 fn main() -> ExitCode {
     let args: Vec<String> = std::env::args().skip(1).collect();
@@ -30,6 +38,8 @@ fn main() -> ExitCode {
         Some("info") => info(&args[1..]),
         Some("verify") => verify(&args[1..]),
         Some("extract-branch") => extract(&args[1..]),
+        Some("keygen") => keygen(&args[1..]),
+        Some("sign") => sign(&args[1..]),
         _ => Err(Failure::Usage),
     };
     match outcome {
@@ -52,6 +62,12 @@ enum Failure {
 
 impl From<eh3d_container::ContainerError> for Failure {
     fn from(e: eh3d_container::ContainerError) -> Self {
+        Failure::Error(e.to_string())
+    }
+}
+
+impl From<KeyError> for Failure {
+    fn from(e: KeyError) -> Self {
         Failure::Error(e.to_string())
     }
 }
@@ -161,10 +177,18 @@ fn verify(args: &[String]) -> Result<u8, Failure> {
     };
     let mut strict = false;
     let mut required: BTreeSet<String> = BTreeSet::new();
+    let mut project_required = false;
+    let mut keyring = Ed25519Keyring::new();
     let mut i = 0;
     while i < rest.len() {
         match rest[i].as_str() {
             "--strict" => strict = true,
+            "--require-project-signature" => project_required = true,
+            "--pubkey" => {
+                i += 1;
+                let path = rest.get(i).ok_or(Failure::Usage)?;
+                keyring.read_file(Path::new(path))?;
+            }
             "--require-signed" => {
                 i += 1;
                 let list = rest.get(i).ok_or(Failure::Usage)?;
@@ -174,11 +198,23 @@ fn verify(args: &[String]) -> Result<u8, Failure> {
         }
         i += 1;
     }
+    let verifier: Option<&dyn Verifier> = if keyring.is_empty() {
+        None
+    } else {
+        Some(&keyring)
+    };
     let checks = Checks {
         require_signed: required,
+        require_project_signature: project_required,
+        verifier,
         ..Checks::default()
     };
-    let mut project = Project::open(Path::new(file), &OpenOptions::default())?;
+    let mut project = open(file)?;
+    let report = project.signatures(verifier);
+    println!("signature project: {}", report.project);
+    for (branch, status) in &report.branches {
+        println!("signature {branch}: {status}");
+    }
     let findings = project.diagnose(&checks);
     let mut failed = false;
     for f in &findings {
@@ -201,6 +237,75 @@ fn verify(args: &[String]) -> Result<u8, Failure> {
         println!("VERIFY=PASS");
         Ok(0)
     }
+}
+
+fn keygen(args: &[String]) -> Result<u8, Failure> {
+    let [path] = args else {
+        return Err(Failure::Usage);
+    };
+    if path.starts_with("--") {
+        return Err(Failure::Usage);
+    }
+    let pair = generate_key_files(Path::new(path))?;
+    println!("key        {}", pair.key_id);
+    println!(
+        "secret key {} (keep it to yourself, outside any project)",
+        pair.secret_path.display()
+    );
+    println!(
+        "public key {} (give it to those who check)",
+        pair.public_path.display()
+    );
+    Ok(0)
+}
+
+fn sign(args: &[String]) -> Result<u8, Failure> {
+    let [file, rest @ ..] = args else {
+        return Err(Failure::Usage);
+    };
+    let mut key = None;
+    let mut branches: BTreeSet<String> = BTreeSet::new();
+    let mut whole = false;
+    let mut i = 0;
+    while i < rest.len() {
+        match rest[i].as_str() {
+            "--project" => whole = true,
+            "--key" if key.is_none() => {
+                i += 1;
+                key = Some(rest.get(i).ok_or(Failure::Usage)?);
+            }
+            "--branch" => {
+                i += 1;
+                let list = rest.get(i).ok_or(Failure::Usage)?;
+                branches.extend(list.split(',').filter(|s| !s.is_empty()).map(str::to_owned));
+            }
+            _ => return Err(Failure::Usage),
+        }
+        i += 1;
+    }
+    let key = key.ok_or(Failure::Usage)?;
+    if branches.is_empty() && !whole {
+        return Err(Failure::Usage);
+    }
+    let signer = Ed25519Signer::read(Path::new(key))?;
+    let mut project = open(file)?;
+    // everything is checked before the first signature, so a refusal leaves the file as it was
+    for branch in &branches {
+        project.check_signable(branch)?;
+    }
+    if whole && project.record().seal.is_some() {
+        return Err(Failure::Error("the project is sealed read-only".into()));
+    }
+    let options = SaveOptions::default();
+    for branch in &branches {
+        project = project.sign_branch(branch, &signer, &options)?;
+        println!("signed branch {branch} with {}", signer.key_id());
+    }
+    if whole {
+        project.sign_project(&signer, &options)?;
+        println!("signed the project with {}", signer.key_id());
+    }
+    Ok(0)
 }
 
 fn extract(args: &[String]) -> Result<u8, Failure> {

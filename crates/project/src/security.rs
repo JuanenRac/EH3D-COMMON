@@ -2,13 +2,16 @@
 //!
 //! Integrity (the SHA-256 of every entry and of every branch) is always there. Signing is
 //! optional: the file carries a signature record and the name of the key, never the key. This
-//! module has the two traits a program implements with the cryptography it chooses; the crate
-//! itself ships no algorithm. A signature algorithm that is in the offline crate cache of the
-//! suite can be added as a feature without changing the file format.
+//! module has the two traits of signing and checking and what is known about a signature; the
+//! algorithm of the suite, Ed25519, is in [`crate::ed25519`]. A program may implement the traits
+//! with other cryptography without changing the file format.
 //!
 //! Encryption of a branch and the sealing of a branch are designed in `docs/FORMAT_EH3D.md`.
 //! A sealed branch is refused for writing (`EH3D-PKG-020`) and an encrypted branch is refused
 //! for reading when no key is at hand (`EH3D-PKG-023`); the encryption itself is pending.
+
+use std::collections::BTreeMap;
+use std::fmt;
 
 use crate::records::SignatureRecord;
 
@@ -60,6 +63,36 @@ pub enum SignatureStatus {
     Invalid,
     /// The key, or the algorithm, is not known to the verifier.
     UnknownKey,
+}
+
+impl fmt::Display for SignatureStatus {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            SignatureStatus::Unsigned => f.write_str("unsigned"),
+            SignatureStatus::Unchecked => f.write_str("signed, not checked"),
+            SignatureStatus::Valid(key) => write!(f, "signed, valid (key {key})"),
+            SignatureStatus::Invalid => f.write_str("INVALID signature"),
+            SignatureStatus::UnknownKey => f.write_str("signed, unknown key"),
+        }
+    }
+}
+
+/// The state of every signature of a project, as [`crate::Project::signatures`] finds it.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct SignatureReport {
+    /// The signature of the project record.
+    pub project: SignatureStatus,
+    /// The signature of each branch (extension folders have no record and are not listed).
+    pub branches: BTreeMap<String, SignatureStatus>,
+}
+
+impl SignatureReport {
+    /// True when any signature is wrong.
+    pub fn any_invalid(&self) -> bool {
+        std::iter::once(&self.project)
+            .chain(self.branches.values())
+            .any(|s| *s == SignatureStatus::Invalid)
+    }
 }
 
 /// Judges the signature record of a branch or of the project against `message`.
