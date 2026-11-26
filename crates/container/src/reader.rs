@@ -525,6 +525,21 @@ impl<R: Read + Seek> Container<R> {
         })
     }
 
+    /// The entry as it is stored: its header and its compressed bytes, nothing decompressed.
+    pub(crate) fn raw_entry(
+        &mut self,
+        name: &str,
+    ) -> Result<zip::read::ZipFile<'_, R>, ContainerError> {
+        let &i = self.index.get(name).ok_or_else(|| {
+            ContainerError::Rejected(
+                Violation::new(PkgCode::OutsideRoots, "there is no such entry").at(name),
+            )
+        })?;
+        self.archive
+            .by_index_raw(i)
+            .map_err(|e| damaged(&format!("the entry cannot be opened: {e}")))
+    }
+
     /// Reads a whole entry into memory, at most `max_bytes`. The announced size is checked
     /// first, so a package cannot make this reserve more than the call allows.
     pub fn read_limited(&mut self, name: &str, max_bytes: u64) -> Result<Vec<u8>, ContainerError> {

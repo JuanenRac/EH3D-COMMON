@@ -92,7 +92,9 @@ fn write_and_replace<F>(
 where
     F: FnOnce(&mut File) -> Result<(), ContainerError>,
 {
+    // readable too: a writer may check what it wrote before the target is replaced
     let mut file = OpenOptions::new()
+        .read(true)
         .write(true)
         .create_new(true)
         .open(temporary)?;

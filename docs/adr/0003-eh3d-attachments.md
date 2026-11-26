@@ -16,6 +16,7 @@ A project of a design is more than the design: data sheets, manuals, drawings of
 6. **Danger is decided by name and content, twice.** It is recorded when the file is attached and judged again when it is taken out, because a record can be written by anyone. There is one set of lists, in `eh3d-filekind`, used by the container, the viewer and the panel; a kind that none of them knows asks like a dangerous one.
 7. **Taking out is careful:** safe name inside the chosen folder, never over a file, not executable, marked as foreign on Windows, checked against its hash, removed when refused or incomplete. The crate opens and runs nothing.
 8. **A link is data.** Only `https` and `http` addresses without credentials, with the hash the file must have. Downloading is something a person does outside.
+9. **What does not change is not compressed again.** A save copies the compressed bytes and the CRC of every entry that stays, so an attachment is compressed only the first time. The new file is checked entry by entry (SHA-256) before it replaces the old one, so a save still reads every entry once.
 
 ## Options left out
 
@@ -27,5 +28,4 @@ A project of a design is more than the design: data sheets, manuals, drawings of
 ## Pending, with the reason
 
 * The windows of the programs (attach from a menu, open from a part, the confirmation) and the viewer inside the programs: separate work.
-* Saving any branch recompresses every entry of the project, the attachments included; copying unchanged entries without recompressing them would make projects with large files faster to save.
 * Compressed archives are not looked into, and the macro check reads the list of entries of an office file, not its content.

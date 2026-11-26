@@ -1138,7 +1138,8 @@ impl Project {
         Ok(())
     }
 
-    /// Writes the file again as `plan` and `record` say and opens it.
+    /// Writes the file again as `plan` and `record` say and opens it. The new file is checked
+    /// entry by entry before it replaces the old one, so it is not read a second time here.
     fn rewrite(
         self,
         plan: Plan,
@@ -1149,20 +1150,33 @@ impl Project {
             path,
             container,
             spec,
+            integrity,
+            verified,
             ..
         } = self;
-        assemble(Some(container), &path, &spec, plan, record, atomic)?;
-        Project::open(
-            &path,
-            &OpenOptions {
-                spec,
-                verify_integrity: true,
-            },
-        )
+        let old = OldFile {
+            container,
+            integrity,
+            verified,
+        };
+        let written = assemble(Some(old), &path, &spec, plan, record, atomic)?;
+        let mut options = OpenOptions {
+            spec,
+            verify_integrity: false,
+        };
+        let mut project = Project::open(&path, &options)?;
+        if written.as_ref() == Some(&project.integrity) {
+            project.verified = true;
+            return Ok(project);
+        }
+        // not the file that was checked (another program wrote it meanwhile): check it all
+        options.verify_integrity = true;
+        Project::open(&path, &options)
     }
 
     /// Saves one branch. Only this branch and the record of the project change; every other
-    /// entry, known or not, is copied through and keeps its bytes. Refused: a branch the writer
+    /// entry, known or not, is copied through and keeps its bytes; an entry that does not change, of
+    /// this branch or of another, is not compressed again. Refused: a branch the writer
     /// does not own (017), a branch or project that is sealed (020), a malformed update (015),
     /// a reference to a branch that is not in the file (018). The file is replaced atomically
     /// and the project is opened again from the new file.
@@ -1646,22 +1660,31 @@ struct Plan {
     streams: Vec<StreamedFile>,
 }
 
-/// Writes the new file: every entry of the old container that is not skipped, copied through
-/// as a stream (so its bytes are written again exactly as the deterministic writer writes
-/// them), the new entries and the project record. The old file is closed before the target is
-/// replaced, which Windows needs.
+/// The file that is being written again: its entries, what its integrity record says of them and
+/// whether that was checked.
+struct OldFile {
+    container: Container<File>,
+    integrity: Integrity,
+    verified: bool,
+}
+
+/// Writes the new file: every entry of the old one that is not skipped, the new entries and the
+/// project record. An entry that does not change is not compressed again but copied as it is
+/// stored: those that are not skipped, and the new ones with the name, size and SHA-256 of an entry
+/// that was checked. With an old file, the new one is checked entry by entry before it replaces it
+/// and its integrity record is returned; the old file is closed before that, which Windows needs.
 fn assemble(
-    container: Option<Container<File>>,
+    old: Option<OldFile>,
     path: &Path,
     spec: &ContainerSpec,
     plan: Plan,
     record: &ProjectRecord,
     atomic: &AtomicOptions,
-) -> Result<()> {
-    let mut container = container;
-    let copy: Vec<String> = container
+) -> Result<Option<Integrity>> {
+    let mut old = old;
+    let copy: Vec<String> = old
         .iter()
-        .flat_map(|c| c.entries().map(|e| e.name.clone()))
+        .flat_map(|o| o.container.entries().map(|e| e.name.clone()))
         .filter(|n| n != "project.json" && n != "integrity.json" && !plan.skip.contains(n))
         .collect();
     let mut roots: BTreeSet<String> = BTreeSet::new();
@@ -1681,14 +1704,36 @@ fn assemble(
         .filter(|p| !p.as_os_str().is_empty())
         .unwrap_or_else(|| Path::new("."));
     let mut writer = ContainerWriter::new(&writer_spec, dir);
-    if let Some(open) = container.as_mut() {
+    if let Some(old) = old.as_mut() {
         for name in &copy {
-            let mut stream = open.read_stream(name)?;
-            writer.add_stream(name, &mut stream)?;
+            match old.integrity.files.get(name) {
+                Some(entry) => {
+                    writer.keep(&mut old.container, name, entry)?;
+                }
+                // only in a file opened without the check: read it and record what it holds
+                None => {
+                    let mut stream = old.container.read_stream(name)?;
+                    writer.add_stream(name, &mut stream)?;
+                }
+            }
         }
     }
     for (name, bytes) in &plan.extra {
-        writer.add(name, bytes)?;
+        let unchanged = old.as_ref().filter(|o| o.verified).and_then(|o| {
+            o.integrity
+                .files
+                .get(name)
+                .filter(|e| {
+                    e.size == bytes.len() as u64 && e.sha256 == eh3d_container::sha256_hex(bytes)
+                })
+                .cloned()
+        });
+        match (old.as_mut(), unchanged) {
+            (Some(old), Some(entry)) => {
+                writer.keep(&mut old.container, name, &entry)?;
+            }
+            _ => writer.add(name, bytes)?,
+        }
     }
     for stream in &plan.streams {
         let mut file = File::open(&stream.path)?;
@@ -1712,8 +1757,12 @@ fn assemble(
     let project = to_canonical_file_bytes(record)
         .map_err(|e| ContainerError::Io(io::Error::other(e.to_string())))?;
     writer.add("project.json", &project)?;
-    drop(container);
-    writer.write_to_path(path, atomic)
+    match old {
+        Some(old) => writer
+            .write_to_path_from(path, atomic, old.container)
+            .map(Some),
+        None => writer.write_to_path(path, atomic).map(|()| None),
+    }
 }
 
 /// Reads all of a stream into memory for callers that hold a small entry (a helper for tests

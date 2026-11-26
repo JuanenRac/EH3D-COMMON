@@ -167,6 +167,90 @@ pub fn ratio_from_pointer(
     (pos / total).clamp(MIN_RATIO, MAX_RATIO)
 }
 
+/// Where one tab of a bar goes: its row, how far from the left of the bar it starts and how wide it is.
+#[derive(Debug, Clone, Copy, PartialEq)]
+pub struct TabPlace {
+    /// The row, 0 at the top.
+    pub row: usize,
+    /// The distance from the first place of a row.
+    pub x: f32,
+    /// Its width: the width asked for, or the room of its row when that is less.
+    pub w: f32,
+}
+
+/// The tabs of a bar set in rows.
+#[derive(Debug, Clone, PartialEq)]
+pub struct TabRows {
+    /// The place of each tab, in the order given; `None` for a tab in a row that is not shown.
+    pub places: Vec<Option<TabPlace>>,
+    /// The rows the bar takes, at least 1.
+    pub rows: usize,
+}
+
+fn flow(widths: &[f32], first_room: f32, room: f32, spacing: f32) -> Vec<TabPlace> {
+    let (mut row, mut x) = (0usize, 0.0_f32);
+    widths
+        .iter()
+        .map(|&width| {
+            let width = width.max(0.0);
+            loop {
+                let here = if row == 0 { first_room } else { room }.max(0.0);
+                let left = here - x;
+                // a new row when it does not fit here and a new row gives it more
+                if width > left && (x > 0.0 || (row == 0 && room > here)) {
+                    row += 1;
+                    x = 0.0;
+                    continue;
+                }
+                let place = TabPlace {
+                    row,
+                    x,
+                    w: width.min(left.max(0.0)),
+                };
+                x += place.w + spacing;
+                break place;
+            }
+        })
+        .collect()
+}
+
+/// Sets tabs of the `widths` given, in their order, in rows: the first row has `first_room` (the buttons of the bar take the rest), the
+/// others `room`, and `spacing` separates two tabs. A tab that does not fit starts a new row, so every title is written whole while its
+/// row can hold it. At most `max_rows` rows (at least 1) are shown; when there are more, every row gets the room of the first one and the
+/// rows shown are the ones that end with the row of the `active` tab, or the first ones when it is among them.
+pub fn tab_rows(
+    widths: &[f32],
+    first_room: f32,
+    room: f32,
+    spacing: f32,
+    active: usize,
+    max_rows: usize,
+) -> TabRows {
+    let max_rows = max_rows.max(1);
+    let count = |places: &[TabPlace]| places.last().map_or(1, |p| p.row + 1);
+    let mut places = flow(widths, first_room, room, spacing);
+    if count(&places) > max_rows {
+        places = flow(widths, first_room, first_room, spacing);
+    }
+    let total = count(&places);
+    let shown = places
+        .get(active)
+        .or(places.last())
+        .map_or(0, |p| (p.row + 1).saturating_sub(max_rows));
+    TabRows {
+        places: places
+            .into_iter()
+            .map(|p| {
+                (p.row >= shown && p.row < shown + max_rows).then(|| TabPlace {
+                    row: p.row - shown,
+                    ..p
+                })
+            })
+            .collect(),
+        rows: total.min(max_rows),
+    }
+}
+
 /// A place a panel can be dropped on while it is dragged: a group of tabs, docked or floating.
 #[derive(Debug, Clone, PartialEq)]
 pub struct DropSlot {
@@ -174,12 +258,29 @@ pub struct DropSlot {
     pub panels: Vec<String>,
     /// The rectangle of the group, tab bar included.
     pub rect: Rect,
-    /// The rectangles of its tabs.
+    /// The rectangles of its tabs, in their order; they may be in several rows. A tab that is not drawn has an empty rectangle.
     pub tabs: Vec<Rect>,
-    /// The height of the tab bar.
+    /// The height of the tab bar, with all its rows.
     pub bar_h: f32,
     /// Whether the group is in a floating window.
     pub floating: bool,
+}
+
+/// The place among the tabs of a drop at (`x`, `y`) on their bar, reading the rows from the top and each row from the left: before the
+/// first tab that is in a row below the pointer, or in its row with its middle to the right of it; after the last tab otherwise.
+fn tab_index(tabs: &[Rect], x: f32, y: f32) -> usize {
+    // the strip above a tab belongs to its row
+    const ABOVE: f32 = 2.0;
+    let drawn = |t: &Rect| t.w > 0.0;
+    let after = |t: &Rect| {
+        let in_a_row_above = t.y + t.h <= y;
+        let in_a_row_below = t.y > y + ABOVE;
+        !in_a_row_above && (in_a_row_below || t.x + t.w / 2.0 >= x)
+    };
+    tabs.iter()
+        .position(|t| drawn(t) && after(t))
+        .or_else(|| tabs.iter().rposition(drawn).map(|i| i + 1))
+        .unwrap_or(0)
 }
 
 /// What dropping the dragged panel at (`x`, `y`) would do, and the rectangle to show as a preview. Floating windows are looked at first (the last
@@ -196,11 +297,7 @@ pub fn pick_drop(
     let anchor_of = |s: &DropSlot| s.panels.iter().find(|p| *p != dragged).cloned();
     let alone = |s: &DropSlot| s.panels.len() == 1 && s.panels[0] == dragged;
     let index_in = |s: &DropSlot| -> Option<usize> {
-        if y < s.rect.y + s.bar_h {
-            Some(s.tabs.iter().filter(|t| t.x + t.w / 2.0 < x).count())
-        } else {
-            None
-        }
+        (y < s.rect.y + s.bar_h).then(|| tab_index(&s.tabs, x, y))
     };
     for s in slots.iter().rev().filter(|s| s.floating) {
         if s.rect.contains(x, y) {
@@ -479,6 +576,88 @@ mod tests {
                 assert!(l.validate(&ids).is_empty(), "{t:?}");
             }
         }
+    }
+
+    fn rows_of(r: &TabRows) -> Vec<Option<usize>> {
+        r.places.iter().map(|p| p.map(|p| p.row)).collect()
+    }
+
+    #[test]
+    fn tabs_that_do_not_fit_go_to_further_rows_whole() {
+        // all in one row
+        let r = tab_rows(&[50.0, 60.0], 120.0, 160.0, 2.0, 0, 4);
+        assert_eq!((r.rows, rows_of(&r)), (1, vec![Some(0), Some(0)]));
+        // the second does not fit beside the first: a second row, with its whole width
+        let r = tab_rows(&[50.0, 90.0, 40.0], 120.0, 160.0, 2.0, 0, 4);
+        assert_eq!((r.rows, rows_of(&r)), (2, vec![Some(0), Some(1), Some(1)]));
+        assert_eq!(r.places[1].unwrap().w, 90.0);
+        assert_eq!(r.places[2].unwrap().x, 92.0);
+        // wider than the first row but not than the next: it moves down to be whole
+        let r = tab_rows(&[140.0], 120.0, 160.0, 2.0, 0, 4);
+        assert_eq!((r.rows, r.places[0].unwrap().w), (2, 140.0));
+        // wider than any row: one row of its own, cut to the room
+        let r = tab_rows(&[300.0, 300.0], 80.0, 120.0, 2.0, 0, 4);
+        assert_eq!(rows_of(&r), vec![Some(1), Some(2)]);
+        assert!(r.places.iter().all(|p| p.unwrap().w == 120.0));
+        // nothing to draw and nonsense still give one row
+        assert_eq!(tab_rows(&[], 10.0, 20.0, 2.0, 0, 4).rows, 1);
+        let r = tab_rows(&[30.0, 30.0], -5.0, 0.0, 2.0, 9, 0);
+        assert_eq!(r.rows, 1);
+        assert!(r.places.iter().flatten().all(|p| p.w == 0.0));
+    }
+
+    #[test]
+    fn with_too_many_rows_the_tab_on_show_stays_in_sight() {
+        let widths = [90.0; 6];
+        for active in 0..widths.len() {
+            let r = tab_rows(&widths, 100.0, 140.0, 2.0, active, 2);
+            assert_eq!(r.rows, 2);
+            assert!(r.places[active].is_some(), "{active} {r:?}");
+            assert_eq!(r.places.iter().flatten().count(), 2, "{active}");
+            // every row gets the room beside the buttons
+            assert!(r.places.iter().flatten().all(|p| p.w == 90.0 && p.row < 2));
+        }
+        let first = tab_rows(&widths, 100.0, 140.0, 2.0, 0, 2);
+        assert!(first.places[0].is_some() && first.places[1].is_some());
+    }
+
+    #[test]
+    fn a_drop_on_a_bar_of_two_rows_keeps_the_reading_order() {
+        let bar = |x: f32, row: f32| Rect::new(x, 40.0 + 2.0 + 24.0 * row, 80.0, 22.0);
+        // two tabs above, two below, and one that is not drawn
+        let tabs = [
+            bar(10.0, 0.0),
+            bar(92.0, 0.0),
+            bar(10.0, 1.0),
+            bar(92.0, 1.0),
+            Rect::new(0.0, 0.0, 0.0, 0.0),
+        ];
+        let at = |x: f32, y: f32| tab_index(&tabs, x, y);
+        assert_eq!(at(20.0, 50.0), 0);
+        assert_eq!(at(100.0, 50.0), 1);
+        assert_eq!(at(250.0, 50.0), 2, "after the last tab of the first row");
+        assert_eq!(at(20.0, 75.0), 2);
+        assert_eq!(at(100.0, 75.0), 3);
+        assert_eq!(at(250.0, 75.0), 4);
+        // the strip above the tabs of the second row belongs to it
+        assert_eq!(at(20.0, 65.0), 2);
+        let mut s = slot(
+            &["a", "b", "c", "d"],
+            Rect::new(10.0, 40.0, 300.0, 500.0),
+            false,
+        );
+        s.tabs = tabs[..4].to_vec();
+        s.bar_h = 48.0;
+        let area = Rect::new(0.0, 0.0, 1000.0, 600.0);
+        let (t, _) = pick_drop(&[s], area, 100.0, 75.0, "e", 24.0).unwrap();
+        assert_eq!(
+            t,
+            DropTarget::OnGroup {
+                anchor: "a".into(),
+                zone: Zone::Center,
+                index: Some(3)
+            }
+        );
     }
 
     #[test]
