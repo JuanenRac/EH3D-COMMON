@@ -792,3 +792,144 @@ fn the_codes_of_the_registry_in_the_documentation_match_when_it_is_next_to_this_
         .count();
     assert_eq!(listed, PkgCode::ALL.len());
 }
+
+/// Writes a package again with every entry taken by `keep`; says how many were copied as stored.
+fn keep_all(
+    source: &std::path::Path,
+    target: &std::path::Path,
+    spec: &ContainerSpec,
+) -> Result<usize, ContainerError> {
+    let mut from = Container::open_path(source, spec)?;
+    let record = from.verify_integrity().or_else(|_| {
+        serde_json::from_slice::<Integrity>(&from.read_limited("integrity.json", 1 << 20)?)
+            .map_err(|e| ContainerError::Io(std::io::Error::other(e.to_string())))
+    })?;
+    let mut writer = ContainerWriter::new(spec, target.parent().unwrap());
+    let mut copied = 0;
+    for (name, entry) in &record.files {
+        if writer.keep(&mut from, name, entry)? {
+            copied += 1;
+        }
+    }
+    writer.write_to_path_from(target, &AtomicOptions::default(), from)?;
+    Ok(copied)
+}
+
+#[test]
+fn kept_entries_reproduce_the_reference_packages_byte_for_byte() {
+    let spec = ContainerSpec::eh3dproj_v1();
+    let dir = temp_dir("kept_golden");
+    for name in ["minimal", "typical", "unicode_names"] {
+        let golden_path = golden_dir().join(format!("{name}.eh3dproj"));
+        let golden = std::fs::read(&golden_path).unwrap();
+        let out = dir.join(format!("{name}.eh3dproj"));
+        let copied = keep_all(&golden_path, &out, &spec).unwrap();
+        let entries = Container::open(Cursor::new(golden.clone()), &spec)
+            .unwrap()
+            .entries()
+            .count();
+        assert_eq!(
+            copied,
+            entries - 1,
+            "{name}: every entry but the record is copied"
+        );
+        assert_eq!(std::fs::read(&out).unwrap(), golden, "{name}");
+        // over itself, too
+        keep_all(&out, &out, &spec).unwrap();
+        assert_eq!(std::fs::read(&out).unwrap(), golden, "{name}");
+    }
+    assert!(leftovers(&dir).is_empty());
+    let _ = std::fs::remove_dir_all(&dir);
+}
+
+#[test]
+fn an_entry_stored_in_another_way_is_compressed_again_into_the_one_form() {
+    let spec = spec(); // reads stored entries too
+    let dir = temp_dir("kept_other");
+    let canonical = write_phoenix(&[0, 1, 2, 3], "r", &dir, "canonical.phoenixproj");
+    // the same entries and record, stored without compression and without the fixed time
+    let mut from = Container::open(Cursor::new(canonical.clone()), &spec).unwrap();
+    let names: Vec<String> = from.entries().map(|e| e.name.clone()).collect();
+    let contents: Vec<Vec<u8>> = names
+        .iter()
+        .map(|n| from.read_limited(n, 1 << 20).unwrap())
+        .collect();
+    let raws: Vec<Raw> = names
+        .iter()
+        .zip(&contents)
+        .map(|(n, c)| Raw::file(n, c))
+        .collect();
+    let other = dir.join("other.phoenixproj");
+    std::fs::write(&other, raw_zip(&raws)).unwrap();
+    let out = dir.join("out.phoenixproj");
+    assert_eq!(keep_all(&other, &out, &spec).unwrap(), 0);
+    assert_eq!(std::fs::read(&out).unwrap(), canonical);
+    let _ = std::fs::remove_dir_all(&dir);
+}
+
+#[test]
+fn a_kept_entry_that_is_damaged_or_not_what_its_record_says_replaces_nothing() {
+    let spec = ContainerSpec::phoenixproj(0, 1);
+    let dir = temp_dir("kept_bad");
+    let good = write_phoenix(&[0, 1, 2, 3], "r", &dir, "good.phoenixproj");
+    let target = dir.join("target.phoenixproj");
+    std::fs::write(&target, b"the old file").unwrap();
+
+    // the record says another hash than the stored data gives
+    let source = dir.join("good.phoenixproj");
+    let mut from = Container::open_path(&source, &spec).unwrap();
+    let mut record = from.verify_integrity().unwrap();
+    record.files.get_mut("design/a.json").unwrap().sha256 = sha256_hex(b"something else");
+    let mut writer = ContainerWriter::new(&spec, &dir);
+    for (name, entry) in &record.files {
+        assert!(writer.keep(&mut from, name, entry).unwrap());
+    }
+    let error = writer
+        .write_to_path_from(&target, &AtomicOptions::default(), from)
+        .unwrap_err();
+    assert_eq!(error.code(), Some(PkgCode::Integrity));
+    assert_eq!(std::fs::read(&target).unwrap(), b"the old file");
+
+    // a bit of the stored data of an entry is flipped
+    let mut bytes = good;
+    let at = bytes
+        .windows(b"design/a.json".len())
+        .position(|w| w == b"design/a.json")
+        .unwrap()
+        + b"design/a.json".len();
+    bytes[at + 2] ^= 0x10;
+    let damaged = dir.join("damaged.phoenixproj");
+    std::fs::write(&damaged, &bytes).unwrap();
+    assert!(keep_all(&damaged, &target, &spec).is_err());
+    assert_eq!(std::fs::read(&target).unwrap(), b"the old file");
+
+    // a size that differs is refused when the entry is taken
+    let mut from = Container::open_path(&source, &spec).unwrap();
+    let mut entry = from.verify_integrity().unwrap().files["design/a.json"].clone();
+    entry.size += 1;
+    let mut writer = ContainerWriter::new(&spec, &dir);
+    let error = writer.keep(&mut from, "design/a.json", &entry).unwrap_err();
+    assert_eq!(error.code(), Some(PkgCode::Integrity));
+    assert!(leftovers(&dir).is_empty());
+    let _ = std::fs::remove_dir_all(&dir);
+}
+
+#[test]
+fn kept_entries_need_the_package_they_come_from() {
+    let spec = ContainerSpec::phoenixproj(0, 1);
+    let dir = temp_dir("kept_alone");
+    write_phoenix(&[0, 1, 2, 3], "r", &dir, "source.phoenixproj");
+    let mut from = Container::open_path(&dir.join("source.phoenixproj"), &spec).unwrap();
+    let record = from.verify_integrity().unwrap();
+    let mut writer = ContainerWriter::new(&spec, &dir);
+    for (name, entry) in &record.files {
+        writer.keep(&mut from, name, entry).unwrap();
+    }
+    let target = dir.join("target.phoenixproj");
+    assert!(writer
+        .write_to_path(&target, &AtomicOptions::default())
+        .is_err());
+    assert!(!target.exists());
+    assert!(leftovers(&dir).is_empty());
+    let _ = std::fs::remove_dir_all(&dir);
+}

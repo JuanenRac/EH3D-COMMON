@@ -334,3 +334,29 @@ impl Seed {
         (self.next() % n as u64) as usize
     }
 }
+
+/// Writes the ZIP file again with the same entries in the same order and the same headers, but
+/// compressed at `level`, so that its compressed bytes are not the ones the suite writes.
+/// `change` gives other content to one entry (and nothing else, so the record is then wrong).
+pub fn repack(path: &Path, level: i64, change: Option<(&str, &[u8])>) {
+    let mut archive = zip::ZipArchive::new(File::open(path).unwrap()).unwrap();
+    let mut writer = zip::ZipWriter::new(std::io::Cursor::new(Vec::new()));
+    let options = zip::write::SimpleFileOptions::default()
+        .compression_method(zip::CompressionMethod::Deflated)
+        .compression_level(Some(level))
+        .system(zip::System::Unix)
+        .last_modified_time(zip::DateTime::default());
+    for i in 0..archive.len() {
+        let mut entry = archive.by_index(i).unwrap();
+        let name = entry.name().expect("entry name").into_owned();
+        let mut bytes = Vec::new();
+        entry.read_to_end(&mut bytes).unwrap();
+        if let Some((_, other)) = change.filter(|(changed, _)| *changed == name) {
+            bytes = other.to_vec();
+        }
+        writer.start_file(name.as_str(), options).unwrap();
+        std::io::Write::write_all(&mut writer, &bytes).unwrap();
+    }
+    drop(archive);
+    std::fs::write(path, writer.finish().unwrap().into_inner()).unwrap();
+}
