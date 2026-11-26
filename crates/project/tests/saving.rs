@@ -184,7 +184,7 @@ fn an_entry_that_is_not_what_the_record_says_is_refused_by_a_save() {
     repack(&path, 6, Some(("pcb/outline.json", &other)));
     assert!(Project::open(&path, &OpenOptions::default()).is_err());
     let wrong = std::fs::read(&path).unwrap();
-    let error = save_cnc(open_unchecked(&path), b"{}").unwrap_err();
+    let error = save_cnc(open_unchecked(&path), b"{}").err().unwrap();
     assert_eq!(error.code(), Some(PkgCode::Integrity));
     assert_eq!(std::fs::read(&path).unwrap(), wrong);
     assert_eq!(leftovers(dir.path()), Vec::<String>::new());
