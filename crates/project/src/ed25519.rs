@@ -302,7 +302,7 @@ fn parse_key(bytes: &[u8]) -> Option<(KeyKind, Zeroizing<[u8; 32]>)> {
         _ => None,
     };
     let mut out = Zeroizing::new([0u8; 32]);
-    for (slot, pair) in out.iter_mut().zip(digits.chunks_exact(2)) {
+    for (slot, pair) in out.iter_mut().zip(digits.as_chunks::<2>().0) {
         *slot = nibble(pair[0])? * 16 + nibble(pair[1])?;
     }
     Some((kind, out))

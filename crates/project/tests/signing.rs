@@ -436,7 +436,7 @@ fn damaged_signature_records_are_never_taken_for_valid() {
     let record: Value = serde_json::from_slice(&original["pcb/branch.json"]).unwrap();
     let value = record["signature"]["value"].as_str().unwrap().to_owned();
 
-    let cases: Vec<Value> = vec![
+    let cases = [
         json!({"algorithm": "ed25519", "key_id": signer().key_id(), "value": ""}),
         json!({"algorithm": "ed25519", "key_id": signer().key_id(), "value": &value[..126]}),
         json!({"algorithm": "ed25519", "key_id": signer().key_id(), "value": &value[..127]}),
@@ -655,9 +655,8 @@ fn damaged_key_files_are_refused_without_saying_what_they_hold() {
             }
             Err(error) => quiet(error),
         }
-        match ring.read_file(&damaged) {
-            Ok(_) => {}
-            Err(error) => quiet(error),
+        if let Err(error) = ring.read_file(&damaged) {
+            quiet(error);
         }
     }
 }
