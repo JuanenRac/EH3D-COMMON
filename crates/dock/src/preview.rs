@@ -1,7 +1,7 @@
 //! A picture of a layout as SVG, drawn from the model alone: the groups of tabs, the dividers, the floating windows and the folded tabs. It is what
 //! the demonstration writes for `--shot`, what the documentation shows, and a way to look at a factory layout without opening a window.
 
-use crate::arrange::arrange;
+use crate::arrange::{arrange, tab_rows};
 use crate::core::PanelDef;
 use crate::geom::{Rect, Side};
 use crate::model::{Layout, Node};
@@ -43,36 +43,41 @@ fn tabs_svg(
         "<rect x=\"{:.1}\" y=\"{:.1}\" width=\"{:.1}\" height=\"{:.1}\" rx=\"3\" fill=\"#1f2430\" stroke=\"#3a4256\"/>\n",
         r.x, r.y, r.w, r.h
     ));
+    let widths: Vec<f32> = ids
+        .iter()
+        .map(|id| text_width(title(defs, id, lang)) + 16.0)
+        .collect();
+    let most = ((r.h / 2.0 / BAR) as usize).max(2);
+    let rows = tab_rows(&widths, r.w - 8.0, r.w - 8.0, 3.0, active, most);
+    let bar_h = BAR * rows.rows as f32;
     out.push_str(&format!(
-        "<rect x=\"{:.1}\" y=\"{:.1}\" width=\"{:.1}\" height=\"{BAR}\" rx=\"3\" fill=\"#2a3142\"/>\n",
+        "<rect x=\"{:.1}\" y=\"{:.1}\" width=\"{:.1}\" height=\"{bar_h}\" rx=\"3\" fill=\"#2a3142\"/>\n",
         r.x, r.y, r.w
     ));
-    let mut x = r.x + 4.0;
-    for (i, id) in ids.iter().enumerate() {
-        let t = title(defs, id, lang);
-        let w = (text_width(t) + 16.0).min((r.right() - x).max(0.0));
-        if w < 14.0 {
-            break;
-        }
+    for (i, (id, place)) in ids.iter().zip(&rows.places).enumerate() {
+        let Some(place) = place.filter(|p| p.w >= 14.0) else {
+            continue;
+        };
+        let (x, y) = (r.x + 4.0 + place.x, r.y + BAR * place.row as f32);
+        let w = place.w;
         let fill = if i == active { "#3b82f6" } else { "#364058" };
         out.push_str(&format!(
             "<rect x=\"{x:.1}\" y=\"{:.1}\" width=\"{w:.1}\" height=\"{:.1}\" rx=\"3\" fill=\"{fill}\"/>\n",
-            r.y + 3.0,
+            y + 3.0,
             BAR - 5.0
         ));
         out.push_str(&format!(
             "<text x=\"{:.1}\" y=\"{:.1}\" fill=\"#e8ecf5\" font-size=\"12\" font-family=\"sans-serif\" clip-path=\"inset(0)\">{}</text>\n",
             x + 8.0,
-            r.y + 16.0,
-            esc(t)
+            y + 16.0,
+            esc(title(defs, id, lang))
         ));
-        x += w + 3.0;
     }
     if let Some(a) = ids.get(active) {
         out.push_str(&format!(
             "<text x=\"{:.1}\" y=\"{:.1}\" fill=\"#8893ab\" font-size=\"11\" font-family=\"sans-serif\">{}</text>\n",
             r.x + 10.0,
-            r.y + BAR + 20.0,
+            r.y + bar_h + 20.0,
             esc(a)
         ));
     }

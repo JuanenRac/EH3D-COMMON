@@ -5,7 +5,9 @@
 //! after the frame is drawn, so every rule stays in the model, where it is tested without a window.
 
 use crate::about::{self, AboutBrand, Phoenix};
-use crate::arrange::{arrange, min_size, pick_drop, ratio_from_pointer, DropSlot};
+use crate::arrange::{
+    arrange, min_size, pick_drop, ratio_from_pointer, tab_rows, DropSlot, TabRows,
+};
 use crate::core::{AboutInfo, DockCore, Outcome, PanelDef};
 use crate::geom::{Axis, Rect, Side};
 use crate::menu::{Chosen, DockAction, Kind, MenuBar, Resolved};
@@ -22,7 +24,7 @@ use egui::{
 };
 use eh3d_view::texts::Lang;
 
-/// The height of a tab bar, in points.
+/// The height of one row of a tab bar, in points. A bar whose tabs do not fit in one row has several.
 pub const BAR_H: f32 = 24.0;
 /// The width of a divider, in points.
 pub const GAP: f32 = 5.0;
@@ -163,14 +165,6 @@ impl View<'_> {
             .find(|d| d.id == id)
             .map(|d| d.title.get(self.lang).to_string())
             .unwrap_or_else(|| id.to_string())
-    }
-
-    fn icon(&self, id: &str) -> &'static str {
-        self.defs
-            .iter()
-            .find(|d| d.id == id)
-            .map(|d| d.icon)
-            .unwrap_or("")
     }
 
     fn mins(&self, id: &str) -> (f32, f32) {
@@ -329,26 +323,73 @@ fn side_word(lang: Lang, s: Side) -> &'static str {
 const TAB_TEXT_X: f32 = 11.0;
 const TAB_CLIP: f32 = 4.0;
 const TAB_PAD: f32 = 22.0;
-/// Under this width a tab that cuts its title shows the sign of its panel instead.
-const TAB_NARROW: f32 = 60.0;
+/// The space between two tabs of a row.
+const TAB_GAP: f32 = 2.0;
+/// A tab narrower than this is not drawn.
+const TAB_MIN: f32 = 24.0;
+/// A button of the bar, and what the buttons and the margins take of the first row and of the others.
+const BAR_BUTTON: f32 = BAR_H - 6.0;
+const BUTTONS_AND_MARGINS: f32 = 2.0 * (BAR_BUTTON + 2.0) + 9.0;
+const MARGINS: f32 = 8.0;
+/// The most rows a bar takes in a group `height` points high: half of it, and never fewer than two.
+fn most_rows(height: f32) -> usize {
+    ((height / 2.0 / BAR_H) as usize).max(2)
+}
 
-/// What a tab of `width` points writes: its title, or the sign of the panel when the tab is narrow and the title of `title_width` points does
-/// not fit in it. A short title that fits whole is always written, however narrow its tab is.
-fn tab_label(title: String, icon: &str, width: f32, title_width: f32) -> String {
-    let cut = TAB_TEXT_X + title_width > width - TAB_CLIP;
-    if cut && width < TAB_NARROW && !icon.is_empty() {
-        icon.to_string()
-    } else {
-        title
+fn tab_font() -> FontId {
+    FontId::proportional(13.0)
+}
+
+/// The tabs of a bar `width` points wide measured and set in rows.
+struct TabBar {
+    widths: Vec<f32>,
+    rows: TabRows,
+}
+
+impl TabBar {
+    fn new(
+        ui: &Ui,
+        v: &View,
+        width: f32,
+        ids: &[String],
+        active: usize,
+        max_rows: usize,
+    ) -> TabBar {
+        let p = ui.painter();
+        let widths: Vec<f32> = ids
+            .iter()
+            .map(|id| {
+                p.layout_no_wrap(v.title(id), tab_font(), v.pal.text)
+                    .size()
+                    .x
+                    .ceil()
+                    + TAB_PAD
+            })
+            .collect();
+        let rows = tab_rows(
+            &widths,
+            width - BUTTONS_AND_MARGINS,
+            width - MARGINS,
+            TAB_GAP,
+            active,
+            max_rows,
+        );
+        TabBar { widths, rows }
+    }
+
+    fn height(&self) -> f32 {
+        BAR_H * self.rows.rows as f32
     }
 }
 
-/// Draws a row of tabs in `bar` and gives the rectangle of each tab that was drawn (in the order of `ids`).
+/// Draws the rows of tabs of `layout` in `bar` and gives the rectangle of each tab (in the order of `ids`; empty for one that was not
+/// drawn). Every title is written whole while a row of the bar can hold it; a longer one is cut and shown whole under the pointer.
 #[allow(clippy::too_many_arguments)]
 fn tab_bar(
     ui: &mut Ui,
     v: &View,
     bar: egui::Rect,
+    layout: &TabBar,
     ids: &[String],
     active: usize,
     floating: bool,
@@ -358,7 +399,7 @@ fn tab_bar(
     let p = ui.painter().clone();
     p.rect_filled(bar, CornerRadius::ZERO, v.pal.bar);
     // the buttons on the right: maximise or restore (dock for a floating window), and hide
-    let b = BAR_H - 6.0;
+    let b = BAR_BUTTON;
     let mut right = bar.right() - 3.0;
     let act = ids.get(active).cloned().unwrap_or_default();
     let hide = egui::Rect::from_min_size(Pos2::new(right - b, bar.top() + 3.0), Vec2::splat(b));
@@ -407,33 +448,22 @@ fn tab_bar(
             ev.push(Ev::Action(DockAction::ToggleMaximize));
         }
     }
-    // measure the tabs and keep the one on show in view
-    let font = FontId::proportional(13.0);
-    let limit = right - bar.left() - 6.0;
-    let widths: Vec<f32> = ids
-        .iter()
-        .map(|id| {
-            p.layout_no_wrap(v.title(id), font.clone(), v.pal.text)
-                .size()
-                .x
-                + TAB_PAD
-        })
-        .collect();
-    let mut start = active.min(widths.len().saturating_sub(1));
-    let mut used = widths.get(start).copied().unwrap_or(0.0);
-    while start > 0 && used + widths[start - 1] <= limit {
-        start -= 1;
-        used += widths[start];
-    }
+    let font = tab_font();
     let mut rects = vec![Rect::new(0.0, 0.0, 0.0, 0.0); ids.len()];
-    let mut x = bar.left() + 4.0;
-    for (i, id) in ids.iter().enumerate().skip(start) {
-        let w = widths[i].min((bar.left() + limit + 4.0 - x).max(0.0));
-        if w < 24.0 {
-            break;
+    for (i, id) in ids.iter().enumerate() {
+        let Some(place) = layout.rows.places.get(i).copied().flatten() else {
+            continue;
+        };
+        if place.w < TAB_MIN {
+            continue;
         }
-        let rect =
-            egui::Rect::from_min_size(Pos2::new(x, bar.top() + 2.0), Vec2::new(w, BAR_H - 2.0));
+        let rect = egui::Rect::from_min_size(
+            Pos2::new(
+                bar.left() + 4.0 + place.x,
+                bar.top() + BAR_H * place.row as f32 + 2.0,
+            ),
+            Vec2::new(place.w, BAR_H - 2.0),
+        );
         rects[i] = from_egui(rect);
         let resp = ui.interact(
             rect,
@@ -464,12 +494,11 @@ fn tab_bar(
                 Stroke::new(2.0, v.pal.tab_ink),
             );
         }
-        let label = tab_label(v.title(id), v.icon(id), w, widths[i] - TAB_PAD);
         let clipped = p.with_clip_rect(rect.shrink2(Vec2::new(TAB_CLIP, 0.0)));
         clipped.text(
             Pos2::new(rect.left() + TAB_TEXT_X, rect.center().y),
             Align2::LEFT_CENTER,
-            label,
+            v.title(id),
             font.clone(),
             if i == active {
                 v.pal.tab_ink
@@ -486,7 +515,9 @@ fn tab_bar(
             ev.push(Ev::BeginDrag(id.clone()));
         }
         resp.context_menu(|ui| tab_menu(ui, v, id, ev));
-        x += w + 2.0;
+        if place.w < layout.widths[i] {
+            resp.on_hover_text(v.title(id));
+        }
     }
     rects
 }
@@ -506,8 +537,9 @@ fn draw_group(
 ) {
     let p = ui.painter().clone();
     p.rect_filled(rect, CornerRadius::same(3), v.pal.bg);
-    let bar = egui::Rect::from_min_size(rect.min, Vec2::new(rect.width(), BAR_H));
-    let tabs = tab_bar(ui, v, bar, ids, active, false, maximized, ev);
+    let layout = TabBar::new(ui, v, rect.width(), ids, active, most_rows(rect.height()));
+    let bar = egui::Rect::from_min_size(rect.min, Vec2::new(rect.width(), layout.height()));
+    let tabs = tab_bar(ui, v, bar, &layout, ids, active, false, maximized, ev);
     p.rect_stroke(
         rect,
         CornerRadius::same(3),
@@ -525,7 +557,7 @@ fn draw_group(
         panels: ids.to_vec(),
         rect: from_egui(rect),
         tabs,
-        bar_h: BAR_H,
+        bar_h: layout.height(),
         floating: false,
     });
 }
@@ -1011,8 +1043,11 @@ impl Dock {
                 .collapsible(false)
                 .show(&ctx, |ui| {
                     let w = ui.available_width();
-                    let (bar, _) = ui.allocate_exact_size(Vec2::new(w, BAR_H), Sense::hover());
-                    let tabs = tab_bar(ui, &v, bar, &f.group.panels, active, true, false, &mut ev);
+                    let ids = &f.group.panels;
+                    let layout = TabBar::new(ui, &v, w, ids, active, most_rows(f.rect.h));
+                    let (bar, _) =
+                        ui.allocate_exact_size(Vec2::new(w, layout.height()), Sense::hover());
+                    let tabs = tab_bar(ui, &v, bar, &layout, ids, active, true, false, &mut ev);
                     let rest = ui.available_rect_before_wrap();
                     run_body(
                         ui,
@@ -1022,7 +1057,7 @@ impl Dock {
                         &v,
                         &mut ev,
                     );
-                    tabs
+                    (tabs, layout.height())
                 });
             if !open {
                 ev.push(Ev::Action(DockAction::HidePanel(
@@ -1030,13 +1065,14 @@ impl Dock {
                 )));
             }
             if let Some(r) = shown {
-                if let Some(tabs) = r.inner {
+                if let Some((tabs, bar_h)) = r.inner {
                     let rect = from_egui(r.response.rect);
                     slots.push(DropSlot {
                         panels: f.group.panels.clone(),
                         rect,
                         tabs,
-                        bar_h: BAR_H + 24.0,
+                        // the title of the window is above the bar
+                        bar_h: bar_h + 24.0,
                         floating: true,
                     });
                     if (rect.x - f.rect.x).abs() > 1.0
@@ -1889,8 +1925,19 @@ mod tests {
                 pal: Palette::from_visuals(ui.visuals()),
                 locked: false,
             };
-            let bar = egui::Rect::from_min_size(Pos2::ZERO, Vec2::new(width, BAR_H));
-            rects = tab_bar(ui, &v, bar, &ids, active, false, false, &mut Vec::new());
+            let layout = TabBar::new(ui, &v, width, &ids, active, most_rows(600.0));
+            let bar = egui::Rect::from_min_size(Pos2::ZERO, Vec2::new(width, layout.height()));
+            rects = tab_bar(
+                ui,
+                &v,
+                bar,
+                &layout,
+                &ids,
+                active,
+                false,
+                false,
+                &mut Vec::new(),
+            );
         });
         let mut texts = Vec::new();
         for clipped in &out.shapes {
@@ -1900,26 +1947,26 @@ mod tests {
         (texts, rects)
     }
 
-    /// The width of a bar that leaves `room` points for tabs, after its two buttons and its margins.
-    fn bar_with_room(room: f32) -> f32 {
-        room + 2.0 * (BAR_H - 6.0 + 2.0) + 9.0
+    fn rows_used(rects: &[Rect]) -> Vec<usize> {
+        rects
+            .iter()
+            .map(|r| ((r.y - 2.0) / BAR_H).round() as usize)
+            .collect()
     }
 
-    #[test]
-    fn a_tab_writes_its_sign_only_when_it_is_narrow_and_cuts_its_title() {
-        let label = |w: f32, tw: f32, icon: &str| tab_label("title".into(), icon, w, tw);
-        // a title of one or two characters in a tab of its own size
-        assert_eq!(label(31.0, 9.0, "L"), "title");
-        assert_eq!(label(40.0, 18.0, "L"), "title");
-        assert_eq!(label(48.0, 26.0, "L"), "title");
-        // a tab that only loses room after its title still shows it whole
-        assert_eq!(label(33.0, 18.0, "L"), "title");
-        // the title is cut and the tab is narrow
-        assert_eq!(label(32.0, 18.0, "L"), "L");
-        assert_eq!(label(59.0, 120.0, "L"), "L");
-        // a cut title in a wider tab, or with no sign to show, stays
-        assert_eq!(label(60.0, 120.0, "L"), "title");
-        assert_eq!(label(30.0, 120.0, ""), "title");
+    /// Every tab is drawn, inside the width, whole in its row and over no other one.
+    fn assert_rows_are_sound(rects: &[Rect], width: f32) {
+        for (i, a) in rects.iter().enumerate() {
+            assert!(
+                a.w >= TAB_MIN && a.x >= 0.0 && a.x + a.w <= width,
+                "{i} {a:?}"
+            );
+            for b in &rects[i + 1..] {
+                let apart = a.x + a.w <= b.x || b.x + b.w <= a.x;
+                let other_row = a.y + a.h <= b.y || b.y + b.h <= a.y;
+                assert!(apart || other_row, "{a:?} {b:?}");
+            }
+        }
     }
 
     #[test]
@@ -1938,9 +1985,9 @@ mod tests {
         ];
         for lang in Lang::ALL {
             let (texts, rects) = draw_tabs(&defs, lang, 600.0, 0);
-            for (d, r) in defs.iter().zip(&rects) {
+            assert_eq!(rows_used(&rects), [0, 0], "{lang:?}");
+            for d in &defs {
                 let title = d.title.get(lang);
-                assert!(r.w > 0.0 && r.w < TAB_NARROW, "{lang:?} {title} {}", r.w);
                 assert!(texts.iter().any(|t| t == title), "{lang:?} {texts:?}");
                 assert!(!texts.iter().any(|t| t == d.icon), "{lang:?} {texts:?}");
             }
@@ -1948,36 +1995,182 @@ mod tests {
     }
 
     #[test]
-    fn a_narrow_panel_shows_the_sign_of_a_cut_title_and_clips_a_long_one() {
-        let long = "A rather long title of a panel";
+    fn long_titles_that_do_not_fit_go_to_a_second_row_with_their_whole_name() {
         let defs = [
-            PanelDef::new("first", Text8::same("图层")).icon("F"),
-            PanelDef::new("second", Text8::same(long)).icon("S"),
+            PanelDef::new("rules", Text8::same("Konstruktionsregelprüfung")).icon("K"),
+            PanelDef::new("library", Text8::same("Bauteilbibliotheksverwaltung")).icon("B"),
+            PanelDef::new("tools", Text8::same("Werkzeugeinstellungen")).icon("W"),
         ];
-        let full = draw_tabs(&defs, Lang::Zh, 900.0, 0).1;
-        let (short_w, long_w) = (full[0].w, full[1].w);
-        assert!(short_w < TAB_NARROW && long_w > 2.0 * TAB_NARROW);
+        let wide = draw_tabs(&defs, Lang::De, 900.0, 0).1;
+        assert_eq!(rows_used(&wide), [0, 0, 0]);
+        // room for one of them in each row
+        let width = wide.iter().map(|r| r.w).fold(0.0, f32::max) + 60.0;
+        for active in 0..defs.len() {
+            let (texts, rects) = draw_tabs(&defs, Lang::De, width, active);
+            assert_rows_are_sound(&rects, width);
+            assert!(rows_used(&rects)[2] >= 1, "{rects:?}");
+            for (d, (r, full)) in defs.iter().zip(rects.iter().zip(&wide)) {
+                assert_eq!(r.w, full.w, "the name is whole");
+                assert!(
+                    texts.iter().any(|t| t == d.title.get(Lang::De)),
+                    "{texts:?}"
+                );
+                assert!(!texts.iter().any(|t| t == d.icon), "{texts:?}");
+            }
+        }
+    }
 
-        // room for the short tab and a wide part of the long one: the long title is written and clipped
-        let room = short_w + 2.0 + TAB_NARROW + 20.0;
-        let (texts, rects) = draw_tabs(&defs, Lang::Zh, bar_with_room(room), 0);
-        assert!(rects[1].w >= TAB_NARROW && rects[1].w < long_w);
-        assert!(texts.iter().any(|t| t == long), "{texts:?}");
-        assert!(texts.iter().any(|t| t == "图层"), "{texts:?}");
+    #[test]
+    fn chinese_and_japanese_titles_keep_every_character_in_a_second_row() {
+        let defs = [
+            PanelDef::new(
+                "a",
+                Text8([
+                    "a",
+                    "a",
+                    "a",
+                    "a",
+                    "a",
+                    "a",
+                    "设计规则检查结果",
+                    "デザインルールチェック",
+                ]),
+            )
+            .icon("A"),
+            PanelDef::new(
+                "b",
+                Text8([
+                    "b",
+                    "b",
+                    "b",
+                    "b",
+                    "b",
+                    "b",
+                    "元件库管理器面板",
+                    "部品ライブラリの管理",
+                ]),
+            )
+            .icon("B"),
+        ];
+        for lang in [Lang::Zh, Lang::Ja] {
+            let wide = draw_tabs(&defs, lang, 900.0, 0).1;
+            let width = wide[0].w.max(wide[1].w) + 60.0;
+            let (texts, rects) = draw_tabs(&defs, lang, width, 1);
+            assert_rows_are_sound(&rects, width);
+            assert_eq!(rows_used(&rects), [0, 1], "{lang:?}");
+            for (d, (r, full)) in defs.iter().zip(rects.iter().zip(&wide)) {
+                assert_eq!(r.w, full.w, "{lang:?}");
+                assert!(texts.iter().any(|t| t == d.title.get(lang)), "{texts:?}");
+                assert!(!texts.iter().any(|t| t == d.icon), "{texts:?}");
+            }
+        }
+    }
 
-        // only a sliver of the long one: its sign
-        let room = short_w + 2.0 + 40.0;
-        let (texts, rects) = draw_tabs(&defs, Lang::Zh, bar_with_room(room), 0);
-        assert!(rects[1].w >= 24.0 && rects[1].w < TAB_NARROW);
-        assert!(texts.iter().any(|t| t == "S"), "{texts:?}");
-        assert!(!texts.iter().any(|t| t == long), "{texts:?}");
+    #[test]
+    fn in_a_very_narrow_panel_every_tab_has_a_row_and_no_sign_takes_its_place() {
+        let defs = [
+            PanelDef::new("first", Text8::same("A rather long title of a panel")).icon("F"),
+            PanelDef::new("second", Text8::same("图层")).icon("S"),
+        ];
+        for width in [40.0, 60.0, 90.0] {
+            let (texts, rects) = draw_tabs(&defs, Lang::Zh, width, 0);
+            assert_rows_are_sound(&rects, width);
+            assert!(rects[0].y < rects[1].y, "{width} {rects:?}");
+            assert!(!texts.iter().any(|t| t == "F" || t == "S"), "{texts:?}");
+            for d in &defs {
+                assert!(
+                    texts.iter().any(|t| t == d.title.get(Lang::Zh)),
+                    "{texts:?}"
+                );
+            }
+        }
+        // too narrow for any tab: nothing is drawn and nothing fails
+        let (_, rects) = draw_tabs(&defs, Lang::Zh, 20.0, 0);
+        assert!(rects.iter().all(|r| r.w == 0.0), "{rects:?}");
+    }
 
-        // a panel so narrow that even the short title is cut: its sign
-        let room = short_w - 10.0;
-        let (texts, rects) = draw_tabs(&defs, Lang::Zh, bar_with_room(room), 0);
-        assert!(rects[0].w >= 24.0 && rects[0].w < short_w);
-        assert!(texts.iter().any(|t| t == "F"), "{texts:?}");
-        assert!(!texts.iter().any(|t| t == "图层"), "{texts:?}");
+    /// A frame with a narrow group of three long titles beside a wide group, whose bodies note where they were drawn.
+    fn narrow_group() -> (Harness, Rc<Cell<f32>>) {
+        let defs = vec![
+            PanelDef::new("a", Text8::same("Konstruktionsregeln")),
+            PanelDef::new("b", Text8::same("Bauteilbibliothek")),
+            PanelDef::new("c", Text8::same("Werkzeugeinstellungen")),
+            PanelDef::new("d", Text8::same("Board")),
+        ];
+        let layout = Layout::with_root(Node::row(
+            0.18,
+            Node::tabs(&["a", "b", "c"]),
+            Node::tabs(&["d"]),
+        ));
+        let mut dock = Dock::single(defs, layout);
+        let top = Rc::new(Cell::new(0.0));
+        for id in ["a", "b", "c"] {
+            let top = top.clone();
+            dock.register(id, move |ui| top.set(ui.max_rect().top()));
+        }
+        let mut h = Harness {
+            ctx: egui::Context::default(),
+            dock,
+            t: 0.0,
+            calls: Rc::new(Cell::new(0)),
+            chosen: Vec::new(),
+        };
+        h.frames(3);
+        (h, top)
+    }
+
+    fn centre(r: Rect) -> Pos2 {
+        Pos2::new(r.x + r.w / 2.0, r.y + r.h / 2.0)
+    }
+
+    #[test]
+    fn the_content_starts_under_the_last_row_of_tabs() {
+        let (h, top) = narrow_group();
+        let narrow = h.dock.last_slots()[0].clone();
+        assert!(narrow.bar_h >= 2.0 * BAR_H, "{narrow:?}");
+        assert_eq!(narrow.bar_h % BAR_H, 0.0);
+        let lowest = narrow.tabs.iter().map(|t| t.y + t.h).fold(0.0, f32::max);
+        assert!(
+            (lowest - (narrow.rect.y + narrow.bar_h)).abs() < 0.5,
+            "{narrow:?}"
+        );
+        // the body is 3 points inside the content
+        assert!((top.get() - (narrow.rect.y + narrow.bar_h + 3.0)).abs() < 0.5);
+        // a group with one short title keeps one row
+        assert_eq!(h.dock.last_slots()[1].bar_h, BAR_H);
+    }
+
+    #[test]
+    fn a_tab_of_any_row_can_be_dragged_away() {
+        for which in [0, 2] {
+            let (mut h, _) = narrow_group();
+            let slots = h.dock.last_slots().to_vec();
+            let tab = slots[0].tabs[which];
+            if which == 2 {
+                assert!(tab.y > slots[0].tabs[0].y, "the tab is in a lower row");
+            }
+            let to = &slots[1];
+            h.drag(centre(tab), centre(to.rect));
+            assert!(h.dock.core().layout_is_sound());
+            let id = ["a", "b", "c"][which];
+            let group = h.dock.core().layout().group_of(id).expect("still shown");
+            assert!(group.panels.iter().any(|p| p == "d"), "{:?}", group.panels);
+        }
+    }
+
+    #[test]
+    fn a_tab_dropped_on_a_lower_row_takes_that_place() {
+        let (mut h, _) = narrow_group();
+        let slots = h.dock.last_slots().to_vec();
+        let last = slots[0].tabs[2];
+        let from = slots[1].tabs[0];
+        // on the left half of the third tab: before it
+        let to = Pos2::new(last.x + 4.0, last.y + last.h / 2.0);
+        // not on the strip along the edge of the window
+        let to = Pos2::new(to.x.max(slots[0].rect.x + EDGE_MARGIN + 1.0), to.y);
+        h.drag(centre(from), to);
+        let group = h.dock.core().layout().group_of("d").expect("still shown");
+        assert_eq!(group.panels, ["a", "b", "d", "c"]);
     }
 
     #[test]
