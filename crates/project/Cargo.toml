@@ -23,6 +23,8 @@ zeroize = "1"
 eh3d-container = { version = ">=0.0.1", path = "../container" }
 eh3d-diagnostic = { version = ">=0.0.1", path = "../diagnostic" }
 serde = { version = "1", features = ["derive"] }
+# sha2: the hash of an attachment is worked out while it is read in blocks (the version of the suite).
+sha2 = "0.10"
 # float_roundtrip: the same switch as the container, which writes canonical JSON.
 serde_json = { version = "1", features = ["float_roundtrip"] }
 

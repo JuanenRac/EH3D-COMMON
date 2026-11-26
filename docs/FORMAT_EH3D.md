@@ -24,11 +24,12 @@ common/                 what belongs to the project as a whole
 manufacturing/          a .eh3dproj 1.0.0 package, entry for entry
 docs/<program>/         documentation of a program (a branch of its own)
 docs/project/           documentation of the project as a whole
+attachments/            data sheets, manuals and any other file attached to the project
 x-<name>/               an extension of someone else: kept, never read
 audit/log.jsonl         the audit log (optional, not a branch)
 ```
 
-A **branch** is a top-level folder whose name is 1 to 32 characters of lowercase ASCII letters, digits and hyphens, starting and ending with a letter or a digit. `docs` and `audit` are not branches; `docs/<name>` (the same name rule) is. Any such folder is a branch: a program that appears in a later version writes a branch that an older program keeps. The names the crate knows (`KNOWN_BRANCHES`: `pcb`, `cad`, `3dp`, `laser`, `cnc`, `pnp`, `vision`, `routepro`, `drillpro`, `stencilcam`, `gerberviewer`, `common`, `manufacturing`, `docs`) are only for showing in a list. Folders that start with `x-` are extension folders: no record is needed, nothing is read, everything is kept and listed in the integrity record.
+A **branch** is a top-level folder whose name is 1 to 32 characters of lowercase ASCII letters, digits and hyphens, starting and ending with a letter or a digit. `docs` and `audit` are not branches; `docs/<name>` (the same name rule) is. Any such folder is a branch: a program that appears in a later version writes a branch that an older program keeps. The names the crate knows (`KNOWN_BRANCHES`: `pcb`, `cad`, `3dp`, `laser`, `cnc`, `pnp`, `vision`, `routepro`, `drillpro`, `stencilcam`, `gerberviewer`, `common`, `manufacturing`, `docs`, `attachments`) are only for showing in a list. Folders that start with `x-` are extension folders: no record is needed, nothing is read, everything is kept and listed in the integrity record.
 
 A file at the top level other than the two records, a folder that is not a valid branch name, and a file directly under `docs/` have no place in the layout and are refused (`EH3D-PKG-009`).
 
@@ -100,7 +101,7 @@ When the source branch changes, its hash changes and the reference no longer mat
 ## Permissions
 
 * A program writes the branches it owns (`Writer`): its own and `docs/<its name>`. Writing another's branch is refused (`EH3D-PKG-017`), also when the writer's name differs from the `app` of the branch.
-* `common` and `docs/project` belong to the project as a whole; any program may write them.
+* `common`, `docs/project` and `attachments` belong to the project as a whole; any program may write them.
 * `manufacturing` belongs to the program that prepares the job (a CAM program, or the importer of a `.eh3dproj`).
 * Saving a branch writes that branch and the two records of the project and copies every other entry through: **their bytes do not change**. The file is replaced atomically (a temporary file in the same folder, then a rename), so a crash never leaves half a project.
 * This is a rule of the programs that follow the format, not a defence against someone who edits the file by hand. Against that there are the signature and the seal below.
@@ -124,6 +125,109 @@ The documentation of a program is a branch of its own, so it takes part in the i
 ### Origin of an imported file: `<branch>/origin/`
 
 A program that imports a format of another program (EAGLE, KiCad, Gerber, STEP, 3MF, SVG, G-code...) keeps in its branch, under `origin/`, the **original file as it was read** and `origin/report.json`: the format, the name, the SHA-256 and the size of the file; the converter and its version; what was read, what was not read and what an export to the same format cannot say (each as a count with the reason). With that, the way back (export to the other format) tells what was lost instead of losing it unseen. The report is checked against the files that are there (hash, size, name under `origin/`). Export to another format is done by the same program from the same branch; the container stores no export.
+
+## Attachments: `attachments/`
+
+A project may carry any file: data sheets, manuals, office documents, projects and drawings of other programs, video, sound, anything. They live in **one shared branch**, `attachments/` (format `1.0`), written by the module `eh3d_project::attachments`. The reasons are in `docs/adr/0003-eh3d-attachments.md`.
+
+```
+attachments/
+  branch.json                    the record of the branch, as for any branch
+  index.json                     what each attachment is
+  blobs/<sha256>/00000           the bytes of a file, under the SHA-256 of its content
+  blobs/<sha256>/00001           a large file continues in more parts
+```
+
+No name given by a person is ever a path inside the project: the paths are made of the hash and a number.
+
+### The index
+
+```json
+{
+  "schema": 1,
+  "attachments": [
+    {
+      "sha256": "<SHA-256 of the whole file: the identifier>",
+      "name": "NE555.pdf",
+      "size": 734003,
+      "kind": "pdf",
+      "storage": "inside",
+      "title": { "en": "Timer data sheet" },
+      "components": [
+        { "reference": "U3" },
+        { "value": "10k" },
+        { "manufacturer": "Example", "part_number": "NE555P" }
+      ]
+    },
+    {
+      "sha256": "<SHA-256 the file at the address must have>",
+      "name": "manual.pdf",
+      "kind": "pdf",
+      "storage": "link",
+      "url": "https://example.invalid/manual.pdf"
+    }
+  ]
+}
+```
+
+* A file is **stored once**: its identifier is the SHA-256 of its content, so attaching the same content again adds the new components, title and address to the record that is there. The attachments are sorted by identifier.
+* `name` is a safe file name: no folder, no control, invisible or text-reordering characters, no leading or trailing dots or spaces, no leading dash, no reserved name of Windows, at most 150 bytes. A reader cleans it again before it makes a file.
+* `kind` is `pdf`, `markdown`, `text`, `image`, `report` (`.json`), `office` (doc docx docm odt rtf xls xlsx xlsm ods csv tsv ppt pptx pptm odp and their templates), `project` (EAGLE, KiCad, `.eh3d` and other design projects), `cad` (STEP, STL, DXF, DWG, IGES, OBJ, PLY, 3MF), `video`, `audio`, `archive` or `other`. A word a reader does not know is `other`. Anything may be attached.
+* `components` says which pieces of the design use it. Each entry names **one** of a designator (`reference`), a `value`, or a `part_number`, the last one with or without its `manufacturer`. Designators, part numbers and manufacturers are compared without regard to case; a value exactly (`1m` is not `1M`). `AttachmentIndex::for_component` gives the attachments of a piece, the ones of its designator first, then of its part number with the manufacturer, of its part number, and of its value.
+* `storage` is `inside` (the default) or `link`. A link keeps only the address (`https://` or `http://`, with no user name or password in it) and the SHA-256, and the size when it is known. **Nothing is ever downloaded or opened by itself**; `matches_file` tells whether a file a person got from the address is the one announced. Attaching the file itself later makes the link a file inside and keeps the address.
+* `added` is the time as the caller wrote it. Unknown fields are kept.
+
+### Dangerous files
+
+Programs, scripts, office documents with macros, compressed archives (they are not looked into) and pages that can run code (HTML, SVG) are accepted, kept like any other file and marked `danger`: `executable`, `script`, `macros`, `archive` or `active-content`. The mark comes from the extension, from the first bytes (a program behind a harmless name) and, for office documents, from the macros named inside them; a document that cannot be looked into counts as one with macros.
+
+* Taking a dangerous file out needs the agreement of a person (`Consent::Given`, `--confirm-dangerous`). The mark of the record is not trusted alone: the name and the content of the file are looked at again, and a refused or partial file is removed.
+* A file taken out gets its safe name inside the folder chosen, never replaces a file that is there, is not executable and is marked on Windows as coming from outside.
+* Nothing of an attachment is ever run or opened by this crate. A program that opens one asks first, and never launches a program or a script (`Danger::never_launched`).
+* The `attachments` branch is not offered to the programs as files to take (`suiteview`); `extract-branch` of it gives the parts under their hash, which have no extension.
+
+### Limits and memory
+
+* One attachment may be up to **1 GiB** (`AttachmentLimits`, setting `attachments.max_mb`, 1 to 4096). The whole project stays under the limit of the container (4 GiB minus one byte), with 16 MiB left free for the records.
+* Files are measured, stored, checked and taken out in blocks. A file larger than 32 MiB is stored in parts of 32 MiB, and reading holds one part at most, so a large attachment is never whole in memory. The content is checked against its SHA-256 before the last part is handed over, and a file that changes while it is being attached is refused with nothing written.
+* The parts are far under the limit of one entry, so **a reader that knows nothing of attachments** (any reader of format 1.0.0) opens the project, keeps the branch byte for byte when it saves its own, and verifies it like any unknown branch. Projects made before attachments open as before and have none.
+* A key file of a signature is never put into a project. A sealed project or branch is not written, and a branch of attachments of a newer format is refused (`EH3D-PKG-024`). Writing the branch removes a signature of the project, and one of the branch unless a signer is given.
+
+### For a program
+
+```rust
+use eh3d_project::attachments::{self, AttachRequest, Attacher, ComponentLink, ComponentQuery, Consent};
+
+// attach (any program; the file is read in blocks)
+let request = AttachRequest::new().component(ComponentLink::designator("U3"));
+let done = Attacher::new("pcb", env!("CARGO_PKG_VERSION")).attach_file(project, path, &request, &options)?;
+let mut project = done.project;          // done.notices says what to tell the person
+
+// from a piece of the design
+let index = attachments::read_index(&mut project)?;
+let found = index.for_component(&ComponentQuery::new().reference("U3").value("NE555"));
+
+// show it inside the program: a name, a size, the danger and a reader as often as needed
+let source = attachments::AttachmentSource::open(project.path(), found[0].id())?;
+let bytes = source.reader()?;            // std::io::Read
+
+// take it out (NeedsConfirmation for a dangerous file until the person agrees)
+attachments::extract(&mut project, found[0].id(), folder, Consent::NotAsked, &limits)?;
+```
+
+The viewer of the suite (`eh3d-viewer`, `docs/VIEWER.md`) reads any `Source`; a program hands it an attachment with a wrapper of its own, without writing a file first:
+
+```rust
+struct FromProject(attachments::AttachmentSource);
+
+impl eh3d_viewer::Source for FromProject {
+    fn name(&self) -> &str { self.0.name() }
+    fn len(&self) -> u64 { self.0.len() }
+    fn reader(&self) -> std::io::Result<Box<dyn std::io::Read + '_>> { Ok(Box::new(self.0.reader()?)) }
+}
+```
+
+`attach_link`, `set_components` and `detach` complete it. The words of the warnings in the eight languages are in `suitetext` (`attachments::danger_word`, `AttachmentDangerous`, `AttachmentLinkOnly`, `AttachmentTooLarge`). The windows of the programs do not show attachments yet.
 
 ## Security (all optional)
 
@@ -251,6 +355,14 @@ eh3d-project extract-branch FILE BRANCH OUT_DIR
 eh3d-project extract-branch FILE manufacturing --eh3dproj OUT.eh3dproj
 eh3d-project keygen KEYFILE
 eh3d-project sign FILE --key KEYFILE [--branch BRANCH[,BRANCH...]] [--project]
+eh3d-project attach FILE PATH [--name NAME] [--title TEXT] [--url URL] [LINKS] [--max-mb N]
+eh3d-project attach-link FILE URL (--sha256 HEX [--size BYTES] | --of PATH) [--name NAME] [--title TEXT] [LINKS]
+eh3d-project attachments FILE [--json] [LINKS]
+eh3d-project extract-attachment FILE ID OUT_DIR [--confirm-dangerous] [--max-mb N]
+eh3d-project attachment-links FILE ID (add|remove) LINKS
+eh3d-project detach FILE ID
 ```
 
-`verify` prints the state of every signature (`signature project: ...`, `signature <branch>: ...`) and the findings with their codes, and ends with `VERIFY=PASS` or `VERIFY=FAIL` (exit 0, 2); signatures are judged with the public keys given by `--pubkey`. `keygen` writes `KEYFILE` and `KEYFILE.pub` and prints the identifier of the key, never the key. `sign` checks every branch asked for before it signs the first. Wrong use is 64 and any other failure 1. `extract-branch` and `keygen` never replace a file that is there; nothing is written except by `extract-branch`, `keygen` and `sign`.
+`verify` prints the state of every signature (`signature project: ...`, `signature <branch>: ...`) and the findings with their codes, and ends with `VERIFY=PASS` or `VERIFY=FAIL` (exit 0, 2); signatures are judged with the public keys given by `--pubkey`. `keygen` writes `KEYFILE` and `KEYFILE.pub` and prints the identifier of the key, never the key. `sign` checks every branch asked for before it signs the first. Wrong use is 64 and any other failure 1. `extract-branch`, `extract-attachment` and `keygen` never replace a file that is there; nothing is written except by them and by `sign`, `attach`, `attach-link`, `attachment-links` and `detach`, which rewrite the project.
+
+`LINKS` are the pieces of the design: `--ref R5`, `--value 10k`, `--part NUMBER` and `--maker-part MAKER NUMBER`, each as often as needed. `ID` is the identifier of an attachment or its first 8 digits or more. `attach-link --of PATH` takes the hash and the size from a file the person already has. `extract-attachment` of a dangerous file without `--confirm-dangerous` writes nothing and exits 3.

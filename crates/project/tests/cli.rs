@@ -166,3 +166,115 @@ fn keygen_sign_and_verify_from_the_command_line() {
     assert_eq!(wrong.status.code(), Some(1));
     assert!(!String::from_utf8_lossy(&wrong.stderr).contains(digits));
 }
+
+#[test]
+fn attachments_are_added_listed_and_taken_out_from_the_command_line() {
+    let dir = tempdir().unwrap();
+    let file = project(dir.path());
+    let sheet = dir.path().join("NE555.pdf");
+    std::fs::write(&sheet, b"%PDF-1.4 made up").unwrap();
+    let script = dir.path().join("tool.py");
+    std::fs::write(&script, b"print('made up')\n").unwrap();
+    let at = |p: &Path| p.to_str().unwrap().to_owned();
+
+    let done = run(&[
+        "attach",
+        &file,
+        &at(&sheet),
+        "--ref",
+        "U3",
+        "--maker-part",
+        "Example",
+        "NE555P",
+        "--title",
+        "Data sheet",
+    ]);
+    assert_eq!(done.status.code(), Some(0), "{done:?}");
+    assert_eq!(run(&["attach", &file, &at(&script)]).status.code(), Some(0));
+    let again = run(&["attach", &file, &at(&sheet), "--ref", "U3"]);
+    assert!(out(&again).contains("nothing new"), "{again:?}");
+
+    let listed = out(&run(&["attachments", &file]));
+    assert!(listed.contains("attachments  2"), "{listed}");
+    assert!(listed.contains("DANGEROUS (script)"), "{listed}");
+    let of_u3 = run(&["attachments", &file, "--ref", "u3", "--json"]);
+    let list: serde_json::Value = serde_json::from_str(&out(&of_u3)).unwrap();
+    assert_eq!(list.as_array().unwrap().len(), 1);
+    assert_eq!(list[0]["name"], "NE555.pdf");
+    assert_eq!(list[0]["kind"], "pdf");
+    let sheet_id = list[0]["sha256"].as_str().unwrap().to_owned();
+    assert_eq!(run(&["verify", &file]).status.code(), Some(0));
+
+    let target = dir.path().join("out");
+    let taken = run(&["extract-attachment", &file, &sheet_id[..12], &at(&target)]);
+    assert_eq!(taken.status.code(), Some(0), "{taken:?}");
+    assert_eq!(
+        std::fs::read(target.join("NE555.pdf")).unwrap(),
+        b"%PDF-1.4 made up"
+    );
+    // never over a file that is there
+    let twice = run(&["extract-attachment", &file, &sheet_id, &at(&target)]);
+    assert_eq!(twice.status.code(), Some(1));
+
+    let all = run(&["attachments", &file, "--json"]);
+    let all: serde_json::Value = serde_json::from_str(&out(&all)).unwrap();
+    let script_id = all
+        .as_array()
+        .unwrap()
+        .iter()
+        .find(|a| a["name"] == "tool.py")
+        .and_then(|a| a["sha256"].as_str())
+        .unwrap()
+        .to_owned();
+    let refused = run(&["extract-attachment", &file, &script_id, &at(&target)]);
+    assert_eq!(refused.status.code(), Some(3), "{refused:?}");
+    assert!(!target.join("tool.py").exists());
+    let agreed = run(&[
+        "extract-attachment",
+        &file,
+        &script_id,
+        &at(&target),
+        "--confirm-dangerous",
+    ]);
+    assert_eq!(agreed.status.code(), Some(0), "{agreed:?}");
+    assert!(target.join("tool.py").exists());
+
+    let linked = run(&[
+        "attach-link",
+        &file,
+        "https://example.invalid/manual.pdf",
+        "--sha256",
+        &"a".repeat(64),
+        "--value",
+        "10k",
+    ]);
+    assert_eq!(linked.status.code(), Some(0), "{linked:?}");
+    let link = run(&["extract-attachment", &file, &"a".repeat(64), &at(&target)]);
+    assert_eq!(link.status.code(), Some(1));
+    assert!(String::from_utf8_lossy(&link.stderr).contains("nothing is downloaded"));
+
+    let moved = run(&[
+        "attachment-links",
+        &file,
+        &sheet_id,
+        "remove",
+        "--ref",
+        "U3",
+    ]);
+    assert_eq!(moved.status.code(), Some(0), "{moved:?}");
+    assert!(out(&run(&["attachments", &file, "--ref", "U3"])).contains("attachments  0"));
+    assert_eq!(run(&["detach", &file, &sheet_id]).status.code(), Some(0));
+    assert!(out(&run(&["attachments", &file])).contains("attachments  2"));
+    assert_eq!(run(&["verify", &file]).status.code(), Some(0));
+
+    for wrong in [
+        vec!["attach", &file],
+        vec!["attach", &file, "x", "--max-mb", "0"],
+        vec!["attach-link", &file, "https://example.invalid/a"],
+        vec!["attachments", &file, "--confirm-dangerous"],
+        vec!["attachment-links", &file, &script_id, "add"],
+    ] {
+        let o = run(&wrong);
+        assert!(matches!(o.status.code(), Some(1 | 64)), "{wrong:?} {o:?}");
+    }
+}

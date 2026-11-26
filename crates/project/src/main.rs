@@ -8,25 +8,39 @@
 //! eh3d-project sign FILE --key KEYFILE [--branch BRANCH[,BRANCH...]] [--project]
 //! eh3d-project extract-branch FILE BRANCH OUT_DIR
 //! eh3d-project extract-branch FILE manufacturing --eh3dproj OUT.eh3dproj
+//! eh3d-project attach FILE PATH [--name NAME] [--title TEXT] [--url URL] [LINKS] [--max-mb N]
+//! eh3d-project attach-link FILE URL (--sha256 HEX [--size BYTES] | --of PATH) [--name NAME] [--title TEXT] [LINKS]
+//! eh3d-project attachments FILE [--json] [LINKS]
+//! eh3d-project extract-attachment FILE ID OUT_DIR [--confirm-dangerous] [--max-mb N]
+//! eh3d-project attachment-links FILE ID (add|remove) LINKS
+//! eh3d-project detach FILE ID
 //! ```
 //!
+//! `LINKS` are the pieces of the design: `--ref R5`, `--value 10k`, `--part NUMBER`, `--maker-part MAKER NUMBER`, each one as
+//! often as needed.
+//!
 //! Exit codes: 0 sound, 2 verification not passed (an error finding, or a warning with
-//! `--strict`), 1 anything else that failed, 64 wrong use. Nothing is written except by
-//! `extract-branch` and `keygen`, which never replace a file, and by `sign`, which rewrites the
-//! project given to it. The secret key is read from the path given and is never printed.
+//! `--strict`), 3 a dangerous attachment was not taken out because nobody agreed, 1 anything
+//! else that failed, 64 wrong use. Nothing is written except by `extract-branch`,
+//! `extract-attachment` and `keygen`, which never replace a file, and by `sign`, `attach`,
+//! `attach-link`, `attachment-links` and `detach`, which rewrite the project given to them.
+//! Nothing is opened, run or downloaded. The secret key is read from the path given and is never
+//! printed.
 
 use std::collections::BTreeSet;
 use std::path::Path;
 use std::process::ExitCode;
 
 use eh3d_container::AtomicOptions;
+use eh3d_project::attachments::{self, Attached};
 use eh3d_project::ed25519::generate_key_files;
 use eh3d_project::{
-    Checks, Ed25519Keyring, Ed25519Signer, KeyError, OpenOptions, Project, SaveOptions, Signer,
+    AttachError, AttachRequest, Attacher, Attachment, Checks, ComponentLink, ComponentQuery,
+    Consent, Ed25519Keyring, Ed25519Signer, KeyError, OpenOptions, Project, SaveOptions, Signer,
     Verifier,
 };
 
-const USAGE: &str = "usage:\n  eh3d-project info FILE [--json]\n  eh3d-project verify FILE [--strict] [--require-signed BRANCH[,BRANCH...]] [--require-project-signature] [--pubkey KEY.pub]...\n  eh3d-project extract-branch FILE BRANCH OUT_DIR\n  eh3d-project extract-branch FILE manufacturing --eh3dproj OUT.eh3dproj\n  eh3d-project keygen KEYFILE\n  eh3d-project sign FILE --key KEYFILE [--branch BRANCH[,BRANCH...]] [--project]";
+const USAGE: &str = "usage:\n  eh3d-project info FILE [--json]\n  eh3d-project verify FILE [--strict] [--require-signed BRANCH[,BRANCH...]] [--require-project-signature] [--pubkey KEY.pub]...\n  eh3d-project extract-branch FILE BRANCH OUT_DIR\n  eh3d-project extract-branch FILE manufacturing --eh3dproj OUT.eh3dproj\n  eh3d-project keygen KEYFILE\n  eh3d-project sign FILE --key KEYFILE [--branch BRANCH[,BRANCH...]] [--project]\n  eh3d-project attach FILE PATH [--name NAME] [--title TEXT] [--url URL] [LINKS] [--max-mb N]\n  eh3d-project attach-link FILE URL (--sha256 HEX [--size BYTES] | --of PATH) [--name NAME] [--title TEXT] [LINKS]\n  eh3d-project attachments FILE [--json] [LINKS]\n  eh3d-project extract-attachment FILE ID OUT_DIR [--confirm-dangerous] [--max-mb N]\n  eh3d-project attachment-links FILE ID (add|remove) LINKS\n  eh3d-project detach FILE ID\nLINKS: --ref R5, --value 10k, --part NUMBER, --maker-part MAKER NUMBER (each as often as needed)";
 
 fn main() -> ExitCode {
     let args: Vec<String> = std::env::args().skip(1).collect();
@@ -40,6 +54,12 @@ fn main() -> ExitCode {
         Some("extract-branch") => extract(&args[1..]),
         Some("keygen") => keygen(&args[1..]),
         Some("sign") => sign(&args[1..]),
+        Some("attach") => attach(&args[1..]),
+        Some("attach-link") => attach_link(&args[1..]),
+        Some("attachments") => list_attachments(&args[1..]),
+        Some("extract-attachment") => extract_attachment(&args[1..]),
+        Some("attachment-links") => attachment_links(&args[1..]),
+        Some("detach") => detach(&args[1..]),
         _ => Err(Failure::Usage),
     };
     match outcome {
@@ -52,12 +72,26 @@ fn main() -> ExitCode {
             eprintln!("error: {text}");
             ExitCode::from(1)
         }
+        Err(Failure::NeedsConfirmation(text)) => {
+            eprintln!("error: {text}; add --confirm-dangerous if you trust it");
+            ExitCode::from(3)
+        }
     }
 }
 
 enum Failure {
     Usage,
     Error(String),
+    NeedsConfirmation(String),
+}
+
+impl From<AttachError> for Failure {
+    fn from(e: AttachError) -> Self {
+        match e {
+            AttachError::NeedsConfirmation { .. } => Failure::NeedsConfirmation(e.to_string()),
+            _ => Failure::Error(e.to_string()),
+        }
+    }
 }
 
 impl From<eh3d_container::ContainerError> for Failure {
@@ -324,4 +358,268 @@ fn extract(args: &[String]) -> Result<u8, Failure> {
         }
         _ => Err(Failure::Usage),
     }
+}
+
+/// The options of the commands of the attachments, in any order.
+#[derive(Default)]
+struct Options {
+    request: AttachRequest,
+    sha256: Option<String>,
+    size: Option<u64>,
+    of: Option<String>,
+    max_mb: Option<String>,
+    json: bool,
+    confirmed: bool,
+}
+
+fn options(args: &[String], allowed: &[&str]) -> Result<Options, Failure> {
+    const LINKS: [&str; 4] = ["--ref", "--value", "--part", "--maker-part"];
+    let mut out = Options::default();
+    let mut rest = args.iter();
+    while let Some(flag) = rest.next() {
+        let name = flag.as_str();
+        let known =
+            allowed.contains(&name) || (allowed.contains(&"LINKS") && LINKS.contains(&name));
+        if !known {
+            return Err(Failure::Usage);
+        }
+        let mut word = || rest.next().cloned().ok_or(Failure::Usage);
+        match name {
+            "--json" => out.json = true,
+            "--confirm-dangerous" => out.confirmed = true,
+            "--ref" => {
+                let link = ComponentLink::designator(&word()?);
+                out.request.components.push(link);
+            }
+            "--value" => {
+                let link = ComponentLink::of_value(&word()?);
+                out.request.components.push(link);
+            }
+            "--part" => {
+                let link = ComponentLink::part(None, &word()?);
+                out.request.components.push(link);
+            }
+            "--maker-part" => {
+                let maker = word()?;
+                let link = ComponentLink::part(Some(&maker), &word()?);
+                out.request.components.push(link);
+            }
+            "--name" => out.request.name = Some(word()?),
+            "--title" => {
+                let text = word()?;
+                out.request.title.insert("en".to_owned(), text);
+            }
+            "--url" => out.request.url = Some(word()?),
+            "--sha256" => out.sha256 = Some(word()?),
+            "--size" => out.size = Some(word()?.parse().map_err(|_| Failure::Usage)?),
+            "--of" => out.of = Some(word()?),
+            "--max-mb" => out.max_mb = Some(word()?),
+            _ => return Err(Failure::Usage),
+        }
+    }
+    Ok(out)
+}
+
+fn attacher(max_mb: Option<&str>) -> Result<Attacher, Failure> {
+    let mut writer = Attacher::new("eh3d-project", env!("CARGO_PKG_VERSION"));
+    if let Some(mb) = max_mb {
+        if !writer.limits.apply("attachments.max_mb", mb) {
+            return Err(Failure::Usage);
+        }
+    }
+    Ok(writer)
+}
+
+fn say(done: &Attached, what: &str) {
+    if !done.written {
+        println!("nothing new: {} is as it was", done.id);
+        return;
+    }
+    println!("{what} {}", done.id);
+    for notice in &done.notices {
+        println!("note: {notice}");
+    }
+}
+
+fn attach(args: &[String]) -> Result<u8, Failure> {
+    let [file, source, rest @ ..] = args else {
+        return Err(Failure::Usage);
+    };
+    let given = options(rest, &["--name", "--title", "--url", "--max-mb", "LINKS"])?;
+    let done = attacher(given.max_mb.as_deref())?.attach_file(
+        open(file)?,
+        Path::new(source),
+        &given.request,
+        &SaveOptions::default(),
+    )?;
+    let what = if done.already_there {
+        "already stored, added to"
+    } else {
+        "attached"
+    };
+    say(&done, what);
+    Ok(0)
+}
+
+fn attach_link(args: &[String]) -> Result<u8, Failure> {
+    let [file, url, rest @ ..] = args else {
+        return Err(Failure::Usage);
+    };
+    let given = options(
+        rest,
+        &["--name", "--title", "--sha256", "--size", "--of", "LINKS"],
+    )?;
+    let (sha256, size) = match (given.sha256, given.of) {
+        (Some(sha256), None) => (sha256, given.size),
+        (None, Some(path)) if given.size.is_none() => {
+            let (sha256, size) = attachments::hash_file(Path::new(&path))?;
+            (sha256, Some(size))
+        }
+        _ => return Err(Failure::Usage),
+    };
+    let done = attacher(None)?.attach_link(
+        open(file)?,
+        url,
+        &sha256,
+        size,
+        &given.request,
+        &SaveOptions::default(),
+    )?;
+    say(&done, "linked");
+    Ok(0)
+}
+
+fn components_of(a: &Attachment) -> String {
+    a.components
+        .iter()
+        .map(|c| {
+            if let Some(reference) = &c.reference {
+                reference.clone()
+            } else if let Some(value) = &c.value {
+                format!("value {value}")
+            } else if let Some(number) = &c.part_number {
+                match &c.manufacturer {
+                    Some(maker) => format!("{maker} {number}"),
+                    None => format!("part {number}"),
+                }
+            } else {
+                "another kind of link".to_owned()
+            }
+        })
+        .collect::<Vec<_>>()
+        .join(", ")
+}
+
+fn list_attachments(args: &[String]) -> Result<u8, Failure> {
+    let [file, rest @ ..] = args else {
+        return Err(Failure::Usage);
+    };
+    let given = options(rest, &["--json", "LINKS"])?;
+    let mut project = open(file)?;
+    let index = attachments::read_index(&mut project)?;
+    let asked = &given.request.components;
+    let found: Vec<&Attachment> = if asked.is_empty() {
+        index.attachments.iter().collect()
+    } else {
+        // every piece named in the command line is one question; an attachment is listed once
+        let mut found: Vec<&Attachment> = Vec::new();
+        for link in asked {
+            let mut query = ComponentQuery::new();
+            if let Some(reference) = &link.reference {
+                query = query.reference(reference);
+            }
+            if let Some(value) = &link.value {
+                query = query.value(value);
+            }
+            if let Some(number) = &link.part_number {
+                query = query.part_number(number);
+            }
+            if let Some(maker) = &link.manufacturer {
+                query = query.manufacturer(maker);
+            }
+            for a in index.for_component(&query) {
+                if !found.iter().any(|f| f.sha256 == a.sha256) {
+                    found.push(a);
+                }
+            }
+        }
+        found
+    };
+    if given.json {
+        let list: Vec<serde_json::Value> = found
+            .iter()
+            .map(|a| serde_json::to_value(a).unwrap_or_default())
+            .collect();
+        println!(
+            "{}",
+            serde_json::to_string_pretty(&list).unwrap_or_default()
+        );
+        return Ok(0);
+    }
+    println!("attachments  {}", found.len());
+    for a in found {
+        let size = a.size.map_or_else(|| "?".to_owned(), |s| s.to_string());
+        let place = if a.is_link() { "link" } else { "inside" };
+        let danger = a
+            .danger()
+            .map_or(String::new(), |d| format!("  DANGEROUS ({})", d.name()));
+        println!(
+            "  {}  {:<8} {size:>11}  {place:<6}  {}{danger}",
+            &a.sha256[..16.min(a.sha256.len())],
+            a.kind().name(),
+            a.file_name()
+        );
+        if !a.components.is_empty() {
+            println!("      for {}", components_of(a));
+        }
+        if let Some(url) = &a.url {
+            println!("      from {url}");
+        }
+    }
+    Ok(0)
+}
+
+fn extract_attachment(args: &[String]) -> Result<u8, Failure> {
+    let [file, id, out, rest @ ..] = args else {
+        return Err(Failure::Usage);
+    };
+    let given = options(rest, &["--confirm-dangerous", "--max-mb"])?;
+    let limits = attacher(given.max_mb.as_deref())?.limits;
+    let consent = if given.confirmed {
+        Consent::Given
+    } else {
+        Consent::NotAsked
+    };
+    let mut project = open(file)?;
+    let written = attachments::extract(&mut project, id, Path::new(out), consent, &limits)?;
+    println!("written to {}", written.display());
+    Ok(0)
+}
+
+fn attachment_links(args: &[String]) -> Result<u8, Failure> {
+    let [file, id, action, rest @ ..] = args else {
+        return Err(Failure::Usage);
+    };
+    let links = options(rest, &["LINKS"])?.request.components;
+    let (add, remove): (&[ComponentLink], &[ComponentLink]) = match action.as_str() {
+        "add" => (&links, &[]),
+        "remove" => (&[], &links),
+        _ => return Err(Failure::Usage),
+    };
+    if links.is_empty() {
+        return Err(Failure::Usage);
+    }
+    let done =
+        attacher(None)?.set_components(open(file)?, id, add, remove, &SaveOptions::default())?;
+    say(&done, "changed");
+    Ok(0)
+}
+
+fn detach(args: &[String]) -> Result<u8, Failure> {
+    let [file, id] = args else {
+        return Err(Failure::Usage);
+    };
+    let done = attacher(None)?.detach(open(file)?, id, &SaveOptions::default())?;
+    say(&done, "removed");
+    Ok(0)
 }

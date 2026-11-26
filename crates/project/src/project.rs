@@ -12,7 +12,7 @@
 
 use std::collections::{BTreeMap, BTreeSet};
 use std::fs::File;
-use std::io::{self, Read};
+use std::io::{self, Read, Seek, SeekFrom};
 use std::path::{Path, PathBuf};
 
 use eh3d_container::{
@@ -22,6 +22,7 @@ use eh3d_container::{
 use eh3d_diagnostic::Diagnostic;
 use serde_json::Value;
 
+use crate::attachments::{AttachmentIndex, INDEX_FILE};
 use crate::meta::{ConversionReport, DocIndex, Metadata, DOC_INDEX_FILE, META_FILE, REPORT_FILE};
 use crate::records::{
     branch_content_hash, try_signing_message, BranchIndexEntry, BranchRecord, Dependency,
@@ -31,8 +32,8 @@ use crate::records::{
 use crate::security::{sign_with, status_of, SignatureReport, SignatureStatus, Signer, Verifier};
 use crate::spec::{
     branch_dir, classify, eh3d, entry_name, is_sha256_hex, is_shared_branch, manufacturing,
-    parse_major_minor, parse_version, root_of, valid_branch_id, EntryClass, BRANCH_FILE,
-    COMMON_BRANCH, CONTAINER_VERSION, DOCS_ROOT, FORMAT_VERSION, MANUFACTURING_BRANCH,
+    parse_major_minor, parse_version, root_of, valid_branch_id, EntryClass, ATTACHMENTS_BRANCH,
+    BRANCH_FILE, COMMON_BRANCH, CONTAINER_VERSION, DOCS_ROOT, FORMAT_VERSION, MANUFACTURING_BRANCH,
     RECORD_SCHEMA,
 };
 
@@ -192,6 +193,30 @@ impl BranchUpdate {
         self.entries.insert(rel.to_owned(), bytes.to_vec());
         self
     }
+}
+
+/// A file of a branch that is written from a part of a file on disk, without holding it in memory. The size and the hash are the
+/// ones the branch record states, so a file that changes while it is read is refused before anything is replaced.
+#[derive(Debug, Clone)]
+pub(crate) struct StreamedFile {
+    pub(crate) rel: String,
+    pub(crate) path: PathBuf,
+    pub(crate) offset: u64,
+    pub(crate) size: u64,
+    pub(crate) sha256: String,
+}
+
+/// A write of a branch whose files are not all in memory (used by the attachments): what is kept as it is, what is new from memory
+/// and what is new from disk. Every other file of the branch is dropped.
+#[derive(Debug, Default)]
+pub(crate) struct StreamedUpdate {
+    pub(crate) id: String,
+    pub(crate) format: String,
+    pub(crate) app_version: String,
+    pub(crate) keep: BTreeSet<String>,
+    pub(crate) entries: BTreeMap<String, Vec<u8>>,
+    pub(crate) files: Vec<StreamedFile>,
+    pub(crate) extra: BTreeMap<String, Value>,
 }
 
 /// The settings of a save.
@@ -483,6 +508,11 @@ impl Project {
         };
         assemble(None, path, &options.spec, Plan::default(), &record, atomic)?;
         Project::open(path, options)
+    }
+
+    /// The limits the project was opened with.
+    pub(crate) fn spec(&self) -> &ContainerSpec {
+        &self.spec
     }
 
     /// The file the project was opened from.
@@ -859,6 +889,18 @@ impl Project {
                 add(PkgCode::BranchRecord, why, Some(id), Some(name));
             }
         }
+        if id == ATTACHMENTS_BRANCH {
+            let name = entry_name(id, INDEX_FILE);
+            let outcome = if branch.files.contains_key(INDEX_FILE) {
+                self.read_record::<AttachmentIndex>(&name)
+                    .and_then(|index| index.validate(files()))
+            } else {
+                Err("the index of the attachments is missing".to_owned())
+            };
+            if let Err(why) = outcome {
+                add(PkgCode::BranchRecord, why, Some(id), Some(name));
+            }
+        }
         if branch.files.contains_key(REPORT_FILE) {
             let name = entry_name(id, REPORT_FILE);
             let outcome = self
@@ -1125,58 +1167,13 @@ impl Project {
     /// a reference to a branch that is not in the file (018). The file is replaced atomically
     /// and the project is opened again from the new file.
     pub fn save_branch(
-        mut self,
+        self,
         writer: &Writer,
         update: BranchUpdate,
         options: &SaveOptions<'_>,
     ) -> Result<Project> {
         let id = update.id.clone();
-        if self.record.seal.is_some() {
-            return Err(refuse(PkgCode::Sealed, "the project is sealed read-only"));
-        }
-        if !valid_branch_id(&id) {
-            return Err(refuse_at(
-                PkgCode::BranchRecord,
-                "not a valid branch name",
-                &id,
-            ));
-        }
-        if writer.app.trim().is_empty() {
-            return Err(refuse(PkgCode::BranchOwner, "the writer has no name"));
-        }
-        let shared = is_shared_branch(&id);
-        if !shared && !writer.claims(&id) {
-            return Err(refuse_at(
-                PkgCode::BranchOwner,
-                format!("'{}' does not own this branch", writer.app),
-                &id,
-            ));
-        }
-        if let Some(old) = self.branches.get(&id) {
-            if let Some(record) = &old.record {
-                if !shared && record.app != writer.app {
-                    return Err(refuse_at(
-                        PkgCode::BranchOwner,
-                        format!("the branch was written by '{}'", record.app),
-                        &id,
-                    ));
-                }
-                if record.seal.is_some() {
-                    return Err(refuse_at(
-                        PkgCode::Sealed,
-                        "the branch is sealed read-only",
-                        &id,
-                    ));
-                }
-            }
-        }
-        if parse_major_minor(&update.format).is_none() || update.app_version.trim().is_empty() {
-            return Err(refuse_at(
-                PkgCode::BranchRecord,
-                "the format must be major.minor and the program version is needed",
-                &id,
-            ));
-        }
+        self.check_may_write(writer, &id, &update.format, &update.app_version)?;
         let mut new_files = Vec::new();
         for (rel, bytes) in &update.entries {
             if crate::ed25519::looks_like_secret_key(bytes) {
@@ -1229,7 +1226,7 @@ impl Project {
                 .iter()
                 .map(|(n, s, z)| (n.as_str(), *z, s.as_str())),
         );
-        let mut record = BranchRecord {
+        let record = BranchRecord {
             schema: RECORD_SCHEMA,
             branch: id.clone(),
             app: writer.app.clone(),
@@ -1242,11 +1239,6 @@ impl Project {
             encryption: update.encryption.clone(),
             extra: update.extra.clone(),
         };
-        if let Some(signer) = options.signer {
-            record.signature = Some(signature_of(signer, BRANCH_SIGNATURE_LABEL, &record, &id)?);
-        }
-        let record_bytes = to_canonical_file_bytes(&record)
-            .map_err(|e| ContainerError::Io(io::Error::other(e.to_string())))?;
 
         let mut plan = Plan::default();
         let prefix = branch_dir(&id);
@@ -1259,11 +1251,167 @@ impl Project {
         for (rel, bytes) in update.entries {
             plan.extra.push((entry_name(&id, &rel), bytes));
         }
+        self.commit_branch(record, plan, options)
+    }
+
+    /// Why `writer` may not write the branch `id`, if it may not: a sealed project or branch (020), a name that is not a branch
+    /// (015), a branch of another program (017), a format or a program version that is not usable (015).
+    pub(crate) fn check_may_write(
+        &self,
+        writer: &Writer,
+        id: &str,
+        format: &str,
+        app_version: &str,
+    ) -> Result<()> {
+        if self.record.seal.is_some() {
+            return Err(refuse(PkgCode::Sealed, "the project is sealed read-only"));
+        }
+        if !valid_branch_id(id) {
+            return Err(refuse_at(
+                PkgCode::BranchRecord,
+                "not a valid branch name",
+                id,
+            ));
+        }
+        if writer.app.trim().is_empty() {
+            return Err(refuse(PkgCode::BranchOwner, "the writer has no name"));
+        }
+        let shared = is_shared_branch(id);
+        if !shared && !writer.claims(id) {
+            return Err(refuse_at(
+                PkgCode::BranchOwner,
+                format!("'{}' does not own this branch", writer.app),
+                id,
+            ));
+        }
+        if let Some(record) = self.branches.get(id).and_then(|old| old.record.as_ref()) {
+            if !shared && record.app != writer.app {
+                return Err(refuse_at(
+                    PkgCode::BranchOwner,
+                    format!("the branch was written by '{}'", record.app),
+                    id,
+                ));
+            }
+            if record.seal.is_some() {
+                return Err(refuse_at(
+                    PkgCode::Sealed,
+                    "the branch is sealed read-only",
+                    id,
+                ));
+            }
+        }
+        if parse_major_minor(format).is_none() || app_version.trim().is_empty() {
+            return Err(refuse_at(
+                PkgCode::BranchRecord,
+                "the format must be major.minor and the program version is needed",
+                id,
+            ));
+        }
+        Ok(())
+    }
+
+    /// Saves a branch from files that are on disk, with the same rules as [`Project::save_branch`]. The files that are kept keep
+    /// their bytes.
+    pub(crate) fn save_streamed(
+        self,
+        writer: &Writer,
+        update: StreamedUpdate,
+        options: &SaveOptions<'_>,
+    ) -> Result<Project> {
+        let id = update.id.clone();
+        self.check_may_write(writer, &id, &update.format, &update.app_version)?;
+        let mut files: Vec<(String, u64, String)> = Vec::new();
+        if let Some(old) = self.branches.get(&id) {
+            for rel in &update.keep {
+                let info = old.files.get(rel).ok_or_else(|| {
+                    refuse_at(
+                        PkgCode::OutsideRoots,
+                        "there is no such file in the branch",
+                        &entry_name(&id, rel),
+                    )
+                })?;
+                files.push((rel.clone(), info.size, info.sha256.clone()));
+            }
+        }
+        for (rel, bytes) in &update.entries {
+            if crate::ed25519::looks_like_secret_key(bytes) {
+                return Err(refuse_at(
+                    PkgCode::BranchRecord,
+                    "a secret key is never put into a project",
+                    &entry_name(&id, rel),
+                ));
+            }
+            files.push((
+                rel.clone(),
+                bytes.len() as u64,
+                eh3d_container::sha256_hex(bytes),
+            ));
+        }
+        for file in &update.files {
+            files.push((file.rel.clone(), file.size, file.sha256.clone()));
+        }
+        for (rel, _, _) in &files {
+            let name = entry_name(&id, rel);
+            if rel == BRANCH_FILE || rel.is_empty() || check_entry_name(&name).is_err() {
+                return Err(refuse_at(
+                    PkgCode::InvalidName,
+                    "the name is not portable",
+                    &name,
+                ));
+            }
+        }
+        let hash = branch_content_hash(files.iter().map(|(n, z, s)| (n.as_str(), *z, s.as_str())));
+        let old = self.branches.get(&id).and_then(|b| b.record.as_ref());
+        let record = BranchRecord {
+            schema: RECORD_SCHEMA,
+            branch: id.clone(),
+            app: writer.app.clone(),
+            format: update.format.clone(),
+            app_version: update.app_version.clone(),
+            content_hash: hash,
+            depends: old.map(|r| r.depends.clone()).unwrap_or_default(),
+            seal: None,
+            signature: None,
+            encryption: None,
+            extra: update.extra,
+        };
+        let kept: BTreeSet<String> = update.keep.iter().map(|rel| entry_name(&id, rel)).collect();
+        let mut plan = Plan::default();
+        let prefix = branch_dir(&id);
+        plan.skip.extend(
+            self.container
+                .entries()
+                .filter(|e| e.name.starts_with(&prefix) && !kept.contains(&e.name))
+                .map(|e| e.name.clone()),
+        );
+        for (rel, bytes) in update.entries {
+            plan.extra.push((entry_name(&id, &rel), bytes));
+        }
+        for mut file in update.files {
+            file.rel = entry_name(&id, &file.rel);
+            plan.streams.push(file);
+        }
+        self.commit_branch(record, plan, options)
+    }
+
+    /// Signs and writes the record of one branch, the audit line and the index of `project.json`, and replaces the file.
+    fn commit_branch(
+        mut self,
+        mut record: BranchRecord,
+        mut plan: Plan,
+        options: &SaveOptions<'_>,
+    ) -> Result<Project> {
+        let id = record.branch.clone();
+        if let Some(signer) = options.signer {
+            record.signature = Some(signature_of(signer, BRANCH_SIGNATURE_LABEL, &record, &id)?);
+        }
+        let record_bytes = to_canonical_file_bytes(&record)
+            .map_err(|e| ContainerError::Io(io::Error::other(e.to_string())))?;
         plan.extra
             .push((entry_name(&id, BRANCH_FILE), record_bytes));
         if let Some(at) = &options.audit_at {
             let line = serde_json::json!({
-                "action": "save", "app": writer.app, "app_version": update.app_version, "at": at, "branch": id,
+                "action": "save", "app": record.app, "app_version": record.app_version, "at": at, "branch": id,
             });
             self.append_audit(&mut plan, &line)?;
         }
@@ -1490,11 +1638,12 @@ fn judge_signature(
     }
 }
 
-/// What to leave out of the copy and what to add.
+/// What to leave out of the copy and what to add (`streams` name the entry in full and come from files on disk).
 #[derive(Default)]
 struct Plan {
     skip: BTreeSet<String>,
     extra: Vec<(String, Vec<u8>)>,
+    streams: Vec<StreamedFile>,
 }
 
 /// Writes the new file: every entry of the old container that is not skipped, copied through
@@ -1516,7 +1665,11 @@ fn assemble(
         .filter(|n| n != "project.json" && n != "integrity.json" && !plan.skip.contains(n))
         .collect();
     let mut roots: BTreeSet<String> = BTreeSet::new();
-    for name in copy.iter().chain(plan.extra.iter().map(|(n, _)| n)) {
+    for name in copy
+        .iter()
+        .chain(plan.extra.iter().map(|(n, _)| n))
+        .chain(plan.streams.iter().map(|s| &s.rel))
+    {
         if let Some(root) = root_of(name) {
             roots.insert(root);
         }
@@ -1536,6 +1689,25 @@ fn assemble(
     }
     for (name, bytes) in &plan.extra {
         writer.add(name, bytes)?;
+    }
+    for stream in &plan.streams {
+        let mut file = File::open(&stream.path)?;
+        file.seek(SeekFrom::Start(stream.offset))?;
+        writer.add_stream(&stream.rel, file.take(stream.size))?;
+    }
+    if !plan.streams.is_empty() {
+        let written = writer.integrity();
+        for stream in &plan.streams {
+            let same = written
+                .files
+                .get(&stream.rel)
+                .is_some_and(|e| e.size == stream.size && e.sha256 == stream.sha256);
+            if !same {
+                return Err(ContainerError::Io(io::Error::other(
+                    "a file changed while it was being added; nothing was written",
+                )));
+            }
+        }
     }
     let project = to_canonical_file_bytes(record)
         .map_err(|e| ContainerError::Io(io::Error::other(e.to_string())))?;

@@ -40,6 +40,9 @@ pub const COMMON_BRANCH: &str = "common";
 pub const MANUFACTURING_BRANCH: &str = "manufacturing";
 /// The documentation branch of the project as a whole; any program may write it.
 pub const PROJECT_DOCS_BRANCH: &str = "docs/project";
+/// The branch of the attachments of the project (data sheets, manuals and any other file); any program may write it, through
+/// [`crate::attachments`].
+pub const ATTACHMENTS_BRANCH: &str = "attachments";
 /// The most characters of a branch name.
 pub const MAX_SEGMENT: usize = 32;
 
@@ -47,7 +50,7 @@ pub const MAX_SEGMENT: usize = 32;
 pub const LANGUAGES: [&str; 8] = ["en", "es", "de", "fr", "it", "ja", "zh", "pt-PT"];
 
 /// The branches this crate knows by name.
-pub const KNOWN_BRANCHES: [&str; 14] = [
+pub const KNOWN_BRANCHES: [&str; 15] = [
     "pcb",
     "cad",
     "3dp",
@@ -62,6 +65,7 @@ pub const KNOWN_BRANCHES: [&str; 14] = [
     COMMON_BRANCH,
     MANUFACTURING_BRANCH,
     DOCS_ROOT,
+    ATTACHMENTS_BRANCH,
 ];
 
 /// The preset of the project container: the strict name and ZIP policy, canonical JSON, the
@@ -85,6 +89,7 @@ pub fn eh3d() -> ContainerSpec {
         "common/",
         "manufacturing/",
         "docs/",
+        "attachments/",
         "audit/",
     ];
     ContainerSpec {
@@ -211,9 +216,9 @@ pub fn root_of(name: &str) -> Option<String> {
 }
 
 /// True for the branches that belong to the project as a whole and may be written by any
-/// program: `common` and `docs/project`.
+/// program: `common`, `docs/project` and `attachments`.
 pub fn is_shared_branch(id: &str) -> bool {
-    id == COMMON_BRANCH || id == PROJECT_DOCS_BRANCH
+    id == COMMON_BRANCH || id == PROJECT_DOCS_BRANCH || id == ATTACHMENTS_BRANCH
 }
 
 /// Reads `major.minor` (digits only, at most nine each) into numbers.
