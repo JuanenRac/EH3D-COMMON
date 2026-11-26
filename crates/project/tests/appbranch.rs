@@ -143,7 +143,7 @@ fn what_is_taken_from_another_branch_is_noticed_when_its_source_changes() {
     assert!(notices.is_empty());
     let (_, copy, warnings) = KIT.open(&path).unwrap();
     assert_eq!(copy.depends().len(), 1);
-    assert_eq!(copy.depends()[0].uses, [target.clone()]);
+    assert_eq!(copy.depends()[0].uses, std::slice::from_ref(&target));
     assert!(!warnings.iter().any(|w| w.contains("'laser'")));
 
     let p = Project::open(&path, &OpenOptions::default()).unwrap();
