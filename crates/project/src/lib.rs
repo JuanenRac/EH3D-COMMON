@@ -18,6 +18,9 @@
 //! * [`appbranch`]: what a program does with its own branch (save, open, import with a report,
 //!   take from another branch, out-of-date notices), so that each program does not write it
 //!   again;
+//! * [`manufacturing`]: how the programs that make something from the job of the project read it and keep their result;
+//! * [`suiteview`] and [`suitetext`]: what a window shows and asks before it writes a project, and its words in the eight
+//!   languages;
 //! * [`project`]: open, read the branches of other programs, check, save one branch without
 //!   touching the bytes of the others, find derived branches that are out of date, and take the
 //!   `manufacturing` branch in and out as a `.eh3dproj`.
@@ -33,11 +36,14 @@
 
 pub mod appbranch;
 pub mod ed25519;
+pub mod manufacturing;
 pub mod meta;
 pub mod project;
 pub mod records;
 pub mod security;
 pub mod spec;
+pub mod suitetext;
+pub mod suiteview;
 
 pub use ed25519::{Ed25519Keyring, Ed25519Signer, KeyError, KeyPair};
 pub use project::{
