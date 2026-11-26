@@ -215,6 +215,18 @@ let bytes = source.reader()?;            // std::io::Read
 attachments::extract(&mut project, found[0].id(), folder, Consent::NotAsked, &limits)?;
 ```
 
+The viewer of the suite (`eh3d-viewer`, `docs/VIEWER.md`) reads any `Source`; a program hands it an attachment with a wrapper of its own, without writing a file first:
+
+```rust
+struct FromProject(attachments::AttachmentSource);
+
+impl eh3d_viewer::Source for FromProject {
+    fn name(&self) -> &str { self.0.name() }
+    fn len(&self) -> u64 { self.0.len() }
+    fn reader(&self) -> std::io::Result<Box<dyn std::io::Read + '_>> { Ok(Box::new(self.0.reader()?)) }
+}
+```
+
 `attach_link`, `set_components` and `detach` complete it. The words of the warnings in the eight languages are in `suitetext` (`attachments::danger_word`, `AttachmentDangerous`, `AttachmentLinkOnly`, `AttachmentTooLarge`). The windows of the programs do not show attachments yet.
 
 ## Security (all optional)
