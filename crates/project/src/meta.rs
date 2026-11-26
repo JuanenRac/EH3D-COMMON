@@ -23,7 +23,7 @@ pub const ORIGIN_DIR: &str = "origin/";
 /// A text that is not empty must have an English version, which every program can fall back on.
 pub type LocalText = BTreeMap<String, String>;
 
-fn check_text(what: &str, text: &LocalText) -> Result<(), String> {
+pub(crate) fn check_text(what: &str, text: &LocalText) -> Result<(), String> {
     for (lang, value) in text {
         if !LANGUAGES.contains(&lang.as_str()) {
             return Err(format!(

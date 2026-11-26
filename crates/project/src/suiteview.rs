@@ -10,6 +10,7 @@ use eh3d_container::{write_atomic, AtomicOptions, ContainerError};
 
 use crate::appbranch::{self, Notice};
 use crate::meta::{ConversionReport, Counted};
+use crate::spec::ATTACHMENTS_BRANCH;
 use crate::suitetext::{fill, Said, S};
 
 /// The record the container keeps in every branch.
@@ -114,7 +115,8 @@ pub fn view(path: &Path, own: &str) -> Result<ProjectView, String> {
         let record = b.record.as_ref();
         if b.id == own {
             found.own_hash = Some(b.hash.clone());
-        } else {
+        } else if b.id != ATTACHMENTS_BRANCH {
+            // the attachments are stored under their hash: they are listed and taken out as attachments, never taken as files
             for name in b.files.keys().filter(|n| n.as_str() != BRANCH_RECORD) {
                 found.takeable.push((b.id.clone(), name.clone()));
             }
