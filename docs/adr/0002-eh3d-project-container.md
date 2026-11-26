@@ -1,6 +1,6 @@
 # 0002 - The `.eh3d` project container: one file, one branch for each program
 
-Status: accepted. The core (branches, integrity of every branch, references with hash, metadata, documentation, origin of imports, seal, audit log, the signature record and its checks) is implemented in the crate `eh3d-project`. Encryption of a branch and a signature algorithm are designed here and pending (see Pending).
+Status: accepted. The core (branches, integrity of every branch, references with hash, metadata, documentation, origin of imports, seal, audit log, the signature record and its checks) is implemented in the crate `eh3d-project`. Branches and projects are signed with Ed25519 (decision 14). Encryption of a branch is designed here and pending (see Pending).
 
 ## Context
 
@@ -26,7 +26,9 @@ The owner decided (D-C1 to D-C4): the extension is `.eh3d`, one project is one f
     * *Audit log* `audit/log.jsonl`, one canonical line for each save, outside the content hash.
 11. **Versions.** The file has `format_version` (1.0.0); each branch has its own `format` (`major.minor`). A newer major or minor of the file is refused (`013`). A newer format of a branch is reported for that branch (`024`) and the rest stays usable.
 12. **Codes.** `EH3D-PKG-015` to `EH3D-PKG-024` are added to the registry. Codes 001 to 014 do not change. 019 is the only code that is a warning (`PkgCode::is_warning`).
-13. **Clock and randomness.** The crate reads no clock and no random source: times come from the caller, so the same content gives the same bytes.
+13. **Clock and randomness.** The crate reads no clock: times come from the caller, so the same content gives the same bytes. The random source of the system is read only to make a new key (`keygen`) and the identifier of a project created through `appbranch`.
+14. **The signature algorithm is Ed25519 with `ed25519-dalek`** (decision of the owner): pure Rust, so no C compiler is needed on any target. The version is fixed (`=2.2.0`, which shares `sha2` with the rest of the suite) with only the `zeroize` feature. Ed25519 signs deterministically, so the same record and key give the same bytes. Keys are small text files outside every project, at a path the person gives; the public key is what a program trusts. The licences of the new crates (BSD-3-Clause, MIT, Apache-2.0; all usable under GPL-3.0-or-later) are in `crates/project/THIRD_PARTY_NOTICES`. Adding the algorithm changed no byte of the format.
+15. **What every program does with its branch** (save, open, import with a report, take from another branch, out-of-date notices, list, extract) is the module `appbranch` of the crate, so it is written once.
 
 ## Defaults taken without asking (conservative, change them here if the owner decides otherwise)
 
@@ -43,11 +45,13 @@ The owner decided (D-C1 to D-C4): the extension is `.eh3d`, one project is one f
 * **One file for each program plus a manifest of links.** Rejected: the links break when files are moved or copied apart, and the owner asked for one file.
 * **A single tree where every program writes anywhere.** Rejected: two programs rewriting the same data and one overwriting the other (D-C4).
 * **A database file (SQLite) as the container.** Rejected: it cannot be inspected with any archive tool, is hard to check against hostile input and does not give the same bytes for the same content.
+* **`ring` for the signature.** Rejected: it needs a C compiler on every target and a new tree of dependencies for all the programs.
 * **Signing inside the ZIP (the signature of ZIP tools).** Rejected: it differs by tool and platform and does not cover the branches as the format needs.
 
 ## Pending, with the reason
 
-* **A signature algorithm.** The natural choice is Ed25519. No pure Rust crate for it is in the offline cache of the build (the cache holds `ring`, which needs a C compiler on every target and a new tree of dependencies for all the programs). Until a crate is accepted, the traits `Signer` and `Verifier` are the point of extension and the checks are tested with a double. Adding the algorithm changes no byte of the format.
+* **A password on the secret key file**, keys kept by the system or by a hardware token, and a list of trusted keys in the configuration of each program: not designed yet. The traits `Signer` and `Verifier` are the points where they plug in.
+* **A project signature that also covers the rest of every `branch.json` and the extension folders** would need a new label; today a delivery that needs them proved signs the branches as well.
 * **Encryption of a branch.** The record and the refusal are in place; the cipher and the derivation of the key from a password or a key file are pending. An authenticated cipher (AES-GCM or ChaCha20-Poly1305) with a fresh nonce for each file and the branch name and file name as associated data is the intended design; the nonce is stored in the record, never derived from the clock.
 * **Revision history of a branch** (light snapshots or differences) and **thumbnails by branch**: not designed beyond leaving `x-*` folders and unknown fields free for them.
-* **Programs that use the format.** No program writes a `.eh3d` yet; each does it in its own round, with its own conversions.
+* **Programs that use the format.** Some programs already write their branch with their own copy of the branch handling; each adopts `appbranch` in its own round.

@@ -186,13 +186,20 @@ pub fn branch_content_hash<'a>(files: impl IntoIterator<Item = (&'a str, u64, &'
 /// The bytes that a signature of a record covers: a fixed label, then the canonical JSON of the
 /// record without its `signature`.
 pub fn signing_message(label: &str, record: &impl Serialize) -> Vec<u8> {
-    let mut value = serde_json::to_value(record).unwrap_or(Value::Null);
+    try_signing_message(label, record).unwrap_or_else(|| format!("{label}\n").into_bytes())
+}
+
+/// [`signing_message`], or `None` for a record that has no canonical form (an integer that no
+/// double equals, in a field of another program). Nothing is signed or accepted for such a
+/// record: a message without it would be the same for every one of them.
+pub fn try_signing_message(label: &str, record: &impl Serialize) -> Option<Vec<u8>> {
+    let mut value = serde_json::to_value(record).ok()?;
     if let Value::Object(map) = &mut value {
         map.remove("signature");
     }
     let mut out = format!("{label}\n").into_bytes();
-    out.extend_from_slice(canonical_string(&value).unwrap_or_default().as_bytes());
-    out
+    out.extend_from_slice(canonical_string(&value).ok()?.as_bytes());
+    Some(out)
 }
 
 /// The label of the message of a branch signature.
@@ -275,5 +282,14 @@ mod tests {
         });
         assert_eq!(unsigned, signing_message(BRANCH_SIGNATURE_LABEL, &record));
         assert!(unsigned.starts_with(b"eh3d-branch-signature-v1\n"));
+    }
+
+    #[test]
+    fn a_record_without_a_canonical_form_gives_no_message() {
+        let record: BranchRecord = serde_json::from_str(
+            r#"{"branch":"pcb","app":"a","format":"1.0","app_version":"0","content_hash":"h","n":18446744073709551615}"#,
+        )
+        .unwrap();
+        assert_eq!(try_signing_message(BRANCH_SIGNATURE_LABEL, &record), None);
     }
 }

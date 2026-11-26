@@ -132,12 +132,80 @@ A project without any of this is valid. Integrity is always there; everything el
 | Layer | What it gives | State |
 |---|---|---|
 | Integrity | SHA-256 of every entry (`integrity.json`), content hash of every branch, content hash of the whole file (the audit log left out). Detects damage and accidental change. It is **not authenticity**: whoever can change the entries can rewrite the record. | Done |
-| Signature | A signature of a branch (in its record) or of the project (in `project.json`) over the canonical JSON of the record without its `signature`, with a fixed label (`eh3d-branch-signature-v1`, `eh3d-project-signature-v1`). The record carries the algorithm, the identifier of the key and the value in hexadecimal; **the keys are never in the file** (a private key is not read or kept by the crate, public keys are given by the program through the `Verifier` trait). The record of a branch states its content hash, so a signed branch is covered file by file. Wrong signature `EH3D-PKG-021`; required and missing, or the key unknown `EH3D-PKG-022`. | The format, the traits (`Signer`, `Verifier`) and the checks are done and tested with a double; no algorithm is shipped (see the ADR) |
+| Signature | A signature of a branch (in its record) or of the project (in `project.json`) over the canonical JSON of the record without its `signature`, with a fixed label (`eh3d-branch-signature-v1`, `eh3d-project-signature-v1`). The record carries the algorithm, the identifier of the key and the value in hexadecimal; **the keys are never in the file** (a private key is not read or kept by the crate, public keys are given by the program through the `Verifier` trait). The record of a branch states its content hash, so a signed branch is covered file by file. Wrong signature `EH3D-PKG-021`; required and missing, or the key unknown `EH3D-PKG-022`. | Done, with Ed25519 (see Signatures below) |
 | Encryption | A branch can be stored encrypted; its record says the algorithm, the key identifier and the parameters, and only its `branch.json` stays readable. The other branches stay readable. Reading an encrypted branch without its key is `EH3D-PKG-023`; the branch is kept byte for byte and can be extracted as it is. | The record and the refusal are done; the cipher is pending |
 | Seal | A branch or the whole project can be sealed read-only (who, when, why). A write to a sealed branch or project is refused (`EH3D-PKG-020`). A seal is a rule of the programs; with a signature over the record it is also provable. | Done |
 | Audit log | `audit/log.jsonl`: one canonical JSON line for each save (action, program, program version, time given by the caller, branch). It is outside the content hash, so it does not change the content of the project. A program decides whether to write it. | Done |
 
 Nothing in a file is ever run, and the reader refuses before it decompresses more than its limits (below).
+
+## Signatures
+
+The algorithm of the suite is **Ed25519** (RFC 8032), written in the record as `ed25519`:
+
+```json
+"signature": { "algorithm": "ed25519", "key_id": "ed25519:<32 hex digits>", "value": "<128 hex digits>" }
+```
+
+* **The message** is the label of the kind (`eh3d-branch-signature-v1` or `eh3d-project-signature-v1`), a line feed, and the canonical JSON of the record without its `signature`. A record with a number that has no canonical form (an integer that no double equals) is never signed and a signature on it is never accepted.
+* **The key identifier** is `ed25519:` and the first 32 hex digits of the SHA-256 of the 32 byte public key.
+* **Checking is strict:** a weak public key (of small order) is not trusted and a signature must be in its one valid encoding.
+* **Keys are always outside the project.** A key file is two lines, a header and 64 lowercase hex digits: `eh3d-ed25519-secret-v1` (the 32 byte seed) or `eh3d-ed25519-public-v1` (the public key, in the secret file's path plus `.pub`). The person gives the path. A new secret file never replaces one and is readable only by its owner (mode 600 on Unix; on Windows every other permission is removed and only the owner is granted, with the system tool `icacls`, so a disk without permissions, such as FAT, refuses it). A key is never printed, an error never quotes a key file, the secret is wiped from memory, and a program refuses to save into a project an entry that starts like a secret key file. The key files have no password: keep the secret one where only you can read it.
+
+### What a signature covers
+
+| Signature | Covers | Does not cover |
+|---|---|---|
+| Branch (`<branch>/branch.json`) | The whole record: name of the branch, program, formats, versions, references, seal, unknown fields, and through the content hash every file of the branch | The other branches |
+| Project (`project.json`) | The record of the project: identifier, name, units, times, seal, and the index with the content hash of every branch | The rest of each `branch.json` (references, seals, branch signatures), the extension folders `x-*` and the audit log |
+
+A program that needs a whole delivery proved signs the branches **and** the project. Signing a branch (`Project::sign_branch`) rewrites only its `branch.json`, so a project signature made before keeps holding; saving a branch drops the project signature and, unless a signer is given, the signature of that branch. A sealed branch or project is not signed again.
+
+### States
+
+`Project::open_verified` (or `Project::signatures`) says for the project and for every branch:
+
+| State | Meaning |
+|---|---|
+| unsigned | There is no signature |
+| signed, valid | The signature is right, for the key named, and the files are the ones that were signed |
+| INVALID | The signature is wrong, or the files, the folder name or the index are not what the record says, or the record of the branch cannot be read |
+| signed, unknown key | The key (or the algorithm) is not one that was given |
+| signed, not checked | No key was given, or the file was opened without the integrity check |
+
+An invalid signature never stops the file from opening; `diagnose` reports it as `EH3D-PKG-021`, and a required signature that is not valid as `EH3D-PKG-022`. Someone who can change a file can also remove a signature, so a program that depends on signatures **requires** them (`--require-signed`, `--require-project-signature`) and keeps its own list of trusted public keys.
+
+## A program and its own branch
+
+The module `eh3d_project::appbranch` holds what every program does with its branch, so it is not written again in each one:
+
+```rust
+use eh3d_project::appbranch::{self, BranchKit, Identity};
+
+const KIT: BranchKit<'static> = BranchKit::new("laser", "1.0", "laser.json", env!("CARGO_PKG_VERSION"));
+
+// save: every file is read and checked before this; what is not touched stays
+let (_, notices) = KIT.update(path, &Identity::default(), |_, copy| {
+    copy.put("drawing/a.svg", bytes)?;
+    copy.choose("drawing", "drawing/", "drawing/a.svg");
+    Ok(())
+})?;
+// open, with what is out of date or wrong
+let (project, copy, warnings) = KIT.open(path)?;
+// import a foreign file, kept with the report of the conversion
+let report = appbranch::conversion_report("my-program", "1.0.0", "svg", &name, &bytes, conversion);
+KIT.import(path, &Identity::default(), bytes, &report, |copy, original| {
+    copy.choose("drawing", "drawing/", original);
+    Ok(())
+})?;
+// take from another branch, remembering the state of the source
+KIT.take(path, "pcb", "outline.json", "outline2d", check, |copy, target| copy.set("drawing", target))?;
+// list the branches, extract one
+let listing = appbranch::list(path)?;
+appbranch::extract(path, "pcb", dir)?;
+```
+
+To adopt it, a program keeps its formats (what a drawing or a program of a machine is, what the report counts, its own messages) and drops its copies of the working branch, the open or create step, the bounded read, the identifier, the take, the warnings and the list. The keys of the record of the branch stay the ones the program already writes, so the files made before still open. Errors are `appbranch::BranchError`, whose text is the message for the person, and the notes after a write are `appbranch::Notice`.
 
 ## Limits and the strict container
 
@@ -170,9 +238,11 @@ The version of the file (`format_version`) is for the record layout described he
 
 ```
 eh3d-project info FILE [--json]
-eh3d-project verify FILE [--strict] [--require-signed BRANCH[,BRANCH...]]
+eh3d-project verify FILE [--strict] [--require-signed BRANCH[,BRANCH...]] [--require-project-signature] [--pubkey KEY.pub]...
 eh3d-project extract-branch FILE BRANCH OUT_DIR
 eh3d-project extract-branch FILE manufacturing --eh3dproj OUT.eh3dproj
+eh3d-project keygen KEYFILE
+eh3d-project sign FILE --key KEYFILE [--branch BRANCH[,BRANCH...]] [--project]
 ```
 
-`verify` prints the findings with their codes and ends with `VERIFY=PASS` or `VERIFY=FAIL` (exit 0, 2); wrong use is 64 and any other failure 1. `extract-branch` never replaces a file that is there. Nothing is written except by `extract-branch`.
+`verify` prints the state of every signature (`signature project: ...`, `signature <branch>: ...`) and the findings with their codes, and ends with `VERIFY=PASS` or `VERIFY=FAIL` (exit 0, 2); signatures are judged with the public keys given by `--pubkey`. `keygen` writes `KEYFILE` and `KEYFILE.pub` and prints the identifier of the key, never the key. `sign` checks every branch asked for before it signs the first. Wrong use is 64 and any other failure 1. `extract-branch` and `keygen` never replace a file that is there; nothing is written except by `extract-branch`, `keygen` and `sign`.

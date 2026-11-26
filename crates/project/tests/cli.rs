@@ -102,3 +102,67 @@ fn wrong_use_and_missing_files_have_their_own_exit_codes() {
     assert_eq!(run(&["--help"]).status.code(), Some(0));
     assert_eq!(run(&["info", "no-such-file.eh3d"]).status.code(), Some(1));
 }
+
+#[test]
+fn keygen_sign_and_verify_from_the_command_line() {
+    let dir = tempdir().unwrap();
+    let file = project(dir.path());
+    let key = dir.path().join("studio.key");
+    let key = key.to_str().unwrap();
+    let public = format!("{key}.pub");
+
+    let made = run(&["keygen", key]);
+    assert_eq!(made.status.code(), Some(0), "{made:?}");
+    let secret = std::fs::read_to_string(key).unwrap();
+    let digits = secret.lines().nth(1).unwrap();
+    assert!(!out(&made).contains(digits));
+    assert!(out(&made).contains("ed25519:"));
+    assert_eq!(run(&["keygen", key]).status.code(), Some(1));
+    assert_eq!(std::fs::read_to_string(key).unwrap(), secret);
+
+    let before = std::fs::read(&file).unwrap();
+    for refused in [
+        run(&["sign", &file, "--key", key, "--branch", "pcb,none"]),
+        run(&["sign", &file, "--key", &public, "--branch", "pcb"]),
+        run(&["sign", &file, "--key", "no-such.key", "--project"]),
+    ] {
+        assert_eq!(refused.status.code(), Some(1), "{refused:?}");
+    }
+    assert_eq!(run(&["sign", &file, "--key", key]).status.code(), Some(64));
+    assert_eq!(run(&["sign", &file, "--project"]).status.code(), Some(64));
+    assert_eq!(std::fs::read(&file).unwrap(), before);
+
+    let done = run(&["sign", &file, "--key", key, "--branch", "pcb", "--project"]);
+    assert_eq!(done.status.code(), Some(0), "{done:?}");
+    assert!(out(&done).contains("signed branch pcb"));
+    assert!(!out(&done).contains(digits));
+
+    let checked = run(&[
+        "verify",
+        &file,
+        "--pubkey",
+        &public,
+        "--require-signed",
+        "pcb",
+        "--require-project-signature",
+    ]);
+    assert_eq!(checked.status.code(), Some(0), "{checked:?}");
+    let text = out(&checked);
+    assert!(text.contains("signature pcb: signed, valid"), "{text}");
+    assert!(text.contains("signature project: signed, valid"), "{text}");
+    assert!(text.contains("signature cad: unsigned"), "{text}");
+
+    let unchecked = run(&["verify", &file]);
+    assert_eq!(unchecked.status.code(), Some(0));
+    assert!(out(&unchecked).contains("signature pcb: signed, not checked"));
+    assert_eq!(
+        run(&["verify", &file, "--require-signed", "pcb"])
+            .status
+            .code(),
+        Some(2)
+    );
+    // a secret key is not what checks a signature
+    let wrong = run(&["verify", &file, "--pubkey", key]);
+    assert_eq!(wrong.status.code(), Some(1));
+    assert!(!String::from_utf8_lossy(&wrong.stderr).contains(digits));
+}
