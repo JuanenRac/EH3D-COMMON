@@ -1,6 +1,6 @@
 # The viewer of attachments (`eh3d-viewer`)
 
-A project of the suite can carry datasheets, manuals and other files. This crate shows them inside a program and takes them out with care. Its state (`viewer::Viewer`) has no window in it; the panel drawn with egui is the feature `gui` (`gui::ViewerPanel`). The words are in the eight languages of the suite. No program uses it yet.
+A project of the suite can carry datasheets, manuals and other files. This crate shows them inside a program and takes them out with care. Its state (`viewer::Viewer`) has no window in it; the panel drawn with egui is the feature `gui` (`gui::ViewerPanel`). The words are in the eight languages of the suite. The programs reach it through the panel of attachments ([ATTACHMENTS_PANEL.md](ATTACHMENTS_PANEL.md)). What a file is and whether it is dangerous is decided by `eh3d-filekind`, the one classification of the suite.
 
 Every attachment is untrusted input. Nothing of an attachment is ever run, nothing is downloaded and no link is followed.
 
@@ -25,7 +25,7 @@ Every attachment is untrusted input. Nothing of an attachment is ever run, nothi
 | Office files with macros | Extension, or macros found inside a file with a harmless extension | Preview, open outside or save after confirming |
 | Compressed archives | Extension or first bytes; they are not looked into | Open outside or save after confirming |
 | HTML and SVG | Extension | Read as text, open outside or save after confirming |
-| Unknown kinds | No known extension | Open outside or save after confirming |
+| Unknown kinds | No known extension | Open outside, extract or save after confirming |
 
 A dangerous file shows only its warning until the person confirms. A confirmation is good for one action.
 

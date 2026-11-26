@@ -7,6 +7,7 @@ use std::path::PathBuf;
 use std::sync::Arc;
 
 use crate::error::ViewerError;
+use crate::kind::Danger;
 
 /// One attachment: its name and a way to read its bytes from the start, as often as needed.
 pub trait Source: Send + Sync {
@@ -16,6 +17,10 @@ pub trait Source: Send + Sync {
     fn len(&self) -> u64;
     /// A reader from the first byte.
     fn reader(&self) -> io::Result<Box<dyn Read + '_>>;
+    /// A danger that what holds the attachment knows of (the record of a project): the viewer is at least that careful.
+    fn declared_danger(&self) -> Option<Danger> {
+        None
+    }
     /// True when nothing is announced.
     fn is_empty(&self) -> bool {
         self.len() == 0

@@ -116,6 +116,10 @@ jobs:
         env:
           EH3D_PDFIUM_REQUIRED: "1"
         run: cargo test -p eh3d-viewer --all-targets --features gui
+      - name: Lints of the attachment panel with its drawing
+        run: cargo clippy -p eh3d-attachpanel --all-targets --features gui -- -D warnings
+      - name: Tests of the attachment panel with its drawing
+        run: cargo test -p eh3d-attachpanel --all-targets --features gui
       - name: Tests with the 32-bit library of Windows
         if: runner.os == 'Windows'
         shell: bash

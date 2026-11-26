@@ -20,7 +20,7 @@
 //! often as needed.
 //!
 //! Exit codes: 0 sound, 2 verification not passed (an error finding, or a warning with
-//! `--strict`), 3 a dangerous attachment was not taken out because nobody agreed, 1 anything
+//! `--strict`), 3 a dangerous or unknown attachment was not taken out because nobody agreed, 1 anything
 //! else that failed, 64 wrong use. Nothing is written except by `extract-branch`,
 //! `extract-attachment` and `keygen`, which never replace a file, and by `sign`, `attach`,
 //! `attach-link`, `attachment-links` and `detach`, which rewrite the project given to them.
@@ -560,9 +560,11 @@ fn list_attachments(args: &[String]) -> Result<u8, Failure> {
     for a in found {
         let size = a.size.map_or_else(|| "?".to_owned(), |s| s.to_string());
         let place = if a.is_link() { "link" } else { "inside" };
-        let danger = a
-            .danger()
-            .map_or(String::new(), |d| format!("  DANGEROUS ({})", d.name()));
+        let danger = match a.danger() {
+            Some(d) => format!("  DANGEROUS ({})", d.name()),
+            None if a.needs_confirmation() => "  UNKNOWN KIND".to_owned(),
+            None => String::new(),
+        };
         println!(
             "  {}  {:<8} {size:>11}  {place:<6}  {}{danger}",
             &a.sha256[..16.min(a.sha256.len())],

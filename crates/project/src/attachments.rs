@@ -1,7 +1,7 @@
 //! The attachments of a project: data sheets, manuals, other projects and any other file, kept in the shared branch `attachments/`.
 //!
-//! * **Any file** may be attached; [`crate::attachfile`] says what kind it is and whether it is dangerous. A dangerous file is
-//!   kept like any other, marked, and taken out only when a person has agreed ([`Consent::Given`]). Nothing is ever run, opened or
+//! * **Any file** may be attached; `eh3d-filekind` says what kind it is and whether it is dangerous. A dangerous file is
+//!   kept like any other, marked, and a dangerous or unknown one is taken out only when a person has agreed ([`Consent::Given`]). Nothing is ever run, opened or
 //!   downloaded here.
 //! * A file is stored **once**, under the SHA-256 of its content, which is also its identifier. Many components can point at it
 //!   ([`ComponentLink`]: a designator such as `R5`, a value, or a part number with or without its manufacturer), so a data sheet
@@ -20,15 +20,16 @@ use std::io::{self, Read, Write};
 use std::path::{Path, PathBuf};
 
 use eh3d_container::{to_canonical_file_bytes, ContainerError, PkgCode, Violation};
+use eh3d_filekind::{
+    danger_of, danger_of_file, is_known_name, sanitize_file_name, AttachmentKind, Danger,
+    HEAD_BYTES,
+};
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 use sha2::{Digest, Sha256};
 use thiserror::Error;
 
 use crate::appbranch::Notice;
-use crate::attachfile::{
-    danger_of, danger_of_file, sanitize_file_name, AttachmentKind, Danger, HEAD_BYTES,
-};
 use crate::meta::{check_text, LocalText};
 use crate::project::{OpenOptions, Project, SaveOptions, StreamedFile, StreamedUpdate, Writer};
 use crate::records::to_hex;
@@ -93,13 +94,13 @@ pub enum AttachError {
         /// The limit of the project.
         limit: u64,
     },
-    /// The file is dangerous and nobody has agreed to take it out.
-    #[error("{name} is marked dangerous ({}): it is taken out only when a person agrees", .danger.name())]
+    /// The file is dangerous or of an unknown kind and nobody has agreed to take it out.
+    #[error("{name} is {}: it is taken out only when a person agrees", doubt(.danger))]
     NeedsConfirmation {
         /// The name.
         name: String,
-        /// Why.
-        danger: Danger,
+        /// Why it is dangerous; nothing when the suite does not know its kind.
+        danger: Option<Danger>,
     },
     /// The attachment is only a link: there is no file in the project.
     #[error("{name} is only a link ({url}): nothing is downloaded by itself")]
@@ -112,6 +113,13 @@ pub enum AttachError {
     /// No attachment has that identifier.
     #[error("there is no attachment {0}")]
     NotFound(String),
+}
+
+fn doubt(danger: &Option<Danger>) -> String {
+    danger.map_or_else(
+        || "of a kind the suite does not know".to_owned(),
+        |d| format!("marked dangerous ({})", d.name()),
+    )
 }
 
 /// The result of this module.
@@ -389,9 +397,9 @@ impl Attachment {
             .or_else(|| danger_of(&self.name, &[]))
     }
 
-    /// True when a person has to agree before it is taken out or opened.
+    /// True when a person has to agree before it is taken out or opened: it is dangerous, or the suite does not know its kind.
     pub fn needs_confirmation(&self) -> bool {
-        self.danger().is_some()
+        self.danger().is_some() || !is_known_name(&self.file_name())
     }
 
     /// The name to give to a file taken out of the project: cleaned again, whatever the record says.
@@ -1331,15 +1339,15 @@ fn copy_out(
         {
             return Err(AttachError::NeedsConfirmation {
                 name: name.to_owned(),
-                danger,
+                danger: Some(danger),
             });
         }
     }
     Ok(())
 }
 
-/// Takes one attachment out into `directory` under its safe name, never over a file that is there. A dangerous file needs
-/// [`Consent::Given`]. The file is not executable, it is marked on Windows as coming from outside, it is checked against its
+/// Takes one attachment out into `directory` under its safe name, never over a file that is there. A dangerous file, or one of a
+/// kind the suite does not know, needs [`Consent::Given`]. The file is not executable, it is marked on Windows as coming from outside, it is checked against its
 /// SHA-256 and a partial or refused one is removed. Nothing is opened or run.
 pub fn extract(
     project: &mut Project,
@@ -1357,8 +1365,11 @@ pub fn extract(
             url: record.url.clone().unwrap_or_default(),
         });
     }
-    if let (Some(danger), Consent::NotAsked) = (record.danger(), consent) {
-        return Err(AttachError::NeedsConfirmation { name, danger });
+    if consent == Consent::NotAsked && record.needs_confirmation() {
+        return Err(AttachError::NeedsConfirmation {
+            name,
+            danger: record.danger(),
+        });
     }
     let size = record.size.unwrap_or(0);
     if size > limits.max_attachment_bytes {
@@ -1420,4 +1431,9 @@ pub fn danger_word(danger: Danger) -> S {
         Danger::Archive => S::DangerArchive,
         Danger::ActiveContent => S::DangerActive,
     }
+}
+
+/// The word of the window (in the eight languages) for why an agreement is asked: a danger, or an unknown kind.
+pub fn doubt_word(danger: Option<Danger>) -> S {
+    danger.map_or(S::DangerUnknown, danger_word)
 }

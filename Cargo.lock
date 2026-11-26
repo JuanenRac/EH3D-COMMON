@@ -292,6 +292,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "eh3d-attachpanel"
+version = "0.0.1"
+dependencies = [
+ "egui",
+ "eh3d-container",
+ "eh3d-dock",
+ "eh3d-filedialog",
+ "eh3d-project",
+ "eh3d-view",
+ "eh3d-viewer",
+ "tempfile",
+]
+
+[[package]]
 name = "eh3d-aux"
 version = "0.0.1"
 dependencies = [
@@ -363,6 +377,14 @@ name = "eh3d-filedialog"
 version = "0.0.1"
 
 [[package]]
+name = "eh3d-filekind"
+version = "0.0.1"
+dependencies = [
+ "flate2",
+ "zip",
+]
+
+[[package]]
 name = "eh3d-fleet"
 version = "0.0.1"
 dependencies = [
@@ -423,6 +445,7 @@ dependencies = [
  "ed25519-dalek",
  "eh3d-container",
  "eh3d-diagnostic",
+ "eh3d-filekind",
  "flate2",
  "getrandom",
  "serde",
@@ -460,6 +483,7 @@ name = "eh3d-viewer"
 version = "0.0.1"
 dependencies = [
  "egui",
+ "eh3d-filekind",
  "eh3d-view",
  "flate2",
  "image",

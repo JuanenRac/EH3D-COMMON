@@ -1,0 +1,34 @@
+[package]
+name = "eh3d-attachpanel"
+version = "0.0.1"
+edition.workspace = true
+rust-version.workspace = true
+description = "The panel of the attachments of a project that every PHOENIX program mounts: list, attach a file or a link, link to a component, extract and remove with a question first, and the viewer beside the list"
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+
+[features]
+default = []
+# the panel drawn with egui (the model it draws has no window and is always there)
+gui = ["dep:egui", "dep:eh3d-filedialog", "eh3d-viewer/gui"]
+
+[dependencies]
+# the project and its attachments
+eh3d-project = { version = ">=0.0.1", path = "../project" }
+# the viewer shown beside the list
+eh3d-viewer = { version = ">=0.0.1", path = "../viewer" }
+# the entry of the panel in the frame of the programs
+eh3d-dock = { version = ">=0.0.1", path = "../dock" }
+# the languages of the interface are the ones of eh3d-view
+eh3d-view = { version = ">=0.0.1", path = "../view" }
+# the window that chooses files and folders, only drawn with the feature `gui`
+eh3d-filedialog = { version = ">=0.0.1", path = "../filedialog", optional = true }
+egui = { version = "0.37.0", default-features = false, optional = true }
+
+[dev-dependencies]
+eh3d-container = { version = ">=0.0.1", path = "../container" }
+tempfile = "3"
+
+[lints]
+workspace = true

@@ -687,3 +687,32 @@ fn the_same_attachments_give_the_same_bytes() {
     }
     assert_eq!(results[0], results[1]);
 }
+
+#[test]
+fn a_kind_the_suite_does_not_know_is_taken_out_only_with_an_agreement() {
+    let dir = tempdir().unwrap();
+    let path = new_project(dir.path()).path().to_path_buf();
+    let source = file(dir.path(), "dump.made-up", b"made up bytes");
+    let done = attach(open(&path), &source, &AttachRequest::new());
+    let mut project = done.project;
+    let index = read_index(&mut project).unwrap();
+    let record = index.find(&done.id).unwrap();
+    assert_eq!(
+        record.danger(),
+        None,
+        "unknown is not a danger of the record"
+    );
+    assert!(record.needs_confirmation());
+    let out = dir.path().join("out");
+    let limits = AttachmentLimits::default();
+    let error =
+        attachments::extract(&mut project, &done.id, &out, Consent::NotAsked, &limits).unwrap_err();
+    assert!(
+        matches!(error, AttachError::NeedsConfirmation { danger: None, .. }),
+        "{error}"
+    );
+    assert!(!out.join("dump.made-up").exists());
+    let written =
+        attachments::extract(&mut project, &done.id, &out, Consent::Given, &limits).unwrap();
+    assert_eq!(std::fs::read(written).unwrap(), b"made up bytes");
+}

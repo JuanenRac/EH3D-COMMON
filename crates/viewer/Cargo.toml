@@ -14,6 +14,8 @@ default = []
 gui = ["dep:egui"]
 
 [dependencies]
+# what a file is and whether it is dangerous, the one classification of the suite
+eh3d-filekind = { version = ">=0.0.1", path = "../filekind" }
 # the languages of the interface are the ones of eh3d-view
 eh3d-view = { version = ">=0.0.1", path = "../view" }
 # the office documents of today are ZIP archives of XML files
