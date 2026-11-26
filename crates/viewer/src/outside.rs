@@ -198,6 +198,8 @@ pub struct Outbox {
 static FOLDERS: AtomicU64 = AtomicU64::new(0);
 
 fn new_private_dir(path: &Path) -> io::Result<()> {
+    // only Unix sets a mode; elsewhere the folder takes the one of its parent
+    #[cfg_attr(not(unix), allow(unused_mut))]
     let mut builder = fs::DirBuilder::new();
     #[cfg(unix)]
     {

@@ -3,7 +3,7 @@
 //! older ones be dropped, and a search gives way to a page between two pages.
 
 use std::sync::atomic::{AtomicU64, Ordering};
-use std::sync::mpsc::{channel, Receiver, RecvTimeoutError, Sender, TryRecvError};
+use std::sync::mpsc::{channel, Receiver, Sender, TryRecvError};
 use std::sync::Arc;
 use std::time::Duration;
 
@@ -198,9 +198,6 @@ impl PdfSession {
 
     /// Waits at most `timeout` for an answer; `None` when none came or the thread has ended.
     pub fn wait(&self, timeout: Duration) -> Option<Reply> {
-        match self.replies.recv_timeout(timeout) {
-            Ok(reply) => Some(reply),
-            Err(RecvTimeoutError::Timeout | RecvTimeoutError::Disconnected) => None,
-        }
+        self.replies.recv_timeout(timeout).ok()
     }
 }
