@@ -261,6 +261,7 @@ impl AttachPanel {
         }
         self.model.set_project(project);
         self.model.poll();
+        self.escape(ui);
         let place = ui.max_rect().intersect(ui.clip_rect());
         self.drawn = Some((place, ui.ctx().cumulative_frame_nr()));
         if let Some(Ok((sha256, size))) = self.model.take_hash() {
@@ -323,6 +324,27 @@ impl AttachPanel {
             ui.ctx().request_repaint_after(Duration::from_millis(100));
         }
         self.model.take_wrote()
+    }
+
+    /// Escape closes what the panel has open, one thing at each press and nothing written: the window that chooses, then the
+    /// question before a write (answered with no), then the form of a link. With nothing open, and while a list drops down, the
+    /// key is left to the program.
+    fn escape(&mut self, ui: &Ui) {
+        let open = self.chooser.is_some() || self.link.is_some() || self.model.pending().is_some();
+        if !open
+            || egui::Popup::is_any_open(ui.ctx())
+            || !ui.input_mut(|i| i.consume_key(egui::Modifiers::NONE, egui::Key::Escape))
+        {
+            return;
+        }
+        if self.chooser.take().is_some() {
+            return;
+        }
+        if self.model.pending().is_some() {
+            self.model.cancel();
+        } else {
+            self.act(Asked::Link(false));
+        }
     }
 
     /// The project of a panel that opens them itself, with the buttons to open and close it.
@@ -932,5 +954,85 @@ mod tests {
         assert_eq!(alone.model.project(), Some(file.as_path()));
         assert_eq!(alone.model.items().len(), 1);
         let _ = std::fs::remove_dir_all(&dir);
+    }
+
+    /// A frame on which Escape is pressed; true when the key is still there for the program after the panel was drawn.
+    fn escape_frame(ctx: &egui::Context, panel: &mut AttachPanel, file: &Path) -> bool {
+        let mut input = egui::RawInput {
+            screen_rect: Some(Rect::from_min_size(Pos2::ZERO, Vec2::new(900.0, 700.0))),
+            ..Default::default()
+        };
+        input.events.push(egui::Event::Key {
+            key: egui::Key::Escape,
+            physical_key: Some(egui::Key::Escape),
+            pressed: true,
+            repeat: false,
+            modifiers: egui::Modifiers::NONE,
+        });
+        let mut left = false;
+        let out = ctx.run_ui(input, |ui| {
+            panel.show(ui, Some(file), "en");
+            left = ui.input(|i| i.key_pressed(egui::Key::Escape));
+        });
+        out.drop_without_applying_deltas();
+        left
+    }
+
+    #[test]
+    fn escape_closes_what_the_panel_has_open_one_at_a_time_and_writes_nothing() {
+        let dir =
+            std::env::temp_dir().join(format!("eh3d-attachpanel-escape-{}", std::process::id()));
+        let _ = std::fs::remove_dir_all(&dir);
+        std::fs::create_dir_all(&dir).unwrap();
+        let file = dir.join("a.eh3d");
+        Project::create(
+            &file,
+            NewProject {
+                id: "0f6d3c1a-9b1e-4c53-9b60-3a8f1d2c7e11".to_owned(),
+                name: "made up".to_owned(),
+                units: "mm".to_owned(),
+                created: None,
+            },
+            &OpenOptions::default(),
+            &AtomicOptions::default(),
+        )
+        .unwrap();
+        let sheet = dir.join("sheet.txt");
+        std::fs::write(&sheet, "made up").unwrap();
+
+        let ctx = egui::Context::default();
+        let mut panel = AttachPanel::new(Program::new("cnc", "0.1.0"));
+        frame(&ctx, &mut panel, Some(&file), "en", 900.0);
+        panel.model.request(Request::AttachFile(sheet));
+        wait(&mut panel);
+        let id = panel.model.items()[0].id.clone();
+        let before = std::fs::read(&file).unwrap();
+
+        // the question before a removal, the form of a link and the window that chooses, all open at once
+        panel.model.request(Request::Remove(id));
+        assert!(panel.model.pending().is_some());
+        panel.link = Some(LinkDraft::default());
+        panel.open_chooser(Purpose::HashOf);
+        frame(&ctx, &mut panel, Some(&file), "en", 900.0);
+
+        assert!(!escape_frame(&ctx, &mut panel, &file));
+        assert!(panel.chooser.is_none());
+        assert!(panel.model.pending().is_some() && panel.link.is_some());
+        assert!(!escape_frame(&ctx, &mut panel, &file));
+        assert!(panel.model.pending().is_none() && panel.link.is_some());
+        assert!(!escape_frame(&ctx, &mut panel, &file));
+        assert!(panel.link.is_none());
+        wait(&mut panel);
+        assert_eq!(panel.model.items().len(), 1);
+        assert_eq!(std::fs::read(&file).unwrap(), before);
+        let _ = std::fs::remove_dir_all(&dir);
+    }
+
+    #[test]
+    fn with_nothing_open_the_panel_leaves_escape_to_the_program() {
+        let missing = std::env::temp_dir().join("eh3d-attachpanel-no-such-project.eh3d");
+        let ctx = egui::Context::default();
+        let mut panel = AttachPanel::new(Program::new("cnc", "0.1.0"));
+        assert!(escape_frame(&ctx, &mut panel, &missing));
     }
 }

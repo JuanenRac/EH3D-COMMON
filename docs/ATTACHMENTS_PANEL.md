@@ -11,6 +11,8 @@ The one panel a PHOENIX program mounts for the attachments of its `.eh3d` projec
 * **Remove** from the project, always after a confirmation.
 * **Show** the chosen attachment inside; opening outside and saving a copy follow the rules of the viewer.
 
+`Escape` closes what the panel has open, one thing at each press and nothing written: the window that chooses, then the question before a write (answered with no), then the form of a link. With nothing open, and while a list drops down, the key is left to the program.
+
 A write that removes a signature of the project or of the branch of attachments is asked about first. Only the branch `attachments/` is written; the branches of the programs keep their bytes. The work runs on a thread of its own, and the panel reads the project again when another program wrote it. Nothing of an attachment is run and nothing is downloaded.
 
 ## Mounting it
