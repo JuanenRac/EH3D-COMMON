@@ -28,7 +28,9 @@ pub struct Preview {
 }
 
 /// The longest cell or paragraph kept.
-const MAX_PIECE_CHARS: usize = 20_000;
+pub(crate) const MAX_PIECE_CHARS: usize = 20_000;
+/// The most bytes of text of a whole preview: a value shown in many cells counts every time.
+const MAX_PREVIEW_BYTES: usize = 16 * 1024 * 1024;
 /// The most columns of a table.
 pub(crate) const MAX_COLUMNS: usize = 256;
 
@@ -37,6 +39,7 @@ pub(crate) struct Builder {
     preview: Preview,
     blocks_left: u64,
     cells_left: u64,
+    bytes_left: usize,
 }
 
 impl Builder {
@@ -45,6 +48,7 @@ impl Builder {
             preview: Preview::default(),
             blocks_left: limits.max_blocks,
             cells_left: limits.max_cells,
+            bytes_left: MAX_PREVIEW_BYTES,
         }
     }
 
@@ -57,12 +61,26 @@ impl Builder {
         self.preview.truncated = true;
     }
 
-    /// Cuts a text that is too long, at a character boundary.
+    /// Cuts a text that is too long, at a character boundary, and counts it against the text of the whole preview. What is
+    /// cut gives its memory back.
     pub(crate) fn clip(&mut self, mut text: String) -> String {
         if let Some((at, _)) = text.char_indices().nth(MAX_PIECE_CHARS) {
             text.truncate(at);
             self.truncate();
         }
+        if text.len() > self.bytes_left {
+            let mut end = self.bytes_left;
+            while !text.is_char_boundary(end) {
+                end -= 1;
+            }
+            text.truncate(end);
+            self.truncate();
+            // nothing more is kept
+            self.blocks_left = 0;
+            self.bytes_left = text.len();
+        }
+        self.bytes_left -= text.len();
+        text.shrink_to_fit();
         text
     }
 
@@ -79,7 +97,8 @@ impl Builder {
             Block::Quote(t) => Block::Quote(self.clip(t)),
             other => other,
         };
-        self.blocks_left -= 1;
+        // a text that used up the preview has already left no block
+        self.blocks_left = self.blocks_left.saturating_sub(1);
         self.preview.blocks.push(block);
     }
 

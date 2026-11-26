@@ -529,9 +529,15 @@ impl<'a> BranchKit<'a> {
         report: &ConversionReport,
         apply: impl FnOnce(&mut WorkingCopy, &str) -> BranchResult<()>,
     ) -> BranchResult<Vec<Notice>> {
-        let original = format!("{ORIGIN_DIR}{}", report.source.name);
+        let mut original = format!("{ORIGIN_DIR}{}", report.source.name);
+        let mut report = report.clone();
+        // a file with the name of the report would be written over by it: it is kept under another one
+        if original.eq_ignore_ascii_case(REPORT_FILE) {
+            original = format!("{ORIGIN_DIR}original-{}", report.source.name);
+            report.original = report.original.map(|_| original.clone());
+        }
         self.check_name(&original)?;
-        let text = pretty_line(report)?;
+        let text = pretty_line(&report)?;
         let mut replaced = false;
         let (_, mut notices) = self.update(path, identity, |_, copy| {
             let before: Vec<String> = copy

@@ -100,6 +100,11 @@ where
         .open(temporary)?;
     write(&mut file)?;
     file.flush()?;
+    // the new file keeps who may read and write the one it replaces
+    #[cfg(unix)]
+    if let Ok(old) = fs::metadata(target) {
+        let _ = file.set_permissions(old.permissions());
+    }
     file.sync_all()?;
     drop(file);
 

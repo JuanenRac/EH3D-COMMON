@@ -127,3 +127,39 @@ fn the_viewer_shows_a_page_with_the_library_beside_the_program() {
         !view.searching() && view.hits().len() == 1 && view.page() == 1
     });
 }
+
+#[test]
+fn a_damaged_document_is_refused_or_read_but_never_stops_the_program() {
+    if !required() {
+        return;
+    }
+    let whole = pdf(&["Hello datasheet", "second page"]);
+    let try_it = |bytes: Vec<u8>| {
+        let Ok(document) = PdfiumDocument::open(bytes) else {
+            return;
+        };
+        for page in 0..document.page_count().min(4) {
+            let _ = document.page_size(page);
+            let _ = document.render(page, 40, 20);
+            let _ = document.find(page, "e", 4);
+        }
+    };
+    for cut in (0..whole.len()).step_by(7) {
+        try_it(whole[..cut].to_vec());
+    }
+    let mut state = 0x5EED_0005u64;
+    let mut below = |n: usize| {
+        state ^= state << 13;
+        state ^= state >> 7;
+        state ^= state << 17;
+        (state % n as u64) as usize
+    };
+    for _ in 0..300 {
+        let mut bytes = whole.clone();
+        for _ in 0..1 + below(8) {
+            let at = below(bytes.len());
+            bytes[at] = below(256) as u8;
+        }
+        try_it(bytes);
+    }
+}

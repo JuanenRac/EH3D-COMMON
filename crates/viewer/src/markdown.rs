@@ -5,6 +5,17 @@ use crate::doc::{Block, Builder, Preview};
 use crate::limits::ViewerLimits;
 use crate::plain;
 
+/// How far the end of a link is looked for. Without it a line of nothing but `[` takes a time that grows with its square.
+const MAX_LINK_BYTES: usize = 4096;
+
+fn within(text: &str) -> &str {
+    let mut end = text.len().min(MAX_LINK_BYTES);
+    while !text.is_char_boundary(end) {
+        end -= 1;
+    }
+    &text[..end]
+}
+
 /// The text of a line without the marks of emphasis, with links written out.
 fn inline(text: &str) -> String {
     let mut out = String::with_capacity(text.len());
@@ -13,9 +24,11 @@ fn inline(text: &str) -> String {
         if c == '[' || rest.starts_with("![") {
             let picture = c == '!';
             let body = &rest[if picture { 2 } else { 1 }..];
-            if let Some((label, after)) = body.split_once("](") {
+            if let Some((label, _)) = within(body).split_once("](") {
+                let after = &body[label.len() + 2..];
                 if !label.contains('[') {
-                    if let Some((address, tail)) = after.split_once(')') {
+                    if let Some((address, _)) = within(after).split_once(')') {
+                        let tail = &after[address.len() + 1..];
                         if picture {
                             out.push_str(&format!("[{label}]"));
                         } else if label == address || address.starts_with('#') {

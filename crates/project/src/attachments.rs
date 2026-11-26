@@ -541,7 +541,7 @@ impl AttachmentIndex {
                     let dir = a.blob_dir();
                     let parts: Vec<&(&str, u64, &str)> =
                         files.iter().filter(|f| f.0.starts_with(&dir)).collect();
-                    let total: u64 = parts.iter().map(|p| p.1).sum();
+                    let total = parts.iter().fold(0u64, |sum, p| sum.saturating_add(p.1));
                     if parts.is_empty() || a.size != Some(total) {
                         return Err(format!("'{name}': the stored file is not complete"));
                     }
