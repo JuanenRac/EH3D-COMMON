@@ -28,21 +28,19 @@ const MAX_SETTINGS_BYTES: u64 = 4 << 20;
 /// The program the panel works for.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct Program {
-    /// Its name, as the record of the branch says it.
-    pub app: String,
+    /// The branch of its own (`laser`, `cnc`, `pnp`), which is also the name it writes with: what a write would unsign is
+    /// asked about.
+    pub branch: String,
     /// Its version.
     pub version: String,
-    /// The branch of its own (`laser`, `cnc`, `pnp`): what a write would unsign is asked about.
-    pub branch: String,
 }
 
 impl Program {
-    /// A program.
-    pub fn new(app: &str, version: &str, branch: &str) -> Program {
+    /// The program of a branch, in a version.
+    pub fn new(branch: &str, version: &str) -> Program {
         Program {
-            app: app.to_owned(),
-            version: version.to_owned(),
             branch: branch.to_owned(),
+            version: version.to_owned(),
         }
     }
 }
@@ -713,7 +711,7 @@ impl Model {
     }
 
     fn start(&mut self, file: PathBuf, request: Request, agreed: bool) {
-        let attacher = Attacher::new(&self.program.app, &self.program.version)
+        let attacher = Attacher::new(&self.program.branch, &self.program.version)
             .with_limits(self.limits);
         let keys = self.credential_keys.clone();
         let (send, receive) = mpsc::channel();

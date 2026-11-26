@@ -44,6 +44,9 @@ macro_rules! texts {
 
 texts! {
     Title: ["Attachments", "Adjuntos", "Anhänge", "Pièces jointes", "Allegati", "添付ファイル", "附件", "Anexos"];
+    OpenProject: ["Open suite project…", "Abrir proyecto de la suite…", "Suite-Projekt öffnen…", "Ouvrir un projet de la suite…", "Apri progetto della suite…", "スイートプロジェクトを開く…", "打开套件项目…", "Abrir projeto da suite…"];
+    CloseProject: ["Close the project", "Cerrar el proyecto", "Projekt schließen", "Fermer le projet", "Chiudi il progetto", "プロジェクトを閉じる", "关闭项目", "Fechar o projeto"];
+    ProjectName: ["Project: {0}", "Proyecto: {0}", "Projekt: {0}", "Projet : {0}", "Progetto: {0}", "プロジェクト：{0}", "项目：{0}", "Projeto: {0}"];
     NoProject: ["Open or save a suite project (.eh3d) to keep data sheets and manuals with it.", "Abre o guarda un proyecto de la suite (.eh3d) para guardar con él hojas de datos y manuales.", "Öffnen oder speichern Sie ein Suite-Projekt (.eh3d), um Datenblätter und Handbücher darin aufzubewahren.", "Ouvrez ou enregistrez un projet de la suite (.eh3d) pour y conserver fiches techniques et manuels.", "Apri o salva un progetto della suite (.eh3d) per conservarvi schede tecniche e manuali.", "データシートやマニュアルを保存するには、スイートプロジェクト (.eh3d) を開くか保存してください。", "打开或保存套件项目 (.eh3d)，即可把数据手册和说明书保存在其中。", "Abra ou guarde um projeto da suite (.eh3d) para guardar com ele folhas de dados e manuais."];
     NoAttachments: ["The project has no attachments yet.", "El proyecto todavía no tiene adjuntos.", "Das Projekt hat noch keine Anhänge.", "Le projet n’a pas encore de pièces jointes.", "Il progetto non ha ancora allegati.", "このプロジェクトにはまだ添付ファイルがありません。", "该项目还没有附件。", "O projeto ainda não tem anexos."];
     AttachFile: ["Attach a file…", "Adjuntar un archivo…", "Datei anhängen…", "Joindre un fichier…", "Allega un file…", "ファイルを添付…", "添加文件…", "Anexar um ficheiro…"];

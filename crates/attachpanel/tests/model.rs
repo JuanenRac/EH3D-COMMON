@@ -38,7 +38,7 @@ fn file(dir: &Path, name: &str, bytes: &[u8]) -> PathBuf {
 }
 
 fn model() -> Model {
-    Model::new(Program::new("EH3D-PHOENIX-CNC", "0.1.0", "cnc"))
+    Model::new(Program::new("cnc", "0.1.0"))
 }
 
 fn wait(model: &mut Model) {

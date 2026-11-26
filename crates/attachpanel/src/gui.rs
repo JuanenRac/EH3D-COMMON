@@ -25,6 +25,7 @@ const WIDE: f32 = 760.0;
 #[derive(Debug, Clone, PartialEq, Eq)]
 enum Purpose {
     Attach,
+    OpenProject,
     HashOf,
     ExtractTo(String),
     SaveCopy,
@@ -57,6 +58,7 @@ enum Asked {
     Link(bool),
     ShowAll,
     ReadAgain,
+    Close,
     Confirm,
     Cancel,
 }
@@ -75,6 +77,10 @@ pub struct AttachPanel {
     checked: Option<Instant>,
     /// The folder the last file was chosen in.
     folder: Option<PathBuf>,
+    /// Whether the panel opens projects itself, for a program with no project menu.
+    opens: bool,
+    /// The project the panel opened itself.
+    own: Option<PathBuf>,
 }
 
 fn kind_of_form(form: LinkForm) -> Text {
@@ -113,7 +119,28 @@ impl AttachPanel {
             component: ComponentDraft::default(),
             checked: None,
             folder: None,
+            opens: false,
+            own: None,
         }
+    }
+
+    /// The same panel for a program whose window has no project of the suite: the panel has its own button to open one. A
+    /// project the program gives to [`AttachPanel::show`] still comes first.
+    #[must_use]
+    pub fn opens_projects(mut self) -> AttachPanel {
+        self.opens = true;
+        self
+    }
+
+    /// Asks for a project to open (an entry of a menu): the window to choose it is drawn with the panel.
+    pub fn choose_project(&mut self) {
+        self.open_chooser(Purpose::OpenProject);
+    }
+
+    /// Opens a project in a panel that opens them itself.
+    pub fn open_project(&mut self, path: PathBuf) {
+        self.own = Some(path);
+        self.link = None;
     }
 
     /// The same panel with another viewer (a test gives one that starts no program).
@@ -142,8 +169,13 @@ impl AttachPanel {
     /// once after the project was written: the program reads its own state of the project again.
     pub fn show(&mut self, ui: &mut Ui, project: Option<&Path>, code: &str) -> bool {
         let lang = lang_of(code);
+        let own = self.own.clone();
+        let project = project.or(own.as_deref());
         if self.model.project() != project {
-            self.chooser = None;
+            // the window that chooses the next project stays
+            if self.chooser.as_ref().is_some_and(|c| c.purpose != Purpose::OpenProject) {
+                self.chooser = None;
+            }
             self.link = None;
         }
         self.model.set_project(project);
@@ -153,11 +185,18 @@ impl AttachPanel {
             self.model.check_file();
         }
         self.follow_selection();
+        let mut asked = Vec::new();
+        if self.opens {
+            self.project_line(ui, project, lang, &mut asked);
+        }
         if project.is_none() {
             ui.label(tr(lang, Text::NoProject));
+            for what in asked {
+                self.act(what);
+            }
+            self.chooser_window(ui, lang);
             return self.model.take_wrote();
         }
-        let mut asked = Vec::new();
         self.head(ui, lang, &mut asked);
         let mut event = None;
         if ui.available_width() >= WIDE {
@@ -192,6 +231,28 @@ impl AttachPanel {
             ui.ctx().request_repaint_after(Duration::from_millis(100));
         }
         self.model.take_wrote()
+    }
+
+    /// The project of a panel that opens them itself, with the buttons to open and close it.
+    fn project_line(
+        &mut self,
+        ui: &mut Ui,
+        project: Option<&Path>,
+        lang: Lang,
+        asked: &mut Vec<Asked>,
+    ) {
+        ui.horizontal_wrapped(|ui| {
+            if ui.button(tr(lang, Text::OpenProject)).clicked() {
+                asked.push(Asked::Choose(Purpose::OpenProject));
+            }
+            if let Some(file) = project {
+                let name = eh3d_project::suiteview::name_of(file);
+                ui.label(fill(tr(lang, Text::ProjectName), &[&name]));
+                if self.own.is_some() && ui.button(tr(lang, Text::CloseProject)).clicked() {
+                    asked.push(Asked::Close);
+                }
+            }
+        });
     }
 
     /// The viewer shows the attachment that is chosen, and nothing for a link or for none.
@@ -387,6 +448,7 @@ impl AttachPanel {
             Asked::Link(open) => self.link = open.then(LinkDraft::default),
             Asked::ShowAll => self.model.set_filter(None),
             Asked::ReadAgain => self.model.reload(),
+            Asked::Close => self.own = None,
             Asked::Confirm => self.model.confirm(),
             Asked::Cancel => self.model.cancel(),
         }
@@ -409,7 +471,12 @@ impl AttachPanel {
         } else {
             Mode::Open
         };
-        let browser = Browser::new(mode, &start, &home, vec![Filter::any()], None);
+        let filter = if purpose == Purpose::OpenProject {
+            Filter::new(&[eh3d_project::appbranch::EXTENSION])
+        } else {
+            Filter::any()
+        };
+        let browser = Browser::new(mode, &start, &home, vec![filter], None);
         self.chooser = Some(Chooser { browser, purpose });
     }
 
@@ -421,6 +488,7 @@ impl AttachPanel {
         };
         match purpose {
             Purpose::Attach => self.model.request(Request::AttachFile(path)),
+            Purpose::OpenProject => self.open_project(path),
             Purpose::HashOf => {
                 if let (Some(draft), Ok((sha256, size))) =
                     (&mut self.link, attachments::hash_file(&path))
@@ -614,7 +682,7 @@ mod tests {
         std::fs::write(&script, "made up").unwrap();
 
         let ctx = egui::Context::default();
-        let mut panel = AttachPanel::new(Program::new("EH3D-PHOENIX-CNC", "0.1.0", "cnc"));
+        let mut panel = AttachPanel::new(Program::new("cnc", "0.1.0"));
         assert!(panel.apply_setting("viewer.max_pdf_mb", "8"));
         assert!(panel.apply_setting("attachments.max_mb", "8"));
         assert!(!panel.apply_setting("other", "8"));
@@ -646,6 +714,18 @@ mod tests {
             assert!(panel.chooser.is_some());
         }
         assert!(panel.shown.is_some(), "the viewer follows the list");
+
+        // a panel of a program with no project menu opens one itself
+        let mut alone = AttachPanel::new(Program::new("pnp", "0.1.0"))
+            .opens_projects();
+        frame(&ctx, &mut alone, None, "fr", 500.0);
+        alone.choose_project();
+        frame(&ctx, &mut alone, None, "fr", 500.0);
+        assert!(alone.chooser.is_some());
+        alone.open_project(file.clone());
+        frame(&ctx, &mut alone, None, "zh", 900.0);
+        assert_eq!(alone.model.project(), Some(file.as_path()));
+        assert_eq!(alone.model.items().len(), 1);
         let _ = std::fs::remove_dir_all(&dir);
     }
 }

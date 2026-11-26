@@ -11,7 +11,7 @@
 //! // among the panels of the frame
 //! defs.push(eh3d_attachpanel::panel_def());
 //! // kept for as long as the program runs
-//! let attachments = AttachPanel::new(Program::new("EH3D-PHOENIX-CNC", env!("CARGO_PKG_VERSION"), "cnc"));
+//! let attachments = AttachPanel::new(Program::new("cnc", env!("CARGO_PKG_VERSION")));
 //! // in the body of the panel, on every frame
 //! if attachments.show(ui, project_path, lang_code) {
 //!     // the project was written: read your own state of it again
