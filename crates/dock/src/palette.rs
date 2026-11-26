@@ -112,6 +112,62 @@ pub fn readable(colour: Rgb, background: Rgb) -> Rgb {
     }
 }
 
+/// What a window does with the colour of its program: only accents (main buttons, selection, the active tab and links). The grounds, the panels
+/// and the bars of the window are not touched.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub struct Accents {
+    /// Links and any other text in the colour of the program, legible on every ground of the window.
+    pub link: Rgb,
+    /// The ground of what is selected and of the active tab: the ground of the window with a tint of the program.
+    pub selection_fill: Rgb,
+    /// Text and outline on [`Accents::selection_fill`].
+    pub selection_ink: Rgb,
+    /// The fill of a main button.
+    pub button_fill: Rgb,
+    /// The text of a main button.
+    pub button_ink: Rgb,
+}
+
+/// The strongest and the weakest tint of a selection, in hundredths of the colour of the program.
+const TINT_STRONGEST: u8 = 40;
+const TINT_WEAKEST: u8 = 8;
+
+/// The colour `percent` hundredths of the way from `ground` to `colour`.
+fn tint(ground: Rgb, colour: Rgb, percent: u8) -> Rgb {
+    let mix = |g: u8, c: u8| {
+        let share = u16::from(percent.min(100));
+        // both terms are at most 255 * 100, so the sum fits and the result is at most 255
+        ((u16::from(g) * (100 - share) + u16::from(c) * share + 50) / 100) as u8
+    };
+    [
+        mix(ground[0], colour[0]),
+        mix(ground[1], colour[1]),
+        mix(ground[2], colour[2]),
+    ]
+}
+
+/// The accents of a window: `main` is the principal tone of the program, `ground` the ground of its panels, `others` the other grounds that text
+/// is written on (all light or all dark, like `ground`) and `text` the colour of the text of the window. The selection is the strongest tint on
+/// which that text still reaches [`TEXT_CONTRAST`].
+pub fn accents(main: Rgb, ground: Rgb, others: &[Rgb], text: Rgb) -> Accents {
+    let on_grounds = others.iter().fold(readable(main, ground), |found, &other| {
+        readable(found, other)
+    });
+    let selection_fill = (TINT_WEAKEST..=TINT_STRONGEST)
+        .rev()
+        .step_by(2)
+        .map(|percent| tint(ground, main, percent))
+        .find(|&fill| contrast(text, fill) >= TEXT_CONTRAST)
+        .unwrap_or_else(|| tint(ground, main, TINT_WEAKEST));
+    Accents {
+        link: on_grounds,
+        selection_fill,
+        selection_ink: readable(on_grounds, selection_fill),
+        button_fill: main,
+        button_ink: ink_on(main),
+    }
+}
+
 /// Hue (in turns), lightness and saturation of a colour.
 fn to_hls(colour: Rgb) -> (f64, f64, f64) {
     let [r, g, b] = colour.map(|v| f64::from(v) / 255.0);
@@ -259,5 +315,42 @@ mod tests {
         }
         assert!((contrast([0, 0, 0], [255, 255, 255]) - 21.0).abs() < 0.001);
         assert_eq!(from_hls(0.0, 0.5, 1.0), [255, 0, 0]);
+    }
+
+    #[test]
+    fn the_accents_of_each_program_read_on_light_and_on_dark_windows() {
+        // ground of the panels, the other grounds and the text: the dark and light looks of egui and of the brand
+        let looks: [(u32, [u32; 2], u32); 4] = [
+            (0x1B1B1B, [0x1B1B1B, 0x0A0A0A], 0xB4B4B4),
+            (0xF8F8F8, [0xF8F8F8, 0xFFFFFF], 0x3C3C3C),
+            (0x161B22, [0x21262D, 0x0D1117], 0xE6EDF3),
+            (0xFFFFFF, [0xF4F0EA, 0xE9E3DA], 0x221E1A),
+        ];
+        for program in Phoenix::ALL {
+            let main = program.tones().main;
+            for (ground, others, text) in looks {
+                let (ground, others, text) = (hex(ground), others.map(hex), hex(text));
+                let a = accents(main, ground, &others, text);
+                let what = format!("{program:?} {ground:?} {a:?}");
+                for g in others.into_iter().chain([ground]) {
+                    assert!(contrast(a.link, g) >= TEXT_CONTRAST, "link {what}");
+                }
+                assert!(contrast(text, a.selection_fill) >= TEXT_CONTRAST, "{what}");
+                assert!(
+                    contrast(a.selection_ink, a.selection_fill) >= TEXT_CONTRAST,
+                    "{what}"
+                );
+                assert!(
+                    contrast(a.button_ink, a.button_fill) >= TEXT_CONTRAST,
+                    "{what}"
+                );
+                assert_eq!(a.button_fill, main, "{what}");
+                // what is selected can be told from the ground it lies on
+                assert!(contrast(a.selection_fill, ground) > 1.05, "{what}");
+            }
+        }
+        assert_eq!(tint([0, 0, 0], [255, 255, 255], 0), [0, 0, 0]);
+        assert_eq!(tint([0, 0, 0], [255, 255, 255], 100), [255, 255, 255]);
+        assert_eq!(tint([10, 20, 30], [110, 120, 130], 50), [60, 70, 80]);
     }
 }

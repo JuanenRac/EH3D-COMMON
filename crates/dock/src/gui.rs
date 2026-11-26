@@ -4,12 +4,14 @@
 //! The drawing only reads the state of [`DockCore`] and collects what the person did as a list of events; the events are applied to the model
 //! after the frame is drawn, so every rule stays in the model, where it is tested without a window.
 
-use crate::about::{self, AboutBrand};
+use crate::about::{self, AboutBrand, Phoenix};
 use crate::arrange::{arrange, min_size, pick_drop, ratio_from_pointer, DropSlot};
 use crate::core::{AboutInfo, DockCore, Outcome, PanelDef};
 use crate::geom::{Axis, Rect, Side};
 use crate::menu::{Chosen, DockAction, Kind, MenuBar, Resolved};
 use crate::model::{DockError, DropTarget, Layout, Node, PanelState};
+use crate::palette;
+use crate::recent_store::RecentStore;
 use crate::shortcuts::{DockKey, Shortcut};
 use crate::stdmenus::shortcut_table;
 use crate::texts::{panel_label, tr, DockText};
@@ -47,6 +49,9 @@ pub struct Palette {
     bar: Color32,
     tab: Color32,
     tab_active: Color32,
+    /// The text of the active tab, and whether the frame marks that tab with a line (a window with the accents of a program).
+    tab_ink: Color32,
+    marked: bool,
     tab_hover: Color32,
     text: Color32,
     dim: Color32,
@@ -63,6 +68,8 @@ impl Palette {
             bar: v.widgets.noninteractive.bg_fill,
             tab: v.widgets.inactive.weak_bg_fill,
             tab_active: v.selection.bg_fill,
+            tab_ink: v.text_color(),
+            marked: false,
             tab_hover: v.widgets.hovered.weak_bg_fill,
             text: v.text_color(),
             dim: v.weak_text_color(),
@@ -71,6 +78,64 @@ impl Palette {
             border: v.widgets.noninteractive.bg_stroke.color,
         }
     }
+}
+
+/// The colour as the palette takes it.
+fn rgb(c: Color32) -> palette::Rgb {
+    [c.r(), c.g(), c.b()]
+}
+
+fn from_rgb([r, g, b]: palette::Rgb) -> Color32 {
+    Color32::from_rgb(r, g, b)
+}
+
+/// Gives a coloured outline the colour of the program, as strong as it was; a grey one stays as it is.
+fn recolour(stroke: &mut Stroke, to: palette::Rgb) {
+    let [r, g, b, a] = stroke.color.to_srgba_unmultiplied();
+    if r.max(g).max(b) - r.min(g).min(b) >= 60 {
+        stroke.color = Color32::from_rgba_unmultiplied(to[0], to[1], to[2], a);
+    }
+}
+
+/// The accents of a window with these visuals, worked out from its grounds and the colour of its text.
+pub fn accents_of(program: Phoenix, v: &egui::Visuals) -> palette::Accents {
+    let text = v
+        .override_text_color
+        .unwrap_or_else(|| v.widgets.inactive.text_color());
+    palette::accents(
+        program.accent(),
+        rgb(v.panel_fill),
+        &[rgb(v.window_fill), rgb(v.extreme_bg_color)],
+        rgb(text),
+    )
+}
+
+/// Puts the colour of a program on the accents of some visuals, and on nothing else: the selection (with it the active tab), the links and the
+/// outlines that were already coloured. The grounds, the panels, the bars and the text stay as they are. Doing it twice changes nothing more.
+pub fn accent_visuals(program: Phoenix, v: &mut egui::Visuals) {
+    let a = accents_of(program, v);
+    v.selection.bg_fill = from_rgb(a.selection_fill);
+    v.selection.stroke.color = from_rgb(a.selection_ink);
+    v.selection.stroke.width = v.selection.stroke.width.max(1.0);
+    v.hyperlink_color = from_rgb(a.link);
+    for stroke in [
+        &mut v.widgets.inactive.bg_stroke,
+        &mut v.widgets.hovered.bg_stroke,
+        &mut v.widgets.active.bg_stroke,
+    ] {
+        recolour(stroke, a.link);
+    }
+}
+
+/// A main button of a program: filled with its colour, with black or white text, whichever reads better.
+pub fn primary_button(program: Phoenix, text: impl Into<String>) -> egui::Button<'static> {
+    let fill = program.accent();
+    egui::Button::new(
+        egui::RichText::new(text)
+            .strong()
+            .color(from_rgb(palette::ink_on(fill))),
+    )
+    .fill(from_rgb(fill))
 }
 
 enum Ev {
@@ -374,6 +439,13 @@ fn tab_bar(
             },
             fill,
         );
+        if i == active && v.pal.marked {
+            p.hline(
+                rect.shrink(3.0).x_range(),
+                rect.top() + 1.0,
+                Stroke::new(2.0, v.pal.tab_ink),
+            );
+        }
         let label = if w < 60.0 && !v.icon(id).is_empty() {
             v.icon(id).to_string()
         } else {
@@ -385,7 +457,11 @@ fn tab_bar(
             Align2::LEFT_CENTER,
             label,
             font.clone(),
-            if i == active { v.pal.text } else { v.pal.dim },
+            if i == active {
+                v.pal.tab_ink
+            } else {
+                v.pal.dim
+            },
         );
         let summary = panel_label(v.lang, &v.title(id), v.state_word(id));
         resp.widget_info(|| egui::WidgetInfo::labeled(egui::Role::Button, true, &summary));
@@ -680,6 +756,8 @@ pub struct Dock {
     name_error: bool,
     show_about: bool,
     brand: Option<AboutBrand>,
+    /// The program of the family whose colour the accents of the window take.
+    program: Option<Phoenix>,
     show_shortcuts: bool,
     banner: Vec<String>,
     shortcut_rows: Vec<(String, String, String)>,
@@ -702,6 +780,7 @@ impl Dock {
             name_error: false,
             show_about: false,
             brand: None,
+            program: None,
             show_shortcuts: false,
             banner: Vec::new(),
             shortcut_rows: Vec::new(),
@@ -747,7 +826,43 @@ impl Dock {
     /// Gives the window about the program the look of its program of the PHOENIX family (see [`about_contents`]): the picture in a ring of the
     /// accent colour, the name in large letters, one sentence, the author and the links. Without it the window is the plain list of lines.
     pub fn set_brand(&mut self, brand: AboutBrand) {
+        self.program = Some(brand.program);
         self.brand = Some(brand);
+    }
+
+    /// The window takes the colour of a program of the PHOENIX family on its accents (see [`accent_visuals`]) from the next time it is drawn; the
+    /// frame keeps doing it when the program sets other visuals. [`Dock::set_brand`] does this too: a program calls this one only when it has a
+    /// window about of its own.
+    pub fn set_program(&mut self, program: Phoenix) {
+        self.program = Some(program);
+    }
+
+    /// Keeps the list of recent files in the settings folder of the user (see [`RecentStore`]), whatever settings file the program uses. A program
+    /// calls this once, when it opens its window and after it read its settings; never in a test or to make a picture.
+    pub fn keep_user_recent(&mut self, program: Phoenix) {
+        if let Some(store) = RecentStore::for_user(program) {
+            self.core.keep_recent_in(store);
+        }
+    }
+
+    /// Puts the accents of the program on the window and on what is being drawn.
+    fn keep_accents(&self, ui: &mut Ui) {
+        let Some(program) = self.program else {
+            return;
+        };
+        let ctx = ui.ctx().clone();
+        let now = ctx.global_style().visuals.clone();
+        let mut wanted = now.clone();
+        accent_visuals(program, &mut wanted);
+        if wanted != now {
+            ctx.set_visuals(wanted);
+        }
+        // what is drawn now took its look before: it is brought up to date too
+        let mut own = ui.visuals().clone();
+        accent_visuals(program, &mut own);
+        if own != *ui.visuals() {
+            *ui.visuals_mut() = own;
+        }
     }
 
     /// The program turns entries of the menus off and sets their check marks, by id; it can call this every frame.
@@ -811,13 +926,20 @@ impl Dock {
 
     /// Draws the panels in the space left in `ui`.
     pub fn show(&mut self, ui: &mut Ui) {
+        self.core.flush_recent();
+        self.keep_accents(ui);
         let layout = self.core.layout().clone();
         let defs: Vec<PanelDef> = self.core.defs().to_vec();
+        let mut pal = Palette::from_visuals(ui.visuals());
+        if self.program.is_some() {
+            pal.tab_ink = pal.accent;
+            pal.marked = true;
+        }
         let v = View {
             defs: &defs,
             lang: self.core.lang,
             layout: &layout,
-            pal: Palette::from_visuals(ui.visuals()),
+            pal,
             locked: layout.locked,
         };
         let full = ui.available_rect_before_wrap();
@@ -1218,6 +1340,8 @@ impl Dock {
     /// Draws the menu bar in `ui` (put it in a top panel) and handles the shortcuts. Gives what the person chose with the mouse or the keyboard: an
     /// action of the program, a recent file, or a frame action that has already been done.
     pub fn menu_bar<A: Clone>(&mut self, ui: &mut Ui, bar: &MenuBar<A>) -> Option<Chosen<A>> {
+        self.core.flush_recent();
+        self.keep_accents(ui);
         let ctx = ui.ctx().clone();
         let mut chosen = self.handle_shortcuts(&ctx, bar);
         let by_key = chosen.is_some();
@@ -1356,6 +1480,7 @@ impl Dock {
         if let Some(mut name) = self.ask_name.take() {
             let mut keep = true;
             let mut accepted = false;
+            let program = self.program;
             egui::Window::new(tr(lang, DockText::SaveWorkspace))
                 .collapsible(false)
                 .resizable(false)
@@ -1368,9 +1493,11 @@ impl Dock {
                     }
                     ui.horizontal(|ui| {
                         let ok = valid_name(name.trim());
-                        if ui
-                            .add_enabled(ok, egui::Button::new(tr(lang, DockText::Accept)))
-                            .clicked()
+                        let accept = match program {
+                            Some(program) => primary_button(program, tr(lang, DockText::Accept)),
+                            None => egui::Button::new(tr(lang, DockText::Accept)),
+                        };
+                        if ui.add_enabled(ok, accept).clicked()
                             || (ok
                                 && edit.lost_focus()
                                 && ui.input(|i| i.key_pressed(egui::Key::Enter)))
@@ -1393,6 +1520,13 @@ impl Dock {
                 self.ask_name = Some(name);
             }
         }
+    }
+}
+
+/// A list of recent files changed in the last frame is not lost when the window closes.
+impl Drop for Dock {
+    fn drop(&mut self) {
+        self.core.flush_recent();
     }
 }
 
@@ -1487,7 +1621,8 @@ fn decode_logo(bytes: &[u8]) -> Option<egui::ColorImage> {
 
 /// The texture of the picture of a program, made once and kept with the window.
 fn logo_texture(ctx: &egui::Context, brand: &AboutBrand) -> Option<egui::TextureHandle> {
-    let id = Id::unique(("eh3d_dock_about_logo", brand.program));
+    // a program may have a small picture for its header and a large one for its window «About»
+    let id = Id::unique(("eh3d_dock_about_logo", brand.program, brand.logo_png.len()));
     if let Some(texture) = ctx.data(|d| d.get_temp::<egui::TextureHandle>(id)) {
         return Some(texture);
     }
@@ -1495,6 +1630,16 @@ fn logo_texture(ctx: &egui::Context, brand: &AboutBrand) -> Option<egui::Texture
     let texture = ctx.load_texture(brand.program.name(), image, egui::TextureOptions::LINEAR);
     ctx.data_mut(|d| d.insert_temp(id, texture.clone()));
     Some(texture)
+}
+
+/// The picture of a program (the one of its window «About») drawn as a square of `size` points, for the header of its window. A picture that
+/// cannot be read leaves the room empty.
+pub fn program_mark(ui: &mut Ui, brand: &AboutBrand, size: f32) -> egui::Response {
+    let (square, response) = ui.allocate_exact_size(Vec2::splat(size), Sense::hover());
+    if let Some(texture) = logo_texture(ui.ctx(), brand) {
+        egui::Image::new(&texture).paint_at(ui, square);
+    }
+    response
 }
 
 /// The colour of the name of a program in its window «About»: its accent, moved towards a darker or a lighter tone of the same hue as far as the
@@ -1857,6 +2002,85 @@ mod tests {
                     "{program:?} {found}"
                 );
             }
+        }
+    }
+
+    #[test]
+    fn the_accents_of_a_program_go_on_the_selection_and_the_links_and_nothing_else() {
+        // the looks of egui, and one of a program with coloured outlines of its own
+        let mut forge = egui::Visuals::dark();
+        forge.panel_fill = Color32::from_rgb(0x17, 0x13, 0x10);
+        forge.window_fill = Color32::from_rgb(0x22, 0x1c, 0x17);
+        forge.override_text_color = Some(Color32::from_rgb(0xf4, 0xec, 0xe0));
+        let amber = Color32::from_rgb(0xff, 0xb0, 0x00);
+        forge.widgets.inactive.bg_stroke =
+            Stroke::new(1.0, Color32::from_rgba_unmultiplied(0xff, 0xb0, 0x00, 110));
+        forge.widgets.hovered.bg_stroke = Stroke::new(1.5, amber);
+        for before in [egui::Visuals::light(), egui::Visuals::dark(), forge] {
+            for program in Phoenix::ALL {
+                let mut after = before.clone();
+                accent_visuals(program, &mut after);
+                let mut twice = after.clone();
+                accent_visuals(program, &mut twice);
+                assert!(after == twice, "{program:?}");
+                assert_eq!(after.panel_fill, before.panel_fill);
+                assert_eq!(after.window_fill, before.window_fill);
+                assert_eq!(after.extreme_bg_color, before.extreme_bg_color);
+                assert_eq!(after.override_text_color, before.override_text_color);
+                assert_eq!(
+                    after.widgets.noninteractive.bg_stroke,
+                    before.widgets.noninteractive.bg_stroke
+                );
+                assert_eq!(
+                    after.widgets.inactive.weak_bg_fill,
+                    before.widgets.inactive.weak_bg_fill
+                );
+                let fill = rgb(after.selection.bg_fill);
+                let text = rgb(before
+                    .override_text_color
+                    .unwrap_or_else(|| before.widgets.inactive.text_color()));
+                for (ink, ground) in [
+                    (rgb(after.selection.stroke.color), fill),
+                    (text, fill),
+                    (rgb(after.hyperlink_color), rgb(after.panel_fill)),
+                    (rgb(after.hyperlink_color), rgb(after.window_fill)),
+                    (rgb(after.hyperlink_color), rgb(after.extreme_bg_color)),
+                ] {
+                    let found = palette::contrast(ink, ground);
+                    assert!(found >= palette::TEXT_CONTRAST, "{program:?} {found}");
+                }
+                if before.widgets.hovered.bg_stroke.color == amber {
+                    assert_eq!(
+                        rgb(after.widgets.hovered.bg_stroke.color),
+                        rgb(after.hyperlink_color)
+                    );
+                    assert_eq!(
+                        after.widgets.inactive.bg_stroke.color.a(),
+                        before.widgets.inactive.bg_stroke.color.a()
+                    );
+                } else {
+                    assert_eq!(
+                        after.widgets.hovered.bg_stroke,
+                        before.widgets.hovered.bg_stroke
+                    );
+                }
+            }
+        }
+    }
+
+    #[test]
+    fn a_window_of_a_program_keeps_its_accents_when_its_visuals_are_set_again() {
+        let mut h = Harness::new(Sector::Pcb);
+        h.dock.set_program(Phoenix::Cnc);
+        for visuals in [egui::Visuals::dark(), egui::Visuals::light()] {
+            h.ctx.set_visuals(visuals.clone());
+            h.frames(2);
+            let mut wanted = visuals;
+            accent_visuals(Phoenix::Cnc, &mut wanted);
+            let now = h.ctx.global_style().visuals.clone();
+            assert_eq!(now.selection.bg_fill, wanted.selection.bg_fill);
+            assert_eq!(now.hyperlink_color, wanted.hyperlink_color);
+            assert_eq!(now.panel_fill, wanted.panel_fill);
         }
     }
 

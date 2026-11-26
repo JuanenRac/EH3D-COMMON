@@ -5,6 +5,7 @@ use crate::config;
 use crate::menu::{DockAction, MenuContext, PanelEntry};
 use crate::model::{valid_id, DockError, Layout, PanelState};
 use crate::recent::RecentFiles;
+use crate::recent_store::RecentStore;
 use crate::serial::ParseError;
 use crate::shortcuts::{DockKey, DockKeys, Shortcut};
 use crate::texts::Text8;
@@ -96,6 +97,8 @@ pub struct DockCore {
     pub lang: Lang,
     keys: DockKeys,
     recent: RecentFiles,
+    /// The file of the recent files, and what it holds.
+    store: Option<(RecentStore, Vec<String>)>,
     warnings: Vec<LoadWarning>,
     focus: Option<String>,
     /// What the window about the program shows.
@@ -128,6 +131,7 @@ impl DockCore {
             lang: Lang::En,
             keys,
             recent: RecentFiles::default(),
+            store: None,
             warnings: Vec::new(),
             focus: None,
             about: AboutInfo::default(),
@@ -186,6 +190,32 @@ impl DockCore {
     /// The recent files, to change them.
     pub fn recent_mut(&mut self) -> &mut RecentFiles {
         &mut self.recent
+    }
+
+    /// From now on the list of recent files lives in this file, whatever the settings file says. The list that the file holds replaces the one in
+    /// memory; when there is no usable file yet, the one in memory (read from the settings file) is the first one written there.
+    pub fn keep_recent_in(&mut self, store: RecentStore) {
+        let held = match store.load(self.recent.limit()) {
+            Some(list) => {
+                self.recent = list;
+                self.recent.items().to_vec()
+            }
+            None => Vec::new(),
+        };
+        self.store = Some((store, held));
+        self.flush_recent();
+    }
+
+    /// Writes the list of recent files into its file when it changed; the window calls this as it draws. A file that cannot be written is tried
+    /// again at the next change.
+    pub fn flush_recent(&mut self) {
+        if let Some((store, held)) = &mut self.store {
+            if held.as_slice() != self.recent.items() {
+                // nothing is lost by failing: the list stays in memory
+                let _ = store.save(&self.recent);
+                *held = self.recent.items().to_vec();
+            }
+        }
     }
 
     /// The panel with the focus.
@@ -398,7 +428,13 @@ impl DockCore {
                 detail: bad.to_string(),
             });
         }
-        self.recent = RecentFiles::from_pairs(&pairs);
+        let read = RecentFiles::from_pairs(&pairs);
+        if self.store.is_some() {
+            // the file of the user is the list: the settings file only says how long it may be
+            self.recent.set_limit(read.limit());
+        } else {
+            self.recent = read;
+        }
         self.warnings.extend(warnings);
     }
 
@@ -706,5 +742,46 @@ mod tests {
         assert_eq!(c.title("zzz"), "zzz");
         c.lang = Lang::Es;
         assert_eq!(c.menu_context().lang, Lang::Es);
+    }
+
+    #[test]
+    fn the_recent_files_live_in_the_file_of_the_user_when_one_is_given() {
+        use crate::about::Phoenix;
+        use crate::recent_store::RecentStore;
+        let dir = std::env::temp_dir().join(format!("eh3d-core-recent-{}", std::process::id()));
+        let _ = std::fs::remove_dir_all(&dir);
+        let store = RecentStore::in_dir(&dir, Phoenix::Cad);
+        let fresh = || DockCore::new(Vec::new(), Vec::new());
+        let settings = "dock.recent.0=/old.eh3d\n";
+        // the first start: the list of the settings file moves to the file of the user
+        let mut core = fresh();
+        core.load_config(settings);
+        core.keep_recent_in(store.clone());
+        assert_eq!(store.load(10).unwrap().items(), ["/old.eh3d"]);
+        core.recent_mut().push("/new.eh3d");
+        core.flush_recent();
+        // a start without a settings file keeps the list
+        let mut again = fresh();
+        again.keep_recent_in(store.clone());
+        assert_eq!(again.recent().items(), ["/new.eh3d", "/old.eh3d"]);
+        // reading a settings file afterwards does not replace it, and an emptied list does not come back from there
+        again.load_config(settings);
+        assert_eq!(again.recent().items().len(), 2);
+        again.recent_mut().clear();
+        again.flush_recent();
+        let mut last = fresh();
+        last.load_config(settings);
+        last.keep_recent_in(store.clone());
+        assert!(last.recent().items().is_empty());
+        // a program without a file of its own writes nothing
+        let _ = std::fs::remove_dir_all(&dir);
+        let mut free = fresh();
+        free.recent_mut().push("/x.eh3d");
+        free.flush_recent();
+        assert!(!dir.exists());
+        // nothing is written for a list that has nothing in it
+        free = fresh();
+        free.keep_recent_in(store);
+        assert!(!dir.exists());
     }
 }

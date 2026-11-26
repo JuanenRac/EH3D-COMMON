@@ -130,7 +130,22 @@ let tools = Menu::new("tools", Label::Std(DockText::MenuTools))
 * **Help:** `help_menu` offers online help (`F1`, when the program has it), the window with the keyboard shortcuts (drawn by the frame from the menus and the frame's own keys), Check for updates (only when the program asks for it) and About (the name, version and license the program gives with `Dock::set_about`, and the notice that third-party names are trademarks of their owners).
 * **Turning entries off and ticking them:** `Dock::set_menu_state(disabled_ids, checks)` can be called every frame. An entry that is off is built as inert and no shortcut, click or search will give back its action (checked by tests).
 * **Shortcuts:** `Dock::handle_shortcuts` (called by `menu_bar`) looks for a pressed key, most specific first (`Ctrl+Shift+S` before `Ctrl+S`); a key without a modifier is ignored while a text box has the keyboard. `MenuBar::conflicts(&ctx)` lists the shortcuts two entries share, counting the frame's own; `MenuBar::validate()` finds repeated and empty ids.
-* **Recent files:** `dock.core_mut().recent_mut().push(path)` when a file is opened or saved; the list is kept in the settings file.
+* **Recent files:** `dock.core_mut().recent_mut().push(path)` when a file is opened or saved; the list is kept in the settings file, and a program of the PHOENIX family keeps it in the folder of the user too (below).
+
+## Where the recent files are kept
+
+A program of the PHOENIX family calls `Dock::keep_user_recent(program)` once, when it opens its window and after it read its settings. From then on the list lives in a file of its own, whatever settings file the program was started with, and also without one:
+
+| System | File |
+|---|---|
+| Windows | `%APPDATA%\EH3D\recent-phoenix-<program>.txt` |
+| Linux, macOS | `$XDG_CONFIG_HOME/eh3d/recent-phoenix-<program>.txt`, or `~/.config/eh3d/` |
+
+* The file is a line `eh3d.recent=1` and the lines `dock.recent.<n>=<path>`, newest first. It holds paths and nothing else; an entry with `://` (an address, which could carry a password) is never written nor read. On Linux and macOS only its owner can read it.
+* It is written into a new file of the same folder first, which then takes the place of the old one, when the list changed.
+* A file that cannot be used (not this kind, not text, over 64 KiB) is left aside without an error and replaced by the next list.
+* The first time, the list that the settings file held moves to the new file. Afterwards `dock.recent_limit` still says how many are kept, and the `dock.recent.<n>` lines of the settings file are no longer read.
+* Tests and the pictures of the windows do not call it: `recent_store::RecentStore::in_dir` and `DockCore::keep_recent_in` take a folder of their own.
 
 ## The window about a program
 
@@ -156,6 +171,16 @@ The window then shows the picture inside a ring of the accent colour of the prog
 | 3DP | gold | `#FFD53E` | `#E8A317` | `#A86E00` | `#FFDC5E` | `#FFE999` |
 
 The tones live in `eh3d_dock::palette` (`Phoenix::tones`), and the accent is the principal one. It is meant for fills and rings: gold or emerald are not legible as text on a white window, nor amethyst on a dark one. For text, `palette::readable(colour, ground)` gives the nearest lightness of the same hue with a contrast of at least 4.5 to 1, and `palette::ink_on(fill)` gives black or white for what is written on a fill (a button). The window «About» writes the name of the program with the readable tone of the ground of the window.
+
+## The colour of a program in its window
+
+Only the accents of a window take the colour of its program: main buttons, what is selected, the active tab and links. Grounds, panels, bars and the text stay as the program set them.
+
+* `Dock::set_brand` is enough; a program with a window «About» of its own calls `Dock::set_program` instead. The frame then keeps the accents each time it draws, also after the program set other visuals (a change of theme).
+* `palette::accents(main, ground, other grounds, text)` works them out without a window: links read at 4.5 to 1 on every ground, the selection is the ground with the strongest tint (8 to 40 hundredths of the colour) on which the text of the window still reads at 4.5 to 1, with its own text and outline at 4.5 to 1 too, and a main button is the principal tone with black or white text.
+* `gui::accent_visuals` puts them on `egui::Visuals`: the selection, the links and the outlines of the widgets that were already coloured (a grey outline stays grey). The active tab of the frame has the tinted ground, text in the colour of the program and a line over it.
+* `gui::primary_button(program, text)` makes a main button, and `gui::program_mark(ui, &brand, size)` draws the picture of the program for the header of its window.
+* The tests check the contrasts for the six programs on light and dark looks.
 
 ## Moving a program to the frame
 
