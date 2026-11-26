@@ -325,6 +325,24 @@ fn side_word(lang: Lang, s: Side) -> &'static str {
     )
 }
 
+/// Where the title of a tab starts, how much of each side of the tab is clipped away and the room a tab adds to its title.
+const TAB_TEXT_X: f32 = 11.0;
+const TAB_CLIP: f32 = 4.0;
+const TAB_PAD: f32 = 22.0;
+/// Under this width a tab that cuts its title shows the sign of its panel instead.
+const TAB_NARROW: f32 = 60.0;
+
+/// What a tab of `width` points writes: its title, or the sign of the panel when the tab is narrow and the title of `title_width` points does
+/// not fit in it. A short title that fits whole is always written, however narrow its tab is.
+fn tab_label(title: String, icon: &str, width: f32, title_width: f32) -> String {
+    let cut = TAB_TEXT_X + title_width > width - TAB_CLIP;
+    if cut && width < TAB_NARROW && !icon.is_empty() {
+        icon.to_string()
+    } else {
+        title
+    }
+}
+
 /// Draws a row of tabs in `bar` and gives the rectangle of each tab that was drawn (in the order of `ids`).
 #[allow(clippy::too_many_arguments)]
 fn tab_bar(
@@ -398,7 +416,7 @@ fn tab_bar(
             p.layout_no_wrap(v.title(id), font.clone(), v.pal.text)
                 .size()
                 .x
-                + 22.0
+                + TAB_PAD
         })
         .collect();
     let mut start = active.min(widths.len().saturating_sub(1));
@@ -446,14 +464,10 @@ fn tab_bar(
                 Stroke::new(2.0, v.pal.tab_ink),
             );
         }
-        let label = if w < 60.0 && !v.icon(id).is_empty() {
-            v.icon(id).to_string()
-        } else {
-            v.title(id)
-        };
-        let clipped = p.with_clip_rect(rect.shrink2(Vec2::new(4.0, 0.0)));
+        let label = tab_label(v.title(id), v.icon(id), w, widths[i] - TAB_PAD);
+        let clipped = p.with_clip_rect(rect.shrink2(Vec2::new(TAB_CLIP, 0.0)));
         clipped.text(
-            Pos2::new(rect.left() + 11.0, rect.center().y),
+            Pos2::new(rect.left() + TAB_TEXT_X, rect.center().y),
             Align2::LEFT_CENTER,
             label,
             font.clone(),
@@ -1741,6 +1755,7 @@ mod tests {
     use crate::menu::StdAction;
     use crate::sectors::Sector;
     use crate::stdmenus::{standard_bar, HelpOptions};
+    use crate::texts::Text8;
     use std::cell::Cell;
     use std::rc::Rc;
 
@@ -1838,6 +1853,131 @@ mod tests {
             self.pointer(to, Some(false));
             self.frames(2);
         }
+    }
+
+    fn texts_of(shape: &egui::Shape, out: &mut Vec<String>) {
+        match shape {
+            egui::Shape::Text(t) => out.push(t.galley.text().to_string()),
+            egui::Shape::Vec(all) => all.iter().for_each(|s| texts_of(s, out)),
+            _ => {}
+        }
+    }
+
+    /// Draws one row of tabs `width` points wide and gives the texts it wrote and the rectangle of each tab.
+    fn draw_tabs(
+        defs: &[PanelDef],
+        lang: Lang,
+        width: f32,
+        active: usize,
+    ) -> (Vec<String>, Vec<Rect>) {
+        let ctx = egui::Context::default();
+        let dock = Dock::new(Sector::Pcb.panels(), Sector::Pcb.workspaces());
+        let ids: Vec<String> = defs.iter().map(|d| d.id.clone()).collect();
+        let mut rects = Vec::new();
+        let input = egui::RawInput {
+            screen_rect: Some(egui::Rect::from_min_size(
+                Pos2::ZERO,
+                Vec2::new(1400.0, 900.0),
+            )),
+            ..Default::default()
+        };
+        let out = ctx.run_ui(input, |ui| {
+            let v = View {
+                defs,
+                lang,
+                layout: dock.core().layout(),
+                pal: Palette::from_visuals(ui.visuals()),
+                locked: false,
+            };
+            let bar = egui::Rect::from_min_size(Pos2::ZERO, Vec2::new(width, BAR_H));
+            rects = tab_bar(ui, &v, bar, &ids, active, false, false, &mut Vec::new());
+        });
+        let mut texts = Vec::new();
+        for clipped in &out.shapes {
+            texts_of(&clipped.shape, &mut texts);
+        }
+        out.drop_without_applying_deltas();
+        (texts, rects)
+    }
+
+    /// The width of a bar that leaves `room` points for tabs, after its two buttons and its margins.
+    fn bar_with_room(room: f32) -> f32 {
+        room + 2.0 * (BAR_H - 6.0 + 2.0) + 9.0
+    }
+
+    #[test]
+    fn a_tab_writes_its_sign_only_when_it_is_narrow_and_cuts_its_title() {
+        let label = |w: f32, tw: f32, icon: &str| tab_label("title".into(), icon, w, tw);
+        // a title of one or two characters in a tab of its own size
+        assert_eq!(label(31.0, 9.0, "L"), "title");
+        assert_eq!(label(40.0, 18.0, "L"), "title");
+        assert_eq!(label(48.0, 26.0, "L"), "title");
+        // a tab that only loses room after its title still shows it whole
+        assert_eq!(label(33.0, 18.0, "L"), "title");
+        // the title is cut and the tab is narrow
+        assert_eq!(label(32.0, 18.0, "L"), "L");
+        assert_eq!(label(59.0, 120.0, "L"), "L");
+        // a cut title in a wider tab, or with no sign to show, stays
+        assert_eq!(label(60.0, 120.0, "L"), "title");
+        assert_eq!(label(30.0, 120.0, ""), "title");
+    }
+
+    #[test]
+    fn short_titles_are_written_whole_in_chinese_japanese_and_latin() {
+        let defs = [
+            PanelDef::new(
+                "layers",
+                Text8(["Tool", "Capa", "Liv.", "Lage", "Plan", "Cam.", "层", "層"]),
+            )
+            .icon("L"),
+            PanelDef::new(
+                "tools",
+                Text8(["Net", "Red", "Rete", "Netz", "Net", "Rede", "图层", "窓枠"]),
+            )
+            .icon("Ts"),
+        ];
+        for lang in Lang::ALL {
+            let (texts, rects) = draw_tabs(&defs, lang, 600.0, 0);
+            for (d, r) in defs.iter().zip(&rects) {
+                let title = d.title.get(lang);
+                assert!(r.w > 0.0 && r.w < TAB_NARROW, "{lang:?} {title} {}", r.w);
+                assert!(texts.iter().any(|t| t == title), "{lang:?} {texts:?}");
+                assert!(!texts.iter().any(|t| t == d.icon), "{lang:?} {texts:?}");
+            }
+        }
+    }
+
+    #[test]
+    fn a_narrow_panel_shows_the_sign_of_a_cut_title_and_clips_a_long_one() {
+        let long = "A rather long title of a panel";
+        let defs = [
+            PanelDef::new("first", Text8::same("图层")).icon("F"),
+            PanelDef::new("second", Text8::same(long)).icon("S"),
+        ];
+        let full = draw_tabs(&defs, Lang::Zh, 900.0, 0).1;
+        let (short_w, long_w) = (full[0].w, full[1].w);
+        assert!(short_w < TAB_NARROW && long_w > 2.0 * TAB_NARROW);
+
+        // room for the short tab and a wide part of the long one: the long title is written and clipped
+        let room = short_w + 2.0 + TAB_NARROW + 20.0;
+        let (texts, rects) = draw_tabs(&defs, Lang::Zh, bar_with_room(room), 0);
+        assert!(rects[1].w >= TAB_NARROW && rects[1].w < long_w);
+        assert!(texts.iter().any(|t| t == long), "{texts:?}");
+        assert!(texts.iter().any(|t| t == "图层"), "{texts:?}");
+
+        // only a sliver of the long one: its sign
+        let room = short_w + 2.0 + 40.0;
+        let (texts, rects) = draw_tabs(&defs, Lang::Zh, bar_with_room(room), 0);
+        assert!(rects[1].w >= 24.0 && rects[1].w < TAB_NARROW);
+        assert!(texts.iter().any(|t| t == "S"), "{texts:?}");
+        assert!(!texts.iter().any(|t| t == long), "{texts:?}");
+
+        // a panel so narrow that even the short title is cut: its sign
+        let room = short_w - 10.0;
+        let (texts, rects) = draw_tabs(&defs, Lang::Zh, bar_with_room(room), 0);
+        assert!(rects[0].w >= 24.0 && rects[0].w < short_w);
+        assert!(texts.iter().any(|t| t == "F"), "{texts:?}");
+        assert!(!texts.iter().any(|t| t == "图层"), "{texts:?}");
     }
 
     #[test]
