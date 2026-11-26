@@ -421,11 +421,21 @@ pub enum Label {
     StartingFilaments,
     /// The starting processes.
     StartingProcesses,
+    /// The highest speed of the head.
+    MaxSpeed,
+    /// The highest acceleration of the head.
+    MaxAcceleration,
+    /// The highest flow of the hot end.
+    MaxFlow,
+    /// The height used by default.
+    DefaultHeight,
+    /// The figures that were not read on a page of the maker.
+    ToCheck,
 }
 
 impl Label {
     /// Every label.
-    pub const ALL: [Label; 19] = [
+    pub const ALL: [Label; 24] = [
         Label::Volume,
         Label::Nozzles,
         Label::Filament,
@@ -445,6 +455,11 @@ impl Label {
         Label::NotTried,
         Label::StartingFilaments,
         Label::StartingProcesses,
+        Label::MaxSpeed,
+        Label::MaxAcceleration,
+        Label::MaxFlow,
+        Label::DefaultHeight,
+        Label::ToCheck,
     ];
 
     /// The label in a language.
@@ -605,6 +620,56 @@ impl Label {
                 "出発点となるプロセス",
                 "起步工艺",
                 "Processos de partida",
+            ],
+            Label::MaxSpeed => [
+                "Highest speed",
+                "Velocidad máxima",
+                "Höchstgeschwindigkeit",
+                "Vitesse maximale",
+                "Velocità massima",
+                "最大速度",
+                "最大速度",
+                "Velocidade máxima",
+            ],
+            Label::MaxAcceleration => [
+                "Highest acceleration",
+                "Aceleración máxima",
+                "Höchstbeschleunigung",
+                "Accélération maximale",
+                "Accelerazione massima",
+                "最大加速度",
+                "最大加速度",
+                "Aceleração máxima",
+            ],
+            Label::MaxFlow => [
+                "Highest flow of the hot end",
+                "Caudal máximo del fusor",
+                "Höchster Durchfluss des Hotends",
+                "Débit maximal de la tête chauffante",
+                "Portata massima dell'hotend",
+                "ホットエンドの最大流量",
+                "热端最大流量",
+                "Caudal máximo do hotend",
+            ],
+            Label::DefaultHeight => [
+                "Height used by default",
+                "Altura usada por defecto",
+                "Standardmäßig genutzte Höhe",
+                "Hauteur utilisée par défaut",
+                "Altezza usata di default",
+                "標準で使う高さ",
+                "默认使用高度",
+                "Altura usada por predefinição",
+            ],
+            Label::ToCheck => [
+                "To be checked on the maker's page",
+                "Por comprobar en la página del fabricante",
+                "Auf der Seite des Herstellers zu prüfen",
+                "À vérifier sur la page du fabricant",
+                "Da controllare sulla pagina del produttore",
+                "メーカーのページで要確認",
+                "需在厂商页面核实",
+                "Por confirmar na página do fabricante",
             ],
         };
         pick(lang, texts)

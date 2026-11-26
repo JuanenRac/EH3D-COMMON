@@ -13,17 +13,45 @@
       "enclosure": "open",
       "nozzle_max_c": 300,
       "bed_max_c": 100,
+      "max_speed_mm_s": 500,
+      "max_acceleration_mm_s2": 10000,
+      "max_flow_mm3_s": 28,
       "multicolor": { "status": "optional", "system": "AMS lite", "max_colors": 4 },
       "firmware": "bambu",
       "adapter": "bambu_lan",
       "adapter_documented": true,
       "send_formats": ["gcode_3mf", "gcode"],
       "sources": [
-        { "url": "https://bambulab.com/en/a1/tech-specs", "covers": ["volume_mm", "filament_diameter_mm", "nozzles_mm", "nozzle_max_c", "bed_max_c", "firmware"] },
-        { "url": "https://wiki.bambulab.com/en/a1/manual/faq", "covers": ["enclosure"] },
-        { "url": "https://bambulab.com/en/support/buying-guide/a1", "covers": ["multicolor"] },
-        { "url": "https://wiki.bambulab.com/en/software/third-party-integration", "covers": ["adapter"] },
-        { "url": "https://wiki.bambulab.com/en/software/bambu-connect", "covers": ["send_formats"] }
+        { "url": "https://bambulab.com/en/a1/tech-specs", "covers": ["volume_mm", "filament_diameter_mm", "nozzles_mm", "nozzle_max_c", "bed_max_c", "max_speed_mm_s", "max_acceleration_mm_s2", "max_flow_mm3_s"], "confirmed": ["volume_mm", "filament_diameter_mm", "nozzles_mm", "nozzle_max_c", "bed_max_c", "max_speed_mm_s", "max_acceleration_mm_s2", "max_flow_mm3_s"] },
+        { "url": "https://wiki.bambulab.com/en/a1/manual/faq", "covers": ["enclosure", "multicolor"], "confirmed": ["enclosure", "multicolor"] },
+        { "url": "https://wiki.bambulab.com/en/software/third-party-integration", "covers": ["firmware", "adapter"], "confirmed": ["firmware", "adapter"] },
+        { "url": "https://wiki.bambulab.com/en/software/bambu-connect", "covers": ["send_formats"], "confirmed": ["send_formats"] }
+      ],
+      "verified": false
+    },
+    {
+      "id": "bambu-lab/p1p",
+      "manufacturer": "Bambu Lab",
+      "model": "P1P",
+      "volume_mm": [256, 256, 256],
+      "filament_diameter_mm": 1.75,
+      "nozzle_default_mm": 0.4,
+      "nozzles_mm": [0.2, 0.4, 0.6, 0.8],
+      "enclosure": "open",
+      "nozzle_max_c": 300,
+      "bed_max_c": 100,
+      "max_speed_mm_s": 500,
+      "max_acceleration_mm_s2": 20000,
+      "default_height_mm": 250,
+      "multicolor": { "status": "optional", "system": "AMS" },
+      "firmware": "bambu",
+      "adapter": "bambu_lan",
+      "adapter_documented": true,
+      "send_formats": ["gcode_3mf", "gcode"],
+      "sources": [
+        { "url": "https://eu.store.bambulab.com/products/p1s", "covers": ["volume_mm", "nozzles_mm", "enclosure", "nozzle_max_c", "bed_max_c", "max_speed_mm_s", "max_acceleration_mm_s2", "default_height_mm", "multicolor", "filament_diameter_mm"], "confirmed": ["volume_mm", "nozzles_mm", "enclosure", "nozzle_max_c", "bed_max_c", "max_speed_mm_s", "max_acceleration_mm_s2", "default_height_mm", "multicolor"] },
+        { "url": "https://wiki.bambulab.com/en/software/third-party-integration", "covers": ["firmware", "adapter"], "confirmed": ["firmware", "adapter"] },
+        { "url": "https://wiki.bambulab.com/en/software/bambu-connect", "covers": ["send_formats"], "confirmed": ["send_formats"] }
       ],
       "verified": false
     },
@@ -39,16 +67,19 @@
       "heated_chamber": false,
       "nozzle_max_c": 300,
       "bed_max_c": 100,
+      "max_speed_mm_s": 500,
+      "max_acceleration_mm_s2": 20000,
+      "default_height_mm": 250,
       "multicolor": { "status": "optional", "system": "AMS", "max_colors": 16 },
       "firmware": "bambu",
       "adapter": "bambu_lan",
       "adapter_documented": true,
       "send_formats": ["gcode_3mf", "gcode"],
       "sources": [
-        { "url": "https://us.store.bambulab.com/products/p1s", "covers": ["volume_mm", "filament_diameter_mm", "nozzles_mm", "enclosure", "nozzle_max_c", "bed_max_c", "multicolor", "firmware"] },
-        { "url": "https://wiki.bambulab.com/en/p1/manual/faq", "covers": ["enclosure", "heated_chamber"] },
-        { "url": "https://wiki.bambulab.com/en/software/third-party-integration", "covers": ["adapter"] },
-        { "url": "https://wiki.bambulab.com/en/software/bambu-connect", "covers": ["send_formats"] }
+        { "url": "https://eu.store.bambulab.com/products/p1s", "covers": ["volume_mm", "nozzles_mm", "enclosure", "nozzle_max_c", "bed_max_c", "multicolor", "max_speed_mm_s", "max_acceleration_mm_s2", "default_height_mm", "filament_diameter_mm"], "confirmed": ["volume_mm", "nozzles_mm", "enclosure", "nozzle_max_c", "bed_max_c", "multicolor", "max_speed_mm_s", "max_acceleration_mm_s2", "default_height_mm"] },
+        { "url": "https://wiki.bambulab.com/en/p1/manual/faq", "covers": ["enclosure", "heated_chamber"], "confirmed": ["enclosure", "heated_chamber"] },
+        { "url": "https://wiki.bambulab.com/en/software/third-party-integration", "covers": ["firmware", "adapter"], "confirmed": ["firmware", "adapter"] },
+        { "url": "https://wiki.bambulab.com/en/software/bambu-connect", "covers": ["send_formats"], "confirmed": ["send_formats"] }
       ],
       "verified": false
     }

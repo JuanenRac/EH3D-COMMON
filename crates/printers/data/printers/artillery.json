@@ -20,7 +20,7 @@
       "send_formats": ["gcode"],
       "sources": [
         { "url": "https://www.artillery3d.com/products/sidewinder-x4-plus-s1", "covers": ["volume_mm", "filament_diameter_mm", "nozzle_max_c", "bed_max_c", "firmware", "send_formats"] },
-        { "url": "https://www.artillery3d.com/products/brass-nozzle-kit-for-sw-x3-sw-x4", "covers": ["nozzles_mm"] }
+        { "url": "https://www.artillery3d.com/products/brass-nozzle-kit-for-sw-x3-sw-x4", "covers": ["nozzles_mm"], "confirmed": ["nozzles_mm"] }
       ],
       "verified": false
     },
@@ -29,18 +29,21 @@
       "manufacturer": "Artillery",
       "model": "Sidewinder X4 Pro S1",
       "volume_mm": [240, 240, 260],
+      "filament_diameter_mm": 1.75,
       "nozzle_default_mm": 0.4,
       "nozzles_mm": [0.4],
       "enclosure": "unknown",
       "nozzle_max_c": 300,
       "bed_max_c": 100,
+      "max_speed_mm_s": 500,
+      "max_acceleration_mm_s2": 12000,
       "multicolor": { "status": "unknown" },
       "firmware": "klipper",
       "adapter": "klipper_moonraker",
       "adapter_documented": false,
       "sources": [
-        { "url": "https://www.artillery3d.com/products/sidewinder-x4-pro-s1", "covers": ["volume_mm", "nozzle_max_c", "bed_max_c", "firmware"] },
-        { "url": "https://www.artillery3d.com/products/brass-nozzle-kit-for-sw-x3-sw-x4", "covers": ["nozzles_mm"] }
+        { "url": "https://www.artillery3d.com/products/sidewinder-x4-pro-s1", "covers": ["volume_mm", "filament_diameter_mm", "nozzle_max_c", "bed_max_c", "firmware", "max_speed_mm_s", "max_acceleration_mm_s2"], "confirmed": ["volume_mm", "filament_diameter_mm", "nozzle_max_c", "bed_max_c", "firmware", "max_speed_mm_s", "max_acceleration_mm_s2"] },
+        { "url": "https://www.artillery3d.com/products/brass-nozzle-kit-for-sw-x3-sw-x4", "covers": ["nozzles_mm"], "confirmed": ["nozzles_mm"] }
       ],
       "verified": false
     }

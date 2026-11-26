@@ -15,13 +15,16 @@ One JSON file per maker in `crates/printers/data/printers/`, embedded in the cra
 | `enclosure` | `open`, `enclosed` or `unknown` |
 | `heated_chamber`, `chamber_max_c` | whether the chamber is heated on purpose, and how far |
 | `nozzle_max_c`, `bed_max_c` | the highest temperatures |
+| `max_speed_mm_s`, `max_acceleration_mm_s2` | the highest speed and acceleration of the head the maker states |
+| `max_flow_mm3_s` | the highest flow of the hot end, as the maker measures it with one material; a ceiling, not a figure for every filament |
+| `default_height_mm` | the height used by default where the maker says it is less than the volume |
 | `multicolor` | `status` (`included`, `optional`, `none`, `unknown`), `system`, `max_colors` |
 | `firmware` | `bambu`, `klipper`, `marlin` or `unknown` |
 | `adapter` | the family of protocol: `bambu_lan`, `klipper_moonraker`, `marlin_serial`, `octoprint`, `prusalink`, `vendor_protocol`, `unknown` |
 | `adapter_documented` | `false` when the family is taken from the firmware and the maker does not document it: check it on the machine |
 | `send_formats` | `gcode`, `gcode_3mf`, `bgcode`; empty when the maker does not say |
-| `sources` | the pages: an `https` address and the fields it says (`covers`) |
-| `verified` | always `false` in the data of the suite |
+| `sources` | the pages: an `https` address, the fields it is named for (`covers`) and, of those, the ones read on the page itself (`confirmed`) |
+| `verified` | always `false` in the data of the suite: it means tried on a machine |
 
 A figure that is not published is absent or `unknown`, never a guess.
 
@@ -40,6 +43,10 @@ The data is checked when it is loaded. A record is refused when its identifier d
 | `EH3D-PRN-007` | Values contradict each other |
 | `EH3D-PRN-008` | Text not accepted |
 | `EH3D-PRN-009` | Data file too large |
+
+## What was read and what is still to be checked
+
+`confirmed` holds the fields that were read on the maker's own page and agree with it. `Printer::confirmed(field)` asks for one field and `Printer::unconfirmed()` lists the claims of a record that no page was read for: they are to be checked. A field is left out when the page no longer answers, does not say it, or could only be read through a summary. Reading a page is not trying a machine, so `verified` stays `false`.
 
 ## Where to start from
 
