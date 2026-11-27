@@ -6,6 +6,8 @@ All notable changes to this project are documented here.
 
 - **A drill file that does not declare its format can be refused until one is chosen (`eh3d-bungard-formats`, `docs/FORMAT_ERRORS.md`):** new `ncd::parse_as` and `parse_as_limited` take the format the person chose (`ncd::NumberFormat`: `mils`, `inch-2.4-tz`, `inch-2.4-lz`, `metric-3.3-tz`, `metric-3.3-lz` or other digits) and refuse with `EH3D-FORMATS-014` a file whose scale would have to be supposed; what a file declares wins over the choice. `ncd::how_to_choose` explains it in the eight languages and `ncd::MILS_DECLARATION` is the header by which a program of the suite declares the whole mils it writes. `ncd::parse` still reads as before, for showing a file; a `FILE_FORMAT` comment written with a blank is now taken, and a coordinate of zero no longer counts as a supposition. 4 tests.
 
+- **Touch screens, the second question before the spindle or the laser goes on:** the shared code reads `pause.power_on` of a job and has the words for it in the eight languages (`firmware_base`). Host-tested only.
+
 ## [0.3.9] - Plots keep their relative mode, the GRBL controller sets the active work zero and an optional spindle stop on pause
 
 - **Zeroing writes the work system in use (`eh3d-controller`, fix):** the GRBL controller always wrote `G54` (`G10 L20 P1`), also while the program worked in `G55` to `G59`; it now writes the system in use (`P0`). The simulated GRBL keeps the six work systems.
