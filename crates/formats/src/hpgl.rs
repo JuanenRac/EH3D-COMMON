@@ -1,5 +1,6 @@
-//! HP-GL subset used by the plotter files of the CCD software: `IN`, `SP`, `PU`, `PD`, `PA`, `PR`, the arcs and circles (`AA`, `AR`,
-//! `CI`, cut into chords) and the scaling (`SC` with `IP`).
+//! HP-GL subset used by the plotter files of the CCD software: `IN`, `DF`, `SP`, `PU`, `PD`, `PA`, `PR`, the arcs and circles (`AA`, `AR`,
+//! `CI`, cut into chords) and the scaling (`SC` with `IP`). `PR` and `PA` set the mode in which the coordinates of the following `PU` and `PD`
+//! are read, until the other one, `IN` or `DF`.
 //! One plotter unit is 0.025 mm and the origin is the lower left corner (HP 7475A convention).
 
 use crate::error::{Code, FormatError};
@@ -145,6 +146,8 @@ pub fn parse_with(text: &str, segments_per_circle: u32) -> Plot {
     let mut plot = Plot::default();
     let (mut pen, mut down, mut pos) = (1u8, false, (0i32, 0i32));
     let mut cur: Option<Polyline> = None;
+    // `PR` and `PA` set it for every pen command that follows
+    let mut relative = false;
 
     let finish = |cur: &mut Option<Polyline>, plot: &mut Plot| {
         if let Some(p) = cur.take() {
@@ -176,6 +179,13 @@ pub fn parse_with(text: &str, segments_per_circle: u32) -> Plot {
                 down = false;
                 sc = None;
                 ip = None;
+                relative = false;
+            }
+            // the default values: absolute coordinates and no scaling (the two plotter points stay)
+            "DF" => {
+                finish(&mut cur, &mut plot);
+                sc = None;
+                relative = false;
             }
             "SP" => {
                 finish(&mut cur, &mut plot);
@@ -236,9 +246,13 @@ pub fn parse_with(text: &str, segments_per_circle: u32) -> Plot {
                     finish(&mut cur, &mut plot);
                 }
                 down = new_down;
-                let rel = op == "PR";
+                match op.as_str() {
+                    "PA" => relative = false,
+                    "PR" => relative = true,
+                    _ => {}
+                }
                 for pair in f.as_chunks::<2>().0 {
-                    let to = match (rel, map) {
+                    let to = match (relative, map) {
                         (true, Some(m)) => {
                             round((pos.0 as f64 + pair[0] * m.0, pos.1 as f64 + pair[1] * m.1))
                         }
@@ -315,17 +329,69 @@ fn commands(text: &str) -> Vec<Command<'_>> {
 /// The commands whose arguments are numbers.
 const NUMERIC: [&str; 10] = ["SP", "SC", "IP", "CI", "AA", "AR", "PU", "PD", "PA", "PR"];
 
-/// What the reader of a plot ([`parse_with`]) drops without a word: a number it cannot read (`EH3D-FORMATS-006`, with the column of the field) and the last
-/// coordinate of a position command (`PU`, `PD`, `PA`, `PR`) that has no pair (`EH3D-FORMATS-007`, with the column of the command). The reading of a file is
-/// the same whether or not this is asked; a clean file gives an empty list.
+/// The commands that move or cut the work and that the reader does not follow (it only counts them in [`Plot::ignored`]).
+const UNFOLLOWED: [&str; 22] = [
+    "LB", "CP", "EA", "ER", "RA", "RR", "EW", "WG", "PM", "EP", "FP", "AT", "RT", "BZ", "BR", "PE",
+    "UC", "RP", "RO", "IW", "IR", "CT",
+];
+
+/// The commands that move the pen or cut, and so use the scaling in force.
+const DRAWING: [&str; 7] = ["CI", "AA", "AR", "PU", "PD", "PA", "PR"];
+
+/// Whether an unfollowed command changes what is cut: `RO`, `IW`, `IR` and `CT` with no argument (or with the usual value, zero) only put things back.
+fn changes_geometry(op: &str, args: &str) -> bool {
+    if op == "SM" {
+        return !args.trim().is_empty();
+    }
+    if matches!(op, "RO" | "IW" | "IR" | "CT") {
+        let usual = args.trim().is_empty()
+            || (matches!(op, "RO" | "CT") && floats(args).first() == Some(&0.0));
+        return !usual;
+    }
+    UNFOLLOWED.contains(&op)
+}
+
+/// Whether an `SC` or an `IP` with these arguments is not applied as it is written: it needs no argument (which turns it off) or the four of the two
+/// corners; a fifth argument of `SC` other than zero asks for another kind of scaling.
+fn misread_scaling(op: &str, f: &[f64]) -> bool {
+    if f.is_empty() {
+        return false;
+    }
+    if op == "IP" {
+        return f.len() != 4;
+    }
+    !(f.len() == 4 || (f.len() == 5 && f[4] == 0.0)) || f[0] == f[1] || f[2] == f[3]
+}
+
+/// What the reader of a plot ([`parse_with`]) drops or does not follow without a word: a number it cannot read (`EH3D-FORMATS-006`, with the column of the
+/// field), the last coordinate of a position command (`PU`, `PD`, `PA`, `PR`) that has no pair (`EH3D-FORMATS-007`, with the column of the command), a command
+/// that changes what is cut and is not followed, such as a rotation (`EH3D-FORMATS-012`), and a scaling that is not applied as written (`EH3D-FORMATS-013`:
+/// an `SC` or `IP` without its arguments, or user units drawn with no `IP` to lay them on). The reading of a file is the same whether or not this is asked;
+/// a clean file gives an empty list.
 pub fn diagnose(text: &str) -> Vec<FormatError> {
     let mut found = Vec::new();
+    // the user units asked for and the plotter points they are laid on, as the reader keeps them
+    let (mut scaled, mut points, mut told) = (false, false, false);
     for cmd in commands(text) {
         if cmd.text.len() < 2 || !cmd.text.is_char_boundary(2) {
             continue;
         }
         let (op, args) = cmd.text.split_at(2);
         let op = op.to_ascii_uppercase();
+        let problem = |code| FormatError {
+            code,
+            line: Some(cmd.line),
+            column: Some(cmd.column),
+            detail: cmd.text.to_string(),
+        };
+        if changes_geometry(&op, args) {
+            found.push(problem(Code::HpglUnsupportedGeometry));
+        }
+        match op.as_str() {
+            "IN" => (scaled, points, told) = (false, false, false),
+            "DF" => (scaled, told) = (false, false),
+            _ => {}
+        }
         if !NUMERIC.contains(&op.as_str()) {
             continue;
         }
@@ -360,6 +426,24 @@ pub fn diagnose(text: &str) -> Vec<FormatError> {
             }
         }
         close(&mut field, at, &mut found);
+        if found.len() == first_bad && matches!(op.as_str(), "SC" | "IP") {
+            let f = floats(args);
+            if op == "SC" {
+                (scaled, told) = (f.len() >= 4, false);
+            } else {
+                points = f.len() >= 4;
+            }
+            if misread_scaling(&op, &f) {
+                found.push(problem(Code::HpglScaling));
+                // one word for one mistake: the drawing that follows is not told again
+                told = true;
+            }
+        }
+        // an `IP` may still come after the `SC`: the lack of it counts when something is drawn
+        if scaled && !points && !told && DRAWING.contains(&op.as_str()) {
+            found.push(problem(Code::HpglScaling));
+            told = true;
+        }
         if found.len() == first_bad
             && matches!(op.as_str(), "PU" | "PD" | "PA" | "PR")
             && numbers % 2 == 1
