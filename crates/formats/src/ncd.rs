@@ -137,6 +137,137 @@ fn note_ignored(out: &mut DrillFile, line: usize, raw: &str) {
 /// The most digits on either side of the point that a `;FILE_FORMAT=` line or a `000.000` option may ask for.
 const MAX_FORMAT_DIGITS: u32 = 6;
 
+/// The header lines by which the suite declares that the numbers of a file it writes are whole mils: inches with three decimals and the zeros in front left out. Every reader of
+/// drill files takes them for what they say; they go inside the header (after `M48`).
+pub const MILS_DECLARATION: &str = ";FILE_FORMAT=3:3\nINCH,TZ\n";
+
+/// How the numbers of a drill file are written, as the person chooses it for a file that does not say it. What a file declares always wins over the choice.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum NumberFormat {
+    /// Whole mils (0.001 inch), as the files of the Bungard machines and their programs have them.
+    Mils,
+    /// The digits before and after the point of a number written without one, and the side whose zeros are left out.
+    Digits {
+        metric: bool,
+        integer: u8,
+        decimal: u8,
+        /// True for `LZ` (the zeros at the end are left out); false for `TZ` (the zeros in front are left out).
+        trailing_left_out: bool,
+    },
+}
+
+impl NumberFormat {
+    /// The choices a program offers in a list. Other digits can be written by name (`inch-2.5-tz`).
+    pub const PRESETS: [NumberFormat; 5] = [
+        NumberFormat::Mils,
+        NumberFormat::Digits {
+            metric: false,
+            integer: 2,
+            decimal: 4,
+            trailing_left_out: false,
+        },
+        NumberFormat::Digits {
+            metric: false,
+            integer: 2,
+            decimal: 4,
+            trailing_left_out: true,
+        },
+        NumberFormat::Digits {
+            metric: true,
+            integer: 3,
+            decimal: 3,
+            trailing_left_out: false,
+        },
+        NumberFormat::Digits {
+            metric: true,
+            integer: 3,
+            decimal: 3,
+            trailing_left_out: true,
+        },
+    ];
+
+    /// The name that a command line and a configuration use: `mils`, or `inch-2.4-tz`, `inch-2.4-lz`, `metric-3.3-tz`... (`tz` and `lz` as the header words of the file).
+    pub fn name(self) -> String {
+        match self {
+            NumberFormat::Mils => "mils".into(),
+            NumberFormat::Digits {
+                metric,
+                integer,
+                decimal,
+                trailing_left_out,
+            } => format!(
+                "{}-{integer}.{decimal}-{}",
+                if metric { "metric" } else { "inch" },
+                if trailing_left_out { "lz" } else { "tz" }
+            ),
+        }
+    }
+
+    /// The format with the name `text` ([`NumberFormat::name`]), with one to six digits on each side; `None` for any other text.
+    pub fn from_name(text: &str) -> Option<NumberFormat> {
+        let text = text.trim().to_ascii_lowercase();
+        if text == "mils" {
+            return Some(NumberFormat::Mils);
+        }
+        let mut parts = text.split('-');
+        let metric = match parts.next()? {
+            "inch" => false,
+            "metric" => true,
+            _ => return None,
+        };
+        let (integer, decimal) = parts.next()?.split_once('.')?;
+        let digits = |t: &str| {
+            t.parse::<u8>()
+                .ok()
+                .filter(|n| (1..=MAX_FORMAT_DIGITS).contains(&u32::from(*n)))
+        };
+        let (integer, decimal) = (digits(integer)?, digits(decimal)?);
+        let trailing_left_out = match parts.next()? {
+            "tz" => false,
+            "lz" => true,
+            _ => return None,
+        };
+        parts.next().is_none().then_some(NumberFormat::Digits {
+            metric,
+            integer,
+            decimal,
+            trailing_left_out,
+        })
+    }
+
+    /// The value of a setting: empty or `ask` is no choice (a file that does not say its format is refused), else [`NumberFormat::from_name`]. The error is the text
+    /// that is none of them.
+    pub fn from_setting(text: &str) -> Result<Option<NumberFormat>, String> {
+        let t = text.trim();
+        if t.is_empty() || t.eq_ignore_ascii_case("ask") {
+            return Ok(None);
+        }
+        NumberFormat::from_name(t)
+            .map(Some)
+            .ok_or_else(|| t.to_string())
+    }
+
+    /// The value of the setting for `chosen` ([`NumberFormat::from_setting`]).
+    pub fn setting(chosen: Option<NumberFormat>) -> String {
+        chosen.map_or_else(|| "ask".into(), NumberFormat::name)
+    }
+}
+
+/// What a program says after it refused a file whose format is not declared (`EH3D-FORMATS-014`): the names to choose from, in the language of the code `lang`
+/// (`en`, `es`, `de`, `fr`, `it`, `ja`, `zh`, `pt`; English for any other). The program adds how it takes the choice (its option or its menu).
+pub fn how_to_choose(lang: &str) -> &'static str {
+    match lang {
+        "es" => "El archivo no declara cómo están escritos sus números y no se adivina la escala. Elija el formato: mils (milésimas de pulgada enteras), inch-2.4-tz, inch-2.4-lz, metric-3.3-tz o metric-3.3-lz (tz: se omiten los ceros de delante; lz: se omiten los ceros del final)",
+        "de" => "Die Datei gibt nicht an, wie ihre Zahlen geschrieben sind, und der Maßstab wird nicht geraten. Wählen Sie das Format: mils (ganze Tausendstel Zoll), inch-2.4-tz, inch-2.4-lz, metric-3.3-tz oder metric-3.3-lz (tz: führende Nullen fehlen; lz: Nullen am Ende fehlen)",
+        "fr" => "Le fichier ne déclare pas comment ses nombres sont écrits et l'échelle n'est pas devinée. Choisissez le format : mils (millièmes de pouce entiers), inch-2.4-tz, inch-2.4-lz, metric-3.3-tz ou metric-3.3-lz (tz : les zéros de tête sont omis ; lz : les zéros de fin sont omis)",
+        "it" => "Il file non dichiara come sono scritti i suoi numeri e la scala non viene indovinata. Scegliere il formato: mils (millesimi di pollice interi), inch-2.4-tz, inch-2.4-lz, metric-3.3-tz o metric-3.3-lz (tz: gli zeri iniziali sono omessi; lz: gli zeri finali sono omessi)",
+        "pt" => "O ficheiro não declara como estão escritos os seus números e a escala não é adivinhada. Escolha o formato: mils (milésimas de polegada inteiras), inch-2.4-tz, inch-2.4-lz, metric-3.3-tz ou metric-3.3-lz (tz: os zeros à esquerda são omitidos; lz: os zeros no fim são omitidos)",
+        "zh" => "文件未声明数值的书写方式，不会猜测比例。请选择格式：mils（整数千分之一英寸）、inch-2.4-tz、inch-2.4-lz、metric-3.3-tz 或 metric-3.3-lz（tz：省略前导零；lz：省略末尾零）",
+        "ja" => "ファイルに数値の書式が宣言されていないため、縮尺は推定しません。書式を選んでください：mils（整数の1/1000インチ）、inch-2.4-tz、inch-2.4-lz、metric-3.3-tz、metric-3.3-lz（tz：先頭のゼロを省略、lz：末尾のゼロを省略）",
+        _ => "The file does not declare how its numbers are written and the scale is not guessed. Choose the format: mils (whole thousandths of an inch), inch-2.4-tz, inch-2.4-lz, metric-3.3-tz or metric-3.3-lz (tz: the zeros in front are left out; lz: the zeros at the end are left out)",
+    }
+}
+
 #[derive(Debug, Clone, Copy, Default)]
 struct Format {
     /// `Some(true)` for metric, `Some(false)` for inch; `None` when the header does not say: the numbers are then mils, as in the files of the machine.
@@ -149,6 +280,8 @@ struct Format {
     plain_inch: bool,
     /// True when the header says `LZ` or `TZ`.
     zeros_declared: bool,
+    /// The unit the header says (`Some(true)` for metric), kept apart from [`Format::metric`], which a plain `INCH` leaves empty.
+    unit_said: Option<bool>,
 }
 
 impl Format {
@@ -185,6 +318,43 @@ impl Format {
         (mils.abs() < i32::MAX as f64).then_some(mils as i32)
     }
 
+    /// The format with what the file does not say taken from `chosen`; `None` when the choice cannot be what the header says.
+    fn completed(&self, chosen: NumberFormat) -> Option<Format> {
+        let (metric, integer, decimal, trailing_left_out) = match chosen {
+            NumberFormat::Mils => (false, 3, 3, false),
+            NumberFormat::Digits {
+                metric,
+                integer,
+                decimal,
+                trailing_left_out,
+            } => (
+                metric,
+                u32::from(integer),
+                u32::from(decimal),
+                trailing_left_out,
+            ),
+        };
+        if self.unit_said.is_some_and(|said| said != metric) {
+            return None;
+        }
+        if chosen == NumberFormat::Mils
+            && (self.digits.is_some_and(|(_, d)| d != 3)
+                || (self.zeros_declared && self.trailing_suppressed))
+        {
+            return None;
+        }
+        Some(Format {
+            metric: Some(metric),
+            digits: Some(self.digits.unwrap_or((integer, decimal))),
+            trailing_suppressed: if self.zeros_declared {
+                self.trailing_suppressed
+            } else {
+                trailing_left_out
+            },
+            ..*self
+        })
+    }
+
     /// Whether reading the coordinates of `line` (already read as `X..Y..`) takes something the file does not say: the unit or, after a unit alone,
     /// what it stands for (`INCH` alone is read as mils, other programs read it as 2.4 inches), the digits, or the side of the zeros of a number
     /// that does not fill the digits.
@@ -193,7 +363,8 @@ impl Format {
             return true;
         }
         line.split(['X', 'Y'])
-            .filter(|n| !n.is_empty() && !n.contains('.'))
+            // a number with a point, and a zero, mean the same whatever the format
+            .filter(|n| !n.contains('.') && n.bytes().any(|b| b.is_ascii_digit() && b != b'0'))
             .any(|n| match self.digits {
                 None => true,
                 Some((i, d)) => {
@@ -237,6 +408,7 @@ impl Format {
             }
             _ => return,
         }
+        self.unit_said = self.metric;
         let mut options = false;
         for part in parts {
             options = true;
@@ -307,7 +479,7 @@ pub fn parse_limited(
     limits: &crate::limits::ReaderLimits,
 ) -> Result<(DrillFile, crate::limits::LimitVerdict), FormatError> {
     let verdict = limits.guard(text)?;
-    let file = parse_unchecked(text).map_err(|e| e.to_error())?.0;
+    let file = parse_unchecked(text, None).map_err(|e| e.to_error())?.0;
     Ok((file, verdict))
 }
 
@@ -319,7 +491,7 @@ pub fn parse(text: &str) -> Result<DrillFile, ParseError> {
         .map_err(|e| ParseError::TooLarge {
             detail: e.to_string(),
         })?;
-    Ok(parse_unchecked(text)?.0)
+    Ok(parse_unchecked(text, None)?.0)
 }
 
 /// What the reader of a drill file ([`parse`]) supposes without a word. When the file does not say how its numbers are written, the first coordinate that
@@ -345,10 +517,42 @@ pub fn parse_declared(text: &str) -> Result<DrillFile, FormatError> {
 /// The file and what was supposed to read it, with the size limits of [`parse`].
 fn read_noting(text: &str) -> Result<(DrillFile, Option<FormatError>), FormatError> {
     crate::limits::ReaderLimits::default().guard(text)?;
-    parse_unchecked(text).map_err(|e| e.to_error())
+    parse_unchecked(text, None).map_err(|e| e.to_error())
 }
 
-fn parse_unchecked(text: &str) -> Result<(DrillFile, Option<FormatError>), ParseError> {
+/// Reads a drill file for a program that makes something from it or moves a machine. A file that declares its format is read as [`parse`] reads it and `chosen` is
+/// not looked at. A file that does not is refused with `EH3D-FORMATS-014` when there is no choice, and read with the choice when there is one; a choice that cannot
+/// be what the header says (another unit) is refused with the same code. [`how_to_choose`] is what to tell the person.
+pub fn parse_as(text: &str, chosen: Option<NumberFormat>) -> Result<DrillFile, FormatError> {
+    parse_as_limited(text, chosen, &crate::limits::ReaderLimits::default()).map(|(file, _)| file)
+}
+
+/// [`parse_as`] with the limits of [`parse_limited`] and its verdict.
+pub fn parse_as_limited(
+    text: &str,
+    chosen: Option<NumberFormat>,
+    limits: &crate::limits::ReaderLimits,
+) -> Result<(DrillFile, crate::limits::LimitVerdict), FormatError> {
+    let verdict = limits.guard(text)?;
+    let plain = parse_unchecked(text, None);
+    if let Ok((file, None)) = plain {
+        return Ok((file, verdict));
+    }
+    let read = match chosen {
+        None => plain,
+        Some(chosen) => parse_unchecked(text, Some(chosen)),
+    };
+    match read.map_err(|e| e.to_error())? {
+        (_, Some(refused)) => Err(refused),
+        (file, None) => Ok((file, verdict)),
+    }
+}
+
+/// The reading itself. With `chosen`, what the header does not say is taken from it and the second value is only a choice that does not fit the header.
+fn parse_unchecked(
+    text: &str,
+    chosen: Option<NumberFormat>,
+) -> Result<(DrillFile, Option<FormatError>), ParseError> {
     let mut out = DrillFile::default();
     let mut supposed = None::<FormatError>;
     let (mut tool, mut x, mut y) = (None::<u8>, 0, 0);
@@ -383,15 +587,23 @@ fn parse_unchecked(text: &str) -> Result<(DrillFile, Option<FormatError>), Parse
             in_header = false;
             continue;
         }
+        // the comment may be written with blanks after its `;`
+        let comment_format = line
+            .strip_prefix(';')
+            .map(str::trim_start)
+            .filter(|c| c.starts_with("FILE_FORMAT="));
         if line.starts_with("METRIC")
             || line.starts_with("INCH")
             || line == "M71"
             || line == "M72"
-            || line.starts_with(";FILE_FORMAT=")
+            || comment_format.is_some()
         {
             // the unit, the digits and the zeros of the coordinates that follow
-            fmt.header(line);
-            if !line.starts_with(";FILE_FORMAT=") {
+            match comment_format {
+                Some(c) => fmt.header(&format!(";{c}")),
+                None => fmt.header(line),
+            }
+            if comment_format.is_none() {
                 out.units_declared = true;
             }
             if line.starts_with("METRIC") || line == "M71" {
@@ -441,8 +653,26 @@ fn parse_unchecked(text: &str) -> Result<(DrillFile, Option<FormatError>), Parse
             continue;
         }
         let t = tool.ok_or(ParseError::HoleBeforeTool { line: n + 1 })?;
-        parse_coord(line, &fmt, &mut x, &mut y).ok_or_else(bad)?;
-        if supposed.is_none() && fmt.supposes(line) {
+        let used = match chosen {
+            None => fmt,
+            Some(c) => match fmt.completed(c) {
+                Some(used) => used,
+                None => {
+                    supposed = Some(FormatError {
+                        code: Code::NcdFormatAssumed,
+                        line: Some(n + 1),
+                        column: None,
+                        detail: format!("the chosen format {} does not fit the header", c.name()),
+                    });
+                    break;
+                }
+            },
+        };
+        if chosen.is_some() {
+            out.metric = used.metric == Some(true);
+        }
+        parse_coord(line, &used, &mut x, &mut y).ok_or_else(bad)?;
+        if chosen.is_none() && supposed.is_none() && fmt.supposes(line) {
             supposed = Some(FormatError {
                 code: Code::NcdFormatAssumed,
                 line: Some(n + 1),
