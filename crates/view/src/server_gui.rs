@@ -178,13 +178,16 @@ fn form(ui: &mut egui::Ui, panel: &mut ServerPanel, lang: Lang, action: &mut Opt
 /// The indicator of the link for the corner of any window: a dot of the colour of the state and its word, with the longer text (and what the person can
 /// do about it) on hover. It reads nothing and sends nothing; give it the badge of the panel (`panel.badge()`) or of a tracker.
 pub fn link_badge(ui: &mut egui::Ui, badge: LinkBadge, lang: Lang) -> egui::Response {
-    let inner = ui.horizontal(|ui| {
-        let (rect, _) = ui.allocate_exact_size(egui::vec2(10.0, 10.0), egui::Sense::hover());
-        ui.painter()
-            .circle_filled(rect.center(), 4.5, tone_color(badge.tone()));
-        ui.label(badge.label(lang));
-    });
+    let inner = ui.horizontal(|ui| badge_parts(ui, badge, lang));
     inner.response.on_hover_text(badge.tooltip(lang))
+}
+
+/// The dot and the word of the indicator, in the row they are put in: the word wraps where the row does.
+fn badge_parts(ui: &mut egui::Ui, badge: LinkBadge, lang: Lang) -> egui::Response {
+    let (rect, _) = ui.allocate_exact_size(egui::vec2(10.0, 10.0), egui::Sense::hover());
+    ui.painter()
+        .circle_filled(rect.center(), 4.5, tone_color(badge.tone()));
+    ui.label(badge.label(lang))
 }
 
 /// The width the table of the sessions needs.
@@ -334,7 +337,8 @@ fn contents(ui: &mut egui::Ui, panel: &mut ServerPanel, lang: Lang) -> Option<Ac
     // the state of the link and who is logged in
     let state = panel.state();
     ui.horizontal_wrapped(|ui| {
-        link_badge(ui, LinkBadge::new(state), lang);
+        let badge = LinkBadge::new(state);
+        badge_parts(ui, badge, lang).on_hover_text(badge.tooltip(lang));
         if let Some(who) = panel.who() {
             ui.label(format!("{} {}", tr(lang, ServerText::LoggedInAs), who.name));
         }
