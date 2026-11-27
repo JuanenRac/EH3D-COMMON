@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.3.8] - Panels come to the front and fit narrow columns, results are not kept over newer saves and signing keys are safer at their edges
+
 - **Signing keys at their edges (`eh3d-project`, `eh3d_dock::key_store`):** putting a password on a key through a link now protects the file the link points at, instead of replacing the link and leaving the key without a password behind it; a byte order mark before a password given on the standard input is no longer part of it; and a path too long to be read back is refused instead of being kept. 3 tests.
 - **Asking for a panel brings it to the front (`eh3d-dock`, `docs/DOCKING.md`):** `DockAction::ShowPanel` did nothing seen for a panel that was already a tab behind another one. It now puts its tab on show, raises its floating window over the others and ends the maximising of another group; `Layout::bring_to_front` does the same for a program. Showing a panel from the View menu does too. 6 tests, 2 of them of the drawing.
 - **The settings panel of the server keeps to the width of its column (`eh3d-view`, `docs/SERVER_CLIENT.md`):** in a narrow column the check that looks for the server was cut at the edge. Labels go over their boxes where the two do not fit side by side, long words wrap, buttons go to further rows and the list of sessions takes rows of its own. 4 tests of the drawing in the eight languages at several widths, now run in the CI.
