@@ -189,7 +189,9 @@ def render(third: list[dict], extra: list[tuple[str, str]]) -> str:
     lines = ["Third-party notices", "===================", "", MARKER, "",
              "The program is built with the Rust crates below, fetched from crates.io. Each is used under the licence named beside it",
              "(where there is a choice, under any one of those offered); their copyright notices and licence texts follow. The",
-             "program also holds the Rust standard library (MIT or Apache-2.0, copyright of The Rust Project contributors).", "",
+             "program also holds the Rust standard library (MIT or Apache-2.0, copyright of The Rust Project contributors).",
+             "The crates are used unchanged; the source of each, including those under the Mozilla Public License 2.0",
+             "(https://mozilla.org/MPL/2.0/), is at https://crates.io/crates/<name>/<version>.", "",
              "Components", "----------", ""]
     lines += [f"{p['name']} | {p['version']} | {licence_of(p)}" for p in third]
     lines += ["", "Copyright notices and licence texts", "-----------------------------------"]
