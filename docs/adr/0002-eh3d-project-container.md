@@ -50,7 +50,7 @@ The owner decided (D-C1 to D-C4): the extension is `.eh3d`, one project is one f
 
 ## Pending, with the reason
 
-* **A password on the secret key file**, keys kept by the system or by a hardware token, and a list of trusted keys in the configuration of each program: not designed yet. The traits `Signer` and `Verifier` are the points where they plug in.
+* **Keys kept by the system or by a hardware token** and a list of trusted keys in the configuration of each program: not designed yet (the password on the secret key file is in `0004-eh3d-safe-writes-and-keys.md`). The traits `Signer` and `Verifier` are the points where they plug in.
 * **A project signature that also covers the rest of every `branch.json` and the extension folders** would need a new label; today a delivery that needs them proved signs the branches as well.
 * **Encryption of a branch.** The record and the refusal are in place; the cipher and the derivation of the key from a password or a key file are pending. An authenticated cipher (AES-GCM or ChaCha20-Poly1305) with a fresh nonce for each file and the branch name and file name as associated data is the intended design; the nonce is stored in the record, never derived from the clock.
 * **Revision history of a branch** (light snapshots or differences) and **thumbnails by branch**: not designed beyond leaving `x-*` folders and unknown fields free for them.

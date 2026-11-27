@@ -4,8 +4,9 @@
 //! eh3d-project info FILE [--json]
 //! eh3d-project verify FILE [--strict] [--require-signed BRANCH[,BRANCH...]]
 //!                          [--require-project-signature] [--pubkey KEY.pub]...
-//! eh3d-project keygen KEYFILE
-//! eh3d-project sign FILE --key KEYFILE [--branch BRANCH[,BRANCH...]] [--project]
+//! eh3d-project keygen KEYFILE [--password-stdin | --no-password]
+//! eh3d-project protect-key KEYFILE [--password-stdin]
+//! eh3d-project sign FILE --key KEYFILE [--branch BRANCH[,BRANCH...]] [--project] [--password-stdin] [--replace-signature]
 //! eh3d-project extract-branch FILE BRANCH OUT_DIR
 //! eh3d-project extract-branch FILE manufacturing --eh3dproj OUT.eh3dproj
 //! eh3d-project attach FILE PATH [--name NAME] [--title TEXT] [--url URL] [LINKS] [--max-mb N]
@@ -16,31 +17,41 @@
 //! eh3d-project detach FILE ID
 //! ```
 //!
+//! A new secret key is under a password, asked twice at the terminal without showing it, or read
+//! as one line of the standard input with `--password-stdin`; `--no-password` makes one without.
+//! A password is never taken from the command line. `sign` replaces a signature that is there only
+//! with `--replace-signature`.
+//!
 //! `LINKS` are the pieces of the design: `--ref R5`, `--value 10k`, `--part NUMBER`, `--maker-part MAKER NUMBER`, each one as
 //! often as needed.
 //!
 //! Exit codes: 0 sound, 2 verification not passed (an error finding, or a warning with
-//! `--strict`), 3 a dangerous or unknown attachment was not taken out because nobody agreed, 1 anything
-//! else that failed, 64 wrong use. Nothing is written except by `extract-branch`,
-//! `extract-attachment` and `keygen`, which never replace a file, and by `sign`, `attach`,
+//! `--strict`), 3 something needed an agreement that was not given (a dangerous or unknown
+//! attachment, a signature to replace), 1 anything else that failed, 64 wrong use. Nothing is
+//! written except by `extract-branch`, `extract-attachment` and `keygen`, which never replace a
+//! file, by `protect-key`, which rewrites the key file given to it, and by `sign`, `attach`,
 //! `attach-link`, `attachment-links` and `detach`, which rewrite the project given to them.
-//! Nothing is opened, run or downloaded. The secret key is read from the path given and is never
-//! printed.
+//! Nothing is opened, run or downloaded. The secret key is read from the path given; it and the
+//! password are never printed.
 
 use std::collections::BTreeSet;
+use std::io::{BufRead, IsTerminal, Read};
 use std::path::Path;
 use std::process::ExitCode;
 
 use eh3d_container::AtomicOptions;
 use eh3d_project::attachments::{self, Attached};
-use eh3d_project::ed25519::generate_key_files;
+use eh3d_project::ed25519::{
+    generate_key_files, generate_locked_key_files, key_protection, protect_key_file,
+};
 use eh3d_project::{
     AttachError, AttachRequest, Attacher, Attachment, Checks, ComponentLink, ComponentQuery,
-    Consent, Ed25519Keyring, Ed25519Signer, KeyError, OpenOptions, Project, SaveOptions, Signer,
-    Verifier,
+    Consent, Ed25519Keyring, Ed25519Signer, KeyError, KeyProtection, OpenOptions, Password,
+    Project, SaveOptions, Signer, Verifier,
 };
+use zeroize::Zeroizing;
 
-const USAGE: &str = "usage:\n  eh3d-project info FILE [--json]\n  eh3d-project verify FILE [--strict] [--require-signed BRANCH[,BRANCH...]] [--require-project-signature] [--pubkey KEY.pub]...\n  eh3d-project extract-branch FILE BRANCH OUT_DIR\n  eh3d-project extract-branch FILE manufacturing --eh3dproj OUT.eh3dproj\n  eh3d-project keygen KEYFILE\n  eh3d-project sign FILE --key KEYFILE [--branch BRANCH[,BRANCH...]] [--project]\n  eh3d-project attach FILE PATH [--name NAME] [--title TEXT] [--url URL] [LINKS] [--max-mb N]\n  eh3d-project attach-link FILE URL (--sha256 HEX [--size BYTES] | --of PATH) [--name NAME] [--title TEXT] [LINKS]\n  eh3d-project attachments FILE [--json] [LINKS]\n  eh3d-project extract-attachment FILE ID OUT_DIR [--confirm-dangerous] [--max-mb N]\n  eh3d-project attachment-links FILE ID (add|remove) LINKS\n  eh3d-project detach FILE ID\nLINKS: --ref R5, --value 10k, --part NUMBER, --maker-part MAKER NUMBER (each as often as needed)";
+const USAGE: &str = "usage:\n  eh3d-project info FILE [--json]\n  eh3d-project verify FILE [--strict] [--require-signed BRANCH[,BRANCH...]] [--require-project-signature] [--pubkey KEY.pub]...\n  eh3d-project extract-branch FILE BRANCH OUT_DIR\n  eh3d-project extract-branch FILE manufacturing --eh3dproj OUT.eh3dproj\n  eh3d-project keygen KEYFILE [--password-stdin | --no-password]\n  eh3d-project protect-key KEYFILE [--password-stdin]\n  eh3d-project sign FILE --key KEYFILE [--branch BRANCH[,BRANCH...]] [--project] [--password-stdin] [--replace-signature]\n  eh3d-project attach FILE PATH [--name NAME] [--title TEXT] [--url URL] [LINKS] [--max-mb N]\n  eh3d-project attach-link FILE URL (--sha256 HEX [--size BYTES] | --of PATH) [--name NAME] [--title TEXT] [LINKS]\n  eh3d-project attachments FILE [--json] [LINKS]\n  eh3d-project extract-attachment FILE ID OUT_DIR [--confirm-dangerous] [--max-mb N]\n  eh3d-project attachment-links FILE ID (add|remove) LINKS\n  eh3d-project detach FILE ID\nLINKS: --ref R5, --value 10k, --part NUMBER, --maker-part MAKER NUMBER (each as often as needed)";
 
 fn main() -> ExitCode {
     let args: Vec<String> = std::env::args().skip(1).collect();
@@ -53,6 +64,7 @@ fn main() -> ExitCode {
         Some("verify") => verify(&args[1..]),
         Some("extract-branch") => extract(&args[1..]),
         Some("keygen") => keygen(&args[1..]),
+        Some("protect-key") => protect_key(&args[1..]),
         Some("sign") => sign(&args[1..]),
         Some("attach") => attach(&args[1..]),
         Some("attach-link") => attach_link(&args[1..]),
@@ -76,6 +88,10 @@ fn main() -> ExitCode {
             eprintln!("error: {text}; add --confirm-dangerous if you trust it");
             ExitCode::from(3)
         }
+        Err(Failure::NeedsReplacing(text)) => {
+            eprintln!("error: {text}; add --replace-signature to replace it");
+            ExitCode::from(3)
+        }
     }
 }
 
@@ -83,6 +99,7 @@ enum Failure {
     Usage,
     Error(String),
     NeedsConfirmation(String),
+    NeedsReplacing(String),
 }
 
 impl From<AttachError> for Failure {
@@ -273,14 +290,63 @@ fn verify(args: &[String]) -> Result<u8, Failure> {
     }
 }
 
+/// One line of the standard input, without its end: the password of a script.
+fn password_from_stdin() -> Result<Password, Failure> {
+    let mut line = Zeroizing::new(String::with_capacity(2048));
+    std::io::stdin()
+        .lock()
+        .take(2048)
+        .read_line(&mut line)
+        .map_err(|e| Failure::Error(format!("the password could not be read: {e}")))?;
+    let text = line.trim_end_matches(['\r', '\n']);
+    Ok(Password::new(text.to_owned()))
+}
+
+/// A password asked at the terminal, which does not show it.
+fn password_from_terminal(prompt: &str) -> Result<Password, Failure> {
+    if !std::io::stdin().is_terminal() {
+        return Err(Failure::Error(
+            "there is no terminal to ask for the password; give it with --password-stdin".into(),
+        ));
+    }
+    rpassword::prompt_password(prompt)
+        .map(Password::new)
+        .map_err(|e| Failure::Error(format!("the password could not be read: {e}")))
+}
+
+/// A new password: one line of the standard input, or asked twice at the terminal.
+fn new_password(from_stdin: bool) -> Result<Password, Failure> {
+    if from_stdin {
+        return password_from_stdin();
+    }
+    let first = password_from_terminal("New password: ")?;
+    if !first.same_as(&password_from_terminal("The same password again: ")?) {
+        return Err(Failure::Error("the two passwords are not the same".into()));
+    }
+    Ok(first)
+}
+
 fn keygen(args: &[String]) -> Result<u8, Failure> {
-    let [path] = args else {
+    let [path, rest @ ..] = args else {
         return Err(Failure::Usage);
     };
     if path.starts_with("--") {
         return Err(Failure::Usage);
     }
-    let pair = generate_key_files(Path::new(path))?;
+    let path = Path::new(path);
+    let pair = match rest {
+        [flag] if flag == "--no-password" => {
+            eprintln!(
+                "warning: the key file has no password: whoever copies it can sign as you ('eh3d-project protect-key' adds one)"
+            );
+            generate_key_files(path)?
+        }
+        [] => generate_locked_key_files(path, &new_password(false)?)?,
+        [flag] if flag == "--password-stdin" => {
+            generate_locked_key_files(path, &new_password(true)?)?
+        }
+        _ => return Err(Failure::Usage),
+    };
     println!("key        {}", pair.key_id);
     println!(
         "secret key {} (keep it to yourself, outside any project)",
@@ -293,17 +359,58 @@ fn keygen(args: &[String]) -> Result<u8, Failure> {
     Ok(0)
 }
 
+fn protect_key(args: &[String]) -> Result<u8, Failure> {
+    let [path, rest @ ..] = args else {
+        return Err(Failure::Usage);
+    };
+    let from_stdin = match rest {
+        [] => false,
+        [flag] if flag == "--password-stdin" => true,
+        _ => return Err(Failure::Usage),
+    };
+    let path = Path::new(path);
+    // said before the person types anything
+    if matches!(key_protection(path)?, KeyProtection::Password { .. }) {
+        return Err(KeyError::AlreadyProtected(path.to_owned()).into());
+    }
+    protect_key_file(path, &new_password(from_stdin)?)?;
+    println!("the key file {} has a password now", path.display());
+    Ok(0)
+}
+
+/// The signer of the key file, with its password when it has one; a file without one is told.
+fn signer_of(path: &Path, from_stdin: bool) -> Result<Ed25519Signer, Failure> {
+    match key_protection(path)? {
+        KeyProtection::Password { .. } => {
+            let password = if from_stdin {
+                password_from_stdin()?
+            } else {
+                password_from_terminal("Password of the key file: ")?
+            };
+            Ok(Ed25519Signer::read_with(path, Some(&password))?)
+        }
+        _ => {
+            eprintln!(
+                "warning: the key file has no password ('eh3d-project protect-key' adds one)"
+            );
+            Ok(Ed25519Signer::read(path)?)
+        }
+    }
+}
+
 fn sign(args: &[String]) -> Result<u8, Failure> {
     let [file, rest @ ..] = args else {
         return Err(Failure::Usage);
     };
     let mut key = None;
     let mut branches: BTreeSet<String> = BTreeSet::new();
-    let mut whole = false;
+    let (mut whole, mut from_stdin, mut replace) = (false, false, false);
     let mut i = 0;
     while i < rest.len() {
         match rest[i].as_str() {
             "--project" => whole = true,
+            "--password-stdin" => from_stdin = true,
+            "--replace-signature" => replace = true,
             "--key" if key.is_none() => {
                 i += 1;
                 key = Some(rest.get(i).ok_or(Failure::Usage)?);
@@ -321,22 +428,46 @@ fn sign(args: &[String]) -> Result<u8, Failure> {
     if branches.is_empty() && !whole {
         return Err(Failure::Usage);
     }
-    let signer = Ed25519Signer::read(Path::new(key))?;
     let mut project = open(file)?;
-    // everything is checked before the first signature, so a refusal leaves the file as it was
+    // everything is checked before the password is asked and before the first signature, so a
+    // refusal leaves the file as it was
     for branch in &branches {
         project.check_signable(branch)?;
     }
     if whole && project.record().seal.is_some() {
         return Err(Failure::Error("the project is sealed read-only".into()));
     }
+    if !replace {
+        let asked = branches
+            .iter()
+            .map(|b| Some(b.as_str()))
+            .chain(whole.then_some(None));
+        for target in asked {
+            if let Some(old) = project.signature_to_replace(target) {
+                return Err(Failure::NeedsReplacing(format!(
+                    "{} is signed already with the key {}",
+                    target.unwrap_or("the project"),
+                    old.key_id
+                )));
+            }
+        }
+    }
+    let signer = signer_of(Path::new(key), from_stdin)?;
     let options = SaveOptions::default();
     for branch in &branches {
-        project = project.sign_branch(branch, &signer, &options)?;
+        project = if replace {
+            project.sign_branch_replacing(branch, &signer, &options)?
+        } else {
+            project.sign_branch(branch, &signer, &options)?
+        };
         println!("signed branch {branch} with {}", signer.key_id());
     }
     if whole {
-        project.sign_project(&signer, &options)?;
+        if replace {
+            project.sign_project_replacing(&signer, &options)?;
+        } else {
+            project.sign_project(&signer, &options)?;
+        }
         println!("signed the project with {}", signer.key_id());
     }
     Ok(0)

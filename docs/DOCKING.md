@@ -153,6 +153,10 @@ A program of the PHOENIX family calls `Dock::keep_user_recent(program)` once, wh
 * The first time, the list that the settings file held moves to the new file. Afterwards `dock.recent_limit` still says how many are kept, and the `dock.recent.<n>` lines of the settings file are no longer read.
 * Tests and the pictures of the windows do not call it: `recent_store::RecentStore::in_dir` and `DockCore::keep_recent_in` take a folder of their own.
 
+## Where the path of the signing key is kept
+
+A program that signs offers the key used last: `key_store::KeyStore::for_user(program)` gives it, `load` reads the path, `remember` keeps the path of the key that was just used and `forget` drops it. The file is `signing-key-phoenix-<program>.txt` in the same folder as the recent projects: a line `eh3d.signing-key=1` and a line `key.path=<path>`. It holds **the path only**: nothing of it reads the key file, and no key and no password is written. Only an absolute path of one line is kept, never an address; on Linux and macOS only its owner can read it. A key that is no longer there is the program's to notice.
+
 ## The window about a program
 
 `Dock::set_about` gives the name, version, licence and extra lines. A program of the PHOENIX family also calls `Dock::set_brand` with an `about::AboutBrand`: which program it is (`about::Phoenix`) and the bytes of its own picture, put inside the program with `include_bytes!`.

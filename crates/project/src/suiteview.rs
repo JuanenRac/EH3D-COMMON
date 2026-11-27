@@ -2,14 +2,19 @@
 //! state, what is out of date, what is signed, what a person has to agree to before the program writes, and a copy under another name
 //! that keeps every branch. Nothing here interprets the files of a branch and only [`copy_project`] writes. The words are
 //! those of [`crate::suitetext`].
+//!
+//! A window keeps the **mark** of what it read ([`ProjectView::own_hash`]) and hands it back to [`warnings`] before it writes.
+//! When another program saved the file meanwhile, [`warnings`] refuses (`EH3D-PKG-025`): the program writes nothing and offers to
+//! read the project again, or to save under another name.
 
 use std::io::Write as _;
 use std::path::Path;
 
-use eh3d_container::{write_atomic, AtomicOptions, ContainerError};
+use eh3d_container::{write_atomic, AtomicOptions, ContainerError, PkgCode};
 
 use crate::appbranch::{self, Notice};
 use crate::meta::{ConversionReport, Counted};
+use crate::revision::{self, Revision};
 use crate::spec::ATTACHMENTS_BRANCH;
 use crate::suitetext::{fill, Said, S};
 
@@ -82,7 +87,8 @@ pub struct ProjectView {
     pub stale: Vec<Stale>,
     /// Whether the project as a whole is signed.
     pub project_signed: bool,
-    /// The content hash of the branch of this program, when it is there.
+    /// The mark of what was read, to be kept and handed back to [`warnings`] as it is: the content hash of the branch of this
+    /// program (`-` without it), `@` and the [`Revision`] of the whole file.
     pub own_hash: Option<String>,
     /// The files of the other branches, as branch and name.
     pub takeable: Vec<(String, String)>,
@@ -111,11 +117,11 @@ pub fn view(path: &Path, own: &str) -> Result<ProjectView, String> {
         project_signed: project.record().signature.is_some(),
         ..ProjectView::default()
     };
+    let own_hash = project.branch(own).map_or("-", |b| b.hash.as_str());
+    found.own_hash = Some(format!("{own_hash}@{}", project.revision()));
     for b in project.branches() {
         let record = b.record.as_ref();
-        if b.id == own {
-            found.own_hash = Some(b.hash.clone());
-        } else if b.id != ATTACHMENTS_BRANCH {
+        if b.id != own && b.id != ATTACHMENTS_BRANCH {
             // the attachments are stored under their hash: they are listed and taken out as attachments, never taken as files
             for name in b.files.keys().filter(|n| n.as_str() != BRANCH_RECORD) {
                 found.takeable.push((b.id.clone(), name.clone()));
@@ -185,9 +191,40 @@ pub fn banner(
     lines
 }
 
+/// The two parts of a mark of [`ProjectView::own_hash`]: the content hash of the branch and the revision of the file. A text that
+/// is not a mark is taken for a content hash alone.
+fn parts_of(mark: Option<&str>) -> (Option<&str>, Option<Revision>) {
+    match mark.and_then(|m| m.split_once('@')) {
+        Some((hash, revision)) => (Some(hash).filter(|h| *h != "-"), Revision::parse(revision)),
+        None => (mark, None),
+    }
+}
+
+/// The revision of the file that a mark of [`ProjectView::own_hash`] holds, for [`crate::appbranch::BranchKit::update_since`].
+pub fn revision_of(mark: &str) -> Option<Revision> {
+    parts_of(Some(mark)).1
+}
+
+/// Refuses (`EH3D-PKG-025`) when the project at `path` no longer holds what was read with the mark `seen`: another program saved it,
+/// or it is gone. A program asks this again right before it writes after a question, because the person may have taken long to
+/// answer. Writes of this program do not count.
+pub fn check_unchanged(path: &Path, seen: &str) -> Result<(), String> {
+    match revision_of(seen) {
+        Some(seen) => revision::check_unchanged(path, &seen).map_err(|e| e.to_string()),
+        None => Ok(()),
+    }
+}
+
+/// Whether a refusal in words is the one of a file that another program saved (`EH3D-PKG-025`), so that a window says it in its
+/// language ([`S::ChangedOnDisk`]) and offers to read the project again or to save under another name.
+pub fn is_changed_refusal(why: &str) -> bool {
+    why.contains(PkgCode::ChangedOnDisk.code())
+}
+
 /// What a person has to agree to before the branch of the program is written into `target`. `current` is the project the window works
-/// on (also the source of a copy when `target` is not there yet) and `seen` the content hash its branch had when the window read or
-/// wrote it. Nothing to agree to gives an empty list.
+/// on (also the source of a copy when `target` is not there yet) and `seen` the mark ([`ProjectView::own_hash`]) of what the window
+/// read or wrote. Nothing to agree to gives an empty list. Writing over the project the window works on is **refused** when another
+/// program saved it since it was read (see [`is_changed_refusal`]).
 pub fn warnings(
     target: &Path,
     current: Option<&Path>,
@@ -195,11 +232,18 @@ pub fn warnings(
     own: &str,
 ) -> Result<Vec<Said>, String> {
     let mut out = Vec::new();
+    let (seen_hash, seen_revision) = parts_of(seen);
+    // the project of the window, saved or taken away by another program since it was read, is not written over
+    if let (Some(current), Some(seen)) = (current, &seen_revision) {
+        if same_file(current, target) {
+            revision::check_unchanged(target, seen).map_err(|e| e.to_string())?;
+        }
+    }
     let found = if target.exists() {
         let found = view(target, own)?;
         if !current.is_some_and(|c| same_file(c, target)) {
             out.push(Said(S::WarnForeign, vec![name_of(target), own.to_owned()]));
-        } else if found.own_hash.as_deref() != seen {
+        } else if parts_of(found.own_hash.as_deref()).0 != seen_hash {
             out.push(Said(S::WarnChanged, vec![own.to_owned(), name_of(target)]));
         }
         Some(found)

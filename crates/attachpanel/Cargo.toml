@@ -16,6 +16,8 @@ gui = ["dep:egui", "dep:eh3d-filedialog", "eh3d-viewer/gui"]
 [dependencies]
 # the project and its attachments
 eh3d-project = { version = ">=0.0.1", path = "../project" }
+# the code of the refusal of a write over a file another program saved
+eh3d-container = { version = ">=0.0.1", path = "../container" }
 # the viewer shown beside the list
 eh3d-viewer = { version = ">=0.0.1", path = "../viewer" }
 # the entry of the panel in the frame of the programs
@@ -27,7 +29,6 @@ eh3d-filedialog = { version = ">=0.0.1", path = "../filedialog", optional = true
 egui = { version = "0.37.0", default-features = false, optional = true }
 
 [dev-dependencies]
-eh3d-container = { version = ">=0.0.1", path = "../container" }
 tempfile = "3"
 
 [lints]

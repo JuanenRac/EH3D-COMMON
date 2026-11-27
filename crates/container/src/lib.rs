@@ -38,7 +38,7 @@ pub mod reader;
 pub mod spec;
 pub mod writer;
 
-pub use atomic::{clean_orphan_temporaries, write_atomic, AtomicOptions};
+pub use atomic::{clean_orphan_temporaries, write_atomic, write_atomic_checked, AtomicOptions};
 pub use canonical::{
     canonical_file_bytes, canonical_string, to_canonical_file_bytes, CanonicalError,
 };

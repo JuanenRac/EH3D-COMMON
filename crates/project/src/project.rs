@@ -29,6 +29,7 @@ use crate::records::{
     EncryptionRecord, ProjectRecord, Seal, SignatureRecord, BRANCH_SIGNATURE_LABEL,
     PROJECT_SIGNATURE_LABEL,
 };
+use crate::revision::{self, Revision};
 use crate::security::{sign_with, status_of, SignatureReport, SignatureStatus, Signer, Verifier};
 use crate::spec::{
     branch_dir, classify, eh3d, entry_name, is_sha256_hex, is_shared_branch, manufacturing,
@@ -518,7 +519,16 @@ impl Project {
             signature: None,
             extra: BTreeMap::new(),
         };
-        assemble(None, path, &options.spec, Plan::default(), &record, atomic)?;
+        let spec = &options.spec;
+        assemble(
+            None,
+            path,
+            spec,
+            Plan::default(),
+            &record,
+            atomic,
+            || Ok(()),
+        )?;
         Project::open(path, options)
     }
 
@@ -545,6 +555,13 @@ impl Project {
     /// One branch.
     pub fn branch(&self, id: &str) -> Option<&Branch> {
         self.branches.get(id)
+    }
+
+    /// The mark of the content the file held when it was opened (or last written through this
+    /// handle). A program keeps it to refuse a later write over what another program saved; see
+    /// [`crate::revision`].
+    pub fn revision(&self) -> Revision {
+        Revision::from_integrity(&self.integrity)
     }
 
     /// The files of the audit log.
@@ -1104,20 +1121,55 @@ impl Project {
         self.signable_record(id).map(|_| ())
     }
 
+    /// The signature that signing would replace: that of the branch `id`, or that of the project
+    /// without one. A program asks the person before it replaces it (see
+    /// [`Project::sign_branch_replacing`] and [`Project::sign_project_replacing`]).
+    pub fn signature_to_replace(&self, id: Option<&str>) -> Option<&SignatureRecord> {
+        match id {
+            Some(id) => self.branches.get(id)?.record.as_ref()?.signature.as_ref(),
+            None => self.record.signature.as_ref(),
+        }
+    }
+
     /// Signs the branch `id` as it is. Only its `branch.json` changes (and the audit log when a
     /// time is given); the project record is not touched, so a signature of the project keeps
     /// holding. Signing is not writing the branch: any program may do it for the person who
-    /// holds the key. A sealed branch or project is refused (020). `options.modified` and
-    /// `options.signer` are not used.
+    /// holds the key. A sealed branch or project is refused (020), and so is replacing another
+    /// signature (026). `options.modified` and `options.signer` are not used.
     pub fn sign_branch(
-        mut self,
+        self,
         id: &str,
         signer: &dyn Signer,
         options: &SaveOptions<'_>,
     ) -> Result<Project> {
+        self.put_branch_signature(id, signer, options, false)
+    }
+
+    /// Like [`Project::sign_branch`], when the person agreed to replace the signature that is
+    /// there.
+    pub fn sign_branch_replacing(
+        self,
+        id: &str,
+        signer: &dyn Signer,
+        options: &SaveOptions<'_>,
+    ) -> Result<Project> {
+        self.put_branch_signature(id, signer, options, true)
+    }
+
+    fn put_branch_signature(
+        mut self,
+        id: &str,
+        signer: &dyn Signer,
+        options: &SaveOptions<'_>,
+        replace: bool,
+    ) -> Result<Project> {
         let mut record = self.signable_record(id)?;
-        record.signature = None;
-        record.signature = Some(signature_of(signer, BRANCH_SIGNATURE_LABEL, &record, id)?);
+        let old = record.signature.take();
+        let new = signature_of(signer, BRANCH_SIGNATURE_LABEL, &record, id)?;
+        if !replace {
+            refuse_replacing(old.as_ref(), &new, id)?;
+        }
+        record.signature = Some(new);
         let bytes = to_canonical_file_bytes(&record)
             .map_err(|e| ContainerError::Io(io::Error::other(e.to_string())))?;
         let mut plan = Plan::default();
@@ -1166,12 +1218,23 @@ impl Project {
             verified,
             ..
         } = self;
+        let seen = Revision::from_integrity(&integrity);
         let old = OldFile {
             container,
             integrity,
             verified,
         };
-        let written = assemble(Some(old), &path, &spec, plan, record, atomic)?;
+        // asked just before the old file is replaced: it must still hold what was opened here
+        let unchanged = || match Revision::with_spec(&path, &spec) {
+            Ok(now) if now == seen => Ok(()),
+            _ => Err(revision::changed()),
+        };
+        // asked at once too: a file that was written in place is told as changed, not as damaged
+        unchanged()?;
+        let written = assemble(Some(old), &path, &spec, plan, record, atomic, unchanged)?;
+        if let Some(written) = &written {
+            revision::note_own_write(&path, seen.clone(), Revision::from_integrity(written));
+        }
         let mut options = OpenOptions {
             spec,
             verify_integrity: false,
@@ -1498,8 +1561,28 @@ impl Project {
         self.rewrite(Plan::default(), &record, &options.atomic)
     }
 
-    /// Signs the project record (which holds the hash of every branch) with `signer`.
+    /// Signs the project record (which holds the hash of every branch) with `signer`. Replacing
+    /// another signature of the project is refused (026).
     pub fn sign_project(self, signer: &dyn Signer, options: &SaveOptions<'_>) -> Result<Project> {
+        self.put_project_signature(signer, options, false)
+    }
+
+    /// Like [`Project::sign_project`], when the person agreed to replace the signature that is
+    /// there.
+    pub fn sign_project_replacing(
+        self,
+        signer: &dyn Signer,
+        options: &SaveOptions<'_>,
+    ) -> Result<Project> {
+        self.put_project_signature(signer, options, true)
+    }
+
+    fn put_project_signature(
+        self,
+        signer: &dyn Signer,
+        options: &SaveOptions<'_>,
+        replace: bool,
+    ) -> Result<Project> {
         if self.record.seal.is_some() {
             return Err(refuse(PkgCode::Sealed, "the project is sealed read-only"));
         }
@@ -1511,13 +1594,12 @@ impl Project {
             ));
         }
         let mut record = self.record.clone();
-        record.signature = None;
-        record.signature = Some(signature_of(
-            signer,
-            PROJECT_SIGNATURE_LABEL,
-            &record,
-            "project.json",
-        )?);
+        let old = record.signature.take();
+        let new = signature_of(signer, PROJECT_SIGNATURE_LABEL, &record, "project.json")?;
+        if !replace {
+            refuse_replacing(old.as_ref(), &new, "project.json")?;
+        }
+        record.signature = Some(new);
         self.rewrite(Plan::default(), &record, &options.atomic)
     }
 
@@ -1697,6 +1779,7 @@ fn assemble(
     plan: Plan,
     record: &ProjectRecord,
     atomic: &AtomicOptions,
+    unchanged: impl FnMut() -> Result<()>,
 ) -> Result<Option<Integrity>> {
     let mut old = old;
     let copy: Vec<String> = old
@@ -1776,9 +1859,24 @@ fn assemble(
     writer.add("project.json", &project)?;
     match old {
         Some(old) => writer
-            .write_to_path_from(path, atomic, old.container)
+            .write_to_path_from_checked(path, atomic, old.container, unchanged)
             .map(Some),
         None => writer.write_to_path(path, atomic).map(|()| None),
+    }
+}
+
+/// Refuses to put `new` where another signature `old` is, which nobody agreed to replace.
+fn refuse_replacing(old: Option<&SignatureRecord>, new: &SignatureRecord, id: &str) -> Result<()> {
+    match old {
+        Some(old) if old != new => Err(refuse_at(
+            PkgCode::SignatureExists,
+            format!(
+                "it is signed already (key {}); replacing the signature needs to be agreed",
+                old.key_id
+            ),
+            id,
+        )),
+        _ => Ok(()),
     }
 }
 

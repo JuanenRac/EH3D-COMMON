@@ -40,10 +40,12 @@
 pub mod appbranch;
 pub mod attachments;
 pub mod ed25519;
+pub mod keylock;
 pub mod manufacturing;
 pub mod meta;
 pub mod project;
 pub mod records;
+pub mod revision;
 pub mod security;
 pub mod spec;
 pub mod suitetext;
@@ -53,8 +55,9 @@ pub use attachments::{
     AttachError, AttachRequest, Attacher, Attachment, AttachmentIndex, AttachmentLimits,
     AttachmentSource, ComponentLink, ComponentQuery, Consent,
 };
-pub use ed25519::{Ed25519Keyring, Ed25519Signer, KeyError, KeyPair};
+pub use ed25519::{Ed25519Keyring, Ed25519Signer, KeyError, KeyPair, KeyProtection};
 pub use eh3d_filekind::{AttachmentKind, Danger};
+pub use keylock::{KdfParams, Password};
 pub use project::{
     manufacturing_update, Branch, BranchUpdate, Checks, FileInfo, Finding, NewProject, OpenOptions,
     Project, SaveOptions, StaleRef, Writer, AUDIT_LOG,
@@ -63,4 +66,5 @@ pub use records::{
     branch_content_hash, BranchIndexEntry, BranchRecord, Dependency, EncryptionRecord,
     ProjectRecord, Seal, SignatureRecord,
 };
+pub use revision::Revision;
 pub use security::{SignatureReport, SignatureStatus, Signer, Verifier, VerifyOutcome};

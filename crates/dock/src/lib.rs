@@ -13,6 +13,7 @@ pub mod arrange;
 pub mod config;
 pub mod core;
 pub mod geom;
+pub mod key_store;
 pub mod menu;
 pub mod model;
 pub mod palette;

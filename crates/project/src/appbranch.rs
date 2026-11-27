@@ -30,6 +30,7 @@ use crate::project::{
     BranchUpdate, Checks, NewProject, OpenOptions, Project, SaveOptions, StaleRef, Writer,
 };
 use crate::records::Dependency;
+use crate::revision::Revision;
 use crate::spec::BRANCH_FILE;
 
 /// The folder of a branch that holds what was taken from other branches.
@@ -160,6 +161,14 @@ pub fn new_project_id() -> BranchResult<String> {
 /// Opens the project at `path`, every entry checked.
 pub fn open_project(path: &Path) -> BranchResult<Project> {
     Project::open(path, &OpenOptions::default()).map_err(|e| in_file(path, e))
+}
+
+/// Opens the project at `path` to write to it, refused (`EH3D-PKG-025`) when it no longer holds
+/// what was read as `seen`: another program saved it meanwhile. Writes of this program do not
+/// count; see [`crate::revision`].
+pub fn open_unchanged(path: &Path, seen: &Revision) -> BranchResult<Project> {
+    crate::revision::check_unchanged(path, seen)?;
+    open_project(path)
 }
 
 /// Opens the project at `path`, or creates it when there is no file there. A name or an
@@ -513,6 +522,22 @@ impl<'a> BranchKit<'a> {
         apply: impl FnOnce(&mut Project, &mut WorkingCopy) -> BranchResult<()>,
     ) -> BranchResult<(Project, Vec<Notice>)> {
         let mut project = open_or_create(path, identity)?;
+        let mut copy = self.load(&mut project)?;
+        apply(&mut project, &mut copy)?;
+        self.write(project, copy, &SaveOptions::default())
+    }
+
+    /// Like [`BranchKit::update`] for a project that is there and was read before, as `seen`
+    /// ([`Project::revision`]): refused (`EH3D-PKG-025`), with nothing written, when another
+    /// program saved the file since. A program offers then to read it again, or to save under
+    /// another name.
+    pub fn update_since(
+        &self,
+        path: &Path,
+        seen: &Revision,
+        apply: impl FnOnce(&mut Project, &mut WorkingCopy) -> BranchResult<()>,
+    ) -> BranchResult<(Project, Vec<Notice>)> {
+        let mut project = open_unchanged(path, seen)?;
         let mut copy = self.load(&mut project)?;
         apply(&mut project, &mut copy)?;
         self.write(project, copy, &SaveOptions::default())
