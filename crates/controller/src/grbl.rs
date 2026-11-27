@@ -2,6 +2,9 @@
 //! defines them. grblHAL and FluidNC speak the same protocol, so the same controller drives them (each reports itself as its own family).
 //!
 //! The lines are sent one at a time and each one waits for its `ok` (or `error:N`): simple and safe, not the fastest way to stream.
+//!
+//! A pause is the feed hold (`!`), which leaves the spindle turning. [`GrblController::with_spindle_stop_on_pause`] (off by default) adds the
+//! safety door byte (`0x84`), with which the firmware also turns the spindle and the coolant off, and turns them on again when it resumes.
 
 use std::io;
 use std::time::{Duration, Instant};
@@ -22,6 +25,17 @@ const HOLD: u8 = b'!';
 const RESUME: u8 = b'~';
 const RESET: u8 = 0x18;
 const JOG_CANCEL: u8 = 0x85;
+const SAFETY_DOOR: u8 = 0x84;
+
+/// The millimetres of an inch, for a controller set to report in inches (`$13=1`).
+const INCH_MM: f64 = 25.4;
+
+/// How long a pause that stops the spindle waits for the controller to say it is in the door state.
+const DOOR_CONFIRM: Duration = Duration::from_secs(2);
+
+/// What a pause that was asked to stop the spindle says when the controller does not confirm it.
+const SPINDLE_NOT_STOPPED: &str =
+    "the feed is held, but the controller did not confirm that it stopped the spindle";
 
 /// How long the controller waits for the end of a line, by the kind of line. Most lines are taken at once; a homing cycle (`$H`) and a
 /// jog (`$J=...`) answer only when the machine has finished moving, which can take a long time.
@@ -93,6 +107,12 @@ pub struct GrblController<T: LineTransport> {
     busy_max: Duration,
     /// A reset went out and its greeting has not been read yet: that greeting is expected, not a restart of the controller by itself.
     reset_sent: bool,
+    /// A pause also stops the spindle and the coolant (the safety door of the firmware).
+    stop_spindle_on_pause: bool,
+    /// The controller reports positions and feeds in inches (`$13=1`), as far as its settings have been seen.
+    report_inches: bool,
+    /// A line was not answered in time: what is on the way is read off before the next one.
+    resync: bool,
 }
 
 /// What a controller that restarted by itself (a power dip, a noisy cable, its own button) is told as: it comes back idle, with the spindle off and its modal state lost.
@@ -114,7 +134,91 @@ impl<T: LineTransport> GrblController<T> {
             urgent: UrgentChannel::new(),
             busy_max: MAX_BUSY_WAIT,
             reset_sent: false,
+            stop_spindle_on_pause: false,
+            report_inches: false,
+            resync: false,
         }
+    }
+
+    /// Makes a pause ([`Command::Pause`] and [`Urgent::Hold`]) stop the spindle and the coolant as well as the motion; off by default.
+    ///
+    /// After the feed hold the safety door byte (`0x84`) is sent: the firmware goes to its door state and turns both off. A resume is the
+    /// same `~` as always: the firmware turns them on again and waits its own delay before the machine moves. A firmware built to park does
+    /// so. [`Command::Pause`] asks for the state and is an error when the door state is not confirmed (the feed stays held); a pause sent
+    /// through the [`UrgentChannel`] cannot wait for that answer, so look at the status. A door byte during a homing ends it with an alarm.
+    pub fn with_spindle_stop_on_pause(mut self, on: bool) -> Self {
+        self.stop_spindle_on_pause = on;
+        self
+    }
+
+    /// Whether the reports are being read as inches: a `$13=1` has been seen among the settings (in [`Controller::max_travel`], in the answer
+    /// to `$$` or in a line sent). The positions and the feed of [`Status`] are in mm all the same.
+    pub fn reports_in_inches(&self) -> bool {
+        self.report_inches
+    }
+
+    /// Reads a status report in the units the controller is set to; what comes out is in mm.
+    fn read_report(&mut self, line: &str) -> Option<Status> {
+        let scale = if self.report_inches { INCH_MM } else { 1.0 };
+        parse_status_scaled(line, &mut self.wco, scale)
+    }
+
+    /// Learns the unit of the reports from a line of the settings.
+    fn note_setting(&mut self, line: &str) {
+        if let Some((13, value)) = parse_setting(line) {
+            self.report_inches = value != 0.0;
+        }
+    }
+
+    /// After a line that got no answer: reads off what arrived late, so that an old `ok` is not taken for the answer to the next line.
+    fn drain_late(&mut self) -> Result<(), Error> {
+        if !self.resync {
+            return Ok(());
+        }
+        self.resync = false;
+        let wait = self.timeouts.line.min(Duration::from_millis(50));
+        for _ in 0..256 {
+            match self.transport.read_line(wait).map_err(Self::link)? {
+                Some(l) if is_greeting(&l) => self.greeting()?,
+                Some(_) => {}
+                None => break,
+            }
+        }
+        Ok(())
+    }
+
+    /// Asks for the state until the controller says it is in the door state, at most `limit`.
+    fn confirm_door(&mut self, limit: Duration) -> Result<(), Error> {
+        let end = Instant::now() + limit;
+        while Instant::now() < end {
+            self.byte(STATUS)?;
+            let ask_until = Instant::now() + Duration::from_millis(250);
+            loop {
+                let left = ask_until.saturating_duration_since(Instant::now());
+                if left.is_zero() {
+                    break;
+                }
+                let Some(l) = self.transport.read_line(left).map_err(Self::link)? else {
+                    return Err(Error::Refused(SPINDLE_NOT_STOPPED.to_string()));
+                };
+                let l = l.trim();
+                if is_greeting(l) {
+                    self.greeting()?;
+                    continue;
+                }
+                if let Some(code) = l.strip_prefix("ALARM:") {
+                    return Err(Error::Alarm(format!("alarm {code}")));
+                }
+                if l.starts_with("<Door") {
+                    return Ok(());
+                }
+                if l.starts_with('<') {
+                    std::thread::sleep(Duration::from_millis(25));
+                    break;
+                }
+            }
+        }
+        Err(Error::Refused(SPINDLE_NOT_STOPPED.to_string()))
     }
 
     /// The same protocol reported as another family (grblHAL, FluidNC).
@@ -164,6 +268,10 @@ impl<T: LineTransport> GrblController<T> {
                     self.byte(HOLD)?;
                     self.wait_hold_done(Duration::from_secs(3));
                     self.byte(RESET)?;
+                }
+                Urgent::Hold if self.stop_spindle_on_pause => {
+                    self.byte(HOLD)?;
+                    self.byte(SAFETY_DOOR)?;
                 }
                 other => {
                     if matches!(other, Urgent::Reset) {
@@ -223,6 +331,8 @@ impl<T: LineTransport> GrblController<T> {
                     Ok(Some(l)) => {
                         let l = l.trim();
                         if l.starts_with("<Hold:0")
+                            || l.starts_with("<Door:0")
+                            || l.starts_with("<Door:1")
                             || l.starts_with("<Idle")
                             || l.starts_with("<Alarm")
                         {
@@ -265,9 +375,10 @@ impl<T: LineTransport> GrblController<T> {
                         return Err(Error::Alarm(format!("alarm {code}")));
                     }
                     // a report that answers a status request sent out of turn: it is left for whoever watches the position
-                    if let Some(status) = parse_status(l, &mut self.wco) {
+                    if let Some(status) = self.read_report(l) {
                         self.urgent.publish_report(status);
                     }
+                    self.note_setting(l);
                 }
             }
         }
@@ -282,6 +393,7 @@ impl<T: LineTransport> GrblController<T> {
         };
         // what was asked to go out of turn goes first
         self.flush_urgent()?;
+        self.drain_late()?;
         self.transport
             .write_all(format!("{text}\n").as_bytes())
             .map_err(Self::link)?;
@@ -302,7 +414,12 @@ impl<T: LineTransport> GrblController<T> {
                 Probe::Silent => break,
             }
         }
+        if done.is_ok() {
+            // a setting the program wrote itself
+            self.note_setting(text);
+        }
         if done == Err(Error::Timeout) {
+            self.resync = true;
             // never leave the machine moving: a homing cycle ignores a hold, so it is reset; a jog is cancelled; the rest is held
             let _ = self.byte(match kind {
                 Kind::Homing => RESET,
@@ -345,6 +462,7 @@ impl<T: LineTransport> GrblController<T> {
                     }
                     if l.starts_with("<Run")
                         || l.starts_with("<Hold")
+                        || l.starts_with("<Door")
                         || l.starts_with("<Jog")
                         || l.starts_with("<Home")
                     {
@@ -416,6 +534,12 @@ fn axis_name(axis: usize) -> Result<char, Error> {
 /// Reads a status report (`<Idle|MPos:1.000,2.000,3.000|FS:0,0|...>`); `wco` is the work offset known so far and is updated when the
 /// report brings one. `None` when the line is not a report.
 pub fn parse_status(line: &str, wco: &mut [f64; AXES]) -> Option<Status> {
+    parse_status_scaled(line, wco, 1.0)
+}
+
+/// [`parse_status`] for a controller that reports lengths in a unit of `scale` mm: X, Y, Z and the feed are multiplied by it (the other
+/// axes are left as they come).
+fn parse_status_scaled(line: &str, wco: &mut [f64; AXES], scale: f64) -> Option<Status> {
     let body = line.trim().strip_prefix('<')?.strip_suffix('>')?;
     let mut parts = body.split('|');
     let head = parts.next()?;
@@ -437,6 +561,13 @@ pub fn parse_status(line: &str, wco: &mut [f64; AXES]) -> Option<Status> {
     };
     let nums =
         |v: &str| -> Vec<f64> { v.split(',').filter_map(|n| n.trim().parse().ok()).collect() };
+    let lengths = |v: &str| -> Vec<f64> {
+        nums(v)
+            .into_iter()
+            .enumerate()
+            .map(|(i, n)| if i < 3 { n * scale } else { n })
+            .collect()
+    };
     let mut mpos: Option<Vec<f64>> = None;
     let mut wpos: Option<Vec<f64>> = None;
     for p in parts {
@@ -444,19 +575,19 @@ pub fn parse_status(line: &str, wco: &mut [f64; AXES]) -> Option<Status> {
             continue;
         };
         match k {
-            "MPos" => mpos = Some(nums(v)),
-            "WPos" => wpos = Some(nums(v)),
+            "MPos" => mpos = Some(lengths(v)),
+            "WPos" => wpos = Some(lengths(v)),
             "WCO" => {
-                for (i, n) in nums(v).into_iter().take(AXES).enumerate() {
+                for (i, n) in lengths(v).into_iter().take(AXES).enumerate() {
                     wco[i] = n;
                 }
             }
             "FS" => {
                 let n = nums(v);
-                st.feed_mm_min = n.first().copied().unwrap_or(0.0);
+                st.feed_mm_min = n.first().copied().unwrap_or(0.0) * scale;
                 st.spindle_rpm = n.get(1).copied().unwrap_or(0.0);
             }
-            "F" => st.feed_mm_min = nums(v).first().copied().unwrap_or(0.0),
+            "F" => st.feed_mm_min = nums(v).first().copied().unwrap_or(0.0) * scale,
             "Bf" => {
                 // free blocks of the planner (of 15 here) and free bytes of the serial buffer
                 let n = nums(v);
@@ -528,7 +659,7 @@ impl<T: LineTransport> Controller for GrblController<T> {
                         self.greeting()?;
                         continue;
                     }
-                    if let Some(st) = parse_status(&l, &mut self.wco) {
+                    if let Some(st) = self.read_report(&l) {
                         return Ok(st);
                     }
                 }
@@ -556,7 +687,14 @@ impl<T: LineTransport> Controller for GrblController<T> {
                     Err(Error::Unsupported("homing some of the axes"))
                 }
             }
-            Command::Pause => self.byte(HOLD),
+            Command::Pause => {
+                self.byte(HOLD)?;
+                if !self.stop_spindle_on_pause {
+                    return Ok(());
+                }
+                self.byte(SAFETY_DOOR)?;
+                self.confirm_door(DOOR_CONFIRM)
+            }
             Command::Resume => self.byte(RESUME),
             Command::Stop => {
                 // hold first so that the machine stops moving; the reset waits until it has (a reset while it still moves loses steps
@@ -573,7 +711,8 @@ impl<T: LineTransport> Controller for GrblController<T> {
                 for a in axes {
                     words.push_str(&format!("{}0", axis_name(a)?));
                 }
-                self.line(&format!("G10L20P1{words}"))
+                // P0 is the work system in use (G54 to G59), whichever line of the program or of the operator chose it
+                self.line(&format!("G10L20P0{words}"))
             }
             Command::Spindle { rpm, clockwise } => {
                 if rpm <= 0.0 {
@@ -591,6 +730,8 @@ impl<T: LineTransport> Controller for GrblController<T> {
     }
 
     fn max_travel(&mut self) -> Result<Option<[f64; 3]>, Error> {
+        self.flush_urgent()?;
+        self.drain_late()?;
         self.transport.write_all(b"$$\n").map_err(Self::link)?;
         let end = Instant::now() + self.timeouts.line;
         let mut found: [Option<f64>; 3] = [None; 3];
@@ -603,12 +744,17 @@ impl<T: LineTransport> Controller for GrblController<T> {
                 None => return Err(Error::Timeout),
                 Some(l) => {
                     let l = l.trim();
+                    if is_greeting(l) {
+                        self.greeting()?;
+                        continue;
+                    }
                     if l == "ok" {
                         break;
                     }
                     if let Some(code) = l.strip_prefix("error:") {
                         return Err(Error::Refused(format!("error {code}")));
                     }
+                    self.note_setting(l);
                     if let Some((n, v)) = parse_setting(l) {
                         if (130..=132).contains(&n) {
                             found[(n - 130) as usize] = Some(v);
@@ -757,7 +903,7 @@ mod tests {
         c.command(Command::EmergencyStop).unwrap();
         assert_eq!(
             c.transport().text(),
-            "$J=G91G21X-2.500F300\n$H\n$X\nG10L20P1X0Y0\nM3S12000\nM5\nM8\n!~\u{85}\u{18}"
+            "$J=G91G21X-2.500F300\n$H\n$X\nG10L20P0X0Y0\nM3S12000\nM5\nM8\n!~\u{85}\u{18}"
         );
         // Stop holds and then resets
         let mut c = GrblController::new(MockTransport::default());
@@ -795,6 +941,129 @@ mod tests {
             !c.transport().1.contains(&HOLD),
             "the machine was working: no feed hold"
         );
+    }
+
+    /// A transport that gives its reads in the order written (`None` is a read that gets nothing) and keeps what is sent.
+    struct Reads(std::collections::VecDeque<Option<&'static str>>, Vec<u8>);
+
+    impl LineTransport for Reads {
+        fn write_all(&mut self, bytes: &[u8]) -> io::Result<()> {
+            self.1.extend_from_slice(bytes);
+            Ok(())
+        }
+        fn read_line(&mut self, _timeout: Duration) -> io::Result<Option<String>> {
+            Ok(self.0.pop_front().flatten().map(String::from))
+        }
+    }
+
+    fn reads(script: &[Option<&'static str>]) -> GrblController<Reads> {
+        GrblController::new(Reads(script.iter().copied().collect(), Vec::new()))
+    }
+
+    #[test]
+    fn a_pause_is_the_feed_hold_alone_unless_the_spindle_stop_is_asked_for() {
+        let mut c = GrblController::new(MockTransport::default());
+        c.command(Command::Pause).unwrap();
+        assert_eq!(c.transport().written, vec![b'!']);
+
+        let mock = MockTransport::with_replies(&[
+            "<Hold:1|MPos:0.000,0.000,0.000>",
+            "<Door:0|MPos:0.000,0.000,0.000>",
+        ]);
+        let mut c = GrblController::new(mock).with_spindle_stop_on_pause(true);
+        assert_eq!(c.command(Command::Pause), Ok(()));
+        assert_eq!(c.transport().written, vec![b'!', SAFETY_DOOR, b'?', b'?']);
+        c.command(Command::Resume).unwrap();
+        assert_eq!(c.transport().written.last(), Some(&b'~'));
+    }
+
+    #[test]
+    fn a_pause_that_cannot_confirm_the_spindle_stop_says_so_and_an_alarm_is_told() {
+        let mut c = reads(&[None]).with_spindle_stop_on_pause(true);
+        assert_eq!(
+            c.command(Command::Pause),
+            Err(Error::Refused(SPINDLE_NOT_STOPPED.to_string()))
+        );
+        assert_eq!(c.transport().1[..2], [b'!', SAFETY_DOOR]);
+        let mut c = reads(&[Some("ALARM:6")]).with_spindle_stop_on_pause(true);
+        assert!(matches!(c.command(Command::Pause), Err(Error::Alarm(_))));
+    }
+
+    #[test]
+    fn an_urgent_hold_carries_the_door_byte_only_when_the_spindle_stop_is_asked_for() {
+        for (stop, expected) in [(false, vec![b'!']), (true, vec![b'!', SAFETY_DOOR])] {
+            let mut c = GrblController::new(MockTransport::default())
+                .with_spindle_stop_on_pause(stop)
+                .with_timeout(Duration::from_millis(1));
+            c.urgent_channel().unwrap().send(Urgent::Hold);
+            assert_eq!(c.status(), Err(Error::Timeout));
+            let mut written = c.transport().written.clone();
+            assert_eq!(written.pop(), Some(b'?'));
+            assert_eq!(written, expected);
+        }
+    }
+
+    #[test]
+    fn a_line_waits_while_the_machine_is_in_the_door_state() {
+        let mut c = reads(&[None, Some("<Door:0|MPos:0.000,0.000,0.000>"), Some("ok")]);
+        assert_eq!(c.send_line("G1 X100 F60"), Ok(()));
+        assert!(!c.transport().1.contains(&HOLD));
+    }
+
+    #[test]
+    fn a_stop_after_a_door_pause_resets_as_soon_as_the_machine_stands_still() {
+        let mock = MockTransport::with_replies(&["<Door:0|MPos:0.000,0.000,0.000>"]);
+        let mut c = GrblController::new(mock);
+        c.command(Command::Stop).unwrap();
+        assert_eq!(c.transport().written, vec![b'!', b'?', RESET]);
+    }
+
+    #[test]
+    fn a_late_ok_is_not_taken_for_the_answer_to_the_next_line() {
+        // no answer, a silent probe, then the `ok` of the old line arrives late; the next line is refused
+        let mut c = reads(&[None, None, Some("ok"), None, Some("error:20")]);
+        assert_eq!(c.send_line("G1 X1 F100"), Err(Error::Timeout));
+        assert_eq!(
+            c.send_line("G99"),
+            Err(Error::Refused("error 20".to_string()))
+        );
+    }
+
+    #[test]
+    fn a_controller_set_to_inches_is_read_in_mm() {
+        let mock = MockTransport::with_replies(&[
+            "$13=1",
+            "$130=300.000",
+            "$131=200.000",
+            "$132=45.000",
+            "ok",
+            "<Idle|MPos:1.000,2.000,-1.000|FS:10,12000|WCO:0.500,0.000,0.000>",
+            "ok",
+            "<Idle|MPos:1.000,2.000,-1.000|FS:10,0>",
+        ]);
+        let mut c = GrblController::new(mock);
+        // the travel settings are in mm whatever the reports are in
+        assert_eq!(c.max_travel(), Ok(Some([300.0, 200.0, 45.0])));
+        assert!(c.reports_in_inches());
+        let s = c.status().unwrap();
+        assert!((s.machine_mm[0] - 25.4).abs() < 1e-9);
+        assert!((s.machine_mm[2] + 25.4).abs() < 1e-9);
+        assert!((s.work_mm[0] - 12.7).abs() < 1e-9);
+        assert!((s.feed_mm_min - 254.0).abs() < 1e-9);
+        assert_eq!(s.spindle_rpm, 12000.0);
+        // a setting the program writes itself is learnt too
+        c.send_line("$13=0").unwrap();
+        assert!(!c.reports_in_inches());
+        assert_eq!(c.status().unwrap().machine_mm[0], 1.0);
+    }
+
+    #[test]
+    fn a_restart_seen_while_the_settings_are_read_is_told() {
+        let mut c = GrblController::new(MockTransport::with_replies(&[
+            "Grbl 1.1h ['$' for help]",
+            "ok",
+        ]));
+        assert_eq!(c.max_travel(), Err(Error::Refused(RESTARTED.to_string())));
     }
 
     #[test]

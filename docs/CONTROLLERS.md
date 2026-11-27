@@ -75,11 +75,18 @@ The settings are keys of a configuration file (`key = value`, `#` comments), eac
 
 What it does not have: TLS (Moonraker listens on plain HTTP on a trusted network), the notifications that Moonraker pushes over a WebSocket (a shutdown is noticed from the state in the status, which the controller reads). Those need the WebSocket option of [the decision](adr/0001-klipper-transport.md). The evidence is `simulator`: a fake Moonraker on `127.0.0.1` in `tests/httprpc_link.rs`; a real Klipper has not answered it yet.
 
+## Zero, pause and units
+
+* **Zero:** `Command::ZeroWork` writes the work system in use (`G10 L20 P0`), whichever of `G54` to `G59` the program or the operator chose.
+* **Pause with GRBL:** a pause is the feed hold, which leaves the spindle turning. `GrblController::with_spindle_stop_on_pause(true)` (off by default) follows it with the safety door byte (`0x84`): the firmware turns the spindle and the coolant off, and on a resume (`~`, the same as always) turns them on again and waits its own delay before it moves; a firmware built to park does so. `Command::Pause` then asks for the state and is an error when the door state is not confirmed, with the feed held. A pause sent through the `UrgentChannel` cannot wait for that answer, so the program looks at the status (`State::Door`). During a homing the door byte ends the homing with an alarm; during a jog it cancels the jog.
+* **Units of a GRBL jog and report:** a jog says `G21` itself. A controller set to report in inches (`$13=1`) is read in mm once that setting has been seen: in `max_travel`, in the answer to `$$` or in a line the program sends.
+* **Units of a Marlin jog:** Marlin has no jog of its own, so after a `G20` sent through the controller the jog is made between `G21` and `G20`.
+
 ## Safe when a controller goes silent
 
 The controllers of this crate stop what moves when the answers stop coming, and they do not send the order again.
 
-* GRBL holds the machine by the kind of line (a homing is reset, a jog cancelled, anything else held).
+* GRBL holds the machine by the kind of line (a homing is reset, a jog cancelled, anything else held). What arrives late is read off before the next line, so that an old `ok` is not taken for its answer.
 * Marlin sends the quick stop `M410` after a move that got no answer.
 * Klipper has no quick stop that keeps the machine ready: the only order that goes ahead of its queue is `printer.emergency_stop`. A move that gets no answer asks the machine whether it is alive (`printer.info`, answered out of the queue of G-code): while the probes are answered the machine is busy and the wait goes on up to the busy limit; a probe that is not answered is silence, the emergency stop is given, the controller is `halted()` and refuses everything that is not a stop, an unlock or a question until `Command::Unlock` restarts the firmware and Klipper says it is ready again. A hold and a stop of the job asked from another thread through the `UrgentChannel` are that same stop. A move whose link broke (the connection closed, nothing listening any more) gets the same emergency stop: nobody knows whether the machine still moves.
 

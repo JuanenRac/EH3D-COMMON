@@ -162,6 +162,8 @@ pub struct MarlinController<T: LineTransport> {
     resync: bool,
     /// A reset went out and its greeting is expected.
     reset_expected: bool,
+    /// The last `G20` or `G21` the program sent: inches are in force.
+    inches: bool,
 }
 
 impl<T: LineTransport> MarlinController<T> {
@@ -181,6 +183,7 @@ impl<T: LineTransport> MarlinController<T> {
             halted: false,
             resync: false,
             reset_expected: false,
+            inches: false,
         }
     }
 
@@ -278,7 +281,13 @@ impl<T: LineTransport> MarlinController<T> {
         let mut n = 0;
         while n < 256 {
             match self.transport.read_line(wait) {
-                Ok(Some(_)) => n += 1,
+                Ok(Some(l)) => {
+                    // a start read off here is a start all the same: the controller is back in mm
+                    if l.trim() == "start" {
+                        self.inches = false;
+                    }
+                    n += 1;
+                }
                 _ => break,
             }
         }
@@ -301,6 +310,7 @@ impl<T: LineTransport> MarlinController<T> {
             };
             let l = raw.trim();
             if l == "start" {
+                self.inches = false;
                 if self.reset_expected {
                     self.reset_expected = false;
                     continue;
@@ -489,11 +499,23 @@ impl<T: LineTransport> Controller for MarlinController<T> {
                 feed_mm_min,
             } => {
                 let a = axis_name(axis)?;
-                self.exchange("G91")?;
-                let moved = self.exchange(&format!("G1 {a}{distance_mm:.3} F{feed_mm_min:.0}"));
-                // the machine never stays in relative mode, whatever happened to the move
-                let back = self.exchange("G90");
-                moved.and(back)
+                // the distance and the feed are in mm: a program that left inches on would go 25.4 times as far
+                let inches = self.inches;
+                if inches {
+                    self.exchange("G21")?;
+                }
+                let done = self.exchange("G91").and_then(|()| {
+                    let moved = self.exchange(&format!("G1 {a}{distance_mm:.3} F{feed_mm_min:.0}"));
+                    // the machine never stays in relative mode, whatever happened to the move
+                    let back = self.exchange("G90");
+                    moved.and(back)
+                });
+                if inches {
+                    // the units of the program come back
+                    let units = self.exchange("G20");
+                    return done.and(units);
+                }
+                done
             }
             Command::JogStop | Command::Stop => self.exchange("M410"),
             Command::Home(axes) => {
@@ -549,8 +571,13 @@ impl<T: LineTransport> Controller for MarlinController<T> {
             return Ok(());
         }
         self.exchange(&text)?;
-        // the feed of the program is what the status says
+        // the feed of the program is what the status says, and its units are what a jog has to put back
         for w in text.to_ascii_uppercase().split_whitespace() {
+            match w {
+                "G20" => self.inches = true,
+                "G21" => self.inches = false,
+                _ => {}
+            }
             if let Some(f) = w.strip_prefix('F').and_then(|v| v.parse::<f64>().ok()) {
                 self.feed = f;
             }
@@ -973,6 +1000,29 @@ mod tests {
         assert_eq!(
             c.command(Command::Resume),
             Err(Error::Unsupported("resume"))
+        );
+    }
+
+    #[test]
+    fn a_jog_is_in_mm_while_the_program_is_in_inches_and_the_inches_come_back() {
+        let mut c = marlin(Impair::clean(), false);
+        c.send_line("G20").unwrap();
+        let jog = Command::Jog {
+            axis: 0,
+            distance_mm: 5.0,
+            feed_mm_min: 300.0,
+        };
+        c.command(jog.clone()).unwrap();
+        assert_eq!(
+            c.transport().device().executed,
+            ["G20", "G21", "G91", "G1 X5.000 F300", "G90", "G20"]
+        );
+        // back in mm, a jog adds nothing
+        c.send_line("G21").unwrap();
+        c.command(jog).unwrap();
+        assert_eq!(
+            c.transport().device().executed[7..],
+            ["G91", "G1 X5.000 F300", "G90"]
         );
     }
 
