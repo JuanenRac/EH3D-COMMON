@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The two touch screens answer the question they show (`firmware_base`, safety):** the client of the server and the flow of the job send back the identifier of what the job asked (`pause.question`) with Continue and "Tool changed", and the table of refusals has `question_changed` and `question_required`. Checked by the host tests of the screens.
+
 - **The relative mode of a plot lasts until an absolute one (`eh3d-bungard-formats`, fix):** only the coordinates written with `PR` itself were read as relative, so the `PU` and `PD` after it went to other places and the routing path was wrong. `PR` and `PA` now set the mode of the following commands, and `IN` and `DF` put it back to absolute; `DF` also ends the scaling.
 - **What a plot asks for and the reader does not do is told (`eh3d-bungard-formats`, `docs/FORMAT_ERRORS.md`):** `hpgl::diagnose` and `parse_strict` give `EH3D-FORMATS-012` for a command that changes what is cut and is not followed (a rotation, a window, a rectangle, a label...) and `EH3D-FORMATS-013` for a scaling that is not applied as written (`SC` or `IP` without their arguments, user units with no `IP`). Programs that already refuse a plot with a finding now refuse these too.
 - **A supposed coordinate format of a drill file is told (`eh3d-bungard-formats`):** an `INCH` header with nothing else is still read as whole mils, as before, while other programs read it as 2.4 inches, ten times less. `ncd::diagnose` now gives `EH3D-FORMATS-014` for it and for any other format that has to be supposed, and `ncd::parse_declared` refuses such a file; `ncd::parse` reads as before. 8 tests of these three changes.
