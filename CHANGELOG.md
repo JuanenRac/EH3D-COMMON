@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The shared part of the two touch screens follows the screens (`firmware_base/`):** the warning shown before a job that goes on after a stop is let go, the reason of a resume the server does not do, their texts in the eight languages, the fonts built again with the new characters and their tests, as the two screens have them. Not seen on the module.
+
 ## [0.3.8] - Panels come to the front and fit narrow columns, results are not kept over newer saves and signing keys are safer at their edges
 
 - **Signing keys at their edges (`eh3d-project`, `eh3d_dock::key_store`):** putting a password on a key through a link now protects the file the link points at, instead of replacing the link and leaving the key without a password behind it; a byte order mark before a password given on the standard input is no longer part of it; and a path too long to be read back is refused instead of being kept. 3 tests.
