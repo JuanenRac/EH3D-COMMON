@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.3.9] - Plots keep their relative mode, the GRBL controller sets the active work zero and an optional spindle stop on pause
+
 - **Zeroing writes the work system in use (`eh3d-controller`, fix):** the GRBL controller always wrote `G54` (`G10 L20 P1`), also while the program worked in `G55` to `G59`; it now writes the system in use (`P0`). The simulated GRBL keeps the six work systems.
 - **A pause can stop the spindle too (`eh3d-controller`, safety, off by default):** the feed hold leaves the spindle turning. `with_spindle_stop_on_pause(true)` adds the safety door byte of the firmware, which turns the spindle and the coolant off and turns them on again, with its delay, on a resume; a pause that the firmware does not confirm is an error. A line that waits while the machine is in the door state is no longer given up as unanswered, and a stop in that state resets without waiting three seconds.
 - **A Marlin jog keeps to mm after `G20` (`eh3d-controller`, fix):** with inches left on by the program the jog went 25.4 times as far; it is now made in mm and the inches come back after it.
