@@ -476,18 +476,17 @@ fn nothing_is_written_over_what_another_program_saved_since_the_panel_read() {
 fn the_writes_of_the_same_program_one_after_another_are_not_another_program() {
     let dir = tempdir().unwrap();
     let project = new_project(dir.path());
-    let (mut first, mut second) = (model(), model());
-    first.set_project(Some(&project));
-    second.set_project(Some(&project));
-    for (n, panel) in [&mut first, &mut second, &mut first]
-        .into_iter()
-        .enumerate()
-    {
+    let mut panels = [model(), model()];
+    for panel in &mut panels {
+        panel.set_project(Some(&project));
+    }
+    for (n, which) in [0, 1, 0].into_iter().enumerate() {
+        let panel = &mut panels[which];
         let source = file(dir.path(), &format!("{n}.txt"), format!("{n}").as_bytes());
         run(panel, Request::AttachFile(source));
         assert_eq!(panel.message(), Some(&Message::Attached), "{n}");
     }
-    assert_eq!(first.items().len(), 3);
+    assert_eq!(panels[0].items().len(), 3);
 }
 
 #[test]
