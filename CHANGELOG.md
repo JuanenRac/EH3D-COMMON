@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Shared base of the touch screens:** the summary of a drilling file of the card reads its numbers as the file declares them, completed with the chosen `drill_format` (the rules of `ncd::parse_as`). When neither says enough, or the choice cannot be what the file says, the holes and tools are counted and the size is not known, and a diameter with no unit is not given.
+
 ## [0.4.0] - Drill files declare their number format, new signing passwords need twelve characters and complete third-party notices
 
 - **Notices tool:** a crate in the public domain (CC0 1.0) that ships no text is named instead of stopping the tool.
