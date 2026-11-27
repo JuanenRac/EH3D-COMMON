@@ -29,8 +29,6 @@ pub struct Preview {
 
 /// The longest cell or paragraph kept.
 pub(crate) const MAX_PIECE_CHARS: usize = 20_000;
-/// The most bytes of text of a whole preview: a value shown in many cells counts every time.
-const MAX_PREVIEW_BYTES: usize = 16 * 1024 * 1024;
 /// The most columns of a table.
 pub(crate) const MAX_COLUMNS: usize = 256;
 
@@ -48,7 +46,7 @@ impl Builder {
             preview: Preview::default(),
             blocks_left: limits.max_blocks,
             cells_left: limits.max_cells,
-            bytes_left: MAX_PREVIEW_BYTES,
+            bytes_left: usize::try_from(limits.max_preview_bytes).unwrap_or(usize::MAX),
         }
     }
 
@@ -137,6 +135,27 @@ impl Builder {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn the_text_of_a_whole_preview_is_the_one_the_limits_say() {
+        let limits = ViewerLimits {
+            max_preview_bytes: 10,
+            ..ViewerLimits::default()
+        };
+        let mut builder = Builder::new(&limits);
+        builder.push(Block::Paragraph("123456".into()));
+        builder.push(Block::Paragraph("789012".into()));
+        builder.push(Block::Paragraph("more".into()));
+        let preview = builder.finish();
+        assert!(preview.truncated);
+        assert_eq!(
+            preview.blocks,
+            [
+                Block::Paragraph("123456".into()),
+                Block::Paragraph("7890".into())
+            ]
+        );
+    }
 
     #[test]
     fn the_limits_cut_blocks_cells_and_long_texts() {

@@ -429,3 +429,92 @@ fn the_limit_of_the_settings_is_the_one_that_refuses_a_large_file() {
     assert!(panel.items().is_empty(), "{:?}", panel.message());
     assert!(matches!(panel.message(), Some(Message::Failed(_))));
 }
+
+/// Another program saves the project: its write is made on a copy, which then takes its place.
+fn another_program_attaches(project: &Path, source: &Path) {
+    let apart = project.with_extension("apart.eh3d");
+    fs::copy(project, &apart).unwrap();
+    let mut other = model();
+    other.set_project(Some(&apart));
+    run(&mut other, Request::AttachFile(source.to_path_buf()));
+    assert_eq!(other.message(), Some(&Message::Attached));
+    fs::rename(&apart, project).unwrap();
+}
+
+#[test]
+fn nothing_is_written_over_what_another_program_saved_since_the_panel_read() {
+    let dir = tempdir().unwrap();
+    let project = new_project(dir.path());
+    let mut panel = model();
+    panel.set_project(Some(&project));
+    let theirs = file(dir.path(), "theirs.txt", b"theirs");
+    let mine = file(dir.path(), "mine.txt", b"mine");
+    another_program_attaches(&project, &theirs);
+    let held = fs::read(&project).unwrap();
+
+    run(&mut panel, Request::AttachFile(mine.clone()));
+    assert_eq!(
+        panel.message(),
+        Some(&Message::ChangedOnDisk("made-up.eh3d".to_owned()))
+    );
+    assert!(panel.message().unwrap().is_warning());
+    assert!(panel
+        .message()
+        .unwrap()
+        .text(Lang::Es)
+        .contains("made-up.eh3d"));
+    assert_eq!(fs::read(&project).unwrap(), held);
+    assert!(!panel.take_wrote());
+    // the list was read again, and asking once more writes
+    assert_eq!(panel.items().len(), 1);
+    run(&mut panel, Request::AttachFile(mine));
+    assert_eq!(panel.message(), Some(&Message::Attached));
+    assert_eq!(panel.items().len(), 2);
+}
+
+#[test]
+fn the_writes_of_the_same_program_one_after_another_are_not_another_program() {
+    let dir = tempdir().unwrap();
+    let project = new_project(dir.path());
+    let (mut first, mut second) = (model(), model());
+    first.set_project(Some(&project));
+    second.set_project(Some(&project));
+    for (n, panel) in [&mut first, &mut second, &mut first]
+        .into_iter()
+        .enumerate()
+    {
+        let source = file(dir.path(), &format!("{n}.txt"), format!("{n}").as_bytes());
+        run(panel, Request::AttachFile(source));
+        assert_eq!(panel.message(), Some(&Message::Attached), "{n}");
+    }
+    assert_eq!(first.items().len(), 3);
+}
+
+#[test]
+fn a_question_stays_when_only_the_date_changed_and_goes_when_the_content_did() {
+    let dir = tempdir().unwrap();
+    let project = new_project(dir.path());
+    let mut panel = model();
+    panel.set_project(Some(&project));
+    run(
+        &mut panel,
+        Request::AttachFile(file(dir.path(), "one.txt", b"one")),
+    );
+    let id = id_of(&panel, "one.txt");
+    panel.request(Request::Remove(id.clone()));
+    assert!(panel.pending().is_some());
+
+    let touched = fs::File::options().write(true).open(&project).unwrap();
+    touched
+        .set_modified(std::time::SystemTime::now() + Duration::from_secs(3600))
+        .unwrap();
+    drop(touched);
+    assert!(panel.check_file());
+    assert!(panel.pending().is_some());
+
+    another_program_attaches(&project, &file(dir.path(), "two.txt", b"two"));
+    assert!(panel.check_file());
+    assert!(panel.pending().is_none());
+    assert!(matches!(panel.message(), Some(Message::ChangedOnDisk(_))));
+    assert_eq!(panel.items().len(), 2);
+}

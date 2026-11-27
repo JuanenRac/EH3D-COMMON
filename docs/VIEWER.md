@@ -45,8 +45,11 @@ An attachment may be up to **1 GB**. All limits are in `ViewerLimits`; a program
 | `viewer.max_image_mb` | 64 | Largest picture file shown (also at most 48 million pixels) |
 | `viewer.max_text_mb` | 2 | Bytes of a text file shown; the rest is cut |
 | `viewer.max_office_mb` | 128 | Largest office document previewed |
+| `viewer.max_preview_mb` | 16 | Text a whole preview keeps, of any kind; the rest is cut and said |
 
-Office archives have more limits that are not settings: 32 MB unpacked for one part, 96 MB for all the parts read, 20,000 entries, 20,000 paragraphs and rows, 100,000 cells and 256 columns. A document type declaration is refused, so there are no external or expanding entities; external relationships are not followed. A preview of any kind keeps 20,000 characters of one paragraph or cell and 16 MB of text in all, so a value that a workbook shows in many cells cannot use up the memory. In Markdown the end of a link is looked for within 4,096 bytes; a longer one stays as it is written.
+Each value is a whole number from 1 to 4096.
+
+Office archives have more limits that are not settings: 32 MB unpacked for one part, 96 MB for all the parts read, 20,000 entries, 20,000 paragraphs and rows, 100,000 cells and 256 columns. A document type declaration is refused, so there are no external or expanding entities; external relationships are not followed. A preview of any kind keeps 20,000 characters of one paragraph or cell and `viewer.max_preview_mb` of text in all (16 MB unless the settings say otherwise), so a value that a workbook shows in many cells cannot use up the memory. In Markdown the end of a link is looked for within 4,096 bytes; a longer one stays as it is written.
 
 ## PDFium
 

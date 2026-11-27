@@ -2,8 +2,9 @@
 
 mod support;
 
+use std::io::Write as _;
 use std::path::Path;
-use std::process::{Command, Output};
+use std::process::{Command, Output, Stdio};
 
 use support::*;
 use tempfile::tempdir;
@@ -111,13 +112,16 @@ fn keygen_sign_and_verify_from_the_command_line() {
     let key = key.to_str().unwrap();
     let public = format!("{key}.pub");
 
-    let made = run(&["keygen", key]);
+    let made = run(&["keygen", key, "--no-password"]);
     assert_eq!(made.status.code(), Some(0), "{made:?}");
     let secret = std::fs::read_to_string(key).unwrap();
     let digits = secret.lines().nth(1).unwrap();
     assert!(!out(&made).contains(digits));
     assert!(out(&made).contains("ed25519:"));
-    assert_eq!(run(&["keygen", key]).status.code(), Some(1));
+    assert_eq!(
+        run(&["keygen", key, "--no-password"]).status.code(),
+        Some(1)
+    );
     assert_eq!(std::fs::read_to_string(key).unwrap(), secret);
 
     let before = std::fs::read(&file).unwrap();
@@ -277,4 +281,84 @@ fn attachments_are_added_listed_and_taken_out_from_the_command_line() {
         let o = run(&wrong);
         assert!(matches!(o.status.code(), Some(1 | 64)), "{wrong:?} {o:?}");
     }
+}
+
+fn run_with_line(args: &[&str], line: &str) -> Output {
+    let mut child = Command::new(env!("CARGO_BIN_EXE_eh3d-project"))
+        .args(args)
+        .stdin(Stdio::piped())
+        .stdout(Stdio::piped())
+        .stderr(Stdio::piped())
+        .spawn()
+        .unwrap();
+    // a command that does not read it may be gone already
+    let _ = writeln!(child.stdin.take().unwrap(), "{line}");
+    child.wait_with_output().unwrap()
+}
+
+fn all_of(o: &Output) -> String {
+    format!("{}{}", out(o), String::from_utf8_lossy(&o.stderr))
+}
+
+#[test]
+fn keys_under_a_password_and_signatures_to_replace_from_the_command_line() {
+    let dir = tempdir().unwrap();
+    let file = project(dir.path());
+    let key = dir.path().join("studio.key");
+    let key = key.to_str().unwrap();
+    // put together here so that no password is written in the source
+    let phrase = ["made", "up", "phrase"].join(" ");
+
+    // with no terminal a password is not asked, and nothing is made
+    let none = run(&["keygen", key]);
+    assert_eq!(none.status.code(), Some(1), "{none:?}");
+    let short = run_with_line(&["keygen", key, "--password-stdin"], "short");
+    assert_eq!(short.status.code(), Some(1), "{short:?}");
+    assert!(!std::path::Path::new(key).exists());
+
+    let made = run_with_line(&["keygen", key, "--password-stdin"], &phrase);
+    assert_eq!(made.status.code(), Some(0), "{made:?}");
+    assert!(!all_of(&made).contains(&phrase));
+    let sign = |line: &str, more: &[&str]| {
+        let mut args = vec![
+            "sign",
+            &file,
+            "--key",
+            key,
+            "--branch",
+            "pcb",
+            "--password-stdin",
+        ];
+        args.extend_from_slice(more);
+        run_with_line(&args, line)
+    };
+    let before = std::fs::read(&file).unwrap();
+    let wrong = sign("not that phrase", &[]);
+    assert_eq!(wrong.status.code(), Some(1), "{wrong:?}");
+    assert!(!all_of(&wrong).contains("not that phrase"));
+    assert_eq!(std::fs::read(&file).unwrap(), before);
+    let done = sign(&phrase, &[]);
+    assert_eq!(done.status.code(), Some(0), "{done:?}");
+    assert!(!all_of(&done).contains(&phrase));
+    assert!(!all_of(&done).contains("no password"));
+
+    let again = sign(&phrase, &[]);
+    assert_eq!(again.status.code(), Some(3), "{again:?}");
+    assert!(all_of(&again).contains("--replace-signature"));
+    let replaced = sign(&phrase, &["--replace-signature"]);
+    assert_eq!(replaced.status.code(), Some(0), "{replaced:?}");
+
+    let protected = run_with_line(&["protect-key", key, "--password-stdin"], &phrase);
+    assert_eq!(protected.status.code(), Some(1), "{protected:?}");
+    assert!(all_of(&protected).contains("already"));
+    let old = dir.path().join("old.key");
+    let old = old.to_str().unwrap();
+    let made = run(&["keygen", old, "--no-password"]);
+    assert_eq!(made.status.code(), Some(0));
+    assert!(all_of(&made).contains("no password"));
+    let protected = run_with_line(&["protect-key", old, "--password-stdin"], &phrase);
+    assert_eq!(protected.status.code(), Some(0), "{protected:?}");
+    assert!(std::fs::read_to_string(old)
+        .unwrap()
+        .starts_with("eh3d-ed25519-locked-v1"));
 }

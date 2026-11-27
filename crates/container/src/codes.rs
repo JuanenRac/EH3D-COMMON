@@ -1,4 +1,4 @@
-//! The stable codes of the container: `EH3D-PKG-001` to `EH3D-PKG-024`.
+//! The stable codes of the container: `EH3D-PKG-001` to `EH3D-PKG-026`.
 //!
 //! A code never changes its meaning and is never reused. The registry that the user reads lives
 //! in the documentation repository of the suite; a test here keeps the two lists in step when the
@@ -7,7 +7,8 @@
 //! Codes 001 to 014 belong to the container itself (names, ZIP structure, integrity, limits,
 //! version, atomic replacement). Codes 015 to 024 belong to the project container with branches
 //! (`.eh3d`, crate `eh3d-project`): branch records, branch hashes, ownership, references between
-//! branches, seals, signatures and encryption.
+//! branches, seals, signatures and encryption. Codes 025 and 026 are refusals of a write that would
+//! lose something nobody agreed to lose: the work another program saved, or a signature.
 
 use std::fmt;
 
@@ -67,11 +68,15 @@ pub enum PkgCode {
     EncryptedBranch = 23,
     /// 024: the format version of a branch is newer than the application supports.
     BranchVersion = 24,
+    /// 025: the file changed on disk since it was read, so nothing was written over it.
+    ChangedOnDisk = 25,
+    /// 026: there is a signature already and replacing it was not agreed to.
+    SignatureExists = 26,
 }
 
 impl PkgCode {
     /// Every code, in order.
-    pub const ALL: [PkgCode; 24] = [
+    pub const ALL: [PkgCode; 26] = [
         PkgCode::InvalidName,
         PkgCode::DuplicateName,
         PkgCode::SpecialEntry,
@@ -96,16 +101,18 @@ impl PkgCode {
         PkgCode::SignatureMissing,
         PkgCode::EncryptedBranch,
         PkgCode::BranchVersion,
+        PkgCode::ChangedOnDisk,
+        PkgCode::SignatureExists,
     ];
 
-    /// The number part, 1 to 24.
+    /// The number part, 1 to 26.
     pub fn number(self) -> u8 {
         self as u8
     }
 
     /// The code as text, for example `EH3D-PKG-010`.
     pub fn code(self) -> &'static str {
-        const CODES: [&str; 24] = [
+        const CODES: [&str; 26] = [
             "EH3D-PKG-001",
             "EH3D-PKG-002",
             "EH3D-PKG-003",
@@ -130,6 +137,8 @@ impl PkgCode {
             "EH3D-PKG-022",
             "EH3D-PKG-023",
             "EH3D-PKG-024",
+            "EH3D-PKG-025",
+            "EH3D-PKG-026",
         ];
         CODES[self as usize - 1]
     }
@@ -172,6 +181,8 @@ impl PkgCode {
             PkgCode::SignatureMissing => "Signature required but missing or its key unknown",
             PkgCode::EncryptedBranch => "Branch encrypted and its key not available",
             PkgCode::BranchVersion => "Branch format version newer than supported",
+            PkgCode::ChangedOnDisk => "File changed on disk since it was read",
+            PkgCode::SignatureExists => "Signature there already and its replacement not agreed",
         }
     }
 
@@ -187,6 +198,9 @@ impl PkgCode {
         };
         let (severity, recoverability) = if self.is_warning() {
             (Severity::Warning, Recoverability::Recoverable)
+        } else if matches!(self, PkgCode::ChangedOnDisk | PkgCode::SignatureExists) {
+            // a refusal that reading again, another name or an agreement gets past
+            (Severity::Error, Recoverability::Recoverable)
         } else {
             (Severity::Error, Recoverability::Unrecoverable)
         };
@@ -214,14 +228,14 @@ mod tests {
     use super::*;
 
     #[test]
-    fn the_twenty_four_codes_are_numbered_without_gaps() {
+    fn the_twenty_six_codes_are_numbered_without_gaps() {
         for (index, code) in PkgCode::ALL.iter().enumerate() {
             assert_eq!(code.number() as usize, index + 1);
             assert_eq!(code.code(), format!("EH3D-PKG-{:03}", index + 1));
             assert_eq!(PkgCode::from_code(code.code()), Some(*code));
             assert!(!code.title().is_empty());
         }
-        assert_eq!(PkgCode::from_code("EH3D-PKG-025"), None);
+        assert_eq!(PkgCode::from_code("EH3D-PKG-027"), None);
         assert_eq!(PkgCode::from_code("EH3D-PKG-000"), None);
     }
 

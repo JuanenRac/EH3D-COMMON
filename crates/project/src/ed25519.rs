@@ -1,7 +1,11 @@
 //! Ed25519 (RFC 8032) signing and checking of branches and projects, with the crate
 //! `ed25519-dalek`.
 //!
-//! **Keys never live in a project.** A key is a small text file whose path the person gives:
+//! **Keys never live in a project.** A key is a small text file whose path the person gives. A
+//! new secret key is best made under a password ([`generate_locked_key_files`], the format is in
+//! [`crate::keylock`]); the files without one, made before, are read as they are, and
+//! [`key_protection`] says which is which so that a program warns and offers
+//! [`protect_key_file`]:
 //!
 //! ```text
 //! eh3d-ed25519-secret-v1          eh3d-ed25519-public-v1
@@ -23,12 +27,16 @@ use std::fmt;
 use std::fs::{self, File, OpenOptions};
 use std::io::{self, Read, Write};
 use std::path::{Path, PathBuf};
+use std::sync::atomic::{AtomicU32, Ordering};
 
 use ed25519_dalek::{Signature, SigningKey, VerifyingKey};
 use eh3d_container::sha256_hex;
 use thiserror::Error;
 use zeroize::Zeroizing;
 
+use crate::keylock::{
+    KdfParams, LockError, Locked, Password, LOCKED_KEY_HEADER, MIN_PASSWORD_CHARS,
+};
 use crate::security::{Signer, Verifier, VerifyOutcome};
 
 /// The algorithm name written in a signature record.
@@ -40,7 +48,7 @@ pub const PUBLIC_KEY_HEADER: &str = "eh3d-ed25519-public-v1";
 /// What is added to the path of a secret key file to name its public key file.
 pub const PUBLIC_KEY_SUFFIX: &str = ".pub";
 /// A key file is never larger than this.
-const MAX_KEY_FILE: usize = 256;
+const MAX_KEY_FILE: usize = 512;
 
 /// Why a key could not be made, read or used. No variant carries what a key file holds.
 #[derive(Debug, Error)]
@@ -78,6 +86,38 @@ pub enum KeyError {
     /// The access to the new secret key file could not be limited to its owner.
     #[error("{}: the access to the key file could not be limited to its owner", .0.display())]
     Permissions(PathBuf),
+    /// The secret key is under a password and none was given.
+    #[error("{}: the key file has a password, which is needed", .0.display())]
+    NeedsPassword(PathBuf),
+    /// The password does not open the file (or the file was changed).
+    #[error("{}: the password is not right, or the file is damaged", .0.display())]
+    WrongPassword(PathBuf),
+    /// The new password is too short or too long.
+    #[error("the password needs at least {MIN_PASSWORD_CHARS} characters and at most 1024 bytes")]
+    UnusablePassword,
+    /// The key file has a password already.
+    #[error("{}: the key file has a password already", .0.display())]
+    AlreadyProtected(PathBuf),
+    /// The password could not be turned into a key (not enough memory).
+    #[error("the password could not be turned into a key: not enough memory")]
+    Derivation,
+}
+
+/// How a secret key file is kept.
+#[derive(Debug, Clone, PartialEq, Eq)]
+#[non_exhaustive]
+pub enum KeyProtection {
+    /// Under a password.
+    Password {
+        /// The identifier of its public key.
+        key_id: String,
+    },
+    /// Without one: whoever copies the file can sign. A program warns and offers
+    /// [`protect_key_file`].
+    Unprotected {
+        /// The identifier of its public key.
+        key_id: String,
+    },
 }
 
 /// The files and the identifier of a key that was just made.
@@ -104,12 +144,11 @@ pub fn public_key_path(secret: &Path) -> PathBuf {
     PathBuf::from(name)
 }
 
-/// True when `bytes` start like a secret key file; such bytes are never put into a project.
+/// True when `bytes` start like a secret key file, with a password or without; such bytes are
+/// never put into a project.
 pub fn looks_like_secret_key(bytes: &[u8]) -> bool {
-    bytes
-        .strip_prefix(b"\xef\xbb\xbf")
-        .unwrap_or(bytes)
-        .starts_with(SECRET_KEY_HEADER.as_bytes())
+    let text = bytes.strip_prefix(b"\xef\xbb\xbf").unwrap_or(bytes);
+    text.starts_with(SECRET_KEY_HEADER.as_bytes()) || text.starts_with(LOCKED_KEY_HEADER.as_bytes())
 }
 
 /// Signs with a secret key held in memory.
@@ -134,12 +173,33 @@ impl Ed25519Signer {
         Ed25519Signer { key, key_id }
     }
 
-    /// Reads the secret key file at `path`.
+    /// Reads the secret key file at `path`, one without a password. A file with one is
+    /// [`KeyError::NeedsPassword`]; see [`Ed25519Signer::read_with`].
     pub fn read(path: &Path) -> Result<Ed25519Signer, KeyError> {
-        match read_key_file(path)? {
-            (KeyKind::Secret, seed) => Ok(Ed25519Signer::from_seed(&seed)),
-            (KeyKind::Public, _) => Err(KeyError::PublicKeyGiven(path.to_owned())),
+        Ed25519Signer::read_with(path, None)
+    }
+
+    /// Reads the secret key file at `path`, with the password of a file that has one (a file
+    /// without a password is read whatever is given).
+    pub fn read_with(path: &Path, password: Option<&Password>) -> Result<Ed25519Signer, KeyError> {
+        let locked = match read_key_file(path)? {
+            KeyFile::Plain(KeyKind::Secret, seed) => return Ok(Ed25519Signer::from_seed(&seed)),
+            KeyFile::Plain(KeyKind::Public, _) => {
+                return Err(KeyError::PublicKeyGiven(path.to_owned()))
+            }
+            KeyFile::Locked(locked) => locked,
+        };
+        let password = password.ok_or_else(|| KeyError::NeedsPassword(path.to_owned()))?;
+        let seed = locked.open(password).map_err(|e| match e {
+            LockError::Derive => KeyError::Derivation,
+            LockError::Open => KeyError::WrongPassword(path.to_owned()),
+        })?;
+        let signer = Ed25519Signer::from_seed(&seed);
+        // the public key in clear is the one of the sealed seed
+        if signer.public_key() != locked.public {
+            return Err(KeyError::NotAKeyFile(path.to_owned()));
         }
+        Ok(signer)
     }
 
     /// The public key.
@@ -191,8 +251,10 @@ impl Ed25519Keyring {
     /// Trusts the public key of the file at `path` and returns its identifier.
     pub fn read_file(&mut self, path: &Path) -> Result<String, KeyError> {
         match read_key_file(path)? {
-            (KeyKind::Public, bytes) => self.add(&bytes),
-            (KeyKind::Secret, _) => Err(KeyError::SecretKeyGiven(path.to_owned())),
+            KeyFile::Plain(KeyKind::Public, bytes) => self.add(&bytes),
+            KeyFile::Plain(KeyKind::Secret, _) | KeyFile::Locked(_) => {
+                Err(KeyError::SecretKeyGiven(path.to_owned()))
+            }
         }
     }
 
@@ -231,9 +293,111 @@ impl Verifier for Ed25519Keyring {
     }
 }
 
-/// Makes a new key from the random source of the system and writes the two files. Neither file
-/// replaces one that is there.
+/// Makes a new key from the random source of the system and writes the two files, the secret one
+/// **without a password**. Neither file replaces one that is there. Prefer
+/// [`generate_locked_key_files`].
 pub fn generate_key_files(secret_path: &Path) -> Result<KeyPair, KeyError> {
+    generate(secret_path, None)
+}
+
+/// Like [`generate_key_files`], with the secret key under a password.
+pub fn generate_locked_key_files(
+    secret_path: &Path,
+    password: &Password,
+) -> Result<KeyPair, KeyError> {
+    generate_locked_key_files_with(secret_path, password, KdfParams::default())
+}
+
+/// Like [`generate_locked_key_files`], with a chosen cost of Argon2id.
+pub fn generate_locked_key_files_with(
+    secret_path: &Path,
+    password: &Password,
+    params: KdfParams,
+) -> Result<KeyPair, KeyError> {
+    if !password.is_long_enough() {
+        return Err(KeyError::UnusablePassword);
+    }
+    generate(secret_path, Some((password, params)))
+}
+
+/// How the secret key file at `path` is kept, and which key it is. No password is needed.
+pub fn key_protection(path: &Path) -> Result<KeyProtection, KeyError> {
+    match read_key_file(path)? {
+        KeyFile::Plain(KeyKind::Secret, seed) => Ok(KeyProtection::Unprotected {
+            key_id: Ed25519Signer::from_seed(&seed).key_id,
+        }),
+        KeyFile::Plain(KeyKind::Public, _) => Err(KeyError::PublicKeyGiven(path.to_owned())),
+        KeyFile::Locked(locked) => Ok(KeyProtection::Password {
+            key_id: key_id_of(&locked.public),
+        }),
+    }
+}
+
+/// Puts the secret key file at `path`, which has no password, under one. The new text is written
+/// beside it (readable only by its owner), read back and only then takes the place of the old
+/// file in one step. The old text may stay on the disk until it is written over, as after any
+/// replacement; the public key file does not change.
+pub fn protect_key_file(path: &Path, password: &Password) -> Result<(), KeyError> {
+    protect_key_file_with(path, password, KdfParams::default())
+}
+
+/// Like [`protect_key_file`], with a chosen cost of Argon2id.
+pub fn protect_key_file_with(
+    path: &Path,
+    password: &Password,
+    params: KdfParams,
+) -> Result<(), KeyError> {
+    static CALLS: AtomicU32 = AtomicU32::new(0);
+    if !password.is_long_enough() {
+        return Err(KeyError::UnusablePassword);
+    }
+    let seed = match read_key_file(path)? {
+        KeyFile::Plain(KeyKind::Secret, seed) => seed,
+        KeyFile::Plain(KeyKind::Public, _) => {
+            return Err(KeyError::PublicKeyGiven(path.to_owned()))
+        }
+        KeyFile::Locked(_) => return Err(KeyError::AlreadyProtected(path.to_owned())),
+    };
+    let public = Ed25519Signer::from_seed(&seed).public_key();
+    let locked = lock(&seed, public, password, params)?;
+    let mut name = path.as_os_str().to_owned();
+    let call = CALLS.fetch_add(1, Ordering::Relaxed);
+    name.push(format!(".{}-{call}.new", std::process::id()));
+    let beside = PathBuf::from(name);
+    write_new(&beside, locked.text().as_bytes(), true)?;
+    let done = Ed25519Signer::read_with(&beside, Some(password)).and_then(|signer| {
+        if signer.public_key() != public {
+            return Err(KeyError::NotAKeyFile(beside.clone()));
+        }
+        fs::rename(&beside, path).map_err(|error| KeyError::Io {
+            path: path.to_owned(),
+            error,
+        })
+    });
+    if done.is_err() {
+        let _ = fs::remove_file(&beside);
+    }
+    done
+}
+
+/// Seals a seed with a new salt and nonce.
+fn lock(
+    seed: &[u8; 32],
+    public: [u8; 32],
+    password: &Password,
+    params: KdfParams,
+) -> Result<Locked, KeyError> {
+    let mut salt = [0u8; 16];
+    let mut nonce = [0u8; 24];
+    getrandom::fill(&mut salt).map_err(|_| KeyError::Random)?;
+    getrandom::fill(&mut nonce).map_err(|_| KeyError::Random)?;
+    Locked::seal(seed, public, password, params, salt, nonce).map_err(|_| KeyError::Derivation)
+}
+
+fn generate(
+    secret_path: &Path,
+    password: Option<(&Password, KdfParams)>,
+) -> Result<KeyPair, KeyError> {
     let extension = secret_path
         .extension()
         .map(|e| e.to_string_lossy().to_ascii_lowercase());
@@ -250,7 +414,15 @@ pub fn generate_key_files(secret_path: &Path) -> Result<KeyPair, KeyError> {
     let mut seed = Zeroizing::new([0u8; 32]);
     getrandom::fill(seed.as_mut_slice()).map_err(|_| KeyError::Random)?;
     let signer = Ed25519Signer::from_seed(&seed);
-    write_new(secret_path, &key_text(SECRET_KEY_HEADER, &seed), true)?;
+    let secret = match password {
+        Some((password, params)) => Zeroizing::new(
+            lock(&seed, signer.public_key(), password, params)?
+                .text()
+                .into_bytes(),
+        ),
+        None => key_text(SECRET_KEY_HEADER, &seed),
+    };
+    write_new(secret_path, &secret, true)?;
     let public = key_text(PUBLIC_KEY_HEADER, &signer.public_key());
     if let Err(e) = write_new(&public_path, &public, false) {
         // the secret file is the one made a moment ago
@@ -308,7 +480,15 @@ fn parse_key(bytes: &[u8]) -> Option<(KeyKind, Zeroizing<[u8; 32]>)> {
     Some((kind, out))
 }
 
-fn read_key_file(path: &Path) -> Result<(KeyKind, Zeroizing<[u8; 32]>), KeyError> {
+/// What a key file holds.
+enum KeyFile {
+    /// The 32 bytes in clear.
+    Plain(KeyKind, Zeroizing<[u8; 32]>),
+    /// A secret key under a password.
+    Locked(Locked),
+}
+
+fn read_key_file(path: &Path) -> Result<KeyFile, KeyError> {
     let io_error = |error| KeyError::Io {
         path: path.to_owned(),
         error,
@@ -322,7 +502,10 @@ fn read_key_file(path: &Path) -> Result<(KeyKind, Zeroizing<[u8; 32]>), KeyError
     if bytes.len() > MAX_KEY_FILE {
         return Err(KeyError::NotAKeyFile(path.to_owned()));
     }
-    parse_key(&bytes).ok_or_else(|| KeyError::NotAKeyFile(path.to_owned()))
+    let plain = parse_key(&bytes).map(|(kind, key)| KeyFile::Plain(kind, key));
+    plain
+        .or_else(|| Locked::parse(&bytes).map(KeyFile::Locked))
+        .ok_or_else(|| KeyError::NotAKeyFile(path.to_owned()))
 }
 
 /// Creates `path` (never over a file) and writes `bytes`; a `private` file is limited to its

@@ -13,7 +13,7 @@ The one panel a PHOENIX program mounts for the attachments of its `.eh3d` projec
 
 `Escape` closes what the panel has open, one thing at each press and nothing written: the window that chooses, then the question before a write (answered with no), then the form of a link. With nothing open, and while a list drops down, the key is left to the program.
 
-A write that removes a signature of the project or of the branch of attachments is asked about first. Only the branch `attachments/` is written; the branches of the programs keep their bytes. The work runs on a thread of its own, and the panel reads the project again when another program wrote it. Nothing of an attachment is run and nothing is downloaded.
+A write that removes a signature of the project or of the branch of attachments is asked about first. Only the branch `attachments/` is written; the branches of the programs keep their bytes. The work runs on a thread of its own, and the panel reads the project again when another program wrote it. A write is **refused**, with nothing written, when another program saved the project after the panel read it, also while a question was waiting (`Message::ChangedOnDisk`); the list is read again and the person asks once more. A change of date alone is not a change, and what the program itself writes does not count (`docs/FORMAT_EH3D.md`). Nothing of an attachment is run and nothing is downloaded.
 
 ## Mounting it
 
@@ -63,6 +63,7 @@ A program keeps the `key = value` lines of its settings file whose key starts wi
 | `viewer.max_image_mb` | 64 | largest picture file shown |
 | `viewer.max_text_mb` | 2 | bytes of a text file shown |
 | `viewer.max_office_mb` | 128 | largest office document previewed |
+| `viewer.max_preview_mb` | 16 | text a whole preview keeps; the rest is cut and said |
 
 Each value is a whole number from 1 to 4096.
 

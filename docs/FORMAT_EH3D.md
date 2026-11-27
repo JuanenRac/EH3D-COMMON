@@ -245,7 +245,31 @@ The algorithm of the suite is **Ed25519** (RFC 8032), written in the record as `
 * **The message** is the label of the kind (`eh3d-branch-signature-v1` or `eh3d-project-signature-v1`), a line feed, and the canonical JSON of the record without its `signature`. A record with a number that has no canonical form (an integer that no double equals) is never signed and a signature on it is never accepted.
 * **The key identifier** is `ed25519:` and the first 32 hex digits of the SHA-256 of the 32 byte public key.
 * **Checking is strict:** a weak public key (of small order) is not trusted and a signature must be in its one valid encoding.
-* **Keys are always outside the project.** A key file is two lines, a header and 64 lowercase hex digits: `eh3d-ed25519-secret-v1` (the 32 byte seed) or `eh3d-ed25519-public-v1` (the public key, in the secret file's path plus `.pub`). The person gives the path. A new secret file never replaces one and is readable only by its owner (mode 600 on Unix; on Windows every other permission is removed and only the owner is granted, with the system tool `icacls`, so a disk without permissions, such as FAT, refuses it). A key is never printed, an error never quotes a key file, the secret is wiped from memory, and a program refuses to save into a project an entry that starts like a secret key file. The key files have no password: keep the secret one where only you can read it.
+* **Keys are always outside the project.** A key file is two lines, a header and 64 lowercase hex digits: `eh3d-ed25519-secret-v1` (the 32 byte seed) or `eh3d-ed25519-public-v1` (the public key, in the secret file's path plus `.pub`). The person gives the path. A new secret file never replaces one and is readable only by its owner (mode 600 on Unix; on Windows every other permission is removed and only the owner is granted, with the system tool `icacls`, so a disk without permissions, such as FAT, refuses it). A key is never printed, an error never quotes a key file, the secret is wiped from memory, and a program refuses to save into a project an entry that starts like a secret key file. A secret key is best kept under a password (below); a file without one, as made before, is read as it is, and a program warns about it.
+
+### Secret keys under a password
+
+```text
+eh3d-ed25519-locked-v1
+argon2id-v19 m=65536 t=3 p=1
+public <64 lowercase hex digits>
+salt <32 lowercase hex digits>
+nonce <48 lowercase hex digits>
+sealed <96 lowercase hex digits>
+```
+
+* The password becomes a 32 byte key with **Argon2id** version 0x13 over the salt: memory in KiB, passes and lanes are the second line. New files use 64 MiB, 3 passes and 1 lane. A file that asks for more than 1 GiB, 16 passes, 16 lanes or 4 GiB of memory times passes is not read.
+* `sealed` is the 32 byte seed under **XChaCha20-Poly1305** with that key and the nonce (24 bytes), then the 16 byte tag. The five lines above it, each ended by a line feed, are the associated data, so none of them can be changed. Salt and nonce are new random bytes for each file.
+* The public key is in clear, so a program can say which key it is (`key_protection`) before it asks for the password. It is checked against the opened seed.
+* A password has at least 8 characters and at most 1024 bytes. It is never taken from the command line, never printed and, with the derived key and the seed, wiped from memory. An error never says whether the password or the file is wrong.
+* `generate_locked_key_files` makes a key; `Ed25519Signer::read_with` opens it; `protect_key_file` puts a file without a password under one (written beside it, read back and then put in its place; the old text may stay on the disk until it is written over).
+* A program remembers the **path** of the key a person used (`eh3d_dock::key_store`), never the key or the password.
+
+A program that only calls `Ed25519Signer::read` keeps reading the files without a password, and gets `KeyError::NeedsPassword` for the others.
+
+### Replacing a signature
+
+Signing never puts another signature over one that is there unless a person agreed: `sign_branch` and `sign_project` refuse (`EH3D-PKG-026`), `signature_to_replace` gives the one that would go, so a program asks (the words are `suitetext::S::SignatureReplace`), and `sign_branch_replacing` or `sign_project_replacing` do it. Signing again with the same key what is already signed changes nothing and is not refused. On the command line, `--replace-signature`.
 
 ### What a signature covers
 
@@ -269,6 +293,15 @@ A program that needs a whole delivery proved signs the branches **and** the proj
 | signed, not checked | No key was given, or the file was opened without the integrity check |
 
 An invalid signature never stops the file from opening; `diagnose` reports it as `EH3D-PKG-021`, and a required signature that is not valid as `EH3D-PKG-022`. Someone who can change a file can also remove a signature, so a program that depends on signatures **requires** them (`--require-signed`, `--require-project-signature`) and keeps its own list of trusted public keys.
+
+## Another program saved the file
+
+Two programs may have the same project open. The one that writes second must not take the work of the first away, so **a write is refused when the file no longer holds what was read** (`EH3D-PKG-025`), and nothing is written. The program offers to read the project again or to save under another name (`suiteview::copy_project` carries what is in the file now; the words are `suitetext::S::ChangedOnDisk`).
+
+* What counts is the **content**: the mark of a project (`Project::revision`) is made from `integrity.json`, the name, size and SHA-256 of every entry. A file that was only touched, or written again with the same content, is the same file. A file that is gone or can no longer be read is a changed one.
+* Every write of the crate (`save_branch`, signing, sealing, attachments) checks that the file is still the one its `Project` opened, at once and again just before the atomic replacement. The moment between that answer and the rename is not covered, and there is no lock file.
+* Between **reading and writing**, which in a window may be hours, the program keeps the mark: `suiteview::view` puts it in `own_hash` and `suiteview::warnings` refuses when it no longer holds; `suiteview::check_unchanged` asks again after a question; `appbranch::open_unchanged` and `BranchKit::update_since` take the mark itself.
+* The writes a program makes itself, one after another (its window and its panel of attachments, say), are remembered while it runs and do not count as another program.
 
 ## A program and its own branch
 
@@ -330,6 +363,8 @@ The project container is `eh3d-container` with the strict policy: names in Unico
 | `EH3D-PKG-022` | A signature is required and missing, or the key is not known |
 | `EH3D-PKG-023` | A branch is encrypted and its key is not available |
 | `EH3D-PKG-024` | The format of a branch is newer than the program supports |
+| `EH3D-PKG-025` | Another program saved the file since it was read, so nothing was written over it |
+| `EH3D-PKG-026` | There is a signature already and replacing it was not agreed to |
 
 A code never changes its meaning and is never reused.
 

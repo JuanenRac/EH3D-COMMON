@@ -4,6 +4,9 @@
 //! is a [`Request`]; what a person has to agree to first becomes a [`Question`], and only [`Model::confirm`] goes on. The work runs
 //! on a thread of its own, because a file may be a gigabyte: [`Model::poll`] collects the answer. The SHA-256 of a file is
 //! taken on another thread for the same reason. Nothing here runs, opens or downloads anything of an attachment.
+//!
+//! A write is refused, with nothing written, when another program saved the project after the panel read it; the list is then
+//! read again. What the program of the panel itself writes does not count (see [`eh3d_project::revision`]).
 
 use std::collections::VecDeque;
 use std::fs;
@@ -12,7 +15,9 @@ use std::sync::mpsc::{self, Receiver, TryRecvError};
 use std::thread;
 use std::time::SystemTime;
 
+use eh3d_container::PkgCode;
 use eh3d_project::attachments::{self, read_index, AttachmentSource};
+use eh3d_project::revision::{self, Revision};
 use eh3d_project::spec::{eh3d, ATTACHMENTS_BRANCH};
 use eh3d_project::suitetext::S;
 use eh3d_project::{
@@ -275,6 +280,8 @@ pub enum Message {
     Changed,
     /// A settings file with a credential was refused.
     HoldsCredential(String),
+    /// Another program saved the project with this name since it was read: nothing was written.
+    ChangedOnDisk(String),
     /// It could not be done, in the words of what refused it.
     Failed(String),
 }
@@ -295,6 +302,7 @@ impl Message {
             Message::Removed => tr(lang, Text::Removed).to_owned(),
             Message::Changed => tr(lang, Text::Changed).to_owned(),
             Message::HoldsCredential(name) => fill(tr(lang, Text::HoldsCredential), &[name]),
+            Message::ChangedOnDisk(name) => fill(tr(lang, Text::ChangedOnDisk), &[name]),
             Message::Failed(why) => fill(tr(lang, Text::Failed), &[why]),
         }
     }
@@ -303,7 +311,10 @@ impl Message {
     pub fn is_warning(&self) -> bool {
         matches!(
             self,
-            Message::Marked(_) | Message::HoldsCredential(_) | Message::Failed(_)
+            Message::Marked(_)
+                | Message::HoldsCredential(_)
+                | Message::ChangedOnDisk(_)
+                | Message::Failed(_)
         )
     }
 }
@@ -366,9 +377,25 @@ fn holds_credential(path: &Path, keys: &[String]) -> bool {
         && fs::read(path).is_ok_and(|bytes| keys.iter().any(|key| suiteview::sets_key(&bytes, key)))
 }
 
-fn written(done: Result<attachments::Attached, AttachError>, what: Written) -> Outcome {
+fn refused_as_changed(file: &Path) -> Outcome {
+    Outcome::Finished {
+        message: Message::ChangedOnDisk(suiteview::name_of(file)),
+        select: None,
+        wrote: false,
+    }
+}
+
+fn written(
+    file: &Path,
+    done: Result<attachments::Attached, AttachError>,
+    what: Written,
+) -> Outcome {
     let mut done = match done {
         Ok(done) => done,
+        // saved by another program while this one was writing
+        Err(e) if e.to_string().contains(PkgCode::ChangedOnDisk.code()) => {
+            return refused_as_changed(file)
+        }
         Err(e) => return failed(e),
     };
     let message = match what {
@@ -406,6 +433,7 @@ fn perform(
     agreed: bool,
     attacher: &Attacher,
     credential_keys: &[String],
+    seen: Option<&Revision>,
 ) -> Outcome {
     let options = SaveOptions::default();
     if let Request::Extract(id, folder) = request {
@@ -439,25 +467,37 @@ fn perform(
             };
         }
     }
+    // what the person saw in the panel is what is written to
+    if seen.is_some_and(|seen| revision::check_unchanged(file, seen).is_err()) {
+        return refused_as_changed(file);
+    }
     let project = match appbranch::open_project(file) {
         Ok(project) => project,
         Err(e) => return failed(e),
     };
     match request {
         Request::AttachFile(path) => written(
+            file,
             attacher.attach_file(project, path, &AttachRequest::new(), &options),
             Written::Attach,
         ),
         Request::AttachLink { url, sha256, size } => written(
+            file,
             attacher.attach_link(project, url, sha256, *size, &AttachRequest::new(), &options),
             Written::Attach,
         ),
-        Request::Remove(id) => written(attacher.detach(project, id, &options), Written::Remove),
+        Request::Remove(id) => written(
+            file,
+            attacher.detach(project, id, &options),
+            Written::Remove,
+        ),
         Request::AddComponent(id, link) => written(
+            file,
             attacher.set_components(project, id, std::slice::from_ref(link), &[], &options),
             Written::Components,
         ),
         Request::RemoveComponent(id, link) => written(
+            file,
             attacher.set_components(project, id, &[], std::slice::from_ref(link), &options),
             Written::Components,
         ),
@@ -473,6 +513,8 @@ pub struct Model {
     limits: AttachmentLimits,
     file: Option<PathBuf>,
     stamp: Stamp,
+    /// The mark of the content that was read, which a write is held to.
+    revision: Option<Revision>,
     index: AttachmentIndex,
     items: Vec<Item>,
     error: Option<String>,
@@ -497,6 +539,7 @@ impl Model {
             limits: AttachmentLimits::default(),
             file: None,
             stamp: None,
+            revision: None,
             index: AttachmentIndex::default(),
             items: Vec::new(),
             error: None,
@@ -614,7 +657,8 @@ impl Model {
         self.file.as_deref()
     }
 
-    /// Reads the project again when the file changed since it was read. True when it did.
+    /// Reads the project again when the file changed since it was read. True when it did. A question that was waiting stays when
+    /// only the date changed; when the content changed it is dropped, with nothing written, and said.
     pub fn check_file(&mut self) -> bool {
         let Some(file) = &self.file else {
             return false;
@@ -622,8 +666,13 @@ impl Model {
         if self.job.is_some() || stamp_of(file) == self.stamp {
             return false;
         }
-        self.pending = None;
+        let seen = self.revision.clone();
         self.reload();
+        let same_content = seen.is_some() && seen == self.revision;
+        if !same_content && self.pending.take().is_some() {
+            let name = self.file.as_deref().map(suiteview::name_of);
+            self.message = name.map(Message::ChangedOnDisk);
+        }
         true
     }
 
@@ -633,6 +682,7 @@ impl Model {
         self.items.clear();
         self.error = None;
         self.stamp = None;
+        self.revision = None;
         let Some(file) = self.file.clone() else {
             return;
         };
@@ -641,10 +691,13 @@ impl Model {
         if self.stamp.is_none() {
             return;
         }
-        let read = open_to_read(&file)
-            .and_then(|mut project| read_index(&mut project).map_err(|e| e.to_string()));
+        let read = open_to_read(&file).and_then(|mut project| {
+            let index = read_index(&mut project).map_err(|e| e.to_string())?;
+            Ok((index, project.revision()))
+        });
         match read {
-            Ok(index) => {
+            Ok((index, revision)) => {
+                self.revision = Some(revision);
                 self.items = index.attachments.iter().map(Item::of).collect();
                 self.items
                     .sort_by_key(|i| (i.name.to_lowercase(), i.id.clone()));
@@ -817,11 +870,12 @@ impl Model {
         let attacher =
             Attacher::new(&self.program.branch, &self.program.version).with_limits(self.limits);
         let keys = self.credential_keys.clone();
+        let seen = self.revision.clone();
         let (send, receive) = mpsc::channel();
         let spawned = thread::Builder::new()
             .name("eh3d-attachments".to_owned())
             .spawn(move || {
-                let outcome = perform(&file, &request, agreed, &attacher, &keys);
+                let outcome = perform(&file, &request, agreed, &attacher, &keys, seen.as_ref());
                 // the panel may be gone: there is nobody to tell then
                 let _ = send.send(Done {
                     file,
@@ -882,7 +936,10 @@ impl Model {
             } => {
                 self.wrote |= wrote;
                 // a refusal is not covered by the next file: the dropped files that wait are given up
-                if matches!(message, Message::Failed(_) | Message::HoldsCredential(_)) {
+                if matches!(
+                    message,
+                    Message::Failed(_) | Message::HoldsCredential(_) | Message::ChangedOnDisk(_)
+                ) {
                     self.dropped.clear();
                 }
                 if same {

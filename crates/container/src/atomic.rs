@@ -75,8 +75,25 @@ pub fn write_atomic<F>(
 where
     F: FnOnce(&mut File) -> Result<(), ContainerError>,
 {
+    write_atomic_checked(target, options, write, || Ok(()))
+}
+
+/// Like [`write_atomic`], with a last look at the target: once the new content is complete,
+/// `check` is asked just before the replacement (and again before every retry), and its error
+/// stops the write with the target as it is. A program uses it to never replace a file that
+/// another program wrote meanwhile. The moment between the answer and the rename is not covered.
+pub fn write_atomic_checked<F, C>(
+    target: &Path,
+    options: &AtomicOptions,
+    write: F,
+    mut check: C,
+) -> Result<(), ContainerError>
+where
+    F: FnOnce(&mut File) -> Result<(), ContainerError>,
+    C: FnMut() -> Result<(), ContainerError>,
+{
     let temporary = temp_path(target);
-    let outcome = write_and_replace(target, &temporary, options, write);
+    let outcome = write_and_replace(target, &temporary, options, write, &mut check);
     if outcome.is_err() {
         let _ = fs::remove_file(&temporary);
     }
@@ -88,6 +105,7 @@ fn write_and_replace<F>(
     temporary: &Path,
     options: &AtomicOptions,
     write: F,
+    check: &mut dyn FnMut() -> Result<(), ContainerError>,
 ) -> Result<(), ContainerError>
 where
     F: FnOnce(&mut File) -> Result<(), ContainerError>,
@@ -108,6 +126,8 @@ where
     file.sync_all()?;
     drop(file);
 
+    // before the backup too: a refused write leaves the backup that was there
+    check()?;
     if options.keep_backup && target.is_file() {
         let mut backup = target.as_os_str().to_owned();
         backup.push(".bak");
@@ -118,6 +138,7 @@ where
     let mut delay = Duration::from_millis(10);
     let limit = Duration::from_millis(options.retry_millis);
     loop {
+        check()?;
         match fs::rename(temporary, target) {
             Ok(()) => break,
             Err(e) if is_retryable(&e) && waited < limit => {
@@ -247,6 +268,26 @@ mod tests {
         let error = write_atomic(&target, &options, put(b"new")).unwrap_err();
         assert_eq!(error.code(), Some(PkgCode::AtomicReplace));
         assert!(target.join("inner").is_dir());
+        assert!(leftovers(&dir).is_empty());
+        let _ = fs::remove_dir_all(&dir);
+    }
+
+    #[test]
+    fn a_refused_check_leaves_the_target_the_backup_and_no_temporary() {
+        let dir = folder("check");
+        let target = dir.join("p.bin");
+        fs::write(&target, b"theirs").unwrap();
+        fs::write(dir.join("p.bin.bak"), b"older").unwrap();
+        let options = AtomicOptions {
+            keep_backup: true,
+            ..AtomicOptions::default()
+        };
+        let result = write_atomic_checked(&target, &options, put(b"mine"), || {
+            Err(Violation::new(PkgCode::ChangedOnDisk, "made up").into())
+        });
+        assert_eq!(result.unwrap_err().code(), Some(PkgCode::ChangedOnDisk));
+        assert_eq!(fs::read(&target).unwrap(), b"theirs");
+        assert_eq!(fs::read(dir.join("p.bin.bak")).unwrap(), b"older");
         assert!(leftovers(&dir).is_empty());
         let _ = fs::remove_dir_all(&dir);
     }

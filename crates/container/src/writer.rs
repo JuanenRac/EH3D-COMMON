@@ -21,7 +21,7 @@ use sha2::{Digest, Sha256};
 use zip::write::SimpleFileOptions;
 use zip::{CompressionMethod, ZipArchive, ZipWriter};
 
-use crate::atomic::{write_atomic, AtomicOptions};
+use crate::atomic::{write_atomic, write_atomic_checked, AtomicOptions};
 use crate::canonical::canonical_file_bytes;
 use crate::codes::PkgCode;
 use crate::error::{ContainerError, Violation};
@@ -329,17 +329,37 @@ impl ContainerWriter {
         options: &AtomicOptions,
         from: Container<R>,
     ) -> Result<Integrity, ContainerError> {
+        self.write_to_path_from_checked(path, options, from, || Ok(()))
+    }
+
+    /// Like [`ContainerWriter::write_to_path_from`], with the last look at the target of
+    /// [`write_atomic_checked`]: an error of `check` leaves the target as it is.
+    pub fn write_to_path_from_checked<R: Read + Seek, C>(
+        self,
+        path: &Path,
+        options: &AtomicOptions,
+        from: Container<R>,
+        check: C,
+    ) -> Result<Integrity, ContainerError>
+    where
+        C: FnMut() -> Result<(), ContainerError>,
+    {
         let integrity = self.finished_record()?;
         let mut written = None;
-        write_atomic(path, options, |file| {
-            // `from` moves in here so that it is closed before the rename.
-            let mut from = from;
-            self.assemble(file, &integrity, Some(&mut from))?;
-            drop(from);
-            file.flush()?;
-            written = Some(Container::open(&*file, &self.spec)?.verify_integrity()?);
-            Ok(())
-        })?;
+        write_atomic_checked(
+            path,
+            options,
+            |file| {
+                // `from` moves in here so that it is closed before the rename.
+                let mut from = from;
+                self.assemble(file, &integrity, Some(&mut from))?;
+                drop(from);
+                file.flush()?;
+                written = Some(Container::open(&*file, &self.spec)?.verify_integrity()?);
+                Ok(())
+            },
+            check,
+        )?;
         Ok(written.expect("set when the write succeeds"))
     }
 

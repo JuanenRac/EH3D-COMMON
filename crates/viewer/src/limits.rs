@@ -32,6 +32,9 @@ pub struct ViewerLimits {
     pub max_render_pixels: u64,
     /// The most matches a search of a PDF keeps.
     pub max_search_hits: u64,
+    /// The most bytes of text a whole preview keeps; a value shown in many cells counts every
+    /// time. What does not fit is cut and said.
+    pub max_preview_bytes: u64,
 }
 
 impl Default for ViewerLimits {
@@ -50,14 +53,15 @@ impl Default for ViewerLimits {
             max_cells: 100_000,
             max_render_pixels: 16_000_000,
             max_search_hits: 2_000,
+            max_preview_bytes: 16 * MIB,
         }
     }
 }
 
 impl ViewerLimits {
     /// Takes one line of a settings file. The keys are `viewer.max_attachment_mb`,
-    /// `viewer.max_pdf_mb`, `viewer.max_image_mb`, `viewer.max_text_mb` and
-    /// `viewer.max_office_mb`. Returns false for a key that is not of the viewer or a value that is
+    /// `viewer.max_pdf_mb`, `viewer.max_image_mb`, `viewer.max_text_mb`,
+    /// `viewer.max_office_mb` and `viewer.max_preview_mb`. Returns false for a key that is not of the viewer or a value that is
     /// not a whole number from 1 to 4096; the limit then stays as it was.
     pub fn apply(&mut self, key: &str, value: &str) -> bool {
         let Ok(mb) = value.trim().parse::<u64>() else {
@@ -72,6 +76,7 @@ impl ViewerLimits {
             "viewer.max_image_mb" => &mut self.max_image_file_bytes,
             "viewer.max_text_mb" => &mut self.max_text_bytes,
             "viewer.max_office_mb" => &mut self.max_office_file_bytes,
+            "viewer.max_preview_mb" => &mut self.max_preview_bytes,
             _ => return false,
         };
         *slot = mb * MIB;
@@ -95,6 +100,18 @@ mod tests {
         assert!(limits.apply("viewer.max_attachment_mb", " 10 "));
         assert_eq!(limits.max_attachment_bytes, 10 * MIB);
         assert_eq!(limits.capped(limits.max_pdf_bytes), 10 * MIB);
+    }
+
+    #[test]
+    fn the_text_of_a_preview_is_sixteen_megabytes_unless_the_settings_say_more_or_less() {
+        let mut limits = ViewerLimits::default();
+        assert_eq!(limits.max_preview_bytes, 16 * MIB);
+        assert!(limits.apply("viewer.max_preview_mb", "64"));
+        assert_eq!(limits.max_preview_bytes, 64 * MIB);
+        assert!(limits.apply("viewer.max_preview_mb", "1"));
+        assert_eq!(limits.max_preview_bytes, MIB);
+        assert!(!limits.apply("viewer.max_preview_mb", "0"));
+        assert_eq!(limits.max_preview_bytes, MIB);
     }
 
     #[test]
