@@ -132,6 +132,23 @@ jobs:
           python -I tools/fetch_pdfium.py --platform windows-x86 --out target/i686-pc-windows-msvc/debug/deps
           cargo test -p eh3d-viewer --all-targets --features gui --target i686-pc-windows-msvc
 
+  third-party-notices:
+    # the notices of the crate that holds the signatures must name every crate it is built with
+    name: Third-party notices
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Rust toolchain
+        shell: bash
+        run: rustup toolchain install "$(sed -n 's/^channel = "\(.*\)"/\1/p' rust-toolchain.toml)" --profile minimal
+      - name: Tests of the notices tool
+        run: python3 -I -m unittest discover -s tools -p test_third_party_notices.py
+      - name: Every dependency is in the notices
+        run: python3 -I tools/third_party_notices.py --package eh3d-project --output crates/project/THIRD_PARTY_NOTICES --check
+
   consumers-list:
     name: Repositories that depend on this one
     runs-on: ubuntu-latest
