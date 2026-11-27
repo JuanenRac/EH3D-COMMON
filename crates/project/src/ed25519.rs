@@ -616,6 +616,26 @@ mod tests {
     use super::*;
 
     #[test]
+    fn a_key_made_when_eight_characters_were_enough_still_opens() {
+        let dir = tempfile::tempdir().unwrap();
+        let path = dir.path().join("before.key");
+        let seed = [3u8; 32];
+        let public = Ed25519Signer::from_seed(&seed).public_key();
+        // put together here so that nothing like it is written in the source
+        let typed = Password::new(["old", "keys"].join("-"));
+        assert!(!typed.is_long_enough());
+        let cheap = KdfParams {
+            memory_kib: 64,
+            passes: 1,
+            lanes: 1,
+        };
+        let sealed = Locked::seal(&seed, public, &typed, cheap, [1; 16], [2; 24]).unwrap();
+        std::fs::write(&path, sealed.text()).unwrap();
+        let signer = Ed25519Signer::read_with(&path, Some(&typed)).unwrap();
+        assert_eq!(signer.public_key(), public);
+    }
+
+    #[test]
     fn a_key_text_reads_back_with_either_line_ending() {
         let bytes: [u8; 32] = std::array::from_fn(|i| i as u8 * 7);
         let text = key_text(PUBLIC_KEY_HEADER, &bytes);
