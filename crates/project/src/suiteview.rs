@@ -121,9 +121,7 @@ pub fn view(path: &Path, own: &str) -> Result<ProjectView, String> {
     found.own_hash = Some(format!("{own_hash}@{}", project.revision()));
     for b in project.branches() {
         let record = b.record.as_ref();
-        if b.id == own {
-            // its state is in the mark
-        } else if b.id != ATTACHMENTS_BRANCH {
+        if b.id != own && b.id != ATTACHMENTS_BRANCH {
             // the attachments are stored under their hash: they are listed and taken out as attachments, never taken as files
             for name in b.files.keys().filter(|n| n.as_str() != BRANCH_RECORD) {
                 found.takeable.push((b.id.clone(), name.clone()));

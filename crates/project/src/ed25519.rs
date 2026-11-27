@@ -93,7 +93,10 @@ pub enum KeyError {
     #[error("{}: the password is not right, or the file is damaged", .0.display())]
     WrongPassword(PathBuf),
     /// The new password is too short or too long.
-    #[error("the password needs at least {MIN_PASSWORD_CHARS} characters and at most 1024 bytes")]
+    #[error(
+        "the password needs at least {} characters and at most 1024 bytes",
+        MIN_PASSWORD_CHARS
+    )]
     UnusablePassword,
     /// The key file has a password already.
     #[error("{}: the key file has a password already", .0.display())]
