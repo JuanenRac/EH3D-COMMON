@@ -298,7 +298,9 @@ fn password_from_stdin() -> Result<Password, Failure> {
         .take(2048)
         .read_line(&mut line)
         .map_err(|e| Failure::Error(format!("the password could not be read: {e}")))?;
-    let text = line.trim_end_matches(['\r', '\n']);
+    // a mark of the byte order that a pipe or a saved file puts first is not typed at a terminal
+    let text = line.strip_prefix('\u{feff}').unwrap_or(&line);
+    let text = text.trim_end_matches(['\r', '\n']);
     Ok(Password::new(text.to_owned()))
 }
 

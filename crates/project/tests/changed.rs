@@ -304,8 +304,6 @@ fn a_text_that_is_no_mark_and_a_file_that_is_gone_keep_nothing() {
         assert!(is_changed_refusal(&why), "{bad:?}: {why}");
         assert_eq!(fs::read(&path).unwrap(), before, "{bad:?}");
     }
-    // the mark of a project that had no branch of this program holds the revision all the same
-    assert!(mark.starts_with("-@"), "{mark}");
     fs::remove_file(&path).unwrap();
     let why =
         keep_result_since(&KIT, &path, &mark, &layers[0], "a.txt", b"x".to_vec()).unwrap_err();

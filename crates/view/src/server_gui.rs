@@ -469,7 +469,8 @@ mod tests {
     /// Every text of a shape with the place where it is seen: what a text box holds scrolls inside the box, whose clip cuts it.
     fn texts_of(shape: &egui::Shape, clip: egui::Rect, out: &mut Vec<(String, egui::Rect)>) {
         match shape {
-            egui::Shape::Text(t) => {
+            // an empty label has no place of its own
+            egui::Shape::Text(t) if !t.galley.text().is_empty() => {
                 let seen = shape.visual_bounding_rect().intersect(clip);
                 out.push((t.galley.text().to_string(), seen));
             }
@@ -583,21 +584,49 @@ mod tests {
         }
     }
 
+    /// How many rows the words of a text took in a column `width` wide.
+    fn rows_of(panel: &mut ServerPanel, lang: Lang, width: f32, wanted: &str) -> usize {
+        fn find(shape: &egui::Shape, wanted: &str) -> Option<usize> {
+            match shape {
+                egui::Shape::Text(t) if t.galley.text() == wanted => Some(t.galley.rows.len()),
+                egui::Shape::Vec(v) => v.iter().find_map(|s| find(s, wanted)),
+                _ => None,
+            }
+        }
+        let ctx = egui::Context::default();
+        let column = egui::Rect::from_min_size(egui::Pos2::ZERO, egui::vec2(width, 3000.0));
+        let mut rows = 0;
+        for _ in 0..4 {
+            let input = egui::RawInput {
+                screen_rect: Some(egui::Rect::from_min_size(
+                    egui::Pos2::ZERO,
+                    egui::vec2(SCREEN, 3000.0),
+                )),
+                ..Default::default()
+            };
+            let out = ctx.run_ui(input, |ui| {
+                ui.scope_builder(egui::UiBuilder::new().max_rect(column), |ui| {
+                    show(ui, panel, lang);
+                });
+            });
+            rows = out
+                .shapes
+                .iter()
+                .find_map(|c| find(&c.shape, wanted))
+                .expect("the text was drawn");
+            out.drop_without_applying_deltas();
+        }
+        rows
+    }
+
     #[test]
-    fn the_long_words_of_the_check_take_more_than_one_row_in_a_narrow_column() {
+    fn the_long_words_of_the_check_take_more_rows_in_a_narrower_column() {
         for lang in Lang::ALL {
             let mut panel = full_panel();
             let label = tr(lang, Field::Mdns.label());
-            let height = |texts: Vec<(String, egui::Rect)>| {
-                texts
-                    .into_iter()
-                    .find(|(t, _)| t == label)
-                    .map(|(_, r)| r.height())
-                    .expect("the check")
-            };
-            let one_row = height(draw(&mut panel, lang, 800.0).0);
-            let narrow = height(draw(&mut panel, lang, 100.0).0);
-            assert!(narrow > 1.5 * one_row, "{lang:?}: {narrow} {one_row}");
+            let wide = rows_of(&mut panel, lang, 800.0, label);
+            let narrow = rows_of(&mut panel, lang, 100.0, label);
+            assert!(narrow > wide, "{lang:?}: {narrow} {wide}");
         }
     }
 

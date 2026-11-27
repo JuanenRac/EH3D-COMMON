@@ -152,6 +152,40 @@ fn an_old_key_is_read_as_before_and_can_be_protected() {
     }
 }
 
+#[cfg(unix)]
+#[test]
+fn protecting_a_link_protects_the_key_it_points_at() {
+    use std::os::unix::fs::symlink;
+    let dir = tempdir().unwrap();
+    let apart = dir.path().join("apart");
+    fs::create_dir(&apart).unwrap();
+    let real = apart.join("real.key");
+    generate_key_files(&real).unwrap();
+    // a relative link to a link
+    symlink("apart/real.key", dir.path().join("first.key")).unwrap();
+    let link = dir.path().join("second.key");
+    symlink("first.key", &link).unwrap();
+
+    protect_key_file_with(&link, &words("one"), CHEAP).unwrap();
+    assert!(fs::read_to_string(&real)
+        .unwrap()
+        .starts_with(LOCKED_KEY_HEADER));
+    assert!(link.symlink_metadata().unwrap().file_type().is_symlink());
+    Ed25519Signer::read_with(&link, Some(&words("one"))).unwrap();
+    assert_eq!(names(&apart), ["real.key", "real.key.pub"]);
+
+    // links that go round and a link that points nowhere are errors, and nothing is made
+    symlink("round.key", dir.path().join("round.key")).unwrap();
+    symlink("nowhere", dir.path().join("lost.key")).unwrap();
+    for bad in ["round.key", "lost.key"] {
+        assert!(matches!(
+            protect_key_file_with(&dir.path().join(bad), &words("one"), CHEAP),
+            Err(KeyError::Io { .. })
+        ));
+    }
+    assert!(!dir.path().join("nowhere").exists());
+}
+
 #[test]
 fn a_changed_locked_file_is_refused_and_it_is_never_put_into_a_project() {
     let dir = tempdir().unwrap();

@@ -339,7 +339,8 @@ pub fn key_protection(path: &Path) -> Result<KeyProtection, KeyError> {
 /// Puts the secret key file at `path`, which has no password, under one. The new text is written
 /// beside it (readable only by its owner), read back and only then takes the place of the old
 /// file in one step. The old text may stay on the disk until it is written over, as after any
-/// replacement; the public key file does not change.
+/// replacement; the public key file does not change. A `path` that is a link protects the file it
+/// points at, and the link stays.
 pub fn protect_key_file(path: &Path, password: &Password) -> Result<(), KeyError> {
     protect_key_file_with(path, password, KdfParams::default())
 }
@@ -354,6 +355,11 @@ pub fn protect_key_file_with(
     if !password.is_long_enough() {
         return Err(KeyError::UnusablePassword);
     }
+    // a link is not replaced by the new file: the key without a password would stay behind it
+    let path = &followed(path).map_err(|error| KeyError::Io {
+        path: path.to_owned(),
+        error,
+    })?;
     let seed = match read_key_file(path)? {
         KeyFile::Plain(KeyKind::Secret, seed) => seed,
         KeyFile::Plain(KeyKind::Public, _) => {
@@ -381,6 +387,22 @@ pub fn protect_key_file_with(
         let _ = fs::remove_file(&beside);
     }
     done
+}
+
+/// The file a path names, through the links it may go through.
+fn followed(path: &Path) -> io::Result<PathBuf> {
+    let mut at = path.to_owned();
+    for _ in 0..32 {
+        if !at.symlink_metadata()?.file_type().is_symlink() {
+            return Ok(at);
+        }
+        let to = fs::read_link(&at)?;
+        at = match at.parent() {
+            Some(dir) => dir.join(to),
+            None => to,
+        };
+    }
+    Err(io::Error::other("too many links"))
 }
 
 /// Seals a seed with a new salt and nonce.
