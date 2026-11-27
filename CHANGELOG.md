@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Touch screens, the second question before the spindle or the laser goes on:** the shared code reads `pause.power_on` of a job and has the words for it in the eight languages (`firmware_base`). Host-tested only.
+
 ## [0.3.9] - Plots keep their relative mode, the GRBL controller sets the active work zero and an optional spindle stop on pause
 
 - **Zeroing writes the work system in use (`eh3d-controller`, fix):** the GRBL controller always wrote `G54` (`G10 L20 P1`), also while the program worked in `G55` to `G59`; it now writes the system in use (`P0`). The simulated GRBL keeps the six work systems.
