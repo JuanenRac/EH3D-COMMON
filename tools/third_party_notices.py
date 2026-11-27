@@ -159,7 +159,10 @@ def missing_texts(package: dict, apache: str | None) -> list[str]:
     for part in re.split(r"\s+AND\s+", licence_of(package)):
         offered = [o.strip(" ()") for o in re.split(r"\s+OR\s+", part)]
         name = next((p for p in PREFERENCE if p in offered), None)
-        if name in PERMISSION:
+        if name is None and "CC0-1.0" in offered:
+            chosen.append(f"{package['name']}: dedicated to the public domain under CC0 1.0 by {holders} "
+                          "(https://creativecommons.org/publicdomain/zero/1.0/); no notice is asked for.")
+        elif name in PERMISSION:
             chosen.append(f"{name} License\n\nCopyright (c) {holders}\n\n{PERMISSION[name]}")
         elif name == "Apache-2.0" and apache:
             chosen.append(f"Copyright {holders}\n\n{apache}")

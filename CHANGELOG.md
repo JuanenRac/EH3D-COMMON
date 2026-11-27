@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **Notices tool:** a crate in the public domain (CC0 1.0) that ships no text is named instead of stopping the tool.
+
 - **New passwords of signing keys need at least 12 characters (`eh3d-project`, was 8):** it applies to a new key and to protecting a key file; `MIN_PASSWORD_CHARS` is 12, so the programs that show it, and the message in eight languages, say 12. A key file already under a password of 8 to 11 characters opens as before.
 
 - **The touch screens send the number format of a drilling file:** their shared base takes the setting `drill_format` (`ask` by default), puts it in the job only when one is chosen, and says a refusal of the server for the format in the eight languages.

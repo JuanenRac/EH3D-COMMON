@@ -44,6 +44,10 @@ class NoticesTest(unittest.TestCase):
         self.assertIn("Copyright (c) Ann\n", written)
         self.assertIn("Copyright Ann\n\nApache License", written)
 
+    def test_a_public_domain_crate_with_no_text_is_named(self) -> None:
+        written = notices.render([self.crate("free", "CC0-1.0", {})], [])
+        self.assertIn("free: dedicated to the public domain", written)
+
     def test_a_licence_with_no_known_text_stops_the_tool(self) -> None:
         with self.assertRaises(SystemExit):
             notices.render([self.crate("odd", "MPL-2.0", {})], [])
