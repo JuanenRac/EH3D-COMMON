@@ -66,7 +66,7 @@ CANDIDATES = [
 HMI_CANDIDATES = [
     "core/job_bar.hpp", "core/job_memory.hpp", "core/job_tools.hpp", "core/lang.hpp", "core/notices.hpp", "core/orientation.hpp", "core/quality.hpp",
     "core/rack.hpp", "core/sdfiles.hpp", "core/server_link.hpp", "core/session.hpp", "core/server_errors.hpp", "core/server_errors_gen.hpp", "core/stage_notice.hpp", "core/stop_latch.hpp", "core/voice.hpp", "core/wav.hpp", "core/workflow.hpp",
-    "main/board.hpp", "main/board_p4.cpp", "main/server_link.cpp", "main/server_link.hpp",
+    "main/board.hpp", "main/board_p4.cpp", "main/module_p4.h", "main/module_p4.c", "main/touch_gsl3680.cpp", "core/gsl3680.hpp", "tests/test_touch.cpp", "main/server_link.cpp", "main/server_link.hpp",
     "tests/test_hmi.cpp", "tests/test_notices.cpp", "tests/test_quality.cpp", "tests/test_workflow.cpp", "tests/test_keyboard.cpp", "tests/test_locales.cpp",
     "tests/test_session.cpp", "tools/gen_server_errors.py", "tools/test_gen_server_errors.py",
     # the settings, the gate, the keyboard, the texts and the kind of machine are one file for both screens: what only one screen has (the panel that moves the machine by hand, the kinds of machine) is in

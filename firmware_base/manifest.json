@@ -60,6 +60,12 @@
         "EH3D-NODE-HMI-GUI": "core/gate.hpp"
       }
     },
+    "core/gsl3680.hpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "core/gsl3680.hpp",
+        "EH3D-NODE-HMI-GUI": "core/gsl3680.hpp"
+      }
+    },
     "core/hmi_config.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD-HMI": "core/hmi_config.hpp",
@@ -410,6 +416,18 @@
         "EH3D-NODE-BUNGARD-AUX": "main/log_buffer.hpp"
       }
     },
+    "main/module_p4.c": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "main/module_p4.c",
+        "EH3D-NODE-HMI-GUI": "main/module_p4.c"
+      }
+    },
+    "main/module_p4.h": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "main/module_p4.h",
+        "EH3D-NODE-HMI-GUI": "main/module_p4.h"
+      }
+    },
     "main/network.cpp": {
       "targets": {
         "EH3D-NODE-BUNGARD": "main/network.cpp",
@@ -494,6 +512,12 @@
         "EH3D-NODE-BUNGARD-AUX": "main/tls_cert.hpp"
       }
     },
+    "main/touch_gsl3680.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "main/touch_gsl3680.cpp",
+        "EH3D-NODE-HMI-GUI": "main/touch_gsl3680.cpp"
+      }
+    },
     "main/web_server.hpp": {
       "targets": {
         "EH3D-NODE-BUNGARD": "main/web_server.hpp"
@@ -557,6 +581,12 @@
       "targets": {
         "EH3D-NODE-BUNGARD": "tests/test_shared.cpp",
         "EH3D-NODE-BUNGARD-AUX": "tests/test_shared.cpp"
+      }
+    },
+    "tests/test_touch.cpp": {
+      "targets": {
+        "EH3D-NODE-BUNGARD-HMI": "tests/test_touch.cpp",
+        "EH3D-NODE-HMI-GUI": "tests/test_touch.cpp"
       }
     },
     "tests/test_workflow.cpp": {
