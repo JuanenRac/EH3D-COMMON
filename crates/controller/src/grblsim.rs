@@ -1,6 +1,6 @@
 //! GRBL 1.1 and grblHAL as a [`Device`]: the lines and the bytes of the protocol answered the way the firmware answers them, so that
 //! the controller of the suite is tried on its dialect and not on canned lines. The machine in it is a point that jumps to its target; what
-//! it keeps is the position, the offset of the work, the spindle, the hold and the alarm. grblHAL differs where it is seen on the line: its
+//! it keeps is the position, the offsets of the work systems (`G54` to `G59`), the spindle, the hold, the safety door and the alarm. grblHAL differs where it is seen on the line: its
 //! greeting, its build report with the extra options, the pins and the accessories in the status report, and the alarm that asks for homing
 //! at the start. A line can be made to fail by its number, with the code the firmware would give. This is not the firmware: it answers
 //! what the program asks and nothing else, and evidence from it is `simulator`.
@@ -23,6 +23,7 @@ pub const TRAVEL_MM: [f64; 3] = [300.0, 200.0, 50.0];
 enum Mode {
     Idle,
     Hold,
+    Door,
     Alarm(u32),
 }
 
@@ -32,9 +33,15 @@ pub struct GrblDevice {
     flavor: Flavor,
     mode: Mode,
     machine: [f64; 3],
-    wco: [f64; 3],
+    /// The offsets of `G54` to `G59`, and which of them is in use.
+    offsets: [[f64; 3]; 6],
+    system: usize,
     feed: f64,
     spindle: f64,
+    /// The speed the spindle goes back to when the safety door is resumed.
+    door_spindle: f64,
+    /// A firmware that does not take the safety door byte.
+    pub no_door: bool,
     relative: bool,
     rx: Vec<u8>,
     /// How many lines of G-code (not the `$` ones) were taken, from 1.
@@ -57,9 +64,12 @@ impl GrblDevice {
             // grblHAL with homing on starts locked until it is homed or unlocked
             mode: Mode::Idle,
             machine: [0.0; 3],
-            wco: [0.0; 3],
+            offsets: [[0.0; 3]; 6],
+            system: 0,
             feed: 0.0,
             spindle: 0.0,
+            door_spindle: 0.0,
+            no_door: false,
             relative: false,
             rx: Vec::new(),
             lines: 0,
@@ -96,6 +106,11 @@ impl GrblDevice {
         self.spindle
     }
 
+    /// The offset of a work system, from 0 (`G54`) to 5 (`G59`).
+    pub fn offset(&self, system: usize) -> [f64; 3] {
+        self.offsets[system]
+    }
+
     fn greeting(&self) -> String {
         match self.flavor {
             Flavor::Grbl => "Grbl 1.1h ['$' for help]".to_string(),
@@ -108,6 +123,7 @@ impl GrblDevice {
         let head = match self.mode {
             Mode::Alarm(_) => "Alarm".to_string(),
             Mode::Hold => "Hold:0".to_string(),
+            Mode::Door => "Door:0".to_string(),
             Mode::Idle if self.busy > 0 => {
                 self.busy -= 1;
                 "Run".to_string()
@@ -128,7 +144,9 @@ impl GrblDevice {
         if self.reports % 3 == 1 {
             s.push_str(&format!(
                 "|WCO:{:.3},{:.3},{:.3}",
-                self.wco[0], self.wco[1], self.wco[2]
+                self.offsets[self.system][0],
+                self.offsets[self.system][1],
+                self.offsets[self.system][2]
             ));
         }
         s.push_str(">\n");
@@ -192,15 +210,17 @@ impl GrblDevice {
         let mut moved = false;
         let mut relative = self.relative;
         let mut spindle = None;
+        let mut system = self.system;
         for (letter, n) in &words {
             match (*letter, *n) {
                 ('G', g) if g == 0.0 || g == 1.0 => moved = true,
                 ('G', g) if g == 2.0 || g == 3.0 => return "error:20\n".to_string(),
                 ('G', 90.0) => relative = false,
                 ('G', 91.0) => relative = true,
-                ('G', g)
-                    if [4.0, 17.0, 18.0, 19.0, 20.0, 21.0, 54.0, 92.0, 94.0, 10.0].contains(&g) => {
+                ('G', g) if [54.0, 55.0, 56.0, 57.0, 58.0, 59.0].contains(&g) => {
+                    system = (g - 54.0) as usize;
                 }
+                ('G', g) if [4.0, 17.0, 18.0, 19.0, 20.0, 21.0, 92.0, 94.0, 10.0].contains(&g) => {}
                 ('G', _) => return "error:20\n".to_string(),
                 ('M', m) if m == 3.0 || m == 4.0 || m == 5.0 => {
                     spindle = Some(m);
@@ -219,6 +239,11 @@ impl GrblDevice {
                 _ => return "error:20\n".to_string(),
             }
         }
+        if system != self.system {
+            self.system = system;
+            // the next report brings the offset of the system now in use
+            self.reports = 0;
+        }
         if moved || jog {
             let has_feed = feed.is_some() || self.feed > 0.0;
             for (letter, n) in &words {
@@ -231,7 +256,7 @@ impl GrblDevice {
                 target[ax] = if relative || jog && text.contains("G91") {
                     self.machine[ax] + n
                 } else {
-                    *n + self.wco[ax]
+                    *n + self.offsets[self.system][ax]
                 };
             }
             if !jog && words.iter().any(|(l, n)| *l == 'G' && *n == 1.0) && !has_feed {
@@ -247,7 +272,21 @@ impl GrblDevice {
             self.machine = target;
             self.busy = 1;
         } else if words.iter().any(|(l, n)| *l == 'G' && *n == 10.0) {
-            // G10 L20 P1 X0 Y0: the work position here is what the line says
+            // G10 L20 Pn X0 Y0: the work position here is what the line says; P0 is the system in use, P1 to P6 are G54 to G59
+            let p = words
+                .iter()
+                .find(|(l, _)| *l == 'P')
+                .map_or(0.0, |(_, n)| *n);
+            if !(0.0..=6.0).contains(&p) {
+                return "error:29\n".to_string();
+            }
+            let written = match p as usize {
+                0 => self.system,
+                n => n - 1,
+            };
+            if written == self.system {
+                self.reports = 0;
+            }
             for (letter, n) in &words {
                 let ax = match letter {
                     'X' => 0,
@@ -255,7 +294,7 @@ impl GrblDevice {
                     'Z' => 2,
                     _ => continue,
                 };
-                self.wco[ax] = self.machine[ax] - n;
+                self.offsets[written][ax] = self.machine[ax] - n;
             }
         }
         if !jog {
@@ -300,7 +339,7 @@ impl GrblDevice {
             return "[MSG:Caution: Unlocked]\nok\n".to_string();
         }
         if up == "$H" {
-            if matches!(self.mode, Mode::Hold) {
+            if matches!(self.mode, Mode::Hold | Mode::Door) {
                 return "error:8\n".to_string();
             }
             self.mode = Mode::Idle;
@@ -333,8 +372,18 @@ impl Device for GrblDevice {
                     }
                 }
                 b'~' => {
-                    if self.mode == Mode::Hold {
+                    if self.mode == Mode::Door {
+                        self.spindle = self.door_spindle;
                         self.mode = Mode::Idle;
+                    } else if self.mode == Mode::Hold {
+                        self.mode = Mode::Idle;
+                    }
+                }
+                0x84 => {
+                    if !self.no_door && matches!(self.mode, Mode::Idle | Mode::Hold) {
+                        self.door_spindle = self.spindle;
+                        self.spindle = 0.0;
+                        self.mode = Mode::Door;
                     }
                 }
                 0x18 => {
@@ -342,10 +391,12 @@ impl Device for GrblDevice {
                     self.rx.clear();
                     self.spindle = 0.0;
                     self.relative = false;
+                    self.system = 0;
+                    self.reports = 0;
                     // a reset in the middle of a move loses the position: the firmware says so with an alarm
                     self.mode = if self.busy > 0 {
                         Mode::Alarm(3)
-                    } else if self.mode == Mode::Hold {
+                    } else if matches!(self.mode, Mode::Hold | Mode::Door) {
                         Mode::Idle
                     } else {
                         self.mode
@@ -470,6 +521,53 @@ mod tests {
         assert_eq!(g.send_line("T1 M6").unwrap_err().code(), Some(20));
         let mut h = controller(Flavor::GrblHal, Impair::clean());
         assert!(h.send_line("T1 M6").is_ok());
+    }
+
+    #[test]
+    fn the_zero_goes_to_the_work_system_in_use_and_the_others_keep_theirs() {
+        let mut c = controller(Flavor::Grbl, Impair::clean());
+        c.send_line("G0 X10 Y5").unwrap();
+        c.send_line("G55").unwrap();
+        c.command(Command::ZeroWork(vec![0, 1])).unwrap();
+        let s = c.status().unwrap();
+        assert_eq!(&s.work_mm[..2], &[0.0, 0.0]);
+        let device = c.transport().device();
+        assert_eq!(device.offset(1), [10.0, 5.0, 0.0]);
+        assert_eq!(device.offset(0), [0.0; 3]);
+        assert!(device.log.iter().any(|l| l == "G10L20P0X0Y0"));
+        c.send_line("G54").unwrap();
+        assert_eq!(&c.status().unwrap().work_mm[..2], &[10.0, 5.0]);
+    }
+
+    #[test]
+    fn a_pause_stops_the_spindle_only_when_asked_and_the_resume_starts_it_again() {
+        for stop in [false, true] {
+            let link = WireLink::new(GrblDevice::new(Flavor::Grbl), Impair::clean());
+            let mut c = GrblController::new(link).with_spindle_stop_on_pause(stop);
+            c.send_line("M3 S8000").unwrap();
+            c.command(Command::Pause).unwrap();
+            let s = c.status().unwrap();
+            if stop {
+                assert_eq!((s.state, s.spindle_rpm), (State::Door, 0.0));
+            } else {
+                assert_eq!((s.state, s.spindle_rpm), (State::Hold, 8000.0));
+            }
+            c.command(Command::Resume).unwrap();
+            let s = c.status().unwrap();
+            assert_eq!((s.state, s.spindle_rpm), (State::Idle, 8000.0));
+        }
+    }
+
+    #[test]
+    fn a_firmware_without_the_safety_door_is_not_taken_for_a_stopped_spindle() {
+        let mut device = GrblDevice::new(Flavor::Grbl);
+        device.no_door = true;
+        let link = WireLink::new(device, Impair::clean());
+        let mut c = GrblController::new(link).with_spindle_stop_on_pause(true);
+        c.send_line("M3 S8000").unwrap();
+        assert!(matches!(c.command(Command::Pause), Err(Error::Refused(_))));
+        let s = c.status().unwrap();
+        assert_eq!((s.state, s.spindle_rpm), (State::Hold, 8000.0));
     }
 
     #[test]
