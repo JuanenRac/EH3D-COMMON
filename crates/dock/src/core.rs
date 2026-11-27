@@ -281,12 +281,15 @@ impl DockCore {
             DockAction::TogglePanel(id) => {
                 self.require_panel(id)?;
                 if self.layout_mut().toggle(id)? {
+                    self.layout_mut().bring_to_front(id)?;
                     self.focus = Some(id.clone());
                 }
             }
             DockAction::ShowPanel(id) => {
                 self.require_panel(id)?;
                 self.layout_mut().show(id)?;
+                // a panel already shown may be a tab behind another, under a floating window or hidden by a maximised panel
+                self.layout_mut().bring_to_front(id)?;
                 self.focus = Some(id.clone());
             }
             DockAction::HidePanel(id) => {
@@ -549,6 +552,67 @@ mod tests {
         assert_eq!(c.layout().state_of("layers"), Some(PanelState::Docked));
         assert_eq!(
             c.apply(&DockAction::HidePanel("zzz".into())),
+            Err(DockError::UnknownPanel)
+        );
+        assert!(c.layout_is_sound());
+    }
+
+    #[test]
+    fn showing_a_panel_brings_it_in_front_of_the_tabs_it_shares_a_group_with() {
+        let mut c = core();
+        assert_eq!(c.layout().active_of("files"), Some("files"));
+        c.apply(&DockAction::ShowPanel("layers".into())).unwrap();
+        assert_eq!(c.layout().active_of("files"), Some("layers"));
+        assert_eq!(c.focus(), Some("layers"));
+        assert_eq!(c.target_panel().as_deref(), Some("layers"));
+        // also while the layout is locked: no panel moves
+        c.apply(&DockAction::ToggleLock).unwrap();
+        c.apply(&DockAction::ShowPanel("files".into())).unwrap();
+        assert_eq!(c.layout().active_of("layers"), Some("files"));
+        assert!(c.layout_is_sound());
+    }
+
+    #[test]
+    fn showing_a_hidden_panel_leaves_it_on_show_in_its_old_tabs() {
+        let mut c = core();
+        c.apply(&DockAction::HidePanel("layers".into())).unwrap();
+        c.apply(&DockAction::ShowPanel("layers".into())).unwrap();
+        assert_eq!(c.layout().active_of("files"), Some("layers"));
+        // the same through the entry of the View menu
+        c.apply(&DockAction::TogglePanel("layers".into())).unwrap();
+        c.apply(&DockAction::TogglePanel("layers".into())).unwrap();
+        assert_eq!(c.layout().active_of("files"), Some("layers"));
+    }
+
+    #[test]
+    fn showing_a_panel_ends_the_maximising_of_another_group() {
+        let mut c = core();
+        c.layout_mut().maximize("view").unwrap();
+        c.apply(&DockAction::ShowPanel("console".into())).unwrap();
+        assert_eq!(c.layout().maximized, None);
+        // a tab of the maximised group takes its place and stays maximised
+        c.layout_mut().maximize("files").unwrap();
+        c.apply(&DockAction::ShowPanel("layers".into())).unwrap();
+        assert_eq!(c.layout().maximized.as_deref(), Some("layers"));
+        assert_eq!(c.layout().active_of("files"), Some("layers"));
+        assert!(c.layout_is_sound());
+    }
+
+    #[test]
+    fn showing_a_floating_panel_puts_its_window_and_tab_on_top() {
+        let mut c = core();
+        c.apply(&DockAction::FloatPanel("view".into())).unwrap();
+        c.apply(&DockAction::FloatPanel("console".into())).unwrap();
+        c.apply(&DockAction::ShowPanel("view".into())).unwrap();
+        let last = c.layout().floating.last().unwrap();
+        assert_eq!(last.group.panels, ["view"]);
+        assert_eq!(c.layout().floating.len(), 2);
+        // a floating panel does not end the maximising: its window is over the tree
+        c.layout_mut().maximize("files").unwrap();
+        c.apply(&DockAction::ShowPanel("console".into())).unwrap();
+        assert_eq!(c.layout().maximized.as_deref(), Some("files"));
+        assert_eq!(
+            c.layout_mut().bring_to_front("zzz"),
             Err(DockError::UnknownPanel)
         );
         assert!(c.layout_is_sound());

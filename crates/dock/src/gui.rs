@@ -796,6 +796,8 @@ pub struct Dock {
     bodies: Vec<(String, Body)>,
     drag: Option<String>,
     overlay: Option<String>,
+    /// A panel just asked for, whose floating window (when it has one) goes over the others at the next frame.
+    raise: Option<String>,
     generation: u32,
     ask_name: Option<String>,
     name_error: bool,
@@ -820,6 +822,7 @@ impl Dock {
             bodies: Vec::new(),
             drag: None,
             overlay: None,
+            raise: None,
             generation: 0,
             ask_name: None,
             name_error: false,
@@ -948,6 +951,10 @@ impl Dock {
                 | DockAction::DeleteWorkspace
         );
         let out = self.core.apply(&action)?;
+        if let DockAction::ShowPanel(id) | DockAction::TogglePanel(id) = &action {
+            // a floating window keeps its place in the stack of egui: it is raised when it is drawn next
+            self.raise = Some(id.clone());
+        }
         if restyle {
             self.generation = self.generation.wrapping_add(1);
             self.overlay = None;
@@ -1064,6 +1071,13 @@ impl Dock {
                 )));
             }
             if let Some(r) = shown {
+                if self
+                    .raise
+                    .as_ref()
+                    .is_some_and(|id| f.group.panels.contains(id))
+                {
+                    ctx.move_to_top(r.response.layer_id);
+                }
                 if let Some((tabs, bar_h)) = r.inner {
                     let rect = from_egui(r.response.rect);
                     slots.push(DropSlot {
@@ -1084,6 +1098,7 @@ impl Dock {
                 }
             }
         }
+        self.raise = None;
         self.last_slots = slots.clone();
         // a folded panel that was opened
         self.draw_overlay(&ctx, &v, area, &strips, &mut ev);
@@ -1824,7 +1839,7 @@ mod tests {
     use crate::sectors::Sector;
     use crate::stdmenus::{standard_bar, HelpOptions};
     use crate::texts::Text8;
-    use std::cell::Cell;
+    use std::cell::{Cell, RefCell};
     use std::rc::Rc;
 
     struct Harness {
@@ -2253,6 +2268,70 @@ mod tests {
         h.frames(1);
         assert!(h.dock.core().layout_is_sound());
         assert_eq!(before.lines().count(), h.dock.layout_text().lines().count());
+    }
+
+    /// A frame with two tabs in one group and two floating windows in the same place; every body notes that it was drawn.
+    fn covered_panels() -> (Harness, Rc<RefCell<Vec<&'static str>>>) {
+        let defs = ["a", "b", "c", "d"]
+            .iter()
+            .map(|id| PanelDef::new(id, Text8::same("Panel")))
+            .collect();
+        let rect = Rect::new(300.0, 200.0, 320.0, 240.0);
+        let layout = Layout::with_root(Node::tabs(&["a", "b"]))
+            .with_floating(&["c"], rect)
+            .with_floating(&["d"], rect);
+        let mut dock = Dock::single(defs, layout);
+        let drawn = Rc::new(RefCell::new(Vec::new()));
+        for id in ["a", "b"] {
+            let drawn = drawn.clone();
+            dock.register(id, move |_| drawn.borrow_mut().push(id));
+        }
+        let mut h = Harness {
+            ctx: egui::Context::default(),
+            dock,
+            t: 0.0,
+            calls: Rc::new(Cell::new(0)),
+            chosen: Vec::new(),
+        };
+        h.frames(3);
+        (h, drawn)
+    }
+
+    #[test]
+    fn showing_a_covered_tab_draws_its_body() {
+        let (mut h, drawn) = covered_panels();
+        assert!(!drawn.borrow().contains(&"b"));
+        h.dock.apply(DockAction::ShowPanel("b".into())).unwrap();
+        drawn.borrow_mut().clear();
+        h.frames(2);
+        assert_eq!(*drawn.borrow(), ["b", "b"]);
+    }
+
+    #[test]
+    fn showing_a_floating_window_under_another_raises_it() {
+        let (mut h, _) = covered_panels();
+        let at = centre(
+            h.dock
+                .last_slots()
+                .iter()
+                .find(|s| s.floating)
+                .expect("the floating windows were drawn")
+                .rect,
+        );
+        let over = |h: &Harness| h.ctx.layer_id_at(at).expect("a window is there");
+        let first = over(&h);
+        let (under, other) = if h.dock.core().layout().floating[1].group.panels == ["d"] {
+            ("c", "d")
+        } else {
+            ("d", "c")
+        };
+        h.dock.apply(DockAction::ShowPanel(under.into())).unwrap();
+        h.frames(2);
+        let second = over(&h);
+        assert_ne!(first, second, "the other window is on top now");
+        h.dock.apply(DockAction::ShowPanel(other.into())).unwrap();
+        h.frames(2);
+        assert_eq!(over(&h), first);
     }
 
     #[test]

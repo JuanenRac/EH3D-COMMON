@@ -10,6 +10,10 @@ use std::time::{Duration, SystemTime};
 
 use eh3d_container::{ContainerError, PkgCode};
 use eh3d_project::appbranch::{self, BranchKit, Identity};
+use eh3d_project::manufacturing::{
+    keep_result, keep_result_since, layers_of, read_result, save_result_since, state, JobFile,
+    SOURCE_BRANCH,
+};
 use eh3d_project::revision;
 use eh3d_project::suiteview::{self, check_unchanged, is_changed_refusal, revision_of};
 use eh3d_project::{
@@ -220,6 +224,93 @@ fn the_window_is_refused_when_another_program_saved_and_may_save_under_another_n
         suiteview::warnings(&other, Some(&other), Some(&mark), "nothing").unwrap(),
         []
     );
+}
+
+/// A project with a job of two drill layers.
+fn job_project(dir: &Path) -> (PathBuf, Vec<JobFile>) {
+    let path = project(dir);
+    let record = br#"{"layers":[{"path":"layers/a.drl","kind":"drill"},{"path":"layers/b.drl","kind":"drill"}]}"#;
+    let update = BranchUpdate::new(SOURCE_BRANCH, "1.0", "0.1.0")
+        .with_entry("project.json", &record[..])
+        .with_entry("layers/a.drl", &b"M48 a"[..])
+        .with_entry("layers/b.drl", &b"M48 b"[..]);
+    open(&path)
+        .save_branch(
+            &Writer::for_app(SOURCE_BRANCH),
+            update,
+            &SaveOptions::default(),
+        )
+        .unwrap();
+    let layers = layers_of(&path, "drill").unwrap();
+    (path, layers)
+}
+
+fn mark_of(path: &Path) -> String {
+    suiteview::view(path, "laser").unwrap().own_hash.unwrap()
+}
+
+#[test]
+fn a_result_is_not_kept_over_what_another_program_saved_since_the_opening() {
+    let dir = tempdir().unwrap();
+    let (path, layers) = job_project(dir.path());
+    let mark = mark_of(&path);
+    let result = |text: &[u8]| vec![("a.txt".to_string(), text.to_vec())];
+    // the mark of the opening lasts through the writes of this program, with and without it
+    keep_result_since(&KIT, &path, &mark, &layers[0], "a.txt", b"one".to_vec()).unwrap();
+    keep_result(&KIT, &path, &layers[1], "b.txt", b"two".to_vec()).unwrap();
+    save_result_since(&KIT, &path, &mark, &layers, &result(b"three")).unwrap();
+    keep_result_since(&KIT, &path, &mark, &layers[1], "b.txt", b"four".to_vec()).unwrap();
+    assert_eq!(state(&KIT, &path).unwrap().results, ["a.txt", "b.txt"]);
+
+    another_program_saves(&path, b"theirs");
+    let theirs = fs::read(&path).unwrap();
+    for why in [
+        keep_result_since(&KIT, &path, &mark, &layers[0], "a.txt", b"mine".to_vec()),
+        save_result_since(&KIT, &path, &mark, &layers, &result(b"mine")),
+        // the refusal comes before anything else is judged
+        save_result_since(&KIT, &path, &mark, &[], &[]),
+    ] {
+        let why = why.unwrap_err();
+        assert!(is_changed_refusal(&why), "{why}");
+    }
+    assert_eq!(fs::read(&path).unwrap(), theirs);
+    // read again, it is written
+    let again = mark_of(&path);
+    keep_result_since(&KIT, &path, &again, &layers[0], "a.txt", b"mine".to_vec()).unwrap();
+    assert_eq!(read_result(&KIT, &path, "a.txt").unwrap(), b"mine");
+    assert_eq!(read_result(&KIT, &path, "b.txt").unwrap(), b"four");
+}
+
+#[test]
+fn a_text_that_is_no_mark_and_a_file_that_is_gone_keep_nothing() {
+    let dir = tempdir().unwrap();
+    let (path, layers) = job_project(dir.path());
+    let before = fs::read(&path).unwrap();
+    let mark = mark_of(&path);
+    let revision = mark.split_once('@').unwrap().1.to_string();
+    for bad in [
+        String::new(),
+        "-".into(),
+        "@".into(),
+        "-@".into(),
+        revision.clone(),
+        mark.to_uppercase(),
+        mark[..mark.len() - 1].to_string(),
+        format!("{mark}0"),
+        format!("-@{}", "0".repeat(64)),
+    ] {
+        let why =
+            keep_result_since(&KIT, &path, &bad, &layers[0], "a.txt", b"x".to_vec()).unwrap_err();
+        assert!(is_changed_refusal(&why), "{bad:?}: {why}");
+        assert_eq!(fs::read(&path).unwrap(), before, "{bad:?}");
+    }
+    // the mark of a project that had no branch of this program holds the revision all the same
+    assert!(mark.starts_with("-@"), "{mark}");
+    fs::remove_file(&path).unwrap();
+    let why =
+        keep_result_since(&KIT, &path, &mark, &layers[0], "a.txt", b"x".to_vec()).unwrap_err();
+    assert!(is_changed_refusal(&why), "{why}");
+    assert!(!path.exists());
 }
 
 fn synthetic_in(dir: &Path, name: &str) -> PathBuf {

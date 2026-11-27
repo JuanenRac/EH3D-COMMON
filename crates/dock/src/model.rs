@@ -483,6 +483,35 @@ impl Layout {
         Ok(())
     }
 
+    /// Makes a docked or floating panel the one the person sees: its tab goes on show in its group, a floating window goes last (on top) and a
+    /// maximised panel of another group gets its place back. A hidden or folded panel is left as it is (see [`Layout::show`]). Allowed while the
+    /// layout is locked, for nothing is moved out of its group.
+    pub fn bring_to_front(&mut self, id: &str) -> Result<(), DockError> {
+        match self.state_of(id) {
+            None => return Err(DockError::UnknownPanel),
+            Some(PanelState::Docked) => {
+                self.set_active(id)?;
+                if let Some(m) = self.maximized.clone() {
+                    let same_group = self.path_of(&m) == self.path_of(id);
+                    self.maximized = same_group.then(|| id.to_string());
+                }
+            }
+            Some(PanelState::Floating) => {
+                self.set_active(id)?;
+                let at = self
+                    .floating
+                    .iter()
+                    .position(|f| f.group.panels.iter().any(|p| p == id));
+                if let Some(i) = at {
+                    let win = self.floating.remove(i);
+                    self.floating.push(win);
+                }
+            }
+            Some(PanelState::Hidden | PanelState::AutoHidden(_)) => {}
+        }
+        Ok(())
+    }
+
     /// Moves the tab of a panel to place `index` of its group (the index is clamped).
     pub fn reorder(&mut self, id: &str, index: usize) -> Result<(), DockError> {
         self.require_free()?;

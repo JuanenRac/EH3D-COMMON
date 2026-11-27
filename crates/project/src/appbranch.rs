@@ -168,7 +168,12 @@ pub fn open_project(path: &Path) -> BranchResult<Project> {
 /// count; see [`crate::revision`].
 pub fn open_unchanged(path: &Path, seen: &Revision) -> BranchResult<Project> {
     crate::revision::check_unchanged(path, seen)?;
-    open_project(path)
+    let project = open_project(path)?;
+    // what was opened is judged too: the file may have been saved between the look and the opening
+    if !crate::revision::follows(path, seen, &project.revision()) {
+        return Err(crate::revision::changed().into());
+    }
+    Ok(project)
 }
 
 /// Opens the project at `path`, or creates it when there is no file there. A name or an
