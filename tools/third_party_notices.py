@@ -26,6 +26,7 @@ from pathlib import Path
 
 NAME = "THIRD_PARTY_NOTICES"
 MARKER = "Made by third_party_notices.py from the dependency tree of Cargo; do not edit by hand."
+OLD_PROJECT_NOTICE = "The Ed25519 signatures of the project container"
 TARGETS = ("x86_64-unknown-linux-gnu", "aarch64-unknown-linux-gnu", "x86_64-pc-windows-msvc", "i686-pc-windows-msvc",
            "aarch64-apple-darwin", "x86_64-apple-darwin")
 NOTICE_FILE = re.compile(r"^((un)?licen[cs]e|copying|copyright|notice)([-_.].*)?$|^.*[-_]licen[cs]e(\.(txt|md))?$|^(ofl|ufl)(\.txt)?$", re.IGNORECASE)
@@ -174,7 +175,8 @@ def own_notices(own: list[dict], output: Path) -> list[tuple[str, str]]:
         path = Path(package["manifest_path"]).parent / NAME
         if path.is_file() and path.resolve() != output.resolve():
             text = clean(path.read_text(encoding="utf-8"))
-            if MARKER not in text:
+            # older tags of the project crate list only Rust crates, which the tree covers
+            if MARKER not in text and OLD_PROJECT_NOTICE not in flat(text):
                 found.append((package["name"], text))
     return found
 
