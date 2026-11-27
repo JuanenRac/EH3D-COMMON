@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- **The shared part of the two touch screens draws every text of the eight languages (`firmware_base/`):** the fonts hold every character of every text, so Japanese and Chinese no longer fall back to English, and the refusal codes added by the server have their texts. Not seen on the module.
+
 ## [0.3.7] - Projects saved by another program are not written over, signing keys under a password and agreed signature replacement
 
 - **Saving a `.eh3d` project is refused when another program saved it meanwhile (`eh3d-project`, `eh3d-attachpanel`, `docs/FORMAT_EH3D.md`, `docs/adr/0004-eh3d-safe-writes-and-keys.md`):** nothing is written over a file whose content is no longer the one that was read (new code `EH3D-PKG-025`), and the message says to open it again or to save under another name. The content counts, not the date, and the writes a program makes one after another do not count as another program. Every write of the crate checks it again just before the replacement (`write_atomic_checked` in the container). A window gets it from `suiteview::view` and `warnings`, which now refuse; `suiteview::check_unchanged`, `appbranch::open_unchanged` and `BranchKit::update_since` are there for the rest, and the panel of attachments refuses too and reads the list again.
