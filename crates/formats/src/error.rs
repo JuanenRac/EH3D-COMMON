@@ -97,11 +97,17 @@ pub enum Code {
     GerberBadCoordinate,
     /// 011: a file bigger than the limits of the readers (see `reader_limits.cfg`).
     FileTooLarge,
+    /// 012: a plot command that changes what is cut and is not followed (a rotation, a window, a rectangle, a label).
+    HpglUnsupportedGeometry,
+    /// 013: a scaling of a plot (`SC`, `IP`) that cannot be applied as it is written.
+    HpglScaling,
+    /// 014: a drill file read by supposing something about how its coordinates are written.
+    NcdFormatAssumed,
 }
 
 impl Code {
     /// Every code, in the order of their numbers.
-    pub const ALL: [Code; 11] = [
+    pub const ALL: [Code; 14] = [
         Code::NcdBadLine,
         Code::NcdHoleBeforeTool,
         Code::DxfNotDxf,
@@ -113,9 +119,12 @@ impl Code {
         Code::GerberNoOutline,
         Code::GerberBadCoordinate,
         Code::FileTooLarge,
+        Code::HpglUnsupportedGeometry,
+        Code::HpglScaling,
+        Code::NcdFormatAssumed,
     ];
 
-    /// The number of the code (1 to 11).
+    /// The number of the code (1 to 14).
     pub fn number(self) -> u16 {
         match self {
             Code::NcdBadLine => 1,
@@ -129,6 +138,9 @@ impl Code {
             Code::GerberNoOutline => 9,
             Code::GerberBadCoordinate => 10,
             Code::FileTooLarge => 11,
+            Code::HpglUnsupportedGeometry => 12,
+            Code::HpglScaling => 13,
+            Code::NcdFormatAssumed => 14,
         }
     }
 
@@ -250,6 +262,36 @@ impl Code {
                 "文件超过了读取器的限制",
                 "ファイルがリーダーの上限を超えています",
             ],
+            Code::HpglUnsupportedGeometry => [
+                "a plot command that changes what is cut is not followed",
+                "no se sigue una orden del trazado que cambia lo que se corta",
+                "un comando del tracciato che cambia ciò che viene tagliato non è seguito",
+                "ein Plotbefehl, der ändert, was geschnitten wird, wird nicht befolgt",
+                "une commande de tracé qui change ce qui est découpé n'est pas suivie",
+                "não é seguido um comando do traçado que muda o que é cortado",
+                "未执行一个会改变切割内容的绘图命令",
+                "切削内容を変えるプロットコマンドは実行されません",
+            ],
+            Code::HpglScaling => [
+                "the scaling of the plot cannot be applied as it is written",
+                "la escala del trazado no se puede aplicar como está escrita",
+                "la scala del tracciato non può essere applicata come è scritta",
+                "die Skalierung des Plots kann nicht wie angegeben angewendet werden",
+                "la mise à l'échelle du tracé ne peut pas être appliquée telle qu'elle est écrite",
+                "não é possível aplicar a escala do traçado tal como está escrita",
+                "无法按照文件中的写法应用绘图缩放",
+                "プロットの拡大縮小を記述どおりに適用できません",
+            ],
+            Code::NcdFormatAssumed => [
+                "the format of the coordinates is supposed and the scale may be wrong",
+                "el formato de las coordenadas se supone y la escala puede ser errónea",
+                "il formato delle coordinate è presunto e la scala può essere errata",
+                "das Koordinatenformat wird angenommen und der Maßstab kann falsch sein",
+                "le format des coordonnées est supposé et l'échelle peut être fausse",
+                "o formato das coordenadas é assumido e a escala pode estar errada",
+                "坐标格式按假定读取，比例可能错误",
+                "座標の形式は推定のため、縮尺が誤っている可能性があります",
+            ],
         };
         row[lang.index()]
     }
@@ -315,7 +357,10 @@ mod tests {
                 "EH3D-FORMATS-008",
                 "EH3D-FORMATS-009",
                 "EH3D-FORMATS-010",
-                "EH3D-FORMATS-011"
+                "EH3D-FORMATS-011",
+                "EH3D-FORMATS-012",
+                "EH3D-FORMATS-013",
+                "EH3D-FORMATS-014"
             ]
         );
     }

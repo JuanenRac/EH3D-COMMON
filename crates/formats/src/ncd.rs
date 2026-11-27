@@ -147,6 +147,8 @@ struct Format {
     trailing_suppressed: bool,
     /// An `INCH` (or `M72`) header with nothing else: the files of the machine, and the ones this suite writes, say it and then give whole mils.
     plain_inch: bool,
+    /// True when the header says `LZ` or `TZ`.
+    zeros_declared: bool,
 }
 
 impl Format {
@@ -181,6 +183,24 @@ impl Format {
         };
         let mils = if negative { -mils } else { mils }.round();
         (mils.abs() < i32::MAX as f64).then_some(mils as i32)
+    }
+
+    /// Whether reading the coordinates of `line` (already read as `X..Y..`) takes something the file does not say: the unit or, after a unit alone,
+    /// what it stands for (`INCH` alone is read as mils, other programs read it as 2.4 inches), the digits, or the side of the zeros of a number
+    /// that does not fill the digits.
+    fn supposes(&self, line: &str) -> bool {
+        if self.metric.is_none() {
+            return true;
+        }
+        line.split(['X', 'Y'])
+            .filter(|n| !n.is_empty() && !n.contains('.'))
+            .any(|n| match self.digits {
+                None => true,
+                Some((i, d)) => {
+                    !self.zeros_declared
+                        && (n.trim_start_matches(['+', '-']).len() as u32) < i.saturating_add(d)
+                }
+            })
     }
 
     /// Reads the options of a header line such as `INCH,LZ`, `METRIC,TZ,000.000` or `;FILE_FORMAT=2:4`.
@@ -221,8 +241,8 @@ impl Format {
         for part in parts {
             options = true;
             match part.trim() {
-                "LZ" => self.trailing_suppressed = true,
-                "TZ" => self.trailing_suppressed = false,
+                "LZ" => (self.trailing_suppressed, self.zeros_declared) = (true, true),
+                "TZ" => (self.trailing_suppressed, self.zeros_declared) = (false, true),
                 other => {
                     if let Some((i, d)) = other.split_once('.') {
                         if other.chars().all(|c| c.is_ascii_digit() || c == '.') {
@@ -287,7 +307,7 @@ pub fn parse_limited(
     limits: &crate::limits::ReaderLimits,
 ) -> Result<(DrillFile, crate::limits::LimitVerdict), FormatError> {
     let verdict = limits.guard(text)?;
-    let file = parse_unchecked(text).map_err(|e| e.to_error())?;
+    let file = parse_unchecked(text).map_err(|e| e.to_error())?.0;
     Ok((file, verdict))
 }
 
@@ -299,11 +319,38 @@ pub fn parse(text: &str) -> Result<DrillFile, ParseError> {
         .map_err(|e| ParseError::TooLarge {
             detail: e.to_string(),
         })?;
-    parse_unchecked(text)
+    Ok(parse_unchecked(text)?.0)
 }
 
-fn parse_unchecked(text: &str) -> Result<DrillFile, ParseError> {
+/// What the reader of a drill file ([`parse`]) supposes without a word. When the file does not say how its numbers are written, the first coordinate that
+/// needs a supposition gives `EH3D-FORMATS-014`: the position may then be at another scale than the program that wrote the file meant (an `INCH` header
+/// with nothing else is read as mils, while other programs read it as 2.4 inches: ten times less). A file that cannot be read gives that error. The reading
+/// of a file is the same whether or not this is asked; a file that says its format gives an empty list.
+pub fn diagnose(text: &str) -> Vec<FormatError> {
+    match read_noting(text) {
+        Ok((_, supposed)) => supposed.into_iter().collect(),
+        Err(error) => vec![error],
+    }
+}
+
+/// [`parse`], refusing a file whose format would have to be supposed ([`diagnose`]), for a program that must not guess a position. The lines left out of
+/// the holes are not refused here: they are in [`DrillFile::ignored`].
+pub fn parse_declared(text: &str) -> Result<DrillFile, FormatError> {
+    match read_noting(text)? {
+        (_, Some(supposed)) => Err(supposed),
+        (file, None) => Ok(file),
+    }
+}
+
+/// The file and what was supposed to read it, with the size limits of [`parse`].
+fn read_noting(text: &str) -> Result<(DrillFile, Option<FormatError>), FormatError> {
+    crate::limits::ReaderLimits::default().guard(text)?;
+    parse_unchecked(text).map_err(|e| e.to_error())
+}
+
+fn parse_unchecked(text: &str) -> Result<(DrillFile, Option<FormatError>), ParseError> {
     let mut out = DrillFile::default();
+    let mut supposed = None::<FormatError>;
     let (mut tool, mut x, mut y) = (None::<u8>, 0, 0);
     let mut in_header = false;
     let mut fmt = Format::default();
@@ -395,13 +442,21 @@ fn parse_unchecked(text: &str) -> Result<DrillFile, ParseError> {
         }
         let t = tool.ok_or(ParseError::HoleBeforeTool { line: n + 1 })?;
         parse_coord(line, &fmt, &mut x, &mut y).ok_or_else(bad)?;
+        if supposed.is_none() && fmt.supposes(line) {
+            supposed = Some(FormatError {
+                code: Code::NcdFormatAssumed,
+                line: Some(n + 1),
+                column: None,
+                detail: line.to_string(),
+            });
+        }
         out.holes.push(Hole {
             tool: t,
             x_mil: x,
             y_mil: y,
         });
     }
-    Ok(out)
+    Ok((out, supposed))
 }
 
 #[cfg(test)]
