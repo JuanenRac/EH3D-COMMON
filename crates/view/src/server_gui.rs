@@ -199,7 +199,8 @@ fn sessions_width(ui: &egui::Ui, panel: &ServerPanel, lang: Lang) -> f32 {
         ServerText::SessionRole,
         ServerText::SessionAddress,
     ]
-    .map(|head| wide(tr(lang, head)));
+    // a column of the grid is never narrower than a thing to click
+    .map(|head| wide(tr(lang, head)).max(ui.spacing().interact_size.x));
     let mut last: f32 = 0.0;
     for row in panel.sessions.rows() {
         for (column, text) in columns
