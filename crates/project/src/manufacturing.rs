@@ -9,6 +9,8 @@ use std::sync::atomic::{AtomicUsize, Ordering};
 use serde_json::Value;
 
 use crate::appbranch::{self, BranchError, BranchKit, Identity, TAKEN_DIR};
+use crate::revision::{self, Revision};
+use crate::suiteview;
 
 pub use crate::suiteview::is_project;
 
@@ -157,6 +159,38 @@ pub fn save_result(
     inputs: &[JobFile],
     results: &[(String, Vec<u8>)],
 ) -> Result<Vec<String>, String> {
+    write_result(kit, path, None, inputs, results)
+}
+
+/// Like [`save_result`] for a project that a window opened with the mark `seen` ([`suiteview::ProjectView::own_hash`]): refused
+/// (`EH3D-PKG-025`, see [`suiteview::is_changed_refusal`]), with nothing written, when another program saved the file since, when it is
+/// gone or when `seen` is not a mark of an opening. Writes of this program do not count.
+pub fn save_result_since(
+    kit: &BranchKit<'_>,
+    path: &Path,
+    seen: &str,
+    inputs: &[JobFile],
+    results: &[(String, Vec<u8>)],
+) -> Result<Vec<String>, String> {
+    let seen = opened(path, seen)?;
+    write_result(kit, path, Some(&seen), inputs, results)
+}
+
+/// The revision of a mark of an opening, with the file still as it says.
+fn opened(path: &Path, seen: &str) -> Result<Revision, String> {
+    // a text that holds no revision cannot show that the file is the one that was read
+    let seen = suiteview::revision_of(seen).ok_or_else(|| revision::changed().to_string())?;
+    revision::check_unchanged(path, &seen).map_err(|e| e.to_string())?;
+    Ok(seen)
+}
+
+fn write_result(
+    kit: &BranchKit<'_>,
+    path: &Path,
+    seen: Option<&Revision>,
+    inputs: &[JobFile],
+    results: &[(String, Vec<u8>)],
+) -> Result<Vec<String>, String> {
     if inputs.is_empty() || results.is_empty() {
         return Err("there is nothing to save: a result and the layers it was made from".into());
     }
@@ -168,39 +202,44 @@ pub fn save_result(
         kit.check_name(&format!("{RESULT_DIR}{name}"))
             .map_err(|e| e.to_string())?;
     }
-    let (_, notices) = kit
-        .update(path, &Identity::default(), |project, copy| {
-            let old: Vec<String> = copy
-                .files()
-                .keys()
-                .filter(|n| n.starts_with(TAKEN_DIR) || n.starts_with(RESULT_DIR))
-                .cloned()
-                .collect();
-            for name in &old {
-                copy.remove(name);
+    let apply = |project: &mut crate::Project,
+                 copy: &mut appbranch::WorkingCopy|
+     -> appbranch::BranchResult<()> {
+        let old: Vec<String> = copy
+            .files()
+            .keys()
+            .filter(|n| n.starts_with(TAKEN_DIR) || n.starts_with(RESULT_DIR))
+            .cloned()
+            .collect();
+        for name in &old {
+            copy.remove(name);
+        }
+        let mut targets = Vec::new();
+        for input in inputs {
+            let now = project.read_entry(SOURCE_BRANCH, &input.rel)?;
+            if now != input.bytes {
+                return Err(BranchError::Refused(format!(
+                    "{} changed while the result was being made; make it again",
+                    input.rel
+                )));
             }
-            let mut targets = Vec::new();
-            for input in inputs {
-                let now = project.read_entry(SOURCE_BRANCH, &input.rel)?;
-                if now != input.bytes {
-                    return Err(BranchError::Refused(format!(
-                        "{} changed while the result was being made; make it again",
-                        input.rel
-                    )));
-                }
-                let target = format!("{TAKEN_DIR}{SOURCE_BRANCH}/{}", input.rel);
-                copy.put(&target, now)?;
-                targets.push(target);
-            }
-            let dependency = project.dependency_on(SOURCE_BRANCH, "job-layers", 1, targets)?;
-            copy.add_dependency(dependency);
-            for (name, bytes) in results {
-                copy.put(&format!("{RESULT_DIR}{name}"), bytes.clone())?;
-            }
-            copy.set("source", SOURCE_BRANCH);
-            Ok(())
-        })
-        .map_err(|e| e.to_string())?;
+            let target = format!("{TAKEN_DIR}{SOURCE_BRANCH}/{}", input.rel);
+            copy.put(&target, now)?;
+            targets.push(target);
+        }
+        let dependency = project.dependency_on(SOURCE_BRANCH, "job-layers", 1, targets)?;
+        copy.add_dependency(dependency);
+        for (name, bytes) in results {
+            copy.put(&format!("{RESULT_DIR}{name}"), bytes.clone())?;
+        }
+        copy.set("source", SOURCE_BRANCH);
+        Ok(())
+    };
+    let written = match seen {
+        Some(seen) => kit.update_since(path, seen, apply),
+        None => kit.update(path, &Identity::default(), apply),
+    };
+    let (_, notices) = written.map_err(|e| e.to_string())?;
     Ok(notices.iter().map(ToString::to_string).collect())
 }
 
@@ -209,6 +248,31 @@ pub fn save_result(
 pub fn keep_result(
     kit: &BranchKit<'_>,
     path: &Path,
+    layer: &JobFile,
+    name: &str,
+    bytes: Vec<u8>,
+) -> Result<Vec<String>, String> {
+    keep(kit, path, None, layer, name, bytes)
+}
+
+/// Like [`keep_result`] for a project that a window opened with the mark `seen`, refused as [`save_result_since`] is. The results of the
+/// other layers that are kept are therefore the ones the person saw, never ones that another program wrote meanwhile.
+pub fn keep_result_since(
+    kit: &BranchKit<'_>,
+    path: &Path,
+    seen: &str,
+    layer: &JobFile,
+    name: &str,
+    bytes: Vec<u8>,
+) -> Result<Vec<String>, String> {
+    let seen = opened(path, seen)?;
+    keep(kit, path, Some(&seen), layer, name, bytes)
+}
+
+fn keep(
+    kit: &BranchKit<'_>,
+    path: &Path,
+    seen: Option<&Revision>,
     layer: &JobFile,
     name: &str,
     bytes: Vec<u8>,
@@ -226,7 +290,7 @@ pub fn keep_result(
             results.push((other.clone(), read_result(kit, path, other)?));
         }
     }
-    save_result(kit, path, &inputs, &results)
+    write_result(kit, path, seen, &inputs, &results)
 }
 
 /// What the branch of a program holds in the project at `path`, and whether it is out of date. A project without the branch has an empty state.

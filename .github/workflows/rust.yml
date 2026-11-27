@@ -120,6 +120,8 @@ jobs:
         run: cargo clippy -p eh3d-attachpanel --all-targets --features gui -- -D warnings
       - name: Tests of the attachment panel with its drawing
         run: cargo test -p eh3d-attachpanel --all-targets --features gui
+      - name: Tests of the server panel with its drawing
+        run: cargo test -p eh3d-view --all-targets --features gui
       - name: Tests with the 32-bit library of Windows
         if: runner.os == 'Windows'
         shell: bash

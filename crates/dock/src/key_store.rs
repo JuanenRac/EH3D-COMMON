@@ -72,15 +72,19 @@ impl KeyStore {
         usable(&key).is_some().then_some(key)
     }
 
-    /// Keeps the path of the key that was used. A relative path, an address or a path with a control character is refused.
+    /// Keeps the path of the key that was used. A relative path, an address, a path with a control character or one too long to be read back
+    /// is refused.
     pub fn remember(&self, key: &Path) -> io::Result<()> {
         static CALLS: AtomicU32 = AtomicU32::new(0);
-        let key = usable(key).ok_or_else(|| {
-            io::Error::new(
-                io::ErrorKind::InvalidInput,
-                "only the absolute path of a key file is kept",
-            )
-        })?;
+        let room = MAX_FILE as usize - HEADER.len() - PREFIX.len() - 2;
+        let key = usable(key)
+            .filter(|text| text.len() <= room)
+            .ok_or_else(|| {
+                io::Error::new(
+                    io::ErrorKind::InvalidInput,
+                    "only the absolute path of a key file is kept",
+                )
+            })?;
         if let Some(dir) = self.path.parent() {
             fs::create_dir_all(dir)?;
         }
@@ -194,6 +198,20 @@ mod tests {
             fs::write(store.path(), damaged).unwrap();
             assert_eq!(store.load(), None);
         }
+    }
+
+    #[test]
+    fn the_longest_path_that_is_kept_is_read_back_and_a_longer_one_is_refused() {
+        let folder = Folder::new();
+        let store = KeyStore::in_dir(&folder.0, Phoenix::Cnc);
+        let room = MAX_FILE as usize - HEADER.len() - PREFIX.len() - 2;
+        let start = std::env::temp_dir().join("k").to_str().unwrap().to_string();
+        let longest = PathBuf::from(format!("{start}{}", "a".repeat(room - start.len())));
+        store.remember(&longest).unwrap();
+        assert_eq!(store.load(), Some(longest.clone()));
+        let longer = PathBuf::from(format!("{}a", longest.display()));
+        assert!(store.remember(&longer).is_err());
+        assert_eq!(store.load(), Some(longest));
     }
 
     #[test]

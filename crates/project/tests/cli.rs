@@ -361,4 +361,25 @@ fn keys_under_a_password_and_signatures_to_replace_from_the_command_line() {
     assert!(std::fs::read_to_string(old)
         .unwrap()
         .starts_with("eh3d-ed25519-locked-v1"));
+
+    // a byte order mark that a pipe puts first is not part of the password
+    let marked = dir.path().join("marked.key");
+    let marked = marked.to_str().unwrap();
+    let with_mark = format!("\u{feff}{phrase}");
+    let made = run_with_line(&["keygen", marked, "--password-stdin"], &with_mark);
+    assert_eq!(made.status.code(), Some(0), "{made:?}");
+    for line in [&phrase, &with_mark] {
+        let args = [
+            "sign",
+            &file,
+            "--key",
+            marked,
+            "--branch",
+            "pcb",
+            "--password-stdin",
+            "--replace-signature",
+        ];
+        let done = run_with_line(&args, line);
+        assert_eq!(done.status.code(), Some(0), "{done:?}");
+    }
 }
