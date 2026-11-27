@@ -4,8 +4,9 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
-- **The touch screens send the number format of a drilling file:** their shared base takes the setting `drill_format` (`ask` by default), puts it in the job only when one is chosen, and says a refusal of the server for the format in the eight languages.
+- **New passwords of signing keys need at least 12 characters (`eh3d-project`, was 8):** it applies to a new key and to protecting a key file; `MIN_PASSWORD_CHARS` is 12, so the programs that show it, and the message in eight languages, say 12. A key file already under a password of 8 to 11 characters opens as before.
 
+- **The touch screens send the number format of a drilling file:** their shared base takes the setting `drill_format` (`ask` by default), puts it in the job only when one is chosen, and says a refusal of the server for the format in the eight languages.
 - **Touch screens, before the tool goes down into the work:** the shared code reads `pause.plunge` of a job and has the words for it in the eight languages (`firmware_base`). Host-tested only.
 
 - **Third-party notices made from the dependency tree and checked in CI (`tools/third_party_notices.py`, `docs/THIRD_PARTY_NOTICES.md`):** `crates/project/THIRD_PARTY_NOTICES` is now complete, with the copyright lines of every crate (argon2 and chacha20poly1305 had none), the Apache-2.0 text that rpassword and rtoolbox ask for and the licences of the crates that were not listed. A new CI job fails when a dependency or a licence is missing from the file. Programs of the suite can use the same tool.

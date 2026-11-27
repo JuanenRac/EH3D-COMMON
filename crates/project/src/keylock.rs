@@ -29,8 +29,9 @@ use crate::records::{from_hex, to_hex};
 
 /// The first line of a secret key file kept under a password.
 pub const LOCKED_KEY_HEADER: &str = "eh3d-ed25519-locked-v1";
-/// The fewest characters of a new password.
-pub const MIN_PASSWORD_CHARS: usize = 8;
+/// The fewest characters of a new password: a new key file, or one that is being protected. A key file made before with a shorter one
+/// (8 characters or more) still opens: the length is not looked at when a file is read.
+pub const MIN_PASSWORD_CHARS: usize = 12;
 /// The most bytes of a password.
 pub const MAX_PASSWORD_BYTES: usize = 1024;
 /// The most memory a key file may ask for, in KiB (1 GiB).
@@ -348,11 +349,13 @@ mod tests {
     }
 
     #[test]
-    fn a_password_shows_nothing_and_is_long_enough_from_eight_characters() {
+    fn a_password_shows_nothing_and_is_long_enough_from_twelve_characters() {
         assert_eq!(format!("{:?}", words(3)), "Password(..)");
-        assert!(!Password::new("seven77".into()).is_long_enough());
-        assert!(Password::new("eight888".into()).is_long_enough());
-        assert!(Password::new("ñññññññ8".into()).is_long_enough());
+        assert!(!Password::new("eleven11111".into()).is_long_enough());
+        assert!(Password::new("twelve121212".into()).is_long_enough());
+        // characters are counted, not bytes
+        assert!(!Password::new("ñññññññññññ".into()).is_long_enough());
+        assert!(Password::new("ñññññññññññ1".into()).is_long_enough());
         assert!(!Password::new("a".repeat(MAX_PASSWORD_BYTES + 1)).is_long_enough());
         assert!(words(1).same_as(&words(1)) && !words(1).same_as(&words(2)));
         assert!(KdfParams::default().is_allowed());
