@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.4.1] - Shared base of the touch screens with their own drivers and fonts
+
 - **Shared base of the touch screens:** the fonts take the characters of the new texts of the settings contract, and a compiler warning about the pin of the hardware stop is gone.
 - **Touch screens, own drivers of the module:** their shared base now holds the start of each part of the module without a board package and the GSL3680 touch with a table the user provides (`firmware_base`). Host-tested only.
 - **Shared base of the touch screens:** the summary of a drilling file of the card reads its numbers as the file declares them, completed with the chosen `drill_format` (the rules of `ncd::parse_as`). When neither says enough, or the choice cannot be what the file says, the holes and tools are counted and the size is not known, and a diameter with no unit is not given.
